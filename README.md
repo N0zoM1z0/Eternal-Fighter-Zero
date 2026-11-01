@@ -17,7 +17,7 @@ of the local TH10 reconstruction. [TH105](https://github.com/N0zoM1z0/th105)
 is an engine-family research reference; its VC8 compiler and recovered layouts
 are not EFZ evidence.
 
-This is an initial reconstruction checkpoint, not a runnable replacement game.
+This is a partial reconstruction, not a runnable replacement game.
 See [progress](docs/PROGRESS.md) and the [current handoff](docs/RE_HANDOFF.md).
 
 ## Exact target
@@ -40,17 +40,19 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **fifty-three complete exact authored functions, 30,715 code bytes**,
-with every relocation field explicitly bound and compared. Seven compiler-generated deleting/array-iteration/static-lifetime helpers are checked separately
+Recovered owners provide **53 complete exact authored functions, 30,715 code bytes**,
+with every relocation field explicitly bound and compared. Seven compiler-generated
+deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library
 math wrappers are also checked separately. The complete effect dispatcher adds
 191 associated switch-table bytes, compared in full and counted separately from
-code. The local Ghidra
-inventory contains 950 non-external candidates; their boundaries and origins
+code. The local Ghidra inventory contains 950 non-external candidates; their boundaries and origins
 remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
 is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
-the accepted startup/window, context lifetime, effect activation, display-device lifetime, surface transfer, palette/blend tables, the large effect dispatcher, frame controls/rendering, word files and pattern owners, configuration
-helpers, retained evidence and next owner.
+the accepted owners, retained evidence and next work. Unaccepted reader/audio
+drafts are preserved separately in the [workbench](workbench/reader-audio/README.md)
+and are excluded from these totals. The repository is prepared for handoff;
+the previous autonomous reconstruction goal was cleared by the operator.
 
 Compiler, linker, resource and native execution smoke checks pass. The original
 translation-unit graph, linked data/resources, full executable and runtime
@@ -117,6 +119,7 @@ are open. [Oracle contract](docs/ORACLES.md), [workflow](docs/RE_WORKFLOW.md).
 | --- | --- |
 | `config/` | target/tool locks, build recipes and independent progress ledgers |
 | `src/` | handwritten natural C/C++ reconstruction |
+| `workbench/` | explicitly unaccepted drafts and integration notes |
 | `probes/` | compiler/linker/resource smoke inputs |
 | `scripts/` | verification, Ghidra, build, exact comparison and reporting |
 | `docs/` | handoff, durable findings, workflow and comparison evidence |

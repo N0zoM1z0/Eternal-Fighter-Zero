@@ -217,14 +217,16 @@ constructor iterators at `0x4082A0`/`0x408380` are reproduced by the compiler
 from ordinary `new[]`/`delete[]`; those helper bodies are separate generated
 origin evidence and are excluded from authored progress.
 
-The loader constructs a 12-byte reader for the original pattern-path binding
+The loader uses a provisional 12-byte reader view for the pattern-path binding
 at `0x787510`, reads the element count, constructs the counted array and fills
 frames in the exact original order: offsets 0, 2, 8, 10, 4, 6. It retains the
-original unused type read/store, fourteen discarded integer-decoder calls and
-ten 16-byte reads per frame. Reader construction/destruction and decoder/read
-bindings are `0x408330`, `0x408360`, `0x405700` and `0x405600`. The actual decoder
-implementation and complete on-disk format remain open; these are exact caller
-bodies under explicit callee bindings.
+original unused type read/store, fourteen discarded integer reads and ten
+16-byte reads per frame. Reader construction/destruction and integer/raw-read
+bindings are `0x408330`, `0x408360`, `0x405700` and `0x405600`. Subsequent original
+instruction review establishes that ReadInt reads four raw bytes: the earlier
+custom integer-decoder hypothesis was incorrect. The complete file format and
+reader class size/alignment remain open; these accepted caller bodies do not
+establish complete callee ownership. See the pending reader/audio findings below.
 
 First complete comparisons matched constructor/destructor and the three small
 pattern members immediately. The loader initially had 63 stack-offset byte
@@ -734,3 +736,36 @@ exact; configuration units were untouched. Private original evidence includes
 `EffectFrame-first.cpp`, `ContextState-first.cpp`, `WordFile-first.cpp`.
 Existing dispatcher/local-table and standard-library certificates were refreshed.
 Whole-product linking and original/reconstructed game runtime remain open.
+
+
+## Raw file reader and audio loading
+
+These instruction-review findings postdate the accepted frame checkpoint.
+They correct hypotheses, but the accompanying reader/audio source is still
+unaccepted in `workbench/reader-audio/`; no progress rows were added.
+
+PatternReader::ReadInt at `0x405700` reads four raw bytes through `0x405600`;
+ReadShort/ReadFloat read two/four. There is no custom integer decoder here.
+Read returns the transfer count. The accepted Context caller still has an old
+provisional void declaration; its correction requires the matching relocation
+symbol and certificate replay. `0x405970` resets two fields and returns 1,
+not a demonstrated base-class constructor. Only the reader's handle/buffer at
+0/4 are identified; its provisional 12-byte caller view does not prove a third
+field or complete original size/alignment.
+
+Audio `0x40E4D0` maintains looping: it checks a selected buffer/sample and loop
+end, queries playback position, then stops/repositions/restarts after the end.
+The accepted SetMode(short) name is a provisional mislabel. The draft corrects
+it to MaintainLoop(unsigned short), with acceptance still pending. Reviewed
+accesses expose loopStart/loopEnd at 0/4, window/DirectSound at 8/0xC, samples
+at 0x10, sample sizes at 0x268 and buffers at 0x4C0 (150 entries, minimum view
+0x718). This expands the earlier buffer-only view without establishing full
+original typing or linked global placement.
+
+The WAV owner at `0x40DFB0` uses MMIO, reads an 18-byte WAVEFORMATEX and requires
+PCM before allocation and DirectSound buffer creation/fill. Source/codegen and
+resource lifetime closure are pending. Preserve original missing checks and
+cleanup behavior rather than hardening them during exact reconstruction.
+Original FillBuffer calls at `0x40DBBC`/`0x40DBE1` target `0x778600`; a scratch
+memcpy binding to `0x778410` was incorrect. The workbench records remaining
+mismatches and the exact integration requirements.

@@ -19,15 +19,17 @@ The only canonical target is ignored, read-only `resources/EFZ.exe`, SHA-256
 Do not substitute `EFZ.OLD`, netplay binaries or another release. New targets
 require an explicit scope change, a separate identity and separate evidence.
 
-## Active reconstruction direction
+## Reconstruction policy
 
 Recover both substantial owners and useful small functions; do not optimize
 for leaf count. Recheck prior documentation/hypotheses against target evidence.
-The operator says this is the only working session: recover and continue dirty
-work rather than avoiding it. Commit substantive verified progress using the
-English prefix `gpt-6.1-sol: `. Replay only changed/involved units, never an
-unrequested full cold cohort. Continue the full reconstruction objective across
-checkpoints; a successful unit does not complete the game reconstruction.
+Preserve unfinished work and inspect its handoff before integrating it. Commit
+substantive verified progress using the English prefix `gpt-6.1-sol: `. Replay
+only changed/involved units, never an unrequested full cold cohort. A successful
+unit does not complete the game reconstruction. The operator cleared the prior
+autonomous goal and requested cleanup and handoff on 2026-11-01; do not infer an
+active autonomous reconstruction task from historical notes. Do not spawn
+subagents unless the operator explicitly requests delegation.
 
 ## Exact work
 
@@ -76,3 +78,8 @@ changes need the relevant focused oracle checks. Run `scripts/ci.py` and
 Do not require broad runtime/failure-injection/sanitizer matrices for ordinary
 exact units. Product closure, original/reconstructed runtime comparison and
 portability are later, independently tracked phases.
+
+`src/` is the accepted baseline. `workbench/reader-audio/` preserves unaccepted
+drafts and an integration patch; its diagnostic comparisons confer no progress
+credit. Read its README before resuming that work. Do not delete retained
+analysis evidence or the toolchain/Wine/Ghidra state as routine cache cleanup.

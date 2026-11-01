@@ -9,9 +9,12 @@ local executable/DLL contents and deterministic name/content tree digests of
 VC and Platform SDK headers/libraries. No compiler is vendored.
 
 Compiler/linker banners are 13.10.3077 / 7.10.3077. The initial `/Od /G6 /MD /Gy
-/W3` recipe is a reproducible unit profile. It is not a claim that every original
-EFZ TU used these settings. `/GS` and `/Zi` did not change the initial reader's
-stack mismatch; this does not establish their production selection.
+/W3` recipe remains the configuration-unit profile. Startup and other owners
+also use explicit `/MT` and `/MT /GS` profiles from `config/build.toml`; consult
+each unit's recipe, not the profile's historical description, for selection.
+These profiles do not establish settings for every original translation unit.
+Early `/GS` and `/Zi` trials on ReadConfigByte were inconclusive; later exact
+owners provide independent evidence for their own selected profiles.
 
 Native builds use `.tools/wine-msvc710`, `WINEARCH=win32`, Xvfb, CPU affinity to
 one available CPU and nice 10. An advisory file lock serializes compiler/linker/
