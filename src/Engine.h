@@ -3,8 +3,11 @@
 #define EFZ_ENGINE_H
 #include <windows.h>
 #include <unknwn.h>
+#include <ddraw.h>
 struct SurfaceRect { int left, top, right, bottom; };
 class Video {
+    unsigned char unknown_0000[0x20808];
+    IDirectDraw *directDraw;
 public:
     void Initialize(HWND, unsigned char);
     void Shutdown();

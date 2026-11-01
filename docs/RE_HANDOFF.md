@@ -21,17 +21,43 @@ later checkpoints are local unless the operator requests a push.
 | `context-activate` | `0x406AA0` | 775 |
 | `context-load-object` | `0x406DB0` | 173 |
 | `context-load-patterns` | `0x406E60` | 668 |
+| `video-load-bitmap` | `0x408D00` | 905 |
+| `video-decode-packed` | `0x409470` | 711 |
+| `surface-make-rect` | `0x40C590` | 69 |
 | `pattern-construct` | `0x408310` | 24 |
 | `pattern-destruct` | `0x408270` | 43 |
 | `pattern-allocate` | `0x4082D0` | 56 |
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **5,249 bytes** in twelve complete functions.
+Total authored exact code is **6,934 bytes** in fifteen complete functions.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
 from authored match totals. Three additional generated array helpers have
 189 compared bytes, also excluded. Candidate inventory remains 950 non-external entries.
+
+## Latest surface transfer checkpoint
+
+`src/Surface.cpp` closes the complete raw loader (905 bytes), packed decoder
+(711 bytes) and rectangle factory (69 bytes). All three pass strict complete
+comparison. Engine.h now includes the observed DirectDraw pointer at 0x20808
+and historical SDK types; the complete Video object extent is still open.
+
+The raw path retains byte-wise low-16-bit BMP fields, signed modulo correction
+blocks, rounded allocation/return width, reversed rows and original early-return
+cleanup behavior. Packed decoding preserves uncompressed reversed rows versus
+forward RLE rows, persistent repeat/current-pixel state, exact cursor updates,
+byte palette truncation, and the unused Unlock HRESULT assignment. The rectangle
+factory is cdecl returning a four-integer value, not a member constructor.
+
+First complete comparisons were early (902/905 and 708/711). Normal scope/
+aggregate choices and exact branch/store recovery produced full zero-difference
+bodies. These source declarations are not claimed as unique original source.
+Public proof is `docs/evidence/surface-exact.json`; original disassembly and
+named bindings remain private under `.analysis/`. Shared-header revalidation
+used four cold source/profile artifacts reused across their selected functions;
+configuration units were not rebuilt. Five generated helpers remain excluded
+from authored totals. Thirteen focused oracle self-tests and metadata CI pass.
 
 ## Latest effect activation checkpoint
 
@@ -115,12 +141,13 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Recover the original raw surface loader `0x408D00` (905-byte candidate)
-   and packed surface decoder `0x409470` (711-byte candidate), closing the
-   actual graphics work referenced by the now-exact activation. Review their
-   complete ranges, dead branches, COM slots and returned rectangle layout.
-2. Recover packed/raw palette loaders at `0x40B760` (316-byte candidate) and
-   `0x40B640` (284-byte candidate), along with final surface property access.
+1. Recover packed/raw palette loaders at `0x40B760` (316-byte candidate) and
+   `0x40B640` (284-byte candidate), plus final surface-property access. Review
+   the full data path against actual file resources; do not infer palette
+   semantics solely from names.
+2. Continue into a substantial rendering owner alongside useful leaves, after
+   examining native boundaries and COM/data dependencies. The surface code is
+   recovered, but device initialization and rendering closure are still open.
 3. Close the external tail subobject lifetime `0x405E60`/`0x405F80`, context
    InitializeState/ResetState `0x408100`/`0x406440`, and pattern reader/decoder.
 4. Review timing thread `0x401850` and plan larger character-dispatch owners

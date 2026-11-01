@@ -2349,3 +2349,117 @@ type = "REL32"
 symbol = "??3@YAXPAX@Z"
 target = 0x00777e20
 evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[units.video-load-bitmap]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Surface.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-load-bitmap/Surface.obj"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target_address = 0x00408d00
+size = 905
+
+[[units.video-load-bitmap.relocations]]
+offset = 39
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 72
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 126
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 377
+type = "DIR32"
+symbol = "?bitmapFailure@@3QBDB"
+target = 0x007877d4
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 385
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 405
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 759
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 783
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-load-bitmap.relocations]]
+offset = 816
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[units.video-decode-packed]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Surface.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-decode-packed/Surface.obj"
+symbol = "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target_address = 0x00409470
+size = 711
+
+[[units.video-decode-packed.relocations]]
+offset = 211
+type = "DIR32"
+symbol = "?packedFailure@@3QBDB"
+target = 0x00787824
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[[units.video-decode-packed.relocations]]
+offset = 219
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings"
+
+[units.surface-make-rect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Surface.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/surface-make-rect/Surface.obj"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target_address = 0x0040c590
+size = 69

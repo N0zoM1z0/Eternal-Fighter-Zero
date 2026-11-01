@@ -291,3 +291,59 @@ That first verification required only three cold source/profile builds,
 including activation. Final activation source cleanup rebuilt only its one
 recipe. Configuration units were untouched. Existing recipes can reproduce
 the comparisons using the standard explicit `--unit` replay interface.
+
+## Surface transfer
+
+`src/Surface.cpp` recovers the complete 905-byte raw bitmap loader at
+`0x408D00..0x409089`, 711-byte packed decoder at `0x409470..0x409737`, and
+69-byte rectangle factory at `0x40C590..0x40C5D5`. Return instructions and
+following alignment were reviewed. The factory is an ordinary cdecl function
+returning four integers by value, not a thiscall rectangle constructor.
+It sets left/top to x/y and right/bottom to x+width/y+height. This recovers
+the otherwise externally bound rectangle-return behavior in the surface path.
+
+The minimum Video view now includes the DirectDraw pointer at `0x20808`;
+its complete object extent and initialization remain open. The pinned historical
+SDK reproduces standard IDirectDraw::CreateSurface (slot 6) and surface Lock /
+Unlock (slots 25 / 32), with stdcall COM arguments. Descriptors have dwSize
+108, flags 7, caps 0x840, and lock flag 1. Only the original assigned fields
+are initialized; the source does not zero descriptor storage absent from the
+original code. Full native comparison covers the fixed slot offsets too.
+
+The bitmap path reconstructs dimensions from independent byte pairs at 18/19
+and 22/23. Width uses signed remainder in
+`width += (4 - width % 4) * (width % 4 > 0)`, including both negative-remainder
+correction branches that Ghidra removes as unreachable. The rounded width is
+used for allocation, row transfer and the returned rectangle. Pixel offset is
+only the low byte pair at 10/11, not a silently corrected 32-bit BMP field.
+Rows are copied bottom-up, adding the byte palette offset before truncation.
+The original unchecked read/lock behavior and create-failure path (which
+returns a zero rectangle without closing/freeing the file allocation) remain.
+
+The packed path reads little-endian width/height byte pairs and starts its
+consumed-byte counter at four. Marker zero selects bottom-up uncompressed
+transfer. Nonzero marker selects forward-row RLE: literals at or below the
+marker replace the palette-biased current pixel; larger bytes set the repeat
+count to encoded-marker-1. Each branch advances the input counter separately.
+Repeat count and current pixel persist across row boundaries. Palette sums
+truncate on byte storage. Creation failure reports the original error binding
+and returns zero; success returns the consumed byte count. Unlock's original
+unused HRESULT assignment is preserved.
+
+First complete source comparisons were obtained early: bitmap 902 versus 905
+bytes, packed 708 versus 711, rectangle factory already exact. SDK interface
+slots and substantive decode expressions agreed; exact original branch order,
+duplicated cursor increments, stored HRESULT, and ordinary descriptor/state
+lifetimes resolved remaining differences. A two-field Dimensions aggregate
+recovers the bitmap width/height slots without dummy locals. Source scopes and
+names are reconstruction choices, not uniquely recovered original declarations.
+No target bytes, inert padding or forced-register ABI declarations were used.
+
+The complete final bodies match all bytes after explicit relocations. Public
+proof is `docs/evidence/surface-exact.json`. Private original disassembly and
+named binding inventory are `.analysis/ghidra/disasm-00408d00.txt`,
+`disasm-00409470.txt` and `.analysis/probes/surface.py`. The rectangle factory
+has no relocations; raw/packed bodies have ten/two. Error data bindings are
+`0x7877D4` and `0x787824`. Source grouping required four cold translation-unit
+artifacts for new and shared-header-dependent comparisons, rather than one
+compiler invocation per function. Configuration units were not replayed.

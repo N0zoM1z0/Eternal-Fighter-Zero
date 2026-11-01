@@ -16,3 +16,6 @@ address,end,size,status,evidence
 0x00408380,0x004083A3,35,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
 0x00406AA0,0x00406DA7,775,reviewed,docs/KNOWLEDGE_BASE.md#effect-activation
 0x00406DB0,0x00406E5D,173,reviewed,docs/KNOWLEDGE_BASE.md#effect-activation
+0x00408D00,0x00409089,905,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
+0x00409470,0x00409737,711,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
+0x0040C590,0x0040C5D5,69,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer

@@ -85,9 +85,9 @@ address,origin,status,evidence
 0x00408C70,unknown,unreviewed,
 0x00408CA0,unknown,unreviewed,
 0x00408CD0,unknown,unreviewed,
-0x00408D00,unknown,unreviewed,
+0x00408D00,authored,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
 0x00409090,unknown,unreviewed,
-0x00409470,unknown,unreviewed,
+0x00409470,authored,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
 0x00409740,unknown,unreviewed,
 0x00409A90,unknown,unreviewed,
 0x00409DB0,unknown,unreviewed,
@@ -111,7 +111,7 @@ address,origin,status,evidence
 0x0040BF20,unknown,unreviewed,
 0x0040C070,unknown,unreviewed,
 0x0040C1C0,unknown,unreviewed,
-0x0040C590,unknown,unreviewed,
+0x0040C590,authored,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
 0x0040C5E0,unknown,unreviewed,
 0x0040C6F0,unknown,unreviewed,
 0x0040C880,unknown,unreviewed,

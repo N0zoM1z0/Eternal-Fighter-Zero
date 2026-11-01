@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "method": "selected complete comparison; four cold source/profile artifacts shared unchanged across their selected functions; configuration units untouched",
+  "authority": "complete native codegen under explicit original bindings; compiler-generated helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 905,
+      "matched_bytes": 905,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 39,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 72,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 126,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 377,
+          "target": 7894996,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bitmapFailure@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 385,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 405,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 759,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 816,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3c67682517d146343d9be0d9859630800a2dc89933bcba6c0a75217dd4b02fc0",
+      "target_extent_sha256": "3c67682517d146343d9be0d9859630800a2dc89933bcba6c0a75217dd4b02fc0",
+      "unit": "video-load-bitmap",
+      "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+      "target_address": "0x00408D00",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "19627c35920908a7bf67870769965bc6a14668158604a7d8f53df20a85da70eb",
+      "object_sha256": "d0cb4bb978ea07625edfd355b2e510490e9a7f26d307aff2b29f3f7ce65647a6",
+      "source_sha256": "075c56c12f35a1a5eee21c20f42b415145a55b49ad643592cc6f4bfb0d964a34",
+      "dependencies": {
+        "src/Engine.h": "ab8b6bf5eb85a774958e035eea3e8c1e1a843d1c175b13f6b0191ddc9ea4ce7f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "61f96ba3505a3fba7a0eb672bff44709486e764adbac4a66ad138ad7aed65cd1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7731cf7fea21faefebf3019bf2f198935eb200611d9999de27709e98246abba7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 711,
+      "matched_bytes": 711,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 211,
+          "target": 7895076,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?packedFailure@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        },
+        {
+          "offset": 219,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassembly and PE import bindings",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8ab4eaf429bcb87214b9250b22537a65418f0a751a1ee68318b396fa8013308b",
+      "target_extent_sha256": "8ab4eaf429bcb87214b9250b22537a65418f0a751a1ee68318b396fa8013308b",
+      "unit": "video-decode-packed",
+      "symbol": "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+      "target_address": "0x00409470",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "19627c35920908a7bf67870769965bc6a14668158604a7d8f53df20a85da70eb",
+      "object_sha256": "d0cb4bb978ea07625edfd355b2e510490e9a7f26d307aff2b29f3f7ce65647a6",
+      "source_sha256": "075c56c12f35a1a5eee21c20f42b415145a55b49ad643592cc6f4bfb0d964a34",
+      "dependencies": {
+        "src/Engine.h": "ab8b6bf5eb85a774958e035eea3e8c1e1a843d1c175b13f6b0191ddc9ea4ce7f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "61f96ba3505a3fba7a0eb672bff44709486e764adbac4a66ad138ad7aed65cd1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fc7f4bc57f62d2fa7e069da2a4c97b62888bce8fc806092fe0c3f49dc2ba8ecc",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 69,
+      "matched_bytes": 69,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "2a3e0d2e1a7d2c793c83a40922828c1a2a48aa523c3482949a44a20c78c5e18c",
+      "target_extent_sha256": "2a3e0d2e1a7d2c793c83a40922828c1a2a48aa523c3482949a44a20c78c5e18c",
+      "unit": "surface-make-rect",
+      "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+      "target_address": "0x0040C590",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "19627c35920908a7bf67870769965bc6a14668158604a7d8f53df20a85da70eb",
+      "object_sha256": "d0cb4bb978ea07625edfd355b2e510490e9a7f26d307aff2b29f3f7ce65647a6",
+      "source_sha256": "075c56c12f35a1a5eee21c20f42b415145a55b49ad643592cc6f4bfb0d964a34",
+      "dependencies": {
+        "src/Engine.h": "ab8b6bf5eb85a774958e035eea3e8c1e1a843d1c175b13f6b0191ddc9ea4ce7f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "61f96ba3505a3fba7a0eb672bff44709486e764adbac4a66ad138ad7aed65cd1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5e9270525d6623d7779ff6c6be503de0ff92fb6a9a9105bf1ecdac261580f621",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
