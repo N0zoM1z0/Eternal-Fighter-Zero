@@ -1,33 +1,50 @@
 # Current handoff — 2026-11-01
 
-## Checkpoint
+## Active checkpoint
 
-Initial EFZ repository prepared using the TH10 organization. Use Bash and the
-local Ghidra wrapper directly; the operator explicitly requested no REA.
+The full EFZ reconstruction goal remains active. Work on substantial owners and
+small functions, recheck hypotheses against original evidence, handle dirty work,
+and commit substantive progress with `gpt-6.1-sol: `. Use Bash/local Ghidra only.
 
-The canonical supplied target, its complete PE mapping, VC7.1 RTM toolchain,
-isolated Wine execution, strict COFF oracle and private Ghidra project are in
-place. Exact target identity is in `config/target.toml`; upstream release
-provenance is still open. Do not substitute a presumed clean release silently.
+The canonical target remains SHA-256
+`3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
+Upstream release/modification provenance remains open. The public repository is
+`N0zoM1z0/Eternal-Fighter-Zero`; initial publication was authorized, but ordinary
+later checkpoints are local unless the operator requests a push.
 
-Local Ghidra 12.1.3 imported/analyzed the target and passed independent input,
-entrypoint and all four file-backed section hash checks. Its inventory has
-950 non-external candidates, kept separate from reviewed boundaries/origins.
-
-`src/Config.cpp` recovers two complete authored functions:
-
-| Unit | Address | Exact bytes |
+| Authored exact unit | Address | Bytes |
 | --- | --- | ---: |
+| `startup-main` | `0x401000` | 1,638 |
+| `startup-window-procedure` | `0x401670` | 468 |
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Cold replay has zero differences across 434 bytes and all 20 relocation fields.
-The public report is `docs/evidence/config-exact.json`; exact/source/origin/
-boundary ledgers are independent. The original TU and source names are unknown.
-The three string bindings and allocator/deallocator destinations remain original
-external bindings, not a closed reconstructed product graph.
+Total authored exact code is **2,540 bytes** in four complete functions.
+Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
+strict zero-difference proofs, but are classified compiler-generated and excluded
+from authored match totals. Candidate inventory remains 950 non-external entries.
 
-## Resume commands
+## Verified startup result
+
+`src/Startup.cpp` covers full window/device initialization, eight scene
+allocations in nine slots, message/frame dispatch and window-destruction cleanup.
+The original unreachable scene-zeroing block is preserved; Ghidra pseudocode
+omitted it. Independent IAT inspection corrected a misleading literal-only
+reading: destruction calls `timeEndPeriod(1)` and `PostQuitMessage(1000)`.
+
+Startup uses its own `/MT` profile because original CRT calls are direct.
+Do not transplant that profile globally: prior configuration units retain their
+verified `/MD` recipe. The first whole startup build was compared early and the
+remaining 33 local stack-displacement differences were resolved with natural
+MSG/WNDCLASS/HWND scope and names. No byte arrays for code, padding or fake ABI
+were used. Class names and opaque storage types remain provisional.
+
+Selected cold replay passed all four new units: 2,194 compared bytes and 198
+relocations, with zero differences. Public proof: `docs/evidence/startup-exact.json`.
+The unchanged configuration cohort was not rebuilt. Public progress counts only
+the two new authored owners (2,106 bytes), not the compiler-generated helpers.
+
+## Resume
 
 ```bash
 git status --short --branch
@@ -35,29 +52,34 @@ scripts/repo-python scripts/verify-target.py
 scripts/repo-python scripts/verify-toolchain.py --check
 scripts/repo-python scripts/report-reconstruction-status.py
 scripts/repo-python scripts/ghidra.py verify
+```
+
+Select only changed/involved units for subsequent native work. For startup edits:
+
+```bash
 scripts/repo-python scripts/replay-exact-units.py \
-  --unit config-read-byte --unit config-write-byte
+  --unit startup-main --unit startup-window-procedure \
+  --unit startup-context-delete --unit startup-secondary-delete
 scripts/repo-python scripts/ci.py
 ```
 
-For a documentation-only pass, the target/tool/Ghidra commands are unnecessary.
-The compiler execution smoke already passed C/C++, Windows headers, resources,
-linking, CRT and execution of its own binary. Repeat it only on setup/toolchain
-changes or a compiler/Wine failure.
+Current exact reports depend on complete source/selected recipe identities, not
+the current hash of the entire manifest. Adding unrelated units does not require
+replaying historical units. Documentation-only work needs no native rebuild.
 
-## Next work
+## Next evidence-driven owners
 
-1. Review the adjacent `0x405BE0` 268-byte object/file helper. Its stack cookie,
-   object field ownership and string/CRT bindings require their own manifest.
-2. Review a representative larger owner to test whether the `/Od` candidate
-   profile extends beyond these configuration leaves. Keep the first complete
-   comparison early and record unknown production settings honestly.
-3. Establish original game/CRT/library boundaries and subsystem ownership from
-   EFZ evidence. Use TH105 only for concrete engine-family hypotheses.
-4. Corroborate the supplied executable's upstream release/modification status
-   without changing the canonical input. Any alternate target needs a separate
-   comparison scope.
+1. Close context lifetime/data ownership from constructor `0x406070` (493-byte
+   candidate) and destructor `0x406260` (477-byte candidate). Their implementations
+   remain original external bindings despite exact startup callers.
+2. Attack context activation `0x406AA0` (775-byte candidate) and load
+   `0x406E60` (668-byte candidate), alongside useful small owners. Review actual
+   boundaries/types and compare the first complete source early.
+3. Review the 157-byte timing thread at `0x401850` to connect frame events to
+   the recovered main loop; review `0x405BE0` file helper when its owner is selected.
+4. Plan larger character dispatch owners from actual control-flow evidence;
+   automatic 60–88 KB bodies and decompiler warnings require careful review.
 
-LTCG/linked EH/data lanes, production linking, runnable reconstructed game,
-runtime dual-oracle comparison and portability remain open. No original-game
-execution has been claimed. See `RE_ARTIFACTS.md` for private recovery paths.
+Production TU partitioning, linked global data/resources, callee closure,
+runnable product, original/reconstructed runtime comparison and portability
+remain open. The original game has not been executed by this workflow.

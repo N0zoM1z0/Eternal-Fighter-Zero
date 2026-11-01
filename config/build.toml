@@ -10,3 +10,9 @@ artifact_kind = "coff"
 compiler = "msvc710/Vc7/bin/cl.exe"
 flags = ["/Od", "/G6", "/MD", "/Gy", "/W3"]
 status = "candidate; individually verified complete functions only"
+
+[profiles.vc71-od-static]
+artifact_kind = "coff"
+compiler = "msvc710/Vc7/bin/cl.exe"
+flags = ["/Od", "/G6", "/MT", "/Gy", "/W3"]
+status = "startup-specific profile; direct original CRT calls require non-dllimport headers"

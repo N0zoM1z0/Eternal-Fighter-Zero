@@ -116,3 +116,62 @@ cookie. Its source type/layout and full ownership remain open. Review it with
 the local Ghidra wrapper before extending the Config lane. The startup entry
 and DirectDraw/DirectInput/DirectSound imports are additional navigation leads,
 not recovered subsystem ownership.
+
+## Startup and window ownership
+
+The complete startup entry at `0x401000..0x401666` is 1,638 bytes. Its final
+instruction is the three-byte `ret 0x10` at `0x401663`; the following INT3 bytes
+are outside the owner. The callback at `0x401670..0x401844` is 468 bytes with
+another stdcall return. Both boundaries were rechecked against actual decoded
+instructions, rather than adopting the candidate size without inspection.
+
+`src/Startup.cpp` represents both complete bodies. The startup registers the
+window class, creates the window and timing events/thread, initializes three
+device owners, allocates the context and eight scenes in a nine-slot table,
+and runs the Windows message/frame loop. Slot four is null. The frame loop
+toggles the context field at `0x1368`, passes its signed 16-bit field at `0xF26`
+to the audio owner, dispatches virtual slot one, and waits on the frame event.
+The provisional class names do not establish the original class identities.
+Opaque storage describes observed allocation sizes/field offsets only.
+
+Ghidra removes the unreachable `0x401564..0x401582` scene-zeroing block from
+its pseudocode. The original function still owns those bytes. The recovered
+constant conditional retains that complete branch; no target bytes or padding
+are embedded. A first complete build was compared before acceptance: `/MD`
+introduced DLL-import CRT calls, unlike the original direct `srand` and `time`
+calls. The startup-specific `/MT` profile fixes those header declarations.
+The previous configuration profile is retained and was not globally replaced.
+
+The complete `/MT` startup initially had 33 stack-displacement differences.
+Keeping the MSG/WNDCLASS window state in the outer function and the HWND's use
+inside its post-registration scope recovers the original natural local layout:
+MSG at EBP-0x1C, WNDCLASS at EBP-0x44, HWND at EBP-0x48. No fake parameters,
+register controls or extra dummy locals are used. The input configuration
+callee receives an unsigned integer; conversion of the byte result accounts
+for the original explicit zero-extension before the call.
+
+Window destruction first gates scene message forwarding with the ready flag,
+then frees the nonvirtual scene base allocations, deletes the context and
+optional secondary owners, shuts down audio/input/video in that order,
+terminates the timing thread and closes three handles. Independent PE import
+inspection establishes **timeEndPeriod(1), PostQuitMessage(1000)**. Reading the
+literal arguments without resolving their IAT destinations would incorrectly
+suggest a sleep call. Default messages delegate to DefWindowProcA.
+
+Reviewed bindings include globals at `0x790100..0x790150`, input/audio owners
+at `0x7B0968`/`0x7B0B60`, device methods and eight constructor destinations.
+Every relocation has an explicit named binding in the manifest. Allocation
+sizes are 0x142F0 for the context and 0x44C/0x560/0x438/0x598/0x474/0x760/
+0x448/0x758 for scenes. These exact callers remain conditional on the original
+callee/data addresses; their implementations and linked initialization are open.
+
+The compiler also reproduces the complete 44-byte scalar-deleting helpers at
+`0x4018F0..0x40191C` and `0x401920..0x40194C`. Their destructor destinations are
+`0x406260` and `0x40ECB0`, followed by the original conditional deallocation.
+These are reviewed **compiler-generated** origins, not authored progress.
+Their strict units and comparison reports are retained as auxiliary ABI proof.
+
+Private evidence: `.analysis/ghidra/disasm-00401000.txt`, the corresponding
+startup decompile, `.analysis/probes/startup.py` (independent named binding
+inventory), native build logs and `.analysis/exact/startup-selected.json`.
+Public complete comparisons are in `docs/evidence/startup-exact.json`.

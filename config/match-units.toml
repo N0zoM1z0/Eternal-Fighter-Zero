@@ -162,3 +162,1429 @@ type = "DIR32"
 symbol = "__imp__CloseHandle@4"
 target = 0x00787038
 evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[units.startup-main]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Startup.cpp"
+dependencies = []
+object = "build/match-units/startup-main/Startup.obj"
+symbol = "_GameMain@16"
+target_address = 0x00401000
+size = 1638
+
+[[units.startup-main.relocations]]
+offset = 18
+type = "REL32"
+symbol = "_memset"
+target = 0x00777dc0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 34
+type = "DIR32"
+symbol = "?classNameFirst@@3QBDB"
+target = 0x0078720c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 41
+type = "DIR32"
+symbol = "_WindowProcedure@16"
+target = 0x00401670
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 61
+type = "DIR32"
+symbol = "__imp__LoadIconA@8"
+target = 0x00787190
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "__imp__LoadCursorA@8"
+target = 0x00787194
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 109
+type = "DIR32"
+symbol = "__imp__GetStockObject@4"
+target = 0x00787018
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 119
+type = "DIR32"
+symbol = "?classNameSecond@@3QBDB"
+target = 0x00787220
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 129
+type = "DIR32"
+symbol = "__imp__RegisterClassA@4"
+target = 0x00787198
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 161
+type = "DIR32"
+symbol = "__imp__GetSystemMetrics@4"
+target = 0x0078719c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__imp__GetSystemMetrics@4"
+target = 0x0078719c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 185
+type = "DIR32"
+symbol = "?windowTitle@@3QBDB"
+target = 0x00787234
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 190
+type = "DIR32"
+symbol = "?windowClass@@3QBDB"
+target = 0x00787248
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 198
+type = "DIR32"
+symbol = "__imp__CreateWindowExA@48"
+target = 0x007871a0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 228
+type = "DIR32"
+symbol = "__imp__ShowWindow@8"
+target = 0x007871a4
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 238
+type = "DIR32"
+symbol = "__imp__UpdateWindow@4"
+target = 0x007871a8
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 245
+type = "REL32"
+symbol = "_time"
+target = 0x00777d83
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 254
+type = "REL32"
+symbol = "_srand"
+target = 0x00777d54
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 265
+type = "DIR32"
+symbol = "__imp__timeBeginPeriod@4"
+target = 0x007871dc
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 271
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 276
+type = "DIR32"
+symbol = "?lastTick@@3KA"
+target = 0x00790100
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 290
+type = "DIR32"
+symbol = "__imp__CreateEventA@16"
+target = 0x00787034
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 295
+type = "DIR32"
+symbol = "?tickEvent@@3PAXA"
+target = 0x0079013c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 309
+type = "DIR32"
+symbol = "__imp__CreateEventA@16"
+target = 0x00787034
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 314
+type = "DIR32"
+symbol = "?frameEvent@@3PAXA"
+target = 0x00790140
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 320
+type = "DIR32"
+symbol = "?tickEvent@@3PAXA"
+target = 0x0079013c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 327
+type = "DIR32"
+symbol = "__imp__SetEvent@4"
+target = 0x00787030
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 332
+type = "DIR32"
+symbol = "?frameEvent@@3PAXA"
+target = 0x00790140
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 339
+type = "DIR32"
+symbol = "__imp__SetEvent@4"
+target = 0x00787030
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 344
+type = "DIR32"
+symbol = "?threadId@@3KA"
+target = 0x00790138
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 353
+type = "DIR32"
+symbol = "_FrameThread@4"
+target = 0x00401850
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 363
+type = "DIR32"
+symbol = "__imp__CreateThread@24"
+target = 0x0078702c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 368
+type = "DIR32"
+symbol = "?threadHandle@@3PAXA"
+target = 0x00790144
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 376
+type = "DIR32"
+symbol = "?threadHandle@@3PAXA"
+target = 0x00790144
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 383
+type = "DIR32"
+symbol = "__imp__SetThreadPriority@8"
+target = 0x00787028
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 391
+type = "DIR32"
+symbol = "__imp__ShowCursor@4"
+target = 0x007871ac
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 398
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 411
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 416
+type = "REL32"
+symbol = "?Initialize@Video@@QAEXPAUHWND__@@E@Z"
+target = 0x004083b0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 425
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 430
+type = "REL32"
+symbol = "?Initialize@Input@@QAEXPAUHWND__@@@Z"
+target = 0x0040c6f0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 439
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 444
+type = "REL32"
+symbol = "?Initialize@Audio@@QAEXPAUHWND__@@@Z"
+target = 0x0040d9f0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 454
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 474
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 486
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 491
+type = "REL32"
+symbol = "?Configure@Input@@QAEXI@Z"
+target = 0x0040d460
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 498
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 503
+type = "REL32"
+symbol = "?Defaults@Input@@QAEXXZ"
+target = 0x0040d140
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 513
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 530
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 535
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 540
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 548
+type = "REL32"
+symbol = "??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00406070
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 569
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 575
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 580
+type = "REL32"
+symbol = "?Initialize@Context@@QAEXXZ"
+target = 0x00406780
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 586
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 591
+type = "REL32"
+symbol = "?Load@Context@@QAEXXZ"
+target = 0x00406e60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 597
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 602
+type = "REL32"
+symbol = "?Activate@Context@@QAEXXZ"
+target = 0x00406aa0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 608
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 618
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 632
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 649
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 654
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 659
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 665
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 671
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 676
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 688
+type = "REL32"
+symbol = "??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00775d60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 709
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 719
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 736
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 741
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 746
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 752
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 758
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 763
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 775
+type = "REL32"
+symbol = "??0Scene1@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00753260
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 796
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 806
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 823
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 828
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 833
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 839
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 845
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 850
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 862
+type = "REL32"
+symbol = "??0Scene2@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x0076c6f0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 883
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 893
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 910
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 915
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 920
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 926
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 932
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 937
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 949
+type = "REL32"
+symbol = "??0Scene3@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x007633a0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 970
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 976
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 990
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1007
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1012
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1017
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1023
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1029
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1034
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1046
+type = "REL32"
+symbol = "??0Scene5@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x007712f0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1076
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1099
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1116
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1121
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1126
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1131
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1137
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1142
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1154
+type = "REL32"
+symbol = "??0Scene6@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759f30
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1184
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1194
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1211
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1216
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1221
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1226
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1232
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1237
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1249
+type = "REL32"
+symbol = "??0Scene7@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x007758b0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1279
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1289
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1306
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1311
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1316
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1321
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1327
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1332
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1344
+type = "REL32"
+symbol = "??0Scene8@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x0076e480
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1374
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1382
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1392
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1402
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1412
+type = "DIR32"
+symbol = "?ready@@3HA"
+target = 0x0079014c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1447
+type = "DIR32"
+symbol = "__imp__PeekMessageA@20"
+target = 0x007871b0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1467
+type = "DIR32"
+symbol = "__imp__GetMessageA@16"
+target = 0x007871b4
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1486
+type = "DIR32"
+symbol = "__imp__TranslateMessage@4"
+target = 0x007871b8
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1496
+type = "DIR32"
+symbol = "__imp__DispatchMessageA@4"
+target = 0x007871bc
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1504
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1522
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1535
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1542
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1550
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1563
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1568
+type = "REL32"
+symbol = "?SetMode@Audio@@QAEXF@Z"
+target = 0x0040e4d0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1575
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1582
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1589
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1596
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1606
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1613
+type = "DIR32"
+symbol = "?frameEvent@@3PAXA"
+target = 0x00790140
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-main.relocations]]
+offset = 1620
+type = "DIR32"
+symbol = "__imp__WaitForSingleObject@8"
+target = 0x00787024
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[units.startup-window-procedure]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Startup.cpp"
+dependencies = []
+object = "build/match-units/startup-window-procedure/Startup.obj"
+symbol = "_WindowProcedure@16"
+target_address = 0x00401670
+size = 468
+
+[[units.startup-window-procedure.relocations]]
+offset = 8
+type = "DIR32"
+symbol = "?ready@@3HA"
+target = 0x0079014c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 25
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 35
+type = "DIR32"
+symbol = "?sceneIndex@@3EA"
+target = 0x00790148
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 42
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 80
+type = "DIR32"
+symbol = "?active@@3IA"
+target = 0x00790134
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 91
+type = "DIR32"
+symbol = "?ready@@3HA"
+target = 0x0079014c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 129
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 142
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 154
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 167
+type = "DIR32"
+symbol = "?scenes@@3PAPAVScene@@A"
+target = 0x00790110
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 178
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 203
+type = "REL32"
+symbol = "??_GContext@@QAEPAXI@Z"
+target = 0x004018f0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 221
+type = "DIR32"
+symbol = "?context@@3PAVContext@@A"
+target = 0x0079010c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 231
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 240
+type = "DIR32"
+symbol = "?secondaryA@@3PAVSecondary@@A"
+target = 0x00790104
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 265
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 283
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 292
+type = "DIR32"
+symbol = "?secondaryB@@3PAVSecondary@@A"
+target = 0x00790108
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 317
+type = "REL32"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target = 0x00401920
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 334
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 339
+type = "REL32"
+symbol = "?Shutdown@Audio@@QAEXXZ"
+target = 0x0040d930
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 344
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 349
+type = "REL32"
+symbol = "?Shutdown@Input@@QAEXXZ"
+target = 0x0040c880
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 354
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 359
+type = "REL32"
+symbol = "?Shutdown@Video@@QAEXXZ"
+target = 0x00408a60
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 366
+type = "DIR32"
+symbol = "?threadHandle@@3PAXA"
+target = 0x00790144
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 373
+type = "DIR32"
+symbol = "__imp__TerminateThread@8"
+target = 0x0078703c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 379
+type = "DIR32"
+symbol = "?frameEvent@@3PAXA"
+target = 0x00790140
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 386
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 392
+type = "DIR32"
+symbol = "?tickEvent@@3PAXA"
+target = 0x0079013c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 399
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 404
+type = "DIR32"
+symbol = "?threadHandle@@3PAXA"
+target = 0x00790144
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 411
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 419
+type = "DIR32"
+symbol = "__imp__timeEndPeriod@4"
+target = 0x007871d8
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__imp__PostQuitMessage@4"
+target = 0x00787188
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-window-procedure.relocations]]
+offset = 454
+type = "DIR32"
+symbol = "__imp__DefWindowProcA@16"
+target = 0x0078718c
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[units.startup-context-delete]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Startup.cpp"
+dependencies = []
+object = "build/match-units/startup-context-delete/Startup.obj"
+symbol = "??_GContext@@QAEPAXI@Z"
+target_address = 0x004018f0
+size = 44
+
+[[units.startup-context-delete.relocations]]
+offset = 11
+type = "REL32"
+symbol = "??1Context@@QAE@XZ"
+target = 0x00406260
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-context-delete.relocations]]
+offset = 28
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[units.startup-secondary-delete]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Startup.cpp"
+dependencies = []
+object = "build/match-units/startup-secondary-delete/Startup.obj"
+symbol = "??_GSecondary@@QAEPAXI@Z"
+target_address = 0x00401920
+size = 44
+
+[[units.startup-secondary-delete.relocations]]
+offset = 11
+type = "REL32"
+symbol = "??1Secondary@@QAE@XZ"
+target = 0x0040ecb0
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[[units.startup-secondary-delete.relocations]]
+offset = 28
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"

@@ -19,6 +19,16 @@ The only canonical target is ignored, read-only `resources/EFZ.exe`, SHA-256
 Do not substitute `EFZ.OLD`, netplay binaries or another release. New targets
 require an explicit scope change, a separate identity and separate evidence.
 
+## Active reconstruction direction
+
+Recover both substantial owners and useful small functions; do not optimize
+for leaf count. Recheck prior documentation/hypotheses against target evidence.
+The operator says this is the only working session: recover and continue dirty
+work rather than avoiding it. Commit substantive verified progress using the
+English prefix `gpt-6.1-sol: `. Replay only changed/involved units, never an
+unrequested full cold cohort. Continue the full reconstruction objective across
+checkpoints; a successful unit does not complete the game reconstruction.
+
 ## Exact work
 
 Use the pinned VC7.1 RTM 13.10.3077 toolchain and explicit per-unit profiles.
