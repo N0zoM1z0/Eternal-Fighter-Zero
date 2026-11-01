@@ -427,3 +427,105 @@ Private supporting evidence is `.analysis/ghidra/decompile-0040b8a0.txt`,
 within each recipe. Configuration units were not rebuilt. Public certificates
 for startup, context, activation and surface transfer have refreshed dependency
 identities. The original game and a reconstructed whole product remain unrun.
+
+## Display device lifetime
+
+Direct original call-operand review corrects an earlier handoff hypothesis:
+`0x4019B0` is a 614-byte file transformation utility, not device initialization.
+It reads `system0\\object.bmp`, XORs bytes after its ten-byte prefix with 100,
+and writes `system\\object.dat`; its analyzed caller set is empty. This does
+not prove it is unreachable through every possible indirect path. Startup
+actually calls **`0x4083B0`**, whose complete code returns an integer, so the
+previous void-return declaration was also corrected. Startup still compares
+exactly under the corrected COFF symbol.
+
+`src/Device.cpp` recovers the following complete authored bodies. The original
+return instructions and following alignment were reviewed independently of
+Ghidra's candidate names and calling-convention guesses.
+
+| Provisional owner | Address | Bytes |
+| --- | --- | ---: |
+| Initialize | `0x4083B0` | 654 |
+| Recreate8Bit | `0x408640` | 519 |
+| Recreate16Bit | `0x408850` | 519 |
+| Shutdown | `0x408A60` | 231 |
+| Destructor | `0x408B50` | 231 |
+| ReleaseSurface | `0x408C40` | 46 |
+| RequestClose | `0x408C70` | 34 |
+| RestorePrimarySurface | `0x408CA0` | 48 |
+| RestoreSurface | `0x408CD0` | 42 |
+
+Initialization stores the raw mode byte at offset four and HWND at zero,
+creates DirectDraw through its original import thunk at `0x776A62`, and sets
+cooperative flags `0x13`. Mode equal to one selects 640x480; other values
+select 320x240. Initial depth is eight. The primary descriptor has size 108,
+flags `0x21`, caps `0xA18` and one back buffer. Its width/height use the raw
+byte in `mode * 320 + 320` / `mode * 240 + 240`; they do not normalize it to
+a boolean. Back-buffer caps are four. Initialization creates a palette from
+256 PALETTEENTRY values at offset five and attaches it to the primary surface.
+The two final palette calls retain their original unchecked results.
+
+Every checked failure displays its distinct original message/title binding and
+calls RequestClose. That helper posts WM_CLOSE to the stored window and returns
+**one**, as do successful initialization and recreation. The code does not
+invent zero failure returns or add cleanup before posting. Both recreation
+functions release back and primary surfaces first, retain the palette interface,
+and rebuild at their selected depth without creating or reattaching a palette.
+The exact descriptor assignments and original error branches are preserved.
+
+Shutdown and destruction independently release palette, back surface and primary
+surface, zeroing each nonnull pointer. They then restore the display mode,
+release DirectDraw and zero its pointer. The surface helper releases and zeros
+its caller's pointer. Restore helpers call the historical surface Restore slot
+27 and return zero for any nonzero HRESULT, one for zero. RequestClose uses the
+independently verified USER32 PostMessageA IAT entry `0x787180`.
+
+The shared Video view now represents HWND, the palette at `0x5`, both previously
+recovered blend matrices at `0x405`/`0x10405`, the distance table at `0x20406`,
+and DirectDraw/primary/back/palette interfaces at
+`0x20808`/`0x2080C`/`0x20810`/`0x20814`. The native model occupies `0x20818`
+bytes, the interval from original Video global `0x790150` to the neighboring
+Input global `0x7B0968`. This is compatible with the observed allocation and
+consumers; it does not uniquely recover original declarations or TU grouping.
+
+Global lifetime establishes why `0x408B50` is destruction rather than a second
+arbitrarily named shutdown. Original initializer `0x786420` constructs Video
+at `0x790150` and registers wrapper `0x786480` through the CRT exit routine at
+`0x777F05`. That wrapper calls `0x408B50` on the same object. A natural
+`Video video;` definition in `src/VideoGlobal.cpp` reproduces the complete
+28-byte initializer and 15-byte exit wrapper. These two compiler-generated
+helpers are auxiliary evidence, excluded from authored exact totals. Their
+public proof is `docs/evidence/video-global-exact.json`. Linked CRT table
+placement, all other globals and complete product startup remain open.
+
+The first complete Device.cpp comparison already had the original lengths.
+Only 21/17/17 stack-displacement bytes differed in initialization/recreation;
+the five initially included smaller bodies were already exact. Keeping scalar
+HRESULT/caps outside the normal descriptor scope recovers the original frame
+and slots, without dummy locals or byte padding. All nine final bodies are
+complete strict exact in `docs/evidence/device-exact.json`. Revalidation used
+seven cold source/profile artifacts for 34 new/shared-header-dependent bodies;
+configuration recipes were untouched.
+
+The global definition exposed a COFF-reader defect: VC7.1 advertises the `.bss`
+allocation size (133,144 bytes) with raw pointer zero, while the previous reader
+required that allocation to fit inside the object file. The reader now accepts
+this unbacked, uninitialized-data shape without synthesizing file bytes. It
+still rejects missing raw code/data, mixed BSS/code or initialized flags, raw
+BSS storage and BSS relocations. Two new target-free tests cover a real-shaped
+large BSS neighbor and malformed variants. Microsoft's
+[section table and data specification](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format#section-table-section-headers)
+describes the uninitialized-data flag and zero raw pointer; the retained
+nonzero allocation size here is directly observed VC7.1 object evidence.
+This adds no linked-data acceptance lane or relaxation to function comparison.
+
+Private evidence includes `.analysis/ghidra/decompile-004083b0.txt`,
+`decompile-00408850.txt`, `callers-00408b50.txt`, `callers-00401950.txt`,
+`callers-004019b0.txt`, and `.analysis/probes/raw-00408*.txt`,
+`raw-00786420.txt`, `Device-first.cpp`, `device.py`, and `video-global.py`.
+An original 865-byte rendering candidate at `0x40A440` was also inspected:
+its inner loops explicitly manipulate AH/AL and push/pop ESI/EDI within branch
+bodies. A faithful natural-C++ exact strategy remains open. The 14,114-byte
+`0x401C20` candidate has a large state switch and x87 arithmetic; its decompile
+and bounded original disassembly are retained for further owner work. Neither
+candidate receives source or exact credit from this inspection.

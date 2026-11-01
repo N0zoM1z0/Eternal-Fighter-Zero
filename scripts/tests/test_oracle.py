@@ -39,6 +39,19 @@ def object_fixture(code=b"\xC3", relocation=False, function_count=1):
     return header + section + code + reloc + records + struct.pack("<I", 4)
 
 
+def object_with_bss_fixture():
+    """A file-backed function beside a large, unbacked VC7.1 .bss section."""
+    original = object_fixture()
+    header = bytearray(original[:20])
+    struct.pack_into("<H", header, 2, 2)
+    struct.pack_into("<I", header, 8, struct.unpack_from("<I", header, 8)[0] + 40)
+    text = bytearray(original[20:60])
+    struct.pack_into("<I", text, 20, 100)
+    bss = struct.pack("<8sIIIIIIHHI", b".bss\0\0\0\0", 0, 0, 0x20818,
+                      0, 0, 0, 0, 0, 0xC0400080)
+    return header + text + bss + original[60:]
+
+
 class ExactOracleTests(unittest.TestCase):
     def test_replays_all_addends_without_masking(self):
         rows = [binding(), binding(4, "REL32", "_callee", 0x405000)]
@@ -114,6 +127,28 @@ class ExactOracleTests(unittest.TestCase):
                 data[offset:offset + len(payload)] = payload
                 path.write_bytes(data)
                 with self.assertRaises(ValueError):
+                    coff_object(path)
+
+    def test_coff_bss_storage_is_not_read_as_file_bytes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "x.obj"
+            path.write_bytes(object_with_bss_fixture())
+            _, sections, _ = coff_object(path)
+            self.assertEqual((sections[1]["size"], sections[1]["raw_offset"]), (0x20818, 0))
+            self.assertEqual(object_function(path, "_f0"), (b"\xc3", []))
+
+    def test_coff_unbacked_code_and_malformed_bss_reject(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "x.obj"
+            # Missing code bytes, mixed BSS/code or initialized flags, raw BSS
+            # bytes and BSS relocations must not bypass file-backed validation.
+            mutations = [(40, "I", 0), (96, "I", 0xC04000A0),
+                         (96, "I", 0xC04000C0), (80, "I", 100), (92, "H", 1)]
+            for offset, kind, value in mutations:
+                data = object_with_bss_fixture()
+                struct.pack_into("<" + kind, data, offset, value)
+                path.write_bytes(data)
+                with self.subTest(offset=offset, value=value), self.assertRaises(ValueError):
                     coff_object(path)
 
     def test_unit_manifest_is_bound_to_canonical_target(self):

@@ -24,3 +24,14 @@ address,end,size,status,evidence
 0x0040B760,0x0040B89C,316,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
 0x0040BCC0,0x0040BD25,101,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
 0x0040B8A0,0x0040BCBE,1054,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
+0x004083B0,0x0040863E,654,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408640,0x00408847,519,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408850,0x00408A57,519,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408A60,0x00408B47,231,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408B50,0x00408C37,231,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408C40,0x00408C6E,46,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408C70,0x00408C92,34,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408CA0,0x00408CD0,48,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00408CD0,0x00408CFA,42,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00786420,0x0078643C,28,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00786480,0x0078648F,15,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime

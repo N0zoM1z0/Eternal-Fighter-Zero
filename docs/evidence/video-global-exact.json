@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "method": "selected complete comparison; seven cold source/profile artifacts shared unchanged across 34 new or shared-header-dependent functions; configuration units untouched",
+  "authority": "complete native codegen under explicit original bindings; compiler-generated helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 28,
+      "matched_bytes": 28,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 7930192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?video@@3VVideo@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4200784,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Video@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        },
+        {
+          "offset": 14,
+          "target": 7890048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_$E2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 7831301,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_atexit",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "be5d33eadc61ef23fff224c6037bb1a1afd462ee3b25a17ba8d16e211b88c49e",
+      "target_extent_sha256": "be5d33eadc61ef23fff224c6037bb1a1afd462ee3b25a17ba8d16e211b88c49e",
+      "unit": "video-static-initialize",
+      "symbol": "_$E1",
+      "target_address": "0x00786420",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "083cab9d44699a8bc8185258ff21d8c0c0c66d62886187c5cbb94ec0b1e3e64f",
+      "object_sha256": "14ee7b844cc8eb282ddc3f2b137c3fd5b862b0d541e750c05a3409703342473f",
+      "source_sha256": "07a43bfd7e6e7483e733af70d0f2cbeffd948599e1894fbe0467fcda3a64a79f",
+      "dependencies": {
+        "src/Engine.h": "cfccba41ef381fe22e5e2f4213b6ff050afbdef516bec9432348f7462a1ae478"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5d8a2c2673e747318d8ceaec96d11191176de9a9f8cb2f1d5cf0d98fa9a6554d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a567e06e7c25c3c91c5ea6cc56124834b672d0438822fc8d89f4088eb75a56fe",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 15,
+      "matched_bytes": 15,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 7930192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?video@@3VVideo@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4229968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1Video@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "374ce23e8dc858e6e25d7e90157ec3180b549d3dc97a48cadea6a7a54f2f475c",
+      "target_extent_sha256": "374ce23e8dc858e6e25d7e90157ec3180b549d3dc97a48cadea6a7a54f2f475c",
+      "unit": "video-static-destruct",
+      "symbol": "_$E2",
+      "target_address": "0x00786480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "083cab9d44699a8bc8185258ff21d8c0c0c66d62886187c5cbb94ec0b1e3e64f",
+      "object_sha256": "14ee7b844cc8eb282ddc3f2b137c3fd5b862b0d541e750c05a3409703342473f",
+      "source_sha256": "07a43bfd7e6e7483e733af70d0f2cbeffd948599e1894fbe0467fcda3a64a79f",
+      "dependencies": {
+        "src/Engine.h": "cfccba41ef381fe22e5e2f4213b6ff050afbdef516bec9432348f7462a1ae478"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5d8a2c2673e747318d8ceaec96d11191176de9a9f8cb2f1d5cf0d98fa9a6554d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "16a4fbc3c6ca9a1f097b21382c92b36c136b41a6c9675433e13fff6d1279291e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

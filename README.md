@@ -40,13 +40,13 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **twenty complete exact authored functions, 8,784 code bytes**,
-with every relocation field explicitly bound and compared. Five compiler-generated deleting/array-iteration helpers are checked separately
+Recovered owners provide **twenty-nine complete exact authored functions, 11,108 code bytes**,
+with every relocation field explicitly bound and compared. Seven compiler-generated deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. The local Ghidra
 inventory contains 950 non-external candidates; their boundaries and origins
 remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
 is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
-the accepted startup/window, context lifetime, effect activation, surface transfer, palette/blend tables and pattern owners, configuration
+the accepted startup/window, context lifetime, effect activation, display-device lifetime, surface transfer, palette/blend tables and pattern owners, configuration
 helpers, retained evidence and next owner.
 
 Compiler, linker, resource and native execution smoke checks pass. The original

@@ -435,7 +435,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 [[units.startup-main.relocations]]
 offset = 416
 type = "REL32"
-symbol = "?Initialize@Video@@QAEXPAUHWND__@@E@Z"
+symbol = "?Initialize@Video@@QAEHPAUHWND__@@E@Z"
 target = 0x004083b0
 evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
 
@@ -2604,3 +2604,561 @@ object = "build/match-units/video-build-blend-tables/Palette.obj"
 symbol = "?BuildBlendTables@Video@@QAEXPAE@Z"
 target_address = 0x0040b8a0
 size = 1054
+
+[units.video-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-initialize/Device.obj"
+symbol = "?Initialize@Video@@QAEHPAUHWND__@@E@Z"
+target_address = 0x004083b0
+size = 654
+
+[[units.video-initialize.relocations]]
+offset = 41
+type = "REL32"
+symbol = "_DirectDrawCreate@12"
+target = 0x00776a62
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 57
+type = "DIR32"
+symbol = "?initCreateTitle@@3QBDB"
+target = 0x007875d8
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 62
+type = "DIR32"
+symbol = "?initCreateError@@3QBDB"
+target = 0x007875e0
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 70
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 78
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 131
+type = "DIR32"
+symbol = "?initCooperativeTitle@@3QBDB"
+target = 0x00787604
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "?initCooperativeError@@3QBDB"
+target = 0x0078760c
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 144
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 152
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 218
+type = "DIR32"
+symbol = "?initLargeTitle@@3QBDB"
+target = 0x00787624
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 223
+type = "DIR32"
+symbol = "?initLargeError@@3QBDB"
+target = 0x0078762c
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 231
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 239
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 298
+type = "DIR32"
+symbol = "?initSmallTitle@@3QBDB"
+target = 0x00787648
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 303
+type = "DIR32"
+symbol = "?initSmallError@@3QBDB"
+target = 0x00787650
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 311
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 319
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 450
+type = "DIR32"
+symbol = "?initPrimaryTitle@@3QBDB"
+target = 0x0078766c
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 455
+type = "DIR32"
+symbol = "?initPrimaryError@@3QBDB"
+target = 0x00787674
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 463
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 471
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 537
+type = "DIR32"
+symbol = "?initBackTitle@@3QBDB"
+target = 0x00787690
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 542
+type = "DIR32"
+symbol = "?initBackError@@3QBDB"
+target = 0x00787698
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 550
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-initialize.relocations]]
+offset = 558
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[units.video-recreate-8bit]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-recreate-8bit/Device.obj"
+symbol = "?Recreate8Bit@Video@@QAEHXZ"
+target_address = 0x00408640
+size = 519
+
+[[units.video-recreate-8bit.relocations]]
+offset = 167
+type = "DIR32"
+symbol = "?reset8LargeTitle@@3QBDB"
+target = 0x007876b4
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 172
+type = "DIR32"
+symbol = "?reset8LargeError@@3QBDB"
+target = 0x007876bc
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 180
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 188
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 247
+type = "DIR32"
+symbol = "?reset8SmallTitle@@3QBDB"
+target = 0x007876d8
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 252
+type = "DIR32"
+symbol = "?reset8SmallError@@3QBDB"
+target = 0x007876e0
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 260
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 268
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 399
+type = "DIR32"
+symbol = "?reset8PrimaryTitle@@3QBDB"
+target = 0x007876fc
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 404
+type = "DIR32"
+symbol = "?reset8PrimaryError@@3QBDB"
+target = 0x00787704
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 412
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 420
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 483
+type = "DIR32"
+symbol = "?reset8BackTitle@@3QBDB"
+target = 0x00787720
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 488
+type = "DIR32"
+symbol = "?reset8BackError@@3QBDB"
+target = 0x00787728
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 496
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-8bit.relocations]]
+offset = 504
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[units.video-recreate-16bit]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-recreate-16bit/Device.obj"
+symbol = "?Recreate16Bit@Video@@QAEHXZ"
+target_address = 0x00408850
+size = 519
+
+[[units.video-recreate-16bit.relocations]]
+offset = 167
+type = "DIR32"
+symbol = "?reset16LargeTitle@@3QBDB"
+target = 0x00787744
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 172
+type = "DIR32"
+symbol = "?reset16LargeError@@3QBDB"
+target = 0x0078774c
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 180
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 188
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 247
+type = "DIR32"
+symbol = "?reset16SmallTitle@@3QBDB"
+target = 0x00787768
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 252
+type = "DIR32"
+symbol = "?reset16SmallError@@3QBDB"
+target = 0x00787770
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 260
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 268
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 399
+type = "DIR32"
+symbol = "?reset16PrimaryTitle@@3QBDB"
+target = 0x0078778c
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 404
+type = "DIR32"
+symbol = "?reset16PrimaryError@@3QBDB"
+target = 0x00787794
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 412
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 420
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 483
+type = "DIR32"
+symbol = "?reset16BackTitle@@3QBDB"
+target = 0x007877b0
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 488
+type = "DIR32"
+symbol = "?reset16BackError@@3QBDB"
+target = 0x007877b8
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 496
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[[units.video-recreate-16bit.relocations]]
+offset = 504
+type = "REL32"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target = 0x00408c70
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[units.video-shutdown]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-shutdown/Device.obj"
+symbol = "?Shutdown@Video@@QAEXXZ"
+target_address = 0x00408a60
+size = 231
+
+[units.video-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-destruct/Device.obj"
+symbol = "??1Video@@QAE@XZ"
+target_address = 0x00408b50
+size = 231
+
+[units.video-release-surface]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-release-surface/Device.obj"
+symbol = "?ReleaseSurface@Video@@QAEXPAPAUIUnknown@@@Z"
+target_address = 0x00408c40
+size = 46
+
+[units.video-request-close]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-request-close/Device.obj"
+symbol = "?RequestClose@Video@@QAEHXZ"
+target_address = 0x00408c70
+size = 34
+
+[[units.video-request-close.relocations]]
+offset = 21
+type = "DIR32"
+symbol = "__imp__PostMessageA@16"
+target = 0x00787180
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original body, named data and PE imports"
+
+[units.video-restore-primary]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-restore-primary/Device.obj"
+symbol = "?RestorePrimarySurface@Video@@QAEHXZ"
+target_address = 0x00408ca0
+size = 48
+
+[units.video-restore-surface]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Device.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-restore-surface/Device.obj"
+symbol = "?RestoreSurface@Video@@QAEHPAPAUIUnknown@@@Z"
+target_address = 0x00408cd0
+size = 42
+
+[units.video-static-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoGlobal.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-static-initialize/VideoGlobal.obj"
+symbol = "_$E1"
+target_address = 0x00786420
+size = 28
+
+[[units.video-static-initialize.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[[units.video-static-initialize.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??0Video@@QAE@XZ"
+target = 0x00401950
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[[units.video-static-initialize.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "_$E2"
+target = 0x00786480
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[[units.video-static-initialize.relocations]]
+offset = 19
+type = "REL32"
+symbol = "_atexit"
+target = 0x00777f05
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[units.video-static-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoGlobal.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-static-destruct/VideoGlobal.obj"
+symbol = "_$E2"
+target_address = 0x00786480
+size = 15
+
+[[units.video-static-destruct.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?video@@3VVideo@@A"
+target = 0x00790150
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[[units.video-static-destruct.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??1Video@@QAE@XZ"
+target = 0x00408b50
+evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"

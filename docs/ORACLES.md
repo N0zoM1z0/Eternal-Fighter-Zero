@@ -62,3 +62,14 @@ The focused checks falsify incomplete extents, missing/extra/misnamed/unsupporte
 relocations, overlapping fields, wrong binding addresses, stale source/object/
 manifest receipts, wrong target identity and ambiguous/truncated COFF records.
 They also verify DIR32 and REL32 replay with positive and negative addends.
+
+## COFF uninitialized storage
+
+Normal VC7.1 objects may contain a large `.bss` allocation with no raw bytes.
+The reader accepts the uninitialized-data flag with raw pointer and relocation
+count zero; it does not read that storage from the file or fabricate code.
+Code and initialized sections still require file-backed bytes. Mixed BSS/code
+or initialized flags, file-backed BSS and BSS relocations remain unsupported
+and fail closed. This allows the natural global Video definition's generated
+initializer/exit functions to use the existing complete-code lane. It does not
+accept linked BSS layout, CRT table placement or general data closure.

@@ -28,6 +28,15 @@ later checkpoints are local unless the operator requests a push.
 | `video-load-palette` | `0x40B760` | 316 |
 | `video-build-blend-tables` | `0x40B8A0` | 1,054 |
 | `video-surface-property` | `0x40BCC0` | 101 |
+| `video-initialize` | `0x4083B0` | 654 |
+| `video-recreate-8bit` | `0x408640` | 519 |
+| `video-recreate-16bit` | `0x408850` | 519 |
+| `video-shutdown` | `0x408A60` | 231 |
+| `video-destruct` | `0x408B50` | 231 |
+| `video-release-surface` | `0x408C40` | 46 |
+| `video-request-close` | `0x408C70` | 34 |
+| `video-restore-primary` | `0x408CA0` | 48 |
+| `video-restore-surface` | `0x408CD0` | 42 |
 | `surface-make-rect` | `0x40C590` | 69 |
 | `pattern-construct` | `0x408310` | 24 |
 | `pattern-destruct` | `0x408270` | 43 |
@@ -35,19 +44,59 @@ later checkpoints are local unless the operator requests a push.
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **8,784 bytes** in twenty complete functions.
+Total authored exact code is **11,108 bytes** in twenty-nine complete functions.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
 from authored match totals. Three additional generated array helpers have
-189 compared bytes, also excluded. Candidate inventory remains 950 non-external entries.
+189 compared bytes, also excluded. Two generated global lifetime functions add
+43 auxiliary bytes, for seven helpers / 320 bytes total outside authored progress.
+Candidate inventory remains 950 non-external entries.
+
+## Latest display-device lifetime checkpoint
+
+`src/Device.cpp` closes initialization (654 bytes), both 8/16-bit recreation
+owners (519 bytes each), explicit shutdown and destruction (231 bytes each),
+and four release/close/restore helpers. All nine bodies are strict exact in
+`docs/evidence/device-exact.json`. Total authored progress is 29 functions /
+11,108 bytes, with 36 reviewed boundaries/origins including seven helpers.
+
+The prior handoff misidentified `0x4019B0` as device initialization. Its actual
+body is a file transformation utility with no analyzed direct caller. Startup
+calls `0x4083B0`; the complete callee also corrects its former void declaration
+to an integer return. The corrected Startup relocation still compares exactly.
+Error exits post WM_CLOSE and return one. Mode comparisons, raw-byte descriptor
+dimensions, partially initialized descriptors and unchecked palette calls retain
+the original behavior. Engine.h models HWND, the palette and blend matrices,
+and DirectDraw/primary/back/palette pointers through offset `0x20814`.
+
+The exit-registration chain proves `0x408B50` is Video destruction. A natural
+`Video video;` definition in `src/VideoGlobal.cpp` emits the exact 28-byte
+initializer at `0x786420` and 15-byte cleanup wrapper at `0x786480`. These are
+compiler-generated and excluded from authored matches. Native BSS storage is
+`0x20818` bytes, consistent with the interval to the original neighboring Input
+global. Full production data/table placement remains independently open.
+
+The first three large Device.cpp bodies had correct lengths and only stack-slot
+differences (21/17/17 bytes). Ordinary descriptor scoping resolved them. Global
+ownership exposed a real COFF parser defect: large BSS allocation size with no
+raw bytes was rejected. The reader now handles this shape and rejects malformed
+BSS, missing code/data and mixed code flags. Two focused tests cover the change;
+all 15 oracle self-tests pass. Source scopes and declarations remain natural.
+
+Selected final verification used seven cold source/profile artifacts for 34
+new/shared-header-dependent bodies, all exact. Configuration units were not
+rebuilt. Public certificates for affected older groups have fresh dependency
+identities. Private original disassembly, first source and comparison helpers
+are retained under `.analysis/probes/`; full details are in the knowledge base.
+No original or whole reconstructed game runtime was executed.
 
 ## Latest palette and blend-table checkpoint
 
 `src/Palette.cpp` closes the complete 1,054-byte nearest-color table builder,
 95-byte Video constructor, 284/316-byte bitmap/packed palette loaders, and
 101-byte surface-property reader. All five are strict complete exact bodies;
-public proof is `docs/evidence/palette-exact.json`. Reviewed boundaries/origins
-now total 25, including the five auxiliary generated helpers.
+public proof is `docs/evidence/palette-exact.json`. At that checkpoint, reviewed
+boundaries/origins totaled 25, including five auxiliary generated helpers.
 
 The constructor establishes the 512-entry squared-difference table at `0x20406`.
 The large owner generates mean-color and saturated-sum matrices at `0x405` and
@@ -99,8 +148,9 @@ bodies. These source declarations are not claimed as unique original source.
 Public proof is `docs/evidence/surface-exact.json`; original disassembly and
 named bindings remain private under `.analysis/`. Shared-header revalidation
 used four cold source/profile artifacts reused across their selected functions;
-configuration units were not rebuilt. Five generated helpers remain excluded
-from authored totals. Thirteen focused oracle self-tests and metadata CI pass.
+configuration units were not rebuilt. The five then-recovered generated helpers
+were excluded from authored totals. Thirteen oracle self-tests passed then;
+the current checkpoint extends that suite to fifteen.
 
 ## Latest effect activation checkpoint
 
@@ -184,17 +234,19 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Continue a substantial rendering/device owner alongside useful leaves.
-   `0x40A440` has an 865-byte candidate and an existing private decompile;
-   register-shaped pixel expressions need full native instruction review before
-   deciding how natural C++ can reproduce it. Device initialization candidate
-   `0x4019B0` is 614 bytes; do not treat candidate boundaries/types as reviewed.
+1. Continue substantial rendering/state owners alongside useful leaves.
+   `0x40A440` is an 865-byte candidate with full original instruction evidence:
+   branch-local ESI/EDI saves and AH/AL pixel operations need a defensible natural
+   C++ exact strategy. Do not treat the decompiler's register concatenations as
+   recovered source. `0x401C20` is a 14,114-byte state-switch candidate with
+   x87 work; a decompile and bounded disassembly are retained privately.
 2. Close external tail subobject lifetime `0x405E60`/`0x405F80`, context
    InitializeState/ResetState `0x408100`/`0x406440`, and pattern reader/decoder.
 3. Review timing thread `0x401850` and plan larger character-dispatch owners
    from full control flow; keep pursuing representative owners and useful leaves.
 
-The palette/blend owner is complete; no candidate stack mismatch remains there.
+Palette/blend tables and the selected display-device lifetime bodies are exact.
+`0x4019B0` is a file utility; do not repeat the former device-initializer label.
 Production TU partitioning, complete linked global data/resources, remaining
 callee closure, runnable product, original/reconstructed runtime comparison
 and portability remain open. The original game has not been executed.

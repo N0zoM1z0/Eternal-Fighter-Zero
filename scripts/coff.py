@@ -41,7 +41,15 @@ def coff_object(
         if offset + 40 > len(data):
             raise ValueError("truncated COFF section table")
         fields = struct.unpack_from("<8sIIIIIIHHI", data, offset)
-        if fields[4] + fields[3] > len(data) or fields[5] + fields[7] * 10 > len(data):
+        # VC7.1 records .bss storage size without emitting raw bytes. It must
+        # never turn missing code/initialized bytes into an accepted extent.
+        uninitialized = bool(fields[9] & 0x80)
+        if uninitialized:
+            if fields[9] & 0x60 or fields[4] or fields[7]:
+                raise ValueError("unsupported uninitialized COFF section")
+        elif fields[3] and (not fields[4] or fields[4] + fields[3] > len(data)):
+            raise ValueError("COFF section data leaves object file")
+        if fields[5] + fields[7] * 10 > len(data):
             raise ValueError("COFF section/relocation table leaves object file")
         if fields[9] & 0x01000000:
             raise ValueError("extended COFF relocation counts are unsupported")

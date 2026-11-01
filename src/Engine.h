@@ -6,15 +6,27 @@
 #include <ddraw.h>
 struct SurfaceRect { int left, top, right, bottom; };
 class Video {
-    unsigned char unknown_0000[4];
+    HWND window;
     unsigned char flag0004;
-    unsigned char unknown_0005[0x20401];
+    PALETTEENTRY paletteEntries[256];
+    unsigned char meanBlend[256][256];
+    unsigned char sumBlend[256][256];
+    unsigned char unknown_20405;
     unsigned short squaredDifference[512];
     unsigned char unknown_20806[2];
     IDirectDraw *directDraw;
+    IDirectDrawSurface *primarySurface, *backSurface;
+    IDirectDrawPalette *paletteInterface;
 public:
     Video();
-    void Initialize(HWND, unsigned char);
+    ~Video();
+    int Initialize(HWND, unsigned char);
+    int Recreate8Bit();
+    int Recreate16Bit();
+    int RequestClose();
+    void ReleaseSurface(IUnknown **);
+    int RestorePrimarySurface();
+    int RestoreSurface(IUnknown **);
     void Shutdown();
     int DecodeSurface(IUnknown **, const unsigned char *, unsigned char, unsigned char);
     SurfaceRect LoadSurface(IUnknown **, const char *, unsigned char);
