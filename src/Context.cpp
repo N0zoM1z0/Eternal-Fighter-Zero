@@ -36,7 +36,7 @@ Context::Context(Video *video, Input *input, Audio *audio)
         setting134f = 2;
         flag1345 = 0;
     }
-    InitializeState();
+    ProbeCharacterData();
     ResetState();
 }
 
@@ -96,7 +96,7 @@ void Context::Load()
                 patterns[i].Allocate(size);
                 for (int j = 0; j < size; ++j) {
                     patterns[i].frames[j].duration = reader.ReadInt();
-                    patterns[i].frames[j].y = reader.ReadInt();
+                    patterns[i].frames[j].texture = reader.ReadInt();
                     patterns[i].frames[j].width = reader.ReadInt();
                     patterns[i].frames[j].height = reader.ReadInt();
                     patterns[i].frames[j].u = reader.ReadInt();

@@ -1,306 +1,168 @@
 # Current handoff — 2026-11-01
 
-## Active checkpoint
+## Active objective and constraints
 
-The full EFZ reconstruction goal remains active. Work on substantial owners and
-small functions, recheck hypotheses against original evidence, handle dirty work,
-and commit substantive progress with `gpt-6.1-sol: `. Use Bash/local Ghidra only.
+The full Eternal Fighter Zero reconstruction goal remains active. Recover both
+substantial owners and useful leaves, recheck hypotheses against original
+instructions, handle all dirty work in this sole session, and commit substantive
+verified progress with `gpt-6.1-sol: `. Use Bash/local Ghidra directly; no REA.
+Code, comments, documentation and metadata stay English; conversation is Chinese.
 
-The canonical target remains SHA-256
+The public repository is `N0zoM1z0/Eternal-Fighter-Zero`. Initial publication was
+authorized; later checkpoints stay local until the operator requests a push.
+Never claim the whole reconstruction complete from a set of exact units.
+
+## Canonical input and tools
+
+The only target is ignored/read-only `resources/EFZ.exe`, 3,743,744 bytes, SHA-256
 `3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
-Upstream release/modification provenance remains open. The public repository is
-`N0zoM1z0/Eternal-Fighter-Zero`; initial publication was authorized, but ordinary
-later checkpoints are local unless the operator requests a push.
+Release/modification provenance remains open. Do not substitute EFZ.OLD, a
+netplay binary, another release, or an unverified archive/version label.
 
-| Authored exact unit | Address | Bytes |
-| --- | --- | ---: |
-| `startup-main` | `0x401000` | 1,638 |
-| `startup-window-procedure` | `0x401670` | 468 |
-| `context-update-effect` | `0x401C20` | 14,114 |
-| `effect-spawn-construct` | `0x405490` | 30 |
-| `context-emit-effect` | `0x407100` | 406 |
-| `context-remove-effect` | `0x4072A0` | 193 |
-| `context-advance-effect-write` | `0x407370` | 327 |
-| `context-construct` | `0x406070` | 493 |
-| `context-destruct` | `0x406260` | 477 |
-| `context-activate` | `0x406AA0` | 775 |
-| `context-load-object` | `0x406DB0` | 173 |
-| `context-load-patterns` | `0x406E60` | 668 |
-| `video-load-bitmap` | `0x408D00` | 905 |
-| `video-decode-packed` | `0x409470` | 711 |
-| `video-construct` | `0x401950` | 95 |
-| `video-load-bitmap-palette` | `0x40B640` | 284 |
-| `video-load-palette` | `0x40B760` | 316 |
-| `video-build-blend-tables` | `0x40B8A0` | 1,054 |
-| `video-surface-property` | `0x40BCC0` | 101 |
-| `video-initialize` | `0x4083B0` | 654 |
-| `video-recreate-8bit` | `0x408640` | 519 |
-| `video-recreate-16bit` | `0x408850` | 519 |
-| `video-shutdown` | `0x408A60` | 231 |
-| `video-destruct` | `0x408B50` | 231 |
-| `video-release-surface` | `0x408C40` | 46 |
-| `video-request-close` | `0x408C70` | 34 |
-| `video-restore-primary` | `0x408CA0` | 48 |
-| `video-restore-surface` | `0x408CD0` | 42 |
-| `surface-make-rect` | `0x40C590` | 69 |
-| `pattern-construct` | `0x408310` | 24 |
-| `pattern-destruct` | `0x408270` | 43 |
-| `pattern-allocate` | `0x4082D0` | 56 |
-| `config-read-byte` | `0x405A20` | 180 |
-| `config-write-byte` | `0x405AE0` | 254 |
+Use `scripts/repo-python` (CPython 3.13.5). The control plane uses the standard
+library. Host Python pefile/capstone are private analysis aids only. The pinned
+VC7.1 RTM compiler is 13.10.3077, linker 7.10.3077; complete tool/header/library
+identities are in `config/tools.lock.toml`. Normal COFF recipes use explicit
+per-unit profiles. Native jobs are serial, isolated win32 Wine, one CPU, nice 10,
+bounded and logged. Ordinary checks use `verify-toolchain.py --check`; execute
+smoke is for setup/tool changes or actual failures, not every replay.
 
-Total authored exact code is **26,178 instruction bytes** in thirty-four complete functions.
-The dispatcher also has **191 associated exact switch-table bytes**, compared
-with its code as a complete 14,305-byte contribution. Data is excluded from the
-instruction total.
-Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
-strict zero-difference proofs, but are classified compiler-generated and excluded
-from authored match totals. Three additional generated array helpers have
-189 compared bytes, also excluded. Two generated global lifetime functions add
-43 auxiliary bytes, for seven helpers / 320 bytes total outside authored progress.
-Four standard-library float math wrappers have another 90 auxiliary exact bytes,
-also excluded. Candidate inventory remains 950 non-external entries.
+Local Ghidra 12.1.3 holds the target-attested EFZ project. Serialize queries;
+its lock is nonblocking. Existing-project queries use noanalysis/readOnly and
+attest every file-backed section. Ghidra names/types/boundaries remain provisional.
 
-## Latest complete effect dispatcher checkpoint
+## Verified progress
 
-`src/EffectUpdate.cpp` recovers the entire 14,114-byte `Context::UpdateEffect`
-owner at `0x401C20`. Its generated local tables add 136/55 bytes, and the full
-14,305-byte COFF contribution matches through `0x405401`, excluding alignment
-before the next function. All 301 relocation fields are explicitly bound.
-`src/EffectPool.cpp` adds the 30-byte spawn constructor, 406-byte emitter,
-193-byte remover and 327-byte queue advancement. All five authored functions
-are exact in `docs/evidence/effect-exact.json`.
+| Fact | Current result |
+| --- | ---: |
+| Authored complete exact functions | 53 |
+| Authored exact instruction bytes | 30,715 |
+| Associated exact local-table bytes | 191 |
+| Reviewed boundaries / origins | 64 / 64 |
+| Compiler-generated auxiliary helpers | 7 functions / 320 bytes |
+| Standard-library auxiliary wrappers | 4 functions / 90 bytes |
+| Automatic non-external function candidates | 950 |
 
-The 640-slot effect queue replaces an initial character-state hypothesis.
-Engine.h models active/owner/flag arrays, the 112-byte slots and 72-byte spawn
-record from their actual producers and consumers. The first pattern-frame word
-is a duration, correcting its former provisional x name. Signed-char loads at
-0x134D/0x1366 are reflected in the declarations. Pattern loading, construction
-and other dependent bodies retain their complete native matches.
+The candidate inventory is unchanged and is not an authored-code denominator.
+Complete authored records are in `config/matches.csv`; independent boundaries,
+origins and source mappings have their own ledgers. Public certificates are in
+`docs/evidence/`. No whole-game percentage or runnable replacement is claimed.
 
-Ghidra omitted many child-spawn assignments and floating conversions. Complete
-case review recovered emission parameters, palette/group/layer distinctions,
-completion-only removal/emission order, integer speed division, signed angular
-division, short increments and x87 operand/temporary order. First source was
-14,172 contribution bytes versus 14,305. A subsequent arithmetic-correct build
-had identical instructions, slots, branches and all bytes. Normal case scopes
-and the horizontal scalar name reproduce the original 0x2DC frame; no extra
-locals, padding, assembly or target-byte arrays are used.
+The largest recovered owner is `Context::UpdateEffect` at `0x401C20`: 14,114
+instruction bytes plus 136/55-byte switch tables, a complete 14,305-byte
+contribution through `0x405401`. All 301 relocations compare, and all 36 internal
+bindings must agree with actual compiled local offsets. Its four queue/spawn
+helpers are also exact. Tables are generated by normal C++ switch compilation,
+not copied into source. `code_size` only attributes code/data; it never shortens
+comparison. Malformed attribution, local rebinding, masks and prefix credit fail.
 
-The existing whole-contribution oracle now records optional code/local-table
-attribution. It still compares every contribution byte and relocation; code_size
-never shortens acceptance. Progress separates 26,178 authored instruction bytes
-from 191 associated local-table bytes. A focused test falsifies prefix-only
-acceptance with a changed table and rejects malformed attribution. Internal
-local bindings must also equal load address plus their compiled COFF offset;
-all 36 internal dispatcher bindings satisfy this gate. All 17 oracle
-self-tests pass. Four exact math.h overload/wrapper functions are classified
-standard-library and have auxiliary proof in `effect-math-exact.json`.
+## Latest frame/word-file checkpoint
 
-Final selected revalidation used nine cold source/profile artifacts for 43 new
-or shared-header-dependent functions, all exact. Configuration units were not
-rebuilt. Reviewed boundaries/origins total 45; authored functions total 34.
-The candidate inventory is unchanged. Complete original disassembly, per-case
-evidence and first sources are retained in `.analysis/probes/effect-*`,
-`raw-00401c20.txt`, `EffectUpdate-first.cpp`, and related Ghidra exports. Neither
-the original game nor a whole reconstructed product has been run.
+Nineteen newly recovered functions add 4,537 authored instruction bytes:
 
-## Latest display-device lifetime checkpoint
+| Source | Functions | Bytes | Behavior |
+| --- | ---: | ---: | --- |
+| `src/EffectFrame.cpp` | 4 | 1,242 | live queue clear/update/type removal and complete 919-byte rendering owner |
+| `src/ContextState.cpp` | 4 | 1,352 | reset, character-file probes, countdown/volume controls and camera shake |
+| `src/WordFile.cpp` | 7 | 466 | construction, destruction, open/close and two-byte read/write |
+| `src/PaletteFade.cpp` | 3 | 1,396 | complete 811-byte fade owner and both palette interpolators |
+| `src/AudioVolume.cpp` | 1 | 81 | per-buffer DirectSound volume forwarding |
 
-`src/Device.cpp` closes initialization (654 bytes), both 8/16-bit recreation
-owners (519 bytes each), explicit shutdown and destruction (231 bytes each),
-and four release/close/restore helpers. All nine bodies are strict exact in
-`docs/evidence/device-exact.json`. At that checkpoint, authored progress was
-29 functions / 11,108 bytes, with 36 reviewed boundaries/origins including seven
-helpers.
+All are strict exact in `docs/evidence/frame-exact.json`. The renderer and most
+helpers matched on the first complete build. Probe scopes resolved fifteen
+stack differences; WordFile writing needed its original local copy/count and
+failure branch; volume comparison order resolved nine differences. The fade,
+shake and palette bodies matched on their first complete builds. No dummy
+locals, padding, assembly or artificial ABI declarations were introduced.
 
-The prior handoff misidentified `0x4019B0` as device initialization. Its actual
-body is a file transformation utility with no analyzed direct caller. Startup
-calls `0x4083B0`; the complete callee also corrects its former void declaration
-to an integer return. The corrected Startup relocation still compares exactly.
-Error exits post WM_CLOSE and return one. Mode comparisons, raw-byte descriptor
-dimensions, partially initialized descriptors and unchecked palette calls retain
-the original behavior. Engine.h models HWND, the palette and blend matrices,
-and DirectDraw/primary/back/palette pointers through offset `0x20814`.
+Corrections established directly from consumers and original calls:
 
-The exit-registration chain proves `0x408B50` is Video destruction. A natural
-`Video video;` definition in `src/VideoGlobal.cpp` emits the exact 28-byte
-initializer at `0x786420` and 15-byte cleanup wrapper at `0x786480`. These are
-compiler-generated and excluded from authored matches. Native BSS storage is
-`0x20818` bytes, consistent with the interval to the original neighboring Input
-global. Full production data/table placement remains independently open.
+- `0x408100` is ProbeCharacterData, not generic InitializeState. It probes
+  misuzu/minagi/kano then exnanase/ikumi/kaori and sets mode 1/0/-1 with the
+  second group's failure taking precedence. Original invalid-handle closes stay.
+- The old 0x6C-byte ContextTail hypothesis conflated a four-word file prefix with
+  later Context counters. WordFile is modeled at `0x14284`; effect phase/angle/
+  frame fields start separately at `0x14294`. Context still occupies original
+  allocation size `0x142F0`. This is a source model, not unique original typing.
+- PatternFrame holds unsigned duration/texture words and signed u/v/width/height
+  words. The former y label is corrected to texture. Slot layer is unsigned;
+  group remains signed. Loader/producer bodies remain exact after these changes.
+- Camera shake multiplies trig results by amplitude before integer conversion;
+  Ghidra omitted that multiplication. Fade directions and short countdowns are
+  signed. Audio's minimum view exposes buffers at `0x4C0`, not full Audio layout.
 
-The first three large Device.cpp bodies had correct lengths and only stack-slot
-differences (21/17/17 bytes). Ordinary descriptor scoping resolved them. Global
-ownership exposed a real COFF parser defect: large BSS allocation size with no
-raw bytes was rejected. The reader now handles this shape and rejects malformed
-BSS, missing code/data and mixed code flags. Two focused tests cover the change;
-all 15 oracle self-tests pass. Source scopes and declarations remain natural.
+UpdateEffects follows the live write cursor while dispatch can emit children.
+Type removal scans the write slot with an inclusive do/while boundary. Rendering
+retains ordinary structure-return/assignment copies, mirrored positioning,
+payload-dependent camera terms, texture selection and blend-group arguments.
+Draw callees `0x409A90`/`0x40A0B0` remain unresolved implementations.
 
-Selected final verification used seven cold source/profile artifacts for 34
-new/shared-header-dependent bodies, all exact. Configuration units were not
-rebuilt. Public certificates for affected older groups have fresh dependency
-identities. Private original disassembly, first source and comparison helpers
-are retained under `.analysis/probes/`; full details are in the knowledge base.
-No original or whole reconstructed game runtime was executed.
+Palette interpolation uses 256-entry local buffers, reads/writes 255 entries,
+and leaves entry 255 unchanged. WordFile retains OPEN_ALWAYS read-open,
+unchecked short transfers, unsigned remaining-count behavior and original
+failure messages. Defaults initialize only exhausted/handle; no extra state is
+invented. Audio skips sentinel 150 and forwards to DirectSound SetVolume slot 15.
 
-## Latest palette and blend-table checkpoint
+Final selected verification used **14 cold source/profile artifacts for 62 new
+or shared-header-dependent functions**, all exact. Configuration units were
+untouched. Compiler-local dispatcher symbol IDs were refreshed after header
+changes, preserving all original destinations and internal-offset checks.
+Existing public certificates have current source/dependency identities. All
+17 focused oracle tests, metadata CI and target-bound tracking validation pass.
 
-`src/Palette.cpp` closes the complete 1,054-byte nearest-color table builder,
-95-byte Video constructor, 284/316-byte bitmap/packed palette loaders, and
-101-byte surface-property reader. All five are strict complete exact bodies;
-public proof is `docs/evidence/palette-exact.json`. At that checkpoint, reviewed
-boundaries/origins totaled 25, including five auxiliary generated helpers.
+Private evidence includes `.analysis/probes/frame.py`, `frame-selected.json`,
+`replay-shared-header.py`, `publish-frame-certificates.py`, `EffectFrame-first.cpp`,
+`ContextState-first.cpp`, `WordFile-first.cpp`, `raw-00407*.txt`, and related
+`.analysis/ghidra/` decompiles/caller queries. Final native results are in
+`.analysis/exact/frame-and-affected.json`. Durable detail is in
+`docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files` and prior owner sections.
 
-The constructor establishes the 512-entry squared-difference table at `0x20406`.
-The large owner generates mean-color and saturated-sum matrices at `0x405` and
-`0x10405`, searches candidates 1..254, clamps sums to 254, and mirrors only
-entries 0..254. Column 255 and any cell without an improving candidate retain
-their previous contents. Palette files were inspected independently: object.dat
-starts with 254, effect.dat with 80. The loader ignores this prefix value and
-uses its supplied count; texture callers use it to skip palette storage.
-
-Full callee review corrected the palette API from void/byte-argument hypotheses
-to integer return and three full-width integer arguments. Activation relocation
-symbols were updated and its complete body still matches. Engine.h exposes
-only the additional observed flag and distance table, preserving DirectDraw
-at `0x20808`; full Video layout/device lifetime remains open.
-
-Normal numeric locals with semantic comments and stable declaration order
-resolve the large function's VC7.1 `/Od` allocation. A name permutation without
-preserving declaration order left 59 differing bytes; preserving both and
-separating counter scopes gives the original 0x78 frame and all exact slots.
-Names/scopes are reconstruction choices. Final acceptance compares unmodified
-COFF bytes without slot or branch normalization, padding, assembly or extra
-locals. Private source checkpoints and diagnostic mapping are retained in
-`.analysis/probes/Palette-*.cpp`, `palette-slots.py`, and the name-map JSON files.
-
-Final selected revalidation used five cold source/profile artifacts for 23
-new/shared-header-dependent bodies. Certificates for startup, context, activation
-and surface transfer were refreshed; configuration units were untouched. The
-13 focused oracle tests, metadata CI, target-bound tracking validation and
-Ghidra project attestation pass. No whole reconstructed executable or game
-runtime was run.
-
-## Latest surface transfer checkpoint
-
-`src/Surface.cpp` closes the complete raw loader (905 bytes), packed decoder
-(711 bytes) and rectangle factory (69 bytes). All three pass strict complete
-comparison. Engine.h now includes the observed DirectDraw pointer at 0x20808
-and historical SDK types; the complete Video object extent is still open.
-
-The raw path retains byte-wise low-16-bit BMP fields, signed modulo correction
-blocks, rounded allocation/return width, reversed rows and original early-return
-cleanup behavior. Packed decoding preserves uncompressed reversed rows versus
-forward RLE rows, persistent repeat/current-pixel state, exact cursor updates,
-byte palette truncation, and the unused Unlock HRESULT assignment. The rectangle
-factory is cdecl returning a four-integer value, not a member constructor.
-
-First complete comparisons were early (902/905 and 708/711). Normal scope/
-aggregate choices and exact branch/store recovery produced full zero-difference
-bodies. These source declarations are not claimed as unique original source.
-Public proof is `docs/evidence/surface-exact.json`; original disassembly and
-named bindings remain private under `.analysis/`. Shared-header revalidation
-used four cold source/profile artifacts reused across their selected functions;
-configuration units were not rebuilt. The five then-recovered generated helpers
-were excluded from authored totals. Thirteen oracle self-tests passed then;
-the current checkpoint extends that suite to fifteen.
-
-## Latest effect activation checkpoint
-
-`src/Activation.cpp` recovers complete activation at `0x406AA0` (775 bytes)
-and object-file loading at `0x406DB0` (173 bytes). Both are strict exact.
-Activation retains the packed path, the inactive raw-BMP branch omitted by
-Ghidra, two hidden 16-byte structure return temporaries, and the original
-compiler-generated cookie/check. A dedicated `/MT /GS` profile records that
-setting without changing existing source profiles.
-
-The first complete activation build was 820 bytes. Natural state/buffer scopes
-and the chosen 100-byte source error buffer resolved the length and stack
-layout differences. The helper initially matched size but still had eight
-stack differences; those were corrected before acceptance. Read full original
-disassembly rather than adopting the decompile's buffer-size guesses.
-
-The shared Video API declarations are now explicit in Engine.h. Revalidation
-used one cold artifact per source/profile recipe, reusing its unchanged COFF
-bytes for other selected functions: three translation-unit builds checked the
-new bodies and 13 dependent bodies. Final source cleanup rebuilt only activation.
-Configuration units were not replayed. Public proof is
-`docs/evidence/activation-exact.json`, with refreshed dependent certificates.
-Private optimized replay recipe/logs are retained under `.analysis/probes/`
-and `.analysis/exact/`; the public standard explicit replay remains reproducible.
-
-## Verified context and pattern result
-
-`src/Context.cpp` now closes the 493-byte context constructor, 477-byte
-context destructor and 668-byte pattern loader. Three pattern members add
-24-byte construction, 43-byte destruction and 56-byte allocation bodies.
-Shared layout definitions moved from Startup.cpp into `src/Engine.h`; this
-header is an explicit dependency of both groups' exact recipes.
-
-Constructor/member cleanup at offset 0x14284, 920 COM-style interface slots,
-65 audio IDs, optional blob and counted pattern-array lifetime are represented
-by natural C++. The pattern loader preserves all integer-decoder calls,
-original field order, unused type read/store and ten 16-byte reads per frame.
-The source does not silently initialize the original uninitialized count byte.
-
-The previous Ghidra ATL/Concurrency names were re-evaluated against pattern
-allocation/loader consumers and compiler-generated array cleanup. Three array
-helpers (106, 48 and 35 bytes) have separate generated-origin proofs, not
-extra authored credit. Source names and unknown data regions stay provisional.
-
-The first whole loader comparison had 63 stack-offset differences; explicit
-natural parsing lifetimes resolved them. Startup's four involved units were
-replayed after the shared-header extraction. The configuration source includes
-neither changed file and was not rebuilt. Public proofs are
-`docs/evidence/context-exact.json` and refreshed `docs/evidence/startup-exact.json`.
-
-## Earlier startup result
-
-The complete 1,638-byte startup and 468-byte callback retain the unreachable
-scene-zeroing branch omitted by decompilation. Destruction uses
-`timeEndPeriod(1)` and `PostQuitMessage(1000)` per independent PE IAT inspection.
-The original `/MT` startup profile remains local to those codegen recipes;
-configuration's verified `/MD` recipe was not globally changed.
-
-## Resume
+## Resume and validation
 
 ```bash
 git status --short --branch
 scripts/repo-python scripts/verify-target.py
 scripts/repo-python scripts/verify-toolchain.py --check
 scripts/repo-python scripts/report-reconstruction-status.py
-scripts/repo-python scripts/ghidra.py verify
 ```
 
-Select only changed/involved units for subsequent native work. For startup edits:
+For analysis, query the existing local project after any required verification:
 
 ```bash
-scripts/repo-python scripts/replay-exact-units.py \
-  --unit startup-main --unit startup-window-procedure \
-  --unit startup-context-delete --unit startup-secondary-delete
-scripts/repo-python scripts/ci.py
+scripts/repo-python scripts/ghidra.py callers 0x407620
+scripts/repo-python scripts/ghidra.py decompile 0x409A90
 ```
 
-Current exact reports depend on complete source/selected recipe identities, not
-the current hash of the entire manifest. Adding unrelated units does not require
-replaying historical units. Documentation-only work needs no native rebuild.
+Select only new/changed/involved units for native replay. Do not run an
+unrequested full cold cohort. Identical selected source/profile/dependency
+recipes may share their unchanged COFF artifact with explicit receipts, as in
+the retained private driver. The public per-unit interface remains available:
 
-## Next evidence-driven owners
+```bash
+scripts/repo-python scripts/replay-exact-units.py --unit context-render-effects
+scripts/repo-python scripts/validate-tracking.py --require-target
+scripts/repo-python scripts/ci.py
+git diff --check
+```
 
-1. Close the effect dispatcher's larger callers, context initialization/reset
-   `0x408100`/`0x406440`, and external tail lifetime `0x405E60`/`0x405F80`.
-   The queue and dispatch owner are exact, but full frame/render orchestration
-   remains open. Recheck all provisional names against original instructions.
-2. Continue substantial rendering owners alongside useful leaves. `0x40A440`
-   has full original evidence with branch-local ESI/EDI saves and AH/AL pixel
-   operations; a defensible natural C++ exact strategy remains open. It has
-   no source/exact credit yet. Do not copy decompiler register concatenations.
-3. Close pattern reader/integer decoding and timing thread `0x401850`, then
-   continue representative scene/character owners from complete control flow.
+Selected unit/profile/source/dependency identities control freshness. Full
+manifest hashes are historical provenance; unrelated additions do not require
+rebuilding old functions. Regenerate progress after ledger changes. Stage new
+files before the final cached whitespace check.
 
-`0x401C20` is fully recovered, including its two associated local tables.
-`0x4019B0` is a file utility; do not repeat the former device-initializer label.
-Production TU partitioning, complete linked global data/resources, remaining
-callee closure, runnable product, original/reconstructed runtime comparison
-and portability remain open. The original game has not been executed.
+## Next evidence-driven work
+
+1. Recover remaining draw implementations and scene/frame callers. The 865-byte
+   `0x40A440` candidate has branch-local ESI/EDI saves and AH/AL pixel operations;
+   a defensible natural C++ exact strategy remains open. Do not paste decompiler
+   register concatenations or bypass the source rules with assembly.
+2. Recover PatternReader construction/read/integer decoding and its actual base
+   ownership. It is distinct from WordFile; do not merge them from superficial
+   file-method similarity. Existing bindings identify exact original callees.
+3. Continue Input/Audio device and resource lifetime, timing thread `0x401850`,
+   and representative larger scene/character owners from complete control flow.
+   Recheck old hypotheses rather than treating names as original symbols.
+
+Production TU partitioning, all linked globals/data/resources/imports, remaining
+callee closure, a runnable native Windows product, original/reconstructed runtime
+comparison and portability are still open. The original game has not been run.

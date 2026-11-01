@@ -365,8 +365,8 @@ void Context::UpdateEffect(short slot)
             return;
         }
         case 0x1a: {
-            tail.copiedEffectFrame = effects[slot].frame;
-            tail.copiedEffectTick = effects[slot].tick;
+            copiedEffectFrame = effects[slot].frame;
+            copiedEffectTick = effects[slot].tick;
             break;
         }
         case 0x1b: {
@@ -392,7 +392,7 @@ void Context::UpdateEffect(short slot)
         }
         case 0x21: {
             if (effects[slot].frame == 0 && effects[slot].tick == 0) {
-                tail.effectPhase = 0;
+                effectPhase = 0;
                 for (i = 0; i < 40; ++i) {
                     spawn.x = (int)effects[slot].x;
                     spawn.y = (int)effects[slot].y;
@@ -451,13 +451,13 @@ void Context::UpdateEffect(short slot)
         }
         case 0x26: {
             if (effects[slot].frame == 0 && effects[slot].tick == 0) {
-                double angle = (tail.effectPhase * 9 * 3.141592) / 180.0;
+                double angle = (effectPhase * 9 * 3.141592) / 180.0;
                 double speed = 3.0;
                 horizontal = std::cos(angle) * speed;
                 y = std::sin(angle) * speed / 3.0;
                 effects[slot].vx = std::cos(-0.43633222222222223) * horizontal - std::sin(-0.43633222222222223) * y;
                 effects[slot].vy = (effects[slot].facing * 2 - 1) * (std::cos(-0.43633222222222223) * y + std::sin(-0.43633222222222223) * horizontal);
-                tail.effectPhase = tail.effectPhase + 1;
+                effectPhase = effectPhase + 1;
             }
             effects[slot].x = effects[slot].x + effects[slot].vx;
             effects[slot].y = effects[slot].y + effects[slot].vy;
@@ -559,9 +559,9 @@ void Context::UpdateEffect(short slot)
                     spawn.layer = 1;
                     EmitEffect(&spawn);
                 }
-                tail.effectPhase = 0;
-                tail.effectAngleStart = (short)(std::rand() / 91.02);
-                tail.effectAngleEnd = tail.effectAngleStart + 30 + (short)(std::rand() / 273.07);
+                effectPhase = 0;
+                effectAngleStart = (short)(std::rand() / 91.02);
+                effectAngleEnd = effectAngleStart + 30 + (short)(std::rand() / 273.07);
                 for (i = 0; i < 40; ++i) {
                     spawn.x = (int)effects[slot].x;
                     spawn.y = (int)effects[slot].y;
@@ -585,13 +585,13 @@ void Context::UpdateEffect(short slot)
         }
         case 0x35: {
             if (effects[slot].frame == 0 && effects[slot].tick == 0) {
-                double angle = (tail.effectPhase * 9 * 3.141592) / 180.0;
+                double angle = (effectPhase * 9 * 3.141592) / 180.0;
                 double speed = 3.0;
                 horizontal = std::cos(angle) * speed * 5.0;
                 y = std::sin(angle) * speed / 3.0 * 5.0;
-                effects[slot].vx = std::cos((tail.effectAngleStart * 3.141592) / 180.0) * horizontal - std::sin((tail.effectAngleStart * 3.141592) / 180.0) * y;
-                effects[slot].vy = (effects[slot].facing * 2 - 1) * (std::cos((tail.effectAngleStart * 3.141592) / 180.0) * y + std::sin((tail.effectAngleStart * 3.141592) / 180.0) * horizontal);
-                tail.effectPhase = tail.effectPhase + 1;
+                effects[slot].vx = std::cos((effectAngleStart * 3.141592) / 180.0) * horizontal - std::sin((effectAngleStart * 3.141592) / 180.0) * y;
+                effects[slot].vy = (effects[slot].facing * 2 - 1) * (std::cos((effectAngleStart * 3.141592) / 180.0) * y + std::sin((effectAngleStart * 3.141592) / 180.0) * horizontal);
+                effectPhase = effectPhase + 1;
             }
             effects[slot].vx = effects[slot].vx * 0.94;
             effects[slot].vy = effects[slot].vy * 0.94;
@@ -601,13 +601,13 @@ void Context::UpdateEffect(short slot)
         }
         case 0x36: {
             if (effects[slot].frame == 0 && effects[slot].tick == 0) {
-                double angle = (tail.effectPhase * 9 * 3.141592) / 180.0;
+                double angle = (effectPhase * 9 * 3.141592) / 180.0;
                 double speed = 3.0;
                 horizontal = std::cos(angle) * speed * 5.0;
                 y = std::sin(angle) * speed / 3.0 * 5.0;
-                effects[slot].vx = std::cos((tail.effectAngleEnd * 3.141592) / 180.0) * horizontal - std::sin((tail.effectAngleEnd * 3.141592) / 180.0) * y;
-                effects[slot].vy = (effects[slot].facing * 2 - 1) * (std::cos((tail.effectAngleEnd * 3.141592) / 180.0) * y + std::sin((tail.effectAngleEnd * 3.141592) / 180.0) * horizontal);
-                tail.effectPhase = tail.effectPhase + 1;
+                effects[slot].vx = std::cos((effectAngleEnd * 3.141592) / 180.0) * horizontal - std::sin((effectAngleEnd * 3.141592) / 180.0) * y;
+                effects[slot].vy = (effects[slot].facing * 2 - 1) * (std::cos((effectAngleEnd * 3.141592) / 180.0) * y + std::sin((effectAngleEnd * 3.141592) / 180.0) * horizontal);
+                effectPhase = effectPhase + 1;
             }
             effects[slot].vx = effects[slot].vx * 0.94;
             effects[slot].vy = effects[slot].vy * 0.94;

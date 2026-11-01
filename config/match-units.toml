@@ -1602,7 +1602,7 @@ size = 493
 [[units.context-construct.relocations]]
 offset = 19
 type = "REL32"
-symbol = "??0ContextTail@@QAE@XZ"
+symbol = "??0WordFile@@QAE@XZ"
 target = 0x00405e60
 evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
 
@@ -1651,7 +1651,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 [[units.context-construct.relocations]]
 offset = 472
 type = "REL32"
-symbol = "?InitializeState@Context@@QAEXXZ"
+symbol = "?ProbeCharacterData@Context@@QAEXXZ"
 target = 0x00408100
 evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
 
@@ -1703,7 +1703,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 [[units.context-destruct.relocations]]
 offset = 469
 type = "REL32"
-symbol = "??1ContextTail@@QAE@XZ"
+symbol = "??1WordFile@@QAE@XZ"
 target = 0x00405f80
 evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
 
@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L58570"
+symbol = "$L60113"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L58620"
+symbol = "$L60163"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L58276"
+symbol = "$L59819"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L58298"
+symbol = "$L59841"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L58305"
+symbol = "$L59848"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L58310"
+symbol = "$L59853"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L58314"
+symbol = "$L59857"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L58321"
+symbol = "$L59864"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L58328"
+symbol = "$L59871"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L58340"
+symbol = "$L59883"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L58347"
+symbol = "$L59890"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L58354"
+symbol = "$L59897"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L58361"
+symbol = "$L59904"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L58364"
+symbol = "$L59907"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L58367"
+symbol = "$L59910"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L58370"
+symbol = "$L59913"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L58373"
+symbol = "$L59916"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L58376"
+symbol = "$L59919"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L58377"
+symbol = "$L59920"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L58381"
+symbol = "$L59924"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L58388"
+symbol = "$L59931"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L58392"
+symbol = "$L59935"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L58396"
+symbol = "$L59939"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L58400"
+symbol = "$L59943"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L58404"
+symbol = "$L59947"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L58408"
+symbol = "$L59951"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L58412"
+symbol = "$L59955"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L58416"
+symbol = "$L59959"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L58420"
+symbol = "$L59963"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L58424"
+symbol = "$L59967"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L58428"
+symbol = "$L59971"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L58434"
+symbol = "$L59977"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L58440"
+symbol = "$L59983"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L58459"
+symbol = "$L60002"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L58463"
+symbol = "$L60006"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L58273"
+symbol = "$L59816"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -5414,3 +5414,753 @@ type = "REL32"
 symbol = "_sin"
 target = 0x00778204
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload chain and reviewed original calls"
+
+[units.context-clear-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectFrame.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-clear-effects/EffectFrame.obj"
+symbol = "?ClearEffects@Context@@QAEXXZ"
+target_address = 0x00407560
+size = 76
+
+[units.context-update-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectFrame.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-update-effects/EffectFrame.obj"
+symbol = "?UpdateEffects@Context@@QAEXXZ"
+target_address = 0x004075b0
+size = 97
+
+[[units.context-update-effects.relocations]]
+offset = 62
+type = "REL32"
+symbol = "?UpdateEffect@Context@@QAEXF@Z"
+target = 0x00401c20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-remove-effect-type]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectFrame.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-remove-effect-type/EffectFrame.obj"
+symbol = "?RemoveEffectsOfType@Context@@QAEXH@Z"
+target_address = 0x004074c0
+size = 150
+
+[[units.context-remove-effect-type.relocations]]
+offset = 69
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-render-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectFrame.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-render-effects/EffectFrame.obj"
+symbol = "?RenderEffects@Context@@QAEXHHE@Z"
+target_address = 0x00407620
+size = 919
+
+[[units.context-render-effects.relocations]]
+offset = 170
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 264
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 362
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 456
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 545
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 767
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040a0b0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-render-effects.relocations]]
+offset = 877
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-reset-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/ContextState.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-reset-state/ContextState.obj"
+symbol = "?ResetState@Context@@QAEXXZ"
+target_address = 0x00406440
+size = 322
+
+[[units.context-reset-state.relocations]]
+offset = 35
+type = "REL32"
+symbol = "?ClearEffects@Context@@QAEXXZ"
+target = 0x00407560
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-reset-state.relocations]]
+offset = 44
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-reset-state.relocations]]
+offset = 98
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-reset-state.relocations]]
+offset = 113
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-reset-state.relocations]]
+offset = 164
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-probe-character-data]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/ContextState.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-probe-character-data/ContextState.obj"
+symbol = "?ProbeCharacterData@Context@@QAEXXZ"
+target_address = 0x00408100
+size = 246
+
+[[units.context-probe-character-data.relocations]]
+offset = 19
+type = "DIR32"
+symbol = "?characterPath0@@3QBDB"
+target = 0x0078752c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 26
+type = "DIR32"
+symbol = "?characterPath1@@3QBDB"
+target = 0x00787540
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 33
+type = "DIR32"
+symbol = "?characterPath2@@3QBDB"
+target = 0x00787554
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 40
+type = "DIR32"
+symbol = "?characterPath3@@3QBDB"
+target = 0x00787564
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 47
+type = "DIR32"
+symbol = "?characterPath4@@3QBDB"
+target = 0x0078757c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "?characterPath5@@3QBDB"
+target = 0x0078758c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 120
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 149
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 207
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-probe-character-data.relocations]]
+offset = 236
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-construct/WordFile.obj"
+symbol = "??0WordFile@@QAE@XZ"
+target_address = 0x00405e60
+size = 33
+
+[units.word-file-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-destruct/WordFile.obj"
+symbol = "??1WordFile@@QAE@XZ"
+target_address = 0x00405f80
+size = 33
+
+[[units.word-file-destruct.relocations]]
+offset = 25
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-open-read]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-open-read/WordFile.obj"
+symbol = "?OpenRead@WordFile@@QAEIPBD@Z"
+target_address = 0x00405e90
+size = 106
+
+[[units.word-file-open-read.relocations]]
+offset = 31
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-open-read.relocations]]
+offset = 65
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-open-write]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-open-write/WordFile.obj"
+symbol = "?OpenWrite@WordFile@@QAEXPBD@Z"
+target_address = 0x00405f00
+size = 67
+
+[[units.word-file-open-write.relocations]]
+offset = 31
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-close]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-close/WordFile.obj"
+symbol = "?Close@WordFile@@QAEXXZ"
+target_address = 0x00405f50
+size = 43
+
+[[units.word-file-close.relocations]]
+offset = 25
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-read]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-read/WordFile.obj"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target_address = 0x00405fb0
+size = 112
+
+[[units.word-file-read.relocations]]
+offset = 56
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-read.relocations]]
+offset = 67
+type = "DIR32"
+symbol = "?wordReadTitle@@3QBDB"
+target = 0x007873b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-read.relocations]]
+offset = 72
+type = "DIR32"
+symbol = "?wordReadError@@3QBDB"
+target = 0x007873c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-read.relocations]]
+offset = 80
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.word-file-write]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/WordFile.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/word-file-write/WordFile.obj"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target_address = 0x00406020
+size = 72
+
+[[units.word-file-write.relocations]]
+offset = 38
+type = "DIR32"
+symbol = "__imp__WriteFile@20"
+target = 0x00787040
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-write.relocations]]
+offset = 49
+type = "DIR32"
+symbol = "?wordWriteTitle@@3QBDB"
+target = 0x007873ec
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-write.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "?wordWriteError@@3QBDB"
+target = 0x00787400
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.word-file-write.relocations]]
+offset = 62
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-update-frame-controls]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/ContextState.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-update-frame-controls/ContextState.obj"
+symbol = "?UpdateFrameControls@Context@@QAEXXZ"
+target_address = 0x004079c0
+size = 369
+
+[[units.context-update-frame-controls.relocations]]
+offset = 361
+type = "REL32"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target = 0x0040e5d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-update-camera-shake]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/ContextState.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-update-camera-shake/ContextState.obj"
+symbol = "?UpdateCameraShake@Context@@QAEXXZ"
+target_address = 0x00407b40
+size = 415
+
+[[units.context-update-camera-shake.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 44
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 61
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 78
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 108
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 119
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 136
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 160
+type = "DIR32"
+symbol = "__real@4054c00000000000"
+target = 0x007875b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 184
+type = "DIR32"
+symbol = "__real@4076800000000000"
+target = 0x007875b0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 206
+type = "DIR32"
+symbol = "__real@4076800000000000"
+target = 0x007875b0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 230
+type = "DIR32"
+symbol = "__real@405ac00000000000"
+target = 0x007875a8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 254
+type = "DIR32"
+symbol = "__real@4076800000000000"
+target = 0x007875b0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 276
+type = "DIR32"
+symbol = "__real@4076800000000000"
+target = 0x007875b0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 335
+type = "DIR32"
+symbol = "__real@3fee666666666666"
+target = 0x007875a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 359
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-camera-shake.relocations]]
+offset = 375
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.context-update-palette-fade]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/PaletteFade.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-update-palette-fade/PaletteFade.obj"
+symbol = "?UpdatePaletteFade@Context@@QAEXXZ"
+target_address = 0x00407d10
+size = 811
+
+[[units.context-update-palette-fade.relocations]]
+offset = 47
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 95
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 111
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 132
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 153
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 187
+type = "REL32"
+symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040bf20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 266
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 288
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 321
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 337
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 357
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040bf20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 459
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 501
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 517
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 538
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 559
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 590
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 669
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 691
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 724
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 740
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 760
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[[units.context-update-palette-fade.relocations]]
+offset = 791
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complete body, data and PE import operands"
+
+[units.video-darken-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/PaletteFade.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-darken-palette/PaletteFade.obj"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target_address = 0x0040be20
+size = 249
+
+[units.video-lighten-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/PaletteFade.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-lighten-palette/PaletteFade.obj"
+symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
+target_address = 0x0040bf20
+size = 336
+
+[units.audio-set-volume]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/AudioVolume.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-set-volume/AudioVolume.obj"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target_address = 0x0040e5d0
+size = 81

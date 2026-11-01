@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <unknwn.h>
 #include <ddraw.h>
+#include <dsound.h>
 struct SurfaceRect { int left, top, right, bottom; };
 class Video {
     HWND window;
@@ -34,6 +35,10 @@ public:
     int LoadBitmapPalette(unsigned char *, const char *, int, int, int);
     unsigned char SurfaceProperty(IUnknown *);
     void BuildBlendTables(unsigned char *);
+    void DarkenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
+    void LightenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
+    int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
+    int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
 };
 class Input {
 public:
@@ -43,25 +48,31 @@ public:
     void Shutdown();
 };
 class Audio {
+    unsigned char unknown_0000[0x4c0];
+    IDirectSoundBuffer *buffers[150];
 public:
     void Initialize(HWND);
     void SetMode(short);
     void ReleaseSound(unsigned short);
+    void SetSoundVolume(unsigned short, int);
     void Shutdown();
 };
 class Secondary { public: ~Secondary(); };
-class ContextTail {
-    unsigned char unknown_0000[0x10];
+// Word-oriented file state; the remaining Context fields are separate members.
+class WordFile {
+    int exhausted;
+    HANDLE file;
+    DWORD remaining, transferred;
 public:
-    int effectPhase, effectAngleStart, effectAngleEnd;
-    unsigned int copiedEffectFrame, copiedEffectTick;
-private:
-    unsigned char unknown_0024[0x48];
-public:
-    ContextTail();
-    ~ContextTail();
+    WordFile();
+    ~WordFile();
+    unsigned int OpenRead(const char *);
+    void OpenWrite(const char *);
+    void Close();
+    unsigned short ReadWord();
+    void WriteWord(unsigned short);
 };
-struct PatternFrame { unsigned short duration, y, u, v, width, height; };
+struct PatternFrame { unsigned short duration, texture; short u, v, width, height; };
 class PatternSequence {
 public:
     unsigned char count;
@@ -82,7 +93,8 @@ struct EffectSpawn {
     char flag0018;
     unsigned char unknown_0019[3];
     int facing;
-    char group, layer;
+    char group;
+    unsigned char layer;
     unsigned char unknown_0022[2];
     int payload;
     unsigned char unknown_0028[4];
@@ -98,7 +110,8 @@ struct EffectSlot {
     char flag0048;
     unsigned char unknown_0049[3];
     int facing;
-    char group, layer;
+    char group;
+    unsigned char layer;
     unsigned char unknown_0052[2];
     int payload;
     unsigned char unknown_0058[0x14];
@@ -117,16 +130,31 @@ public:
     IUnknown *extraA, *extraB, *extraC;
     unsigned short soundSlots[0x41];
     unsigned short audioMode;
-private:
-    unsigned char unknown_0f28[0xa];
+public:
+    int targetVolume, currentVolume;
+    short volumeStep;
 public:
     unsigned char flag0f32;
 private:
-    unsigned char unknown_0f33[0x412];
+    unsigned char unknown_0f33;
+public:
+    unsigned char colorKey;
+private:
+    unsigned char unknown_0f35[0x40c];
+public:
+    char characterDataMode;
+private:
+    unsigned char unknown_1342[3];
 public:
     unsigned char flag1345;
+public:
+    unsigned char flag1346;
 private:
-    unsigned char unknown_1346[7];
+    unsigned char unknown_1347;
+public:
+    int counter1348;
+private:
+    unsigned char unknown_134c;
 public:
     char effectSelector;
 private:
@@ -135,7 +163,11 @@ public:
     unsigned char setting134f;
     char effectFlag1350;
 private:
-    unsigned char unknown_1351[0x14];
+    unsigned char unknown_1351[3];
+public:
+    int counter1354;
+private:
+    unsigned char unknown_1358[0xd];
 public:
     unsigned char setting1365;
     char setting1366;
@@ -158,9 +190,30 @@ public:
     char effectFlags[640];
     EffectSlot effects[640];
     PatternSequence *patterns;
+public:
+    short state1420c, state1420e;
+    double state14210;
+    int state14218, state1421c, state14220;
 private:
-    unsigned char unknown_1420c[0x78];
-    ContextTail tail;
+    unsigned char unknown_14224[4];
+public:
+    double state14228, state14230;
+private:
+    unsigned char unknown_14238[0x28];
+public:
+    double fadeLevel;
+    int fadeHold;
+    char fadeDirection;
+private:
+    unsigned char unknown_1426d[3];
+public:
+    int fadeAttack, fadeRelease, state14278, state1427c;
+private:
+    unsigned char unknown_14280[4];
+    WordFile replayFile;
+    int effectPhase, effectAngleStart, effectAngleEnd;
+    unsigned int copiedEffectFrame, copiedEffectTick;
+    unsigned char unknown_142a8[0x48];
 public:
     Context(Video *, Input *, Audio *);
     ~Context();
@@ -172,8 +225,15 @@ public:
     void EmitEffect(EffectSpawn *);
     void RemoveEffect(short);
     void AdvanceEffectWrite();
-    void InitializeState();
+    void ProbeCharacterData();
+    void ClearEffects();
+    void UpdateEffects();
+    void RemoveEffectsOfType(int);
+    void RenderEffects(int, int, unsigned char);
     void ResetState();
+    void UpdateFrameControls();
+    void UpdateCameraShake();
+    void UpdatePaletteFade();
 };
 class Scene {
 public:
