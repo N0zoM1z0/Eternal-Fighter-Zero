@@ -16,6 +16,11 @@ later checkpoints are local unless the operator requests a push.
 | --- | --- | ---: |
 | `startup-main` | `0x401000` | 1,638 |
 | `startup-window-procedure` | `0x401670` | 468 |
+| `context-update-effect` | `0x401C20` | 14,114 |
+| `effect-spawn-construct` | `0x405490` | 30 |
+| `context-emit-effect` | `0x407100` | 406 |
+| `context-remove-effect` | `0x4072A0` | 193 |
+| `context-advance-effect-write` | `0x407370` | 327 |
 | `context-construct` | `0x406070` | 493 |
 | `context-destruct` | `0x406260` | 477 |
 | `context-activate` | `0x406AA0` | 775 |
@@ -44,21 +49,70 @@ later checkpoints are local unless the operator requests a push.
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **11,108 bytes** in twenty-nine complete functions.
+Total authored exact code is **26,178 instruction bytes** in thirty-four complete functions.
+The dispatcher also has **191 associated exact switch-table bytes**, compared
+with its code as a complete 14,305-byte contribution. Data is excluded from the
+instruction total.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
 from authored match totals. Three additional generated array helpers have
 189 compared bytes, also excluded. Two generated global lifetime functions add
 43 auxiliary bytes, for seven helpers / 320 bytes total outside authored progress.
-Candidate inventory remains 950 non-external entries.
+Four standard-library float math wrappers have another 90 auxiliary exact bytes,
+also excluded. Candidate inventory remains 950 non-external entries.
+
+## Latest complete effect dispatcher checkpoint
+
+`src/EffectUpdate.cpp` recovers the entire 14,114-byte `Context::UpdateEffect`
+owner at `0x401C20`. Its generated local tables add 136/55 bytes, and the full
+14,305-byte COFF contribution matches through `0x405401`, excluding alignment
+before the next function. All 301 relocation fields are explicitly bound.
+`src/EffectPool.cpp` adds the 30-byte spawn constructor, 406-byte emitter,
+193-byte remover and 327-byte queue advancement. All five authored functions
+are exact in `docs/evidence/effect-exact.json`.
+
+The 640-slot effect queue replaces an initial character-state hypothesis.
+Engine.h models active/owner/flag arrays, the 112-byte slots and 72-byte spawn
+record from their actual producers and consumers. The first pattern-frame word
+is a duration, correcting its former provisional x name. Signed-char loads at
+0x134D/0x1366 are reflected in the declarations. Pattern loading, construction
+and other dependent bodies retain their complete native matches.
+
+Ghidra omitted many child-spawn assignments and floating conversions. Complete
+case review recovered emission parameters, palette/group/layer distinctions,
+completion-only removal/emission order, integer speed division, signed angular
+division, short increments and x87 operand/temporary order. First source was
+14,172 contribution bytes versus 14,305. A subsequent arithmetic-correct build
+had identical instructions, slots, branches and all bytes. Normal case scopes
+and the horizontal scalar name reproduce the original 0x2DC frame; no extra
+locals, padding, assembly or target-byte arrays are used.
+
+The existing whole-contribution oracle now records optional code/local-table
+attribution. It still compares every contribution byte and relocation; code_size
+never shortens acceptance. Progress separates 26,178 authored instruction bytes
+from 191 associated local-table bytes. A focused test falsifies prefix-only
+acceptance with a changed table and rejects malformed attribution. Internal
+local bindings must also equal load address plus their compiled COFF offset;
+all 36 internal dispatcher bindings satisfy this gate. All 17 oracle
+self-tests pass. Four exact math.h overload/wrapper functions are classified
+standard-library and have auxiliary proof in `effect-math-exact.json`.
+
+Final selected revalidation used nine cold source/profile artifacts for 43 new
+or shared-header-dependent functions, all exact. Configuration units were not
+rebuilt. Reviewed boundaries/origins total 45; authored functions total 34.
+The candidate inventory is unchanged. Complete original disassembly, per-case
+evidence and first sources are retained in `.analysis/probes/effect-*`,
+`raw-00401c20.txt`, `EffectUpdate-first.cpp`, and related Ghidra exports. Neither
+the original game nor a whole reconstructed product has been run.
 
 ## Latest display-device lifetime checkpoint
 
 `src/Device.cpp` closes initialization (654 bytes), both 8/16-bit recreation
 owners (519 bytes each), explicit shutdown and destruction (231 bytes each),
 and four release/close/restore helpers. All nine bodies are strict exact in
-`docs/evidence/device-exact.json`. Total authored progress is 29 functions /
-11,108 bytes, with 36 reviewed boundaries/origins including seven helpers.
+`docs/evidence/device-exact.json`. At that checkpoint, authored progress was
+29 functions / 11,108 bytes, with 36 reviewed boundaries/origins including seven
+helpers.
 
 The prior handoff misidentified `0x4019B0` as device initialization. Its actual
 body is a file transformation utility with no analyzed direct caller. Startup
@@ -234,18 +288,18 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Continue substantial rendering/state owners alongside useful leaves.
-   `0x40A440` is an 865-byte candidate with full original instruction evidence:
-   branch-local ESI/EDI saves and AH/AL pixel operations need a defensible natural
-   C++ exact strategy. Do not treat the decompiler's register concatenations as
-   recovered source. `0x401C20` is a 14,114-byte state-switch candidate with
-   x87 work; a decompile and bounded disassembly are retained privately.
-2. Close external tail subobject lifetime `0x405E60`/`0x405F80`, context
-   InitializeState/ResetState `0x408100`/`0x406440`, and pattern reader/decoder.
-3. Review timing thread `0x401850` and plan larger character-dispatch owners
-   from full control flow; keep pursuing representative owners and useful leaves.
+1. Close the effect dispatcher's larger callers, context initialization/reset
+   `0x408100`/`0x406440`, and external tail lifetime `0x405E60`/`0x405F80`.
+   The queue and dispatch owner are exact, but full frame/render orchestration
+   remains open. Recheck all provisional names against original instructions.
+2. Continue substantial rendering owners alongside useful leaves. `0x40A440`
+   has full original evidence with branch-local ESI/EDI saves and AH/AL pixel
+   operations; a defensible natural C++ exact strategy remains open. It has
+   no source/exact credit yet. Do not copy decompiler register concatenations.
+3. Close pattern reader/integer decoding and timing thread `0x401850`, then
+   continue representative scene/character owners from complete control flow.
 
-Palette/blend tables and the selected display-device lifetime bodies are exact.
+`0x401C20` is fully recovered, including its two associated local tables.
 `0x4019B0` is a file utility; do not repeat the former device-initializer label.
 Production TU partitioning, complete linked global data/resources, remaining
 callee closure, runnable product, original/reconstructed runtime comparison

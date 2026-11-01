@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import struct
 
-from common import ROOT, load_toml, load_units, number, record_digest, sha256, target_bytes, verify_target
+from common import ROOT, contribution_layout, load_toml, load_units, number, record_digest, sha256, target_bytes, verify_target
 from coff import RELOCATION_IDS, object_function
 
 
@@ -38,6 +38,13 @@ def replay_relocations(code: bytes, actual: list[dict], declared: list[dict], ad
     keys = lambda rows: sorted((r["offset"], r["type_id"], r["symbol"]) for r in rows)
     if keys(actual) != keys(expected):
         raise ValueError(f"COFF relocation inventory differs: {keys(actual)!r} != {keys(expected)!r}")
+    observed = {r["offset"]: r for r in actual}
+    for row in expected:
+        local_offset = observed[row["offset"]].get("local_target_offset")
+        if local_offset is not None:
+            if row["target"] != address + local_offset:
+                raise ValueError("internal COFF symbol binding differs from its compiled offset")
+            row["local_target_offset"] = local_offset
     relocated = bytearray(code)
     for row in expected:
         offset = row["offset"]
@@ -111,6 +118,10 @@ def compare_unit(name: str) -> dict:
     address = number(unit["target_address"])
     report = complete_compare(code, target_bytes(original, address, unit["size"]),
                               relocations, unit.get("relocations", []), address)
+    code_size, tables = contribution_layout(unit)
+    if tables:
+        report.update(code_size=code_size, local_data_bytes=unit["size"] - code_size,
+                      local_data=tables)
     report.update(unit=name, symbol=unit["symbol"], target_address=f"0x{address:08X}",
                   target_sha256=hashlib.sha256(original).hexdigest(),
                   boundary_ledger_sha256=sha256(ROOT / "config/function-boundaries.csv"),

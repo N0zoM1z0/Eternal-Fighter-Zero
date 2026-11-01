@@ -1,7 +1,7 @@
 """Independent candidate, boundary, origin, source and exact ledgers."""
 import csv
 import json
-from common import ROOT, load_toml, load_units, number, record_digest, sha256
+from common import ROOT, contribution_layout, load_toml, load_units, number, record_digest, sha256
 
 
 def rows(name: str) -> list[dict]:
@@ -12,11 +12,14 @@ def rows(name: str) -> list[dict]:
 def summary() -> dict:
     boundaries = rows("function-boundaries.csv")
     exact = rows("matches.csv")
+    units = load_units()
+    code_bytes = sum(contribution_layout(units[r["unit"]])[0] for r in exact)
     return dict(candidate_functions=len(rows("functions.csv")),
                 reviewed_boundaries=sum(r["status"] == "reviewed" for r in boundaries),
                 reviewed_origins=sum(r["status"] == "reviewed" for r in rows("function-origins.csv")),
                 source_functions=len(rows("implemented.csv")), exact_functions=len(exact),
-                exact_bytes=sum(number(r["size"]) for r in exact),
+                exact_bytes=code_bytes,
+                exact_local_data_bytes=sum(number(r["size"]) for r in exact) - code_bytes,
                 whole_product="open", runtime_validation="open", portability="not started")
 
 
@@ -79,6 +82,11 @@ def validate() -> None:
         if len(reports) != 1:
             raise ValueError("exact ledger lacks one public comparison certificate")
         proof = reports[0]
+        code_size, tables = contribution_layout(unit)
+        if (proof.get("code_size", proof["size"]) != code_size
+                or proof.get("local_data", []) != tables
+                or proof.get("local_data_bytes", 0) != unit["size"] - code_size):
+            raise ValueError("public comparison certificate has different contribution attribution")
         if (proof["result"] != "exact" or proof["difference_count"] != 0
                 or proof["size"] != unit["size"] or proof["matched_bytes"] != unit["size"]
                 or number(proof["target_address"]) != address):

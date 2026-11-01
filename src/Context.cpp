@@ -95,7 +95,7 @@ void Context::Load()
                 size = patterns[i].count;
                 patterns[i].Allocate(size);
                 for (int j = 0; j < size; ++j) {
-                    patterns[i].frames[j].x = reader.ReadInt();
+                    patterns[i].frames[j].duration = reader.ReadInt();
                     patterns[i].frames[j].y = reader.ReadInt();
                     patterns[i].frames[j].width = reader.ReadInt();
                     patterns[i].frames[j].height = reader.ReadInt();

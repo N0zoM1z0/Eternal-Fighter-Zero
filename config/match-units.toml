@@ -3162,3 +3162,2255 @@ type = "REL32"
 symbol = "??1Video@@QAE@XZ"
 target = 0x00408b50
 evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static initializer, exit wrapper and Video ownership"
+
+[units.context-update-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectUpdate.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-update-effect/EffectUpdate.obj"
+symbol = "?UpdateEffect@Context@@QAEXF@Z"
+target_address = 0x00401c20
+size = 14305
+code_size = 14114
+
+[[units.context-update-effect.local_data]]
+offset = 14114
+size = 136
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; complete original 34-destination / 55-state compressed switch"
+
+[[units.context-update-effect.local_data]]
+offset = 14250
+size = 55
+kind = "switch-index-table"
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; complete original 34-destination / 55-state compressed switch"
+
+[[units.context-update-effect.relocations]]
+offset = 21
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 92
+type = "DIR32"
+symbol = "$L58570"
+target = 0x004053ca
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
+
+[[units.context-update-effect.relocations]]
+offset = 99
+type = "DIR32"
+symbol = "$L58620"
+target = 0x00405342
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
+
+[[units.context-update-effect.relocations]]
+offset = 231
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 271
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 338
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 357
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 415
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 455
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 522
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 541
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 599
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 639
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 706
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 725
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 783
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 823
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 890
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 909
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1051
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1091
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1158
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1177
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1439
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1448
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1498
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1504
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1513
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1577
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1616
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1625
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1675
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1753
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1821
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1839
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1847
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1855
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1892
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 1932
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2215
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2255
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2322
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2341
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2483
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2523
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2590
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2609
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2751
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2791
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2858
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2877
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2935
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 2975
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3042
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3061
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3203
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3243
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3310
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3329
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3471
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3511
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3578
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3597
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3739
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3779
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3846
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 3865
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4166
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4179
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4188
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4238
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4251
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4260
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4310
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4602
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4615
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4624
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4674
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4970
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4983
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 4992
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5042
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5055
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5064
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5114
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5406
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5419
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5428
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5478
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5770
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5783
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5792
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 5842
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6179
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6188
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6253
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6331
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6463
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6503
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6570
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6643
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6661
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6669
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6677
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6695
+type = "DIR32"
+symbol = "__real@40d3880000000000"
+target = 0x00787350
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6712
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6752
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6966
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6984
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 6992
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7003
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7021
+type = "DIR32"
+symbol = "__real@40d3880000000000"
+target = 0x00787350
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7044
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7090
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7307
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7325
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7333
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7344
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7362
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7385
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7431
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7648
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7666
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7674
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7685
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7703
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7726
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 7772
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8017
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8023
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8035
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8058
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8087
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8102
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8111
+type = "DIR32"
+symbol = "__real@bfdbecddfc28ab32"
+target = 0x00787330
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8122
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8140
+type = "DIR32"
+symbol = "__real@bfdbecddfc28ab32"
+target = 0x00787330
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8151
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8231
+type = "DIR32"
+symbol = "__real@bfdbecddfc28ab32"
+target = 0x00787330
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8242
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8260
+type = "DIR32"
+symbol = "__real@bfdbecddfc28ab32"
+target = 0x00787330
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8271
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8524
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8542
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8550
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8561
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8579
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8639
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8645
+type = "DIR32"
+symbol = "__real@3ff921fafc8b007a"
+target = 0x00787320
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8656
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8708
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8925
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8947
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8985
+type = "DIR32"
+symbol = "__real@3f91df4663f11168"
+target = 0x00787318
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 8996
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9014
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9079
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9131
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9348
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9370
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9408
+type = "DIR32"
+symbol = "__real@3f91df4663f11168"
+target = 0x00787318
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9419
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9437
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9502
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9554
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9771
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9793
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9831
+type = "DIR32"
+symbol = "__real@3f91df4663f11168"
+target = 0x00787318
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9842
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9860
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9925
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 9977
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10194
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10216
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10254
+type = "DIR32"
+symbol = "__real@3f91df4663f11168"
+target = 0x00787318
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10265
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10283
+type = "DIR32"
+symbol = "__real@40c9640000000000"
+target = 0x00787348
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10348
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10400
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10613
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10634
+type = "REL32"
+symbol = "?sin@@YAMM@Z"
+target = 0x00405450
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10643
+type = "DIR32"
+symbol = "__real@40c00000"
+target = 0x00787310
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10668
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10688
+type = "DIR32"
+symbol = "__real@40af400000000000"
+target = 0x00787308
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10694
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10740
+type = "DIR32"
+symbol = "__real@3fc999999999999a"
+target = 0x00787300
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10765
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10864
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10904
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10922
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10928
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 10934
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872e8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11190
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11211
+type = "REL32"
+symbol = "?sin@@YAMM@Z"
+target = 0x00405450
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11220
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872e0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11229
+type = "REL32"
+symbol = "?sqrt@@YAMM@Z"
+target = 0x00405410
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11265
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11285
+type = "DIR32"
+symbol = "__real@40bb580000000000"
+target = 0x007872d8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11291
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11337
+type = "DIR32"
+symbol = "__real@3fc999999999999a"
+target = 0x00787300
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11362
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11461
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11501
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11519
+type = "DIR32"
+symbol = "__real@40e0000000000000"
+target = 0x00787358
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11525
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11531
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872e8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11814
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11854
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11921
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11940
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11966
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11984
+type = "DIR32"
+symbol = "__real@4056c147ae147ae1"
+target = 0x007872d0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 11989
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12021
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12039
+type = "DIR32"
+symbol = "__real@4071111eb851eb85"
+target = 0x007872c8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12044
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12116
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12156
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12223
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12281
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12321
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12388
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12489
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12495
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12507
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12530
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12545
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12565
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12580
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12586
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12607
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12613
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12624
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12654
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12660
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12671
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12763
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12769
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12780
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12810
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12816
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12827
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12918
+type = "DIR32"
+symbol = "__real@3fee147ae147ae14"
+target = 0x007872b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 12964
+type = "DIR32"
+symbol = "__real@3fee147ae147ae14"
+target = 0x007872b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13200
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13206
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13218
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13241
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13256
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13276
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13291
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13297
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13318
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13324
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13335
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13365
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13371
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13382
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13474
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13480
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13491
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13521
+type = "DIR32"
+symbol = "__real@400921fafc8b007a"
+target = 0x00787360
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13527
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13538
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13629
+type = "DIR32"
+symbol = "__real@3fee147ae147ae14"
+target = 0x007872b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 13675
+type = "DIR32"
+symbol = "__real@3fee147ae147ae14"
+target = 0x007872b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 14102
+type = "REL32"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target = 0x004072a0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping"
+
+[[units.context-update-effect.relocations]]
+offset = 14114
+type = "DIR32"
+symbol = "$L58276"
+target = 0x00401c87
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
+
+[[units.context-update-effect.relocations]]
+offset = 14118
+type = "DIR32"
+symbol = "$L58298"
+target = 0x00401fbb
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
+
+[[units.context-update-effect.relocations]]
+offset = 14122
+type = "DIR32"
+symbol = "$L58305"
+target = 0x004020c7
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
+
+[[units.context-update-effect.relocations]]
+offset = 14126
+type = "DIR32"
+symbol = "$L58310"
+target = 0x00402302
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
+
+[[units.context-update-effect.relocations]]
+offset = 14130
+type = "DIR32"
+symbol = "$L58314"
+target = 0x00402447
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
+
+[[units.context-update-effect.relocations]]
+offset = 14134
+type = "DIR32"
+symbol = "$L58321"
+target = 0x00402553
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
+
+[[units.context-update-effect.relocations]]
+offset = 14138
+type = "DIR32"
+symbol = "$L58328"
+target = 0x0040265f
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
+
+[[units.context-update-effect.relocations]]
+offset = 14142
+type = "DIR32"
+symbol = "$L58340"
+target = 0x00402823
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
+
+[[units.context-update-effect.relocations]]
+offset = 14146
+type = "DIR32"
+symbol = "$L58347"
+target = 0x0040292f
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
+
+[[units.context-update-effect.relocations]]
+offset = 14150
+type = "DIR32"
+symbol = "$L58354"
+target = 0x00402a3b
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
+
+[[units.context-update-effect.relocations]]
+offset = 14154
+type = "DIR32"
+symbol = "$L58361"
+target = 0x00402b47
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
+
+[[units.context-update-effect.relocations]]
+offset = 14158
+type = "DIR32"
+symbol = "$L58364"
+target = 0x00402cff
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
+
+[[units.context-update-effect.relocations]]
+offset = 14162
+type = "DIR32"
+symbol = "$L58367"
+target = 0x00402e6b
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
+
+[[units.context-update-effect.relocations]]
+offset = 14166
+type = "DIR32"
+symbol = "$L58370"
+target = 0x00403023
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
+
+[[units.context-update-effect.relocations]]
+offset = 14170
+type = "DIR32"
+symbol = "$L58373"
+target = 0x0040318f
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
+
+[[units.context-update-effect.relocations]]
+offset = 14174
+type = "DIR32"
+symbol = "$L58376"
+target = 0x00403308
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
+
+[[units.context-update-effect.relocations]]
+offset = 14178
+type = "DIR32"
+symbol = "$L58377"
+target = 0x0040334f
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
+
+[[units.context-update-effect.relocations]]
+offset = 14182
+type = "DIR32"
+symbol = "$L58381"
+target = 0x004034e4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
+
+[[units.context-update-effect.relocations]]
+offset = 14186
+type = "DIR32"
+symbol = "$L58388"
+target = 0x004035d8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
+
+[[units.context-update-effect.relocations]]
+offset = 14190
+type = "DIR32"
+symbol = "$L58392"
+target = 0x0040371b
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
+
+[[units.context-update-effect.relocations]]
+offset = 14194
+type = "DIR32"
+symbol = "$L58396"
+target = 0x00403870
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
+
+[[units.context-update-effect.relocations]]
+offset = 14198
+type = "DIR32"
+symbol = "$L58400"
+target = 0x004039c5
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
+
+[[units.context-update-effect.relocations]]
+offset = 14202
+type = "DIR32"
+symbol = "$L58404"
+target = 0x00403b1a
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
+
+[[units.context-update-effect.relocations]]
+offset = 14206
+type = "DIR32"
+symbol = "$L58408"
+target = 0x00403d31
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
+
+[[units.context-update-effect.relocations]]
+offset = 14210
+type = "DIR32"
+symbol = "$L58412"
+target = 0x00403ec2
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
+
+[[units.context-update-effect.relocations]]
+offset = 14214
+type = "DIR32"
+symbol = "$L58416"
+target = 0x00404069
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
+
+[[units.context-update-effect.relocations]]
+offset = 14218
+type = "DIR32"
+symbol = "$L58420"
+target = 0x00404210
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
+
+[[units.context-update-effect.relocations]]
+offset = 14222
+type = "DIR32"
+symbol = "$L58424"
+target = 0x004043b7
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
+
+[[units.context-update-effect.relocations]]
+offset = 14226
+type = "DIR32"
+symbol = "$L58428"
+target = 0x0040455e
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
+
+[[units.context-update-effect.relocations]]
+offset = 14230
+type = "DIR32"
+symbol = "$L58434"
+target = 0x00404771
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
+
+[[units.context-update-effect.relocations]]
+offset = 14234
+type = "DIR32"
+symbol = "$L58440"
+target = 0x004049c6
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
+
+[[units.context-update-effect.relocations]]
+offset = 14238
+type = "DIR32"
+symbol = "$L58459"
+target = 0x00404c92
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
+
+[[units.context-update-effect.relocations]]
+offset = 14242
+type = "DIR32"
+symbol = "$L58463"
+target = 0x00404f59
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
+
+[[units.context-update-effect.relocations]]
+offset = 14246
+type = "DIR32"
+symbol = "$L58273"
+target = 0x0040521b
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
+
+[units.effect-spawn-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectPool.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/effect-spawn-construct/EffectPool.obj"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target_address = 0x00405490
+size = 30
+
+[[units.effect-spawn-construct.relocations]]
+offset = 16
+type = "REL32"
+symbol = "_memset"
+target = 0x00777dc0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands"
+
+[units.context-emit-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectPool.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-emit-effect/EffectPool.obj"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target_address = 0x00407100
+size = 406
+
+[[units.context-emit-effect.relocations]]
+offset = 396
+type = "REL32"
+symbol = "?AdvanceEffectWrite@Context@@QAEXXZ"
+target = 0x00407370
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands"
+
+[units.context-remove-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectPool.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-remove-effect/EffectPool.obj"
+symbol = "?RemoveEffect@Context@@QAEXF@Z"
+target_address = 0x004072a0
+size = 193
+
+[units.context-advance-effect-write]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectPool.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-advance-effect-write/EffectPool.obj"
+symbol = "?AdvanceEffectWrite@Context@@QAEXXZ"
+target_address = 0x00407370
+size = 327
+
+[units.math-sqrt-float]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectUpdate.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/math-sqrt-float/EffectUpdate.obj"
+symbol = "?sqrt@@YAMM@Z"
+target_address = 0x00405410
+size = 17
+
+[[units.math-sqrt-float.relocations]]
+offset = 8
+type = "REL32"
+symbol = "_sqrtf"
+target = 0x00405430
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload chain and reviewed original calls"
+
+[units.math-sqrtf]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectUpdate.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/math-sqrtf/EffectUpdate.obj"
+symbol = "_sqrtf"
+target_address = 0x00405430
+size = 28
+
+[[units.math-sqrtf.relocations]]
+offset = 14
+type = "REL32"
+symbol = "_sqrt"
+target = 0x0077842d
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload chain and reviewed original calls"
+
+[units.math-sin-float]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectUpdate.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/math-sin-float/EffectUpdate.obj"
+symbol = "?sin@@YAMM@Z"
+target_address = 0x00405450
+size = 17
+
+[[units.math-sin-float.relocations]]
+offset = 8
+type = "REL32"
+symbol = "_sinf"
+target = 0x00405470
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload chain and reviewed original calls"
+
+[units.math-sinf]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/EffectUpdate.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/math-sinf/EffectUpdate.obj"
+symbol = "_sinf"
+target_address = 0x00405470
+size = 28
+
+[[units.math-sinf.relocations]]
+offset = 14
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload chain and reviewed original calls"

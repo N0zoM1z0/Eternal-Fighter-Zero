@@ -65,6 +65,13 @@ class ExactOracleTests(unittest.TestCase):
         report = complete_compare(b"\0" * 4, struct.pack("<I", 0x790100), [actual(row)], [row], 0x401000)
         self.assertEqual(report["result"], "mismatch")
 
+    def test_internal_binding_must_preserve_the_compiled_local_destination(self):
+        row = binding(target=0x401010)
+        observed = dict(actual(row), local_target_offset=16)
+        replay_relocations(b"\0" * 20, [observed], [row], 0x401000)
+        with self.assertRaisesRegex(ValueError, "compiled offset"):
+            replay_relocations(b"\0" * 20, [observed], [dict(row, target=0x402000)], 0x401000)
+
     def test_one_symbol_cannot_resolve_to_two_addresses(self):
         rows = [binding(), binding(4, target=0x790200)]
         with self.assertRaisesRegex(ValueError, "inconsistent destinations"):
@@ -85,6 +92,22 @@ class ExactOracleTests(unittest.TestCase):
         for code, original in [(b"", b""), (b"\xc3", b"\xc3\xcc"), (b"\xc3\xcc", b"\xc3")]:
             with self.subTest(code=code), self.assertRaises(ValueError):
                 complete_compare(code, original, [], [], 0x401000)
+
+    def test_local_table_attribution_never_accepts_a_matching_code_prefix(self):
+        unit = dict(size=5, code_size=1, local_data=[dict(
+            offset=1, size=4, kind="switch-address-table", evidence="reviewed synthetic table")])
+        self.assertEqual(common.contribution_layout(unit)[0], 1)
+        self.assertEqual(complete_compare(b"\xc3\0\0\0\0", b"\xc3\0\0\0\1",
+                                          [], [], 0x401000)["result"], "mismatch")
+        bad_units = [dict(unit, code_size=0), dict(unit, code_size=6),
+                     dict(unit, local_data=[])]
+        for change in [dict(offset=2), dict(size=0), dict(size=5),
+                       dict(kind="unreviewed"), dict(evidence="")]:
+            table = dict(unit["local_data"][0], **change)
+            bad_units.append(dict(unit, local_data=[table]))
+        for bad in bad_units:
+            with self.subTest(unit=bad), self.assertRaises(ValueError):
+                common.contribution_layout(bad)
 
     def test_missing_extra_wrong_symbol_and_unknown_relocations_reject(self):
         row = binding()
@@ -110,6 +133,12 @@ class ExactOracleTests(unittest.TestCase):
             self.assertEqual(code, b"\0" * 4)
             self.assertEqual(relocations[0]["symbol"], "_global")
             self.assertEqual(relocations[0]["type_id"], 6)
+            data = bytearray(object_fixture(b"\0" * 4, relocation=True))
+            # Bind the relocation to the function defined in this same section.
+            struct.pack_into("<I", data, 68, 0)
+            path.write_bytes(data)
+            _, relocations = object_function(path, "_f0")
+            self.assertEqual(relocations[0]["local_target_offset"], 0)
 
     def test_coff_ambiguous_extents_and_truncated_relocation_reject(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -28,3 +28,8 @@ address,name,source,symbol,status,evidence
 0x00408C70,?RequestClose@Video@@QAEHXZ,src/Device.cpp,?RequestClose@Video@@QAEHXZ,complete,docs/evidence/device-exact.json
 0x00408CA0,?RestorePrimarySurface@Video@@QAEHXZ,src/Device.cpp,?RestorePrimarySurface@Video@@QAEHXZ,complete,docs/evidence/device-exact.json
 0x00408CD0,?RestoreSurface@Video@@QAEHPAPAUIUnknown@@@Z,src/Device.cpp,?RestoreSurface@Video@@QAEHPAPAUIUnknown@@@Z,complete,docs/evidence/device-exact.json
+0x00401C20,?UpdateEffect@Context@@QAEXF@Z,src/EffectUpdate.cpp,?UpdateEffect@Context@@QAEXF@Z,complete,docs/evidence/effect-exact.json
+0x00405490,??0EffectSpawn@@QAE@XZ,src/EffectPool.cpp,??0EffectSpawn@@QAE@XZ,complete,docs/evidence/effect-exact.json
+0x00407100,?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z,src/EffectPool.cpp,?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z,complete,docs/evidence/effect-exact.json
+0x004072A0,?RemoveEffect@Context@@QAEXF@Z,src/EffectPool.cpp,?RemoveEffect@Context@@QAEXF@Z,complete,docs/evidence/effect-exact.json
+0x00407370,?AdvanceEffectWrite@Context@@QAEXXZ,src/EffectPool.cpp,?AdvanceEffectWrite@Context@@QAEXXZ,complete,docs/evidence/effect-exact.json

@@ -222,19 +222,21 @@ def object_function(
         target = symbols.get(target_index)
         if target is None:
             raise ValueError("relocation references an auxiliary symbol")
-        relocations.append(
-            {
-                "offset": local,
-                "type_id": type_id,
-                "type": next(
-                    (
-                        name
-                        for name, value in RELOCATION_IDS.items()
-                        if value == type_id
-                    ),
-                    f"0x{type_id:04X}",
+        relocation = {
+            "offset": local,
+            "type_id": type_id,
+            "type": next(
+                (
+                    name
+                    for name, value in RELOCATION_IDS.items()
+                    if value == type_id
                 ),
-                "symbol": target["name"],
-            }
-        )
+                f"0x{type_id:04X}",
+            ),
+            "symbol": target["name"],
+        }
+        if (target["section"] == symbol["section"]
+                and int(symbol["value"]) <= int(target["value"]) < int(symbol["value"]) + size):
+            relocation["local_target_offset"] = int(target["value"]) - int(symbol["value"])
+        relocations.append(relocation)
     return code, relocations

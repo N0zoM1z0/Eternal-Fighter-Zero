@@ -104,8 +104,29 @@ def load_units() -> dict:
     if manifest["target_sha256"] != load_toml(ROOT / "config/target.toml")["target"]["sha256"]:
         raise ValueError("match-unit manifest is bound to another target")
     units = manifest["units"]
+    for unit in units.values():
+        contribution_layout(unit)
     validate_unit_bindings(units)
     return units
+
+
+def contribution_layout(unit: dict) -> tuple[int, list[dict]]:
+    """Attribute code/local tables; never shorten the compared contribution."""
+    size = number(unit["size"])
+    code_size = number(unit.get("code_size", size))
+    tables = unit.get("local_data", [])
+    if not 0 < code_size <= size:
+        raise ValueError("invalid contribution code extent")
+    end = code_size
+    for table in tables:
+        if (number(table["offset"]) != end or number(table["size"]) <= 0
+                or table.get("kind") not in {"switch-address-table", "switch-index-table"}
+                or not table.get("evidence")):
+            raise ValueError("unreviewed or noncontiguous local table extent")
+        end += number(table["size"])
+    if end != size:
+        raise ValueError("local table extents do not cover the complete contribution")
+    return code_size, tables
 
 
 def validate_unit_bindings(units: dict) -> None:

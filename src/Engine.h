@@ -51,12 +51,17 @@ public:
 };
 class Secondary { public: ~Secondary(); };
 class ContextTail {
-    unsigned char unknown_0000[0x6c];
+    unsigned char unknown_0000[0x10];
+public:
+    int effectPhase, effectAngleStart, effectAngleEnd;
+    unsigned int copiedEffectFrame, copiedEffectTick;
+private:
+    unsigned char unknown_0024[0x48];
 public:
     ContextTail();
     ~ContextTail();
 };
-struct PatternFrame { unsigned short x, y, u, v, width, height; };
+struct PatternFrame { unsigned short duration, y, u, v, width, height; };
 class PatternSequence {
 public:
     unsigned char count;
@@ -67,6 +72,38 @@ public:
     PatternSequence();
     ~PatternSequence();
     void Allocate(int);
+};
+// Provisional effect records recovered from their producers and consumers.
+struct EffectSpawn {
+    int owner;
+    unsigned short type;
+    unsigned char unknown_0006[2];
+    double x, y;
+    char flag0018;
+    unsigned char unknown_0019[3];
+    int facing;
+    char group, layer;
+    unsigned char unknown_0022[2];
+    int payload;
+    unsigned char unknown_0028[4];
+    unsigned char palette;
+    unsigned char unknown_002d[0x1b];
+    EffectSpawn();
+};
+struct EffectSlot {
+    unsigned short type, frame, tick;
+    unsigned char unknown_0006[0x12];
+    double x, y, vx, vy;
+    unsigned char unknown_0038[0x10];
+    char flag0048;
+    unsigned char unknown_0049[3];
+    int facing;
+    char group, layer;
+    unsigned char unknown_0052[2];
+    int payload;
+    unsigned char unknown_0058[0x14];
+    unsigned char palette;
+    unsigned char unknown_006d[3];
 };
 class Context {
 public:
@@ -89,13 +126,19 @@ private:
 public:
     unsigned char flag1345;
 private:
-    unsigned char unknown_1346[9];
+    unsigned char unknown_1346[7];
+public:
+    char effectSelector;
+private:
+    unsigned char unknown_134e;
 public:
     unsigned char setting134f;
+    char effectFlag1350;
 private:
-    unsigned char unknown_1350[0x15];
+    unsigned char unknown_1351[0x14];
 public:
-    unsigned char setting1365, setting1366;
+    unsigned char setting1365;
+    char setting1366;
 private:
     unsigned char unknown_1367;
 public:
@@ -111,9 +154,9 @@ private:
 public:
     unsigned char *blob;
     short field1380, field1382;
-private:
-    unsigned char unknown_1384[0x12e84];
-public:
+    int effectActive[640], effectOwner[640];
+    char effectFlags[640];
+    EffectSlot effects[640];
     PatternSequence *patterns;
 private:
     unsigned char unknown_1420c[0x78];
@@ -125,6 +168,10 @@ public:
     void Load();
     void Activate();
     void LoadObjectFile(IUnknown **, const char *, unsigned char, unsigned char);
+    void UpdateEffect(short);
+    void EmitEffect(EffectSpawn *);
+    void RemoveEffect(short);
+    void AdvanceEffectWrite();
     void InitializeState();
     void ResetState();
 };

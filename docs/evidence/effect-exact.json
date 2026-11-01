@@ -1,0 +1,2919 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; nine cold source/profile artifacts shared unchanged across 43 new or shared-header-dependent functions; configuration units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 14305,
+      "matched_bytes": 14305,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 21,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 4215754,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58570",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca",
+          "local_target_offset": 14250,
+          "addend": 0
+        },
+        {
+          "offset": 99,
+          "target": 4215618,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58620",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342",
+          "local_target_offset": 14114,
+          "addend": 0
+        },
+        {
+          "offset": 231,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 271,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 338,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 415,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 455,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 522,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 541,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 599,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 639,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 706,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 725,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 823,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 890,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 909,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1051,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1091,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1158,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1177,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1439,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1448,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1498,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1504,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1513,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1577,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1616,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1625,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1675,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1753,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1821,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1839,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1847,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1855,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1892,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 1932,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2215,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2255,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2322,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2341,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2483,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2523,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2590,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2609,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2751,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2791,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2858,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2877,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2935,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 2975,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3042,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3061,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3203,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3243,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3310,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3329,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3471,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3511,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3578,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3597,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3739,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3779,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3846,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 3865,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4166,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4179,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4188,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4238,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4251,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4260,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4310,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4602,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4615,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4624,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4674,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4970,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4983,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 4992,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5042,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5055,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5064,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5114,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5406,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5419,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5428,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5478,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5770,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5783,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5792,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 5842,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6179,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6188,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6253,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6331,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6463,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6503,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6570,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6643,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6661,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6669,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6677,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6695,
+          "target": 7893840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40d3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6712,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6752,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6966,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6984,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 6992,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7003,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7021,
+          "target": 7893840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40d3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7044,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7090,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7307,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7325,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7333,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7344,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7362,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7385,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7431,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7648,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7666,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7674,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7685,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7703,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7726,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 7772,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8017,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8023,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8035,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8058,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8087,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8102,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8111,
+          "target": 7893808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bfdbecddfc28ab32",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8122,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8140,
+          "target": 7893808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bfdbecddfc28ab32",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8151,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8231,
+          "target": 7893808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bfdbecddfc28ab32",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8242,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8260,
+          "target": 7893808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bfdbecddfc28ab32",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8271,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8524,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8542,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8550,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8561,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8579,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8639,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8645,
+          "target": 7893792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8656,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8708,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8925,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8947,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8985,
+          "target": 7893784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f91df4663f11168",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 8996,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9014,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9079,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9131,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9348,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9370,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9408,
+          "target": 7893784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f91df4663f11168",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9419,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9437,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9502,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9554,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9771,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9793,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9831,
+          "target": 7893784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f91df4663f11168",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9842,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9860,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9925,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 9977,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10194,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10216,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10254,
+          "target": 7893784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f91df4663f11168",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10265,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10283,
+          "target": 7893832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c9640000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10348,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10400,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10613,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10634,
+          "target": 4215888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?sin@@YAMM@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10643,
+          "target": 7893776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c00000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10668,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10688,
+          "target": 7893768,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40af400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10694,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10740,
+          "target": 7893760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fc999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10765,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10864,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10904,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10922,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10928,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 10934,
+          "target": 7893736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3feccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11190,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11211,
+          "target": 4215888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?sin@@YAMM@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11220,
+          "target": 7893728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40800000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11229,
+          "target": 4215824,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?sqrt@@YAMM@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11265,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11285,
+          "target": 7893720,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40bb580000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11291,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11337,
+          "target": 7893760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fc999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11362,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11461,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11501,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11519,
+          "target": 7893848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40e0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11525,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11531,
+          "target": 7893736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3feccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11814,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11854,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11921,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11940,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11966,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11984,
+          "target": 7893712,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056c147ae147ae1",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 11989,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12021,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12039,
+          "target": 7893704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4071111eb851eb85",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12044,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12116,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12156,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12223,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12281,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12321,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12388,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12489,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12495,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12507,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12530,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12545,
+          "target": 7893696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12565,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12580,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12586,
+          "target": 7893696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12607,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12613,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12624,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12654,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12660,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12671,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12763,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12769,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12780,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12810,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12816,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12827,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12918,
+          "target": 7893688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fee147ae147ae14",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 12964,
+          "target": 7893688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fee147ae147ae14",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13200,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13206,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13218,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13241,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13256,
+          "target": 7893696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13276,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13291,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13297,
+          "target": 7893696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13318,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13324,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13335,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13365,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13371,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13382,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13474,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13480,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13491,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13521,
+          "target": 7893856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400921fafc8b007a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13527,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13538,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13629,
+          "target": 7893688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fee147ae147ae14",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 13675,
+          "target": 7893688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fee147ae147ae14",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 14102,
+          "target": 4223648,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed original call operands, constants and case-table mapping",
+          "addend": 0
+        },
+        {
+          "offset": 14114,
+          "target": 4201607,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58276",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87",
+          "local_target_offset": 103,
+          "addend": 0
+        },
+        {
+          "offset": 14118,
+          "target": 4202427,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58298",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb",
+          "local_target_offset": 923,
+          "addend": 0
+        },
+        {
+          "offset": 14122,
+          "target": 4202695,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58305",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7",
+          "local_target_offset": 1191,
+          "addend": 0
+        },
+        {
+          "offset": 14126,
+          "target": 4203266,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58310",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302",
+          "local_target_offset": 1762,
+          "addend": 0
+        },
+        {
+          "offset": 14130,
+          "target": 4203591,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58314",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447",
+          "local_target_offset": 2087,
+          "addend": 0
+        },
+        {
+          "offset": 14134,
+          "target": 4203859,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58321",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553",
+          "local_target_offset": 2355,
+          "addend": 0
+        },
+        {
+          "offset": 14138,
+          "target": 4204127,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58328",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f",
+          "local_target_offset": 2623,
+          "addend": 0
+        },
+        {
+          "offset": 14142,
+          "target": 4204579,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58340",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823",
+          "local_target_offset": 3075,
+          "addend": 0
+        },
+        {
+          "offset": 14146,
+          "target": 4204847,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58347",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f",
+          "local_target_offset": 3343,
+          "addend": 0
+        },
+        {
+          "offset": 14150,
+          "target": 4205115,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58354",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b",
+          "local_target_offset": 3611,
+          "addend": 0
+        },
+        {
+          "offset": 14154,
+          "target": 4205383,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58361",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47",
+          "local_target_offset": 3879,
+          "addend": 0
+        },
+        {
+          "offset": 14158,
+          "target": 4205823,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58364",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff",
+          "local_target_offset": 4319,
+          "addend": 0
+        },
+        {
+          "offset": 14162,
+          "target": 4206187,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58367",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b",
+          "local_target_offset": 4683,
+          "addend": 0
+        },
+        {
+          "offset": 14166,
+          "target": 4206627,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58370",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023",
+          "local_target_offset": 5123,
+          "addend": 0
+        },
+        {
+          "offset": 14170,
+          "target": 4206991,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58373",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f",
+          "local_target_offset": 5487,
+          "addend": 0
+        },
+        {
+          "offset": 14174,
+          "target": 4207368,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58376",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308",
+          "local_target_offset": 5864,
+          "addend": 0
+        },
+        {
+          "offset": 14178,
+          "target": 4207439,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58377",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f",
+          "local_target_offset": 5935,
+          "addend": 0
+        },
+        {
+          "offset": 14182,
+          "target": 4207844,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58381",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4",
+          "local_target_offset": 6340,
+          "addend": 0
+        },
+        {
+          "offset": 14186,
+          "target": 4208088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58388",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8",
+          "local_target_offset": 6584,
+          "addend": 0
+        },
+        {
+          "offset": 14190,
+          "target": 4208411,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58392",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b",
+          "local_target_offset": 6907,
+          "addend": 0
+        },
+        {
+          "offset": 14194,
+          "target": 4208752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58396",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870",
+          "local_target_offset": 7248,
+          "addend": 0
+        },
+        {
+          "offset": 14198,
+          "target": 4209093,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58400",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5",
+          "local_target_offset": 7589,
+          "addend": 0
+        },
+        {
+          "offset": 14202,
+          "target": 4209434,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58404",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a",
+          "local_target_offset": 7930,
+          "addend": 0
+        },
+        {
+          "offset": 14206,
+          "target": 4209969,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58408",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31",
+          "local_target_offset": 8465,
+          "addend": 0
+        },
+        {
+          "offset": 14210,
+          "target": 4210370,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58412",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2",
+          "local_target_offset": 8866,
+          "addend": 0
+        },
+        {
+          "offset": 14214,
+          "target": 4210793,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58416",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069",
+          "local_target_offset": 9289,
+          "addend": 0
+        },
+        {
+          "offset": 14218,
+          "target": 4211216,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58420",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210",
+          "local_target_offset": 9712,
+          "addend": 0
+        },
+        {
+          "offset": 14222,
+          "target": 4211639,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58424",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7",
+          "local_target_offset": 10135,
+          "addend": 0
+        },
+        {
+          "offset": 14226,
+          "target": 4212062,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58428",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e",
+          "local_target_offset": 10558,
+          "addend": 0
+        },
+        {
+          "offset": 14230,
+          "target": 4212593,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58434",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771",
+          "local_target_offset": 11089,
+          "addend": 0
+        },
+        {
+          "offset": 14234,
+          "target": 4213190,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58440",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6",
+          "local_target_offset": 11686,
+          "addend": 0
+        },
+        {
+          "offset": 14238,
+          "target": 4213906,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58459",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92",
+          "local_target_offset": 12402,
+          "addend": 0
+        },
+        {
+          "offset": 14242,
+          "target": 4214617,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58463",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59",
+          "local_target_offset": 13113,
+          "addend": 0
+        },
+        {
+          "offset": 14246,
+          "target": 4215323,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L58273",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b",
+          "local_target_offset": 13819,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6ce87746f564d6eeaf3daf897237c8b94fd71e17bf1a26ba2c2b144629ff8f16",
+      "target_extent_sha256": "6ce87746f564d6eeaf3daf897237c8b94fd71e17bf1a26ba2c2b144629ff8f16",
+      "code_size": 14114,
+      "local_data_bytes": 191,
+      "local_data": [
+        {
+          "offset": 14114,
+          "size": 136,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; complete original 34-destination / 55-state compressed switch"
+        },
+        {
+          "offset": 14250,
+          "size": 55,
+          "kind": "switch-index-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; complete original 34-destination / 55-state compressed switch"
+        }
+      ],
+      "unit": "context-update-effect",
+      "symbol": "?UpdateEffect@Context@@QAEXF@Z",
+      "target_address": "0x00401C20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3931923553de31b080bbc6176bf3d1429851f39341fbd3a4057f1076f28207e2",
+      "object_sha256": "e01e2040a9876f22c181f960c023e6805ee6dbd638dd8dc6fdb8613e427d2f22",
+      "source_sha256": "765cce7ea00da791d546183b6e51f43681b1ff9f60eae571f04856906b16abac",
+      "dependencies": {
+        "src/Engine.h": "77cd4d9f1f98fb9e76c376e9fa14ce2042dcd7e19934453daa2f1258e4930639"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eaeb8415b364f9a7683d5304086a71ffc9d902c42966cf0890c0d51289f172b6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9054fc4d854017b1f1ece5d106e475ad64426be186765e1a1ae89b76ad803e14",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 30,
+      "matched_bytes": 30,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 16,
+          "target": 7830976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+      "target_extent_sha256": "6e29f4e9f7c18111358377512b098e4c62371280882858f2b58d016499f01c06",
+      "unit": "effect-spawn-construct",
+      "symbol": "??0EffectSpawn@@QAE@XZ",
+      "target_address": "0x00405490",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3931923553de31b080bbc6176bf3d1429851f39341fbd3a4057f1076f28207e2",
+      "object_sha256": "fec2775d84a0253562970e9566d9e097b3d78cd58497ffe360e3bcc688f819ef",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "77cd4d9f1f98fb9e76c376e9fa14ce2042dcd7e19934453daa2f1258e4930639"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eaeb8415b364f9a7683d5304086a71ffc9d902c42966cf0890c0d51289f172b6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9717f185a22b41ebc7ebb482af16680adb8edde6d7cfcb3a202903247caacccc",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 406,
+      "matched_bytes": 406,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 396,
+          "target": 4223856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AdvanceEffectWrite@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool body and original call operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d97676fb10b9883ba7c45746c1e00fd06725ae62a687f833ac0c6e8f39e1b0bc",
+      "target_extent_sha256": "d97676fb10b9883ba7c45746c1e00fd06725ae62a687f833ac0c6e8f39e1b0bc",
+      "unit": "context-emit-effect",
+      "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+      "target_address": "0x00407100",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3931923553de31b080bbc6176bf3d1429851f39341fbd3a4057f1076f28207e2",
+      "object_sha256": "fec2775d84a0253562970e9566d9e097b3d78cd58497ffe360e3bcc688f819ef",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "77cd4d9f1f98fb9e76c376e9fa14ce2042dcd7e19934453daa2f1258e4930639"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eaeb8415b364f9a7683d5304086a71ffc9d902c42966cf0890c0d51289f172b6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f7051e9cec3faad85016b8ecb211b3b18d0a8904115023cdd92dee24a8397414",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 193,
+      "matched_bytes": 193,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "a5993e32201e78c33580e81e0d13628252f8d2fb9df0f3e6e23d7ce08e6c137a",
+      "target_extent_sha256": "a5993e32201e78c33580e81e0d13628252f8d2fb9df0f3e6e23d7ce08e6c137a",
+      "unit": "context-remove-effect",
+      "symbol": "?RemoveEffect@Context@@QAEXF@Z",
+      "target_address": "0x004072A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3931923553de31b080bbc6176bf3d1429851f39341fbd3a4057f1076f28207e2",
+      "object_sha256": "fec2775d84a0253562970e9566d9e097b3d78cd58497ffe360e3bcc688f819ef",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "77cd4d9f1f98fb9e76c376e9fa14ce2042dcd7e19934453daa2f1258e4930639"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eaeb8415b364f9a7683d5304086a71ffc9d902c42966cf0890c0d51289f172b6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7cf0d860ea29aa5ece4744dd54f51ff4ed429d8e0ec2e6c77f7633208e40aaee",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 327,
+      "matched_bytes": 327,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "4197f4e0a85eb0c86bb720af56817d5ee47fdb9396a627806c209568000c862b",
+      "target_extent_sha256": "4197f4e0a85eb0c86bb720af56817d5ee47fdb9396a627806c209568000c862b",
+      "unit": "context-advance-effect-write",
+      "symbol": "?AdvanceEffectWrite@Context@@QAEXXZ",
+      "target_address": "0x00407370",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3931923553de31b080bbc6176bf3d1429851f39341fbd3a4057f1076f28207e2",
+      "object_sha256": "fec2775d84a0253562970e9566d9e097b3d78cd58497ffe360e3bcc688f819ef",
+      "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
+      "dependencies": {
+        "src/Engine.h": "77cd4d9f1f98fb9e76c376e9fa14ce2042dcd7e19934453daa2f1258e4930639"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "eaeb8415b364f9a7683d5304086a71ffc9d902c42966cf0890c0d51289f172b6",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "954fe804ee5c8319ab48f86a27e5d238505d66ca3b33be6b281572b6a0587ac0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

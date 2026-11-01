@@ -529,3 +529,95 @@ bodies. A faithful natural-C++ exact strategy remains open. The 14,114-byte
 `0x401C20` candidate has a large state switch and x87 arithmetic; its decompile
 and bounded original disassembly are retained for further owner work. Neither
 candidate receives source or exact credit from this inspection.
+
+## Effect state dispatch
+
+`src/EffectUpdate.cpp` recovers the complete large owner at `0x401C20`.
+Its **14,114 instruction bytes** end at `0x405342`, immediately followed by
+136 bytes of switch destinations and 55 bytes of compressed case indices.
+The complete 14,305-byte contribution ends at `0x405401`; the following
+alignment before `0x405410` is excluded. Both original tables were independently
+reviewed: 33 explicit cases within state values 0..54, one default destination,
+34 destination pointers and 55 index bytes. Ghidra's 14,114-byte body inventory
+remains unchanged; the reviewed contribution boundary also includes its tables.
+
+This owner handles a 640-slot effect queue. Initial character-state naming was
+a hypothesis, replaced after reviewing the actual spawn/delete consumers and
+slot-array extent. No original class or member identifiers are claimed.
+The corresponding reviewed authored helpers in `src/EffectPool.cpp` are:
+
+| Owner | Address | Bytes |
+| --- | --- | ---: |
+| EffectSpawn constructor | `0x405490` | 30 |
+| EmitEffect | `0x407100` | 406 |
+| RemoveEffect | `0x4072A0` | 193 |
+| AdvanceEffectWrite | `0x407370` | 327 |
+
+The 72-byte spawn record is naturally initialized with memset. EmitEffect
+copies only the observed fields, initializes frame/tick to zero, records active
+and owner values and advances the write cursor. It does not clear the remaining
+slot storage. Active/owner arrays start at `0x1384`/`0x1D84`, byte flags at
+`0x2784`, and 640 112-byte slots at `0x2A08`, ending exactly at the existing
+pattern pointer `0x14208`. Fields include unsigned-short type/frame/tick,
+double position/velocity, facing, group, layer, payload and palette. Unknown
+regions remain data. Signed-short queue cursors retain their original wrap at
+640 and original handling of owned versus inactive entries. Deletion clears
+active/owner and skips inactive entries at the read cursor. Advancement always
+moves at least once, adjusts a colliding read cursor, and stops after finding
+an owner-zero slot or trying 640 entries.
+
+The dispatcher preserves all child-effect parameters that Ghidra's pseudocode
+omits, including integer-truncated positions, facing, group/layer, selector-
+derived type and palette values, and the order of removal and subsequent
+emission. Special frame events at 10/15/26, conditional emission flag `0x1366`,
+shared angular phase/limits, drag, gravity and bounce branches remain intact.
+The first pattern-frame word is a duration, as demonstrated by tick comparisons;
+the earlier provisional `x` field was renamed accordingly. The loader's native
+bytes remain exact. Selector `0x134D` and emission flag `0x1366` use signed-char
+loads, which corrected the shared provisional declarations.
+
+Floating-point details are part of the recovered behavior. State 10 uses an
+integer `rand() / 2000` speed before double conversion. Other states retain
+double division, signed integer angular division, float sin/sqrt overloads,
+short truncation, original approximate constants, expression grouping and
+x87 spill/evaluation order. No replacement random source, trigonometric
+simplification, saturation or extra failure handling was introduced.
+
+The first complete contribution was 14,172 bytes against 14,305. Full original
+review corrected completion-only emissions, palette/group values, short prefix
+increments and float conversion order. Writing the facing factor before the
+trigonometric subexpression reproduces its original temporary spills. Ordinary
+case scopes retain all local lifetimes; renaming the shared horizontal scalar
+recovers root-slot ordering without extra locals. The final frame is the original
+0x2DC bytes. Source names/scopes are reconstruction choices. A private normalized
+instruction diagnostic helped locate differences, but acceptance compares every
+unmodified COFF byte, including all 191 local-table bytes and all 301 explicitly
+bound relocation fields. There is no prefix credit or masked-address mode.
+
+Public proof is `docs/evidence/effect-exact.json`, covering the owner and all
+four helpers. Four float-overload/sinf/sqrtf bodies at `0x405410`, `0x405430`,
+`0x405450`, `0x405470` also reproduce exactly (90 bytes total) from the pinned
+VC7.1 math.h implementation. They are classified standard-library, excluded
+from authored totals, and recorded in `docs/evidence/effect-math-exact.json`.
+The seven earlier compiler-generated helpers remain separately excluded.
+
+The oracle still compares the entire positive COFF contribution. Optional
+`code_size` and reviewed contiguous `local_data` segments attribute instruction
+and local-table bytes; they never shorten that comparison. Tracking validates
+the certificate's attribution, reports code and associated data separately,
+and rejects incomplete/gapped/overlapping/unreviewed splits. The focused test
+also changes a table byte under a matching code prefix and requires mismatch.
+All 36 internally defined dispatcher symbols must retain their actual COFF
+relative offsets under relocation; a second focused test rejects rebinding them
+to invented destinations. The existing 43 compiled artifacts still pass this
+stronger gate, without any additional cold build.
+This supports compiler-generated tables inside a single reviewed contribution;
+general cross-contribution linked data and whole-product linking remain open.
+
+Final selected verification used nine cold source/profile artifacts for 43 new
+or shared-header-dependent functions. All compare exactly; configuration units
+were untouched. Retained evidence includes `.analysis/probes/raw-00401c20.txt`
+(full instruction dump), `effect-case-*.txt`, `EffectUpdate-first.cpp`,
+`EffectUpdate-operator-baseline.cpp`, `effect-update.py`, `effect-pool.py`,
+and `.analysis/ghidra/decompile-00407100.txt`, `decompile-00407370.txt`.
+No game runtime comparison has been performed.

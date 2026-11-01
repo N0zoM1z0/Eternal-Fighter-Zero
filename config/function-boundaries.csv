@@ -35,3 +35,12 @@ address,end,size,status,evidence
 0x00408CD0,0x00408CFA,42,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
 0x00786420,0x0078643C,28,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
 0x00786480,0x0078648F,15,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
+0x00401C20,0x00405401,14305,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00405490,0x004054AE,30,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00407100,0x00407296,406,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x004072A0,0x00407361,193,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00407370,0x004074B7,327,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00405410,0x00405421,17,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00405430,0x0040544C,28,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00405450,0x00405461,17,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
+0x00405470,0x0040548C,28,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
