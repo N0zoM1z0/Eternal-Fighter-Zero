@@ -2168,7 +2168,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassem
 [[units.context-activate.relocations]]
 offset = 412
 type = "REL32"
-symbol = "?LoadPalette@Video@@QAEXPAEPBDEEE@Z"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
 target = 0x0040b760
 evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
 
@@ -2273,7 +2273,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassem
 [[units.context-activate.relocations]]
 offset = 721
 type = "REL32"
-symbol = "?LoadBitmapPalette@Video@@QAEXPAEPBDEEE@Z"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
 target = 0x0040b640
 evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
 
@@ -2463,3 +2463,144 @@ object = "build/match-units/surface-make-rect/Surface.obj"
 symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
 target_address = 0x0040c590
 size = 69
+
+[units.video-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Palette.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-construct/Palette.obj"
+symbol = "??0Video@@QAE@XZ"
+target_address = 0x00401950
+size = 95
+
+[units.video-load-bitmap-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Palette.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-load-bitmap-palette/Palette.obj"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target_address = 0x0040b640
+size = 284
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 34
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 49
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 61
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 97
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 250
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-bitmap-palette.relocations]]
+offset = 265
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[units.video-load-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Palette.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-load-palette/Palette.obj"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target_address = 0x0040b760
+size = 316
+
+[[units.video-load-palette.relocations]]
+offset = 34
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 53
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 72
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 84
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 120
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 282
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[[units.video-load-palette.relocations]]
+offset = 297
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original body and PE import bindings"
+
+[units.video-surface-property]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Palette.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-surface-property/Palette.obj"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target_address = 0x0040bcc0
+size = 101
+
+[units.video-build-blend-tables]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Palette.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/video-build-blend-tables/Palette.obj"
+symbol = "?BuildBlendTables@Video@@QAEXPAE@Z"
+target_address = 0x0040b8a0
+size = 1054

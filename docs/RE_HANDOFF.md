@@ -23,6 +23,11 @@ later checkpoints are local unless the operator requests a push.
 | `context-load-patterns` | `0x406E60` | 668 |
 | `video-load-bitmap` | `0x408D00` | 905 |
 | `video-decode-packed` | `0x409470` | 711 |
+| `video-construct` | `0x401950` | 95 |
+| `video-load-bitmap-palette` | `0x40B640` | 284 |
+| `video-load-palette` | `0x40B760` | 316 |
+| `video-build-blend-tables` | `0x40B8A0` | 1,054 |
+| `video-surface-property` | `0x40BCC0` | 101 |
 | `surface-make-rect` | `0x40C590` | 69 |
 | `pattern-construct` | `0x408310` | 24 |
 | `pattern-destruct` | `0x408270` | 43 |
@@ -30,11 +35,49 @@ later checkpoints are local unless the operator requests a push.
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **6,934 bytes** in fifteen complete functions.
+Total authored exact code is **8,784 bytes** in twenty complete functions.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
 from authored match totals. Three additional generated array helpers have
 189 compared bytes, also excluded. Candidate inventory remains 950 non-external entries.
+
+## Latest palette and blend-table checkpoint
+
+`src/Palette.cpp` closes the complete 1,054-byte nearest-color table builder,
+95-byte Video constructor, 284/316-byte bitmap/packed palette loaders, and
+101-byte surface-property reader. All five are strict complete exact bodies;
+public proof is `docs/evidence/palette-exact.json`. Reviewed boundaries/origins
+now total 25, including the five auxiliary generated helpers.
+
+The constructor establishes the 512-entry squared-difference table at `0x20406`.
+The large owner generates mean-color and saturated-sum matrices at `0x405` and
+`0x10405`, searches candidates 1..254, clamps sums to 254, and mirrors only
+entries 0..254. Column 255 and any cell without an improving candidate retain
+their previous contents. Palette files were inspected independently: object.dat
+starts with 254, effect.dat with 80. The loader ignores this prefix value and
+uses its supplied count; texture callers use it to skip palette storage.
+
+Full callee review corrected the palette API from void/byte-argument hypotheses
+to integer return and three full-width integer arguments. Activation relocation
+symbols were updated and its complete body still matches. Engine.h exposes
+only the additional observed flag and distance table, preserving DirectDraw
+at `0x20808`; full Video layout/device lifetime remains open.
+
+Normal numeric locals with semantic comments and stable declaration order
+resolve the large function's VC7.1 `/Od` allocation. A name permutation without
+preserving declaration order left 59 differing bytes; preserving both and
+separating counter scopes gives the original 0x78 frame and all exact slots.
+Names/scopes are reconstruction choices. Final acceptance compares unmodified
+COFF bytes without slot or branch normalization, padding, assembly or extra
+locals. Private source checkpoints and diagnostic mapping are retained in
+`.analysis/probes/Palette-*.cpp`, `palette-slots.py`, and the name-map JSON files.
+
+Final selected revalidation used five cold source/profile artifacts for 23
+new/shared-header-dependent bodies. Certificates for startup, context, activation
+and surface transfer were refreshed; configuration units were untouched. The
+13 focused oracle tests, metadata CI, target-bound tracking validation and
+Ghidra project attestation pass. No whole reconstructed executable or game
+runtime was run.
 
 ## Latest surface transfer checkpoint
 
@@ -141,18 +184,17 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Recover packed/raw palette loaders at `0x40B760` (316-byte candidate) and
-   `0x40B640` (284-byte candidate), plus final surface-property access. Review
-   the full data path against actual file resources; do not infer palette
-   semantics solely from names.
-2. Continue into a substantial rendering owner alongside useful leaves, after
-   examining native boundaries and COM/data dependencies. The surface code is
-   recovered, but device initialization and rendering closure are still open.
-3. Close the external tail subobject lifetime `0x405E60`/`0x405F80`, context
+1. Continue a substantial rendering/device owner alongside useful leaves.
+   `0x40A440` has an 865-byte candidate and an existing private decompile;
+   register-shaped pixel expressions need full native instruction review before
+   deciding how natural C++ can reproduce it. Device initialization candidate
+   `0x4019B0` is 614 bytes; do not treat candidate boundaries/types as reviewed.
+2. Close external tail subobject lifetime `0x405E60`/`0x405F80`, context
    InitializeState/ResetState `0x408100`/`0x406440`, and pattern reader/decoder.
-4. Review timing thread `0x401850` and plan larger character-dispatch owners
+3. Review timing thread `0x401850` and plan larger character-dispatch owners
    from full control flow; keep pursuing representative owners and useful leaves.
 
+The palette/blend owner is complete; no candidate stack mismatch remains there.
 Production TU partitioning, complete linked global data/resources, remaining
 callee closure, runnable product, original/reconstructed runtime comparison
 and portability remain open. The original game has not been executed.

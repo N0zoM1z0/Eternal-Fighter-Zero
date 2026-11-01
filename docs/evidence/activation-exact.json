@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete comparison; four cold source/profile artifacts shared unchanged across their selected functions; configuration units untouched",
+  "method": "selected complete comparison; five cold source/profile artifacts shared unchanged across 23 new or shared-header-dependent functions; configuration units untouched",
   "authority": "complete native codegen under explicit original bindings; compiler-generated helpers are auxiliary",
   "reports": [
     {
@@ -141,7 +141,7 @@
           "target": 4241248,
           "type": "REL32",
           "type_id": 20,
-          "symbol": "?LoadPalette@Video@@QAEXPAEPBDEEE@Z",
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
           "addend": 0
         },
@@ -276,7 +276,7 @@
           "target": 4240960,
           "type": "REL32",
           "type_id": 20,
-          "symbol": "?LoadBitmapPalette@Video@@QAEXPAEPBDEEE@Z",
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
           "addend": 0
         },
@@ -305,16 +305,16 @@
       "symbol": "?Activate@Context@@QAEXXZ",
       "target_address": "0x00406AA0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "19627c35920908a7bf67870769965bc6a14668158604a7d8f53df20a85da70eb",
-      "object_sha256": "6e5b85a5d9cf0c8ccd5c7f31d8f53fac88bb38cef84a70eae9b066464e9ee0ab",
+      "boundary_ledger_sha256": "fdffdaa9388f4d49cb6b1b81421332bc1ff54cbc022e5544c80db2b89c6f9b09",
+      "object_sha256": "d6b6623ae3ce528d90124378238b8bbb87079b06280dcf9fcfc03747700c1c8a",
       "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
       "dependencies": {
-        "src/Engine.h": "ab8b6bf5eb85a774958e035eea3e8c1e1a843d1c175b13f6b0191ddc9ea4ce7f"
+        "src/Engine.h": "26e1b79e9a7e917ada16a4857a34e0cef571d4b718e5b1351bd7f61505a4f6dc"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "61f96ba3505a3fba7a0eb672bff44709486e764adbac4a66ad138ad7aed65cd1",
+      "units_manifest_sha256": "5c958d166cdfcdc1edf25807f9166c0491d445a1846be64dc7946e172b8402e2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "336fc272d4d70793e757ac543cb7306ae3ff0298063f6b0ddf82152fd713a6ae",
+      "unit_sha256": "fb52e95e5bc0278889cfed6a222028fcffbe6f8e28402f1020bec8163dcd4358",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -395,14 +395,14 @@
       "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
       "target_address": "0x00406DB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "19627c35920908a7bf67870769965bc6a14668158604a7d8f53df20a85da70eb",
-      "object_sha256": "6e5b85a5d9cf0c8ccd5c7f31d8f53fac88bb38cef84a70eae9b066464e9ee0ab",
+      "boundary_ledger_sha256": "fdffdaa9388f4d49cb6b1b81421332bc1ff54cbc022e5544c80db2b89c6f9b09",
+      "object_sha256": "d6b6623ae3ce528d90124378238b8bbb87079b06280dcf9fcfc03747700c1c8a",
       "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
       "dependencies": {
-        "src/Engine.h": "ab8b6bf5eb85a774958e035eea3e8c1e1a843d1c175b13f6b0191ddc9ea4ce7f"
+        "src/Engine.h": "26e1b79e9a7e917ada16a4857a34e0cef571d4b718e5b1351bd7f61505a4f6dc"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "61f96ba3505a3fba7a0eb672bff44709486e764adbac4a66ad138ad7aed65cd1",
+      "units_manifest_sha256": "5c958d166cdfcdc1edf25807f9166c0491d445a1846be64dc7946e172b8402e2",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "df0b24fdd37fcb922d17e8a27ed0f590939bfadef650bb5d16789abbc085acb1",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",

@@ -4,7 +4,7 @@ address,origin,status,evidence
 0x00401850,unknown,unreviewed,
 0x004018F0,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401920,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
-0x00401950,unknown,unreviewed,
+0x00401950,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
 0x004019B0,unknown,unreviewed,
 0x00401C20,unknown,unreviewed,
 0x00405410,unknown,unreviewed,
@@ -100,10 +100,10 @@ address,origin,status,evidence
 0x0040B300,unknown,unreviewed,
 0x0040B440,unknown,unreviewed,
 0x0040B5E0,unknown,unreviewed,
-0x0040B640,unknown,unreviewed,
-0x0040B760,unknown,unreviewed,
-0x0040B8A0,unknown,unreviewed,
-0x0040BCC0,unknown,unreviewed,
+0x0040B640,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
+0x0040B760,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
+0x0040B8A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
+0x0040BCC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
 0x0040BD30,unknown,unreviewed,
 0x0040BD70,unknown,unreviewed,
 0x0040BDC0,unknown,unreviewed,

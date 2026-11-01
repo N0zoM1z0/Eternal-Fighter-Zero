@@ -347,3 +347,83 @@ has no relocations; raw/packed bodies have ten/two. Error data bindings are
 `0x7877D4` and `0x787824`. Source grouping required four cold translation-unit
 artifacts for new and shared-header-dependent comparisons, rather than one
 compiler invocation per function. Configuration units were not replayed.
+
+## Palette and blend tables
+
+The reviewed original bodies below are represented in `src/Palette.cpp`.
+Ends exclude the following alignment bytes. All five complete bodies pass
+strict comparison in `docs/evidence/palette-exact.json`.
+
+| Provisional owner | Complete range | Bytes |
+| --- | --- | ---: |
+| Video constructor | `0x401950..0x4019AF` | 95 |
+| Bitmap palette loader | `0x40B640..0x40B75C` | 284 |
+| Packed palette loader | `0x40B760..0x40B89C` | 316 |
+| Blend table builder | `0x40B8A0..0x40BCBE` | 1,054 |
+| Surface property reader | `0x40BCC0..0x40BD25` | 101 |
+
+The constructor clears byte `0x4` and fills 512 unsigned-short entries at
+`0x20406` with `(i - 256) * (i - 256) / 4`. The table builder uses its midpoint
+at `0x20606` for signed channel differences. This evidence extends the minimum
+Video layout while preserving the DirectDraw pointer at `0x20808`; it does
+not close the object's full extent or all initialization.
+
+Both palette loaders return an integer and take three full-width integer
+source/destination/count arguments. Earlier void-return/byte-argument declarations
+were hypotheses contradicted by the complete callees. Corrected COFF symbols
+are recorded in the activation recipe; activation still compares exactly.
+The bitmap loader begins at fixed offset 54 and reads BGRx entries with stride
+four. The packed loader begins at one and reads BGR triples with stride three.
+Both write red/green/blue/zero into four-byte destination entries. Neither
+validates the read length. The packed invalid-handle path closes that invalid
+handle and returns zero; the bitmap path has no such check. Success returns
+one. These behaviors are retained rather than replaced with a general parser.
+
+The actual ignored archive resources provide an independent format check:
+
+| Resource | Bytes | First byte | SHA-256 |
+| --- | ---: | ---: | --- |
+| `SYSTEM/object.dat` | 154,628 | 254 | `9fb3e71425963fea2d0b6cb5f525ef4bbd87a6477679b5c06ada4f6abd5ce27c` |
+| `SYSTEM/EFFECT/effect.dat` | 5,202,559 | 80 | `434b6d73d185e3f6fcf1b11747288975bb3344525ad495cbdd1518160a47cda7` |
+
+The palette loader ignores that first byte and uses its supplied count.
+Activation requests source zero, destination 175 and count 80. In contrast,
+the packed texture callers skip `first_byte * 3 + 1` bytes before decoding.
+The archive contains no object bitmap for the inactive raw path. These file
+observations do not resolve upstream release/modification provenance.
+
+The substantial table builder searches nearest colors for both channel means
+and channel sums clamped to **254**, using the constructor's quantized squared
+distance. Mean/sum output matrices start at Video offsets `0x405`/`0x10405`.
+For outer entries 0..255 it visits paired entries below `min(i + 1, 255)`;
+each candidate search visits entries **1..254**. Best distances start at 40,000,
+updates require strict improvement, and equal-distance ties keep the first
+winner. The original repeated distance expressions remain repeated. Finally
+it mirrors the triangle only for entries 0..254. Column 255 retains its prior
+contents. A destination also remains untouched if no candidate improves the
+initial distance. The source does not silently fill these retained entries.
+
+The surface property reader locks a 108-byte historical SDK descriptor, reads
+one full 32-bit word, masks to the low byte, unlocks, and returns that byte.
+Its unused offset-54 assignment and stored Lock HRESULT are original code,
+not invented state. The COM slots and all instructions compare exactly.
+
+Initial complete table source was close in size but had different stack
+allocation. Once expression grouping, embedded cursor increments and pointer
+formation agreed, diagnostic instruction alignment isolated scope/name layout.
+Separate normal counter scopes recover the 0x78-byte frame. Numeric locals,
+semantic comments and a stable declaration order recover VC7.1 `/Od` slot
+ordering. They are reconstruction choices, not original variable identities.
+A controlled name permutation also required preserving name declaration order;
+permuting names alone left 59 differing bytes. The final unmodified compiler
+output passes all 1,054 bytes, including frame, slots and branches. No normalized
+or masked comparison is used for acceptance, and no padding, extra locals,
+assembly or target-byte arrays are present.
+
+Private supporting evidence is `.analysis/ghidra/decompile-0040b8a0.txt`,
+`.analysis/probes/raw-0040b8a0.txt`, `palette.py`, `palette-slots.py` and
+`palette-assets.json`. New and shared-header-dependent revalidation checked
+23 complete bodies with five cold source/profile artifacts reused unchanged
+within each recipe. Configuration units were not rebuilt. Public certificates
+for startup, context, activation and surface transfer have refreshed dependency
+identities. The original game and a reconstructed whole product remain unrun.
