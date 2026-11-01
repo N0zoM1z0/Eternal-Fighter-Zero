@@ -16,3 +16,9 @@ artifact_kind = "coff"
 compiler = "msvc710/Vc7/bin/cl.exe"
 flags = ["/Od", "/G6", "/MT", "/Gy", "/W3"]
 status = "startup-specific profile; direct original CRT calls require non-dllimport headers"
+
+[profiles.vc71-od-static-gs]
+artifact_kind = "coff"
+compiler = "msvc710/Vc7/bin/cl.exe"
+flags = ["/Od", "/G6", "/MT", "/Gy", "/GS", "/W3"]
+status = "effect activation profile; original cookie/check and complete inactive branch preserved"

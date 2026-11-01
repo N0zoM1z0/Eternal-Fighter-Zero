@@ -3,10 +3,16 @@
 #define EFZ_ENGINE_H
 #include <windows.h>
 #include <unknwn.h>
+struct SurfaceRect { int left, top, right, bottom; };
 class Video {
 public:
     void Initialize(HWND, unsigned char);
     void Shutdown();
+    int DecodeSurface(IUnknown **, const unsigned char *, unsigned char, unsigned char);
+    SurfaceRect LoadSurface(IUnknown **, const char *, unsigned char);
+    void LoadPalette(unsigned char *, const char *, unsigned char, unsigned char, unsigned char);
+    void LoadBitmapPalette(unsigned char *, const char *, unsigned char, unsigned char, unsigned char);
+    unsigned char SurfaceProperty(IUnknown *);
 };
 class Input {
 public:
@@ -97,6 +103,7 @@ public:
     void Initialize();
     void Load();
     void Activate();
+    void LoadObjectFile(IUnknown **, const char *, unsigned char, unsigned char);
     void InitializeState();
     void ResetState();
 };

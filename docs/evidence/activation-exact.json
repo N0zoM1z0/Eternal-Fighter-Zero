@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "method": "selected complete comparisons; one cold COFF artifact per identical source/profile/dependency recipe, reused unchanged across its functions; no configuration replay",
+  "authority": "complete codegen under declared original bindings; generated helpers remain auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 775,
+      "matched_bytes": 775,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 62,
+          "target": 7894112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectDataPath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 68,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 95,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 137,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 235,
+          "target": 4232304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 287,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 313,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 334,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 349,
+          "target": 7894140,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?objectDataPath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 373,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 387,
+          "target": 7894160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?objectPalettePath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 412,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEXPAEPBDEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 474,
+          "target": 7894180,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 483,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 7894200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectPrefix0@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 511,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 521,
+          "target": 7894220,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectPrefix00@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 530,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 551,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 567,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 575,
+          "target": 7894240,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bitmapExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 584,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 633,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 648,
+          "target": 7894248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?objectBitmapPath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 681,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 695,
+          "target": 7894268,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?objectBitmapPalettePath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 721,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEXPAEPBDEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 747,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 767,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "afc02b135b66eb1bbd43f2d25ac47cbf0a4acaf63c894291e858972b11f62b3b",
+      "target_extent_sha256": "afc02b135b66eb1bbd43f2d25ac47cbf0a4acaf63c894291e858972b11f62b3b",
+      "unit": "context-activate",
+      "symbol": "?Activate@Context@@QAEXXZ",
+      "target_address": "0x00406AA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "370853847d21c3be5d4ac78b905368af161b45e1c4034b693d88c045cc556003",
+      "object_sha256": "808af98980826cdac8fe4cef142116c5fa029e0a91901a6444d23629207b1a09",
+      "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
+      "dependencies": {
+        "src/Engine.h": "256ec917fa90cc43db4cc0020c33d02a106dbfccd56164709924ebefb5bb193b"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e051c6e84f4242fc55c097b7763be7b489c6d69a1b3049a72f1de458661a47b8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "336fc272d4d70793e757ac543cb7306ae3ff0298063f6b0ddf82152fd713a6ae",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 173,
+      "matched_bytes": 173,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 33,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 48,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 60,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 135,
+          "target": 4232304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 145,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        },
+        {
+          "offset": 160,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "cddf6c3cbdaffc5c2376bcb84c572dc898e2722e28da9f251103e5921e035ad7",
+      "target_extent_sha256": "cddf6c3cbdaffc5c2376bcb84c572dc898e2722e28da9f251103e5921e035ad7",
+      "unit": "context-load-object",
+      "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+      "target_address": "0x00406DB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "370853847d21c3be5d4ac78b905368af161b45e1c4034b693d88c045cc556003",
+      "object_sha256": "808af98980826cdac8fe4cef142116c5fa029e0a91901a6444d23629207b1a09",
+      "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
+      "dependencies": {
+        "src/Engine.h": "256ec917fa90cc43db4cc0020c33d02a106dbfccd56164709924ebefb5bb193b"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "e051c6e84f4242fc55c097b7763be7b489c6d69a1b3049a72f1de458661a47b8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "df0b24fdd37fcb922d17e8a27ed0f590939bfadef650bb5d16789abbc085acb1",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -239,3 +239,55 @@ bindings), and `.analysis/exact/context-selected.json`. Public proofs are in
 `docs/evidence/context-exact.json`; the shared-header startup revalidation is
 in the refreshed `docs/evidence/startup-exact.json`. No configuration unit needed
 replay because it does not include the new shared header.
+
+## Effect activation
+
+`0x406AA0..0x406DA7` is a complete 775-byte activation owner, including the
+original integer-constant branch, inactive raw-BMP path and stack-cookie check.
+`src/Activation.cpp` preserves both branches. Ghidra pseudocode removes the
+entire `0x406C45..0x406D75` raw branch and replaces the cookie call with an
+injection; neither is sufficient evidence for reconstructing this owner.
+
+The packed path reads the original effect file and advances past its
+`first_byte * 3 + 1` prefix. It decodes all 920 texture slots, advancing only
+when the decoder returns a nonzero consumed length; zero reports the decimal
+slot index through MessageBoxA. It then loads the object surface and palette.
+The retained inactive path formats zero-padded three-digit bitmap paths,
+loads each texture and the object bitmap, and uses the bitmap palette entry.
+The final surface-property byte is stored at context offset `0xF34`; palette
+storage is passed at `0xF35`. No extra file/error handling was invented.
+
+The nine distinct original filename/prefix bindings occupy
+`0x787460..0x7874FC`; duplicate object filenames retain distinct addresses.
+Decoder, raw surface loader, packed/raw palette loaders and final property
+bindings are `0x409470`, `0x408D00`, `0x40B760`/`0x40B640` and `0x40BCC0`.
+The raw surface loader writes four 32-bit return values through a hidden
+result pointer and returns that pointer. A normal 16-byte `SurfaceRect`
+return reproduces both ignored return temporaries in activation; the semantic
+field names and complete Video implementation remain provisional.
+
+The new `/GS` profile binds the cookie at `0x78F050` and compiler-injected
+fastcall check at `0x7781DC`. Both relocation fields are included in strict
+comparison. The first source was 820 bytes; correcting buffer/state lifetimes
+and using a 100-byte source error buffer reproduces the original 775-byte
+body and EBP-0xE4 frame. That source array capacity is not claimed as a uniquely
+recovered original declaration. Ordinary nested scopes retain the original
+handle, decode cursor, allocation and formatting-buffer lifetimes; there are
+no dummy locals, assembly wrappers or byte padding.
+
+`Context::LoadObjectFile` at `0x406DB0..0x406E5D` is a complete 173-byte helper.
+It opens/reads the file, skips the same prefix, calls the decoder with its
+original byte arguments, closes the handle and deletes the buffer. An early
+size-only check was insufficient: full relocation replay exposed eight stack
+bytes that still differed. Scalar/buffer scoping resolved them, and only the
+complete final zero-difference result is accepted.
+
+Public proof is `docs/evidence/activation-exact.json`. Private full original
+Ghidra disassembly and binding inventory are in `.analysis/ghidra/` and
+`.analysis/probes/activation.py`. The shared Video declarations changed in
+`src/Engine.h`, so the 13 dependent startup/context/pattern bodies were checked
+again using unchanged compiled COFF artifacts grouped by identical recipe.
+That first verification required only three cold source/profile builds,
+including activation. Final activation source cleanup rebuilt only its one
+recipe. Configuration units were untouched. Existing recipes can reproduce
+the comparisons using the standard explicit `--unit` replay interface.

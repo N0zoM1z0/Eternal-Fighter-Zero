@@ -18,6 +18,8 @@ later checkpoints are local unless the operator requests a push.
 | `startup-window-procedure` | `0x401670` | 468 |
 | `context-construct` | `0x406070` | 493 |
 | `context-destruct` | `0x406260` | 477 |
+| `context-activate` | `0x406AA0` | 775 |
+| `context-load-object` | `0x406DB0` | 173 |
 | `context-load-patterns` | `0x406E60` | 668 |
 | `pattern-construct` | `0x408310` | 24 |
 | `pattern-destruct` | `0x408270` | 43 |
@@ -25,11 +27,35 @@ later checkpoints are local unless the operator requests a push.
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **4,301 bytes** in ten complete functions.
+Total authored exact code is **5,249 bytes** in twelve complete functions.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
 from authored match totals. Three additional generated array helpers have
 189 compared bytes, also excluded. Candidate inventory remains 950 non-external entries.
+
+## Latest effect activation checkpoint
+
+`src/Activation.cpp` recovers complete activation at `0x406AA0` (775 bytes)
+and object-file loading at `0x406DB0` (173 bytes). Both are strict exact.
+Activation retains the packed path, the inactive raw-BMP branch omitted by
+Ghidra, two hidden 16-byte structure return temporaries, and the original
+compiler-generated cookie/check. A dedicated `/MT /GS` profile records that
+setting without changing existing source profiles.
+
+The first complete activation build was 820 bytes. Natural state/buffer scopes
+and the chosen 100-byte source error buffer resolved the length and stack
+layout differences. The helper initially matched size but still had eight
+stack differences; those were corrected before acceptance. Read full original
+disassembly rather than adopting the decompile's buffer-size guesses.
+
+The shared Video API declarations are now explicit in Engine.h. Revalidation
+used one cold artifact per source/profile recipe, reusing its unchanged COFF
+bytes for other selected functions: three translation-unit builds checked the
+new bodies and 13 dependent bodies. Final source cleanup rebuilt only activation.
+Configuration units were not replayed. Public proof is
+`docs/evidence/activation-exact.json`, with refreshed dependent certificates.
+Private optimized replay recipe/logs are retained under `.analysis/probes/`
+and `.analysis/exact/`; the public standard explicit replay remains reproducible.
 
 ## Verified context and pattern result
 
@@ -89,16 +115,16 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Attack context activation `0x406AA0` (775-byte candidate). Its decompile
-   removes multiple unreachable branches and injects the stack-cookie check;
-   recover the full original disassembly before writing complete source.
-2. Close the newly exposed external member lifetime at `0x405E60`/`0x405F80`,
-   context InitializeState/ResetState at `0x408100`/`0x406440`, and the
-   12-byte pattern reader's constructor/destructor and integer decoder.
-3. Review the 157-byte timing thread at `0x401850` to connect frame events to
-   the recovered main loop. Continue both representative owners and useful leaves.
-4. Plan larger character dispatch owners from actual control-flow evidence;
-   automatic 60–88 KB bodies and decompiler warnings require careful review.
+1. Recover the original raw surface loader `0x408D00` (905-byte candidate)
+   and packed surface decoder `0x409470` (711-byte candidate), closing the
+   actual graphics work referenced by the now-exact activation. Review their
+   complete ranges, dead branches, COM slots and returned rectangle layout.
+2. Recover packed/raw palette loaders at `0x40B760` (316-byte candidate) and
+   `0x40B640` (284-byte candidate), along with final surface property access.
+3. Close the external tail subobject lifetime `0x405E60`/`0x405F80`, context
+   InitializeState/ResetState `0x408100`/`0x406440`, and pattern reader/decoder.
+4. Review timing thread `0x401850` and plan larger character-dispatch owners
+   from full control flow; keep pursuing representative owners and useful leaves.
 
 Production TU partitioning, complete linked global data/resources, remaining
 callee closure, runnable product, original/reconstructed runtime comparison

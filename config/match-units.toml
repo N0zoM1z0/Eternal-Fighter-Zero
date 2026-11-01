@@ -2056,3 +2056,296 @@ object = "build/match-units/pattern-vector-construct/Context.obj"
 symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
 target_address = 0x00408380
 size = 35
+
+[units.context-activate]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Activation.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-activate/Activation.obj"
+symbol = "?Activate@Context@@QAEXXZ"
+target_address = 0x00406aa0
+size = 775
+
+[[units.context-activate.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 62
+type = "DIR32"
+symbol = "?effectDataPath@@3QBDB"
+target = 0x00787460
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 68
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 83
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 95
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 137
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 235
+type = "REL32"
+symbol = "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target = 0x00409470
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 265
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 287
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 313
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 334
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 349
+type = "DIR32"
+symbol = "?objectDataPath@@3QBDB"
+target = 0x0078747c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 373
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 387
+type = "DIR32"
+symbol = "?objectPalettePath@@3QBDB"
+target = 0x00787490
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 412
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEXPAEPBDEEE@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 474
+type = "DIR32"
+symbol = "?effectPrefix@@3QBDB"
+target = 0x007874a4
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 483
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 502
+type = "DIR32"
+symbol = "?effectPrefix0@@3QBDB"
+target = 0x007874b8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 511
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 521
+type = "DIR32"
+symbol = "?effectPrefix00@@3QBDB"
+target = 0x007874cc
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 530
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 551
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 567
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 575
+type = "DIR32"
+symbol = "?bitmapExtension@@3QBDB"
+target = 0x007874e0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 584
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 633
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 648
+type = "DIR32"
+symbol = "?objectBitmapPath@@3QBDB"
+target = 0x007874e8
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 681
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 695
+type = "DIR32"
+symbol = "?objectBitmapPalettePath@@3QBDB"
+target = 0x007874fc
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 721
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEXPAEPBDEEE@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 747
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-activate.relocations]]
+offset = 767
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[units.context-load-object]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/Activation.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-load-object/Activation.obj"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target_address = 0x00406db0
+size = 173
+
+[[units.context-load-object.relocations]]
+offset = 33
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 48
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 60
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 96
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 135
+type = "REL32"
+symbol = "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target = 0x00409470
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 145
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
+
+[[units.context-load-object.relocations]]
+offset = 160
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassembly, IAT and named data operands"
