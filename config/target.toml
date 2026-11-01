@@ -1,0 +1,48 @@
+schema_version = 1
+
+[target]
+filename = "EFZ.exe"
+size = 3743744
+sha256 = "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481"
+md5 = "9ac51d746d2ad288de8fe705e5b119c4"
+identity = "supplied Memorial archive main executable (2005-11-25 PE timestamp)"
+version_status = "4.02 candidate; no PE version resource, external release corroboration open"
+
+[pe]
+machine = "0x014c"
+optional_magic = "0x010b"
+image_base = "0x00400000"
+entry_point = "0x00778a4a"
+size_of_image = "0x003b4000"
+headers_raw_size = "0x00001000"
+timestamp = "0x4386998f"
+linker_major = 7
+linker_minor = 10
+
+[[pe.sections]]
+name = ".text"
+virtual_size = 3691695
+rva = 4096
+raw_size = 3694592
+raw_offset = 4096
+
+[[pe.sections]]
+name = ".rdata"
+virtual_size = 31168
+rva = 3698688
+raw_size = 32768
+raw_offset = 3698688
+
+[[pe.sections]]
+name = ".data"
+virtual_size = 146196
+rva = 3731456
+raw_size = 8192
+raw_offset = 3731456
+
+[[pe.sections]]
+name = ".rsrc"
+virtual_size = 2400
+rva = 3878912
+raw_size = 4096
+raw_offset = 3739648

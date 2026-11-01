@@ -1,0 +1,17 @@
+/.analysis/
+/.tools/
+/.venv/
+/_reference/
+/build/
+/ghidra-project/
+/resources/*.exe
+/resources/*.EXE
+__pycache__/
+*.pyc
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.i64
+*.gpr
+*.rep/

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+repo_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+repo_python=${EFZ_PYTHON:-$repo_root/.venv/bin/python}
+if [[ ! -x "$repo_python" ]]; then
+  echo 'Missing repository Python. See README.md setup instructions.' >&2
+  exit 1
+fi
+"$repo_python" -c 'import pathlib,platform,sys; expected=pathlib.Path(sys.argv[1]).read_text().strip(); actual=platform.python_version(); sys.exit(0 if actual==expected and platform.python_implementation()=="CPython" else "Expected CPython "+expected+", got "+actual)' "$repo_root/.python-version"
+exec "$repo_python" "$@"

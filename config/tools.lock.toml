@@ -1,0 +1,44 @@
+schema_version = 1
+
+[msvc71]
+repository = "https://github.com/archaic-msvc/msvc710.git"
+commit = "2932d76fe417b0bc49010b26d4be2e5b743cc4be"
+compiler_version = "13.10.3077"
+linker_version = "7.10.3077"
+status = "RTM candidate supported by EFZ Rich build 3077; production flags open"
+
+[wine]
+version = "9.0 (Ubuntu 9.0~repack-4build3)"
+launcher_sha256 = "96d2e3a50f09760fd38ad083d57fbe3d07f7fe92308b81db2335b57bb36d98f9"
+loader = "/usr/lib/wine/wine"
+loader_sha256 = "e6fb92dbdf361e700b13d8c5bc83da47560ee3c3d6f3f81e0023230bc07b5154"
+
+[files]
+"Vc7/bin/atlprov.dll" = "96d5605211a7bbc0431aa40e0184a1c3aced303bb4e70b56eb2ce66361122704"
+"Vc7/bin/bscmake.exe" = "51dc5196c44f1b0409ffde540fc57a8868c9c784c4a745e32553f4bac2355ea6"
+"Vc7/bin/c1.dll" = "11f452af93f8e686b36b348763b33d32ae2766f1b0c360a447053bf44ec50fcc"
+"Vc7/bin/c1xx.dll" = "353f3d5dcd050b876e1c044b99c4bf47958d255f395a4919f406a19921be4dfa"
+"Vc7/bin/c2.dll" = "bcd28f39b1798b07989c30a1df471cf87fc20e3802d130901a08f83800e6b81e"
+"Vc7/bin/cl.exe" = "2ecf86a3edfd3deae498e08298e210e984537ce9e11759930561e43f40bd2515"
+"Vc7/bin/clstencil.exe" = "e1ae79dc694138a150da1726ec670826c8f7dff0fe195a61d83faccb18240b7f"
+"Vc7/bin/cvtres.exe" = "c08ec0a3053434a0ba017d50cf1fcd8a3bcc32cb67e43a2aefe3c01a41eedbf7"
+"Vc7/bin/dumpbin.exe" = "199d4a4d355a987de84efeb7dc9012d5e31c2edd9c544580d91c949f52f95ce6"
+"Vc7/bin/editbin.exe" = "ba0d2067fea609623ba72cd58e6e6b994890a112a612df80ef9be080a4d510eb"
+"Vc7/bin/h2inc.exe" = "a91dcf8751a3bec8cb537676ee34c957b0a91d61d7e3032defbb607a91929c28"
+"Vc7/bin/lib.exe" = "3892c55821f628961ebf177537fdb002f3423166ead89c3aa7bc2ea1419fe1eb"
+"Vc7/bin/link.exe" = "0d5f9712d0da843d787bf4ce4e678abc6b737940996706b2c86101eac9df3e3c"
+"Vc7/bin/ml.exe" = "9b69cec8c55b18b26c733c94f2ad00ccc706c84a97e7c4c390a4c8c55ea0cbeb"
+"Vc7/bin/msobj71.dll" = "19ce191c44e783e70c762ef13c1e918fc07745c8f64fcfc7b217e73ef667c168"
+"Vc7/bin/mspdb71.dll" = "85ebd7dcbe1b9fa756f23e5f811d7dfeccdac0de14271f2c18affbf918d8cb79"
+"Vc7/bin/nmake.exe" = "eace209f687eba79f19341a2b5cc8b804ca19bebf636d0f4780f3e2272283207"
+"Vc7/bin/rc.exe" = "139597123a5daa11148da6704c779152dc6b693bde65222e6855639164aaf9bb"
+"Vc7/bin/rcdll.dll" = "f0c29d72e249614ab801efc35de4fe939b3e7edd6d6f45c3df63f580c459f47c"
+"Vc7/bin/sproxy.exe" = "c2f09ce8aa4d49dcb920139c9bd004115d1a49518bed2c7120e2dff40aeb44fa"
+"Vc7/bin/undname.exe" = "40c8574397eaa2777e03bf3b64989c3fc9bd138c46c8090e4262797e335e67ab"
+"Vc7/bin/vcdeploy.exe" = "26fd6191b79b9b2f0346fb438b7fafaa7bcc4f2327715679d9fe57a6218dc046"
+
+[trees]
+"Vc7/include" = "997e7b542717cd17fba223c6e4adba5fb07264b8f5ee0a0146280f8e81b9c6df"
+"Vc7/lib" = "72f37de9f07157b31791b3f5059c3dbe28bb992e79479457790b779a82060024"
+"Vc7/PlatformSDK/Include" = "d5b88d20ec9f5ebf21f15c8b8409811c731a46b74dab912ab71d9b854f262621"
+"Vc7/PlatformSDK/Lib" = "bc86d67cf29bf48ba9b739f8e249522cf30438a08a08294afbc89f52589538b7"

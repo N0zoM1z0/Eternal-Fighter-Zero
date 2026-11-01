@@ -1,0 +1,3 @@
+address,end,size,status,evidence
+0x00405A20,0x00405AD4,180,reviewed,docs/KNOWLEDGE_BASE.md#configuration-file-access
+0x00405AE0,0x00405BDE,254,reviewed,docs/KNOWLEDGE_BASE.md#configuration-file-access

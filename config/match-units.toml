@@ -1,0 +1,164 @@
+schema_version = 1
+target_sha256 = "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481"
+
+[units]
+
+[units.config-read-byte]
+artifact_kind = "coff"
+profile = "vc71-od"
+source = "src/Config.cpp"
+dependencies = []
+object = "build/match-units/config-read-byte/Config.obj"
+symbol = "_ReadConfigByte"
+target_address = 0x00405a20
+size = 180
+
+[[units.config-read-byte.relocations]]
+offset = 36
+type = "DIR32"
+symbol = "_efz_key_ini"
+target = 0x00787378
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; mapped ASCII key.ini"
+
+[[units.config-read-byte.relocations]]
+offset = 42
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT CreateFileA"
+
+[[units.config-read-byte.relocations]]
+offset = 63
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT GetFileSize"
+
+[[units.config-read-byte.relocations]]
+offset = 80
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT GetFileSize"
+
+[[units.config-read-byte.relocations]]
+offset = 92
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; complete original call operand and allocation wrapper"
+
+[[units.config-read-byte.relocations]]
+offset = 128
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT ReadFile"
+
+[[units.config-read-byte.relocations]]
+offset = 156
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; complete original call operand and deallocation thunk"
+
+[[units.config-read-byte.relocations]]
+offset = 169
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT CloseHandle"
+
+[units.config-write-byte]
+artifact_kind = "coff"
+profile = "vc71-od"
+source = "src/Config.cpp"
+dependencies = []
+object = "build/match-units/config-write-byte/Config.obj"
+symbol = "_WriteConfigByte"
+target_address = 0x00405ae0
+size = 254
+
+[[units.config-write-byte.relocations]]
+offset = 36
+type = "DIR32"
+symbol = "_efz_key_ini_update_read"
+target = 0x00787380
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 42
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 67
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 88
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 100
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 146
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 182
+type = "DIR32"
+symbol = "_efz_key_ini_update_write"
+target = 0x00787388
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 188
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 215
+type = "DIR32"
+symbol = "__imp__WriteFile@20"
+target = 0x00787040
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 230
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"
+
+[[units.config-write-byte.relocations]]
+offset = 243
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings"

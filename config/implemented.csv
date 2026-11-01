@@ -1,0 +1,3 @@
+address,name,source,symbol,status,evidence
+0x00405A20,ReadConfigByte,src/Config.cpp,_ReadConfigByte,complete,docs/evidence/config-exact.json
+0x00405AE0,WriteConfigByte,src/Config.cpp,_WriteConfigByte,complete,docs/evidence/config-exact.json

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "method": "scripts/replay-exact-units.py --unit config-read-byte --unit config-write-byte",
+  "authority": "complete function codegen under declared original address bindings; no product/runtime closure",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 180,
+      "matched_bytes": 180,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 36,
+          "target": 7893880,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_efz_key_ini",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; mapped ASCII key.ini",
+          "addend": 0
+        },
+        {
+          "offset": 42,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT CreateFileA",
+          "addend": 0
+        },
+        {
+          "offset": 63,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT GetFileSize",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT GetFileSize",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; complete original call operand and allocation wrapper",
+          "addend": 0
+        },
+        {
+          "offset": 128,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT ReadFile",
+          "addend": 0
+        },
+        {
+          "offset": 156,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; complete original call operand and deallocation thunk",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; PE KERNEL32 IAT CloseHandle",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0604329f929e5f7b42c418e31b6d5d321b5dad84e43382a64b67ba9da1a1b669",
+      "target_extent_sha256": "0604329f929e5f7b42c418e31b6d5d321b5dad84e43382a64b67ba9da1a1b669",
+      "unit": "config-read-byte",
+      "symbol": "_ReadConfigByte",
+      "target_address": "0x00405A20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "c2012e502b8bdda01fd48171f5ea773938f3e5ace14ba05f1eeb2b6a9399888d",
+      "object_sha256": "45f80a919f6f63594ab53857ae68ddcabde2d749c9907b0a6e6f2851c8d4659d",
+      "source_sha256": "6d27679d200abd4cb554f71b3ab7a9e8c23ca3fc3898362b21a270bfb2841743",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "885101ef4beadf83906c7057990d8f605f33658f50357312a48d56f8c2117f64",
+      "build_manifest_sha256": "f335f1246460960bc9e95ef5bb4e988175c3ac09b45b19b2c40b1826fa9e8f10",
+      "unit_sha256": "481fabf7c28a57dadd6e29cc9b16713390a1cbbca7b70d8799a59797f313cec8",
+      "profile_sha256": "061e02003f7816c24781dccd1a7f8c7f3a38f2883315c8c8225b04c0da8af0f9",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 254,
+      "matched_bytes": 254,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 36,
+          "target": 7893888,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_efz_key_ini_update_read",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 42,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 67,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 88,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 136,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 182,
+          "target": 7893896,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_efz_key_ini_update_write",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 188,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 215,
+          "target": 7893056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WriteFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 230,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        },
+        {
+          "offset": 243,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body disassembly, PE IAT and string bindings",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "021c58fcdc7334f44b52af5d8d7e055da05e5a451d997ac93b05373bfb5f8a5c",
+      "target_extent_sha256": "021c58fcdc7334f44b52af5d8d7e055da05e5a451d997ac93b05373bfb5f8a5c",
+      "unit": "config-write-byte",
+      "symbol": "_WriteConfigByte",
+      "target_address": "0x00405AE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "c2012e502b8bdda01fd48171f5ea773938f3e5ace14ba05f1eeb2b6a9399888d",
+      "object_sha256": "85f9118d9d11a51625e2f9f15fb32ea28811d1bad2255caed2872d355b2099be",
+      "source_sha256": "6d27679d200abd4cb554f71b3ab7a9e8c23ca3fc3898362b21a270bfb2841743",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "885101ef4beadf83906c7057990d8f605f33658f50357312a48d56f8c2117f64",
+      "build_manifest_sha256": "f335f1246460960bc9e95ef5bb4e988175c3ac09b45b19b2c40b1826fa9e8f10",
+      "unit_sha256": "e04b3b3966c27bb1e1cb927e4f53fd8fad1ac2ad6c78b27c57c661d59b9fe58f",
+      "profile_sha256": "061e02003f7816c24781dccd1a7f8c7f3a38f2883315c8c8225b04c0da8af0f9",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

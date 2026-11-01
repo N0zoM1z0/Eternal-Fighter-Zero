@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "authority": "Selected local Ghidra/JDK surfaces, not the complete installation. Static analysis is provisional and does not establish byte exactness.",
+  "ghidra": {
+    "version": "12.1.3",
+    "release_tag": "Ghidra_12.1.3_build",
+    "files": {
+      "Ghidra/application.properties": "fb9b6292c801e4a18b7c20829437d3b18b2241b273aea9b1cbdebdf3e5d0dc15",
+      "support/analyzeHeadless": "302880328a0024ee24cfe0326d4d9a61c2237116d95f2e0e0df090f747f95e30",
+      "Ghidra/Features/Base/lib/Base.jar": "1b6b4063ed5c04c6137ecfc588e72ec7d795a57b07ab34324a8245e85d50a56c",
+      "Ghidra/Features/Decompiler/lib/Decompiler.jar": "c3b5aa4b77ad19244fcc418b17e129a98a9bc23ebd876fa02b5f419145ec3132",
+      "Ghidra/Framework/SoftwareModeling/lib/SoftwareModeling.jar": "220c419c4d94d65faddecf77ba899213b66382c092a3753be56f3bb08112c96f",
+      "Ghidra/Framework/Utility/lib/Utility.jar": "6f5c4ae8de0ef8f93f796a1b66f1b9dba047b423c54d3d0d845b486d8d08323d",
+      "Ghidra/Features/Decompiler/os/linux_x86_64/decompile": "4a97ff9a3dbac5757c7240a664571e82345e4abc4f67cd211cd9d402abe4543d",
+      "Ghidra/Processors/x86/data/languages/x86.sla": "f8f79a2bae797ed62e9613cb1253dab56e57a0a57c4b14b52912e25c58e60273",
+      "Ghidra/Processors/x86/data/languages/x86win.cspec": "5145482b1c9aa6a9c6ad4d5554f98a35fb11b82a13e226df96018a171ea94988",
+      "Ghidra/Processors/x86/data/languages/x86.pspec": "b83be4039dd2e89ceaca7e6200d3c2cbd4152f7bdee8555065a4b9de1ce76b91",
+      "Ghidra/Processors/x86/data/languages/x86.ldefs": "5d8311a8a38cc55072b250d2610ac98a5970d3e2233c97edaf21f551052eb4a0"
+    }
+  },
+  "jdk": {
+    "version": "21.0.12.1+1",
+    "banner_substring": "openjdk version \"21.0.12.1\"",
+    "files": {
+      "bin/java": "2a207f5e7d075afa01d97f8048389a64432a44c4a5af0f5e77d6e286ec5f401d",
+      "release": "ebbd70bf00bab6d39addf51969c5ff244030b86b29de400b9fb10612ebd3ceec",
+      "lib/modules": "70c5465dabf8e1bec2860631ea3ffd342f0ec23a5e2efd3a389d2abe32448f98"
+    }
+  }
+}

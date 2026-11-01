@@ -1,0 +1,12 @@
+schema_version = 1
+product_status = "open"
+production_translation_units = "unknown"
+production_link_order = "unknown"
+production_resource_inputs = "unknown"
+production_runtime_library = "unknown"
+
+[profiles.vc71-od]
+artifact_kind = "coff"
+compiler = "msvc710/Vc7/bin/cl.exe"
+flags = ["/Od", "/G6", "/MD", "/Gy", "/W3"]
+status = "candidate; individually verified complete functions only"
