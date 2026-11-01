@@ -175,3 +175,67 @@ Private evidence: `.analysis/ghidra/disasm-00401000.txt`, the corresponding
 startup decompile, `.analysis/probes/startup.py` (independent named binding
 inventory), native build logs and `.analysis/exact/startup-selected.json`.
 Public complete comparisons are in `docs/evidence/startup-exact.json`.
+
+## Context and pattern lifetime
+
+The original constructor at `0x406070..0x40625D` (493 bytes), destructor at
+`0x406260..0x40643D` (477 bytes), and pattern loader at
+`0x406E60..0x4070FC` (668 bytes) were reviewed as complete contiguous bodies.
+The return instructions and following alignment were checked independently of
+Ghidra candidate labels. `src/Context.cpp` provides natural C++ definitions;
+`src/Engine.h` now shares the observed layouts with the startup owner.
+
+The context has a nontrivial tail subobject at offset `0x14284`, whose constructor and
+destructor bind to `0x405E60` and `0x405F80`. The reconstruction represents it as a member; original inheritance/composition
+is not yet established. Natural member lifetime emits those
+calls in the correct order. The first three pointers are video/input/audio
+owners. The destructor releases 920 COM-style interface pointers at `0x38`
+and three additional pointers at `0xE98..0xEA0`, using stdcall virtual slot two.
+It releases non-sentinel audio slots (65 entries and the `0xF26` slot), deletes
+the pattern array and optional byte buffer, then destroys the tail member.
+The interface calling convention is taken from the explicit original pushes
+and vtable call, not from inferred decompiler class names.
+
+The constructor initializes sound slots to 150 and preserves the original
+configuration-byte/default branches. Bytes `0x21..0x24` and `0x26` drive the
+observed fields; numeric/offset field names remain provisional. The full shared
+layout preserves the original 0x142F0 allocation size used by startup. Unknown
+storage is represented as unknown data, without pretending those fields are
+semantically recovered.
+
+The 8-byte pattern element contains an uninitialized count byte, three unknown
+bytes and a pointer to 12-byte frames. Its constructor at `0x408310` is 24 bytes
+and initializes only that pointer. Its destructor at `0x408270` is 43 bytes;
+allocation at `0x4082D0` is 56 bytes and stores the low count byte while using
+the signed full integer allocation argument. Reallocating a populated element
+is not hardened or silently repaired. The frames contain six 16-bit fields.
+
+This directly contradicts the automatic names suggesting ATL string dispatch
+and Concurrency TaskStack at the pattern array cleanup/element destructor.
+The 106-byte vector-deleting helper at `0x408200` and 48/35-byte destructor/
+constructor iterators at `0x4082A0`/`0x408380` are reproduced by the compiler
+from ordinary `new[]`/`delete[]`; those helper bodies are separate generated
+origin evidence and are excluded from authored progress.
+
+The loader constructs a 12-byte reader for the original pattern-path binding
+at `0x787510`, reads the element count, constructs the counted array and fills
+frames in the exact original order: offsets 0, 2, 8, 10, 4, 6. It retains the
+original unused type read/store, fourteen discarded integer-decoder calls and
+ten 16-byte reads per frame. Reader construction/destruction and decoder/read
+bindings are `0x408330`, `0x408360`, `0x405700` and `0x405600`. The actual decoder
+implementation and complete on-disk format remain open; these are exact caller
+bodies under explicit callee bindings.
+
+First complete comparisons matched constructor/destructor and the three small
+pattern members immediately. The loader initially had 63 stack-offset byte
+differences. Natural lifetimes for the scratch buffer, reader/count state and
+loop parsing state resolved those differences, without changing instructions,
+adding dummy variables or masking fields. Array cookies and generated cleanup
+were retained in complete comparison.
+
+Private evidence is in `.analysis/ghidra/decompile-00406*.txt`,
+`.analysis/probes/raw-00406*.txt`, `.analysis/probes/context.py` (named original
+bindings), and `.analysis/exact/context-selected.json`. Public proofs are in
+`docs/evidence/context-exact.json`; the shared-header startup revalidation is
+in the refreshed `docs/evidence/startup-exact.json`. No configuration unit needed
+replay because it does not include the new shared header.

@@ -6,62 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 
-class Video {
-public:
-    void Initialize(HWND, unsigned char);
-    void Shutdown();
-};
-class Input {
-public:
-    void Initialize(HWND);
-    void Configure(unsigned int);
-    void Defaults();
-    void Shutdown();
-};
-class Audio {
-public:
-    void Initialize(HWND);
-    void SetMode(short);
-    void Shutdown();
-};
-class Secondary { public: ~Secondary(); };
-class Context {
-    unsigned char unknown_0000[0xf26];
-public:
-    short audioMode;
-private:
-    unsigned char unknown_0f28[0x440];
-public:
-    int framePhase;
-private:
-    unsigned char unknown_136c[0x12f84];
-public:
-    Context(Video *, Input *, Audio *);
-    ~Context();
-    void Initialize();
-    void Load();
-    void Activate();
-};
-class Scene {
-public:
-    virtual void Slot0();
-    virtual unsigned char Step();
-    unsigned message;
-};
-#define DECLARE_SCENE(Name, Size) \
-class Name : public Scene { \
-    unsigned char unknown_0008[Size - 8]; \
-public: Name(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *); \
-};
-DECLARE_SCENE(Scene0, 0x44c)
-DECLARE_SCENE(Scene1, 0x560)
-DECLARE_SCENE(Scene2, 0x438)
-DECLARE_SCENE(Scene3, 0x598)
-DECLARE_SCENE(Scene5, 0x474)
-DECLARE_SCENE(Scene6, 0x760)
-DECLARE_SCENE(Scene7, 0x448)
-DECLARE_SCENE(Scene8, 0x758)
-#undef DECLARE_SCENE
+#include "Engine.h"
 
 extern Video video;
 extern Input input;

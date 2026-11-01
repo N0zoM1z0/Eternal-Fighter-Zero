@@ -40,15 +40,14 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-The initial checkpoint has **four complete exact authored functions, 2,540 code bytes**,
-with every relocation field explicitly bound and compared. Two additional
-44-byte compiler-generated deleting helpers are checked separately as ABI
-evidence and are excluded from authored progress. The local Ghidra
+The initial checkpoint has **ten complete exact authored functions, 4,301 code bytes**,
+with every relocation field explicitly bound and compared. Five compiler-generated deleting/array-iteration helpers are checked separately
+as ABI evidence and are excluded from authored progress. The local Ghidra
 inventory contains 950 non-external candidates; their boundaries and origins
 remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
 is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
-the accepted startup/window owners and configuration helpers, retained evidence
-and next owner.
+the accepted startup/window, context lifetime and pattern owners, configuration
+helpers, retained evidence and next owner.
 
 Compiler, linker, resource and native execution smoke checks pass. The original
 translation-unit graph, linked data/resources, full executable and runtime

@@ -167,7 +167,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = []
+dependencies = ["src/Engine.h"]
 object = "build/match-units/startup-main/Startup.obj"
 symbol = "_GameMain@16"
 target_address = 0x00401000
@@ -1276,7 +1276,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = []
+dependencies = ["src/Engine.h"]
 object = "build/match-units/startup-window-procedure/Startup.obj"
 symbol = "_WindowProcedure@16"
 target_address = 0x00401670
@@ -1545,7 +1545,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = []
+dependencies = ["src/Engine.h"]
 object = "build/match-units/startup-context-delete/Startup.obj"
 symbol = "??_GContext@@QAEPAXI@Z"
 target_address = 0x004018f0
@@ -1569,7 +1569,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = []
+dependencies = ["src/Engine.h"]
 object = "build/match-units/startup-secondary-delete/Startup.obj"
 symbol = "??_GSecondary@@QAEPAXI@Z"
 target_address = 0x00401920
@@ -1588,3 +1588,471 @@ type = "REL32"
 symbol = "??3@YAXPAX@Z"
 target = 0x00777e20
 evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
+
+[units.context-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-construct/Context.obj"
+symbol = "??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x00406070
+size = 493
+
+[[units.context-construct.relocations]]
+offset = 19
+type = "REL32"
+symbol = "??0ContextTail@@QAE@XZ"
+target = 0x00405e60
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 248
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 289
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 308
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 333
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 358
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 377
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 472
+type = "REL32"
+symbol = "?InitializeState@Context@@QAEXXZ"
+target = 0x00408100
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-construct.relocations]]
+offset = 480
+type = "REL32"
+symbol = "?ResetState@Context@@QAEXXZ"
+target = 0x00406440
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.context-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-destruct/Context.obj"
+symbol = "??1Context@@QAE@XZ"
+target_address = 0x00406260
+size = 477
+
+[[units.context-destruct.relocations]]
+offset = 306
+type = "REL32"
+symbol = "?ReleaseSound@Audio@@QAEXG@Z"
+target = 0x0040df50
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-destruct.relocations]]
+offset = 348
+type = "REL32"
+symbol = "?ReleaseSound@Audio@@QAEXG@Z"
+target = 0x0040df50
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-destruct.relocations]]
+offset = 394
+type = "REL32"
+symbol = "??_EPatternSequence@@QAEPAXI@Z"
+target = 0x00408200
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-destruct.relocations]]
+offset = 439
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-destruct.relocations]]
+offset = 469
+type = "REL32"
+symbol = "??1ContextTail@@QAE@XZ"
+target = 0x00405f80
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.context-load-patterns]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/context-load-patterns/Context.obj"
+symbol = "?Load@Context@@QAEXXZ"
+target_address = 0x00406e60
+size = 668
+
+[[units.context-load-patterns.relocations]]
+offset = 13
+type = "DIR32"
+symbol = "?patternPath@@3QBDB"
+target = 0x00787510
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 21
+type = "REL32"
+symbol = "??0PatternReader@@QAE@PBDH@Z"
+target = 0x00408330
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 29
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 54
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 79
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 97
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 165
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 176
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 184
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 192
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 250
+type = "REL32"
+symbol = "?Allocate@PatternSequence@@QAEXH@Z"
+target = 0x004082d0
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 322
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 357
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 427
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 462
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 497
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 505
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 513
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 521
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 529
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 537
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 545
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 561
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 569
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 577
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 585
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 593
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 601
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 639
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEXPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.context-load-patterns.relocations]]
+offset = 659
+type = "REL32"
+symbol = "??1PatternReader@@QAE@XZ"
+target = 0x00408360
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.pattern-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-construct/Context.obj"
+symbol = "??0PatternSequence@@QAE@XZ"
+target_address = 0x00408310
+size = 24
+
+[units.pattern-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-destruct/Context.obj"
+symbol = "??1PatternSequence@@QAE@XZ"
+target_address = 0x00408270
+size = 43
+
+[[units.pattern-destruct.relocations]]
+offset = 32
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.pattern-allocate]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-allocate/Context.obj"
+symbol = "?Allocate@PatternSequence@@QAEXH@Z"
+target_address = 0x004082d0
+size = 56
+
+[[units.pattern-allocate.relocations]]
+offset = 31
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.pattern-vector-delete]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-vector-delete/Context.obj"
+symbol = "??_EPatternSequence@@QAEPAXI@Z"
+target_address = 0x00408200
+size = 106
+
+[[units.pattern-vector-delete.relocations]]
+offset = 16
+type = "DIR32"
+symbol = "??1PatternSequence@@QAE@XZ"
+target = 0x00408270
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.pattern-vector-delete.relocations]]
+offset = 34
+type = "REL32"
+symbol = "??_I@YGXPAXIHP6EX0@Z@Z"
+target = 0x004082a0
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.pattern-vector-delete.relocations]]
+offset = 54
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.pattern-vector-delete.relocations]]
+offset = 73
+type = "REL32"
+symbol = "??1PatternSequence@@QAE@XZ"
+target = 0x00408270
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[[units.pattern-vector-delete.relocations]]
+offset = 90
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
+
+[units.pattern-vector-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-vector-destruct/Context.obj"
+symbol = "??_I@YGXPAXIHP6EX0@Z@Z"
+target_address = 0x004082a0
+size = 48
+
+[units.pattern-vector-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Context.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/pattern-vector-construct/Context.obj"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target_address = 0x00408380
+size = 35

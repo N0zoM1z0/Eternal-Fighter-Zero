@@ -5,3 +5,12 @@ address,end,size,status,evidence
 0x00401670,0x00401844,468,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x004018F0,0x0040191C,44,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401920,0x0040194C,44,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
+0x00406070,0x0040625D,493,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00406260,0x0040643D,477,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00406E60,0x004070FC,668,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00408310,0x00408328,24,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00408270,0x0040829B,43,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x004082D0,0x00408308,56,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00408200,0x0040826A,106,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x004082A0,0x004082D0,48,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
+0x00408380,0x004083A3,35,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime

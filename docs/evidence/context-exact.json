@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "method": "selected cold replay of context/pattern units and startup units affected by the shared layout header; configuration units were not rebuilt",
+  "authority": "complete function codegen under declared original bindings; generated array/deleting helpers are auxiliary, not authored progress",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 493,
+      "matched_bytes": 493,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 19,
+          "target": 4218464,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0ContextTail@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 248,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 289,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 308,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 333,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 358,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 377,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 472,
+          "target": 4227328,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 480,
+          "target": 4219968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetState@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9fdf40ac3a20f03020705a3245a8dbb6bf07aac9807b0b8709ad452ba0e62da0",
+      "target_extent_sha256": "9fdf40ac3a20f03020705a3245a8dbb6bf07aac9807b0b8709ad452ba0e62da0",
+      "unit": "context-construct",
+      "symbol": "??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x00406070",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "f9640a9383dc29ff8d9d04a3e76da8f8da4ecf85921950b33797ca694a3f3d31",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "4ba8efa377f282aa7a1a71141f497a36e31d6e417bb5320696c32f65fd2a7ec5",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 477,
+      "matched_bytes": 477,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 306,
+          "target": 4251472,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 348,
+          "target": 4251472,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 394,
+          "target": 4227584,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_EPatternSequence@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 439,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 469,
+          "target": 4218752,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1ContextTail@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ad68e4a1fd75efb8340f040cf43618e9bd5b28f2241e51004e5b0858b06a18ce",
+      "target_extent_sha256": "ad68e4a1fd75efb8340f040cf43618e9bd5b28f2241e51004e5b0858b06a18ce",
+      "unit": "context-destruct",
+      "symbol": "??1Context@@QAE@XZ",
+      "target_address": "0x00406260",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "d782ff76da0e552adce17b827a58ba82132745733eb1bb7774d205e0b47ea420",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "353c90ba1ef0221bb3a05d393f13912a5671323d29eba9ea1ef5cf31dcf1ab3a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 668,
+      "matched_bytes": 668,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7894288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?patternPath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 21,
+          "target": 4227888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0PatternReader@@QAE@PBDH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 29,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 79,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 165,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 176,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 184,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 192,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 250,
+          "target": 4227792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 392,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 427,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 462,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 497,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 505,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 513,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 521,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 529,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 537,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 545,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 553,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 561,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 569,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 577,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 585,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 593,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 601,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 639,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEXPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 659,
+          "target": 4227936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternReader@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "309862cf2e90bf81fbf7beab2ace5f301c4e91ffe01bcf1ad81d0f9ef346502b",
+      "target_extent_sha256": "309862cf2e90bf81fbf7beab2ace5f301c4e91ffe01bcf1ad81d0f9ef346502b",
+      "unit": "context-load-patterns",
+      "symbol": "?Load@Context@@QAEXXZ",
+      "target_address": "0x00406E60",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "2f64a9f0a19791c159df25010cc1af297f82bf9f6112fd9d3304bb7de426ec9c",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "fd93f18f932731bf9a2d7b5a638b9833f4241fa65d6dc85be1b16001eae71ec0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 24,
+      "matched_bytes": 24,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "13d64daa3c44070ffedb8010e1892c40ff61a9452a2044daa6046609572677c5",
+      "target_extent_sha256": "13d64daa3c44070ffedb8010e1892c40ff61a9452a2044daa6046609572677c5",
+      "unit": "pattern-construct",
+      "symbol": "??0PatternSequence@@QAE@XZ",
+      "target_address": "0x00408310",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "edfbf3d89d7682a64c63140667f8de3b03fabf81d613b474b52d83c172be66db",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "511904dd007648d49b57d6ae0f48f0cd87772f2f0f0dbd84da5c42dbce18647e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 43,
+      "matched_bytes": 43,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 32,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "386a093214c96bc6ad2e8f437000f98216f8c96f352dcb763fa6a65661b99825",
+      "target_extent_sha256": "386a093214c96bc6ad2e8f437000f98216f8c96f352dcb763fa6a65661b99825",
+      "unit": "pattern-destruct",
+      "symbol": "??1PatternSequence@@QAE@XZ",
+      "target_address": "0x00408270",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "425397000ff884d26bdb6040340c915ef6b4722982a8e7960a03723fcddadc38",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "d4d1133ad5160a449bd2b6092760ed4f4d7a6e4c312b1f577609e96d62796c05",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 56,
+      "matched_bytes": 56,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 31,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "45ff07e2001331c98175f227438bf4146c09e9e4faba5382084afb95402f0cf4",
+      "target_extent_sha256": "45ff07e2001331c98175f227438bf4146c09e9e4faba5382084afb95402f0cf4",
+      "unit": "pattern-allocate",
+      "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+      "target_address": "0x004082D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "f68f5ea8b89bcfa27bf32a0830af8b2ac51dbfe6fdc262b8fc83683a23203b88",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "f8234cebb99c2eaa3c8140166f0df98edb589913f5a1f5189c17f9ca1075e264",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 106,
+      "matched_bytes": 106,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 16,
+          "target": 4227696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??1PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 34,
+          "target": 4227744,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_I@YGXPAXIHP6EX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 73,
+          "target": 4227696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "16abf8c658104ed252129a16341530a2067b0c10a9a3c019d7d8000635ae930d",
+      "target_extent_sha256": "16abf8c658104ed252129a16341530a2067b0c10a9a3c019d7d8000635ae930d",
+      "unit": "pattern-vector-delete",
+      "symbol": "??_EPatternSequence@@QAEPAXI@Z",
+      "target_address": "0x00408200",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "612005d8724d57822ba3205eb0fcaff51abbe9f85fa8d658d76f2a52c5a1f215",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "6382f1e094191bce6e6de9c89d3871bb6404c2255e0f45813f18b3d7bd5774bc",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 48,
+      "matched_bytes": 48,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "ea54d3be0b3f1bf36afb9e00395c3ad120839ee50991e6fe98646108f7f4f7c9",
+      "target_extent_sha256": "ea54d3be0b3f1bf36afb9e00395c3ad120839ee50991e6fe98646108f7f4f7c9",
+      "unit": "pattern-vector-destruct",
+      "symbol": "??_I@YGXPAXIHP6EX0@Z@Z",
+      "target_address": "0x004082A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "8f7bdf3a75780bad1901e323acd8bc4328f1c128862760e8db096a3a13b0038d",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "192a8ae1a47b95d5cbf35325dc09e0384fe3c0953b47d1aff313471313c2fa92",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 35,
+      "matched_bytes": 35,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "b3a0a61ce7b60346d97f5991665f32c39b4e9846b1d720eeb06bd68c4aeb8d76",
+      "target_extent_sha256": "b3a0a61ce7b60346d97f5991665f32c39b4e9846b1d720eeb06bd68c4aeb8d76",
+      "unit": "pattern-vector-construct",
+      "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+      "target_address": "0x00408380",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b71f7d984de873c41291bbdb9fb0e4dda81d1bc3c7f0c92dd3712839901e353f",
+      "object_sha256": "b77070b0a66a26b84279bfe2f033207f0addbc17e8816bb977afd9606fd2be3b",
+      "source_sha256": "e309a28e1aa539f89a47abb9b8fa99647a8391e1e7d16c36a2c01e146271c06b",
+      "dependencies": {
+        "src/Engine.h": "d1223508600fe042248c618cf910738af0924a5a0b2b94d25d6228ea7c9ef723"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "06cbe55a7abafa66e6502d09f1edc1d67019a56d91430e30dbe1530d175ca1a8",
+      "build_manifest_sha256": "da8705a0141d3667417a8dad064041bedf8792fa5540660945baa26521dc23b0",
+      "unit_sha256": "b7bce8b15e9439cb158f324c90cc202fb743f487612cb0813da360ebfaf18cdf",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

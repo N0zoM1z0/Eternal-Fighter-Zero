@@ -16,33 +16,53 @@ later checkpoints are local unless the operator requests a push.
 | --- | --- | ---: |
 | `startup-main` | `0x401000` | 1,638 |
 | `startup-window-procedure` | `0x401670` | 468 |
+| `context-construct` | `0x406070` | 493 |
+| `context-destruct` | `0x406260` | 477 |
+| `context-load-patterns` | `0x406E60` | 668 |
+| `pattern-construct` | `0x408310` | 24 |
+| `pattern-destruct` | `0x408270` | 43 |
+| `pattern-allocate` | `0x4082D0` | 56 |
 | `config-read-byte` | `0x405A20` | 180 |
 | `config-write-byte` | `0x405AE0` | 254 |
 
-Total authored exact code is **2,540 bytes** in four complete functions.
+Total authored exact code is **4,301 bytes** in ten complete functions.
 Additional 44-byte scalar-deleting helpers at `0x4018F0` and `0x401920` have
 strict zero-difference proofs, but are classified compiler-generated and excluded
-from authored match totals. Candidate inventory remains 950 non-external entries.
+from authored match totals. Three additional generated array helpers have
+189 compared bytes, also excluded. Candidate inventory remains 950 non-external entries.
 
-## Verified startup result
+## Verified context and pattern result
 
-`src/Startup.cpp` covers full window/device initialization, eight scene
-allocations in nine slots, message/frame dispatch and window-destruction cleanup.
-The original unreachable scene-zeroing block is preserved; Ghidra pseudocode
-omitted it. Independent IAT inspection corrected a misleading literal-only
-reading: destruction calls `timeEndPeriod(1)` and `PostQuitMessage(1000)`.
+`src/Context.cpp` now closes the 493-byte context constructor, 477-byte
+context destructor and 668-byte pattern loader. Three pattern members add
+24-byte construction, 43-byte destruction and 56-byte allocation bodies.
+Shared layout definitions moved from Startup.cpp into `src/Engine.h`; this
+header is an explicit dependency of both groups' exact recipes.
 
-Startup uses its own `/MT` profile because original CRT calls are direct.
-Do not transplant that profile globally: prior configuration units retain their
-verified `/MD` recipe. The first whole startup build was compared early and the
-remaining 33 local stack-displacement differences were resolved with natural
-MSG/WNDCLASS/HWND scope and names. No byte arrays for code, padding or fake ABI
-were used. Class names and opaque storage types remain provisional.
+Constructor/member cleanup at offset 0x14284, 920 COM-style interface slots,
+65 audio IDs, optional blob and counted pattern-array lifetime are represented
+by natural C++. The pattern loader preserves all integer-decoder calls,
+original field order, unused type read/store and ten 16-byte reads per frame.
+The source does not silently initialize the original uninitialized count byte.
 
-Selected cold replay passed all four new units: 2,194 compared bytes and 198
-relocations, with zero differences. Public proof: `docs/evidence/startup-exact.json`.
-The unchanged configuration cohort was not rebuilt. Public progress counts only
-the two new authored owners (2,106 bytes), not the compiler-generated helpers.
+The previous Ghidra ATL/Concurrency names were re-evaluated against pattern
+allocation/loader consumers and compiler-generated array cleanup. Three array
+helpers (106, 48 and 35 bytes) have separate generated-origin proofs, not
+extra authored credit. Source names and unknown data regions stay provisional.
+
+The first whole loader comparison had 63 stack-offset differences; explicit
+natural parsing lifetimes resolved them. Startup's four involved units were
+replayed after the shared-header extraction. The configuration source includes
+neither changed file and was not rebuilt. Public proofs are
+`docs/evidence/context-exact.json` and refreshed `docs/evidence/startup-exact.json`.
+
+## Earlier startup result
+
+The complete 1,638-byte startup and 468-byte callback retain the unreachable
+scene-zeroing branch omitted by decompilation. Destruction uses
+`timeEndPeriod(1)` and `PostQuitMessage(1000)` per independent PE IAT inspection.
+The original `/MT` startup profile remains local to those codegen recipes;
+configuration's verified `/MD` recipe was not globally changed.
 
 ## Resume
 
@@ -69,17 +89,17 @@ replaying historical units. Documentation-only work needs no native rebuild.
 
 ## Next evidence-driven owners
 
-1. Close context lifetime/data ownership from constructor `0x406070` (493-byte
-   candidate) and destructor `0x406260` (477-byte candidate). Their implementations
-   remain original external bindings despite exact startup callers.
-2. Attack context activation `0x406AA0` (775-byte candidate) and load
-   `0x406E60` (668-byte candidate), alongside useful small owners. Review actual
-   boundaries/types and compare the first complete source early.
+1. Attack context activation `0x406AA0` (775-byte candidate). Its decompile
+   removes multiple unreachable branches and injects the stack-cookie check;
+   recover the full original disassembly before writing complete source.
+2. Close the newly exposed external member lifetime at `0x405E60`/`0x405F80`,
+   context InitializeState/ResetState at `0x408100`/`0x406440`, and the
+   12-byte pattern reader's constructor/destructor and integer decoder.
 3. Review the 157-byte timing thread at `0x401850` to connect frame events to
-   the recovered main loop; review `0x405BE0` file helper when its owner is selected.
+   the recovered main loop. Continue both representative owners and useful leaves.
 4. Plan larger character dispatch owners from actual control-flow evidence;
    automatic 60–88 KB bodies and decompiler warnings require careful review.
 
-Production TU partitioning, linked global data/resources, callee closure,
-runnable product, original/reconstructed runtime comparison and portability
-remain open. The original game has not been executed by this workflow.
+Production TU partitioning, complete linked global data/resources, remaining
+callee closure, runnable product, original/reconstructed runtime comparison
+and portability remain open. The original game has not been executed.

@@ -3,3 +3,9 @@ address,name,source,symbol,status,evidence
 0x00405AE0,WriteConfigByte,src/Config.cpp,_WriteConfigByte,complete,docs/evidence/config-exact.json
 0x00401000,_GameMain@16,src/Startup.cpp,_GameMain@16,complete,docs/evidence/startup-exact.json
 0x00401670,_WindowProcedure@16,src/Startup.cpp,_WindowProcedure@16,complete,docs/evidence/startup-exact.json
+0x00406070,??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z,src/Context.cpp,??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/context-exact.json
+0x00406260,??1Context@@QAE@XZ,src/Context.cpp,??1Context@@QAE@XZ,complete,docs/evidence/context-exact.json
+0x00406E60,?Load@Context@@QAEXXZ,src/Context.cpp,?Load@Context@@QAEXXZ,complete,docs/evidence/context-exact.json
+0x00408310,??0PatternSequence@@QAE@XZ,src/Context.cpp,??0PatternSequence@@QAE@XZ,complete,docs/evidence/context-exact.json
+0x00408270,??1PatternSequence@@QAE@XZ,src/Context.cpp,??1PatternSequence@@QAE@XZ,complete,docs/evidence/context-exact.json
+0x004082D0,?Allocate@PatternSequence@@QAEXH@Z,src/Context.cpp,?Allocate@PatternSequence@@QAEXH@Z,complete,docs/evidence/context-exact.json
