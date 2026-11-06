@@ -65,8 +65,8 @@ address,origin,status,evidence
 0x00407CE0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00407D10,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x00408040,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
-0x00408080,unknown,unreviewed,
-0x004080C0,unknown,unreviewed,
+0x00408080,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
+0x004080C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
 0x00408100,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x00408200,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
 0x00408270,authored,reviewed,docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime
@@ -167,7 +167,7 @@ address,origin,status,evidence
 0x00410940,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
 0x004109D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
 0x00410A10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
-0x00410A40,unknown,unreviewed,
+0x00410A40,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
 0x00410A80,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410AC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
 0x00410B10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
@@ -278,7 +278,7 @@ address,origin,status,evidence
 0x004D5AD0,unknown,unreviewed,
 0x004D6F50,unknown,unreviewed,
 0x004DB160,unknown,unreviewed,
-0x004E7EC0,unknown,unreviewed,
+0x004E7EC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
 0x004F8300,authored,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
 0x004F8480,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
 0x004F8590,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime

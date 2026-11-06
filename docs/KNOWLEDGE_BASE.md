@@ -4004,3 +4004,91 @@ selection; no unrequested full cold cohort, full CI or runtime matrix ran.
 Tracking, ledger/progress CI and whitespace checks passed. Private full attempts,
 compiler exits, decompiles and independent reviews remain in
 `.analysis/probes/mizuka-effects/`.
+
+## Mizuka animation and state owner
+
+Four new complete authored units add65,964 exact instruction bytes and836
+associated local-table bytes. Main source: `src/Character24State.cpp`; support
+source: `src/MizukaStateSupport.cpp`. Public proof:
+`docs/evidence/mizuka-state-exact.json`. All four explicit recipes use pinned
+VC7.1 static /Od and complete strict comparison.
+
+| Complete owner | Canonical entry | Exact code bytes | Associated tables |
+| --- | --- | ---: | ---: |
+| Character24::Slot06 | 0x4E7EC0 | 65,782 | 836 |
+| Secondary::SetHorizontalOffset | 0x410A40 | 63 | 0 |
+| Context::StartReverseFade | 0x408080 | 59 | 0 |
+| Context::SetSceneTimer | 0x4080C0 | 60 | 0 |
+
+The main function has17,962 contiguous instructions,1,636 direct internal
+branches and one compressed indirect switch. Code ends exclusively at4F7FB6;
+the520-byte address table then ends at4F81BE, followed by316 selector bytes for
+animation IDs1..316. Its complete66,618-byte contribution ends at4F82FA. Six CC
+bytes precede the existing accepted constructor4F8300. All130 destinations are
+reviewed:129 explicit animation cases and a default selected by187 entries.
+Original vtable7885D0 slot6/operand7885E8 contains4E7EC0, independently checked.
+
+All1,454 relocation fields are individually reviewed:442 direct CALL operands,
+880 typed floating operands and132 compiler-local fields (130 table entries and
+two dispatch operands). The83 distinct floating payloads match canonical memory,
+native COFF bytes, symbol bits and original operand widths. The three support
+functions have no relocations. No original byte arrays, patched code, padding,
+fake ABI, masked addresses, size overrides or prefix acceptance are used.
+
+The ordinary source has frameDuration/frameCount atEBP-4/-8, one real72-byte
+EffectSpawn descriptor atEBP-50, receiver atEBP-54 and complete frame42C. Existing
+shared member and virtual declarations supply the real receiver adjustments.
+The source preserves signed-short RandomRange with explicit unsigned caller
+conversion: all seven original AX results are zero-extended. Additional masks
+on those already-converted values emitted unwanted AND instructions and were
+removed only after checking the original operands.
+
+Every promoted tick load in this owner uses MOVZX (328 occurrences), as do all
+17 promoted field0158 loads. Public field declarations remain compatible with
+prior accepted code; this source uses explicit unsigned short/byte read casts.
+Original word/byte stores and increments retain their widths. A target-backed
+view splits existing unknown storage into word field00DC and byte field00DE:
+4F21AE stores4 toDC and4F21BA storesEC toDE. Remaining offsets and object size
+are unchanged; signedness of unused read behavior is not claimed recovered.
+The reserved-storage name had no existing source consumers.
+
+Original control flow includes immediate collision, landing, action-cancel and
+state-transition exits. Animation178 has both an inner completed-frame exit
+and its outer case exit. Animations180/181,212,220,303..305 and313..315 preserve
+their direct dispatch exits, positive first/else order and original thresholds.
+Animation206's slide first checks positive velocity, flag1 and frame<3, then
+subtracts its scalar; other paths clear the flag. Its floating comparison is
+not the decompiler's negated <= expression. Integer center-minus-facing products,
+short frame rollback, x87 operand order and random draws remain target-bound.
+
+The first complete natural source contributed66,643 bytes against66,618. Full
+comparison and per-case diagnostics exposed decompiler-normalized conditions,
+unsigned reads and early exits. The last32 differing bytes came from two wrong
+exit destinations and animation206's slide branch. Restoring these yielded a
+strict whole-contribution exact result, retained after source formatting.
+Per-case sizes and normalized branches never conferred progress credit.
+
+The three concrete support bodies retain the real ABIs. SetHorizontalOffset
+writes `(1-player*2)*magnitude` to Context14238 and hold to14240, returning RET08.
+StartReverseFade writes direction-1 then attack/hold/release and returns RET0C.
+SetSceneTimer stores Context14278, halves it with signed division only when
+setting136C==0 and returns RET04. These methods retain existing provisional view
+names rather than asserting recovered original source names.
+
+Formal validation selected four new units and244 actual Engine.h consumers,
+including existing auxiliaries, from67 serial cold source/profile/dependency
+artifacts. All248 complete comparisons passed strict zero differences; both
+main tables were compared in full. Compiler-local identities were refreshed
+only after unchanged offsets, canonical destinations and literal bytes were
+verified. Thirty-three unrelated prior units retained their evidence. Tracking,
+ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
+matrix ran. Private evidence, complete attempts and compiler exits remain in
+`.analysis/probes/mizuka-state/`.
+
+With this accepted owner, every one of the13 original Mizuka vtable destinations
+has a complete exact source-bound proof, including the inherited shared resource
+loader. This closes that virtual-entry code inventory only: linked data/assets,
+original translation-unit partitioning, complete runtime behavior and whole-game
+reconstruction remain independently open. The earlier parked Shiori dispatcher
+receives no credit from this function's result and must not be retried without
+new falsifiable evidence.

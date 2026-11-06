@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 259 |
-| Authored exact instruction bytes | 317,338 |
-| Associated exact local-table bytes | 1,131 |
-| Reviewed boundaries / origins | 299 / 299 |
+| Authored complete exact functions | 263 |
+| Authored exact instruction bytes | 383,302 |
+| Associated exact local-table bytes | 1,967 |
+| Reviewed boundaries / origins | 303 / 303 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,45 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mizuka local-effect checkpoint
+## Latest Mizuka state checkpoint
+
+Four complete exact units add65,964 instruction bytes plus836 local-table bytes:
+Character24::Slot06 at4E7EC0/65782 code, Secondary::SetHorizontalOffset410A40/63,
+Context::StartReverseFade408080/59 and Context::SetSceneTimer4080C0/60. Source:
+src/Character24State.cpp and src/MizukaStateSupport.cpp. Main complete contribution
+66618 bytes ends4F82FA, including130-destination /316-selector tables; six CC
+bytes precede the accepted constructor4F8300. Public proof:
+docs/evidence/mizuka-state-exact.json; durable facts:
+[Mizuka animation and state owner](KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner).
+Private full attempts/review: .analysis/probes/mizuka-state/README.md.
+
+Complete review covers17,962 instructions,1,636 internal branches,129 animation
+cases and1,454 relocation fields:442 calls,880 typed floating operands and132
+local bindings. Preserve explicit unsigned tick/0158 reads, positive landing/
+slide tests, direct state exits, animation178's separate completed-frame exit,
+integer particle subtraction, all random draws and exact floating operand order.
+The real used72-byte descriptor and ordinary duration/count locals yield frame42C,
+receiverEBP-54, descriptorEBP-50 and duration/countEBP-4/-8 without padding.
+
+Three nonvirtual method declarations and two canonical word/byte stores refine
+Engine.h; remaining layout and existing method bodies are unchanged. Formal
+replay selected4 new units plus244 actual Engine.h consumers from67 serial cold
+artifacts; all248 strict whole-contribution comparisons passed. Local-symbol
+identities were checked against unchanged offsets/destinations/literal bytes.
+Thirty-three unrelated old units retained earlier evidence. Focused tracking,
+ledger/progress CI and whitespace checks passed; no full CI/cohort/runtime matrix.
+
+All13 original table7885D0 destinations now have complete exact source proofs,
+including the inherited resource loader. This is a virtual-entry inventory
+milestone, not linked-data/resource, runtime or game closure. Recheck the live
+ledgers before selecting further owners. A fresh substantial candidate is the
+next character state body50C4B0/54769 near constructor519E00: first establish its
+actual vtable/constructor ownership and complete code/table extent. That
+constructor currently has reviewed origin evidence, not accepted exact source.
+Do not retry parked PrepareBattle/Shiori-state controls without a new target-
+backed instruction prediction.
+
+## Previous Mizuka local-effect checkpoint
 
 Three complete exact units add42,383 instruction bytes plus348 local-table bytes:
 Character24::Slot07 at501E20/42279 code, SecondaryPose::VectorAngle4C0480/45 and
@@ -70,10 +108,9 @@ identities were reviewed against unchanged offsets/destinations or literal bytes
 Thirty-three unrelated old units retain prior evidence. Focused tracking, ledger/
 progress CI and whitespace checks passed; no full CI/cohort/runtime matrix ran.
 
-Remaining substantial Mizuka owner: shared slot06 state4E7EC0/65782. Review its
-full code/table boundary before acceptance; no source/runtime/character closure
-follows from the existing exact slots. Preserve neutral parked PrepareBattle
-and Shiori-state controls unless new evidence predicts a specific difference.
+Slot06 state4E7EC0/65782 has since been accepted above, completing the exact
+virtual-entry code inventory for table7885D0. Linked data/resources, runtime and
+game remain open. Preserve neutral parked PrepareBattle/Shiori-state controls.
 
 ## Previous Mizuka CPU checkpoint
 
@@ -94,9 +131,8 @@ Preserve unsigned AX random conversions, x87 operand order, used distance record
 positive special-state timer priority, active movement timer exits and the
 separate successful-choice/outer state204 exits. Original vtable is7885D0 slot5.
 
-Slot07 local effects501E20/42279 has since been accepted above. Remaining Mizuka
-substantial owner: shared slot06 state4E7EC0/65782. Its complete code/table extent
-remains to be reviewed; existing exact owners do not establish runtime/character closure.
+Slot07 local effects501E20/42279 and slot06 state4E7EC0/65782 have since been
+accepted above. Existing exact owners do not establish runtime/character closure.
 
 ## Previous Mizuka command checkpoint
 
@@ -116,9 +152,9 @@ Preserve single-wrap history indexing, every scan window, sequential state
 advancement, gate-mask !=0 versus positive command-ID terms, stage6/7 store
 order and the short release/press scan's actual unsigned byte ==1/==0 checks.
 
-Slot05 CPU4FDC10/16912 has since been accepted above. Remaining Mizuka owners:
-shared slot06 state4E7EC0/65782. Slot07 local effects501E20/42279 has since been
-accepted above. Inspect complete extents and any attached tables;
+Slot05 CPU4FDC10/16912, slot06 state4E7EC0/65782 and slot07 local
+effects501E20/42279 have since been accepted above. Inspect the live ledgers
+before selecting further units;
 existing accepted virtuals do not imply a complete runnable character.
 
 ## Previous Mizuka action checkpoint
@@ -147,9 +183,9 @@ change is essential. The large action selector alone reviews2655 instructions,
 430 internal branches,42 direct calls,42 real virtual calls and87 relocations.
 
 Mizuka Slot02 command scanner4FAF70/11423 has since been accepted above.
-Slot05 CPU4FDC10/16912 has since been accepted above. Shared slot06 at4E7EC0/65782
-remains available; slot07 local effects501E20/42279 has since been accepted above.
-Inspect complete boundaries/local tables.
+Slot05 CPU4FDC10/16912, slot06 state4E7EC0/65782 and slot07 local
+effects501E20/42279 have since been accepted above. Inspect complete boundaries
+and associated local tables for new owners.
 A full target-bound character constructor and selected virtuals do not complete
 that character's runtime implementation.
 

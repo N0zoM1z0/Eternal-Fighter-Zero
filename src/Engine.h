@@ -224,7 +224,10 @@ public:
     double field00b8;
     double field00c0, field00c8;
     int field00d0;
-    unsigned char unknown_00d4[0x20];
+    unsigned char unknown_00d4[8];
+    short field00dc;
+    unsigned char field00de;
+    unsigned char unknown_00df[0x15];
     short field00f4;
     unsigned char unknown_00f6[0x2];
     double field00f8;
@@ -358,6 +361,7 @@ public:
     void SetCharacterTint(unsigned char, int);
     void SetVerticalShake(int, int);
     void SetHorizontalShake(int, int);
+    void SetHorizontalOffset(int, int);
     int FaceOpponent();
     void UpdateLocomotionState();
 };
@@ -559,6 +563,8 @@ public:
     void EmitEffect(EffectSpawn *);
     void RequestTransition(char);
     void StartFade(int, int, int);
+    void StartReverseFade(int, int, int);
+    void SetSceneTimer(int);
     void RemoveEffect(short);
     void AdvanceEffectWrite();
     void ProbeCharacterData();

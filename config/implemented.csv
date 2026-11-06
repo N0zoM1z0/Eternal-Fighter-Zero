@@ -258,3 +258,7 @@ address,name,source,symbol,status,evidence
 0x00501E20,?Slot07@Character24@@UAEXXZ,src/Character24Effects.cpp,?Slot07@Character24@@UAEXXZ,complete,docs/evidence/mizuka-effects-exact.json
 0x004C0480,?VectorAngle@SecondaryPose@@QAENNN@Z,src/MizukaEffectSupport.cpp,?VectorAngle@SecondaryPose@@QAENNN@Z,complete,docs/evidence/mizuka-effects-exact.json
 0x00408040,?StartFade@Context@@QAEXHHH@Z,src/MizukaEffectSupport.cpp,?StartFade@Context@@QAEXHHH@Z,complete,docs/evidence/mizuka-effects-exact.json
+0x004E7EC0,?Slot06@Character24@@UAEXXZ,src/Character24State.cpp,?Slot06@Character24@@UAEXXZ,complete,docs/evidence/mizuka-state-exact.json
+0x00410A40,?SetHorizontalOffset@Secondary@@QAEXHH@Z,src/MizukaStateSupport.cpp,?SetHorizontalOffset@Secondary@@QAEXHH@Z,complete,docs/evidence/mizuka-state-exact.json
+0x00408080,?StartReverseFade@Context@@QAEXHHH@Z,src/MizukaStateSupport.cpp,?StartReverseFade@Context@@QAEXHHH@Z,complete,docs/evidence/mizuka-state-exact.json
+0x004080C0,?SetSceneTimer@Context@@QAEXH@Z,src/MizukaStateSupport.cpp,?SetSceneTimer@Context@@QAEXH@Z,complete,docs/evidence/mizuka-state-exact.json

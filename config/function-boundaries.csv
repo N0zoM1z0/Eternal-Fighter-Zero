@@ -298,3 +298,7 @@ address,end,size,status,evidence
 0x00501E20,0x0050C4A3,42627,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x004C0480,0x004C04AD,45,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x00408040,0x0040807B,59,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
+0x004E7EC0,0x004F82FA,66618,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
+0x00410A40,0x00410A7F,63,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
+0x00408080,0x004080BB,59,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
+0x004080C0,0x004080FC,60,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
