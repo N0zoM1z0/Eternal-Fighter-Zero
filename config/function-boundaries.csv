@@ -311,3 +311,4 @@ address,end,size,status,evidence
 0x0051DF30,0x0051DF5F,47,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051A350,0x0051D384,12340,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051DF60,0x0051F3DA,5242,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051F3E0,0x005236C7,17127,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-cpu-command-and-movement-owner

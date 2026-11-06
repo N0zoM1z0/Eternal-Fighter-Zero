@@ -302,7 +302,7 @@ address,origin,status,evidence
 0x0051DDE0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051DF30,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051DF60,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
-0x0051F3E0,unknown,unreviewed,
+0x0051F3E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-cpu-command-and-movement-owner
 0x005236D0,unknown,unreviewed,
 0x00530BC0,unknown,unreviewed,
 0x00546480,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review

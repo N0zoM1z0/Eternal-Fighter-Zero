@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 273 |
-| Authored exact instruction bytes | 405,219 |
+| Authored complete exact functions | 274 |
+| Authored exact instruction bytes | 422,346 |
 | Associated exact local-table bytes | 1,967 |
-| Reviewed boundaries / origins | 312 / 312 |
+| Reviewed boundaries / origins | 313 / 313 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,43 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misuzu construction, input and indicators checkpoint
+## Latest Misuzu CPU checkpoint
+
+Character23::Slot05 at 51F3E0 is complete exact /17,127 instruction bytes,
+exclusive end 5236C7. Nine following CC alignment bytes precede local effects
+5236D0 and are excluded. No local tables occur. Source: src/Character23Cpu.cpp,
+profile vc71-od-static. Public proof: docs/evidence/misuzu-cpu-exact.json;
+durable facts:
+[Misuzu CPU command and movement owner](KNOWLEDGE_BASE.md#misuzu-cpu-command-and-movement-owner).
+Private full attempts and independent review: .analysis/probes/misuzu-cpu/README.md.
+
+Review covers 4,399 contiguous instructions, 809 internal branches and all 318
+relocation fields: 108 RandomRange calls, two CollisionSide calls, one external
+fabs call and 207 typed floating operands. All 39 literal payloads match the
+native COFF and canonical target. The used forward/vertical distance record
+recovers EBP-10/-8, receiver EBP-14 and complete frame FC without padding.
+Preserve physical decision priority, positive conditional tails, integer
+constant-minus-boolean products, all random draws and unsigned AX conversions.
+The original late condition really requires distance.forward >800 and <120;
+do not simplify or repair its apparently contradictory source conditions.
+
+Final formatted public source passed one selected cold complete zero-difference
+native replay. No public header or existing source changed, so no prior native
+unit required replay. Tracking, ledger/progress CI and whitespace checks passed;
+no full CI/cohort or runtime matrix ran. One initial generated-source syntax
+failure was corrected; the required toolchain --execute smoke passed before
+subsequent builds. All compiler exits and attempts remain retained.
+
+Eleven of 13 original table 788650 destinations now have exact proofs, including
+the shared resource loader. Next substantial owners are state 50C4B0/54769 and
+local effects 5236D0/54139. Review their complete code/table extents before
+acceptance and build the first complete natural source early. Fresh read-only
+decompiles remain under .analysis/probes/misuzu/; they confer no progress credit.
+Preserve parked PrepareBattle/Shiori controls without a new falsifiable target
+instruction prediction. This checkpoint does not establish character/runtime
+or game closure.
+
+## Previous Misuzu construction, input and indicators checkpoint
 
 Ten complete exact functions add 21,917 instruction bytes without local tables.
 Sources: src/Character23Frame.cpp, Character23Input.cpp and Character23Commands.cpp.
@@ -75,12 +111,11 @@ offsets, destinations and literal bytes. The other 254 existing units retain
 their prior evidence. Focused tracking, ledger/progress CI and whitespace checks
 passed; no full CI/cohort or runtime matrix ran.
 
-Ten of the 13 original vtable destinations now have exact proofs, including
-the inherited shared resource loader. Still open: CPU 51F3E0/17127, state
-50C4B0/54769 and local effects 5236D0/54139. Start with the CPU owner, review
-its complete boundary and operands, and build the first complete source early.
-Fresh read-only decompiles of all three are retained under the private Misuzu
-probe; they confer no progress credit. Preserve parked PrepareBattle/Shiori
+Ten of the 13 original vtable destinations had exact proofs at this checkpoint,
+including the inherited shared resource loader. CPU 51F3E0/17127 has since been
+accepted above; state 50C4B0/54769 and local effects 5236D0/54139 remain open.
+Fresh read-only decompiles are retained under the private Misuzu probe;
+they confer no progress credit. Preserve parked PrepareBattle/Shiori
 controls unless new evidence gives a falsifiable instruction prediction.
 
 ## Previous Mizuka state checkpoint

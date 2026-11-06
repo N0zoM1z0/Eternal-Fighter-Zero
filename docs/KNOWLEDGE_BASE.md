@@ -4192,3 +4192,70 @@ CI/cohort or runtime matrix ran. Full target dumps, read-only annotated
 decompiles, source/object attempts, compiler exit logs and independent reviews
 remain in `.analysis/probes/misuzu/`. Its one-time derivation/publication scripts
 must not be rerun over accepted or newer sources.
+
+## Misuzu CPU command and movement owner
+
+Character23::Slot05 at 0x51F3E0 now has complete strict exact source in
+`src/Character23Cpu.cpp`, profile vc71-od-static. Its 17,127 instruction bytes
+end exclusively at 5236C7. Nine CC alignment bytes precede local effects
+5236D0; they are excluded, and no local contribution tables occur. Original
+vtable 788650 slot5/operand788664 contains 51F3E0, independently verified.
+Public proof: `docs/evidence/misuzu-cpu-exact.json`. Names remain reconstruction
+views rather than recovered original identifiers.
+
+Independent full review covers 4,399 contiguous instructions, 809 direct
+internal branches and all 318 relocation fields: 108 calls to accepted
+Secondary::RandomRange 4108A0, two to CollisionSide 40FF70, one to external
+fabs 77842D and 207 typed floating operands. Every original operand has an
+explicit actual symbol, canonical destination and evidence. All 39 distinct
+float/double payloads match target memory, native COFF bytes and symbol bits.
+The fabs implementation's caller ABI and actual FABS operation are retained
+as external dependency evidence without authored runtime credit.
+
+The CPU clears command0262 to 99, decrements positive movement timers01a0/01a4
+and clears input/button/guard outputs before its decisions. The random guard
+thresholds preserve the original precomputed ternaries, float additions and
+double multiplication order. The field0170==1/mode3114==2 exit and opponent
+state96 exit precede distance calculation. A real used sixteen-byte distance
+record recovers forward at EBP-10 and vertical at EBP-8, receiver at EBP-14 and
+frame FC, without inert locals, fake declarations or padding.
+
+Target branch order handles the current hurt-state/tick-zero path before the
+regular decisions, then exits from grounded movement animations or the original
+opponent/current animation guard. The special command52 gate tests own resource
+or flag, a fresh random draw, opponent states150..156 and four current-state
+alternatives with their separate random draws. Preserve all random samples and
+unsigned AX caller conversions; no redundant AND mask is added to a converted
+RandomRange result. Clearing an invalid mode2 returns before general choices.
+
+The original mode choices and animation-specific command selections retain
+their physical order, separate successful-choice exits and positive conditional
+tails. The target computes thresholds as constant minus boolean times constant,
+including 70,80,90; replacing these with negative multiplication plus a constant
+changes register allocation and codegen. The late opponent-state predicate
+really uses a 4.0f coefficient, and another late source condition requires
+forward distance >800.0 and <120.0. Both canonical literal payloads and original
+comparisons were checked. Apparently contradictory conditions are preserved;
+logical cleanup would change target instructions. Positive active movement
+timers own separate CollisionSide/clamp exits before new random choices.
+
+The first compiling complete source contributed 17,267 bytes. Original entry
+priority, early exits, positive conditional tails and integer arithmetic order
+reduced it to 17,127. The final four differing bytes identified incorrect source
+literals, corrected to the original 4.0f and 800.0 before acceptance. Final
+formatted source retained the full zero-difference result. Diagnostic branch
+normalization and size agreement supplied no acceptance credit.
+
+One selected final cold artifact passed all 17,127 bytes with zero differences
+after the 318 reviewed bindings. Public headers and existing source bodies are
+unchanged, so no old native unit needed replay. Focused tracking, ledger/progress
+CI and whitespace checks passed; no full CI/cohort or runtime matrix ran. One
+initial generated-source syntax failure was fixed, and the required pinned
+toolchain --execute C/C++/Windows/CRT/resource/link/execution smoke passed before
+further native builds. All attempts and compiler exits remain retained under
+`.analysis/probes/misuzu-cpu/` and `.analysis/build/`.
+
+Eleven of the thirteen original Misuzu vtable destinations now have exact
+source-bound proofs, including the inherited resource loader. State50C4B0/54769
+and local effects5236D0/54139 remain open, as do linked data/assets, original
+translation-unit partitioning, runtime behavior and whole-game reconstruction.
