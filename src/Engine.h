@@ -252,8 +252,8 @@ public:
     int field0150;
     unsigned char unknown_0154[0x4];
     char field0158;
-    char field0159;
-    char field015a;
+    unsigned char field0159;
+    unsigned char field015a;
     unsigned char unknown_015b[0x1];
     int field015c;
     int field0160;
@@ -269,9 +269,9 @@ public:
     unsigned char unknown_018e[2];
     int buttonHeld[4];
     unsigned char unknown_01a0[8];
-    char field01a8;
-    char field01a9;
-    char field01aa;
+    unsigned char field01a8;
+    unsigned char field01a9;
+    unsigned char field01aa;
     unsigned char history[180];
     unsigned char unknown_025f[0x1];
     short field0260;
@@ -345,6 +345,8 @@ public:
     void AwardComboScore(const SecondaryFrame *);
     void AddScore(unsigned int);
     short RandomRange(short, short);
+    int FaceOpponent();
+    void UpdateLocomotionState();
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {

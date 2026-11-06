@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts shared unchanged across nine new Shiori command/initialization/effect/meter and shared locomotion units and 157 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 130,
+      "matched_bytes": 130,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "0d648ef993a2dfb8d12aea59d30ab59273239a1e67b7bf1b46b57fd1f1a60b24",
+      "target_extent_sha256": "0d648ef993a2dfb8d12aea59d30ab59273239a1e67b7bf1b46b57fd1f1a60b24",
+      "unit": "secondary-face-opponent",
+      "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+      "target_address": "0x0040E630",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "484cc99b2e94c16ee643a09bbe862711b40b371e498e3e08b4fd2e903abd1d67",
+      "object_sha256": "4acbe22b7f52f7de28a769c61d1a34b748542ccfe17576f039fbefdef5172509",
+      "source_sha256": "888609e5151631cd3f2beabfeb0ee8f6a2cd665afb676148d2204a56b610f3ff",
+      "dependencies": {
+        "src/Engine.h": "412337fc270443ba69655af7e7286c1057fedbf14a1eea106562b7b8a1e2d574",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cff7f9ef61b7ceff1ad185dd51b1d87357f82ccb93d48689ebffaf2360709196",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "006f305044973af09ef2fe887bfa5e7315e8aa30029f0824e944a2f920a43618",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 923,
+      "matched_bytes": 923,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 206,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 634,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 668,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 700,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 831,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 875,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 915,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2d7401da42e1d4fcbdd8c92142368dbf5203bdc90ef19ae62b56ff2bca7df18e",
+      "target_extent_sha256": "2d7401da42e1d4fcbdd8c92142368dbf5203bdc90ef19ae62b56ff2bca7df18e",
+      "unit": "secondary-update-locomotion-state",
+      "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+      "target_address": "0x0040E740",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "484cc99b2e94c16ee643a09bbe862711b40b371e498e3e08b4fd2e903abd1d67",
+      "object_sha256": "57a49e270dd8e28e84ff1e78f2aaad658f9a605dbdca07f70ae044176ffe2a8b",
+      "source_sha256": "68684104771a83adacbc448cc6178d78b1d5b74fbc0fa13dae2ff839d1bee186",
+      "dependencies": {
+        "src/Engine.h": "412337fc270443ba69655af7e7286c1057fedbf14a1eea106562b7b8a1e2d574",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cff7f9ef61b7ceff1ad185dd51b1d87357f82ccb93d48689ebffaf2360709196",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "db63f4fc8c9610f19ab46567ace3ce405ff4a4e4e61c7eed15f01a39de6dd0a2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

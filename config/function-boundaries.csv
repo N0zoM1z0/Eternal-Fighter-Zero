@@ -211,3 +211,12 @@ address,end,size,status,evidence
 0x004108A0,0x00410934,148,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
 0x00413100,0x004136D0,1488,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
 0x00413090,0x004130FA,106,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
+0x00423140,0x00425D6A,11306,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x0040E630,0x0040E6B2,130,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x0040E740,0x0040EADB,923,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x00422F40,0x00423082,322,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x00423090,0x004230CA,58,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x004230D0,0x00423120,80,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x00423120,0x00423133,19,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x00425D70,0x004261A8,1080,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
+0x004261C0,0x004261EF,47,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion

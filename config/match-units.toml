@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62174"
+symbol = "$L62176"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62224"
+symbol = "$L62226"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61880"
+symbol = "$L61882"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61902"
+symbol = "$L61904"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61909"
+symbol = "$L61911"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61914"
+symbol = "$L61916"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61918"
+symbol = "$L61920"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61925"
+symbol = "$L61927"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61932"
+symbol = "$L61934"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61944"
+symbol = "$L61946"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61951"
+symbol = "$L61953"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61958"
+symbol = "$L61960"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61965"
+symbol = "$L61967"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61968"
+symbol = "$L61970"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61971"
+symbol = "$L61973"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61974"
+symbol = "$L61976"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61977"
+symbol = "$L61979"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61980"
+symbol = "$L61982"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61981"
+symbol = "$L61983"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61985"
+symbol = "$L61987"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61992"
+symbol = "$L61994"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61996"
+symbol = "$L61998"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L62000"
+symbol = "$L62002"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L62004"
+symbol = "$L62006"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L62008"
+symbol = "$L62010"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L62012"
+symbol = "$L62014"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L62016"
+symbol = "$L62018"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L62020"
+symbol = "$L62022"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L62024"
+symbol = "$L62026"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L62028"
+symbol = "$L62030"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L62032"
+symbol = "$L62034"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L62038"
+symbol = "$L62040"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L62044"
+symbol = "$L62046"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L62063"
+symbol = "$L62065"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L62067"
+symbol = "$L62069"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61877"
+symbol = "$L61879"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61329"
+symbol = "$L61331"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61280"
+symbol = "$L61282"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61281"
+symbol = "$L61283"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61282"
+symbol = "$L61284"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61283"
+symbol = "$L61285"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61284"
+symbol = "$L61286"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61285"
+symbol = "$L61287"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61286"
+symbol = "$L61288"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62267"
+symbol = "$L62269"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61928"
+symbol = "$L61930"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61959"
+symbol = "$L61961"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61962"
+symbol = "$L61964"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61965"
+symbol = "$L61967"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61980"
+symbol = "$L61982"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62295"
+symbol = "$L62297"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62108"
+symbol = "$L62110"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62112"
+symbol = "$L62114"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62116"
+symbol = "$L62118"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62120"
+symbol = "$L62122"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62124"
+symbol = "$L62126"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62128"
+symbol = "$L62130"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62132"
+symbol = "$L62134"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62136"
+symbol = "$L62138"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62140"
+symbol = "$L62142"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62144"
+symbol = "$L62146"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62148"
+symbol = "$L62150"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62152"
+symbol = "$L62154"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62156"
+symbol = "$L62158"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62160"
+symbol = "$L62162"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62164"
+symbol = "$L62166"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62168"
+symbol = "$L62170"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62172"
+symbol = "$L62174"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62176"
+symbol = "$L62178"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62180"
+symbol = "$L62182"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62184"
+symbol = "$L62186"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62188"
+symbol = "$L62190"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62192"
+symbol = "$L62194"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62196"
+symbol = "$L62198"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62200"
+symbol = "$L62202"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -15506,7 +15506,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-constructi
 [[units.character-08-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62100"
+symbol = "$SG62102"
 target = 0x00787df0
 evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
@@ -15516,3 +15516,926 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-command-dispatch]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08State.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-command-dispatch/Character08State.obj"
+symbol = "?Slot04@Character08@@UAEXXZ"
+target_address = 0x00423140
+size = 11306
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 309
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 330
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 482
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 565
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 785
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 806
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1050
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1071
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1333
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1354
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1425
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1599
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1678
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1852
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 1945
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2119
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2183
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2357
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2436
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2610
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2703
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2877
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2925
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 2955
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3134
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3152
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3375
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3393
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3600
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3618
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3678
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3762
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3886
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 3993
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4118
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4210
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4335
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4383
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4582
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4603
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4833
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 4854
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5068
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5089
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5144
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5331
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5352
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5569
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5590
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5792
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5813
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5895
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 5975
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6005
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6131
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6288
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6393
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6423
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6679
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6743
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6859
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 6889
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7078
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7164
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7194
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7377
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7489
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7632
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7833
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 7883
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8052
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8277
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8502
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8621
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8671
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 8840
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9066
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9246
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787e40
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9276
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9354
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9530
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9649
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9699
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9776
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9810
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 9838
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10052
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10224
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10450
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10544
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10583
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787e30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10617
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787d88
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 10831
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 11008
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 11205
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-command-dispatch.relocations]]
+offset = 11289
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040f170
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-face-opponent]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryFacing.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-face-opponent/SecondaryFacing.obj"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target_address = 0x0040e630
+size = 130
+
+[units.secondary-update-locomotion-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryLocomotion.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-update-locomotion-state/SecondaryLocomotion.obj"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target_address = 0x0040e740
+size = 923
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 56
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 206
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 634
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 668
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 700
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 831
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 875
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-update-locomotion-state.relocations]]
+offset = 915
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-initialize-state/Character08Frame.obj"
+symbol = "?InitializeState@Character08@@UAEXXZ"
+target_address = 0x00422f40
+size = 322
+
+[[units.character-08-initialize-state.relocations]]
+offset = 314
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040edf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-reset-pose/Character08Frame.obj"
+symbol = "?ResetPose@Character08@@UAEXXZ"
+target_address = 0x00423090
+size = 58
+
+[[units.character-08-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040f110
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-remove-local-effect/Character08Frame.obj"
+symbol = "?RemoveLocalEffect@Character08@@UAEXF@Z"
+target_address = 0x004230d0
+size = 80
+
+[[units.character-08-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412e60
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-locomotion-wrapper]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-locomotion-wrapper/Character08Frame.obj"
+symbol = "?Slot03@Character08@@UAEXXZ"
+target_address = 0x00423120
+size = 19
+
+[[units.character-08-locomotion-wrapper.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040e740
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-render-meter]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-render-meter/Character08Frame.obj"
+symbol = "?Slot01@Character08@@UAEXXZ"
+target_address = 0x00425d70
+size = 1080
+
+[[units.character-08-render-meter.relocations]]
+offset = 86
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 299
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 451
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 717
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 895
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.character-08-render-meter.relocations]]
+offset = 1071
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-emit-local-effect/Character08Frame.obj"
+symbol = "?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x004261c0
+size = 47
+
+[[units.character-08-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412b10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"

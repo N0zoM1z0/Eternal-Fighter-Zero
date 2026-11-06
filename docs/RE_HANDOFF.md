@@ -14,7 +14,9 @@ then all three character resource loaders and both character image-transfer meth
 followed by character input/replay, visual trail ownership and the complete body/trail renderer,
 then common state dispatch, movement and timer updates with their supporting predicates/buffer clears,
 followed by guard decisions, damage/combo factors, scoring and replay-aware random ranges,
-then the complete local-effect renderer/reset and the Shiori constructor.
+then the complete local-effect renderer/reset and the Shiori constructor,
+followed by Shiori command/state control, meter, initialization/effect ownership,
+and the shared facing/grounded locomotion owners.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -27,10 +29,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 174 |
-| Authored exact instruction bytes | 93,524 |
+| Authored complete exact functions | 183 |
+| Authored exact instruction bytes | 107,489 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 212 / 212 |
+| Reviewed boundaries / origins | 221 / 221 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -439,6 +441,32 @@ secondary-local-render-exact.json and character-08-exact.json. The constructor
 preserves the original command-slot overwrite and 0x3458 extent; 22 other called
 constructors remain reviewed but unimplemented.
 
+The latest checkpoint adds nine authored complete exact bodies /13,965 bytes:
+Shiori slot-4 command/state dispatch 0x423140 /11,306, slot-1 meter rendering
+0x425D70 /1,080, initializer 0x422F40 /322, pose reset 0x423090 /58, local effect
+removal/emission 0x4230D0 /80 and 0x4261C0 /47, slot-3 locomotion wrapper
+0x423120 /19, shared facing 0x40E630 /130 and grounded locomotion 0x40E740 /923.
+Seven child virtual bodies plus the preceding constructor are accepted; this does
+not establish linked table placement, all character behavior or whole-game closure.
+Source is Character08State.cpp, Character08Frame.cpp, SecondaryFacing.cpp and
+SecondaryLocomotion.cpp. Proofs are character-08-exact.json and
+secondary-locomotion-exact.json. All 166 new/affected comparisons are strict exact
+from 41 cold source/profile/dependency artifacts; 75 local destination/offset
+checks and the independently checked constructor literal remain explicit. No
+standalone Input, Reader or Config cohort was replayed. Private complete reviews,
+first sources and trials are .analysis/probes/shiori-command/; final replay is
+.analysis/exact/shiori-command-and-affected.json.
+
+The next coherent owner is Shiori slot 2 at 0x4261F0, a 5,299-byte Ghidra body
+candidate which recognizes commands from the 180-byte history ring and writes
+field0262, consumed by the now-exact slot-4 dispatcher. Use the target-attested
+.analysis/ghidra/decompile-004261f0.txt and fresh raw instructions. The decompiler nests successive recognition scans
+inside one another; reconstruct the actual loop exits/modulo indexing from the
+complete boundary, then build the first FULL source early. The existing header
+already exposes this ring and command token, so avoid unneeded shared-header
+changes and replay only new/involved units. Slots 5 and 7 have 15,066-/36,135-byte
+code candidates at 0x4276B0 /0x42B190; their complete code/data extents remain open.
+
 The Shiori / Character08 slot-6 animation dispatcher at 0x4136D0 now has a complete
 private C++ draft and a reviewed full extent: 62,273 code bytes, 540 address-table
 bytes and 319 selector bytes, ending at 0x422D6C before alignment and the constructor.
@@ -461,14 +489,14 @@ site and are parked. Revisit only with a falsifiable target/compiler prediction;
 otherwise pursue another substantial character state/command owner. Do not blindly
 rerun the retained derivation scripts against the evolving baseline. Keep the
 existing signed RandomRange declaration and use explicit unsigned caller reads
-when the original operand demands them. The current baseline has no child virtual
-body credit and the large method remains absent from accepted match/source rows.
+when the original operand demands them. The current baseline accepts seven other Shiori virtual
+bodies; this large slot-6 method remains absent from accepted match/source rows.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the
 no-stack-argument/unused-result source view are provisional. Separate interface
-review from body recovery and linked-data placement; no child override body is
-accepted by these declarations. All 23 called character constructors have
+review from body recovery and linked-data placement; declarations alone confer
+no child-body credit. Seven Shiori overrides now have separate complete exact proofs. All 23 called character constructors have
 reviewed boundary/origin rows; Shiori is accepted and the other 22 remain unimplemented. Their allocation and
 common-base evidence is .analysis/probes/character-create/. Do not count reviewed
 declarations as exact functions. Two 505-element arrays at base offsets 10/164,

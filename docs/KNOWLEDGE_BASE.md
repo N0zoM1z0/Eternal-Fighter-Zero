@@ -2136,8 +2136,9 @@ are strict native exact. All twelve new relocation operands were independently
 read from the canonical target. These add three authored functions /2,056
 instruction bytes, bringing the accepted baseline to **174 authored complete
 exact functions /93,524 instruction bytes**, with 335 associated local-table bytes.
-Reviewed boundaries and origins are both 212. The other 22 called character
-constructors and all child virtual method bodies remain unimplemented.
+Reviewed boundaries and origins are both 212. At that checkpoint the other 22 called character
+constructors and all child virtual method bodies remained unimplemented; the
+following Shiori checkpoint accepts seven of its virtual bodies.
 
 ### Shared local-effect renderer and descriptor reset
 
@@ -2233,3 +2234,131 @@ size override. The large private prototype/rename source errors were corrected
 and pinned toolchain execution checks passed; all final accepted-unit builds and
 comparisons above succeeded. Original translation-unit context and private draft
 field/helper views remain hypotheses requiring fresh evidence before integration.
+
+## Shiori command state and shared locomotion
+
+Nine complete authored contributions add **13,965 instruction bytes**, including
+Shiori's complete 11,306-byte command/state dispatcher. The accepted baseline is
+now **183 authored exact functions /107,489 instruction bytes**, with the existing
+335 associated local-table bytes. All 221 reviewed boundaries/origins remain
+separate from the 950 provisional inventory candidates. No full-game or linked
+virtual-table completion is claimed.
+
+| Source view | Canonical entry | Complete bytes |
+| --- | --- | ---: |
+| Secondary::FaceOpponent | 0x40E630 | 130 |
+| Secondary::UpdateLocomotionState | 0x40E740 | 923 |
+| Character08::InitializeState | 0x422F40 | 322 |
+| Character08::ResetPose | 0x423090 | 58 |
+| Character08::RemoveLocalEffect | 0x4230D0 | 80 |
+| Character08::Slot03 | 0x423120 | 19 |
+| Character08::Slot04 | 0x423140 | 11,306 |
+| Character08::Slot01 | 0x425D70 | 1,080 |
+| Character08::EmitLocalEffect | 0x4261C0 | 47 |
+
+### Owning table and exact function extents
+
+A fresh canonical read of the thirteen-word table at 0x787DF8 identifies Shiori
+slots 0/1/3/4/9/10/12 with the seven child bodies above. In particular the command
+entry is slot 4 at operand 0x787E08. The already-accepted constructor installs
+this table and copies resource name shiori; the object extent remains 0x3458.
+All new boundaries decode contiguously through their final RET. Direct branch
+targets remain within each complete function and land on decoded instruction
+starts. The command body ends at 0x425D6A, followed by six alignment bytes before
+slot 1 at 0x425D70; no local switch data is dropped from this owner. All **119 new
+relocation operands** were independently read from the target before acceptance.
+No address mask, prefix match, size override or artificial ABI local is used.
+
+Character08 now has eight accepted source functions including its constructor,
+seven of them virtual bodies, totaling 13,374 instruction bytes. The inherited
+resource loader remains a shared accepted contribution, without duplicate credit.
+The other Shiori virtual bodies, original linked table placement, other character
+bodies and the complete Windows product remain separate work.
+
+### Command priorities, action selection and byte flags
+
+Slot04 consumes the signed command token at 262, current/queued input bitfields
+at 1A8/1A9 and their unsigned byte lifetime at 1AA. It clears current bits below
+animation 200, decrements the positive lifetime, and keeps lifetime/queued bits
+consistent in the original order. Fields 159/15A are unsigned byte counters from
+the actual MOVZX reads; these and 1A8/1A9/1AA refine prior store-oriented char
+views without changing any offset or object extent. Existing input-history
+producers and shared initialization/buffer clears remain exact.
+
+Transitions compare the current sequence's signed field0002 against each target
+sequence's signed field0000, test frame word B0 bit 8, and retain the original
+animation/cancellation gates. Common attack gates allow animations below 200 or
+cancellation value at least 2 other than 6; the first special transition retains
+its distinct greater-than-1 comparisons. Health 3,333, power 1,000/2,000/3,000,
+resource 500 and child state checks remain literal target-backed predicates.
+Every reset, buffered-input clear, facing update and state write keeps its
+original order. Ground/air choices preserve the separate less-than-zero and
+exact-zero conditions, including the original unordered floating behavior.
+
+The directional conditions evaluate opponent X minus self X before multiplying
+by the integer factor 1 - command*2. The negative tie-direction uses an actual
+multiply by -1 rather than an invented ABI cast or an altered test. The first
+complete source was built early. Full target comparison exposed reversed
+integer thresholds, decompiler return guards, operand order and byte signedness;
+those were corrected from complete original branches. Redundant parentheses
+and indentation were cleaned up and the complete contribution remained zero
+difference. All early exits and complete button/normal/special paths are present.
+
+FaceOpponent retains signed previous facing, compares self/opponent X, writes
++1 or -1 and returns an EAX-sized int indicating whether facing changed. Equal
+or unordered positions leave facing unchanged and return zero. This corrects
+the provisional decompiler bool-return view using full instructions and an
+original caller that consumes EAX. UpdateLocomotionState clears the two air
+counters at exactly zero height, then handles nonnegative height outside states
+4/5/6/10/11/12. Its jump, crouch, stand-up, idle and directional walk transitions
+preserve when the state ID is set before or after virtual ResetPose and facing
+updates. Slot03 is the complete nineteen-byte direct delegation to this shared
+owner, not a reconstruction of another character's bytes.
+
+### Child initialization, local effects and meter
+
+InitializeState clears all eight child state ints, both observed five-short
+coordinate views and the three 64-int arrays, then calls the accepted shared
+initializer. ResetPose clears the first three child state ints before calling
+the shared pose reset. RemoveLocalEffect clears the three arrays at the signed
+slot index before the shared ring removal; no new bounds guard changes original
+behavior. EmitLocalEffect first dispatches virtual removal at effectWrite, then
+calls the shared emitter. This preserves child ownership cleanup on ring reuse.
+
+Slot01 renders the state-counter-314C meter from pattern sequences 43 and 44,
+frame zero. Positive counter checks remain separate around the two draws. Player
+placement uses anchors 49/271 and Y=31 with original frame offsets; it does not
+add a mirror flag. Filled width is counter*frame.width/3,600 using signed integer
+arithmetic with the original evaluation order and no added saturation. Two named
+rectangles, a twelve-byte PatternFrame and the compiler's six return/assignment
+temporary pairs naturally reproduce the complete 0xF4 stack frame. Reversing the
+integer multiplication operands had the same arithmetic result but removed
+required moves under VC7.1 /Od; retaining the original order matches all 1,080
+bytes. MakeSurfaceRect and DrawSurface remain independently bound callees.
+
+### Focused replay and next owner
+
+Forty-one cold source/profile/dependency artifacts cover the nine new and 157
+Engine.h-dependent existing units: all **166 complete comparisons are strict
+exact**. The four dispatcher recipes retain all 75 local offsets/destinations;
+the constructor's numbered string symbol was refreshed only after its COFF
+literal was independently checked against the seven original shiori bytes.
+This refresh changes symbol identity, not an accepted relocation field or its
+destination. New Shiori reports join character-08-exact.json; shared facing and
+locomotion proofs are secondary-locomotion-exact.json. Existing involved proofs
+are refreshed; standalone Input, Reader and Config contributions were omitted.
+Private full replay is .analysis/exact/shiori-command-and-affected.json. Full
+sources, cold trials, contiguous boundaries, successor/table ownership and
+operand reviews are retained in .analysis/probes/shiori-command/. No compiler or
+Wine failure occurred in this checkpoint; only focused ledger/progress and
+whitespace checks are required, without full CI or runtime matrices.
+
+A target-attested decompile now identifies the next substantial Shiori owner,
+slot 2 at 0x4261F0: a 5,299-byte candidate input-history recognizer which writes
+the command token at 262 from the 180-byte history ring. Its deeply nested
+Ghidra loop structure is provisional: review the complete original loop exits,
+modulo accesses and boundary before constructing the first full source. Slot 5
+at 0x4276B0 has a 15,066-byte candidate body and slot 7 at 0x42B190 has a 36,135-byte
+candidate body. Those sizes are discovery facts, not reviewed acceptance extents.
+The complete slot-6 animation draft remains unaccepted in its existing private
+parked snapshot; neutral controls there are not reopened by this checkpoint.

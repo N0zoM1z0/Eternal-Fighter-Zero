@@ -173,3 +173,12 @@ address,name,source,symbol,status,evidence
 0x00413100,?RenderLocalEffects@Secondary@@QAEXHHE@Z,src/SecondaryLocalRender.cpp,?RenderLocalEffects@Secondary@@QAEXHHE@Z,complete,docs/evidence/secondary-local-render-exact.json
 0x00413090,?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z,src/SecondarySpawn.cpp,?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/secondary-local-render-exact.json
 0x00422D70,??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/Character08.cpp,??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/character-08-exact.json
+0x00423140,?Slot04@Character08@@UAEXXZ,src/Character08State.cpp,?Slot04@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x0040E630,?FaceOpponent@Secondary@@QAEHXZ,src/SecondaryFacing.cpp,?FaceOpponent@Secondary@@QAEHXZ,complete,docs/evidence/secondary-locomotion-exact.json
+0x0040E740,?UpdateLocomotionState@Secondary@@QAEXXZ,src/SecondaryLocomotion.cpp,?UpdateLocomotionState@Secondary@@QAEXXZ,complete,docs/evidence/secondary-locomotion-exact.json
+0x00422F40,?InitializeState@Character08@@UAEXXZ,src/Character08Frame.cpp,?InitializeState@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x00423090,?ResetPose@Character08@@UAEXXZ,src/Character08Frame.cpp,?ResetPose@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x004230D0,?RemoveLocalEffect@Character08@@UAEXF@Z,src/Character08Frame.cpp,?RemoveLocalEffect@Character08@@UAEXF@Z,complete,docs/evidence/character-08-exact.json
+0x00423120,?Slot03@Character08@@UAEXXZ,src/Character08Frame.cpp,?Slot03@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x00425D70,?Slot01@Character08@@UAEXXZ,src/Character08Frame.cpp,?Slot01@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x004261C0,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character08Frame.cpp,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-08-exact.json
