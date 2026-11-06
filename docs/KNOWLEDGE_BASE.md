@@ -1221,8 +1221,8 @@ the counter increments per quiet player, twice in a fully quiet frame. Do not
 infer a 30-second interval. The original enabled guard remains an ordinary
 constant condition in source. Context's selectedPlayer at 1342, CPU flags at
 1343/1344, selection at 134E and mode at 1364 expose previously unknown storage.
-They are provisional names/types, with no layout growth. Signed char CPU flags
-and buttonA reflect target byte operations; bool CPU flags introduced six extra
+They are provisional names/types, with no layout growth. Byte CPU flags and signed buttonA retain target operations; the later character
+selection owner establishes unsigned CPU-flag reads. Bool CPU flags introduced six extra
 zeroing instructions before SETE in a rejected complete-source trial.
 
 Step's final RET is at 0x776486. Its complete seven-entry address table occupies
@@ -1254,3 +1254,121 @@ Private full comparisons, rejected trials, boundary/operand reviews and logs
 remain under .analysis/probes/scene-next/, .analysis/build/scene-next-* and
 .analysis/exact/scene-and-affected.json. Ghidra candidates and original vtable
 observations remain separate from function acceptance and linked-data closure.
+
+
+## Character selection scene
+
+On 2026-11-06, seven complete Scene1 functions were accepted for 10,780 authored
+instruction bytes plus 20 associated local-table bytes. The character-selection
+update body is the substantial owner in this checkpoint. Its constructor,
+destructor, stage loading, player palette loading, keyboard handling and entry
+transition are also exact. Render and character-object construction remain open;
+this is not complete Scene1 or game closure. Public proof is
+[scene-select-exact.json](evidence/scene-select-exact.json).
+
+| Member | Entry | Complete contribution bytes |
+| --- | --- | ---: |
+| Scene1 constructor | 0x753260 | 1,609 |
+| Scene1 destructor | 0x7538B0 | 314 |
+| Scene1::Step | 0x7539F0 | 6,928 (6,908 code + 20 table) |
+| Scene1::LoadStage | 0x759460 | 354 |
+| Scene1::LoadPlayerPalette | 0x7595D0 | 415 |
+| Scene1::PollKeyboard | 0x759770 | 350 |
+| Scene1::Enter | 0x7598D0 | 830 |
+
+Every complete boundary was independently reviewed through its final RET, with
+original direct branches checked inside the instruction extent. All 199 new
+relocation operands were decoded from the canonical original and checked against
+explicit named destinations, including paths, ten floating constants, CRT calls,
+accepted owner calls and the reviewed Scene1 vtable at 0x7892C0. That table points
+to render 0x755500, Step 0x7539F0 and keyboard 0x759770. Natural C++ inheritance
+emits its vptr writes; no vtable/data placement is accepted. Step's final RET is
+0x7554EB; the five-case table occupies 0x7554EC..0x755500 (exclusive end). Entries
+are 0x753D0C, 0x7543E8, 0x7544D2, 0x75455F and 0x754802. The table pointer plus all
+five entries retain explicit original destinations and checked local offsets.
+The 6,908-byte Ghidra body alone was not used as the acceptance extent.
+
+The provisional Scene1 view preserves startup's 0x560 allocation. It has six
+surface pointers at 434/438/43C/440/444/448; two later color keys at 44E/44F;
+five doubles at 450..470; an entry counter at 478, two player deltas at 47C/480,
+and remaining counters through 490; short pairs at 494/498; unsigned held bytes
+at 49C and signed per-player state bytes at 49E; 25 character-order bytes at 4A0,
+a 24-byte 3-column grid at 4B9 and 24 portrait offsets at 4D4; grid X/Y, character
+and palette byte pairs at 538/53A/53C/53E; random-selection timers at 540; and
+23 unavailable-stage flags at 544. These names/types are provisional observed
+views, not proof of original member grouping or a unique source class design.
+
+Constructor paths bind separate chr_sel_bg, chr_sel_ob and stage/all DAT/BMP
+strings at 0x7890F0..0x789198. It preserves the constant resource branch and
+individual initialization of grid order, portrait offsets and character order.
+Initial display values are 0, 50, 50, 0 and -240, not arbitrary decompiler names.
+Enter resets the animation and timers, uses -480 for the stage entrance, clears
+Context's player flags and alternate-style ints, builds stage exclusions for
+character-data modes 0/-1, selects music 0/1, renders and fades in. Mode 0/2 marks
+one CPU selection as stage-ready; it retains the original asymmetric CPU test.
+The destructor releases six surfaces in the original non-address order.
+
+Step preserves CPU-input suppression and redirection, random character/stage
+selection, restricted character and stage sets, palette collision avoidance,
+confirmation/cancellation states, cosine transitions and scene return values.
+It returns 8/0 after cancellation according to mode, 2 when entering combat,
+and 1 while character selection continues. The original constant-enabled stage
+randomization guard remains in source. Signed comparisons against 6/13/16/18/22/
+23 retain the actual source operation shapes rather than equivalent rewritten
+thresholds. Animation uses ordinary cos and integer conversions, with the
+original 180/3.141592 degree divisor, (cos+1)*300 portrait motion and stage
+expression ((cos-0.5)*2-1)*240. No fast math or custom conversion wrapper is used.
+
+Context's B/C/D pulse bytes, stage byte at F32, menu mode at 1364 and Scene flag
+at 2D now have signed char views from explicit MOVSX evidence; CPU flags at
+1343/1344 have unsigned char views from MOVZX, without changing the already
+exact title stores. Context exposes two int alternate-style fields at 1338,
+flag 1358, ints 135C/1360, two player flags at 1378 and flag 14283 inside existing
+unknown storage. The shared Scene pointer pair at C/10 is represented as an
+array for the target's player indexing, with identical constructor stores.
+Secondary exposes palette index 8E and a one-byte view of the NUL-terminated
+resource-name start at 94. A reviewed character constructor (0x48A720) copies a
+string to that address after calling base construction at 0x40EAE0. This minimum
+view establishes neither the full resource-name capacity nor Secondary's size,
+vtable or character inheritance. No new allocation uses that minimum size.
+
+LoadStage retains its own duplicate prefix/extension bindings at 0x789238..
+0x789260 and both compiled DAT/BMP paths. LoadPlayerPalette builds system plus
+the character name twice, directory separator and extension, then loads/submits
+40 entries beginning at AF+player*40 using palette*40 as source offset. Keyboard
+retains the original 256-byte buffer, HRESULT inner scope, input-lost reacquire
+and failure-buffer access. Escape sets the cancellation flag, F1 restores
+bindings, and F2/F3/F4 select profiles 1/2/3 only when ReadConfigByte(0x98) > 0.
+No bounds, cleanup or failure behavior was silently improved.
+
+The first complete constructor/destructor source matched immediately. Step's
+first 6,928-byte contribution had 338 byte differences; recovered byte types,
+branch forms and integer bounds reduced those to eleven path-buffer offsets.
+A naturally nested digits scope under the path buffer recovered the original
+stack order and made the full function exact. Merely reversing declarations or
+renaming the same-scope buffers did not fix it; those trials are retained. The
+four adjacent functions' first complete source was exact except for three
+keyboard branches: explicit > 0 recovered the original signed TEST/JLE shape
+following unsigned byte promotion. No byte wrappers, padding or partial claims
+were used. Every involved unit was compared after the final source/header edits.
+
+Final verification uses 24 cold source/profile/dependency artifacts for seven
+new and 107 Engine.h/Input.h-dependent existing units, all 114 complete strict
+comparisons exact. The effect dispatcher still covers 14,305 bytes, 301
+relocations and 36 original-offset bindings; the title Step still includes its
+entire 28-byte table and eight offset bindings. Header changes refreshed their
+44 compiler-local symbol IDs without changing any destinations or offsets.
+Reader/Config were unaffected and omitted. Private source trials, operand and
+boundary reviews are retained under .analysis/probes/scene-select/; final replay
+is .analysis/exact/scene-select-and-affected.json. No oracle/toolchain change,
+full CI/cold cohort or runtime matrix was needed.
+
+The next render owner at 0x755500 needs its complete 12,720-byte contiguous
+contribution reviewed independently. The provisional Ghidra body lists only
+12,231 addresses: omitted intervals 0x757946..0x75794F and 0x75795F..0x757B3F
+contain normal loop instructions in the target, not accepted gaps or table
+padding. Do not copy that incomplete body extent into a comparison recipe.
+Local render disassembly and decompile are retained, alongside the 3,399-byte
+character-loading candidate at 0x7586B0. The latter creates the original
+per-character subclasses; arbitrary opaque constructor/size guesses are not
+accepted. DrawSurface and its software conversion callee also remain open.

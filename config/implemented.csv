@@ -113,3 +113,10 @@ address,name,source,symbol,status,evidence
 0x0040BD70,?ApplyPaletteRange@Video@@QAEHPAEEE@Z,src/VideoFrame.cpp,?ApplyPaletteRange@Video@@QAEHPAEEE@Z,complete,docs/evidence/video-frame-exact.json
 0x0040BDC0,?ClearPaletteRGB@Video@@QAEHPAE@Z,src/VideoFrame.cpp,?ClearPaletteRGB@Video@@QAEHPAE@Z,complete,docs/evidence/video-frame-exact.json
 0x0040B5E0,?Present@Video@@QAEHXZ,src/VideoFrame.cpp,?Present@Video@@QAEHXZ,complete,docs/evidence/video-frame-exact.json
+0x00753260,??0Scene1@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,src/SceneSelect.cpp,??0Scene1@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene-select-exact.json
+0x007538B0,??1Scene1@@QAE@XZ,src/SceneSelect.cpp,??1Scene1@@QAE@XZ,complete,docs/evidence/scene-select-exact.json
+0x007539F0,?Step@Scene1@@UAEEXZ,src/SceneSelect.cpp,?Step@Scene1@@UAEEXZ,complete,docs/evidence/scene-select-exact.json
+0x00759460,?LoadStage@Scene1@@QAEXXZ,src/SceneSelect.cpp,?LoadStage@Scene1@@QAEXXZ,complete,docs/evidence/scene-select-exact.json
+0x007595D0,?LoadPlayerPalette@Scene1@@QAEXD@Z,src/SceneSelect.cpp,?LoadPlayerPalette@Scene1@@QAEXD@Z,complete,docs/evidence/scene-select-exact.json
+0x00759770,?PollKeyboard@Scene1@@UAEXXZ,src/SceneSelect.cpp,?PollKeyboard@Scene1@@UAEXXZ,complete,docs/evidence/scene-select-exact.json
+0x007598D0,?Enter@Scene1@@QAEXXZ,src/SceneSelect.cpp,?Enter@Scene1@@QAEXXZ,complete,docs/evidence/scene-select-exact.json

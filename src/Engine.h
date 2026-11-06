@@ -71,7 +71,16 @@ public:
     void SetSoundVolume(unsigned short, int);
     void Shutdown();
 };
-class Secondary { public: ~Secondary(); };
+class Secondary {
+    unsigned char unknown_0000[0x8e];
+public:
+    char paletteIndex;
+private:
+    unsigned char unknown_008f[5];
+public:
+    char resourceName[1]; // Observed string start, not a complete object-size claim.
+    ~Secondary();
+};
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {
     int exhausted;
@@ -140,7 +149,7 @@ public:
 public:
     char directionX[2], directionY[2];
     char buttonA[2];
-    unsigned char buttonB[2], buttonC[2], buttonD[2];
+    char buttonB[2], buttonC[2], buttonD[2];
     int heldA[2], heldB[2], heldC[2], heldD[2];
     IUnknown *textures[0x398];
     IUnknown *extraA, *extraB, *extraC;
@@ -150,19 +159,22 @@ public:
     int targetVolume, currentVolume;
     short volumeStep;
 public:
-    unsigned char flag0f32;
+    char flag0f32;
 private:
     unsigned char unknown_0f33;
 public:
     unsigned char colorKey;
 private:
-    unsigned char unknown_0f35[0x40c];
+    unsigned char unknown_0f35[0x403];
+public:
+    int alternateStyle[2];
+private:
+    unsigned char unknown_1340;
 public:
     char characterDataMode;
-private:
 public:
     unsigned char selectedPlayer;
-    char cpuPlayer[2];
+    unsigned char cpuPlayer[2];
 public:
     unsigned char flag1345;
 public:
@@ -175,7 +187,6 @@ private:
     unsigned char unknown_134c;
 public:
     char effectSelector;
-private:
 public:
     unsigned char selection134e;
 public:
@@ -185,10 +196,14 @@ private:
     unsigned char unknown_1351[3];
 public:
     int counter1354;
-private:
-    unsigned char unknown_1358[0xc];
 public:
-    unsigned char mode1364;
+    char flag1358;
+private:
+    unsigned char unknown_1359[3];
+public:
+    int field135c, field1360;
+public:
+    char mode1364;
 public:
     unsigned char setting1365;
     char setting1366;
@@ -202,8 +217,10 @@ private:
     unsigned char unknown_1371[3];
 public:
     int configured;
+public:
+    char playerFlag1378[2];
 private:
-    unsigned char unknown_1378[4];
+    unsigned char unknown_137a[2];
 public:
     unsigned char *blob;
     short field1380, field1382;
@@ -230,7 +247,10 @@ private:
 public:
     int fadeAttack, fadeRelease, state14278, state1427c;
 private:
-    unsigned char unknown_14280[4];
+    unsigned char unknown_14280[3];
+public:
+    char flag14283;
+private:
     WordFile replayFile;
     int effectPhase, effectAngleStart, effectAngleEnd;
     unsigned int copiedEffectFrame, copiedEffectTick;
@@ -269,14 +289,14 @@ public:
     unsigned message;
 protected:
     HWND window;
-    Secondary *secondaryA, *secondaryB;
+    Secondary *secondary[2];
     Secondary **secondarySlotA, **secondarySlotB;
     Context *contextOwner;
     Video *videoOwner;
     Input *inputOwner;
     Audio *audioOwner;
     char phase;
-    unsigned char flag002d;
+    char flag002d;
     unsigned char palette[1024];
     unsigned char colorKey;
 public:
@@ -308,7 +328,35 @@ class Name : public Scene { \
 public: Name(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *); \
     virtual void Slot0(); virtual unsigned char Step(); virtual void PollKeyboard(); \
 };
-DECLARE_SCENE(Scene1, 0x560)
+class Scene1 : public Scene {
+    unsigned char unknown_0430[4];
+    IUnknown *backgroundSurface, *objectSurface, *portraitSurface, *stageSurface;
+    IUnknown *playerSurfaces[2];
+    unsigned char field044c, field044d, stageColorKey, portraitColorKey;
+    double field0450, field0458, field0460, field0468, field0470;
+    int field0478, playerDelta[2], field0484, field0488, field048c, field0490;
+    short field0494[2], field0498[2];
+    unsigned char field049c[2];
+    char field049e[2];
+    char characterOrder[25], gridCharacters[24];
+    unsigned char unknown_04d1[3];
+    int portraitOffsets[24];
+    unsigned char unknown_0534[4];
+    char field0538[2], field053a[2], field053c[2], field053e[2];
+    short field0540[2];
+    unsigned char stageUnavailable[23];
+    unsigned char unknown_055b[5];
+public:
+    Scene1(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene1();
+    virtual void Slot0();
+    virtual unsigned char Step();
+    virtual void PollKeyboard();
+    void Enter();
+    void LoadCharacter(Secondary **, Secondary **, char);
+    void LoadStage();
+    void LoadPlayerPalette(char);
+};
 DECLARE_SCENE(Scene2, 0x438)
 DECLARE_SCENE(Scene3, 0x598)
 DECLARE_SCENE(Scene5, 0x474)

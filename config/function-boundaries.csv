@@ -128,3 +128,10 @@ address,end,size,status,evidence
 0x0040BD70,0x0040BDB1,65,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x0040BDC0,0x0040BE11,81,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
 0x0040B5E0,0x0040B63E,94,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00753260,0x007538A9,1609,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x007538B0,0x007539EA,314,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x007539F0,0x00755500,6928,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x00759460,0x007595C2,354,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x007595D0,0x0075976F,415,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x00759770,0x007598CE,350,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
+0x007598D0,0x00759C0E,830,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene

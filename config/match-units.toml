@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L61744"
+symbol = "$L61801"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L61794"
+symbol = "$L61851"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61450"
+symbol = "$L61507"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61472"
+symbol = "$L61529"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61479"
+symbol = "$L61536"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61484"
+symbol = "$L61541"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61488"
+symbol = "$L61545"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61495"
+symbol = "$L61552"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61502"
+symbol = "$L61559"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61514"
+symbol = "$L61571"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61521"
+symbol = "$L61578"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61528"
+symbol = "$L61585"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61535"
+symbol = "$L61592"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61538"
+symbol = "$L61595"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61541"
+symbol = "$L61598"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61544"
+symbol = "$L61601"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61547"
+symbol = "$L61604"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61550"
+symbol = "$L61607"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61551"
+symbol = "$L61608"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61555"
+symbol = "$L61612"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61562"
+symbol = "$L61619"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61566"
+symbol = "$L61623"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61570"
+symbol = "$L61627"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61574"
+symbol = "$L61631"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61578"
+symbol = "$L61635"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61582"
+symbol = "$L61639"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61586"
+symbol = "$L61643"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61590"
+symbol = "$L61647"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61594"
+symbol = "$L61651"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61598"
+symbol = "$L61655"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L61602"
+symbol = "$L61659"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L61608"
+symbol = "$L61665"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L61614"
+symbol = "$L61671"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L61633"
+symbol = "$L61690"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L61637"
+symbol = "$L61694"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61447"
+symbol = "$L61504"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L60899"
+symbol = "$L60956"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L60850"
+symbol = "$L60907"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L60851"
+symbol = "$L60908"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L60852"
+symbol = "$L60909"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L60853"
+symbol = "$L60910"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L60854"
+symbol = "$L60911"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L60855"
+symbol = "$L60912"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L60856"
+symbol = "$L60913"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9019,3 +9019,1473 @@ type = "REL32"
 symbol = "?ConvertBackBuffer@Video@@QAEHXZ"
 target = 0x0040b440
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-select-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-construct/SceneSelect.obj"
+symbol = "??0Scene1@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x00753260
+size = 1609
+
+[[units.scene-select-construct.relocations]]
+offset = 41
+type = "REL32"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759c10
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "??_7Scene1@@6B@"
+target = 0x007892c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 72
+type = "DIR32"
+symbol = "?selectBackgroundDat@@3QBDB"
+target = 0x007890f0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 92
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 101
+type = "DIR32"
+symbol = "?selectObjectsDat@@3QBDB"
+target = 0x00789108
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 122
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 134
+type = "DIR32"
+symbol = "?selectStagesDat@@3QBDB"
+target = 0x00789120
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 155
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 169
+type = "DIR32"
+symbol = "?selectPaletteDat@@3QBDB"
+target = 0x00789138
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 187
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 199
+type = "DIR32"
+symbol = "?selectBackgroundBmp@@3QBDB"
+target = 0x00789150
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 224
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 231
+type = "DIR32"
+symbol = "?selectObjectsBmp@@3QBDB"
+target = 0x00789168
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 256
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 266
+type = "DIR32"
+symbol = "?selectStagesBmp@@3QBDB"
+target = 0x00789180
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 291
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 305
+type = "DIR32"
+symbol = "?selectPaletteBmp@@3QBDB"
+target = 0x00789198
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 323
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 344
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 374
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 465
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 493
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 521
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 549
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-construct.relocations]]
+offset = 577
+type = "DIR32"
+symbol = "__real@c06e000000000000"
+target = 0x00788048
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-destruct/SceneSelect.obj"
+symbol = "??1Scene1@@QAE@XZ"
+target_address = 0x007538b0
+size = 314
+
+[[units.scene-select-destruct.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene1@@6B@"
+target = 0x007892c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-step]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-step/SceneSelect.obj"
+symbol = "?Step@Scene1@@UAEEXZ"
+target_address = 0x007539f0
+size = 6928
+code_size = 6908
+
+[[units.scene-select-step.local_data]]
+offset = 6908
+size = 20
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; complete original five-case address table at 0x7554EC through 0x755500"
+
+[[units.scene-select-step.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 33
+type = "REL32"
+symbol = "?Enter@Scene1@@QAEXXZ"
+target = 0x007598d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 65
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 103
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 157
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 792
+type = "DIR32"
+symbol = "$L61894"
+target = 0x007554ec
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-select-step.relocations]]
+offset = 994
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 1023
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 1594
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 1683
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 1784
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 1882
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2458
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2488
+type = "REL32"
+symbol = "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z"
+target = 0x007586b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2514
+type = "REL32"
+symbol = "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z"
+target = 0x007586b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2591
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2602
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2611
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2617
+type = "DIR32"
+symbol = "__real@4072c00000000000"
+target = 0x007889a8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2622
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2730
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2827
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2838
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2847
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2853
+type = "DIR32"
+symbol = "__real@4072c00000000000"
+target = 0x007889a8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 2858
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3016
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3315
+type = "REL32"
+symbol = "?LoadPlayerPalette@Scene1@@QAEXD@Z"
+target = 0x007595d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3434
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3503
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3744
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3824
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3872
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3880
+type = "REL32"
+symbol = "?LoadStage@Scene1@@QAEXXZ"
+target = 0x00759460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 3901
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4072
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4143
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4329
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4350
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4455
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4792
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4803
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4812
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4818
+type = "DIR32"
+symbol = "__real@4072c00000000000"
+target = 0x007889a8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4823
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4855
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4866
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4875
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4881
+type = "DIR32"
+symbol = "__real@4072c00000000000"
+target = 0x007889a8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4886
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4974
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4985
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 4994
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5002
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5008
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5013
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5097
+type = "DIR32"
+symbol = "?selectStagePrefixZero@@3QBDB"
+target = 0x007891b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5106
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5116
+type = "DIR32"
+symbol = "?selectStagePrefix@@3QBDB"
+target = 0x007891c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5125
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5153
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5169
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5186
+type = "DIR32"
+symbol = "?selectDatExtension@@3QBDB"
+target = 0x007891d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5195
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5229
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5243
+type = "DIR32"
+symbol = "?selectStagePaletteDat@@3QBDB"
+target = 0x007891d8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5261
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5292
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5299
+type = "DIR32"
+symbol = "?selectBmpExtension@@3QBDB"
+target = 0x007891f0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5308
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5344
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5358
+type = "DIR32"
+symbol = "?selectStagePaletteBmp@@3QBDB"
+target = 0x007891f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5376
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5407
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5428
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5462
+type = "REL32"
+symbol = "?ApplyPaletteRange@Video@@QAEHPAEEE@Z"
+target = 0x0040bd70
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5739
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5750
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5759
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5767
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5773
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5778
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5897
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5903
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5914
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5923
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5928
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 5991
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6002
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6011
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6019
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6025
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6030
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6140
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6156
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6177
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6193
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6241
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6257
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6278
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6294
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6315
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6339
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6361
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6632
+type = "REL32"
+symbol = "?LoadStage@Scene1@@QAEXXZ"
+target = 0x00759460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6889
+type = "REL32"
+symbol = "?LoadStage@Scene1@@QAEXXZ"
+target = 0x00759460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6899
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-step.relocations]]
+offset = 6908
+type = "DIR32"
+symbol = "$L61555"
+target = 0x00753d0c
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-select-step.relocations]]
+offset = 6912
+type = "DIR32"
+symbol = "$L61586"
+target = 0x007543e8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-select-step.relocations]]
+offset = 6916
+type = "DIR32"
+symbol = "$L61589"
+target = 0x007544d2
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-select-step.relocations]]
+offset = 6920
+type = "DIR32"
+symbol = "$L61592"
+target = 0x0075455f
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-select-step.relocations]]
+offset = 6924
+type = "DIR32"
+symbol = "$L61607"
+target = 0x00754802
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[units.scene-select-load-stage]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-load-stage/SceneSelect.obj"
+symbol = "?LoadStage@Scene1@@QAEXXZ"
+target_address = 0x00759460
+size = 354
+
+[[units.scene-select-load-stage.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 36
+type = "DIR32"
+symbol = "?selectReloadStagePrefixZero@@3QBDB"
+target = 0x00789238
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 45
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 55
+type = "DIR32"
+symbol = "?selectReloadStagePrefix@@3QBDB"
+target = 0x00789248
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 64
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 92
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 108
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 125
+type = "DIR32"
+symbol = "?selectReloadDatExtension@@3QBDB"
+target = 0x00789258
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 134
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 169
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 200
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 207
+type = "DIR32"
+symbol = "?selectReloadBmpExtension@@3QBDB"
+target = 0x00789260
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 216
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 252
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 283
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 304
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 338
+type = "REL32"
+symbol = "?ApplyPaletteRange@Video@@QAEHPAEEE@Z"
+target = 0x0040bd70
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-load-stage.relocations]]
+offset = 346
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-player-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-player-palette/SceneSelect.obj"
+symbol = "?LoadPlayerPalette@Scene1@@QAEXD@Z"
+target_address = 0x007595d0
+size = 415
+
+[[units.scene-select-player-palette.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 31
+type = "DIR32"
+symbol = "?selectPlayerPrefixDat@@3QBDB"
+target = 0x00789268
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 40
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 70
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 78
+type = "DIR32"
+symbol = "?selectPlayerSeparatorDat@@3QBDB"
+target = 0x00789270
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 87
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 116
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 124
+type = "DIR32"
+symbol = "?selectPlayerExtensionDat@@3QBDB"
+target = 0x00789274
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 133
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 192
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 202
+type = "DIR32"
+symbol = "?selectPlayerPrefixBmp@@3QBDB"
+target = 0x0078927c
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 211
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 241
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 249
+type = "DIR32"
+symbol = "?selectPlayerSeparatorBmp@@3QBDB"
+target = 0x00789284
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 258
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 287
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 295
+type = "DIR32"
+symbol = "?selectPlayerExtensionBmp@@3QBDB"
+target = 0x00789288
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 304
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 363
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 397
+type = "REL32"
+symbol = "?ApplyPaletteRange@Video@@QAEHPAEEE@Z"
+target = 0x0040bd70
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-player-palette.relocations]]
+offset = 405
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-keyboard/SceneSelect.obj"
+symbol = "?PollKeyboard@Scene1@@UAEXXZ"
+target_address = 0x00759770
+size = 350
+
+[[units.scene-select-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 184
+type = "REL32"
+symbol = "?Defaults@Input@@QAEXXZ"
+target = 0x0040d140
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 208
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 234
+type = "REL32"
+symbol = "?Configure@Input@@QAEXI@Z"
+target = 0x0040d460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 258
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 284
+type = "REL32"
+symbol = "?Configure@Input@@QAEXI@Z"
+target = 0x0040d460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 308
+type = "REL32"
+symbol = "_ReadConfigByte"
+target = 0x00405a20
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 334
+type = "REL32"
+symbol = "?Configure@Input@@QAEXI@Z"
+target = 0x0040d460
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-keyboard.relocations]]
+offset = 342
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-enter]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelect.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-enter/SceneSelect.obj"
+symbol = "?Enter@Scene1@@QAEXXZ"
+target_address = 0x007598d0
+size = 830
+
+[[units.scene-select-enter.relocations]]
+offset = 32
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 60
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 88
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 116
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 144
+type = "DIR32"
+symbol = "__real@c07e000000000000"
+target = 0x007884b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 401
+type = "DIR32"
+symbol = "?selectEnterPaletteDat@@3QBDB"
+target = 0x00789290
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 419
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 432
+type = "DIR32"
+symbol = "?selectEnterPaletteBmp@@3QBDB"
+target = 0x007892a8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 450
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 577
+type = "REL32"
+symbol = "_memset"
+target = 0x00777dc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 773
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 788
+type = "REL32"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target = 0x004068b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[[units.scene-select-enter.relocations]]
+offset = 815
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"

@@ -40,18 +40,20 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **114 complete exact authored functions, 45,065 code bytes**,
+Recovered owners provide **121 complete exact authored functions, 55,845 code bytes**,
 with every relocation field explicitly bound and compared. Eleven compiler-generated
 deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library
 math wrappers are also checked separately. The complete effect and title-scene
-dispatchers add 219 associated switch-table bytes, compared in full and counted separately from
-code. The local Ghidra inventory contains 950 non-external candidates; their boundaries and origins
+dispatchers and character-selection update add 239 associated switch-table bytes,
+compared in full and counted separately from code. The local Ghidra inventory contains 950 non-external candidates; their boundaries and origins
 remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
 is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
 the accepted owners, retained evidence and next work. The complete raw file
 reader, DirectInput owner, DirectSound/WAV/loop/playback members, title scene and
-shared scene fades are accepted at function-codegen level.
+shared scene fades are accepted at function-codegen level. Character-selection
+update, entry, lifetime and palette helpers are also exact; its render and
+character-construction functions remain open.
 The reader/audio historical drafts are
 preserved separately in the [workbench](workbench/reader-audio/README.md).
 Reconstruction resumed on 2026-11-06 with focused new/affected exact comparisons.

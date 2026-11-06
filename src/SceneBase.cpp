@@ -6,8 +6,8 @@ Scene::Scene(HWND handle, Secondary **first, Secondary **second, Context *contex
     secondarySlotA = first;
     secondarySlotB = second;
     window = handle;
-    secondaryA = *first;
-    secondaryB = *second;
+    secondary[0] = *first;
+    secondary[1] = *second;
     contextOwner = context;
     videoOwner = video;
     inputOwner = input;

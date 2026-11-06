@@ -15,6 +15,7 @@ class Input {
     IDirectInputDevice7A *keyboard;
     IDirectInputDevice7A *joysticks[2];
     friend class Scene0;
+    friend class Scene1;
     friend BOOL CALLBACK EnumerateInputDevice(const DIDEVICEINSTANCEA *, void *);
 public:
     Input();

@@ -6,7 +6,8 @@ The operator resumed exact reconstruction on 2026-11-06 and requested focused
 new/affected comparisons without full CI/cold cohorts or redundant tests.
 The current checkpoints complete the preserved PatternReader and Audio owners,
 then DirectInput, Audio playback controls, Context input/audio transitions and
-the complete title scene with its shared base/fades and palette/frame wrappers.
+the complete title scene with its shared base/fades and palette/frame wrappers,
+and substantial character-selection update/entry/resource functions.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -19,10 +20,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 114 |
-| Authored exact instruction bytes | 45,065 |
-| Associated exact local-table bytes | 219 |
-| Reviewed boundaries / origins | 129 / 129 |
+| Authored complete exact functions | 121 |
+| Authored exact instruction bytes | 55,845 |
+| Associated exact local-table bytes | 239 |
+| Reviewed boundaries / origins | 136 / 136 |
 | Compiler-generated auxiliary helpers | 11 functions / 406 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -31,8 +32,8 @@ config/matches.csv and docs/evidence/ are the acceptance authority. Candidate
 counts are not an authored-code denominator. No runnable replacement or
 whole-game completion percentage is claimed.
 
-The largest owner is Context::UpdateEffect (0x401C20): 14,114 instruction bytes
-and 191 local-table bytes, compared as the complete 14,305-byte contribution
+The largest accepted individual body is Context::UpdateEffect (0x401C20):
+14,114 instruction bytes and 191 local-table bytes, compared as the complete 14,305-byte contribution
 through 0x405401. All 301 relocations and 36 compiler-local offset bindings
 remain checked. The Context header update refreshed compiler-local symbol IDs
 without changing destinations, extents or offset checks.
@@ -90,7 +91,7 @@ reader and Config sources were untouched. Public proof is context-io-exact.json;
 private final replay is .analysis/exact/context-io-and-affected.json. The complete
 dispatcher and its 36 local-offset bindings remain exact after symbol-ID refresh.
 
-The latest checkpoint adds twelve complete functions: Scene base construction,
+Checkpoint 44d09cb adds twelve complete functions: Scene base construction,
 FadeOut/FadeIn, Scene0 construction/destruction/Step/render/keyboard, and Video
 palette submission/range/RGB clearing/presentation. They add 3,769 instruction
 bytes and 28 local-table bytes. The complete title Step contribution is 1,267
@@ -107,18 +108,45 @@ affected-owner proofs are refreshed. Private replay is
 .analysis/exact/scene-and-affected.json. See the knowledge base's
 [scene owner facts](KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base).
 
+The latest checkpoint adds seven complete Scene1 functions (10,780 instruction
+bytes plus 20 local-table bytes): construction/destruction, Step, LoadStage,
+LoadPlayerPalette, PollKeyboard and Enter. The complete Step contribution is
+6,928 bytes through 0x755500, including its five-case table after RET at
+0x7554EB. All 199 new relocation operands were independently reviewed. The
+provisional 0x560 Scene1 layout exposes surface slots, animation state, character
+grid/order/offsets and selection flags without changing startup allocations.
+Context byte signedness now follows actual Scene1 MOVSX/MOVZX reads; the shared
+Secondary pointer pair is a natural array with identical base-constructor code.
+Twenty-four cold source/profile/dependency artifacts cover seven new and 107
+shared-header-dependent units, all 114 full comparisons strict exact. Reader
+and Config were unaffected. Public proof is scene-select-exact.json; affected
+proofs were refreshed. Private replay is
+.analysis/exact/scene-select-and-affected.json. The effect and title dispatchers
+retain every original destination and offset check after 44 local-symbol-ID
+refreshes. Full CI/cold cohorts and redundant tests were omitted as requested.
+See [the character-selection facts](KNOWLEDGE_BASE.md#character-selection-scene).
+Scene1 render and character construction are still open; do not claim full
+scene/callee closure from these successful functions.
+
 Important retained limits:
 
 - Scene base is a provisional 0x430 minimum view, with palette at 0x2E;
   Scene0's startup allocation remains 0x44C. Other scene allocations and startup
   dispatch/delete bodies remain exact. No unique original class/type grouping
   or linked vtable placement is claimed. Direction-held fields are unsigned
-  bytes; CPU flags and buttonA use signed bytes matching original codegen.
+  bytes; CPU flags are unsigned from Scene1 MOVZX reads. All four button-pulse
+  arrays and mode1364 are signed bytes from explicit MOVSX evidence.
 - Title inactivity increments per quiet player, twice per fully quiet frame;
   do not infer 30 seconds from threshold 1800. Keyboard failure still reaches
   the original buffer test. Fades preserve 16/15 ms busy waits. ApplyPalette
   submits 255 entries; Present returns zero only for surface loss and does not
   implement restoration. Its converter and DrawSurface remain open externals.
+- Scene1 Step's table is 20 bytes at 0x7554EC, with all six original-offset
+  bindings checked. Integer branch bounds and the nested path/digits scope are
+  codegen evidence; do not flatten/rewrite them without a full comparison.
+  Secondary's palette byte at 8E and string start at 94 are minimum views only,
+  not complete class size/name capacity/inheritance claims. No allocation uses
+  that partial size. Its character constructors and the render body remain open.
 - Context direction/pulse arrays occupy 0xC..0x17 and four two-int held arrays
   occupy 0x18..0x37. Initialize loads wave\\se\\00.wav..64.wav and sets volume -500
   even on a failed load. LoadMusic calls marker parsing even when loading fails,
@@ -192,16 +220,22 @@ The reader/audio/Input backlog, Context input/audio transitions and the title
 scene/shared fade owner are complete at function-codegen level. Their successful
 units do not complete the game. The base now has three reviewed virtual slots,
 so subsequent scene work can use that shape while keeping per-owner fields and
-ABI provisional. Next inspect the coherent Scene1 owner: locate and review its
-constructor in the current inventory, Step 0x7539F0 (6,908-byte candidate), and
-adjacent resource/render/keyboard bodies. Review complete boundaries, tables,
-relocations and native-C++ feasibility before acceptance;
-do not assume neighboring Ghidra candidates are correct or copy title field
-meanings into other scenes. Scene6 also offers a larger follow-up owner.
-Startup's other scene constructors remain explicit external destinations.
-Do not optimize for small-function counts or treat decompiler hypotheses as
-ABI proof. Private title trials and original reviews are retained under
-.analysis/probes/scene-next/; no archived workbench source should overwrite src/.
+ABI provisional. Continue the remaining coherent Scene1 owner: render at
+0x755500 and character construction at 0x7586B0. Target-attested decompiles and
+complete raw disassembly are retained under .analysis/ghidra/ and
+.analysis/probes/scene-select/. The render candidate has a contiguous 12,720-byte
+span through RET at 0x7586AF, but Ghidra's 12,231-address body omits normal loop
+instructions at 0x757946..0x75794F and 0x75795F..0x757B3F. Review those paths and
+the entire original span before choosing complete boundaries; do not mask gaps
+or accept Ghidra's body size. Its many MakeSurfaceRect temporaries and draw calls
+appear normal C++ outside the still-external rendering kernels. The 3,399-byte
+character-loader candidate creates 24 concrete character classes; review their
+constructor boundaries, common-base relationship and allocation sizes before
+adding source declarations. Do not invent opaque sizes solely to force call ABI.
+Scene6 also offers a larger follow-up owner. Startup's other scene constructors
+remain explicit external destinations. Do not optimize for small-function
+counts or treat decompiler hypotheses as ABI proof. Preserve all private trials
+and avoid overwriting src/ with archived workbench drafts.
 
 The Draw implementations 0x409A90/0x40A0B0 were inspected completely. Like the
 865-byte 0x40A440 kernel, they have body-local ESI/EDI push/pop and AH/AL pixel

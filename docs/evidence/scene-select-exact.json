@@ -1,0 +1,2010 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 24 cold source/profile/dependency artifacts shared unchanged across seven new character-selection functions and 107 shared-header-dependent units; reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1609,
+      "matched_bytes": 1609,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 41,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7901888,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene1@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 72,
+          "target": 7901424,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectBackgroundDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 7901448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectObjectsDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 122,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 134,
+          "target": 7901472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagesDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 155,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 7901496,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPaletteDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 199,
+          "target": 7901520,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectBackgroundBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 224,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 231,
+          "target": 7901544,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectObjectsBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 256,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 266,
+          "target": 7901568,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagesBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 291,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 305,
+          "target": 7901592,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPaletteBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 323,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 344,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 374,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 465,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 493,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 521,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 549,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 577,
+          "target": 7897160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c06e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9045ef25d64bf59adca7f7abe13a0a14a109c6cd9735aa4227edf56ccd431137",
+      "target_extent_sha256": "9045ef25d64bf59adca7f7abe13a0a14a109c6cd9735aa4227edf56ccd431137",
+      "unit": "scene-select-construct",
+      "symbol": "??0Scene1@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x00753260",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "41d52b63de9a51ccd4851b5fe8071399747f2cb087c8c3bbd3eafeb9a83d9009",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 314,
+      "matched_bytes": 314,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7901888,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene1@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fb26decc7d74946c899503cdb410f5bee8c015e716341359df9c817c457efb6e",
+      "target_extent_sha256": "fb26decc7d74946c899503cdb410f5bee8c015e716341359df9c817c457efb6e",
+      "unit": "scene-select-destruct",
+      "symbol": "??1Scene1@@QAE@XZ",
+      "target_address": "0x007538B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "87afd65436de2a8cd7f1afa9c13bef883ca15fb22ff84b090b4911c595b4e3e4",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 6928,
+      "matched_bytes": 6928,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 33,
+          "target": 7706832,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Enter@Scene1@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 65,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 792,
+          "target": 7689452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61894",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 6908,
+          "addend": 0
+        },
+        {
+          "offset": 994,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1023,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1594,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1683,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1784,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1882,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2458,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2488,
+          "target": 7702192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2514,
+          "target": 7702192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2591,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2602,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2611,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2617,
+          "target": 7899560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4072c00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2622,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2730,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2827,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2838,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2847,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2853,
+          "target": 7899560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4072c00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2858,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3016,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3315,
+          "target": 7706064,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPlayerPalette@Scene1@@QAEXD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3434,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3503,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3744,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3824,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3872,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3880,
+          "target": 7705696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadStage@Scene1@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 3901,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4072,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4143,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4329,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4350,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4455,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4792,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4803,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4812,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4818,
+          "target": 7899560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4072c00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4823,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4855,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4866,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4875,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4881,
+          "target": 7899560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4072c00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4886,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4974,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4985,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 4994,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5002,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5008,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5013,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5097,
+          "target": 7901616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagePrefixZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5106,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5116,
+          "target": 7901632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagePrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5125,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5153,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5169,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5186,
+          "target": 7901648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectDatExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5195,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5229,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5243,
+          "target": 7901656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagePaletteDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5261,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5292,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5299,
+          "target": 7901680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectBmpExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5308,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5344,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5358,
+          "target": 7901688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectStagePaletteBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5376,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5407,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5428,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5462,
+          "target": 4242800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPaletteRange@Video@@QAEHPAEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5739,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5750,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5759,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5767,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5773,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5778,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5897,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5903,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5914,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5923,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5928,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 5991,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6002,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6011,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6019,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6025,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6030,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6140,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6156,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6177,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6193,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6241,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6257,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6278,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6294,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6315,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6339,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6361,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6632,
+          "target": 7705696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadStage@Scene1@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6889,
+          "target": 7705696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadStage@Scene1@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6899,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 6908,
+          "target": 7683340,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61555",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 796,
+          "addend": 0
+        },
+        {
+          "offset": 6912,
+          "target": 7685096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61586",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 2552,
+          "addend": 0
+        },
+        {
+          "offset": 6916,
+          "target": 7685330,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61589",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 2786,
+          "addend": 0
+        },
+        {
+          "offset": 6920,
+          "target": 7685471,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61592",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 2927,
+          "addend": 0
+        },
+        {
+          "offset": 6924,
+          "target": 7686146,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61607",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 3602,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "78d0eef2ad3c1e98293f68d8d25bc4c41cb48f5c6a9f37a718864814e3688ff6",
+      "target_extent_sha256": "78d0eef2ad3c1e98293f68d8d25bc4c41cb48f5c6a9f37a718864814e3688ff6",
+      "code_size": 6908,
+      "local_data_bytes": 20,
+      "local_data": [
+        {
+          "offset": 6908,
+          "size": 20,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; complete original five-case address table at 0x7554EC through 0x755500"
+        }
+      ],
+      "unit": "scene-select-step",
+      "symbol": "?Step@Scene1@@UAEEXZ",
+      "target_address": "0x007539F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "bf6cb9c15f18677b22b76cd2f68533faf6437304c65699684fed5b33671b5a42",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 354,
+      "matched_bytes": 354,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 36,
+          "target": 7901752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectReloadStagePrefixZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 45,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 55,
+          "target": 7901768,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectReloadStagePrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 64,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 108,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 7901784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectReloadDatExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 134,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 200,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 207,
+          "target": 7901792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectReloadBmpExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 216,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 252,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 283,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 304,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 338,
+          "target": 4242800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPaletteRange@Video@@QAEHPAEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 346,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4f42522ae76e2d031902d1ac6419ec020b89e41da91e927c0a5968584dd4edaa",
+      "target_extent_sha256": "4f42522ae76e2d031902d1ac6419ec020b89e41da91e927c0a5968584dd4edaa",
+      "unit": "scene-select-load-stage",
+      "symbol": "?LoadStage@Scene1@@QAEXXZ",
+      "target_address": "0x00759460",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4123c6c7e6c52ee2cb2de5a4df8c90b3d51221be011f63ebee593e44451b0ff2",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 415,
+      "matched_bytes": 415,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 31,
+          "target": 7901800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerPrefixDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 40,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 70,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 78,
+          "target": 7901808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerSeparatorDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 116,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 7901812,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerExtensionDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 133,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 192,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 202,
+          "target": 7901820,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerPrefixBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 211,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 241,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 249,
+          "target": 7901828,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerSeparatorBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 287,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 295,
+          "target": 7901832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectPlayerExtensionBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 304,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 363,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 397,
+          "target": 4242800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPaletteRange@Video@@QAEHPAEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 405,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "69037da32ed0f726adbbb83e5760f4942e95aad85bfa17aed655b167b999d5ca",
+      "target_extent_sha256": "69037da32ed0f726adbbb83e5760f4942e95aad85bfa17aed655b167b999d5ca",
+      "unit": "scene-select-player-palette",
+      "symbol": "?LoadPlayerPalette@Scene1@@QAEXD@Z",
+      "target_address": "0x007595D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3e8ee79ab1659e8c8a3da2f921ae97c6ba5ff6de7a9d3f837cd215b793570175",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 350,
+      "matched_bytes": 350,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 184,
+          "target": 4247872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Defaults@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 208,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 234,
+          "target": 4248672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Configure@Input@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 284,
+          "target": 4248672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Configure@Input@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 308,
+          "target": 4217376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_ReadConfigByte",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 334,
+          "target": 4248672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Configure@Input@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 342,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c26180b1f510d7c227bb4ec65c4fa649c81dd82bfd8cc37e094910d16098d2a7",
+      "target_extent_sha256": "c26180b1f510d7c227bb4ec65c4fa649c81dd82bfd8cc37e094910d16098d2a7",
+      "unit": "scene-select-keyboard",
+      "symbol": "?PollKeyboard@Scene1@@UAEXXZ",
+      "target_address": "0x00759770",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "94605bb8d30d2568100141231e05e860d1c2f2e6545787e7eadacf8df0f0dd00",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 830,
+      "matched_bytes": 830,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 32,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 60,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 88,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 116,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 144,
+          "target": 7898296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 401,
+          "target": 7901840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectEnterPaletteDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 419,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 432,
+          "target": 7901864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?selectEnterPaletteBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 450,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 577,
+          "target": 7830976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 773,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 788,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 815,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e85a6c06d79a4d2f218e350084b2a40fd402b76d5db42fc7b6c63aca257513e5",
+      "target_extent_sha256": "e85a6c06d79a4d2f218e350084b2a40fd402b76d5db42fc7b6c63aca257513e5",
+      "unit": "scene-select-enter",
+      "symbol": "?Enter@Scene1@@QAEXXZ",
+      "target_address": "0x007598D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "851d205affe66bb92978e13ffc4bd21019776219c450588237db2135595ce2a8",
+      "object_sha256": "33830dc12d9f6c5719e078ec525efd2a6a8efcc6933b0b30a41106547d2d4a6a",
+      "source_sha256": "c5021500e6ceafffdce11bce97a6c72a4538856b68c1133af26e4ea130dcccfe",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0ad40ce795e50eba5bef00027e85d8ae0ef69faa6aabcffc43df248b987043f5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9ba9d8eb132c7edc7a4f2f7c8057a5baaa024c20832cff2bcbbff791d3a1401e",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
