@@ -16439,3 +16439,13 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412b10
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.character-08-recognize-commands]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Input.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-recognize-commands/Character08Input.obj"
+symbol = "?Slot02@Character08@@UAEXXZ"
+target_address = 0x004261f0
+size = 5299

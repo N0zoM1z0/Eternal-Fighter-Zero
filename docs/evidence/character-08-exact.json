@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts shared unchanged across nine new Shiori command/initialization/effect/meter and shared locomotion units and 157 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "method": "selected complete contribution comparisons; Shiori input recognition uses one new cold source/profile/dependency artifact; the eight previously accepted Shiori reports retain their independently recorded artifacts; shared headers and existing sources unchanged",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -1258,6 +1258,34 @@
       "units_manifest_sha256": "cff7f9ef61b7ceff1ad185dd51b1d87357f82ccb93d48689ebffaf2360709196",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "90e08b9017f77ede5b346533bd80d28dea91729600bf9e95c177e0ef0e3423a5",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 5299,
+      "matched_bytes": 5299,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "5a740b12d514e1001787798a5b8633fb3a3b17591eb1b898466c6c15f11c54c4",
+      "target_extent_sha256": "5a740b12d514e1001787798a5b8633fb3a3b17591eb1b898466c6c15f11c54c4",
+      "unit": "character-08-recognize-commands",
+      "symbol": "?Slot02@Character08@@UAEXXZ",
+      "target_address": "0x004261F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e3c6d19a029653e607d64c3201bfa9b9386a6aaa003f0f185423ca214431d9ef",
+      "object_sha256": "c7cf83c98a6cdbcca721942157c879b1e0873b0b34a67fb66181886c57d05516",
+      "source_sha256": "17774b2b2a46acf365a690faa3001e41b6ff4ece59164f79e1bdef940ad74a97",
+      "dependencies": {
+        "src/Engine.h": "412337fc270443ba69655af7e7286c1057fedbf14a1eea106562b7b8a1e2d574",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "881243e7d14154cd23d1948ee4c9063e98fe235e1a4938c9031e2bf999c435be",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cac3121734d311d2b799e463acb515e1537c38b40cdc28f36fb1f0041b878376",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

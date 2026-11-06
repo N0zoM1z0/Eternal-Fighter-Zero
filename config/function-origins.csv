@@ -201,7 +201,7 @@ address,origin,status,evidence
 0x00425D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
 0x004261B0,unknown,unreviewed,
 0x004261C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
-0x004261F0,unknown,unreviewed,
+0x004261F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-input-history-recognition
 0x004276B0,unknown,unreviewed,
 0x0042B190,unknown,unreviewed,
 0x00434010,unknown,unreviewed,

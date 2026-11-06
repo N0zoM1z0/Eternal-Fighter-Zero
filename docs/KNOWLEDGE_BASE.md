@@ -2353,12 +2353,72 @@ operand reviews are retained in .analysis/probes/shiori-command/. No compiler or
 Wine failure occurred in this checkpoint; only focused ledger/progress and
 whitespace checks are required, without full CI or runtime matrices.
 
-A target-attested decompile now identifies the next substantial Shiori owner,
-slot 2 at 0x4261F0: a 5,299-byte candidate input-history recognizer which writes
-the command token at 262 from the 180-byte history ring. Its deeply nested
-Ghidra loop structure is provisional: review the complete original loop exits,
-modulo accesses and boundary before constructing the first full source. Slot 5
-at 0x4276B0 has a 15,066-byte candidate body and slot 7 at 0x42B190 has a 36,135-byte
-candidate body. Those sizes are discovery facts, not reviewed acceptance extents.
-The complete slot-6 animation draft remains unaccepted in its existing private
-parked snapshot; neutral controls there are not reopened by this checkpoint.
+The following input-history checkpoint accepts the complete slot-2 owner described
+below. Slot 5 at 0x4276B0 and slot 7 at 0x42B190 remain substantial leads with
+15,066-byte and 36,135-byte candidates, respectively. Those sizes are discovery
+facts, not reviewed acceptance extents. The complete slot-6 animation draft
+remains unaccepted in its private parked snapshot; neutral controls there are
+not reopened by this checkpoint.
+
+## Shiori input history recognition
+
+Character08::Slot02 is the complete 5,299-byte input recognizer at
+0x4261F0..0x4276A2, exclusive end 0x4276A3. All 1,536 instructions and 246 direct
+internal jumps were reviewed; a single final RET is followed by thirteen INT3
+bytes before 0x4276B0. There are no calls, COFF relocations or associated local
+tables. The Shiori table at 0x787DF8 independently points slot 2, operand
+0x787E00, at this entry. Source is src/Character08Input.cpp under the explicit
+VC7.1 /Od /G6 /MT /Gy profile. Its complete cold native contribution is strict
+exact: 5,299 of 5,299 bytes, zero differences, with no masked operands.
+
+The decompiler's deeply nested loops are sixteen successive, priority-ordered
+recognition scans. The function first sets signed command token field0262 to 99.
+Each scan clears an unsigned progress byte and walks the history interval from
+field0260 plus a fixed offset through field0260+179. Ring access subtracts 180
+once when i>=180; the target does not compute general remainder. Facing at 0x50
+is signed, the sample at history[180] is unsigned, and field0260 is signed short.
+Low-nibble directions, button masks, progress stages and the original scan order
+remain explicit. Meter field0148 and current animation field0008 gate specific
+patterns. The accepted slot-4 dispatcher consumes the resulting token.
+
+| Scan priority | Samples | Accepted token or button-dependent base |
+| --- | ---: | --- |
+| 1 | 90 | 0x5F; requires meter == 3000 |
+| 2 | 90 | delayed 0xAA; same-sample 0xA0; requires meter >= 1000 |
+| 3 | 75 | 0x78; requires meter >= 1000 |
+| 4 | 90 | 0x65; requires meter == 3000 |
+| 5 | 90 | 0x6E; requires meter >= 1000 |
+| 6 | 60 | 0x14 |
+| 7 | 45 | 0x0A |
+| 8 | 45 | 0x28 |
+| 9 | 45 | 0x1E |
+| 10 | 5 | 6; separate release/press checks on bit 8 |
+| 11 | 90 | 0x35; requires animation 0x60 |
+| 12 | 90 | 0x34 |
+| 13 | 45 | 0x33 |
+| 14 | 45 | 0x32 |
+| 15 | 45 | 1 |
+| 16 | 45 | 0 |
+
+Button-dependent results add ((sample&0xE0)>0), ((sample&0xC0)>0) and
+((sample&0x80)>0) to the stated base. The second scan's delayed and same-sample
+bases really differ in the original instructions; preserve this behavior.
+Stage updates use consecutive checks rather than an else-if chain, so a sample
+can advance multiple stages where the original predicates permit it.
+
+The first complete draft was compiled early. Exact reconstruction required the
+original single-wrap index, signed facing selection expressions, positive
+button-mask comparisons without narrowing casts, >=1000 meter comparisons,
+and stage==1 in the short release/press scan. The decompiler's boolean guess
+for that stage loses an original comparison. Natural C++ reproduces the entire
+function without wrappers, assembly, padding or target-byte injection.
+
+One new formal cold artifact and one strict comparison suffice: no shared header
+or previously accepted source changed. Eight earlier Shiori reports remain
+unchanged in docs/evidence/character-08-exact.json; the new report is appended.
+Private evidence, full source trials and boundary review are retained in
+.analysis/probes/shiori-input/; formal report is .analysis/exact/shiori-input.json.
+Authored acceptance is now 184 complete functions /112,788 instruction bytes,
+with 335 associated local-table bytes; reviewed boundaries and origins are 222.
+Product closure, linked data placement, runtime equivalence and portability
+remain independently open.
