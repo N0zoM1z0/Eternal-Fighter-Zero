@@ -4914,3 +4914,51 @@ Eleven of thirteen original Misaki virtual destinations now have complete exact
 proofs, including inherited LoadResources. State5571F0 and effects56F920 remain
 open with associated tables unreviewed. Resource/data/runtime/TU and game phases
 remain independently open.
+
+## Misaki animation and state owner
+
+Character07::Slot06 at0x5571F0 is complete strict exact in
+`src/Character07State.cpp`:66,501 instruction bytes followed by841 associated
+table bytes, total67,342. Code ends exclusively at5675B5; the132-entry DWORD
+address table occupies5675B5..5677C4 and the313-byte animation selector occupies
+5677C5..5678FD. Two excluded CC bytes precede accepted constructor567900.
+Original vtable788808 slot06 operand788820 contains5571F0. Public proof:
+`docs/evidence/misaki-state-exact.json`; recipe:character-07-update-state,
+pinned vc71-od-static.
+
+Independent review covers18,119 contiguous instructions,1,658 internal direct
+branches, the indirect dispatch and every original table destination. The
+selector covers animation IDs1..313, with131 explicit cases and182 defaults.
+Every destination starts an instruction; default entry131 reaches55729D.
+All1,519 relocation fields have explicit reviewed symbols and canonical
+destinations:432 direct calls,953 double operands and134 local bindings
+(132 address entries plus the two selector/address dispatch operands).
+All101 distinct64-bit literal payloads were freshly extracted from the target
+and independently checked against native COFF. All eight RandomRange callers
+zero-extend AX. Virtual calls comprise221 ResetPose calls and33 local emitters.
+
+Natural C++ retains one real EffectSpawn descriptor at EBP-50, duration/count
+at EBP-4/-8, receiver at EBP-54, saved ESI and frame414. Initial freeze guards,
+unsigned frame ticks, signed facing, float operand order, positive action and
+landing tails, and separate successful/outer exits remain explicit. The target
+really compares promoted unsigned frame numbers against-1 twice in state164;
+retain those guards despite their apparent redundancy. Its decompiler omitted
+them. Preserve original particle arithmetic, random sample order and throwing
+state transitions rather than simplifying equivalent expressions. Original
+class/translation-unit provenance remains open.
+
+The first complete native source was built early. Target-backed control and
+expression refinements then yielded the full exact artifact; diagnostic case
+normalization conferred no credit. After source formatting, the entire function
+was rebuilt and compared again. One final selected cold native replay passed
+all67,342 bytes and1,519 reviewed bindings with zero differences. Public headers,
+all318 prior recipes and existing source owners are unchanged. Focused tracking,
+ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
+matrix ran. No compiler/Wine failure occurred. Retain all target evidence,
+complete source/header/object attempts and bounded native exit logs in
+`.analysis/probes/misaki-state/` and `.analysis/build/`. Inherited unused derivation
+scripts are historical templates, not idempotent maintenance commands.
+
+Twelve of thirteen Misaki virtual destinations now have complete exact proofs.
+Effects56F920/15,562 instruction bytes remains open, with associated tables still
+unreviewed. Resource/data/runtime/TU and game phases remain independently open.

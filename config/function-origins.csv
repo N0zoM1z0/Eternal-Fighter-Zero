@@ -317,7 +317,7 @@ address,origin,status,evidence
 0x0054AD80,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners
 0x0054C250,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-cpu-command-and-movement-owner
 0x0054FD30,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls
-0x005571F0,unknown,unreviewed,
+0x005571F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misaki-animation-and-state-owner
 0x00567900,authored,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners
 0x00567A90,authored,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners
 0x00567BA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners

@@ -336,3 +336,4 @@ address,end,size,status,evidence
 0x00567C50,0x0056A5F0,10656,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners
 0x0056A640,0x0056B629,4073,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners
 0x0056B630,0x0056F917,17127,reviewed,docs/KNOWLEDGE_BASE.md#misaki-cpu-command-and-movement-owner
+0x005571F0,0x005678FE,67342,reviewed,docs/KNOWLEDGE_BASE.md#misaki-animation-and-state-owner
