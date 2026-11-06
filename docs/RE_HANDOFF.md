@@ -4,8 +4,9 @@
 
 The operator resumed exact reconstruction on 2026-11-06 and requested focused
 new/affected comparisons without full CI/cold cohorts or redundant tests.
-This session completed the preserved PatternReader and Audio owners in two
-local checkpoints. The full game remains incomplete; continue from the accepted
+The current checkpoints complete the preserved PatternReader and Audio owners,
+then the DirectInput owner and remaining Audio playback controls. The full game
+remains incomplete; continue from the accepted
 src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -18,11 +19,11 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 85 |
-| Authored exact instruction bytes | 35,244 |
+| Authored complete exact functions | 96 |
+| Authored exact instruction bytes | 40,064 |
 | Associated exact local-table bytes | 191 |
-| Reviewed boundaries / origins | 98 / 98 |
-| Compiler-generated auxiliary helpers | 9 functions / 363 bytes |
+| Reviewed boundaries / origins | 111 / 111 |
+| Compiler-generated auxiliary helpers | 11 functions / 406 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
 
@@ -33,7 +34,7 @@ whole-game completion percentage is claimed.
 The largest owner is Context::UpdateEffect (0x401C20): 14,114 instruction bytes
 and 191 local-table bytes, compared as the complete 14,305-byte contribution
 through 0x405401. All 301 relocations and 36 compiler-local offset bindings
-remain checked. The Audio header update refreshed compiler-local symbol IDs
+remain checked. The Input header update refreshed compiler-local symbol IDs
 without changing destinations, extents or offset checks.
 
 ## Latest exact progress
@@ -63,8 +64,30 @@ by eight and the original early return. MaintainLoop uses four early returns.
 Complete comparisons were retained after each trial. See
 [the knowledge base](KNOWLEDGE_BASE.md#audio-resource-and-loop-owner).
 
+The latest checkpoint adds nine DirectInput functions (4,552 bytes), two Audio
+playback members (268 bytes), and two generated Input global wrappers (43
+auxiliary bytes). Input.h now owns the provisional DirectInput 7 layout and
+Engine.h includes it; all 76 existing Engine.h recipes track that transitive
+dependency. The Initialize return type and startup relocation symbol were
+corrected to int at the same destination 0x40C6F0. Nineteen cold source/profile
+artifacts cover 13 new bodies and 76 affected existing units: all 89 complete
+comparisons are strict exact. Config and reader were not involved. Private final
+replay is .analysis/exact/input-and-affected.json; new public proofs are
+input-exact.json, input-global-exact.json and audio-playback-exact.json. Existing
+affected-owner proofs were refreshed. All fifteen authored Audio members in the
+contiguous original region are now exact (3,508 bytes).
+
 Important retained limits:
 
+- Input's minimum view is 0x1F4, not a proven 0x1F8 class from the global gap.
+  It owns keyboard state, two DIJOYSTATE records, sixteen bindings and four
+  DirectInput interfaces. Only successful enumeration increments the global
+  byte count; partial failures remain unreleased. Initialize deliberately checks
+  a stale HRESULT after keyboard creation. Defaults reads the first key.ini
+  binding record; Configure uses unchecked profile * 39 indexing. All original
+  transfer checks, axis/button evaluation order and cleanup behavior are retained.
+- StopSound/StartSound preserve the original buffer-before-sentinel check and
+  boolean looping argument. Their title at 0x7879D4 includes text following DS.
 - Reader fields at 0/4 are known; its provisional 12-byte caller view does not
   establish a third field or full original size/alignment. Reset is not a proven
   base constructor. ReadInt reads four raw bytes; no custom decoder is present.
@@ -116,11 +139,24 @@ one cold artifact with explicit per-unit receipts. Preserve complete strict
 comparisons after scope/name changes; update ledgers, proofs, progress, durable
 knowledge and this handoff before a local checkpoint.
 
-The reader/audio backlog is complete at function-codegen level. Next coherent
-candidates include the timing thread 0x401850, Input lifetime, Draw implementations
-0x409A90/0x40A0B0 and the 865-byte pixel candidate 0x40A440. Recheck complete target
-boundaries and callers before accepting inferred names/types. Larger scene
-owners remain open; do not optimize solely for small-function counts.
+The reader/audio/Input backlog is complete at function-codegen level. A useful
+next coherent owner is Context::Initialize at 0x406780, already called by startup;
+review its complete target body and adjacent state ownership before writing.
+Larger actor/scene owners also remain open; do not optimize for small-function
+counts. Startup's scene constructors remain explicit external destinations.
+
+The Draw implementations 0x409A90/0x40A0B0 were inspected completely. Like the
+865-byte 0x40A440 kernel, they have body-local ESI/EDI push/pop and AH/AL pixel
+loops consistent with handwritten assembly. No permitted natural-C++ exact
+strategy is proven, so no prefix/assembly-wrapper credit was accepted. The
+blended callee's last argument is loaded as a signed byte; existing caller
+names/types remain provisional. Retain .analysis/probes/draw-*-review.txt and
+the Ghidra decompile for future evidence-driven work.
+
+Timing thread 0x401850 has a complete 157-byte body with two initialized locals
+that are never read. Its logic is documented in KNOWLEDGE_BASE.md; it remains
+open rather than adding inert source to force those stores. No target-specific
+roadblock prevents work on the Context/scene owners.
 
 Production TU partitioning, linked data/resources/imports, callee closure, the
 runnable Windows product, original/reconstructed runtime comparison and

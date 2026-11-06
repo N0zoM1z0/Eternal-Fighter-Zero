@@ -40,8 +40,8 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **85 complete exact authored functions, 35,244 code bytes**,
-with every relocation field explicitly bound and compared. Nine compiler-generated
+Recovered owners provide **96 complete exact authored functions, 40,064 code bytes**,
+with every relocation field explicitly bound and compared. Eleven compiler-generated
 deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library
 math wrappers are also checked separately. The complete effect dispatcher adds
@@ -50,7 +50,8 @@ code. The local Ghidra inventory contains 950 non-external candidates; their bou
 remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
 is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
 the accepted owners, retained evidence and next work. The complete raw file
-reader and DirectSound/WAV/loop owner are accepted. Their historical drafts are
+reader, DirectInput owner and DirectSound/WAV/loop/playback members are accepted.
+The reader/audio historical drafts are
 preserved separately in the [workbench](workbench/reader-audio/README.md).
 Reconstruction resumed on 2026-11-06 with focused new/affected exact comparisons.
 

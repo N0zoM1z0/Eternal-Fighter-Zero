@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; nineteen cold source/profile artifacts shared unchanged across 13 new Input and Audio playback bodies and 76 shared-header-dependent units; reader and configuration units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 258,
+      "matched_bytes": 258,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "cbd675bb7cbb58b53b321ec8bca3c97d9dfee577a4a50b54e8c8443db0e25793",
+      "target_extent_sha256": "cbd675bb7cbb58b53b321ec8bca3c97d9dfee577a4a50b54e8c8443db0e25793",
+      "unit": "input-construct",
+      "symbol": "??0Input@@QAE@XZ",
+      "target_address": "0x0040C5E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2464c21cc11ce4852aa9d3697d35aafbaab3f1e6edaa4e881e2526ec373ae86b",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 389,
+      "matched_bytes": 389,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 34,
+          "target": 7908716,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_IID_IDirectInput7A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 57,
+          "target": 7893372,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetWindowLongA@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 63,
+          "target": 7830128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_DirectInputCreateEx@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7908588,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_IID_IDirectInputDevice7A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 7908316,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_GUID_SysKeyboard",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 139,
+          "target": 4246176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReportFailure@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 151,
+          "target": 7903628,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_c_dfDIKeyboard",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 192,
+          "target": 4246176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReportFailure@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 252,
+          "target": 4246176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReportFailure@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 4246176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReportFailure@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 310,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 327,
+          "target": 4246240,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_EnumerateInputDevice@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 370,
+          "target": 4246176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReportFailure@Input@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0dd1e2965927382c3161e061aa28bfe008b38da0b51108fdc3199440b860b2d0",
+      "target_extent_sha256": "0dd1e2965927382c3161e061aa28bfe008b38da0b51108fdc3199440b860b2d0",
+      "unit": "input-initialize",
+      "symbol": "?Initialize@Input@@QAEHPAUHWND__@@@Z",
+      "target_address": "0x0040C6F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "adb64e003a8bc0da9430f104a98b1110225d70f35b685b3d8e4857a329e6cd59",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 262,
+      "matched_bytes": 262,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "d3325f6e361638dd7a0932263554da8cc081684ba9da35d91f13b9d69b6f8d4d",
+      "target_extent_sha256": "d3325f6e361638dd7a0932263554da8cc081684ba9da35d91f13b9d69b6f8d4d",
+      "unit": "input-shutdown",
+      "symbol": "?Shutdown@Input@@QAEXXZ",
+      "target_address": "0x0040C880",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8addb7e7d836db5a4959bc82528a1c5b8391bd233814cb75242fd607bb34f400",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 262,
+      "matched_bytes": 262,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "d3325f6e361638dd7a0932263554da8cc081684ba9da35d91f13b9d69b6f8d4d",
+      "target_extent_sha256": "d3325f6e361638dd7a0932263554da8cc081684ba9da35d91f13b9d69b6f8d4d",
+      "unit": "input-destruct",
+      "symbol": "??1Input@@QAE@XZ",
+      "target_address": "0x0040C990",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6667ed0928f0068183e3f4ec049b175574e7be272511709582f3c799158754e2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 53,
+      "matched_bytes": 53,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7895184,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?inputErrorTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 15,
+          "target": 7895192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?inputErrorMessage@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 23,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 45,
+          "target": 7893376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__PostMessageA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fd1b7d5cd9b1e79ddab3c764531ea5230603b07f57addb19e96d9796cf301d22",
+      "target_extent_sha256": "fd1b7d5cd9b1e79ddab3c764531ea5230603b07f57addb19e96d9796cf301d22",
+      "unit": "input-report-failure",
+      "symbol": "?ReportFailure@Input@@QAEXXZ",
+      "target_address": "0x0040CAA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "295a27c6ecce5fca9ff5cd881e89530014d1c3a7d89b74fab940ea8b80cf4e7e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 531,
+      "matched_bytes": 531,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 17,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 30,
+          "target": 7908588,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_IID_IDirectInputDevice7A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 43,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 7903652,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_c_dfDIJoystick",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 117,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 123,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 163,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 177,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 183,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 197,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 203,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 290,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 296,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 310,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 316,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 368,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 374,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 388,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 394,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 430,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 450,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 456,
+          "target": 8065656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratingInput@@3PAVInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 491,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 500,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 507,
+          "target": 8065676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?enumeratedJoysticks@@3EA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a11f623a2a276bb4ccebb26bce03abeeca0254badb18635dcd0910b96f3b06de",
+      "target_extent_sha256": "a11f623a2a276bb4ccebb26bce03abeeca0254badb18635dcd0910b96f3b06de",
+      "unit": "input-enumerate",
+      "symbol": "_EnumerateInputDevice@8",
+      "target_address": "0x0040CAE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6c2f5038630bafd52ee847eb9bf536a8f8e658dd51e2e943a66eac7ca88d05a1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1079,
+      "matched_bytes": 1079,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "77532295662299d5cdd0f5f2bbc1d4a4f07cb5d1a993beb4f5e469fee2909478",
+      "target_extent_sha256": "77532295662299d5cdd0f5f2bbc1d4a4f07cb5d1a993beb4f5e469fee2909478",
+      "unit": "input-read-state",
+      "symbol": "?ReadState@Input@@QAEEE@Z",
+      "target_address": "0x0040CD00",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c18f247199654b3c68da053b5720c8fb839865228e357bdd14adfd78a8e074ff",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 786,
+      "matched_bytes": 786,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 35,
+          "target": 7895220,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?inputDefaultPath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 41,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 99,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 135,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 765,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 778,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a03b8010a2ddb223a9c63b38ac6dd5539218bfb34250e99630df0dafe2cff0d4",
+      "target_extent_sha256": "a03b8010a2ddb223a9c63b38ac6dd5539218bfb34250e99630df0dafe2cff0d4",
+      "unit": "input-defaults",
+      "symbol": "?Defaults@Input@@QAEXXZ",
+      "target_address": "0x0040D140",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "36cc1300095dd0739d3b29a85b5be2f27d796cfb85172b80f9bcf17058bdc16d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 932,
+      "matched_bytes": 932,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 35,
+          "target": 7895228,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?inputProfilePath@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 41,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 99,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 135,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 909,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 922,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8c85a94027d938efc2649bac1d4f74d73bceae500d5d713342e0600f7252b910",
+      "target_extent_sha256": "8c85a94027d938efc2649bac1d4f74d73bceae500d5d713342e0600f7252b910",
+      "unit": "input-configure",
+      "symbol": "?Configure@Input@@QAEXI@Z",
+      "target_address": "0x0040D460",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d86f622c9fadb76d42274cf0d9fd1e3ecb2ac7e9a2f5ff38faf597d0810509c5",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

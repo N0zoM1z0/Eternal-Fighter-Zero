@@ -41,13 +41,7 @@ public:
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
     int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
 };
-class Input {
-public:
-    void Initialize(HWND);
-    void Configure(unsigned int);
-    void Defaults();
-    void Shutdown();
-};
+#include "Input.h"
 class Audio {
     DWORD loopStart, loopEnd;
     HWND window;
@@ -67,6 +61,8 @@ public:
     unsigned short LoadWave(const char *);
     void ReadLoopMarkers(const char *);
     void ReleaseSound(unsigned short);
+    void StopSound(unsigned short);
+    void StartSound(unsigned short, int);
     void SetSoundVolume(unsigned short, int);
     void Shutdown();
 };

@@ -84,3 +84,14 @@ address,name,source,symbol,status,evidence
 0x0040DFB0,?LoadWave@Audio@@QAEGPBD@Z,src/AudioResources.cpp,?LoadWave@Audio@@QAEGPBD@Z,complete,docs/evidence/audio-exact.json
 0x0040E2B0,?ReadLoopMarkers@Audio@@QAEXPBD@Z,src/AudioResources.cpp,?ReadLoopMarkers@Audio@@QAEXPBD@Z,complete,docs/evidence/audio-exact.json
 0x0040E4D0,?MaintainLoop@Audio@@QAEXG@Z,src/AudioResources.cpp,?MaintainLoop@Audio@@QAEXG@Z,complete,docs/evidence/audio-exact.json
+0x0040C5E0,??0Input@@QAE@XZ,src/InputResources.cpp,??0Input@@QAE@XZ,complete,docs/evidence/input-exact.json
+0x0040C6F0,?Initialize@Input@@QAEHPAUHWND__@@@Z,src/InputResources.cpp,?Initialize@Input@@QAEHPAUHWND__@@@Z,complete,docs/evidence/input-exact.json
+0x0040C880,?Shutdown@Input@@QAEXXZ,src/InputResources.cpp,?Shutdown@Input@@QAEXXZ,complete,docs/evidence/input-exact.json
+0x0040C990,??1Input@@QAE@XZ,src/InputResources.cpp,??1Input@@QAE@XZ,complete,docs/evidence/input-exact.json
+0x0040CAA0,?ReportFailure@Input@@QAEXXZ,src/InputResources.cpp,?ReportFailure@Input@@QAEXXZ,complete,docs/evidence/input-exact.json
+0x0040CAE0,_EnumerateInputDevice@8,src/InputResources.cpp,_EnumerateInputDevice@8,complete,docs/evidence/input-exact.json
+0x0040CD00,?ReadState@Input@@QAEEE@Z,src/InputResources.cpp,?ReadState@Input@@QAEEE@Z,complete,docs/evidence/input-exact.json
+0x0040D140,?Defaults@Input@@QAEXXZ,src/InputResources.cpp,?Defaults@Input@@QAEXXZ,complete,docs/evidence/input-exact.json
+0x0040D460,?Configure@Input@@QAEXI@Z,src/InputResources.cpp,?Configure@Input@@QAEXI@Z,complete,docs/evidence/input-exact.json
+0x0040DE40,?StopSound@Audio@@QAEXG@Z,src/AudioPlayback.cpp,?StopSound@Audio@@QAEXG@Z,complete,docs/evidence/audio-playback-exact.json
+0x0040DE80,?StartSound@Audio@@QAEXGH@Z,src/AudioPlayback.cpp,?StartSound@Audio@@QAEXGH@Z,complete,docs/evidence/audio-playback-exact.json

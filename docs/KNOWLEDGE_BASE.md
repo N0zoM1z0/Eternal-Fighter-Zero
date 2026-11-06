@@ -528,9 +528,8 @@ Private evidence includes `.analysis/ghidra/decompile-004083b0.txt`,
 An original 865-byte rendering candidate at `0x40A440` was also inspected:
 its inner loops explicitly manipulate AH/AL and push/pop ESI/EDI within branch
 bodies. A faithful natural-C++ exact strategy remains open. The 14,114-byte
-`0x401C20` candidate has a large state switch and x87 arithmetic; its decompile
-and bounded original disassembly are retained for further owner work. Neither
-candidate receives source or exact credit from this inspection.
+`0x401C20` state dispatcher was subsequently accepted as described below;
+the rendering inspection independently confers no source or exact credit.
 
 ## Effect state dispatch
 
@@ -935,3 +934,157 @@ docs/evidence/audio-exact.json and audio-global-exact.json; affected owner
 proofs were refreshed. Private evidence is .analysis/exact/audio-and-affected.json,
 .analysis/probes/audio-next/, the retained raw-0040d*.txt/raw-0040e*.txt and the
 target-attested Ghidra audio-load-wave-review-20261106.txt.
+
+## DirectInput owner
+
+On 2026-11-06, nine complete Input functions were accepted for 4,552 authored
+instruction bytes. Two normal compiler-generated global-lifetime wrappers add
+43 auxiliary bytes. All 63 member/callback and six wrapper relocations were
+independently checked against complete original operands, mapped GUID/format/
+global data, PE imports and the CRT exit registration destination. Every direct
+branch stays inside its complete reviewed body, which ends at the final RET;
+following alignment bytes are excluded. There are no hidden tables or EH extents.
+
+| Member | Entry | Complete bytes |
+| --- | --- | ---: |
+| Constructor | 0x40C5E0 | 258 |
+| Initialize | 0x40C6F0 | 389 |
+| Shutdown | 0x40C880 | 262 |
+| Destructor | 0x40C990 | 262 |
+| ReportFailure | 0x40CAA0 | 53 |
+| EnumerateInputDevice callback | 0x40CAE0 | 531 |
+| ReadState | 0x40CD00 | 1,079 |
+| Defaults | 0x40D140 | 786 |
+| Configure | 0x40D460 | 932 |
+| Generated global initializer | 0x786440 | 28 |
+| Generated global destructor | 0x786490 | 15 |
+
+Names and recovered field types remain provisional. The callback's two-argument
+stdcall ABI follows the
+EnumDevices call, SDK callback type and complete RET 8; Ghidra's one-argument
+prototype was insufficient. Initialize returns int, replacing the earlier void
+caller declaration and relocation symbol. Its original destination is unchanged;
+the complete startup contribution was recompiled and strictly compared.
+
+The minimum Input view is 0x1F4 bytes: signed keyboard bytes at 0, 32 unknown
+bytes at 0x100, two 80-byte DIJOYSTATE records at 0x120/0x170, two sets of eight
+signed-short bindings at 0x1C0/0x1D0, HWND at 0x1E0 and DirectInput/keyboard/two
+joystick interfaces at 0x1E4/0x1E8/0x1EC/0x1F0. The four-byte gap before the
+neighboring Audio global does not establish a larger class or another field.
+Constructor sets the sixteen default key words and four interface pointers;
+keyboard/joystick state and window are not initialized by that member. The
+normal global definition does not prove linked BSS or original TU partitioning.
+
+The locked SDK's DirectInput 7 declarations and original GUID bytes identify
+IID_IDirectInput7A at 0x78AD6C, IID_IDirectInputDevice7A at 0x78ACEC and
+GUID_SysKeyboard at 0x78ABDC. Source explicitly sets DIRECTINPUT_VERSION 0x0700.
+The DirectInputCreateEx import thunk is 0x777A70. Original data-format headers
+at 0x78998C/0x7899A4 have sizes 24/16, state sizes 256/80 and object counts
+256/44, supporting c_dfDIKeyboard/c_dfDIJoystick bindings. These data remain
+explicit external destinations; no linked-data acceptance is claimed.
+
+Initialize obtains the instance with GetWindowLongA(window, -6), creates
+DirectInput 7, creates the keyboard, sets its format/cooperative flags 0x15 and
+acquires it. It deliberately does not assign the keyboard CreateDeviceEx return
+value: the following comparison uses the prior DirectInputCreateEx HRESULT.
+Preserve this observed stale-result bug. After keyboard acquisition it records
+this at global 0x7B1278 and enumerates type 4 devices with flags 1, passing the
+DirectInput pointer as callback context. ReportFailure shows the original message
+with null owner and posts WM_CLOSE to the stored window; it does not add cleanup.
+
+The callback uses global Input/count at 0x7B1278/0x7B128C, ignoring its context
+argument. It creates a joystick, sets its format and cooperative flags 0x16,
+then sets DIPROP_RANGE on offsets 0 and 4 to [-1000, 1000] using a 24-byte
+DIPROPRANGE with 16-byte header. Acquire succeeds before the byte counter is
+incremented. It stops enumeration at two successful devices; every earlier
+failure returns continue without releasing the partial device or advancing the
+counter. No reset or new slot guard was added. Shutdown and destructor each
+unacquire/release keyboard and joysticks only under the outer DirectInput-present
+condition, then release DirectInput; they retain the original pointer clearing.
+
+ReadState accepts player 0/1 and returns a packed eight-bit state. It reads
+keyboard state and polls both joysticks, attempting reacquisition only for
+DIERR_INPUTLOST. Mapping high bits select keyboard/first/second joystick;
+low byte selects a key/button or direction code. Axis tests are strict <-500
+or >500, and joystick button data is read before the key < 16 check. The source
+retains this order and does not generalize the checked format. Each successful
+joystick condition breaks directly from the switch; an else-if chain generated
+a shorter complete function. Its exact frame keeps index/binding/key/device/
+HRESULT/result byte at EBP-4/-8/-9/-0x10/-0x14/-0x15. Ordinary nested scopes
+reproduce these slots without padding, assembly or dummy fields.
+
+Defaults and Configure both read binary key.ini through distinct original path
+operands 0x7878B4/0x7878BC. They request read/write access, require at least
+32 bytes, allocate/read the full reported size and store eight words for each
+player in binding order 3,2,1,0,4,5,6,7. Each word is
+low + (high << 8) - (high > 0), preserving unsigned byte promotion. Configure
+adds profile * 39 to each file offset without a new extent check. Reversing the
+source index terms changed register allocation; profile * 39 + player * 16
+matches the complete original expression order. Allocation/read lifetime scopes
+keep file/size/transferred/data/index at EBP-4/-8/-0xC/-0x10/-0x14. Both functions
+retain unchecked transfer handling and CloseHandle even on an invalid handle.
+The provisional Defaults name identifies the first record reader, not a generic
+reset-to-constructor-defaults operation.
+
+Normal Input input; reproduces the 28-byte initializer/15-byte exit wrapper at
+0x786440/0x786490, bound to Input 0x7B0968, ctor/dtor 0x40C5E0/0x40C990 and
+atexit 0x777F05. These helpers are compiler-generated and excluded from authored
+progress. Complete member proofs are docs/evidence/input-exact.json; auxiliary
+proofs are input-global-exact.json.
+
+Input.h is shared through Engine.h, and is an explicit transitive dependency
+of every affected recipe. InputResources/InputGlobal depend directly on Input.h.
+Final verification used nineteen cold source/profile artifacts for eleven new
+authored members/callbacks (including the playback controls below), two generated
+helpers and 76 affected existing units: all 89 complete comparisons are strict
+exact. Reader and configuration units were not involved. The complete dispatcher
+retains all 14,305 compared bytes, 301 relocations and 36 checked compiled-local
+offsets; only local symbol IDs were refreshed. All new sources use explicit
+/Od /G6 /MT /Gy /W3. Private evidence is .analysis/exact/input-and-affected.json,
+.analysis/probes/input-next/ (complete boundaries and native trials), and
+Ghidra decompile-40c5e0.txt through decompile-40d460.txt. The first Ghidra request
+used interior address 0x40C610 and was rejected; the constructor was correctly
+located at 0x40C5E0 from global initialization and reviewed independently.
+
+## Audio playback controls
+
+StopSound at 0x40DE40 (64 bytes) and StartSound at 0x40DE80 (204 bytes) complete
+the remaining two members in the contiguous Audio code region. Both are normal
+C++, compiled and compared as complete functions. StopSound conditionally calls
+the existing buffer's Stop method. StartSound checks buffers[id] before testing
+the 150 sentinel, then calls Stop, SetCurrentPosition(0) and Play(0, 0, loop == 1).
+It preserves the original order, potential sentinel access and boolean loop flag;
+no extra guards or cleanup were added. Only a nonzero Play result displays the
+original window-owned error message.
+
+All three playback relocations are reviewed: MessageBoxA IAT 0x787184 and original
+title/message pointers 0x7879D4/0x7879E8. The title includes text following DS and
+was not replaced with another title. Complete boundaries end at 0x40DE80/0x40DF4C;
+following alignment is excluded. Public proof is audio-playback-exact.json.
+The accepted Audio region now contains fifteen authored members (resource/loop,
+volume and playback) totaling 3,508 bytes. This does not establish runtime device
+behavior or whole-game audio closure. Playback declarations were incorporated
+before the shared-header replay above, avoiding a second dependency cohort.
+
+## Rendering and timer follow-up evidence
+
+The original DrawSurface/DrawBlendedSurface bodies at 0x409A90/0x40A0B0 were
+inspected completely (799/897 bytes through their RET 0x2C/0x30). Their pixel
+branches also contain body-local ESI/EDI push/pop pairs and direct AH/AL loops,
+consistent with handwritten assembly. The earlier 865-byte 0x40A440 rendering
+candidate is not an isolated case. No permitted natural-C++ exact strategy is
+proven for these kernels; retain them open instead of accepting only their
+clipping/COM prefixes or introducing assembly wrappers. Private evidence is
+.analysis/probes/draw-00409a90-review.txt/draw-0040a0b0-review.txt and the local
+Ghidra decompile-00409a90.txt. The blended body's last argument is loaded as a
+signed byte before accepting modes 0/1; existing external names/types remain
+provisional until complete owner and caller review.
+
+Timer thread 0x401850 has a 157-byte complete body. It writes three zero locals,
+updates lastTick at 0x790100, waits on tickEvent 0x79013C with the byte at
+0x78F040 as timeout, and signals frameEvent 0x790140. Every elapsed second it
+increments that byte only when the signed count exceeds 64, resets the count
+and samples time again. Two initialized locals have no later reads in this
+body. It remains unimplemented; do not add inert source merely to force its
+frame. Complete original disassembly is timing-00401850-review.txt. These
+follow-up observations confer no exact credit or automatic ledger changes.

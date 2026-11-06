@@ -2,8 +2,8 @@
 
 Both owners were integrated and accepted on 2026-11-06. Reader contributes
 20 functions / 1,370 code bytes; Audio contributes 12 / 3,159. The two AudioGlobal
-helpers contribute 43 auxiliary bytes and no authored credit. Accepted totals
-are 85 functions / 35,244 code bytes. Public proofs are in docs/evidence/;
+helpers contribute 43 auxiliary bytes and no authored credit. That integration
+checkpoint reached 85 functions / 35,244 code bytes. Public proofs are in docs/evidence/;
 these historical scratch diagnostics independently confer no progress credit.
 
 ## Preserved contents

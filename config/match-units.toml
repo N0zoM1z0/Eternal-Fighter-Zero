@@ -167,7 +167,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#configuration-file-access; original full-body
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/startup-main/Startup.obj"
 symbol = "_GameMain@16"
 target_address = 0x00401000
@@ -449,7 +449,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 [[units.startup-main.relocations]]
 offset = 430
 type = "REL32"
-symbol = "?Initialize@Input@@QAEXPAUHWND__@@@Z"
+symbol = "?Initialize@Input@@QAEHPAUHWND__@@@Z"
 target = 0x0040c6f0
 evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
 
@@ -1276,7 +1276,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/startup-window-procedure/Startup.obj"
 symbol = "_WindowProcedure@16"
 target_address = 0x00401670
@@ -1545,7 +1545,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/startup-context-delete/Startup.obj"
 symbol = "??_GContext@@QAEPAXI@Z"
 target_address = 0x004018f0
@@ -1569,7 +1569,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Startup.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/startup-secondary-delete/Startup.obj"
 symbol = "??_GSecondary@@QAEPAXI@Z"
 target_address = 0x00401920
@@ -1593,7 +1593,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/context-construct/Context.obj"
 symbol = "??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z"
 target_address = 0x00406070
@@ -1666,7 +1666,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/context-destruct/Context.obj"
 symbol = "??1Context@@QAE@XZ"
 target_address = 0x00406260
@@ -1711,7 +1711,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/context-load-patterns/Context.obj"
 symbol = "?Load@Context@@QAEXXZ"
 target_address = 0x00406e60
@@ -1952,7 +1952,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-construct/Context.obj"
 symbol = "??0PatternSequence@@QAE@XZ"
 target_address = 0x00408310
@@ -1962,7 +1962,7 @@ size = 24
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-destruct/Context.obj"
 symbol = "??1PatternSequence@@QAE@XZ"
 target_address = 0x00408270
@@ -1979,7 +1979,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-allocate/Context.obj"
 symbol = "?Allocate@PatternSequence@@QAEXH@Z"
 target_address = 0x004082d0
@@ -1996,7 +1996,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-vector-delete/Context.obj"
 symbol = "??_EPatternSequence@@QAEPAXI@Z"
 target_address = 0x00408200
@@ -2041,7 +2041,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-vector-destruct/Context.obj"
 symbol = "??_I@YGXPAXIHP6EX0@Z@Z"
 target_address = 0x004082a0
@@ -2051,7 +2051,7 @@ size = 48
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h", "src/PatternReader.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h", "src/Input.h"]
 object = "build/match-units/pattern-vector-construct/Context.obj"
 symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
 target_address = 0x00408380
@@ -2061,7 +2061,7 @@ size = 35
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/Activation.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-activate/Activation.obj"
 symbol = "?Activate@Context@@QAEXXZ"
 target_address = 0x00406aa0
@@ -2295,7 +2295,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassem
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/Activation.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-load-object/Activation.obj"
 symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
 target_address = 0x00406db0
@@ -2354,7 +2354,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-activation; original complete disassem
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Surface.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-load-bitmap/Surface.obj"
 symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
 target_address = 0x00408d00
@@ -2434,7 +2434,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassemb
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Surface.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-decode-packed/Surface.obj"
 symbol = "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
 target_address = 0x00409470
@@ -2458,7 +2458,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#surface-transfer; original complete disassemb
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Surface.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/surface-make-rect/Surface.obj"
 symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
 target_address = 0x0040c590
@@ -2468,7 +2468,7 @@ size = 69
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Palette.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-construct/Palette.obj"
 symbol = "??0Video@@QAE@XZ"
 target_address = 0x00401950
@@ -2478,7 +2478,7 @@ size = 95
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Palette.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-load-bitmap-palette/Palette.obj"
 symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
 target_address = 0x0040b640
@@ -2530,7 +2530,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original b
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Palette.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-load-palette/Palette.obj"
 symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
 target_address = 0x0040b760
@@ -2589,7 +2589,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#palette-and-blend-tables; complete original b
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Palette.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-surface-property/Palette.obj"
 symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
 target_address = 0x0040bcc0
@@ -2599,7 +2599,7 @@ size = 101
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Palette.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-build-blend-tables/Palette.obj"
 symbol = "?BuildBlendTables@Video@@QAEXPAE@Z"
 target_address = 0x0040b8a0
@@ -2609,7 +2609,7 @@ size = 1054
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-initialize/Device.obj"
 symbol = "?Initialize@Video@@QAEHPAUHWND__@@E@Z"
 target_address = 0x004083b0
@@ -2794,7 +2794,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original bo
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-recreate-8bit/Device.obj"
 symbol = "?Recreate8Bit@Video@@QAEHXZ"
 target_address = 0x00408640
@@ -2916,7 +2916,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original bo
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-recreate-16bit/Device.obj"
 symbol = "?Recreate16Bit@Video@@QAEHXZ"
 target_address = 0x00408850
@@ -3038,7 +3038,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original bo
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-shutdown/Device.obj"
 symbol = "?Shutdown@Video@@QAEXXZ"
 target_address = 0x00408a60
@@ -3048,7 +3048,7 @@ size = 231
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-destruct/Device.obj"
 symbol = "??1Video@@QAE@XZ"
 target_address = 0x00408b50
@@ -3058,7 +3058,7 @@ size = 231
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-release-surface/Device.obj"
 symbol = "?ReleaseSurface@Video@@QAEXPAPAUIUnknown@@@Z"
 target_address = 0x00408c40
@@ -3068,7 +3068,7 @@ size = 46
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-request-close/Device.obj"
 symbol = "?RequestClose@Video@@QAEHXZ"
 target_address = 0x00408c70
@@ -3085,7 +3085,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; complete original bo
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-restore-primary/Device.obj"
 symbol = "?RestorePrimarySurface@Video@@QAEHXZ"
 target_address = 0x00408ca0
@@ -3095,7 +3095,7 @@ size = 48
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Device.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-restore-surface/Device.obj"
 symbol = "?RestoreSurface@Video@@QAEHPAPAUIUnknown@@@Z"
 target_address = 0x00408cd0
@@ -3105,7 +3105,7 @@ size = 42
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/VideoGlobal.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-static-initialize/VideoGlobal.obj"
 symbol = "_$E1"
 target_address = 0x00786420
@@ -3143,7 +3143,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static init
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/VideoGlobal.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-static-destruct/VideoGlobal.obj"
 symbol = "_$E2"
 target_address = 0x00786480
@@ -3167,7 +3167,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#display-device-lifetime; original static init
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectUpdate.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-update-effect/EffectUpdate.obj"
 symbol = "?UpdateEffect@Context@@QAEXF@Z"
 target_address = 0x00401c20
@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L60134"
+symbol = "$L61640"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L60184"
+symbol = "$L61690"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L59840"
+symbol = "$L61346"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L59862"
+symbol = "$L61368"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L59869"
+symbol = "$L61375"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L59874"
+symbol = "$L61380"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L59878"
+symbol = "$L61384"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L59885"
+symbol = "$L61391"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L59892"
+symbol = "$L61398"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L59904"
+symbol = "$L61410"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L59911"
+symbol = "$L61417"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L59918"
+symbol = "$L61424"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L59925"
+symbol = "$L61431"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L59928"
+symbol = "$L61434"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L59931"
+symbol = "$L61437"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L59934"
+symbol = "$L61440"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L59937"
+symbol = "$L61443"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L59940"
+symbol = "$L61446"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L59941"
+symbol = "$L61447"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L59945"
+symbol = "$L61451"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L59952"
+symbol = "$L61458"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L59956"
+symbol = "$L61462"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L59960"
+symbol = "$L61466"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L59964"
+symbol = "$L61470"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L59968"
+symbol = "$L61474"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L59972"
+symbol = "$L61478"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L59976"
+symbol = "$L61482"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L59980"
+symbol = "$L61486"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L59984"
+symbol = "$L61490"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L59988"
+symbol = "$L61494"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L59992"
+symbol = "$L61498"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L59998"
+symbol = "$L61504"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L60004"
+symbol = "$L61510"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L60023"
+symbol = "$L61529"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L60027"
+symbol = "$L61533"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L59837"
+symbol = "$L61343"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -5297,7 +5297,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original comp
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectPool.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/effect-spawn-construct/EffectPool.obj"
 symbol = "??0EffectSpawn@@QAE@XZ"
 target_address = 0x00405490
@@ -5314,7 +5314,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectPool.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-emit-effect/EffectPool.obj"
 symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
 target_address = 0x00407100
@@ -5331,7 +5331,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed complete pool
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectPool.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-remove-effect/EffectPool.obj"
 symbol = "?RemoveEffect@Context@@QAEXF@Z"
 target_address = 0x004072a0
@@ -5341,7 +5341,7 @@ size = 193
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectPool.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-advance-effect-write/EffectPool.obj"
 symbol = "?AdvanceEffectWrite@Context@@QAEXXZ"
 target_address = 0x00407370
@@ -5351,7 +5351,7 @@ size = 327
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectUpdate.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/math-sqrt-float/EffectUpdate.obj"
 symbol = "?sqrt@@YAMM@Z"
 target_address = 0x00405410
@@ -5368,7 +5368,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectUpdate.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/math-sqrtf/EffectUpdate.obj"
 symbol = "_sqrtf"
 target_address = 0x00405430
@@ -5385,7 +5385,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectUpdate.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/math-sin-float/EffectUpdate.obj"
 symbol = "?sin@@YAMM@Z"
 target_address = 0x00405450
@@ -5402,7 +5402,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectUpdate.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/math-sinf/EffectUpdate.obj"
 symbol = "_sinf"
 target_address = 0x00405470
@@ -5419,7 +5419,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; pinned math.h overload
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectFrame.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-clear-effects/EffectFrame.obj"
 symbol = "?ClearEffects@Context@@QAEXXZ"
 target_address = 0x00407560
@@ -5429,7 +5429,7 @@ size = 76
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectFrame.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-update-effects/EffectFrame.obj"
 symbol = "?UpdateEffects@Context@@QAEXXZ"
 target_address = 0x004075b0
@@ -5446,7 +5446,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectFrame.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-remove-effect-type/EffectFrame.obj"
 symbol = "?RemoveEffectsOfType@Context@@QAEXH@Z"
 target_address = 0x004074c0
@@ -5463,7 +5463,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/EffectFrame.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-render-effects/EffectFrame.obj"
 symbol = "?RenderEffects@Context@@QAEXHHE@Z"
 target_address = 0x00407620
@@ -5522,7 +5522,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/ContextState.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-reset-state/ContextState.obj"
 symbol = "?ResetState@Context@@QAEXXZ"
 target_address = 0x00406440
@@ -5567,7 +5567,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/ContextState.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-probe-character-data/ContextState.obj"
 symbol = "?ProbeCharacterData@Context@@QAEXXZ"
 target_address = 0x00408100
@@ -5647,7 +5647,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-construct/WordFile.obj"
 symbol = "??0WordFile@@QAE@XZ"
 target_address = 0x00405e60
@@ -5657,7 +5657,7 @@ size = 33
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-destruct/WordFile.obj"
 symbol = "??1WordFile@@QAE@XZ"
 target_address = 0x00405f80
@@ -5674,7 +5674,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-open-read/WordFile.obj"
 symbol = "?OpenRead@WordFile@@QAEIPBD@Z"
 target_address = 0x00405e90
@@ -5698,7 +5698,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-open-write/WordFile.obj"
 symbol = "?OpenWrite@WordFile@@QAEXPBD@Z"
 target_address = 0x00405f00
@@ -5715,7 +5715,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-close/WordFile.obj"
 symbol = "?Close@WordFile@@QAEXXZ"
 target_address = 0x00405f50
@@ -5732,7 +5732,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-read/WordFile.obj"
 symbol = "?ReadWord@WordFile@@QAEGXZ"
 target_address = 0x00405fb0
@@ -5770,7 +5770,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/WordFile.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/word-file-write/WordFile.obj"
 symbol = "?WriteWord@WordFile@@QAEXG@Z"
 target_address = 0x00406020
@@ -5808,7 +5808,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/ContextState.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-update-frame-controls/ContextState.obj"
 symbol = "?UpdateFrameControls@Context@@QAEXXZ"
 target_address = 0x004079c0
@@ -5825,7 +5825,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/ContextState.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-update-camera-shake/ContextState.obj"
 symbol = "?UpdateCameraShake@Context@@QAEXXZ"
 target_address = 0x00407b40
@@ -5961,7 +5961,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/PaletteFade.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/context-update-palette-fade/PaletteFade.obj"
 symbol = "?UpdatePaletteFade@Context@@QAEXXZ"
 target_address = 0x00407d10
@@ -6139,7 +6139,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files; original complet
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/PaletteFade.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-darken-palette/PaletteFade.obj"
 symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
 target_address = 0x0040be20
@@ -6149,7 +6149,7 @@ size = 249
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/PaletteFade.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/video-lighten-palette/PaletteFade.obj"
 symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
 target_address = 0x0040bf20
@@ -6159,7 +6159,7 @@ size = 336
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/AudioVolume.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-set-volume/AudioVolume.obj"
 symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
 target_address = 0x0040e5d0
@@ -6656,7 +6656,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete origi
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-construct/AudioResources.obj"
 symbol = "??0Audio@@QAE@XZ"
 target_address = 0x0040d810
@@ -6666,7 +6666,7 @@ size = 95
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-destruct/AudioResources.obj"
 symbol = "??1Audio@@QAE@XZ"
 target_address = 0x0040d870
@@ -6690,7 +6690,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-shutdown/AudioResources.obj"
 symbol = "?Shutdown@Audio@@QAEXXZ"
 target_address = 0x0040d930
@@ -6714,7 +6714,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-initialize/AudioResources.obj"
 symbol = "?Initialize@Audio@@QAEXPAUHWND__@@@Z"
 target_address = 0x0040d9f0
@@ -6773,7 +6773,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-fill-buffer/AudioResources.obj"
 symbol = "?FillBuffer@Audio@@QAEXG@Z"
 target_address = 0x0040dab0
@@ -6839,7 +6839,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-release-buffer/AudioResources.obj"
 symbol = "?ReleaseBuffer@Audio@@QAEXG@Z"
 target_address = 0x0040dc50
@@ -6870,7 +6870,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-create-buffer/AudioResources.obj"
 symbol = "?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z"
 target_address = 0x0040dcd0
@@ -6929,7 +6929,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-find-slot/AudioResources.obj"
 symbol = "?FindFreeSlot@Audio@@QAEGXZ"
 target_address = 0x0040ddd0
@@ -6960,7 +6960,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-release-sound/AudioResources.obj"
 symbol = "?ReleaseSound@Audio@@QAEXG@Z"
 target_address = 0x0040df50
@@ -6984,7 +6984,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-load-wave/AudioResources.obj"
 symbol = "?LoadWave@Audio@@QAEGPBD@Z"
 target_address = 0x0040dfb0
@@ -7295,7 +7295,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-loop-markers/AudioResources.obj"
 symbol = "?ReadLoopMarkers@Audio@@QAEXPBD@Z"
 target_address = 0x0040e2b0
@@ -7361,7 +7361,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static-gs"
 source = "src/AudioResources.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-maintain-loop/AudioResources.obj"
 symbol = "?MaintainLoop@Audio@@QAEXG@Z"
 target_address = 0x0040e4d0
@@ -7371,7 +7371,7 @@ size = 255
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/AudioGlobal.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-global-initialize/AudioGlobal.obj"
 symbol = "_$E1"
 target_address = 0x00786460
@@ -7409,7 +7409,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed compl
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/AudioGlobal.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/Input.h"]
 object = "build/match-units/audio-global-destroy/AudioGlobal.obj"
 symbol = "_$E2"
 target_address = 0x007864a0
@@ -7428,3 +7428,637 @@ type = "REL32"
 symbol = "??1Audio@@QAE@XZ"
 target = 0x0040d870
 evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.input-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-construct/InputResources.obj"
+symbol = "??0Input@@QAE@XZ"
+target_address = 0x0040c5e0
+size = 258
+
+[units.input-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-initialize/InputResources.obj"
+symbol = "?Initialize@Input@@QAEHPAUHWND__@@@Z"
+target_address = 0x0040c6f0
+size = 389
+
+[[units.input-initialize.relocations]]
+offset = 34
+type = "DIR32"
+symbol = "_IID_IDirectInput7A"
+target = 0x0078ad6c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 57
+type = "DIR32"
+symbol = "__imp__GetWindowLongA@8"
+target = 0x0078717c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 63
+type = "REL32"
+symbol = "_DirectInputCreateEx@20"
+target = 0x00777a70
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 96
+type = "DIR32"
+symbol = "_IID_IDirectInputDevice7A"
+target = 0x0078acec
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 101
+type = "DIR32"
+symbol = "_GUID_SysKeyboard"
+target = 0x0078abdc
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 139
+type = "REL32"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target = 0x0040caa0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 151
+type = "DIR32"
+symbol = "_c_dfDIKeyboard"
+target = 0x0078998c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 192
+type = "REL32"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target = 0x0040caa0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 252
+type = "REL32"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target = 0x0040caa0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 297
+type = "REL32"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target = 0x0040caa0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 310
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 327
+type = "DIR32"
+symbol = "_EnumerateInputDevice@8"
+target = 0x0040cae0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-initialize.relocations]]
+offset = 370
+type = "REL32"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target = 0x0040caa0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-shutdown]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-shutdown/InputResources.obj"
+symbol = "?Shutdown@Input@@QAEXXZ"
+target_address = 0x0040c880
+size = 262
+
+[units.input-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-destruct/InputResources.obj"
+symbol = "??1Input@@QAE@XZ"
+target_address = 0x0040c990
+size = 262
+
+[units.input-report-failure]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-report-failure/InputResources.obj"
+symbol = "?ReportFailure@Input@@QAEXXZ"
+target_address = 0x0040caa0
+size = 53
+
+[[units.input-report-failure.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "?inputErrorTitle@@3QBDB"
+target = 0x00787890
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-report-failure.relocations]]
+offset = 15
+type = "DIR32"
+symbol = "?inputErrorMessage@@3QBDB"
+target = 0x00787898
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-report-failure.relocations]]
+offset = 23
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-report-failure.relocations]]
+offset = 45
+type = "DIR32"
+symbol = "__imp__PostMessageA@16"
+target = 0x00787180
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-enumerate]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-enumerate/InputResources.obj"
+symbol = "_EnumerateInputDevice@8"
+target_address = 0x0040cae0
+size = 531
+
+[[units.input-enumerate.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 17
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 30
+type = "DIR32"
+symbol = "_IID_IDirectInputDevice7A"
+target = 0x0078acec
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 43
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 90
+type = "DIR32"
+symbol = "_c_dfDIJoystick"
+target = 0x007899a4
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 97
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 103
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 117
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 123
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 163
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 177
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 183
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 197
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 203
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 290
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 296
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 310
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 316
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 368
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 374
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 388
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 394
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 450
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 456
+type = "DIR32"
+symbol = "?enumeratingInput@@3PAVInput@@A"
+target = 0x007b1278
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 491
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 500
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-enumerate.relocations]]
+offset = 507
+type = "DIR32"
+symbol = "?enumeratedJoysticks@@3EA"
+target = 0x007b128c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-read-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-read-state/InputResources.obj"
+symbol = "?ReadState@Input@@QAEEE@Z"
+target_address = 0x0040cd00
+size = 1079
+
+[units.input-defaults]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-defaults/InputResources.obj"
+symbol = "?Defaults@Input@@QAEXXZ"
+target_address = 0x0040d140
+size = 786
+
+[[units.input-defaults.relocations]]
+offset = 35
+type = "DIR32"
+symbol = "?inputDefaultPath@@3QBDB"
+target = 0x007878b4
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 41
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 66
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 87
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 99
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 765
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-defaults.relocations]]
+offset = 778
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-configure]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputResources.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-configure/InputResources.obj"
+symbol = "?Configure@Input@@QAEXI@Z"
+target_address = 0x0040d460
+size = 932
+
+[[units.input-configure.relocations]]
+offset = 35
+type = "DIR32"
+symbol = "?inputProfilePath@@3QBDB"
+target = 0x007878bc
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 41
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 66
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 87
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 99
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 909
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-configure.relocations]]
+offset = 922
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-global-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputGlobal.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-global-initialize/InputGlobal.obj"
+symbol = "_$E1"
+target_address = 0x00786440
+size = 28
+
+[[units.input-global-initialize.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-global-initialize.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??0Input@@QAE@XZ"
+target = 0x0040c5e0
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-global-initialize.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "_$E2"
+target = 0x00786490
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-global-initialize.relocations]]
+offset = 19
+type = "REL32"
+symbol = "_atexit"
+target = 0x00777f05
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.input-global-destroy]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/InputGlobal.cpp"
+dependencies = ["src/Input.h"]
+object = "build/match-units/input-global-destroy/InputGlobal.obj"
+symbol = "_$E2"
+target_address = 0x00786490
+size = 15
+
+[[units.input-global-destroy.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?input@@3VInput@@A"
+target = 0x007b0968
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.input-global-destroy.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??1Input@@QAE@XZ"
+target = 0x0040c990
+evidence = "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.audio-stop-sound]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/AudioPlayback.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/audio-stop-sound/AudioPlayback.obj"
+symbol = "?StopSound@Audio@@QAEXG@Z"
+target_address = 0x0040de40
+size = 64
+
+[units.audio-start-sound]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/AudioPlayback.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/audio-start-sound/AudioPlayback.obj"
+symbol = "?StartSound@Audio@@QAEXGH@Z"
+target_address = 0x0040de80
+size = 204
+
+[[units.audio-start-sound.relocations]]
+offset = 176
+type = "DIR32"
+symbol = "?audioPlayTitle@@3QBDB"
+target = 0x007879d4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-playback-controls; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.audio-start-sound.relocations]]
+offset = 181
+type = "DIR32"
+symbol = "?audioPlayError@@3QBDB"
+target = 0x007879e8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-playback-controls; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[[units.audio-start-sound.relocations]]
+offset = 194
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-playback-controls; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"

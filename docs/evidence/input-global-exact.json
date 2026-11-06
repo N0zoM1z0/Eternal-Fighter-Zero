@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; nineteen cold source/profile artifacts shared unchanged across 13 new Input and Audio playback bodies and 76 shared-header-dependent units; reader and configuration units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 28,
+      "matched_bytes": 28,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 8063336,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?input@@3VInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4244960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Input@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 14,
+          "target": 7890064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_$E2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 7831301,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_atexit",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8f05fcf85e64bc6f8b50a252205bb43151a0b92054f817fc84501cd9a8fc3b5c",
+      "target_extent_sha256": "8f05fcf85e64bc6f8b50a252205bb43151a0b92054f817fc84501cd9a8fc3b5c",
+      "unit": "input-global-initialize",
+      "symbol": "_$E1",
+      "target_address": "0x00786440",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "dfb8c9b444ef9455405b8ef6abedc37c9776bd697cdd7770bf0d4655c92f91ed",
+      "source_sha256": "aebbeaf65eceaf851fd3e8b1896322f3003dc2cf2f4f80aff141767caa679198",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "55b1467de04d9d394e56e5ea99360f4d532097caef95bbf8e1ccf86965e81914",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 15,
+      "matched_bytes": 15,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 8063336,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?input@@3VInput@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4245904,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1Input@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#directinput-owner; reviewed complete original operand, GUID/format/global data, PE import or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2bc2f92a2c7952ab2f2a2def6a1430c0e659544d935b1e5a3c9af0b8c444d2a4",
+      "target_extent_sha256": "2bc2f92a2c7952ab2f2a2def6a1430c0e659544d935b1e5a3c9af0b8c444d2a4",
+      "unit": "input-global-destroy",
+      "symbol": "_$E2",
+      "target_address": "0x00786490",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
+      "object_sha256": "dfb8c9b444ef9455405b8ef6abedc37c9776bd697cdd7770bf0d4655c92f91ed",
+      "source_sha256": "aebbeaf65eceaf851fd3e8b1896322f3003dc2cf2f4f80aff141767caa679198",
+      "dependencies": {
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8d056cde3e2b6b79157900e97cf00dfba05e8ad68ecea225c592a684f024eb86",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
