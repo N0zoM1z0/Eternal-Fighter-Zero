@@ -212,7 +212,7 @@ public:
     unsigned char unknown_008f[0x5];
     char resourceName[16];
     int cpuControlled;
-    unsigned char unknown_00a8[0x4];
+    float field00a8;
     char field00ac;
     unsigned char unknown_00ad[0x3];
     double field00b0;
@@ -223,7 +223,7 @@ public:
     short field00f4;
     unsigned char unknown_00f6[0x2];
     double field00f8;
-    unsigned char unknown_0100[0x4];
+    unsigned int field0100;
     short field0104;
     unsigned char unknown_0106[0x2];
     int field0108;
@@ -292,11 +292,11 @@ public:
     int field30bc;
     unsigned char unknown_30c0[0x4];
     int field30c4;
-    int field30c8;
-    int field30cc;
+    unsigned int field30c8;
+    unsigned int field30cc;
     unsigned int field30d0;
-    int field30d4;
-    int field30d8;
+    unsigned int field30d4;
+    unsigned int field30d8;
     int field30dc;
     unsigned int field30e0;
     unsigned int field30e4;
@@ -329,6 +329,17 @@ public:
     int IsStateGroupB();
     void ClearBufferedButtons();
     void ClearInputHistory();
+    int CanGuard(const SecondaryFrame *, const SecondaryFrame *);
+    int GuardInput(const SecondaryFrame *);
+    int AirActionReady();
+    int IsStateGroupC();
+    double DamageFactor();
+    double HealthFactor();
+    double ComboFactor();
+    void ApplyDamage(int, double);
+    void AwardComboScore(const SecondaryFrame *);
+    void AddScore(unsigned int);
+    short RandomRange(short, short);
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {

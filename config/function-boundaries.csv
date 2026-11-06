@@ -198,3 +198,14 @@ address,end,size,status,evidence
 0x004103A0,0x0041041E,126,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
 0x0040F170,0x0040F18F,31,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
 0x0040F190,0x0040F1D3,67,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x00410050,0x004100E5,149,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x004100F0,0x004102DE,494,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x004102E0,0x00410339,89,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410420,0x0041047B,91,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410480,0x00410523,163,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410530,0x0041055F,47,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410560,0x0041059E,62,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x004105A0,0x00410789,489,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410790,0x0041083C,172,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00410840,0x004108A0,96,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x004108A0,0x00410934,148,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score

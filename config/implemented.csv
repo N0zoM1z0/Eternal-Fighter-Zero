@@ -159,3 +159,14 @@ address,name,source,symbol,status,evidence
 0x004103A0,?IsStateGroupB@Secondary@@QAEHXZ,src/SecondaryFrame.cpp,?IsStateGroupB@Secondary@@QAEHXZ,complete,docs/evidence/secondary-frame-exact.json
 0x0040F170,?ClearBufferedButtons@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?ClearBufferedButtons@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
 0x0040F190,?ClearInputHistory@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?ClearInputHistory@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x00410050,?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z,src/SecondaryCombat.cpp,?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z,complete,docs/evidence/secondary-combat-exact.json
+0x004100F0,?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z,src/SecondaryCombat.cpp,?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z,complete,docs/evidence/secondary-combat-exact.json
+0x004102E0,?AirActionReady@Secondary@@QAEHXZ,src/SecondaryCombat.cpp,?AirActionReady@Secondary@@QAEHXZ,complete,docs/evidence/secondary-combat-exact.json
+0x00410420,?IsStateGroupC@Secondary@@QAEHXZ,src/SecondaryCombat.cpp,?IsStateGroupC@Secondary@@QAEHXZ,complete,docs/evidence/secondary-combat-exact.json
+0x00410480,?DamageFactor@Secondary@@QAENXZ,src/SecondaryCombat.cpp,?DamageFactor@Secondary@@QAENXZ,complete,docs/evidence/secondary-combat-exact.json
+0x00410530,?HealthFactor@Secondary@@QAENXZ,src/SecondaryCombat.cpp,?HealthFactor@Secondary@@QAENXZ,complete,docs/evidence/secondary-combat-exact.json
+0x00410560,?ComboFactor@Secondary@@QAENXZ,src/SecondaryCombat.cpp,?ComboFactor@Secondary@@QAENXZ,complete,docs/evidence/secondary-combat-exact.json
+0x004105A0,?ApplyDamage@Secondary@@QAEXHN@Z,src/SecondaryCombat.cpp,?ApplyDamage@Secondary@@QAEXHN@Z,complete,docs/evidence/secondary-combat-exact.json
+0x00410790,?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z,src/SecondaryCombat.cpp,?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z,complete,docs/evidence/secondary-combat-exact.json
+0x00410840,?AddScore@Secondary@@QAEXI@Z,src/SecondaryCombat.cpp,?AddScore@Secondary@@QAEXI@Z,complete,docs/evidence/secondary-combat-exact.json
+0x004108A0,?RandomRange@Secondary@@QAEFFF@Z,src/SecondaryCombat.cpp,?RandomRange@Secondary@@QAEFFF@Z,complete,docs/evidence/secondary-combat-exact.json

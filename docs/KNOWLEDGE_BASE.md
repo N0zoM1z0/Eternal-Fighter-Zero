@@ -2027,3 +2027,123 @@ Full first-source trials, target code, typed-constant/operand/boundary/successor
 reviews and the initialization diagnostic are retained under
 .analysis/probes/secondary-frame/. No full CI, unrequested cold cohort or redundant
 runtime matrix was run; no compiler/Wine failure occurred in this checkpoint.
+
+## Character guard, damage and score
+
+Eleven authored contributions add exactly 2,000 instruction bytes under
+vc71-od-static. Independent complete-target review covers 567 instructions,
+72 internal direct branches, all final returns and 41 explicit relocation
+operands. The 96-byte score routine ends immediately at the next reviewed random
+routine entry; the other extents have following INT3 alignment. No local tables,
+auxiliary credit or partial/masked comparisons are involved.
+
+| Original | Complete bytes | Recovered Secondary member |
+| --- | ---: | --- |
+| 0x410050 | 149 | CanGuard(const SecondaryFrame *, const SecondaryFrame *) |
+| 0x4100F0 | 494 | GuardInput(const SecondaryFrame *) |
+| 0x4102E0 | 89 | AirActionReady |
+| 0x410420 | 91 | IsStateGroupC |
+| 0x410480 | 163 | DamageFactor, double return |
+| 0x410530 | 47 | HealthFactor, double return |
+| 0x410560 | 62 | ComboFactor, double return |
+| 0x4105A0 | 489 | ApplyDamage(int, double) |
+| 0x410790 | 172 | AwardComboScore(const SecondaryFrame *) |
+| 0x410840 | 96 | AddScore(unsigned int) |
+| 0x4108A0 | 148 | RandomRange(short, short), short return |
+
+Source is SecondaryCombat.cpp. The frame pointer arguments use the existing
+200-byte record view, with unsigned flag words AA/B0 and signed short A0.
+The three floating helpers return through ST0; Ghidra's float10/undefined-call
+presentation is not an integer-return interface. The damage caller's actual
+receiver setup selects the opponent for HealthFactor, while DamageFactor and
+ComboFactor use self. All names remain reconstruction identifiers.
+
+CanGuard rejects positive short 13A, attack-AA bit 0x80, or missing defense-B0
+bit 0x10. With attack-AA bit 4 clear, negative y and short 14E below 30, it also
+rejects. Otherwise it delegates to GuardInput and returns int 0/1. GuardInput
+retains separate CPU/human branches. CPU training mode 1 requires Context
+counter1348; other CPU modes compare float(rand()) against float A8 * 10,000.0f,
+then set vertical input from attack-AA bits 1/2. Both paths preserve the original
+grounded high/low flag tests. Human horizontal input is checked against opponent
+position and the already accepted numeric state-group A predicate. The repeated
+grounded checks are retained in each branch rather than factored out.
+
+AirActionReady returns the original int conditional result for nonpositive short
+124, negative y, zero int 128 and state group B. Group C is exactly IDs
+163/164/165/166, matching the earlier buffered-button range without introducing
+a broader gameplay classification. Natural conditional-result form recovers the
+AirActionReady stack result; guard floating comparison operand order recovers
+rand evaluation and avoids an incorrect intermediate float spill.
+
+DamageFactor is double 118 /10,000 +1, with Context mode 2 overriding setting
+1370. Signed-byte setting 1 halves the result, setting 2 leaves it, and other
+values double it. An explicit signed conversion preserves the existing unsigned
+view/read behavior elsewhere. HealthFactor is
+(HP *0.5 /10,000 +0.5) *double180. ComboFactor returns 1 when double178 /10,000
+exceeds 1, otherwise returning that ratio, including the original unordered path.
+
+ApplyDamage saves the opponent's initial HP at 10C on combo count zero, then
+subtracts int(baseDamage *own.DamageFactor() *opponent.HealthFactor()
+*own.ComboFactor()) from HP 108. The complete three-call FPU spill/evaluation
+sequence and _ftol2 destination are preserved. It saves double178 /100 at F8,
+multiplies 178 by scaling /1,000, and repeats that multiplication if the new value
+exceeds 10,000; this really is a second multiplication rather than a clamp.
+It advances signed short 174, copies it to F4, sets short104 to 180, records
+initial-minus-current HP at 100, updates unsigned combo/damage maxima at
+30D4/30D8, advances 30D0 and awards the original score product. Signed integer
+division baseDamage /100 occurs before unsigned multiplications. AwardComboScore
+performs the corresponding record/count/score updates using signed frame A0.
+The complete first sources for all damage/factor/score routines were strict exact.
+
+AddScore adds an unsigned amount to low word 30C8. Each unsigned 100,000,000 carry
+subtracts that value and increments high word 30CC, preserving ordinary 32-bit
+wrap behavior. The views at A8, 100, 30C8/30CC and 30D4/30D8 are refined as float/unsigned
+words from the actual accesses, without changing layout or offsets. Existing
+initialization and all involved owners remain exact; no speculative validation
+or counter saturation is added.
+
+RandomRange always calls CRT rand first, even when replay mode 1 replaces its
+ushort value via WordFile::ReadWord. Mode 2 records the ushort. It returns a
+signed short result of low +(high-low)*value /32,768, using the original signed
+32-bit product/division and final short narrowing. The named short result and
+normal local scope recover the original result/value stack slots; no unused
+padding local is used. Source retains the raw interval/replay behavior without
+new range guards or a replacement RNG. CPU guard's direct rand path remains
+separate. The original WordFile helpers receive no duplicate credit.
+
+Explicit destinations include rand 0x777D61, _ftol2 0x7783B8, WordFile ReadWord /
+WriteWord 0x405FB0 /0x406020, and the reviewed member calls. Constants bind to
+double zero 0x7872F8, double 2 at 0x787328, one/100 at 0x7875C0/D0,
+double 10,000/1,000 at 0x787C00/20, float 10,000 at C48 and double 0.5 at C50.
+All relocation bytes participate in the strict complete comparison.
+
+Final replay cold builds 34 source/profile/dependency artifacts for eleven new
+and 143 Engine.h-dependent existing units: all 154 full comparisons are strict
+exact. Four dispatchers retain all 75 original local-offset checks/destinations
+after compiler-local symbol identity refreshes. Standalone Input, Reader and
+Config are unaffected and omitted. New proof is secondary-combat-exact.json;
+involved owner proofs, ledgers and progress are refreshed. Private final replay
+is .analysis/exact/secondary-combat-and-affected.json. Complete initial sources,
+trials, canonical code, typed constants and boundary/operand/successor reviews
+remain under .analysis/probes/secondary-combat/. No compiler/Wine failure, full
+CI, unrequested cold cohort or redundant runtime matrix occurred in this checkpoint.
+
+### Next substantial owner: Shiori slot 6 (unaccepted)
+
+A fresh canonical read of the thirteen-word table at 0x787DF8 agrees with the
+retained constructor/table review for resource ID 8, shiori, constructor
+0x422D70 and source view Character08. Slot 6 at operand 0x787E10 points to
+0x4136D0. This identifies the large virtual animation dispatcher with that child;
+it is not established as a common Secondary body. Ghidra's direct-caller query
+returns zero, consistent with a table-referenced method, and its candidate body
+is 0x4136D0..0x422A10 (62,273 bytes). Its 5,726-line decompile warns about switch
+normalization. Complete boundary, case mapping, associated address-table/byte-map
+and exact-source review are still required; none of this contributes exact credit.
+
+The related 0x413090 candidate is also not accepted. Its 106 raw bytes save ECX
+but perform writes through [EBP+8] and end with RET 4. Those operand/cleanup facts
+reject a this-only default-constructor interpretation despite its initializer-like
+stores. Review actual callsites and ownership before a source declaration. The
+retained private ownership and raw helper evidence is in
+.analysis/probes/secondary-combat/next-shiori-owner-review.json and next-413090.txt;
+target-attested queries are in .analysis/ghidra/.

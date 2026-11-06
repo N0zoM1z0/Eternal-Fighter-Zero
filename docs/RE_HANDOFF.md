@@ -12,7 +12,8 @@ complete selection renderer and character creation dispatcher, followed by the
 shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O,
 then all three character resource loaders and both character image-transfer methods,
 followed by character input/replay, visual trail ownership and the complete body/trail renderer,
-then common state dispatch, movement and timer updates with their supporting predicates/buffer clears.
+then common state dispatch, movement and timer updates with their supporting predicates/buffer clears,
+followed by guard decisions, damage/combo factors, scoring and replay-aware random ranges.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -25,10 +26,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 160 |
-| Authored exact instruction bytes | 89,468 |
+| Authored complete exact functions | 171 |
+| Authored exact instruction bytes | 91,468 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 199 / 199 |
+| Reviewed boundaries / origins | 210 / 210 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -266,7 +267,7 @@ A missing-method declaration in the first private renderer compile caused C2039;
 the required post-failure --execute compiler/linker/resource/execution smoke
 passed before work resumed. All logs/trials are retained in .analysis/.
 
-The latest checkpoint adds nine authored functions for 3,895 instruction bytes:
+Checkpoint 873e981 adds nine authored functions for 3,895 instruction bytes:
 DispatchState 0x40F230 (575), CheckAirAction 0x40F470 (262), UpdateMovement
 0x40F580 (1,012), UpdateTimers 0x40F980 (1,509), CollisionSide 0x40FF70 (222),
 two numeric state-group predicates 0x410340/0x4103A0 (91/126), and the buffered-
@@ -294,6 +295,36 @@ proofs are refreshed. Private final replay is
 .analysis/exact/secondary-frame-and-affected.json, with complete trials/reviews
 and the initialization diagnostic under .analysis/probes/secondary-frame/.
 See [the frame/movement facts](KNOWLEDGE_BASE.md#character-frame-state-and-movement).
+No compiler/Wine failure occurred; routine --execute smoke was not repeated.
+
+The latest checkpoint adds eleven authored Secondary functions for exactly
+2,000 instruction bytes: CanGuard/GuardInput 0x410050/0x4100F0 (149/494),
+AirActionReady/group-C predicate 0x4102E0/0x410420 (89/91), three double-returning
+damage/health/combo factors 0x410480/0x410530/0x410560 (163/47/62), ApplyDamage
+0x4105A0 (489), AwardComboScore 0x410790 (172), AddScore 0x410840 (96), and
+short-returning RandomRange 0x4108A0 (148). Complete review covers 567
+instructions, 72 internal branches and 41 explicit relocations. Score's complete
+extent ends at the adjacent random routine entry; no padding/table credit is
+added. Source is SecondaryCombat.cpp, with no auxiliary credit.
+
+Human/CPU/training guard branches, frame flags, actual floating return/receiver
+contracts, three-factor damage with truncation, original repeated scaling,
+unsigned maxima/counts and 100,000,000 score carry are retained. A8 is a float;
+100 and score/record words 30C8/30CC/30D4/30D8 are unsigned from target accesses. The
+random range always calls rand before replay substitution/recording and returns
+a short after signed division by 32,768. Guard uses its separate direct rand
+path. The first damage/factor/score sources were complete strict exact; guard
+operand order, conditional-result form and an actually used short result local
+resolved the remaining differences without padding or ABI tricks.
+
+Thirty-four cold artifacts cover eleven new and 143 Engine.h-dependent existing
+units: all 154 complete comparisons are strict exact. All 75 original local
+bindings/destinations remain checked. Standalone Input, Reader and Config are
+unaffected and omitted. New proof is secondary-combat-exact.json; involved owner
+proofs and ledgers are refreshed. Private final replay is
+.analysis/exact/secondary-combat-and-affected.json, with full trials/reviews under
+.analysis/probes/secondary-combat/. See
+[the guard/damage/score facts](KNOWLEDGE_BASE.md#character-guard-damage-and-score).
 No compiler/Wine failure occurred; routine --execute smoke was not repeated.
 
 Important retained limits:
@@ -396,18 +427,26 @@ statistics are accepted. Its three resource loaders and both character image
 transfer methods are exact too, followed by character input/replay, trail
 capture/wrappers and the full body/trail renderer. Common state dispatch,
 air-action transitions, movement, timer updates, numeric state predicates and
-input-buffer clears are now exact too. Continue into the remaining coherent
-character frame/effect/collision helpers: provisional candidates 0x410050 (149),
-0x4100F0 (494), 0x4102E0 (89) and 0x4105A0 (489). Target-attested decompiles are
-retained in .analysis/ghidra/; inspect complete target boundaries, actual
-ECX receivers, floating-point order and record types before naming/acceptance.
-The initial decompiles suggest guard/air-action checks and damage/combo processing;
-these are hypotheses until full raw target review. Related direct callees at
-0x410480/0x410530/0x410560/0x410840 may close the damage owner.
-Build the first complete source early. The 23 individual character constructors
-also remain reviewed but unimplemented. The common pose/base/resource/state
-model now supports those larger per-character owners; avoid optimizing for leaf
-counts or inferring success from decompiler types.
+input-buffer clears are exact too, followed by guard/damage/combo/score/random
+owners. Move into substantial remaining owners rather than accumulating leaf
+counts: local-effect rendering 0x413100 has a 1,488-byte candidate body, and the
+Shiori / Character08 virtual slot-6 animation dispatcher at 0x4136D0 has a 62,273-byte Ghidra body
+candidate through 0x422A10. Target-attested decompiles are retained, including
+5,726 lines for the large dispatcher, which warns about switch normalization.
+Review actual callers/owning virtual slot and the complete instruction plus
+associated address-table/byte-map boundaries before source implementation.
+The candidate body alone is not an acceptance extent; do not drop switch data
+or omitted cases, use compare_size, or accept a prefix. Build the first complete
+source early. Related 0x413090 (106-byte candidate) has retained raw/decompile evidence.
+Fresh canonical table review identifies 0x4136D0 through ID 8's table 0x787DF8,
+slot operand 0x787E10; the constructor is 0x422D70. Do not treat this as a shared
+Secondary implementation. Its direct-caller query returns zero; ownership
+review is .analysis/probes/secondary-combat/next-shiori-owner-review.json.
+The 106-byte 0x413090 saves ECX but writes through [EBP+8] and returns with RET 4;
+it is not a this-only constructor. Actual caller/receiver review is still needed.
+All these targets remain unimplemented/uncredited. The 23 individual character
+constructors remain reviewed but unimplemented; the common pose/base/resource/
+state model supports those owners as another substantial line of work.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the

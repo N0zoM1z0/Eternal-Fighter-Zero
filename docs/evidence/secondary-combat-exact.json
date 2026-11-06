@@ -1,0 +1,682 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 34 cold source/profile/dependency artifacts shared unchanged across eleven new character guard/damage/score units and 143 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 149,
+      "matched_bytes": 149,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 88,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 126,
+          "target": 4260080,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0f711461151315d3a504f5c2c40950b55b74faca14765e7f9f94977360806ea3",
+      "target_extent_sha256": "0f711461151315d3a504f5c2c40950b55b74faca14765e7f9f94977360806ea3",
+      "unit": "secondary-can-guard",
+      "symbol": "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z",
+      "target_address": "0x00410050",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1cbfd4bdc9de019bd610574508654cf2f6ef3871181329ab92680db204b9d1a3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 494,
+      "matched_bytes": 494,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 68,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 89,
+          "target": 7896136,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@461c4000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 247,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 294,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 351,
+          "target": 4260672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupA@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 412,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 463,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5d64d1f0d51f655981a5ed551f1066a68d2c81fb9e906defb2cc73f814b1102e",
+      "target_extent_sha256": "5d64d1f0d51f655981a5ed551f1066a68d2c81fb9e906defb2cc73f814b1102e",
+      "unit": "secondary-guard-input",
+      "symbol": "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z",
+      "target_address": "0x004100F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fb7c8b7ada654d54ade5fd0426c2575d68dff3a7b97f15d1a24aee658269c7e0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 89,
+      "matched_bytes": 89,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 31,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 58,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b9b5d2d9e67df2bc229017e361b4a0db23d00e9338de1da402a240162ad8d4bc",
+      "target_extent_sha256": "b9b5d2d9e67df2bc229017e361b4a0db23d00e9338de1da402a240162ad8d4bc",
+      "unit": "secondary-air-action-ready",
+      "symbol": "?AirActionReady@Secondary@@QAEHXZ",
+      "target_address": "0x004102E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "970dea2402660a6f7114dbf2dd2d22b33657f16274c366585a29b199e1b373ab",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 91,
+      "matched_bytes": 91,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "bb2d182301b40dd4a8e943e04216247f1af5db28cf17cd70132990d8a3497e7d",
+      "target_extent_sha256": "bb2d182301b40dd4a8e943e04216247f1af5db28cf17cd70132990d8a3497e7d",
+      "unit": "secondary-state-group-c",
+      "symbol": "?IsStateGroupC@Secondary@@QAEHXZ",
+      "target_address": "0x00410420",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cc031be2bfa37dedefdda4d0b513f12cfbdeefadbcba590e52f0fd6fbdec3910",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 163,
+      "matched_bytes": 163,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 36,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 42,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 89,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 130,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 147,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 153,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4aafaecdf63a53d11ebe9f10a086f234d3abab6fd840abb7b77a336121a5a94e",
+      "target_extent_sha256": "4aafaecdf63a53d11ebe9f10a086f234d3abab6fd840abb7b77a336121a5a94e",
+      "unit": "secondary-damage-factor",
+      "symbol": "?DamageFactor@Secondary@@QAENXZ",
+      "target_address": "0x00410480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b3666aae9d1dc8acf31de33005164d4b16afbb23938246f5cacd15b813005032",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 18,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 24,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 30,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9d2fb3648cbf1e4722efcbfd991ec2b97c8f0d13e007851e8310d9e5d6fbfec6",
+      "target_extent_sha256": "9d2fb3648cbf1e4722efcbfd991ec2b97c8f0d13e007851e8310d9e5d6fbfec6",
+      "unit": "secondary-health-factor",
+      "symbol": "?HealthFactor@Secondary@@QAENXZ",
+      "target_address": "0x00410530",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b563144432d88f483f2c43883c0f437228e1f2cf515a73c6262bd19b11f3514c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 62,
+      "matched_bytes": 62,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 18,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 24,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 37,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a93df94ebe4b0673bb53da5094f1497cf3080980ab6cbf6c77d4e72b19f46701",
+      "target_extent_sha256": "a93df94ebe4b0673bb53da5094f1497cf3080980ab6cbf6c77d4e72b19f46701",
+      "unit": "secondary-combo-factor",
+      "symbol": "?ComboFactor@Secondary@@QAENXZ",
+      "target_address": "0x00410560",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e53b625765f1dd36b1678ea3c67863eec0a4ea154158e154f3215e5a56cb0eb0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 489,
+      "matched_bytes": 489,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4260992,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DamageFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 89,
+          "target": 4261168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?HealthFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 4261216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ComboFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 111,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 166,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 199,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 215,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 478,
+          "target": 4261952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AddScore@Secondary@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d31b9db18b71723b6b6c4afbf2da728b14fa49ef3e8c6d8caf38f80c58454d57",
+      "target_extent_sha256": "d31b9db18b71723b6b6c4afbf2da728b14fa49ef3e8c6d8caf38f80c58454d57",
+      "unit": "secondary-apply-damage",
+      "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+      "target_address": "0x004105A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e065a634166500062f80ab29676bf94eff2a8de0afbbbc2cf3ae784430ee624d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 172,
+      "matched_bytes": 172,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 162,
+          "target": 4261952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AddScore@Secondary@@QAEXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "649303cc644fd1e4b7cdddba98a9de88f0ad32a8a6f2cdbbf870402fba68c21e",
+      "target_extent_sha256": "649303cc644fd1e4b7cdddba98a9de88f0ad32a8a6f2cdbbf870402fba68c21e",
+      "unit": "secondary-award-combo-score",
+      "symbol": "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z",
+      "target_address": "0x00410790",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "424b807c66887ba38eb6ad18b14ff15348a163d8d074dd3a737dc62209e62ed3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 96,
+      "matched_bytes": 96,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "046bc0ac4759bf1ab72d78d64d7d28474d2d0f8fff954c8a075ce729e9534ee5",
+      "target_extent_sha256": "046bc0ac4759bf1ab72d78d64d7d28474d2d0f8fff954c8a075ce729e9534ee5",
+      "unit": "secondary-add-score",
+      "symbol": "?AddScore@Secondary@@QAEXI@Z",
+      "target_address": "0x00410840",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "63b95fb86b5b0435f39619758fd0bc33a66e48a13fd1ffcd94da96edbae3b640",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 148,
+      "matched_bytes": 148,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 49,
+          "target": 4218800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadWord@WordFile@@QAEGXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 95,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "747130457267c92c4ba6ba2f527a64348c212e8a764413bf119eec56cd8e557b",
+      "target_extent_sha256": "747130457267c92c4ba6ba2f527a64348c212e8a764413bf119eec56cd8e557b",
+      "unit": "secondary-random-range",
+      "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+      "target_address": "0x004108A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42dfeb4fcb87424709fe22c877ead7a698afadab602ca8efd8292b21a1013f61",
+      "object_sha256": "921a2bf4acc2b11faee0825124de83ba19ea983457705fc54099bf0cada9caf5",
+      "source_sha256": "687228a98ebca215c7ab8f0e0e8b029c00d251e07e99b1d98f54391e5960f6fd",
+      "dependencies": {
+        "src/Engine.h": "d202d8047b78b33e3f6352390339f362db4209bda765ba3dbf236d9ac333438e",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b94c75e390aebb72dc5d3592a81605648b84d862f0a5cc029c101aac5a117505",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "11b78a31703eb4ee926a8fe8cb74870cfdb9c96a6bd28ae109f4fbfe249aef84",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

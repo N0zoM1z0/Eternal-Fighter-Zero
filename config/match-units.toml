@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62145"
+symbol = "$L62165"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62195"
+symbol = "$L62215"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61851"
+symbol = "$L61871"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61873"
+symbol = "$L61893"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61880"
+symbol = "$L61900"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61885"
+symbol = "$L61905"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61889"
+symbol = "$L61909"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61896"
+symbol = "$L61916"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61903"
+symbol = "$L61923"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61915"
+symbol = "$L61935"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61922"
+symbol = "$L61942"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61929"
+symbol = "$L61949"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61936"
+symbol = "$L61956"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61939"
+symbol = "$L61959"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61942"
+symbol = "$L61962"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61945"
+symbol = "$L61965"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61948"
+symbol = "$L61968"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61951"
+symbol = "$L61971"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61952"
+symbol = "$L61972"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61956"
+symbol = "$L61976"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61963"
+symbol = "$L61983"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61967"
+symbol = "$L61987"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61971"
+symbol = "$L61991"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61975"
+symbol = "$L61995"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61979"
+symbol = "$L61999"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61983"
+symbol = "$L62003"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61987"
+symbol = "$L62007"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61991"
+symbol = "$L62011"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61995"
+symbol = "$L62015"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61999"
+symbol = "$L62019"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L62003"
+symbol = "$L62023"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L62009"
+symbol = "$L62029"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L62015"
+symbol = "$L62035"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L62034"
+symbol = "$L62054"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L62038"
+symbol = "$L62058"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61848"
+symbol = "$L61868"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61300"
+symbol = "$L61320"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61251"
+symbol = "$L61271"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61252"
+symbol = "$L61272"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61253"
+symbol = "$L61273"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61254"
+symbol = "$L61274"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61255"
+symbol = "$L61275"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61256"
+symbol = "$L61276"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61257"
+symbol = "$L61277"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62238"
+symbol = "$L62258"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61899"
+symbol = "$L61919"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61930"
+symbol = "$L61950"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61933"
+symbol = "$L61953"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61936"
+symbol = "$L61956"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61951"
+symbol = "$L61971"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62257"
+symbol = "$L62277"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62070"
+symbol = "$L62090"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62074"
+symbol = "$L62094"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62078"
+symbol = "$L62098"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62082"
+symbol = "$L62102"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62086"
+symbol = "$L62106"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62090"
+symbol = "$L62110"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62094"
+symbol = "$L62114"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62098"
+symbol = "$L62118"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62102"
+symbol = "$L62122"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62106"
+symbol = "$L62126"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62110"
+symbol = "$L62130"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62114"
+symbol = "$L62134"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62118"
+symbol = "$L62138"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62122"
+symbol = "$L62142"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62126"
+symbol = "$L62146"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62130"
+symbol = "$L62150"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62134"
+symbol = "$L62154"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62138"
+symbol = "$L62158"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62142"
+symbol = "$L62162"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62146"
+symbol = "$L62166"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62150"
+symbol = "$L62170"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62154"
+symbol = "$L62174"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62158"
+symbol = "$L62178"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62162"
+symbol = "$L62182"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -15005,3 +15005,400 @@ object = "build/match-units/secondary-clear-input-history/SecondaryFrame.obj"
 symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
 target_address = 0x0040f190
 size = 67
+
+[units.secondary-can-guard]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-can-guard/SecondaryCombat.obj"
+symbol = "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z"
+target_address = 0x00410050
+size = 149
+
+[[units.secondary-can-guard.relocations]]
+offset = 88
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-can-guard.relocations]]
+offset = 126
+type = "REL32"
+symbol = "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z"
+target = 0x004100f0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-guard-input]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-guard-input/SecondaryCombat.obj"
+symbol = "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z"
+target_address = 0x004100f0
+size = 494
+
+[[units.secondary-guard-input.relocations]]
+offset = 68
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 89
+type = "DIR32"
+symbol = "__real@461c4000"
+target = 0x00787c48
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 196
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 247
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 294
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 351
+type = "REL32"
+symbol = "?IsStateGroupA@Secondary@@QAEHXZ"
+target = 0x00410340
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 412
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-guard-input.relocations]]
+offset = 463
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-air-action-ready]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-air-action-ready/SecondaryCombat.obj"
+symbol = "?AirActionReady@Secondary@@QAEHXZ"
+target_address = 0x004102e0
+size = 89
+
+[[units.secondary-air-action-ready.relocations]]
+offset = 31
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-air-action-ready.relocations]]
+offset = 58
+type = "REL32"
+symbol = "?IsStateGroupB@Secondary@@QAEHXZ"
+target = 0x004103a0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-state-group-c]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-state-group-c/SecondaryCombat.obj"
+symbol = "?IsStateGroupC@Secondary@@QAEHXZ"
+target_address = 0x00410420
+size = 91
+
+[units.secondary-damage-factor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-damage-factor/SecondaryCombat.obj"
+symbol = "?DamageFactor@Secondary@@QAENXZ"
+target_address = 0x00410480
+size = 163
+
+[[units.secondary-damage-factor.relocations]]
+offset = 36
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 42
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 83
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 89
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 124
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 130
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 147
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-damage-factor.relocations]]
+offset = 153
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-health-factor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-health-factor/SecondaryCombat.obj"
+symbol = "?HealthFactor@Secondary@@QAENXZ"
+target_address = 0x00410530
+size = 47
+
+[[units.secondary-health-factor.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-health-factor.relocations]]
+offset = 24
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-health-factor.relocations]]
+offset = 30
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-combo-factor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-combo-factor/SecondaryCombat.obj"
+symbol = "?ComboFactor@Secondary@@QAENXZ"
+target_address = 0x00410560
+size = 62
+
+[[units.secondary-combo-factor.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-combo-factor.relocations]]
+offset = 24
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-combo-factor.relocations]]
+offset = 37
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-combo-factor.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-apply-damage]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-apply-damage/SecondaryCombat.obj"
+symbol = "?ApplyDamage@Secondary@@QAEXHN@Z"
+target_address = 0x004105a0
+size = 489
+
+[[units.secondary-apply-damage.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?DamageFactor@Secondary@@QAENXZ"
+target = 0x00410480
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 89
+type = "REL32"
+symbol = "?HealthFactor@Secondary@@QAENXZ"
+target = 0x00410530
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 103
+type = "REL32"
+symbol = "?ComboFactor@Secondary@@QAENXZ"
+target = 0x00410560
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 111
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 148
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 166
+type = "DIR32"
+symbol = "__real@408f400000000000"
+target = 0x00787c20
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 199
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 215
+type = "DIR32"
+symbol = "__real@408f400000000000"
+target = 0x00787c20
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-apply-damage.relocations]]
+offset = 478
+type = "REL32"
+symbol = "?AddScore@Secondary@@QAEXI@Z"
+target = 0x00410840
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-award-combo-score]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-award-combo-score/SecondaryCombat.obj"
+symbol = "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z"
+target_address = 0x00410790
+size = 172
+
+[[units.secondary-award-combo-score.relocations]]
+offset = 162
+type = "REL32"
+symbol = "?AddScore@Secondary@@QAEXI@Z"
+target = 0x00410840
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-add-score]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-add-score/SecondaryCombat.obj"
+symbol = "?AddScore@Secondary@@QAEXI@Z"
+target_address = 0x00410840
+size = 96
+
+[units.secondary-random-range]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryCombat.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-random-range/SecondaryCombat.obj"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target_address = 0x004108a0
+size = 148
+
+[[units.secondary-random-range.relocations]]
+offset = 10
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-random-range.relocations]]
+offset = 49
+type = "REL32"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target = 0x00405fb0
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-random-range.relocations]]
+offset = 95
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
