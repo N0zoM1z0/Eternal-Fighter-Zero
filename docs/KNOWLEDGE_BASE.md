@@ -4536,3 +4536,68 @@ whitespace checks passed; no full CI/cohort or runtime matrix ran.
 Full attempts, read-only annotated decompiles, boundary/operand review and native
 exit logs are retained in `.analysis/probes/mishio/`. Its one-time generation
 scripts are derivation history and must not overwrite accepted/newer sources.
+
+## Mishio CPU command and movement owner
+
+Character15::Slot05 at 0x54C250 is complete strict exact in
+`src/Character15Cpu.cpp`: 15,066 instruction bytes, exclusive end 0x54FD2A,
+without local tables. Six following CC alignment bytes precede effect owner
+0x54FD30 and are excluded. Public proof: `docs/evidence/mishio-cpu-exact.json`;
+explicit recipe: character-15-cpu-input, pinned vc71-od-static.
+
+Independent boundary review covers all 3,883 contiguous instructions and 722
+internal branches. All 297 relocation fields have explicit reviewed symbols,
+original destinations and typed evidence: 90 RandomRange calls, two CollisionSide
+calls, one external fabs call and 204 floating operands. All 38 distinct literal
+payloads agree independently between canonical target and native COFF. Every
+RandomRange caller zero-extends AX. The fabs call preserves its real cdecl double
+argument, caller cleanup and x87 return; the external implementation is ABI
+evidence, without authored credit. There are no indirect calls or local tables.
+The original virtual slot05 operand at 0x78877C points directly to this owner.
+
+The entry defaults command99, decrements positive movement timers01a0/01a4,
+clears directional/button output and resets014e. Three independent random
+comparisons set014e to60; preserve 25.0f plus airborne30 scaling, the signed
+integer mode3/400 and state170/300 terms, the hurt-state multiplier and the
+original floating evaluation order. A provisional unsigned mode term added a
+64-bit conversion and moved later spills. Signed inline ternaries recover the
+original operations. CPU mode is the shared field3114; it is distinct from
+Mishio's field3158 indicator/special state.
+
+Ordinary used locals are one sixteen-byte forward/vertical distance record at
+EBP-10/-8 and receiver EBP-14. The full natural frame is C0. Forward distance
+evaluates opponent.x-self.x before facing multiplication; vertical distance is
+fabs(self.y-opponent.y). Preserve the early opponent-state96 return, the positive
+hurt-state owner before normal decisions and the grounded locomotion/guard exits.
+Hurt-state inputX uses `1 - (RandomRange(0,100) < 50) * 2`; button3 is assigned
+first from vertical and then forward distance, followed by the original cancel.
+Both assignments are actual target behavior.
+
+The positive special-command guard checks field0118>500 or field0120>0,
+then the random8.0f gate, opponent state150..156 and self state250/251/252 or
+270/271/272, assigning command52 and returning. Shared mode clearing and
+mode4..12 priorities follow. State-specific command windows, meter gates and
+random sample order remain explicit. Positive nested phase/random and distance
+tails recover original jumps without inert locals. At 54E15D and 54E162, the
+successful nested random path and its enclosing path each return to the epilogue;
+retaining both source returns recovers the final five bytes. Merely merging the
+exits produces15061 bytes and does not receive exact credit.
+
+The airborne command40..42 window tests forward against vertical+40 and
+vertical-40. Preserve subtraction from vertical before comparing forward;
+algebraic reassociation changes the x87 operations. Positive movement timers
+precede the final random movement owner. The original close/far facing-command
+guards, thresholds and immediately returning branches are retained.
+
+Final formatted public source passed one selected complete cold native replay
+with all297 reviewed bindings and zero differing bytes. Public headers and all
+304 existing recipes/source owners are unchanged, so no old unit required
+replay. Focused tracking, ledger/progress CI and whitespace checks passed;
+no full CI/cohort or runtime matrix ran. No native compiler/Wine failure occurred.
+All decompile input, target review, source/object attempts and native exits are
+retained in `.analysis/probes/mishio-cpu/`. One-time derivation scripts are
+historical and must not overwrite accepted/newer sources.
+
+Eleven of thirteen original Mishio virtual destinations now have exact proofs.
+State530BC0 and effects54FD30 remain open, including unreviewed associated tables.
+Linked resources/data, original TU partitioning, runtime and game remain open.

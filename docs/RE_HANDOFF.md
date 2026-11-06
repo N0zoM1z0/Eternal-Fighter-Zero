@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 286 |
-| Authored exact instruction bytes | 555,222 |
+| Authored complete exact functions | 287 |
+| Authored exact instruction bytes | 570,288 |
 | Associated exact local-table bytes | 3,192 |
-| Reviewed boundaries / origins | 324 / 324 |
+| Reviewed boundaries / origins | 325 / 325 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,39 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mishio construction, input and indicator checkpoint
+## Latest Mishio CPU checkpoint
+
+Character15::Slot05 at54C250 is complete exact:15,066 instruction bytes,
+exclusive end54FD2A, no local tables. Six excluded CC bytes precede54FD30.
+Source: src/Character15Cpu.cpp; profile vc71-od-static; proof:
+docs/evidence/mishio-cpu-exact.json. Durable target findings:
+[Mishio CPU command and movement owner](KNOWLEDGE_BASE.md#mishio-cpu-command-and-movement-owner).
+Private attempts and independent review: .analysis/probes/mishio-cpu/README.md.
+
+Review covers3,883 contiguous instructions,722 internal branches and all297
+relocations:90 RandomRange, two CollisionSide, one external fabs and204 typed
+floating operands. All38 literal payloads match target/COFF; all90 random callers
+zero-extend AX. Shared CPU mode3114 is distinct from Mishio's3158. Signed inline
+ternaries, real forward/vertical distances and original evaluation order recover
+frameC0 with receiver EBP-14. Preserve positive decision priorities and the two
+natural returns at54E15D/54E162; merging them loses five bytes.
+
+Formatted source passed one final selected complete cold native replay. All304
+prior recipes and public headers are unchanged; no old unit required replay.
+Focused tracking, ledgers/progress CI and whitespace checks passed; no full
+CI/cohort or runtime matrix ran. No compiler/Wine failure occurred. Preserve
+all native exits and private analysis.
+
+Eleven of thirteen Mishio virtual destinations now have exact proofs. Next
+substantial owner: state530BC0, candidate87313 instruction bytes ending5460D1,
+with associated tables still unreviewed. Effects54FD30/29568 code bytes also
+remains OPEN with associated tables unreviewed. Both read-only annotated
+decompiles are in .analysis/probes/mishio/. Build a complete first source early;
+review original instruction/table boundaries and all operands before credit.
+Preserve parked PrepareBattle/Shiori controls until new evidence offers a
+falsifiable instruction prediction. Resource/runtime/game phases remain open.
+
+## Previous Mishio construction, input and indicator checkpoint
 
 Ten complete Character15 owners add23,968 exact instruction bytes, without
 associated tables: constructor546480/513, initializer546690/413,
