@@ -304,7 +304,7 @@ address,origin,status,evidence
 0x0051DF60,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051F3E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-cpu-command-and-movement-owner
 0x005236D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls
-0x00530BC0,unknown,unreviewed,
+0x00530BC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner
 0x00546480,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners
 0x00546690,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners
 0x00546830,authored,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners

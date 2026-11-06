@@ -1,0 +1,7576 @@
+// Mishio complete animation and state update dispatch.
+#include "CharacterViews.h"
+void Character15::Slot06()
+{
+    if (field014a > 0 || (*opponentSlot)->field014c > 0) {
+        return;
+    }
+    unsigned short frameDuration, frameCount;
+    EffectSpawn effect;
+    frameDuration = patterns[field0008].frames[field000a].duration;
+    frameCount = patterns[field0008].count;
+    ResetLocalEffectSpawn(&effect);
+    switch (field0008) {
+    default:
+        field0158 = 0;
+        field0030 = 0.0;
+        field0038 = 0.0;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        break;
+    case 1:
+        field0158 = 0;
+        field0030 = 0.4;
+        field0038 = 0.0;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        break;
+    case 2:
+        field0158 = 0;
+        field0030 = -0.4;
+        field0038 = 0.0;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        break;
+    case 3:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        field0158 = 0;
+        FaceOpponent();
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        break;
+    case 4:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if ((unsigned char)field0158 == '\0') {
+                FaceOpponent();
+            }
+            field0030 = 0.0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0048 = 0.04;
+            field0038 = -2.45;
+            if ((unsigned char)field0158 == '\x01') {
+                field0030 = 0.3;
+                field0158 = 0;
+            }
+        }
+        if (2 < field000a) {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 5:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if ((unsigned char)field0158 == '\0') {
+                FaceOpponent();
+            }
+            field0030 = 0.0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0048 = 0.04;
+            field0038 = -2.45;
+            field0030 = 0.7;
+            if ((unsigned char)field0158 == '\x01') {
+                field0030 = 1.1;
+                field0158 = 0;
+            }
+        }
+        if (2 < field000a) {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 6:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if ((unsigned char)field0158 == '\0') {
+                FaceOpponent();
+            }
+            field0030 = 0.0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0048 = 0.04;
+            field0038 = -2.45;
+            field0030 = -0.7;
+        }
+        if (2 < field000a) {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 7:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        field0158 = 0;
+        FaceOpponent();
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 8:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        field0158 = 0;
+        FaceOpponent();
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 9:
+        field0038 = field0038 + field0048;
+        field0158 = 0;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 13:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        field0158 = 0;
+        FaceOpponent();
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 14:
+        field0048 = 0.04;
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.45;
+            field0030 = 0.0;
+            if ((unsigned char)field0158 == '\x01') {
+                field0030 = 0.4;
+                field0158 = 0;
+            }
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 15:
+        field0048 = 0.04;
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.45;
+            field0030 = 0.7;
+            if ((unsigned char)field0158 == '\x01') {
+                field0030 = 1.1;
+                field0158 = 0;
+            }
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 16:
+        field0048 = 0.04;
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.45;
+            field0030 = -0.7;
+            if ((unsigned char)field0158 == '\x01') {
+                field0158 = 0;
+            }
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (3 < field000a)) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 47:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0030 = 0.0;
+            field0048 = 0.035;
+        }
+        field0038 = field0038 + field0048;
+        if ((0.0 < field0028 + field0038) &&
+            (field000a < 2)) {
+            field000c = 0;
+            field000a = 2;
+            field02c9 = 7;
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field0048 = 0.0;
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                --field000a;
+            }
+        }
+        break;
+    case 50:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 10;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.1;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 10.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 51:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.5;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 20.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 52:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x14;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.8;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 53:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 10;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.1;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 10.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 54:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.5;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 20.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 55:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x14;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.8;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 56:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 10;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.1;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 10.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 57:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.5;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 20.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 58:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x14;
+            field0030 =
+            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            -1.8;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 59:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            if (field0038 < -2.0) {
+                field0038 = -2.0;
+            } else if (field0038 > -0.5) {
+                field0038 = -0.5;
+            }
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 60:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            if (field0038 < -4.0) {
+                field0038 = -4.0;
+            } else if (field0038 > -0.5) {
+                field0038 = -0.5;
+            }
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 61:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            if (field0038 < -6.0) {
+                field0038 = -6.0;
+            } else if (field0038 > -0.5) {
+                field0038 = -0.5;
+            }
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 62:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 63:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 64:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 0x46;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            if (field0038 < -2.0) {
+                field0038 = -2.0;
+            } else if (field0038 > -0.5) {
+                field0038 = -0.5;
+            }
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 65:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 0x46;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            if (field0038 < -4.0) {
+                field0038 = -4.0;
+            } else if (field0038 > -0.5) {
+                field0038 = -0.5;
+            }
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 66:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 0x46;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 =
+            field0038 * 0.75 + field00c8;
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 67:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 0x46;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0048 = 0.032;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 68:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 1.5;
+        }
+        field0148 = field0148 + 3;
+        field0030 = field00c0;
+        field0038 = field00c8;
+        ++field000c;
+        if (CollisionSide() != 0) {
+            field0008 = 0x46;
+            ResetPose();
+            break;
+        }
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 69:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 1.5;
+        }
+        field0148 = field0148 + 3;
+        field0030 = field00c0;
+        field0038 = field00c8;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 70:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
+            (field3138 == 0)) {
+            field0148 = field0148 + 0x1e;
+            ++field3138;
+            field0124 = field0124 + 0x78;
+            field0030 = 0.5;
+            field0038 = -2.5;
+            field0048 = 0.025;
+            field02c9 = 0x1f;
+            effect.type = 0;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 71:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0048 = 0.072;
+        }
+        if (field0038 <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
+            field000a = 2;
+            field000c = 0;
+        }
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (1 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 72:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        field0158 = 0;
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 73:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        field0158 = 0;
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 74:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        field0158 = 0;
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 75:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field0030 = 2.2;
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0048 = 0.0;
+        field0040 = 0.06;
+        field0030 = field0030 - field0040;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 76:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field0030 = 2.2;
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0048 = 0.0;
+        field0040 = 0.06;
+        field0030 = field0030 - field0040;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 77:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.6;
+        }
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field0030 = 2.2;
+        }
+        field0038 = 0.0;
+        field0028 = 0.0;
+        field0048 = 0.0;
+        field0040 = 0.06;
+        field0030 = field0030 - field0040;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 =
+            (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 81:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            effect.type = 499;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+            field0148 = field0148 + 0x1e;
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0048 = 0.032;
+        }
+        field0030 = field0030 + 0.02;
+        field0038 = field0038 + field0048;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                --field000a;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (field000a == 1)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 82:
+        if (field0120 != '\0') {
+            field0118 = field0118 - 0.8;
+        }
+        if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
+            (field3138 == 0)) {
+            field02c9 = 0x1e;
+            field0038 = -0.45;
+            field0030 = -0.1;
+            ++field3138;
+            field0148 = field0148 + 0x1e;
+        }
+        if ((field000a == 4) && ((unsigned short)field000c == 0)) {
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0048 = 0.032;
+        }
+        if ((field0038 > 0.0) && (field000a == 4)) {
+            field000a = 5;
+            field000c = 0;
+        }
+        if (3 < field000a) {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 4) && (field3138 < 8)) {
+                field000a = 0;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((0.0 <= field0028 + field0038) &&
+            (4 < field000a)) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 83:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field02c9 = 0x21;
+            field0038 = -1.5;
+            field0030 = -0.8;
+            field0148 = field0148 + 0x1e;
+        }
+        field0038 = field0038 + 0.04;
+        if (field000a == 0 && field0038 + field0028 > 0.0) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 1;
+            break;
+        }
+        if (field000a == 1) {
+            field0030 = field0030 + 0.01;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0030 = -2.0;
+        }
+        if (1 < field000a) {
+            field0030 = field0030 + 0.06;
+        }
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        break;
+    case 84:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field02c9 = 0x21;
+            field0038 = -1.5;
+            field0030 = -0.8;
+            field0148 = field0148 + 0x1e;
+        }
+        field0038 = field0038 + 0.04;
+        if (field000a == 0 && field0038 + field0028 > 0.0) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 1;
+            break;
+        }
+        if (field000a == 1) {
+            field0030 = field0030 + 0.01;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0030 = -2.0;
+        }
+        if (1 < field000a) {
+            field0030 = field0030 + 0.06;
+        }
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        break;
+    case 85:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != '\0') {
+                field0118 = field0118 - 30.0;
+            }
+            field02c9 = 0x21;
+            field0030 = field00c0;
+            field0038 = field00c8;
+            field0148 = field0148 + 0x1e;
+        }
+        field0038 = field0038 + 0.04;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 86:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field3138 == 0) {
+                if (field0120 != '\0') {
+                    field0118 = field0118 - 30.0;
+                }
+                field02c9 = 0x21;
+                field0030 = field00c0;
+                field0038 = field00c8;
+                field0148 = field0148 + 0x1e;
+                ++field3138;
+            }
+        }
+        field0038 = field0038 + 0.06;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = 0;
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            if (field012c != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        break;
+    case 87:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            effect.type = 0x1ef;
+            effect.x = 60.0;
+            effect.y = 40.0;
+            effect.payload = 1;
+            effect.flag0018 = 1;
+            effect.group = 0;
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 96:
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount - 1) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 97:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            SetVerticalShake(3,0);
+            effect.type = 3;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 7;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        break;
+    case 98:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            SetVerticalShake(3,0);
+            effect.type = 3;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 7;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        break;
+    case 99:
+        ++field000c;
+        field0158 = 0;
+        if (((0 < field0108) && (99 < (unsigned short)field000c)) &&
+            (field000a == 0)) {
+            field0008 = 0x60;
+            ResetPose();
+        }
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x60;
+                ResetPose();
+            }
+        }
+        break;
+    case 150:
+        if (inputY == '\x01') {
+            field0008 = 0x99;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x96;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 10;
+            field0030 = -1.5;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 151:
+        if (inputY == '\x01') {
+            field0008 = 0x9a;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x97;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 0xf;
+            field0030 = -1.8;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 152:
+        if (inputY == '\x01') {
+            field0008 = 0x9b;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x98;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 0x14;
+            field0030 = -2.3;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 153:
+        if (inputY == '\x01') {
+            field0008 = 0x99;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x96;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 10;
+            field0030 = -1.5;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 154:
+        if (inputY == '\x01') {
+            field0008 = 0x9a;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x97;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 0xf;
+            field0030 = -1.8;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 155:
+        if (inputY == '\x01') {
+            field0008 = 0x9b;
+        }
+        if (inputY != '\x01') {
+            field0008 = 0x98;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0148 = field0148 + 0x14;
+            field0030 = -2.3;
+            field0038 = 0.0;
+            field0028 = 0.0;
+        }
+        field0038 = 0.0;
+        field0030 = field0030 + 0.06;
+        if (field0030 > 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field0020 - 20.0 <= 0.0) ||
+            (639.0 <= field0020 + 20.0)) {
+            field00b8 = field0030;
+        }
+        else {
+            field00b8 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 156:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.6;
+            field0148 = field0148 + 0xf;
+            field0048 = 0.06;
+        }
+        field0030 = -1.2;
+        field0038 = field0038 + field0048;
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 157:
+        field0030 = 1.0;
+        field0048 = 0.045;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        }
+        else {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 158:
+        field0030 = -1.0;
+        field0048 = 0.045;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        }
+        else {
+            field0038 = field0038 + field0048;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (0.0 <= field0028 + field0038) {
+            field0028 = 0.0;
+            field02c9 = 9;
+            FaceOpponent();
+            field0008 = 0xd;
+            ResetPose();
+        }
+        break;
+    case 161:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x3c);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field016c = 1;
+            field02c9 = 0x3e;
+            ++field3138;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+                field0048 = 0.035;
+            }
+        }
+        break;
+    case 162:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0038 = -1.5;
+            field0048 = 0.025;
+            field016c = 1;
+        }
+        if ((field000a == 6) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x3c);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field016c = 1;
+            field02c9 = 0x3e;
+            field0148 = field0148 + -1000;
+            ++field3138;
+        }
+        field0038 = field0038 + field0048;
+        if (field0028 + field0038 > 0.0) {
+            field0008 = 0xd;
+            ResetPose();
+            ResetPose();
+            field0028 = 0.0;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 0xf) {
+                field0048 = 0.035;
+            }
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        break;
+    case 163:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            StartTrail(3);
+        }
+        if ((inputY == -1) && (field000a > 0)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0048 = 0.0;
+        }
+        if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+            field0030 = 1.0;
+        }
+        field0158 = 1;
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((inputX == facing) && (field313c >= 120)) {
+            field0008 = 0xb2;
+            ResetPose();
+        }
+        if ((inputX != facing) && (field3138 >= 60)) {
+            field0008 = 0xb2;
+            ResetPose();
+        }
+        break;
+    case 164:
+        StartTrail(2);
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if ((field000a > 0) && (field000a < 3)) {
+            field0038 = field0038 + field0048;
+        }
+        if (((field000a > 0) &&
+            (0.0 <= field0038 + field0028)) &&
+            (field3138 == 0)) {
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0040 = 0.0;
+            field0028 = 0.0;
+            ++field3138;
+            field02c9 = 9;
+            field000a = 3;
+            field000c = 0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+                field0030 = -1.7;
+                field0038 = -1.0;
+                field0048 = 0.04;
+            }
+            if (field000a == 3) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                FaceOpponent();
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 165:
+        if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
+            (field3138 == 0)) {
+            field0030 = 1.3;
+            StartTrail(3);
+            field0038 = 0.0;
+            field0048 = 0.0;
+            field02c9 = 0x11;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if ((inputX == facing) && (field313c >= 120)) {
+            field0008 = 9;
+            ResetPose();
+            field0030 = 1.3;
+            field0048 = 0.03;
+            if ((FaceOpponent()) != 0) {
+                field0030 = -field0030;
+            }
+        }
+        if ((inputX != facing) && (field3138 >= 39)) {
+            field0008 = 9;
+            ResetPose();
+            field0030 = 1.3;
+            field0048 = 0.03;
+            if ((FaceOpponent()) != 0) {
+                field0030 = -field0030;
+            }
+        }
+        break;
+    case 166:
+        if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
+            (field3138 == 0)) {
+            field0030 = -1.3;
+            field0038 = 0.0;
+            field0048 = 0.0;
+            StartTrail(3);
+            field02c9 = 0x11;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        if (((int)inputX == -(int)facing) && (field313c >= 120)) {
+            field0008 = 9;
+            ResetPose();
+            field0030 = -0.9;
+            field0048 = 0.03;
+            if ((FaceOpponent()) != 0) {
+                field0030 = -field0030;
+            }
+        }
+        if (((int)inputX != -(int)facing) && (field3138 >= 48)) {
+            field0008 = 9;
+            ResetPose();
+            field0030 = -0.9;
+            field0048 = 0.03;
+            if ((FaceOpponent()) != 0) {
+                field0030 = -field0030;
+            }
+        }
+        break;
+    case 167:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0030 = 0.0;
+            field0038 = 0.0;
+            if (field0120 == '\x01') {
+                field0178 =
+                field0118 * 5.0 + field0178;
+            }
+            field0118 = 0.0;
+            field014c = 0x5a;
+            SetTint(0xb0,3);
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field02c9 = 0x12;
+            effect.type = 1;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            effect.type = 4;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 168:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field0048 = 0.0;
+            field014e = 0;
+            field00b8 = 0.0;
+            field0040 = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 169:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field0048 = 0.0;
+            field014e = 0;
+            field00b8 = 0.0;
+            field0040 = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == frameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 170:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field3138 = (int(field0030 * 100.0));
+            field313c = (int(field0038 * 100.0));
+            if (field0048 == 0.0) {
+                field0048 = 0.035;
+            }
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field014e = 0;
+            field00b8 = 0.0;
+            field014c = 0x3c;
+        }
+        if ((field014c == 0) && (field3140 == 0)) {
+            ++field3140;
+            field0030 = (double)field3138 * 0.01;
+            field0038 = (double)field313c * 0.01;
+        }
+        if (field014c == 0) {
+            field0038 = field0038 + field0048;
+        }
+        if (field0038 + field0028 > 0.0) {
+            ResetFrame();
+            field0028 = 0.0;
+            field0008 = 0xa9;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        break;
+    case 171:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field3138 = (int(field0030 * 100.0));
+            field313c = (int(field0038 * 100.0));
+            field0030 = 0.0;
+            field0038 = 0.0;
+            if (field0120 == '\x01') {
+                field0178 =
+                field0118 * 5.0 + field0178;
+            }
+            field0118 = 0.0;
+            field014c = 0x5a;
+            SetTint(0xb0,3);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field02c9 = 0x12;
+            effect.type = 1;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                field0030 = (double)field3138 * 0.01;
+                field0038 = (double)field313c * 0.01;
+                field0048 = 0.035;
+                ResetPose();
+            }
+        }
+        break;
+    case 178:
+        field0030 = field0030 - 0.03;
+        field0030 = field0030;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((inputY == -1) && (field000a > 0)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                break;
+            }
+        }
+        break;
+    case 180:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            StartTrail(2);
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0048 = 0.0;
+        }
+        if (field0028 < 0.0) {
+            field0038 = field0038 + field0048;
+        }
+        if ((0.0 < field0028 + field0038) &&
+            (field000a < 10)) {
+            ResetFrame();
+            field0028 = 0.0;
+            field000c = 0;
+            field000a = 10;
+            field02c9 = 9;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                field0030 = -0.5;
+                field0038 = -1.0;
+                field0048 = 0.028;
+            }
+            if (field000a == 10) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        break;
+    case 200:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 >= 2)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 201:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 >= 2)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 3) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 4) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                if (inputY != '\x01') {
+                    field0008 = 7;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 202:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 203:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (((inputY == -1) && (field000a > 0)) &&
+            ((field015c < 3 && (field0168 >= 2)))) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.06;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x23;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 204:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 >= 2)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 205:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 >= 2)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xd;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 4) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 206:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.03;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        if ((field000a == 3) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x19;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 207:
+        field0038 = field0038 + field0048;
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
+            ) {
+            ++field015a;
+            field0008 = 0xe;
+            if (inputX == facing) {
+                field0008 = 0xf;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 0x10;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        if (field0028 + field0038 >= 0.0) {
+            field0028 = 0.0;
+            field0008 = 0xd;
+            ResetPose();
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        break;
+    case 208:
+        field0038 = field0038 + field0048;
+        if (((inputY == -1) && (field000a > 0)) &&
+            ((field015c < 3 && ((field0168 >= 2 && (field015a == '\0')))))
+            ) {
+            ++field015a;
+            field0008 = 0xe;
+            if (inputX == facing) {
+                field0008 = 0xf;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 0x10;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xd;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        if (field0028 + field0038 >= 0.0) {
+            field0028 = 0.0;
+            field0008 = 0xd;
+            ResetPose();
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        break;
+    case 209:
+        field0038 = field0038 + field0048;
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
+            ) {
+            ++field015a;
+            field0008 = 0xe;
+            if (inputX == facing) {
+                field0008 = 0xf;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 0x10;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        if (field0028 + field0038 >= 0.0) {
+            field0028 = 0.0;
+            field0008 = 0xd;
+            ResetPose();
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (0 < field016c) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        break;
+    case 210:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0158 = 0;
+        }
+        if ((field000a == 8) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0xf;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        if (field0028 < 0.0) {
+            field0038 = field0038 + 0.035;
+        }
+        if (field0028 + field0038 > 0.0) {
+            ResetFrame();
+            field0028 = 0.0;
+            field000c = 0;
+            field000a = 0xc;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 2) {
+                field0030 = 1.0;
+                field0038 = -1.3;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 211:
+        if ((unsigned char)field0158 == '\0') {
+            field0030 = 0.0;
+            field0038 = 0.0;
+        }
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 >= 2)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        if (field0030 > 0.0 && (unsigned char)field0158 == 1) {
+            field0030 = field0030 - 0.06;
+        } else {
+            field0030 = 0.0;
+            field0158 = 0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                field0168 = 0;
+            }
+            if ((field000a == 3) && ((unsigned short)field000c == 0)) {
+                field0148 = field0148 + 0x1e;
+                field02c9 = 0x14;
+                field016c = 1;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 212:
+        field0038 = field0038 + field0048;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 0x1e;
+            field02c9 = 0x14;
+            field016c = 1;
+            field0030 = field0030 / 2.0;
+            field0048 = 0.07;
+        }
+        if (field0168 > 1) {
+            field0008 = 0xd5;
+            ResetPose();
+            ResetFrame();
+            break;
+        }
+        if (field0028 + field0038 >= 0.0) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            SetVerticalShake(3,0);
+            effect.type = 3;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 7;
+            field0008 = 0xd6;
+            ResetPose();
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field000a = field000a + -2;
+            }
+        }
+        break;
+    case 213:
+        field0048 = 0.042;
+        field0038 = field0038 + field0048;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0030 = -1.0;
+            field0038 = -2.4;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        break;
+    case 214:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            SetVerticalShake(3,0);
+            effect.type = 3;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 220:
+        field0030 = 0.0;
+        field0038 = 0.0;
+        field0158 = 0;
+        if ((field000a == 2) && (field0168 == 3)) {
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field00b8 = 0.0;
+            ResetPose();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            field0008 = 0xdd;
+            (*opponentSlot)->field0008 = 0x6b;
+            effect.type = 0;
+            effect.x = (double)((int(field0020)) + facing * 0x24);
+            effect.y = (double)((int(field0028)) + -0x2e);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 2) &&
+                ((*opponentSlot)->field0028 == 0.0)) {
+                field016c = 1;
+            }
+            else {
+                field016c = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        break;
+    case 221:
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if (field000a == 1) {
+                (*opponentSlot)->field0020 =
+                (double)(facing * 0x1e) + field0020;
+                (*opponentSlot)->field0008 = 0x6c;
+                (*opponentSlot)->ResetPose();
+            }
+            if (field000a == 2) {
+                (*opponentSlot)->field0020 =
+                (double)(facing * 0xd) + field0020;
+                (*opponentSlot)->field0008 = 0x6c;
+                (*opponentSlot)->ResetPose();
+            }
+            if (field000a == 3) {
+                if ((CollisionSide()) != '\0') {
+                    field0020 = (double)(facing * 5) + field0020;
+                }
+                (*opponentSlot)->field0020 =
+                field0020 - (double)(facing * 5);
+                (*opponentSlot)->field0008 = 0x34;
+                (*opponentSlot)->ResetPose();
+                (*opponentSlot)->facing = -(*opponentSlot)->facing;
+            }
+            if (field000a == 5) {
+                facing = -facing;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        break;
+    case 230:
+        StartTrail(3);
+        field0158 = 0;
+        field0030 = field0030 - 0.02;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = 1.0;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 231:
+        StartTrail(3);
+        field0158 = 0;
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 == 3)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        field0030 = field0030 - 0.045;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = field0030 + 2.0;
+            effect.type = 0x1f;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 0;
+            effect.layer = 0;
+            effect.facing = (facing == -1);
+            contextOwner->EmitEffect(&effect);
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 10;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 232:
+        StartTrail(3);
+        field0158 = 0;
+        if ((((inputY == -1) && (field000a > 0)) &&
+            (field015c < 3)) && (field0168 == 3)) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            field0168 = 0;
+            ResetPose();
+            break;
+        }
+        field0030 = field0030 - 0.045;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = field0030 + 2.0;
+            effect.type = 0x1f;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 0;
+            effect.layer = 0;
+            effect.facing = (facing == -1);
+            contextOwner->EmitEffect(&effect);
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 10;
+            field02c9 = 0x14;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 233:
+        StartTrail(3);
+        field0158 = 0;
+        field0030 = field0030 - 0.02;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = 1.0;
+        }
+        if ((field000a == 1) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 234:
+        StartTrail(3);
+        field0158 = 0;
+        field0030 = field0030 - 0.045;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = field0030 + 2.0;
+            effect.type = 0x1f;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 0;
+            effect.layer = 0;
+            effect.facing = (facing == -1);
+            contextOwner->EmitEffect(&effect);
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 235:
+        StartTrail(3);
+        field0158 = 0;
+        field0030 = field0030 - 0.045;
+        if (field0030 < 0.0) {
+            field0030 = 0.0;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0038 = 0.0;
+            field0030 = field0030 + 2.0;
+            effect.type = 0x1f;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)(int(field0028));
+            effect.group = 0;
+            effect.layer = 0;
+            effect.facing = (facing == -1);
+            contextOwner->EmitEffect(&effect);
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0148 = field0148 + 5;
+            field02c9 = 0x15;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 3) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        break;
+    case 248:
+        field0038 = field0038 + field0048;
+        if ((field000a == 1) && (field0168 == 3)) {
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->field0128 = 1;
+            ResetFrame();
+            ResetPose();
+            effect.type = 0;
+            effect.x = (double)((int(field0020)) + facing * 0x20);
+            effect.y = (double)((int(field0028)) + -0x39);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field000a = 0;
+            field000c = 0;
+            field0008 = 0xf9;
+            (*opponentSlot)->field0008 = 0x67;
+            (*opponentSlot)->field0020 =
+            (double)(facing * 0x1d) + field0020;
+            (*opponentSlot)->field0028 = field0028 - 73.0;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1 && (*opponentSlot)->field0028 < 0.0 &&
+                ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 149)) {
+                field016c = 1;
+            } else { field016c = 0; }
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                field0008 = 0xd1;
+                field000a = 2;
+            }
+        }
+        break;
+    case 249:
+        field013e = 2;
+        if (field000a < 6) {
+            SetHorizontalOffset(0x32,3);
+            SetHorizontalShake(0x32,3);
+        }
+        if (6 < field000a) {
+            (*opponentSlot)->SetHorizontalShake(0x32,3);
+        }
+        if ((field000a == 4) && ((unsigned short)field000c == 0)) {
+            ApplyDamage(0x47e,500.0);
+            (*opponentSlot)->ResetPose();
+        }
+        if ((1 < field000a) && (field000a < 4)) {
+            field0038 = field0038 + 0.05;
+            (*opponentSlot)->field0008 = 0x76;
+            (*opponentSlot)->field0020 =
+            (double)(facing * 0x11) + field0020;
+            (*opponentSlot)->field0028 = field0028 + 11.0;
+            if (0.0 < field0028 + field0038) {
+                ResetFrame();
+                field0028 = 0.0;
+                field000a = 4;
+                field000c = 0;
+                (*opponentSlot)->field0028 = 0.0;
+                (*opponentSlot)->field0020 =
+                field0020 - (double)(facing * 6);
+                (*opponentSlot)->ResetPose();
+                (*opponentSlot)->field0008 = 0x62;
+                effect.type = 0;
+                effect.x = (double)((int(field0020)) - facing * 9);
+                effect.y = (double)((int(field0028)) + 4);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.palette = 2;
+                contextOwner->EmitEffect(&effect);
+                return;
+            }
+        }
+        if (field000a > 6 && field0028 < 0.0) {
+            field0038 = field0038 + 0.035;
+            if (field0028 + field0038 > 0.0) {
+                ResetFrame();
+                field0028 = 0.0;
+                field000c = 0;
+                field000a = 0x10;
+                break;
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 1) {
+                (*opponentSlot)->field0008 = 0x75;
+                (*opponentSlot)->field0028 = field0028 - 22.0;
+                (*opponentSlot)->field0020 =
+                (double)(facing * 0x27) + field0020;
+            }
+            if (field000a == 4) {
+                field000a = field000a + -2;
+            }
+            if (field000a == 6) {
+                facing = -facing;
+            }
+            if (field000a == 7) {
+                field0030 = -1.5;
+                field0038 = -1.0;
+            }
+            if (field000a == 0x10) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        break;
+    case 250:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if ((0 < field0168) && (field3158 == 0)) {
+                    if (((unsigned short)RandomRange(0, 1000)) < 500) {
+                        field3158 = 1;
+                    }
+                    else {
+                        field3158 = 2;
+                    }
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 251:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if ((0 < field0168) && (field3158 == 0)) {
+                    if (((unsigned short)RandomRange(0, 1000)) < 500) {
+                        field3158 = 1;
+                    }
+                    else {
+                        field3158 = 2;
+                    }
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 252:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field016c = 2;
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field0030 = 0.0;
+            field0038 = 0.0;
+            field0040 = 0.0;
+        }
+        if (0 < field0168) {
+            field3138 = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 2) || (field000a == 0xb)) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+            }
+            if (field000a == 0xc) {
+                field02c8 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if ((0 < field3138) && (field3158 == 0)) {
+                    if (((unsigned short)RandomRange(0, 1000)) < 500) {
+                        field3158 = 1;
+                    }
+                    else {
+                        field3158 = 2;
+                    }
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 253:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field016c = 6;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.035,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if ((((field000a == 10) || (field000a == 0xd)) ||
+                (field000a == 0x10)) || (field000a == 0x13)) {
+                field0168 = 0;
+            }
+            if (field000a == 5) {
+                effect.type = 0x1f;
+                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                field0030 = 3.0;
+            }
+            if ((field000a == 7) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 7) && (field0168 == 0)) {
+                field000a = 0x16;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 254:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field016c = 4;
+        }
+        if (((((field000a == 6) || (field000a == 9)) ||
+            (field000a == 0xc)) || (field000a == 0xf)) &&
+            ((unsigned short)field000c == 0)) {
+            field02c9 = 0x15;
+            field0148 = field0148 + 5;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (((field000a == 6) || (field000a == 9)) ||
+                ((field000a == 0xc || (field000a == 0xf)))) {
+                field0168 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 255:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field0158 = 0;
+            ResetFrame();
+            field016c = 99;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.035,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (((((field000a == 10) || (field000a == 0xd)) ||
+                (field000a == 0x10)) ||
+                ((field000a == 0x13 || (field000a == 0x16)))) ||
+                ((field000a == 0x19 ||
+                ((field000a == 0x1c || (field000a == 0x1f))))))
+            {
+                field0168 = 0;
+            }
+            if (field000a == 5) {
+                effect.type = 0x1f;
+                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                field0030 = 3.2;
+            }
+            if ((field000a == 7) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+                field0168 = 0;
+                break;
+            }
+            if ((field000a == 7) && (field0168 == 0)) {
+                field000a = 0x1f;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 256:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        if (((4 < field000a) && (field000a < 7)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 4) && ((unsigned short)field000c == 0)) {
+                facing = -facing;
+            }
+            if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x194;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 7) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x11a;
+                ResetPose();
+            }
+        }
+        break;
+    case 257:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        if (((4 < field000a) && (field000a < 7)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x194;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 7) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x11a;
+                ResetPose();
+            }
+        }
+        break;
+    case 258:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        if (((4 < field000a) && (field000a < 7)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x193;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 7) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x11a;
+                ResetPose();
+            }
+        }
+        break;
+    case 259:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if (((2 < field000a) && (field000a < 5)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 3) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x195;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 5) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x11b;
+                field000a = 0;
+            }
+        }
+        break;
+    case 260:
+        if (((3 < field000a) && (field000a < 6)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x11b;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 4) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x196;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 6) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x11a;
+                field000a = 0;
+            }
+        }
+        break;
+    case 261:
+        if (((3 < field000a) && (field000a < 6)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x11b;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 4) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
+                field0148 = field0148 + 0x14;
+                effect.type = 0x197;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 6) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x11a;
+                field000a = 0;
+            }
+        }
+        break;
+    case 262:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
+                field0148 = field0148 + 5;
+                effect.type = 0x193;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x10b;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 263:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                field0148 = field0148 + 5;
+                effect.type = 0x194;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x10b;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 264:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
+                field0148 = field0148 + 5;
+                effect.type = 0x195;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x10b;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 265:
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x10b;
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 8) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
+                field0148 = field0148 + 5;
+                effect.type = 0x196;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x10b;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 266:
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x10b;
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 8) && ((unsigned short)field000c == 0)) {
+                field02c8 = 5;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
+                field0148 = field0148 + 5;
+                effect.type = 0x197;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x10b;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 267:
+        if (field3140 == 0) {
+            field0030 = field0030 * 0.5;
+            if (field0038 < 0.0) {
+                field0038 = field0038 * 0.75;
+            }
+            ++field3140;
+        }
+        if (((field313c == 0) && (field000a < 5)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a < 7) &&
+            (field0038 = field0038 + 0.035,
+            0.0 < field0028 + field0038)) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 7;
+        }
+        if ((6 < field000a) &&
+            (field0030 = field0030 - 0.05,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 7) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+                FaceOpponent();
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 268:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        field0038 = field0038 + field0048;
+        if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+            field02c8 = 1;
+            effect.type = 400;
+            effect.x = (double)((int(field0020)) + facing * 0x40);
+            effect.y = (double)(int(field0028));
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            effect.owner = 1;
+            EmitLocalEffect(&effect);
+            field3148 = 1;
+            field0148 = field0148 + 0x19;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        break;
+    case 269:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        field0038 = field0038 + field0048;
+        if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+            field02c8 = 1;
+            effect.type = 0x191;
+            effect.x = (double)((int(field0020)) + facing * 0x40);
+            effect.y = (double)(int(field0028));
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            effect.owner = 1;
+            EmitLocalEffect(&effect);
+            field3148 = 1;
+            field0148 = field0148 + 0x19;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 270:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ResetFrame();
+        }
+        field0038 = field0038 + field0048;
+        if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+            field02c8 = 2;
+            effect.type = 0x192;
+            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x3c);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            effect.owner = 1;
+            EmitLocalEffect(&effect);
+            field3148 = 1;
+            field0148 = field0148 + 0x19;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 271:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        field0038 = field0038 + field0048;
+        if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+            effect.type = 0x198;
+            if (field0020 - (*opponentSlot)->field0020 < 150.0 &&
+                field0020 - (*opponentSlot)->field0020 > -150.0) {
+                effect.x = (*opponentSlot)->field0020;
+            } else {
+                if ((*opponentSlot)->field0020 > field0020) {
+                    effect.x = field0020 + 150.0;
+                }
+                if ((*opponentSlot)->field0020 < field0020) {
+                    effect.x = field0020 - 150.0;
+                }
+            }
+            effect.y = (double)(int(field0028));
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            effect.owner = 1;
+            EmitLocalEffect(&effect);
+            field314c = 1;
+            field0148 = field0148 + 0x19;
+            field02c8 = 3;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if ((field000a == 10) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 272:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        field0038 = field0038 + field0048;
+        if ((field000a == 5) && ((unsigned short)field000c == 0)) {
+            effect.type = 0x198;
+            if ((150.0 < field0020 - (*opponentSlot)->field0020)
+                || (field0020 - (*opponentSlot)->field0020 < -150.0)
+                ) {
+                effect.x = (*opponentSlot)->field0020;
+            }
+            else {
+                if ((*opponentSlot)->field0020 > field0020) {
+                    effect.x = field0020 + 150.0;
+                }
+                if ((*opponentSlot)->field0020 < field0020) {
+                    effect.x = field0020 - 150.0;
+                }
+            }
+            effect.y = (double)(int(field0028));
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            effect.owner = 1;
+            EmitLocalEffect(&effect);
+            field314c = 1;
+            field0148 = field0148 + 0x19;
+            field02c8 = 3;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if ((field000a == 10) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                ResetPose();
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 273:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 2) {
+                effect.type = 0x1b5;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 3) {
+                field02c8 = 5;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 274:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.04500000178813934,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 5;
+                field0030 = 2.5;
+                effect.type = 0x1b5;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 275:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field016c = 1;
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field0030 = 1.0;
+            field0038 = 0.0;
+            field0040 = 0.0;
+        }
+        if (0 < field0168) {
+            field3138 = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.02500000037252903,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 2) || (field000a == 0xb)) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 5;
+                effect.type = 0x1bc;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 9) {
+                field016c = 1;
+                field0168 = 0;
+                field02c8 = 5;
+                effect.type = 0x1b5;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 276:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 4;
+                effect.type = 0x1b6;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1b8;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 277:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.04500000178813934,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 4;
+                effect.type = 0x1b6;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1b8;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1ba;
+                effect.owner = 1;
+                effect.x = (double)((int(field0020)) + facing * 0x5a);
+                effect.y = (double)((int(field0028)) + -0x3c);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 278:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field016c = 1;
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field0038 = 0.0;
+            field0040 = 0.0;
+        }
+        if (0 < field0168) {
+            field3138 = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.02500000037252903,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 2) || (field000a == 0xb)) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 4;
+                effect.type = 0x1bd;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1b8;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 9) {
+                field016c = 1;
+                field0168 = 0;
+                field02c8 = 4;
+                effect.type = 0x1b6;
+                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.y = (double)((int(field0028)) + -0x28);
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1b8;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 2;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+                ResetPose();
+            }
+        }
+        break;
+    case 279:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 280:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field3138 = 5;
+            field016c = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.04500000178813934,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+                field0030 = 2.5;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 281:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+            field0148 = field0148 + 0x2d;
+            field016c = 2;
+            if (field0120 == '\0') {
+                field0118 = field0118 - 500.0;
+            }
+            else {
+                field0118 = field0118 - 250.0;
+            }
+            effect.type = 0x21;
+            effect.palette = 0xb;
+            effect.x = (double)(int(field0020));
+            effect.y = (double)((int(field0028)) + -0x32);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field0038 = 0.0;
+            field0040 = 0.0;
+        }
+        if (0 < field0168) {
+            field3138 = 1;
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.02500000037252903,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if ((field000a == 2) || (field000a == 0xb)) {
+                field0168 = 0;
+            }
+            if (field000a == 3) {
+                field02c8 = 0;
+            }
+            if (field000a == 0xc) {
+                field02c8 = 0;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    case 282:
+        if (field3140 == 0) {
+            field0030 = field0030 * 0.5;
+            if (field0038 < 0.0) {
+                field0038 = field0038 * 0.75;
+            }
+            ++field3140;
+        }
+        if (((field313c == 0) && (field000a < 5)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a < 7) &&
+            (field0038 = field0038 + 0.035,
+            0.0 < field0028 + field0038)) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 7;
+        }
+        if ((6 < field000a) &&
+            (field0030 = field0030 - 0.05,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 7) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        break;
+    case 283:
+        if (field3140 == 0) {
+            field0030 = field0030 * 0.5;
+            if (field0038 < 0.0) {
+                field0038 = field0038 * 0.75;
+            }
+            ++field3140;
+        }
+        if (((field313c == 0) && (field000a < 5)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x106;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x107;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x108;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x10a;
+                    ++field313c;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x109;
+                    ++field313c;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a < 7) &&
+            (field0038 = field0038 + 0.035,
+            0.0 < field0028 + field0038)) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 7;
+        }
+        if ((6 < field000a) &&
+            (field0030 = field0030 - 0.05,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 7) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        break;
+    case 300:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -1000;
+            SetTint(0xb0,3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field016c = 99;
+            field3150 = 0;
+            ResetFrame();
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.035,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        if ((field0168 == 3) && (field3150 == 0)) {
+            (*opponentSlot)->field014a = 0xb4;
+            field014a = 0x5a;
+            ++field3150;
+        }
+        if (field0168 == 3 && (*opponentSlot)->field0028 < 0.0 && field000a < 10) {
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->field0028 = 0.0;
+            (*opponentSlot)->field0008 = 0x37;
+            break;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (((((field000a == 0xd) || (field000a == 0x10))
+                || ((field000a == 0x13 ||
+                ((field000a == 0x16 ||
+                (field000a == 0x19)))))) ||
+                (field000a == 0x1c)) || (field000a == 0x1f)) {
+                field0168 = 0;
+            }
+            if (field000a == 8) {
+                effect.type = 0x1f;
+                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                field0030 = 3.5;
+            }
+            if ((field000a == 10) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field0168 != 3)) {
+                field000a = 0x22;
+                break;
+            }
+            if ((field000a == 0x14) && (field313c < 2)) {
+                field000a = 0xb;
+                ++field313c;
+            }
+            if ((field000a == 0x1f) && (field3140 < 3)) {
+                field000a = 0x16;
+                ++field3140;
+                field0168 = 0;
+            }
+            if ((field000a >= frameCount) ||
+                (field000a == 0x28)) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 301:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -2000;
+            SetTint(0xb0,3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field016c = 99;
+            field3150 = 0;
+            ResetFrame();
+        }
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.04,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        if ((field0168 == 3) && (field3150 == 0)) {
+            (*opponentSlot)->field014a = 0xb4;
+            field014a = 0x5a;
+            ++field3150;
+        }
+        if (field0168 == 3 && (*opponentSlot)->field0028 < 0.0 && field000a < 10) {
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->field0028 = 0.0;
+            (*opponentSlot)->field0008 = 0x37;
+            break;
+        }
+        if (((0x15 < field000a) && (field000a < 0x1f)) &&
+            ((unsigned short)RandomRange(0, 100) < 10)) {
+            effect.type = 0x19a;
+            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if (((field000a == 0xd) || (field000a == 0x10)) ||
+                (((field000a == 0x13 ||
+                (((field000a == 0x16 || (field000a == 0x19))
+                || (field000a == 0x1c)))) ||
+                (field000a == 0x1f)))) {
+                field0168 = 0;
+            }
+            if (field000a == 8) {
+                effect.type = 0x1f;
+                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                field0030 = 4.0;
+            }
+            if ((field000a == 10) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field0168 != 3)) {
+                field000a = 0x28;
+                break;
+            }
+            if ((field000a == 0x14) && (field313c < 3)) {
+                field000a = 0xb;
+                ++field313c;
+            }
+            if ((field000a == 0x1f) && (field3140 < 4)) {
+                field000a = 0x16;
+                ++field3140;
+                field0168 = 0;
+            }
+            if ((field000a >= frameCount) ||
+                (field000a == 0x28)) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 302:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -3000;
+            SetTint(0xb0,3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field016c = 99;
+            field3150 = 0;
+            field02c9 = 0x25;
+            ResetFrame();
+        }
+        contextOwner->SetSceneTimer(0xf);
+        if ((field0030 > 0.0) &&
+            (field0030 = field0030 - 0.045,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        if ((field0168 == 3) && (field3150 == 0)) {
+            (*opponentSlot)->field014a = 0xb4;
+            field014a = 0x5a;
+            ++field3150;
+            contextOwner->SetSceneTimer(0x5d);
+        }
+        if (field0168 == 3 && (*opponentSlot)->field0028 < 0.0 && field000a < 10) {
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->field0028 = 0.0;
+            (*opponentSlot)->field0008 = 0x37;
+            break;
+        }
+        if (((0x15 < field000a) && (field000a < 0x1f)) &&
+            ((unsigned short)RandomRange(0, 100) < 10)) {
+            effect.type = 0x19a;
+            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        if (((0x15 < field000a) && (field000a < 0x1f)) &&
+            ((unsigned short)RandomRange(0, 100) < 5)) {
+            effect.type = 0x19b;
+            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                field0168 = 0;
+            }
+            if ((((((field000a == 0xd) || (field000a == 0x10))
+                || (field000a == 0x13)) ||
+                ((field000a == 0x16 || (field000a == 0x19))))
+                || (field000a == 0x1c)) || (field000a == 0x1f)
+                ) {
+                field0168 = 0;
+            }
+            if (field000a == 8) {
+                effect.type = 0x1f;
+                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                field0030 = 5.0;
+            }
+            if ((field000a == 10) && (field3138 < 2)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field0168 != 3)) {
+                field000a = 0x28;
+                break;
+            }
+            if ((field000a == 0x14) && (field313c < 3)) {
+                field000a = 0xb;
+                ++field313c;
+            }
+            if ((field000a == 0x1f) && (field3140 < 8)) {
+                field000a = 0x16;
+                ++field3140;
+                field0168 = 0;
+            }
+            if ((field000a >= frameCount) ||
+                (field000a == 0x28)) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 303:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field3154 = 1;
+            field3150 = 0;
+            ResetFrame();
+            field014c = 0x78;
+            field0148 = field0148 + -1000;
+            SetTint(0xb0,3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (((8 < field000a) && (field000a < 0xb)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 9) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x19e;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0xb) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x137;
+                ResetPose();
+            }
+        }
+        break;
+    case 304:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field3154 = 2;
+            field3150 = 0;
+            ResetFrame();
+            field014c = 0x78;
+            field0148 = field0148 + -2000;
+            SetTint(0xb0,3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (((8 < field000a) && (field000a < 0xb)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 9) && ((unsigned short)field000c == 0)) {
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                field02c8 = 10;
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x19e;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0xb) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x137;
+                ResetPose();
+            }
+        }
+        break;
+    case 305:
+        contextOwner->SetSceneTimer(0xf);
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field3154 = 3;
+            field3150 = 0;
+            ResetFrame();
+            field014c = 0x78;
+            field0148 = field0148 + -3000;
+            SetTint(0xb0,3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.y = (double)((int(field0028)) + -0x2a);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 0x25;
+        }
+        if (((8 < field000a) && (field000a < 0xb)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 9) && ((unsigned short)field000c == 0)) {
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                field013c = 0x2d;
+                field02c8 = 10;
+                effect.type = 0x1f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = (facing == -1);
+                contextOwner->EmitEffect(&effect);
+                effect.type = 0x19e;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0xb) && (field3138 < 4)) {
+                field000a = field000a + -2;
+                ++field3138;
+            }
+            if (field000a >= frameCount) {
+                field000a = 0;
+                field0008 = 0x137;
+                ResetPose();
+            }
+        }
+        break;
+    case 306:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if ((((6 < field000a) && (field000a < 9)) &&
+            (field3150 < field3154 + 1)) &&
+            (((buttonPulse[0] == '\x01' || (buttonPulse[1] == '\x01')
+            ) || ((buttonPulse[2] == '\x01' || (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
+                effect.type = 0x19c;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x137;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 307:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if ((((6 < field000a) && (field000a < 9)) &&
+            (field3150 < field3154 + 1)) &&
+            (((buttonPulse[0] == '\x01' || (buttonPulse[1] == '\x01')
+            ) || ((buttonPulse[2] == '\x01' || (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
+                effect.type = 0x19e;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x137;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 308:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if ((((6 < field000a) && (field000a < 9)) &&
+            (field3150 < field3154 + 1)) &&
+            (((buttonPulse[0] == '\x01' || (buttonPulse[1] == '\x01')
+            ) || ((buttonPulse[2] == '\x01' || (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
+                effect.type = 0x19d;
+                effect.owner = 1;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 9) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x137;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 309:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x137;
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if ((((7 < field000a) && (field000a < 10)) &&
+            (field3150 < field3154 + 1)) &&
+            (((buttonPulse[0] == '\x01' ||
+            (buttonPulse[1] == '\x01')) ||
+            ((buttonPulse[2] == '\x01' || (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 8) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
+                effect.type = 0x19f;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x137;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 310:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if (field0028 + field0038 > 0.0) {
+            field0038 = 0.0;
+            field0028 = 0.0;
+            field000a = 7;
+            field000c = 0;
+            field0008 = 0x137;
+            break;
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            ResetFrame();
+        }
+        if ((((7 < field000a) && (field000a < 10)) &&
+            (field3150 < field3154 + 1)) &&
+            (((buttonPulse[0] == '\x01' ||
+            (buttonPulse[1] == '\x01')) ||
+            ((buttonPulse[2] == '\x01' || (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 8) && ((unsigned short)field000c == 0)) {
+                field02c8 = 10;
+                field016c = 1;
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
+                effect.type = 0x1a0;
+                effect.x = (double)(int(field0020));
+                effect.y = (double)(int(field0028));
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.owner = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 4) && (field3138 < 0)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if ((field000a == 10) && (field3138 < 4)) {
+                ++field3138;
+                field000a = field000a + -2;
+                break;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0x137;
+                field000a = 0;
+                ++field313c;
+            }
+        }
+        break;
+    case 311:
+        if (field3154 == 3) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if (field3140 == 0) {
+            field0030 = field0030 * 0.5;
+            if (field0038 < 0.0) {
+                field0038 = field0038 * 0.75;
+            }
+            ++field3140;
+        }
+        if (((field3150 < field3154 + 1) && (field000a < 5)) &&
+            ((buttonPulse[0] == '\x01' ||
+            (((buttonPulse[1] == '\x01' || (buttonPulse[2] == '\x01')) ||
+            (buttonPulse[3] == '\x01')))))) {
+            if (inputY == -1) {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x132;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x133;
+                    facing = -facing;
+                    ++field3150;
+                    return;
+                }
+            }
+            if (inputY == '\0') {
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x134;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+            if (inputY == '\x01') {
+                if (inputX == '\0') {
+                    ResetPose();
+                    field0008 = 0x136;
+                    ++field3150;
+                    return;
+                }
+                if (inputX == facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    return;
+                }
+                if ((int)inputX == -(int)facing) {
+                    ResetPose();
+                    field0008 = 0x135;
+                    ++field3150;
+                    facing = -facing;
+                    return;
+                }
+            }
+        }
+        if ((field000a < 7) &&
+            (field0038 = field0038 + 0.035,
+            0.0 < field0028 + field0038)) {
+            field0028 = 0.0;
+            field0038 = 0.0;
+            field000c = 0;
+            field000a = 7;
+        }
+        if ((6 < field000a) &&
+            (field0030 = field0030 - 0.05,
+            field0030 < 0.0)) {
+            field0030 = 0.0;
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a == 7) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 7;
+                if (inputY == '\x01') {
+                    field0008 = 3;
+                }
+                ResetPose();
+                FaceOpponent();
+                if (field3158 == 1) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 312:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -1000;
+            SetTint(0xb0,3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.y = (double)((int(field0028)) + -0x29);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 6) {
+                field02c8 = 6;
+                effect.type = 0x1a1;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1ad;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 10) {
+                if (8 < field3138) {
+                    effect.type = 0x1a5;
+                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.y = (double)((int(field0028)) + -0x94);
+                    effect.group = 2;
+                    effect.owner = 1;
+                    effect.layer = 1;
+                    effect.flag0018 = (unsigned char)facing;
+                    EmitLocalEffect(&effect);
+                    return;
+                }
+                if (0 < buttonHeld[0]) {
+                    ++field3138;
+                    field000a = field000a + -4;
+                }
+            }
+            if (field000a == 0xd) {
+                field02c8 = 8;
+            }
+            if (field000a == 0xf) {
+                effect.type = 0x1a2;
+                if (8 < field3138) {
+                    effect.type = 0x1ae;
+                }
+                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.y = (double)((int(field0028)) + -0x32);
+                if (field313c == 1) {
+                    effect.y = (double)((int(field0028)) + -0x3c);
+                }
+                if (field313c == 2) {
+                    effect.y = (double)((int(field0028)) + -0x28);
+                }
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0x10) && (field313c < 2)) {
+                field000a = field000a + -2;
+                ++field313c;
+            }
+            if ((field000a == 0x12) && (field313c < 6)) {
+                ++field313c;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 313:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -2000;
+            SetTint(0xb0,3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.y = (double)((int(field0028)) + -0x29);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 6) {
+                field013c = 0xf;
+                field02c8 = 6;
+                effect.type = 0x1a1;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1ad;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 10) {
+                if (8 < field3138) {
+                    effect.type = 0x1a5;
+                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.y = (double)((int(field0028)) + -0x94);
+                    effect.group = 2;
+                    effect.owner = 1;
+                    effect.layer = 1;
+                    effect.flag0018 = (unsigned char)facing;
+                    EmitLocalEffect(&effect);
+                    return;
+                }
+                if (0 < buttonHeld[1]) {
+                    ++field3138;
+                    field000a = field000a + -4;
+                }
+            }
+            if (field000a == 0xd) {
+                field02c8 = 8;
+            }
+            if (field000a == 0xf) {
+                effect.type = 0x1a3;
+                if (8 < field3138) {
+                    effect.type = 0x1af;
+                }
+                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.y = (double)((int(field0028)) + -0x32);
+                if (field313c == 1) {
+                    effect.y = (double)((int(field0028)) + -0x3c);
+                }
+                if (field313c == 2) {
+                    effect.y = (double)((int(field0028)) + -0x28);
+                }
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0x10) && (field313c < 2)) {
+                field000a = field000a + -2;
+                ++field313c;
+            }
+            if ((field000a == 0x12) && (field313c < 6)) {
+                ++field313c;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 314:
+        if (2 < field000a) {
+            contextOwner->SetSceneTimer(0xf);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if ((field000a == 2) && ((unsigned short)field000c == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -3000;
+            SetTint(0xb0,3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.y = (double)((int(field0028)) + -0x29);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 0x25;
+            ResetFrame();
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 6) {
+                field013c = 0x1e;
+                field02c8 = 6;
+                effect.type = 0x1a1;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1ad;
+                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.y = (double)((int(field0028)) + -0x94);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 10) {
+                if (8 < field3138) {
+                    effect.type = 0x1a5;
+                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.y = (double)((int(field0028)) + -0x94);
+                    effect.group = 2;
+                    effect.owner = 1;
+                    effect.layer = 1;
+                    effect.flag0018 = (unsigned char)facing;
+                    EmitLocalEffect(&effect);
+                    return;
+                }
+                if (0 < buttonHeld[2]) {
+                    ++field3138;
+                    field000a = field000a + -4;
+                }
+            }
+            if (field000a == 0xd) {
+                field02c8 = 8;
+            }
+            if (field000a == 0xf) {
+                effect.type = 0x1a4;
+                if (8 < field3138) {
+                    effect.type = 0x1b0;
+                }
+                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.y = (double)((int(field0028)) + -0x32);
+                if (field313c == 1) {
+                    effect.y = (double)((int(field0028)) + -0x3c);
+                }
+                if (field313c == 2) {
+                    effect.y = (double)((int(field0028)) + -0x28);
+                }
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0x10) && (field313c < 2)) {
+                field000a = field000a + -2;
+                ++field313c;
+            }
+            if ((field000a == 0x12) && (field313c < 6)) {
+                ++field313c;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 315:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if (((field000a == 2) && ((unsigned short)field000c == 0)) &&
+            (field3140 == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -1000;
+            SetTint(0xb0,3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.y = (double)((int(field0028)) + -0x61);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ResetFrame();
+            ++field3140;
+        }
+        if (field000a > 9 && field0028 < 0.0) {
+            field0038 = field0038 + 0.02;
+            if (field0028 + field0038 > 0.0) {
+                field0028 = 0.0;
+                ResetFrame();
+                field000c = 0;
+                field000a = 0x10;
+                break;
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if ((field000a == 5) && (field3138 < 5)) {
+                field000a = field000a + -3;
+                ++field3138;
+            }
+            if (field000a == 10) {
+                field02c8 = 9;
+                field0030 = -1.3;
+                field0038 = -0.8;
+                effect.type = 0x1a6;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1a5;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 0x10) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 316:
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if (((field000a == 2) && ((unsigned short)field000c == 0)) &&
+            (field3140 == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -2000;
+            SetTint(0xb0,3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.y = (double)((int(field0028)) + -0x61);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ResetFrame();
+            ++field3140;
+        }
+        if (field000a > 9 && field0028 < 0.0) {
+            field0038 = field0038 + 0.02;
+            if (field0028 + field0038 > 0.0) {
+                field0028 = 0.0;
+                ResetFrame();
+                field000c = 0;
+                field000a = 0x10;
+                break;
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if ((field000a == 5) && (field3138 < 5)) {
+                field000a = field000a + -3;
+                ++field3138;
+            }
+            if (field000a == 10) {
+                field02c8 = 9;
+                field0030 = -1.3;
+                field0038 = -0.8;
+                effect.type = 0x1a8;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1a5;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0xe) && (field313c < 2)) {
+                field02c8 = 9;
+                ++field313c;
+                field000a = field000a + -4;
+                if (field313c == 1) {
+                    effect.type = 0x1b1;
+                }
+                if (field313c == 2) {
+                    effect.type = 0x1a7;
+                }
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1a5;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 0x10) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 317:
+        if (2 < field000a) {
+            contextOwner->SetSceneTimer(3);
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+            field0158 = 0;
+        }
+        if (((field000a == 2) && ((unsigned short)field000c == 0)) &&
+            (field3140 == 0)) {
+            field0158 = 0;
+            field014c = 0x78;
+            field0148 = field0148 + -3000;
+            SetTint(0xb0,3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.y = (double)((int(field0028)) + -0x61);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 0x25;
+            ResetFrame();
+            ++field3140;
+        }
+        if (field000a > 9 && field0028 < 0.0) {
+            field0038 = field0038 + 0.02;
+            if (field0028 + field0038 > 0.0) {
+                field0028 = 0.0;
+                ResetFrame();
+                field000c = 0;
+                field000a = 0x10;
+                break;
+            }
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 3;
+            if ((field000a == 5) && (field3138 < 5)) {
+                field000a = field000a + -3;
+                ++field3138;
+            }
+            if (field000a == 10) {
+                field02c8 = 9;
+                field0030 = -1.3;
+                field0038 = -0.8;
+                effect.type = 0x1ac;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1a5;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if ((field000a == 0xe) && (field313c < 4)) {
+                field02c8 = 9;
+                ++field313c;
+                field000a = field000a + -4;
+                if (field313c == 1) {
+                    effect.type = 0x1ab;
+                }
+                if (field313c == 2) {
+                    effect.type = 0x1b2;
+                }
+                if (field313c == 3) {
+                    effect.type = 0x1aa;
+                }
+                if (field313c == 4) {
+                    effect.type = 0x1a9;
+                }
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                effect.type = 0x1a5;
+                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.y = (double)((int(field0028)) + -0x20);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 0x10) {
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+                if (field3158 == 2) {
+                    field3158 = 0;
+                }
+            }
+        }
+        break;
+    case 318:
+        field0158 = 0;
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            ResetFrame();
+        }
+        if ((field000a == 0) && ((unsigned short)field000c == 0)) {
+            SetHorizontalShake(0x32,3);
+            field014c = 0x78;
+            field0148 = field0148 + -3000;
+            SetTint(0xb0,3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int(field0020)) + facing * 0xd);
+            effect.y = (double)((int(field0028)) + -0x34);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            field02c9 = 0x25;
+            effect.type = 0x47;
+            contextOwner->EmitEffect(&effect);
+            effect.type = 0x1b4;
+            effect.x = (double)((int(field0020)) + facing * 0xd);
+            effect.y = (double)((int(field0028)) + -0x34);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            effect.field0030 = 1;
+            EmitLocalEffect(&effect);
+        }
+        if ((field000a == 7) && ((unsigned short)field000c == 0)) {
+            field02c8 = 0xb;
+            SetVerticalShake(5,0);
+            field3158 = 3;
+            field3168 = 0x1194;
+            effect.type = 0x1b3;
+            effect.x = (double)((int(field0020)) + facing * 5);
+            effect.y = (double)((int(field0028)) + -0x2d);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x1ad;
+            effect.x = (double)((int(field0020)) + facing * 5);
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x1ad;
+            effect.x = (double)((int(field0020)) + facing * 0x2d);
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x1ad;
+            effect.x = (double)((int(field0020)) - facing * 0x23);
+            effect.y = (double)(int(field0028));
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if ((field000a == 10) && (field3138 < 5)) {
+                ++field3138;
+                field000a = field000a + -2;
+            }
+            if (field000a >= frameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        break;
+    }
+}

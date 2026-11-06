@@ -4601,3 +4601,91 @@ historical and must not overwrite accepted/newer sources.
 Eleven of thirteen original Mishio virtual destinations now have exact proofs.
 State530BC0 and effects54FD30 remain open, including unreviewed associated tables.
 Linked resources/data, original TU partitioning, runtime and game remain open.
+
+## Mishio animation and state owner
+
+Character15::Slot06 at 0x530BC0 is complete strict exact in
+`src/Character15State.cpp`: 87,313 instruction bytes plus 934 associated table
+bytes, total contribution 88,247. Public proof: `docs/evidence/mishio-state-exact.json`;
+explicit recipe: character-15-update-state, pinned vc71-od-static.
+
+Code ends at 0x5460D1. The contiguous 154-destination address table occupies
+0x5460D1..0x546338 (616 bytes); the 318-byte selector occupies
+0x546339..0x546476 for animation IDs 1..318. Nine CC alignment bytes precede
+accepted constructor546480 and are excluded. All 153 explicit state entries and
+165 default selectors were checked directly; all destinations are instruction
+starts. The original slot06 operand at788780 contains530BC0. A normal C++ switch
+emits both complete tables; no original table bytes are copied into source.
+
+Independent review covers 23,524 contiguous instructions, 2,363 direct internal
+branches, one indirect switch and 418 virtual calls. All 1,612 relocation fields
+have explicit reviewed symbols, original destinations and evidence: 516 direct
+calls, 940 typed floating operands and 156 local table bindings. All 79 distinct
+64-bit floating payloads agree independently in target and native COFF. All 12
+RandomRange callers zero-extend AX. Relocation operands are compared without
+masking, including every destination in the complete address table.
+
+The used72-byte EffectSpawn is EBP-50, receiver EBP-54 and ordinary duration /
+count locals EBP-4/-8. Natural source recovers the complete49C frame with saved
+ESI and the five-byte epilogue. Promoted tick reads use unsigned short; byte
+slide flags use explicit unsigned reads. Preserve real byte/word increments,
+positive landing/collision branches, source operand order and actual immediate
+thresholds rather than algebraically equivalent decompiler conditions.
+
+Nineteen original calls to shared polar helper434010 add8 to the character
+receiver, addressing the pose/velocity prefix beginning at field0008. The source
+uses the existing reviewed SecondaryEffectSlot velocity view at that actual
+address. The accepted callee accesses only vx/vy at prefix offsets28/30,
+corresponding to character0030/0038; both arguments are real doubles and cleanup
+is unchanged. No new ABI declaration or duplicate helper credit is introduced.
+Original common class ownership and translation-unit partitioning remain open.
+
+The physical slide branch decelerates only while horizontal velocity is positive
+and the unsigned0158 flag equals1, otherwise clearing both. State178 retains
+its inner completion break and outer dispatch break; merging these loses five
+bytes. State212 takes the positive phase>1 hit exit before normal landing work.
+State248's successful opponent grab exits directly, while its frame1 airborne
+opponent predicate assigns016c positively. State249 tests frame>6 and negative
+height before applying0.035 gravity; landing immediately resets to frame16.
+States315..317 use their own frame>9 /0.02-gravity landing owners and direct exits.
+
+State271 selects the opponent x coordinate inside the strict150/-150 range;
+outside it, original opponent.x>self.x and opponent.x<self.x comparisons select
+the two bounded positions. State272 retains its different range test and the
+same physical operand order. Reversing relational operands changes x87 status
+checks even where ordinary finite values appear equivalent.
+
+States253/255/259..266 and306..310 retain direct dispatch exits for repeating
+frame rollback. States300..302 first handle the positive phase3, airborne
+opponent and frame<10 guard, resetting the opponent and exiting immediately.
+Their frame10 repetition and failed-hit branches also exit directly. All original
+meter costs, state3158 changes, descriptor values, action priority and repeated
+emissions remain explicit. Integer particle coordinates subtract facing times
+positive constants in the original order. Six decompiler &0xffff masks were
+removed only after original MOVZX callers proved the actual unsigned return;
+keeping those masks emits six extra AND instructions. Three register-result
+comma assignments required explicit natural RandomRange expressions before
+the first successful native source build.
+
+The first complete successful native contribution had88,216 bytes; common
+unsigned/branch restoration produced88,218, specific state control88,281, and
+final byte reads/range ordering/random-mask corrections recovered all88,247.
+All153 diagnostic cases align, followed by the unmodified complete strict
+zero-difference comparison. Diagnostic case normalization alone has no acceptance
+authority. Final formatting also received complete comparison and renewed operand
+review before one selected final cold native replay.
+
+Public headers and all305 previous recipes/source owners remain unchanged, so
+no old native unit needed replay. Focused tracking, ledger/progress CI and
+whitespace checks passed; no full CI/cohort or runtime matrix ran. The initial
+provisional comma-assignment syntax failure was corrected, and required
+verify-toolchain --execute smoke passed before subsequent native attempts.
+All inputs, objects, compiler exits and independent reviews remain retained in
+`.analysis/probes/mishio-state/`; its one-time derivation scripts must not overwrite
+accepted/newer sources.
+
+Twelve of thirteen original Mishio virtual destinations now have exact proofs.
+Local effects54FD30/29568 instruction bytes remains open with associated tables
+unreviewed. Its fresh annotated decompile is retained privately; it confers no
+acceptance. Linked resources/data, original TU partitioning, runtime and game
+reconstruction remain independently open.

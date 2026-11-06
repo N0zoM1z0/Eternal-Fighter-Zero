@@ -324,3 +324,4 @@ address,end,size,status,evidence
 0x005468E0,0x00549DBE,13534,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners
 0x0054AD80,0x0054C24D,5325,reviewed,docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners
 0x0054C250,0x0054FD2A,15066,reviewed,docs/KNOWLEDGE_BASE.md#mishio-cpu-command-and-movement-owner
+0x00530BC0,0x00546477,88247,reviewed,docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner

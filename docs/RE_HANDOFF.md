@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 287 |
-| Authored exact instruction bytes | 570,288 |
-| Associated exact local-table bytes | 3,192 |
-| Reviewed boundaries / origins | 325 / 325 |
+| Authored complete exact functions | 288 |
+| Authored exact instruction bytes | 657,601 |
+| Associated exact local-table bytes | 4,126 |
+| Reviewed boundaries / origins | 326 / 326 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,49 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mishio CPU checkpoint
+## Latest Mishio state checkpoint
+
+Character15::Slot06 at530BC0 is complete exact:87,313 instruction bytes plus
+934 associated local-table bytes, total88,247. Code ends5460D1,154-destination
+address table ends546339 and318-byte selector ends546477. Nine excluded CC
+bytes precede accepted constructor546480. Source:src/Character15State.cpp;
+profile vc71-od-static. Public proof:docs/evidence/mishio-state-exact.json.
+Durable target findings:
+[Mishio animation and state owner](KNOWLEDGE_BASE.md#mishio-animation-and-state-owner).
+Private attempts/reviews:.analysis/probes/mishio-state/README.md.
+
+Independent review covers23,524 contiguous instructions,2,363 internal branches,
+153 explicit states and all1,612 relocation fields:516 direct calls,940 typed
+floating operands,156 compiler-local bindings. All79 double payloads agree in
+canonical target/COFF. All12 random callers zero-extend AX;418 virtual calls
+retain actual owners. The real72-byte descriptor and used duration/count locals
+recover frame49C, receiver EBP-54, descriptor EBP-50 and duration/count EBP-4/-8,
+with saved ESI. Preserve the five-byte epilogue and all934 table bytes.
+
+Keep unsigned slide/tick reads, positive landing and collision exits, immediate
+thresholds, integer particle subtraction and direct frame-rollback exits.
+State178's nested/outer breaks both matter. States300..302 first handle the
+positive phase3 airborne-opponent guard and exit; their repetition/failure
+branches also leave the dispatch. All19 shared polar calls address the actual
+velocity prefix at this+8 and preserve the already reviewed callee ABI.
+
+Formatted public source passed one final selected complete cold native replay.
+All305 prior recipes/source owners and public headers are unchanged; no old
+unit required replay. Focused tracking, ledger/progress CI and whitespace checks
+passed; no full CI/cohort or runtime matrix ran. Initial provisional comma
+assignments failed syntax; corrected source followed a successful required
+verify-toolchain --execute smoke. All native exits and evidence remain retained.
+
+Twelve of thirteen Mishio virtual destinations now have complete exact proofs.
+Next substantial owner:local effects54FD30/29568 instruction bytes, candidate
+code end5570B0, with associated tables still unreviewed. Fresh read-only annotated
+decompile:.analysis/probes/mishio/calls-annotated-0054fd30.txt. Build the complete
+first source early and review all code/table boundaries and operands before
+credit. Resource/runtime/game phases and original TU partitioning remain open.
+Keep parked PrepareBattle/Shiori controls until new target evidence supplies a
+falsifiable instruction prediction.
+
+## Previous Mishio CPU checkpoint
 
 Character15::Slot05 at54C250 is complete exact:15,066 instruction bytes,
 exclusive end54FD2A, no local tables. Six excluded CC bytes precede54FD30.
