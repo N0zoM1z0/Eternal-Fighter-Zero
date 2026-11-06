@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "one selected final cold pinned VC7.1 static /Od artifact; existing source and public headers unchanged",
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts cover10 new Mishio constructor/frame/input/command units and40 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "address": "0x51f3e0",
     "exclusive_end": "0x5236c7",
@@ -7503,16 +7503,16 @@
       "symbol": "?Slot05@Character23@@UAEXXZ",
       "target_address": "0x0051F3E0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "d2534145a87c31da002ec4d92b7fc14f33e0f7cc524e37cc6cbdef37791c492d",
-      "object_sha256": "1d1035c5c41c0c03787e10300ec716551580b29a0bf420d3fdd4a56449fe70c1",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "d8e487d13bdc92b8cae1eef0c766f2bab48936cf4f16bcaade1f94d164360508",
       "source_sha256": "bbebb0627a2cc27b179dd618aa4f4c17d27e0f68d7db7e9ee6b131f800aba9f5",
       "dependencies": {
-        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe",
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "34f226058c5f9f312fc0b9ca6922614ae171b11eea4f2241212aab45b5bf85e9",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "63e3defc9539972b941be46c91ee38e2556c532dfe1887ee49c9f447dcb1ffcd",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

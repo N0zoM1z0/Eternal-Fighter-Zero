@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 276 |
-| Authored exact instruction bytes | 531,254 |
+| Authored complete exact functions | 286 |
+| Authored exact instruction bytes | 555,222 |
 | Associated exact local-table bytes | 3,192 |
-| Reviewed boundaries / origins | 315 / 315 |
+| Reviewed boundaries / origins | 324 / 324 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,51 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misuzu local-effect checkpoint
+## Latest Mishio construction, input and indicator checkpoint
+
+Ten complete Character15 owners add23,968 exact instruction bytes, without
+associated tables: constructor546480/513, initializer546690/413,
+reset546830/58, removal546870/80, locomotion5468C0/19,
+action input5468E0/13534, indicators549DC0/3278, frame control54AA90/701,
+emitter54AD50/47 and commands54AD80/5325. Sources:
+src/Character15Frame.cpp, Character15Input.cpp and Character15Commands.cpp;
+profile vc71-od-static. Public proof: docs/evidence/mishio-exact.json.
+Durable target findings:
+[Mishio construction input and indicator owners](KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners).
+Private retained attempts/reviews: .analysis/probes/mishio/README.md.
+
+Selection15 allocates3478; constructor resource literal788760 says "mishio"
+and vptr788768 has13 reviewed destinations. The Character15 tail now contains
+15 observed scalar ints and three64-int arrays3174/3274/3374. Natural alignment
+retains3478. Both creation consumers preserve their complete original bytes.
+No other class view, Engine.h or Input.h changed.
+
+Independent review covers6,271 instructions,880 internal branches and all156
+relocation fields (97 direct calls,57 typed floating operands,string and vptr).
+Keep commandCount/commands stores30F4/30F5/30FF, the initializer's base-only
+call, unsigned byte operations, first two phase >1 gates, and directional
+product order. Frame control uses self tints and a real72-byte descriptor;
+indicators multiply field3168 before frame.width, retaining frame274.
+
+Formatted public sources passed50 complete strict comparisons from23 serial
+cold source/profile/dependency artifacts: ten new units and40 actual header
+consumers. All515 generated-symbol name refreshes preserve reviewed local
+positions/destinations or literal bytes;254 unrelated existing units retain
+prior artifacts. Focused tracking, ledgers/progress CI and whitespace checks
+passed; no full CI/cohort or runtime matrix ran. No compiler/Wine failure
+occurred in this checkpoint. All private evidence and build exit logs remain.
+
+Ten of thirteen Mishio virtual destinations now have exact proofs (nine new
+child bodies plus inherited LoadResources). Next substantial owner:
+CPU54C250/15066. State530BC0/87313 code bytes and effects54FD30/29568 code
+bytes remain OPEN with associated tables unreviewed. All13 annotated decompiles
+are retained privately, but confer no acceptance. Continue with complete first
+source and early native comparison, reviewing original boundaries/operands
+before ledger credit. Preserve parked PrepareBattle/Shiori controls until new
+evidence offers a falsifiable instruction prediction. Resources, original TU
+partitioning, runtime and game reconstruction remain independently open.
+
+## Previous Misuzu local-effect checkpoint
 
 Character23::Slot07 at 5236D0 is complete exact: 54,139 instruction bytes plus
 372 associated local-table bytes, total contribution 54,511. Code ends 530A4B;

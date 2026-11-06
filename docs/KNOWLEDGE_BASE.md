@@ -4432,3 +4432,107 @@ code inventory milestone only. Linked data/assets, original translation-unit
 partitioning, runtime behavior and whole-game reconstruction remain open.
 The next constructor546480 uses original "mishio" literal788760 and table788768;
 its creation ID, full virtual extents and exact source still require review.
+## Mishio construction input and indicator owners
+
+Ten complete authored functions add 23,968 exact instruction bytes without
+associated local tables. Sources: `src/Character15Frame.cpp`,
+`src/Character15Input.cpp` and `src/Character15Commands.cpp`. Public proof:
+`docs/evidence/mishio-exact.json`. Explicit recipes use pinned VC7.1 static /Od
+and complete strict comparison, without masks, size overrides or prefix credit.
+
+| Complete owner | Canonical entry | Exact code bytes |
+| --- | --- | ---: |
+| Character15 constructor | 0x546480 | 513 |
+| Character15::InitializeState | 0x546690 | 413 |
+| Character15::ResetPose | 0x546830 | 58 |
+| Character15::RemoveLocalEffect | 0x546870 | 80 |
+| Character15::Slot03 locomotion | 0x5468C0 | 19 |
+| Character15::Slot04 action input | 0x5468E0 | 13,534 |
+| Character15::Slot01 indicators | 0x549DC0 | 3,278 |
+| Character15::Slot08 frame control | 0x54AA90 | 701 |
+| Character15::EmitLocalEffect | 0x54AD50 | 47 |
+| Character15::Slot02 command scanning | 0x54AD80 | 5,325 |
+
+Canonical selection ID15 allocates 0x3478 bytes and calls constructor546480.
+The constructor copies the complete NUL-terminated resource literal "mishio"
+from788760 and installs vtable788768. All13 original virtual destinations were
+read directly. Nine new child virtuals plus inherited LoadResources410B70 now
+have exact proofs. CPU54C250/15066, state530BC0/87313 instruction bytes and
+effects54FD30/29568 instruction bytes remain open; the latter two associated
+table extents still require review. Constructor acceptance is additional to the
+13 virtual entries. This inventory does not establish character, resource or
+runtime closure.
+
+Independent complete boundary review covers6,271 contiguous instructions,
+880 internal branches and all following padding/next entries. All156 relocation
+fields have reviewed original operands, symbols and destinations:97 direct
+calls,57 typed floating operands, one resource string and one vtable store.
+All nine floating payloads agree independently in canonical target and COFF.
+There are51 real virtual calls and no new compiler-local tables. Decompiler
+annotations and prior characters supplied hypotheses; only original EFZ
+instructions and complete native comparisons establish acceptance.
+
+Constructor and initializer clear15 scalar ints at3138..3170 and three64-int
+arrays at3174,3274,3374. Their final field ends3474; ordinary inherited
+alignment retains allocation3478 without explicit padding. Only Character15's
+opaque tail is expanded. Constructor surfaceCount is1303, commandCount is7,
+commands[0] is3 and commands[10] is15. The observed byte stores are30F4,30F5
+and30FF respectively. Both initialization paths use boxes(-4,-57),(18,0),
+(21,-12),(18,-15),(38,-39) in that store order. InitializeState calls only the
+shared initializer after its stores and loop. Both creation consumers retain
+their original complete allocation/call instructions.
+
+ResetPose clears3138,313c,3140 before the shared reset. RemoveLocalEffect
+clears all three arrays at the requested slot, then calls the base. The emitter
+removes effectWrite through the actual virtual slot before the shared emitter.
+Locomotion calls the accepted shared movement owner.
+
+Frame control constructs one used72-byte EffectSpawn and resets it through the
+shared helper. State3's positive3168 timer decrements except during state318,
+and exhaustion clears3158. Active states decrement315c. State3 advances3160
+through144 and applies eight self tints at18-frame intervals, using the original
+209,208,207,177,207,208,209,210 sequence and duration27. Outside hurt states
+50..149, expired315c emits type34/36 according to3158; state3 uses an unsigned
+RandomRange(0,100) result against50. Position casts, facing multiplication and
+unsigned random returns retain the target's order; group2/layer1 emission
+resets315c to2. Ordinary locals recover frame54, receiver EBP-4C, descriptor
+EBP-48 and saved ESI, without inert locals.
+
+Indicators advance3164 through29. Four independent state tests draw patterns
+39..42; active states use frame3164/6. Two independent positive3168 tests draw
+icon43 and gauge44. Mirrored player coordinates and all18 MakeSurfaceRect /
+six DrawSurface calls are preserved. Gauge width evaluates
+`field3168 * frame.width / 4500` in that order. Width-first multiplication
+removed12 bytes of register moves; field-first source recovers all3278 bytes,
+including frame274, receiver EBP-274 and saved ESI.
+
+Action input has frame14, receiver EBP-4,3,397 instructions,583 branches and
+107 relocations:46 ClearBufferedButtons calls, four FaceOpponent calls and
+57 floating operands. Preserve unsigned latch reads, byte increments/decrements,
+01aa<=0,0159/015a<1 and positive permission masks. The first two phase gates
+are >1; later gates use >=2. Directional products evaluate opponent.x-self.x
+before `1-field0262*2`; opposite facing uses multiplication by-1. Positive
+combined air guards, the three independent3158==3 final assignments and the
+original special/normal attack priorities recover all exits. Mishio's own
+3158 state gates remain explicit rather than copied from another character.
+
+Commands have frameC, receiver EBP-C, index EBP-4 and unsigned byte buttons /
+stage at EBP-5/-6. Their1,541 instructions and249 branches implement16 ordered
+scans over the180-entry history using single-wrap indexing. Command99 is the
+default; command98's staged button sequence precedes the facing-dependent
+motions. Preserve actual windows, sequential advancement, three >=1000 meter
+gates and the distinction between gate-mask !=0 and positive command-ID sums.
+The first complete source had the full5325-byte size but seven differing bytes;
+three threshold pairs and one gate branch required original-instruction fixes.
+
+Final formatted sources passed50 complete strict comparisons from23 serial
+cold source/profile/dependency artifacts: ten new units and40 actual consumers
+of CharacterViews.h. All515 refreshed generated-symbol identities across nine
+old units retain reviewed destinations, local offsets or literal payloads
+(513 local bindings and two strings). The other254 units retain earlier proofs.
+Engine.h and Input.h remain unchanged. Focused tracking, ledger/progress CI and
+whitespace checks passed; no full CI/cohort or runtime matrix ran.
+
+Full attempts, read-only annotated decompiles, boundary/operand review and native
+exit logs are retained in `.analysis/probes/mishio/`. Its one-time generation
+scripts are derivation history and must not overwrite accepted/newer sources.

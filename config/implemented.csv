@@ -275,3 +275,13 @@ address,name,source,symbol,status,evidence
 0x0051F3E0,Character23::Slot05,src/Character23Cpu.cpp,?Slot05@Character23@@UAEXXZ,complete,docs/evidence/misuzu-cpu-exact.json
 0x0050C4B0,Character23::Slot06,src/Character23State.cpp,?Slot06@Character23@@UAEXXZ,complete,docs/evidence/misuzu-state-exact.json
 0x005236D0,Character23::Slot07,src/Character23Effects.cpp,?Slot07@Character23@@UAEXXZ,complete,docs/evidence/misuzu-effects-exact.json
+0x00546480,??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/Character15Frame.cpp,??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/mishio-exact.json
+0x00546690,?InitializeState@Character15@@UAEXXZ,src/Character15Frame.cpp,?InitializeState@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x00546830,?ResetPose@Character15@@UAEXXZ,src/Character15Frame.cpp,?ResetPose@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x00546870,?RemoveLocalEffect@Character15@@UAEXF@Z,src/Character15Frame.cpp,?RemoveLocalEffect@Character15@@UAEXF@Z,complete,docs/evidence/mishio-exact.json
+0x005468C0,?Slot03@Character15@@UAEXXZ,src/Character15Frame.cpp,?Slot03@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x0054AA90,?Slot08@Character15@@UAEXXZ,src/Character15Frame.cpp,?Slot08@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x00549DC0,?Slot01@Character15@@UAEXXZ,src/Character15Frame.cpp,?Slot01@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x0054AD50,?EmitLocalEffect@Character15@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character15Frame.cpp,?EmitLocalEffect@Character15@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/mishio-exact.json
+0x005468E0,?Slot04@Character15@@UAEXXZ,src/Character15Input.cpp,?Slot04@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
+0x0054AD80,?Slot02@Character15@@UAEXXZ,src/Character15Commands.cpp,?Slot02@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json

@@ -1,0 +1,5964 @@
+{
+  "schema_version": 1,
+  "authority": "complete target-bound native codegen with independently reviewed original symbol destinations; no masks, partial extents or size overrides",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 513,
+      "matched_bytes": 513,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z at 0x40eae0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7898984,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character15@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original constructor vptr store and all13 canonical virtual destinations at788768; existing native inheritance and slot ABI retained",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7898976,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62182",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original resource literal at788760 and complete native COFF mishio NUL-terminated bytes independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to _strcpy at 0x778080; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "20e61daf65cec07c0c3eca868f4eb787abcc501585c9f1a54ba7de8a1e4bb46b",
+      "target_extent_sha256": "20e61daf65cec07c0c3eca868f4eb787abcc501585c9f1a54ba7de8a1e4bb46b",
+      "unit": "character-15-constructor",
+      "symbol": "??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x00546480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "873339167b43ad8b2fb9988885e53af1e50e20d58b6c1c269562160e1949dc8b",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 413,
+      "matched_bytes": 413,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 405,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?InitializeState@Secondary@@UAEXXZ at 0x40edf0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e9ad168278ea151d6b412d760b9b8db2bfacb82a8b3c8ac6c3a3ac417ba8d227",
+      "target_extent_sha256": "e9ad168278ea151d6b412d760b9b8db2bfacb82a8b3c8ac6c3a3ac417ba8d227",
+      "unit": "character-15-initialize-state",
+      "symbol": "?InitializeState@Character15@@UAEXXZ",
+      "target_address": "0x00546690",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4705edffa307894cfba44e8d43e96677a45f01a0718ac031befa9297cbef96c5",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ResetPose@Secondary@@UAEXXZ at 0x40f110; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fa75a448bd3d27d0931a715d28ad2cd515ab84a6c5f9e31986b8092c52165694",
+      "target_extent_sha256": "fa75a448bd3d27d0931a715d28ad2cd515ab84a6c5f9e31986b8092c52165694",
+      "unit": "character-15-reset-pose",
+      "symbol": "?ResetPose@Character15@@UAEXXZ",
+      "target_address": "0x00546830",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "79fd6306d75fe6617619d218c6c470dcccc2a985452235b42a56032889f6dacf",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x412e60; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bf5453a84adeafd2a580818bbf9b47d8472998bedda429cad7c499995ac17f5a",
+      "target_extent_sha256": "bf5453a84adeafd2a580818bbf9b47d8472998bedda429cad7c499995ac17f5a",
+      "unit": "character-15-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character15@@UAEXF@Z",
+      "target_address": "0x00546870",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "808d618f5000f1e7c373cbe89045c6e780fb017e2d3f25f2b62d503f6aad5e6e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x40e740; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ea5256f7d48da0f0fe168a789fc64cd821b88a366b749a78a4b0857e81c09f55",
+      "target_extent_sha256": "ea5256f7d48da0f0fe168a789fc64cd821b88a366b749a78a4b0857e81c09f55",
+      "unit": "character-15-locomotion",
+      "symbol": "?Slot03@Character15@@UAEXXZ",
+      "target_address": "0x005468C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0db44f5f2b45364b9e8337ab10401317cf3bb4e9e12fdcb32bc8ac529d8b05e9",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 701,
+      "matched_bytes": 701,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 240,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 294,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 321,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 348,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 375,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 402,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 432,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 539,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 572,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 586,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 628,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 642,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 679,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8cd11f6b28b40c423781fb1bf961b086a5c248ae3a853a75050927004ec9f1c7",
+      "target_extent_sha256": "8cd11f6b28b40c423781fb1bf961b086a5c248ae3a853a75050927004ec9f1c7",
+      "unit": "character-15-frame-control",
+      "symbol": "?Slot08@Character15@@UAEXXZ",
+      "target_address": "0x0054AA90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "06c176736502b8f6d39c66322cf0ed18142ec28edd7d13c4746797cd90f5e534",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 3278,
+      "matched_bytes": 3278,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 144,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 254,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 509,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 611,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 748,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 874,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1050,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1152,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1289,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1415,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1591,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1693,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1830,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1956,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2132,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2209,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2346,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2473,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2649,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2751,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2915,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3093,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3269,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "66ae0b8fa77286f433432329482568a019b206113ddb16f6c93bae2a03b79227",
+      "target_extent_sha256": "66ae0b8fa77286f433432329482568a019b206113ddb16f6c93bae2a03b79227",
+      "unit": "character-15-render-indicators",
+      "symbol": "?Slot01@Character15@@UAEXXZ",
+      "target_address": "0x00549DC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c9064c102f7308da3a7fd711dab31df9aebc1e71ac89dc52f02850ae6fa2aff4",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x412b10; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fc804d82fdec30703a012af02b21c8b39392e75f658b5774778f5957f41e5722",
+      "target_extent_sha256": "fc804d82fdec30703a012af02b21c8b39392e75f658b5774778f5957f41e5722",
+      "unit": "character-15-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character15@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x0054AD50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "a250db49df05ad939650c37ad3a6442d76c9bdb0bd2c81ad8baba388b4cc5158",
+      "source_sha256": "c1e25805e2d6863fa9cb95b43290ee0400fc3650099368dbaac07c79f6c489f0",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ac6d4231921567a25332861ff36ee335b76f5a3bb00899b1674c862ed063c2a2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 13534,
+      "matched_bytes": 13534,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 309,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 330,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 482,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 565,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 656,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 830,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 937,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1112,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1234,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1408,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1500,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1674,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1780,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1954,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2076,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2250,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2345,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2514,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2623,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2792,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2917,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3086,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3178,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3352,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3458,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3632,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3754,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3928,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4014,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4188,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4274,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4449,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4522,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4575,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4606,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4636,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4810,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4911,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5085,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5171,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5345,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5393,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5477,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5610,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5792,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5925,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6092,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6224,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6522,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6543,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6789,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6810,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7041,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7062,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7145,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7179,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7353,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7438,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7612,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7701,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7875,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7950,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8030,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8060,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8185,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e48; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8341,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8448,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8478,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8733,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8799,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8915,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8945,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9135,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9221,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9251,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9434,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9546,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9689,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9890,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9940,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10109,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10334,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10559,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10678,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10728,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10897,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11123,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11401,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11533,
+          "target": 7898928,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c056800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x788730; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11563,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787ea0; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11641,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11817,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11936,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11986,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12063,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875c8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12097,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875d0; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12125,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12339,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12511,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12737,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12831,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12870,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12904,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787d88; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13118,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13344,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13517,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e9109c9ac35e81e6860bb4ac4aa759e0de997b5974e156ef10da5eceaff4641a",
+      "target_extent_sha256": "e9109c9ac35e81e6860bb4ac4aa759e0de997b5974e156ef10da5eceaff4641a",
+      "unit": "character-15-action-input",
+      "symbol": "?Slot04@Character15@@UAEXXZ",
+      "target_address": "0x005468E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "bf479b38abb3177b109f6ddb424b06cea9eda94ae029bfe305058c29c5c39168",
+      "source_sha256": "53d9baf4d7373f4f5c56080adc8e852dbf8a42f0afda1da0452d71c187d39efd",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a03bd93f9960684f66b3d54341fb7e92ead3e63358a613a5683a4a4541de0467",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 5325,
+      "matched_bytes": 5325,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "f870ec920b4b985472c2a04d9c4432e03eb64495f2c4405d1d5e451db75a2721",
+      "target_extent_sha256": "f870ec920b4b985472c2a04d9c4432e03eb64495f2c4405d1d5e451db75a2721",
+      "unit": "character-15-recognize-commands",
+      "symbol": "?Slot02@Character15@@UAEXXZ",
+      "target_address": "0x0054AD80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "d45c583c8ac18375a9707125f655beb483fb1eadd82272a8521f5b9747f5a231",
+      "object_sha256": "f7c7d37aaf6105a242cb3a0adca8f02b3e495410eb17c13c60451a5f8aed90cb",
+      "source_sha256": "6719492c4f38e1908bcf0f3236bbbe9e54ff580f35dc5ede050975fecc6ed3a3",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db879c6518cf13ca5106d816895933358c1b24cb8934f6b01f7effdc6fcd512a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6635bdaf7248437033a3b0afc721aa5e6c14ea43c6bfc1800a125cac40d44a32",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts cover10 new Mishio constructor/frame/input/command units and40 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "boundary_review": [
+    {
+      "tag": "constructor",
+      "address": "0x546480",
+      "exclusive_end": "0x546681",
+      "size": 513,
+      "instructions": 105,
+      "branches": [
+        {
+          "address": "0x546632",
+          "target": "0x54663d"
+        },
+        {
+          "address": "0x546641",
+          "target": "0x546678"
+        },
+        {
+          "address": "0x546676",
+          "target": "0x546634"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x5464a4",
+          "instruction": "call   0x40eae0"
+        },
+        {
+          "address": "0x5464c1",
+          "instruction": "call   0x778080"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 15,
+      "next_entry": "0x546690",
+      "local_data": []
+    },
+    {
+      "tag": "initialize",
+      "address": "0x546690",
+      "exclusive_end": "0x54682d",
+      "size": 413,
+      "instructions": 76,
+      "branches": [
+        {
+          "address": "0x5467db",
+          "target": "0x5467e6"
+        },
+        {
+          "address": "0x5467ea",
+          "target": "0x546821"
+        },
+        {
+          "address": "0x54681f",
+          "target": "0x5467dd"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x546824",
+          "instruction": "call   0x40edf0"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 3,
+      "next_entry": "0x546830",
+      "local_data": []
+    },
+    {
+      "tag": "reset-pose",
+      "address": "0x546830",
+      "exclusive_end": "0x54686a",
+      "size": 58,
+      "instructions": 15,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x546861",
+          "instruction": "call   0x40f110"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 6,
+      "next_entry": "0x546870",
+      "local_data": []
+    },
+    {
+      "tag": "remove-effect",
+      "address": "0x546870",
+      "exclusive_end": "0x5468c0",
+      "size": 80,
+      "instructions": 20,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5468b5",
+          "instruction": "call   0x412e60"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 0,
+      "next_entry": "0x5468c0",
+      "local_data": []
+    },
+    {
+      "tag": "locomotion",
+      "address": "0x5468c0",
+      "exclusive_end": "0x5468d3",
+      "size": 19,
+      "instructions": 9,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5468ca",
+          "instruction": "call   0x40e740"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 13,
+      "next_entry": "0x5468e0",
+      "local_data": []
+    },
+    {
+      "tag": "frame-control",
+      "address": "0x54aa90",
+      "exclusive_end": "0x54ad4d",
+      "size": 701,
+      "instructions": 184,
+      "branches": [
+        {
+          "address": "0x54aab8",
+          "target": "0x54ab03"
+        },
+        {
+          "address": "0x54aac4",
+          "target": "0x54ab03"
+        },
+        {
+          "address": "0x54aad3",
+          "target": "0x54aaea"
+        },
+        {
+          "address": "0x54aaf4",
+          "target": "0x54ab03"
+        },
+        {
+          "address": "0x54ab0d",
+          "target": "0x54ad48"
+        },
+        {
+          "address": "0x54ab32",
+          "target": "0x54ac44"
+        },
+        {
+          "address": "0x54ab5a",
+          "target": "0x54ab69"
+        },
+        {
+          "address": "0x54ab73",
+          "target": "0x54ab84"
+        },
+        {
+          "address": "0x54ab8e",
+          "target": "0x54ab9f"
+        },
+        {
+          "address": "0x54aba9",
+          "target": "0x54abba"
+        },
+        {
+          "address": "0x54abc4",
+          "target": "0x54abd5"
+        },
+        {
+          "address": "0x54abdf",
+          "target": "0x54abf0"
+        },
+        {
+          "address": "0x54abfa",
+          "target": "0x54ac0b"
+        },
+        {
+          "address": "0x54ac15",
+          "target": "0x54ac26"
+        },
+        {
+          "address": "0x54ac33",
+          "target": "0x54ac44"
+        },
+        {
+          "address": "0x54ac4e",
+          "target": "0x54ad48"
+        },
+        {
+          "address": "0x54ac5e",
+          "target": "0x54ac73"
+        },
+        {
+          "address": "0x54ac6d",
+          "target": "0x54ad48"
+        },
+        {
+          "address": "0x54ac7d",
+          "target": "0x54ac85"
+        },
+        {
+          "address": "0x54ac8f",
+          "target": "0x54ac97"
+        },
+        {
+          "address": "0x54aca1",
+          "target": "0x54acc5"
+        },
+        {
+          "address": "0x54acb5",
+          "target": "0x54acbf"
+        },
+        {
+          "address": "0x54acbd",
+          "target": "0x54acc5"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x54aa9d",
+          "instruction": "call   0x405490"
+        },
+        {
+          "address": "0x54aaa9",
+          "instruction": "call   0x413090"
+        },
+        {
+          "address": "0x54ab7f",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54ab9a",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54abb5",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54abd0",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54abeb",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54ac06",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54ac21",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54ac3f",
+          "instruction": "call   0x410ac0"
+        },
+        {
+          "address": "0x54acaa",
+          "instruction": "call   0x4108a0"
+        },
+        {
+          "address": "0x54accb",
+          "instruction": "call   0x7783b8"
+        },
+        {
+          "address": "0x54acd9",
+          "instruction": "call   0x4108a0"
+        },
+        {
+          "address": "0x54ad03",
+          "instruction": "call   0x7783b8"
+        },
+        {
+          "address": "0x54ad11",
+          "instruction": "call   0x4108a0"
+        },
+        {
+          "address": "0x54ad36",
+          "instruction": "call   0x407100"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 3,
+      "next_entry": "0x54ad50",
+      "local_data": []
+    },
+    {
+      "tag": "render-indicators",
+      "address": "0x549dc0",
+      "exclusive_end": "0x54aa8e",
+      "size": 3278,
+      "instructions": 906,
+      "branches": [
+        {
+          "address": "0x549df8",
+          "target": "0x549e0a"
+        },
+        {
+          "address": "0x549e17",
+          "target": "0x549fc1"
+        },
+        {
+          "address": "0x549e95",
+          "target": "0x549ef6"
+        },
+        {
+          "address": "0x549ef4",
+          "target": "0x549f5b"
+        },
+        {
+          "address": "0x549fce",
+          "target": "0x54a1de"
+        },
+        {
+          "address": "0x54a080",
+          "target": "0x54a0fc"
+        },
+        {
+          "address": "0x54a0fa",
+          "target": "0x54a178"
+        },
+        {
+          "address": "0x54a1eb",
+          "target": "0x54a3fb"
+        },
+        {
+          "address": "0x54a29d",
+          "target": "0x54a319"
+        },
+        {
+          "address": "0x54a317",
+          "target": "0x54a395"
+        },
+        {
+          "address": "0x54a408",
+          "target": "0x54a618"
+        },
+        {
+          "address": "0x54a4ba",
+          "target": "0x54a536"
+        },
+        {
+          "address": "0x54a534",
+          "target": "0x54a5b2"
+        },
+        {
+          "address": "0x54a625",
+          "target": "0x54a81d"
+        },
+        {
+          "address": "0x54a6be",
+          "target": "0x54a73a"
+        },
+        {
+          "address": "0x54a738",
+          "target": "0x54a7b7"
+        },
+        {
+          "address": "0x54a82a",
+          "target": "0x54aa89"
+        },
+        {
+          "address": "0x54a8dc",
+          "target": "0x54a976"
+        },
+        {
+          "address": "0x54a971",
+          "target": "0x54aa23"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x549e4f",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x549ebd",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x549f24",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x549fbc",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x54a022",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a0ab",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a129",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a1d9",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x54a23f",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a2c8",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a346",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a3f6",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x54a45c",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a4e5",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a563",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a613",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x54a660",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a6e9",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a768",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a818",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x54a87e",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a922",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54a9d4",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x54aa84",
+          "instruction": "call   0x409a90"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 2,
+      "next_entry": "0x54aa90",
+      "local_data": []
+    },
+    {
+      "tag": "emit-effect",
+      "address": "0x54ad50",
+      "exclusive_end": "0x54ad7f",
+      "size": 47,
+      "instructions": 18,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x54ad74",
+          "instruction": "call   0x412b10"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x54ad6a",
+          "instruction": "call   DWORD PTR [eax+0x28]"
+        }
+      ],
+      "padding": 1,
+      "next_entry": "0x54ad80",
+      "local_data": []
+    },
+    {
+      "tag": "input",
+      "address": "0x5468e0",
+      "exclusive_end": "0x549dbe",
+      "size": 13534,
+      "instructions": 3397,
+      "branches": [
+        {
+          "address": "0x5468f6",
+          "target": "0x546902"
+        },
+        {
+          "address": "0x54690e",
+          "target": "0x54691c"
+        },
+        {
+          "address": "0x54691a",
+          "target": "0x546931"
+        },
+        {
+          "address": "0x54693d",
+          "target": "0x546949"
+        },
+        {
+          "address": "0x546956",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x546970",
+          "target": "0x54697e"
+        },
+        {
+          "address": "0x54697c",
+          "target": "0x5469b0"
+        },
+        {
+          "address": "0x54698a",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x54699a",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x5469aa",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x5469dc",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x546a05",
+          "target": "0x546a43"
+        },
+        {
+          "address": "0x546a33",
+          "target": "0x546a3e"
+        },
+        {
+          "address": "0x546a3e",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546a4d",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x546a60",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546a73",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546a89",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546abb",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546ad0",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546adc",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546b05",
+          "target": "0x546b27"
+        },
+        {
+          "address": "0x546b22",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546b31",
+          "target": "0x546b43"
+        },
+        {
+          "address": "0x546b3d",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546b50",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546b65",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546b7e",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546bb0",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546bbf",
+          "target": "0x546bd9"
+        },
+        {
+          "address": "0x546bcb",
+          "target": "0x546bd9"
+        },
+        {
+          "address": "0x546bd7",
+          "target": "0x546be7"
+        },
+        {
+          "address": "0x546be5",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546c0e",
+          "target": "0x546c30"
+        },
+        {
+          "address": "0x546c2b",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546c3a",
+          "target": "0x546c4c"
+        },
+        {
+          "address": "0x546c46",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546c59",
+          "target": "0x546c6e"
+        },
+        {
+          "address": "0x546c68",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546c7e",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546c97",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546cc9",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546cd8",
+          "target": "0x546cf2"
+        },
+        {
+          "address": "0x546ce4",
+          "target": "0x546cf2"
+        },
+        {
+          "address": "0x546cf0",
+          "target": "0x546d01"
+        },
+        {
+          "address": "0x546cff",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546d28",
+          "target": "0x546d4a"
+        },
+        {
+          "address": "0x546d45",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546d54",
+          "target": "0x546d66"
+        },
+        {
+          "address": "0x546d60",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546d73",
+          "target": "0x546d97"
+        },
+        {
+          "address": "0x546d82",
+          "target": "0x546d97"
+        },
+        {
+          "address": "0x546d91",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546da7",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546dc0",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546df2",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546e00",
+          "target": "0x546e1a"
+        },
+        {
+          "address": "0x546e0c",
+          "target": "0x546e1a"
+        },
+        {
+          "address": "0x546e18",
+          "target": "0x546e29"
+        },
+        {
+          "address": "0x546e27",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546e50",
+          "target": "0x546e72"
+        },
+        {
+          "address": "0x546e6d",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546e7c",
+          "target": "0x546e8e"
+        },
+        {
+          "address": "0x546e88",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546e9b",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546eb1",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546eca",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546efc",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546f0a",
+          "target": "0x546f24"
+        },
+        {
+          "address": "0x546f16",
+          "target": "0x546f24"
+        },
+        {
+          "address": "0x546f22",
+          "target": "0x546f33"
+        },
+        {
+          "address": "0x546f31",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546f5a",
+          "target": "0x546f7c"
+        },
+        {
+          "address": "0x546f77",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x546f86",
+          "target": "0x546f98"
+        },
+        {
+          "address": "0x546f92",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x546fa5",
+          "target": "0x546fba"
+        },
+        {
+          "address": "0x546fb4",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x546fc9",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x546fe2",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x547014",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x547023",
+          "target": "0x54703d"
+        },
+        {
+          "address": "0x54702f",
+          "target": "0x54703d"
+        },
+        {
+          "address": "0x54703b",
+          "target": "0x54704b"
+        },
+        {
+          "address": "0x547049",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x547072",
+          "target": "0x547094"
+        },
+        {
+          "address": "0x54708f",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54709e",
+          "target": "0x5470b0"
+        },
+        {
+          "address": "0x5470aa",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x5470bd",
+          "target": "0x5470e1"
+        },
+        {
+          "address": "0x5470cc",
+          "target": "0x5470e1"
+        },
+        {
+          "address": "0x5470db",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x5470f1",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x54710a",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x54713c",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x54714a",
+          "target": "0x547164"
+        },
+        {
+          "address": "0x547156",
+          "target": "0x547164"
+        },
+        {
+          "address": "0x547162",
+          "target": "0x547173"
+        },
+        {
+          "address": "0x547171",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x54719a",
+          "target": "0x5471bc"
+        },
+        {
+          "address": "0x5471b7",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5471c6",
+          "target": "0x5471d8"
+        },
+        {
+          "address": "0x5471d2",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x5471e5",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x5471fb",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x547212",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x547244",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x547252",
+          "target": "0x54726c"
+        },
+        {
+          "address": "0x54725e",
+          "target": "0x54726c"
+        },
+        {
+          "address": "0x54726a",
+          "target": "0x54727b"
+        },
+        {
+          "address": "0x547279",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x5472a2",
+          "target": "0x5472c4"
+        },
+        {
+          "address": "0x5472bf",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5472ce",
+          "target": "0x5472e0"
+        },
+        {
+          "address": "0x5472da",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x5472ed",
+          "target": "0x547302"
+        },
+        {
+          "address": "0x5472fc",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x547311",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x547328",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x54735a",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x547369",
+          "target": "0x547383"
+        },
+        {
+          "address": "0x547375",
+          "target": "0x547383"
+        },
+        {
+          "address": "0x547381",
+          "target": "0x547391"
+        },
+        {
+          "address": "0x54738f",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x5473b8",
+          "target": "0x5473da"
+        },
+        {
+          "address": "0x5473d5",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5473e4",
+          "target": "0x5473f6"
+        },
+        {
+          "address": "0x5473f0",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x547403",
+          "target": "0x547427"
+        },
+        {
+          "address": "0x547412",
+          "target": "0x547427"
+        },
+        {
+          "address": "0x547421",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x547437",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x54744e",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x547480",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x54748e",
+          "target": "0x5474a8"
+        },
+        {
+          "address": "0x54749a",
+          "target": "0x5474a8"
+        },
+        {
+          "address": "0x5474a6",
+          "target": "0x5474b7"
+        },
+        {
+          "address": "0x5474b5",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x5474de",
+          "target": "0x547500"
+        },
+        {
+          "address": "0x5474fb",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54750a",
+          "target": "0x54751c"
+        },
+        {
+          "address": "0x547516",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x547529",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x54753f",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x547558",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x54758a",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x547598",
+          "target": "0x5475b2"
+        },
+        {
+          "address": "0x5475a4",
+          "target": "0x5475b2"
+        },
+        {
+          "address": "0x5475b0",
+          "target": "0x5475c1"
+        },
+        {
+          "address": "0x5475bf",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x5475e8",
+          "target": "0x54760a"
+        },
+        {
+          "address": "0x547605",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547614",
+          "target": "0x547626"
+        },
+        {
+          "address": "0x547620",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x547633",
+          "target": "0x547648"
+        },
+        {
+          "address": "0x547642",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x547657",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x547670",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x5476a2",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x5476b1",
+          "target": "0x5476cb"
+        },
+        {
+          "address": "0x5476bd",
+          "target": "0x5476cb"
+        },
+        {
+          "address": "0x5476c9",
+          "target": "0x5476d9"
+        },
+        {
+          "address": "0x5476d7",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x547700",
+          "target": "0x547722"
+        },
+        {
+          "address": "0x54771d",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54772c",
+          "target": "0x54773e"
+        },
+        {
+          "address": "0x547738",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x54774b",
+          "target": "0x54776f"
+        },
+        {
+          "address": "0x54775a",
+          "target": "0x54776f"
+        },
+        {
+          "address": "0x547769",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x54777f",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x547798",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x5477ca",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x5477d8",
+          "target": "0x5477f2"
+        },
+        {
+          "address": "0x5477e4",
+          "target": "0x5477f2"
+        },
+        {
+          "address": "0x5477f0",
+          "target": "0x547801"
+        },
+        {
+          "address": "0x5477ff",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x547828",
+          "target": "0x54784a"
+        },
+        {
+          "address": "0x547845",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547854",
+          "target": "0x547866"
+        },
+        {
+          "address": "0x547860",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x547870",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x547883",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x54789c",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x5478ce",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x5478dd",
+          "target": "0x5478f7"
+        },
+        {
+          "address": "0x5478e9",
+          "target": "0x5478f7"
+        },
+        {
+          "address": "0x5478f5",
+          "target": "0x547905"
+        },
+        {
+          "address": "0x547903",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x54792c",
+          "target": "0x54794e"
+        },
+        {
+          "address": "0x547949",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547958",
+          "target": "0x54796a"
+        },
+        {
+          "address": "0x547964",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x547974",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x547987",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x5479a0",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x5479d2",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x5479e1",
+          "target": "0x5479fb"
+        },
+        {
+          "address": "0x5479ed",
+          "target": "0x5479fb"
+        },
+        {
+          "address": "0x5479f9",
+          "target": "0x547a0a"
+        },
+        {
+          "address": "0x547a08",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x547a31",
+          "target": "0x547a53"
+        },
+        {
+          "address": "0x547a4e",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547a5d",
+          "target": "0x547a6f"
+        },
+        {
+          "address": "0x547a69",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547a79",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547a93",
+          "target": "0x547aa7"
+        },
+        {
+          "address": "0x547aa1",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547ab4",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547acd",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547ae7",
+          "target": "0x547b10"
+        },
+        {
+          "address": "0x547af5",
+          "target": "0x547b10"
+        },
+        {
+          "address": "0x547b0a",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547b3c",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547b4b",
+          "target": "0x547b65"
+        },
+        {
+          "address": "0x547b57",
+          "target": "0x547b65"
+        },
+        {
+          "address": "0x547b63",
+          "target": "0x547b73"
+        },
+        {
+          "address": "0x547b71",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547b9a",
+          "target": "0x547bbc"
+        },
+        {
+          "address": "0x547bb7",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547bc6",
+          "target": "0x547bd8"
+        },
+        {
+          "address": "0x547bd2",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547be2",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547bf5",
+          "target": "0x547c0a"
+        },
+        {
+          "address": "0x547c04",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547c1d",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547c4f",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547c5d",
+          "target": "0x547c77"
+        },
+        {
+          "address": "0x547c69",
+          "target": "0x547c77"
+        },
+        {
+          "address": "0x547c75",
+          "target": "0x547c86"
+        },
+        {
+          "address": "0x547c84",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547cad",
+          "target": "0x547ccf"
+        },
+        {
+          "address": "0x547cca",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547cd9",
+          "target": "0x547ceb"
+        },
+        {
+          "address": "0x547ce5",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547cf5",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547d08",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547d21",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547d53",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547d62",
+          "target": "0x547d7c"
+        },
+        {
+          "address": "0x547d6e",
+          "target": "0x547d7c"
+        },
+        {
+          "address": "0x547d7a",
+          "target": "0x547d8a"
+        },
+        {
+          "address": "0x547d88",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547db1",
+          "target": "0x547dd3"
+        },
+        {
+          "address": "0x547dce",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547de0",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547dfa",
+          "target": "0x547e0e"
+        },
+        {
+          "address": "0x547e08",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547e3a",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547e53",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547e66",
+          "target": "0x547e80"
+        },
+        {
+          "address": "0x547e72",
+          "target": "0x547e80"
+        },
+        {
+          "address": "0x547e7e",
+          "target": "0x547e93"
+        },
+        {
+          "address": "0x547e8d",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547eba",
+          "target": "0x547f27"
+        },
+        {
+          "address": "0x547ed8",
+          "target": "0x547ee3"
+        },
+        {
+          "address": "0x547eed",
+          "target": "0x547ef8"
+        },
+        {
+          "address": "0x547f02",
+          "target": "0x547f0d"
+        },
+        {
+          "address": "0x547f17",
+          "target": "0x547f22"
+        },
+        {
+          "address": "0x547f22",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x547f34",
+          "target": "0x547f49"
+        },
+        {
+          "address": "0x547f43",
+          "target": "0x548062"
+        },
+        {
+          "address": "0x547f75",
+          "target": "0x548062"
+        },
+        {
+          "address": "0x547f8e",
+          "target": "0x548062"
+        },
+        {
+          "address": "0x547fa1",
+          "target": "0x547fbb"
+        },
+        {
+          "address": "0x547fad",
+          "target": "0x547fbb"
+        },
+        {
+          "address": "0x547fb9",
+          "target": "0x547fce"
+        },
+        {
+          "address": "0x547fc8",
+          "target": "0x548062"
+        },
+        {
+          "address": "0x547ff5",
+          "target": "0x548062"
+        },
+        {
+          "address": "0x548013",
+          "target": "0x54801e"
+        },
+        {
+          "address": "0x548028",
+          "target": "0x548033"
+        },
+        {
+          "address": "0x54803d",
+          "target": "0x548048"
+        },
+        {
+          "address": "0x548052",
+          "target": "0x54805d"
+        },
+        {
+          "address": "0x54805d",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54806f",
+          "target": "0x54818d"
+        },
+        {
+          "address": "0x5480a1",
+          "target": "0x54818d"
+        },
+        {
+          "address": "0x5480ba",
+          "target": "0x54818d"
+        },
+        {
+          "address": "0x5480cd",
+          "target": "0x5480e7"
+        },
+        {
+          "address": "0x5480d9",
+          "target": "0x5480e7"
+        },
+        {
+          "address": "0x5480e5",
+          "target": "0x5480f9"
+        },
+        {
+          "address": "0x5480f3",
+          "target": "0x54818d"
+        },
+        {
+          "address": "0x548120",
+          "target": "0x54818d"
+        },
+        {
+          "address": "0x54813e",
+          "target": "0x548149"
+        },
+        {
+          "address": "0x548153",
+          "target": "0x54815e"
+        },
+        {
+          "address": "0x548168",
+          "target": "0x548173"
+        },
+        {
+          "address": "0x54817d",
+          "target": "0x548188"
+        },
+        {
+          "address": "0x548188",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548197",
+          "target": "0x5481a9"
+        },
+        {
+          "address": "0x5481a3",
+          "target": "0x548288"
+        },
+        {
+          "address": "0x5481b6",
+          "target": "0x548288"
+        },
+        {
+          "address": "0x5481e8",
+          "target": "0x548288"
+        },
+        {
+          "address": "0x5481fa",
+          "target": "0x548214"
+        },
+        {
+          "address": "0x548206",
+          "target": "0x548214"
+        },
+        {
+          "address": "0x548212",
+          "target": "0x548223"
+        },
+        {
+          "address": "0x548221",
+          "target": "0x548288"
+        },
+        {
+          "address": "0x54824a",
+          "target": "0x548288"
+        },
+        {
+          "address": "0x548278",
+          "target": "0x548283"
+        },
+        {
+          "address": "0x548283",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548292",
+          "target": "0x5482a4"
+        },
+        {
+          "address": "0x54829e",
+          "target": "0x548393"
+        },
+        {
+          "address": "0x5482b1",
+          "target": "0x5482c6"
+        },
+        {
+          "address": "0x5482c0",
+          "target": "0x548393"
+        },
+        {
+          "address": "0x5482f2",
+          "target": "0x548393"
+        },
+        {
+          "address": "0x548305",
+          "target": "0x54831f"
+        },
+        {
+          "address": "0x548311",
+          "target": "0x54831f"
+        },
+        {
+          "address": "0x54831d",
+          "target": "0x54832e"
+        },
+        {
+          "address": "0x54832c",
+          "target": "0x548393"
+        },
+        {
+          "address": "0x548355",
+          "target": "0x548393"
+        },
+        {
+          "address": "0x548383",
+          "target": "0x54838e"
+        },
+        {
+          "address": "0x54838e",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54839d",
+          "target": "0x5483af"
+        },
+        {
+          "address": "0x5483a9",
+          "target": "0x54848f"
+        },
+        {
+          "address": "0x5483bc",
+          "target": "0x54848f"
+        },
+        {
+          "address": "0x5483ee",
+          "target": "0x54848f"
+        },
+        {
+          "address": "0x548401",
+          "target": "0x54841b"
+        },
+        {
+          "address": "0x54840d",
+          "target": "0x54841b"
+        },
+        {
+          "address": "0x548419",
+          "target": "0x54842a"
+        },
+        {
+          "address": "0x548428",
+          "target": "0x54848f"
+        },
+        {
+          "address": "0x548451",
+          "target": "0x54848f"
+        },
+        {
+          "address": "0x54847f",
+          "target": "0x54848a"
+        },
+        {
+          "address": "0x54848a",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548499",
+          "target": "0x5484ab"
+        },
+        {
+          "address": "0x5484a5",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x5484b8",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x5484d2",
+          "target": "0x5484e6"
+        },
+        {
+          "address": "0x5484e0",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x5484f9",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x54852b",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x54853a",
+          "target": "0x548554"
+        },
+        {
+          "address": "0x548546",
+          "target": "0x548554"
+        },
+        {
+          "address": "0x548552",
+          "target": "0x548562"
+        },
+        {
+          "address": "0x548560",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x548589",
+          "target": "0x5485ab"
+        },
+        {
+          "address": "0x5485a6",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5485b5",
+          "target": "0x5485c7"
+        },
+        {
+          "address": "0x5485c1",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x5485d4",
+          "target": "0x5485e9"
+        },
+        {
+          "address": "0x5485e3",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x5485fc",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x54862e",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x54863d",
+          "target": "0x548657"
+        },
+        {
+          "address": "0x548649",
+          "target": "0x548657"
+        },
+        {
+          "address": "0x548655",
+          "target": "0x548665"
+        },
+        {
+          "address": "0x548663",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x54868c",
+          "target": "0x5486ae"
+        },
+        {
+          "address": "0x5486a9",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5486b8",
+          "target": "0x5486ca"
+        },
+        {
+          "address": "0x5486c4",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x5486d7",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x5486ea",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x548703",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x548735",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x548744",
+          "target": "0x54875e"
+        },
+        {
+          "address": "0x548750",
+          "target": "0x54875e"
+        },
+        {
+          "address": "0x54875c",
+          "target": "0x54876c"
+        },
+        {
+          "address": "0x54876a",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x548793",
+          "target": "0x5487b5"
+        },
+        {
+          "address": "0x5487b0",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5487bf",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x5487d1",
+          "target": "0x5487e6"
+        },
+        {
+          "address": "0x5487e0",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x5487f7",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x54880a",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548847",
+          "target": "0x548892"
+        },
+        {
+          "address": "0x548867",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x54888c",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x5488b9",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x5488cb",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x5488e2",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x548914",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x548927",
+          "target": "0x548941"
+        },
+        {
+          "address": "0x548933",
+          "target": "0x548941"
+        },
+        {
+          "address": "0x54893f",
+          "target": "0x54894f"
+        },
+        {
+          "address": "0x54894d",
+          "target": "0x5489b2"
+        },
+        {
+          "address": "0x54895c",
+          "target": "0x548968"
+        },
+        {
+          "address": "0x5489ad",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5489e9",
+          "target": "0x548a31"
+        },
+        {
+          "address": "0x548a09",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548a2b",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548a58",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548a6b",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548a9d",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548aaf",
+          "target": "0x548ac9"
+        },
+        {
+          "address": "0x548abb",
+          "target": "0x548ac9"
+        },
+        {
+          "address": "0x548ac7",
+          "target": "0x548ad8"
+        },
+        {
+          "address": "0x548ad6",
+          "target": "0x548b3a"
+        },
+        {
+          "address": "0x548ae4",
+          "target": "0x548af0"
+        },
+        {
+          "address": "0x548b35",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548b4d",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548b7f",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548bbc",
+          "target": "0x548c07"
+        },
+        {
+          "address": "0x548bdc",
+          "target": "0x548cb7"
+        },
+        {
+          "address": "0x548c01",
+          "target": "0x548cb7"
+        },
+        {
+          "address": "0x548c2e",
+          "target": "0x548cb7"
+        },
+        {
+          "address": "0x548c41",
+          "target": "0x548c5b"
+        },
+        {
+          "address": "0x548c4d",
+          "target": "0x548c5b"
+        },
+        {
+          "address": "0x548c59",
+          "target": "0x548c69"
+        },
+        {
+          "address": "0x548c67",
+          "target": "0x548cb7"
+        },
+        {
+          "address": "0x548c76",
+          "target": "0x548c82"
+        },
+        {
+          "address": "0x548cb2",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548cee",
+          "target": "0x548d36"
+        },
+        {
+          "address": "0x548d0e",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548d30",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548d5d",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548d6c",
+          "target": "0x548d86"
+        },
+        {
+          "address": "0x548d78",
+          "target": "0x548d86"
+        },
+        {
+          "address": "0x548d84",
+          "target": "0x548d94"
+        },
+        {
+          "address": "0x548d92",
+          "target": "0x548dcd"
+        },
+        {
+          "address": "0x548da1",
+          "target": "0x548dad"
+        },
+        {
+          "address": "0x548dc8",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548dd7",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548dea",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548e1c",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548e33",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548e46",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548e70",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548e83",
+          "target": "0x548e9d"
+        },
+        {
+          "address": "0x548e8f",
+          "target": "0x548e9d"
+        },
+        {
+          "address": "0x548e9b",
+          "target": "0x548eab"
+        },
+        {
+          "address": "0x548ea9",
+          "target": "0x548f1e"
+        },
+        {
+          "address": "0x548eee",
+          "target": "0x548ef9"
+        },
+        {
+          "address": "0x548f0e",
+          "target": "0x548f19"
+        },
+        {
+          "address": "0x548f19",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548f2b",
+          "target": "0x548f4f"
+        },
+        {
+          "address": "0x548f3a",
+          "target": "0x548f4f"
+        },
+        {
+          "address": "0x548f49",
+          "target": "0x549231"
+        },
+        {
+          "address": "0x548f5b",
+          "target": "0x548fac"
+        },
+        {
+          "address": "0x548f72",
+          "target": "0x548fac"
+        },
+        {
+          "address": "0x548f9c",
+          "target": "0x548fa7"
+        },
+        {
+          "address": "0x548fa7",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x548fbd",
+          "target": "0x54906f"
+        },
+        {
+          "address": "0x548fea",
+          "target": "0x54906a"
+        },
+        {
+          "address": "0x549018",
+          "target": "0x54906a"
+        },
+        {
+          "address": "0x549026",
+          "target": "0x549040"
+        },
+        {
+          "address": "0x549032",
+          "target": "0x549040"
+        },
+        {
+          "address": "0x54903e",
+          "target": "0x54904f"
+        },
+        {
+          "address": "0x54904d",
+          "target": "0x54906a"
+        },
+        {
+          "address": "0x54906a",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54907c",
+          "target": "0x5490a0"
+        },
+        {
+          "address": "0x54908b",
+          "target": "0x5490a0"
+        },
+        {
+          "address": "0x54909a",
+          "target": "0x549150"
+        },
+        {
+          "address": "0x5490c7",
+          "target": "0x549150"
+        },
+        {
+          "address": "0x5490f9",
+          "target": "0x549150"
+        },
+        {
+          "address": "0x549108",
+          "target": "0x549122"
+        },
+        {
+          "address": "0x549114",
+          "target": "0x549122"
+        },
+        {
+          "address": "0x549120",
+          "target": "0x549130"
+        },
+        {
+          "address": "0x54912e",
+          "target": "0x549150"
+        },
+        {
+          "address": "0x54914b",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54915c",
+          "target": "0x549180"
+        },
+        {
+          "address": "0x54916b",
+          "target": "0x549180"
+        },
+        {
+          "address": "0x54917a",
+          "target": "0x549231"
+        },
+        {
+          "address": "0x5491a7",
+          "target": "0x549231"
+        },
+        {
+          "address": "0x5491d9",
+          "target": "0x549231"
+        },
+        {
+          "address": "0x5491e8",
+          "target": "0x549202"
+        },
+        {
+          "address": "0x5491f4",
+          "target": "0x549202"
+        },
+        {
+          "address": "0x549200",
+          "target": "0x549211"
+        },
+        {
+          "address": "0x54920f",
+          "target": "0x549231"
+        },
+        {
+          "address": "0x54922c",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54923e",
+          "target": "0x549262"
+        },
+        {
+          "address": "0x54924d",
+          "target": "0x549262"
+        },
+        {
+          "address": "0x54925c",
+          "target": "0x54971b"
+        },
+        {
+          "address": "0x54926f",
+          "target": "0x5492c0"
+        },
+        {
+          "address": "0x549286",
+          "target": "0x5492c0"
+        },
+        {
+          "address": "0x5492b0",
+          "target": "0x5492bb"
+        },
+        {
+          "address": "0x5492bb",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5492d1",
+          "target": "0x549383"
+        },
+        {
+          "address": "0x5492fe",
+          "target": "0x54937e"
+        },
+        {
+          "address": "0x54932c",
+          "target": "0x54937e"
+        },
+        {
+          "address": "0x54933b",
+          "target": "0x549355"
+        },
+        {
+          "address": "0x549347",
+          "target": "0x549355"
+        },
+        {
+          "address": "0x549353",
+          "target": "0x549363"
+        },
+        {
+          "address": "0x549361",
+          "target": "0x54937e"
+        },
+        {
+          "address": "0x54937e",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549390",
+          "target": "0x5493b4"
+        },
+        {
+          "address": "0x54939f",
+          "target": "0x5493b4"
+        },
+        {
+          "address": "0x5493ae",
+          "target": "0x549465"
+        },
+        {
+          "address": "0x5493db",
+          "target": "0x549465"
+        },
+        {
+          "address": "0x54940d",
+          "target": "0x549465"
+        },
+        {
+          "address": "0x54941c",
+          "target": "0x549436"
+        },
+        {
+          "address": "0x549428",
+          "target": "0x549436"
+        },
+        {
+          "address": "0x549434",
+          "target": "0x549445"
+        },
+        {
+          "address": "0x549443",
+          "target": "0x549465"
+        },
+        {
+          "address": "0x549460",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549471",
+          "target": "0x549495"
+        },
+        {
+          "address": "0x549480",
+          "target": "0x549495"
+        },
+        {
+          "address": "0x54948f",
+          "target": "0x54971b"
+        },
+        {
+          "address": "0x54949f",
+          "target": "0x5494b1"
+        },
+        {
+          "address": "0x5494ab",
+          "target": "0x54957b"
+        },
+        {
+          "address": "0x5494c4",
+          "target": "0x54957b"
+        },
+        {
+          "address": "0x5494f1",
+          "target": "0x54957b"
+        },
+        {
+          "address": "0x549523",
+          "target": "0x54957b"
+        },
+        {
+          "address": "0x549532",
+          "target": "0x54954c"
+        },
+        {
+          "address": "0x54953e",
+          "target": "0x54954c"
+        },
+        {
+          "address": "0x54954a",
+          "target": "0x54955b"
+        },
+        {
+          "address": "0x549559",
+          "target": "0x54957b"
+        },
+        {
+          "address": "0x549576",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5495a2",
+          "target": "0x54966b"
+        },
+        {
+          "address": "0x5495d4",
+          "target": "0x54966b"
+        },
+        {
+          "address": "0x5495f6",
+          "target": "0x54966b"
+        },
+        {
+          "address": "0x549614",
+          "target": "0x54966b"
+        },
+        {
+          "address": "0x549622",
+          "target": "0x54963c"
+        },
+        {
+          "address": "0x54962e",
+          "target": "0x54963c"
+        },
+        {
+          "address": "0x54963a",
+          "target": "0x54964b"
+        },
+        {
+          "address": "0x549649",
+          "target": "0x54966b"
+        },
+        {
+          "address": "0x549666",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549692",
+          "target": "0x54971b"
+        },
+        {
+          "address": "0x5496c4",
+          "target": "0x54971b"
+        },
+        {
+          "address": "0x5496d3",
+          "target": "0x5496ed"
+        },
+        {
+          "address": "0x5496df",
+          "target": "0x5496ed"
+        },
+        {
+          "address": "0x5496eb",
+          "target": "0x5496fb"
+        },
+        {
+          "address": "0x5496f9",
+          "target": "0x54971b"
+        },
+        {
+          "address": "0x549716",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549728",
+          "target": "0x54974c"
+        },
+        {
+          "address": "0x549737",
+          "target": "0x54974c"
+        },
+        {
+          "address": "0x549746",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549759",
+          "target": "0x5497aa"
+        },
+        {
+          "address": "0x549770",
+          "target": "0x5497aa"
+        },
+        {
+          "address": "0x54979a",
+          "target": "0x5497a5"
+        },
+        {
+          "address": "0x5497a5",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5497bb",
+          "target": "0x5499d1"
+        },
+        {
+          "address": "0x5497d4",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x5497e6",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x549808",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x54982a",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x549846",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x549873",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x549888",
+          "target": "0x5498a2"
+        },
+        {
+          "address": "0x54989c",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x5498ce",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x5498dc",
+          "target": "0x5498f6"
+        },
+        {
+          "address": "0x5498e8",
+          "target": "0x5498f6"
+        },
+        {
+          "address": "0x5498f4",
+          "target": "0x549905"
+        },
+        {
+          "address": "0x549903",
+          "target": "0x549925"
+        },
+        {
+          "address": "0x549920",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x54994c",
+          "target": "0x5499cc"
+        },
+        {
+          "address": "0x54997a",
+          "target": "0x5499cc"
+        },
+        {
+          "address": "0x549989",
+          "target": "0x5499a3"
+        },
+        {
+          "address": "0x549995",
+          "target": "0x5499a3"
+        },
+        {
+          "address": "0x5499a1",
+          "target": "0x5499b1"
+        },
+        {
+          "address": "0x5499af",
+          "target": "0x5499cc"
+        },
+        {
+          "address": "0x5499cc",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x5499de",
+          "target": "0x549a02"
+        },
+        {
+          "address": "0x5499ed",
+          "target": "0x549a02"
+        },
+        {
+          "address": "0x5499fc",
+          "target": "0x549ab3"
+        },
+        {
+          "address": "0x549a29",
+          "target": "0x549ab3"
+        },
+        {
+          "address": "0x549a5b",
+          "target": "0x549ab3"
+        },
+        {
+          "address": "0x549a6a",
+          "target": "0x549a84"
+        },
+        {
+          "address": "0x549a76",
+          "target": "0x549a84"
+        },
+        {
+          "address": "0x549a82",
+          "target": "0x549a93"
+        },
+        {
+          "address": "0x549a91",
+          "target": "0x549ab3"
+        },
+        {
+          "address": "0x549aae",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549abf",
+          "target": "0x549ae3"
+        },
+        {
+          "address": "0x549ace",
+          "target": "0x549ae3"
+        },
+        {
+          "address": "0x549add",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549aef",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549b0d",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549b2f",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549b51",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549b7e",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549b93",
+          "target": "0x549bac"
+        },
+        {
+          "address": "0x549ba6",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549bd8",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549be7",
+          "target": "0x549c01"
+        },
+        {
+          "address": "0x549bf3",
+          "target": "0x549c01"
+        },
+        {
+          "address": "0x549bff",
+          "target": "0x549c10"
+        },
+        {
+          "address": "0x549c0e",
+          "target": "0x549c30"
+        },
+        {
+          "address": "0x549c2b",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549c3a",
+          "target": "0x549c4c"
+        },
+        {
+          "address": "0x549c46",
+          "target": "0x549d12"
+        },
+        {
+          "address": "0x549c73",
+          "target": "0x549d12"
+        },
+        {
+          "address": "0x549ca5",
+          "target": "0x549d12"
+        },
+        {
+          "address": "0x549cba",
+          "target": "0x549d12"
+        },
+        {
+          "address": "0x549cc9",
+          "target": "0x549ce3"
+        },
+        {
+          "address": "0x549cd5",
+          "target": "0x549ce3"
+        },
+        {
+          "address": "0x549ce1",
+          "target": "0x549cf2"
+        },
+        {
+          "address": "0x549cf0",
+          "target": "0x549d12"
+        },
+        {
+          "address": "0x549d0d",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549d39",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549d67",
+          "target": "0x549dba"
+        },
+        {
+          "address": "0x549d76",
+          "target": "0x549d90"
+        },
+        {
+          "address": "0x549d82",
+          "target": "0x549d90"
+        },
+        {
+          "address": "0x549d8e",
+          "target": "0x549d9f"
+        },
+        {
+          "address": "0x549d9d",
+          "target": "0x549dba"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x546a14",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x546b14",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x546c1d",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x546d37",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x546e5f",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x546f69",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547081",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5471a9",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5472b1",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5473c7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5474ed",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5475f7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54770f",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547837",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54793b",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547a40",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547ba9",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547cbc",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547dc0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x547ec9",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548004",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54812f",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548259",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548364",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548460",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548598",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54869b",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5487a2",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548974",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x548afc",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x548c8e",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x548db9",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x548eb8",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x548f81",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54905c",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54913d",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54921e",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549295",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549370",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549452",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549568",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549658",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549708",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x54977f",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549912",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5499be",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549aa0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549c1d",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549cff",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x549dac",
+          "instruction": "call   0x40f170"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x546a0f",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x546b0f",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x546c18",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x546d32",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x546e5a",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x546f64",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x54707c",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5471a4",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5472ac",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5473c2",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5474e8",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5475f2",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x54770a",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547832",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x547936",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547a3b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547ba4",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547cb7",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x547dbb",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547ec4",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x547fff",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54812a",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548254",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x54835f",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54845b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548593",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548696",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54879d",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548966",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548aee",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548c80",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548dab",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548eb3",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x548f7c",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x549057",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x549138",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549219",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549290",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54936b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54944d",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549563",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549653",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x549703",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54977a",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x54990d",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5499b9",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549a9b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549c18",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549cfa",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x549da7",
+          "instruction": "call   DWORD PTR [edx]"
+        }
+      ],
+      "padding": 2,
+      "next_entry": "0x549dc0",
+      "local_data": []
+    },
+    {
+      "tag": "commands",
+      "address": "0x54ad80",
+      "exclusive_end": "0x54c24d",
+      "size": 5325,
+      "instructions": 1541,
+      "branches": [
+        {
+          "address": "0x54ada6",
+          "target": "0x54adb1"
+        },
+        {
+          "address": "0x54adc4",
+          "target": "0x54aedf"
+        },
+        {
+          "address": "0x54adf5",
+          "target": "0x54ae11"
+        },
+        {
+          "address": "0x54adfe",
+          "target": "0x54ae11"
+        },
+        {
+          "address": "0x54ae0c",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54ae18",
+          "target": "0x54ae27"
+        },
+        {
+          "address": "0x54ae21",
+          "target": "0x54ae27"
+        },
+        {
+          "address": "0x54ae30",
+          "target": "0x54ae40"
+        },
+        {
+          "address": "0x54ae39",
+          "target": "0x54ae40"
+        },
+        {
+          "address": "0x54ae3b",
+          "target": "0x54aedf"
+        },
+        {
+          "address": "0x54ae46",
+          "target": "0x54ae55"
+        },
+        {
+          "address": "0x54ae4f",
+          "target": "0x54ae55"
+        },
+        {
+          "address": "0x54ae5f",
+          "target": "0x54ae6e"
+        },
+        {
+          "address": "0x54ae68",
+          "target": "0x54ae6e"
+        },
+        {
+          "address": "0x54ae77",
+          "target": "0x54ae84"
+        },
+        {
+          "address": "0x54ae80",
+          "target": "0x54ae84"
+        },
+        {
+          "address": "0x54ae82",
+          "target": "0x54aedf"
+        },
+        {
+          "address": "0x54ae8b",
+          "target": "0x54ae9a"
+        },
+        {
+          "address": "0x54ae94",
+          "target": "0x54ae9a"
+        },
+        {
+          "address": "0x54aea0",
+          "target": "0x54aeaf"
+        },
+        {
+          "address": "0x54aea9",
+          "target": "0x54aeaf"
+        },
+        {
+          "address": "0x54aeb8",
+          "target": "0x54aec5"
+        },
+        {
+          "address": "0x54aec1",
+          "target": "0x54aec5"
+        },
+        {
+          "address": "0x54aec3",
+          "target": "0x54aedf"
+        },
+        {
+          "address": "0x54aecc",
+          "target": "0x54aeda"
+        },
+        {
+          "address": "0x54aed4",
+          "target": "0x54aeda"
+        },
+        {
+          "address": "0x54aeda",
+          "target": "0x54ada8"
+        },
+        {
+          "address": "0x54aef3",
+          "target": "0x54aefe"
+        },
+        {
+          "address": "0x54af11",
+          "target": "0x54b0cd"
+        },
+        {
+          "address": "0x54af45",
+          "target": "0x54af9a"
+        },
+        {
+          "address": "0x54af4e",
+          "target": "0x54af9a"
+        },
+        {
+          "address": "0x54af95",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54afb4",
+          "target": "0x54b01a"
+        },
+        {
+          "address": "0x54afbd",
+          "target": "0x54b01a"
+        },
+        {
+          "address": "0x54afc9",
+          "target": "0x54b016"
+        },
+        {
+          "address": "0x54b011",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b034",
+          "target": "0x54b043"
+        },
+        {
+          "address": "0x54b03d",
+          "target": "0x54b043"
+        },
+        {
+          "address": "0x54b062",
+          "target": "0x54b071"
+        },
+        {
+          "address": "0x54b06b",
+          "target": "0x54b071"
+        },
+        {
+          "address": "0x54b090",
+          "target": "0x54b09f"
+        },
+        {
+          "address": "0x54b099",
+          "target": "0x54b09f"
+        },
+        {
+          "address": "0x54b0a9",
+          "target": "0x54b0c8"
+        },
+        {
+          "address": "0x54b0b1",
+          "target": "0x54b0c8"
+        },
+        {
+          "address": "0x54b0c2",
+          "target": "0x54b0c8"
+        },
+        {
+          "address": "0x54b0c8",
+          "target": "0x54aef5"
+        },
+        {
+          "address": "0x54b0e1",
+          "target": "0x54b0ec"
+        },
+        {
+          "address": "0x54b0ff",
+          "target": "0x54b29d"
+        },
+        {
+          "address": "0x54b133",
+          "target": "0x54b185"
+        },
+        {
+          "address": "0x54b13c",
+          "target": "0x54b185"
+        },
+        {
+          "address": "0x54b180",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b19f",
+          "target": "0x54b202"
+        },
+        {
+          "address": "0x54b1a8",
+          "target": "0x54b202"
+        },
+        {
+          "address": "0x54b1b4",
+          "target": "0x54b1fe"
+        },
+        {
+          "address": "0x54b1f9",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b221",
+          "target": "0x54b230"
+        },
+        {
+          "address": "0x54b22a",
+          "target": "0x54b230"
+        },
+        {
+          "address": "0x54b24f",
+          "target": "0x54b25e"
+        },
+        {
+          "address": "0x54b258",
+          "target": "0x54b25e"
+        },
+        {
+          "address": "0x54b278",
+          "target": "0x54b298"
+        },
+        {
+          "address": "0x54b280",
+          "target": "0x54b298"
+        },
+        {
+          "address": "0x54b292",
+          "target": "0x54b298"
+        },
+        {
+          "address": "0x54b298",
+          "target": "0x54b0e3"
+        },
+        {
+          "address": "0x54b2b1",
+          "target": "0x54b2bc"
+        },
+        {
+          "address": "0x54b2ce",
+          "target": "0x54b480"
+        },
+        {
+          "address": "0x54b302",
+          "target": "0x54b353"
+        },
+        {
+          "address": "0x54b30b",
+          "target": "0x54b353"
+        },
+        {
+          "address": "0x54b34e",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b36d",
+          "target": "0x54b3cf"
+        },
+        {
+          "address": "0x54b376",
+          "target": "0x54b3cf"
+        },
+        {
+          "address": "0x54b382",
+          "target": "0x54b3cb"
+        },
+        {
+          "address": "0x54b3c6",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b3e9",
+          "target": "0x54b3f8"
+        },
+        {
+          "address": "0x54b3f2",
+          "target": "0x54b3f8"
+        },
+        {
+          "address": "0x54b402",
+          "target": "0x54b411"
+        },
+        {
+          "address": "0x54b40b",
+          "target": "0x54b411"
+        },
+        {
+          "address": "0x54b42b",
+          "target": "0x54b43a"
+        },
+        {
+          "address": "0x54b434",
+          "target": "0x54b43a"
+        },
+        {
+          "address": "0x54b454",
+          "target": "0x54b463"
+        },
+        {
+          "address": "0x54b45d",
+          "target": "0x54b463"
+        },
+        {
+          "address": "0x54b46d",
+          "target": "0x54b47b"
+        },
+        {
+          "address": "0x54b475",
+          "target": "0x54b47b"
+        },
+        {
+          "address": "0x54b47b",
+          "target": "0x54b2b3"
+        },
+        {
+          "address": "0x54b494",
+          "target": "0x54b49f"
+        },
+        {
+          "address": "0x54b4b2",
+          "target": "0x54b688"
+        },
+        {
+          "address": "0x54b4e6",
+          "target": "0x54b538"
+        },
+        {
+          "address": "0x54b4ef",
+          "target": "0x54b538"
+        },
+        {
+          "address": "0x54b533",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b557",
+          "target": "0x54b5b7"
+        },
+        {
+          "address": "0x54b560",
+          "target": "0x54b5b7"
+        },
+        {
+          "address": "0x54b56b",
+          "target": "0x54b5b3"
+        },
+        {
+          "address": "0x54b5ae",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b5d6",
+          "target": "0x54b5e5"
+        },
+        {
+          "address": "0x54b5df",
+          "target": "0x54b5e5"
+        },
+        {
+          "address": "0x54b5ef",
+          "target": "0x54b5fe"
+        },
+        {
+          "address": "0x54b5f8",
+          "target": "0x54b5fe"
+        },
+        {
+          "address": "0x54b61d",
+          "target": "0x54b62c"
+        },
+        {
+          "address": "0x54b626",
+          "target": "0x54b62c"
+        },
+        {
+          "address": "0x54b64b",
+          "target": "0x54b65a"
+        },
+        {
+          "address": "0x54b654",
+          "target": "0x54b65a"
+        },
+        {
+          "address": "0x54b664",
+          "target": "0x54b683"
+        },
+        {
+          "address": "0x54b66c",
+          "target": "0x54b683"
+        },
+        {
+          "address": "0x54b67d",
+          "target": "0x54b683"
+        },
+        {
+          "address": "0x54b683",
+          "target": "0x54b496"
+        },
+        {
+          "address": "0x54b69c",
+          "target": "0x54b6a7"
+        },
+        {
+          "address": "0x54b6ba",
+          "target": "0x54b803"
+        },
+        {
+          "address": "0x54b6ee",
+          "target": "0x54b740"
+        },
+        {
+          "address": "0x54b6f7",
+          "target": "0x54b740"
+        },
+        {
+          "address": "0x54b73b",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b75a",
+          "target": "0x54b7bd"
+        },
+        {
+          "address": "0x54b763",
+          "target": "0x54b7bd"
+        },
+        {
+          "address": "0x54b76f",
+          "target": "0x54b7b9"
+        },
+        {
+          "address": "0x54b7b4",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b7c7",
+          "target": "0x54b7d6"
+        },
+        {
+          "address": "0x54b7d0",
+          "target": "0x54b7d6"
+        },
+        {
+          "address": "0x54b7f0",
+          "target": "0x54b7fe"
+        },
+        {
+          "address": "0x54b7f8",
+          "target": "0x54b7fe"
+        },
+        {
+          "address": "0x54b7fe",
+          "target": "0x54b69e"
+        },
+        {
+          "address": "0x54b819",
+          "target": "0x54b824"
+        },
+        {
+          "address": "0x54b836",
+          "target": "0x54b97d"
+        },
+        {
+          "address": "0x54b86a",
+          "target": "0x54b8bb"
+        },
+        {
+          "address": "0x54b873",
+          "target": "0x54b8bb"
+        },
+        {
+          "address": "0x54b8b6",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b8d5",
+          "target": "0x54b937"
+        },
+        {
+          "address": "0x54b8de",
+          "target": "0x54b937"
+        },
+        {
+          "address": "0x54b8ea",
+          "target": "0x54b933"
+        },
+        {
+          "address": "0x54b92e",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54b951",
+          "target": "0x54b960"
+        },
+        {
+          "address": "0x54b95a",
+          "target": "0x54b960"
+        },
+        {
+          "address": "0x54b96a",
+          "target": "0x54b978"
+        },
+        {
+          "address": "0x54b972",
+          "target": "0x54b978"
+        },
+        {
+          "address": "0x54b978",
+          "target": "0x54b81b"
+        },
+        {
+          "address": "0x54b994",
+          "target": "0x54b99f"
+        },
+        {
+          "address": "0x54b9b2",
+          "target": "0x54bb05"
+        },
+        {
+          "address": "0x54b9e5",
+          "target": "0x54ba38"
+        },
+        {
+          "address": "0x54b9ee",
+          "target": "0x54ba38"
+        },
+        {
+          "address": "0x54ba33",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54ba42",
+          "target": "0x54baa5"
+        },
+        {
+          "address": "0x54ba4b",
+          "target": "0x54baa5"
+        },
+        {
+          "address": "0x54ba57",
+          "target": "0x54baa1"
+        },
+        {
+          "address": "0x54ba9c",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bac4",
+          "target": "0x54bad3"
+        },
+        {
+          "address": "0x54bacd",
+          "target": "0x54bad3"
+        },
+        {
+          "address": "0x54baf2",
+          "target": "0x54bb00"
+        },
+        {
+          "address": "0x54bafa",
+          "target": "0x54bb00"
+        },
+        {
+          "address": "0x54bb00",
+          "target": "0x54b996"
+        },
+        {
+          "address": "0x54bb1b",
+          "target": "0x54bb26"
+        },
+        {
+          "address": "0x54bb38",
+          "target": "0x54bc8a"
+        },
+        {
+          "address": "0x54bb6c",
+          "target": "0x54bbbd"
+        },
+        {
+          "address": "0x54bb75",
+          "target": "0x54bbbd"
+        },
+        {
+          "address": "0x54bbb8",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bbdc",
+          "target": "0x54bc3f"
+        },
+        {
+          "address": "0x54bbe5",
+          "target": "0x54bc3f"
+        },
+        {
+          "address": "0x54bbf1",
+          "target": "0x54bc3b"
+        },
+        {
+          "address": "0x54bc36",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bc5e",
+          "target": "0x54bc6d"
+        },
+        {
+          "address": "0x54bc67",
+          "target": "0x54bc6d"
+        },
+        {
+          "address": "0x54bc77",
+          "target": "0x54bc85"
+        },
+        {
+          "address": "0x54bc7f",
+          "target": "0x54bc85"
+        },
+        {
+          "address": "0x54bc85",
+          "target": "0x54bb1d"
+        },
+        {
+          "address": "0x54bca1",
+          "target": "0x54bcac"
+        },
+        {
+          "address": "0x54bcbf",
+          "target": "0x54bd1f"
+        },
+        {
+          "address": "0x54bcec",
+          "target": "0x54bd08"
+        },
+        {
+          "address": "0x54bcf5",
+          "target": "0x54bd08"
+        },
+        {
+          "address": "0x54bd03",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bd0f",
+          "target": "0x54bd1d"
+        },
+        {
+          "address": "0x54bd17",
+          "target": "0x54bd1d"
+        },
+        {
+          "address": "0x54bd1d",
+          "target": "0x54bca3"
+        },
+        {
+          "address": "0x54bd33",
+          "target": "0x54bd3e"
+        },
+        {
+          "address": "0x54bd51",
+          "target": "0x54be0e"
+        },
+        {
+          "address": "0x54bd84",
+          "target": "0x54bda0"
+        },
+        {
+          "address": "0x54bd8d",
+          "target": "0x54bda0"
+        },
+        {
+          "address": "0x54bd9b",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bdaa",
+          "target": "0x54bdb9"
+        },
+        {
+          "address": "0x54bdb3",
+          "target": "0x54bdb9"
+        },
+        {
+          "address": "0x54bdc0",
+          "target": "0x54bdcf"
+        },
+        {
+          "address": "0x54bdc9",
+          "target": "0x54bdcf"
+        },
+        {
+          "address": "0x54bdd9",
+          "target": "0x54bde8"
+        },
+        {
+          "address": "0x54bde2",
+          "target": "0x54bde8"
+        },
+        {
+          "address": "0x54bdef",
+          "target": "0x54be09"
+        },
+        {
+          "address": "0x54bdf7",
+          "target": "0x54be09"
+        },
+        {
+          "address": "0x54be03",
+          "target": "0x54be09"
+        },
+        {
+          "address": "0x54be09",
+          "target": "0x54bd35"
+        },
+        {
+          "address": "0x54be22",
+          "target": "0x54be2d"
+        },
+        {
+          "address": "0x54be40",
+          "target": "0x54beef"
+        },
+        {
+          "address": "0x54be71",
+          "target": "0x54be8d"
+        },
+        {
+          "address": "0x54be7a",
+          "target": "0x54be8d"
+        },
+        {
+          "address": "0x54be88",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54be97",
+          "target": "0x54bea6"
+        },
+        {
+          "address": "0x54bea0",
+          "target": "0x54bea6"
+        },
+        {
+          "address": "0x54bead",
+          "target": "0x54bebc"
+        },
+        {
+          "address": "0x54beb6",
+          "target": "0x54bebc"
+        },
+        {
+          "address": "0x54bec6",
+          "target": "0x54bed5"
+        },
+        {
+          "address": "0x54becf",
+          "target": "0x54bed5"
+        },
+        {
+          "address": "0x54bedc",
+          "target": "0x54beea"
+        },
+        {
+          "address": "0x54bee4",
+          "target": "0x54beea"
+        },
+        {
+          "address": "0x54beea",
+          "target": "0x54be24"
+        },
+        {
+          "address": "0x54bf03",
+          "target": "0x54bf0e"
+        },
+        {
+          "address": "0x54bf21",
+          "target": "0x54bfd0"
+        },
+        {
+          "address": "0x54bf52",
+          "target": "0x54bf6e"
+        },
+        {
+          "address": "0x54bf5b",
+          "target": "0x54bf6e"
+        },
+        {
+          "address": "0x54bf69",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54bf78",
+          "target": "0x54bf87"
+        },
+        {
+          "address": "0x54bf81",
+          "target": "0x54bf87"
+        },
+        {
+          "address": "0x54bf8e",
+          "target": "0x54bf9d"
+        },
+        {
+          "address": "0x54bf97",
+          "target": "0x54bf9d"
+        },
+        {
+          "address": "0x54bfa7",
+          "target": "0x54bfb6"
+        },
+        {
+          "address": "0x54bfb0",
+          "target": "0x54bfb6"
+        },
+        {
+          "address": "0x54bfbd",
+          "target": "0x54bfcb"
+        },
+        {
+          "address": "0x54bfc5",
+          "target": "0x54bfcb"
+        },
+        {
+          "address": "0x54bfcb",
+          "target": "0x54bf05"
+        },
+        {
+          "address": "0x54bfe4",
+          "target": "0x54bfef"
+        },
+        {
+          "address": "0x54c001",
+          "target": "0x54c0b0"
+        },
+        {
+          "address": "0x54c032",
+          "target": "0x54c04e"
+        },
+        {
+          "address": "0x54c03b",
+          "target": "0x54c04e"
+        },
+        {
+          "address": "0x54c049",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54c058",
+          "target": "0x54c067"
+        },
+        {
+          "address": "0x54c061",
+          "target": "0x54c067"
+        },
+        {
+          "address": "0x54c06e",
+          "target": "0x54c07d"
+        },
+        {
+          "address": "0x54c077",
+          "target": "0x54c07d"
+        },
+        {
+          "address": "0x54c087",
+          "target": "0x54c096"
+        },
+        {
+          "address": "0x54c090",
+          "target": "0x54c096"
+        },
+        {
+          "address": "0x54c09d",
+          "target": "0x54c0ab"
+        },
+        {
+          "address": "0x54c0a5",
+          "target": "0x54c0ab"
+        },
+        {
+          "address": "0x54c0ab",
+          "target": "0x54bfe6"
+        },
+        {
+          "address": "0x54c0c7",
+          "target": "0x54c0d2"
+        },
+        {
+          "address": "0x54c0e5",
+          "target": "0x54c17e"
+        },
+        {
+          "address": "0x54c119",
+          "target": "0x54c135"
+        },
+        {
+          "address": "0x54c122",
+          "target": "0x54c135"
+        },
+        {
+          "address": "0x54c130",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54c13c",
+          "target": "0x54c14b"
+        },
+        {
+          "address": "0x54c145",
+          "target": "0x54c14b"
+        },
+        {
+          "address": "0x54c155",
+          "target": "0x54c164"
+        },
+        {
+          "address": "0x54c15e",
+          "target": "0x54c164"
+        },
+        {
+          "address": "0x54c16b",
+          "target": "0x54c179"
+        },
+        {
+          "address": "0x54c173",
+          "target": "0x54c179"
+        },
+        {
+          "address": "0x54c179",
+          "target": "0x54c0c9"
+        },
+        {
+          "address": "0x54c195",
+          "target": "0x54c1a0"
+        },
+        {
+          "address": "0x54c1b3",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54c1e7",
+          "target": "0x54c200"
+        },
+        {
+          "address": "0x54c1f0",
+          "target": "0x54c200"
+        },
+        {
+          "address": "0x54c1fe",
+          "target": "0x54c249"
+        },
+        {
+          "address": "0x54c207",
+          "target": "0x54c216"
+        },
+        {
+          "address": "0x54c210",
+          "target": "0x54c216"
+        },
+        {
+          "address": "0x54c220",
+          "target": "0x54c22f"
+        },
+        {
+          "address": "0x54c229",
+          "target": "0x54c22f"
+        },
+        {
+          "address": "0x54c236",
+          "target": "0x54c244"
+        },
+        {
+          "address": "0x54c23e",
+          "target": "0x54c244"
+        },
+        {
+          "address": "0x54c244",
+          "target": "0x54c197"
+        }
+      ],
+      "direct_calls": [],
+      "virtual_calls": [],
+      "padding": 3,
+      "next_entry": "0x54c250",
+      "local_data": []
+    }
+  ],
+  "reviewed_relocation_fields": 156,
+  "allocation": "original creation case15 allocates3478; current native creation dispatchers retain the same complete allocation/call bytes",
+  "virtual_table": "0x788768"
+}
