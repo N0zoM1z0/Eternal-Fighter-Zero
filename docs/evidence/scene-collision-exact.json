@@ -1,0 +1,538 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 405,
+      "matched_bytes": 405,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 118,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767676; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767694; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 163,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007676A3; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 185,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007676B9; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 200,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007676C8; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 223,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007676DF; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767702; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767720; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 303,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076772F; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 326,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767746; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 341,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767755; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 363,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076776B; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "23c1fa53452cb93ddd0ff353d7571fc7576ff4ab994fafe9f6e0628a9a8ebc70",
+      "target_extent_sha256": "23c1fa53452cb93ddd0ff353d7571fc7576ff4ab994fafe9f6e0628a9a8ebc70",
+      "unit": "scene-battle-transform-pose-box",
+      "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+      "target_address": "0x00767600",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "59a122ae8f468eba0f49e874ca30ce13cbf42143ff55e6bce804c58086b97c04",
+      "source_sha256": "86b86b03475ccb422d28608067fa331d79f66e65e4afeb53c2e14f5d95dde385",
+      "dependencies": {
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "dd560a316a09878ed15bfa546f475dcc5bab10512ec89219f02d337d69c85053",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 390,
+      "matched_bytes": 390,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 82,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007677F2; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767813; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 133,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767825; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 155,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076783B; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 173,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076784D; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767864; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 234,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076788A; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007678AB; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007678BD; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 308,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007678D4; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        },
+        {
+          "offset": 326,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007678E6; original x87 half-pixel bias operand; independently checked 8-byte IEEE double 0.5 payload at 787C50",
+          "addend": 0
+        },
+        {
+          "offset": 348,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 007678FC; accepted compiler floating-to-signed-int helper with live x87 input",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "97b2f0789a3bb64c4452d685a3d5b54f95e1fd0abea76894a0a2af6800c7de8d",
+      "target_extent_sha256": "97b2f0789a3bb64c4452d685a3d5b54f95e1fd0abea76894a0a2af6800c7de8d",
+      "unit": "scene-battle-transform-snapshot-box",
+      "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+      "target_address": "0x007677A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "59a122ae8f468eba0f49e874ca30ce13cbf42143ff55e6bce804c58086b97c04",
+      "source_sha256": "86b86b03475ccb422d28608067fa331d79f66e65e4afeb53c2e14f5d95dde385",
+      "dependencies": {
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "bd3b789da595da2b90c352424a5fa1106334ef6109531a7595fb38343bf3ec49",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 128,
+      "matched_bytes": 128,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "f1c322c553f211c7ae5274ccd596cfc9bd4074610b78889e9c64606cf0ad1f07",
+      "target_extent_sha256": "f1c322c553f211c7ae5274ccd596cfc9bd4074610b78889e9c64606cf0ad1f07",
+      "unit": "scene-battle-boxes-overlap",
+      "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+      "target_address": "0x00767930",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "59a122ae8f468eba0f49e874ca30ce13cbf42143ff55e6bce804c58086b97c04",
+      "source_sha256": "86b86b03475ccb422d28608067fa331d79f66e65e4afeb53c2e14f5d95dde385",
+      "dependencies": {
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "eae7b24adf6055df7ede3c533a94f86c699b8e5c990ca19a226a7e01e08f815a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1456,
+      "matched_bytes": 1456,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 130,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767A32; reviewed Scene3 TransformSnapshotBox, ECX scene, hidden SurfaceRect return pointer, genuine F0-byte snapshot and explicit box pointer; ret 0C",
+          "addend": 0
+        },
+        {
+          "offset": 242,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767AA2; reviewed Scene3 TransformSnapshotBox, ECX scene, hidden SurfaceRect return pointer, genuine F0-byte snapshot and explicit box pointer; ret 0C",
+          "addend": 0
+        },
+        {
+          "offset": 308,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767AE4; reviewed Scene3 TransformSnapshotBox, ECX scene, hidden SurfaceRect return pointer, genuine F0-byte snapshot and explicit box pointer; ret 0C",
+          "addend": 0
+        },
+        {
+          "offset": 428,
+          "target": 4260576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AirActionReady@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767B5C; accepted Secondary AirActionReady, ECX defender receiver and full int result",
+          "addend": 0
+        },
+        {
+          "offset": 554,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767BDA; reviewed Scene3 BoxesOverlap, ECX scene, two const SurfaceRect pointers; signed -1/0 result; ret 08",
+          "addend": 0
+        },
+        {
+          "offset": 691,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767C63; reviewed Scene3 BoxesOverlap, ECX scene, two const SurfaceRect pointers; signed -1/0 result; ret 08",
+          "addend": 0
+        },
+        {
+          "offset": 808,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767CD8; accepted cdecl MakeSurfaceRect with hidden 16-byte return pointer and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1416,
+          "target": 4260080,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00767F38; accepted Secondary GuardInput, ECX defender and pointer to the copied 200-byte attacker frame",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "592df0c87ace829a5f7426202f33f42f7e94aacbe1e58923896bbf867aa0050d",
+      "target_extent_sha256": "592df0c87ace829a5f7426202f33f42f7e94aacbe1e58923896bbf867aa0050d",
+      "unit": "scene-battle-test-body-interaction",
+      "symbol": "?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z",
+      "target_address": "0x007679B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "59a122ae8f468eba0f49e874ca30ce13cbf42143ff55e6bce804c58086b97c04",
+      "source_sha256": "86b86b03475ccb422d28608067fa331d79f66e65e4afeb53c2e14f5d95dde385",
+      "dependencies": {
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fe4341043cbb8e78fe7aaeb1c6b1049bafea8f7411321ee6f35b40a2b7113cc0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1734,
+      "matched_bytes": 1734,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 426,
+          "target": 7764400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076662A; reviewed Scene3 TestBodyInteraction, ECX scene, two complete Secondary pointers and two full snapshot pointers; int result; ret 10",
+          "addend": 0
+        },
+        {
+          "offset": 477,
+          "target": 7764400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076665D; reviewed Scene3 TestBodyInteraction, ECX scene, two complete Secondary pointers and two full snapshot pointers; int result; ret 10",
+          "addend": 0
+        },
+        {
+          "offset": 716,
+          "target": 7781040,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveEffectClash@Scene3@@QAEXPAVSecondary@@0HH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076674C; open effect-clash owner; original call passes ECX scene, two complete Secondary pointers and two signed int indices; full callee body and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 989,
+          "target": 7778448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveEffectPair@Scene3@@QAEXPAVSecondary@@0HH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076685D; open effect-pair owner; original call passes ECX scene, two complete Secondary pointers and two signed int indices; callee operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1034,
+          "target": 7778448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveEffectPair@Scene3@@QAEXPAVSecondary@@0HH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0076688A; open effect-pair owner; original call passes ECX scene, two complete Secondary pointers and two signed int indices; callee operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1232,
+          "target": 7772112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveEffectHit@Scene3@@QAEXPAVSecondary@@0HPAUBattleCollisionSnapshot@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766950; open effect-hit owner; original call passes ECX scene, two complete Secondary pointers, signed int effect index and snapshot pointer; callee operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1284,
+          "target": 7781696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveBodyEffect@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1H@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766984; open body-effect owner; original call passes ECX scene, two complete Secondary pointers, two full snapshot pointers and signed int effect index; callee operands and ret 14 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1443,
+          "target": 7772112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveEffectHit@Scene3@@QAEXPAVSecondary@@0HPAUBattleCollisionSnapshot@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766A23; open effect-hit owner; original call passes ECX scene, two complete Secondary pointers, signed int effect index and snapshot pointer; callee operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1495,
+          "target": 7781696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveBodyEffect@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1H@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766A57; open body-effect owner; original call passes ECX scene, two complete Secondary pointers, two full snapshot pointers and signed int effect index; callee operands and ret 14 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1670,
+          "target": 7765856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveBodyHit@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766B06; open body-hit owner; original call passes ECX scene, two complete Secondary pointers and two snapshot pointers; callee stack operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        },
+        {
+          "offset": 1724,
+          "target": 7765856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolveBodyHit@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 00766B3C; open body-hit owner; original call passes ECX scene, two complete Secondary pointers and two snapshot pointers; callee stack operands and ret 10 reviewed; no implementation credit",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5ddc181f0df6ebe997de05a96e5d8b927f6c5ad9b06f1c8c70884057c06ec4c6",
+      "target_extent_sha256": "5ddc181f0df6ebe997de05a96e5d8b927f6c5ad9b06f1c8c70884057c06ec4c6",
+      "unit": "scene-battle-dispatch-collisions",
+      "symbol": "?DispatchCollisions@Scene3@@QAEXXZ",
+      "target_address": "0x00766480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "59a122ae8f468eba0f49e874ca30ce13cbf42143ff55e6bce804c58086b97c04",
+      "source_sha256": "86b86b03475ccb422d28608067fa331d79f66e65e4afeb53c2e14f5d95dde385",
+      "dependencies": {
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "77d202907f6db27047632916d3d89adb5ec7ec5c0f8ca2a1b6597e1c1eed5ae1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 47 cold source/profile/dependency artifacts cover five new battle collision units and 179 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
+}

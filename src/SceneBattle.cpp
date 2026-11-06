@@ -1,5 +1,5 @@
 // Battle scene fields follow complete target constructor accesses.
-#include "Engine.h"
+#include "SceneBattle.h"
 extern SurfaceRect __cdecl MakeSurfaceRect(int, int, int, int);
 Scene3::Scene3(HWND handle, Secondary **first, Secondary **second, Context *context, Video *video, Input *input, Audio *audio)
 : Scene(handle, first, second, context, video, input, audio)

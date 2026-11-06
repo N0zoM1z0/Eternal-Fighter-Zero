@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 46 cold source/profile/dependency artifacts cover five new battle scene units and 174 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
+  "method": "selected complete contribution comparison; 47 cold source/profile/dependency artifacts cover five new battle collision units and 179 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -53,15 +53,15 @@
       "symbol": "_$E1",
       "target_address": "0x00786460",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "8571709edd421251b5ca5d489a7cf754a137c3b478a5fbf0f0c9f5fda1e8da1c",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "533e8ad2789de8767a8d6f4337f39817696d11daec202377765cdbf373015b8d",
       "source_sha256": "5def88961a5ac8cef0df14c3cc41a9574de2f5340caaac1ae579527c5adb05e3",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "15e9fc1f5796ef1dbcbd3bf325fb8d6016be20f04435a75f3d889650d78bb163",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -99,15 +99,15 @@
       "symbol": "_$E2",
       "target_address": "0x007864A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "8571709edd421251b5ca5d489a7cf754a137c3b478a5fbf0f0c9f5fda1e8da1c",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "533e8ad2789de8767a8d6f4337f39817696d11daec202377765cdbf373015b8d",
       "source_sha256": "5def88961a5ac8cef0df14c3cc41a9574de2f5340caaac1ae579527c5adb05e3",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "efe31ab5dc89f54d91949cbdc1b736adbf17a038e96f1801b33ccd3410306a50",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

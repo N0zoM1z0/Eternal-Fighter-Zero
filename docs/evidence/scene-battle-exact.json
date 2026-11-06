@@ -196,17 +196,18 @@
       "symbol": "??0Scene3@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x007633A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
-      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "8f762299f76a75ecdbdea7403a2541bb4351e903d1e9138d93ef0cafa712f3e8",
+      "source_sha256": "439af665643808b515cb4aec490cc4853333c54d15964ccb93151797a539f7de",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "b5477c71a0457977c1c3c80719092f078b268087801cae76235c5ddfb675b951",
+      "unit_sha256": "334cbdc61cb4bb907f4ca336e8d10a2f0b29057347b400cc08ea3b69f31e1d8d",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -359,17 +360,18 @@
       "symbol": "?UpdateCamera@Scene3@@QAEXXZ",
       "target_address": "0x007647B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
-      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "8f762299f76a75ecdbdea7403a2541bb4351e903d1e9138d93ef0cafa712f3e8",
+      "source_sha256": "439af665643808b515cb4aec490cc4853333c54d15964ccb93151797a539f7de",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "492706a1558812bb53be48c7c0a596bc13ca7240a71b46515ddf405374f22a73",
+      "unit_sha256": "5783710f0462f040b59a1065f732e8cdf89888b7be8f05d46e5457bd4fb2f826",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -405,17 +407,18 @@
       "symbol": "?PlayCharacterSounds@Scene3@@QAEXXZ",
       "target_address": "0x00764DB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
-      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "8f762299f76a75ecdbdea7403a2541bb4351e903d1e9138d93ef0cafa712f3e8",
+      "source_sha256": "439af665643808b515cb4aec490cc4853333c54d15964ccb93151797a539f7de",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "b899630c6c75215d4b527ee7a926f7c0887bc07f70b168e3b2a0c3ab39f548ba",
+      "unit_sha256": "1e5b1ace7a5e89a193997b266c3bb895c4dc16ca03e331846b9e651befe30fb2",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -442,17 +445,18 @@
       "symbol": "?PlayEffectSounds@Scene3@@QAEXXZ",
       "target_address": "0x00764F10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
-      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "8f762299f76a75ecdbdea7403a2541bb4351e903d1e9138d93ef0cafa712f3e8",
+      "source_sha256": "439af665643808b515cb4aec490cc4853333c54d15964ccb93151797a539f7de",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "8647e53f330c8e1f500316aaf909e93aac13ecfcda55157a16f396a8a75fd8ba",
+      "unit_sha256": "323710b2c4094300d9037eaa1e3cffd0ddaaf776d545d134ad7a52b19c50e5ac",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -533,20 +537,21 @@
       "symbol": "?UpdateIntro@Scene3@@QAEXXZ",
       "target_address": "0x00766070",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
-      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
-      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "boundary_ledger_sha256": "0c8976e93f96b5e30e800efc3e63c354ff542f3e7fa4af07ca5a80be854b284f",
+      "object_sha256": "8f762299f76a75ecdbdea7403a2541bb4351e903d1e9138d93ef0cafa712f3e8",
+      "source_sha256": "439af665643808b515cb4aec490cc4853333c54d15964ccb93151797a539f7de",
       "dependencies": {
-        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "18246fa93786ceee79bbc486a72ea967de46954808845cf2fd82fcf2e0416e1d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "units_manifest_sha256": "ab16351a088497edb7c7489e8af604c5930163991d01e993d205616232d9691d",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "1a69af6aab665ac06c6b2a2fb6daa8dc9efd477a755f0af4da10baa90c5d9f2f",
+      "unit_sha256": "96539936a508fb22478c4b65e4b563d8dc9d38774588cd8b044edc0e035a4983",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "method": "selected complete contribution comparison; 46 cold source/profile/dependency artifacts cover five new battle scene units and 174 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
+  "method": "selected complete contribution comparison; 47 cold source/profile/dependency artifacts cover five new battle collision units and 179 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
 }

@@ -19,7 +19,8 @@ followed by Shiori command/state control, meter, initialization/effect ownership
 and the shared facing/grounded locomotion owners, then the complete Shiori
 input-history recognizer and CPU command/movement owner, followed by the complete
 local-effect dispatcher and its shared controls, followed by battle scene
-construction, camera tracking/shake composition, sound consumption and intro events.
+construction, camera tracking/shake composition, sound consumption and intro events,
+then collision dispatch, world-box transforms, overlap and body-contact checks.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -32,10 +33,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 196 |
-| Authored exact instruction bytes | 168,890 |
+| Authored complete exact functions | 201 |
+| Authored exact instruction bytes | 173,003 |
 | Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 234 / 234 |
+| Reviewed boundaries / origins | 239 / 239 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -53,7 +54,42 @@ contribution with its 301 relocations and 36 local offsets intact.
 
 ## Latest exact progress
 
-The latest checkpoint adds five complete Scene3 battle functions: constructor
+The latest checkpoint adds five complete collision members: DispatchCollisions
+0x766480 /1734, TransformPoseBox 0x767600 /405, TransformSnapshotBox 0x7677A0 /390,
+BoxesOverlap 0x767930 /128 and TestBodyInteraction 0x7679B0 /1456. All 4,113 bytes
+and 43 reviewed relocation fields compare strict exact. The transforms keep the
+original explicit box argument, hidden struct return, exact half-pixel bias and
+signed conversions. BoxesOverlap returns -1/0 and includes valid edge contact.
+The real F0-byte snapshot and Scene3 declarations now live in SceneBattle.h;
+Startup.cpp, SceneBattle.cpp and SceneCollision.cpp are its consumers. Their
+14 unit recipes include the new dependency. Engine.h retains a Scene3 forward
+declaration and exposes observed 32-bit Secondary field144 in retained padding.
+Five new and 179 shared-header-dependent existing units compare exact from
+47 serial cold artifacts; all 135 prior local destination/offset bindings are
+checked. Final proof is scene-collision-exact.json; private full reports are
+.analysis/exact/scene-collision-and-affected.json. Only new/affected units and
+focused ledger/progress/whitespace checks ran.
+
+Next continue the substantial hit owners from .analysis/probes/scene-collision/.
+Read its README and actual full instruction dumps before editing. Fresh canonical
+decompiles/full bodies exist for ResolveBodyHit 0x767F60 /6245, ResolveEffectHit
+0x7697D0 /6334, ResolveEffectPair 0x76B090 /2578, ResolveEffectClash 0x76BAB0 /650
+and ResolveBodyEffect 0x76BD40 /2466. Their dispatcher call signatures are reviewed,
+but implementation/origin credit remains open. Compile the first complete source
+early. Batch genuinely used Secondary field refinements for a coherent collision
+owner group; do not speculate on names or sweep flags. Battle-header-only changes
+now involve the 14 Startup/battle/collision units, not the global Engine.h cohort.
+Main battle Step/render/keyboard remain open and should follow callee recovery.
+
+Pushbox resolution 0x766B50 /2727 remains open. Four temporary slots
+EBP-6C/-70/-DC/-E0 each have only two immediate stores and no observed reads;
+Ghidra omits those comparisons/materializations. Do not add dummy Boolean stores
+or accept the shortened C output. The exact inventory is retained in
+.analysis/probes/scene-collision/pushbox-write-only-audit.json. Revisit only with
+a natural-source explanation; no new pushbox source or native trial was added.
+
+
+Checkpoint 1ead791 adds five complete Scene3 battle functions: constructor
 0x7633A0 /2129, UpdateCamera 0x7647B0 /1530, PlayCharacterSounds 0x764DB0 /337,
 PlayEffectSounds 0x764F10 /296 and UpdateIntro 0x766070 /292. All 4,584 instruction
 bytes and 45 explicitly reviewed relocation fields compare strict exact. The
@@ -66,15 +102,10 @@ Proof is scene-battle-exact.json; final private replay is
 .analysis/exact/scene-battle-and-affected.json. Only involved units and focused
 ledger/progress/whitespace checks ran. No full CI or runtime matrix ran.
 
-Next pursue the battle owner from .analysis/probes/scene-battle/. Read its README
-and target-attested decompiles before editing. The complete Step at 0x763C20
-connects the newly accepted helpers to character update, round control and
-collision. Substantial open bodies include collision dispatch 0x766480 /1734,
-pushbox resolution 0x766B50 /2727, hit processing 0x767F60 /6245 and 0x7697D0
-/6334. Inspect real receivers and complete helper signatures before defining new
-methods. The camera and event source can remain accepted while those owners are
-recovered. Scene2 is the random system\nl loading interlude that returns scene
-ID 3, not the battle owner. Its constructor/table/decompiles are retained too.
+The earlier scene entry/camera evidence remains in .analysis/probes/scene-battle/.
+Its complete Step 0x763C20 connects the accepted helpers to character update,
+round control and collision. Scene2 is the random system\nl loading interlude
+that returns scene ID 3; its constructor/table/decompiles remain unimplemented.
 
 The Shiori slot-6 first-divergence audit found no new falsifiable explanation
 from slot-7 operand-order evidence: animation 303's scalar tick increment at

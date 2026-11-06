@@ -245,7 +245,8 @@ public:
     short field013c;
     short field013e;
     short field0140;
-    unsigned char unknown_0142[0x6];
+    unsigned char unknown_0142[2];
+    int field0144;
     short field0148;
     short field014a;
     short field014c;
@@ -640,30 +641,7 @@ public:
     void LoadPlayerPalette(char);
 };
 DECLARE_SCENE(Scene2, 0x438)
-class Scene3 : public Scene {
-    unsigned char unknown_0430[4];
-    int field0434, field0438, field043c;
-    int field0440, field0444, field0448, field044c;
-    int field0450, field0454, field0458, field045c, field0460;
-    SurfaceRect field0464, field0474, field0484, field0494;
-    SurfaceRect field04a4, field04b4, field04c4, field04d4, field04e4;
-    SurfaceRect field04f4, field0504, field0514, field0524, field0534;
-    SurfaceRect field0544, field0554, field0564;
-    short field0574, field0576;
-    unsigned char field0578, unknown_0579[7];
-    double field0580;
-    int field0588, field058c, field0590;
-    unsigned char unknown_0594[4];
-public:
-    Scene3(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
-    virtual void Slot0();
-    virtual unsigned char Step();
-    virtual void PollKeyboard();
-    void UpdateCamera();
-    void PlayCharacterSounds();
-    void PlayEffectSounds();
-    void UpdateIntro();
-};
+class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 DECLARE_SCENE(Scene6, 0x760)
 DECLARE_SCENE(Scene7, 0x448)

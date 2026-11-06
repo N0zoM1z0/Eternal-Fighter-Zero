@@ -2736,3 +2736,132 @@ authored acceptance to **196 functions /168,890 instruction bytes**, plus the
 unchanged 667 local-table bytes. Reviewed boundaries and origins are 234 each.
 The complete battle loop, draw/keyboard entries, collision and round-resolution
 owners remain open; these five functions do not establish a playable battle.
+
+## Battle collision dispatch and world boxes
+
+The battle owner now accepts five more complete Scene3 members, all on the
+canonical target and explicit VC7.1 /Od /G6 /MT /Gy /W3 profile:
+
+| Authored owner | Entry | Complete instruction bytes |
+| --- | --- | ---: |
+| DispatchCollisions | 0x766480 | 1,734 |
+| TransformPoseBox | 0x767600 | 405 |
+| TransformSnapshotBox | 0x7677A0 | 390 |
+| BoxesOverlap | 0x767930 | 128 |
+| TestBodyInteraction | 0x7679B0 | 1,456 |
+
+Full boundary review covers 996 instructions, all 81 direct branches, 35 calls,
+final RETs and following alignment. No local table belongs to these functions.
+All 43 relocation fields were independently checked against original operands:
+35 explicit callees and eight references to the exact double 0.5 at 0x787C50.
+Callee ownership, receiver, stack arguments and result width are separate from
+implementation credit. The large body/effect hit owners remain open even though
+their dispatcher call interfaces are now reviewed.
+
+### Genuine snapshots and calling conventions
+
+BattleCollisionSnapshot is the actual aggregate written by DispatchCollisions
+and consumed by the collision helpers: SecondaryFrame at 0..C7, PatternFrame at
+C8..D3, natural alignment before doubles X/Y at D8/E0, facing byte E8, state byte
+E9 and signed command word EA. Its normal size is F0. The frame contains the five
+body boxes at 0, four attack boxes at 50, special box at 90 and existing numerical
+fields; it is not a fabricated ABI object. The dispatcher copies real 200-byte
+frames and 12-byte image frames, then stores positions and facing independently.
+Only after effect/body passes does it copy the low byte of Secondary field168
+and the word at 16C into each snapshot. The original order and widths are retained.
+Secondary field144 is the observed 32-bit reset field, replacing four of
+the six unknown bytes after 142 while preserving the two-byte 142 region and all
+later offsets.
+
+Both box-transform functions are ordinary Scene3 members. ECX is the scene,
+stack +8 is the hidden SurfaceRect return pointer, +C is the genuine pose or
+snapshot pointer, and +10 is the EXPLICIT source-box pointer; each ends RET 0C.
+Ghidra omitted that box argument and the x87 input values from its C output.
+TransformPoseBox reads the existing SecondaryPose base view, including pattern
+U/V, world X/Y and signed facing; TransformSnapshotBox uses the copied sprite
+and pose. All values and widths are reviewed from instructions rather than the
+incomplete decompiler signatures.
+
+For facing==1, top/bottom are integer conversions of Y-V+sourceTop/Bottom, and
+left/right are conversions of X-0.5-U+sourceLeft/Right. The other branch mirrors
+horizontally: X+0.5+U-sourceRight/Left. Both branches keep the same vertical rule.
+The original half-pixel operand is exactly 0.5; do not assume an epsilon or replace
+the conversion with floor. The nested ordinary scopes retain the live horizontal
+offset, real return rectangle and calculation-only vertical offset without dummy
+locals or injected bytes. Each 3C-byte frame and all eight float-to-int calls are
+part of the complete comparison.
+
+BoxesOverlap rejects nonpositive width/height for either input, then returns
+`~((b.right-a.left)|(a.right-b.left)|(b.bottom-a.top)|(a.bottom-b.top)) >> 31`.
+Its signed result is -1 or 0, not Boolean 1. Edge contact counts when both boxes
+are themselves nonempty. Keep all subtraction/bit operations and the signed
+arithmetic shift; a conventional strict-overlap predicate changes behavior.
+It is a member with two box pointers and RET 08, not an invented free-function ABI.
+
+### Complete dispatch and body-contact test
+
+DispatchCollisions first tests both character directions with TestBodyInteraction
+and clears field144 for both. Its 64-slot local-effect rings retain their signed
+read/write indices, explicit wrap and active checks. Pass order is effect clash,
+bidirectional effect-pair handling, player-1 effects against player 0, player-0
+effects against player 1, then body hit processing in both directions. The last
+calls are suppressed by the opposite initial contact-test result, preserving
+which direction owns each result. All eleven direct calls bind explicitly to
+0x7679B0, 0x76BAB0, 0x76B090, 0x7697D0, 0x76BD40 and 0x767F60. No unimplemented
+callee receives credit through those calls.
+
+TestBodyInteraction copies the two actual SecondaryFrames, transforms four attack
+boxes and five defense boxes, and transforms the defender's special box. It
+retains the original state/flag tests, the accepted AirActionReady call at
+0x4102E0 and GuardInput call at 0x4100F0. The latter can consume random input and
+alter CPU guard direction, so this owner is not a pure geometric predicate.
+The ordinary branch builds a 4x5 overlap matrix. Attack flag 40 instead marks
+only column zero and tests the special box. Other matrix cells are not initialized
+by that path in the original; the subsequent intersection loop is preserved and
+no clearing or failure behavior is added. Its starting rectangle is the genuine
+MakeSurfaceRect(-10000,-10000,20000,20000) result. Return 1 requires the remaining
+defender state, >=30 timer, guard input and attack-flag tests; otherwise return 0.
+
+The source groups real per-pass snapshots, indices/results, frame copies, box
+arrays and intersection state in local C++ work records. Every field is used;
+these records are never passed as invented call ABI objects. Natural scopes
+preserve the standalone loop index and special rectangle, including VC7.1's
+actual aggregate/temporary alignment. Complete comparisons were retained after
+every local-layout change. No explicit padding member, naked code, assembly,
+original byte array, compare-size override or relocation mask is present. One
+draft text edit accidentally qualified a local member declaration; it was fixed
+and the required compiler/Wine execution check passed before final acceptance.
+
+### Focused acceptance and next work
+
+Scene3 and its genuine collision snapshot now live in src/SceneBattle.h, included
+by Startup.cpp, SceneBattle.cpp and SceneCollision.cpp. Engine.h retains only the
+Scene3 forward declaration. The nine existing Startup/battle unit recipes track
+the new header precisely. Future changes confined to this battle declaration can
+therefore select its actual consumer units rather than all Engine.h consumers.
+This one-time shared-header change still receives complete affected comparison.
+
+Five new and 179 Engine.h-dependent existing units compare strict exact from
+47 serial cold source/profile/dependency artifacts. All 135 existing compiler-local
+destination/offset bindings are checked before receipt finalization. Uninvolved
+standalone Input, reader and configuration units remain outside this replay.
+Focused ledger/progress and whitespace checks pass; no full CI, runtime matrix or
+unrequested full cohort ran. New source is src/SceneCollision.cpp and public proof
+is docs/evidence/scene-collision-exact.json, with affected certificates refreshed.
+Private evidence and native attempts are retained in .analysis/probes/scene-collision/;
+full formal reports are .analysis/exact/scene-collision-and-affected.json.
+
+The 0x766B50 /2727 pushbox owner stays open. Its complete instruction inventory
+finds four Boolean temporary slots (EBP-6C/-70/-DC/-E0) with two immediate stores
+each and no observed reads. Ghidra omits these comparisons/materializations.
+The private audit records their exact sites; do not add dummy stores or accept
+the decompiler's shorter semantics. Revisit with a natural source explanation.
+The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
+0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
+canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
+remain implementation work, along with the main battle update/draw/keyboard.
+
+This checkpoint adds **5 complete functions /4,113 instruction bytes**, for
+**201 authored functions /173,003 instruction bytes**, plus unchanged 667 local-table
+bytes. Reviewed boundaries/origins are 239 each. Complete game, linked resources,
+original/reconstructed runtime and portability remain independently open phases.

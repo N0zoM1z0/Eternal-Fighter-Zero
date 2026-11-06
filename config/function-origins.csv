@@ -582,12 +582,12 @@ address,origin,status,evidence
 0x00765FA0,unknown,unreviewed,
 0x00766070,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x007661A0,unknown,unreviewed,
-0x00766480,unknown,unreviewed,
+0x00766480,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00766B50,unknown,unreviewed,
-0x00767600,unknown,unreviewed,
-0x007677A0,unknown,unreviewed,
-0x00767930,unknown,unreviewed,
-0x007679B0,unknown,unreviewed,
+0x00767600,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x007677A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x00767930,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x007679B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767F60,unknown,unreviewed,
 0x007697D0,unknown,unreviewed,
 0x0076B090,unknown,unreviewed,

@@ -233,3 +233,8 @@ address,end,size,status,evidence
 0x00764DB0,0x00764F01,337,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x00764F10,0x00765038,296,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x00766070,0x00766194,292,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
+0x00767600,0x00767795,405,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x007677A0,0x00767926,390,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x00767930,0x007679B0,128,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x007679B0,0x00767F60,1456,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
+0x00766480,0x00766B46,1734,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes

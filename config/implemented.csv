@@ -195,3 +195,8 @@ address,name,source,symbol,status,evidence
 0x00764DB0,?PlayCharacterSounds@Scene3@@QAEXXZ,src/SceneBattle.cpp,?PlayCharacterSounds@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
 0x00764F10,?PlayEffectSounds@Scene3@@QAEXXZ,src/SceneBattle.cpp,?PlayEffectSounds@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
 0x00766070,?UpdateIntro@Scene3@@QAEXXZ,src/SceneBattle.cpp,?UpdateIntro@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
+0x00767600,?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z,src/SceneCollision.cpp,?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z,complete,docs/evidence/scene-collision-exact.json
+0x007677A0,?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z,src/SceneCollision.cpp,?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z,complete,docs/evidence/scene-collision-exact.json
+0x00767930,?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z,src/SceneCollision.cpp,?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z,complete,docs/evidence/scene-collision-exact.json
+0x007679B0,?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z,src/SceneCollision.cpp,?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z,complete,docs/evidence/scene-collision-exact.json
+0x00766480,?DispatchCollisions@Scene3@@QAEXXZ,src/SceneCollision.cpp,?DispatchCollisions@Scene3@@QAEXXZ,complete,docs/evidence/scene-collision-exact.json

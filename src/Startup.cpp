@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <ctime>
 
-#include "Engine.h"
+#include "SceneBattle.h"
 
 extern Video video;
 extern Input input;
