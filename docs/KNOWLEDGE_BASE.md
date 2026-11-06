@@ -3661,3 +3661,81 @@ preparation behavior and disabled BMP branch are retained privately. The
 confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division is
 by 1.5f. These correct the decompiler's lost constant types and initial guesses.
 Read `.analysis/probes/scene-loading/README.md` and parked-best before resuming.
+
+## Animated background owners
+
+The four animated background owners used by stages 1, 10, 12 and 16 now have
+complete constructors, destructors, Update and Render bodies in
+`src/Backgrounds.cpp`. Shared image/pattern loaders are complete in
+`src/BackgroundResources.cpp`; `src/Backgrounds.h` records the target-bound
+28-byte object layout. Eighteen authored functions add 9,248 instruction bytes
+and the complete 16-byte stage16 Update address table. Two compiler-generated
+auxiliaries (implicit abstract-base constructor /23 and PatternSequence scalar
+-deleting destructor /44) are independently exact and excluded from authored
+progress. Public proof: `docs/evidence/backgrounds-exact.json`.
+
+| Owner | Constructor | Destructor | Update | Render |
+| --- | --- | --- | --- | --- |
+| Background01 | 751370 /390 | 751500 /194 | 7515D0 /337 | 751730 /694 |
+| Background10 | 751A40 /384 | 751BC0 /194 | 751C90 /337 | 751DF0 /693 |
+| Background12 | 7520B0 /394 | 752240 /194 | 752310 /347 | 752470 /1168 |
+| Background16 | 752900 /393 | 752A90 /194 | 752B60 /588+16 | 752DC0 /1170 |
+
+LoadImages is 750D30 /757; LoadPatterns is 751030 /820. Complete independent
+boundary/operand review covers all twenty contributions: 2,929 instructions,
+151 internal direct branches, one computed jump, 148 direct calls, eight actual
+COM/IAT calls, all 216 relocation fields, and following CC alignment. Stage16
+Update ends code at752DAC, followed by four reviewed table destinations through
+752DBC. The Ghidra code-only /588 candidate is not the complete contribution.
+
+The two actual virtual slots are Update and Render(int,int,char). Render's
+layer argument is signed, while EffectSlot.layer is unsigned. The common fields
+are signed stage /last-surface at4/6, Video* at8, surface array atC, EffectSlot*
+at10, PatternSequence* at14 and unsigned color key at18. The base implicit
+constructor installs the pure-call table7890B8; concrete tables are7890B0,
+7890C0,7890C8,7890D0. No global table/data implementation credit is implied.
+SceneBattleLoop now includes this shared declaration; its six actual accepted
+source consumers all remained completely exact. Engine.h is unchanged.
+
+Constructor surface counts are58/5/2/4 and active-effect counts2/1/2/4.
+Effects start at x=0,y=-450, with frame/tick0, flag0048=1 and blend group2.
+Layer values are respectively0,1,1-i,i>1. Image/pattern loading occurs before
+these effect writes. Both animation updates for stages1 and10 retain switch
+cases0 and1 even though stage10 has one active effect. Every Update reads actual
+pattern duration/count metadata before dispatch, including the scrolling-only
+owners. The two metadata words, and the pattern loader's stored serialized ID,
+are original disk/memory reads; they are not invented initialized temporaries.
+
+Stage12 deliberately falls through from type0 (advance0.5 and wrap at640) to
+type1 (advance0.25 and wrap at640), so type0 advances twice. Stage16 types0..2
+advance1.0/1.4/1.8 and subtract widths850/806/789 after the threshold. Type3
+advances2.2 and clamps to947 instead of wrapping. Render01 returns for layer1;
+Render10 returns for layer0. Render12/16 skip mismatching effect layers and
+render a repeated rectangle displaced by640 or the current frame width.
+All renderers preserve signed mirroring and blend-group >0 branch order,
+original integer truncation, coordinate arithmetic and local frame copies.
+
+Image loading retains the enabled packed-data branch and full disabled BMP
+alternative. Paths are system\bg\bgNN\NNN.dat or .bmp, with independent original
+prefix/separator literals. The loader processes indices0 through lastSurface,
+reads whole files with the original unchecked WINAPI calls and decodes from
+buffer + buffer[0]*3+1. Color key comes from surfaces[0]. Pattern paths use
+system\bg\bgNN\bgNN.pat. It reads a count, allocates new PatternSequence[count],
+reads/stores a serialized pattern ID then discards two words, narrows the frame
+count to a byte, allocates frames using a separate int copy, then reads frame
+fields in duration/texture/width/height/u/v order. Each frame then discards
+fourteen ints and ten16-byte records. Retain exact narrowing, read order and
+loop bounds; conventional format cleanup changes bytes and behavior.
+
+Original ownership bugs remain: constructors allocate PatternSequence arrays
+before LoadPatterns allocates a replacement, and destructors use scalar delete
+on that pointer. The scalar-deleting helper at751A10 calls the original
+PatternSequence destructor and optional operator delete; it is not a vector
+-deleting helper. No runtime repair is part of this exact reconstruction.
+
+Final public sources and their six affected battle consumers passed all26
+complete strict comparisons from only three serial cold artifacts. All five
+local address/table bindings were independently checked before symbol-name
+refresh. Public certificates and per-unit dependencies were refreshed only for
+this selection. No full CI/cohort or runtime matrix ran. Private decompiles,
+full disassembly, attempts and reviews live in `.analysis/probes/backgrounds/`.

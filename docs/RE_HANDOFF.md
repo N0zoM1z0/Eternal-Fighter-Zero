@@ -21,11 +21,11 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 228 |
-| Authored exact instruction bytes | 226,419 |
-| Associated exact local-table bytes | 767 |
-| Reviewed boundaries / origins | 266 / 266 |
-| Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
+| Authored complete exact functions | 246 |
+| Authored exact instruction bytes | 235,667 |
+| Associated exact local-table bytes | 783 |
+| Reviewed boundaries / origins | 286 / 286 |
+| Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
 
@@ -43,7 +43,41 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest loading checkpoint
+## Latest background checkpoint
+
+All four animated background owners for stages1/10/12/16 now have complete
+constructors, destructors, Update and Render implementations, plus both shared
+resource loaders. Eighteen authored functions add9,248 instruction bytes and
+16 local address-table bytes. The implicit abstract-base constructor /23 and
+PatternSequence scalar-deleting helper /44 are auxiliary, without authored credit.
+Source: src/Backgrounds.h, src/Backgrounds.cpp, src/BackgroundResources.cpp.
+SceneBattleLoop now includes the real shared two-slot/28-byte declaration;
+Engine.h and the other existing source owners are unchanged.
+
+Public proof: docs/evidence/backgrounds-exact.json; target findings:
+[Animated background owners](KNOWLEDGE_BASE.md#animated-background-owners).
+Private full attempts, target dumps and reviews: .analysis/probes/backgrounds/README.md.
+Final20 new and six actual SceneBattleLoop source consumers passed all26
+complete strict comparisons from only three serial cold artifacts. All five
+local table/destination bindings were independently checked before symbol-name
+refresh. Tracking, ledger/progress CI and diff whitespace checks passed.
+No whole cohort or runtime matrix ran.
+
+Preserve the signed Render layer byte, stage01/10 different early returns,
+stage12 switch fallthrough, stage16 type3 clamp to947, unconditional metadata
+reads and full disabled BMP branch. The constructor's initial patterns array
+is overwritten by LoadPatterns; the destructor uses scalar delete on the final
+array pointer. These original behaviors are preserved, with no runtime repair.
+Background16::Update is complete604 bytes (588 code +16 table), end752DBC.
+The base implicit constructor has only a vptr store and receives auxiliary
+compiler-generated origin rather than authored progress credit.
+
+PrepareBattle remains open. This checkpoint supplies real background layout,
+implicit-base and ownership evidence; any resumed experiment must make a
+specific prediction from that evidence, not repeat its parked pointer/case controls.
+Read both the background and scene-loading private READMEs before reuse.
+
+## Previous loading checkpoint
 
 Seven new complete authored functions add 3,779 instruction bytes and100 local
 address-table bytes: Scene2 constructor76C6F0/74, destructor76C740/69,
@@ -162,8 +196,9 @@ because its callers or declarations match.
   allocation and 23-table evidence: .analysis/probes/character-create/.
   Other substantial character behavior remains available for recovery.
 - Scene2 interlude and creation dispatcher are accepted, while PrepareBattle
-  remains open as described above. Scene6 and concrete background owners remain
-  possible follow-ups; their declarations/callers give no implementation credit.
+  remains open as described above. Scene6 and other character behaviors remain
+  possible follow-ups; the four concrete background owners listed above are now
+  accepted, while unrelated owners still need their own complete proof.
 - DrawSurface409A90, blended40A0B0 and kernel40A440 have reviewed body-local
   ESI/EDI saves and AH/AL pixel loops consistent with handwritten assembly.
   No permitted natural-C++ exact strategy is established. Read

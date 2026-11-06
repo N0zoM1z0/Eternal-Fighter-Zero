@@ -23564,7 +23564,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-step/SceneBattleLoop.obj"
 symbol = "?Step@Scene3@@UAEEXZ"
 target_address = 0x00763c20
@@ -23812,7 +23812,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-update-round/SceneBattleLoop.obj"
 symbol = "?UpdateRound@Scene3@@QAEXXZ"
 target_address = 0x00765040
@@ -23899,7 +23899,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-update-round-exit/SceneBattleLoop.obj"
 symbol = "?UpdateRoundExit@Scene3@@QAEHXZ"
 target_address = 0x00765fa0
@@ -23979,7 +23979,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-render/SceneBattleLoop.obj"
 symbol = "?Slot0@Scene3@@UAEXXZ"
 target_address = 0x007642a0
@@ -24227,7 +24227,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-clip-frame/SceneBattleLoop.obj"
 symbol = "?ClipFrame@Scene3@@QAEXXZ"
 target_address = 0x007631f0
@@ -24293,7 +24293,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneBattleLoop.cpp"
-dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/Backgrounds.h"]
 object = "build/match-units/scene-battle-render-background/SceneBattleLoop.obj"
 symbol = "?RenderBackground@Scene3@@QAEXXZ"
 target_address = 0x0075dd50
@@ -27374,3 +27374,1722 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 004F8342; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination"
+
+[units.background-base-ctor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-base-ctor/Backgrounds.obj"
+symbol = "??0BattleBackground@@QAE@XZ"
+target_address = 0x007519F0
+size = 23
+
+[[units.background-base-ctor.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7BattleBackground@@6B@"
+target = 0x007890B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007519FC; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[units.background-01-ctor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-01-ctor/Backgrounds.obj"
+symbol = "??0Background01@@QAE@PAVVideo@@@Z"
+target_address = 0x00751370
+size = 390
+
+[[units.background-01-ctor.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0BattleBackground@@QAE@XZ"
+target = 0x007519F0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075137D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 22
+type = "DIR32"
+symbol = "??_7Background01@@6B@"
+target = 0x007890B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751386; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-01-ctor.relocations]]
+offset = 59
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513AB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 84
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513C4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 106
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513DA; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 132
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513F4; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-01-ctor.relocations]]
+offset = 148
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751404; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 183
+type = "REL32"
+symbol = "?LoadImages@BattleBackground@@QAEXXZ"
+target = 0x00750D30
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751427; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 191
+type = "REL32"
+symbol = "?LoadPatterns@BattleBackground@@QAEXXZ"
+target = 0x00751030
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075142F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-ctor.relocations]]
+offset = 257
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751471; independently checked original IEEE double payload 0000000000000000"
+
+[[units.background-01-ctor.relocations]]
+offset = 279
+type = "DIR32"
+symbol = "__real@c07c200000000000"
+target = 0x007890A8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751487; independently checked original IEEE double payload 0000000000207cc0"
+
+[units.background-01-dtor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-01-dtor/Backgrounds.obj"
+symbol = "??1Background01@@QAE@XZ"
+target_address = 0x00751500
+size = 194
+
+[[units.background-01-dtor.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "??_7Background01@@6B@"
+target = 0x007890B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075150E; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-01-dtor.relocations]]
+offset = 119
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751577; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-dtor.relocations]]
+offset = 140
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075158C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-dtor.relocations]]
+offset = 174
+type = "REL32"
+symbol = "??_GPatternSequence@@QAEPAXI@Z"
+target = 0x00751A10
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007515AE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-01-update]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-01-update/Backgrounds.obj"
+symbol = "?Update@Background01@@UAEXXZ"
+target_address = 0x007515D0
+size = 337
+
+[units.background-01-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-01-render/Backgrounds.obj"
+symbol = "?Render@Background01@@UAEXHHD@Z"
+target_address = 0x00751730
+size = 694
+
+[[units.background-01-render.relocations]]
+offset = 136
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007517B8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 229
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751815; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 268
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075183C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 330
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075187A; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 363
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075189B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 562
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751962; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-01-render.relocations]]
+offset = 678
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007519D6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-10-ctor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-10-ctor/Backgrounds.obj"
+symbol = "??0Background10@@QAE@PAVVideo@@@Z"
+target_address = 0x00751A40
+size = 384
+
+[[units.background-10-ctor.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0BattleBackground@@QAE@XZ"
+target = 0x007519F0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A4D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 22
+type = "DIR32"
+symbol = "??_7Background10@@6B@"
+target = 0x007890C0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A56; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-10-ctor.relocations]]
+offset = 56
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A78; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 78
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A8E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 100
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AA4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 126
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ABE; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-10-ctor.relocations]]
+offset = 142
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ACE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 177
+type = "REL32"
+symbol = "?LoadImages@BattleBackground@@QAEXXZ"
+target = 0x00750D30
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AF1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 185
+type = "REL32"
+symbol = "?LoadPatterns@BattleBackground@@QAEXXZ"
+target = 0x00751030
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AF9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-ctor.relocations]]
+offset = 251
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751B3B; independently checked original IEEE double payload 0000000000000000"
+
+[[units.background-10-ctor.relocations]]
+offset = 273
+type = "DIR32"
+symbol = "__real@c07c200000000000"
+target = 0x007890A8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751B51; independently checked original IEEE double payload 0000000000207cc0"
+
+[units.background-10-dtor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-10-dtor/Backgrounds.obj"
+symbol = "??1Background10@@QAE@XZ"
+target_address = 0x00751BC0
+size = 194
+
+[[units.background-10-dtor.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "??_7Background10@@6B@"
+target = 0x007890C0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751BCE; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-10-dtor.relocations]]
+offset = 119
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C37; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-dtor.relocations]]
+offset = 140
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C4C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-dtor.relocations]]
+offset = 174
+type = "REL32"
+symbol = "??_GPatternSequence@@QAEPAXI@Z"
+target = 0x00751A10
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C6E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-10-update]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-10-update/Backgrounds.obj"
+symbol = "?Update@Background10@@UAEXXZ"
+target_address = 0x00751C90
+size = 337
+
+[units.background-10-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-10-render/Backgrounds.obj"
+symbol = "?Render@Background10@@UAEXHHD@Z"
+target_address = 0x00751DF0
+size = 693
+
+[[units.background-10-render.relocations]]
+offset = 135
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751E77; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 228
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ED4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 267
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751EFB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 329
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751F39; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 362
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751F5A; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 561
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752021; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-10-render.relocations]]
+offset = 677
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752095; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-12-ctor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-12-ctor/Backgrounds.obj"
+symbol = "??0Background12@@QAE@PAVVideo@@@Z"
+target_address = 0x007520B0
+size = 394
+
+[[units.background-12-ctor.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0BattleBackground@@QAE@XZ"
+target = 0x007519F0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520BD; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 22
+type = "DIR32"
+symbol = "??_7Background12@@6B@"
+target = 0x007890C8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520C6; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-12-ctor.relocations]]
+offset = 56
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520E8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 81
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752101; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 103
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752117; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 129
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752131; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-12-ctor.relocations]]
+offset = 145
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752141; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 180
+type = "REL32"
+symbol = "?LoadImages@BattleBackground@@QAEXXZ"
+target = 0x00750D30
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752164; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 188
+type = "REL32"
+symbol = "?LoadPatterns@BattleBackground@@QAEXXZ"
+target = 0x00751030
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075216C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-ctor.relocations]]
+offset = 254
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007521AE; independently checked original IEEE double payload 0000000000000000"
+
+[[units.background-12-ctor.relocations]]
+offset = 276
+type = "DIR32"
+symbol = "__real@c07c200000000000"
+target = 0x007890A8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007521C4; independently checked original IEEE double payload 0000000000207cc0"
+
+[units.background-12-dtor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-12-dtor/Backgrounds.obj"
+symbol = "??1Background12@@QAE@XZ"
+target_address = 0x00752240
+size = 194
+
+[[units.background-12-dtor.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "??_7Background12@@6B@"
+target = 0x007890C8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075224E; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-12-dtor.relocations]]
+offset = 119
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522B7; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-dtor.relocations]]
+offset = 140
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522CC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-dtor.relocations]]
+offset = 174
+type = "REL32"
+symbol = "??_GPatternSequence@@QAEPAXI@Z"
+target = 0x00751A10
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522EE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-12-update]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-12-update/Backgrounds.obj"
+symbol = "?Update@Background12@@UAEXXZ"
+target_address = 0x00752310
+size = 347
+
+[[units.background-12-update.relocations]]
+offset = 177
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007523C1; independently checked original IEEE double payload 000000000000e03f"
+
+[[units.background-12-update.relocations]]
+offset = 215
+type = "DIR32"
+symbol = "__real@4084000000000000"
+target = 0x007885C0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007523E7; independently checked original IEEE double payload 0000000000008440"
+
+[[units.background-12-update.relocations]]
+offset = 240
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752400; independently checked original IEEE double payload 0000000000000000"
+
+[[units.background-12-update.relocations]]
+offset = 266
+type = "DIR32"
+symbol = "__real@3fd0000000000000"
+target = 0x00787D28
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075241A; independently checked original IEEE double payload 000000000000d03f"
+
+[[units.background-12-update.relocations]]
+offset = 304
+type = "DIR32"
+symbol = "__real@4084000000000000"
+target = 0x007885C0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752440; independently checked original IEEE double payload 0000000000008440"
+
+[[units.background-12-update.relocations]]
+offset = 329
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752459; independently checked original IEEE double payload 0000000000000000"
+
+[units.background-12-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-12-render/Backgrounds.obj"
+symbol = "?Render@Background12@@UAEXHHD@Z"
+target_address = 0x00752470
+size = 1168
+
+[[units.background-12-render.relocations]]
+offset = 149
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752505; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 246
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752566; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 285
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075258D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 345
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007525C9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 389
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007525F5; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 454
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752636; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 487
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752657; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 547
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752693; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 585
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007526B9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 784
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752780; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 919
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752807; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 1038
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075287E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-12-render.relocations]]
+offset = 1152
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007528F0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-16-ctor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-16-ctor/Backgrounds.obj"
+symbol = "??0Background16@@QAE@PAVVideo@@@Z"
+target_address = 0x00752900
+size = 393
+
+[[units.background-16-ctor.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0BattleBackground@@QAE@XZ"
+target = 0x007519F0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075290D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 22
+type = "DIR32"
+symbol = "??_7Background16@@6B@"
+target = 0x007890D0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752916; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-16-ctor.relocations]]
+offset = 56
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752938; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 81
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752951; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 103
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752967; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 129
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752981; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-16-ctor.relocations]]
+offset = 145
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752991; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 180
+type = "REL32"
+symbol = "?LoadImages@BattleBackground@@QAEXXZ"
+target = 0x00750D30
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529B4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 188
+type = "REL32"
+symbol = "?LoadPatterns@BattleBackground@@QAEXXZ"
+target = 0x00751030
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529BC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-ctor.relocations]]
+offset = 254
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529FE; independently checked original IEEE double payload 0000000000000000"
+
+[[units.background-16-ctor.relocations]]
+offset = 276
+type = "DIR32"
+symbol = "__real@c07c200000000000"
+target = 0x007890A8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752A14; independently checked original IEEE double payload 0000000000207cc0"
+
+[units.background-16-dtor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-16-dtor/Backgrounds.obj"
+symbol = "??1Background16@@QAE@XZ"
+target_address = 0x00752A90
+size = 194
+
+[[units.background-16-dtor.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "??_7Background16@@6B@"
+target = 0x007890D0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752A9E; independently reviewed original two-slot virtual table and base purecall destinations"
+
+[[units.background-16-dtor.relocations]]
+offset = 119
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B07; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-dtor.relocations]]
+offset = 140
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B1C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-dtor.relocations]]
+offset = 174
+type = "REL32"
+symbol = "??_GPatternSequence@@QAEPAXI@Z"
+target = 0x00751A10
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B3E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-16-update]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-16-update/Backgrounds.obj"
+symbol = "?Update@Background16@@UAEXXZ"
+target_address = 0x00752B60
+size = 604
+code_size = 588
+
+[[units.background-16-update.local_data]]
+offset = 588
+size = 16
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; complete four-entry original table at752DAC through752DBC"
+
+[[units.background-16-update.relocations]]
+offset = 158
+type = "DIR32"
+symbol = "$L61814"
+target = 0x00752DAC
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752BFE; reviewed four-way table/branch destination and independent COFF local offset"
+
+[[units.background-16-update.relocations]]
+offset = 180
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C14; independently checked original IEEE double payload 000000000000f03f"
+
+[[units.background-16-update.relocations]]
+offset = 218
+type = "DIR32"
+symbol = "__real@408a900000000000"
+target = 0x00788CB8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C3A; independently checked original IEEE double payload 0000000000908a40"
+
+[[units.background-16-update.relocations]]
+offset = 247
+type = "DIR32"
+symbol = "__real@408a900000000000"
+target = 0x00788CB8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C57; independently checked original IEEE double payload 0000000000908a40"
+
+[[units.background-16-update.relocations]]
+offset = 290
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787F18
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C82; independently checked original IEEE double payload 666666666666f63f"
+
+[[units.background-16-update.relocations]]
+offset = 328
+type = "DIR32"
+symbol = "__real@4089300000000000"
+target = 0x007890E8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CA8; independently checked original IEEE double payload 0000000000308940"
+
+[[units.background-16-update.relocations]]
+offset = 357
+type = "DIR32"
+symbol = "__real@4089300000000000"
+target = 0x007890E8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CC5; independently checked original IEEE double payload 0000000000308940"
+
+[[units.background-16-update.relocations]]
+offset = 400
+type = "DIR32"
+symbol = "__real@3ffccccccccccccd"
+target = 0x007880A8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CF0; independently checked original IEEE double payload cdccccccccccfc3f"
+
+[[units.background-16-update.relocations]]
+offset = 438
+type = "DIR32"
+symbol = "__real@4088a80000000000"
+target = 0x007890E0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D16; independently checked original IEEE double payload 0000000000a88840"
+
+[[units.background-16-update.relocations]]
+offset = 467
+type = "DIR32"
+symbol = "__real@4088a80000000000"
+target = 0x007890E0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D33; independently checked original IEEE double payload 0000000000a88840"
+
+[[units.background-16-update.relocations]]
+offset = 507
+type = "DIR32"
+symbol = "__real@400199999999999a"
+target = 0x00787D20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D5B; independently checked original IEEE double payload 9a99999999990140"
+
+[[units.background-16-update.relocations]]
+offset = 545
+type = "DIR32"
+symbol = "__real@408d980000000000"
+target = 0x007890D8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D81; independently checked original IEEE double payload 0000000000988d40"
+
+[[units.background-16-update.relocations]]
+offset = 570
+type = "DIR32"
+symbol = "__real@408d980000000000"
+target = 0x007890D8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D9A; independently checked original IEEE double payload 0000000000988d40"
+
+[[units.background-16-update.relocations]]
+offset = 588
+type = "DIR32"
+symbol = "$L61645"
+target = 0x00752C02
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DAC; reviewed four-way table/branch destination and independent COFF local offset"
+
+[[units.background-16-update.relocations]]
+offset = 592
+type = "DIR32"
+symbol = "$L61647"
+target = 0x00752C70
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB0; reviewed four-way table/branch destination and independent COFF local offset"
+
+[[units.background-16-update.relocations]]
+offset = 596
+type = "DIR32"
+symbol = "$L61649"
+target = 0x00752CDE
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB4; reviewed four-way table/branch destination and independent COFF local offset"
+
+[[units.background-16-update.relocations]]
+offset = 600
+type = "DIR32"
+symbol = "$L61651"
+target = 0x00752D49
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB8; reviewed four-way table/branch destination and independent COFF local offset"
+
+[units.background-16-render]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-16-render/Backgrounds.obj"
+symbol = "?Render@Background16@@UAEXHHD@Z"
+target_address = 0x00752DC0
+size = 1170
+
+[[units.background-16-render.relocations]]
+offset = 149
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752E55; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 246
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752EB6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 285
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752EDD; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 345
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F19; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 390
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F46; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 455
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F87; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 488
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752FA8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 548
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752FE4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 587
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075300B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 786
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007530D2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 921
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040A0B0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00753159; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 1040
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007531D0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-16-render.relocations]]
+offset = 1154
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00753242; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-load-images]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/BackgroundResources.cpp"
+dependencies = ["src/PatternReader.h", "src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-load-images/BackgroundResources.obj"
+symbol = "?LoadImages@BattleBackground@@QAEXXZ"
+target_address = 0x00750D30
+size = 757
+
+[[units.background-load-images.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078F050
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D37; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-images.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "?bgImagePrefix@@3QBDB"
+target = 0x00789008
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D7D; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700"
+
+[[units.background-load-images.relocations]]
+offset = 86
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D86; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 96
+type = "DIR32"
+symbol = "?bgImagePrefixZero@@3QBDB"
+target = 0x00789018
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D90; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000"
+
+[[units.background-load-images.relocations]]
+offset = 105
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D99; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 127
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DAF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 143
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DBF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 157
+type = "DIR32"
+symbol = "?bgImageSeparator@@3QBDB"
+target = 0x00789028
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DCD; independently reviewed original NUL-terminated path literal 5c00"
+
+[[units.background-load-images.relocations]]
+offset = 166
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DD6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 182
+type = "DIR32"
+symbol = "?bgImageSeparatorZero@@3QBDB"
+target = 0x0078902C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DE6; independently reviewed original NUL-terminated path literal 5c3000"
+
+[[units.background-load-images.relocations]]
+offset = 191
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DEF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 201
+type = "DIR32"
+symbol = "?bgImageSeparatorTwoZeros@@3QBDB"
+target = 0x00789030
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DF9; independently reviewed original NUL-terminated path literal 5c303000"
+
+[[units.background-load-images.relocations]]
+offset = 210
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E02; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 228
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E14; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 244
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E24; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 252
+type = "DIR32"
+symbol = "?bgImageDat@@3QBDB"
+target = 0x00789034
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E2C; independently reviewed original NUL-terminated path literal 2e64617400"
+
+[[units.background-load-images.relocations]]
+offset = 261
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E35; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 292
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E54; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-images.relocations]]
+offset = 307
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E63; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-images.relocations]]
+offset = 319
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E6F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 355
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E93; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-images.relocations]]
+offset = 400
+type = "REL32"
+symbol = "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target = 0x00409470
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750EC0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 410
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750ECA; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-images.relocations]]
+offset = 425
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750ED9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 489
+type = "DIR32"
+symbol = "?bgBitmapPrefix@@3QBDB"
+target = 0x0078903C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F19; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700"
+
+[[units.background-load-images.relocations]]
+offset = 498
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F22; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 508
+type = "DIR32"
+symbol = "?bgBitmapPrefixZero@@3QBDB"
+target = 0x0078904C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F2C; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000"
+
+[[units.background-load-images.relocations]]
+offset = 517
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F35; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 539
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F4B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 555
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F5B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 569
+type = "DIR32"
+symbol = "?bgBitmapSeparator@@3QBDB"
+target = 0x0078905C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F69; independently reviewed original NUL-terminated path literal 5c00"
+
+[[units.background-load-images.relocations]]
+offset = 578
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F72; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 594
+type = "DIR32"
+symbol = "?bgBitmapSeparatorZero@@3QBDB"
+target = 0x00789060
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F82; independently reviewed original NUL-terminated path literal 5c3000"
+
+[[units.background-load-images.relocations]]
+offset = 603
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F8B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 613
+type = "DIR32"
+symbol = "?bgBitmapSeparatorTwoZeros@@3QBDB"
+target = 0x00789064
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F95; independently reviewed original NUL-terminated path literal 5c303000"
+
+[[units.background-load-images.relocations]]
+offset = 622
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F9E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 640
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FB0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 656
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FC0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 664
+type = "DIR32"
+symbol = "?bgBitmapExtension@@3QBDB"
+target = 0x00789068
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FC8; independently reviewed original NUL-terminated path literal 2e626d7000"
+
+[[units.background-load-images.relocations]]
+offset = 673
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FD1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 710
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408D00
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FF6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 735
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040BCC0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075100F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-images.relocations]]
+offset = 749
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781DC
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075101D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-load-patterns]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/BackgroundResources.cpp"
+dependencies = ["src/PatternReader.h", "src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-load-patterns/BackgroundResources.obj"
+symbol = "?LoadPatterns@BattleBackground@@QAEXXZ"
+target_address = 0x00751030
+size = 820
+
+[[units.background-load-patterns.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078F050
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751037; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-patterns.relocations]]
+offset = 31
+type = "DIR32"
+symbol = "?bgPatternPrefix@@3QBDB"
+target = 0x00789070
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075104F; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700"
+
+[[units.background-load-patterns.relocations]]
+offset = 40
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751058; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "?bgPatternPrefixZero@@3QBDB"
+target = 0x00789080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751062; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000"
+
+[[units.background-load-patterns.relocations]]
+offset = 59
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075106B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 81
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751081; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 97
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751091; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 117
+type = "DIR32"
+symbol = "?bgPatternSeparator@@3QBDB"
+target = 0x00789090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510A5; independently reviewed original NUL-terminated path literal 5c626700"
+
+[[units.background-load-patterns.relocations]]
+offset = 126
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510AE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "?bgPatternSeparatorZero@@3QBDB"
+target = 0x00789094
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510B8; independently reviewed original NUL-terminated path literal 5c62673000"
+
+[[units.background-load-patterns.relocations]]
+offset = 145
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510C1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 161
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510D1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 169
+type = "DIR32"
+symbol = "?bgPatternExtension@@3QBDB"
+target = 0x0078909C
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510D9; independently reviewed original NUL-terminated path literal 2e70617400"
+
+[[units.background-load-patterns.relocations]]
+offset = 178
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510E2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 195
+type = "REL32"
+symbol = "??0PatternReader@@QAE@PBDH@Z"
+target = 0x00408330
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510F3; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 203
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510FB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 228
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751114; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 253
+type = "DIR32"
+symbol = "??0PatternSequence@@QAE@XZ"
+target = 0x00408310
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075112D; previously reviewed original GS cookie or WINAPI IAT"
+
+[[units.background-load-patterns.relocations]]
+offset = 271
+type = "REL32"
+symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
+target = 0x00408380
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075113F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 336
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751180; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 347
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075118B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 355
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751193; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 363
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075119B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 412
+type = "REL32"
+symbol = "?Allocate@PatternSequence@@QAEXH@Z"
+target = 0x004082D0
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007511CC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 450
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007511F2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 481
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751211; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 513
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751231; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 545
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751251; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 577
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751271; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 609
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751291; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 641
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512B1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 649
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512B9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 657
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512C1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 665
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512C9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 673
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512D1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 681
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512D9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 689
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512E1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 697
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512E9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 705
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512F1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 713
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512F9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 721
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751301; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 729
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751309; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 737
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751311; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 745
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751319; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075133F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 803
+type = "REL32"
+symbol = "??1PatternReader@@QAE@XZ"
+target = 0x00408360
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751353; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-load-patterns.relocations]]
+offset = 811
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781DC
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075135B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.background-pattern-scalar-delete]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Backgrounds.cpp"
+dependencies = ["src/Backgrounds.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/background-pattern-scalar-delete/Backgrounds.obj"
+symbol = "??_GPatternSequence@@QAEPAXI@Z"
+target_address = 0x00751A10
+size = 44
+
+[[units.background-pattern-scalar-delete.relocations]]
+offset = 11
+type = "REL32"
+symbol = "??1PatternSequence@@QAE@XZ"
+target = 0x00408270
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A1B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[[units.background-pattern-scalar-delete.relocations]]
+offset = 28
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A2C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"

@@ -1,14 +1,8 @@
 // Battle frame sequencing, rendering and round ownership.
 #include "SceneBattle.h"
+#include "Backgrounds.h"
 #include <mmsystem.h>
 #include <cstdlib>
-
-// Reviewed two-slot contract of the object stored at Context+137C.
-class BattleBackground {
-    public:
-    virtual void Update() = 0;
-    virtual void Render(int, int, unsigned char) = 0;
-};
 
 unsigned char Scene3::Step()
 {

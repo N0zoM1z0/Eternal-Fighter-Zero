@@ -1,0 +1,4386 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen with explicit independently reviewed relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 23,
+      "matched_bytes": 23,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7901368,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7BattleBackground@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007519FC; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3f9eff195e89192f26238dfd104bda2972d075958dadec411f06d4de5f4ed7fe",
+      "target_extent_sha256": "3f9eff195e89192f26238dfd104bda2972d075958dadec411f06d4de5f4ed7fe",
+      "unit": "background-base-ctor",
+      "symbol": "??0BattleBackground@@QAE@XZ",
+      "target_address": "0x007519F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "45dce6f036ed52dfab03583aeab2a1b5305d80ae988de22fcc22b5801e262d7a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 390,
+      "matched_bytes": 390,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7674352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0BattleBackground@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075137D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 22,
+          "target": 7901360,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background01@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751386; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 59,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513AB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 84,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513C4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 106,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513DA; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 132,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007513F4; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751404; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 183,
+          "target": 7671088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadImages@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751427; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 191,
+          "target": 7671856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPatterns@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075142F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 257,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751471; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 279,
+          "target": 7901352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07c200000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751487; independently checked original IEEE double payload 0000000000207cc0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7f0b1e81506fe9a32d0f250d63cd99411b000a60611e0bc023da7d9d79f80ce2",
+      "target_extent_sha256": "7f0b1e81506fe9a32d0f250d63cd99411b000a60611e0bc023da7d9d79f80ce2",
+      "unit": "background-01-ctor",
+      "symbol": "??0Background01@@QAE@PAVVideo@@@Z",
+      "target_address": "0x00751370",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a31b9a8909e198e555023647f695dd7f4f2cfcd6b184e5383731967feb979fe3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 194,
+      "matched_bytes": 194,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7901360,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background01@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075150E; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751577; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 140,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075158C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 174,
+          "target": 7674384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GPatternSequence@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007515AE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ac3637570a7be9d8249a5b0a663e9a82ad1d3ae4ae030961f4c31d6a63298e88",
+      "target_extent_sha256": "ac3637570a7be9d8249a5b0a663e9a82ad1d3ae4ae030961f4c31d6a63298e88",
+      "unit": "background-01-dtor",
+      "symbol": "??1Background01@@QAE@XZ",
+      "target_address": "0x00751500",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "232ea9673f2aa4a2269438247ef5386134cfc3dd1f6691036952f5c4b33b5934",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 337,
+      "matched_bytes": 337,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "9eb84a95cf3ad114d90689ed6547427c9106b45b65efd5c0b858b8a99df1ed23",
+      "target_extent_sha256": "9eb84a95cf3ad114d90689ed6547427c9106b45b65efd5c0b858b8a99df1ed23",
+      "unit": "background-01-update",
+      "symbol": "?Update@Background01@@UAEXXZ",
+      "target_address": "0x007515D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "79e41d80aeebefce8358e932ea338a805385bd7ebddb86389a9608dfa767e0c8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 694,
+      "matched_bytes": 694,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 136,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007517B8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 229,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751815; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 268,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075183C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 330,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075187A; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 363,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075189B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 562,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751962; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 678,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007519D6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "720ea538240336a1ffc32950e8e47e511f278960bf4cfe5d68fbdb990d547dcd",
+      "target_extent_sha256": "720ea538240336a1ffc32950e8e47e511f278960bf4cfe5d68fbdb990d547dcd",
+      "unit": "background-01-render",
+      "symbol": "?Render@Background01@@UAEXHHD@Z",
+      "target_address": "0x00751730",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d70f50f1cad29ee8e922170c6f64bc73ca373236a8c6cc138dbc02dba921af7f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 384,
+      "matched_bytes": 384,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7674352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0BattleBackground@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A4D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 22,
+          "target": 7901376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background10@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A56; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A78; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 78,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A8E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AA4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 126,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ABE; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 142,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ACE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 177,
+          "target": 7671088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadImages@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AF1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 185,
+          "target": 7671856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPatterns@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751AF9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 251,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751B3B; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 273,
+          "target": 7901352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07c200000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751B51; independently checked original IEEE double payload 0000000000207cc0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bcfc76999027836473dfa9651cde8939a3d755580af4a35ce12a5eeb6cea9fa7",
+      "target_extent_sha256": "bcfc76999027836473dfa9651cde8939a3d755580af4a35ce12a5eeb6cea9fa7",
+      "unit": "background-10-ctor",
+      "symbol": "??0Background10@@QAE@PAVVideo@@@Z",
+      "target_address": "0x00751A40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "51e7d17f786fec70116e809d896747d56eae0b7bd161af978663be06e573d3d2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 194,
+      "matched_bytes": 194,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7901376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background10@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751BCE; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C37; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 140,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C4C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 174,
+          "target": 7674384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GPatternSequence@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751C6E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "43fe46a60146af48ca39ecd7662b5f63077aefaee314e25f9845c0589858e2a5",
+      "target_extent_sha256": "43fe46a60146af48ca39ecd7662b5f63077aefaee314e25f9845c0589858e2a5",
+      "unit": "background-10-dtor",
+      "symbol": "??1Background10@@QAE@XZ",
+      "target_address": "0x00751BC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "061e89170383f9c874b90d261c6ca163961ab2d42e6b84d5bd23b32d7b4c1ced",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 337,
+      "matched_bytes": 337,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "900f7507cddb26de8c47bed4f32a31092ffb7e434517eb745ceea2c6c37e14fa",
+      "target_extent_sha256": "900f7507cddb26de8c47bed4f32a31092ffb7e434517eb745ceea2c6c37e14fa",
+      "unit": "background-10-update",
+      "symbol": "?Update@Background10@@UAEXXZ",
+      "target_address": "0x00751C90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5574bda03ef4c256afb178a1d2f7e50091d9712693e4f062cefb40167b5da831",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 693,
+      "matched_bytes": 693,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751E77; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 228,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751ED4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751EFB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 329,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751F39; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 362,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751F5A; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 561,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752021; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 677,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752095; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "505e2ec7911fe6110d209452d69d90a05e161b8b3cb64955b9aea153fd86a66a",
+      "target_extent_sha256": "505e2ec7911fe6110d209452d69d90a05e161b8b3cb64955b9aea153fd86a66a",
+      "unit": "background-10-render",
+      "symbol": "?Render@Background10@@UAEXHHD@Z",
+      "target_address": "0x00751DF0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a453cced10749cb2ebce5c89a4dc6d31bb8149f1208ca1d3d4f7981ad1130f76",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 394,
+      "matched_bytes": 394,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7674352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0BattleBackground@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520BD; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 22,
+          "target": 7901384,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background12@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520C6; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007520E8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 81,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752101; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752117; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752131; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 145,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752141; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 180,
+          "target": 7671088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadImages@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752164; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 188,
+          "target": 7671856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPatterns@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075216C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 254,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007521AE; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 276,
+          "target": 7901352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07c200000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007521C4; independently checked original IEEE double payload 0000000000207cc0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "62bf588d517c4042bf6e94d3042355b02e613f1da790f0752d9767a15810ddad",
+      "target_extent_sha256": "62bf588d517c4042bf6e94d3042355b02e613f1da790f0752d9767a15810ddad",
+      "unit": "background-12-ctor",
+      "symbol": "??0Background12@@QAE@PAVVideo@@@Z",
+      "target_address": "0x007520B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "032ea839b9a10eb4961ef219c09021d2b6f34b8e0983c8bf48679b215166f2e9",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 194,
+      "matched_bytes": 194,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7901384,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background12@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075224E; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522B7; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 140,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522CC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 174,
+          "target": 7674384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GPatternSequence@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007522EE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1e2576123efb95733671316d3f79b9058d5f44d38436d5d207cb3d38768d800b",
+      "target_extent_sha256": "1e2576123efb95733671316d3f79b9058d5f44d38436d5d207cb3d38768d800b",
+      "unit": "background-12-dtor",
+      "symbol": "??1Background12@@QAE@XZ",
+      "target_address": "0x00752240",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "82a1fa1c7d3d626afb42711e6ee401a0aba8ff3d970f6a0b7d8a15f5482bc446",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 347,
+      "matched_bytes": 347,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 177,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007523C1; independently checked original IEEE double payload 000000000000e03f",
+          "addend": 0
+        },
+        {
+          "offset": 215,
+          "target": 7898560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4084000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007523E7; independently checked original IEEE double payload 0000000000008440",
+          "addend": 0
+        },
+        {
+          "offset": 240,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752400; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 266,
+          "target": 7896360,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075241A; independently checked original IEEE double payload 000000000000d03f",
+          "addend": 0
+        },
+        {
+          "offset": 304,
+          "target": 7898560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4084000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752440; independently checked original IEEE double payload 0000000000008440",
+          "addend": 0
+        },
+        {
+          "offset": 329,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752459; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "64d0037b111d17809e89817a3872a9eba2ee50b372ee57d7aba7e8909716b587",
+      "target_extent_sha256": "64d0037b111d17809e89817a3872a9eba2ee50b372ee57d7aba7e8909716b587",
+      "unit": "background-12-update",
+      "symbol": "?Update@Background12@@UAEXXZ",
+      "target_address": "0x00752310",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fb18c17d95308ffad841d8b8101196d58dd2579c963e39fa9a963e8f1abdd5c3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1168,
+      "matched_bytes": 1168,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 149,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752505; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 246,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752566; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075258D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 345,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007525C9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 389,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007525F5; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 454,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752636; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 487,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752657; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 547,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752693; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 585,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007526B9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 784,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752780; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 919,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752807; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 1038,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075287E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 1152,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007528F0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d38dc046c57f2007653e7ed4c068004049b27afd0604ab19a34a123c7d081055",
+      "target_extent_sha256": "d38dc046c57f2007653e7ed4c068004049b27afd0604ab19a34a123c7d081055",
+      "unit": "background-12-render",
+      "symbol": "?Render@Background12@@UAEXHHD@Z",
+      "target_address": "0x00752470",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f5e764e6dfa59e94509872bf52e27463fbaa30fa73e974aabd001d3bf0058b97",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 393,
+      "matched_bytes": 393,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 7674352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0BattleBackground@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075290D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 22,
+          "target": 7901392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background16@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752916; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752938; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 81,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752951; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752967; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752981; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 145,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752991; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 180,
+          "target": 7671088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadImages@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529B4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 188,
+          "target": 7671856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPatterns@BattleBackground@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529BC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 254,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007529FE; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 276,
+          "target": 7901352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07c200000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752A14; independently checked original IEEE double payload 0000000000207cc0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "f8d6103724f2a0478fb100c358fd095a7dc0bc43948b98bbd484fdf2a6fc7e81",
+      "target_extent_sha256": "f8d6103724f2a0478fb100c358fd095a7dc0bc43948b98bbd484fdf2a6fc7e81",
+      "unit": "background-16-ctor",
+      "symbol": "??0Background16@@QAE@PAVVideo@@@Z",
+      "target_address": "0x00752900",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "489d293bcb62607732bf4012cfcb324647188e29f0ecc361447582ad621f16a6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 194,
+      "matched_bytes": 194,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7901392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Background16@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752A9E; independently reviewed original two-slot virtual table and base purecall destinations",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B07; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 140,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B1C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 174,
+          "target": 7674384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GPatternSequence@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752B3E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0422043959a879260e04526d42a95a72abc774269d21a220970ea690fcac7788",
+      "target_extent_sha256": "0422043959a879260e04526d42a95a72abc774269d21a220970ea690fcac7788",
+      "unit": "background-16-dtor",
+      "symbol": "??1Background16@@QAE@XZ",
+      "target_address": "0x00752A90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "23232a1a00388063d44dde9a0850968ee916011cedf601b51b7e056c139edb74",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 604,
+      "matched_bytes": 604,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 158,
+          "target": 7679404,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61814",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752BFE; reviewed four-way table/branch destination and independent COFF local offset",
+          "local_target_offset": 588,
+          "addend": 0
+        },
+        {
+          "offset": 180,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C14; independently checked original IEEE double payload 000000000000f03f",
+          "addend": 0
+        },
+        {
+          "offset": 218,
+          "target": 7900344,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408a900000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C3A; independently checked original IEEE double payload 0000000000908a40",
+          "addend": 0
+        },
+        {
+          "offset": 247,
+          "target": 7900344,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408a900000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C57; independently checked original IEEE double payload 0000000000908a40",
+          "addend": 0
+        },
+        {
+          "offset": 290,
+          "target": 7896856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752C82; independently checked original IEEE double payload 666666666666f63f",
+          "addend": 0
+        },
+        {
+          "offset": 328,
+          "target": 7901416,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4089300000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CA8; independently checked original IEEE double payload 0000000000308940",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 7901416,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4089300000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CC5; independently checked original IEEE double payload 0000000000308940",
+          "addend": 0
+        },
+        {
+          "offset": 400,
+          "target": 7897256,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ffccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752CF0; independently checked original IEEE double payload cdccccccccccfc3f",
+          "addend": 0
+        },
+        {
+          "offset": 438,
+          "target": 7901408,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4088a80000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D16; independently checked original IEEE double payload 0000000000a88840",
+          "addend": 0
+        },
+        {
+          "offset": 467,
+          "target": 7901408,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4088a80000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D33; independently checked original IEEE double payload 0000000000a88840",
+          "addend": 0
+        },
+        {
+          "offset": 507,
+          "target": 7896352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400199999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D5B; independently checked original IEEE double payload 9a99999999990140",
+          "addend": 0
+        },
+        {
+          "offset": 545,
+          "target": 7901400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408d980000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D81; independently checked original IEEE double payload 0000000000988d40",
+          "addend": 0
+        },
+        {
+          "offset": 570,
+          "target": 7901400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408d980000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752D9A; independently checked original IEEE double payload 0000000000988d40",
+          "addend": 0
+        },
+        {
+          "offset": 588,
+          "target": 7678978,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61645",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DAC; reviewed four-way table/branch destination and independent COFF local offset",
+          "local_target_offset": 162,
+          "addend": 0
+        },
+        {
+          "offset": 592,
+          "target": 7679088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61647",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB0; reviewed four-way table/branch destination and independent COFF local offset",
+          "local_target_offset": 272,
+          "addend": 0
+        },
+        {
+          "offset": 596,
+          "target": 7679198,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61649",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB4; reviewed four-way table/branch destination and independent COFF local offset",
+          "local_target_offset": 382,
+          "addend": 0
+        },
+        {
+          "offset": 600,
+          "target": 7679305,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L61651",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752DB8; reviewed four-way table/branch destination and independent COFF local offset",
+          "local_target_offset": 489,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "878af7b41109f4ccb0d033a1b4232f879076e900d153eef83297107c8b9cf003",
+      "target_extent_sha256": "878af7b41109f4ccb0d033a1b4232f879076e900d153eef83297107c8b9cf003",
+      "code_size": 588,
+      "local_data_bytes": 16,
+      "local_data": [
+        {
+          "offset": 588,
+          "size": 16,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; complete four-entry original table at752DAC through752DBC"
+        }
+      ],
+      "unit": "background-16-update",
+      "symbol": "?Update@Background16@@UAEXXZ",
+      "target_address": "0x00752B60",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c370eaa1f119b2fd4eae630951135d6d1d978c5bf3b82b0e59008457bc246c9e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1170,
+      "matched_bytes": 1170,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 149,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752E55; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 246,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752EB6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752EDD; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 345,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F19; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 390,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F46; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 455,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752F87; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 488,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752FA8; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 548,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00752FE4; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 587,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075300B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 786,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007530D2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 921,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00753159; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 1040,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007531D0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 1154,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00753242; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "86a6364fbe7282a249d84169750d9d1ac0ce331c5c71c72167601d49c143e528",
+      "target_extent_sha256": "86a6364fbe7282a249d84169750d9d1ac0ce331c5c71c72167601d49c143e528",
+      "unit": "background-16-render",
+      "symbol": "?Render@Background16@@UAEXHHD@Z",
+      "target_address": "0x00752DC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "15bf918d47cc69026c37494fdfc5382231985e10bc522ab0504b50f5761b0fb7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 757,
+      "matched_bytes": 757,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D37; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 7901192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImagePrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D7D; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700",
+          "addend": 0
+        },
+        {
+          "offset": 86,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D86; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7901208,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImagePrefixZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D90; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750D99; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 127,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DAF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 143,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DBF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 7901224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImageSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DCD; independently reviewed original NUL-terminated path literal 5c00",
+          "addend": 0
+        },
+        {
+          "offset": 166,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DD6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 182,
+          "target": 7901228,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImageSeparatorZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DE6; independently reviewed original NUL-terminated path literal 5c3000",
+          "addend": 0
+        },
+        {
+          "offset": 191,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DEF; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 201,
+          "target": 7901232,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImageSeparatorTwoZeros@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750DF9; independently reviewed original NUL-terminated path literal 5c303000",
+          "addend": 0
+        },
+        {
+          "offset": 210,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E02; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 228,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E14; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 244,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E24; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 252,
+          "target": 7901236,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgImageDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E2C; independently reviewed original NUL-terminated path literal 2e64617400",
+          "addend": 0
+        },
+        {
+          "offset": 261,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E35; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 292,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E54; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 307,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E63; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 319,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E6F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 355,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750E93; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 400,
+          "target": 4232304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750EC0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 410,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750ECA; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 425,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750ED9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 489,
+          "target": 7901244,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F19; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700",
+          "addend": 0
+        },
+        {
+          "offset": 498,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F22; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 508,
+          "target": 7901260,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapPrefixZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F2C; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000",
+          "addend": 0
+        },
+        {
+          "offset": 517,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F35; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 539,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F4B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 555,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F5B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 569,
+          "target": 7901276,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F69; independently reviewed original NUL-terminated path literal 5c00",
+          "addend": 0
+        },
+        {
+          "offset": 578,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F72; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 594,
+          "target": 7901280,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapSeparatorZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F82; independently reviewed original NUL-terminated path literal 5c3000",
+          "addend": 0
+        },
+        {
+          "offset": 603,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F8B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 613,
+          "target": 7901284,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapSeparatorTwoZeros@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F95; independently reviewed original NUL-terminated path literal 5c303000",
+          "addend": 0
+        },
+        {
+          "offset": 622,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750F9E; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 640,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FB0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 656,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FC0; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 664,
+          "target": 7901288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgBitmapExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FC8; independently reviewed original NUL-terminated path literal 2e626d7000",
+          "addend": 0
+        },
+        {
+          "offset": 673,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FD1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 710,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00750FF6; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 735,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075100F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 749,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075101D; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3685d75817a2916c03280cfdc2d32e2683f1b270793330260c67f48a2a06f515",
+      "target_extent_sha256": "3685d75817a2916c03280cfdc2d32e2683f1b270793330260c67f48a2a06f515",
+      "unit": "background-load-images",
+      "symbol": "?LoadImages@BattleBackground@@QAEXXZ",
+      "target_address": "0x00750D30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "b3aa30956c21e42744d89772ba4887f29688deb476823d2b472da657767f9373",
+      "source_sha256": "e51d650cb3b53fd7fc6bf92acb32547e167b98a10057c9e9334bafd3685d0107",
+      "dependencies": {
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342",
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0d70480cab0d926ce9ad5ab05ef9c68862d6118d2e2decb76a5eb1ddaf1d6a4f",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 820,
+      "matched_bytes": 820,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751037; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 31,
+          "target": 7901296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgPatternPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075104F; independently reviewed original NUL-terminated path literal 73797374656d5c62675c626700",
+          "addend": 0
+        },
+        {
+          "offset": 40,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751058; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7901312,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgPatternPrefixZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751062; independently reviewed original NUL-terminated path literal 73797374656d5c62675c62673000",
+          "addend": 0
+        },
+        {
+          "offset": 59,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075106B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 81,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751081; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751091; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 117,
+          "target": 7901328,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgPatternSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510A5; independently reviewed original NUL-terminated path literal 5c626700",
+          "addend": 0
+        },
+        {
+          "offset": 126,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510AE; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 136,
+          "target": 7901332,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgPatternSeparatorZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510B8; independently reviewed original NUL-terminated path literal 5c62673000",
+          "addend": 0
+        },
+        {
+          "offset": 145,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510C1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 161,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510D1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 7901340,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?bgPatternExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510D9; independently reviewed original NUL-terminated path literal 2e70617400",
+          "addend": 0
+        },
+        {
+          "offset": 178,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510E2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 195,
+          "target": 4227888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0PatternReader@@QAE@PBDH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510F3; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 203,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007510FB; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 228,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751114; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075112D; previously reviewed original GS cookie or WINAPI IAT",
+          "addend": 0
+        },
+        {
+          "offset": 271,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075113F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 336,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751180; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 347,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075118B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 355,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751193; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 363,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075119B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 412,
+          "target": 4227792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007511CC; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 450,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007511F2; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 481,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751211; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 513,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751231; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 545,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751251; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 577,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751271; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 609,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751291; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 641,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512B1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 649,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512B9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 657,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512C1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 665,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512C9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 673,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512D1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 681,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512D9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 689,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512E1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 697,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512E9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 705,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512F1; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 713,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 007512F9; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 721,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751301; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 729,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751309; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 737,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751311; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 745,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751319; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075133F; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 803,
+          "target": 4227936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternReader@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751353; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 811,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 0075135B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "acb8b4b460b521012d50b643f4262f22d2405789f3c10e9e93960effbc84ac4c",
+      "target_extent_sha256": "acb8b4b460b521012d50b643f4262f22d2405789f3c10e9e93960effbc84ac4c",
+      "unit": "background-load-patterns",
+      "symbol": "?LoadPatterns@BattleBackground@@QAEXXZ",
+      "target_address": "0x00751030",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "b3aa30956c21e42744d89772ba4887f29688deb476823d2b472da657767f9373",
+      "source_sha256": "e51d650cb3b53fd7fc6bf92acb32547e167b98a10057c9e9334bafd3685d0107",
+      "dependencies": {
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342",
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "18d27bc016a34f165768eaf7cc933ae00b365c0f416d01c12a3e94d1d9a723d1",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 44,
+      "matched_bytes": 44,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4227696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternSequence@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A1B; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        },
+        {
+          "offset": 28,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A2C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a3867b07480f210599c11a651b7583b958874a1dd34d826bbe0183845ab7cdec",
+      "target_extent_sha256": "a3867b07480f210599c11a651b7583b958874a1dd34d826bbe0183845ab7cdec",
+      "unit": "background-pattern-scalar-delete",
+      "symbol": "??_GPatternSequence@@QAEPAXI@Z",
+      "target_address": "0x00751A10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99af34650eef0de671f56ace04b1bf55f543c8ac6286671ee29c951b2127f2d4",
+      "object_sha256": "216c79ee81689ea366996181e15373630101948744ca3a032f49110766e0e4ac",
+      "source_sha256": "623872f0002a564f43e0d90ed07cc01f07ef40519e3a984ac7d528d72333a3a1",
+      "dependencies": {
+        "src/Backgrounds.h": "5e96c5bc7d20a4e6e4918fb7b91bb33bc1b021f5c95ff84d586101f5a612e57d",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "124bbf60ca143ca5080e653f5313dc87f4f0dceaaf87c7ce831d92a8031c0b8c",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ff38e9503561107e8267ff87c696ec24197b6ab1f06b95cf666e50c59c218e05",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "boundary_review": [
+    {
+      "tag": "base-ctor",
+      "address": "0x7519f0",
+      "size": 23,
+      "code_size": 23,
+      "origin": "compiler-generated",
+      "instructions": 10,
+      "branches": [],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 9,
+      "exit": "ret"
+    },
+    {
+      "tag": "01-ctor",
+      "address": "0x751370",
+      "size": 390,
+      "code_size": 390,
+      "origin": "authored",
+      "instructions": 111,
+      "branches": [
+        [
+          "0x7513e8",
+          "0x751413"
+        ],
+        [
+          "0x751411",
+          "0x75141a"
+        ],
+        [
+          "0x75143a",
+          "0x751445"
+        ],
+        [
+          "0x751449",
+          "0x7514ed"
+        ],
+        [
+          "0x7514e8",
+          "0x75143c"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x75137c",
+          "0x7519f0",
+          "??0BattleBackground@@QAE@XZ"
+        ],
+        [
+          "0x7513aa",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x7513c3",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x7513d9",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x751403",
+          "0x408380",
+          "??_H@YGXPAXIHP6EPAX0@Z@Z"
+        ],
+        [
+          "0x751426",
+          "0x750d30",
+          "?LoadImages@BattleBackground@@QAEXXZ"
+        ],
+        [
+          "0x75142e",
+          "0x751030",
+          "?LoadPatterns@BattleBackground@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 10,
+      "exit": "ret    0x4"
+    },
+    {
+      "tag": "01-dtor",
+      "address": "0x751500",
+      "size": 194,
+      "code_size": 194,
+      "origin": "authored",
+      "instructions": 64,
+      "branches": [
+        [
+          "0x751519",
+          "0x751524"
+        ],
+        [
+          "0x751528",
+          "0x751569"
+        ],
+        [
+          "0x751537",
+          "0x751567"
+        ],
+        [
+          "0x751567",
+          "0x75151b"
+        ],
+        [
+          "0x7515a6",
+          "0x7515b7"
+        ],
+        [
+          "0x7515b5",
+          "0x7515be"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751576",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x75158b",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x7515ad",
+          "0x751a10",
+          "??_GPatternSequence@@QAEPAXI@Z"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x751554",
+          "call   DWORD PTR [edx+0x8]"
+        ]
+      ],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 14,
+      "exit": "ret"
+    },
+    {
+      "tag": "01-update",
+      "address": "0x7515d0",
+      "size": 337,
+      "code_size": 337,
+      "origin": "authored",
+      "instructions": 101,
+      "branches": [
+        [
+          "0x7515e1",
+          "0x7515ec"
+        ],
+        [
+          "0x7515f0",
+          "0x75171c"
+        ],
+        [
+          "0x751662",
+          "0x751717"
+        ],
+        [
+          "0x75166c",
+          "0x751673"
+        ],
+        [
+          "0x75166e",
+          "0x751717"
+        ],
+        [
+          "0x7516b0",
+          "0x751717"
+        ],
+        [
+          "0x751702",
+          "0x751717"
+        ],
+        [
+          "0x751717",
+          "0x7515e3"
+        ]
+      ],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 15,
+      "exit": "ret"
+    },
+    {
+      "tag": "01-render",
+      "address": "0x751730",
+      "size": 694,
+      "code_size": 694,
+      "origin": "authored",
+      "instructions": 229,
+      "branches": [
+        [
+          "0x751741",
+          "0x751748"
+        ],
+        [
+          "0x751743",
+          "0x7519df"
+        ],
+        [
+          "0x75174f",
+          "0x75175a"
+        ],
+        [
+          "0x75175e",
+          "0x7519df"
+        ],
+        [
+          "0x751802",
+          "0x751869"
+        ],
+        [
+          "0x751867",
+          "0x7518c6"
+        ],
+        [
+          "0x7518d9",
+          "0x751968"
+        ],
+        [
+          "0x751966",
+          "0x7519da"
+        ],
+        [
+          "0x7519da",
+          "0x751751"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x7517b7",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x751814",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x75183b",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x751879",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x75189a",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x751961",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x7519d5",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 10,
+      "exit": "ret    0xc"
+    },
+    {
+      "tag": "10-ctor",
+      "address": "0x751a40",
+      "size": 384,
+      "code_size": 384,
+      "origin": "authored",
+      "instructions": 111,
+      "branches": [
+        [
+          "0x751ab2",
+          "0x751add"
+        ],
+        [
+          "0x751adb",
+          "0x751ae4"
+        ],
+        [
+          "0x751b04",
+          "0x751b0f"
+        ],
+        [
+          "0x751b13",
+          "0x751bb7"
+        ],
+        [
+          "0x751bb2",
+          "0x751b06"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751a4c",
+          "0x7519f0",
+          "??0BattleBackground@@QAE@XZ"
+        ],
+        [
+          "0x751a77",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x751a8d",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x751aa3",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x751acd",
+          "0x408380",
+          "??_H@YGXPAXIHP6EPAX0@Z@Z"
+        ],
+        [
+          "0x751af0",
+          "0x750d30",
+          "?LoadImages@BattleBackground@@QAEXXZ"
+        ],
+        [
+          "0x751af8",
+          "0x751030",
+          "?LoadPatterns@BattleBackground@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 0,
+      "exit": "ret    0x4"
+    },
+    {
+      "tag": "10-dtor",
+      "address": "0x751bc0",
+      "size": 194,
+      "code_size": 194,
+      "origin": "authored",
+      "instructions": 64,
+      "branches": [
+        [
+          "0x751bd9",
+          "0x751be4"
+        ],
+        [
+          "0x751be8",
+          "0x751c29"
+        ],
+        [
+          "0x751bf7",
+          "0x751c27"
+        ],
+        [
+          "0x751c27",
+          "0x751bdb"
+        ],
+        [
+          "0x751c66",
+          "0x751c77"
+        ],
+        [
+          "0x751c75",
+          "0x751c7e"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751c36",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x751c4b",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x751c6d",
+          "0x751a10",
+          "??_GPatternSequence@@QAEPAXI@Z"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x751c14",
+          "call   DWORD PTR [edx+0x8]"
+        ]
+      ],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 14,
+      "exit": "ret"
+    },
+    {
+      "tag": "10-update",
+      "address": "0x751c90",
+      "size": 337,
+      "code_size": 337,
+      "origin": "authored",
+      "instructions": 101,
+      "branches": [
+        [
+          "0x751ca1",
+          "0x751cac"
+        ],
+        [
+          "0x751cb0",
+          "0x751ddc"
+        ],
+        [
+          "0x751d22",
+          "0x751dd7"
+        ],
+        [
+          "0x751d2c",
+          "0x751d33"
+        ],
+        [
+          "0x751d2e",
+          "0x751dd7"
+        ],
+        [
+          "0x751d70",
+          "0x751dd7"
+        ],
+        [
+          "0x751dc2",
+          "0x751dd7"
+        ],
+        [
+          "0x751dd7",
+          "0x751ca3"
+        ]
+      ],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 15,
+      "exit": "ret"
+    },
+    {
+      "tag": "10-render",
+      "address": "0x751df0",
+      "size": 693,
+      "code_size": 693,
+      "origin": "authored",
+      "instructions": 229,
+      "branches": [
+        [
+          "0x751e00",
+          "0x751e07"
+        ],
+        [
+          "0x751e02",
+          "0x75209e"
+        ],
+        [
+          "0x751e0e",
+          "0x751e19"
+        ],
+        [
+          "0x751e1d",
+          "0x75209e"
+        ],
+        [
+          "0x751ec1",
+          "0x751f28"
+        ],
+        [
+          "0x751f26",
+          "0x751f85"
+        ],
+        [
+          "0x751f98",
+          "0x752027"
+        ],
+        [
+          "0x752025",
+          "0x752099"
+        ],
+        [
+          "0x752099",
+          "0x751e10"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751e76",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x751ed3",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x751efa",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x751f38",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x751f59",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752020",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x752094",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 11,
+      "exit": "ret    0xc"
+    },
+    {
+      "tag": "12-ctor",
+      "address": "0x7520b0",
+      "size": 394,
+      "code_size": 394,
+      "origin": "authored",
+      "instructions": 113,
+      "branches": [
+        [
+          "0x752125",
+          "0x752150"
+        ],
+        [
+          "0x75214e",
+          "0x752157"
+        ],
+        [
+          "0x752177",
+          "0x752182"
+        ],
+        [
+          "0x752186",
+          "0x752231"
+        ],
+        [
+          "0x75222c",
+          "0x752179"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x7520bc",
+          "0x7519f0",
+          "??0BattleBackground@@QAE@XZ"
+        ],
+        [
+          "0x7520e7",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752100",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752116",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752140",
+          "0x408380",
+          "??_H@YGXPAXIHP6EPAX0@Z@Z"
+        ],
+        [
+          "0x752163",
+          "0x750d30",
+          "?LoadImages@BattleBackground@@QAEXXZ"
+        ],
+        [
+          "0x75216b",
+          "0x751030",
+          "?LoadPatterns@BattleBackground@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 6,
+      "exit": "ret    0x4"
+    },
+    {
+      "tag": "12-dtor",
+      "address": "0x752240",
+      "size": 194,
+      "code_size": 194,
+      "origin": "authored",
+      "instructions": 64,
+      "branches": [
+        [
+          "0x752259",
+          "0x752264"
+        ],
+        [
+          "0x752268",
+          "0x7522a9"
+        ],
+        [
+          "0x752277",
+          "0x7522a7"
+        ],
+        [
+          "0x7522a7",
+          "0x75225b"
+        ],
+        [
+          "0x7522e6",
+          "0x7522f7"
+        ],
+        [
+          "0x7522f5",
+          "0x7522fe"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x7522b6",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x7522cb",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x7522ed",
+          "0x751a10",
+          "??_GPatternSequence@@QAEPAXI@Z"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x752294",
+          "call   DWORD PTR [edx+0x8]"
+        ]
+      ],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 14,
+      "exit": "ret"
+    },
+    {
+      "tag": "12-update",
+      "address": "0x752310",
+      "size": 347,
+      "code_size": 347,
+      "origin": "authored",
+      "instructions": 105,
+      "branches": [
+        [
+          "0x752321",
+          "0x75232c"
+        ],
+        [
+          "0x752330",
+          "0x752466"
+        ],
+        [
+          "0x7523a2",
+          "0x7523af"
+        ],
+        [
+          "0x7523a8",
+          "0x752408"
+        ],
+        [
+          "0x7523aa",
+          "0x752461"
+        ],
+        [
+          "0x7523f0",
+          "0x752408"
+        ],
+        [
+          "0x752449",
+          "0x752461"
+        ],
+        [
+          "0x752461",
+          "0x752323"
+        ]
+      ],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 5,
+      "exit": "ret"
+    },
+    {
+      "tag": "12-render",
+      "address": "0x752470",
+      "size": 1168,
+      "code_size": 1168,
+      "origin": "authored",
+      "instructions": 381,
+      "branches": [
+        [
+          "0x752481",
+          "0x75248c"
+        ],
+        [
+          "0x752490",
+          "0x7528f9"
+        ],
+        [
+          "0x7524ad",
+          "0x7524b1"
+        ],
+        [
+          "0x7524af",
+          "0x752483"
+        ],
+        [
+          "0x75254f",
+          "0x752625"
+        ],
+        [
+          "0x752620",
+          "0x7526e4"
+        ],
+        [
+          "0x7526f7",
+          "0x752810"
+        ],
+        [
+          "0x75280b",
+          "0x7528f4"
+        ],
+        [
+          "0x7528f4",
+          "0x752483"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x752504",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x752565",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x75258c",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x7525c8",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x7525f4",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752635",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752656",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752692",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x7526b8",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x75277f",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x752806",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x75287d",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ],
+        [
+          "0x7528ef",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 0,
+      "exit": "ret    0xc"
+    },
+    {
+      "tag": "16-ctor",
+      "address": "0x752900",
+      "size": 393,
+      "code_size": 393,
+      "origin": "authored",
+      "instructions": 113,
+      "branches": [
+        [
+          "0x752975",
+          "0x7529a0"
+        ],
+        [
+          "0x75299e",
+          "0x7529a7"
+        ],
+        [
+          "0x7529c7",
+          "0x7529d2"
+        ],
+        [
+          "0x7529d6",
+          "0x752a80"
+        ],
+        [
+          "0x752a7b",
+          "0x7529c9"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x75290c",
+          "0x7519f0",
+          "??0BattleBackground@@QAE@XZ"
+        ],
+        [
+          "0x752937",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752950",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752966",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x752990",
+          "0x408380",
+          "??_H@YGXPAXIHP6EPAX0@Z@Z"
+        ],
+        [
+          "0x7529b3",
+          "0x750d30",
+          "?LoadImages@BattleBackground@@QAEXXZ"
+        ],
+        [
+          "0x7529bb",
+          "0x751030",
+          "?LoadPatterns@BattleBackground@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 7,
+      "exit": "ret    0x4"
+    },
+    {
+      "tag": "16-dtor",
+      "address": "0x752a90",
+      "size": 194,
+      "code_size": 194,
+      "origin": "authored",
+      "instructions": 64,
+      "branches": [
+        [
+          "0x752aa9",
+          "0x752ab4"
+        ],
+        [
+          "0x752ab8",
+          "0x752af9"
+        ],
+        [
+          "0x752ac7",
+          "0x752af7"
+        ],
+        [
+          "0x752af7",
+          "0x752aab"
+        ],
+        [
+          "0x752b36",
+          "0x752b47"
+        ],
+        [
+          "0x752b45",
+          "0x752b4e"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x752b06",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x752b1b",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x752b3d",
+          "0x751a10",
+          "??_GPatternSequence@@QAEPAXI@Z"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x752ae4",
+          "call   DWORD PTR [edx+0x8]"
+        ]
+      ],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 14,
+      "exit": "ret"
+    },
+    {
+      "tag": "16-update",
+      "address": "0x752b60",
+      "size": 604,
+      "code_size": 588,
+      "origin": "authored",
+      "instructions": 174,
+      "branches": [
+        [
+          "0x752b71",
+          "0x752b7c"
+        ],
+        [
+          "0x752b80",
+          "0x752da7"
+        ],
+        [
+          "0x752bf2",
+          "0x752da2"
+        ],
+        [
+          "0x752c43",
+          "0x752c6b"
+        ],
+        [
+          "0x752c6b",
+          "0x752da2"
+        ],
+        [
+          "0x752cb1",
+          "0x752cd9"
+        ],
+        [
+          "0x752cd9",
+          "0x752da2"
+        ],
+        [
+          "0x752d1f",
+          "0x752d47"
+        ],
+        [
+          "0x752d47",
+          "0x752da2"
+        ],
+        [
+          "0x752d8a",
+          "0x752da2"
+        ],
+        [
+          "0x752da2",
+          "0x752b73"
+        ]
+      ],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "computed_jumps": [
+        [
+          "0x752bfb",
+          "jmp    DWORD PTR [ecx*4+0x752dac]"
+        ]
+      ],
+      "local_tables": [
+        {
+          "address": "0x752dac",
+          "size": 16,
+          "destinations": [
+            "0x752c02",
+            "0x752c70",
+            "0x752cde",
+            "0x752d49"
+          ]
+        }
+      ],
+      "literals": [],
+      "following_cc_bytes": 4,
+      "exit": "ret"
+    },
+    {
+      "tag": "16-render",
+      "address": "0x752dc0",
+      "size": 1170,
+      "code_size": 1170,
+      "origin": "authored",
+      "instructions": 383,
+      "branches": [
+        [
+          "0x752dd1",
+          "0x752ddc"
+        ],
+        [
+          "0x752de0",
+          "0x75324b"
+        ],
+        [
+          "0x752dfd",
+          "0x752e01"
+        ],
+        [
+          "0x752dff",
+          "0x752dd3"
+        ],
+        [
+          "0x752e9f",
+          "0x752f76"
+        ],
+        [
+          "0x752f71",
+          "0x753036"
+        ],
+        [
+          "0x753049",
+          "0x753162"
+        ],
+        [
+          "0x75315d",
+          "0x753246"
+        ],
+        [
+          "0x753246",
+          "0x752dd3"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x752e54",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x752eb5",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752edc",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752f18",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752f45",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752f86",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752fa7",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x752fe3",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x75300a",
+          "0x7783b8",
+          "__ftol2"
+        ],
+        [
+          "0x7530d1",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x753158",
+          "0x40a0b0",
+          "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+        ],
+        [
+          "0x7531cf",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ],
+        [
+          "0x753241",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 14,
+      "exit": "ret    0xc"
+    },
+    {
+      "tag": "load-images",
+      "address": "0x750d30",
+      "size": 757,
+      "code_size": 757,
+      "origin": "authored",
+      "instructions": 250,
+      "branches": [
+        [
+          "0x750d48",
+          "0x750eea"
+        ],
+        [
+          "0x750d55",
+          "0x750d60"
+        ],
+        [
+          "0x750d6a",
+          "0x750ee5"
+        ],
+        [
+          "0x750d7a",
+          "0x750d8f"
+        ],
+        [
+          "0x750d8d",
+          "0x750da0"
+        ],
+        [
+          "0x750dca",
+          "0x750ddf"
+        ],
+        [
+          "0x750ddd",
+          "0x750e09"
+        ],
+        [
+          "0x750de3",
+          "0x750df8"
+        ],
+        [
+          "0x750df6",
+          "0x750e09"
+        ],
+        [
+          "0x750ee0",
+          "0x750d57"
+        ],
+        [
+          "0x750ee5",
+          "0x750fff"
+        ],
+        [
+          "0x750ef1",
+          "0x750efc"
+        ],
+        [
+          "0x750f06",
+          "0x750fff"
+        ],
+        [
+          "0x750f16",
+          "0x750f2b"
+        ],
+        [
+          "0x750f29",
+          "0x750f3c"
+        ],
+        [
+          "0x750f66",
+          "0x750f7b"
+        ],
+        [
+          "0x750f79",
+          "0x750fa5"
+        ],
+        [
+          "0x750f7f",
+          "0x750f94"
+        ],
+        [
+          "0x750f92",
+          "0x750fa5"
+        ],
+        [
+          "0x750ffa",
+          "0x750ef3"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x750d85",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x750d98",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x750dae",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x750dbe",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750dd5",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750dee",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750e01",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750e13",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x750e23",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750e34",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750e6e",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x750ebf",
+          "0x409470",
+          "?DecodeSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+        ],
+        [
+          "0x750ed8",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ],
+        [
+          "0x750f21",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x750f34",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x750f4a",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x750f5a",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750f71",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750f8a",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750f9d",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750faf",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x750fbf",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750fd0",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x750ff5",
+          "0x408d00",
+          "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+        ],
+        [
+          "0x75100e",
+          "0x40bcc0",
+          "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+        ],
+        [
+          "0x75101c",
+          "0x7781dc",
+          "@__security_check_cookie@4"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x750e52",
+          "call   DWORD PTR ds:0x78704c"
+        ],
+        [
+          "0x750e61",
+          "call   DWORD PTR ds:0x787048"
+        ],
+        [
+          "0x750e91",
+          "call   DWORD PTR ds:0x787044"
+        ],
+        [
+          "0x750ec8",
+          "call   DWORD PTR ds:0x787038"
+        ]
+      ],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [
+        {
+          "symbol": "?bgImagePrefix@@3QBDB",
+          "address": "0x789008",
+          "payload": "73797374656d5c62675c626700"
+        },
+        {
+          "symbol": "?bgImagePrefixZero@@3QBDB",
+          "address": "0x789018",
+          "payload": "73797374656d5c62675c62673000"
+        },
+        {
+          "symbol": "?bgImageSeparator@@3QBDB",
+          "address": "0x789028",
+          "payload": "5c00"
+        },
+        {
+          "symbol": "?bgImageSeparatorZero@@3QBDB",
+          "address": "0x78902c",
+          "payload": "5c3000"
+        },
+        {
+          "symbol": "?bgImageSeparatorTwoZeros@@3QBDB",
+          "address": "0x789030",
+          "payload": "5c303000"
+        },
+        {
+          "symbol": "?bgImageDat@@3QBDB",
+          "address": "0x789034",
+          "payload": "2e64617400"
+        },
+        {
+          "symbol": "?bgBitmapPrefix@@3QBDB",
+          "address": "0x78903c",
+          "payload": "73797374656d5c62675c626700"
+        },
+        {
+          "symbol": "?bgBitmapPrefixZero@@3QBDB",
+          "address": "0x78904c",
+          "payload": "73797374656d5c62675c62673000"
+        },
+        {
+          "symbol": "?bgBitmapSeparator@@3QBDB",
+          "address": "0x78905c",
+          "payload": "5c00"
+        },
+        {
+          "symbol": "?bgBitmapSeparatorZero@@3QBDB",
+          "address": "0x789060",
+          "payload": "5c3000"
+        },
+        {
+          "symbol": "?bgBitmapSeparatorTwoZeros@@3QBDB",
+          "address": "0x789064",
+          "payload": "5c303000"
+        },
+        {
+          "symbol": "?bgBitmapExtension@@3QBDB",
+          "address": "0x789068",
+          "payload": "2e626d7000"
+        }
+      ],
+      "following_cc_bytes": 11,
+      "exit": "ret"
+    },
+    {
+      "tag": "load-patterns",
+      "address": "0x751030",
+      "size": 820,
+      "code_size": 820,
+      "origin": "authored",
+      "instructions": 245,
+      "branches": [
+        [
+          "0x75104c",
+          "0x751061"
+        ],
+        [
+          "0x75105f",
+          "0x751072"
+        ],
+        [
+          "0x7510a2",
+          "0x7510b7"
+        ],
+        [
+          "0x7510b5",
+          "0x7510c8"
+        ],
+        [
+          "0x751122",
+          "0x75114e"
+        ],
+        [
+          "0x75114c",
+          "0x751155"
+        ],
+        [
+          "0x751165",
+          "0x751170"
+        ],
+        [
+          "0x751176",
+          "0x75134f"
+        ],
+        [
+          "0x7511d7",
+          "0x7511e2"
+        ],
+        [
+          "0x7511e8",
+          "0x75134a"
+        ],
+        [
+          "0x751324",
+          "0x75132f"
+        ],
+        [
+          "0x751333",
+          "0x751345"
+        ],
+        [
+          "0x751343",
+          "0x751326"
+        ],
+        [
+          "0x751345",
+          "0x7511d9"
+        ],
+        [
+          "0x75134a",
+          "0x751167"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751057",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x75106a",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x751080",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x751090",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x7510ad",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x7510c0",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x7510d0",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x7510e1",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x7510f2",
+          "0x408330",
+          "??0PatternReader@@QAE@PBDH@Z"
+        ],
+        [
+          "0x7510fa",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751113",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x75113e",
+          "0x408380",
+          "??_H@YGXPAXIHP6EPAX0@Z@Z"
+        ],
+        [
+          "0x75117f",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x75118a",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751192",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x75119a",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7511cb",
+          "0x4082d0",
+          "?Allocate@PatternSequence@@QAEXH@Z"
+        ],
+        [
+          "0x7511f1",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751210",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751230",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751250",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751270",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751290",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512b0",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512b8",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512c0",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512c8",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512d0",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512d8",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512e0",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512e8",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512f0",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x7512f8",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751300",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751308",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751310",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x751318",
+          "0x405700",
+          "?ReadInt@PatternReader@@QAEHXZ"
+        ],
+        [
+          "0x75133e",
+          "0x405600",
+          "?Read@PatternReader@@QAEHPAXH@Z"
+        ],
+        [
+          "0x751352",
+          "0x408360",
+          "??1PatternReader@@QAE@XZ"
+        ],
+        [
+          "0x75135a",
+          "0x7781dc",
+          "@__security_check_cookie@4"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [
+        {
+          "symbol": "?bgPatternPrefix@@3QBDB",
+          "address": "0x789070",
+          "payload": "73797374656d5c62675c626700"
+        },
+        {
+          "symbol": "?bgPatternPrefixZero@@3QBDB",
+          "address": "0x789080",
+          "payload": "73797374656d5c62675c62673000"
+        },
+        {
+          "symbol": "?bgPatternSeparator@@3QBDB",
+          "address": "0x789090",
+          "payload": "5c626700"
+        },
+        {
+          "symbol": "?bgPatternSeparatorZero@@3QBDB",
+          "address": "0x789094",
+          "payload": "5c62673000"
+        },
+        {
+          "symbol": "?bgPatternExtension@@3QBDB",
+          "address": "0x78909c",
+          "payload": "2e70617400"
+        }
+      ],
+      "following_cc_bytes": 12,
+      "exit": "ret"
+    },
+    {
+      "tag": "pattern-scalar-delete",
+      "address": "0x751a10",
+      "size": 44,
+      "code_size": 44,
+      "origin": "compiler-generated",
+      "instructions": 17,
+      "branches": [
+        [
+          "0x751a25",
+          "0x751a33"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x751a1a",
+          "0x408270",
+          "??1PatternSequence@@QAE@XZ"
+        ],
+        [
+          "0x751a2b",
+          "0x777e20",
+          "??3@YAXPAX@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "computed_jumps": [],
+      "local_tables": [],
+      "literals": [],
+      "following_cc_bytes": 4,
+      "exit": "ret    0x4"
+    }
+  ],
+  "latest_selected_replay": "18 authored background functions and two compiler auxiliaries plus six actual SceneBattleLoop source consumers; three selected serial cold artifacts; all26 complete strict comparisons exact; all local destinations/offsets independently checked before symbol-name refresh"
+}
