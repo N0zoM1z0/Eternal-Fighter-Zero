@@ -4962,3 +4962,51 @@ scripts are historical templates, not idempotent maintenance commands.
 Twelve of thirteen Misaki virtual destinations now have complete exact proofs.
 Effects56F920/15,562 instruction bytes remains open, with associated tables still
 unreviewed. Resource/data/runtime/TU and game phases remain independently open.
+
+## Misaki local effect dispatch and controls
+
+Character07::Slot07 at0x56F920 is complete strict exact in
+`src/Character07Effects.cpp`:15,562 instruction bytes plus224 associated table
+bytes, total15,786; complete exclusive end5736CA. The31-entry DWORD address table
+occupies5735EA..573665, followed by100 selector bytes573666..5736C9. Six excluded
+CC bytes precede the next prologue5736D0. Vtable788808 slot07 operand788824
+contains56F920. Public proof:`docs/evidence/misaki-effects-exact.json`;
+recipe:character-07-update-local-effects, pinned vc71-od-static.
+
+Independent review covers3,572 contiguous instructions,228 direct branches,
+the full RET/data boundary and every compressed-switch destination. Effect
+types400..499 select30 explicit cases and70 defaults. Default entry30 reaches
+the shared next-effect tail5735C9. All193 relocation fields have reviewed symbols,
+actual canonical destinations and evidence:69 direct calls,91 double operands
+and33 local bindings (31 address entries and two dispatch operands). All26
+distinct double payloads match freshly read canonical memory and native COFF.
+Direct calls include42 __ftol2,16 CRT rand, nine RandomRange and the descriptor
+constructor/reset. All nine RandomRange results zero-extend AX. Virtual calls
+comprise36 removals and23 local emissions; these remain separate from direct
+CALL relocation bindings.
+
+Natural used locals retain frame19C, receiver EBP-5C, effect cursor EBP-4,
+descriptor EBP-50, duration/count EBP-54/-58 and saved EBX/ESI. Keep the entry
+opponent-freeze guard and per-slot own-freeze/activity checks separate. The ring
+cursor wraps at64. Original lifecycle conversions, successful removal/restart
+exits, unsigned frame/tick increments, signed facing particle subtraction and
+float operand order remain explicit. CRT random multipliers must retain their
+actual evaluation order; mathematical commutativity does not establish exact
+codegen or random-draw correspondence. Existing field3148/3248 arrays and shared
+effect-slot views suffice without public-header changes.
+
+A complete source was compiled early, refined against original instructions,
+then fully rebuilt and compared after formatting. One final selected cold replay
+passed all15,786 bytes and193 reviewed bindings with zero differences. All319
+prior recipes/source owners and public headers were audited unchanged. Focused
+tracking, ledgers/progress CI and whitespace checks passed; no old replay, full
+CI/cohort or runtime matrix ran. No compiler/Wine failure occurred. Full private
+target/operand review, complete source/header/object attempts and native exits
+remain in `.analysis/probes/misaki-effects/` and `.analysis/build/`. Unused inherited
+derivation scripts are historical templates and must not overwrite accepted source.
+
+All thirteen actual destinations of Misaki vtable788808 now map to complete exact
+recipes, including inherited LoadResources. This closes the observed virtual-body
+set, without claiming resource/linked-data, original TU, runtime or game closure.
+Current authored totals:302 functions,801,974 instruction bytes and5,499 associated
+table bytes;339 reviewed boundaries/origins and320 proof recipes.

@@ -1,0 +1,3569 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
+  "method": "one selected final cold pinned VC7.1 static /Od artifact; new complete authored source; public headers and prior units unchanged",
+  "boundary_review": {
+    "address": "0x56f920",
+    "code_size": 15562,
+    "exclusive_code_end": "0x5735ea",
+    "size": 15786,
+    "exclusive_end": "0x5736ca",
+    "instructions": 3572,
+    "branches": [
+      {
+        "address": "0x56f93f",
+        "target": "0x56f946"
+      },
+      {
+        "address": "0x56f941",
+        "target": "0x5735e4"
+      },
+      {
+        "address": "0x56f968",
+        "target": "0x5735e4"
+      },
+      {
+        "address": "0x56f97c",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56f998",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56f9aa",
+        "target": "0x56f9d8"
+      },
+      {
+        "address": "0x56f9b8",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56f9d2",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56fa6b",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56fac8",
+        "target": "0x56fb53"
+      },
+      {
+        "address": "0x56fb41",
+        "target": "0x56fb53"
+      },
+      {
+        "address": "0x56fb53",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56fb9e",
+        "target": "0x56fc29"
+      },
+      {
+        "address": "0x56fc17",
+        "target": "0x56fc29"
+      },
+      {
+        "address": "0x56fc29",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56fc74",
+        "target": "0x56fcff"
+      },
+      {
+        "address": "0x56fced",
+        "target": "0x56fcff"
+      },
+      {
+        "address": "0x56fcff",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56fd31",
+        "target": "0x56fe7f"
+      },
+      {
+        "address": "0x56fd4d",
+        "target": "0x56fe7f"
+      },
+      {
+        "address": "0x56fd61",
+        "target": "0x56fe7f"
+      },
+      {
+        "address": "0x56fd85",
+        "target": "0x56fdf2"
+      },
+      {
+        "address": "0x56fe10",
+        "target": "0x56fe62"
+      },
+      {
+        "address": "0x56fec5",
+        "target": "0x56ffa3"
+      },
+      {
+        "address": "0x56ff3e",
+        "target": "0x56ffa3"
+      },
+      {
+        "address": "0x56ff4e",
+        "target": "0x56ff66"
+      },
+      {
+        "address": "0x56ff74",
+        "target": "0x56ff86"
+      },
+      {
+        "address": "0x56ffa3",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x56ffbe",
+        "target": "0x570054"
+      },
+      {
+        "address": "0x56ffda",
+        "target": "0x570054"
+      },
+      {
+        "address": "0x56ffea",
+        "target": "0x570054"
+      },
+      {
+        "address": "0x57009a",
+        "target": "0x570168"
+      },
+      {
+        "address": "0x570113",
+        "target": "0x570168"
+      },
+      {
+        "address": "0x570123",
+        "target": "0x570135"
+      },
+      {
+        "address": "0x570168",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570183",
+        "target": "0x5701b4"
+      },
+      {
+        "address": "0x57019c",
+        "target": "0x5701b4"
+      },
+      {
+        "address": "0x5701fa",
+        "target": "0x5702c8"
+      },
+      {
+        "address": "0x570267",
+        "target": "0x57029c"
+      },
+      {
+        "address": "0x5702b6",
+        "target": "0x5702c8"
+      },
+      {
+        "address": "0x5702c8",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5702e3",
+        "target": "0x570345"
+      },
+      {
+        "address": "0x5702fb",
+        "target": "0x570345"
+      },
+      {
+        "address": "0x570359",
+        "target": "0x570376"
+      },
+      {
+        "address": "0x570365",
+        "target": "0x5703a7"
+      },
+      {
+        "address": "0x570374",
+        "target": "0x5703a7"
+      },
+      {
+        "address": "0x5703a2",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5703f1",
+        "target": "0x57040c"
+      },
+      {
+        "address": "0x570452",
+        "target": "0x5704c2"
+      },
+      {
+        "address": "0x5704b0",
+        "target": "0x5704c2"
+      },
+      {
+        "address": "0x5704c2",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5704dd",
+        "target": "0x57053f"
+      },
+      {
+        "address": "0x5704f5",
+        "target": "0x57053f"
+      },
+      {
+        "address": "0x570553",
+        "target": "0x570570"
+      },
+      {
+        "address": "0x57055f",
+        "target": "0x5705a1"
+      },
+      {
+        "address": "0x57056e",
+        "target": "0x5705a1"
+      },
+      {
+        "address": "0x57059c",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5705eb",
+        "target": "0x570606"
+      },
+      {
+        "address": "0x57064c",
+        "target": "0x5706bc"
+      },
+      {
+        "address": "0x5706aa",
+        "target": "0x5706bc"
+      },
+      {
+        "address": "0x5706bc",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5706d7",
+        "target": "0x570707"
+      },
+      {
+        "address": "0x5706ef",
+        "target": "0x570707"
+      },
+      {
+        "address": "0x57074d",
+        "target": "0x5707bd"
+      },
+      {
+        "address": "0x5707ab",
+        "target": "0x5707bd"
+      },
+      {
+        "address": "0x5707bd",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570808",
+        "target": "0x570893"
+      },
+      {
+        "address": "0x570881",
+        "target": "0x570893"
+      },
+      {
+        "address": "0x570893",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5708de",
+        "target": "0x570969"
+      },
+      {
+        "address": "0x570957",
+        "target": "0x570969"
+      },
+      {
+        "address": "0x570969",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570984",
+        "target": "0x570a20"
+      },
+      {
+        "address": "0x5709a0",
+        "target": "0x570a20"
+      },
+      {
+        "address": "0x570a6a",
+        "target": "0x570aba"
+      },
+      {
+        "address": "0x570a8a",
+        "target": "0x570aba"
+      },
+      {
+        "address": "0x570aa3",
+        "target": "0x570aba"
+      },
+      {
+        "address": "0x570ab5",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570ad8",
+        "target": "0x570af4"
+      },
+      {
+        "address": "0x570aee",
+        "target": "0x570be3"
+      },
+      {
+        "address": "0x570b0a",
+        "target": "0x570be3"
+      },
+      {
+        "address": "0x570c29",
+        "target": "0x570cb4"
+      },
+      {
+        "address": "0x570ca2",
+        "target": "0x570cb4"
+      },
+      {
+        "address": "0x570cb4",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570ccf",
+        "target": "0x570d3c"
+      },
+      {
+        "address": "0x570ce7",
+        "target": "0x570d3c"
+      },
+      {
+        "address": "0x570d86",
+        "target": "0x570dbd"
+      },
+      {
+        "address": "0x570da6",
+        "target": "0x570dbd"
+      },
+      {
+        "address": "0x570db8",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570e03",
+        "target": "0x570e8e"
+      },
+      {
+        "address": "0x570e7c",
+        "target": "0x570e8e"
+      },
+      {
+        "address": "0x570e8e",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x570ea9",
+        "target": "0x570f55"
+      },
+      {
+        "address": "0x570ec5",
+        "target": "0x570f55"
+      },
+      {
+        "address": "0x570f9f",
+        "target": "0x570fef"
+      },
+      {
+        "address": "0x570fbf",
+        "target": "0x570fef"
+      },
+      {
+        "address": "0x570fd8",
+        "target": "0x570fef"
+      },
+      {
+        "address": "0x570fea",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57100d",
+        "target": "0x571029"
+      },
+      {
+        "address": "0x571023",
+        "target": "0x57111e"
+      },
+      {
+        "address": "0x57103f",
+        "target": "0x57111e"
+      },
+      {
+        "address": "0x571164",
+        "target": "0x5711ef"
+      },
+      {
+        "address": "0x5711dd",
+        "target": "0x5711ef"
+      },
+      {
+        "address": "0x5711ef",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57120a",
+        "target": "0x571277"
+      },
+      {
+        "address": "0x571222",
+        "target": "0x571277"
+      },
+      {
+        "address": "0x5712c1",
+        "target": "0x5712f8"
+      },
+      {
+        "address": "0x5712e1",
+        "target": "0x5712f8"
+      },
+      {
+        "address": "0x5712f3",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57133e",
+        "target": "0x5713c9"
+      },
+      {
+        "address": "0x5713b7",
+        "target": "0x5713c9"
+      },
+      {
+        "address": "0x5713c9",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5713e4",
+        "target": "0x571490"
+      },
+      {
+        "address": "0x571400",
+        "target": "0x571490"
+      },
+      {
+        "address": "0x5714da",
+        "target": "0x57152a"
+      },
+      {
+        "address": "0x5714fa",
+        "target": "0x57152a"
+      },
+      {
+        "address": "0x571513",
+        "target": "0x57152a"
+      },
+      {
+        "address": "0x571525",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571548",
+        "target": "0x571564"
+      },
+      {
+        "address": "0x57155e",
+        "target": "0x571659"
+      },
+      {
+        "address": "0x57157a",
+        "target": "0x571659"
+      },
+      {
+        "address": "0x57169f",
+        "target": "0x57172a"
+      },
+      {
+        "address": "0x571718",
+        "target": "0x57172a"
+      },
+      {
+        "address": "0x57172a",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571745",
+        "target": "0x5717b2"
+      },
+      {
+        "address": "0x57175d",
+        "target": "0x5717b2"
+      },
+      {
+        "address": "0x5717fc",
+        "target": "0x571833"
+      },
+      {
+        "address": "0x57181c",
+        "target": "0x571833"
+      },
+      {
+        "address": "0x57182e",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571879",
+        "target": "0x571904"
+      },
+      {
+        "address": "0x5718f2",
+        "target": "0x571904"
+      },
+      {
+        "address": "0x571904",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57191f",
+        "target": "0x5719d7"
+      },
+      {
+        "address": "0x57193b",
+        "target": "0x5719d7"
+      },
+      {
+        "address": "0x571a1d",
+        "target": "0x571ad3"
+      },
+      {
+        "address": "0x571a96",
+        "target": "0x571ad3"
+      },
+      {
+        "address": "0x571aa6",
+        "target": "0x571abd"
+      },
+      {
+        "address": "0x571ab8",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571ad3",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571b1e",
+        "target": "0x571ba9"
+      },
+      {
+        "address": "0x571b97",
+        "target": "0x571ba9"
+      },
+      {
+        "address": "0x571ba9",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571bdb",
+        "target": "0x571d3b"
+      },
+      {
+        "address": "0x571bf7",
+        "target": "0x571d3b"
+      },
+      {
+        "address": "0x571c0b",
+        "target": "0x571d3b"
+      },
+      {
+        "address": "0x571c2f",
+        "target": "0x571ca8"
+      },
+      {
+        "address": "0x571cc6",
+        "target": "0x571d1e"
+      },
+      {
+        "address": "0x571d81",
+        "target": "0x571e0c"
+      },
+      {
+        "address": "0x571dfa",
+        "target": "0x571e0c"
+      },
+      {
+        "address": "0x571e0c",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571e27",
+        "target": "0x571ecd"
+      },
+      {
+        "address": "0x571e43",
+        "target": "0x571ecd"
+      },
+      {
+        "address": "0x571e57",
+        "target": "0x571ecd"
+      },
+      {
+        "address": "0x571f13",
+        "target": "0x571f9e"
+      },
+      {
+        "address": "0x571f8c",
+        "target": "0x571f9e"
+      },
+      {
+        "address": "0x571f9e",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x571fb9",
+        "target": "0x571fea"
+      },
+      {
+        "address": "0x571fd2",
+        "target": "0x571fea"
+      },
+      {
+        "address": "0x572030",
+        "target": "0x5720fe"
+      },
+      {
+        "address": "0x57209d",
+        "target": "0x5720d2"
+      },
+      {
+        "address": "0x5720ec",
+        "target": "0x5720fe"
+      },
+      {
+        "address": "0x5720fe",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x572130",
+        "target": "0x572290"
+      },
+      {
+        "address": "0x57214c",
+        "target": "0x572290"
+      },
+      {
+        "address": "0x572160",
+        "target": "0x572290"
+      },
+      {
+        "address": "0x572184",
+        "target": "0x5721fd"
+      },
+      {
+        "address": "0x57221b",
+        "target": "0x572273"
+      },
+      {
+        "address": "0x5722d6",
+        "target": "0x5723b4"
+      },
+      {
+        "address": "0x57234f",
+        "target": "0x5723b4"
+      },
+      {
+        "address": "0x57235f",
+        "target": "0x572377"
+      },
+      {
+        "address": "0x572385",
+        "target": "0x572397"
+      },
+      {
+        "address": "0x5723b4",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5723cf",
+        "target": "0x572475"
+      },
+      {
+        "address": "0x5723eb",
+        "target": "0x572475"
+      },
+      {
+        "address": "0x5723ff",
+        "target": "0x572475"
+      },
+      {
+        "address": "0x5724bb",
+        "target": "0x57258e"
+      },
+      {
+        "address": "0x572534",
+        "target": "0x57258e"
+      },
+      {
+        "address": "0x572544",
+        "target": "0x57257e"
+      },
+      {
+        "address": "0x572579",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57258e",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5725a9",
+        "target": "0x5725da"
+      },
+      {
+        "address": "0x5725c2",
+        "target": "0x5725da"
+      },
+      {
+        "address": "0x572620",
+        "target": "0x5726ee"
+      },
+      {
+        "address": "0x57268d",
+        "target": "0x5726c2"
+      },
+      {
+        "address": "0x5726dc",
+        "target": "0x5726ee"
+      },
+      {
+        "address": "0x5726ee",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x572759",
+        "target": "0x57276b"
+      },
+      {
+        "address": "0x572785",
+        "target": "0x572816"
+      },
+      {
+        "address": "0x5727fe",
+        "target": "0x572816"
+      },
+      {
+        "address": "0x572816",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x572825",
+        "target": "0x57284b"
+      },
+      {
+        "address": "0x572831",
+        "target": "0x57284b"
+      },
+      {
+        "address": "0x57283d",
+        "target": "0x57284b"
+      },
+      {
+        "address": "0x572849",
+        "target": "0x572883"
+      },
+      {
+        "address": "0x572855",
+        "target": "0x572863"
+      },
+      {
+        "address": "0x572861",
+        "target": "0x572883"
+      },
+      {
+        "address": "0x57286d",
+        "target": "0x572cb8"
+      },
+      {
+        "address": "0x57287d",
+        "target": "0x572cb8"
+      },
+      {
+        "address": "0x572cb3",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x572cfe",
+        "target": "0x572d8f"
+      },
+      {
+        "address": "0x572d77",
+        "target": "0x572d8f"
+      },
+      {
+        "address": "0x572d8f",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x572daa",
+        "target": "0x572f5a"
+      },
+      {
+        "address": "0x572dc6",
+        "target": "0x572f5a"
+      },
+      {
+        "address": "0x572dda",
+        "target": "0x572f5a"
+      },
+      {
+        "address": "0x572fa4",
+        "target": "0x572fee"
+      },
+      {
+        "address": "0x572fc4",
+        "target": "0x572fee"
+      },
+      {
+        "address": "0x572ffc",
+        "target": "0x573012"
+      },
+      {
+        "address": "0x573020",
+        "target": "0x573037"
+      },
+      {
+        "address": "0x573032",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57309a",
+        "target": "0x57312b"
+      },
+      {
+        "address": "0x573113",
+        "target": "0x57312b"
+      },
+      {
+        "address": "0x57312b",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x573146",
+        "target": "0x5732f0"
+      },
+      {
+        "address": "0x573162",
+        "target": "0x5732f0"
+      },
+      {
+        "address": "0x573176",
+        "target": "0x5732f0"
+      },
+      {
+        "address": "0x57333a",
+        "target": "0x573384"
+      },
+      {
+        "address": "0x57335a",
+        "target": "0x573384"
+      },
+      {
+        "address": "0x573392",
+        "target": "0x5733a8"
+      },
+      {
+        "address": "0x5733b6",
+        "target": "0x5733cd"
+      },
+      {
+        "address": "0x5733c8",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x573430",
+        "target": "0x5734c1"
+      },
+      {
+        "address": "0x5734a9",
+        "target": "0x5734c1"
+      },
+      {
+        "address": "0x5734c1",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x57353e",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5735b7",
+        "target": "0x5735c9"
+      },
+      {
+        "address": "0x5735d6",
+        "target": "0x5735df"
+      },
+      {
+        "address": "0x5735df",
+        "target": "0x56f95b"
+      }
+    ],
+    "indirect_jumps": [
+      {
+        "address": "0x56fa7b",
+        "instruction": "jmp    DWORD PTR [ecx*4+0x5735ea]"
+      }
+    ],
+    "calls": [
+      {
+        "address": "0x56f956",
+        "instruction": "call   0x405490"
+      },
+      {
+        "address": "0x56fa3f",
+        "instruction": "call   0x413090"
+      },
+      {
+        "address": "0x56fb50",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x56fc26",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x56fcfc",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x56fda0",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x56fdc1",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x56fdef",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x56fe2b",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x56fe5f",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x56ff83",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x570005",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x570026",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x570051",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x570132",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5702c5",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5704bf",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5706b9",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5707ba",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x570890",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x570966",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5709bf",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5709f3",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x570ab2",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x570b84",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x570ba5",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x570bd6",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x570cb1",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x570cf0",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x570db5",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x570e8b",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x570ee8",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x570f22",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x570fe7",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5710b9",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5710e0",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571111",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5711ec",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x57122b",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5712f0",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5713c6",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x571423",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x57145d",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x571522",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5715f4",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x57161b",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x57164c",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x571727",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x571766",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x57182b",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x571901",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x57197d",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5719b7",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x571ab5",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x571ba6",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x571c4a",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571c71",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571ca5",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x571ce1",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571d1b",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x571e09",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x571e72",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571e99",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x571eca",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x571f9b",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5720fb",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x57219f",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5721c6",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5721fa",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x572236",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572270",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x572394",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x57241a",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572441",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572472",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x57258b",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5726eb",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x572768",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x57288f",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5728b5",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5728e9",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5728f8",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x57291e",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572952",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572961",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572987",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5729bb",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5729ca",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5729e4",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572a15",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x572a24",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572a4a",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572a7e",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572a8d",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572ab3",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572ae7",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572af6",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572b1c",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572b50",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572b5f",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572b85",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572bb9",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572bc8",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572bec",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572c20",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x572c2f",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572c55",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x572c89",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x572ca3",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x572de0",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572df2",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572e32",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572e59",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572e86",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572ec6",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572eed",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x572f1a",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x57302f",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x57317c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x57318e",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5731ce",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5731ef",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x57321c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x57325c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x573283",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5732b0",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5733c5",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5735c6",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      }
+    ],
+    "local_data": [
+      {
+        "kind": "address-table",
+        "offset": 15562,
+        "size": 124
+      },
+      {
+        "kind": "selector-map",
+        "offset": 15686,
+        "size": 100
+      }
+    ],
+    "jump_table": [
+      {
+        "index": 0,
+        "address": "0x56fa82",
+        "effect_types": [
+          400
+        ]
+      },
+      {
+        "index": 1,
+        "address": "0x56fb58",
+        "effect_types": [
+          401
+        ]
+      },
+      {
+        "index": 2,
+        "address": "0x56fc2e",
+        "effect_types": [
+          402
+        ]
+      },
+      {
+        "index": 3,
+        "address": "0x56fd04",
+        "effect_types": [
+          403
+        ]
+      },
+      {
+        "index": 4,
+        "address": "0x56ffa8",
+        "effect_types": [
+          404
+        ]
+      },
+      {
+        "index": 5,
+        "address": "0x57016d",
+        "effect_types": [
+          405
+        ]
+      },
+      {
+        "index": 6,
+        "address": "0x5702cd",
+        "effect_types": [
+          406
+        ]
+      },
+      {
+        "index": 7,
+        "address": "0x5704c7",
+        "effect_types": [
+          407
+        ]
+      },
+      {
+        "index": 8,
+        "address": "0x5706c1",
+        "effect_types": [
+          408
+        ]
+      },
+      {
+        "index": 9,
+        "address": "0x5707c2",
+        "effect_types": [
+          409
+        ]
+      },
+      {
+        "index": 10,
+        "address": "0x570898",
+        "effect_types": [
+          410
+        ]
+      },
+      {
+        "index": 11,
+        "address": "0x57096e",
+        "effect_types": [
+          411
+        ]
+      },
+      {
+        "index": 12,
+        "address": "0x570cb9",
+        "effect_types": [
+          412
+        ]
+      },
+      {
+        "index": 13,
+        "address": "0x570e93",
+        "effect_types": [
+          413
+        ]
+      },
+      {
+        "index": 14,
+        "address": "0x5711f4",
+        "effect_types": [
+          414
+        ]
+      },
+      {
+        "index": 15,
+        "address": "0x5713ce",
+        "effect_types": [
+          415
+        ]
+      },
+      {
+        "index": 16,
+        "address": "0x57172f",
+        "effect_types": [
+          416
+        ]
+      },
+      {
+        "index": 17,
+        "address": "0x571909",
+        "effect_types": [
+          417
+        ]
+      },
+      {
+        "index": 18,
+        "address": "0x571ad8",
+        "effect_types": [
+          418
+        ]
+      },
+      {
+        "index": 19,
+        "address": "0x571bae",
+        "effect_types": [
+          419
+        ]
+      },
+      {
+        "index": 20,
+        "address": "0x571e11",
+        "effect_types": [
+          421
+        ]
+      },
+      {
+        "index": 21,
+        "address": "0x571fa3",
+        "effect_types": [
+          422
+        ]
+      },
+      {
+        "index": 22,
+        "address": "0x572103",
+        "effect_types": [
+          423
+        ]
+      },
+      {
+        "index": 23,
+        "address": "0x5723b9",
+        "effect_types": [
+          425
+        ]
+      },
+      {
+        "index": 24,
+        "address": "0x572593",
+        "effect_types": [
+          426
+        ]
+      },
+      {
+        "index": 25,
+        "address": "0x5726f3",
+        "effect_types": [
+          495
+        ]
+      },
+      {
+        "index": 26,
+        "address": "0x57281b",
+        "effect_types": [
+          496
+        ]
+      },
+      {
+        "index": 27,
+        "address": "0x572d94",
+        "effect_types": [
+          497
+        ]
+      },
+      {
+        "index": 28,
+        "address": "0x573130",
+        "effect_types": [
+          498
+        ]
+      },
+      {
+        "index": 29,
+        "address": "0x5734c6",
+        "effect_types": [
+          499
+        ]
+      },
+      {
+        "index": 30,
+        "address": "0x5735c9",
+        "effect_types": [
+          420,
+          424,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494
+        ]
+      }
+    ],
+    "selector": "000102030405060708090a0b0c0d0e0f101112131e1415161e17181e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e191a1b1c1d",
+    "owner_table": "0x788808",
+    "owner_slot": 7,
+    "owner_operand": "0x788824",
+    "padding_bytes": 6
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 15786,
+      "matched_bytes": 15786,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 55,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 343,
+          "target": 5715558,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62499",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 15686 independently checked",
+          "local_target_offset": 15686,
+          "addend": 0
+        },
+        {
+          "offset": 350,
+          "target": 5715434,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62553",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 15562 independently checked",
+          "local_target_offset": 15562,
+          "addend": 0
+        },
+        {
+          "offset": 1116,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1153,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1186,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1255,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1292,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1307,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1766,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1799,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2561,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2586,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2716,
+          "target": 7897680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f8eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788250; literal 0.015 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2760,
+          "target": 7893760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fc999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787300; literal 0.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2785,
+          "target": 7893760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fc999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787300; literal 0.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3067,
+          "target": 7896352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@400199999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d20; literal 2.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3092,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3222,
+          "target": 7897680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f8eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788250; literal 0.015 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3266,
+          "target": 7896512,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3291,
+          "target": 7896512,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4256,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4271,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4277,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4308,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4323,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4329,
+          "target": 7896264,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4373,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4417,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4449,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4527,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4613,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4672,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4709,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4742,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5073,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5094,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5100,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5137,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5169,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5213,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5245,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5577,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5598,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5604,
+          "target": 7897032,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ffb333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5635,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5656,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5662,
+          "target": 7896424,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bfe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5706,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5750,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5782,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5860,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5946,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6005,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6042,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6081,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6412,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6433,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6439,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6476,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6508,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6552,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6584,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6916,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6937,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6943,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6974,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6995,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7001,
+          "target": 7896464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bffccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7045,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7089,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7121,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7199,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7285,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7344,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7381,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7420,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7751,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7772,
+          "target": 7897008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7778,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7815,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7847,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7891,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7923,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8249,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8286,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8307,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8966,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9003,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9042,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9117,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9154,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9175,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9555,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9594,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10331,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10368,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10407,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10482,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7880d8; literal -80.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10519,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10540,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11003,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11042,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11745,
+          "target": 7896864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bf947ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12144,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12182,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12249,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12287,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12354,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12392,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12459,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12485,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12549,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12587,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12654,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12692,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12759,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12797,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12864,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12902,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12969,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13005,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13072,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13110,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13505,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13523,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13587,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13615,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13626,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13654,
+          "target": 7896552,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13671,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13699,
+          "target": 7897032,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ffb333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13711,
+          "target": 7896464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bffccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13735,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13763,
+          "target": 7896504,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13774,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13802,
+          "target": 7893736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3feccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13819,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13847,
+          "target": 7896856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13859,
+          "target": 7896264,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13903,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13947,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13979,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14429,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14447,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14511,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14544,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14572,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14589,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14617,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14629,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14653,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14681,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14692,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14720,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14737,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14765,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14777,
+          "target": 7896248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14821,
+          "target": 7896224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f9eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14865,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14897,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15562,
+          "target": 5700226,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62192",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
+          "local_target_offset": 354,
+          "addend": 0
+        },
+        {
+          "offset": 15566,
+          "target": 5700440,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62196",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 568 and canonical destination independently checked",
+          "local_target_offset": 568,
+          "addend": 0
+        },
+        {
+          "offset": 15570,
+          "target": 5700654,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62200",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 782 and canonical destination independently checked",
+          "local_target_offset": 782,
+          "addend": 0
+        },
+        {
+          "offset": 15574,
+          "target": 5700868,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62204",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 996 and canonical destination independently checked",
+          "local_target_offset": 996,
+          "addend": 0
+        },
+        {
+          "offset": 15578,
+          "target": 5701544,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62218",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 1672 and canonical destination independently checked",
+          "local_target_offset": 1672,
+          "addend": 0
+        },
+        {
+          "offset": 15582,
+          "target": 5701997,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62227",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 2125 and canonical destination independently checked",
+          "local_target_offset": 2125,
+          "addend": 0
+        },
+        {
+          "offset": 15586,
+          "target": 5702349,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62233",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 2477 and canonical destination independently checked",
+          "local_target_offset": 2477,
+          "addend": 0
+        },
+        {
+          "offset": 15590,
+          "target": 5702855,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62241",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 2983 and canonical destination independently checked",
+          "local_target_offset": 2983,
+          "addend": 0
+        },
+        {
+          "offset": 15594,
+          "target": 5703361,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62249",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 3489 and canonical destination independently checked",
+          "local_target_offset": 3489,
+          "addend": 0
+        },
+        {
+          "offset": 15598,
+          "target": 5703618,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62254",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 3746 and canonical destination independently checked",
+          "local_target_offset": 3746,
+          "addend": 0
+        },
+        {
+          "offset": 15602,
+          "target": 5703832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62258",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 3960 and canonical destination independently checked",
+          "local_target_offset": 3960,
+          "addend": 0
+        },
+        {
+          "offset": 15606,
+          "target": 5704046,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62262",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 411; compiler-local offset 4174 and canonical destination independently checked",
+          "local_target_offset": 4174,
+          "addend": 0
+        },
+        {
+          "offset": 15610,
+          "target": 5704889,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62278",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 412; compiler-local offset 5017 and canonical destination independently checked",
+          "local_target_offset": 5017,
+          "addend": 0
+        },
+        {
+          "offset": 15614,
+          "target": 5705363,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62287",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 413; compiler-local offset 5491 and canonical destination independently checked",
+          "local_target_offset": 5491,
+          "addend": 0
+        },
+        {
+          "offset": 15618,
+          "target": 5706228,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62303",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 414; compiler-local offset 6356 and canonical destination independently checked",
+          "local_target_offset": 6356,
+          "addend": 0
+        },
+        {
+          "offset": 15622,
+          "target": 5706702,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62312",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 415; compiler-local offset 6830 and canonical destination independently checked",
+          "local_target_offset": 6830,
+          "addend": 0
+        },
+        {
+          "offset": 15626,
+          "target": 5707567,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62328",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 416; compiler-local offset 7695 and canonical destination independently checked",
+          "local_target_offset": 7695,
+          "addend": 0
+        },
+        {
+          "offset": 15630,
+          "target": 5708041,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62337",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 17 for effect types 417; compiler-local offset 8169 and canonical destination independently checked",
+          "local_target_offset": 8169,
+          "addend": 0
+        },
+        {
+          "offset": 15634,
+          "target": 5708504,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62346",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 18 for effect types 418; compiler-local offset 8632 and canonical destination independently checked",
+          "local_target_offset": 8632,
+          "addend": 0
+        },
+        {
+          "offset": 15638,
+          "target": 5708718,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62350",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 19 for effect types 419; compiler-local offset 8846 and canonical destination independently checked",
+          "local_target_offset": 8846,
+          "addend": 0
+        },
+        {
+          "offset": 15642,
+          "target": 5709329,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62362",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 20 for effect types 421; compiler-local offset 9457 and canonical destination independently checked",
+          "local_target_offset": 9457,
+          "addend": 0
+        },
+        {
+          "offset": 15646,
+          "target": 5709731,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62370",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 21 for effect types 422; compiler-local offset 9859 and canonical destination independently checked",
+          "local_target_offset": 9859,
+          "addend": 0
+        },
+        {
+          "offset": 15650,
+          "target": 5710083,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62376",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 22 for effect types 423; compiler-local offset 10211 and canonical destination independently checked",
+          "local_target_offset": 10211,
+          "addend": 0
+        },
+        {
+          "offset": 15654,
+          "target": 5710777,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62390",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 23 for effect types 425; compiler-local offset 10905 and canonical destination independently checked",
+          "local_target_offset": 10905,
+          "addend": 0
+        },
+        {
+          "offset": 15658,
+          "target": 5711251,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62400",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 24 for effect types 426; compiler-local offset 11379 and canonical destination independently checked",
+          "local_target_offset": 11379,
+          "addend": 0
+        },
+        {
+          "offset": 15662,
+          "target": 5711603,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62406",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 25 for effect types 495; compiler-local offset 11731 and canonical destination independently checked",
+          "local_target_offset": 11731,
+          "addend": 0
+        },
+        {
+          "offset": 15666,
+          "target": 5711899,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62411",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 26 for effect types 496; compiler-local offset 12027 and canonical destination independently checked",
+          "local_target_offset": 12027,
+          "addend": 0
+        },
+        {
+          "offset": 15670,
+          "target": 5713300,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62449",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 27 for effect types 497; compiler-local offset 13428 and canonical destination independently checked",
+          "local_target_offset": 13428,
+          "addend": 0
+        },
+        {
+          "offset": 15674,
+          "target": 5714224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62466",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 28 for effect types 498; compiler-local offset 14352 and canonical destination independently checked",
+          "local_target_offset": 14352,
+          "addend": 0
+        },
+        {
+          "offset": 15678,
+          "target": 5715142,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62483",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 29 for effect types 499; compiler-local offset 15270 and canonical destination independently checked",
+          "local_target_offset": 15270,
+          "addend": 0
+        },
+        {
+          "offset": 15682,
+          "target": 5715401,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62184",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; original switch address entry 30 for effect types 420,424,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 15529 and canonical destination independently checked",
+          "local_target_offset": 15529,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "55c03bd9fe10f6f55ea6a3355b3a6a121081be7c59812e1eb1b203d712f7e9eb",
+      "target_extent_sha256": "55c03bd9fe10f6f55ea6a3355b3a6a121081be7c59812e1eb1b203d712f7e9eb",
+      "code_size": 15562,
+      "local_data_bytes": 224,
+      "local_data": [
+        {
+          "offset": 15562,
+          "size": 124,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; complete original31-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        },
+        {
+          "offset": 15686,
+          "size": 100,
+          "kind": "switch-index-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls; complete original31-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        }
+      ],
+      "unit": "character-07-update-local-effects",
+      "symbol": "?Slot07@Character07@@UAEXXZ",
+      "target_address": "0x0056F920",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "57c10f66af0c2a4e29bda763ca5b5ac6e3921a825bed80955762e5d05333f15d",
+      "object_sha256": "21af8238e8fe4e769a2f5dc6e0f615d2d4da026a640bb8e3e620c6b5c2fde4de",
+      "source_sha256": "62afaba3decf408994c04b51508b1c2489cbeb3e18638fd2ebca3150328e8486",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "df48885451007a5ea0a55bc09adbaa4fb07ad8a2688fb1d22f2bda8528472c96"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "67f425d648c72cbed71c6212824492db674c3012dc5cd55c0f5e6de1ce3f7456",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "35be637b9fed794f9da44325a913afb289bc510a63a1fd8d7abf42bc2238ab1c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

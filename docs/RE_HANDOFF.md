@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 301 |
-| Authored exact instruction bytes | 786,412 |
-| Associated exact local-table bytes | 5,275 |
-| Reviewed boundaries / origins | 338 / 338 |
+| Authored complete exact functions | 302 |
+| Authored exact instruction bytes | 801,974 |
+| Associated exact local-table bytes | 5,499 |
+| Reviewed boundaries / origins | 339 / 339 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,37 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misaki animation/state checkpoint
+## Latest Misaki local-effect checkpoint
+
+Character07::Slot07 at56F920 is complete strict exact:15,562 instruction bytes
+and224 associated table bytes, total15,786; complete exclusive end5736CA. Source:
+src/Character07Effects.cpp; profile vc71-od-static; public proof:
+docs/evidence/misaki-effects-exact.json. Durable facts:
+[Misaki local effect dispatch and controls](KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls).
+Private retained evidence:.analysis/probes/misaki-effects/README.md.
+
+Independent review covers3,572 instructions,228 direct branches and the full
+31-address /100-selector switch for30 explicit types400..499. All193 relocation
+fields are independently checked:69 calls,91 double operands and33 local bindings.
+All26 double payloads match target and COFF; all nine RandomRange callers zero-
+extend AX. Preserve CRT random expression order, positive lifecycle exits and
+ring wrap64. Natural frame19C retains the used descriptor and cursor/count locals.
+
+Complete source was compiled early and fully compared again after formatting.
+One final selected cold replay passed all15,786 bytes and193 reviewed bindings.
+Public headers and all319 previous recipes/source owners remain unchanged; no
+old unit needed replay. Focused tracking, ledgers/progress CI and whitespace
+checks passed. No compiler/Wine failure, full CI/cohort or runtime matrix occurred.
+
+All thirteen actual Misaki vtable788808 destinations now map to complete exact
+recipes, including inherited LoadResources. Virtual-body closure does not close
+resource/data/runtime/TU or game phases. Continue substantial coherent owners;
+Mayu (ID5, constructor5DDDF0, allocation3448) is a useful next candidate. Recheck
+its complete constructor, installed vptr and real fields against the canonical
+target before source changes. No fresh Mayu decompile has been started. Preserve
+parked PrepareBattle/Shiori controls until new evidence predicts an instruction.
+
+## Previous Misaki animation/state checkpoint
 
 Character07::Slot06 at5571F0 is complete strict exact:66,501 instruction bytes
 and841 associated table bytes, total67,342; complete exclusive end5678FE. Source:
