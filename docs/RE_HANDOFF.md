@@ -2,11 +2,10 @@
 
 ## Operator state and starting point
 
-The operator stopped further reconstruction, cleared the active goal and asked
-for code/document cleanup, storage cleanup and handoff to another agent.
-The last in-flight native comparison was completed and recorded; no additional
-reconstruction task is active. Suggested follow-ups below are a backlog, not
-an instruction to resume automatically.
+The operator explicitly resumed active EFZ reconstruction on 2026-11-06,
+requesting fast, careful exact recovery with focused checks and selected cold
+replays only. Continue from accepted sources and reviewed target evidence;
+never infer game completion from a successful unit.
 
 Start with `git status --short --branch`, the diff, this file and AGENTS.md.
 Use accepted `src/` and the reviewed ledgers. Preserve unrelated changes and
@@ -22,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 220 |
-| Authored exact instruction bytes | 221,678 |
+| Authored complete exact functions | 221 |
+| Authored exact instruction bytes | 222,640 |
 | Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 258 / 258 |
+| Reviewed boundaries / origins | 259 / 259 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -44,7 +43,24 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Final in-flight checkpoint
+## Latest resumed checkpoint
+
+`Video::SaveScreenshot` at 0x40C1C0 /962 is now complete exact in
+`src/VideoScreenshot.cpp`, profile vc71-od-static-gs. One final selected cold
+artifact passed with zero differences and twenty explicit relocation bindings.
+Public proof: docs/evidence/video-screenshot-exact.json; complete target facts:
+[Video screenshot writer](KNOWLEDGE_BASE.md#video-screenshot-writer).
+Private attempts and audits: .analysis/probes/video-output/README.md.
+No common header or accepted source changed, so no old units required replay.
+Focused tracking, ledger/progress CI and diff whitespace checks passed.
+
+Preserve its original palette/header overwrite order, stride calculation and
+unchecked error behavior. Local scope or work-record changes require a complete
+cold comparison. FillRectangle40B300 is also now confirmed to have a body-local
+EDI save/restore around a handwritten-looking pixel loop; park it alongside the
+other assembly-style blitters unless a permitted natural C++ strategy emerges.
+
+## Previous battle checkpoint
 
 Four complete authored members add 4,998 instruction bytes, with no local tables:
 
@@ -91,8 +107,7 @@ current baseline. They are retained derivation records, not idempotent tools.
 
 ## Parked work and possible follow-ups
 
-Choose substantial owners and useful small functions when reconstruction is
-explicitly resumed. Review complete boundaries and compile a complete source
+Choose substantial owners and useful small functions as reconstruction continues. Review complete boundaries and compile a complete source
 before speculative flag/name sweeps. No future owner has acceptance merely
 because its callers or declarations match.
 
@@ -121,7 +136,7 @@ because its callers or declarations match.
   No permitted natural-C++ exact strategy is established. Read
   .analysis/probes/draw-*-review.txt; do not use naked/assembly/byte wrappers.
   Other open Video owners include DrawShadowSurface40A7B0 /806,
-  FillRectangle40B300 /308, SaveScreenshot40C1C0 /962 and buffer conversion.
+  FillRectangle40B300 /308 and buffer conversion.
 
 The accepted Shiori slot7 contribution is 36,467 bytes including 332 table bytes,
 ending at 0x434003; retain all 60 local bindings and the complete table comparison.

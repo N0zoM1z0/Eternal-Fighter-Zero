@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit reviewed original bindings",
+  "method": "one selected final cold VC7.1 /Od /MT /GS artifact; complete target extent and every relocation compared without masks",
+  "boundary_review": {
+    "address": "0x40c1c0",
+    "exclusive_end": "0x40c582",
+    "size": 962,
+    "instructions": 224,
+    "branches": [
+      [
+        "0x40c200",
+        "0x40c213"
+      ],
+      [
+        "0x40c217",
+        "0x40c22a"
+      ],
+      [
+        "0x40c22e",
+        "0x40c241"
+      ],
+      [
+        "0x40c322",
+        "0x40c333"
+      ],
+      [
+        "0x40c33d",
+        "0x40c3ab"
+      ],
+      [
+        "0x40c349",
+        "0x40c35a"
+      ],
+      [
+        "0x40c364",
+        "0x40c3a6"
+      ],
+      [
+        "0x40c3a4",
+        "0x40c34b"
+      ],
+      [
+        "0x40c3a6",
+        "0x40c324"
+      ],
+      [
+        "0x40c3e0",
+        "0x40c3f1"
+      ],
+      [
+        "0x40c3fb",
+        "0x40c469"
+      ],
+      [
+        "0x40c464",
+        "0x40c3e2"
+      ],
+      [
+        "0x40c473",
+        "0x40c484"
+      ],
+      [
+        "0x40c48b",
+        "0x40c49e"
+      ],
+      [
+        "0x40c49c",
+        "0x40c475"
+      ]
+    ],
+    "direct_calls": [
+      [
+        "0x40c1e0",
+        "0x778180"
+      ],
+      [
+        "0x40c1f1",
+        "0x778090"
+      ],
+      [
+        "0x40c20b",
+        "0x778090"
+      ],
+      [
+        "0x40c222",
+        "0x778090"
+      ],
+      [
+        "0x40c239",
+        "0x778090"
+      ],
+      [
+        "0x40c24e",
+        "0x777f55"
+      ],
+      [
+        "0x40c261",
+        "0x778090"
+      ],
+      [
+        "0x40c272",
+        "0x778090"
+      ],
+      [
+        "0x40c2a1",
+        "0x777d46"
+      ],
+      [
+        "0x40c56b",
+        "0x777e20"
+      ],
+      [
+        "0x40c576",
+        "0x7781dc"
+      ]
+    ],
+    "indirect_calls": [
+      [
+        "0x40c290",
+        "call   DWORD PTR ds:0x78704c"
+      ],
+      [
+        "0x40c2ed",
+        "call   DWORD PTR [edx+0x64]"
+      ],
+      [
+        "0x40c3ca",
+        "call   DWORD PTR [edx+0x80]"
+      ],
+      [
+        "0x40c545",
+        "call   DWORD PTR ds:0x787040"
+      ],
+      [
+        "0x40c552",
+        "call   DWORD PTR ds:0x787038"
+      ]
+    ],
+    "following_cc_bytes": 14,
+    "literals": {
+      "0x787874": "736e61705c736e00",
+      "0x78787c": "3000",
+      "0x787880": "3000",
+      "0x787884": "3000",
+      "0x787888": "2e626d7000"
+    },
+    "abi": "Video thiscall, int index, const byte palette pointer, RET8; genuine DirectDraw surface Lock slot64 / Unlock slot80; WINAPI CreateFileA/WriteFile/CloseHandle IAT"
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 962,
+      "matched_bytes": 962,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1CA; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 33,
+          "target": 7831936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__strnset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1E1; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 41,
+          "target": 7895156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?screenshotPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1E9; NUL-terminated literal 736e61705c736e00",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1F2; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 67,
+          "target": 7895164,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?screenshotZeroThousands@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C203; NUL-terminated literal 3000",
+          "addend": 0
+        },
+        {
+          "offset": 76,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C20C; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 7895168,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?screenshotZeroHundreds@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C21A; NUL-terminated literal 3000",
+          "addend": 0
+        },
+        {
+          "offset": 99,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C223; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 113,
+          "target": 7895172,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?screenshotZeroTens@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C231; NUL-terminated literal 3000",
+          "addend": 0
+        },
+        {
+          "offset": 122,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C23A; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 143,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C24F; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 162,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C262; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 170,
+          "target": 7895176,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?screenshotExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C26A; NUL-terminated literal 2e626d7000",
+          "addend": 0
+        },
+        {
+          "offset": 179,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C273; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 210,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C292; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C2A2; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 903,
+          "target": 7893056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WriteFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C547; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 916,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C554; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 940,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C56C; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        },
+        {
+          "offset": 951,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C577; reviewed CRT/IAT/security dependency and complete original call/data operand",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "548be86dbf0d3356e80cb1184580bbfb0ee28269cdd4b69876db8f702fd4997c",
+      "target_extent_sha256": "548be86dbf0d3356e80cb1184580bbfb0ee28269cdd4b69876db8f702fd4997c",
+      "unit": "video-save-screenshot",
+      "symbol": "?SaveScreenshot@Video@@QAEXHPBE@Z",
+      "target_address": "0x0040C1C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "9c140e4929a956d11f5ae92723520419846d2ab36494d392e4ef8e2259fc66fa",
+      "object_sha256": "15df3606c4e783b3fc4b25676ae47947c4b7ce299c69768bb561bc27c969ac61",
+      "source_sha256": "fd355197f78c8764efd269a2e59253e7d7e3e7eddff9198a92c924ae293fdeb6",
+      "dependencies": {
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6b37df92154559a68c6b3b2c10e175831ab4b41576563772711768035a0e0ee1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8437f6b8d040c9fe0a39c6be42853fc3a6191c52edebc88fba47f163909b05b7",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

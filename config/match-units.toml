@@ -26377,3 +26377,153 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766476; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[units.video-save-screenshot]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/VideoScreenshot.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-save-screenshot/VideoScreenshot.obj"
+symbol = "?SaveScreenshot@Video@@QAEXHPBE@Z"
+target_address = 0x0040C1C0
+size = 962
+
+[[units.video-save-screenshot.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078F050
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1CA; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 33
+type = "REL32"
+symbol = "__strnset"
+target = 0x00778180
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1E1; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 41
+type = "DIR32"
+symbol = "?screenshotPrefix@@3QBDB"
+target = 0x00787874
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1E9; NUL-terminated literal 736e61705c736e00"
+
+[[units.video-save-screenshot.relocations]]
+offset = 50
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C1F2; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 67
+type = "DIR32"
+symbol = "?screenshotZeroThousands@@3QBDB"
+target = 0x0078787C
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C203; NUL-terminated literal 3000"
+
+[[units.video-save-screenshot.relocations]]
+offset = 76
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C20C; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 90
+type = "DIR32"
+symbol = "?screenshotZeroHundreds@@3QBDB"
+target = 0x00787880
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C21A; NUL-terminated literal 3000"
+
+[[units.video-save-screenshot.relocations]]
+offset = 99
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C223; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 113
+type = "DIR32"
+symbol = "?screenshotZeroTens@@3QBDB"
+target = 0x00787884
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C231; NUL-terminated literal 3000"
+
+[[units.video-save-screenshot.relocations]]
+offset = 122
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C23A; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 143
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777F55
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C24F; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 162
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C262; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "?screenshotExtension@@3QBDB"
+target = 0x00787888
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C26A; NUL-terminated literal 2e626d7000"
+
+[[units.video-save-screenshot.relocations]]
+offset = 179
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C273; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 210
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704C
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C292; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 226
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777D46
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C2A2; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 903
+type = "DIR32"
+symbol = "__imp__WriteFile@20"
+target = 0x00787040
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C547; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 916
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C554; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 940
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777E20
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C56C; reviewed CRT/IAT/security dependency and complete original call/data operand"
+
+[[units.video-save-screenshot.relocations]]
+offset = 951
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781DC
+evidence = "docs/KNOWLEDGE_BASE.md#video-screenshot-writer; operand 0040C577; reviewed CRT/IAT/security dependency and complete original call/data operand"

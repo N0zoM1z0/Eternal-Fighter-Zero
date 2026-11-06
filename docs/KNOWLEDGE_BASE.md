@@ -3551,3 +3551,41 @@ ledger/progress/whitespace checks accompany acceptance. The operator stopped
 further reconstruction and requested cleanup/handoff; no autonomous task remains.
 Pushbox, Shiori slot6, other characters, pixel kernels and product/runtime/
 portability closure remain open. Follow RE_HANDOFF.md for current task state.
+
+## Video screenshot writer
+
+`Video::SaveScreenshot` at 0x40C1C0 is a complete authored 962-byte member,
+ending exclusively at 0x40C582 (RET8, followed by fourteen CC alignment bytes).
+Final natural C++ source in `src/VideoScreenshot.cpp` passes complete strict
+native comparison with the pinned VC7.1 static /Od /GS profile. All twenty
+relocation fields bind explicit reviewed CRT, security-cookie, WINAPI IAT or
+literal destinations. No local tables or assembly wrappers are involved.
+The full boundary review covers 224 instructions, fifteen internal direct
+branches, eleven direct calls, two DirectDraw COM calls and three WINAPI IAT
+calls. Public proof is `docs/evidence/video-screenshot-exact.json`.
+
+The filename starts with `snap\sn`, appends three independently stored `0`
+literals when index <1000, <100 and <10, then decimal index and `.bmp`.
+CreateFileA uses read/write, no sharing and OPEN_ALWAYS. It allocates 0x13036
+bytes with new[], locks the actual back surface, and copies 320x240 byte
+indices into vertically reversed BMP rows. The source stride is explicitly
+(flag0004+1)*320 rather than the lock descriptor's pitch. It preserves the
+unchecked Lock/Unlock HRESULT stores, byte sampling in the alternate mode,
+and the original absence of file/allocation/error recovery.
+
+Palette entries are written B,G,R,0 starting at 0x36, then the original loop
+zeros 0x3A bytes, overwriting the first palette entry as well as the header.
+Individual subsequent header byte stores, including the store at offset 47,
+are target facts; do not replace them with a conventional BMP header. The
+filename buffer is initially _strnset for thirty bytes, not all thirty-two.
+Ordinary nested local scopes and a work record containing only live capture
+values retain the original /GS frame and local storage; no inert padding is
+present. Reformatting or changing these locals requires a new full comparison.
+
+One final selected cold artifact proves the final public source. No accepted
+header/source consumer changed and no full CI/cohort ran. Private complete
+attempts, disassembly, operand audit and formal log are retained under
+`.analysis/probes/video-output/`. FillRectangle at 0x40B300 remains open:
+complete review found a second body-local EDI save/restore around a register
+pixel loop, consistent with handwritten assembly. Its decompile alone is not
+evidence for a permitted natural C++ exact implementation.

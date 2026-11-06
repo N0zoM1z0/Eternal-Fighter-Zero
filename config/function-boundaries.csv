@@ -257,3 +257,4 @@ address,end,size,status,evidence
 0x00762C50,0x007631F0,1440,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x00765660,0x00765F96,2358,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x007661A0,0x0076647E,734,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
+0x0040C1C0,0x0040C582,962,reviewed,docs/KNOWLEDGE_BASE.md#video-screenshot-writer
