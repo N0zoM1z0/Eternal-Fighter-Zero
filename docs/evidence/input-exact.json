@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; nineteen cold source/profile artifacts shared unchanged across 13 new Input and Audio playback bodies and 76 shared-header-dependent units; reader and configuration units untouched",
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts shared unchanged across twelve new scene/palette/frame functions and 95 shared-header-dependent units; reader and configuration source units untouched",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -16,14 +16,14 @@
       "symbol": "??0Input@@QAE@XZ",
       "target_address": "0x0040C5E0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "2464c21cc11ce4852aa9d3697d35aafbaab3f1e6edaa4e881e2526ec373ae86b",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -160,14 +160,14 @@
       "symbol": "?Initialize@Input@@QAEHPAUHWND__@@@Z",
       "target_address": "0x0040C6F0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "adb64e003a8bc0da9430f104a98b1110225d70f35b685b3d8e4857a329e6cd59",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -186,14 +186,14 @@
       "symbol": "?Shutdown@Input@@QAEXXZ",
       "target_address": "0x0040C880",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8addb7e7d836db5a4959bc82528a1c5b8391bd233814cb75242fd607bb34f400",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -212,14 +212,14 @@
       "symbol": "??1Input@@QAE@XZ",
       "target_address": "0x0040C990",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "6667ed0928f0068183e3f4ec049b175574e7be272511709582f3c799158754e2",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -275,14 +275,14 @@
       "symbol": "?ReportFailure@Input@@QAEXXZ",
       "target_address": "0x0040CAA0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "295a27c6ecce5fca9ff5cd881e89530014d1c3a7d89b74fab940ea8b80cf4e7e",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -572,14 +572,14 @@
       "symbol": "_EnumerateInputDevice@8",
       "target_address": "0x0040CAE0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "6c2f5038630bafd52ee847eb9bf536a8f8e658dd51e2e943a66eac7ca88d05a1",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -598,14 +598,14 @@
       "symbol": "?ReadState@Input@@QAEEE@Z",
       "target_address": "0x0040CD00",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "c18f247199654b3c68da053b5720c8fb839865228e357bdd14adfd78a8e074ff",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -697,14 +697,14 @@
       "symbol": "?Defaults@Input@@QAEXXZ",
       "target_address": "0x0040D140",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "36cc1300095dd0739d3b29a85b5be2f27d796cfb85172b80f9bcf17058bdc16d",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -796,14 +796,14 @@
       "symbol": "?Configure@Input@@QAEXI@Z",
       "target_address": "0x0040D460",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "fc97f8273a741f7082686cc20ea5e78577c93483de604edad378f2168c39636a",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "f5a5174d67b62e1b983dd8dfe3db507aea4d1ffde4f62df39955830d5d4d4838",
       "source_sha256": "c21028e9c6ea66735818a8e2ea1a2d1f95b6efb6bd6ddfa80e2e6508c5b26660",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "d86f622c9fadb76d42274cf0d9fd1e3ecb2ac7e9a2f5ff38faf597d0810509c5",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

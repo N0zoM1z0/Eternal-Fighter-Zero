@@ -5,7 +5,8 @@
 The operator resumed exact reconstruction on 2026-11-06 and requested focused
 new/affected comparisons without full CI/cold cohorts or redundant tests.
 The current checkpoints complete the preserved PatternReader and Audio owners,
-then DirectInput, Audio playback controls and Context input/audio transitions.
+then DirectInput, Audio playback controls, Context input/audio transitions and
+the complete title scene with its shared base/fades and palette/frame wrappers.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -18,10 +19,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 102 |
-| Authored exact instruction bytes | 41,296 |
-| Associated exact local-table bytes | 191 |
-| Reviewed boundaries / origins | 117 / 117 |
+| Authored complete exact functions | 114 |
+| Authored exact instruction bytes | 45,065 |
+| Associated exact local-table bytes | 219 |
+| Reviewed boundaries / origins | 129 / 129 |
 | Compiler-generated auxiliary helpers | 11 functions / 406 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -76,7 +77,7 @@ input-exact.json, input-global-exact.json and audio-playback-exact.json. Existin
 affected-owner proofs were refreshed. All fifteen authored Audio members in the
 contiguous original region are now exact (3,508 bytes).
 
-The latest checkpoint adds six Context input/audio members (1,232 bytes):
+Checkpoint 1b1978d adds six Context input/audio members (1,232 bytes):
 PollInput, Initialize, PlayEffectSound, LoadMusic, ReleaseMusic and FadeMusic.
 Context's former unknown 0xC..0x37 storage now exposes direction/pulse/held arrays
 without changing size. Startup's Initialize is the 65-file sound-effect loader;
@@ -89,8 +90,35 @@ reader and Config sources were untouched. Public proof is context-io-exact.json;
 private final replay is .analysis/exact/context-io-and-affected.json. The complete
 dispatcher and its 36 local-offset bindings remain exact after symbol-ID refresh.
 
+The latest checkpoint adds twelve complete functions: Scene base construction,
+FadeOut/FadeIn, Scene0 construction/destruction/Step/render/keyboard, and Video
+palette submission/range/RGB clearing/presentation. They add 3,769 instruction
+bytes and 28 local-table bytes. The complete title Step contribution is 1,267
+bytes: 1,239 code bytes through RET at 0x776486 and all seven switch entries at
+0x776487..0x7764A3. All 79 new relocations, including eight local-offset bindings,
+were independently reviewed against canonical original operands. Scene's three
+pure virtual slots and Scene0's concrete table are now represented naturally;
+linked vtable/data acceptance remains open. Context exposes menu state within
+existing storage. Twenty-three cold source/profile/dependency artifacts cover
+12 new and 95 Engine.h/Input.h-dependent units: all 107 complete comparisons
+are strict exact. Reader and Config were unaffected and omitted. Public proofs
+are scene-base-exact.json, scene-title-exact.json and video-frame-exact.json;
+affected-owner proofs are refreshed. Private replay is
+.analysis/exact/scene-and-affected.json. See the knowledge base's
+[scene owner facts](KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base).
+
 Important retained limits:
 
+- Scene base is a provisional 0x430 minimum view, with palette at 0x2E;
+  Scene0's startup allocation remains 0x44C. Other scene allocations and startup
+  dispatch/delete bodies remain exact. No unique original class/type grouping
+  or linked vtable placement is claimed. Direction-held fields are unsigned
+  bytes; CPU flags and buttonA use signed bytes matching original codegen.
+- Title inactivity increments per quiet player, twice per fully quiet frame;
+  do not infer 30 seconds from threshold 1800. Keyboard failure still reaches
+  the original buffer test. Fades preserve 16/15 ms busy waits. ApplyPalette
+  submits 255 entries; Present returns zero only for surface loss and does not
+  implement restoration. Its converter and DrawSurface remain open externals.
 - Context direction/pulse arrays occupy 0xC..0x17 and four two-int held arrays
   occupy 0x18..0x37. Initialize loads wave\\se\\00.wav..64.wav and sets volume -500
   even on a failed load. LoadMusic calls marker parsing even when loading fails,
@@ -160,20 +188,20 @@ one cold artifact with explicit per-unit receipts. Preserve complete strict
 comparisons after scope/name changes; update ledgers, proofs, progress, durable
 knowledge and this handoff before a local checkpoint.
 
-The reader/audio/Input backlog and Context input/audio transitions are complete
-at function-codegen level. Next inspect a coherent scene owner: Scene0 constructor
-0x775D60 (460 bytes), its adjacent lifetime body, and Step 0x775FB0 (1,239 bytes).
-Target-attested local decompiles completed in this session and are retained
-under .analysis/ghidra/decompile-00775d60.txt / decompile-00775fb0.txt. Check their
-complete boundaries, actual vtable/base-class shape and normal C++ feasibility
-before editing declarations. The constructor calls shared base owner 0x759C10;
-Step also calls virtual slot +8, so the current two-slot opaque Scene declaration
-is incomplete. Review the base and vtable before selecting a source model.
-Existing scene views remain opaque/provisional;
-linked vtables/data are not an accepted lane. Scene1 Step 0x7539F0 (6,908 bytes)
-and neighboring scene/resource methods offer larger follow-up owners.
-Startup's scene constructors are still explicit external destinations. Do not
-optimize for small-function counts or accept decompiler hypotheses as ABI proof.
+The reader/audio/Input backlog, Context input/audio transitions and the title
+scene/shared fade owner are complete at function-codegen level. Their successful
+units do not complete the game. The base now has three reviewed virtual slots,
+so subsequent scene work can use that shape while keeping per-owner fields and
+ABI provisional. Next inspect the coherent Scene1 owner: locate and review its
+constructor in the current inventory, Step 0x7539F0 (6,908-byte candidate), and
+adjacent resource/render/keyboard bodies. Review complete boundaries, tables,
+relocations and native-C++ feasibility before acceptance;
+do not assume neighboring Ghidra candidates are correct or copy title field
+meanings into other scenes. Scene6 also offers a larger follow-up owner.
+Startup's other scene constructors remain explicit external destinations.
+Do not optimize for small-function counts or treat decompiler hypotheses as
+ABI proof. Private title trials and original reviews are retained under
+.analysis/probes/scene-next/; no archived workbench source should overwrite src/.
 
 The Draw implementations 0x409A90/0x40A0B0 were inspected completely. Like the
 865-byte 0x40A440 kernel, they have body-local ESI/EDI push/pop and AH/AL pixel

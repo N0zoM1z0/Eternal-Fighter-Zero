@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; nineteen cold source/profile artifacts shared unchanged across 13 new Input and Audio playback bodies and 76 shared-header-dependent units; reader and configuration units untouched",
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts shared unchanged across twelve new scene/palette/frame functions and 95 shared-header-dependent units; reader and configuration source units untouched",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -53,14 +53,14 @@
       "symbol": "_$E1",
       "target_address": "0x00786440",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "dfb8c9b444ef9455405b8ef6abedc37c9776bd697cdd7770bf0d4655c92f91ed",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "1c9d3a354186380f838af3af3a6c758cef4d874f962b830a2f08d3d4eddc506c",
       "source_sha256": "aebbeaf65eceaf851fd3e8b1896322f3003dc2cf2f4f80aff141767caa679198",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "55b1467de04d9d394e56e5ea99360f4d532097caef95bbf8e1ccf86965e81914",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -98,14 +98,14 @@
       "symbol": "_$E2",
       "target_address": "0x00786490",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "284d9a9fc7811054aa979b3dbd974355e00661fa9b1d8478075ef6d1908d8614",
-      "object_sha256": "dfb8c9b444ef9455405b8ef6abedc37c9776bd697cdd7770bf0d4655c92f91ed",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "1c9d3a354186380f838af3af3a6c758cef4d874f962b830a2f08d3d4eddc506c",
       "source_sha256": "aebbeaf65eceaf851fd3e8b1896322f3003dc2cf2f4f80aff141767caa679198",
       "dependencies": {
-        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "cb5f699e3171b1623caefc223dbbf25a292864c72a8b001fdf72790556dd0827",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "8d056cde3e2b6b79157900e97cf00dfba05e8ad68ecea225c592a684f024eb86",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

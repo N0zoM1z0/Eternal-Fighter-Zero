@@ -38,6 +38,11 @@ public:
     void BuildBlendTables(unsigned char *);
     void DarkenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
     void LightenPalette(const unsigned char *, unsigned char, unsigned char, unsigned char);
+    int ApplyPalette(unsigned char *);
+    int ApplyPaletteRange(unsigned char *, unsigned char, unsigned char);
+    int ClearPaletteRGB(unsigned char *);
+    int Present();
+    int ConvertBackBuffer();
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
     int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
 };
@@ -134,7 +139,8 @@ public:
     Audio *audioOwner;
 public:
     char directionX[2], directionY[2];
-    unsigned char buttonA[2], buttonB[2], buttonC[2], buttonD[2];
+    char buttonA[2];
+    unsigned char buttonB[2], buttonC[2], buttonD[2];
     int heldA[2], heldB[2], heldC[2], heldD[2];
     IUnknown *textures[0x398];
     IUnknown *extraA, *extraB, *extraC;
@@ -154,7 +160,9 @@ private:
 public:
     char characterDataMode;
 private:
-    unsigned char unknown_1342[3];
+public:
+    unsigned char selectedPlayer;
+    char cpuPlayer[2];
 public:
     unsigned char flag1345;
 public:
@@ -168,7 +176,8 @@ private:
 public:
     char effectSelector;
 private:
-    unsigned char unknown_134e;
+public:
+    unsigned char selection134e;
 public:
     unsigned char setting134f;
     char effectFlag1350;
@@ -177,7 +186,9 @@ private:
 public:
     int counter1354;
 private:
-    unsigned char unknown_1358[0xd];
+    unsigned char unknown_1358[0xc];
+public:
+    unsigned char mode1364;
 public:
     unsigned char setting1365;
     char setting1366;
@@ -252,16 +263,51 @@ public:
 };
 class Scene {
 public:
+    virtual void Slot0() = 0;
+    virtual unsigned char Step() = 0;
+    virtual void PollKeyboard() = 0;
+    unsigned message;
+protected:
+    HWND window;
+    Secondary *secondaryA, *secondaryB;
+    Secondary **secondarySlotA, **secondarySlotB;
+    Context *contextOwner;
+    Video *videoOwner;
+    Input *inputOwner;
+    Audio *audioOwner;
+    char phase;
+    unsigned char flag002d;
+    unsigned char palette[1024];
+    unsigned char colorKey;
+public:
+    Scene(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    void FadeOut(unsigned char *, unsigned char, int, int);
+    void FadeIn(unsigned char *, unsigned char);
+};
+class Scene0 : public Scene {
+    unsigned char unknown_0430[4];
+    IUnknown *titleSurface, *objectSurface;
+    char selection;
+    unsigned char unknown_043d;
+    short animationTick;
+    unsigned char directionHeld[2];
+    char flag0442;
+    unsigned char unknown_0443;
+    unsigned int idleTicks;
+    int field0448;
+public:
+    Scene0(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene0();
     virtual void Slot0();
     virtual unsigned char Step();
-    unsigned message;
+    virtual void PollKeyboard();
 };
 #define DECLARE_SCENE(Name, Size) \
 class Name : public Scene { \
-    unsigned char unknown_0008[Size - 8]; \
+    unsigned char unknown_0430[Size - sizeof(Scene)]; \
 public: Name(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *); \
+    virtual void Slot0(); virtual unsigned char Step(); virtual void PollKeyboard(); \
 };
-DECLARE_SCENE(Scene0, 0x44c)
 DECLARE_SCENE(Scene1, 0x560)
 DECLARE_SCENE(Scene2, 0x438)
 DECLARE_SCENE(Scene3, 0x598)

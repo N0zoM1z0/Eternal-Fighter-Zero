@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts shared unchanged across twelve new scene/palette/frame functions and 95 shared-header-dependent units; reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 460,
+      "matched_bytes": 460,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 41,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7903616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene0@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 72,
+          "target": 7903456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 7903476,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleObjectsDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 139,
+          "target": 7903496,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titlePaletteDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 171,
+          "target": 7903516,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleObjectsPaletteDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 189,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 201,
+          "target": 7903536,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 236,
+          "target": 7903556,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleObjectsBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 261,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 275,
+          "target": 7903576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titlePaletteBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 293,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 307,
+          "target": 7903596,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?titleObjectsPaletteBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 325,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 346,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "288ede6251f3346e6b08152196e18d85b020bb9a3da81d52e541f841cfef5636",
+      "target_extent_sha256": "288ede6251f3346e6b08152196e18d85b020bb9a3da81d52e541f841cfef5636",
+      "unit": "scene-title-construct",
+      "symbol": "??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x00775D60",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "ccc3850ebe39cfa181c2f43a73295574cc7eef4df0e2aacc0fbe1e0611441506",
+      "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8fac009d2bcf6b3f1e71668eb9ebc339784fe58b9a9acac81ab370f698670d11",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 118,
+      "matched_bytes": 118,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7903616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene0@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ec5ad66a18e3ad25451cdcc8fc723bc69296908b66f2312a7ceb1a22bc048c95",
+      "target_extent_sha256": "ec5ad66a18e3ad25451cdcc8fc723bc69296908b66f2312a7ceb1a22bc048c95",
+      "unit": "scene-title-destruct",
+      "symbol": "??1Scene0@@QAE@XZ",
+      "target_address": "0x00775F30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "ccc3850ebe39cfa181c2f43a73295574cc7eef4df0e2aacc0fbe1e0611441506",
+      "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "93e8d7812f60fa570ae04da14ec500269c74d342007b09ed3c6a6ce37dd2683b",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1267,
+      "matched_bytes": 1267,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 52,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 122,
+          "target": 4242736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyPalette@Video@@QAEHPAE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 139,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 217,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 333,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 565,
+          "target": 7824519,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60899",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 1239,
+          "addend": 0
+        },
+        {
+          "offset": 631,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 678,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 743,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 801,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 854,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 912,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 992,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1039,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1092,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1139,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1163,
+          "target": 4221024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1184,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1214,
+          "target": 7893376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__PostMessageA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 1239,
+          "target": 7823849,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60850",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 569,
+          "addend": 0
+        },
+        {
+          "offset": 1243,
+          "target": 7823976,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60851",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 696,
+          "addend": 0
+        },
+        {
+          "offset": 1247,
+          "target": 7824099,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60852",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 819,
+          "addend": 0
+        },
+        {
+          "offset": 1251,
+          "target": 7824210,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60853",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 930,
+          "addend": 0
+        },
+        {
+          "offset": 1255,
+          "target": 7824337,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60854",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 1057,
+          "addend": 0
+        },
+        {
+          "offset": 1259,
+          "target": 7824434,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60855",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 1154,
+          "addend": 0
+        },
+        {
+          "offset": 1263,
+          "target": 7824479,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L60856",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding",
+          "local_target_offset": 1199,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9e719a98ed09a21a166cf2c30cba4ae7073f1d45658359badeb89e29cda2e1f5",
+      "target_extent_sha256": "9e719a98ed09a21a166cf2c30cba4ae7073f1d45658359badeb89e29cda2e1f5",
+      "code_size": 1239,
+      "local_data_bytes": 28,
+      "local_data": [
+        {
+          "offset": 1239,
+          "size": 28,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; complete original seven-case address table at 0x776487 through 0x7764A3"
+        }
+      ],
+      "unit": "scene-title-step",
+      "symbol": "?Step@Scene0@@UAEEXZ",
+      "target_address": "0x00775FB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "ccc3850ebe39cfa181c2f43a73295574cc7eef4df0e2aacc0fbe1e0611441506",
+      "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4dff409bc32c7a4a12bd23906e0671f1f3a5db87f2f5aa2c0a1d81565e6bf0bf",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 688,
+      "matched_bytes": 688,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 34,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 213,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 262,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 386,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 424,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 506,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 666,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 680,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9c63218c315694f2da097714a11e3937c7f3a5912f0e5f5a8892e9807f58824d",
+      "target_extent_sha256": "9c63218c315694f2da097714a11e3937c7f3a5912f0e5f5a8892e9807f58824d",
+      "unit": "scene-title-render",
+      "symbol": "?Slot0@Scene0@@UAEXXZ",
+      "target_address": "0x007764B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "ccc3850ebe39cfa181c2f43a73295574cc7eef4df0e2aacc0fbe1e0611441506",
+      "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "69555dc91e462ff4efe134dfccec1546e5dcbd255726a2304357db5c2aeb3b97",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 183,
+      "matched_bytes": 183,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 167,
+          "target": 7893376,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__PostMessageA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 175,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "64cf81e633eb61868947642b3cb156e0d35d2f50a7860961f3ad4ca597d403a3",
+      "target_extent_sha256": "64cf81e633eb61868947642b3cb156e0d35d2f50a7860961f3ad4ca597d403a3",
+      "unit": "scene-title-keyboard",
+      "symbol": "?PollKeyboard@Scene0@@UAEXXZ",
+      "target_address": "0x00776760",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "ccc3850ebe39cfa181c2f43a73295574cc7eef4df0e2aacc0fbe1e0611441506",
+      "source_sha256": "02d97a5742ea6aec560d5054b17d38fb9de1c3508983c43cad74890f5b481e61",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f6a3cdc6844ff76853a53b24546733a826f1772931fed8e86f14299886b37c13",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

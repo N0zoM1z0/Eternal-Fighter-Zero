@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 23 cold source/profile/dependency artifacts shared unchanged across twelve new scene/palette/frame functions and 95 shared-header-dependent units; reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 124,
+      "matched_bytes": 124,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7901900,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "395c8f0fde60cc5547a32304546a5700798b6d122a0b5fb455205c8d82381020",
+      "target_extent_sha256": "395c8f0fde60cc5547a32304546a5700798b6d122a0b5fb455205c8d82381020",
+      "unit": "scene-base-construct",
+      "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x00759C10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "4d652f159944fe480a6cd08a5866aec0307a0361c4114cd547ce57737724175f",
+      "source_sha256": "e093abb84100bd6ffe0ade1f01613948a002b6fec47eb225f4b6f113a0e9f979",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ce8ecd051054f8831a3dd13ee86f0e17c10b841e8015def3af7172223f50fce5",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 390,
+      "matched_bytes": 390,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 4253136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSoundVolume@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 154,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 180,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 280,
+          "target": 4243232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LightenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 328,
+          "target": 4253136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSoundVolume@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 334,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 360,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d2ef2902144ccab739e5ce3546f39d70984919e0c4e3b1c903299920edf832a5",
+      "target_extent_sha256": "d2ef2902144ccab739e5ce3546f39d70984919e0c4e3b1c903299920edf832a5",
+      "unit": "scene-fade-out",
+      "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+      "target_address": "0x00759C90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "4d652f159944fe480a6cd08a5866aec0307a0361c4114cd547ce57737724175f",
+      "source_sha256": "e093abb84100bd6ffe0ade1f01613948a002b6fec47eb225f4b6f113a0e9f979",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4e725c0c654d1c91448a285742ea86f02db6011d5510575b7d8f276070c8e1d2",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 272,
+      "matched_bytes": 272,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 4242976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DarkenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 98,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 213,
+          "target": 4243232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LightenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 219,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        },
+        {
+          "offset": 245,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4e14ef6ce86aaa3ca7412e147709c2e556793c459cf8372d954dd238851a897e",
+      "target_extent_sha256": "4e14ef6ce86aaa3ca7412e147709c2e556793c459cf8372d954dd238851a897e",
+      "unit": "scene-fade-in",
+      "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+      "target_address": "0x00759E20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3173d385c3f5b303d48175a119d5628869185e7937b2ff41aabb41ce48754135",
+      "object_sha256": "4d652f159944fe480a6cd08a5866aec0307a0361c4114cd547ce57737724175f",
+      "source_sha256": "e093abb84100bd6ffe0ade1f01613948a002b6fec47eb225f4b6f113a0e9f979",
+      "dependencies": {
+        "src/Engine.h": "144827b7dcc338c1341923a1fa6ef999efaa9f2101284f3ef91019f10439cc39",
+        "src/Input.h": "2c57d3371b046ea3244c5476f311e1f37113200daac6c1e8af9253799c9f0797"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6150df9e0b9755cfe27aaabc3d7ac172e8872356b4f6b9a1c8bb752b4aac24b7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1123789c769b07bd0da83a79a62933750d088ce2a328a069169ee3a5ffe210fd",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

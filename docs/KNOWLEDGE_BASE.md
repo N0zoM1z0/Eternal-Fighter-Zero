@@ -1161,3 +1161,96 @@ only compiler-local symbol IDs changed. Private replay and review are retained
 at .analysis/exact/context-io-and-affected.json and
 .analysis/probes/context-io-next/. Target-attested decompile-00406780.txt
 corroborates startup's loader binding; it is not the boundary/acceptance authority.
+
+
+## Title scene and shared scene base
+
+On 2026-11-06, twelve complete functions recovered the title/menu Scene0 owner,
+shared scene construction and palette transitions, and four Video palette/frame
+wrappers. They add 3,769 authored instruction bytes and 28 associated local
+switch-table bytes. Full target boundaries were reviewed independently of
+compiler output, through each final RET; all 79 relocation operands were decoded
+from the canonical target and checked against their named destinations. Public
+proofs are scene-base-exact.json, scene-title-exact.json and video-frame-exact.json
+under docs/evidence/.
+
+| Member | Entry | Complete contribution bytes |
+| --- | --- | ---: |
+| Scene constructor | 0x759C10 | 124 |
+| Scene::FadeOut | 0x759C90 | 390 |
+| Scene::FadeIn | 0x759E20 | 272 |
+| Scene0 constructor | 0x775D60 | 460 |
+| Scene0 destructor | 0x775F30 | 118 |
+| Scene0::Step | 0x775FB0 | 1,267 (1,239 code + 28 table) |
+| Scene0::Slot0 (render) | 0x7764B0 | 688 |
+| Scene0::PollKeyboard | 0x776760 | 183 |
+| Video::ApplyPalette | 0x40BD30 | 55 |
+| Video::ApplyPaletteRange | 0x40BD70 | 65 |
+| Video::ClearPaletteRGB | 0x40BDC0 | 81 |
+| Video::Present | 0x40B5E0 | 94 |
+
+The base vtable at 0x7892CC contains three purecall destinations (0x77893D),
+not the previous two-slot opaque view. Scene0's table at 0x789980 contains render,
+Step and PollKeyboard in that order. Natural abstract-base/derived declarations
+emit the constructor/destructor vptr writes. These reviewed address bindings
+accept function code only: linked vtable/data placement remains unaccepted.
+The observed base view has message at 4, HWND at 8, Secondary pointers at C/10,
+pointer slots at 14/18, Context/Video/Input/Audio at 1C/20/24/28, phase/flag at
+2C/2D, palette at 2E and color key at 42E. Its rounded minimum view is 0x430;
+this does not establish a unique original class size or type grouping. Scene0
+has surfaces at 434/438, selection at 43C, a short at 43E, held-direction bytes
+at 440/441, a flag at 442, inactivity count at 444 and int at 448. Startup's
+0x44C allocation and all other scene allocation sizes remain exact.
+
+Base construction retains pointer-copy order, phase -1 and flag zero. FadeOut
+runs 20 down through zero and FadeIn zero through 20, calling virtual render
+before each palette operation. Mode 0 darkens; mode 1 lightens; other modes do
+neither. The amount is index * 5 over palette entries 0..255. FadeOut also sets
+the current music slot's volume to volume - (20-index)*step/2. Both alternate
+16/15 millisecond timeGetTime busy waits, with the original byte conversion,
+without adding Sleep, message pumping or new error handling.
+
+The title constructor retains both original DAT and BMP resource paths under
+the original constant condition. Eight distinct string addresses at 0x7898E0,
+0x7898F4, 0x789908, 0x78991C, 0x789930, 0x789944, 0x789958 and 0x78996C bind the
+title/title_ob files and palette paths, including duplicated DAT strings at
+different destinations. The destructor releases and clears two surfaces.
+Step handles the three palette-entry phases, input pulses, seven menu choices,
+scene transitions and WM_CLOSE. The inactivity threshold is greater than 1800;
+the counter increments per quiet player, twice in a fully quiet frame. Do not
+infer a 30-second interval. The original enabled guard remains an ordinary
+constant condition in source. Context's selectedPlayer at 1342, CPU flags at
+1343/1344, selection at 134E and mode at 1364 expose previously unknown storage.
+They are provisional names/types, with no layout growth. Signed char CPU flags
+and buttonA reflect target byte operations; bool CPU flags introduced six extra
+zeroing instructions before SETE in a rejected complete-source trial.
+
+Step's final RET is at 0x776486. Its complete seven-entry address table occupies
+0x776487..0x7764A3 (exclusive end), targeting 0x7761E9, 0x776268, 0x7762E3,
+0x776352, 0x7763D1, 0x776432 and 0x77645F. The table-pointer relocation and all
+seven entries retain explicit original destinations and checked function-relative
+offsets. No prefix, masked address or code-only acceptance is used. The following
+alignment bytes are outside the contribution; render begins at 0x7764B0.
+
+Rendering draws the full 320x240 background, a 120x98 menu at (195,130), and a
+120x14 selection row, then presents. PollKeyboard owns a 256-byte local and an
+inner HRESULT scope matching the /GS stack. It only reacquires DIERR_INPUTLOST;
+the Escape test still reads the buffer after failures, as in the target. The
+initial same-scope local trial was nine bytes short and was not accepted.
+ApplyPalette passes count 255, not 256; its range variant uses colors+first*4.
+ClearPaletteRGB clears only RGB in 256 entries, preserving each fourth byte.
+Present conditionally calls the external converter at 0x40B440 then Flip(0,1),
+returning zero only for DDERR_SURFACELOST and one for success or other errors.
+No surface restoration or converter implementation is inferred. DrawSurface
+and the software conversion kernel remain open despite their exact callers.
+
+Final verification uses 23 cold source/profile/dependency artifacts for twelve
+new and 95 Engine.h/Input.h-dependent existing units. All 107 full comparisons
+are strict exact, including the 14,305-byte effect dispatcher with 301 relocations
+and 36 original-offset bindings. Shared declarations only changed compiler-local
+symbol identities there. Reader and Config sources were unaffected and omitted.
+No full CI/cold cohort, runtime or redundant test matrix was requested or run.
+Private full comparisons, rejected trials, boundary/operand reviews and logs
+remain under .analysis/probes/scene-next/, .analysis/build/scene-next-* and
+.analysis/exact/scene-and-affected.json. Ghidra candidates and original vtable
+observations remain separate from function acceptance and linked-data closure.

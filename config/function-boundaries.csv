@@ -116,3 +116,15 @@ address,end,size,status,evidence
 0x004068B0,0x00406A04,340,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
 0x00406A10,0x00406A65,85,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
 0x00406A70,0x00406A97,39,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x00759C10,0x00759C8C,124,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00759C90,0x00759E16,390,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00759E20,0x00759F30,272,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00775D60,0x00775F2C,460,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00775F30,0x00775FA6,118,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00775FB0,0x007764A3,1267,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x007764B0,0x00776760,688,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x00776760,0x00776817,183,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x0040BD30,0x0040BD67,55,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x0040BD70,0x0040BDB1,65,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x0040BDC0,0x0040BE11,81,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base
+0x0040B5E0,0x0040B63E,94,reviewed,docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base

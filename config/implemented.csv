@@ -101,3 +101,15 @@ address,name,source,symbol,status,evidence
 0x004068B0,?LoadMusic@Context@@QAEXG@Z,src/ContextIO.cpp,?LoadMusic@Context@@QAEXG@Z,complete,docs/evidence/context-io-exact.json
 0x00406A10,?ReleaseMusic@Context@@QAEXXZ,src/ContextIO.cpp,?ReleaseMusic@Context@@QAEXXZ,complete,docs/evidence/context-io-exact.json
 0x00406A70,?FadeMusic@Context@@QAEXHF@Z,src/ContextIO.cpp,?FadeMusic@Context@@QAEXHF@Z,complete,docs/evidence/context-io-exact.json
+0x00759C10,??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,src/SceneBase.cpp,??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene-base-exact.json
+0x00759C90,?FadeOut@Scene@@QAEXPAEEHH@Z,src/SceneBase.cpp,?FadeOut@Scene@@QAEXPAEEHH@Z,complete,docs/evidence/scene-base-exact.json
+0x00759E20,?FadeIn@Scene@@QAEXPAEE@Z,src/SceneBase.cpp,?FadeIn@Scene@@QAEXPAEE@Z,complete,docs/evidence/scene-base-exact.json
+0x00775D60,??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,src/SceneTitle.cpp,??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene-title-exact.json
+0x00775F30,??1Scene0@@QAE@XZ,src/SceneTitle.cpp,??1Scene0@@QAE@XZ,complete,docs/evidence/scene-title-exact.json
+0x00775FB0,?Step@Scene0@@UAEEXZ,src/SceneTitle.cpp,?Step@Scene0@@UAEEXZ,complete,docs/evidence/scene-title-exact.json
+0x007764B0,?Slot0@Scene0@@UAEXXZ,src/SceneTitle.cpp,?Slot0@Scene0@@UAEXXZ,complete,docs/evidence/scene-title-exact.json
+0x00776760,?PollKeyboard@Scene0@@UAEXXZ,src/SceneTitle.cpp,?PollKeyboard@Scene0@@UAEXXZ,complete,docs/evidence/scene-title-exact.json
+0x0040BD30,?ApplyPalette@Video@@QAEHPAE@Z,src/VideoFrame.cpp,?ApplyPalette@Video@@QAEHPAE@Z,complete,docs/evidence/video-frame-exact.json
+0x0040BD70,?ApplyPaletteRange@Video@@QAEHPAEEE@Z,src/VideoFrame.cpp,?ApplyPaletteRange@Video@@QAEHPAEEE@Z,complete,docs/evidence/video-frame-exact.json
+0x0040BDC0,?ClearPaletteRGB@Video@@QAEHPAE@Z,src/VideoFrame.cpp,?ClearPaletteRGB@Video@@QAEHPAE@Z,complete,docs/evidence/video-frame-exact.json
+0x0040B5E0,?Present@Video@@QAEHXZ,src/VideoFrame.cpp,?Present@Video@@QAEHXZ,complete,docs/evidence/video-frame-exact.json

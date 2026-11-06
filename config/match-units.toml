@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L61658"
+symbol = "$L61744"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L61708"
+symbol = "$L61794"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61364"
+symbol = "$L61450"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61386"
+symbol = "$L61472"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61393"
+symbol = "$L61479"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61398"
+symbol = "$L61484"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61402"
+symbol = "$L61488"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61409"
+symbol = "$L61495"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61416"
+symbol = "$L61502"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61428"
+symbol = "$L61514"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61435"
+symbol = "$L61521"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61442"
+symbol = "$L61528"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61449"
+symbol = "$L61535"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61452"
+symbol = "$L61538"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61455"
+symbol = "$L61541"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61458"
+symbol = "$L61544"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61461"
+symbol = "$L61547"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61464"
+symbol = "$L61550"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61465"
+symbol = "$L61551"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61469"
+symbol = "$L61555"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61476"
+symbol = "$L61562"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61480"
+symbol = "$L61566"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61484"
+symbol = "$L61570"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61488"
+symbol = "$L61574"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61492"
+symbol = "$L61578"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61496"
+symbol = "$L61582"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61500"
+symbol = "$L61586"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61504"
+symbol = "$L61590"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61508"
+symbol = "$L61594"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61512"
+symbol = "$L61598"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L61516"
+symbol = "$L61602"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L61522"
+symbol = "$L61608"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L61528"
+symbol = "$L61614"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L61547"
+symbol = "$L61633"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L61551"
+symbol = "$L61637"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61361"
+symbol = "$L61447"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8339,3 +8339,683 @@ object = "build/match-units/context-fade-music/ContextIO.obj"
 symbol = "?FadeMusic@Context@@QAEXHF@Z"
 target_address = 0x00406a70
 size = 39
+
+[units.scene-base-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneBase.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-base-construct/SceneBase.obj"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x00759c10
+size = 124
+
+[[units.scene-base-construct.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene@@6B@"
+target = 0x007892cc
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-fade-out]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneBase.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-fade-out/SceneBase.obj"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target_address = 0x00759c90
+size = 390
+
+[[units.scene-fade-out.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 100
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 148
+type = "REL32"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target = 0x0040e5d0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 154
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 180
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 280
+type = "REL32"
+symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040bf20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 328
+type = "REL32"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target = 0x0040e5d0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 334
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-out.relocations]]
+offset = 360
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-fade-in]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneBase.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-fade-in/SceneBase.obj"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target_address = 0x00759e20
+size = 272
+
+[[units.scene-fade-in.relocations]]
+offset = 11
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 92
+type = "REL32"
+symbol = "?DarkenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040be20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 98
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 124
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 213
+type = "REL32"
+symbol = "?LightenPalette@Video@@QAEXPBEEEE@Z"
+target = 0x0040bf20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 219
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-fade-in.relocations]]
+offset = 245
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-title-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneTitle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-title-construct/SceneTitle.obj"
+symbol = "??0Scene0@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target_address = 0x00775d60
+size = 460
+
+[[units.scene-title-construct.relocations]]
+offset = 41
+type = "REL32"
+symbol = "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+target = 0x00759c10
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "??_7Scene0@@6B@"
+target = 0x00789980
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 72
+type = "DIR32"
+symbol = "?titleDat@@3QBDB"
+target = 0x007898e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 92
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 104
+type = "DIR32"
+symbol = "?titleObjectsDat@@3QBDB"
+target = 0x007898f4
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 125
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 139
+type = "DIR32"
+symbol = "?titlePaletteDat@@3QBDB"
+target = 0x00789908
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 157
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 171
+type = "DIR32"
+symbol = "?titleObjectsPaletteDat@@3QBDB"
+target = 0x0078991c
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 189
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 201
+type = "DIR32"
+symbol = "?titleBmp@@3QBDB"
+target = 0x00789930
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 226
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 236
+type = "DIR32"
+symbol = "?titleObjectsBmp@@3QBDB"
+target = 0x00789944
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 261
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 275
+type = "DIR32"
+symbol = "?titlePaletteBmp@@3QBDB"
+target = 0x00789958
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 293
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 307
+type = "DIR32"
+symbol = "?titleObjectsPaletteBmp@@3QBDB"
+target = 0x0078996c
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 325
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-construct.relocations]]
+offset = 346
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-title-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneTitle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-title-destruct/SceneTitle.obj"
+symbol = "??1Scene0@@QAE@XZ"
+target_address = 0x00775f30
+size = 118
+
+[[units.scene-title-destruct.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "??_7Scene0@@6B@"
+target = 0x00789980
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-title-step]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneTitle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-title-step/SceneTitle.obj"
+symbol = "?Step@Scene0@@UAEEXZ"
+target_address = 0x00775fb0
+size = 1267
+code_size = 1239
+
+[[units.scene-title-step.local_data]]
+offset = 1239
+size = 28
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; complete original seven-case address table at 0x776487 through 0x7764A3"
+
+[[units.scene-title-step.relocations]]
+offset = 52
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 83
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 122
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 139
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 217
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 253
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 333
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 565
+type = "DIR32"
+symbol = "$L60899"
+target = 0x00776487
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 631
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 678
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 743
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 801
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 854
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 912
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 992
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1039
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1092
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1139
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1163
+type = "REL32"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target = 0x00406860
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1184
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1214
+type = "DIR32"
+symbol = "__imp__PostMessageA@16"
+target = 0x00787180
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-step.relocations]]
+offset = 1239
+type = "DIR32"
+symbol = "$L60850"
+target = 0x007761e9
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1243
+type = "DIR32"
+symbol = "$L60851"
+target = 0x00776268
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1247
+type = "DIR32"
+symbol = "$L60852"
+target = 0x007762e3
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1251
+type = "DIR32"
+symbol = "$L60853"
+target = 0x00776352
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1255
+type = "DIR32"
+symbol = "$L60854"
+target = 0x007763d1
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1259
+type = "DIR32"
+symbol = "$L60855"
+target = 0x00776432
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-title-step.relocations]]
+offset = 1263
+type = "DIR32"
+symbol = "$L60856"
+target = 0x0077645f
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[units.scene-title-render]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneTitle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-title-render/SceneTitle.obj"
+symbol = "?Slot0@Scene0@@UAEXXZ"
+target_address = 0x007764b0
+size = 688
+
+[[units.scene-title-render.relocations]]
+offset = 34
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 83
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 213
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 262
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 386
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 424
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 506
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 666
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-render.relocations]]
+offset = 680
+type = "REL32"
+symbol = "?Present@Video@@QAEHXZ"
+target = 0x0040b5e0
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.scene-title-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneTitle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-title-keyboard/SceneTitle.obj"
+symbol = "?PollKeyboard@Scene0@@UAEXXZ"
+target_address = 0x00776760
+size = 183
+
+[[units.scene-title-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-keyboard.relocations]]
+offset = 167
+type = "DIR32"
+symbol = "__imp__PostMessageA@16"
+target = 0x00787180
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[[units.scene-title-keyboard.relocations]]
+offset = 175
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
+
+[units.video-apply-palette]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/VideoFrame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-apply-palette/VideoFrame.obj"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target_address = 0x0040bd30
+size = 55
+
+[units.video-apply-palette-range]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/VideoFrame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-apply-palette-range/VideoFrame.obj"
+symbol = "?ApplyPaletteRange@Video@@QAEHPAEEE@Z"
+target_address = 0x0040bd70
+size = 65
+
+[units.video-clear-palette-rgb]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/VideoFrame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-clear-palette-rgb/VideoFrame.obj"
+symbol = "?ClearPaletteRGB@Video@@QAEHPAE@Z"
+target_address = 0x0040bdc0
+size = 81
+
+[units.video-present]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/VideoFrame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-present/VideoFrame.obj"
+symbol = "?Present@Video@@QAEHXZ"
+target_address = 0x0040b5e0
+size = 94
+
+[[units.video-present.relocations]]
+offset = 24
+type = "REL32"
+symbol = "?ConvertBackBuffer@Video@@QAEHXZ"
+target = 0x0040b440
+evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed complete original operand, mapped resource string, callee, vtable or import destination"
