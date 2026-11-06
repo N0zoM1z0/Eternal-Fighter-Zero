@@ -132,9 +132,10 @@ public:
     Video *videoOwner;
     Input *inputOwner;
     Audio *audioOwner;
-private:
-    unsigned char unknown_000c[0x2c];
 public:
+    char directionX[2], directionY[2];
+    unsigned char buttonA[2], buttonB[2], buttonC[2], buttonD[2];
+    int heldA[2], heldB[2], heldC[2], heldD[2];
     IUnknown *textures[0x398];
     IUnknown *extraA, *extraB, *extraC;
     unsigned short soundSlots[0x41];
@@ -227,6 +228,11 @@ public:
     Context(Video *, Input *, Audio *);
     ~Context();
     void Initialize();
+    void PollInput();
+    void PlayEffectSound(unsigned short);
+    void LoadMusic(unsigned short);
+    void ReleaseMusic();
+    void FadeMusic(int, short);
     void Load();
     void Activate();
     void LoadObjectFile(IUnknown **, const char *, unsigned char, unsigned char);

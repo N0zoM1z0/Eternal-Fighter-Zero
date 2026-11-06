@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; eighteen cold source/profile artifacts shared unchanged across six new Context input/audio functions and 78 shared-header-dependent units; Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 490,
+      "matched_bytes": 490,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 48,
+          "target": 4246784,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadState@Input@@QAEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "912735fc03c445d852004a75b64da19b2787badadc20be3e6da8675248b3e2f9",
+      "target_extent_sha256": "912735fc03c445d852004a75b64da19b2787badadc20be3e6da8675248b3e2f9",
+      "unit": "context-poll-input",
+      "symbol": "?PollInput@Context@@QAEXXZ",
+      "target_address": "0x00406590",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a5977ac87875a87be2d368e76395074997c665a769ed24e55e0414dad2801dfb",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 213,
+      "matched_bytes": 213,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7894060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectSoundPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 55,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 7894072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectSoundZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 78,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 112,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 7894076,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?effectSoundExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 147,
+          "target": 4251568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadWave@Audio@@QAEGPBD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 192,
+          "target": 4253136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSoundVolume@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 205,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "973ed0beb1e428455cd030e209a15193a52ab0ea9da1a44149b71c8d98fea5e2",
+      "target_extent_sha256": "973ed0beb1e428455cd030e209a15193a52ab0ea9da1a44149b71c8d98fea5e2",
+      "unit": "context-initialize",
+      "symbol": "?Initialize@Context@@QAEXXZ",
+      "target_address": "0x00406780",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "05c717bfbd25445c559b5b4ce036e6b174439852ea513959eb38d997e0f5c75a",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 65,
+      "matched_bytes": 65,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 55,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0d5a2800b96378d6d86e7365560e898509ef192274ecd251b0c3047f8d48e5aa",
+      "target_extent_sha256": "0d5a2800b96378d6d86e7365560e898509ef192274ecd251b0c3047f8d48e5aa",
+      "unit": "context-play-effect-sound",
+      "symbol": "?PlayEffectSound@Context@@QAEXG@Z",
+      "target_address": "0x00406860",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0f0cbb39f0d7926e5a5b59a9b3b773b3c3604cbb21799e998ab1bb5a37d2dcb4",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 340,
+      "matched_bytes": 340,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 18,
+          "target": 7894084,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?musicPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 27,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 44,
+          "target": 7894100,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?musicZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 53,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 72,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 88,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7894104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?musicExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 147,
+          "target": 4251200,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StopSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 4251472,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4251568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadWave@Audio@@QAEGPBD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 221,
+          "target": 4252336,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadLoopMarkers@Audio@@QAEXPBD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 330,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3d1a52e8e6912a39611870cce56647c836dd07ac355754368429788f4fe5f900",
+      "target_extent_sha256": "3d1a52e8e6912a39611870cce56647c836dd07ac355754368429788f4fe5f900",
+      "unit": "context-load-music",
+      "symbol": "?LoadMusic@Context@@QAEXG@Z",
+      "target_address": "0x004068B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "955abb937d50c5192fb3ef0e9c9c05757f7edaf9a47783500d81b1be507e1efe",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 85,
+      "matched_bytes": 85,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 43,
+          "target": 4251200,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StopSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 65,
+          "target": 4251472,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseSound@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "cc74a0d34819c1bd7548af85146fa144cbf592bee650c35ee7932ab553d7f0f8",
+      "target_extent_sha256": "cc74a0d34819c1bd7548af85146fa144cbf592bee650c35ee7932ab553d7f0f8",
+      "unit": "context-release-music",
+      "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+      "target_address": "0x00406A10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "bbe844f47033580320f1fadd83872bc47df812e23b8b2aa505e36554890ce87e",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 39,
+      "matched_bytes": 39,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "3857bd5d729b0eead07dd32ecb353e2456eac0f1d5818e760781a9e11d2ce070",
+      "target_extent_sha256": "3857bd5d729b0eead07dd32ecb353e2456eac0f1d5818e760781a9e11d2ce070",
+      "unit": "context-fade-music",
+      "symbol": "?FadeMusic@Context@@QAEXHF@Z",
+      "target_address": "0x00406A70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8061088496607aecf21dd14ae8424c9db88a8a7dc904cd220dff95908e277a6e",
+      "object_sha256": "a5f70f505b93b80c22a047e03c285087deafa1f5b0bd41d6b8f794f1f1db0013",
+      "source_sha256": "455d901a33e766c88cc5d014dfa0c301add264919a25f516c9d21aa334dfa123",
+      "dependencies": {
+        "src/Engine.h": "7730a60f5983bde6dae9b1ce5f4d9e61dcc9ff96d986770620dee7c97fd57054",
+        "src/Input.h": "a3224e7e9690dc018738cca628ae8cec60b9441861666a21b717224c31d92511"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "852f0e18f293a154bb60fbef89016a17184014de4955c01a50c7ab75a93aea37",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e7dd46806ea57100e1ca9853532b412994e0ce399920a7e29bea4d206a545c77",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

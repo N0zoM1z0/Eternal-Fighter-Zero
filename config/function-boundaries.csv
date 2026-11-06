@@ -110,3 +110,9 @@ address,end,size,status,evidence
 0x00786490,0x0078649F,15,reviewed,docs/KNOWLEDGE_BASE.md#directinput-owner
 0x0040DE40,0x0040DE80,64,reviewed,docs/KNOWLEDGE_BASE.md#audio-playback-controls
 0x0040DE80,0x0040DF4C,204,reviewed,docs/KNOWLEDGE_BASE.md#audio-playback-controls
+0x00406590,0x0040677A,490,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x00406780,0x00406855,213,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x00406860,0x004068A1,65,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x004068B0,0x00406A04,340,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x00406A10,0x00406A65,85,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions
+0x00406A70,0x00406A97,39,reviewed,docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions

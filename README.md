@@ -40,7 +40,7 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **96 complete exact authored functions, 40,064 code bytes**,
+Recovered owners provide **102 complete exact authored functions, 41,296 code bytes**,
 with every relocation field explicitly bound and compared. Eleven compiler-generated
 deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library

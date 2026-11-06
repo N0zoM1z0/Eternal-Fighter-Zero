@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L61640"
+symbol = "$L61658"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L61690"
+symbol = "$L61708"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61346"
+symbol = "$L61364"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61368"
+symbol = "$L61386"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61375"
+symbol = "$L61393"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61380"
+symbol = "$L61398"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61384"
+symbol = "$L61402"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61391"
+symbol = "$L61409"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61398"
+symbol = "$L61416"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61410"
+symbol = "$L61428"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61417"
+symbol = "$L61435"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61424"
+symbol = "$L61442"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61431"
+symbol = "$L61449"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61434"
+symbol = "$L61452"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61437"
+symbol = "$L61455"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61440"
+symbol = "$L61458"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61443"
+symbol = "$L61461"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61446"
+symbol = "$L61464"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61447"
+symbol = "$L61465"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61451"
+symbol = "$L61469"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61458"
+symbol = "$L61476"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61462"
+symbol = "$L61480"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61466"
+symbol = "$L61484"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61470"
+symbol = "$L61488"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61474"
+symbol = "$L61492"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61478"
+symbol = "$L61496"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61482"
+symbol = "$L61500"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61486"
+symbol = "$L61504"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61490"
+symbol = "$L61508"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61494"
+symbol = "$L61512"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L61498"
+symbol = "$L61516"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L61504"
+symbol = "$L61522"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L61510"
+symbol = "$L61528"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L61529"
+symbol = "$L61547"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L61533"
+symbol = "$L61551"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61343"
+symbol = "$L61361"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8062,3 +8062,280 @@ type = "DIR32"
 symbol = "__imp__MessageBoxA@16"
 target = 0x00787184
 evidence = "docs/KNOWLEDGE_BASE.md#audio-playback-controls; reviewed complete original operand, GUID/format/global data, PE import or CRT destination"
+
+[units.context-poll-input]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-poll-input/ContextIO.obj"
+symbol = "?PollInput@Context@@QAEXXZ"
+target_address = 0x00406590
+size = 490
+
+[[units.context-poll-input.relocations]]
+offset = 48
+type = "REL32"
+symbol = "?ReadState@Input@@QAEEE@Z"
+target = 0x0040cd00
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[units.context-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-initialize/ContextIO.obj"
+symbol = "?Initialize@Context@@QAEXXZ"
+target_address = 0x00406780
+size = 213
+
+[[units.context-initialize.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 46
+type = "DIR32"
+symbol = "?effectSoundPrefix@@3QBDB"
+target = 0x0078742c
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 55
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 69
+type = "DIR32"
+symbol = "?effectSoundZero@@3QBDB"
+target = 0x00787438
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 78
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 96
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 112
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 120
+type = "DIR32"
+symbol = "?effectSoundExtension@@3QBDB"
+target = 0x0078743c
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 129
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 147
+type = "REL32"
+symbol = "?LoadWave@Audio@@QAEGPBD@Z"
+target = 0x0040dfb0
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 192
+type = "REL32"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target = 0x0040e5d0
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-initialize.relocations]]
+offset = 205
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[units.context-play-effect-sound]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-play-effect-sound/ContextIO.obj"
+symbol = "?PlayEffectSound@Context@@QAEXG@Z"
+target_address = 0x00406860
+size = 65
+
+[[units.context-play-effect-sound.relocations]]
+offset = 55
+type = "REL32"
+symbol = "?StartSound@Audio@@QAEXGH@Z"
+target = 0x0040de80
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[units.context-load-music]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-load-music/ContextIO.obj"
+symbol = "?LoadMusic@Context@@QAEXG@Z"
+target_address = 0x004068b0
+size = 340
+
+[[units.context-load-music.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 18
+type = "DIR32"
+symbol = "?musicPrefix@@3QBDB"
+target = 0x00787444
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 27
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 44
+type = "DIR32"
+symbol = "?musicZero@@3QBDB"
+target = 0x00787454
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 53
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 72
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 88
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 96
+type = "DIR32"
+symbol = "?musicExtension@@3QBDB"
+target = 0x00787458
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 105
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 147
+type = "REL32"
+symbol = "?StopSound@Audio@@QAEXG@Z"
+target = 0x0040de40
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 169
+type = "REL32"
+symbol = "?ReleaseSound@Audio@@QAEXG@Z"
+target = 0x0040df50
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?LoadWave@Audio@@QAEGPBD@Z"
+target = 0x0040dfb0
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 221
+type = "REL32"
+symbol = "?ReadLoopMarkers@Audio@@QAEXPBD@Z"
+target = 0x0040e2b0
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 322
+type = "REL32"
+symbol = "?StartSound@Audio@@QAEXGH@Z"
+target = 0x0040de80
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-load-music.relocations]]
+offset = 330
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[units.context-release-music]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-release-music/ContextIO.obj"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target_address = 0x00406a10
+size = 85
+
+[[units.context-release-music.relocations]]
+offset = 43
+type = "REL32"
+symbol = "?StopSound@Audio@@QAEXG@Z"
+target = 0x0040de40
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[[units.context-release-music.relocations]]
+offset = 65
+type = "REL32"
+symbol = "?ReleaseSound@Audio@@QAEXG@Z"
+target = 0x0040df50
+evidence = "docs/KNOWLEDGE_BASE.md#context-input-and-audio-transitions; independently reviewed complete original operand, mapped path string, accepted callee or CRT destination"
+
+[units.context-fade-music]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/ContextIO.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-fade-music/ContextIO.obj"
+symbol = "?FadeMusic@Context@@QAEXHF@Z"
+target_address = 0x00406a70
+size = 39

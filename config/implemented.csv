@@ -95,3 +95,9 @@ address,name,source,symbol,status,evidence
 0x0040D460,?Configure@Input@@QAEXI@Z,src/InputResources.cpp,?Configure@Input@@QAEXI@Z,complete,docs/evidence/input-exact.json
 0x0040DE40,?StopSound@Audio@@QAEXG@Z,src/AudioPlayback.cpp,?StopSound@Audio@@QAEXG@Z,complete,docs/evidence/audio-playback-exact.json
 0x0040DE80,?StartSound@Audio@@QAEXGH@Z,src/AudioPlayback.cpp,?StartSound@Audio@@QAEXGH@Z,complete,docs/evidence/audio-playback-exact.json
+0x00406590,?PollInput@Context@@QAEXXZ,src/ContextIO.cpp,?PollInput@Context@@QAEXXZ,complete,docs/evidence/context-io-exact.json
+0x00406780,?Initialize@Context@@QAEXXZ,src/ContextIO.cpp,?Initialize@Context@@QAEXXZ,complete,docs/evidence/context-io-exact.json
+0x00406860,?PlayEffectSound@Context@@QAEXG@Z,src/ContextIO.cpp,?PlayEffectSound@Context@@QAEXG@Z,complete,docs/evidence/context-io-exact.json
+0x004068B0,?LoadMusic@Context@@QAEXG@Z,src/ContextIO.cpp,?LoadMusic@Context@@QAEXG@Z,complete,docs/evidence/context-io-exact.json
+0x00406A10,?ReleaseMusic@Context@@QAEXXZ,src/ContextIO.cpp,?ReleaseMusic@Context@@QAEXXZ,complete,docs/evidence/context-io-exact.json
+0x00406A70,?FadeMusic@Context@@QAEXHF@Z,src/ContextIO.cpp,?FadeMusic@Context@@QAEXHF@Z,complete,docs/evidence/context-io-exact.json

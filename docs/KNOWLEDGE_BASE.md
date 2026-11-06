@@ -1088,3 +1088,76 @@ and samples time again. Two initialized locals have no later reads in this
 body. It remains unimplemented; do not add inert source merely to force its
 frame. Complete original disassembly is timing-00401850-review.txt. These
 follow-up observations confer no exact credit or automatic ledger changes.
+
+## Context input and audio transitions
+
+On 2026-11-06, six complete Context members were accepted for 1,232 authored
+instruction bytes. They connect the previously accepted Input and Audio owners
+to startup and scenes. All 31 relocation operands were independently checked
+against original call/data operands; complete branches stay inside their body
+and the final RET is included. No padding, table, EH or prefix-only comparison
+is involved. Public proof is docs/evidence/context-io-exact.json.
+
+| Member | Entry | Complete bytes |
+| --- | --- | ---: |
+| PollInput | 0x406590 | 490 |
+| Initialize | 0x406780 | 213 |
+| PlayEffectSound | 0x406860 | 65 |
+| LoadMusic | 0x4068B0 | 340 |
+| ReleaseMusic | 0x406A10 | 85 |
+| FadeMusic | 0x406A70 | 39 |
+
+The former unknown Context interval 0xC..0x37 is now represented by two signed
+horizontal and two vertical direction bytes at 0xC/0xE, four two-byte button
+pulse arrays at 0x10/0x12/0x14/0x16, and four two-int held-state arrays at
+0x18/0x20/0x28/0x30. Names/types remain provisional views of observed accesses;
+they preserve the original complete Context layout and add no storage.
+PollInput reads each player's eight-bit Input state into a two-byte local.
+It clears direction/pulse bytes, gives up priority over down and left priority
+over right, and emits one pulse for each newly pressed high-nibble button.
+Held flags are set while pressed and cleared on release. The complete 490-byte
+body has no cookie with this two-byte local under the explicit /GS profile.
+Seven direct scene callers are recorded in callers-00406590.txt.
+
+Initialize is the sound-effect loader: it constructs wave\\se\\00.wav through
+wave\\se\\64.wav in a 32-byte path plus eight-byte decimal scratch, stores each
+LoadWave result at soundSlots (0xEA4) and calls SetSoundVolume(result, -500).
+It does not add a failure/sentinel check before setting volume. Path prefix,
+zero and extension are distinct original data bindings at 0x78742C/0x787438/
+0x78743C. _itoa at 0x777F55, strcpy at 0x778080 and strcat at 0x778090 were
+reviewed separately from target function boundaries. Array sizes, cookie and
+loop retain the complete original stack layout. PlayEffectSound checks the
+stored slot against 150, then starts it without looping; its effect index has
+no new bounds check.
+
+LoadMusic builds wave\\bgm\\bgmNN.wav using original data bindings 0x787444,
+0x787454 and 0x787458. It stops/releases a previous non-sentinel slot and stores
+150 before loading the replacement. ReadLoopMarkers is called even if LoadWave
+fails. A successful new slot starts with loop argument zero for IDs 2,3,4,9 and
+one otherwise; the original integer ternary and subtraction are preserved.
+The field still named audioMode at 0xF26 holds this buffer slot, not a general
+mode enum. Six direct music-loading callers are recorded in callers-004068b0.txt.
+ReleaseMusic performs the same stop/release/sentinel sequence without loading.
+FadeMusic simply stores the int target and short step at 0xF28/0xF30; the
+previously accepted UpdateFrameControls performs the actual volume ramp.
+Neither method invents validation or changes original failure handling.
+
+The first complete source, after supplying its transitive private Input.h,
+matched all six bodies immediately. An earlier scratch build omitted that
+header, reported C1083 and hit the existing 120-second process deadline; it
+conferred no comparison credit. The error/timeout evidence is retained in
+.analysis/build/context-io-next-first.log and its timeout summary. The required
+post-failure --execute toolchain check passed C/C++, CRT, resources, linker and
+smoke execution before native work resumed. No toolchain, Wine prefix, oracle
+implementation or target was replaced.
+
+Final verification uses eighteen cold source/profile artifacts for six new and
+78 Engine.h-dependent existing units. Every one of the 84 complete comparisons
+is strict exact. The standalone Input, reader and Config sources are unaffected
+and were not replayed. New ContextIO uses /Od /G6 /MT /Gy /GS /W3, with both
+Engine.h and Input.h explicitly tracked. The dispatcher still compares all
+14,305 bytes, 301 relocations and 36 original-destination/local-offset bindings;
+only compiler-local symbol IDs changed. Private replay and review are retained
+at .analysis/exact/context-io-and-affected.json and
+.analysis/probes/context-io-next/. Target-attested decompile-00406780.txt
+corroborates startup's loader binding; it is not the boundary/acceptance authority.
