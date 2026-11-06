@@ -143,7 +143,7 @@ address,end,size,status,evidence
 0x0048A720,0x0048A9A2,642,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004ADD90,0x004ADF95,517,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004D2850,0x004D29DC,396,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x00519E00,0x0051A067,615,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
+0x00519E00,0x0051A067,615,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x00546480,0x00546681,513,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00567900,0x00567A86,390,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00588310,0x005884A7,407,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
@@ -302,3 +302,12 @@ address,end,size,status,evidence
 0x00410A40,0x00410A7F,63,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
 0x00408080,0x004080BB,59,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
 0x004080C0,0x004080FC,60,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner
+0x0051A070,0x0051A29B,555,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051A2A0,0x0051A2DA,58,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051A2E0,0x0051A330,80,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051A330,0x0051A343,19,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051DDE0,0x0051DF2A,330,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051D390,0x0051DDD7,2631,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051DF30,0x0051DF5F,47,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051A350,0x0051D384,12340,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
+0x0051DF60,0x0051F3DA,5242,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners

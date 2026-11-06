@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 263 |
-| Authored exact instruction bytes | 383,302 |
+| Authored complete exact functions | 273 |
+| Authored exact instruction bytes | 405,219 |
 | Associated exact local-table bytes | 1,967 |
-| Reviewed boundaries / origins | 303 / 303 |
+| Reviewed boundaries / origins | 312 / 312 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,47 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mizuka state checkpoint
+## Latest Misuzu construction, input and indicators checkpoint
+
+Ten complete exact functions add 21,917 instruction bytes without local tables.
+Sources: src/Character23Frame.cpp, Character23Input.cpp and Character23Commands.cpp.
+The canonical constructor 519E00/615, resource literal "misuzu" at 788648,
+allocation 3488 and vtable 788650 establish Character23 ownership. Public proof:
+docs/evidence/misuzu-exact.json; durable facts:
+[Misuzu construction input and indicator owners](KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners).
+Private complete attempts and reviews: .analysis/probes/misuzu/README.md.
+
+Accepted bodies include InitializeState 51A070/555, ResetPose 51A2A0/58,
+RemoveLocalEffect 51A2E0/80, locomotion 51A330/19, action input 51A350/12340,
+HUD indicators 51D390/2631, frame control 51DDE0/330, EmitLocalEffect 51DF30/47
+and command scanning 51DF60/5242. Complete review covers 5,766 instructions,
+780 internal branches and all 136 relocation fields. All boundaries exclude
+following padding; no local-table or partial-function acceptance is used.
+
+Preserve opponent ownership of frame-control tint, field345c * frame.width
+operand order in the gauge, constructor/initializer store order, actual byte
+increments, positive air-action branches, unsigned command stages and every
+scan's single-wrap 180-entry history indexing. The ordinary 72-byte effect
+descriptor, real shared methods and natural class alignment retain the target
+ABIs without padding or fake declarations. Only Character23's existing opaque
+tail in CharacterViews.h is expanded; Engine.h and Input.h are unchanged.
+
+Formal replay selected the ten new units and 27 actual CharacterViews.h
+consumers from 17 serial cold artifacts. All 37 complete comparisons passed
+strict zero differences. Refreshed local-symbol identities preserve reviewed
+offsets, destinations and literal bytes. The other 254 existing units retain
+their prior evidence. Focused tracking, ledger/progress CI and whitespace checks
+passed; no full CI/cohort or runtime matrix ran.
+
+Ten of the 13 original vtable destinations now have exact proofs, including
+the inherited shared resource loader. Still open: CPU 51F3E0/17127, state
+50C4B0/54769 and local effects 5236D0/54139. Start with the CPU owner, review
+its complete boundary and operands, and build the first complete source early.
+Fresh read-only decompiles of all three are retained under the private Misuzu
+probe; they confer no progress credit. Preserve parked PrepareBattle/Shiori
+controls unless new evidence gives a falsifiable instruction prediction.
+
+## Previous Mizuka state checkpoint
 
 Four complete exact units add65,964 instruction bytes plus836 local-table bytes:
 Character24::Slot06 at4E7EC0/65782 code, Secondary::SetHorizontalOffset410A40/63,
@@ -73,11 +113,10 @@ ledger/progress CI and whitespace checks passed; no full CI/cohort/runtime matri
 
 All13 original table7885D0 destinations now have complete exact source proofs,
 including the inherited resource loader. This is a virtual-entry inventory
-milestone, not linked-data/resource, runtime or game closure. Recheck the live
-ledgers before selecting further owners. A fresh substantial candidate is the
-next character state body50C4B0/54769 near constructor519E00: first establish its
-actual vtable/constructor ownership and complete code/table extent. That
-constructor currently has reviewed origin evidence, not accepted exact source.
+milestone, not linked-data/resource, runtime or game closure. The next character
+is now target-bound to Misuzu/Character23 above, with accepted constructor and
+nine child virtuals. Its state body50C4B0/54769 remains open; recheck the live
+ledgers before selecting further owners.
 Do not retry parked PrepareBattle/Shiori-state controls without a new target-
 backed instruction prediction.
 

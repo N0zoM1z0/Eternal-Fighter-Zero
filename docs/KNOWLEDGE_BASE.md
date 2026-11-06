@@ -4092,3 +4092,103 @@ original translation-unit partitioning, complete runtime behavior and whole-game
 reconstruction remain independently open. The earlier parked Shiori dispatcher
 receives no credit from this function's result and must not be retried without
 new falsifiable evidence.
+
+## Misuzu construction input and indicator owners
+
+Ten complete authored functions add 21,917 exact instruction bytes without
+associated local tables. Sources: `src/Character23Frame.cpp`,
+`src/Character23Input.cpp` and `src/Character23Commands.cpp`. Public proof:
+`docs/evidence/misuzu-exact.json`. Explicit recipes use pinned VC7.1 static /Od
+and complete strict comparison, with no masks, size overrides or prefix credit.
+
+| Complete owner | Canonical entry | Exact code bytes |
+| --- | --- | ---: |
+| Character23 constructor | 0x519E00 | 615 |
+| Character23::InitializeState | 0x51A070 | 555 |
+| Character23::ResetPose | 0x51A2A0 | 58 |
+| Character23::RemoveLocalEffect | 0x51A2E0 | 80 |
+| Character23::Slot03 locomotion | 0x51A330 | 19 |
+| Character23::Slot04 action input | 0x51A350 | 12,340 |
+| Character23::Slot01 indicators | 0x51D390 | 2,631 |
+| Character23::Slot08 frame control | 0x51DDE0 | 330 |
+| Character23::EmitLocalEffect | 0x51DF30 | 47 |
+| Character23::Slot02 command scanning | 0x51DF60 | 5,242 |
+
+The canonical selection ID is 23. Its creation dispatch allocates 0x3488 bytes
+and calls 519E00; the constructor copies the NUL-terminated resource literal
+"misuzu" from 788648 and installs vtable 788650. All 13 original destinations
+were checked directly. Nine child virtuals above plus inherited LoadResources
+410B70 now have exact proofs. Slot05 CPU 51F3E0/17127, slot06 state
+50C4B0/54769 and slot07 local effects 5236D0/54139 remain open. Constructor
+acceptance is an additional function, not a fourteenth virtual entry. This
+inventory does not establish linked-resource, runtime or character closure.
+
+Complete independent boundary review covers 5,766 contiguous instructions and
+780 direct internal branches, all within the reviewed extents. Every following
+padding interval and next entry is recorded. All 136 relocation fields have
+explicit reviewed symbols, original destinations and evidence, including typed
+floating payloads, the real vtable and resource string. No compiler-local tables
+occur in these new functions. Existing source similarity supplied hypotheses;
+only this canonical target's instructions and complete comparisons establish
+acceptance.
+
+The constructor sets surfaceCount to 872, commandCount to 5, command entries
+0..5 to 1,19,2,0,1,6 and entry 10 to 23. It clears 19 scalar fields and three
+64-int arrays at 3158,3258,3358. Constructor and InitializeState have distinct
+store order and box values. Constructor boxes are (-2,-62), (1,-10), (24,-18),
+(-11,-23), (21,-22); initialization uses (-13,-60), (14,0), (17,-6), (7,-25),
+(27,-25). Only the existing opaque Character23 tail is expanded into observed
+fields. The final field starts at 3480 and natural inherited alignment retains
+size 3488; no explicit tail padding is added. Both existing creation consumers
+retain their complete original allocation/call instructions.
+
+InitializeState calls the shared initializer, constructs one real 72-byte
+EffectSpawn descriptor, resets through the base and emits type400 at (320,-320),
+group0, layer1, field0028=1, owner1 and flag0018=facing. Ordinary locals recover
+frame50, receiver EBP-50, loop index EBP-4C and descriptor EBP-48. ResetPose
+clears 3138,313c,3140 before the base reset. RemoveLocalEffect clears all three
+arrays at the requested slot before the base removal. EmitLocalEffect removes
+effectWrite through the real virtual slot before the shared emitter.
+
+Frame control decays field345c, applies tint (203,3) to the opponent while
+field3460 is positive and drives field3458's timer. It periodically reduces
+opponent field0108 by ten, clamps at one and resets counters on the original
+hurt-state, timer and opponent-health gates. An initial self-receiver draft
+emitted 324 bytes; the target's actual opponent receiver yields all 330 bytes.
+The indicator renderer draws three status sprites from pattern42, then an icon
+and gauge from patterns43/44. It uses one PatternFrame and actual source/target
+SurfaceRect records, 15 real MakeSurfaceRect calls and five DrawSurface calls.
+The gauge width evaluates `field345c * frame.width / 3000` in that operand
+order. Reversing the multiplication emitted 2619 bytes against 2631 by dropping
+register moves. The real frame214 and saved ESI require no inert locals.
+
+Action input has frame44, receiver EBP-4, 3,141 instructions, 507 internal
+branches and 102 relocations: 44 direct calls and 58 floating operands. Preserve
+unsigned latch/countdown reads, actual byte increments/decrements, field01aa
+<=0 versus ==0, field0159/015a <1 and positive frame-permission masks. Meter
+thresholds are >=3000/>=2000/>=1000; the first phase gate is >1 and the others
+>=2. Directional products evaluate opponent.x-self.x before the integer factor
+`1-field0262*2`. Positive combined air guards and the original special/normal
+action priorities retain exact exits. Two final differing byte extents were
+real field0158 byte increments, rather than widened read/add/store expressions.
+
+Command scanning has frameC, receiver EBP-C, index EBP-4 and unsigned byte
+buttons/stage at EBP-5/-6. Its 1,513 instructions and 243 internal branches
+implement 16 ordered scans over the 180-entry circular history, with single-wrap
+indexing `i-(i>=180)*180`. It defaults to command99; preserve each window,
+sequential stage advancement, facing-dependent IDs, first meter3000 gate and
+later >=1000 gates. Gate-mask !=0 and positive command-ID sums emit different
+branches. The first complete source already had size5242 but seven differing
+bytes; three gate jumps and two meter-threshold pairs required correction.
+Size agreement alone never conferred acceptance.
+
+Final formatted sources passed 37 complete strict comparisons from 17 serial
+cold source/profile/dependency artifacts: ten new units and 27 actual consumers
+of CharacterViews.h. All 308 refreshed generated-symbol identities across six
+old units retain reviewed offsets, destinations or literal payloads. The other
+254 existing units retain earlier evidence. Engine.h and Input.h are unchanged.
+Focused tracking, ledger/progress CI and whitespace checks passed; no full
+CI/cohort or runtime matrix ran. Full target dumps, read-only annotated
+decompiles, source/object attempts, compiler exit logs and independent reviews
+remain in `.analysis/probes/misuzu/`. Its one-time derivation/publication scripts
+must not be rerun over accepted or newer sources.

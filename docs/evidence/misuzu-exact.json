@@ -1,0 +1,5373 @@
+{
+  "schema_version": 1,
+  "authority": "complete target-bound native codegen with independently reviewed original symbol destinations; no masks, partial extents or size overrides",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 615,
+      "matched_bytes": 615,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z at 0x40eae0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7898704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character23@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original constructor vptr store and all13 canonical virtual destinations at788650; existing native inheritance and slot ABI retained",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7898696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62166",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original resource literal at788648 and complete native COFF misuzu NUL-terminated bytes independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to _strcpy at 0x778080; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6a8b8aa97adf26f8f137db086c75ef85a3e0d66e7776c7a8d4b88eb8cd4e094d",
+      "target_extent_sha256": "6a8b8aa97adf26f8f137db086c75ef85a3e0d66e7776c7a8d4b88eb8cd4e094d",
+      "unit": "character-23-constructor",
+      "symbol": "??0Character23@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x00519E00",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d33bad64414515d311d36f9a5c9ed4ac885b9c04dd4c7e1c9c34aa20a55776e8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 555,
+      "matched_bytes": 555,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 457,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?InitializeState@Secondary@@UAEXXZ at 0x40edf0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 465,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 477,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 489,
+          "target": 7898184,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4074000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x788448; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 498,
+          "target": 7898760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c074000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x788688; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "11ea23a94fe973b0cb2920714df8a9e1f882cb21ac5b7bc4fb1a28c1b3383be6",
+      "target_extent_sha256": "11ea23a94fe973b0cb2920714df8a9e1f882cb21ac5b7bc4fb1a28c1b3383be6",
+      "unit": "character-23-initialize-state",
+      "symbol": "?InitializeState@Character23@@UAEXXZ",
+      "target_address": "0x0051A070",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5ec5b34b8f10b798e975de7b234f77737aefeca62a08a447b597e4efc62b7fbc",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ResetPose@Secondary@@UAEXXZ at 0x40f110; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "695602c308425359200dd36b91771d2422acabe9a62e1198e54b2dd67a3433c5",
+      "target_extent_sha256": "695602c308425359200dd36b91771d2422acabe9a62e1198e54b2dd67a3433c5",
+      "unit": "character-23-reset-pose",
+      "symbol": "?ResetPose@Character23@@UAEXXZ",
+      "target_address": "0x0051A2A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7c0a30caf6de695c1ffaecc712c0971d757bc82b640895febfde03377b558cfe",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x412e60; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b2283ebcf9a0b6f8469e8777c9bb51c68aa46869f8dd889f5a9d835fda339530",
+      "target_extent_sha256": "b2283ebcf9a0b6f8469e8777c9bb51c68aa46869f8dd889f5a9d835fda339530",
+      "unit": "character-23-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character23@@UAEXF@Z",
+      "target_address": "0x0051A2E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "727c7f65188b21c0c85942d3630102aebe9592e17900a95d1a67b8ffb657d6fc",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x40e740; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0e1ecf2e8ed78e18e755701745ef6f471c5ab07a61fa8bf47c628a409e680c62",
+      "target_extent_sha256": "0e1ecf2e8ed78e18e755701745ef6f471c5ab07a61fa8bf47c628a409e680c62",
+      "unit": "character-23-locomotion",
+      "symbol": "?Slot03@Character23@@UAEXXZ",
+      "target_address": "0x0051A330",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "aa748b89fa3d1b2e34ea5234565ff5890ca843c3a5e6a47fca06306854024d01",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 330,
+      "matched_bytes": 330,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 72,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x410ac0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e23dffd91055fe2df1f29345bea19c3b73d92118e09886b2c95e67fff8f717a9",
+      "target_extent_sha256": "e23dffd91055fe2df1f29345bea19c3b73d92118e09886b2c95e67fff8f717a9",
+      "unit": "character-23-frame-control",
+      "symbol": "?Slot08@Character23@@UAEXXZ",
+      "target_address": "0x0051DDE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6be900faf9b69c432ff02dfe055485dd18e89a5e2c4d1fbb299c4725f0559994",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2631,
+      "matched_bytes": 2631,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 86,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 299,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 528,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 665,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 792,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 968,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1045,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1182,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1309,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1485,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1562,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1699,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1826,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2002,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2104,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2268,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2446,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x40c590; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2622,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x409a90; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8b152c2985b36e79084d1b47d1eea77fbbfe6486d97923c263b7f206b442d5f7",
+      "target_extent_sha256": "8b152c2985b36e79084d1b47d1eea77fbbfe6486d97923c263b7f206b442d5f7",
+      "unit": "character-23-render-indicators",
+      "symbol": "?Slot01@Character23@@UAEXXZ",
+      "target_address": "0x0051D390",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a7a1b2a22d70c8ee3b4e670687cd19f93a62f9ddb9e762e0974f528cb1474e94",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x412b10; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9faf09375e90375df3bb94f4c9825bc54216121eb05c4919feae8620462b6b6b",
+      "target_extent_sha256": "9faf09375e90375df3bb94f4c9825bc54216121eb05c4919feae8620462b6b6b",
+      "unit": "character-23-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character23@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x0051DF30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d71db57832ce47e0ce6fefedaadc6b099325906e3a5c791b856d2044aae83097",
+      "source_sha256": "987f66bedbe1baed8d30b77209eeb917ae5685bc035a6637ffcf2a9281533a23",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "18b055b76c6b69088b6d169694773de852b6918c9f49f1c61c1f9ef44404f3b1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 12340,
+      "matched_bytes": 12340,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 424,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 557,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 599,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 799,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 820,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 884,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1084,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1105,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1184,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1384,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1405,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1479,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1653,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1737,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1911,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2012,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2186,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2228,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2424,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2481,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2677,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2749,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2945,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3009,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3105,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3389,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3533,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3817,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3946,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4231,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4300,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4487,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4508,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4726,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4747,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4949,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4970,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5041,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5219,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5249,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5297,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5475,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5505,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5706,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5736,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5923,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5953,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6170,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6200,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6403,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6433,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6497,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6581,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6705,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6828,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6953,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7061,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7185,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7260,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7340,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7370,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7495,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7666,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7771,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7801,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8057,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8121,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8237,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8267,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8456,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8542,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8572,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8759,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8892,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9035,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9193,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9362,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9587,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9812,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9887,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10056,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10282,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10462,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e40; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10492,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e38; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10570,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10746,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10821,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10898,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875c8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10932,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875d0; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10960,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11174,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11346,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11572,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11648,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11705,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11739,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787d88; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11953,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12150,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12323,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2ae32b7fce482a017d08bc33d35a5a15135315122d2bbabf1acb57234f1ad33c",
+      "target_extent_sha256": "2ae32b7fce482a017d08bc33d35a5a15135315122d2bbabf1acb57234f1ad33c",
+      "unit": "character-23-action-input",
+      "symbol": "?Slot04@Character23@@UAEXXZ",
+      "target_address": "0x0051A350",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "d91790bd13da9b2819b1f914780fffda7a648f7af71f4ae364d326ab31ee8eb6",
+      "source_sha256": "30b140a5b4f2768e12efc4ef934b08c3c61fb36a57ec9a3587ce577e7a0c9b91",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4dbccd352ed46faa6c4dc9d09298a2e4525c3886898bcc7aa3d4bd037d71729a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 5242,
+      "matched_bytes": 5242,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "ae44549004e09a0e6c28b375ec337242060a0381dfdabd84cfb0c76ef5e60bf8",
+      "target_extent_sha256": "ae44549004e09a0e6c28b375ec337242060a0381dfdabd84cfb0c76ef5e60bf8",
+      "unit": "character-23-recognize-commands",
+      "symbol": "?Slot02@Character23@@UAEXXZ",
+      "target_address": "0x0051DF60",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7e954626f95d2ac9bffaae3df1f3dec5b8086fa96259ae68bf4bfaf3ee1642",
+      "object_sha256": "699b832653572439c54e0fe9dfb7edaed30034f7bfccd84cd07fdf51dfb4989b",
+      "source_sha256": "7a1bc42cf440b8e04b35950e95555664e461f9d6f4c5f2e05754456a49c13bc9",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "6d594ca2673a73f4943df1ae89733412a5facb99e707f23f8bc057f87f2d5aef"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "21dc3eb4b3ed6c8554cf5f879462a046179e0ae537d4367ebffeacaf44721eb9",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "dea2e1ed40211e637778bca3e1dabea0623cd6247a9131728a76bdf57f5a410f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 17 cold source/profile/dependency artifacts cover10 new Misuzu constructor/frame/input/command units and27 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "boundary_review": [
+    {
+      "tag": "constructor",
+      "address": "0x519e00",
+      "exclusive_end": "0x51a067",
+      "size": 615,
+      "instructions": 123,
+      "branches": [
+        {
+          "address": "0x51a018",
+          "target": "0x51a023"
+        },
+        {
+          "address": "0x51a027",
+          "target": "0x51a05e"
+        },
+        {
+          "address": "0x51a05c",
+          "target": "0x51a01a"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x519e24",
+          "instruction": "call   0x40eae0"
+        },
+        {
+          "address": "0x519e41",
+          "instruction": "call   0x778080"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 9,
+      "next_entry": "0x51a070",
+      "local_data": []
+    },
+    {
+      "tag": "initialize",
+      "address": "0x51a070",
+      "exclusive_end": "0x51a29b",
+      "size": 555,
+      "instructions": 108,
+      "branches": [
+        {
+          "address": "0x51a1ef",
+          "target": "0x51a1fa"
+        },
+        {
+          "address": "0x51a1fe",
+          "target": "0x51a235"
+        },
+        {
+          "address": "0x51a233",
+          "target": "0x51a1f1"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x51a238",
+          "instruction": "call   0x40edf0"
+        },
+        {
+          "address": "0x51a240",
+          "instruction": "call   0x405490"
+        },
+        {
+          "address": "0x51a24c",
+          "instruction": "call   0x413090"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x51a294",
+          "instruction": "call   DWORD PTR [edx+0x24]"
+        }
+      ],
+      "padding": 5,
+      "next_entry": "0x51a2a0",
+      "local_data": []
+    },
+    {
+      "tag": "reset-pose",
+      "address": "0x51a2a0",
+      "exclusive_end": "0x51a2da",
+      "size": 58,
+      "instructions": 15,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x51a2d1",
+          "instruction": "call   0x40f110"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 6,
+      "next_entry": "0x51a2e0",
+      "local_data": []
+    },
+    {
+      "tag": "remove-effect",
+      "address": "0x51a2e0",
+      "exclusive_end": "0x51a330",
+      "size": 80,
+      "instructions": 20,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x51a325",
+          "instruction": "call   0x412e60"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 0,
+      "next_entry": "0x51a330",
+      "local_data": []
+    },
+    {
+      "tag": "locomotion",
+      "address": "0x51a330",
+      "exclusive_end": "0x51a343",
+      "size": 19,
+      "instructions": 9,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x51a33a",
+          "instruction": "call   0x40e740"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 13,
+      "next_entry": "0x51a350",
+      "local_data": []
+    },
+    {
+      "tag": "frame-control",
+      "address": "0x51dde0",
+      "exclusive_end": "0x51df2a",
+      "size": 330,
+      "instructions": 84,
+      "branches": [
+        {
+          "address": "0x51ddf1",
+          "target": "0x51de08"
+        },
+        {
+          "address": "0x51de12",
+          "target": "0x51dee3"
+        },
+        {
+          "address": "0x51de5d",
+          "target": "0x51deae"
+        },
+        {
+          "address": "0x51de8d",
+          "target": "0x51dea1"
+        },
+        {
+          "address": "0x51deb8",
+          "target": "0x51dee3"
+        },
+        {
+          "address": "0x51dec7",
+          "target": "0x51dee3"
+        },
+        {
+          "address": "0x51deed",
+          "target": "0x51defb"
+        },
+        {
+          "address": "0x51def9",
+          "target": "0x51df0c"
+        },
+        {
+          "address": "0x51df0a",
+          "target": "0x51df26"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x51de27",
+          "instruction": "call   0x410ac0"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 6,
+      "next_entry": "0x51df30",
+      "local_data": []
+    },
+    {
+      "tag": "render-indicators",
+      "address": "0x51d390",
+      "exclusive_end": "0x51ddd7",
+      "size": 2631,
+      "instructions": 735,
+      "branches": [
+        {
+          "address": "0x51d3ad",
+          "target": "0x51d557"
+        },
+        {
+          "address": "0x51d42b",
+          "target": "0x51d48c"
+        },
+        {
+          "address": "0x51d48a",
+          "target": "0x51d4f1"
+        },
+        {
+          "address": "0x51d564",
+          "target": "0x51d75c"
+        },
+        {
+          "address": "0x51d5fd",
+          "target": "0x51d679"
+        },
+        {
+          "address": "0x51d677",
+          "target": "0x51d6f6"
+        },
+        {
+          "address": "0x51d769",
+          "target": "0x51d961"
+        },
+        {
+          "address": "0x51d802",
+          "target": "0x51d87e"
+        },
+        {
+          "address": "0x51d87c",
+          "target": "0x51d8fb"
+        },
+        {
+          "address": "0x51d96e",
+          "target": "0x51db66"
+        },
+        {
+          "address": "0x51da07",
+          "target": "0x51da83"
+        },
+        {
+          "address": "0x51da81",
+          "target": "0x51db00"
+        },
+        {
+          "address": "0x51db73",
+          "target": "0x51ddd2"
+        },
+        {
+          "address": "0x51dc25",
+          "target": "0x51dcbf"
+        },
+        {
+          "address": "0x51dcba",
+          "target": "0x51dd6c"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x51d3e5",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d453",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d4ba",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d552",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x51d59f",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d628",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d6a7",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d757",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x51d7a4",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d82d",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d8ac",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51d95c",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x51d9a9",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51da32",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51dab1",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51db61",
+          "instruction": "call   0x409a90"
+        },
+        {
+          "address": "0x51dbc7",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51dc6b",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51dd1d",
+          "instruction": "call   0x40c590"
+        },
+        {
+          "address": "0x51ddcd",
+          "instruction": "call   0x409a90"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 9,
+      "next_entry": "0x51dde0",
+      "local_data": []
+    },
+    {
+      "tag": "emit-effect",
+      "address": "0x51df30",
+      "exclusive_end": "0x51df5f",
+      "size": 47,
+      "instructions": 18,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x51df54",
+          "instruction": "call   0x412b10"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x51df4a",
+          "instruction": "call   DWORD PTR [eax+0x28]"
+        }
+      ],
+      "padding": 1,
+      "next_entry": "0x51df60",
+      "local_data": []
+    },
+    {
+      "tag": "input",
+      "address": "0x51a350",
+      "exclusive_end": "0x51d384",
+      "size": 12340,
+      "instructions": 3141,
+      "branches": [
+        {
+          "address": "0x51a366",
+          "target": "0x51a372"
+        },
+        {
+          "address": "0x51a37e",
+          "target": "0x51a38c"
+        },
+        {
+          "address": "0x51a38a",
+          "target": "0x51a3a1"
+        },
+        {
+          "address": "0x51a3ad",
+          "target": "0x51a3b9"
+        },
+        {
+          "address": "0x51a3c6",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a3e0",
+          "target": "0x51a3f4"
+        },
+        {
+          "address": "0x51a3ee",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a3fe",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a40e",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a440",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a469",
+          "target": "0x51a4a7"
+        },
+        {
+          "address": "0x51a497",
+          "target": "0x51a4a2"
+        },
+        {
+          "address": "0x51a4a2",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a4b1",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51a4c4",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a4d7",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a4ed",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a506",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a516",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a544",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a56d",
+          "target": "0x51a58f"
+        },
+        {
+          "address": "0x51a58a",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a59c",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a5b5",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a5cb",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a5fd",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a60f",
+          "target": "0x51a629"
+        },
+        {
+          "address": "0x51a61b",
+          "target": "0x51a629"
+        },
+        {
+          "address": "0x51a627",
+          "target": "0x51a638"
+        },
+        {
+          "address": "0x51a636",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a65f",
+          "target": "0x51a69d"
+        },
+        {
+          "address": "0x51a68d",
+          "target": "0x51a698"
+        },
+        {
+          "address": "0x51a698",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a6aa",
+          "target": "0x51a6bf"
+        },
+        {
+          "address": "0x51a6b9",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a6d2",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a6e8",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a71a",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a72d",
+          "target": "0x51a747"
+        },
+        {
+          "address": "0x51a739",
+          "target": "0x51a747"
+        },
+        {
+          "address": "0x51a745",
+          "target": "0x51a755"
+        },
+        {
+          "address": "0x51a753",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a77c",
+          "target": "0x51a7ba"
+        },
+        {
+          "address": "0x51a7aa",
+          "target": "0x51a7b5"
+        },
+        {
+          "address": "0x51a7b5",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a7c7",
+          "target": "0x51a7eb"
+        },
+        {
+          "address": "0x51a7d6",
+          "target": "0x51a7eb"
+        },
+        {
+          "address": "0x51a7e5",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a7fe",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a814",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a846",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a858",
+          "target": "0x51a872"
+        },
+        {
+          "address": "0x51a864",
+          "target": "0x51a872"
+        },
+        {
+          "address": "0x51a870",
+          "target": "0x51a881"
+        },
+        {
+          "address": "0x51a87f",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a8a8",
+          "target": "0x51a8e6"
+        },
+        {
+          "address": "0x51a8d6",
+          "target": "0x51a8e1"
+        },
+        {
+          "address": "0x51a8e1",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a8f6",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a90c",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a925",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a957",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a965",
+          "target": "0x51a97f"
+        },
+        {
+          "address": "0x51a971",
+          "target": "0x51a97f"
+        },
+        {
+          "address": "0x51a97d",
+          "target": "0x51a98e"
+        },
+        {
+          "address": "0x51a98c",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a9b5",
+          "target": "0x51a9d7"
+        },
+        {
+          "address": "0x51a9d2",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51a9e6",
+          "target": "0x51a9fe"
+        },
+        {
+          "address": "0x51a9f8",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aa0e",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aa27",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aa59",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aa67",
+          "target": "0x51aa81"
+        },
+        {
+          "address": "0x51aa73",
+          "target": "0x51aa81"
+        },
+        {
+          "address": "0x51aa7f",
+          "target": "0x51aa90"
+        },
+        {
+          "address": "0x51aa8e",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aab7",
+          "target": "0x51aad9"
+        },
+        {
+          "address": "0x51aad4",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51aae8",
+          "target": "0x51ab12"
+        },
+        {
+          "address": "0x51aafa",
+          "target": "0x51ab12"
+        },
+        {
+          "address": "0x51ab0c",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51ab21",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51ab3a",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51ab6c",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51ab7b",
+          "target": "0x51ab95"
+        },
+        {
+          "address": "0x51ab87",
+          "target": "0x51ab95"
+        },
+        {
+          "address": "0x51ab93",
+          "target": "0x51aba3"
+        },
+        {
+          "address": "0x51aba1",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51abca",
+          "target": "0x51abec"
+        },
+        {
+          "address": "0x51abe7",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51abf9",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51ac12",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51ac28",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51ac5a",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51ac68",
+          "target": "0x51ac82"
+        },
+        {
+          "address": "0x51ac74",
+          "target": "0x51ac82"
+        },
+        {
+          "address": "0x51ac80",
+          "target": "0x51ac91"
+        },
+        {
+          "address": "0x51ac8f",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51acb8",
+          "target": "0x51acda"
+        },
+        {
+          "address": "0x51acd5",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51ace7",
+          "target": "0x51acfc"
+        },
+        {
+          "address": "0x51acf6",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51ad0f",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51ad25",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51ad57",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51ad65",
+          "target": "0x51ad7f"
+        },
+        {
+          "address": "0x51ad71",
+          "target": "0x51ad7f"
+        },
+        {
+          "address": "0x51ad7d",
+          "target": "0x51ad8e"
+        },
+        {
+          "address": "0x51ad8c",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51adb5",
+          "target": "0x51add7"
+        },
+        {
+          "address": "0x51add2",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51ade4",
+          "target": "0x51ae08"
+        },
+        {
+          "address": "0x51adf3",
+          "target": "0x51ae08"
+        },
+        {
+          "address": "0x51ae02",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51ae1b",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51ae31",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51ae63",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51ae72",
+          "target": "0x51ae8c"
+        },
+        {
+          "address": "0x51ae7e",
+          "target": "0x51ae8c"
+        },
+        {
+          "address": "0x51ae8a",
+          "target": "0x51ae9a"
+        },
+        {
+          "address": "0x51ae98",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51aec1",
+          "target": "0x51aee3"
+        },
+        {
+          "address": "0x51aede",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51aeed",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51af00",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51af1a",
+          "target": "0x51af3a"
+        },
+        {
+          "address": "0x51af28",
+          "target": "0x51af3a"
+        },
+        {
+          "address": "0x51af34",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51af66",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51af7f",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51af91",
+          "target": "0x51afab"
+        },
+        {
+          "address": "0x51af9d",
+          "target": "0x51afab"
+        },
+        {
+          "address": "0x51afa9",
+          "target": "0x51afbe"
+        },
+        {
+          "address": "0x51afb8",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51afe5",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51b008",
+          "target": "0x51b035"
+        },
+        {
+          "address": "0x51b027",
+          "target": "0x51b035"
+        },
+        {
+          "address": "0x51b033",
+          "target": "0x51b07f"
+        },
+        {
+          "address": "0x51b052",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51b071",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51b07d",
+          "target": "0x51b0b4"
+        },
+        {
+          "address": "0x51b0a4",
+          "target": "0x51b0af"
+        },
+        {
+          "address": "0x51b0af",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b0be",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b0d1",
+          "target": "0x51b0e6"
+        },
+        {
+          "address": "0x51b0e0",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b112",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b12b",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b13d",
+          "target": "0x51b157"
+        },
+        {
+          "address": "0x51b149",
+          "target": "0x51b157"
+        },
+        {
+          "address": "0x51b155",
+          "target": "0x51b16a"
+        },
+        {
+          "address": "0x51b164",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b191",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b1b4",
+          "target": "0x51b1e1"
+        },
+        {
+          "address": "0x51b1d3",
+          "target": "0x51b1e1"
+        },
+        {
+          "address": "0x51b1df",
+          "target": "0x51b22b"
+        },
+        {
+          "address": "0x51b1fe",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b21d",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b229",
+          "target": "0x51b260"
+        },
+        {
+          "address": "0x51b250",
+          "target": "0x51b25b"
+        },
+        {
+          "address": "0x51b25b",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b26a",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b27d",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b2af",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b2c8",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b2db",
+          "target": "0x51b2f5"
+        },
+        {
+          "address": "0x51b2e7",
+          "target": "0x51b2f5"
+        },
+        {
+          "address": "0x51b2f3",
+          "target": "0x51b308"
+        },
+        {
+          "address": "0x51b302",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b32f",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b352",
+          "target": "0x51b37f"
+        },
+        {
+          "address": "0x51b371",
+          "target": "0x51b37f"
+        },
+        {
+          "address": "0x51b37d",
+          "target": "0x51b3c9"
+        },
+        {
+          "address": "0x51b39c",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b3bb",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b3c7",
+          "target": "0x51b3fe"
+        },
+        {
+          "address": "0x51b3ee",
+          "target": "0x51b3f9"
+        },
+        {
+          "address": "0x51b3f9",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b40b",
+          "target": "0x51b505"
+        },
+        {
+          "address": "0x51b425",
+          "target": "0x51b439"
+        },
+        {
+          "address": "0x51b433",
+          "target": "0x51b505"
+        },
+        {
+          "address": "0x51b465",
+          "target": "0x51b505"
+        },
+        {
+          "address": "0x51b478",
+          "target": "0x51b492"
+        },
+        {
+          "address": "0x51b484",
+          "target": "0x51b492"
+        },
+        {
+          "address": "0x51b490",
+          "target": "0x51b4a0"
+        },
+        {
+          "address": "0x51b49e",
+          "target": "0x51b505"
+        },
+        {
+          "address": "0x51b4c7",
+          "target": "0x51b505"
+        },
+        {
+          "address": "0x51b4f5",
+          "target": "0x51b500"
+        },
+        {
+          "address": "0x51b500",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b512",
+          "target": "0x51b527"
+        },
+        {
+          "address": "0x51b521",
+          "target": "0x51b5f4"
+        },
+        {
+          "address": "0x51b553",
+          "target": "0x51b5f4"
+        },
+        {
+          "address": "0x51b566",
+          "target": "0x51b580"
+        },
+        {
+          "address": "0x51b572",
+          "target": "0x51b580"
+        },
+        {
+          "address": "0x51b57e",
+          "target": "0x51b58f"
+        },
+        {
+          "address": "0x51b58d",
+          "target": "0x51b5f4"
+        },
+        {
+          "address": "0x51b5b6",
+          "target": "0x51b5f4"
+        },
+        {
+          "address": "0x51b5e4",
+          "target": "0x51b5ef"
+        },
+        {
+          "address": "0x51b5ef",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b601",
+          "target": "0x51b6d3"
+        },
+        {
+          "address": "0x51b633",
+          "target": "0x51b6d3"
+        },
+        {
+          "address": "0x51b646",
+          "target": "0x51b660"
+        },
+        {
+          "address": "0x51b652",
+          "target": "0x51b660"
+        },
+        {
+          "address": "0x51b65e",
+          "target": "0x51b66e"
+        },
+        {
+          "address": "0x51b66c",
+          "target": "0x51b6d3"
+        },
+        {
+          "address": "0x51b695",
+          "target": "0x51b6d3"
+        },
+        {
+          "address": "0x51b6c3",
+          "target": "0x51b6ce"
+        },
+        {
+          "address": "0x51b6ce",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b6dd",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b6f0",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b70a",
+          "target": "0x51b71e"
+        },
+        {
+          "address": "0x51b718",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b74a",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b75c",
+          "target": "0x51b776"
+        },
+        {
+          "address": "0x51b768",
+          "target": "0x51b776"
+        },
+        {
+          "address": "0x51b774",
+          "target": "0x51b785"
+        },
+        {
+          "address": "0x51b783",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b7ac",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b7c1",
+          "target": "0x51b7e3"
+        },
+        {
+          "address": "0x51b7de",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b7f0",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b80a",
+          "target": "0x51b81e"
+        },
+        {
+          "address": "0x51b818",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b84a",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b85c",
+          "target": "0x51b876"
+        },
+        {
+          "address": "0x51b868",
+          "target": "0x51b876"
+        },
+        {
+          "address": "0x51b874",
+          "target": "0x51b885"
+        },
+        {
+          "address": "0x51b883",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b8ac",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b8c1",
+          "target": "0x51b8e3"
+        },
+        {
+          "address": "0x51b8de",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b8f0",
+          "target": "0x51b905"
+        },
+        {
+          "address": "0x51b8ff",
+          "target": "0x51b9ca"
+        },
+        {
+          "address": "0x51b931",
+          "target": "0x51b9ca"
+        },
+        {
+          "address": "0x51b944",
+          "target": "0x51b95e"
+        },
+        {
+          "address": "0x51b950",
+          "target": "0x51b95e"
+        },
+        {
+          "address": "0x51b95c",
+          "target": "0x51b96c"
+        },
+        {
+          "address": "0x51b96a",
+          "target": "0x51b9ca"
+        },
+        {
+          "address": "0x51b993",
+          "target": "0x51b9ca"
+        },
+        {
+          "address": "0x51b9a8",
+          "target": "0x51b9ca"
+        },
+        {
+          "address": "0x51b9c5",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51b9d7",
+          "target": "0x51baa3"
+        },
+        {
+          "address": "0x51ba09",
+          "target": "0x51baa3"
+        },
+        {
+          "address": "0x51ba1c",
+          "target": "0x51ba36"
+        },
+        {
+          "address": "0x51ba28",
+          "target": "0x51ba36"
+        },
+        {
+          "address": "0x51ba34",
+          "target": "0x51ba45"
+        },
+        {
+          "address": "0x51ba43",
+          "target": "0x51baa3"
+        },
+        {
+          "address": "0x51ba6c",
+          "target": "0x51baa3"
+        },
+        {
+          "address": "0x51ba81",
+          "target": "0x51baa3"
+        },
+        {
+          "address": "0x51ba9e",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51baad",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bac0",
+          "target": "0x51bad5"
+        },
+        {
+          "address": "0x51bacf",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bb01",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bb13",
+          "target": "0x51bb2d"
+        },
+        {
+          "address": "0x51bb1f",
+          "target": "0x51bb2d"
+        },
+        {
+          "address": "0x51bb2b",
+          "target": "0x51bb3c"
+        },
+        {
+          "address": "0x51bb3a",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bb63",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bb78",
+          "target": "0x51bb9a"
+        },
+        {
+          "address": "0x51bb95",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51bba4",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bbb7",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bbe9",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bbfc",
+          "target": "0x51bc16"
+        },
+        {
+          "address": "0x51bc08",
+          "target": "0x51bc16"
+        },
+        {
+          "address": "0x51bc14",
+          "target": "0x51bc25"
+        },
+        {
+          "address": "0x51bc23",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bc4c",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bc61",
+          "target": "0x51bc83"
+        },
+        {
+          "address": "0x51bc7e",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51bc8d",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bca0",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bcba",
+          "target": "0x51bcce"
+        },
+        {
+          "address": "0x51bcc8",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bcfa",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bd13",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bd22",
+          "target": "0x51bd3c"
+        },
+        {
+          "address": "0x51bd2e",
+          "target": "0x51bd3c"
+        },
+        {
+          "address": "0x51bd3a",
+          "target": "0x51bd4a"
+        },
+        {
+          "address": "0x51bd48",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bd71",
+          "target": "0x51bd93"
+        },
+        {
+          "address": "0x51bd8e",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51bd9d",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51bdb0",
+          "target": "0x51bdc5"
+        },
+        {
+          "address": "0x51bdbf",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51bdf1",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51be0a",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51be19",
+          "target": "0x51be33"
+        },
+        {
+          "address": "0x51be25",
+          "target": "0x51be33"
+        },
+        {
+          "address": "0x51be31",
+          "target": "0x51be42"
+        },
+        {
+          "address": "0x51be40",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51be69",
+          "target": "0x51be8b"
+        },
+        {
+          "address": "0x51be86",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51be95",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51bea8",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51beda",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51bef3",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51bf02",
+          "target": "0x51bf1c"
+        },
+        {
+          "address": "0x51bf0e",
+          "target": "0x51bf1c"
+        },
+        {
+          "address": "0x51bf1a",
+          "target": "0x51bf2a"
+        },
+        {
+          "address": "0x51bf28",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51bf51",
+          "target": "0x51bf73"
+        },
+        {
+          "address": "0x51bf6e",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51bf7d",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51bf8f",
+          "target": "0x51bfa4"
+        },
+        {
+          "address": "0x51bf9e",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51bfb5",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51bfc8",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c005",
+          "target": "0x51c050"
+        },
+        {
+          "address": "0x51c025",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c04a",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c077",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c089",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c0a0",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c0d2",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c0e5",
+          "target": "0x51c0ff"
+        },
+        {
+          "address": "0x51c0f1",
+          "target": "0x51c0ff"
+        },
+        {
+          "address": "0x51c0fd",
+          "target": "0x51c10d"
+        },
+        {
+          "address": "0x51c10b",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c11a",
+          "target": "0x51c17d"
+        },
+        {
+          "address": "0x51c129",
+          "target": "0x51c135"
+        },
+        {
+          "address": "0x51c178",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c1b4",
+          "target": "0x51c1fc"
+        },
+        {
+          "address": "0x51c1d4",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c1f6",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c208",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c235",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c267",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c27a",
+          "target": "0x51c294"
+        },
+        {
+          "address": "0x51c286",
+          "target": "0x51c294"
+        },
+        {
+          "address": "0x51c292",
+          "target": "0x51c2a3"
+        },
+        {
+          "address": "0x51c2a1",
+          "target": "0x51c304"
+        },
+        {
+          "address": "0x51c2b0",
+          "target": "0x51c2bc"
+        },
+        {
+          "address": "0x51c2ff",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c317",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c349",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c386",
+          "target": "0x51c3d1"
+        },
+        {
+          "address": "0x51c3a6",
+          "target": "0x51c480"
+        },
+        {
+          "address": "0x51c3cb",
+          "target": "0x51c480"
+        },
+        {
+          "address": "0x51c3f8",
+          "target": "0x51c480"
+        },
+        {
+          "address": "0x51c40a",
+          "target": "0x51c424"
+        },
+        {
+          "address": "0x51c416",
+          "target": "0x51c424"
+        },
+        {
+          "address": "0x51c422",
+          "target": "0x51c433"
+        },
+        {
+          "address": "0x51c431",
+          "target": "0x51c480"
+        },
+        {
+          "address": "0x51c43f",
+          "target": "0x51c44b"
+        },
+        {
+          "address": "0x51c47b",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c4b7",
+          "target": "0x51c4ff"
+        },
+        {
+          "address": "0x51c4d7",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c4f9",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c526",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c539",
+          "target": "0x51c553"
+        },
+        {
+          "address": "0x51c545",
+          "target": "0x51c553"
+        },
+        {
+          "address": "0x51c551",
+          "target": "0x51c561"
+        },
+        {
+          "address": "0x51c55f",
+          "target": "0x51c5af"
+        },
+        {
+          "address": "0x51c56e",
+          "target": "0x51c57a"
+        },
+        {
+          "address": "0x51c5aa",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c5b9",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c5cc",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c5fe",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c615",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c628",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c652",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c665",
+          "target": "0x51c67f"
+        },
+        {
+          "address": "0x51c671",
+          "target": "0x51c67f"
+        },
+        {
+          "address": "0x51c67d",
+          "target": "0x51c68d"
+        },
+        {
+          "address": "0x51c68b",
+          "target": "0x51c700"
+        },
+        {
+          "address": "0x51c6d0",
+          "target": "0x51c6db"
+        },
+        {
+          "address": "0x51c6f0",
+          "target": "0x51c6fb"
+        },
+        {
+          "address": "0x51c6fb",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c70d",
+          "target": "0x51c731"
+        },
+        {
+          "address": "0x51c71c",
+          "target": "0x51c731"
+        },
+        {
+          "address": "0x51c72b",
+          "target": "0x51c9b6"
+        },
+        {
+          "address": "0x51c742",
+          "target": "0x51c7f4"
+        },
+        {
+          "address": "0x51c76f",
+          "target": "0x51c7ef"
+        },
+        {
+          "address": "0x51c79d",
+          "target": "0x51c7ef"
+        },
+        {
+          "address": "0x51c7ab",
+          "target": "0x51c7c5"
+        },
+        {
+          "address": "0x51c7b7",
+          "target": "0x51c7c5"
+        },
+        {
+          "address": "0x51c7c3",
+          "target": "0x51c7d4"
+        },
+        {
+          "address": "0x51c7d2",
+          "target": "0x51c7ef"
+        },
+        {
+          "address": "0x51c7ef",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c801",
+          "target": "0x51c825"
+        },
+        {
+          "address": "0x51c810",
+          "target": "0x51c825"
+        },
+        {
+          "address": "0x51c81f",
+          "target": "0x51c8d5"
+        },
+        {
+          "address": "0x51c84c",
+          "target": "0x51c8d5"
+        },
+        {
+          "address": "0x51c87e",
+          "target": "0x51c8d5"
+        },
+        {
+          "address": "0x51c88d",
+          "target": "0x51c8a7"
+        },
+        {
+          "address": "0x51c899",
+          "target": "0x51c8a7"
+        },
+        {
+          "address": "0x51c8a5",
+          "target": "0x51c8b5"
+        },
+        {
+          "address": "0x51c8b3",
+          "target": "0x51c8d5"
+        },
+        {
+          "address": "0x51c8d0",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c8e1",
+          "target": "0x51c905"
+        },
+        {
+          "address": "0x51c8f0",
+          "target": "0x51c905"
+        },
+        {
+          "address": "0x51c8ff",
+          "target": "0x51c9b6"
+        },
+        {
+          "address": "0x51c92c",
+          "target": "0x51c9b6"
+        },
+        {
+          "address": "0x51c95e",
+          "target": "0x51c9b6"
+        },
+        {
+          "address": "0x51c96d",
+          "target": "0x51c987"
+        },
+        {
+          "address": "0x51c979",
+          "target": "0x51c987"
+        },
+        {
+          "address": "0x51c985",
+          "target": "0x51c996"
+        },
+        {
+          "address": "0x51c994",
+          "target": "0x51c9b6"
+        },
+        {
+          "address": "0x51c9b1",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51c9c3",
+          "target": "0x51c9e7"
+        },
+        {
+          "address": "0x51c9d2",
+          "target": "0x51c9e7"
+        },
+        {
+          "address": "0x51c9e1",
+          "target": "0x51cd5c"
+        },
+        {
+          "address": "0x51c9f8",
+          "target": "0x51caaa"
+        },
+        {
+          "address": "0x51ca25",
+          "target": "0x51caa5"
+        },
+        {
+          "address": "0x51ca53",
+          "target": "0x51caa5"
+        },
+        {
+          "address": "0x51ca62",
+          "target": "0x51ca7c"
+        },
+        {
+          "address": "0x51ca6e",
+          "target": "0x51ca7c"
+        },
+        {
+          "address": "0x51ca7a",
+          "target": "0x51ca8a"
+        },
+        {
+          "address": "0x51ca88",
+          "target": "0x51caa5"
+        },
+        {
+          "address": "0x51caa5",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cab7",
+          "target": "0x51cadb"
+        },
+        {
+          "address": "0x51cac6",
+          "target": "0x51cadb"
+        },
+        {
+          "address": "0x51cad5",
+          "target": "0x51cb8c"
+        },
+        {
+          "address": "0x51cb02",
+          "target": "0x51cb8c"
+        },
+        {
+          "address": "0x51cb34",
+          "target": "0x51cb8c"
+        },
+        {
+          "address": "0x51cb43",
+          "target": "0x51cb5d"
+        },
+        {
+          "address": "0x51cb4f",
+          "target": "0x51cb5d"
+        },
+        {
+          "address": "0x51cb5b",
+          "target": "0x51cb6c"
+        },
+        {
+          "address": "0x51cb6a",
+          "target": "0x51cb8c"
+        },
+        {
+          "address": "0x51cb87",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cb98",
+          "target": "0x51cbbc"
+        },
+        {
+          "address": "0x51cba7",
+          "target": "0x51cbbc"
+        },
+        {
+          "address": "0x51cbb6",
+          "target": "0x51cd5c"
+        },
+        {
+          "address": "0x51cbe3",
+          "target": "0x51ccac"
+        },
+        {
+          "address": "0x51cc15",
+          "target": "0x51ccac"
+        },
+        {
+          "address": "0x51cc37",
+          "target": "0x51ccac"
+        },
+        {
+          "address": "0x51cc55",
+          "target": "0x51ccac"
+        },
+        {
+          "address": "0x51cc63",
+          "target": "0x51cc7d"
+        },
+        {
+          "address": "0x51cc6f",
+          "target": "0x51cc7d"
+        },
+        {
+          "address": "0x51cc7b",
+          "target": "0x51cc8c"
+        },
+        {
+          "address": "0x51cc8a",
+          "target": "0x51ccac"
+        },
+        {
+          "address": "0x51cca7",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51ccd3",
+          "target": "0x51cd5c"
+        },
+        {
+          "address": "0x51cd05",
+          "target": "0x51cd5c"
+        },
+        {
+          "address": "0x51cd14",
+          "target": "0x51cd2e"
+        },
+        {
+          "address": "0x51cd20",
+          "target": "0x51cd2e"
+        },
+        {
+          "address": "0x51cd2c",
+          "target": "0x51cd3c"
+        },
+        {
+          "address": "0x51cd3a",
+          "target": "0x51cd5c"
+        },
+        {
+          "address": "0x51cd57",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cd69",
+          "target": "0x51cd8d"
+        },
+        {
+          "address": "0x51cd78",
+          "target": "0x51cd8d"
+        },
+        {
+          "address": "0x51cd87",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cd9e",
+          "target": "0x51cfb4"
+        },
+        {
+          "address": "0x51cdb7",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51cdc9",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51cdeb",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51ce0d",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51ce29",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51ce56",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51ce6b",
+          "target": "0x51ce85"
+        },
+        {
+          "address": "0x51ce7f",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51ceb1",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51cebf",
+          "target": "0x51ced9"
+        },
+        {
+          "address": "0x51cecb",
+          "target": "0x51ced9"
+        },
+        {
+          "address": "0x51ced7",
+          "target": "0x51cee8"
+        },
+        {
+          "address": "0x51cee6",
+          "target": "0x51cf08"
+        },
+        {
+          "address": "0x51cf03",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cf2f",
+          "target": "0x51cfaf"
+        },
+        {
+          "address": "0x51cf5d",
+          "target": "0x51cfaf"
+        },
+        {
+          "address": "0x51cf6c",
+          "target": "0x51cf86"
+        },
+        {
+          "address": "0x51cf78",
+          "target": "0x51cf86"
+        },
+        {
+          "address": "0x51cf84",
+          "target": "0x51cf94"
+        },
+        {
+          "address": "0x51cf92",
+          "target": "0x51cfaf"
+        },
+        {
+          "address": "0x51cfaf",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51cfc1",
+          "target": "0x51cfe5"
+        },
+        {
+          "address": "0x51cfd0",
+          "target": "0x51cfe5"
+        },
+        {
+          "address": "0x51cfdf",
+          "target": "0x51d096"
+        },
+        {
+          "address": "0x51d00c",
+          "target": "0x51d096"
+        },
+        {
+          "address": "0x51d03e",
+          "target": "0x51d096"
+        },
+        {
+          "address": "0x51d04d",
+          "target": "0x51d067"
+        },
+        {
+          "address": "0x51d059",
+          "target": "0x51d067"
+        },
+        {
+          "address": "0x51d065",
+          "target": "0x51d076"
+        },
+        {
+          "address": "0x51d074",
+          "target": "0x51d096"
+        },
+        {
+          "address": "0x51d091",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d0a2",
+          "target": "0x51d0c6"
+        },
+        {
+          "address": "0x51d0b1",
+          "target": "0x51d0c6"
+        },
+        {
+          "address": "0x51d0c0",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d0de",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d0f0",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d112",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d134",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d161",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d176",
+          "target": "0x51d18f"
+        },
+        {
+          "address": "0x51d189",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d1bb",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d1ca",
+          "target": "0x51d1e4"
+        },
+        {
+          "address": "0x51d1d6",
+          "target": "0x51d1e4"
+        },
+        {
+          "address": "0x51d1e2",
+          "target": "0x51d1f3"
+        },
+        {
+          "address": "0x51d1f1",
+          "target": "0x51d213"
+        },
+        {
+          "address": "0x51d20e",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d23a",
+          "target": "0x51d2d8"
+        },
+        {
+          "address": "0x51d26c",
+          "target": "0x51d2d8"
+        },
+        {
+          "address": "0x51d281",
+          "target": "0x51d2d8"
+        },
+        {
+          "address": "0x51d290",
+          "target": "0x51d2aa"
+        },
+        {
+          "address": "0x51d29c",
+          "target": "0x51d2aa"
+        },
+        {
+          "address": "0x51d2a8",
+          "target": "0x51d2b8"
+        },
+        {
+          "address": "0x51d2b6",
+          "target": "0x51d2d8"
+        },
+        {
+          "address": "0x51d2d3",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d2ff",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d32d",
+          "target": "0x51d380"
+        },
+        {
+          "address": "0x51d33c",
+          "target": "0x51d356"
+        },
+        {
+          "address": "0x51d348",
+          "target": "0x51d356"
+        },
+        {
+          "address": "0x51d354",
+          "target": "0x51d365"
+        },
+        {
+          "address": "0x51d363",
+          "target": "0x51d380"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x51a478",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51a57c",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51a66e",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51a78b",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51a8b7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51a9c4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51aac6",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51abd9",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51acc7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51adc4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51aed0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b08c",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b238",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b3d6",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b4d6",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b5c5",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b6a4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b7d0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b8d0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51b9b7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51ba90",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51bb87",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51bc70",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51bd80",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51be78",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51bf60",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51c141",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x51c2c8",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x51c457",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x51c586",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x51c69a",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51c7e1",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51c8c2",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51c9a3",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51ca97",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51cb79",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51cc99",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51cd49",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51cef5",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51cfa1",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51d083",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51d200",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51d2c5",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x51d372",
+          "instruction": "call   0x40f170"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x51a473",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51a577",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51a669",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51a786",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51a8b2",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51a9bf",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51aac1",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51abd4",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51acc2",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51adbf",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51aecb",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b087",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b233",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b3d1",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b4d1",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b5c0",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b69f",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b7cb",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b8cb",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51b9b2",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51ba8b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51bb82",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51bc6b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51bd7b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51be73",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51bf5b",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51c133",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51c2ba",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51c449",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51c578",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51c695",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51c7dc",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51c8bd",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51c99e",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51ca92",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51cb74",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51cc94",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51cd44",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51cef0",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x51cf9c",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51d07e",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51d1fb",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51d2c0",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x51d36d",
+          "instruction": "call   DWORD PTR [edx]"
+        }
+      ],
+      "padding": 12,
+      "next_entry": "0x51d390",
+      "local_data": []
+    },
+    {
+      "tag": "commands",
+      "address": "0x51df60",
+      "exclusive_end": "0x51f3da",
+      "size": 5242,
+      "instructions": 1513,
+      "branches": [
+        {
+          "address": "0x51df89",
+          "target": "0x51df94"
+        },
+        {
+          "address": "0x51dfa7",
+          "target": "0x51e0c0"
+        },
+        {
+          "address": "0x51dfd8",
+          "target": "0x51dff4"
+        },
+        {
+          "address": "0x51dfe1",
+          "target": "0x51dff4"
+        },
+        {
+          "address": "0x51dfef",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51dffb",
+          "target": "0x51e00a"
+        },
+        {
+          "address": "0x51e004",
+          "target": "0x51e00a"
+        },
+        {
+          "address": "0x51e013",
+          "target": "0x51e023"
+        },
+        {
+          "address": "0x51e01c",
+          "target": "0x51e023"
+        },
+        {
+          "address": "0x51e01e",
+          "target": "0x51e0c0"
+        },
+        {
+          "address": "0x51e02d",
+          "target": "0x51e03c"
+        },
+        {
+          "address": "0x51e036",
+          "target": "0x51e03c"
+        },
+        {
+          "address": "0x51e046",
+          "target": "0x51e053"
+        },
+        {
+          "address": "0x51e04f",
+          "target": "0x51e053"
+        },
+        {
+          "address": "0x51e051",
+          "target": "0x51e0c0"
+        },
+        {
+          "address": "0x51e05a",
+          "target": "0x51e069"
+        },
+        {
+          "address": "0x51e063",
+          "target": "0x51e069"
+        },
+        {
+          "address": "0x51e06f",
+          "target": "0x51e07e"
+        },
+        {
+          "address": "0x51e078",
+          "target": "0x51e07e"
+        },
+        {
+          "address": "0x51e088",
+          "target": "0x51e095"
+        },
+        {
+          "address": "0x51e091",
+          "target": "0x51e095"
+        },
+        {
+          "address": "0x51e093",
+          "target": "0x51e0c0"
+        },
+        {
+          "address": "0x51e09c",
+          "target": "0x51e0bb"
+        },
+        {
+          "address": "0x51e0a4",
+          "target": "0x51e0bb"
+        },
+        {
+          "address": "0x51e0b5",
+          "target": "0x51e0bb"
+        },
+        {
+          "address": "0x51e0bb",
+          "target": "0x51df8b"
+        },
+        {
+          "address": "0x51e0d4",
+          "target": "0x51e0df"
+        },
+        {
+          "address": "0x51e0f2",
+          "target": "0x51e281"
+        },
+        {
+          "address": "0x51e126",
+          "target": "0x51e17b"
+        },
+        {
+          "address": "0x51e12f",
+          "target": "0x51e17b"
+        },
+        {
+          "address": "0x51e176",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e19a",
+          "target": "0x51e1fd"
+        },
+        {
+          "address": "0x51e1a3",
+          "target": "0x51e1fd"
+        },
+        {
+          "address": "0x51e1ae",
+          "target": "0x51e1f9"
+        },
+        {
+          "address": "0x51e1f4",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e217",
+          "target": "0x51e226"
+        },
+        {
+          "address": "0x51e220",
+          "target": "0x51e226"
+        },
+        {
+          "address": "0x51e240",
+          "target": "0x51e24f"
+        },
+        {
+          "address": "0x51e249",
+          "target": "0x51e24f"
+        },
+        {
+          "address": "0x51e26e",
+          "target": "0x51e27c"
+        },
+        {
+          "address": "0x51e276",
+          "target": "0x51e27c"
+        },
+        {
+          "address": "0x51e27c",
+          "target": "0x51e0d6"
+        },
+        {
+          "address": "0x51e295",
+          "target": "0x51e2a0"
+        },
+        {
+          "address": "0x51e2b3",
+          "target": "0x51e48c"
+        },
+        {
+          "address": "0x51e2e6",
+          "target": "0x51e339"
+        },
+        {
+          "address": "0x51e2ef",
+          "target": "0x51e339"
+        },
+        {
+          "address": "0x51e334",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e358",
+          "target": "0x51e3ba"
+        },
+        {
+          "address": "0x51e361",
+          "target": "0x51e3ba"
+        },
+        {
+          "address": "0x51e36d",
+          "target": "0x51e3b6"
+        },
+        {
+          "address": "0x51e3b1",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e3d9",
+          "target": "0x51e3e8"
+        },
+        {
+          "address": "0x51e3e2",
+          "target": "0x51e3e8"
+        },
+        {
+          "address": "0x51e3f2",
+          "target": "0x51e401"
+        },
+        {
+          "address": "0x51e3fb",
+          "target": "0x51e401"
+        },
+        {
+          "address": "0x51e420",
+          "target": "0x51e42f"
+        },
+        {
+          "address": "0x51e429",
+          "target": "0x51e42f"
+        },
+        {
+          "address": "0x51e44e",
+          "target": "0x51e45d"
+        },
+        {
+          "address": "0x51e457",
+          "target": "0x51e45d"
+        },
+        {
+          "address": "0x51e467",
+          "target": "0x51e487"
+        },
+        {
+          "address": "0x51e46f",
+          "target": "0x51e487"
+        },
+        {
+          "address": "0x51e481",
+          "target": "0x51e487"
+        },
+        {
+          "address": "0x51e487",
+          "target": "0x51e297"
+        },
+        {
+          "address": "0x51e4a0",
+          "target": "0x51e4ab"
+        },
+        {
+          "address": "0x51e4be",
+          "target": "0x51e680"
+        },
+        {
+          "address": "0x51e4f1",
+          "target": "0x51e544"
+        },
+        {
+          "address": "0x51e4fa",
+          "target": "0x51e544"
+        },
+        {
+          "address": "0x51e53f",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e55e",
+          "target": "0x51e5be"
+        },
+        {
+          "address": "0x51e567",
+          "target": "0x51e5be"
+        },
+        {
+          "address": "0x51e572",
+          "target": "0x51e5ba"
+        },
+        {
+          "address": "0x51e5b5",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e5d8",
+          "target": "0x51e5e7"
+        },
+        {
+          "address": "0x51e5e1",
+          "target": "0x51e5e7"
+        },
+        {
+          "address": "0x51e5f1",
+          "target": "0x51e600"
+        },
+        {
+          "address": "0x51e5fa",
+          "target": "0x51e600"
+        },
+        {
+          "address": "0x51e61a",
+          "target": "0x51e629"
+        },
+        {
+          "address": "0x51e623",
+          "target": "0x51e629"
+        },
+        {
+          "address": "0x51e643",
+          "target": "0x51e652"
+        },
+        {
+          "address": "0x51e64c",
+          "target": "0x51e652"
+        },
+        {
+          "address": "0x51e65c",
+          "target": "0x51e67b"
+        },
+        {
+          "address": "0x51e664",
+          "target": "0x51e67b"
+        },
+        {
+          "address": "0x51e675",
+          "target": "0x51e67b"
+        },
+        {
+          "address": "0x51e67b",
+          "target": "0x51e4a2"
+        },
+        {
+          "address": "0x51e694",
+          "target": "0x51e69f"
+        },
+        {
+          "address": "0x51e6b2",
+          "target": "0x51e815"
+        },
+        {
+          "address": "0x51e6e6",
+          "target": "0x51e738"
+        },
+        {
+          "address": "0x51e6ef",
+          "target": "0x51e738"
+        },
+        {
+          "address": "0x51e733",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e752",
+          "target": "0x51e7b5"
+        },
+        {
+          "address": "0x51e75b",
+          "target": "0x51e7b5"
+        },
+        {
+          "address": "0x51e767",
+          "target": "0x51e7b1"
+        },
+        {
+          "address": "0x51e7ac",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e7d4",
+          "target": "0x51e7e3"
+        },
+        {
+          "address": "0x51e7dd",
+          "target": "0x51e7e3"
+        },
+        {
+          "address": "0x51e802",
+          "target": "0x51e810"
+        },
+        {
+          "address": "0x51e80a",
+          "target": "0x51e810"
+        },
+        {
+          "address": "0x51e810",
+          "target": "0x51e696"
+        },
+        {
+          "address": "0x51e82b",
+          "target": "0x51e836"
+        },
+        {
+          "address": "0x51e848",
+          "target": "0x51e99a"
+        },
+        {
+          "address": "0x51e87c",
+          "target": "0x51e8cd"
+        },
+        {
+          "address": "0x51e885",
+          "target": "0x51e8cd"
+        },
+        {
+          "address": "0x51e8c8",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e8ec",
+          "target": "0x51e94f"
+        },
+        {
+          "address": "0x51e8f5",
+          "target": "0x51e94f"
+        },
+        {
+          "address": "0x51e901",
+          "target": "0x51e94b"
+        },
+        {
+          "address": "0x51e946",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51e959",
+          "target": "0x51e968"
+        },
+        {
+          "address": "0x51e962",
+          "target": "0x51e968"
+        },
+        {
+          "address": "0x51e987",
+          "target": "0x51e995"
+        },
+        {
+          "address": "0x51e98f",
+          "target": "0x51e995"
+        },
+        {
+          "address": "0x51e995",
+          "target": "0x51e82d"
+        },
+        {
+          "address": "0x51e9ae",
+          "target": "0x51e9b9"
+        },
+        {
+          "address": "0x51e9cc",
+          "target": "0x51eb15"
+        },
+        {
+          "address": "0x51ea00",
+          "target": "0x51ea52"
+        },
+        {
+          "address": "0x51ea09",
+          "target": "0x51ea52"
+        },
+        {
+          "address": "0x51ea4d",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ea6c",
+          "target": "0x51eacf"
+        },
+        {
+          "address": "0x51ea75",
+          "target": "0x51eacf"
+        },
+        {
+          "address": "0x51ea81",
+          "target": "0x51eacb"
+        },
+        {
+          "address": "0x51eac6",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ead9",
+          "target": "0x51eae8"
+        },
+        {
+          "address": "0x51eae2",
+          "target": "0x51eae8"
+        },
+        {
+          "address": "0x51eb02",
+          "target": "0x51eb10"
+        },
+        {
+          "address": "0x51eb0a",
+          "target": "0x51eb10"
+        },
+        {
+          "address": "0x51eb10",
+          "target": "0x51e9b0"
+        },
+        {
+          "address": "0x51eb2b",
+          "target": "0x51eb36"
+        },
+        {
+          "address": "0x51eb48",
+          "target": "0x51ec8f"
+        },
+        {
+          "address": "0x51eb7c",
+          "target": "0x51ebcd"
+        },
+        {
+          "address": "0x51eb85",
+          "target": "0x51ebcd"
+        },
+        {
+          "address": "0x51ebc8",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ebe7",
+          "target": "0x51ec49"
+        },
+        {
+          "address": "0x51ebf0",
+          "target": "0x51ec49"
+        },
+        {
+          "address": "0x51ebfc",
+          "target": "0x51ec45"
+        },
+        {
+          "address": "0x51ec40",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ec63",
+          "target": "0x51ec72"
+        },
+        {
+          "address": "0x51ec6c",
+          "target": "0x51ec72"
+        },
+        {
+          "address": "0x51ec7c",
+          "target": "0x51ec8a"
+        },
+        {
+          "address": "0x51ec84",
+          "target": "0x51ec8a"
+        },
+        {
+          "address": "0x51ec8a",
+          "target": "0x51eb2d"
+        },
+        {
+          "address": "0x51eca6",
+          "target": "0x51ecb1"
+        },
+        {
+          "address": "0x51ecc4",
+          "target": "0x51ee16"
+        },
+        {
+          "address": "0x51ecf7",
+          "target": "0x51ed4a"
+        },
+        {
+          "address": "0x51ed00",
+          "target": "0x51ed4a"
+        },
+        {
+          "address": "0x51ed45",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ed69",
+          "target": "0x51edcb"
+        },
+        {
+          "address": "0x51ed72",
+          "target": "0x51edcb"
+        },
+        {
+          "address": "0x51ed7e",
+          "target": "0x51edc7"
+        },
+        {
+          "address": "0x51edc2",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51edea",
+          "target": "0x51edf9"
+        },
+        {
+          "address": "0x51edf3",
+          "target": "0x51edf9"
+        },
+        {
+          "address": "0x51ee03",
+          "target": "0x51ee11"
+        },
+        {
+          "address": "0x51ee0b",
+          "target": "0x51ee11"
+        },
+        {
+          "address": "0x51ee11",
+          "target": "0x51eca8"
+        },
+        {
+          "address": "0x51ee2c",
+          "target": "0x51ee37"
+        },
+        {
+          "address": "0x51ee49",
+          "target": "0x51eea9"
+        },
+        {
+          "address": "0x51ee76",
+          "target": "0x51ee92"
+        },
+        {
+          "address": "0x51ee7f",
+          "target": "0x51ee92"
+        },
+        {
+          "address": "0x51ee8d",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ee99",
+          "target": "0x51eea7"
+        },
+        {
+          "address": "0x51eea1",
+          "target": "0x51eea7"
+        },
+        {
+          "address": "0x51eea7",
+          "target": "0x51ee2e"
+        },
+        {
+          "address": "0x51eebd",
+          "target": "0x51eec8"
+        },
+        {
+          "address": "0x51eedb",
+          "target": "0x51ef99"
+        },
+        {
+          "address": "0x51ef0f",
+          "target": "0x51ef2b"
+        },
+        {
+          "address": "0x51ef18",
+          "target": "0x51ef2b"
+        },
+        {
+          "address": "0x51ef26",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51ef35",
+          "target": "0x51ef44"
+        },
+        {
+          "address": "0x51ef3e",
+          "target": "0x51ef44"
+        },
+        {
+          "address": "0x51ef4b",
+          "target": "0x51ef5a"
+        },
+        {
+          "address": "0x51ef54",
+          "target": "0x51ef5a"
+        },
+        {
+          "address": "0x51ef64",
+          "target": "0x51ef73"
+        },
+        {
+          "address": "0x51ef6d",
+          "target": "0x51ef73"
+        },
+        {
+          "address": "0x51ef7a",
+          "target": "0x51ef94"
+        },
+        {
+          "address": "0x51ef82",
+          "target": "0x51ef94"
+        },
+        {
+          "address": "0x51ef8e",
+          "target": "0x51ef94"
+        },
+        {
+          "address": "0x51ef94",
+          "target": "0x51eebf"
+        },
+        {
+          "address": "0x51efad",
+          "target": "0x51efb8"
+        },
+        {
+          "address": "0x51efca",
+          "target": "0x51f079"
+        },
+        {
+          "address": "0x51effb",
+          "target": "0x51f017"
+        },
+        {
+          "address": "0x51f004",
+          "target": "0x51f017"
+        },
+        {
+          "address": "0x51f012",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f021",
+          "target": "0x51f030"
+        },
+        {
+          "address": "0x51f02a",
+          "target": "0x51f030"
+        },
+        {
+          "address": "0x51f037",
+          "target": "0x51f046"
+        },
+        {
+          "address": "0x51f040",
+          "target": "0x51f046"
+        },
+        {
+          "address": "0x51f050",
+          "target": "0x51f05f"
+        },
+        {
+          "address": "0x51f059",
+          "target": "0x51f05f"
+        },
+        {
+          "address": "0x51f066",
+          "target": "0x51f074"
+        },
+        {
+          "address": "0x51f06e",
+          "target": "0x51f074"
+        },
+        {
+          "address": "0x51f074",
+          "target": "0x51efaf"
+        },
+        {
+          "address": "0x51f090",
+          "target": "0x51f09b"
+        },
+        {
+          "address": "0x51f0ae",
+          "target": "0x51f15d"
+        },
+        {
+          "address": "0x51f0df",
+          "target": "0x51f0fb"
+        },
+        {
+          "address": "0x51f0e8",
+          "target": "0x51f0fb"
+        },
+        {
+          "address": "0x51f0f6",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f105",
+          "target": "0x51f114"
+        },
+        {
+          "address": "0x51f10e",
+          "target": "0x51f114"
+        },
+        {
+          "address": "0x51f11b",
+          "target": "0x51f12a"
+        },
+        {
+          "address": "0x51f124",
+          "target": "0x51f12a"
+        },
+        {
+          "address": "0x51f134",
+          "target": "0x51f143"
+        },
+        {
+          "address": "0x51f13d",
+          "target": "0x51f143"
+        },
+        {
+          "address": "0x51f14a",
+          "target": "0x51f158"
+        },
+        {
+          "address": "0x51f152",
+          "target": "0x51f158"
+        },
+        {
+          "address": "0x51f158",
+          "target": "0x51f092"
+        },
+        {
+          "address": "0x51f174",
+          "target": "0x51f17f"
+        },
+        {
+          "address": "0x51f192",
+          "target": "0x51f241"
+        },
+        {
+          "address": "0x51f1c3",
+          "target": "0x51f1df"
+        },
+        {
+          "address": "0x51f1cc",
+          "target": "0x51f1df"
+        },
+        {
+          "address": "0x51f1da",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f1e9",
+          "target": "0x51f1f8"
+        },
+        {
+          "address": "0x51f1f2",
+          "target": "0x51f1f8"
+        },
+        {
+          "address": "0x51f1ff",
+          "target": "0x51f20e"
+        },
+        {
+          "address": "0x51f208",
+          "target": "0x51f20e"
+        },
+        {
+          "address": "0x51f218",
+          "target": "0x51f227"
+        },
+        {
+          "address": "0x51f221",
+          "target": "0x51f227"
+        },
+        {
+          "address": "0x51f22e",
+          "target": "0x51f23c"
+        },
+        {
+          "address": "0x51f236",
+          "target": "0x51f23c"
+        },
+        {
+          "address": "0x51f23c",
+          "target": "0x51f176"
+        },
+        {
+          "address": "0x51f257",
+          "target": "0x51f262"
+        },
+        {
+          "address": "0x51f274",
+          "target": "0x51f30d"
+        },
+        {
+          "address": "0x51f2a8",
+          "target": "0x51f2c4"
+        },
+        {
+          "address": "0x51f2b1",
+          "target": "0x51f2c4"
+        },
+        {
+          "address": "0x51f2bf",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f2cb",
+          "target": "0x51f2da"
+        },
+        {
+          "address": "0x51f2d4",
+          "target": "0x51f2da"
+        },
+        {
+          "address": "0x51f2e4",
+          "target": "0x51f2f3"
+        },
+        {
+          "address": "0x51f2ed",
+          "target": "0x51f2f3"
+        },
+        {
+          "address": "0x51f2fa",
+          "target": "0x51f308"
+        },
+        {
+          "address": "0x51f302",
+          "target": "0x51f308"
+        },
+        {
+          "address": "0x51f308",
+          "target": "0x51f259"
+        },
+        {
+          "address": "0x51f323",
+          "target": "0x51f32e"
+        },
+        {
+          "address": "0x51f340",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f374",
+          "target": "0x51f38d"
+        },
+        {
+          "address": "0x51f37d",
+          "target": "0x51f38d"
+        },
+        {
+          "address": "0x51f38b",
+          "target": "0x51f3d6"
+        },
+        {
+          "address": "0x51f394",
+          "target": "0x51f3a3"
+        },
+        {
+          "address": "0x51f39d",
+          "target": "0x51f3a3"
+        },
+        {
+          "address": "0x51f3ad",
+          "target": "0x51f3bc"
+        },
+        {
+          "address": "0x51f3b6",
+          "target": "0x51f3bc"
+        },
+        {
+          "address": "0x51f3c3",
+          "target": "0x51f3d1"
+        },
+        {
+          "address": "0x51f3cb",
+          "target": "0x51f3d1"
+        },
+        {
+          "address": "0x51f3d1",
+          "target": "0x51f325"
+        }
+      ],
+      "direct_calls": [],
+      "virtual_calls": [],
+      "padding": 6,
+      "next_entry": "0x51f3e0",
+      "local_data": []
+    }
+  ],
+  "reviewed_relocation_fields": 136,
+  "allocation": "original creation case23 allocates3488; current native creation dispatchers retain the same complete allocation/call bytes",
+  "virtual_table": "0x788650",
+  "reviewed_virtual_destinations": [
+    {
+      "slot": 0,
+      "operand": "0x788650",
+      "target": "0x51a2a0",
+      "status": "complete exact",
+      "unit": "character-23-reset-pose",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 1,
+      "operand": "0x788654",
+      "target": "0x51d390",
+      "status": "complete exact",
+      "unit": "character-23-render-indicators",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 2,
+      "operand": "0x788658",
+      "target": "0x51df60",
+      "status": "complete exact",
+      "unit": "character-23-recognize-commands",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 3,
+      "operand": "0x78865c",
+      "target": "0x51a330",
+      "status": "complete exact",
+      "unit": "character-23-locomotion",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 4,
+      "operand": "0x788660",
+      "target": "0x51a350",
+      "status": "complete exact",
+      "unit": "character-23-action-input",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 5,
+      "operand": "0x788664",
+      "target": "0x51f3e0",
+      "status": "open"
+    },
+    {
+      "slot": 6,
+      "operand": "0x788668",
+      "target": "0x50c4b0",
+      "status": "open"
+    },
+    {
+      "slot": 7,
+      "operand": "0x78866c",
+      "target": "0x5236d0",
+      "status": "open"
+    },
+    {
+      "slot": 8,
+      "operand": "0x788670",
+      "target": "0x51dde0",
+      "status": "complete exact",
+      "unit": "character-23-frame-control",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 9,
+      "operand": "0x788674",
+      "target": "0x51df30",
+      "status": "complete exact",
+      "unit": "character-23-emit-local-effect",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 10,
+      "operand": "0x788678",
+      "target": "0x51a2e0",
+      "status": "complete exact",
+      "unit": "character-23-remove-local-effect",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    },
+    {
+      "slot": 11,
+      "operand": "0x78867c",
+      "target": "0x410b70",
+      "status": "complete exact",
+      "unit": "secondary-load-resources",
+      "evidence": "docs/evidence/secondary-resources-exact.json"
+    },
+    {
+      "slot": 12,
+      "operand": "0x788680",
+      "target": "0x51a070",
+      "status": "complete exact",
+      "unit": "character-23-initialize-state",
+      "evidence": "docs/evidence/misuzu-exact.json"
+    }
+  ]
+}
