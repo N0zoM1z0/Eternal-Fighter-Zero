@@ -5010,3 +5010,61 @@ recipes, including inherited LoadResources. This closes the observed virtual-bod
 set, without claiming resource/linked-data, original TU, runtime or game closure.
 Current authored totals:302 functions,801,974 instruction bytes and5,499 associated
 table bytes;339 reviewed boundaries/origins and320 proof recipes.
+
+## Mayu construction input and indicator owners
+
+Ten complete Character05 owners add17,957 strict exact instruction bytes without
+local tables: constructor5DDDF0/410, initializer5DDF90/270, reset5DE0A0/58,
+removal5DE0E0/80, locomotion5DE130/19, input5DE150/12047, empty indicator/frame
+slots5E1060/11 and5E1070/11, emitter5E1080/47, commands5E10B0/5004. Sources:
+`src/Character05Frame.cpp`, `src/Character05Input.cpp` and
+`src/Character05Commands.cpp`; pinned profile:vc71-od-static. Public proof:
+`docs/evidence/mayu-exact.json`; explicit recipes:character-05-*.
+
+Canonical creation ID5 allocates3448, calls5DDDF0, copies complete NUL-terminated
+literal "mayu" from788A60 and installs vtable788A68. Both accepted creation
+consumers retain their complete allocation/call bytes. Character05's opaque tail
+is replaced only by four observed scalar ints3138/313C/3140/3144 and three64-int
+arrays3148/3248/3348, ending naturally at3448. Public shared Engine/Input views
+are unchanged. Constructor surfaceCount386 and commandCount5 follow actual stores.
+Its explicit command entries are0/6/3, followed by commands[3]=2 and then4, and
+commands[10]=5. Preserve both stores to commands[3] and the sparse later entry;
+do not invent a corrected command list. Initialization restores real child
+fields and calls the shared base; reset clears only the first three scalars.
+Indicator/frame slots01/08 really are empty, and the emitter removes the current
+write slot before forwarding to the shared emitter.
+
+Independent review covers4,731 contiguous instructions,730 internal branches,
+all complete RET boundaries, following padding/next prologues and all13 original
+vtable destinations. All119 relocation fields have reviewed symbols and actual
+canonical destinations:54 direct calls,63 typed double operands, one resource
+string and one vptr. Eleven distinct64-bit double payloads and the complete
+five-byte resource string match target and native COFF. There are48 indirect
+virtual calls, separate from direct CALL bindings. Candidate inventory and fresh
+read-only decompiler annotations remain private, without acceptance authority.
+
+The eight complete frame/construction functions were exact on their first native
+build. Input's first12,133-byte source was corrected from target evidence:
+unsigned byte updates, original phase/meter thresholds, ordered distance and
+direction products, air frame overrides and positive action/throw tails yield
+all12,047 bytes. Commands preserve15 ordered circular-history scans, original
+mask-gate versus positive-mask arithmetic, meter thresholds and facing-dependent
+diagonal selection. Its first5,009-byte source yielded all5,004 exact bytes after
+those operand/control corrections. Formatting changes received complete native
+comparisons; no inert locals, fake ABI or original-byte wrappers were introduced.
+
+The final selected cold comparison covers76 complete units from35 serial native
+source/profile/dependency artifacts:ten new owners and66 actual CharacterViews.h
+consumers. The other254 existing units retain earlier artifacts. Compiler-local
+symbol identity changes are reviewed against identical canonical destinations,
+actual local offsets and complete string payloads before strict comparison.
+All selected units pass zero differences. Focused tracking, ledgers/progress CI
+and whitespace checks pass; no full CI/cohort or runtime matrix ran. Preserve
+private target/operand review, source/header/object attempts, Ghidra logs and
+bounded native exits in `.analysis/probes/mayu/` and `.analysis/build/`.
+
+Ten of thirteen Mayu virtual destinations now have complete exact proofs,
+including inherited LoadResources. CPU5E2440/14310, state5C8580/87209 instruction
+bytes and effects5E5C30/10512 instruction bytes remain open; their associated
+table boundaries require independent review. Original class/TU provenance,
+resource/linked-data, runtime and game phases remain independently open.

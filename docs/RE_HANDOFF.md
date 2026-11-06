@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 302 |
-| Authored exact instruction bytes | 801,974 |
+| Authored complete exact functions | 312 |
+| Authored exact instruction bytes | 819,931 |
 | Associated exact local-table bytes | 5,499 |
-| Reviewed boundaries / origins | 339 / 339 |
+| Reviewed boundaries / origins | 348 / 348 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,46 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misaki local-effect checkpoint
+## Latest Mayu construction/input/command checkpoint
+
+Ten complete Character05 owners add17,957 strict exact instruction bytes without
+local tables:constructor5DDDF0/410, initializer5DDF90/270, reset5DE0A0/58,
+removal5DE0E0/80, locomotion5DE130/19, input5DE150/12047, empty slots01/08
+at5E1060/11 and5E1070/11, emitter5E1080/47, commands5E10B0/5004. Sources:
+src/Character05Frame.cpp, Character05Input.cpp, Character05Commands.cpp;
+profile vc71-od-static; proof:docs/evidence/mayu-exact.json. Durable facts:
+[Mayu construction input and indicator owners](KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners).
+Private evidence:.analysis/probes/mayu/README.md.
+
+Canonical creation ID5 allocates3448, copies "mayu" from788A60 and installs
+vtable788A68. Only Character05's opaque tail is expanded into four scalar ints
+and three64-int arrays3148/3248/3348, ending3448 naturally. Preserve actual
+commandCount5, duplicate commands[3]=2 then4 and sparse commands[10]=5.
+Independent review covers4,731 instructions,730 branches and119 relocations
+(54 calls,63 typed doubles, string/vptr). All11 double payloads match target/COFF.
+Input preserves positive action/throw tails and directional product order;
+commands preserve15 ordered circular-history scans and actual mask/threshold forms.
+
+The final selected cold comparison passed76 complete units from35 serial native
+artifacts:ten new and66 actual CharacterViews.h consumers. The other254 units
+retain earlier proofs. All894 compiler-generated symbol renames are checked
+against unchanged canonical targets/local offsets and string bytes. Report:
+.analysis/exact/mayu-and-affected.json; log:.analysis/build/mayu-formal-replay.log.
+Focused tracking, ledgers/progress CI and whitespace checks passed. No native
+compiler/Wine failure, full CI/cohort or runtime matrix occurred.
+
+Ten of thirteen Mayu virtual destinations now have complete exact proofs,
+including inherited LoadResources. Next substantial owner:CPU5E2440/14310 bytes;
+state5C8580/87209 code and effects5E5C30/10512 code remain OPEN with associated
+tables unreviewed. All13 fresh read-only annotated decompiles are retained in
+.analysis/probes/mayu/calls-annotated-*.txt. The first batch stopped when state
+hit Ghidra's response-buffer limit; a separate state job with verified
+DecompileOptions.setMaxPayloadMBytes(128) completed successfully. All jobs are
+terminal; preserve their logs. No database/target changes were saved.
+Resource/data/runtime/TU and game phases remain independently open. Keep parked
+PrepareBattle/Shiori controls until new evidence predicts an instruction.
+
+## Previous Misaki local-effect checkpoint
 
 Character07::Slot07 at56F920 is complete strict exact:15,562 instruction bytes
 and224 associated table bytes, total15,786; complete exclusive end5736CA. Source:

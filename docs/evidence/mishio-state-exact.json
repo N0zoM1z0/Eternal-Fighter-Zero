@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "selected complete contribution comparison; 29 cold source/profile/dependency artifacts cover10 new Misaki constructor/frame/input/command units and53 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "owner": "Character15::Slot06",
@@ -12840,7 +12840,7 @@
           "target": 5530425,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64698",
+          "symbol": "$L64703",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 87929 independently checked",
           "local_target_offset": 87929,
           "addend": 0
@@ -12850,7 +12850,7 @@
           "target": 5529809,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64858",
+          "symbol": "$L64863",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 87313 independently checked",
           "local_target_offset": 87313,
           "addend": 0
@@ -25946,7 +25946,7 @@
           "target": 5442792,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62140",
+          "symbol": "$L62145",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 0 for animation IDs 1; compiler-local offset 296 and canonical destination independently checked",
           "local_target_offset": 296,
           "addend": 0
@@ -25956,7 +25956,7 @@
           "target": 5442915,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62144",
+          "symbol": "$L62149",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 1 for animation IDs 2; compiler-local offset 419 and canonical destination independently checked",
           "local_target_offset": 419,
           "addend": 0
@@ -25966,7 +25966,7 @@
           "target": 5443038,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62148",
+          "symbol": "$L62153",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 2 for animation IDs 3; compiler-local offset 542 and canonical destination independently checked",
           "local_target_offset": 542,
           "addend": 0
@@ -25976,7 +25976,7 @@
           "target": 5443169,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62152",
+          "symbol": "$L62157",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 3 for animation IDs 4; compiler-local offset 673 and canonical destination independently checked",
           "local_target_offset": 673,
           "addend": 0
@@ -25986,7 +25986,7 @@
           "target": 5443524,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62166",
+          "symbol": "$L62171",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 4 for animation IDs 5; compiler-local offset 1028 and canonical destination independently checked",
           "local_target_offset": 1028,
           "addend": 0
@@ -25996,7 +25996,7 @@
           "target": 5443891,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62180",
+          "symbol": "$L62185",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 5 for animation IDs 6; compiler-local offset 1395 and canonical destination independently checked",
           "local_target_offset": 1395,
           "addend": 0
@@ -26006,7 +26006,7 @@
           "target": 5444221,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62192",
+          "symbol": "$L62197",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 6 for animation IDs 7; compiler-local offset 1725 and canonical destination independently checked",
           "local_target_offset": 1725,
           "addend": 0
@@ -26016,7 +26016,7 @@
           "target": 5444362,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62196",
+          "symbol": "$L62201",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 7 for animation IDs 8; compiler-local offset 1866 and canonical destination independently checked",
           "local_target_offset": 1866,
           "addend": 0
@@ -26026,7 +26026,7 @@
           "target": 5444503,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62200",
+          "symbol": "$L62205",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 8 for animation IDs 9; compiler-local offset 2007 and canonical destination independently checked",
           "local_target_offset": 2007,
           "addend": 0
@@ -26036,7 +26036,7 @@
           "target": 5444686,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62205",
+          "symbol": "$L62210",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 9 for animation IDs 13; compiler-local offset 2190 and canonical destination independently checked",
           "local_target_offset": 2190,
           "addend": 0
@@ -26046,7 +26046,7 @@
           "target": 5444851,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62210",
+          "symbol": "$L62215",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 10 for animation IDs 14; compiler-local offset 2355 and canonical destination independently checked",
           "local_target_offset": 2355,
           "addend": 0
@@ -26056,7 +26056,7 @@
           "target": 5445159,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62219",
+          "symbol": "$L62224",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 11 for animation IDs 15; compiler-local offset 2663 and canonical destination independently checked",
           "local_target_offset": 2663,
           "addend": 0
@@ -26066,7 +26066,7 @@
           "target": 5445467,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62228",
+          "symbol": "$L62233",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 12 for animation IDs 16; compiler-local offset 2971 and canonical destination independently checked",
           "local_target_offset": 2971,
           "addend": 0
@@ -26076,7 +26076,7 @@
           "target": 5445763,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62237",
+          "symbol": "$L62242",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 13 for animation IDs 47; compiler-local offset 3267 and canonical destination independently checked",
           "local_target_offset": 3267,
           "addend": 0
@@ -26086,7 +26086,7 @@
           "target": 5446067,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62245",
+          "symbol": "$L62250",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 14 for animation IDs 50; compiler-local offset 3571 and canonical destination independently checked",
           "local_target_offset": 3571,
           "addend": 0
@@ -26096,7 +26096,7 @@
           "target": 5446564,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62259",
+          "symbol": "$L62264",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 15 for animation IDs 51; compiler-local offset 4068 and canonical destination independently checked",
           "local_target_offset": 4068,
           "addend": 0
@@ -26106,7 +26106,7 @@
           "target": 5447061,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62273",
+          "symbol": "$L62278",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 16 for animation IDs 52; compiler-local offset 4565 and canonical destination independently checked",
           "local_target_offset": 4565,
           "addend": 0
@@ -26116,7 +26116,7 @@
           "target": 5447558,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62287",
+          "symbol": "$L62292",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 17 for animation IDs 53; compiler-local offset 5062 and canonical destination independently checked",
           "local_target_offset": 5062,
           "addend": 0
@@ -26126,7 +26126,7 @@
           "target": 5448055,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62301",
+          "symbol": "$L62306",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 18 for animation IDs 54; compiler-local offset 5559 and canonical destination independently checked",
           "local_target_offset": 5559,
           "addend": 0
@@ -26136,7 +26136,7 @@
           "target": 5448552,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62315",
+          "symbol": "$L62320",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 19 for animation IDs 55; compiler-local offset 6056 and canonical destination independently checked",
           "local_target_offset": 6056,
           "addend": 0
@@ -26146,7 +26146,7 @@
           "target": 5449039,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62329",
+          "symbol": "$L62334",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 20 for animation IDs 56; compiler-local offset 6543 and canonical destination independently checked",
           "local_target_offset": 6543,
           "addend": 0
@@ -26156,7 +26156,7 @@
           "target": 5449512,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62342",
+          "symbol": "$L62347",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 21 for animation IDs 57; compiler-local offset 7016 and canonical destination independently checked",
           "local_target_offset": 7016,
           "addend": 0
@@ -26166,7 +26166,7 @@
           "target": 5449985,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62355",
+          "symbol": "$L62360",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 22 for animation IDs 58; compiler-local offset 7489 and canonical destination independently checked",
           "local_target_offset": 7489,
           "addend": 0
@@ -26176,7 +26176,7 @@
           "target": 5450458,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62368",
+          "symbol": "$L62373",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 23 for animation IDs 59; compiler-local offset 7962 and canonical destination independently checked",
           "local_target_offset": 7962,
           "addend": 0
@@ -26186,7 +26186,7 @@
           "target": 5450969,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62383",
+          "symbol": "$L62388",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 24 for animation IDs 60; compiler-local offset 8473 and canonical destination independently checked",
           "local_target_offset": 8473,
           "addend": 0
@@ -26196,7 +26196,7 @@
           "target": 5451480,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62398",
+          "symbol": "$L62403",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 25 for animation IDs 61; compiler-local offset 8984 and canonical destination independently checked",
           "local_target_offset": 8984,
           "addend": 0
@@ -26206,7 +26206,7 @@
           "target": 5451991,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62413",
+          "symbol": "$L62418",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 26 for animation IDs 62; compiler-local offset 9495 and canonical destination independently checked",
           "local_target_offset": 9495,
           "addend": 0
@@ -26216,7 +26216,7 @@
           "target": 5452430,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62425",
+          "symbol": "$L62430",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 27 for animation IDs 63; compiler-local offset 9934 and canonical destination independently checked",
           "local_target_offset": 9934,
           "addend": 0
@@ -26226,7 +26226,7 @@
           "target": 5452857,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62437",
+          "symbol": "$L62442",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 28 for animation IDs 64; compiler-local offset 10361 and canonical destination independently checked",
           "local_target_offset": 10361,
           "addend": 0
@@ -26236,7 +26236,7 @@
           "target": 5453418,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62453",
+          "symbol": "$L62458",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 29 for animation IDs 65; compiler-local offset 10922 and canonical destination independently checked",
           "local_target_offset": 10922,
           "addend": 0
@@ -26246,7 +26246,7 @@
           "target": 5453979,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62469",
+          "symbol": "$L62474",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 30 for animation IDs 66; compiler-local offset 11483 and canonical destination independently checked",
           "local_target_offset": 11483,
           "addend": 0
@@ -26256,7 +26256,7 @@
           "target": 5454468,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62482",
+          "symbol": "$L62487",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 31 for animation IDs 67; compiler-local offset 11972 and canonical destination independently checked",
           "local_target_offset": 11972,
           "addend": 0
@@ -26266,7 +26266,7 @@
           "target": 5454945,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62495",
+          "symbol": "$L62500",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 32 for animation IDs 68; compiler-local offset 12449 and canonical destination independently checked",
           "local_target_offset": 12449,
           "addend": 0
@@ -26276,7 +26276,7 @@
           "target": 5455261,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62504",
+          "symbol": "$L62509",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 33 for animation IDs 69; compiler-local offset 12765 and canonical destination independently checked",
           "local_target_offset": 12765,
           "addend": 0
@@ -26286,7 +26286,7 @@
           "target": 5455538,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62512",
+          "symbol": "$L62517",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 34 for animation IDs 70; compiler-local offset 13042 and canonical destination independently checked",
           "local_target_offset": 13042,
           "addend": 0
@@ -26296,7 +26296,7 @@
           "target": 5456018,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62524",
+          "symbol": "$L62529",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 35 for animation IDs 71; compiler-local offset 13522 and canonical destination independently checked",
           "local_target_offset": 13522,
           "addend": 0
@@ -26306,7 +26306,7 @@
           "target": 5456445,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62536",
+          "symbol": "$L62541",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 36 for animation IDs 72; compiler-local offset 13949 and canonical destination independently checked",
           "local_target_offset": 13949,
           "addend": 0
@@ -26316,7 +26316,7 @@
           "target": 5456786,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62546",
+          "symbol": "$L62551",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 37 for animation IDs 73; compiler-local offset 14290 and canonical destination independently checked",
           "local_target_offset": 14290,
           "addend": 0
@@ -26326,7 +26326,7 @@
           "target": 5457127,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62556",
+          "symbol": "$L62561",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 38 for animation IDs 74; compiler-local offset 14631 and canonical destination independently checked",
           "local_target_offset": 14631,
           "addend": 0
@@ -26336,7 +26336,7 @@
           "target": 5457444,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62565",
+          "symbol": "$L62570",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 39 for animation IDs 75; compiler-local offset 14948 and canonical destination independently checked",
           "local_target_offset": 14948,
           "addend": 0
@@ -26346,7 +26346,7 @@
           "target": 5457953,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62579",
+          "symbol": "$L62584",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 40 for animation IDs 76; compiler-local offset 15457 and canonical destination independently checked",
           "local_target_offset": 15457,
           "addend": 0
@@ -26356,7 +26356,7 @@
           "target": 5458462,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62593",
+          "symbol": "$L62598",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 41 for animation IDs 77; compiler-local offset 15966 and canonical destination independently checked",
           "local_target_offset": 15966,
           "addend": 0
@@ -26366,7 +26366,7 @@
           "target": 5458947,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62606",
+          "symbol": "$L62611",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 42 for animation IDs 81; compiler-local offset 16451 and canonical destination independently checked",
           "local_target_offset": 16451,
           "addend": 0
@@ -26376,7 +26376,7 @@
           "target": 5459432,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62620",
+          "symbol": "$L62625",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 43 for animation IDs 82; compiler-local offset 16936 and canonical destination independently checked",
           "local_target_offset": 16936,
           "addend": 0
@@ -26386,7 +26386,7 @@
           "target": 5459978,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62635",
+          "symbol": "$L62640",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 44 for animation IDs 83; compiler-local offset 17482 and canonical destination independently checked",
           "local_target_offset": 17482,
           "addend": 0
@@ -26396,7 +26396,7 @@
           "target": 5460559,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62652",
+          "symbol": "$L62657",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 45 for animation IDs 84; compiler-local offset 18063 and canonical destination independently checked",
           "local_target_offset": 18063,
           "addend": 0
@@ -26406,7 +26406,7 @@
           "target": 5461140,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62669",
+          "symbol": "$L62674",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 46 for animation IDs 85; compiler-local offset 18644 and canonical destination independently checked",
           "local_target_offset": 18644,
           "addend": 0
@@ -26416,7 +26416,7 @@
           "target": 5461607,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62683",
+          "symbol": "$L62688",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 47 for animation IDs 86; compiler-local offset 19111 and canonical destination independently checked",
           "local_target_offset": 19111,
           "addend": 0
@@ -26426,7 +26426,7 @@
           "target": 5462089,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62698",
+          "symbol": "$L62703",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 48 for animation IDs 87; compiler-local offset 19593 and canonical destination independently checked",
           "local_target_offset": 19593,
           "addend": 0
@@ -26436,7 +26436,7 @@
           "target": 5462268,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62704",
+          "symbol": "$L62709",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 49 for animation IDs 96; compiler-local offset 19772 and canonical destination independently checked",
           "local_target_offset": 19772,
           "addend": 0
@@ -26446,7 +26446,7 @@
           "target": 5462417,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62710",
+          "symbol": "$L62715",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 50 for animation IDs 97; compiler-local offset 19921 and canonical destination independently checked",
           "local_target_offset": 19921,
           "addend": 0
@@ -26456,7 +26456,7 @@
           "target": 5462665,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62718",
+          "symbol": "$L62723",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 51 for animation IDs 98; compiler-local offset 20169 and canonical destination independently checked",
           "local_target_offset": 20169,
           "addend": 0
@@ -26466,7 +26466,7 @@
           "target": 5462913,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62726",
+          "symbol": "$L62731",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 52 for animation IDs 99; compiler-local offset 20417 and canonical destination independently checked",
           "local_target_offset": 20417,
           "addend": 0
@@ -26476,7 +26476,7 @@
           "target": 5463099,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62733",
+          "symbol": "$L62738",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 53 for animation IDs 150; compiler-local offset 20603 and canonical destination independently checked",
           "local_target_offset": 20603,
           "addend": 0
@@ -26486,7 +26486,7 @@
           "target": 5463527,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62747",
+          "symbol": "$L62752",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 54 for animation IDs 151; compiler-local offset 21031 and canonical destination independently checked",
           "local_target_offset": 21031,
           "addend": 0
@@ -26496,7 +26496,7 @@
           "target": 5463955,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62761",
+          "symbol": "$L62766",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 55 for animation IDs 152; compiler-local offset 21459 and canonical destination independently checked",
           "local_target_offset": 21459,
           "addend": 0
@@ -26506,7 +26506,7 @@
           "target": 5464383,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62775",
+          "symbol": "$L62780",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 56 for animation IDs 153; compiler-local offset 21887 and canonical destination independently checked",
           "local_target_offset": 21887,
           "addend": 0
@@ -26516,7 +26516,7 @@
           "target": 5464787,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62788",
+          "symbol": "$L62793",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 57 for animation IDs 154; compiler-local offset 22291 and canonical destination independently checked",
           "local_target_offset": 22291,
           "addend": 0
@@ -26526,7 +26526,7 @@
           "target": 5465191,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62801",
+          "symbol": "$L62806",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 58 for animation IDs 155; compiler-local offset 22695 and canonical destination independently checked",
           "local_target_offset": 22695,
           "addend": 0
@@ -26536,7 +26536,7 @@
           "target": 5465595,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62814",
+          "symbol": "$L62819",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 59 for animation IDs 156; compiler-local offset 23099 and canonical destination independently checked",
           "local_target_offset": 23099,
           "addend": 0
@@ -26546,7 +26546,7 @@
           "target": 5465867,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62821",
+          "symbol": "$L62826",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 60 for animation IDs 157; compiler-local offset 23371 and canonical destination independently checked",
           "local_target_offset": 23371,
           "addend": 0
@@ -26556,7 +26556,7 @@
           "target": 5466199,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62831",
+          "symbol": "$L62836",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 61 for animation IDs 158; compiler-local offset 23703 and canonical destination independently checked",
           "local_target_offset": 23703,
           "addend": 0
@@ -26566,7 +26566,7 @@
           "target": 5466531,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62841",
+          "symbol": "$L62846",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 62 for animation IDs 161; compiler-local offset 24035 and canonical destination independently checked",
           "local_target_offset": 24035,
           "addend": 0
@@ -26576,7 +26576,7 @@
           "target": 5466807,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62849",
+          "symbol": "$L62854",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 63 for animation IDs 162; compiler-local offset 24311 and canonical destination independently checked",
           "local_target_offset": 24311,
           "addend": 0
@@ -26586,7 +26586,7 @@
           "target": 5467298,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62863",
+          "symbol": "$L62868",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 64 for animation IDs 163; compiler-local offset 24802 and canonical destination independently checked",
           "local_target_offset": 24802,
           "addend": 0
@@ -26596,7 +26596,7 @@
           "target": 5467789,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62880",
+          "symbol": "$L62885",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 65 for animation IDs 164; compiler-local offset 25293 and canonical destination independently checked",
           "local_target_offset": 25293,
           "addend": 0
@@ -26606,7 +26606,7 @@
           "target": 5468234,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62891",
+          "symbol": "$L62896",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 66 for animation IDs 165; compiler-local offset 25738 and canonical destination independently checked",
           "local_target_offset": 25738,
           "addend": 0
@@ -26616,7 +26616,7 @@
           "target": 5468667,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62901",
+          "symbol": "$L62906",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 67 for animation IDs 166; compiler-local offset 26171 and canonical destination independently checked",
           "local_target_offset": 26171,
           "addend": 0
@@ -26626,7 +26626,7 @@
           "target": 5469104,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62915",
+          "symbol": "$L62920",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 68 for animation IDs 167; compiler-local offset 26608 and canonical destination independently checked",
           "local_target_offset": 26608,
           "addend": 0
@@ -26636,7 +26636,7 @@
           "target": 5469592,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62930",
+          "symbol": "$L62935",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 69 for animation IDs 168; compiler-local offset 27096 and canonical destination independently checked",
           "local_target_offset": 27096,
           "addend": 0
@@ -26646,7 +26646,7 @@
           "target": 5469922,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62939",
+          "symbol": "$L62944",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 70 for animation IDs 169; compiler-local offset 27426 and canonical destination independently checked",
           "local_target_offset": 27426,
           "addend": 0
@@ -26656,7 +26656,7 @@
           "target": 5470252,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62948",
+          "symbol": "$L62953",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 71 for animation IDs 170; compiler-local offset 27756 and canonical destination independently checked",
           "local_target_offset": 27756,
           "addend": 0
@@ -26666,7 +26666,7 @@
           "target": 5470709,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62960",
+          "symbol": "$L62965",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 72 for animation IDs 171; compiler-local offset 28213 and canonical destination independently checked",
           "local_target_offset": 28213,
           "addend": 0
@@ -26676,7 +26676,7 @@
           "target": 5471188,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62973",
+          "symbol": "$L62978",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 73 for animation IDs 178; compiler-local offset 28692 and canonical destination independently checked",
           "local_target_offset": 28692,
           "addend": 0
@@ -26686,7 +26686,7 @@
           "target": 5471488,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62983",
+          "symbol": "$L62988",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 74 for animation IDs 180; compiler-local offset 28992 and canonical destination independently checked",
           "local_target_offset": 28992,
           "addend": 0
@@ -26696,7 +26696,7 @@
           "target": 5471858,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62993",
+          "symbol": "$L62998",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 75 for animation IDs 200; compiler-local offset 29362 and canonical destination independently checked",
           "local_target_offset": 29362,
           "addend": 0
@@ -26706,7 +26706,7 @@
           "target": 5472325,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63010",
+          "symbol": "$L63015",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 76 for animation IDs 201; compiler-local offset 29829 and canonical destination independently checked",
           "local_target_offset": 29829,
           "addend": 0
@@ -26716,7 +26716,7 @@
           "target": 5472816,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63028",
+          "symbol": "$L63033",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 77 for animation IDs 202; compiler-local offset 30320 and canonical destination independently checked",
           "local_target_offset": 30320,
           "addend": 0
@@ -26726,7 +26726,7 @@
           "target": 5473130,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63040",
+          "symbol": "$L63045",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 78 for animation IDs 203; compiler-local offset 30634 and canonical destination independently checked",
           "local_target_offset": 30634,
           "addend": 0
@@ -26736,7 +26736,7 @@
           "target": 5473597,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63057",
+          "symbol": "$L63062",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 79 for animation IDs 204; compiler-local offset 31101 and canonical destination independently checked",
           "local_target_offset": 31101,
           "addend": 0
@@ -26746,7 +26746,7 @@
           "target": 5474088,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63075",
+          "symbol": "$L63080",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 80 for animation IDs 205; compiler-local offset 31592 and canonical destination independently checked",
           "local_target_offset": 31592,
           "addend": 0
@@ -26756,7 +26756,7 @@
           "target": 5474579,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63093",
+          "symbol": "$L63098",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 81 for animation IDs 206; compiler-local offset 32083 and canonical destination independently checked",
           "local_target_offset": 32083,
           "addend": 0
@@ -26766,7 +26766,7 @@
           "target": 5474917,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63106",
+          "symbol": "$L63111",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 82 for animation IDs 207; compiler-local offset 32421 and canonical destination independently checked",
           "local_target_offset": 32421,
           "addend": 0
@@ -26776,7 +26776,7 @@
           "target": 5475387,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63119",
+          "symbol": "$L63124",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 83 for animation IDs 208; compiler-local offset 32891 and canonical destination independently checked",
           "local_target_offset": 32891,
           "addend": 0
@@ -26786,7 +26786,7 @@
           "target": 5475857,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63132",
+          "symbol": "$L63137",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 84 for animation IDs 209; compiler-local offset 33361 and canonical destination independently checked",
           "local_target_offset": 33361,
           "addend": 0
@@ -26796,7 +26796,7 @@
           "target": 5476329,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63145",
+          "symbol": "$L63150",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 85 for animation IDs 210; compiler-local offset 33833 and canonical destination independently checked",
           "local_target_offset": 33833,
           "addend": 0
@@ -26806,7 +26806,7 @@
           "target": 5476742,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63157",
+          "symbol": "$L63162",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 86 for animation IDs 211; compiler-local offset 34246 and canonical destination independently checked",
           "local_target_offset": 34246,
           "addend": 0
@@ -26816,7 +26816,7 @@
           "target": 5477213,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63174",
+          "symbol": "$L63179",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 87 for animation IDs 212; compiler-local offset 34717 and canonical destination independently checked",
           "local_target_offset": 34717,
           "addend": 0
@@ -26826,7 +26826,7 @@
           "target": 5477666,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63184",
+          "symbol": "$L63189",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 88 for animation IDs 213; compiler-local offset 35170 and canonical destination independently checked",
           "local_target_offset": 35170,
           "addend": 0
@@ -26836,7 +26836,7 @@
           "target": 5477854,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63190",
+          "symbol": "$L63195",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 89 for animation IDs 214; compiler-local offset 35358 and canonical destination independently checked",
           "local_target_offset": 35358,
           "addend": 0
@@ -26846,7 +26846,7 @@
           "target": 5478141,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63199",
+          "symbol": "$L63204",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 90 for animation IDs 220; compiler-local offset 35645 and canonical destination independently checked",
           "local_target_offset": 35645,
           "addend": 0
@@ -26856,7 +26856,7 @@
           "target": 5478620,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63209",
+          "symbol": "$L63214",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 91 for animation IDs 221; compiler-local offset 36124 and canonical destination independently checked",
           "local_target_offset": 36124,
           "addend": 0
@@ -26866,7 +26866,7 @@
           "target": 5479104,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63222",
+          "symbol": "$L63227",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 92 for animation IDs 230; compiler-local offset 36608 and canonical destination independently checked",
           "local_target_offset": 36608,
           "addend": 0
@@ -26876,7 +26876,7 @@
           "target": 5479411,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63232",
+          "symbol": "$L63237",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 93 for animation IDs 231; compiler-local offset 36915 and canonical destination independently checked",
           "local_target_offset": 36915,
           "addend": 0
@@ -26886,7 +26886,7 @@
           "target": 5479984,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63249",
+          "symbol": "$L63254",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 94 for animation IDs 232; compiler-local offset 37488 and canonical destination independently checked",
           "local_target_offset": 37488,
           "addend": 0
@@ -26896,7 +26896,7 @@
           "target": 5480557,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63266",
+          "symbol": "$L63271",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 95 for animation IDs 233; compiler-local offset 38061 and canonical destination independently checked",
           "local_target_offset": 38061,
           "addend": 0
@@ -26906,7 +26906,7 @@
           "target": 5480864,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63276",
+          "symbol": "$L63281",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 96 for animation IDs 234; compiler-local offset 38368 and canonical destination independently checked",
           "local_target_offset": 38368,
           "addend": 0
@@ -26916,7 +26916,7 @@
           "target": 5481284,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63288",
+          "symbol": "$L63293",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 97 for animation IDs 235; compiler-local offset 38788 and canonical destination independently checked",
           "local_target_offset": 38788,
           "addend": 0
@@ -26926,7 +26926,7 @@
           "target": 5481704,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63300",
+          "symbol": "$L63305",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 98 for animation IDs 248; compiler-local offset 39208 and canonical destination independently checked",
           "local_target_offset": 39208,
           "addend": 0
@@ -26936,7 +26936,7 @@
           "target": 5482243,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63311",
+          "symbol": "$L63316",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 99 for animation IDs 249; compiler-local offset 39747 and canonical destination independently checked",
           "local_target_offset": 39747,
           "addend": 0
@@ -26946,7 +26946,7 @@
           "target": 5483218,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63333",
+          "symbol": "$L63338",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 100 for animation IDs 250; compiler-local offset 40722 and canonical destination independently checked",
           "local_target_offset": 40722,
           "addend": 0
@@ -26956,7 +26956,7 @@
           "target": 5483533,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63345",
+          "symbol": "$L63350",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 101 for animation IDs 251; compiler-local offset 41037 and canonical destination independently checked",
           "local_target_offset": 41037,
           "addend": 0
@@ -26966,7 +26966,7 @@
           "target": 5483849,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63357",
+          "symbol": "$L63362",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 102 for animation IDs 252; compiler-local offset 41353 and canonical destination independently checked",
           "local_target_offset": 41353,
           "addend": 0
@@ -26976,7 +26976,7 @@
           "target": 5484407,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63376",
+          "symbol": "$L63381",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 103 for animation IDs 253; compiler-local offset 41911 and canonical destination independently checked",
           "local_target_offset": 41911,
           "addend": 0
@@ -26986,7 +26986,7 @@
           "target": 5484951,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63391",
+          "symbol": "$L63396",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 104 for animation IDs 254; compiler-local offset 42455 and canonical destination independently checked",
           "local_target_offset": 42455,
           "addend": 0
@@ -26996,7 +26996,7 @@
           "target": 5485284,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63404",
+          "symbol": "$L63409",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 105 for animation IDs 255; compiler-local offset 42788 and canonical destination independently checked",
           "local_target_offset": 42788,
           "addend": 0
@@ -27006,7 +27006,7 @@
           "target": 5486049,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63425",
+          "symbol": "$L63430",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 106 for animation IDs 256; compiler-local offset 43553 and canonical destination independently checked",
           "local_target_offset": 43553,
           "addend": 0
@@ -27016,7 +27016,7 @@
           "target": 5487149,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63462",
+          "symbol": "$L63467",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 107 for animation IDs 257; compiler-local offset 44653 and canonical destination independently checked",
           "local_target_offset": 44653,
           "addend": 0
@@ -27026,7 +27026,7 @@
           "target": 5488211,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63497",
+          "symbol": "$L63502",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 108 for animation IDs 258; compiler-local offset 45715 and canonical destination independently checked",
           "local_target_offset": 45715,
           "addend": 0
@@ -27036,7 +27036,7 @@
           "target": 5489273,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63532",
+          "symbol": "$L63537",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 109 for animation IDs 259; compiler-local offset 46777 and canonical destination independently checked",
           "local_target_offset": 46777,
           "addend": 0
@@ -27046,7 +27046,7 @@
           "target": 5490241,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63565",
+          "symbol": "$L63570",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 110 for animation IDs 260; compiler-local offset 47745 and canonical destination independently checked",
           "local_target_offset": 47745,
           "addend": 0
@@ -27056,7 +27056,7 @@
           "target": 5491290,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63599",
+          "symbol": "$L63604",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 111 for animation IDs 261; compiler-local offset 48794 and canonical destination independently checked",
           "local_target_offset": 48794,
           "addend": 0
@@ -27066,7 +27066,7 @@
           "target": 5492339,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63633",
+          "symbol": "$L63638",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 112 for animation IDs 262; compiler-local offset 49843 and canonical destination independently checked",
           "local_target_offset": 49843,
           "addend": 0
@@ -27076,7 +27076,7 @@
           "target": 5492850,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63647",
+          "symbol": "$L63652",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 113 for animation IDs 263; compiler-local offset 50354 and canonical destination independently checked",
           "local_target_offset": 50354,
           "addend": 0
@@ -27086,7 +27086,7 @@
           "target": 5493361,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63661",
+          "symbol": "$L63666",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 114 for animation IDs 264; compiler-local offset 50865 and canonical destination independently checked",
           "local_target_offset": 50865,
           "addend": 0
@@ -27096,7 +27096,7 @@
           "target": 5493872,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63675",
+          "symbol": "$L63680",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 115 for animation IDs 265; compiler-local offset 51376 and canonical destination independently checked",
           "local_target_offset": 51376,
           "addend": 0
@@ -27106,7 +27106,7 @@
           "target": 5494464,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63690",
+          "symbol": "$L63695",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 116 for animation IDs 266; compiler-local offset 51968 and canonical destination independently checked",
           "local_target_offset": 51968,
           "addend": 0
@@ -27116,7 +27116,7 @@
           "target": 5495056,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63705",
+          "symbol": "$L63710",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 117 for animation IDs 267; compiler-local offset 52560 and canonical destination independently checked",
           "local_target_offset": 52560,
           "addend": 0
@@ -27126,7 +27126,7 @@
           "target": 5496221,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63736",
+          "symbol": "$L63741",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 118 for animation IDs 268; compiler-local offset 53725 and canonical destination independently checked",
           "local_target_offset": 53725,
           "addend": 0
@@ -27136,7 +27136,7 @@
           "target": 5496567,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63747",
+          "symbol": "$L63752",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 119 for animation IDs 269; compiler-local offset 54071 and canonical destination independently checked",
           "local_target_offset": 54071,
           "addend": 0
@@ -27146,7 +27146,7 @@
           "target": 5496938,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63759",
+          "symbol": "$L63764",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 120 for animation IDs 270; compiler-local offset 54442 and canonical destination independently checked",
           "local_target_offset": 54442,
           "addend": 0
@@ -27156,7 +27156,7 @@
           "target": 5497472,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63775",
+          "symbol": "$L63780",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 121 for animation IDs 271; compiler-local offset 54976 and canonical destination independently checked",
           "local_target_offset": 54976,
           "addend": 0
@@ -27166,7 +27166,7 @@
           "target": 5498025,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63791",
+          "symbol": "$L63796",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 122 for animation IDs 272; compiler-local offset 55529 and canonical destination independently checked",
           "local_target_offset": 55529,
           "addend": 0
@@ -27176,7 +27176,7 @@
           "target": 5498578,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63808",
+          "symbol": "$L63813",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 123 for animation IDs 273; compiler-local offset 56082 and canonical destination independently checked",
           "local_target_offset": 56082,
           "addend": 0
@@ -27186,7 +27186,7 @@
           "target": 5498958,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63821",
+          "symbol": "$L63826",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 124 for animation IDs 274; compiler-local offset 56462 and canonical destination independently checked",
           "local_target_offset": 56462,
           "addend": 0
@@ -27196,7 +27196,7 @@
           "target": 5499406,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63834",
+          "symbol": "$L63839",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 125 for animation IDs 275; compiler-local offset 56910 and canonical destination independently checked",
           "local_target_offset": 56910,
           "addend": 0
@@ -27206,7 +27206,7 @@
           "target": 5500218,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63857",
+          "symbol": "$L63862",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 126 for animation IDs 276; compiler-local offset 57722 and canonical destination independently checked",
           "local_target_offset": 57722,
           "addend": 0
@@ -27216,7 +27216,7 @@
           "target": 5500680,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63872",
+          "symbol": "$L63877",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 127 for animation IDs 277; compiler-local offset 58184 and canonical destination independently checked",
           "local_target_offset": 58184,
           "addend": 0
@@ -27226,7 +27226,7 @@
           "target": 5501322,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63891",
+          "symbol": "$L63896",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 128 for animation IDs 278; compiler-local offset 58826 and canonical destination independently checked",
           "local_target_offset": 58826,
           "addend": 0
@@ -27236,7 +27236,7 @@
           "target": 5502306,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63920",
+          "symbol": "$L63925",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 129 for animation IDs 279; compiler-local offset 59810 and canonical destination independently checked",
           "local_target_offset": 59810,
           "addend": 0
@@ -27246,7 +27246,7 @@
           "target": 5502540,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63928",
+          "symbol": "$L63933",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 130 for animation IDs 280; compiler-local offset 60044 and canonical destination independently checked",
           "local_target_offset": 60044,
           "addend": 0
@@ -27256,7 +27256,7 @@
           "target": 5502854,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63937",
+          "symbol": "$L63942",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 131 for animation IDs 281; compiler-local offset 60358 and canonical destination independently checked",
           "local_target_offset": 60358,
           "addend": 0
@@ -27266,7 +27266,7 @@
           "target": 5503390,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63953",
+          "symbol": "$L63958",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 132 for animation IDs 282; compiler-local offset 60894 and canonical destination independently checked",
           "local_target_offset": 60894,
           "addend": 0
@@ -27276,7 +27276,7 @@
           "target": 5504530,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63983",
+          "symbol": "$L63988",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 133 for animation IDs 283; compiler-local offset 62034 and canonical destination independently checked",
           "local_target_offset": 62034,
           "addend": 0
@@ -27286,7 +27286,7 @@
           "target": 5505670,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64013",
+          "symbol": "$L64018",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 134 for animation IDs 300; compiler-local offset 63174 and canonical destination independently checked",
           "local_target_offset": 63174,
           "addend": 0
@@ -27296,7 +27296,7 @@
           "target": 5506785,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64036",
+          "symbol": "$L64041",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 135 for animation IDs 301; compiler-local offset 64289 and canonical destination independently checked",
           "local_target_offset": 64289,
           "addend": 0
@@ -27306,7 +27306,7 @@
           "target": 5508096,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64070",
+          "symbol": "$L64075",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 136 for animation IDs 302; compiler-local offset 65600 and canonical destination independently checked",
           "local_target_offset": 65600,
           "addend": 0
@@ -27316,7 +27316,7 @@
           "target": 5509640,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64113",
+          "symbol": "$L64118",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 137 for animation IDs 303; compiler-local offset 67144 and canonical destination independently checked",
           "local_target_offset": 67144,
           "addend": 0
@@ -27326,7 +27326,7 @@
           "target": 5511052,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64150",
+          "symbol": "$L64155",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 138 for animation IDs 304; compiler-local offset 68556 and canonical destination independently checked",
           "local_target_offset": 68556,
           "addend": 0
@@ -27336,7 +27336,7 @@
           "target": 5512464,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64187",
+          "symbol": "$L64192",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 139 for animation IDs 305; compiler-local offset 69968 and canonical destination independently checked",
           "local_target_offset": 69968,
           "addend": 0
@@ -27346,7 +27346,7 @@
           "target": 5513910,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64224",
+          "symbol": "$L64229",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 140 for animation IDs 306; compiler-local offset 71414 and canonical destination independently checked",
           "local_target_offset": 71414,
           "addend": 0
@@ -27356,7 +27356,7 @@
           "target": 5515174,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64259",
+          "symbol": "$L64264",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 141 for animation IDs 307; compiler-local offset 72678 and canonical destination independently checked",
           "local_target_offset": 72678,
           "addend": 0
@@ -27366,7 +27366,7 @@
           "target": 5516438,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64294",
+          "symbol": "$L64299",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 142 for animation IDs 308; compiler-local offset 73942 and canonical destination independently checked",
           "local_target_offset": 73942,
           "addend": 0
@@ -27376,7 +27376,7 @@
           "target": 5517702,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64329",
+          "symbol": "$L64334",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 143 for animation IDs 309; compiler-local offset 75206 and canonical destination independently checked",
           "local_target_offset": 75206,
           "addend": 0
@@ -27386,7 +27386,7 @@
           "target": 5519047,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64365",
+          "symbol": "$L64370",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 144 for animation IDs 310; compiler-local offset 76551 and canonical destination independently checked",
           "local_target_offset": 76551,
           "addend": 0
@@ -27396,7 +27396,7 @@
           "target": 5520392,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64401",
+          "symbol": "$L64406",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 145 for animation IDs 311; compiler-local offset 77896 and canonical destination independently checked",
           "local_target_offset": 77896,
           "addend": 0
@@ -27406,7 +27406,7 @@
           "target": 5521593,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64433",
+          "symbol": "$L64438",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 146 for animation IDs 312; compiler-local offset 79097 and canonical destination independently checked",
           "local_target_offset": 79097,
           "addend": 0
@@ -27416,7 +27416,7 @@
           "target": 5522795,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64469",
+          "symbol": "$L64474",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 147 for animation IDs 313; compiler-local offset 80299 and canonical destination independently checked",
           "local_target_offset": 80299,
           "addend": 0
@@ -27426,7 +27426,7 @@
           "target": 5524009,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64505",
+          "symbol": "$L64510",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 148 for animation IDs 314; compiler-local offset 81513 and canonical destination independently checked",
           "local_target_offset": 81513,
           "addend": 0
@@ -27436,7 +27436,7 @@
           "target": 5525258,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64542",
+          "symbol": "$L64547",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 149 for animation IDs 315; compiler-local offset 82762 and canonical destination independently checked",
           "local_target_offset": 82762,
           "addend": 0
@@ -27446,7 +27446,7 @@
           "target": 5526166,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64564",
+          "symbol": "$L64569",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 150 for animation IDs 316; compiler-local offset 83670 and canonical destination independently checked",
           "local_target_offset": 83670,
           "addend": 0
@@ -27456,7 +27456,7 @@
           "target": 5527408,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64595",
+          "symbol": "$L64600",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 151 for animation IDs 317; compiler-local offset 84912 and canonical destination independently checked",
           "local_target_offset": 84912,
           "addend": 0
@@ -27466,7 +27466,7 @@
           "target": 5528721,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64629",
+          "symbol": "$L64634",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 152 for animation IDs 318; compiler-local offset 86225 and canonical destination independently checked",
           "local_target_offset": 86225,
           "addend": 0
@@ -27476,7 +27476,7 @@
           "target": 5442669,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62136",
+          "symbol": "$L62141",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-animation-and-state-owner; original switch address entry 153 for animation IDs 10,11,12,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,49,78,79,80,88,89,90,91,92,93,94,95,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,159,160,172,173,174,175,176,177,179,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,215,216,217,218,219,222,223,224,225,226,227,228,229,236,237,238,239,240,241,242,243,244,245,246,247,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299; compiler-local offset 173 and canonical destination independently checked",
           "local_target_offset": 173,
           "addend": 0
@@ -27504,18 +27504,18 @@
       "symbol": "?Slot06@Character15@@UAEXXZ",
       "target_address": "0x00530BC0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "cb9d0e98fca1f5167861e9c208194682641a36c1e156ebc7971d5c3aac3f4246",
-      "object_sha256": "1effbead9e344d37db01b68da2d0ad98b6cbd15e55ec1b6abc29e7197227ecd8",
+      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
+      "object_sha256": "cd1cbee48e8a283ee7975112b99b2a7c9498797e08d86259791789a57a8a517f",
       "source_sha256": "23167a69f0eb552adc60f15d4b952570d685a9944de2571ea3f842b4cad6cee8",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "df48885451007a5ea0a55bc09adbaa4fb07ad8a2688fb1d22f2bda8528472c96"
+        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "52aa6f6a233b178ef7a8123e9d1a8dfb006cd42ec07d1baf0ae497248f725805",
+      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "e74950e0c9696b0323589627838e25399ddc5b75a4811e21f01ef67a604df1bd",
+      "unit_sha256": "94ecb277ae7409b347b95e2e3d682861f9ae4086d66243b9c4d53d810422eff7",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

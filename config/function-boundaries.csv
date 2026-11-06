@@ -148,7 +148,7 @@ address,end,size,status,evidence
 0x00567900,0x00567A86,390,reviewed,docs/KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners
 0x00588310,0x005884A7,407,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005A9FA0,0x005AA175,469,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x005DDDF0,0x005DDF8A,410,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
+0x005DDDF0,0x005DDF8A,410,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005F6D90,0x005F6F19,393,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x006163B0,0x0061656A,442,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00638D90,0x00638F0F,383,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
@@ -338,3 +338,12 @@ address,end,size,status,evidence
 0x0056B630,0x0056F917,17127,reviewed,docs/KNOWLEDGE_BASE.md#misaki-cpu-command-and-movement-owner
 0x005571F0,0x005678FE,67342,reviewed,docs/KNOWLEDGE_BASE.md#misaki-animation-and-state-owner
 0x0056F920,0x005736CA,15786,reviewed,docs/KNOWLEDGE_BASE.md#misaki-local-effect-dispatch-and-controls
+0x005DDF90,0x005DE09E,270,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005DE0A0,0x005DE0DA,58,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005DE0E0,0x005DE130,80,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005DE130,0x005DE143,19,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005E1060,0x005E106B,11,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005E1070,0x005E107B,11,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005E1080,0x005E10AF,47,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005DE150,0x005E105F,12047,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
+0x005E10B0,0x005E243C,5004,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners

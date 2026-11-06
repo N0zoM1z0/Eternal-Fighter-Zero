@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "selected complete contribution comparison; 29 cold source/profile/dependency artifacts cover10 new Misaki constructor/frame/input/command units and53 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "address": "0x5236d0",
     "code_size": 54139,
@@ -5116,7 +5116,7 @@
           "target": 5442395,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63160",
+          "symbol": "$L63165",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 54411 independently checked",
           "local_target_offset": 54411,
           "addend": 0
@@ -5126,7 +5126,7 @@
           "target": 5442123,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63318",
+          "symbol": "$L63323",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 54139 independently checked",
           "local_target_offset": 54139,
           "addend": 0
@@ -10446,7 +10446,7 @@
           "target": 5388338,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62191",
+          "symbol": "$L62196",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
           "local_target_offset": 354,
           "addend": 0
@@ -10456,7 +10456,7 @@
           "target": 5389882,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62215",
+          "symbol": "$L62220",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 1898 and canonical destination independently checked",
           "local_target_offset": 1898,
           "addend": 0
@@ -10466,7 +10466,7 @@
           "target": 5390096,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62219",
+          "symbol": "$L62224",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 2112 and canonical destination independently checked",
           "local_target_offset": 2112,
           "addend": 0
@@ -10476,7 +10476,7 @@
           "target": 5390310,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62223",
+          "symbol": "$L62228",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 2326 and canonical destination independently checked",
           "local_target_offset": 2326,
           "addend": 0
@@ -10486,7 +10486,7 @@
           "target": 5391274,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62240",
+          "symbol": "$L62245",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 3290 and canonical destination independently checked",
           "local_target_offset": 3290,
           "addend": 0
@@ -10496,7 +10496,7 @@
           "target": 5392233,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62256",
+          "symbol": "$L62261",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 4249 and canonical destination independently checked",
           "local_target_offset": 4249,
           "addend": 0
@@ -10506,7 +10506,7 @@
           "target": 5393177,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62271",
+          "symbol": "$L62276",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 5193 and canonical destination independently checked",
           "local_target_offset": 5193,
           "addend": 0
@@ -10516,7 +10516,7 @@
           "target": 5394194,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62290",
+          "symbol": "$L62295",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 6210 and canonical destination independently checked",
           "local_target_offset": 6210,
           "addend": 0
@@ -10526,7 +10526,7 @@
           "target": 5395211,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62308",
+          "symbol": "$L62313",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 7227 and canonical destination independently checked",
           "local_target_offset": 7227,
           "addend": 0
@@ -10536,7 +10536,7 @@
           "target": 5395970,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62323",
+          "symbol": "$L62328",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 7986 and canonical destination independently checked",
           "local_target_offset": 7986,
           "addend": 0
@@ -10546,7 +10546,7 @@
           "target": 5396738,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62331",
+          "symbol": "$L62336",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 8754 and canonical destination independently checked",
           "local_target_offset": 8754,
           "addend": 0
@@ -10556,7 +10556,7 @@
           "target": 5397506,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62339",
+          "symbol": "$L62344",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 411; compiler-local offset 9522 and canonical destination independently checked",
           "local_target_offset": 9522,
           "addend": 0
@@ -10566,7 +10566,7 @@
           "target": 5398459,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62351",
+          "symbol": "$L62356",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 412; compiler-local offset 10475 and canonical destination independently checked",
           "local_target_offset": 10475,
           "addend": 0
@@ -10576,7 +10576,7 @@
           "target": 5398768,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62358",
+          "symbol": "$L62363",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 413; compiler-local offset 10784 and canonical destination independently checked",
           "local_target_offset": 10784,
           "addend": 0
@@ -10586,7 +10586,7 @@
           "target": 5399257,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62367",
+          "symbol": "$L62372",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 414; compiler-local offset 11273 and canonical destination independently checked",
           "local_target_offset": 11273,
           "addend": 0
@@ -10596,7 +10596,7 @@
           "target": 5399743,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62377",
+          "symbol": "$L62382",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 415; compiler-local offset 11759 and canonical destination independently checked",
           "local_target_offset": 11759,
           "addend": 0
@@ -10606,7 +10606,7 @@
           "target": 5400942,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62396",
+          "symbol": "$L62401",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 416; compiler-local offset 12958 and canonical destination independently checked",
           "local_target_offset": 12958,
           "addend": 0
@@ -10616,7 +10616,7 @@
           "target": 5401430,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62405",
+          "symbol": "$L62410",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 17 for effect types 417; compiler-local offset 13446 and canonical destination independently checked",
           "local_target_offset": 13446,
           "addend": 0
@@ -10626,7 +10626,7 @@
           "target": 5401916,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62415",
+          "symbol": "$L62420",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 18 for effect types 418; compiler-local offset 13932 and canonical destination independently checked",
           "local_target_offset": 13932,
           "addend": 0
@@ -10636,7 +10636,7 @@
           "target": 5403115,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62435",
+          "symbol": "$L62440",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 19 for effect types 419; compiler-local offset 15131 and canonical destination independently checked",
           "local_target_offset": 15131,
           "addend": 0
@@ -10646,7 +10646,7 @@
           "target": 5403603,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62444",
+          "symbol": "$L62449",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 20 for effect types 420; compiler-local offset 15619 and canonical destination independently checked",
           "local_target_offset": 15619,
           "addend": 0
@@ -10656,7 +10656,7 @@
           "target": 5404089,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62454",
+          "symbol": "$L62459",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 21 for effect types 421; compiler-local offset 16105 and canonical destination independently checked",
           "local_target_offset": 16105,
           "addend": 0
@@ -10666,7 +10666,7 @@
           "target": 5405288,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62473",
+          "symbol": "$L62478",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 22 for effect types 422; compiler-local offset 17304 and canonical destination independently checked",
           "local_target_offset": 17304,
           "addend": 0
@@ -10676,7 +10676,7 @@
           "target": 5406488,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62492",
+          "symbol": "$L62497",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 23 for effect types 423; compiler-local offset 18504 and canonical destination independently checked",
           "local_target_offset": 18504,
           "addend": 0
@@ -10686,7 +10686,7 @@
           "target": 5407626,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62509",
+          "symbol": "$L62514",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 24 for effect types 424; compiler-local offset 19642 and canonical destination independently checked",
           "local_target_offset": 19642,
           "addend": 0
@@ -10696,7 +10696,7 @@
           "target": 5407840,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62513",
+          "symbol": "$L62518",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 25 for effect types 425; compiler-local offset 19856 and canonical destination independently checked",
           "local_target_offset": 19856,
           "addend": 0
@@ -10706,7 +10706,7 @@
           "target": 5409410,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62552",
+          "symbol": "$L62557",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 26 for effect types 426; compiler-local offset 21426 and canonical destination independently checked",
           "local_target_offset": 21426,
           "addend": 0
@@ -10716,7 +10716,7 @@
           "target": 5410979,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62591",
+          "symbol": "$L62596",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 27 for effect types 427; compiler-local offset 22995 and canonical destination independently checked",
           "local_target_offset": 22995,
           "addend": 0
@@ -10726,7 +10726,7 @@
           "target": 5412549,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62630",
+          "symbol": "$L62635",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 28 for effect types 428; compiler-local offset 24565 and canonical destination independently checked",
           "local_target_offset": 24565,
           "addend": 0
@@ -10736,7 +10736,7 @@
           "target": 5413807,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62662",
+          "symbol": "$L62667",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 29 for effect types 429; compiler-local offset 25823 and canonical destination independently checked",
           "local_target_offset": 25823,
           "addend": 0
@@ -10746,7 +10746,7 @@
           "target": 5415066,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62694",
+          "symbol": "$L62699",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 30 for effect types 430; compiler-local offset 27082 and canonical destination independently checked",
           "local_target_offset": 27082,
           "addend": 0
@@ -10756,7 +10756,7 @@
           "target": 5416324,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62726",
+          "symbol": "$L62731",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 31 for effect types 431; compiler-local offset 28340 and canonical destination independently checked",
           "local_target_offset": 28340,
           "addend": 0
@@ -10766,7 +10766,7 @@
           "target": 5416785,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62735",
+          "symbol": "$L62740",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 32 for effect types 432; compiler-local offset 28801 and canonical destination independently checked",
           "local_target_offset": 28801,
           "addend": 0
@@ -10776,7 +10776,7 @@
           "target": 5417246,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62744",
+          "symbol": "$L62749",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 33 for effect types 433; compiler-local offset 29262 and canonical destination independently checked",
           "local_target_offset": 29262,
           "addend": 0
@@ -10786,7 +10786,7 @@
           "target": 5417707,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62753",
+          "symbol": "$L62758",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 34 for effect types 434; compiler-local offset 29723 and canonical destination independently checked",
           "local_target_offset": 29723,
           "addend": 0
@@ -10796,7 +10796,7 @@
           "target": 5418168,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62762",
+          "symbol": "$L62767",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 35 for effect types 435; compiler-local offset 30184 and canonical destination independently checked",
           "local_target_offset": 30184,
           "addend": 0
@@ -10806,7 +10806,7 @@
           "target": 5418519,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62768",
+          "symbol": "$L62773",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 36 for effect types 436; compiler-local offset 30535 and canonical destination independently checked",
           "local_target_offset": 30535,
           "addend": 0
@@ -10816,7 +10816,7 @@
           "target": 5419259,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62776",
+          "symbol": "$L62781",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 37 for effect types 437; compiler-local offset 31275 and canonical destination independently checked",
           "local_target_offset": 31275,
           "addend": 0
@@ -10826,7 +10826,7 @@
           "target": 5419700,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62786",
+          "symbol": "$L62791",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 38 for effect types 438; compiler-local offset 31716 and canonical destination independently checked",
           "local_target_offset": 31716,
           "addend": 0
@@ -10836,7 +10836,7 @@
           "target": 5420440,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62794",
+          "symbol": "$L62799",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 39 for effect types 439; compiler-local offset 32456 and canonical destination independently checked",
           "local_target_offset": 32456,
           "addend": 0
@@ -10846,7 +10846,7 @@
           "target": 5420879,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62803",
+          "symbol": "$L62808",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 40 for effect types 440; compiler-local offset 32895 and canonical destination independently checked",
           "local_target_offset": 32895,
           "addend": 0
@@ -10856,7 +10856,7 @@
           "target": 5421832,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62816",
+          "symbol": "$L62821",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 41 for effect types 441; compiler-local offset 33848 and canonical destination independently checked",
           "local_target_offset": 33848,
           "addend": 0
@@ -10866,7 +10866,7 @@
           "target": 5422476,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62827",
+          "symbol": "$L62832",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 42 for effect types 442; compiler-local offset 34492 and canonical destination independently checked",
           "local_target_offset": 34492,
           "addend": 0
@@ -10876,7 +10876,7 @@
           "target": 5422690,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62831",
+          "symbol": "$L62836",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 43 for effect types 443; compiler-local offset 34706 and canonical destination independently checked",
           "local_target_offset": 34706,
           "addend": 0
@@ -10886,7 +10886,7 @@
           "target": 5424106,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62845",
+          "symbol": "$L62850",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 44 for effect types 444; compiler-local offset 36122 and canonical destination independently checked",
           "local_target_offset": 36122,
           "addend": 0
@@ -10896,7 +10896,7 @@
           "target": 5425447,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62860",
+          "symbol": "$L62865",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 45 for effect types 445; compiler-local offset 37463 and canonical destination independently checked",
           "local_target_offset": 37463,
           "addend": 0
@@ -10906,7 +10906,7 @@
           "target": 5427246,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62877",
+          "symbol": "$L62882",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 46 for effect types 446; compiler-local offset 39262 and canonical destination independently checked",
           "local_target_offset": 39262,
           "addend": 0
@@ -10916,7 +10916,7 @@
           "target": 5428053,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62889",
+          "symbol": "$L62894",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 47 for effect types 447; compiler-local offset 40069 and canonical destination independently checked",
           "local_target_offset": 40069,
           "addend": 0
@@ -10926,7 +10926,7 @@
           "target": 5428267,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62893",
+          "symbol": "$L62898",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 48 for effect types 448; compiler-local offset 40283 and canonical destination independently checked",
           "local_target_offset": 40283,
           "addend": 0
@@ -10936,7 +10936,7 @@
           "target": 5428598,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62898",
+          "symbol": "$L62903",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 49 for effect types 449; compiler-local offset 40614 and canonical destination independently checked",
           "local_target_offset": 40614,
           "addend": 0
@@ -10946,7 +10946,7 @@
           "target": 5429646,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62922",
+          "symbol": "$L62927",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 50 for effect types 450; compiler-local offset 41662 and canonical destination independently checked",
           "local_target_offset": 41662,
           "addend": 0
@@ -10956,7 +10956,7 @@
           "target": 5429966,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62926",
+          "symbol": "$L62931",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 51 for effect types 451; compiler-local offset 41982 and canonical destination independently checked",
           "local_target_offset": 41982,
           "addend": 0
@@ -10966,7 +10966,7 @@
           "target": 5430408,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62934",
+          "symbol": "$L62939",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 52 for effect types 452; compiler-local offset 42424 and canonical destination independently checked",
           "local_target_offset": 42424,
           "addend": 0
@@ -10976,7 +10976,7 @@
           "target": 5430700,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62939",
+          "symbol": "$L62944",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 53 for effect types 453; compiler-local offset 42716 and canonical destination independently checked",
           "local_target_offset": 42716,
           "addend": 0
@@ -10986,7 +10986,7 @@
           "target": 5431954,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62958",
+          "symbol": "$L62963",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 54 for effect types 454; compiler-local offset 43970 and canonical destination independently checked",
           "local_target_offset": 43970,
           "addend": 0
@@ -10996,7 +10996,7 @@
           "target": 5433154,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62977",
+          "symbol": "$L62982",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 55 for effect types 455; compiler-local offset 45170 and canonical destination independently checked",
           "local_target_offset": 45170,
           "addend": 0
@@ -11006,7 +11006,7 @@
           "target": 5434416,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63001",
+          "symbol": "$L63006",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 56 for effect types 456; compiler-local offset 46432 and canonical destination independently checked",
           "local_target_offset": 46432,
           "addend": 0
@@ -11016,7 +11016,7 @@
           "target": 5435228,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63013",
+          "symbol": "$L63018",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 57 for effect types 457; compiler-local offset 47244 and canonical destination independently checked",
           "local_target_offset": 47244,
           "addend": 0
@@ -11026,7 +11026,7 @@
           "target": 5436007,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63025",
+          "symbol": "$L63030",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 58 for effect types 458; compiler-local offset 48023 and canonical destination independently checked",
           "local_target_offset": 48023,
           "addend": 0
@@ -11036,7 +11036,7 @@
           "target": 5436819,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63037",
+          "symbol": "$L63042",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 59 for effect types 459; compiler-local offset 48835 and canonical destination independently checked",
           "local_target_offset": 48835,
           "addend": 0
@@ -11046,7 +11046,7 @@
           "target": 5437305,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63047",
+          "symbol": "$L63052",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 60 for effect types 460; compiler-local offset 49321 and canonical destination independently checked",
           "local_target_offset": 49321,
           "addend": 0
@@ -11056,7 +11056,7 @@
           "target": 5437791,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63057",
+          "symbol": "$L63062",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 61 for effect types 461; compiler-local offset 49807 and canonical destination independently checked",
           "local_target_offset": 49807,
           "addend": 0
@@ -11066,7 +11066,7 @@
           "target": 5438292,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63067",
+          "symbol": "$L63072",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 62 for effect types 495; compiler-local offset 50308 and canonical destination independently checked",
           "local_target_offset": 50308,
           "addend": 0
@@ -11076,7 +11076,7 @@
           "target": 5438588,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63072",
+          "symbol": "$L63077",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 63 for effect types 496; compiler-local offset 50604 and canonical destination independently checked",
           "local_target_offset": 50604,
           "addend": 0
@@ -11086,7 +11086,7 @@
           "target": 5439989,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63110",
+          "symbol": "$L63115",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 64 for effect types 497; compiler-local offset 52005 and canonical destination independently checked",
           "local_target_offset": 52005,
           "addend": 0
@@ -11096,7 +11096,7 @@
           "target": 5440913,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63127",
+          "symbol": "$L63132",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 65 for effect types 498; compiler-local offset 52929 and canonical destination independently checked",
           "local_target_offset": 52929,
           "addend": 0
@@ -11106,7 +11106,7 @@
           "target": 5441831,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63144",
+          "symbol": "$L63149",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 66 for effect types 499; compiler-local offset 53847 and canonical destination independently checked",
           "local_target_offset": 53847,
           "addend": 0
@@ -11116,7 +11116,7 @@
           "target": 5442090,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62183",
+          "symbol": "$L62188",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls; original switch address entry 67 for effect types 462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 54106 and canonical destination independently checked",
           "local_target_offset": 54106,
           "addend": 0
@@ -11144,18 +11144,18 @@
       "symbol": "?Slot07@Character23@@UAEXXZ",
       "target_address": "0x005236D0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "cb9d0e98fca1f5167861e9c208194682641a36c1e156ebc7971d5c3aac3f4246",
-      "object_sha256": "fe19a0e7fd7810d6ab3a40a2596d46948ed8f80584fb28832a7f800298742ad4",
+      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
+      "object_sha256": "8caa3b7dffe1005b7e6de777e1a88d59fe17a702c4601bf8300420029fb7e10e",
       "source_sha256": "ef9a6afe940c3d3ce94532bfe559c3ff2139858d021e93a60d1469091bdb90a4",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "df48885451007a5ea0a55bc09adbaa4fb07ad8a2688fb1d22f2bda8528472c96"
+        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "52aa6f6a233b178ef7a8123e9d1a8dfb006cd42ec07d1baf0ae497248f725805",
+      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "5f4ba402e033d61e5b771afb562bcfc0d1f52f87805f4acb4e367d0bd58148d9",
+      "unit_sha256": "c1aad184406d5f42d07c68faf6de23bbfbbb43117a4e9665ca187fe84d817a7a",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
