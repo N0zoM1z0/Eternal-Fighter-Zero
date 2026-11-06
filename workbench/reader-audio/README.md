@@ -1,8 +1,9 @@
-# Pending PatternReader and Audio reconstruction
+# Reader archive and pending Audio reconstruction
 
-These are unaccepted drafts preserved for handoff, outside `src/` and all
-reconstruction ledgers. Accepted progress remains 53 functions / 30,715 code
-bytes. Do not treat a scratch disassembly diff as a strict oracle certificate.
+The reader was integrated and accepted on 2026-11-06: twenty complete functions,
+1,370 code bytes. Its archived files remain unchanged here. Audio remains an
+unaccepted draft outside `src/` and reconstruction ledgers. The accepted total
+is 73 functions / 32,085 code bytes. Scratch diagnostics confer no exact credit.
 
 ## Contents and restore
 
@@ -13,21 +14,20 @@ commit `4540d24`. `snapshot.json` records all seven original working-source
 hashes and the patch hash. The accepted versions of those three files were
 restored so existing certificates remain current. No draft code was discarded.
 
-After reviewing the patch and checking for new source changes, restore the
-working integration from the repository root:
+Context.cpp and PatternReader.cpp/.h are already integrated. After reviewing
+the remaining Audio patch and checking for new source changes, restore only
+the Audio integration from the repository root:
 
 ```bash
-git apply --check workbench/reader-audio/integration.patch
-git apply workbench/reader-audio/integration.patch
-cp workbench/reader-audio/PatternReader.cpp src/
-cp workbench/reader-audio/PatternReader.h src/
+git apply --check --include=src/Engine.h --include=src/Startup.cpp workbench/reader-audio/integration.patch
+git apply --include=src/Engine.h --include=src/Startup.cpp workbench/reader-audio/integration.patch
 cp workbench/reader-audio/AudioResources.cpp src/
 cp workbench/reader-audio/AudioGlobal.cpp src/
 ```
 
-The patch introduces `<mmsystem.h>`, expands the provisional Audio layout,
-renames SetMode to MaintainLoop, and shares the reader declaration with Context.
-It deliberately does not update recipes or certificates; integration is pending.
+The remaining patch introduces `<mmsystem.h>`, expands the provisional Audio
+layout and renames SetMode to MaintainLoop. It deliberately does not update
+Audio recipes or certificates; that integration is pending.
 Retain existing block scopes in Open and ReadLine when formatting: scopes affect
 VC7.1 /Od local allocation. No inert code padding or invented ABI is permitted.
 
@@ -103,17 +103,15 @@ Verify them and classify as generated, not authored.
 
 ## Integration gate
 
-1. Finish complete Audio comparisons and independently review all reader/audio
-   boundaries, origins and relocation destinations. Do not publish projected
-   progress from draft counts.
-2. Replace the accepted Context reader Read symbol
-   `?Read@PatternReader@@QAEXPAXH@Z` with `?Read@PatternReader@@QAEHPAXH@Z`.
-   Replace the startup callee `?SetMode@Audio@@QAEXF@Z` with
-   `?MaintainLoop@Audio@@QAEXG@Z`. Targets stay 0x405600 / 0x40E4D0.
-3. Add PatternReader.h to every Context.cpp recipe's dependencies, not only the
-   loader. New reader recipes depend on that header; Audio recipes depend on
-   Engine.h. Use explicit profiles and complete COFF extents.
-4. Engine.h changes involve 62 existing units; Config's two units are untouched.
+1. Finish complete Audio comparisons and independently review all Audio
+   boundaries, origins and relocation destinations. Reader acceptance is in
+   docs/evidence/reader-exact.json; do not republish archived scratch diagnostics.
+2. Replace the startup callee `?SetMode@Audio@@QAEXF@Z` with
+   `?MaintainLoop@Audio@@QAEXG@Z`. Its target stays 0x40E4D0.
+3. Audio recipes depend on Engine.h. Reader/Context dependencies and the Read
+   return-type symbol correction were completed in the reader checkpoint.
+   Use explicit profiles and complete COFF extents.
+4. Engine.h changes involve 62 existing units; Config and reader are untouched.
    Select only the involved old and new units. Recompile the effect dispatcher
    and refresh compiler-local symbol IDs without changing target destinations,
    the complete 14,305-byte extent, or its internal local-offset checks.

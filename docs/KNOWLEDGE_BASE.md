@@ -741,14 +741,14 @@ Whole-product linking and original/reconstructed game runtime remain open.
 ## Raw file reader and audio loading
 
 These instruction-review findings postdate the accepted frame checkpoint.
-They correct hypotheses, but the accompanying reader/audio source is still
-unaccepted in `workbench/reader-audio/`; no progress rows were added.
+The reader was subsequently accepted on 2026-11-06 as described below; Audio
+remains an unaccepted draft in `workbench/reader-audio/`.
 
 PatternReader::ReadInt at `0x405700` reads four raw bytes through `0x405600`;
 ReadShort/ReadFloat read two/four. There is no custom integer decoder here.
-Read returns the transfer count. The accepted Context caller still has an old
-provisional void declaration; its correction requires the matching relocation
-symbol and certificate replay. `0x405970` resets two fields and returns 1,
+Read returns the transfer count. Context now shares the corrected declaration
+and matching relocation symbol; its complete translation unit was replayed.
+`0x405970` resets two fields and returns 1,
 not a demonstrated base-class constructor. Only the reader's handle/buffer at
 0/4 are identified; its provisional 12-byte caller view does not prove a third
 field or complete original size/alignment.
@@ -769,3 +769,70 @@ cleanup behavior rather than hardening them during exact reconstruction.
 Original FillBuffer calls at `0x40DBBC`/`0x40DBE1` target `0x778600`; a scratch
 memcpy binding to `0x778410` was incorrect. The workbench records remaining
 mismatches and the exact integration requirements.
+
+## Pattern reader exact
+
+On 2026-11-06, twenty complete PatternReader members were accepted from ordinary
+C++: 1,370 instruction bytes, with no local tables. The target bodies and all
+41 relocation operands were reviewed separately from their cold native
+comparison. The provisional names identify an application file-ownership API;
+they do not recover original symbols. Constructor/destructor bodies explicitly
+invoke Reset/Open and Close; they are authored members, not generated iterators.
+
+| Member | Entry | Complete bytes |
+| --- | --- | ---: |
+| Open | 0x4054B0 | 235 |
+| Close | 0x4055A0 | 95 |
+| Read | 0x405600 | 60 |
+| ReadLine | 0x405640 | 182 |
+| ReadInt | 0x405700 | 30 |
+| ReadShort | 0x405720 | 31 |
+| ReadFloat | 0x405740 | 30 |
+| Write | 0x405760 | 60 |
+| WriteInt | 0x4057A0 | 27 |
+| WriteFloat | 0x4057C0 | 27 |
+| Printf | 0x4057E0 | 110 |
+| Seek | 0x405850 | 105 |
+| SeekStart | 0x4058C0 | 45 |
+| SeekEnd | 0x4058F0 | 45 |
+| Size | 0x405920 | 41 |
+| IsOpen | 0x405950 | 28 |
+| Reset | 0x405970 | 35 |
+| LoadBuffer | 0x4059A0 | 125 |
+| Constructor | 0x408330 | 40 |
+| Destructor | 0x408360 | 19 |
+
+Each body ends at its complete RET instruction; following alignment bytes are
+excluded. Conditional branches stay within their reviewed body. No target data
+or EH contribution is hidden in these extents. ReadLine and Printf use the
+original cookie at 0x78F050 and check at 0x7781DC. Original CRT destinations are
+strcpy 0x778080, strlen 0x7784E0, vsprintf 0x77856B, allocation 0x777D46 and
+deallocation 0x777E20. The corresponding CRT bodies, original call operands and
+PE IAT names support explicit bindings; no relocation fields are masked.
+
+Open closes prior state, derives access/creation flags in their original order,
+uses share flags 3 and inheritable SECURITY_ATTRIBUTES, and normalizes an
+INVALID_HANDLE_VALUE result to zero. Close frees the optional buffer and resets
+the handle/buffer pair. Read/Write preserve unchecked API-result handling and
+return the transferred count. ReadLine retains the 1,000-byte local, unchecked
+capacity, newline handling and i - 1 return. Printf retains its 256-byte local
+and vsprintf. Seek preserves the repeated origin-zero tests and unspecified
+method for unsupported origins. LoadBuffer retains repeated Size calls,
+size-plus-one allocation and the trailing zero. No original edge behavior was
+hardened. Open and ReadLine block scopes preserve observed /Od local allocation.
+
+The complete original class size/alignment remains unresolved: only offsets
+0/4 are identified. The provisional 12-byte view preserves the accepted loader
+stack layout; the last four bytes remain explicitly unknown. The Read return
+type correction changes the Context relocation symbol, not its destination
+0x405600. All nine Context.cpp recipes now depend on PatternReader.h.
+
+Formal verification compiled exactly two source/profile artifacts: reader with
+/Od /G6 /MT /Gy /GS /W3 and Context with /Od /G6 /MT /Gy /W3. Their 29 complete
+units are strict exact, including the three existing generated pattern helpers
+which receive no authored credit. Engine.h, Audio and all other source units
+were untouched. Public proofs are docs/evidence/reader-exact.json and the
+refreshed docs/evidence/context-exact.json. Private replay is retained at
+.analysis/exact/reader-and-affected.json; original review includes raw-00405*.txt,
+raw-00408330.txt/raw-00408360.txt, reader-pe-review.json and the target-attested
+Ghidra reader-open-review-20261106.txt.

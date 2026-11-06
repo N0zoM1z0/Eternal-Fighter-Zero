@@ -1,11 +1,11 @@
-# Current handoff — 2026-11-01
+# Current handoff — 2026-11-06
 
 ## Task state
 
-The operator cleared the prior autonomous reconstruction goal and requested
-cleanup and handoff to another agent. This checkpoint organizes existing work;
-it does not authorize an indefinite reconstruction loop. The full game remains
-incomplete. Resume reconstruction when the operator assigns it.
+The operator resumed exact reconstruction on 2026-11-06 and requested focused
+new/affected comparisons without a full CI/cold cohort or redundant tests.
+The current local checkpoint integrates the complete PatternReader owner.
+The full game remains incomplete; Audio is the next preserved owner to finish.
 
 Use Bash and local Ghidra; no REA. Code, comments, documentation and metadata
 must be English. Conversation with the operator may be Chinese. Do not spawn
@@ -17,15 +17,16 @@ until the operator requests a push. The local directory retains its historical
 
 ## Accepted baseline
 
-The accepted reconstruction is commit `4540d24` plus this documentation/workbench
-cleanup. Its `src/`, recipes, ledgers and public certificates are unchanged.
+The accepted baseline includes the frame checkpoint and the 2026-11-06 reader
+integration. Exact acceptance is recorded in the independent ledgers and public
+certificates; no whole-product/runtime completion is claimed.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 53 |
-| Authored exact instruction bytes | 30,715 |
+| Authored complete exact functions | 73 |
+| Authored exact instruction bytes | 32,085 |
 | Associated exact local-table bytes | 191 |
-| Reviewed boundaries / origins | 64 / 64 |
+| Reviewed boundaries / origins | 84 / 84 |
 | Compiler-generated auxiliary helpers | 7 functions / 320 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -50,20 +51,31 @@ The final private report is `.analysis/exact/frame-and-affected.json`.
 
 Read [the reader/audio workbench](../workbench/reader-audio/README.md) first.
 It contains four draft source/header files, an integration patch for three
-accepted files, and a source-hash manifest. The patch has not been applied.
+accepted files, and a source-hash manifest. Only its Context.cpp hunk has been
+applied.
 The original dirty integration was preserved before restoring accepted sources.
 
-Twenty PatternReader bodies have equal complete lengths and zero-byte-difference
-private diagnostics. Seven of twelve Audio bodies have the same diagnostic
-result; five still differ. These diagnostics are not formal cold oracle
-certificates. No new reviewed rows, recipes, source mappings or matches were
-published. AudioGlobal's generated helpers remain unaccepted too.
+The twenty PatternReader bodies are now accepted in src/PatternReader.cpp/.h,
+with complete target-bound zero-difference proofs for 1,370 bytes. All 41
+relocations were checked against original operands and PE imports/CRT bodies.
+Context.cpp now shares the corrected int-returning Read declaration, and every
+Context recipe includes PatternReader.h. Two cold source/profile artifacts
+covered 20 new reader bodies and nine affected Context bodies (three generated
+helpers remain auxiliary). Public proofs are reader-exact.json and the refreshed
+context-exact.json; private replay is .analysis/exact/reader-and-affected.json.
+
+Audio was deliberately deferred so this reader checkpoint does not change
+Engine.h or replay its other dependents. Seven of twelve Audio bodies had zero
+differences in old scratch diagnostics; five still differ. AudioGlobal helpers
+remain unaccepted. Preserve these drafts and finish them before broad new-owner
+exploration. The original patch's Context hunk is already applied; use the
+Audio-only restore commands in the workbench README.
 
 Corrections to carry into integration:
 
 - ReadInt is a raw four-byte read, not a custom decoder. Read returns a byte
-  count; the accepted caller's old `void` declaration is provisional and must be
-  replaced together with its relocation symbol and affected certificates.
+  count; the accepted caller's old provisional `void` declaration was
+  corrected together with its relocation symbol and all affected certificates.
 - The provisional reader view remains 12 bytes for the accepted loader's stack
   layout. Only handle/buffer fields at 0/4 are currently identified. Do not claim
   that an extra four-byte field, inheritance or a unique class size is proven.
@@ -103,28 +115,30 @@ no extra files were present. Recover assets on demand using the commands in
 private analysis evidence, build receipts and latest draft objects are retained.
 Browser preview caches and superseded exploratory build objects were removed.
 
-## Resume checks
+## Focused verification and next work
 
-```bash
-git status --short --branch
-scripts/repo-python scripts/verify-target.py
-scripts/repo-python scripts/verify-toolchain.py --check
-scripts/repo-python scripts/report-reconstruction-status.py
-scripts/repo-python scripts/validate-tracking.py --require-target
-scripts/repo-python scripts/ci.py
-```
+The reader checkpoint uses only selected native comparisons, target-bound ledger
+validation, generated progress checks and git diff --check. Full CI and an
+unrequested cold cohort were omitted per the operator's latest instruction.
+No toolchain setup/--execute smoke was needed. For future source changes, replay
+only new/changed/header-dependent units with explicit selectors and retain
+complete strict comparisons. Identical source/profile/dependency recipes may
+share one cold artifact with explicit per-unit receipts.
 
-Cleanup changed no accepted source, profile, recipe, ledger or certificate;
-therefore it requires no native cold replay. Future integration does: select
-only new/changed/header-dependent units, group identical source/profile/dependency
-recipes where receipts remain explicit, and retain complete strict comparisons.
-Never launch an unrequested full cold cohort. `--execute` toolchain smoke is for
-setup/tool changes or actual native failures, not every replay.
+1. Review the pending Audio workbench README, retained full target disassembly
+   and existing mismatches; do not rerun old source generators.
+2. Resolve FillBuffer/CreateBuffer local allocation, LoadWave scope/stack layout,
+   ReadLoopMarkers byte assembly and MaintainLoop branch ordering. Build a
+   complete source early and retain complete comparisons after scope changes.
+3. Integrate Audio only after complete comparisons/boundary/relocation review.
+   Engine.h changes affect 62 accepted units; reader and Config are independent.
+   Refresh dispatcher local-symbol identities without changing destinations,
+   complete extent or local-offset checks. Classify AudioGlobal as generated.
+4. Update ledgers, proofs, progress, durable knowledge and this handoff; commit
+   verified progress locally with the required prefix. Never push implicitly.
 
-For future reconstruction, finish or explicitly defer the preserved reader/audio
-work before starting another owner. Draw implementations `0x409A90`/`0x40A0B0`,
-the 865-byte pixel candidate `0x40A440`, Input lifetime, timing thread `0x401850`
-and larger scene owners remain open. Production TU partitioning, linked data,
-resources/imports, callee closure, the runnable Windows product, original/native
-runtime comparison and portability are separate unfinished phases. The original
-game has not been launched.
+Draw implementations 0x409A90/0x40A0B0, the 865-byte pixel candidate 0x40A440,
+Input lifetime, timing thread 0x401850 and larger scene owners remain open.
+Production TU partitioning, linked data, resources/imports, callee closure,
+the runnable Windows product, original/native runtime comparison and portability
+are separate unfinished phases. The original game has not been launched.

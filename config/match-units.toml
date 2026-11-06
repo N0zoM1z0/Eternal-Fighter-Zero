@@ -1593,7 +1593,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/context-construct/Context.obj"
 symbol = "??0Context@@QAE@PAVVideo@@PAVInput@@PAVAudio@@@Z"
 target_address = 0x00406070
@@ -1666,7 +1666,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/context-destruct/Context.obj"
 symbol = "??1Context@@QAE@XZ"
 target_address = 0x00406260
@@ -1711,7 +1711,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/context-load-patterns/Context.obj"
 symbol = "?Load@Context@@QAEXXZ"
 target_address = 0x00406e60
@@ -1937,7 +1937,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 [[units.context-load-patterns.relocations]]
 offset = 639
 type = "REL32"
-symbol = "?Read@PatternReader@@QAEXPAXH@Z"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
 target = 0x00405600
 evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete original instruction operands and member offsets"
 
@@ -1952,7 +1952,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-construct/Context.obj"
 symbol = "??0PatternSequence@@QAE@XZ"
 target_address = 0x00408310
@@ -1962,7 +1962,7 @@ size = 24
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-destruct/Context.obj"
 symbol = "??1PatternSequence@@QAE@XZ"
 target_address = 0x00408270
@@ -1979,7 +1979,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-allocate/Context.obj"
 symbol = "?Allocate@PatternSequence@@QAEXH@Z"
 target_address = 0x004082d0
@@ -1996,7 +1996,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-vector-delete/Context.obj"
 symbol = "??_EPatternSequence@@QAEPAXI@Z"
 target_address = 0x00408200
@@ -2041,7 +2041,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#context-and-pattern-lifetime; complete origin
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-vector-destruct/Context.obj"
 symbol = "??_I@YGXPAXIHP6EX0@Z@Z"
 target_address = 0x004082a0
@@ -2051,7 +2051,7 @@ size = 48
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/Context.cpp"
-dependencies = ["src/Engine.h"]
+dependencies = ["src/Engine.h", "src/PatternReader.h"]
 object = "build/match-units/pattern-vector-construct/Context.obj"
 symbol = "??_H@YGXPAXIHP6EPAX0@Z@Z"
 target_address = 0x00408380
@@ -6164,3 +6164,490 @@ object = "build/match-units/audio-set-volume/AudioVolume.obj"
 symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
 target_address = 0x0040e5d0
 size = 81
+
+[units.reader-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-construct/PatternReader.obj"
+symbol = "??0PatternReader@@QAE@PBDH@Z"
+target_address = 0x00408330
+size = 40
+
+[[units.reader-construct.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?Reset@PatternReader@@QAEHXZ"
+target = 0x00405970
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-construct.relocations]]
+offset = 27
+type = "REL32"
+symbol = "?Open@PatternReader@@QAEHPBDH@Z"
+target = 0x004054b0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-destruct/PatternReader.obj"
+symbol = "??1PatternReader@@QAE@XZ"
+target_address = 0x00408360
+size = 19
+
+[[units.reader-destruct.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?Close@PatternReader@@QAEHXZ"
+target = 0x004055a0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-open]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-open/PatternReader.obj"
+symbol = "?Open@PatternReader@@QAEHPBDH@Z"
+target_address = 0x004054b0
+size = 235
+
+[[units.reader-open.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?Close@PatternReader@@QAEHXZ"
+target = 0x004055a0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-open.relocations]]
+offset = 194
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-close]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-close/PatternReader.obj"
+symbol = "?Close@PatternReader@@QAEHXZ"
+target_address = 0x004055a0
+size = 95
+
+[[units.reader-close.relocations]]
+offset = 25
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-close.relocations]]
+offset = 61
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-close.relocations]]
+offset = 82
+type = "REL32"
+symbol = "?Reset@PatternReader@@QAEHXZ"
+target = 0x00405970
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-read]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-read/PatternReader.obj"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target_address = 0x00405600
+size = 60
+
+[[units.reader-read.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-read.relocations]]
+offset = 47
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-read-line]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-read-line/PatternReader.obj"
+symbol = "?ReadLine@PatternReader@@QAEHPADH@Z"
+target_address = 0x00405640
+size = 182
+
+[[units.reader-read-line.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-read-line.relocations]]
+offset = 87
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-read-line.relocations]]
+offset = 152
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-read-line.relocations]]
+offset = 172
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-read-int]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-read-int/PatternReader.obj"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target_address = 0x00405700
+size = 30
+
+[[units.reader-read-int.relocations]]
+offset = 19
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-read-short]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-read-short/PatternReader.obj"
+symbol = "?ReadShort@PatternReader@@QAEFXZ"
+target_address = 0x00405720
+size = 31
+
+[[units.reader-read-short.relocations]]
+offset = 19
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-read-float]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-read-float/PatternReader.obj"
+symbol = "?ReadFloat@PatternReader@@QAEMXZ"
+target_address = 0x00405740
+size = 30
+
+[[units.reader-read-float.relocations]]
+offset = 19
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-write]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-write/PatternReader.obj"
+symbol = "?Write@PatternReader@@QAEHPBXH@Z"
+target_address = 0x00405760
+size = 60
+
+[[units.reader-write.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-write.relocations]]
+offset = 47
+type = "DIR32"
+symbol = "__imp__WriteFile@20"
+target = 0x00787040
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-write-int]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-write-int/PatternReader.obj"
+symbol = "?WriteInt@PatternReader@@QAEXH@Z"
+target_address = 0x004057a0
+size = 27
+
+[[units.reader-write-int.relocations]]
+offset = 17
+type = "REL32"
+symbol = "?Write@PatternReader@@QAEHPBXH@Z"
+target = 0x00405760
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-write-float]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-write-float/PatternReader.obj"
+symbol = "?WriteFloat@PatternReader@@QAEXM@Z"
+target_address = 0x004057c0
+size = 27
+
+[[units.reader-write-float.relocations]]
+offset = 17
+type = "REL32"
+symbol = "?Write@PatternReader@@QAEHPBXH@Z"
+target = 0x00405760
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-printf]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-printf/PatternReader.obj"
+symbol = "?Printf@PatternReader@@QAAHPBDZZ"
+target_address = 0x004057e0
+size = 110
+
+[[units.reader-printf.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-printf.relocations]]
+offset = 45
+type = "REL32"
+symbol = "_vsprintf"
+target = 0x0077856b
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-printf.relocations]]
+offset = 60
+type = "REL32"
+symbol = "_strlen"
+target = 0x007784e0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-printf.relocations]]
+offset = 79
+type = "REL32"
+symbol = "?Write@PatternReader@@QAEHPBXH@Z"
+target = 0x00405760
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-printf.relocations]]
+offset = 102
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-seek]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-seek/PatternReader.obj"
+symbol = "?Seek@PatternReader@@QAEKHH@Z"
+target_address = 0x00405850
+size = 105
+
+[[units.reader-seek.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-seek.relocations]]
+offset = 95
+type = "DIR32"
+symbol = "__imp__SetFilePointer@16"
+target = 0x00787050
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-seek-start]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-seek-start/PatternReader.obj"
+symbol = "?SeekStart@PatternReader@@QAEKXZ"
+target_address = 0x004058c0
+size = 45
+
+[[units.reader-seek-start.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-seek-start.relocations]]
+offset = 37
+type = "DIR32"
+symbol = "__imp__SetFilePointer@16"
+target = 0x00787050
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-seek-end]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-seek-end/PatternReader.obj"
+symbol = "?SeekEnd@PatternReader@@QAEKXZ"
+target_address = 0x004058f0
+size = 45
+
+[[units.reader-seek-end.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-seek-end.relocations]]
+offset = 37
+type = "DIR32"
+symbol = "__imp__SetFilePointer@16"
+target = 0x00787050
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-size]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-size/PatternReader.obj"
+symbol = "?Size@PatternReader@@QAEKXZ"
+target_address = 0x00405920
+size = 41
+
+[[units.reader-size.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target = 0x00405950
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-size.relocations]]
+offset = 33
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.reader-is-open]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-is-open/PatternReader.obj"
+symbol = "?IsOpen@PatternReader@@QAEHXZ"
+target_address = 0x00405950
+size = 28
+
+[units.reader-reset]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-reset/PatternReader.obj"
+symbol = "?Reset@PatternReader@@QAEHXZ"
+target_address = 0x00405970
+size = 35
+
+[units.reader-load-buffer]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/PatternReader.cpp"
+dependencies = ["src/PatternReader.h"]
+object = "build/match-units/reader-load-buffer/PatternReader.obj"
+symbol = "?LoadBuffer@PatternReader@@QAEPAEPBD@Z"
+target_address = 0x004059a0
+size = 125
+
+[[units.reader-load-buffer.relocations]]
+offset = 13
+type = "REL32"
+symbol = "?Close@PatternReader@@QAEHXZ"
+target = 0x004055a0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 27
+type = "REL32"
+symbol = "?Open@PatternReader@@QAEHPBDH@Z"
+target = 0x004054b0
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 43
+type = "REL32"
+symbol = "?Size@PatternReader@@QAEKXZ"
+target = 0x00405920
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 52
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 75
+type = "REL32"
+symbol = "?Size@PatternReader@@QAEKXZ"
+target = 0x00405920
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 93
+type = "REL32"
+symbol = "?Size@PatternReader@@QAEKXZ"
+target = 0x00405920
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[[units.reader-load-buffer.relocations]]
+offset = 109
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"

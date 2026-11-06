@@ -1,0 +1,914 @@
+{
+  "schema_version": 1,
+  "method": "selected complete-function comparison; two cold source/profile artifacts shared unchanged across 20 new reader functions and nine Context.cpp functions; all other source units untouched",
+  "authority": "complete native codegen under explicit reviewed original bindings; compiler-generated helpers remain auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 40,
+      "matched_bytes": 40,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4217200,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Reset@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 27,
+          "target": 4215984,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Open@PatternReader@@QAEHPBDH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2d1a04c94e8b1ac3481edf9380c6fdc798932503cdf2d58c735174acd0ec9688",
+      "target_extent_sha256": "2d1a04c94e8b1ac3481edf9380c6fdc798932503cdf2d58c735174acd0ec9688",
+      "unit": "reader-construct",
+      "symbol": "??0PatternReader@@QAE@PBDH@Z",
+      "target_address": "0x00408330",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0eff2dfbb39d0ee5f72c3ae75babb3ef01148f70ff049e44dbc32c3cebf31081",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4216224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b2842b199708054abd1b6fa5ae31a69a782de3ab683210acce5222129264b1bc",
+      "target_extent_sha256": "b2842b199708054abd1b6fa5ae31a69a782de3ab683210acce5222129264b1bc",
+      "unit": "reader-destruct",
+      "symbol": "??1PatternReader@@QAE@XZ",
+      "target_address": "0x00408360",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b93120d428c8afefa2a876e4a9c9c72062eac6c4b073c6e3f9162af5210c6ea0",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 235,
+      "matched_bytes": 235,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4216224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 194,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9d002c8e0822fde4989df77955a910104f6bb28a257be5da21e61c89aca88707",
+      "target_extent_sha256": "9d002c8e0822fde4989df77955a910104f6bb28a257be5da21e61c89aca88707",
+      "unit": "reader-open",
+      "symbol": "?Open@PatternReader@@QAEHPBDH@Z",
+      "target_address": "0x004054B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c42033f2abf6e953b2f0007b0253b9f6eef86b9fa586ba6d23b6fc9e61369d6e",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 95,
+      "matched_bytes": 95,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 25,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 61,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 4217200,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Reset@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "67296195fb6c420cbf3869573b3d1c1a397cba0290e1aebe7c74a1e10cd9ce71",
+      "target_extent_sha256": "67296195fb6c420cbf3869573b3d1c1a397cba0290e1aebe7c74a1e10cd9ce71",
+      "unit": "reader-close",
+      "symbol": "?Close@PatternReader@@QAEHXZ",
+      "target_address": "0x004055A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e5dbf5f9f0bf398ac2b98cf7f2475deef12dc5784ebec297228abd5f2156dde9",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 60,
+      "matched_bytes": 60,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 47,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5a12752cf1da9d409f631376e264fa4ceffac8079f6bdb680a41cd58f37394ab",
+      "target_extent_sha256": "5a12752cf1da9d409f631376e264fa4ceffac8079f6bdb680a41cd58f37394ab",
+      "unit": "reader-read",
+      "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+      "target_address": "0x00405600",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b37a17c8d9c00d88dc0193351daa11cdc02a7c2b2e3ddf304fbfbd7b2aa3b6ac",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 182,
+      "matched_bytes": 182,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 87,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 152,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 172,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2ac66a989458ad005d9d00acac7349735ec8216e6adf9ebe0e64ff2649078428",
+      "target_extent_sha256": "2ac66a989458ad005d9d00acac7349735ec8216e6adf9ebe0e64ff2649078428",
+      "unit": "reader-read-line",
+      "symbol": "?ReadLine@PatternReader@@QAEHPADH@Z",
+      "target_address": "0x00405640",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "81061784f8e194f26779df653ad15331ee43d07aa7bc77e94ab1cf7262748dd7",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 30,
+      "matched_bytes": 30,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 19,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b7e6a714d1d345c91956ab0cad5ace9e7e2b997ca7167a222628a51927bccaa9",
+      "target_extent_sha256": "b7e6a714d1d345c91956ab0cad5ace9e7e2b997ca7167a222628a51927bccaa9",
+      "unit": "reader-read-int",
+      "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+      "target_address": "0x00405700",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e262c1e40e382408fc4a7b830915b859a1f7d5cfb5a16fe213d82d9c53711de1",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 31,
+      "matched_bytes": 31,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 19,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "036a48c05e78a9317fb9f5ada63a48c276f248ffe887fd4084e33fb5077d0781",
+      "target_extent_sha256": "036a48c05e78a9317fb9f5ada63a48c276f248ffe887fd4084e33fb5077d0781",
+      "unit": "reader-read-short",
+      "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+      "target_address": "0x00405720",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9444a0d336e1d7784bcbe072f7b4272802bdb1675b9c039d5c64a208a25b582c",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 30,
+      "matched_bytes": 30,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 19,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "96bd22596a93fb1e25c88f3c5b6351d166d80d00e75aa2f03d2d76874b77f1ae",
+      "target_extent_sha256": "96bd22596a93fb1e25c88f3c5b6351d166d80d00e75aa2f03d2d76874b77f1ae",
+      "unit": "reader-read-float",
+      "symbol": "?ReadFloat@PatternReader@@QAEMXZ",
+      "target_address": "0x00405740",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5693bb10e163430c5a7a2cd248b066f6898867d6eb13e46d55214f9dbd7219db",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 60,
+      "matched_bytes": 60,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 47,
+          "target": 7893056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WriteFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "aa13c4d03bf796bb54191b7317bd34f77e552f1aa37962f32d31ac0f4d64fede",
+      "target_extent_sha256": "aa13c4d03bf796bb54191b7317bd34f77e552f1aa37962f32d31ac0f4d64fede",
+      "unit": "reader-write",
+      "symbol": "?Write@PatternReader@@QAEHPBXH@Z",
+      "target_address": "0x00405760",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f4fe7e10f40b8d272839ece74da8fc263b1e05b5f1b06f9ccbe0488159646e6d",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 27,
+      "matched_bytes": 27,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 17,
+          "target": 4216672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Write@PatternReader@@QAEHPBXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "832ad3c2f3d8377f1625710c654f712b4db259a078656bf581b9d1b9e893714e",
+      "target_extent_sha256": "832ad3c2f3d8377f1625710c654f712b4db259a078656bf581b9d1b9e893714e",
+      "unit": "reader-write-int",
+      "symbol": "?WriteInt@PatternReader@@QAEXH@Z",
+      "target_address": "0x004057A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "dbf709599a4c66084cb9f4bd7f15c01f0ce09fbe5dd17589a6cc8436abcaa99a",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 27,
+      "matched_bytes": 27,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 17,
+          "target": 4216672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Write@PatternReader@@QAEHPBXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8d7b7074e9c32672346b32c6b34e39c5fe911fcd0cb7633487d504e548912f0d",
+      "target_extent_sha256": "8d7b7074e9c32672346b32c6b34e39c5fe911fcd0cb7633487d504e548912f0d",
+      "unit": "reader-write-float",
+      "symbol": "?WriteFloat@PatternReader@@QAEXM@Z",
+      "target_address": "0x004057C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "330b20a4d69ae36779df639541c93cdfe7ba2a275906401fb10761869ca25f65",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 110,
+      "matched_bytes": 110,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 45,
+          "target": 7832939,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_vsprintf",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 60,
+          "target": 7832800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strlen",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 79,
+          "target": 4216672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Write@PatternReader@@QAEHPBXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0e3b75bdd6b7543dbfc6a9bdff5afee9eb3f03dfade53db9bdebbfffaac19253",
+      "target_extent_sha256": "0e3b75bdd6b7543dbfc6a9bdff5afee9eb3f03dfade53db9bdebbfffaac19253",
+      "unit": "reader-printf",
+      "symbol": "?Printf@PatternReader@@QAAHPBDZZ",
+      "target_address": "0x004057E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0928b80ff0151c93cebcdfdacf76a58da0a89cb56a48bf8138f70421c7904eb0",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 105,
+      "matched_bytes": 105,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 95,
+          "target": 7893072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__SetFilePointer@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fc6111c133c81eff3da5d2407e3c3096e4dfccf110edc7ee5281fc5d7ca0b1d8",
+      "target_extent_sha256": "fc6111c133c81eff3da5d2407e3c3096e4dfccf110edc7ee5281fc5d7ca0b1d8",
+      "unit": "reader-seek",
+      "symbol": "?Seek@PatternReader@@QAEKHH@Z",
+      "target_address": "0x00405850",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b3ff49102d00c7155dfcf671526ef9d2fd5c103a51ec9545acaa643e15e78dc0",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 45,
+      "matched_bytes": 45,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 37,
+          "target": 7893072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__SetFilePointer@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "82a0e09ce8a5e6d7da46c1a570a728bc6c24cd2113733cd6e074b3ae93b9b09c",
+      "target_extent_sha256": "82a0e09ce8a5e6d7da46c1a570a728bc6c24cd2113733cd6e074b3ae93b9b09c",
+      "unit": "reader-seek-start",
+      "symbol": "?SeekStart@PatternReader@@QAEKXZ",
+      "target_address": "0x004058C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2203acae81e3a472d6c82da4bd30d808bd7a58d6d21b023f2331cc3a1b53bdb9",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 45,
+      "matched_bytes": 45,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 37,
+          "target": 7893072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__SetFilePointer@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0e250d5ad7eea06cd6f840a7f45f1e3d5bdd027e7b3c7976909c50ee2edc5329",
+      "target_extent_sha256": "0e250d5ad7eea06cd6f840a7f45f1e3d5bdd027e7b3c7976909c50ee2edc5329",
+      "unit": "reader-seek-end",
+      "symbol": "?SeekEnd@PatternReader@@QAEKXZ",
+      "target_address": "0x004058F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ad9ccee049bc232df4e800b38ef28b8e7a36860eab9a0eb3bfa7236cdf1c9ac0",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 41,
+      "matched_bytes": 41,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4217168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 33,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6472aaf5968464b3ce276d23a1d68787850da44fa50b94ad517a2c895a506555",
+      "target_extent_sha256": "6472aaf5968464b3ce276d23a1d68787850da44fa50b94ad517a2c895a506555",
+      "unit": "reader-size",
+      "symbol": "?Size@PatternReader@@QAEKXZ",
+      "target_address": "0x00405920",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1e9727c38b31926408b25ceb3b7dde6f0ec481c6ca7befb9586c5512fb886508",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 28,
+      "matched_bytes": 28,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "6095fa75579c095f231c50b4770f7efe7717d2ec11e5692ec7322fa2bdd23fcf",
+      "target_extent_sha256": "6095fa75579c095f231c50b4770f7efe7717d2ec11e5692ec7322fa2bdd23fcf",
+      "unit": "reader-is-open",
+      "symbol": "?IsOpen@PatternReader@@QAEHXZ",
+      "target_address": "0x00405950",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0184252c0ef8c8272050c3b94679f19d72c0d9c1dfb73a2740af3d6df9cd1d11",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 35,
+      "matched_bytes": 35,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "394b01477843c0859520c17fdaffc8903c565fa904ced6b753391a4dc217f0d6",
+      "target_extent_sha256": "394b01477843c0859520c17fdaffc8903c565fa904ced6b753391a4dc217f0d6",
+      "unit": "reader-reset",
+      "symbol": "?Reset@PatternReader@@QAEHXZ",
+      "target_address": "0x00405970",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d90c884ee9169b25760e2473ca5de2bae27479e8f263d17629e6ebaab38c7f3b",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 125,
+      "matched_bytes": 125,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4216224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 27,
+          "target": 4215984,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Open@PatternReader@@QAEHPBDH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 43,
+          "target": 4217120,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Size@PatternReader@@QAEKXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 52,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 75,
+          "target": 4217120,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Size@PatternReader@@QAEKXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 93,
+          "target": 4217120,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Size@PatternReader@@QAEKXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 109,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "3e5be8f2d1d1895d7ecf3a986454dd8b59b9c618873ca7f5c6ed72e7b1cee9e1",
+      "target_extent_sha256": "3e5be8f2d1d1895d7ecf3a986454dd8b59b9c618873ca7f5c6ed72e7b1cee9e1",
+      "unit": "reader-load-buffer",
+      "symbol": "?LoadBuffer@PatternReader@@QAEPAEPBD@Z",
+      "target_address": "0x004059A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
+      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
+      "dependencies": {
+        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "672e209a60eb8a5d62f532ab66a43a32fe2c901a16f379a4e5679cefe0604f4e",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

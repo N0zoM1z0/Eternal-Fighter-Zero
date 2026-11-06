@@ -1,5 +1,6 @@
 // Complete context lifetime and pattern ownership reconstructed from original code.
 #include "Engine.h"
+#include "PatternReader.h"
 extern "C" unsigned char __cdecl ReadConfigByte(unsigned char);
 extern const char patternPath[];
 
@@ -67,15 +68,6 @@ void PatternSequence::Allocate(int size)
     count = size;
     if (size > 0) frames = new PatternFrame[size];
 }
-
-class PatternReader {
-    unsigned char unknown_0000[12];
-public:
-    PatternReader(const char *, int);
-    ~PatternReader();
-    int ReadInt();
-    void Read(void *, int);
-};
 
 void Context::Load()
 {
