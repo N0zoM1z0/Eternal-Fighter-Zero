@@ -8,7 +8,8 @@ The current checkpoints complete the preserved PatternReader and Audio owners,
 then DirectInput, Audio playback controls, Context input/audio transitions and
 the complete title scene with its shared base/fades and palette/frame wrappers,
 and substantial character-selection update/entry/resource functions plus the
-complete selection renderer and character creation dispatcher.
+complete selection renderer and character creation dispatcher, followed by the
+shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -21,11 +22,11 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 123 |
-| Authored exact instruction bytes | 71,964 |
+| Authored complete exact functions | 139 |
+| Authored exact instruction bytes | 77,120 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 161 / 161 |
-| Compiler-generated auxiliary helpers | 11 functions / 406 bytes |
+| Reviewed boundaries / origins | 178 / 178 |
+| Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
 
@@ -143,14 +144,14 @@ strict result is .analysis/exact/scene-select-render.json. See
 [rendering facts](KNOWLEDGE_BASE.md#character-selection-rendering). The pixel
 kernels and character construction remain explicit external calls.
 
-The latest checkpoint accepts Scene1::LoadCharacter at 0x7586B0: 3,399 complete
+Checkpoint 4d148b3 accepts Scene1::LoadCharacter at 0x7586B0: 3,399 complete
 instruction bytes plus all 96 switch-table bytes, ending at 0x759457. The first
 complete source and final integrated source are strict exact. All 97 relocations,
 including 25 original local-offset bindings, were independently reviewed. The
 24 allocation cases actually use 23 constructors: IDs 10 and 22 share 0x461090
 and size 0x3460. CharacterViews.h records observed extents and external direct
-constructor declarations; no constructor body, virtual layout or original class
-name is claimed. Separate complete-boundary/common-base/argument/allocation
+constructor declarations. The following shared-base checkpoint adds observed
+virtual overrides, while child constructor bodies and original class names remain open. Separate complete-boundary/common-base/argument/allocation
 reviews add 23 reviewed constructor rows only, with no implementation credit.
 
 The nine Scene1 contributions now total 26,899 instruction bytes and 116 local
@@ -165,6 +166,35 @@ identity refreshes. Public proof is character-create-exact.json; private final
 replay is .analysis/exact/character-create-and-affected.json. See
 [creation facts](KNOWLEDGE_BASE.md#character-creation-dispatch) and the separate
 [external constructor review](KNOWLEDGE_BASE.md#character-constructor-allocation-review).
+
+The latest checkpoint accepts sixteen authored shared-character/statistics
+functions for 5,156 instruction bytes, plus a 106-byte generated sequence-delete
+helper with auxiliary credit only. Secondary construction/destruction, embedded
+input/sequence lifetime, ResetPose/ResetFrame/InitializeState, all four local
+effect-pool methods, LoadResources and statistics Read/Write are complete strict
+exact. All seventeen extents and 117 relocation operands were independently
+reviewed. Source is SecondaryLifetime.cpp, SecondaryState.cpp,
+SecondaryResources.cpp and CharacterStatistics.cpp. Natural thirteen-slot
+virtual declarations produce the base table writes; no manual vptr stores,
+packing or fake front gap are used. The provisional base view extends to 3138,
+including eight statistics words at 3118. Both base arrays contain 505 elements,
+correcting the earlier 501-element note. The original statistics file contains
+nine words, including a reserved zero word. Failure/unchecked paths are retained.
+
+Twenty-eight cold artifacts cover 17 new and 105 existing shared-header-dependent
+units: all 122 complete comparisons are strict exact. Four dispatchers retain
+all 75 original local offsets/destinations after compiler-local identity refresh.
+Standalone Input, reader and Config are unaffected and omitted. Public new proofs
+are secondary-lifetime-exact.json, secondary-state-exact.json,
+secondary-resources-exact.json and character-statistics-exact.json; affected
+proofs were refreshed. Private replay is
+.analysis/exact/secondary-base-and-affected.json and complete trial/review evidence
+is .analysis/probes/secondary-base/. See
+[the shared-character facts](KNOWLEDGE_BASE.md#shared-character-base).
+The final trailing-blank-line cleanup in CharacterStatistics.cpp was followed by
+one selected cold artifact and both complete statistics comparisons (268/357
+bytes), again strict exact; final source hashes and proofs were refreshed.
+Private cleanup replay is .analysis/exact/character-statistics-eof.json.
 
 Important retained limits:
 
@@ -259,29 +289,24 @@ The reader/audio/Input backlog, Context input/audio transitions and the title
 scene/shared fade owner are complete at function-codegen level. Their successful
 units do not complete the game. The base now has three reviewed virtual slots,
 so subsequent scene work can use that shape while keeping per-owner fields and
-ABI provisional. The nine Scene1 contributions, including the full creation
-switch/table, are now exact. Continue into the coherent Secondary/character
-base owner: constructor 0x40EAE0 (463-byte candidate), destructor 0x40ECB0 (313),
-virtual slot 0 at 0x40F110 (84), embedded-state constructor 0x412840 (39), and
-8-byte array-element constructors 0x408310/0x412820 (24 each). Target-attested local
-decompiles for all six are retained under .analysis/ghidra/. Base construction
-allocates two 501-element arrays and calls the embedded constructor at this+2BC0.
-It stores the opponent slot at 78 before that call, suggesting a member
-initializer before automatic embedded-member construction; owners at 7C..88 are
-stored afterward. Test that natural source order early. The destructor
-releases surfaces/audio/arrays. Ghidra's ATL/stringdispid names on array cleanup
-are provisional compiler folding, not proof of original source types.
+ABI provisional. The nine Scene1 contributions, including the full creation switch/table,
+are exact. The coherent shared Secondary base is now substantially recovered:
+lifetime, state initialization, local effect management, resource reuse and
+statistics are accepted. Continue into its three resource loaders: LoadImages
+0x411080, LoadSounds 0x4116A0 and LoadPatterns 0x411AE0. Review complete target
+boundaries and build the first complete source early. The new base model also
+supports subsequent child constructor work without inventing vptr stores.
 
-The original base table at 0x787BCC has thirteen entries: 0x40F110, eight purecall
-0x77893D destinations, then 0x412B10/0x412E60/0x410B70/0x40EDF0. Review full virtual
-bodies and actual callsites/argument widths before source declarations and
-natural constructor/destructor vptr emission. Do not fabricate signatures, add
-manual vptr stores or assume the current nonvirtual partial data view is a full
-original class model. Keep code, class-layout and linked-vtable acceptance separate.
-The 23 called character constructors now have reviewed boundary/origin rows and
-original allocation/resource/common-base evidence, but all remain unimplemented.
-Private evidence is .analysis/probes/character-create/ and the per-constructor
-raw disassembly there. Do not turn reviewed declarations into exact-function credit.
+The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
+Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the
+no-stack-argument/unused-result source view are provisional. Separate interface
+review from body recovery and linked-data placement; no child override body is
+accepted by these declarations. All 23 called character constructors still have
+reviewed boundary/origin rows but remain unimplemented. Their allocation and
+common-base evidence is .analysis/probes/character-create/. Do not count reviewed
+declarations as exact functions. Two 505-element arrays at base offsets 10/164,
+embedded InputHistory at 2BC0, the 64-record local pool at 4D0 and statistics at
+3118 are target-backed. Keep unobserved bytes and original failure behavior.
 
 The selection renderer's full evidence remains in .analysis/probes/scene-render/;
 all 489 Ghidra-omitted instruction bytes are accepted in its complete 12,720-byte

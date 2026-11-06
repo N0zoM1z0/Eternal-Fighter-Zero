@@ -71,17 +71,209 @@ public:
     void SetSoundVolume(unsigned short, int);
     void Shutdown();
 };
-class Secondary {
-    unsigned char unknown_0000[0x8d];
+class Context;
+class PatternSequence;
+struct SecondaryEffectSpawn;
+class SecondarySequence {
 public:
+    unsigned char count;
+    unsigned char unknown_0001[3];
+    unsigned char *data;
+    SecondarySequence();
+    ~SecondarySequence();
+};
+class SecondaryInputHistory {
+public:
+    unsigned char pending;
+    unsigned char unknown_0001;
+    unsigned char held;
+    unsigned char unknown_0003[0x4f1];
+    short position;
+    unsigned char unknown_04f6[2];
+    SecondaryInputHistory();
+    void FinishSample();
+};
+struct SecondaryEffectSlot {
+    unsigned short type, frame, tick;
+    unsigned char unknown_0006[0x12];
+    double x, y, vx, vy, ax, ay;
+    char flag0048;
+    unsigned char unknown_0049[3];
+    int facing;
+    char group;
+    unsigned char layer;
+    unsigned char unknown_0052[2];
+    int payload, field0058;
+    SurfaceRect bounds;
+    unsigned char palette;
+    unsigned char unknown_006d[3];
+    double field0070, field0078;
+    int field0080;
+    short field0084, field0086;
+    int field0088, field008c;
+    unsigned char unknown_0090[8];
+};
+struct SecondaryEffectSpawn {
+    int owner;
+    unsigned short type;
+    unsigned char unknown_0006[2];
+    double x, y;
+    char flag0018;
+    unsigned char unknown_0019[3];
+    int facing;
+    char group;
+    unsigned char layer;
+    unsigned char unknown_0022[2];
+    int payload, field0028;
+    unsigned char palette;
+    unsigned char unknown_002d[3];
+    int field0030;
+    SurfaceRect bounds;
+};
+class CharacterStatistics {
+public:
+    int values[8];
+    void Read(const char *);
+    void Write(const char *);
+};
+class Secondary {
+public:
+    virtual void ResetPose();
+    virtual void Slot01() = 0;
+    virtual void Slot02() = 0;
+    virtual void Slot03() = 0;
+    virtual void Slot04() = 0;
+    virtual void Slot05() = 0;
+    virtual void Slot06() = 0;
+    virtual void Slot07() = 0;
+    virtual void Slot08() = 0;
+    virtual void EmitLocalEffect(SecondaryEffectSpawn *);
+    virtual void RemoveLocalEffect(short);
+    virtual void LoadResources();
+    virtual void InitializeState();
+public:
+    short field0008;
+    short field000a;
+    short field000c;
+    unsigned char unknown_000e[0x2];
+    PatternSequence * patterns;
+    IUnknown ** surfaces;
+    unsigned short surfaceCount;
+    unsigned char unknown_001a[0x6];
+    double field0020;
+    double field0028;
+    double field0030, field0038, field0040, field0048;
+    char facing;
+    unsigned char unknown_0051[0x7];
+    char field0058;
+    unsigned char unknown_0059[0x7];
+    int field0060;
+    unsigned char unknown_0064[0x14];
+    Secondary ** opponentSlot;
+    Context * contextOwner;
+    Video * videoOwner;
+    Input * inputOwner;
+    Audio * audioOwner;
+    char player;
     char characterId;
     char paletteIndex;
-private:
-    unsigned char unknown_008f[5];
-public:
+    unsigned char unknown_008f[0x5];
     char resourceName[16];
     int cpuControlled;
+    unsigned char unknown_00a8[0x4];
+    char field00ac;
+    unsigned char unknown_00ad[0x3];
+    double field00b0;
+    double field00b8;
+    unsigned char unknown_00c0[0x10];
+    int field00d0;
+    unsigned char unknown_00d4[0x20];
+    short field00f4;
+    unsigned char unknown_00f6[0x2];
+    double field00f8;
+    unsigned char unknown_0100[0x4];
+    short field0104;
+    unsigned char unknown_0106[0x2];
+    int field0108;
+    int field010c;
+    int field0110;
+    unsigned char unknown_0114[0x4];
+    double field0118;
+    char field0120;
+    unsigned char unknown_0121[0x13];
+    int field0134;
+    short field0138;
+    short field013a;
+    short field013c;
+    short field013e;
+    short field0140;
+    unsigned char unknown_0142[0x6];
+    short field0148;
+    short field014a;
+    short field014c;
+    short field014e;
+    int field0150;
+    unsigned char unknown_0154[0x4];
+    char field0158;
+    char field0159;
+    char field015a;
+    unsigned char unknown_015b[0x1];
+    int field015c;
+    int field0160;
+    SecondarySequence * sequences;
+    int field0168;
+    unsigned char unknown_016c[0x4];
+    int field0170;
+    short field0174;
+    unsigned char unknown_0176[0x2];
+    double field0178;
+    double field0180;
+    unsigned char unknown_0188[0x20];
+    char field01a8;
+    char field01a9;
+    unsigned char unknown_01aa[0x1];
+    unsigned char history[180];
+    unsigned char unknown_025f[0x1];
+    short field0260;
+    short field0262;
+    unsigned short soundSlots[50];
+    char field02c8;
+    char field02c9;
+    short effectWrite;
+    short effectRead;
+    unsigned char unknown_02ce[0x2];
+    int effectOwner[64];
+    int effectActive[64];
+    SecondaryEffectSlot effects[64];
+    unsigned char unknown_2ad0[0xf0];
+    SecondaryInputHistory inputHistory;
+    unsigned char unknown_30b8[0x4];
+    int field30bc;
+    unsigned char unknown_30c0[0x4];
+    int field30c4;
+    int field30c8;
+    int field30cc;
+    int field30d0;
+    int field30d4;
+    int field30d8;
+    int field30dc;
+    unsigned char unknown_30e0[0x8];
+    int field30e8;
+    short field30ec;
+    unsigned char unknown_30ee[0x2];
+    int field30f0;
+    unsigned char unknown_30f4[0x1];
+    char commands[20];
+    unsigned char unknown_3109[0xf];
+    CharacterStatistics statistics;
+    Secondary(Secondary **, Context *, Video *, Input *, Audio *, char);
     ~Secondary();
+    void ResetFrame();
+    void ClearLocalEffects();
+    void AdvanceEffectWrite();
+    void LoadImages();
+    void LoadSounds();
+    void LoadPatterns();
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {
@@ -167,7 +359,10 @@ private:
 public:
     unsigned char colorKey;
 private:
-    unsigned char unknown_0f35[0x403];
+public:
+    unsigned char characterPalette[1024];
+private:
+    unsigned char unknown_1335[3];
 public:
     int alternateStyle[2];
 private:

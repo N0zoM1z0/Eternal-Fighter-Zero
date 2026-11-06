@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 28 cold source/profile/dependency artifacts shared unchanged across 17 new shared-character/statistics units and 105 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 268,
+      "matched_bytes": 268,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 25,
+          "target": 7893904,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsWritePrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 34,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 58,
+          "target": 7893912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsWriteSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 67,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7893916,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsWriteExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 240,
+          "target": 7893056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WriteFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 250,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fbf9cde0a996efa71b91748b2348db5b95e3ecaa8e48916028e17e87a80fc3fb",
+      "target_extent_sha256": "fbf9cde0a996efa71b91748b2348db5b95e3ecaa8e48916028e17e87a80fc3fb",
+      "unit": "character-statistics-write",
+      "symbol": "?Write@CharacterStatistics@@QAEXPBD@Z",
+      "target_address": "0x00405BE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
+      "object_sha256": "2741c9557bea781068653e926fec91933991e7f8691e373aa94a60f518d61fe5",
+      "source_sha256": "60193791d1f05b51deda8be43f1d86cf61fb85198b4b35842ef6d35f84c602ad",
+      "dependencies": {
+        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "67e948111fbba29cc5869ea77cddb26fd6c3c88b8c8acfa2156e44aae2b7c737",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 357,
+      "matched_bytes": 357,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 25,
+          "target": 7893924,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsReadPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 34,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 58,
+          "target": 7893932,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsReadSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 67,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 83,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7893936,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?statisticsReadExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 210,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 231,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 339,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 347,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2d3e7ece18d5329db3589c9c64b6f14fce5893d5c70837237fe76c325847ce9a",
+      "target_extent_sha256": "2d3e7ece18d5329db3589c9c64b6f14fce5893d5c70837237fe76c325847ce9a",
+      "unit": "character-statistics-read",
+      "symbol": "?Read@CharacterStatistics@@QAEXPBD@Z",
+      "target_address": "0x00405CF0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
+      "object_sha256": "2741c9557bea781068653e926fec91933991e7f8691e373aa94a60f518d61fe5",
+      "source_sha256": "60193791d1f05b51deda8be43f1d86cf61fb85198b4b35842ef6d35f84c602ad",
+      "dependencies": {
+        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f1a6df3bcf888623fca4218ba4fe78b2788e6da94f91defe35a1ed3cff26c181",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

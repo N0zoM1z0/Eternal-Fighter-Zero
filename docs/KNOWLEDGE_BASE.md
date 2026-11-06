@@ -1560,28 +1560,136 @@ separate Character22 declaration because that case reuses Character10.
 | 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
 
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
-additional 501-element arrays or initialize different state/resource fields;
+additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's
 constructor by ID 22 is target evidence, not a guessed extra subclass or name.
 The canonical original resource literals and every constructor's raw disassembly
 are retained privately with the independent boundary/allocation review.
 
-The common base constructor candidate 0x40EAE0 is 463 bytes and lifetime body
-0x40ECB0 is 313 bytes. Their local target-attested decompiles are retained, not
-accepted C++ source. The base vtable at 0x787BCC has thirteen observed entries:
-0x40F110, eight 0x77893D purecall entries, then 0x412B10, 0x412E60, 0x410B70 and
-0x40EDF0. Full virtual signatures and source declarations need caller/body review
-before implementing constructor vptr writes naturally. Do not use fabricated
-ABI declarations or manually assign a vptr to bypass that work. The existing
-minimum Secondary view does not model those virtual methods or imply their
-absence from the original class.
+The common base constructor at 0x40EAE0, destructor at 0x40ECB0 and the
+thirteen-slot table at 0x787BCC were investigated as the next coherent owner.
+They are now recovered with natural virtual/member construction in the
+[shared-character checkpoint](#shared-character-base). The earlier 501-element
+array note was incorrect: both the base and the reviewed extra child allocations
+use count 0x1F9 (505), with 0xFCC allocation bytes including the array cookie.
+The 23 child constructor bodies above remain unimplemented.
 
-The original base constructor stores the opponent slot at 78 before calling the
-embedded constructor on this+2BC0, then stores Context/Video/Input/Audio at
-7C/80/84/88 and the player byte at 8C. This ordering suggests a pointer member
-initializer followed by automatic embedded-member construction before the body;
-recheck that ordinary C++ model with the first full native build. The embedded
-constructor writes a short at offset 4F4 and bytes at 0/2, while both distinct
-8-byte array-element constructor bodies clear only their dword at +4 and return
-this. Virtual slot zero at 0x40F110 resets shorts at A/C, a double at B8 and ints
-at 168/170, then calls 0x412910. These target facts are not implementation credit.
+## Shared character base
+
+Canonical target: resources/EFZ.exe, SHA-256
+3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481.
+This checkpoint accepts sixteen authored functions for 5,156 complete instruction
+bytes, plus a separate 106-byte compiler-generated vector-deleting destructor.
+All seventeen original extents were independently decoded through their final
+RET, with contiguous instruction coverage and internal direct-branch targets.
+All 117 new relocation operands were independently decoded and explicitly bound.
+There are no local-table bytes or compiler-local bindings in the new functions.
+
+| Original | Complete bytes | Recovered contribution |
+| --- | ---: | --- |
+| 0x40EAE0 | 463 | Secondary construction |
+| 0x40ECB0 | 313 | Secondary destruction |
+| 0x412820 | 24 | SecondarySequence construction |
+| 0x4128E0 | 43 | SecondarySequence destruction |
+| 0x412870 | 106 | Generated sequence vector-deleting destructor, auxiliary |
+| 0x412840 | 39 | SecondaryInputHistory construction |
+| 0x412910 | 32 | Input-history sample completion |
+| 0x40F110 | 84 | ResetPose, virtual slot 0 |
+| 0x40F1E0 | 74 | ResetFrame |
+| 0x40EDF0 | 795 | InitializeState, virtual slot 12 |
+| 0x412B10 | 846 | EmitLocalEffect, virtual slot 9 |
+| 0x412E60 | 167 | RemoveLocalEffect, virtual slot 10 |
+| 0x412F10 | 292 | AdvanceEffectWrite |
+| 0x413040 | 73 | ClearLocalEffects |
+| 0x410B70 | 1,286 | LoadResources, virtual slot 11 |
+| 0x405BE0 | 268 | CharacterStatistics::Write |
+| 0x405CF0 | 357 | CharacterStatistics::Read |
+
+The base table at 0x787BCC contains ResetPose, eight purecall entries at
+0x77893D, EmitLocalEffect, RemoveLocalEffect, LoadResources and InitializeState,
+in that order. The source uses ordinary virtual declarations and no virtual
+destructor; normal C++ construction/destruction emits the observed table writes.
+EmitLocalEffect takes a spawn pointer, RemoveLocalEffect takes a signed short,
+and the other recovered virtual members have no stack arguments. Reviewed
+calls of provisional slots 1..8 and sampled complete child bodies support a
+no-stack-argument, unused-result interface. Their numerical names and void
+source view remain provisional, without claiming unique original declarations.
+All 23 child tables were read to declare the observed override sets in
+CharacterViews.h and keep the children concrete. A native COFF table inspection
+confirms the same thirteen source slots. This is structural evidence, with no
+linked-vtable/data placement acceptance or child-body credit.
+
+The current Secondary data view extends through 0x3138. VC7.1 naturally places
+its first short at offset 8 when the class has eight-byte alignment and a vptr;
+adding an explicit four-byte field after the vptr was an incorrect first trial.
+No artificial front gap, packing pragma or explicit vptr store is used.
+The opponent-slot member initializer writes offset 78 before the automatic
+embedded InputHistory constructor at this+2BC0; Context/Video/Input/Audio stores
+at 7C/80/84/88 occur in the constructor body afterward. Player, character ID and
+palette are bytes 8C/8D/8E. The resource-name view occupies 94..A4 and the CPU
+flag is an int at A4; original unique buffer capacity remains unproved.
+
+Construction fills fifty ushort sound slots at 264 with sentinel 150 and twenty
+command bytes at 30F5 with -1. The two arrays at 10 and 164 each hold 505
+eight-byte records: allocation 0xFCC, count 0x1F9 and four-byte cookie.
+The first uses the already accepted PatternSequence constructor at 0x408310;
+that function receives no duplicate credit. The second uses SecondarySequence,
+whose constructor clears only the pointer at +4 and whose destructor conditionally
+deletes that byte array. Compiler folding explains common iterator/cleanup
+bodies; Ghidra's ATL/string-dispatch names do not establish semantic origins.
+Destruction releases surface indices 0 through surfaceCount inclusive, deletes
+the pointer array, releases non-150 sounds and deletes both record arrays.
+
+InputHistory occupies 0x4F8 bytes at 2BC0. Its constructor initializes byte 0,
+byte 2 and short 4F4; FinishSample assigns held = pending * 3 and clears pending.
+ResetPose clears shorts A/C, double B8 and ints 168/170 before finishing a sample.
+ResetFrame clears five doubles. InitializeState recovers the full original
+scalar sequence, spawn x = player * 160 + 240, y = 0, facing = 1 - player * 2,
+the 180-byte history clear, local-effect reset and embedded input reset.
+Unobserved state remains explicit unknown data; no speculative initialization
+or guards were added.
+
+The local effect owner has 64 int owner entries at 2D0, 64 active entries at
+3D0, and 64 records at 4D0, each 0x98 bytes, ending at 2AD0. Signed short
+write/read indices are 2CA/2CC. The 0x48-byte spawn record carries owner/type,
+position, flags, facing, grouping, palette, payload and bounds. Emit copies the
+original fields in order and zeroes frame, tick, velocities and other observed
+record state. Advance wraps at 64, handles read-index collisions, skips inactive
+read entries and searches nonzero owners for at most 63 iterations. Remove and
+Clear preserve the original active/owner updates. Complete comparisons include
+all ring traversal and signed-index paths without added bounds checks.
+
+LoadResources initially calls external LoadImages 0x411080, LoadSounds 0x4116A0
+and LoadPatterns 0x411AE0, then sets field30E8. Reuse follows the original
+constant DAT/BMP alternatives, paletteIndex+1 digit suffix and alternate-style
+fallbacks. The BMP alternative really calls LoadPalette on its first path,
+then LoadBitmapPalette for its fallback; that oddity is preserved. Ten distinct
+original resource strings at 0x787B14/18/20/24/2C/30/38/3C/44/50 are explicitly
+bound. Context exposes the 1024-byte palette at F35 inside its existing storage,
+without changing subsequent offsets. The virtual InitializeState call precedes
+statistics handling. Only non-CPU players increment the first counter: modes
+0/2 require flag1358 == 1, while modes 1/3/4 take the other original path.
+The three resource-loader callees remain external and unimplemented.
+
+The statistics object is eight ints at 3118..3138. Caller ECX values establish
+member methods rather than the global-function hypothesis suggested by the
+initial decompile. Write serializes nine ints (36 bytes), including a reserved
+zero ninth word. Read clears the eight object words and copies the first eight
+local record words after ReadFile. It passes GetFileSize's unchecked result to
+ReadFile into the nine-word local buffer and closes the handle even after an
+invalid open, retaining the original short-read/oversize/failure behavior.
+Separate six string operands at 0x787390/398/39C/3A4/3AC/3B0 are explicitly bound.
+Normal nested local scopes recover VC7.1's original stack allocation; complete
+comparisons after the scope change are retained, without unused padding locals.
+
+The final replay cold builds 28 distinct source/profile/dependency artifacts,
+then compares 17 new and 105 shared-header-dependent existing units: all 122
+complete comparisons are strict exact. The four existing dispatchers retain
+all 75 local-offset checks and original destinations after compiler-local
+symbol identity refreshes. Standalone Input, reader and Config are unaffected
+and omitted. Public proofs are secondary-lifetime-exact.json,
+secondary-state-exact.json, secondary-resources-exact.json and
+character-statistics-exact.json, with involved owner proofs refreshed.
+Private evidence, rejected trials, full disassembly and independent boundary,
+operand and virtual-table reviews remain under .analysis/probes/secondary-base/;
+the final replay is .analysis/exact/secondary-base-and-affected.json.
