@@ -4689,3 +4689,84 @@ Local effects54FD30/29568 instruction bytes remains open with associated tables
 unreviewed. Its fresh annotated decompile is retained privately; it confers no
 acceptance. Linked resources/data, original TU partitioning, runtime and game
 reconstruction remain independently open.
+
+## Mishio local effect dispatch and controls
+
+Character15::Slot07 at 0x54FD30 is complete strict exact in
+`src/Character15Effects.cpp`: 29,568 instruction bytes plus 308 associated table
+bytes, total contribution 29,876. Public proof:
+`docs/evidence/mishio-effects-exact.json`; explicit recipe:
+character-15-update-local-effects, pinned vc71-od-static.
+
+Code ends5570B0. The 52-destination address table occupies5570B0..55717F
+(208 bytes), followed by the100-byte selector557180..5571E3 for effect types
+400..499. Twelve CC alignment bytes precede next function5571F0 and are
+excluded. All51 explicit types and49 default selectors were independently
+checked; every destination is an instruction start. A normal C++ switch emits
+both complete tables without original bytes in source. Original slot07 operand
+788784 contains54FD30.
+
+Complete review covers6,781 contiguous instructions,477 direct internal
+branches, one indirect switch and79 virtual calls. All279 relocation fields
+have explicit reviewed symbols, canonical destinations and evidence:95 direct
+calls,130 typed floating operands and54 compiler-local bindings. All34 distinct
+double payloads agree independently in target and native COFF. All20 RandomRange
+callers zero-extend AX. The16 real rand calls retain original sample and
+coefficient order; equal distributions would not establish exact codegen.
+
+The freeze guard exits while the opponent's014c is positive. Otherwise, the
+64-slot circular queue advances from effectRead to effectWrite, preserving
+activity, palette and own-hit-stop gates. Each active slot reads its actual
+pattern duration/count and resets one reused72-byte EffectSpawn. Natural locals
+recover frame1C8, index EBP-4, receiver EBP-5C, descriptor EBP-50 and
+frameDuration/frameCount EBP-54/-58, with saved EBX/ESI. The final epilogue is
+six bytes. Shared helpers and public layout declarations remain unchanged.
+
+Type400's positive hit/frame<49 branch resets frame49/tick0 and clears3148
+before exiting the dispatch. Effects403..407 and412..416 retain original
+character-state and frame6/26 cancellation guards. Type417 has two original
+identical negative state/frame guards, each capable of writing its cancellation
+state and directly exiting; do not collapse the duplicate source conditions.
+The physical code order places type414 before413, despite numeric/decompiler
+order. Reordering the source cases to that independently reviewed order preserves
+VC7.1's original register allocation and complete table destinations.
+
+Types422..428 and433/434 handle positive predicted-ground contact before normal
+work. Their grounded flag/frame cancellation also exits directly; later rollback
+and repeat counters retain their own original limits. Types437/438/444/445 use
+the original invalid-state removal exit and x coordinate evaluation:
+`double(int(field0020)) + (effects[i].vx + 20.0) * facing`.
+The integer conversion precedes the effect velocity and orientation terms.
+Type443 repeats only while3174[i]<10; exact immediates matter independently
+of similar-looking branch shapes.
+
+Type496 emits its original particle sequence when the character leaves the
+specified83..86 states or advances past the frame1 guards for83/84. Integer
+coordinates subtract positive facing products in the target order. Types497/498
+retain all original rand draws, velocity coefficients, bounce conditions and
+lifetime counters. Negative lifetime removal exits directly before normal tick
+work. Fifteen original exits branch directly to queue advancement; routing via
+a case-local final jump changes instruction operands despite equal function size.
+
+The first complete native contribution had29,888 bytes; common word updates,
+unsigned random returns and operand normalization produced29,857. Restored
+positive cancellation/landing owners and original rand terms recovered the full
+29,876 size. Canonical source case order and exact3174 thresholds then reduced
+the raw mismatch to32 bytes. Unmodified complete comparison caught the remaining
+direct-exit destinations and type443 immediate, which branch-normalized diagnostic
+cases could conceal. Final source and both complete tables have zero differences;
+formatting received another complete comparison and independent operand review.
+
+One final selected cold native replay passed all29,876 bytes and279 reviewed
+bindings. Public headers and all306 prior recipes/source owners remain unchanged,
+so no old unit required replay. Focused tracking, ledger/progress CI and whitespace
+checks passed; no full CI/cohort or runtime matrix ran. No native compiler/Wine
+failure occurred in this effect checkpoint. All target evidence, source/object
+attempts, compiler exits and independent reviews remain in
+`.analysis/probes/mishio-effects/`; its one-time derivation scripts must not
+be rerun over accepted/newer source.
+
+All13 original Mishio vtable788768 destinations now have complete exact recipes,
+including inherited LoadResources410B70. The constructor is additional to this
+virtual-entry inventory. This closes only these entry-code proofs; linked
+resources/data, original TU partitioning, runtime and game remain open.

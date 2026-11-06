@@ -1,0 +1,5680 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
+  "method": "one selected final cold pinned VC7.1 static /Od artifact; existing source and public headers unchanged",
+  "boundary_review": {
+    "address": "0x54fd30",
+    "code_size": 29568,
+    "exclusive_code_end": "0x5570b0",
+    "size": 29876,
+    "exclusive_end": "0x5571e4",
+    "instructions": 6781,
+    "branches": [
+      {
+        "address": "0x54fd4f",
+        "target": "0x54fd56"
+      },
+      {
+        "address": "0x54fd51",
+        "target": "0x5570aa"
+      },
+      {
+        "address": "0x54fd78",
+        "target": "0x5570aa"
+      },
+      {
+        "address": "0x54fd8c",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54fda8",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54fdba",
+        "target": "0x54fde8"
+      },
+      {
+        "address": "0x54fdc8",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54fde2",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54fe7b",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54fea0",
+        "target": "0x54feee"
+      },
+      {
+        "address": "0x54ff02",
+        "target": "0x54ff5b"
+      },
+      {
+        "address": "0x54ff1b",
+        "target": "0x54ff5b"
+      },
+      {
+        "address": "0x54ff56",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x54ff72",
+        "target": "0x54ffd9"
+      },
+      {
+        "address": "0x54ffbe",
+        "target": "0x54ffd9"
+      },
+      {
+        "address": "0x54fff7",
+        "target": "0x550019"
+      },
+      {
+        "address": "0x550017",
+        "target": "0x550036"
+      },
+      {
+        "address": "0x55007c",
+        "target": "0x550189"
+      },
+      {
+        "address": "0x5500f2",
+        "target": "0x550137"
+      },
+      {
+        "address": "0x550102",
+        "target": "0x550137"
+      },
+      {
+        "address": "0x55014e",
+        "target": "0x55015d"
+      },
+      {
+        "address": "0x550177",
+        "target": "0x550189"
+      },
+      {
+        "address": "0x550189",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55019c",
+        "target": "0x5501ea"
+      },
+      {
+        "address": "0x550201",
+        "target": "0x550268"
+      },
+      {
+        "address": "0x55024d",
+        "target": "0x550268"
+      },
+      {
+        "address": "0x55027c",
+        "target": "0x550309"
+      },
+      {
+        "address": "0x550299",
+        "target": "0x550309"
+      },
+      {
+        "address": "0x5502ce",
+        "target": "0x550309"
+      },
+      {
+        "address": "0x550327",
+        "target": "0x550349"
+      },
+      {
+        "address": "0x550347",
+        "target": "0x550366"
+      },
+      {
+        "address": "0x5503ac",
+        "target": "0x5504da"
+      },
+      {
+        "address": "0x550402",
+        "target": "0x55042c"
+      },
+      {
+        "address": "0x550443",
+        "target": "0x550488"
+      },
+      {
+        "address": "0x550453",
+        "target": "0x550488"
+      },
+      {
+        "address": "0x55049f",
+        "target": "0x5504ae"
+      },
+      {
+        "address": "0x5504c8",
+        "target": "0x5504da"
+      },
+      {
+        "address": "0x5504da",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5504ed",
+        "target": "0x55053b"
+      },
+      {
+        "address": "0x55057b",
+        "target": "0x55059a"
+      },
+      {
+        "address": "0x5505b8",
+        "target": "0x5505da"
+      },
+      {
+        "address": "0x5505d8",
+        "target": "0x5505f7"
+      },
+      {
+        "address": "0x55063d",
+        "target": "0x5506ef"
+      },
+      {
+        "address": "0x550693",
+        "target": "0x5506bd"
+      },
+      {
+        "address": "0x5506d7",
+        "target": "0x5506ef"
+      },
+      {
+        "address": "0x5506ef",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55070b",
+        "target": "0x55073f"
+      },
+      {
+        "address": "0x55074b",
+        "target": "0x55075c"
+      },
+      {
+        "address": "0x55075a",
+        "target": "0x550777"
+      },
+      {
+        "address": "0x550769",
+        "target": "0x5507c1"
+      },
+      {
+        "address": "0x550775",
+        "target": "0x5507c1"
+      },
+      {
+        "address": "0x55078e",
+        "target": "0x5507c1"
+      },
+      {
+        "address": "0x5507bc",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550807",
+        "target": "0x550892"
+      },
+      {
+        "address": "0x550880",
+        "target": "0x550892"
+      },
+      {
+        "address": "0x550892",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5508ae",
+        "target": "0x5508e2"
+      },
+      {
+        "address": "0x5508ef",
+        "target": "0x55090e"
+      },
+      {
+        "address": "0x5508fd",
+        "target": "0x55090e"
+      },
+      {
+        "address": "0x55090c",
+        "target": "0x550929"
+      },
+      {
+        "address": "0x55091b",
+        "target": "0x550973"
+      },
+      {
+        "address": "0x550927",
+        "target": "0x550973"
+      },
+      {
+        "address": "0x550940",
+        "target": "0x550973"
+      },
+      {
+        "address": "0x55096e",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5509b9",
+        "target": "0x550a44"
+      },
+      {
+        "address": "0x550a32",
+        "target": "0x550a44"
+      },
+      {
+        "address": "0x550a44",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550a60",
+        "target": "0x550a94"
+      },
+      {
+        "address": "0x550aa1",
+        "target": "0x550ab1"
+      },
+      {
+        "address": "0x550aaf",
+        "target": "0x550acc"
+      },
+      {
+        "address": "0x550abe",
+        "target": "0x550b16"
+      },
+      {
+        "address": "0x550aca",
+        "target": "0x550b16"
+      },
+      {
+        "address": "0x550ae3",
+        "target": "0x550b16"
+      },
+      {
+        "address": "0x550b11",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550b5c",
+        "target": "0x550be7"
+      },
+      {
+        "address": "0x550bd5",
+        "target": "0x550be7"
+      },
+      {
+        "address": "0x550be7",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550c03",
+        "target": "0x550c37"
+      },
+      {
+        "address": "0x550c44",
+        "target": "0x550c55"
+      },
+      {
+        "address": "0x550c53",
+        "target": "0x550c6f"
+      },
+      {
+        "address": "0x550c61",
+        "target": "0x550cb9"
+      },
+      {
+        "address": "0x550c6d",
+        "target": "0x550cb9"
+      },
+      {
+        "address": "0x550c86",
+        "target": "0x550cb9"
+      },
+      {
+        "address": "0x550cb4",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550cff",
+        "target": "0x550d8a"
+      },
+      {
+        "address": "0x550d78",
+        "target": "0x550d8a"
+      },
+      {
+        "address": "0x550d8a",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550da6",
+        "target": "0x550dda"
+      },
+      {
+        "address": "0x550de7",
+        "target": "0x550df7"
+      },
+      {
+        "address": "0x550df5",
+        "target": "0x550e12"
+      },
+      {
+        "address": "0x550e04",
+        "target": "0x550e5c"
+      },
+      {
+        "address": "0x550e10",
+        "target": "0x550e5c"
+      },
+      {
+        "address": "0x550e29",
+        "target": "0x550e5c"
+      },
+      {
+        "address": "0x550e57",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550ea2",
+        "target": "0x550f2d"
+      },
+      {
+        "address": "0x550f1b",
+        "target": "0x550f2d"
+      },
+      {
+        "address": "0x550f2d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x550f48",
+        "target": "0x550fa7"
+      },
+      {
+        "address": "0x550f60",
+        "target": "0x550f78"
+      },
+      {
+        "address": "0x550f8f",
+        "target": "0x550fa7"
+      },
+      {
+        "address": "0x550fbe",
+        "target": "0x55109a"
+      },
+      {
+        "address": "0x550fef",
+        "target": "0x55109a"
+      },
+      {
+        "address": "0x5510e0",
+        "target": "0x55119b"
+      },
+      {
+        "address": "0x55113f",
+        "target": "0x55114b"
+      },
+      {
+        "address": "0x55117c",
+        "target": "0x55119b"
+      },
+      {
+        "address": "0x55119b",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5511b6",
+        "target": "0x5511e6"
+      },
+      {
+        "address": "0x5511ce",
+        "target": "0x5511e6"
+      },
+      {
+        "address": "0x55122c",
+        "target": "0x5512b7"
+      },
+      {
+        "address": "0x5512a5",
+        "target": "0x5512b7"
+      },
+      {
+        "address": "0x5512b7",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551302",
+        "target": "0x55138d"
+      },
+      {
+        "address": "0x55137b",
+        "target": "0x55138d"
+      },
+      {
+        "address": "0x55138d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5513d8",
+        "target": "0x551463"
+      },
+      {
+        "address": "0x551451",
+        "target": "0x551463"
+      },
+      {
+        "address": "0x551463",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55147f",
+        "target": "0x55157d"
+      },
+      {
+        "address": "0x5514e2",
+        "target": "0x55157d"
+      },
+      {
+        "address": "0x551589",
+        "target": "0x5515a6"
+      },
+      {
+        "address": "0x551598",
+        "target": "0x5515f0"
+      },
+      {
+        "address": "0x5515a4",
+        "target": "0x5515f0"
+      },
+      {
+        "address": "0x5515bd",
+        "target": "0x5515f0"
+      },
+      {
+        "address": "0x5515eb",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551636",
+        "target": "0x5516c1"
+      },
+      {
+        "address": "0x5516af",
+        "target": "0x5516c1"
+      },
+      {
+        "address": "0x5516c1",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5516dd",
+        "target": "0x5517db"
+      },
+      {
+        "address": "0x551740",
+        "target": "0x5517db"
+      },
+      {
+        "address": "0x5517e8",
+        "target": "0x551816"
+      },
+      {
+        "address": "0x5517f6",
+        "target": "0x551816"
+      },
+      {
+        "address": "0x551805",
+        "target": "0x551816"
+      },
+      {
+        "address": "0x551814",
+        "target": "0x551830"
+      },
+      {
+        "address": "0x551822",
+        "target": "0x55187a"
+      },
+      {
+        "address": "0x55182e",
+        "target": "0x55187a"
+      },
+      {
+        "address": "0x551847",
+        "target": "0x55187a"
+      },
+      {
+        "address": "0x551875",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5518c0",
+        "target": "0x55194b"
+      },
+      {
+        "address": "0x551939",
+        "target": "0x55194b"
+      },
+      {
+        "address": "0x55194b",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551967",
+        "target": "0x551a65"
+      },
+      {
+        "address": "0x5519ca",
+        "target": "0x551a65"
+      },
+      {
+        "address": "0x551a71",
+        "target": "0x551a82"
+      },
+      {
+        "address": "0x551a80",
+        "target": "0x551a9d"
+      },
+      {
+        "address": "0x551a8f",
+        "target": "0x551ae7"
+      },
+      {
+        "address": "0x551a9b",
+        "target": "0x551ae7"
+      },
+      {
+        "address": "0x551ab4",
+        "target": "0x551ae7"
+      },
+      {
+        "address": "0x551ae2",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551b2d",
+        "target": "0x551bb8"
+      },
+      {
+        "address": "0x551ba6",
+        "target": "0x551bb8"
+      },
+      {
+        "address": "0x551bb8",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551bd4",
+        "target": "0x551cde"
+      },
+      {
+        "address": "0x551c37",
+        "target": "0x551cde"
+      },
+      {
+        "address": "0x551cea",
+        "target": "0x551cfb"
+      },
+      {
+        "address": "0x551cf9",
+        "target": "0x551d16"
+      },
+      {
+        "address": "0x551d08",
+        "target": "0x551d60"
+      },
+      {
+        "address": "0x551d14",
+        "target": "0x551d60"
+      },
+      {
+        "address": "0x551d2d",
+        "target": "0x551d60"
+      },
+      {
+        "address": "0x551d5b",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551da6",
+        "target": "0x551e31"
+      },
+      {
+        "address": "0x551e1f",
+        "target": "0x551e31"
+      },
+      {
+        "address": "0x551e31",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x551e4d",
+        "target": "0x551f57"
+      },
+      {
+        "address": "0x551eb0",
+        "target": "0x551f57"
+      },
+      {
+        "address": "0x551f63",
+        "target": "0x551f74"
+      },
+      {
+        "address": "0x551f72",
+        "target": "0x551f8f"
+      },
+      {
+        "address": "0x551f81",
+        "target": "0x551fd9"
+      },
+      {
+        "address": "0x551f8d",
+        "target": "0x551fd9"
+      },
+      {
+        "address": "0x551fa6",
+        "target": "0x551fd9"
+      },
+      {
+        "address": "0x551fd4",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55201f",
+        "target": "0x5520aa"
+      },
+      {
+        "address": "0x552098",
+        "target": "0x5520aa"
+      },
+      {
+        "address": "0x5520aa",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5520bc",
+        "target": "0x55213b"
+      },
+      {
+        "address": "0x5520ca",
+        "target": "0x55213b"
+      },
+      {
+        "address": "0x5520d9",
+        "target": "0x55213b"
+      },
+      {
+        "address": "0x5520f2",
+        "target": "0x55213b"
+      },
+      {
+        "address": "0x552136",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552148",
+        "target": "0x5521c7"
+      },
+      {
+        "address": "0x552156",
+        "target": "0x5521c7"
+      },
+      {
+        "address": "0x552165",
+        "target": "0x5521c7"
+      },
+      {
+        "address": "0x55217e",
+        "target": "0x5521c7"
+      },
+      {
+        "address": "0x5521c2",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5521d5",
+        "target": "0x55220a"
+      },
+      {
+        "address": "0x552214",
+        "target": "0x55227d"
+      },
+      {
+        "address": "0x55222d",
+        "target": "0x55227d"
+      },
+      {
+        "address": "0x552287",
+        "target": "0x552306"
+      },
+      {
+        "address": "0x5522a0",
+        "target": "0x552306"
+      },
+      {
+        "address": "0x552310",
+        "target": "0x552379"
+      },
+      {
+        "address": "0x552329",
+        "target": "0x552379"
+      },
+      {
+        "address": "0x552383",
+        "target": "0x5523f8"
+      },
+      {
+        "address": "0x55238f",
+        "target": "0x5523f8"
+      },
+      {
+        "address": "0x5523a8",
+        "target": "0x5523f8"
+      },
+      {
+        "address": "0x55243e",
+        "target": "0x55250e"
+      },
+      {
+        "address": "0x55249d",
+        "target": "0x5524e2"
+      },
+      {
+        "address": "0x5524a9",
+        "target": "0x5524e2"
+      },
+      {
+        "address": "0x5524fc",
+        "target": "0x55250e"
+      },
+      {
+        "address": "0x55250e",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552521",
+        "target": "0x552556"
+      },
+      {
+        "address": "0x55259c",
+        "target": "0x55260c"
+      },
+      {
+        "address": "0x5525fa",
+        "target": "0x55260c"
+      },
+      {
+        "address": "0x55260c",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55261f",
+        "target": "0x552654"
+      },
+      {
+        "address": "0x55269a",
+        "target": "0x55270a"
+      },
+      {
+        "address": "0x5526f8",
+        "target": "0x55270a"
+      },
+      {
+        "address": "0x55270a",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55271d",
+        "target": "0x552752"
+      },
+      {
+        "address": "0x552798",
+        "target": "0x552808"
+      },
+      {
+        "address": "0x5527f6",
+        "target": "0x552808"
+      },
+      {
+        "address": "0x552808",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552853",
+        "target": "0x5528c3"
+      },
+      {
+        "address": "0x5528b1",
+        "target": "0x5528c3"
+      },
+      {
+        "address": "0x5528c3",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5528d6",
+        "target": "0x55293b"
+      },
+      {
+        "address": "0x552952",
+        "target": "0x552a21"
+      },
+      {
+        "address": "0x552989",
+        "target": "0x552a21"
+      },
+      {
+        "address": "0x552a1c",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552a38",
+        "target": "0x552aa5"
+      },
+      {
+        "address": "0x552a5a",
+        "target": "0x552aa5"
+      },
+      {
+        "address": "0x552a72",
+        "target": "0x552aa5"
+      },
+      {
+        "address": "0x552aa0",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552aeb",
+        "target": "0x552c62"
+      },
+      {
+        "address": "0x552b51",
+        "target": "0x552b6a"
+      },
+      {
+        "address": "0x552b81",
+        "target": "0x552bae"
+      },
+      {
+        "address": "0x552bc5",
+        "target": "0x552c36"
+      },
+      {
+        "address": "0x552bd5",
+        "target": "0x552c36"
+      },
+      {
+        "address": "0x552c50",
+        "target": "0x552c62"
+      },
+      {
+        "address": "0x552c62",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552c75",
+        "target": "0x552cda"
+      },
+      {
+        "address": "0x552cf1",
+        "target": "0x552dc0"
+      },
+      {
+        "address": "0x552d28",
+        "target": "0x552dc0"
+      },
+      {
+        "address": "0x552dbb",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552dd7",
+        "target": "0x552e44"
+      },
+      {
+        "address": "0x552df9",
+        "target": "0x552e44"
+      },
+      {
+        "address": "0x552e11",
+        "target": "0x552e44"
+      },
+      {
+        "address": "0x552e3f",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x552e8a",
+        "target": "0x553001"
+      },
+      {
+        "address": "0x552ef0",
+        "target": "0x552f09"
+      },
+      {
+        "address": "0x552f20",
+        "target": "0x552f4d"
+      },
+      {
+        "address": "0x552f64",
+        "target": "0x552fd5"
+      },
+      {
+        "address": "0x552f74",
+        "target": "0x552fd5"
+      },
+      {
+        "address": "0x552fef",
+        "target": "0x553001"
+      },
+      {
+        "address": "0x553001",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553014",
+        "target": "0x553079"
+      },
+      {
+        "address": "0x553090",
+        "target": "0x55315f"
+      },
+      {
+        "address": "0x5530c7",
+        "target": "0x55315f"
+      },
+      {
+        "address": "0x55315a",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553176",
+        "target": "0x5531e3"
+      },
+      {
+        "address": "0x553198",
+        "target": "0x5531e3"
+      },
+      {
+        "address": "0x5531b0",
+        "target": "0x5531e3"
+      },
+      {
+        "address": "0x5531de",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553229",
+        "target": "0x5533a0"
+      },
+      {
+        "address": "0x55328f",
+        "target": "0x5532a8"
+      },
+      {
+        "address": "0x5532bf",
+        "target": "0x5532ec"
+      },
+      {
+        "address": "0x553303",
+        "target": "0x553374"
+      },
+      {
+        "address": "0x553313",
+        "target": "0x553374"
+      },
+      {
+        "address": "0x55338e",
+        "target": "0x5533a0"
+      },
+      {
+        "address": "0x5533a0",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5533b3",
+        "target": "0x553418"
+      },
+      {
+        "address": "0x55342f",
+        "target": "0x5534fe"
+      },
+      {
+        "address": "0x553466",
+        "target": "0x5534fe"
+      },
+      {
+        "address": "0x5534f9",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553515",
+        "target": "0x553582"
+      },
+      {
+        "address": "0x553537",
+        "target": "0x553582"
+      },
+      {
+        "address": "0x55354f",
+        "target": "0x553582"
+      },
+      {
+        "address": "0x55357d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5535c8",
+        "target": "0x55373f"
+      },
+      {
+        "address": "0x55362e",
+        "target": "0x553647"
+      },
+      {
+        "address": "0x55365e",
+        "target": "0x55368b"
+      },
+      {
+        "address": "0x5536a2",
+        "target": "0x553713"
+      },
+      {
+        "address": "0x5536b2",
+        "target": "0x553713"
+      },
+      {
+        "address": "0x55372d",
+        "target": "0x55373f"
+      },
+      {
+        "address": "0x55373f",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553752",
+        "target": "0x5537b7"
+      },
+      {
+        "address": "0x5537ce",
+        "target": "0x55389d"
+      },
+      {
+        "address": "0x553805",
+        "target": "0x55389d"
+      },
+      {
+        "address": "0x553898",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5538b4",
+        "target": "0x553921"
+      },
+      {
+        "address": "0x5538d6",
+        "target": "0x553921"
+      },
+      {
+        "address": "0x5538ee",
+        "target": "0x553921"
+      },
+      {
+        "address": "0x55391c",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553967",
+        "target": "0x553ade"
+      },
+      {
+        "address": "0x5539cd",
+        "target": "0x5539e6"
+      },
+      {
+        "address": "0x5539fd",
+        "target": "0x553a2a"
+      },
+      {
+        "address": "0x553a41",
+        "target": "0x553ab2"
+      },
+      {
+        "address": "0x553a51",
+        "target": "0x553ab2"
+      },
+      {
+        "address": "0x553acc",
+        "target": "0x553ade"
+      },
+      {
+        "address": "0x553ade",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553af1",
+        "target": "0x553b56"
+      },
+      {
+        "address": "0x553b6d",
+        "target": "0x553c3c"
+      },
+      {
+        "address": "0x553ba4",
+        "target": "0x553c3c"
+      },
+      {
+        "address": "0x553c37",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553c53",
+        "target": "0x553cc0"
+      },
+      {
+        "address": "0x553c75",
+        "target": "0x553cc0"
+      },
+      {
+        "address": "0x553c8d",
+        "target": "0x553cc0"
+      },
+      {
+        "address": "0x553cbb",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553d06",
+        "target": "0x553e7d"
+      },
+      {
+        "address": "0x553d6c",
+        "target": "0x553d85"
+      },
+      {
+        "address": "0x553d9c",
+        "target": "0x553dc9"
+      },
+      {
+        "address": "0x553de0",
+        "target": "0x553e51"
+      },
+      {
+        "address": "0x553df0",
+        "target": "0x553e51"
+      },
+      {
+        "address": "0x553e6b",
+        "target": "0x553e7d"
+      },
+      {
+        "address": "0x553e7d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553e90",
+        "target": "0x553ef5"
+      },
+      {
+        "address": "0x553f0c",
+        "target": "0x553fdb"
+      },
+      {
+        "address": "0x553f43",
+        "target": "0x553fdb"
+      },
+      {
+        "address": "0x553fd6",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x553ff2",
+        "target": "0x55405f"
+      },
+      {
+        "address": "0x554014",
+        "target": "0x55405f"
+      },
+      {
+        "address": "0x55402c",
+        "target": "0x55405f"
+      },
+      {
+        "address": "0x55405a",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5540a5",
+        "target": "0x55421c"
+      },
+      {
+        "address": "0x55410b",
+        "target": "0x554124"
+      },
+      {
+        "address": "0x55413b",
+        "target": "0x554168"
+      },
+      {
+        "address": "0x55417f",
+        "target": "0x5541f0"
+      },
+      {
+        "address": "0x55418f",
+        "target": "0x5541f0"
+      },
+      {
+        "address": "0x55420a",
+        "target": "0x55421c"
+      },
+      {
+        "address": "0x55421c",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55422e",
+        "target": "0x55424d"
+      },
+      {
+        "address": "0x55423c",
+        "target": "0x55424d"
+      },
+      {
+        "address": "0x55424b",
+        "target": "0x55429b"
+      },
+      {
+        "address": "0x5542e1",
+        "target": "0x554351"
+      },
+      {
+        "address": "0x55433f",
+        "target": "0x554351"
+      },
+      {
+        "address": "0x554351",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554364",
+        "target": "0x554399"
+      },
+      {
+        "address": "0x5543df",
+        "target": "0x55444f"
+      },
+      {
+        "address": "0x55443d",
+        "target": "0x55444f"
+      },
+      {
+        "address": "0x55444f",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554462",
+        "target": "0x554497"
+      },
+      {
+        "address": "0x5544dd",
+        "target": "0x55454d"
+      },
+      {
+        "address": "0x55453b",
+        "target": "0x55454d"
+      },
+      {
+        "address": "0x55454d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554560",
+        "target": "0x554595"
+      },
+      {
+        "address": "0x5545db",
+        "target": "0x55464b"
+      },
+      {
+        "address": "0x554639",
+        "target": "0x55464b"
+      },
+      {
+        "address": "0x55464b",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55465e",
+        "target": "0x5546c3"
+      },
+      {
+        "address": "0x5546da",
+        "target": "0x5547a9"
+      },
+      {
+        "address": "0x554711",
+        "target": "0x5547a9"
+      },
+      {
+        "address": "0x5547a4",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5547c0",
+        "target": "0x55482d"
+      },
+      {
+        "address": "0x5547e2",
+        "target": "0x55482d"
+      },
+      {
+        "address": "0x5547fa",
+        "target": "0x55482d"
+      },
+      {
+        "address": "0x554828",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554873",
+        "target": "0x5549ea"
+      },
+      {
+        "address": "0x5548d9",
+        "target": "0x5548f2"
+      },
+      {
+        "address": "0x554909",
+        "target": "0x554936"
+      },
+      {
+        "address": "0x55494d",
+        "target": "0x5549be"
+      },
+      {
+        "address": "0x55495d",
+        "target": "0x5549be"
+      },
+      {
+        "address": "0x5549d8",
+        "target": "0x5549ea"
+      },
+      {
+        "address": "0x5549ea",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5549fd",
+        "target": "0x554a62"
+      },
+      {
+        "address": "0x554a79",
+        "target": "0x554b48"
+      },
+      {
+        "address": "0x554ab0",
+        "target": "0x554b48"
+      },
+      {
+        "address": "0x554b43",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554b5f",
+        "target": "0x554bcc"
+      },
+      {
+        "address": "0x554b81",
+        "target": "0x554bcc"
+      },
+      {
+        "address": "0x554b99",
+        "target": "0x554bcc"
+      },
+      {
+        "address": "0x554bc7",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554c12",
+        "target": "0x554d89"
+      },
+      {
+        "address": "0x554c78",
+        "target": "0x554c91"
+      },
+      {
+        "address": "0x554ca8",
+        "target": "0x554cd5"
+      },
+      {
+        "address": "0x554cec",
+        "target": "0x554d5d"
+      },
+      {
+        "address": "0x554cfc",
+        "target": "0x554d5d"
+      },
+      {
+        "address": "0x554d77",
+        "target": "0x554d89"
+      },
+      {
+        "address": "0x554d89",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554d9b",
+        "target": "0x554deb"
+      },
+      {
+        "address": "0x554df9",
+        "target": "0x554e2e"
+      },
+      {
+        "address": "0x554e74",
+        "target": "0x554ee4"
+      },
+      {
+        "address": "0x554ed2",
+        "target": "0x554ee4"
+      },
+      {
+        "address": "0x554ee4",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554f2f",
+        "target": "0x554f9f"
+      },
+      {
+        "address": "0x554f8d",
+        "target": "0x554f9f"
+      },
+      {
+        "address": "0x554f9f",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554fb1",
+        "target": "0x554fc1"
+      },
+      {
+        "address": "0x554fbf",
+        "target": "0x554fd6"
+      },
+      {
+        "address": "0x554fd1",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x554fec",
+        "target": "0x555028"
+      },
+      {
+        "address": "0x555004",
+        "target": "0x555028"
+      },
+      {
+        "address": "0x55507a",
+        "target": "0x55508d"
+      },
+      {
+        "address": "0x555203",
+        "target": "0x555273"
+      },
+      {
+        "address": "0x555261",
+        "target": "0x555273"
+      },
+      {
+        "address": "0x555273",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555285",
+        "target": "0x555295"
+      },
+      {
+        "address": "0x555293",
+        "target": "0x5552aa"
+      },
+      {
+        "address": "0x5552a5",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5552c0",
+        "target": "0x5552fc"
+      },
+      {
+        "address": "0x5552d8",
+        "target": "0x5552fc"
+      },
+      {
+        "address": "0x55534e",
+        "target": "0x555361"
+      },
+      {
+        "address": "0x5554d7",
+        "target": "0x555547"
+      },
+      {
+        "address": "0x555535",
+        "target": "0x555547"
+      },
+      {
+        "address": "0x555547",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555592",
+        "target": "0x555602"
+      },
+      {
+        "address": "0x5555f0",
+        "target": "0x555602"
+      },
+      {
+        "address": "0x555602",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55564d",
+        "target": "0x5556bd"
+      },
+      {
+        "address": "0x5556ab",
+        "target": "0x5556bd"
+      },
+      {
+        "address": "0x5556bd",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555708",
+        "target": "0x555778"
+      },
+      {
+        "address": "0x555766",
+        "target": "0x555778"
+      },
+      {
+        "address": "0x555778",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555793",
+        "target": "0x5557d4"
+      },
+      {
+        "address": "0x5557ab",
+        "target": "0x5557d4"
+      },
+      {
+        "address": "0x555803",
+        "target": "0x5558a9"
+      },
+      {
+        "address": "0x5558ef",
+        "target": "0x5559bf"
+      },
+      {
+        "address": "0x555951",
+        "target": "0x5559bf"
+      },
+      {
+        "address": "0x555961",
+        "target": "0x5559af"
+      },
+      {
+        "address": "0x5559ad",
+        "target": "0x5559bf"
+      },
+      {
+        "address": "0x5559bf",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5559da",
+        "target": "0x555a1b"
+      },
+      {
+        "address": "0x5559f2",
+        "target": "0x555a1b"
+      },
+      {
+        "address": "0x555a4a",
+        "target": "0x555af0"
+      },
+      {
+        "address": "0x555b36",
+        "target": "0x555c06"
+      },
+      {
+        "address": "0x555b98",
+        "target": "0x555c06"
+      },
+      {
+        "address": "0x555ba8",
+        "target": "0x555bf6"
+      },
+      {
+        "address": "0x555bf4",
+        "target": "0x555c06"
+      },
+      {
+        "address": "0x555c06",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555c18",
+        "target": "0x555c29"
+      },
+      {
+        "address": "0x555c27",
+        "target": "0x555c3e"
+      },
+      {
+        "address": "0x555c39",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555c54",
+        "target": "0x555c90"
+      },
+      {
+        "address": "0x555c6c",
+        "target": "0x555c90"
+      },
+      {
+        "address": "0x555ce2",
+        "target": "0x555cf5"
+      },
+      {
+        "address": "0x555e6d",
+        "target": "0x555edd"
+      },
+      {
+        "address": "0x555ecb",
+        "target": "0x555edd"
+      },
+      {
+        "address": "0x555edd",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555eef",
+        "target": "0x555f00"
+      },
+      {
+        "address": "0x555efe",
+        "target": "0x555f15"
+      },
+      {
+        "address": "0x555f10",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x555f2b",
+        "target": "0x555f67"
+      },
+      {
+        "address": "0x555f43",
+        "target": "0x555f67"
+      },
+      {
+        "address": "0x555fb9",
+        "target": "0x555fcc"
+      },
+      {
+        "address": "0x556144",
+        "target": "0x5561b4"
+      },
+      {
+        "address": "0x5561a2",
+        "target": "0x5561b4"
+      },
+      {
+        "address": "0x5561b4",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55621f",
+        "target": "0x556231"
+      },
+      {
+        "address": "0x55624b",
+        "target": "0x5562dc"
+      },
+      {
+        "address": "0x5562c4",
+        "target": "0x5562dc"
+      },
+      {
+        "address": "0x5562dc",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5562eb",
+        "target": "0x556311"
+      },
+      {
+        "address": "0x5562f7",
+        "target": "0x556311"
+      },
+      {
+        "address": "0x556303",
+        "target": "0x556311"
+      },
+      {
+        "address": "0x55630f",
+        "target": "0x556349"
+      },
+      {
+        "address": "0x55631b",
+        "target": "0x556329"
+      },
+      {
+        "address": "0x556327",
+        "target": "0x556349"
+      },
+      {
+        "address": "0x556333",
+        "target": "0x55677e"
+      },
+      {
+        "address": "0x556343",
+        "target": "0x55677e"
+      },
+      {
+        "address": "0x556779",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x5567c4",
+        "target": "0x556855"
+      },
+      {
+        "address": "0x55683d",
+        "target": "0x556855"
+      },
+      {
+        "address": "0x556855",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x556870",
+        "target": "0x556a20"
+      },
+      {
+        "address": "0x55688c",
+        "target": "0x556a20"
+      },
+      {
+        "address": "0x5568a0",
+        "target": "0x556a20"
+      },
+      {
+        "address": "0x556a6a",
+        "target": "0x556ab4"
+      },
+      {
+        "address": "0x556a8a",
+        "target": "0x556ab4"
+      },
+      {
+        "address": "0x556ac2",
+        "target": "0x556ad8"
+      },
+      {
+        "address": "0x556ae6",
+        "target": "0x556afd"
+      },
+      {
+        "address": "0x556af8",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x556b60",
+        "target": "0x556bf1"
+      },
+      {
+        "address": "0x556bd9",
+        "target": "0x556bf1"
+      },
+      {
+        "address": "0x556bf1",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x556c0c",
+        "target": "0x556db6"
+      },
+      {
+        "address": "0x556c28",
+        "target": "0x556db6"
+      },
+      {
+        "address": "0x556c3c",
+        "target": "0x556db6"
+      },
+      {
+        "address": "0x556e00",
+        "target": "0x556e4a"
+      },
+      {
+        "address": "0x556e20",
+        "target": "0x556e4a"
+      },
+      {
+        "address": "0x556e58",
+        "target": "0x556e6e"
+      },
+      {
+        "address": "0x556e7c",
+        "target": "0x556e93"
+      },
+      {
+        "address": "0x556e8e",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x556ef6",
+        "target": "0x556f87"
+      },
+      {
+        "address": "0x556f6f",
+        "target": "0x556f87"
+      },
+      {
+        "address": "0x556f87",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x557004",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55707d",
+        "target": "0x55708f"
+      },
+      {
+        "address": "0x55709c",
+        "target": "0x5570a5"
+      },
+      {
+        "address": "0x5570a5",
+        "target": "0x54fd6b"
+      }
+    ],
+    "indirect_jumps": [
+      {
+        "address": "0x54fe8b",
+        "instruction": "jmp    DWORD PTR [ecx*4+0x5570b0]"
+      }
+    ],
+    "calls": [
+      {
+        "address": "0x54fd66",
+        "instruction": "call   0x405490"
+      },
+      {
+        "address": "0x54fe4f",
+        "instruction": "call   0x413090"
+      },
+      {
+        "address": "0x550026",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x550186",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x550356",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5504d7",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5505e7",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55088f",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x550a41",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x550be4",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x550d87",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x550f2a",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x55100e",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55101f",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551045",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551056",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551086",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x55118b",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5512b4",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55138a",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x551460",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5514f4",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551502",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551528",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551539",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551569",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5516be",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x551752",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551760",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551786",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551797",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5517c7",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x551948",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5519dc",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5519ea",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551a10",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551a21",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551a51",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x551bb5",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x551c49",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551c57",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551c83",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551c94",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551cca",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x551e2e",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x551ec2",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551ed0",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551efc",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x551f0d",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x551f43",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5520a7",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55250b",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x552609",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x552707",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x552805",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5528c0",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x552936",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x552c5f",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x552cd5",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x552ffe",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x553074",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x55339d",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x553413",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x55373c",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5537b2",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x553adb",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x553b51",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x553e7a",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x553ef0",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x554219",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55434e",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x55444c",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55454a",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x554648",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5546be",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x5549e7",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x554a5d",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x554d86",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x554ee1",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x554f9c",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x554fce",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x555094",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5550e6",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x5550f7",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555141",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555188",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x555270",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5552a2",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x555368",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5553ba",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x5553cb",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555415",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55545c",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x555544",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5555ff",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5556ba",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x555775",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x555822",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555833",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x55585f",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555870",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x5558a6",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5559bc",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x555a69",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555a7a",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x555aa6",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555ab7",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x555aed",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x555c03",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x555c36",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x555cfc",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x555d50",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x555d61",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555dab",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x555df2",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x555eda",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x555f0d",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x555fd3",
+        "instruction": "call   0x4108a0"
+      },
+      {
+        "address": "0x556027",
+        "instruction": "call   0x434010"
+      },
+      {
+        "address": "0x556038",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556082",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5560c9",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5561b1",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x55622e",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x556355",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55637b",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5563af",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5563be",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5563e4",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556418",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x556427",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55644d",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556481",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x556490",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5564aa",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5564db",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5564ea",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556510",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556544",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x556553",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556579",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5565ad",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5565bc",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5565e2",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x556616",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x556625",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55664b",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55667f",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x55668e",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5566b2",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5566e6",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5566f5",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55671b",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x55674f",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x556769",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5568a6",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5568b8",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5568f8",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x55691f",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x55694c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x55698c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5569b3",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5569e0",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556af5",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x556c42",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556c54",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556c94",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556cb5",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556ce2",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556d22",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556d49",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556d76",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x556e8b",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x55708c",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      }
+    ],
+    "local_data": [
+      {
+        "kind": "address-table",
+        "offset": 29568,
+        "size": 208
+      },
+      {
+        "kind": "selector-map",
+        "offset": 29776,
+        "size": 100
+      }
+    ],
+    "jump_table": [
+      {
+        "index": 0,
+        "address": "0x54fe92",
+        "effect_types": [
+          400
+        ]
+      },
+      {
+        "index": 1,
+        "address": "0x55018e",
+        "effect_types": [
+          401
+        ]
+      },
+      {
+        "index": 2,
+        "address": "0x5504df",
+        "effect_types": [
+          402
+        ]
+      },
+      {
+        "index": 3,
+        "address": "0x5506f4",
+        "effect_types": [
+          403
+        ]
+      },
+      {
+        "index": 4,
+        "address": "0x550897",
+        "effect_types": [
+          404
+        ]
+      },
+      {
+        "index": 5,
+        "address": "0x550a49",
+        "effect_types": [
+          405
+        ]
+      },
+      {
+        "index": 6,
+        "address": "0x550bec",
+        "effect_types": [
+          406
+        ]
+      },
+      {
+        "index": 7,
+        "address": "0x550d8f",
+        "effect_types": [
+          407
+        ]
+      },
+      {
+        "index": 8,
+        "address": "0x550f32",
+        "effect_types": [
+          408
+        ]
+      },
+      {
+        "index": 9,
+        "address": "0x5511a0",
+        "effect_types": [
+          409
+        ]
+      },
+      {
+        "index": 10,
+        "address": "0x5512bc",
+        "effect_types": [
+          410
+        ]
+      },
+      {
+        "index": 11,
+        "address": "0x551392",
+        "effect_types": [
+          411
+        ]
+      },
+      {
+        "index": 12,
+        "address": "0x551468",
+        "effect_types": [
+          412
+        ]
+      },
+      {
+        "index": 13,
+        "address": "0x551950",
+        "effect_types": [
+          413
+        ]
+      },
+      {
+        "index": 14,
+        "address": "0x5516c6",
+        "effect_types": [
+          414
+        ]
+      },
+      {
+        "index": 15,
+        "address": "0x551bbd",
+        "effect_types": [
+          415
+        ]
+      },
+      {
+        "index": 16,
+        "address": "0x551e36",
+        "effect_types": [
+          416
+        ]
+      },
+      {
+        "index": 17,
+        "address": "0x5520af",
+        "effect_types": [
+          417
+        ]
+      },
+      {
+        "index": 18,
+        "address": "0x552513",
+        "effect_types": [
+          418
+        ]
+      },
+      {
+        "index": 19,
+        "address": "0x552611",
+        "effect_types": [
+          419
+        ]
+      },
+      {
+        "index": 20,
+        "address": "0x55270f",
+        "effect_types": [
+          420
+        ]
+      },
+      {
+        "index": 21,
+        "address": "0x55280d",
+        "effect_types": [
+          421
+        ]
+      },
+      {
+        "index": 22,
+        "address": "0x5528c8",
+        "effect_types": [
+          422
+        ]
+      },
+      {
+        "index": 23,
+        "address": "0x552c67",
+        "effect_types": [
+          423
+        ]
+      },
+      {
+        "index": 24,
+        "address": "0x553006",
+        "effect_types": [
+          424
+        ]
+      },
+      {
+        "index": 25,
+        "address": "0x5533a5",
+        "effect_types": [
+          425
+        ]
+      },
+      {
+        "index": 26,
+        "address": "0x553744",
+        "effect_types": [
+          426
+        ]
+      },
+      {
+        "index": 27,
+        "address": "0x553ae3",
+        "effect_types": [
+          427
+        ]
+      },
+      {
+        "index": 28,
+        "address": "0x553e82",
+        "effect_types": [
+          428
+        ]
+      },
+      {
+        "index": 29,
+        "address": "0x554221",
+        "effect_types": [
+          429
+        ]
+      },
+      {
+        "index": 30,
+        "address": "0x554356",
+        "effect_types": [
+          430
+        ]
+      },
+      {
+        "index": 31,
+        "address": "0x554454",
+        "effect_types": [
+          431
+        ]
+      },
+      {
+        "index": 32,
+        "address": "0x554552",
+        "effect_types": [
+          432
+        ]
+      },
+      {
+        "index": 33,
+        "address": "0x554650",
+        "effect_types": [
+          433
+        ]
+      },
+      {
+        "index": 34,
+        "address": "0x5549ef",
+        "effect_types": [
+          434
+        ]
+      },
+      {
+        "index": 35,
+        "address": "0x554d8e",
+        "effect_types": [
+          435
+        ]
+      },
+      {
+        "index": 36,
+        "address": "0x554ee9",
+        "effect_types": [
+          436
+        ]
+      },
+      {
+        "index": 37,
+        "address": "0x554fa4",
+        "effect_types": [
+          437
+        ]
+      },
+      {
+        "index": 38,
+        "address": "0x555278",
+        "effect_types": [
+          438
+        ]
+      },
+      {
+        "index": 39,
+        "address": "0x55554c",
+        "effect_types": [
+          439
+        ]
+      },
+      {
+        "index": 40,
+        "address": "0x555607",
+        "effect_types": [
+          440
+        ]
+      },
+      {
+        "index": 41,
+        "address": "0x5556c2",
+        "effect_types": [
+          441
+        ]
+      },
+      {
+        "index": 42,
+        "address": "0x55577d",
+        "effect_types": [
+          442
+        ]
+      },
+      {
+        "index": 43,
+        "address": "0x5559c4",
+        "effect_types": [
+          443
+        ]
+      },
+      {
+        "index": 44,
+        "address": "0x555c0b",
+        "effect_types": [
+          444
+        ]
+      },
+      {
+        "index": 45,
+        "address": "0x555ee2",
+        "effect_types": [
+          445
+        ]
+      },
+      {
+        "index": 46,
+        "address": "0x5561b9",
+        "effect_types": [
+          495
+        ]
+      },
+      {
+        "index": 47,
+        "address": "0x5562e1",
+        "effect_types": [
+          496
+        ]
+      },
+      {
+        "index": 48,
+        "address": "0x55685a",
+        "effect_types": [
+          497
+        ]
+      },
+      {
+        "index": 49,
+        "address": "0x556bf6",
+        "effect_types": [
+          498
+        ]
+      },
+      {
+        "index": 50,
+        "address": "0x556f8c",
+        "effect_types": [
+          499
+        ]
+      },
+      {
+        "index": 51,
+        "address": "0x55708f",
+        "effect_types": [
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494
+        ]
+      }
+    ],
+    "selector": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333332e2f303132",
+    "owner_table": "0x788768",
+    "owner_slot": 7,
+    "owner_operand": "0x788784",
+    "padding_bytes": 12,
+    "abi": "void thiscall virtual slot07; receiver EBP-5C; used72-byte EffectSpawn EBP-50; queue index EBP-4; duration/count EBP-54/-58; frame1C8 with saved EBX/ESI; RET0",
+    "reviewed_relocation_fields": 279,
+    "direct_call_count": 95,
+    "virtual_call_count": 79,
+    "distinct_double_payloads": 34,
+    "random_range_calls": 20,
+    "random_range_return": "all20 original callers zero-extend AX",
+    "rand_calls": 16,
+    "following_entry": "0x5571f0",
+    "acceptance_status": "complete original code/table boundaries and279 operand destinations independently reviewed; full29876-byte native contribution exact"
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 29876,
+      "matched_bytes": 29876,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 55,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 343,
+          "target": 5599616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62725",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 29776 independently checked",
+          "local_target_offset": 29776,
+          "addend": 0
+        },
+        {
+          "offset": 350,
+          "target": 5599408,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62795",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 29568 independently checked",
+          "local_target_offset": 29568,
+          "addend": 0
+        },
+        {
+          "offset": 435,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 601,
+          "target": 7896488,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3faeb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787da8; literal 0.06 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 645,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 670,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 702,
+          "target": 7896904,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4085e00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f48; literal 700.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 734,
+          "target": 7897784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c04e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7882b8; literal -60.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1199,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1256,
+          "target": 7896344,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f947ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d18; literal 0.02 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1300,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1325,
+          "target": 7893744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fd3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1518,
+          "target": 7896904,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4085e00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f48; literal 700.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1550,
+          "target": 7897784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c04e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7882b8; literal -60.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2048,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2080,
+          "target": 7899064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f647ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887b8; literal 0.0025 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2175,
+          "target": 7896904,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4085e00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f48; literal 700.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2207,
+          "target": 7897784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c04e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7882b8; literal -60.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4831,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4848,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4886,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4903,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6085,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6099,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6137,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6154,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6691,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6705,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6743,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6760,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7341,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7355,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7393,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7410,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7962,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7976,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8020,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8037,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8595,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8609,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8653,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8670,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9526,
+          "target": 7899056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887b0; literal 148.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9641,
+          "target": 7899048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062600000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887a8; literal 147.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9778,
+          "target": 7899040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404b000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887a0; literal 54.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9905,
+          "target": 7898800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404a800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7886b0; literal 53.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11229,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11241,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11271,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11344,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11373,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11398,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11423,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11544,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11800,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12156,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12168,
+          "target": 7898160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404b800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788430; literal 55.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12198,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 12271,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12300,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12325,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12350,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12471,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 12727,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13083,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13095,
+          "target": 7897456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4046800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788170; literal 45.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13125,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 13198,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13227,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13252,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13277,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13398,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 13654,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14010,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14022,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce8; literal 60.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14052,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 14125,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14154,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14179,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14204,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14325,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14581,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14937,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14949,
+          "target": 7898160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404b800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788430; literal 55.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 14979,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 15052,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15081,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15106,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15131,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15252,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15508,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15864,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15876,
+          "target": 7897456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4046800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788170; literal 45.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 15906,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 15979,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16008,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16033,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16058,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16179,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16435,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16791,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16803,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16833,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 16906,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16935,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16960,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 16985,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 17106,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 17362,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 17748,
+          "target": 7899056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887b0; literal 148.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18789,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18801,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18831,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 18904,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18933,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18958,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 18983,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19104,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19360,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19716,
+          "target": 7897200,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4004000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788070; literal 2.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19728,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19758,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 19831,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19860,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19885,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 19910,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 20031,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 20287,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 20644,
+          "target": 7897456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4046800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788170; literal 45.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 21349,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 21431,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 21448,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 21485,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 21522,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 21609,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 21634,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 22073,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 22155,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 22172,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 22209,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 22246,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 22333,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 22358,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 23218,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 23283,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23300,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23344,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23361,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23801,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 23866,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23883,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23927,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 23944,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 24525,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 24609,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 24626,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 24663,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 24700,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 24787,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 24812,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 25252,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 25336,
+          "target": 4407312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to ?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z at 0x434010; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 25353,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 25390,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 25427,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 25514,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 25539,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 25751,
+          "target": 7896864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bf947ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 26150,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26188,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26255,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26293,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26360,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26398,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26465,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26491,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26555,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26593,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26660,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26698,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26765,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26803,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26870,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26908,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 26975,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27011,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27078,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27116,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27511,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27529,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27593,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27621,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27632,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27660,
+          "target": 7896552,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27677,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27705,
+          "target": 7897032,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ffb333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27717,
+          "target": 7896464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bffccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27741,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27769,
+          "target": 7896504,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27780,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27808,
+          "target": 7893736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3feccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27825,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 27853,
+          "target": 7896856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27865,
+          "target": 7896264,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27909,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27953,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 27985,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28435,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28453,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28517,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28550,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28578,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28595,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28623,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28635,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28659,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28687,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28698,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28726,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28743,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 28771,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28783,
+          "target": 7896248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28827,
+          "target": 7896224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f9eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28871,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 28903,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 29568,
+          "target": 5570194,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62186",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
+          "local_target_offset": 354,
+          "addend": 0
+        },
+        {
+          "offset": 29572,
+          "target": 5570958,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62198",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 1118 and canonical destination independently checked",
+          "local_target_offset": 1118,
+          "addend": 0
+        },
+        {
+          "offset": 29576,
+          "target": 5571807,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62211",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 1967 and canonical destination independently checked",
+          "local_target_offset": 1967,
+          "addend": 0
+        },
+        {
+          "offset": 29580,
+          "target": 5572340,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62220",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 2500 and canonical destination independently checked",
+          "local_target_offset": 2500,
+          "addend": 0
+        },
+        {
+          "offset": 29584,
+          "target": 5572759,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62228",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 2919 and canonical destination independently checked",
+          "local_target_offset": 2919,
+          "addend": 0
+        },
+        {
+          "offset": 29588,
+          "target": 5573193,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62236",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 3353 and canonical destination independently checked",
+          "local_target_offset": 3353,
+          "addend": 0
+        },
+        {
+          "offset": 29592,
+          "target": 5573612,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62244",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 3772 and canonical destination independently checked",
+          "local_target_offset": 3772,
+          "addend": 0
+        },
+        {
+          "offset": 29596,
+          "target": 5574031,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62252",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 4191 and canonical destination independently checked",
+          "local_target_offset": 4191,
+          "addend": 0
+        },
+        {
+          "offset": 29600,
+          "target": 5574450,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62260",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 4610 and canonical destination independently checked",
+          "local_target_offset": 4610,
+          "addend": 0
+        },
+        {
+          "offset": 29604,
+          "target": 5575072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62276",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 5232 and canonical destination independently checked",
+          "local_target_offset": 5232,
+          "addend": 0
+        },
+        {
+          "offset": 29608,
+          "target": 5575356,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62281",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 5516 and canonical destination independently checked",
+          "local_target_offset": 5516,
+          "addend": 0
+        },
+        {
+          "offset": 29612,
+          "target": 5575570,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62285",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 411; compiler-local offset 5730 and canonical destination independently checked",
+          "local_target_offset": 5730,
+          "addend": 0
+        },
+        {
+          "offset": 29616,
+          "target": 5575784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62289",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 412; compiler-local offset 5944 and canonical destination independently checked",
+          "local_target_offset": 5944,
+          "addend": 0
+        },
+        {
+          "offset": 29620,
+          "target": 5577040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62322",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 413; compiler-local offset 7200 and canonical destination independently checked",
+          "local_target_offset": 7200,
+          "addend": 0
+        },
+        {
+          "offset": 29624,
+          "target": 5576390,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62305",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 414; compiler-local offset 6550 and canonical destination independently checked",
+          "local_target_offset": 6550,
+          "addend": 0
+        },
+        {
+          "offset": 29628,
+          "target": 5577661,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62339",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 415; compiler-local offset 7821 and canonical destination independently checked",
+          "local_target_offset": 7821,
+          "addend": 0
+        },
+        {
+          "offset": 29632,
+          "target": 5578294,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62356",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 416; compiler-local offset 8454 and canonical destination independently checked",
+          "local_target_offset": 8454,
+          "addend": 0
+        },
+        {
+          "offset": 29636,
+          "target": 5578927,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62373",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 17 for effect types 417; compiler-local offset 9087 and canonical destination independently checked",
+          "local_target_offset": 9087,
+          "addend": 0
+        },
+        {
+          "offset": 29640,
+          "target": 5580051,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62390",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 18 for effect types 418; compiler-local offset 10211 and canonical destination independently checked",
+          "local_target_offset": 10211,
+          "addend": 0
+        },
+        {
+          "offset": 29644,
+          "target": 5580305,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62395",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 19 for effect types 419; compiler-local offset 10465 and canonical destination independently checked",
+          "local_target_offset": 10465,
+          "addend": 0
+        },
+        {
+          "offset": 29648,
+          "target": 5580559,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62400",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 20 for effect types 420; compiler-local offset 10719 and canonical destination independently checked",
+          "local_target_offset": 10719,
+          "addend": 0
+        },
+        {
+          "offset": 29652,
+          "target": 5580813,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62405",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 21 for effect types 421; compiler-local offset 10973 and canonical destination independently checked",
+          "local_target_offset": 10973,
+          "addend": 0
+        },
+        {
+          "offset": 29656,
+          "target": 5581000,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62409",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 22 for effect types 422; compiler-local offset 11160 and canonical destination independently checked",
+          "local_target_offset": 11160,
+          "addend": 0
+        },
+        {
+          "offset": 29660,
+          "target": 5581927,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62419",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 23 for effect types 423; compiler-local offset 12087 and canonical destination independently checked",
+          "local_target_offset": 12087,
+          "addend": 0
+        },
+        {
+          "offset": 29664,
+          "target": 5582854,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62429",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 24 for effect types 424; compiler-local offset 13014 and canonical destination independently checked",
+          "local_target_offset": 13014,
+          "addend": 0
+        },
+        {
+          "offset": 29668,
+          "target": 5583781,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62439",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 25 for effect types 425; compiler-local offset 13941 and canonical destination independently checked",
+          "local_target_offset": 13941,
+          "addend": 0
+        },
+        {
+          "offset": 29672,
+          "target": 5584708,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62449",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 26 for effect types 426; compiler-local offset 14868 and canonical destination independently checked",
+          "local_target_offset": 14868,
+          "addend": 0
+        },
+        {
+          "offset": 29676,
+          "target": 5585635,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62459",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 27 for effect types 427; compiler-local offset 15795 and canonical destination independently checked",
+          "local_target_offset": 15795,
+          "addend": 0
+        },
+        {
+          "offset": 29680,
+          "target": 5586562,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62469",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 28 for effect types 428; compiler-local offset 16722 and canonical destination independently checked",
+          "local_target_offset": 16722,
+          "addend": 0
+        },
+        {
+          "offset": 29684,
+          "target": 5587489,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62479",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 29 for effect types 429; compiler-local offset 17649 and canonical destination independently checked",
+          "local_target_offset": 17649,
+          "addend": 0
+        },
+        {
+          "offset": 29688,
+          "target": 5587798,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62486",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 30 for effect types 430; compiler-local offset 17958 and canonical destination independently checked",
+          "local_target_offset": 17958,
+          "addend": 0
+        },
+        {
+          "offset": 29692,
+          "target": 5588052,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62491",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 31 for effect types 431; compiler-local offset 18212 and canonical destination independently checked",
+          "local_target_offset": 18212,
+          "addend": 0
+        },
+        {
+          "offset": 29696,
+          "target": 5588306,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62496",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 32 for effect types 432; compiler-local offset 18466 and canonical destination independently checked",
+          "local_target_offset": 18466,
+          "addend": 0
+        },
+        {
+          "offset": 29700,
+          "target": 5588560,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62501",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 33 for effect types 433; compiler-local offset 18720 and canonical destination independently checked",
+          "local_target_offset": 18720,
+          "addend": 0
+        },
+        {
+          "offset": 29704,
+          "target": 5589487,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62511",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 34 for effect types 434; compiler-local offset 19647 and canonical destination independently checked",
+          "local_target_offset": 19647,
+          "addend": 0
+        },
+        {
+          "offset": 29708,
+          "target": 5590414,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62521",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 35 for effect types 435; compiler-local offset 20574 and canonical destination independently checked",
+          "local_target_offset": 20574,
+          "addend": 0
+        },
+        {
+          "offset": 29712,
+          "target": 5590761,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62528",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 36 for effect types 436; compiler-local offset 20921 and canonical destination independently checked",
+          "local_target_offset": 20921,
+          "addend": 0
+        },
+        {
+          "offset": 29716,
+          "target": 5590948,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62532",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 37 for effect types 437; compiler-local offset 21108 and canonical destination independently checked",
+          "local_target_offset": 21108,
+          "addend": 0
+        },
+        {
+          "offset": 29720,
+          "target": 5591672,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62547",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 38 for effect types 438; compiler-local offset 21832 and canonical destination independently checked",
+          "local_target_offset": 21832,
+          "addend": 0
+        },
+        {
+          "offset": 29724,
+          "target": 5592396,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62562",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 39 for effect types 439; compiler-local offset 22556 and canonical destination independently checked",
+          "local_target_offset": 22556,
+          "addend": 0
+        },
+        {
+          "offset": 29728,
+          "target": 5592583,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62566",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 40 for effect types 440; compiler-local offset 22743 and canonical destination independently checked",
+          "local_target_offset": 22743,
+          "addend": 0
+        },
+        {
+          "offset": 29732,
+          "target": 5592770,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62570",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 41 for effect types 441; compiler-local offset 22930 and canonical destination independently checked",
+          "local_target_offset": 22930,
+          "addend": 0
+        },
+        {
+          "offset": 29736,
+          "target": 5592957,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62574",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 42 for effect types 442; compiler-local offset 23117 and canonical destination independently checked",
+          "local_target_offset": 23117,
+          "addend": 0
+        },
+        {
+          "offset": 29740,
+          "target": 5593540,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62589",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 43 for effect types 443; compiler-local offset 23700 and canonical destination independently checked",
+          "local_target_offset": 23700,
+          "addend": 0
+        },
+        {
+          "offset": 29744,
+          "target": 5594123,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62604",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 44 for effect types 444; compiler-local offset 24283 and canonical destination independently checked",
+          "local_target_offset": 24283,
+          "addend": 0
+        },
+        {
+          "offset": 29748,
+          "target": 5594850,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62619",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 45 for effect types 445; compiler-local offset 25010 and canonical destination independently checked",
+          "local_target_offset": 25010,
+          "addend": 0
+        },
+        {
+          "offset": 29752,
+          "target": 5595577,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62634",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 46 for effect types 495; compiler-local offset 25737 and canonical destination independently checked",
+          "local_target_offset": 25737,
+          "addend": 0
+        },
+        {
+          "offset": 29756,
+          "target": 5595873,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62639",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 47 for effect types 496; compiler-local offset 26033 and canonical destination independently checked",
+          "local_target_offset": 26033,
+          "addend": 0
+        },
+        {
+          "offset": 29760,
+          "target": 5597274,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62677",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 48 for effect types 497; compiler-local offset 27434 and canonical destination independently checked",
+          "local_target_offset": 27434,
+          "addend": 0
+        },
+        {
+          "offset": 29764,
+          "target": 5598198,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62693",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 49 for effect types 498; compiler-local offset 28358 and canonical destination independently checked",
+          "local_target_offset": 28358,
+          "addend": 0
+        },
+        {
+          "offset": 29768,
+          "target": 5599116,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62709",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 50 for effect types 499; compiler-local offset 29276 and canonical destination independently checked",
+          "local_target_offset": 29276,
+          "addend": 0
+        },
+        {
+          "offset": 29772,
+          "target": 5599375,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62178",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 51 for effect types 446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 29535 and canonical destination independently checked",
+          "local_target_offset": 29535,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a001bb97c5d106856ba75ba4aa0037bfc139ce62b78696f588205074c65c5d26",
+      "target_extent_sha256": "a001bb97c5d106856ba75ba4aa0037bfc139ce62b78696f588205074c65c5d26",
+      "code_size": 29568,
+      "local_data_bytes": 308,
+      "local_data": [
+        {
+          "offset": 29568,
+          "size": 208,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; complete original52-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        },
+        {
+          "offset": 29776,
+          "size": 100,
+          "kind": "switch-index-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; complete original52-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        }
+      ],
+      "unit": "character-15-update-local-effects",
+      "symbol": "?Slot07@Character15@@UAEXXZ",
+      "target_address": "0x0054FD30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a91c36f96a4f230301c9a2f148094ee4b160c421ee3c21fe1bfc41922c50d40e",
+      "object_sha256": "b4600460e0861a9c52f0e1ab2db22f22c2ea16d569ef9d0133cb29e517758526",
+      "source_sha256": "27c926b4db4a2f698617f45c5cb964d648718f3d40b1012f95059aa3c1ef1032",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "217d08660707d4259825bc3e51c32b3b34784d50492d7b91615a493704adaffe"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cca684cf979ca370bf8bb0910485969dc9254c04213c829a76dedc877e26f4c7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a8ad41a3f27e5145bcf7d72b1b3984b2e4ac2a6f638b9b0a762c3adf3cdea7bb",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 288 |
-| Authored exact instruction bytes | 657,601 |
-| Associated exact local-table bytes | 4,126 |
-| Reviewed boundaries / origins | 326 / 326 |
+| Authored complete exact functions | 289 |
+| Authored exact instruction bytes | 687,169 |
+| Associated exact local-table bytes | 4,434 |
+| Reviewed boundaries / origins | 327 / 327 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,47 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mishio state checkpoint
+## Latest Mishio local-effect checkpoint
+
+Character15::Slot07 at54FD30 is complete exact:29,568 instruction bytes plus
+308 associated table bytes, total29,876. Code ends5570B0,52-destination address
+table ends557180 and100-byte selector ends5571E4. Twelve excluded CC bytes
+precede next function5571F0. Source:src/Character15Effects.cpp;
+profile vc71-od-static. Public proof:docs/evidence/mishio-effects-exact.json.
+Durable target findings:
+[Mishio local effect dispatch and controls](KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls).
+Private attempts/reviews:.analysis/probes/mishio-effects/README.md.
+
+Review covers6,781 contiguous instructions,477 internal branches,51 explicit
+effect types and all279 relocation fields:95 direct calls,130 typed floating
+operands,54 local bindings. All34 double payloads match target/COFF; all20
+random callers zero-extend AX. All16 rand draws preserve original coefficient
+order. There are79 real virtual calls. Natural used descriptor/index/duration/
+count locals recover frame1C8, receiver EBP-5C, descriptor EBP-50, index EBP-4
+and duration/count EBP-54/-58 with saved EBX/ESI.
+
+Preserve type414-before413 physical order, both type417 cancellation guards,
+positive landing owners, unsigned word updates, integer particle subtraction
+and fifteen direct exits to queue advancement. Equal-size diagnostic cases
+concealed some branch operands; final complete raw code/table comparison passed
+zero differences after final formatting and renewed operand review.
+
+One final selected cold native replay passed. All306 existing recipes/source
+owners and public headers are unchanged; no old unit needed replay. Focused
+tracking, ledgers/progress CI and whitespace checks passed; no full CI/cohort
+or runtime matrix ran. No native compiler/Wine failure occurred in this effect
+checkpoint. Preserve all private evidence and compiler exits.
+
+All13 original Mishio vtable788768 destinations now have complete exact proofs,
+including inherited LoadResources. Constructor acceptance is additional to the
+virtual-entry inventory. Resource/data/runtime/TU and game closure remain open.
+Next substantial character family may start with the already boundary-reviewed
+constructor567900/390. Recheck canonical creation ID, resource string, allocation
+and full virtual table before integrating; constructor review alone confers no
+exact credit. Keep parked PrepareBattle/Shiori controls until new target evidence
+supplies a falsifiable instruction prediction.
+
+## Previous Mishio state checkpoint
 
 Character15::Slot06 at530BC0 is complete exact:87,313 instruction bytes plus
 934 associated local-table bytes, total88,247. Code ends5460D1,154-destination

@@ -287,3 +287,4 @@ address,name,source,symbol,status,evidence
 0x0054AD80,?Slot02@Character15@@UAEXXZ,src/Character15Commands.cpp,?Slot02@Character15@@UAEXXZ,complete,docs/evidence/mishio-exact.json
 0x0054C250,Character15::Slot05,src/Character15Cpu.cpp,?Slot05@Character15@@UAEXXZ,complete,docs/evidence/mishio-cpu-exact.json
 0x00530BC0,Character15::Slot06,src/Character15State.cpp,?Slot06@Character15@@UAEXXZ,complete,docs/evidence/mishio-state-exact.json
+0x0054FD30,Character15::Slot07,src/Character15Effects.cpp,?Slot07@Character15@@UAEXXZ,complete,docs/evidence/mishio-effects-exact.json
