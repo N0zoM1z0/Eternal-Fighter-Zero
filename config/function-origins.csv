@@ -291,7 +291,7 @@ address,origin,status,evidence
 0x004FAF70,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-circular-command-recognition
 0x004FDC10,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner
 0x00501E20,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
-0x0050C4B0,unknown,unreviewed,
+0x0050C4B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner
 0x00519E00,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051A070,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners
 0x0051A2A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#misuzu-construction-input-and-indicator-owners

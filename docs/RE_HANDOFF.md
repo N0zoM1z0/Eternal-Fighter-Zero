@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 274 |
-| Authored exact instruction bytes | 422,346 |
-| Associated exact local-table bytes | 1,967 |
-| Reviewed boundaries / origins | 313 / 313 |
+| Authored complete exact functions | 275 |
+| Authored exact instruction bytes | 477,115 |
+| Associated exact local-table bytes | 2,820 |
+| Reviewed boundaries / origins | 314 / 314 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,49 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misuzu CPU checkpoint
+## Latest Misuzu state checkpoint
+
+Character23::Slot06 at 50C4B0 is complete exact: 54,769 instruction bytes plus
+853 associated local-table bytes, total contribution 55,622. Code ends 519AA1;
+the 134-destination address table ends 519CB9 and the 317-byte selector ends
+519DF6. Ten following CC bytes precede accepted constructor 519E00 and are
+excluded. Source: src/Character23State.cpp, profile vc71-od-static. Public proof:
+docs/evidence/misuzu-state-exact.json; durable facts:
+[Misuzu animation and state owner](KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner).
+Private attempts and full review: .analysis/probes/misuzu-state/README.md.
+
+Independent review covers 14,960 contiguous instructions, 1,430 internal branches,
+133 explicit animation cases and all 1,300 relocation fields: 343 direct calls,
+821 typed floating operands and 136 local table bindings. All 77 literal
+payloads and every original table destination agree. There are 217 real virtual
+calls. The used 72-byte descriptor and ordinary duration/count locals recover
+frame2B4, receiver EBP-54, descriptor EBP-50 and duration/count EBP-4/-8 without
+padding or fake ABI declarations.
+
+Preserve unsigned tick reads, actual byte/word updates, positive landing/collision
+and cancel exits, original threshold immediates, frame rollback and integer
+particle subtraction. Animation211's velocity update belongs inside its positive
+airborne guard; animation212's positive hit exit precedes normal work. Specials
+300..302/304 and repeat owners310..312 jump directly out of the dispatch. The
+cutscene writes real Context state1420c/state1420e fields through actual owners;
+do not reintroduce scaled pointer arithmetic from provisional decompiler text.
+
+Formatted source passed one final selected cold complete strict zero-difference
+native replay, including both complete tables. Public headers and all prior
+source/recipes are unchanged; no old native unit needed replay. Focused tracking,
+ledger/progress CI and whitespace checks passed. No native compiler/Wine failure,
+full CI/cohort or runtime matrix occurred during this checkpoint.
+
+Twelve of the 13 original table788650 destinations now have exact source proofs,
+including inherited LoadResources. Next: local effects 5236D0/54139. Review its
+complete code/table extent before acceptance and build a complete first natural
+source early. Fresh canonical read-only decompile remains at
+.analysis/probes/misuzu/calls-annotated-005236d0.txt; it confers no progress credit.
+Keep the parked PrepareBattle/Shiori controls until new target evidence supplies
+a falsifiable instruction prediction. This is not character/runtime or game
+closure.
+
+## Previous Misuzu CPU checkpoint
 
 Character23::Slot05 at 51F3E0 is complete exact /17,127 instruction bytes,
 exclusive end 5236C7. Nine following CC alignment bytes precede local effects
@@ -70,9 +112,10 @@ no full CI/cohort or runtime matrix ran. One initial generated-source syntax
 failure was corrected; the required toolchain --execute smoke passed before
 subsequent builds. All compiler exits and attempts remain retained.
 
-Eleven of 13 original table 788650 destinations now have exact proofs, including
-the shared resource loader. Next substantial owners are state 50C4B0/54769 and
-local effects 5236D0/54139. Review their complete code/table extents before
+Eleven of 13 original table 788650 destinations had exact proofs at this
+checkpoint, including the shared resource loader. State50C4B0/54769 has since
+been accepted above; local effects5236D0/54139 remains open. Review complete
+extents before
 acceptance and build the first complete natural source early. Fresh read-only
 decompiles remain under .analysis/probes/misuzu/; they confer no progress credit.
 Preserve parked PrepareBattle/Shiori controls without a new falsifiable target

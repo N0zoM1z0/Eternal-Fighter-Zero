@@ -4259,3 +4259,85 @@ Eleven of the thirteen original Misuzu vtable destinations now have exact
 source-bound proofs, including the inherited resource loader. State50C4B0/54769
 and local effects5236D0/54139 remain open, as do linked data/assets, original
 translation-unit partitioning, runtime behavior and whole-game reconstruction.
+
+## Misuzu animation and state owner
+
+Character23::Slot06 at 0x50C4B0 has complete strict exact source in
+`src/Character23State.cpp`, profile vc71-od-static. It adds 54,769 instruction
+bytes and 853 associated local-table bytes. Public proof:
+`docs/evidence/misuzu-state-exact.json`. The complete 55,622-byte contribution
+ends exclusively at 519DF6; ten CC alignment bytes precede constructor519E00
+and are excluded. No size override, masked address or partial acceptance is used.
+
+Code ends at 519AA1. Its 536-byte table holds 134 canonical destinations; the
+317-byte compressed selector starts at 519CB9 and covers animation IDs1..317.
+All 133 explicit cases have their own reviewed destination, with 184 selectors
+using the shared default. Independent review covers 14,960 contiguous
+instructions, 1,430 direct internal branches, one indirect switch and the
+original vtable788650 slot6/operand788668 pointing to 50C4B0. Following tables,
+padding and next entry were checked directly against canonical target bytes.
+
+All 1,300 relocation fields are reviewed independently: 343 direct CALLs,
+821 typed floating operands and 136 compiler-local fields (134 address entries
+and two dispatch operands). Every declaration names the actual symbol,
+canonical destination and evidence. All 77 distinct float/double payloads agree
+in original memory, native COFF bytes and symbol bits; original operand widths
+match. All calls use existing accepted shared declarations, including FadeMusic,
+SetHorizontalOffset and SetSceneTimer. The 217 real virtual calls retain actual
+owners and slot accesses and do not introduce invented relocation fields.
+
+A real used 72-byte EffectSpawn descriptor and ordinary duration/count locals
+yield frame2B4, receiver at EBP-54, descriptor at EBP-50 and duration/count at
+EBP-4/-8. The four-byte epilogue has no saved nonvolatile register. Public
+Engine.h, CharacterViews.h and Input.h remain byte-identical. Source views use
+the existing actual class layout and methods, without extra ABI views or padding.
+
+Every promoted word tick read in the target uses MOVZX, 305 occurrences; source
+uses explicit unsigned reads while preserving the accepted shared declaration.
+Original word increments/decrements and byte updates retain their actual widths.
+Clamp branches, landing/collision exits and input cancellation preserve original
+positive branch order, floating operand order and exact destinations. Restoring
+>= thresholds for field3138/313c retains the original immediate operands rather
+than only equivalent integer truth values.
+
+Animation210 rolls back the frame on its original negative landing predicate.
+Animation211 first tests field0028<0, updates vertical velocity
+there and performs its positive landing exit before ordinary animation work.
+Animation212's field0168>1 transition exits before normal landing/tick work.
+Animation248 sets its follow-up flag using the original opponent-y<0 guard and
+state alternatives; animation249's landing exit precedes grabbed-opponent
+positioning. States259..261 retain their frame>8 positive landing exits.
+
+Specials300..302 and304 have separate direct dispatch exits after success,
+frame8 transitions and local effect emission. Repeat owners310..312 also exit
+after frame rollback/counter updates. Replacing these with an else continuation
+can preserve apparent behavior while changing branch bytes and destinations.
+Particle coordinates use integer center-minus-facing products before double
+conversion; negative multiplication plus addition changes codegen. The cutscene
+writes actual Context state1420c/state1420e word fields through self/opponent
+Context owners. Provisional integer-pointer decompile text must not become
+scaled Context-pointer arithmetic in source.
+
+The first complete source compiled successfully and contributed 55,578 bytes
+against 55,622. Whole-function comparison and case diagnostics identified
+unsigned reads, control polarity, direct exits, operand order and pointer views.
+After target-backed corrections all 133 cases aligned diagnostically, and the
+entire unmodified contribution passed strict zero differences. Final source
+formatting retained that result. Case-local or branch-normalized diagnostics
+confer no acceptance credit by themselves.
+
+One final selected cold artifact passed all 55,622 bytes, including both complete
+tables and all 1,300 reviewed bindings. Public headers and all prior source and
+unit recipes are unchanged, so no old native unit needed replay. Focused tracking,
+ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
+matrix ran. All native builds succeeded under pinned VC7.1 RTM, EFZ-only Wine,
+serial one-CPU nice10 bounded commands with retained exit logs. Complete target
+dumps, read-only decompile, source/object attempts and reviews remain in
+`.analysis/probes/misuzu-state/`. One-time derivation/publication scripts must
+not be rerun over accepted or newer source.
+
+Twelve of thirteen original Misuzu vtable destinations now have complete exact
+source-bound proofs, including inherited LoadResources. Local effects5236D0/54139
+remains open, as do linked data/assets, original translation-unit partitioning,
+complete runtime behavior and whole-game reconstruction. This checkpoint gives
+no credit to the parked Shiori state dispatcher.
