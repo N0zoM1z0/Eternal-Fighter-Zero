@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 43 cold source/profile/dependency artifacts cover one new Shiori CPU owner and 167 Engine.h-dependent existing units; unaffected reports retain their earlier artifacts; standalone Input, reader and configuration source units unchanged",
+  "method": "selected complete contribution comparison; 45 cold source/profile/dependency artifacts cover six new Shiori local-effect/control units and 168 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -305,15 +305,15 @@
       "symbol": "?Activate@Context@@QAEXXZ",
       "target_address": "0x00406AA0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b5975a230e33ec280a6274a801dbf253dfa8bcad12cb488c5019eccfd2b2ac52",
-      "object_sha256": "afe677b8f154dc8c4cafc50c5f1d000cd71d120dbcec9b4052f2f3b6803dcd0f",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "1fcfc7298c516155eab52885a26e14570e56b45b939cb033638ac312671df573",
       "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
       "dependencies": {
-        "src/Engine.h": "4b86ae63ca509d17afb763fd21d1999e60c85f669096055901c4c8852044e396",
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "392fea8c2d8fd9471c6d2f858e37517a5cc3aa400e38dbf9e477139eeee2ecbb",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "c11c28ca370f796ca8af292f5adf1545bc2aa4e4bfa2929cab0520e8a1ee4c9e",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -396,15 +396,15 @@
       "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
       "target_address": "0x00406DB0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "b5975a230e33ec280a6274a801dbf253dfa8bcad12cb488c5019eccfd2b2ac52",
-      "object_sha256": "afe677b8f154dc8c4cafc50c5f1d000cd71d120dbcec9b4052f2f3b6803dcd0f",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "1fcfc7298c516155eab52885a26e14570e56b45b939cb033638ac312671df573",
       "source_sha256": "176d18e548ef7945e8e536bd8029518acd6fa41de9796bfcedfb5b6419aae260",
       "dependencies": {
-        "src/Engine.h": "4b86ae63ca509d17afb763fd21d1999e60c85f669096055901c4c8852044e396",
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "392fea8c2d8fd9471c6d2f858e37517a5cc3aa400e38dbf9e477139eeee2ecbb",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "9959f1caf3c69c8e958795ce93b0c2c75b3d4a4649bff14a006c2aeb2354af4a",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",

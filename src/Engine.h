@@ -139,6 +139,7 @@ struct SecondaryEffectSlot {
     short field0084, field0086;
     int field0088, field008c;
     unsigned char unknown_0090[8];
+    void SetVelocityPolar(double, double);
 };
 struct SecondaryEffectSpawn {
     int owner;
@@ -217,7 +218,7 @@ public:
     unsigned char unknown_00ad[0x3];
     double field00b0;
     double field00b8;
-    unsigned char unknown_00c0[0x10];
+    double field00c0, field00c8;
     int field00d0;
     unsigned char unknown_00d4[0x20];
     short field00f4;
@@ -294,7 +295,8 @@ public:
     char tint30b8;
     unsigned char unknown_30b9[3];
     int field30bc;
-    unsigned char unknown_30c0[0x4];
+    unsigned char field30c0;
+    unsigned char unknown_30c1[3];
     int field30c4;
     unsigned int field30c8;
     unsigned int field30cc;
@@ -347,6 +349,9 @@ public:
     void AwardComboScore(const SecondaryFrame *);
     void AddScore(unsigned int);
     short RandomRange(short, short);
+    void SetTint(unsigned char, int);
+    void SetVerticalShake(int, int);
+    void SetHorizontalShake(int, int);
     int FaceOpponent();
     void UpdateLocomotionState();
 };
@@ -377,21 +382,7 @@ public:
     void Allocate(int);
 };
 // Provisional effect records recovered from their producers and consumers.
-struct EffectSpawn {
-    int owner;
-    unsigned short type;
-    unsigned char unknown_0006[2];
-    double x, y;
-    char flag0018;
-    unsigned char unknown_0019[3];
-    int facing;
-    char group;
-    unsigned char layer;
-    unsigned char unknown_0022[2];
-    int payload;
-    unsigned char unknown_0028[4];
-    unsigned char palette;
-    unsigned char unknown_002d[0x1b];
+struct EffectSpawn : public SecondaryEffectSpawn {
     EffectSpawn();
 };
 struct EffectSlot {
@@ -430,7 +421,9 @@ public:
 public:
     char flag0f32;
 private:
-    unsigned char unknown_0f33;
+public:
+    char field0f33;
+private:
 public:
     unsigned char colorKey;
 private:
@@ -509,7 +502,15 @@ private:
 public:
     double state14228, state14230;
 private:
-    unsigned char unknown_14238[0x28];
+    unsigned char unknown_14238[4];
+public:
+    int state1423c;
+private:
+    unsigned char unknown_14240[4];
+public:
+    int state14244;
+private:
+    unsigned char unknown_14248[0x18];
 public:
     double fadeLevel;
     int fadeHold;
@@ -519,7 +520,10 @@ private:
 public:
     int fadeAttack, fadeRelease, state14278, state1427c;
 private:
-    unsigned char unknown_14280[3];
+public:
+    char state14280;
+private:
+    unsigned char unknown_14281[2];
 public:
     char flag14283;
 private:
@@ -543,6 +547,7 @@ public:
     void LoadObjectFile(IUnknown **, const char *, unsigned char, unsigned char);
     void UpdateEffect(short);
     void EmitEffect(EffectSpawn *);
+    void RequestTransition(char);
     void RemoveEffect(short);
     void AdvanceEffectWrite();
     void ProbeCharacterData();

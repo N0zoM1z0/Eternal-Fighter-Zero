@@ -184,3 +184,9 @@ address,name,source,symbol,status,evidence
 0x004261C0,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character08Frame.cpp,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-08-exact.json
 0x004261F0,?Slot02@Character08@@UAEXXZ,src/Character08Input.cpp,?Slot02@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
 0x004276B0,?Slot05@Character08@@UAEXXZ,src/Character08Cpu.cpp,?Slot05@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x0042B190,?Slot07@Character08@@UAEXXZ,src/Character08Effects.cpp,?Slot07@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x00434010,?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z,src/Character08Effects.cpp,?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z,complete,docs/evidence/secondary-effect-controls-exact.json
+0x00410A10,?SetVerticalShake@Secondary@@QAEXHH@Z,src/SecondaryEffectControls.cpp,?SetVerticalShake@Secondary@@QAEXHH@Z,complete,docs/evidence/secondary-effect-controls-exact.json
+0x00410A80,?SetHorizontalShake@Secondary@@QAEXHH@Z,src/SecondaryEffectControls.cpp,?SetHorizontalShake@Secondary@@QAEXHH@Z,complete,docs/evidence/secondary-effect-controls-exact.json
+0x00410B10,?SetTint@Secondary@@QAEXEH@Z,src/SecondaryEffectControls.cpp,?SetTint@Secondary@@QAEXEH@Z,complete,docs/evidence/secondary-effect-controls-exact.json
+0x00407CE0,?RequestTransition@Context@@QAEXD@Z,src/SecondaryEffectControls.cpp,?RequestTransition@Context@@QAEXD@Z,complete,docs/evidence/secondary-effect-controls-exact.json

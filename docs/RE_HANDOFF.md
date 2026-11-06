@@ -17,7 +17,8 @@ followed by guard decisions, damage/combo factors, scoring and replay-aware rand
 then the complete local-effect renderer/reset and the Shiori constructor,
 followed by Shiori command/state control, meter, initialization/effect ownership,
 and the shared facing/grounded locomotion owners, then the complete Shiori
-input-history recognizer and CPU command/movement owner.
+input-history recognizer and CPU command/movement owner, followed by the complete
+local-effect dispatcher and its shared controls.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -30,10 +31,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 185 |
-| Authored exact instruction bytes | 127,854 |
-| Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 223 / 223 |
+| Authored complete exact functions | 191 |
+| Authored exact instruction bytes | 164,306 |
+| Associated exact local-table bytes | 667 |
+| Reviewed boundaries / origins | 229 / 229 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -42,11 +43,12 @@ config/matches.csv and docs/evidence/ are the acceptance authority. Candidate
 counts are not an authored-code denominator. No runnable replacement or
 whole-game completion percentage is claimed.
 
-The largest accepted individual body is Context::UpdateEffect (0x401C20):
-14,114 instruction bytes and 191 local-table bytes, compared as the complete 14,305-byte contribution
-through 0x405401. All 301 relocations and 36 compiler-local offset bindings
-remain checked. The Context header update refreshed compiler-local symbol IDs
-without changing destinations, extents or offset checks.
+The largest accepted individual body is Character08::Slot07 (0x42B190):
+36,135 code bytes and 332 associated table bytes, compared as the complete
+36,467-byte contribution through exclusive end 0x434003. All 426 relocations,
+including 60 compiler-local destination/offset bindings, are independently checked.
+Context::UpdateEffect (0x401C20) remains exact as a complete 14,305-byte
+contribution with its 301 relocations and 36 local offsets intact.
 
 ## Latest exact progress
 
@@ -477,7 +479,7 @@ trials and boundary review are .analysis/probes/shiori-input/; formal comparison
 is .analysis/exact/shiori-input.json. Focused ledger/progress checks and whitespace
 validation pass; no full CI/cold cohort or runtime matrix is needed.
 
-The latest checkpoint accepts Shiori slot 5, Character08::Slot05 at 0x4276B0:
+Checkpoint 5b64e6d accepts Shiori slot 5, Character08::Slot05 at 0x4276B0:
 15,066 complete code bytes through RET at 0x42B189, followed by six INT3 bytes.
 Source is Character08Cpu.cpp. This is the CPU input/command and strategy/movement
 owner. Full review covers 3,883 instructions, 722 internal jumps and 93 calls;
@@ -498,12 +500,45 @@ Private complete trials and original boundary/operand/constant reviews are
 constructor are accepted, totaling 33,739 instruction bytes. Focused ledger,
 progress and whitespace checks pass; no full CI/cold cohort or runtime matrix.
 
-The next fresh substantial lead is Shiori slot 7 at 0x42B190, with a 36,135-byte
-code candidate. Review its full code/data extent and callers/owner fields before
-building the first COMPLETE source early. Existing CharacterViews.h already
-declares the slot. Slot 8 at 0x4261B0 is a tiny empty body; do not prioritize it
-over the remaining substantial owners. The parked slot-6 draft below is still
-unaccepted; do not reopen byte-neutral trials without a new falsifiable lead.
+The latest checkpoint accepts Shiori slot 7, Character08::Slot07 at 0x42B190:
+36,135 complete code bytes through RET at 0x433EB6, then a 232-byte address table
+and 100-byte selector map. The FULL accepted contribution is 36,467 bytes ending
+at 0x434003; thirteen INT3 bytes precede the next helper. Review covers 8,192
+instructions, 516 direct branches, one indirect switch, 57 explicit types,
+43 default selector entries and all 58 address destinations. All 426 operands
+are reviewed: 60 local bindings, 141 calls and 225 floating references. Source
+restores original case order 441/443/442, direct switch exits and random-call
+coefficient order; do not rely on numerically sorted decompiler cases.
+
+Five independent complete support functions add 317 code bytes: polar velocity
+0x434010 /77, vertical shake 0x410A10 /43, horizontal shake 0x410A80 /63,
+byte/timer tint request 0x410B10 /96, and Context request 0x407CE0 /38. Behavioral
+names remain provisional; exact offsets/arguments/bytes are established.
+EffectSpawn now uses the reviewed common 72-byte descriptor base naturally.
+Secondary C0/C8/30C0 and Context F33/1423C/14244/14280 views replace existing
+unknown storage without shifting extents. The descriptor constructor/reset and
+both emitter kinds receive the same original address. No fake ABI or padding.
+
+All six new and 168 shared-header-dependent old units compare strict exact from
+45 cold artifacts. All 135 selected compiler-local offsets and constructor
+literal bindings remain explicit. Standalone Input, Reader and Config were
+omitted. Public proofs are character-08-exact.json and the new independent
+secondary-effect-controls-exact.json, plus refreshed involved earlier proofs.
+Formal reports are .analysis/exact/shiori-effects-and-affected.json; private
+full trials and independent reviews are .analysis/probes/shiori-effects/.
+Focused ledger/progress and whitespace checks pass; no full CI/cold cohort or
+runtime matrix ran. Two draft member-renaming compiler errors were corrected,
+and the required toolchain execution checks passed afterward.
+
+Shiori now has ten accepted child virtual bodies plus the constructor, totaling
+69,874 code bytes. Slot 6 is still unaccepted as described below; slot 8 is the
+small empty body at 0x4261B0. Fresh exact compiler evidence from slot 7 shows
+how indexed/member addition order and center+(random-40) grouping affect GPR
+allocation. Before resuming slot 6, inspect its FIRST divergence at 0x41FC1E
+and formulate a specific instruction prediction using that evidence; do not
+repeat parked byte-neutral scope/name/increment trials. If it supplies no such
+prediction, move to another substantial shared/character owner. Do not prioritize
+the tiny slot-8 body over substantive remaining owners.
 
 The Shiori / Character08 slot-6 animation dispatcher at 0x4136D0 now has a complete
 private C++ draft and a reviewed full extent: 62,273 code bytes, 540 address-table
@@ -527,7 +562,7 @@ site and are parked. Revisit only with a falsifiable target/compiler prediction;
 otherwise pursue another substantial character state/command owner. Do not blindly
 rerun the retained derivation scripts against the evolving baseline. Keep the
 existing signed RandomRange declaration and use explicit unsigned caller reads
-when the original operand demands them. The current baseline accepts seven other Shiori virtual
+when the original operand demands them. The current baseline accepts ten other Shiori virtual
 bodies; this large slot-6 method remains absent from accepted match/source rows.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.

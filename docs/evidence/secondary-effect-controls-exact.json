@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 77,
+      "matched_bytes": 77,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 23,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained",
+          "addend": 0
+        },
+        {
+          "offset": 44,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 55,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "497d756200ad47f2a87ef2f2186506db676d403a233f28525a21137317311f37",
+      "target_extent_sha256": "497d756200ad47f2a87ef2f2186506db676d403a233f28525a21137317311f37",
+      "unit": "secondary-effect-set-polar-velocity",
+      "symbol": "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z",
+      "target_address": "0x00434010",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "aa764ae60f0a9c56db526c570a4d7ae0f76bbfbdc6dc5b375910762af196569c",
+      "source_sha256": "48f6c716077dd167b3a580d91f2c8c7e9f0c406afc073590d457ecdb51b37fed",
+      "dependencies": {
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "398295450b2bbd43067bbc7bc3690696a5f8e92771f81c199971b465192d3083",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 43,
+      "matched_bytes": 43,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+      "target_extent_sha256": "63da85902d6263e7193af3404095c4d02ef40cca48833408fd9da477906829e0",
+      "unit": "secondary-set-vertical-shake",
+      "symbol": "?SetVerticalShake@Secondary@@QAEXHH@Z",
+      "target_address": "0x00410A10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "9799607dd226ace8cbbb770ad6c25c6dab8e0e1209873476a1679480ef0161da",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "137c58982d158346e7eb40a0ff21fae72b75dd580024391f738118373479ef75",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 63,
+      "matched_bytes": 63,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "1050a8f8fb16f1e56320fa69a1c3e05d0f2e32b6a4e29a39a81965ecce2a15b0",
+      "target_extent_sha256": "1050a8f8fb16f1e56320fa69a1c3e05d0f2e32b6a4e29a39a81965ecce2a15b0",
+      "unit": "secondary-set-horizontal-shake",
+      "symbol": "?SetHorizontalShake@Secondary@@QAEXHH@Z",
+      "target_address": "0x00410A80",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "9799607dd226ace8cbbb770ad6c25c6dab8e0e1209873476a1679480ef0161da",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c03791d5ee198778141eac90d6338106e0c3bdee1947b4a28748a0258b492bfd",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 96,
+      "matched_bytes": 96,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "066017b2635b99dabc12568eae6d1c76abd8d7bbeaca851b177d0948164aa974",
+      "target_extent_sha256": "066017b2635b99dabc12568eae6d1c76abd8d7bbeaca851b177d0948164aa974",
+      "unit": "secondary-set-tint",
+      "symbol": "?SetTint@Secondary@@QAEXEH@Z",
+      "target_address": "0x00410B10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "9799607dd226ace8cbbb770ad6c25c6dab8e0e1209873476a1679480ef0161da",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e53fee2c81c1a3911d593df5fd47e9f46c425a61853a88de60fd1bc711f8e4cd",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 38,
+      "matched_bytes": 38,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "d4c9ef5e5d73ee16d40e775d805bddb4db24e5baf3f76120d399e24afc888af8",
+      "target_extent_sha256": "d4c9ef5e5d73ee16d40e775d805bddb4db24e5baf3f76120d399e24afc888af8",
+      "unit": "context-request-transition",
+      "symbol": "?RequestTransition@Context@@QAEXD@Z",
+      "target_address": "0x00407CE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "1ffb44a3e2473512281129f44f72a6397034eec8d1ec88de865a64d7e21d227c",
+      "object_sha256": "9799607dd226ace8cbbb770ad6c25c6dab8e0e1209873476a1679480ef0161da",
+      "source_sha256": "68d0a8b5608481634f817aa49e794fcf8a45d8e7c673ec7d3fd775805e333131",
+      "dependencies": {
+        "src/Engine.h": "c67f725c1acc4a8293e18ee4b1602f21861e0e9f49d698fd91cb640ec116c2c7",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "064ed5d829f69b57bdbe7a38250349ec7fe43fc4258e73577797301348b8bf4e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "04d4654ea63fb11cdc46089589cdb970e9b2622d3a87bad787e3725df8111801",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 45 cold source/profile/dependency artifacts cover six new Shiori local-effect/control units and 168 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
+}

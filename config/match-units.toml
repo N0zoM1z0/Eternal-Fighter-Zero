@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62180"
+symbol = "$L62186"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62230"
+symbol = "$L62236"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61886"
+symbol = "$L61892"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61908"
+symbol = "$L61914"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61915"
+symbol = "$L61921"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61920"
+symbol = "$L61926"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61924"
+symbol = "$L61930"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61931"
+symbol = "$L61937"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61938"
+symbol = "$L61944"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61950"
+symbol = "$L61956"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61957"
+symbol = "$L61963"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61964"
+symbol = "$L61970"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61971"
+symbol = "$L61977"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61974"
+symbol = "$L61980"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61977"
+symbol = "$L61983"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61980"
+symbol = "$L61986"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61983"
+symbol = "$L61989"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61986"
+symbol = "$L61992"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61987"
+symbol = "$L61993"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61991"
+symbol = "$L61997"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61998"
+symbol = "$L62004"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L62002"
+symbol = "$L62008"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L62006"
+symbol = "$L62012"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L62010"
+symbol = "$L62016"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L62014"
+symbol = "$L62020"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L62018"
+symbol = "$L62024"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L62022"
+symbol = "$L62028"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L62026"
+symbol = "$L62032"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L62030"
+symbol = "$L62036"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L62034"
+symbol = "$L62040"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L62038"
+symbol = "$L62044"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L62044"
+symbol = "$L62050"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L62050"
+symbol = "$L62056"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L62069"
+symbol = "$L62075"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L62073"
+symbol = "$L62079"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61883"
+symbol = "$L61889"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61335"
+symbol = "$L61341"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61286"
+symbol = "$L61292"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61287"
+symbol = "$L61293"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61288"
+symbol = "$L61294"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61289"
+symbol = "$L61295"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61290"
+symbol = "$L61296"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61291"
+symbol = "$L61297"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61292"
+symbol = "$L61298"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62273"
+symbol = "$L62279"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61934"
+symbol = "$L61940"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61965"
+symbol = "$L61971"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61968"
+symbol = "$L61974"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61971"
+symbol = "$L61977"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61986"
+symbol = "$L61992"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62301"
+symbol = "$L62307"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62114"
+symbol = "$L62120"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62118"
+symbol = "$L62124"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62122"
+symbol = "$L62128"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62126"
+symbol = "$L62132"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62130"
+symbol = "$L62136"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62134"
+symbol = "$L62140"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62138"
+symbol = "$L62144"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62142"
+symbol = "$L62148"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62146"
+symbol = "$L62152"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62150"
+symbol = "$L62156"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62154"
+symbol = "$L62160"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62158"
+symbol = "$L62164"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62162"
+symbol = "$L62168"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62166"
+symbol = "$L62172"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62170"
+symbol = "$L62176"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62174"
+symbol = "$L62180"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62178"
+symbol = "$L62184"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62182"
+symbol = "$L62188"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62186"
+symbol = "$L62192"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62190"
+symbol = "$L62196"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62194"
+symbol = "$L62200"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62198"
+symbol = "$L62204"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62202"
+symbol = "$L62208"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62206"
+symbol = "$L62212"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -15506,7 +15506,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-constructi
 [[units.character-08-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62106"
+symbol = "$SG62112"
 target = 0x00787df0
 evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
@@ -18538,3 +18538,3086 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108a0
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[units.character-08-update-local-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-update-local-effects/Character08Effects.obj"
+symbol = "?Slot07@Character08@@UAEXXZ"
+target_address = 0x0042b190
+size = 36467
+code_size = 36135
+
+[[units.character-08-update-local-effects.local_data]]
+offset = 36135
+size = 232
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original 58-destination / 100-type compressed switch and contiguous final RET/data boundary"
+
+[[units.character-08-update-local-effects.local_data]]
+offset = 36367
+size = 100
+kind = "switch-index-table"
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original 58-destination / 100-type compressed switch and contiguous final RET/data boundary"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 343
+type = "DIR32"
+symbol = "$L63458"
+target = 0x00433f9f
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36367 independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 350
+type = "DIR32"
+symbol = "$L63572"
+target = 0x00433eb7
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36135 independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 866
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 891
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1015
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1068
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1093
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1426
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1451
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1604
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1657
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 1682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2185
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2210
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2426
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2451
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2485
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2510
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2542
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2567
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2601
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2626
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2809
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2879
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2919
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2954
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 2982
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 3017
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 3327
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 3360
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 3732
+type = "DIR32"
+symbol = "__real@4048000000000000"
+target = 0x00787fe0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe0; literal 48.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4354
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4387
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4794
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4819
+type = "DIR32"
+symbol = "__real@c004000000000000"
+target = 0x00787d40
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d40; literal -2.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4851
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4895
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4927
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 4961
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5009
+type = "REL32"
+symbol = "?RequestTransition@Context@@QAEXD@Z"
+target = 0x00407ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5038
+type = "REL32"
+symbol = "?RequestTransition@Context@@QAEXD@Z"
+target = 0x00407ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5441
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5459
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5523
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5545
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5556
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5584
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5601
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5629
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5641
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5665
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5693
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5704
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5732
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5749
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5777
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5789
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5833
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5877
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 5909
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6359
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6377
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6441
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6469
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6480
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6508
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6525
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6553
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6565
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6589
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6617
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6628
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6656
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6673
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6701
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6713
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6757
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6801
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 6833
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7283
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7301
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7365
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7393
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7404
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7432
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7449
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7477
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7489
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7513
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7541
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7552
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7580
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7597
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7625
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7637
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7681
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7725
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 7757
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8207
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8225
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8289
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8317
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8328
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8356
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8373
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8401
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8413
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8437
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8465
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8476
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8504
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8521
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8549
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8561
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8605
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8649
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 8681
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9131
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9149
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9213
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9241
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9252
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9280
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9297
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9325
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9337
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9361
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9389
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9400
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9428
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9445
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9473
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9485
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9529
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9573
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 9605
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10047
+type = "DIR32"
+symbol = "__real@4048000000000000"
+target = 0x00787fe0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe0; literal 48.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10458
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10483
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10508
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10647
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10688
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10738
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 10990
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 11015
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 11076
+type = "DIR32"
+symbol = "__real@3f747ae147ae147b"
+target = 0x00787fc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc0; literal 0.005 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 12511
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 13013
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 13515
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 14941
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 15348
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 15399
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 15771
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 15822
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16415
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16454
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16787
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16812
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16846
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16871
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16903
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16928
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16962
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 16987
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17147
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17223
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17263
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17298
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17326
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17361
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17418
+type = "DIR32"
+symbol = "__real@3fc3333333333333"
+target = 0x00787fb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb8; literal 0.15 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17462
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17487
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17821
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787f08
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f08; literal 4.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 17846
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18185
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18224
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18557
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18582
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18616
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18641
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18673
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18698
+type = "DIR32"
+symbol = "__real@bfd999999999999a"
+target = 0x00787ff0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff0; literal -0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18732
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18757
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18917
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 18993
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19033
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19068
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19096
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19131
+type = "DIR32"
+symbol = "__real@bf847ae147ae147b"
+target = 0x00787fe8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fe8; literal -0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19188
+type = "DIR32"
+symbol = "__real@3fc3333333333333"
+target = 0x00787fb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb8; literal 0.15 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19232
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19257
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19666
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19691
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19728
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 19792
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20070
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20091
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20109
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20157
+type = "REL32"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target = 0x00434010
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20182
+type = "DIR32"
+symbol = "__real@4084a00000000000"
+target = 0x00787fa8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fa8; literal 660.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20214
+type = "DIR32"
+symbol = "__real@c034000000000000"
+target = 0x00787fa0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fa0; literal -20.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20689
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20781
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 20802
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21157
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21278
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21299
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21601
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21702
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21827
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21848
+type = "DIR32"
+symbol = "__real@4024000000000000"
+target = 0x00787c28
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c28; literal 10.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 21877
+type = "DIR32"
+symbol = "__real@c024000000000000"
+target = 0x00787f98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f98; literal -10.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22205
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22314
+type = "REL32"
+symbol = "?SetHorizontalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22373
+type = "DIR32"
+symbol = "__real@404a000000000000"
+target = 0x00787f90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f90; literal 52.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22763
+type = "DIR32"
+symbol = "__real@404a000000000000"
+target = 0x00787f90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f90; literal 52.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22794
+type = "REL32"
+symbol = "?SetHorizontalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22809
+type = "REL32"
+symbol = "?SetTint@Secondary@@QAEXEH@Z"
+target = 0x00410b10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22969
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 22994
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23470
+type = "DIR32"
+symbol = "__real@404a000000000000"
+target = 0x00787f90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f90; literal 52.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23757
+type = "REL32"
+symbol = "?SetHorizontalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23795
+type = "REL32"
+symbol = "?ResetFrame@Secondary@@QAEXXZ"
+target = 0x0040f1e0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23810
+type = "REL32"
+symbol = "?SetTint@Secondary@@QAEXEH@Z"
+target = 0x00410b10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23860
+type = "DIR32"
+symbol = "__real@3fac28f5c28f5c29"
+target = 0x00787f88
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f88; literal 0.055 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23904
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 23929
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24142
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24193
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24247
+type = "DIR32"
+symbol = "__real@4083600000000000"
+target = 0x00787f80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f80; literal 620.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24268
+type = "DIR32"
+symbol = "__real@4083600000000000"
+target = 0x00787f80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f80; literal 620.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24288
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24309
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24329
+type = "DIR32"
+symbol = "__real@c024000000000000"
+target = 0x00787f98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f98; literal -10.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24350
+type = "DIR32"
+symbol = "__real@c024000000000000"
+target = 0x00787f98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f98; literal -10.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24392
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24409
+type = "DIR32"
+symbol = "__real@c025000000000000"
+target = 0x00787f78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f78; literal -10.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24426
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24547
+type = "DIR32"
+symbol = "__real@4046000000000000"
+target = 0x00787f70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f70; literal 44.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24676
+type = "DIR32"
+symbol = "__real@404f000000000000"
+target = 0x00787f68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f68; literal 62.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24805
+type = "DIR32"
+symbol = "__real@405dc00000000000"
+target = 0x00787f60
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f60; literal 119.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24938
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787370; literal 160.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 24967
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25116
+type = "REL32"
+symbol = "?SetHorizontalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25129
+type = "REL32"
+symbol = "?ResetFrame@Secondary@@QAEXXZ"
+target = 0x0040f1e0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25144
+type = "REL32"
+symbol = "?SetTint@Secondary@@QAEXEH@Z"
+target = 0x00410b10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25338
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25389
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25443
+type = "DIR32"
+symbol = "__real@4083600000000000"
+target = 0x00787f80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f80; literal 620.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25464
+type = "DIR32"
+symbol = "__real@4083600000000000"
+target = 0x00787f80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f80; literal 620.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25484
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25505
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c10; literal 20.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25525
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25546
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25818
+type = "DIR32"
+symbol = "__real@4085e00000000000"
+target = 0x00787f48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f48; literal 700.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25837
+type = "REL32"
+symbol = "?ApplyDamage@Secondary@@QAEXHN@Z"
+target = 0x004105a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25849
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410a10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25862
+type = "REL32"
+symbol = "?RequestTransition@Context@@QAEXD@Z"
+target = 0x00407ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25935
+type = "DIR32"
+symbol = "__real@bfc999999999999a"
+target = 0x00787f40
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f40; literal -0.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 25955
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26009
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26048
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26093
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26123
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26162
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26239
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26278
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26355
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26394
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26471
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26510
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26955
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 26980
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 27012
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 27481
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 27506
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 27538
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28007
+type = "DIR32"
+symbol = "__real@3feb333333333333"
+target = 0x00787f38
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f38; literal 0.85 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28032
+type = "DIR32"
+symbol = "__real@bfe6666666666666"
+target = 0x00787de0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de0; literal -0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28064
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28533
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28558
+type = "DIR32"
+symbol = "__real@bfeccccccccccccd"
+target = 0x00787c90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c90; literal -0.9 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 28590
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29035
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29074
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29386
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29411
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29523
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 29562
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30142
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30167
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30204
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30268
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30535
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 30574
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31382
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31421
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31668
+type = "DIR32"
+symbol = "__real@3ffa666666666666"
+target = 0x00787f30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f30; literal 1.65 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31693
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31725
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31769
+type = "DIR32"
+symbol = "__real@3f8a9fbe76c8b439"
+target = 0x00787f28
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f28; literal 0.013 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31813
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 31838
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32241
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32266
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32318
+type = "DIR32"
+symbol = "__real@bf947ae147ae147b"
+target = 0x00787f20
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32717
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32755
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32822
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32860
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32927
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 32965
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33032
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33058
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33122
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33160
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33227
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33265
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33332
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33370
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33437
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33475
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33542
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33578
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33645
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 33683
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34078
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34096
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34160
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34188
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34199
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34227
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34244
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34272
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34284
+type = "DIR32"
+symbol = "__real@bffccccccccccccd"
+target = 0x00787d90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34308
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34336
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34347
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34375
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872e8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34392
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34420
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787f18
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34432
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34476
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34520
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 34552
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35002
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35020
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35084
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35117
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35145
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35162
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35190
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35202
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35226
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35254
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35265
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35293
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35310
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35338
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35350
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35394
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787ca0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35438
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 35470
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF payload bytes independently verified"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36135
+type = "DIR32"
+symbol = "$L62715"
+target = 0x0042b2f2
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36139
+type = "DIR32"
+symbol = "$L62719"
+target = 0x0042b3c8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 1 for effect types 401; compiler-local offset 568 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36143
+type = "DIR32"
+symbol = "$L62724"
+target = 0x0042b4cc
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 2 for effect types 402; compiler-local offset 828 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36147
+type = "DIR32"
+symbol = "$L62731"
+target = 0x0042b6ec
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 3 for effect types 404; compiler-local offset 1372 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36151
+type = "DIR32"
+symbol = "$L62739"
+target = 0x0042b968
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 4 for effect types 405; compiler-local offset 2008 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36155
+type = "DIR32"
+symbol = "$L62760"
+target = 0x0042be40
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 5 for effect types 407; compiler-local offset 3248 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36159
+type = "DIR32"
+symbol = "$L62768"
+target = 0x0042bfc7
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 6 for effect types 408; compiler-local offset 3639 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36163
+type = "DIR32"
+symbol = "$L62776"
+target = 0x0042c13f
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 7 for effect types 409; compiler-local offset 4015 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36167
+type = "DIR32"
+symbol = "$L62781"
+target = 0x0042c243
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 8 for effect types 410; compiler-local offset 4275 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36171
+type = "DIR32"
+symbol = "$L62789"
+target = 0x0042c3ca
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 9 for effect types 411; compiler-local offset 4666 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36175
+type = "DIR32"
+symbol = "$L62800"
+target = 0x0042c684
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 10 for effect types 412; compiler-local offset 5364 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36179
+type = "DIR32"
+symbol = "$L62817"
+target = 0x0042ca1a
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 11 for effect types 413; compiler-local offset 6282 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36183
+type = "DIR32"
+symbol = "$L62834"
+target = 0x0042cdb6
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 12 for effect types 414; compiler-local offset 7206 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36187
+type = "DIR32"
+symbol = "$L62851"
+target = 0x0042d152
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 13 for effect types 415; compiler-local offset 8130 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36191
+type = "DIR32"
+symbol = "$L62868"
+target = 0x0042d4ee
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 14 for effect types 416; compiler-local offset 9054 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36195
+type = "DIR32"
+symbol = "$L62885"
+target = 0x0042d88a
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 15 for effect types 417; compiler-local offset 9978 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36199
+type = "DIR32"
+symbol = "$L62894"
+target = 0x0042da16
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 16 for effect types 418; compiler-local offset 10374 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36203
+type = "DIR32"
+symbol = "$L62902"
+target = 0x0042dc48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 17 for effect types 419; compiler-local offset 10936 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36207
+type = "DIR32"
+symbol = "$L62909"
+target = 0x0042de3d
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 18 for effect types 420; compiler-local offset 11437 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36211
+type = "DIR32"
+symbol = "$L62914"
+target = 0x0042df98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 19 for effect types 421; compiler-local offset 11784 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36215
+type = "DIR32"
+symbol = "$L62919"
+target = 0x0042e0f3
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 20 for effect types 422; compiler-local offset 12131 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36219
+type = "DIR32"
+symbol = "$L62924"
+target = 0x0042e24e
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 21 for effect types 423; compiler-local offset 12478 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36223
+type = "DIR32"
+symbol = "$L62931"
+target = 0x0042e444
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 22 for effect types 424; compiler-local offset 12980 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36227
+type = "DIR32"
+symbol = "$L62938"
+target = 0x0042e63a
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 23 for effect types 425; compiler-local offset 13482 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36231
+type = "DIR32"
+symbol = "$L62945"
+target = 0x0042e830
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 24 for effect types 427; compiler-local offset 13984 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36235
+type = "DIR32"
+symbol = "$L62950"
+target = 0x0042e934
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 25 for effect types 428; compiler-local offset 14244 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36239
+type = "DIR32"
+symbol = "$L62964"
+target = 0x0042eb86
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 26 for effect types 429; compiler-local offset 14838 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36243
+type = "DIR32"
+symbol = "$L62971"
+target = 0x0042ed18
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 27 for effect types 430; compiler-local offset 15240 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36247
+type = "DIR32"
+symbol = "$L62979"
+target = 0x0042eec0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 28 for effect types 431; compiler-local offset 15664 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36251
+type = "DIR32"
+symbol = "$L62987"
+target = 0x0042f067
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 29 for effect types 432; compiler-local offset 16087 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36255
+type = "DIR32"
+symbol = "$L62991"
+target = 0x0042f13d
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 30 for effect types 433; compiler-local offset 16301 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36259
+type = "DIR32"
+symbol = "$L63023"
+target = 0x0042f827
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 31 for effect types 434; compiler-local offset 18071 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36263
+type = "DIR32"
+symbol = "$L63057"
+target = 0x0042ff8b
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 32 for effect types 435; compiler-local offset 19963 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36267
+type = "DIR32"
+symbol = "$L63069"
+target = 0x0043017d
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 33 for effect types 436; compiler-local offset 20461 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36271
+type = "DIR32"
+symbol = "$L63073"
+target = 0x00430253
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 34 for effect types 437; compiler-local offset 20675 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36275
+type = "DIR32"
+symbol = "$L63082"
+target = 0x00430417
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 35 for effect types 438; compiler-local offset 21127 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36279
+type = "DIR32"
+symbol = "$L63092"
+target = 0x00430638
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 36 for effect types 439; compiler-local offset 21672 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36283
+type = "DIR32"
+symbol = "$L63105"
+target = 0x004308b2
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 37 for effect types 440; compiler-local offset 22306 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36287
+type = "DIR32"
+symbol = "$L63110"
+target = 0x00430a44
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 38 for effect types 441; compiler-local offset 22708 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36291
+type = "DIR32"
+symbol = "$L63124"
+target = 0x00430e2b
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 39 for effect types 442; compiler-local offset 23707 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36295
+type = "DIR32"
+symbol = "$L63119"
+target = 0x00430d07
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 40 for effect types 443; compiler-local offset 23415 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36299
+type = "DIR32"
+symbol = "$L63152"
+target = 0x004313a4
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 41 for effect types 444; compiler-local offset 25108 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36303
+type = "DIR32"
+symbol = "$L63166"
+target = 0x004315f6
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 42 for effect types 445; compiler-local offset 25702 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36307
+type = "DIR32"
+symbol = "$L63185"
+target = 0x00431a70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 43 for effect types 446; compiler-local offset 26848 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36311
+type = "DIR32"
+symbol = "$L63193"
+target = 0x00431c7e
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 44 for effect types 447; compiler-local offset 27374 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36315
+type = "DIR32"
+symbol = "$L63201"
+target = 0x00431e8c
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 45 for effect types 448; compiler-local offset 27900 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36319
+type = "DIR32"
+symbol = "$L63209"
+target = 0x0043209a
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 46 for effect types 449; compiler-local offset 28426 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36323
+type = "DIR32"
+symbol = "$L63217"
+target = 0x004322a8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 47 for effect types 450; compiler-local offset 28952 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36327
+type = "DIR32"
+symbol = "$L63225"
+target = 0x0043243f
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 48 for effect types 451; compiler-local offset 29359 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36331
+type = "DIR32"
+symbol = "$L63242"
+target = 0x00432884
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 49 for effect types 452; compiler-local offset 30452 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36335
+type = "DIR32"
+symbol = "$L63250"
+target = 0x00432a1b
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 50 for effect types 453; compiler-local offset 30859 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36339
+type = "DIR32"
+symbol = "$L63258"
+target = 0x00432bb4
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 51 for effect types 454; compiler-local offset 31268 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36343
+type = "DIR32"
+symbol = "$L63271"
+target = 0x00432fc0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 52 for effect types 495; compiler-local offset 32304 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36347
+type = "DIR32"
+symbol = "$L63276"
+target = 0x004330e8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 53 for effect types 496; compiler-local offset 32600 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36351
+type = "DIR32"
+symbol = "$L63314"
+target = 0x00433661
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 54 for effect types 497; compiler-local offset 34001 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36355
+type = "DIR32"
+symbol = "$L63331"
+target = 0x004339fd
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 55 for effect types 498; compiler-local offset 34925 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36359
+type = "DIR32"
+symbol = "$L63348"
+target = 0x00433d93
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 56 for effect types 499; compiler-local offset 35843 and canonical destination independently checked"
+
+[[units.character-08-update-local-effects.relocations]]
+offset = 36363
+type = "DIR32"
+symbol = "$L62707"
+target = 0x00433e96
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 57 for effect types 403,406,426,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 36102 and canonical destination independently checked"
+
+[units.secondary-effect-set-polar-velocity]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/secondary-effect-set-polar-velocity/Character08Effects.obj"
+symbol = "?SetVelocityPolar@SecondaryEffectSlot@@QAEXNN@Z"
+target_address = 0x00434010
+size = 77
+
+[[units.secondary-effect-set-polar-velocity.relocations]]
+offset = 12
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified"
+
+[[units.secondary-effect-set-polar-velocity.relocations]]
+offset = 23
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[[units.secondary-effect-set-polar-velocity.relocations]]
+offset = 44
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ff8; literal 57.29579143313326 and COFF payload bytes independently verified"
+
+[[units.secondary-effect-set-polar-velocity.relocations]]
+offset = 55
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; independently reviewed original direct CALL operand and named shared member, CRT or local polar-helper destination; caller receiver/arguments retained"
+
+[units.secondary-set-vertical-shake]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryEffectControls.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-set-vertical-shake/SecondaryEffectControls.obj"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target_address = 0x00410a10
+size = 43
+
+[units.secondary-set-horizontal-shake]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryEffectControls.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-set-horizontal-shake/SecondaryEffectControls.obj"
+symbol = "?SetHorizontalShake@Secondary@@QAEXHH@Z"
+target_address = 0x00410a80
+size = 63
+
+[units.secondary-set-tint]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryEffectControls.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-set-tint/SecondaryEffectControls.obj"
+symbol = "?SetTint@Secondary@@QAEXEH@Z"
+target_address = 0x00410b10
+size = 96
+
+[units.context-request-transition]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryEffectControls.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/context-request-transition/SecondaryEffectControls.obj"
+symbol = "?RequestTransition@Context@@QAEXD@Z"
+target_address = 0x00407ce0
+size = 38

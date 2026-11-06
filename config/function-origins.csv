@@ -62,7 +62,7 @@ address,origin,status,evidence
 0x00407620,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x004079C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x00407B40,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
-0x00407CE0,unknown,unreviewed,
+0x00407CE0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00407D10,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x00408040,unknown,unreviewed,
 0x00408080,unknown,unreviewed,
@@ -166,11 +166,11 @@ address,origin,status,evidence
 0x004108A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
 0x00410940,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
 0x004109D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
-0x00410A10,unknown,unreviewed,
+0x00410A10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410A40,unknown,unreviewed,
-0x00410A80,unknown,unreviewed,
+0x00410A80,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410AC0,unknown,unreviewed,
-0x00410B10,unknown,unreviewed,
+0x00410B10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410B70,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00411080,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x004116A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
@@ -203,8 +203,8 @@ address,origin,status,evidence
 0x004261C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
 0x004261F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-input-history-recognition
 0x004276B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner
-0x0042B190,unknown,unreviewed,
-0x00434010,unknown,unreviewed,
+0x0042B190,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00434010,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00434060,unknown,unreviewed,
 0x004463E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00446590,unknown,unreviewed,

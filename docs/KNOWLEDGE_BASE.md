@@ -2353,12 +2353,11 @@ operand reviews are retained in .analysis/probes/shiori-command/. No compiler or
 Wine failure occurred in this checkpoint; only focused ledger/progress and
 whitespace checks are required, without full CI or runtime matrices.
 
-The following input-history checkpoint accepts the complete slot-2 owner described
-below. Slot 5 at 0x4276B0 and slot 7 at 0x42B190 remain substantial leads with
-15,066-byte and 36,135-byte candidates, respectively. Those sizes are discovery
-facts, not reviewed acceptance extents. The complete slot-6 animation draft
-remains unaccepted in its private parked snapshot; neutral controls there are
-not reopened by this checkpoint.
+The following input-history, CPU and local-effect checkpoints accept the complete
+slot-2, slot-5 and slot-7 owners described below. Their former discovery sizes
+were not acceptance boundaries; the local-effect review also includes both
+associated switch tables. The complete slot-6 animation draft remains unaccepted
+in its private parked snapshot; neutral controls there are not reopened.
 
 ## Shiori input history recognition
 
@@ -2418,7 +2417,7 @@ or previously accepted source changed. Eight earlier Shiori reports remain
 unchanged in docs/evidence/character-08-exact.json; the new report is appended.
 Private evidence, full source trials and boundary review are retained in
 .analysis/probes/shiori-input/; formal report is .analysis/exact/shiori-input.json.
-Authored acceptance is now 184 complete functions /112,788 instruction bytes,
+At the input-recognition checkpoint, authored acceptance is 184 complete functions /112,788 instruction bytes,
 with 335 associated local-table bytes; reviewed boundaries and origins are 222.
 Product closure, linked data placement, runtime equivalence and portability
 remain independently open.
@@ -2516,9 +2515,134 @@ constant payload checks and binding-identity records are retained in
 whitespace checks pass; no full CI/cohort or runtime matrix was run. No native
 compiler or Wine failure occurred during this checkpoint.
 
-Authored acceptance is now **185 complete functions /127,854 instruction bytes**,
-with 335 associated local-table bytes and 223 reviewed boundaries/origins.
-Shiori has nine accepted child virtual bodies plus its constructor, totaling
-33,739 instruction bytes. Slots 6 and 7 remain substantial open owners; slot 8
-is also open. Original linked-data placement, runnable product/runtime closure
-and portability remain independently open.
+At this CPU checkpoint, authored acceptance is **185 complete functions /127,854
+instruction bytes**, with 335 associated local-table bytes and 223 reviewed
+boundaries/origins. Shiori has nine accepted child virtual bodies plus its
+constructor, totaling 33,739 instruction bytes. The subsequent checkpoint below
+accepts slot 7. Slots 6 and 8, original linked-data placement, runnable
+product/runtime closure and portability remain independently open.
+
+## Shiori local effect dispatch and controls
+
+Character08::Slot07 is the complete local-effect update owner at **0x42B190**.
+Its **36,467-byte contribution** contains 36,135 instruction bytes through the
+RET at 0x433EB6, a 232-byte address table at 0x433EB7 and a 100-byte selector
+map at 0x433F9F. Exclusive end is 0x434003; thirteen INT3 bytes precede the
+following 77-byte polar-velocity helper at 0x434010. All 8,192 instructions,
+516 direct branches and the single indirect dispatch were reviewed. Fifty-seven
+explicit effect types in 400..499 select 57 case destinations; 43 selector
+entries use the default destination. All 58 address entries point at reviewed
+instruction starts. The owning Shiori virtual table at 0x787DF8 independently
+points slot 7, operand 0x787E14, to the entry. Candidate code-only size never
+substitutes for the complete code/data contribution.
+
+The function exits if the opponent's signed field014C is positive, initializes
+its signed ring index from effectRead and constructs one 72-byte descriptor.
+It reads the current effectWrite on every loop condition, rather than taking a
+snapshot. Active effects proceed only when short field0086 is zero and the
+original self-field014C/field0088 freeze predicate permits updating. Duration
+and frame count are read from this character's patterns using the effect's
+unsigned type/frame. ResetLocalEffectSpawn receives this character and the
+SAME descriptor address before dispatch. The loop advances and wraps at 64.
+
+Cases control ticks/frames, velocity/acceleration, effect spawning/removal,
+child counters, opponent capture/position/damage, camera/flash requests and
+scene-transition requests. Some paths return from the whole function; others
+leave only the current switch. Those distinctions and the original random-call
+order are explicit in the source. The machine code physically places type 443
+before 442, while the provisional Ghidra output sorts case labels numerically;
+the C++ source restores the original 441/443/442 order. Shared exit destinations
+are also preserved, even where a local skip would produce the same final state.
+
+### Descriptor, fields and support owners
+
+EffectSpawn now derives naturally from the existing SecondaryEffectSpawn view.
+Both describe the same observed 72-byte local object, constructed at 0x405490,
+reset via 0x413090 and passed to both character/local and Context/global effect
+emitters. The nonvirtual base conversion preserves the original address and
+introduces no helper call or displacement. This is a source representation of
+reviewed common storage and usage, not proof of original class inheritance or
+translation-unit partitioning. Existing constructor/emitter callers all retain
+complete exact comparisons. No fake ABI declaration or padding member is used.
+
+Existing Secondary padding at C0/C8 becomes two doubles; byte 30C0 replaces one
+byte of its four-byte unknown region, keeping three bytes at 30C1. Context exposes
+byte F33, ints 1423C/14244 and byte 14280 while preserving the intervening unknown
+storage and every following offset. These numerical views are target facts;
+behavioral names below are provisional.
+
+| Support owner | Entry | Complete code bytes | Original behavior |
+| --- | --- | ---: | --- |
+| SecondaryEffectSlot::SetVelocityPolar | 0x434010 | 77 | vx=cos(angle/57.29579143313326)*speed; vy=sin(angle/57.29579143313326)*speed, using the independently checked exact divisor payload |
+| Secondary::SetVerticalShake | 0x410A10 | 43 | Store signed magnitude as Context double 14210, then hold at 14218 |
+| Secondary::SetHorizontalShake | 0x410A80 | 63 | Store (1-player*2)*magnitude at Context 1423C, then hold at 14244 |
+| Secondary::SetTint | 0x410B10 | 96 | Store byte 30C0 and int duration 30C4; halve duration when setting136C==0; store player at Context F33 |
+| Context::RequestTransition | 0x407CE0 | 38 | Store 1 at state1427C and the request byte at 14280 |
+
+All five support owners are independent complete exact functions, totaling
+317 instruction bytes. The tint parameter's unsigned-byte view retains the
+original 0xB0 caller pushes; the callee copies the byte without extending it.
+The polar helper's receiver is the complete effect slot, with writes at 28/30,
+not a pointer to a fabricated velocity-only ABI object. Cos/sin/float-to-int/CRT
+random bindings remain explicit callee dependencies, not reconstructed CRT credit.
+
+### Source and comparison details
+
+The first complete source was compiled early. Normal local scope places the
+two unsigned duration/count words at EBP-54/-58, the loop index at -4, the
+72-byte descriptor at -50 and this at -5C. The complete frame is 0x328. Locals
+are real used values; no dummy object or inert stack padding is present. Natural
+short increments/decrements preserve the original word-width operations.
+Original clamp order, early lifetime/cancellation exits, layer stores and
+floating/integer operand grouping are restored from instructions, not assumed
+from the decompiler. In particular, center+(RandomRange-40) preserves both call
+order and LEA base/index identity; indexed-position-plus-scalar expressions
+must retain their original operand order under VC7.1 /Od.
+
+The final particle cases demonstrate why equivalent algebra is insufficient.
+For type 497, VX is 1.2*B1+0.7*B2+1.7*B3-1.8 and VY is
+-1.2-(0.6*B4+0.9*B5+1.4*B6). For type 498, VX is
+B1+0.5*B2+1.5*B3-1.5 and VY is -1.0-(0.5*B4+0.8*B5+1.2*B6).
+Each B is a DISTINCT rand()>16000 evaluation in the listed order, after two
+earlier lifespan-bucket calls. Coefficients are recovered from the exact
+canonical payloads, including the distinct 0.8 and 0.9 data addresses. Reordering
+the calls changes which random value receives each coefficient. Every source
+trial retains its full native artifact; normalized diagnostics confer no credit.
+
+All **430 new relocation fields** were independently checked: the main owner has
+60 compiler-local bindings, 141 direct calls and 225 floating operands; the polar
+helper adds two math calls and two divisor references. Every constant payload
+was checked in both COFF and canonical data. Every local pointer/table entry
+has an explicit symbol, canonical destination and checked compiled offset.
+The full 36,467-byte strict comparison includes BOTH tables without masking.
+There is no compare-size override, byte injection, assembly or linked-data
+approximation. Code and associated data are counted separately in progress.
+
+### Focused acceptance and remaining work
+
+Six new units and 168 Engine.h-dependent existing units compare strict exact
+from **45 serial cold source/profile/dependency artifacts**. All 135 selected
+compiler-local offsets/destinations and the constructor's literal identity are
+checked after the header change. Per-unit final receipts preserve the actual
+cold compiler/source/profile and reviewed recipe identities; binding-name
+refreshes do not modify compiler inputs or object bytes. Standalone Input,
+reader and configuration sources were unchanged and omitted. Focused ledger,
+progress and whitespace checks pass; no full CI/cohort or runtime matrix ran.
+
+Public source is Character08Effects.cpp and SecondaryEffectControls.cpp.
+The main proof joins character-08-exact.json; independent support proofs are
+secondary-effect-controls-exact.json. Involved earlier certificates are
+refreshed. Private original/source trials, complete boundaries, operand/payload
+reviews, case-order diagnostics and final symbol-identity refreshes are retained
+in .analysis/probes/shiori-effects/. Formal full reports are
+.analysis/exact/shiori-effects-and-affected.json. Two draft member-renaming
+compiler errors were corrected; each was followed by the required successful
+toolchain execution check. Both failed inputs and compiler exit logs are retained.
+
+Authored acceptance is now **191 complete functions /164,306 instruction bytes**,
+plus **667 associated local-table bytes**. Reviewed boundaries/origins are 229.
+The new checkpoint contributes 36,452 code bytes and 332 local-table bytes.
+Shiori has ten accepted child virtual bodies plus its constructor, totaling
+69,874 code bytes. Slot 6 remains an unaccepted complete private draft; slot 8
+is still open. No whole-game, original linked-data, runnable replacement,
+runtime equivalence or portability closure is claimed.

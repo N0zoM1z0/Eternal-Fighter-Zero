@@ -222,3 +222,9 @@ address,end,size,status,evidence
 0x004261C0,0x004261EF,47,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
 0x004261F0,0x004276A3,5299,reviewed,docs/KNOWLEDGE_BASE.md#shiori-input-history-recognition
 0x004276B0,0x0042B18A,15066,reviewed,docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner
+0x0042B190,0x00434003,36467,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00434010,0x0043405D,77,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00410A10,0x00410A3B,43,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00410A80,0x00410ABF,63,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00410B10,0x00410B70,96,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x00407CE0,0x00407D06,38,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
