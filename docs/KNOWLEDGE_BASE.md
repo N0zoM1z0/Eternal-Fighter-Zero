@@ -3291,3 +3291,145 @@ plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 251 ea
 The battle keyboard, health/HUD/shadow/combo/number drawing, screenshot/fill,
 background implementations and parked pushbox owner remain open, as do the
 whole game and independent product/runtime/portability phases.
+
+## Battle health, HUD and combo display
+
+Canonical target: resources/EFZ.exe, SHA-256
+`3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
+Three complete authored Scene3 display members are accepted from
+src/SceneBattleDisplay.cpp under explicit profile vc71-od-static and pinned
+VC7.1 RTM 13.10.3077:
+
+| Member | Entry | Instruction bytes | Exclusive end | Instructions | Direct branches | Direct calls | Relocations |
+| --- | --- | ---: | --- | ---: | ---: | ---: | ---: |
+| RenderHealthBars | 0x75E240 | 7,707 | 0x76005B | 2,054 | 31 | 64 | 72 |
+| RenderHud | 0x760060 | 9,032 | 0x7623A8 | 2,382 | 58 | 87 | 115 |
+| RenderCombo | 0x7623B0 | 2,205 | 0x762C4D | 654 | 15 | 30 | 32 |
+
+All **18,944 instruction bytes** compare complete strict exact. All 104 direct
+branch destinations are reviewed instruction starts inside the complete bodies.
+There are no indirect jumps, virtual calls or associated local tables. Original
+RET /RET /RET04 exits and following CC runs of 5/8/3 bytes establish complete
+extents; the CC bytes receive no progress credit. All 219 relocation fields have
+explicit reviewed symbols, original destinations and operand evidence: 181 direct
+calls plus 38 independently checked exact IEEE operands. Source width, local
+scope, float/int evaluation and full original branch order are included in the
+comparison. Callee declarations and codegen do not prove callee implementation,
+original TU partitioning, linked data or runtime closure.
+
+### Health tracking and top display
+
+RenderHealthBars first updates both players' live display-health fields, even
+when the later positive Context1420C flag suppresses drawing. Field110 moves
+toward actual health108 in increments/decrements of200 with overshoot correction.
+Field10C decreases by100 only when above actual health and the *opposite* player's
+combo WORD174 is zero, then is clamped upward to actual health. Preserve both
+players' update order, original repeated reads and real signed comparisons.
+Natural compound subtraction matches the original Boolean-scaled decay; adding
+a negative product changes VC7.1 register selection and instructions.
+
+The complete display then composes player pattern48 and45 frames, using their
+actual texture index and signed width/height with the existing Secondary pose/
+PatternSequence layouts. Every repeated frame access, MakeSurfaceRect return,
+rectangle assignment, player mirroring flag and color key is retained. Both
+players' bar widths use signed integer conversion of the relevant field10C or110
+multiplied by exact double120.0 and divided by exact double9999.0. The four live
+x87 arguments were absent from provisional decompiler output.
+
+Prior-health bars draw only at positive width. Smoothed bars use a fixed region
+at width>=40, otherwise a positive-width low-health region animated by
+(field30F0%36)/18. The original right-player low-health **source height is8**,
+while its destination height is6; this asymmetry is retained and exact. Round
+limit and per-player wins are read with the original signed-byte interpretation,
+and the three threshold tests use >=1, >=2, >=3 as encoded. The owner ends with
+the sampled frame counter's DrawNumber call. No extra clamps, validation or
+resource substitutions are introduced.
+
+### Bottom status and world-space overlays
+
+RenderHud returns immediately for positive Context1420C. It draws the complete
+bottom texture strip and both signed WORD148 meter values. Width is the original
+integer expression value*108/3000. The four value tiers (<1000, <2000, <3000,
+otherwise) select the original icons and source regions, including the five-frame
+(field30F0%90)/18 animation. Source/destination coordinates, all 42 rectangle
+assignments and all branch-specific calls are part of the complete contribution.
+
+The separate double118 gauge uses exact double constants60.0,500.0 and1000.0.
+With byte120 zero, the lower half draws width60*value*2/1000. At value>=500 it
+first draws the full60 segment, then width(value-500)*60*2/1000. With byte120
+nonzero it instead draws width60*value/1000 from the animated source region.
+Keep variable-first x87 comparisons and the original lower-half-first physical
+branch order, including its floating status tests. The initial source derivation
+rechecked every constant against its canonical IEEE payload before compilation.
+
+When Context counter1354 is zero, the full owner also draws per-character
+world-space overlays. The stun overlay requires positive signed field124,
+field128 zero, negative Y, state in[50,150), and absent400 in the live character
+sequence frame's AA flags. It uses three strokes, the original facing-specific
+X arithmetic, conditionally limited length100 and color
+211-(field124>30)*3-(field124>60)*7, followed by the original dark strokes.
+The threshold comparisons are the exact >=50 and >=100 forms encoded by the
+target; equivalent49/99 comparisons generate different code.
+
+The angle overlay requires nonzero float134 and accepted IsStateGroupA. Its
+length uses **float100.0f /360.0f**, with the original nested integer conversion
+and different facing-specific addition/subtraction. Both overlays retain
+cameraX+(int)worldX and cameraY+210+(int)worldY-(worldY<0) arithmetic, every
+original signed/unsigned promotion and the real rectangle member stores.
+No fabricated Boolean locals, dummy stores or approximate coordinate helper
+replace the observed code. These are live character-frame reads, not collision
+snapshot ownership.
+
+### Combo display and native source behavior
+
+RenderCombo receives a real Secondary pointer and caps its signed combo count
+at99 without adding a lower clamp. Positive player byte draws the right side
+first; otherwise the left side. It displays count, damage and the integer and
+one-decimal portions of doubleF8, using the actual signed integer conversion and
+signed remainder of (int)(F8*10.0)%10. The exact10.0 constant and all four live
+x87 conversion calls are independently reviewed. The provisional decompiler's
+register-only DrawNumber arguments are not copied into source.
+
+Signed timer104<=6 selects the original DrawBlendedSurface path and DrawNumber
+blend-mode argument; other values use DrawSurface. The two original count>9
+branches contain identical DrawNumber calls. Both branches are present in the
+/Od target contribution and remain natural source control flow; they are not
+removed, filled with padding or counted as additional functions. Decimal-point
+rectangles and each side's fade/emission order are included through RET04.
+
+DrawNumber75DB70 remains an explicit reviewed dependency with six stack arguments
+(two int coordinates, unsigned number, two byte formatting controls and int mode).
+The existing Video DrawSurface/DrawBlendedSurface/FillRectangle contracts and
+compiler __ftol2 dependency retain their reviewed original destinations. This
+checkpoint grants no authored-function credit to those open implementations.
+
+### Focused acceptance and retained evidence
+
+Complete health, HUD and combo sources were built early, at 7700,9028 and2205
+bytes respectively. Genuine work records hold only used rectangles, widths,
+player/stroke indices or counts. The health derivation initially had private
+parser errors involving a frame width name and a spaced dereference; inputs/logs
+are retained, and the pinned --execute smoke check passed before subsequent
+comparisons. Original branch/literal order and ordinary subtraction resolved
+the complete differences. Final formatting/comment cleanup also received full
+native comparisons. There are no assembly, copied bytes, padding fields,
+masked fields or shortened-prefix comparisons.
+
+The final public source received **one serial cold source/profile/dependency
+artifact** and three complete manifest-bound strict comparisons, all zero
+at full extent. Existing source files and shared headers are unchanged, so
+no previous-unit replay was involved. Public proof is
+docs/evidence/battle-display-exact.json. Private complete target instructions,
+source/object attempts, independent call/constant/branch/boundary reviews and
+final reports remain in .analysis/probes/battle-display/ and
+.analysis/exact/battle-display.json. The original decompiles remain in
+.analysis/probes/battle-loop/. Only focused ledger/progress/whitespace checks
+accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
+
+The checkpoint adds **3 authored complete exact functions /18,944 instruction
+bytes**, bringing acceptance to **216 functions /216,680 instruction bytes**,
+plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 254 each.
+DrawNumber, the shadow prepass, battle keyboard/replay reset, parked pushbox,
+concrete background implementations and whole-game/product/runtime/portability
+closure remain open. Complete display functions do not establish a runnable
+replacement or whole-game completion.

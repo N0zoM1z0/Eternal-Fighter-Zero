@@ -250,3 +250,6 @@ address,end,size,status,evidence
 0x007642A0,0x007647A5,1285,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
 0x007631F0,0x0076339F,431,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
 0x0075DD50,0x0075E231,1249,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x0075E240,0x0076005B,7707,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
+0x00760060,0x007623A8,9032,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
+0x007623B0,0x00762C4D,2205,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display

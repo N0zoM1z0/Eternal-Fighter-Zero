@@ -1,0 +1,2065 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "method": "three new complete health/HUD/combo contributions compared from one serial cold source/profile/dependency artifact; existing sources and shared headers unchanged; no unrelated native replay",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 7707,
+      "matched_bytes": 7707,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 926,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E5DE; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1035,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E64B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1208,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E6F8; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1270,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E736; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1410,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E7C2; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1607,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E887; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1630,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E89E; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1727,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E8FF; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1905,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E9B1; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1967,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075E9EF; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2103,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EA77; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2300,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EB3C; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2362,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EB7A; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2526,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EC1E; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2723,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ECE3; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2744,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ECF8; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 2750,
+          "target": 7902648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3878000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ECFE; original 8-byte x87 data operand; independently checked IEEE payload 000000008087c340",
+          "addend": 0
+        },
+        {
+          "offset": 2755,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ED03; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2797,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ED2D; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2900,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075ED94; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3078,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EE46; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3099,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EE5B; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 3105,
+          "target": 7902648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3878000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EE61; original 8-byte x87 data operand; independently checked IEEE payload 000000008087c340",
+          "addend": 0
+        },
+        {
+          "offset": 3110,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EE66; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3152,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EE90; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3255,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EEF7; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3433,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EFA9; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3515,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075EFFB; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3618,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F062; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3796,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F114; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3817,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F129; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 3823,
+          "target": 7902648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3878000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F12F; original 8-byte x87 data operand; independently checked IEEE payload 000000008087c340",
+          "addend": 0
+        },
+        {
+          "offset": 3828,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F134; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3863,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F157; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3962,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F1BA; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4140,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F26C; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4161,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F281; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 4167,
+          "target": 7902648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3878000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F287; original 8-byte x87 data operand; independently checked IEEE payload 000000008087c340",
+          "addend": 0
+        },
+        {
+          "offset": 4172,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F28C; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4207,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F2AF; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4306,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F312; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4484,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F3C4; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4559,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F40F; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4658,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F472; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4836,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F524; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4859,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F53B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4978,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F5B2; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5156,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F664; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5179,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F67B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5357,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F72D; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5405,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F75D; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5583,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F80F; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5606,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F826; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5784,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F8D8; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5832,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F908; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6010,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F9BA; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6033,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075F9D1; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6211,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FA83; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6234,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FA9A; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6353,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FB11; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6531,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FBC3; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6579,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FBF3; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6757,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FCA5; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6805,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FCD5; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6983,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FD87; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7031,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FDB7; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7209,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FE69; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7257,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FE99; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7435,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FF4B; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7483,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0075FF7B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7661,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076002D; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7698,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760052; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bf5300763b8b42bdd4f737099638401c8fbcd481bba6daeea72d67526c22c1f6",
+      "target_extent_sha256": "bf5300763b8b42bdd4f737099638401c8fbcd481bba6daeea72d67526c22c1f6",
+      "unit": "scene-battle-render-health-bars",
+      "symbol": "?RenderHealthBars@Scene3@@QAEXXZ",
+      "target_address": "0x0075E240",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
+      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "284a44dc46527b956dc76dd3a45e4b48c873195d774599301a80675207548298",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 9032,
+      "matched_bytes": 9032,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 58,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076009A; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007600E3; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076017D; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 372,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007601D4; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 454,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760226; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 632,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007602D8; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 688,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760310; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 785,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760371; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 963,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760423; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 992,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760440; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1098,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007604AA; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1276,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076055C; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1332,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760594; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1429,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007605F5; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1607,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007606A7; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1636,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007606C4; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1742,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076072E; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1920,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007607E0; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1948,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007607FC; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2045,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076085D; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2223,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076090F; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2291,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760953; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2397,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007609BD; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2575,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760A6F; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2655,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760ABF; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2757,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760B25; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2935,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760BD7; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2991,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760C0F; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3091,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760C73; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3269,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760D25; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3291,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760D3B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3393,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760DA1; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3571,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760E53; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3627,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760E8B; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3727,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760EEF; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3905,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760FA1; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3927,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00760FB7; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4029,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076101D; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4207,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007610CF; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4235,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007610EB; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4335,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076114F; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4513,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761201; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4574,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076123E; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4676,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007612A4; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4854,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761356; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4899,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761383; original 8-byte x87 data operand; independently checked IEEE payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 4925,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076139D; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 4939,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007613AB; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 4944,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007613B0; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4976,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007613D0; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5075,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761433; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5172,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761494; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5350,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761546; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5371,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076155B; original 8-byte x87 data operand; independently checked IEEE payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 5377,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761561; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 5385,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761569; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 5390,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076156E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5422,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076158E; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5516,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007615EC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 5528,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007615F8; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 5533,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007615FD; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5601,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761641; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5707,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007616AB; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5885,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076175D; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5930,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076178A; original 8-byte x87 data operand; independently checked IEEE payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 5956,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007617A4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 5970,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007617B2; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 5975,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007617B7; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6000,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007617D0; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6099,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761833; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6199,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761897; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6377,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761949; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6398,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076195E; original 8-byte x87 data operand; independently checked IEEE payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 6404,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761964; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 6412,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076196C; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 6417,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761971; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6442,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076198A; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6536,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007619E8; original 8-byte x87 data operand; independently checked IEEE payload 0000000000004e40",
+          "addend": 0
+        },
+        {
+          "offset": 6548,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007619F4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000408f40",
+          "addend": 0
+        },
+        {
+          "offset": 6553,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007619F9; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6614,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761A36; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6716,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761A9C; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6894,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761B4E; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7020,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761BCC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7244,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761CAC; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7284,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761CD4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7346,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761D12; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7578,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761DFA; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7643,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761E3B; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7702,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761E76; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 7828,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761EF4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7890,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00761F32; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8122,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076201A; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8187,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076205B; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8211,
+          "target": 7896072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@00000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762073; original 4-byte x87 data operand; independently checked IEEE payload 00000000",
+          "addend": 0
+        },
+        {
+          "offset": 8248,
+          "target": 4260672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupA@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762098; explicit reviewed secondary-state-group-a destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8331,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007620EB; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8371,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762113; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8433,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762151; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8480,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762180; original 4-byte x87 data operand; independently checked IEEE payload 0000c842",
+          "addend": 0
+        },
+        {
+          "offset": 8486,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762186; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 8493,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076218D; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8552,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007621C8; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8617,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762209; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8676,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762244; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8725,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762275; original 4-byte x87 data operand; independently checked IEEE payload 0000c842",
+          "addend": 0
+        },
+        {
+          "offset": 8731,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076227B; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 8741,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762285; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8766,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076229E; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8828,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007622DC; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8875,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076230B; original 4-byte x87 data operand; independently checked IEEE payload 0000c842",
+          "addend": 0
+        },
+        {
+          "offset": 8881,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762311; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 8888,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762318; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 8947,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762353; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 9012,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762394; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ddd691a330eb9ae6618cc89696410f1c23d118447bd81d90c913789d5598b804",
+      "target_extent_sha256": "ddd691a330eb9ae6618cc89696410f1c23d118447bd81d90c913789d5598b804",
+      "unit": "scene-battle-render-hud",
+      "symbol": "?RenderHud@Scene3@@QAEXXZ",
+      "target_address": "0x00760060",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
+      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3cf294b739e73516af210db91e24bcbc249a8225e87de13de87cebc91e35f8df",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2205,
+      "matched_bytes": 2205,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 75,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007623FB; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 145,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762441; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 316,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007624EC; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 422,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762556; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 473,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762589; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 520,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007625B8; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 571,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007625EB; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 608,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762610; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 627,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762623; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 665,
+          "target": 7896104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4024000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762649; original 8-byte x87 data operand; independently checked IEEE payload 0000000000002440",
+          "addend": 0
+        },
+        {
+          "offset": 670,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076264E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 697,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762669; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 720,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762680; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 793,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007626C9; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 988,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076278C; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1094,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007627F6; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1122,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762812; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1216,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762870; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1411,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762933; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1517,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 0076299D; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1565,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007629CD; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1609,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 007629F9; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1657,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762A29; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1694,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762A4E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1710,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762A5E; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1748,
+          "target": 7896104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4024000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762A84; original 8-byte x87 data operand; independently checked IEEE payload 0000000000002440",
+          "addend": 0
+        },
+        {
+          "offset": 1753,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762A89; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1777,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762AA1; explicit reviewed reviewed-open-draw-number-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1800,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762AB8; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1894,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762B16; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2089,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762BD9; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2195,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762C43; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "937ba8e6280f4b5080845ee0bbf3519e1101e9f12b2a1bedc8173ecc8535a64d",
+      "target_extent_sha256": "937ba8e6280f4b5080845ee0bbf3519e1101e9f12b2a1bedc8173ecc8535a64d",
+      "unit": "scene-battle-render-combo",
+      "symbol": "?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z",
+      "target_address": "0x007623B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
+      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1034bccb89547130c47a54323344bdfff665266ae1b669cdf3d53fc3e5a0b1a3",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

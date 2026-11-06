@@ -24,7 +24,8 @@ then collision dispatch, world-box transforms, overlap and body-contact checks,
 followed by the complete character body-hit outcome owner and character tint helper,
 then all four effect-hit/effect-pair/effect-clash/body-effect outcome owners,
 followed by complete battle frame sequencing/rendering, round/exit control,
-background composition and final frame clipping/presentation.
+background composition and final frame clipping/presentation, then the complete
+health/round-mark display, bottom HUD/world-space overlays and combo display.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -37,10 +38,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 213 |
-| Authored exact instruction bytes | 197,736 |
+| Authored complete exact functions | 216 |
+| Authored exact instruction bytes | 216,680 |
 | Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 251 / 251 |
+| Reviewed boundaries / origins | 254 / 254 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -58,47 +59,56 @@ contribution with its 301 relocations and 36 local offsets intact.
 
 ## Latest exact progress
 
-The latest checkpoint accepts six complete battle functions from
-src/SceneBattleLoop.cpp: Step763C20 /1653, Slot0 render7642A0 /1285,
+The latest checkpoint accepts RenderHealthBars75E240 /7707, RenderHud760060 /9032
+and RenderCombo7623B0 /2205 from src/SceneBattleDisplay.cpp. All 18,944 instruction
+bytes, 219 explicit relocations and 104 direct branches are reviewed and strict
+exact. The owners include complete health tracking, decoration, round marks,
+bottom meters/gauge, live character stun/angle overlays and both combo sides.
+All original rectangle copies, x87 conversion arguments and branch orders are
+included; no prefix, masked field or approximate credit is used.
+
+The three new units compare exact from one serial cold public-source artifact,
+including final formatting/comment edits. Existing sources and shared headers
+are unchanged, so no previous-unit replay was needed. Proof is
+docs/evidence/battle-display-exact.json; full reports are
+.analysis/exact/battle-display.json. Complete target instruction dumps, typed
+source derivation, every source/object attempt and independent operand/branch/
+boundary reviews remain in .analysis/probes/battle-display/. Only focused
+ledger/progress/whitespace checks accompany the checkpoint. Do not rerun private
+one-time make/refine/add/prepare/publish/update-docs mutators on this baseline.
+
+Preserve these target distinctions: health display updates run before the hide
+flag return; prior-health decay uses the opposite combo word; health widths use
+120.0/9999.0; the right low-health source height 8 differs from destination 6.
+HUD gauge118 uses 500/1000 thresholds and 60-pixel segments; angle overlays use
+float 100/360 and nested signed conversions. Combo retains both identical count>9
+branches, signed remainder for the decimal digit and timer104<=6 blending.
+
+Next recover DrawNumber75DB70 /466 and the shadow prepass762C50 /1440, then the
+substantial battle PollKeyboard765660 /2358 and replay-reset7661A0 /734.
+The current RenderMeters declaration for762C50 is a provisional misnomer:
+original instructions show compressed player/effect sprite shadows, alpha B0 and
+Y210. Rename it when implementing the owner; HUD760060 is now accepted and owns
+the actual bottom meter/status display. DrawNumber dynamically indexes the font
+rectangles at Scene3+464; recover the genuine array view with focused involved
+replay if the battle header changes. Avoid an Engine.h change unless target
+facts require it. Full relevant instructions/decompiles remain in
+.analysis/probes/battle-loop/; next-display-inventory.json records callees/x87.
+
+Screenshot40C1C0 /962, FillRectangle40B300 /308 and concrete background objects
+remain open with reviewed caller contracts. Context137C's two-slot source view
+receives no implementation credit. Pushbox766B50 /2727 stays parked for a natural
+explanation of four write-only Boolean temporaries; no dummy stores or byte-neutral
+controls. The private Shiori Slot06 and reader-audio drafts retain earlier handoffs.
+
+Checkpoint466cff0 accepted Step763C20 /1653, Slot0 render7642A0 /1285,
 UpdateRound765040 /1562, UpdateRoundExit765FA0 /205,
-RenderBackground75DD50 /1249 and ClipFrame7631F0 /431. All 6,385 bytes,
-111 relocation fields, 124 direct branches and 20 actual virtual calls are reviewed
-and strict exact. The original disabled eight-call player diagnostic block is
-retained with natural if(false) source and included in the full render comparison.
-Step cleanup is genuine C++ delete, not the provisional decompiler's free label;
-UpdateRoundExit returns a complete integer tested through EAX.
-
-Engine.h exposes actual Context byte 134C/winner134c and double14258/backgroundScale
-inside existing storage, plus two reviewed nonvirtual Video contracts.
-SceneBattle.h adds the involved member contracts. The six new plus 190 genuinely
-header-dependent prior units compare exact from 50 serial cold artifacts. All
-135 prior compiler-local destination/offset bindings are independently checked.
-Proof is docs/evidence/battle-loop-exact.json; full selected reports are
-.analysis/exact/battle-loop-and-affected.json. Private canonical instructions,
-decompiles, every source/object attempt and operand/branch/boundary reviews remain
-in .analysis/probes/battle-loop/. Focused ledger/progress/whitespace checks only;
-no full CI, full cold cohort or runtime matrix. Do not rerun private one-time
-add/refine/prepare/publish/update-docs mutators on the current accepted baseline.
-
-Next recover the substantial battle display owners from the retained full
-canonical evidence: RenderHealthBars75E240, RenderHud760060,
-the shadow prepass762C50 and RenderCombo7623B0, with DrawNumber75DB70 /466.
-The current RenderMeters declaration for762C50 is a provisional misnomer: original
-instructions show compressed player/effect sprite shadows, alpha B0 and Y210,
-not meters. Rename it when implementing that owner; HUD760060 draws meter/status
-bars. Retained next-display-inventory.json records complete calls and x87 inputs.
-Screenshot40C1C0 /962 and FillRectangle40B300 /308 have reviewed actual caller
-contracts and full decompiles, but remain unimplemented. Build the first complete
-source early, recover live x87 operands from original instructions and retain
-full function extents, including disabled code. The large HUD/health bar owners
-should take priority over leaf-count sweeps. Battle PollKeyboard765660 /2358,
-replay-reset7661A0 /734 and background-object concrete implementations remain
-open. Context137C's two-slot source view is provisional and receives no owner
-implementation credit.
-
-Pushbox766B50 /2727 stays parked: four original write-only Boolean temporaries
-are not yet naturally explained; no dummy stores or byte-neutral controls. The
-private Shiori Slot06 and reader-audio drafts retain their earlier handoffs.
+RenderBackground75DD50 /1249 and ClipFrame7631F0 /431. Its 6,385 bytes and 111
+relocations were strict exact; six new plus 190 actual Engine.h consumers were
+verified from 50 artifacts with all 135 prior compiler-local offsets checked.
+That proof remains battle-loop-exact.json. Engine.h exposes the actual byte134C
+and double14258 views; the original disabled eight-call diagnostic render block
+is included. Preserve genuine C++ deletion and integer EAX round-exit results.
 
 Checkpoint f0cc7b7 accepted all four complete effect/body outcomes:
 ResolveEffectHit7697D0 /6334, ResolveEffectPair76B090 /2578,
@@ -114,16 +124,6 @@ Secondary::SetCharacterTint 0x410AC0 /75. That earlier Engine.h change replayed
 two new plus 184 genuinely dependent prior units from 48 artifacts. Its public
 proof remains body-hit-exact.json. Tint 30B8/30BC with Context136C is distinct from
 SetTint 30C0/30C4 with ContextF33; field154 is a real 32-bit view.
-
-Next recover the substantial battle scene update/render/keyboard entries now
-that DispatchCollisions and all five hit-outcome callees have accepted complete
-implementations. Recheck their complete canonical instructions and required
-callees early; retain explicit per-unit profiles and build the first complete
-source before speculative flag sweeps. The parked Pushbox 0x766B50 remains open
-because its original write-only Boolean temporaries are not naturally explained;
-do not add dummy stores or resume byte-neutral controls without a falsifiable
-prediction. The private Shiori Slot06 owner and reader-audio workbench retain
-their earlier handoffs and do not gain credit from this checkpoint.
 
 Checkpoint 3adcc03 adds five complete collision members: DispatchCollisions
 0x766480 /1734, TransformPoseBox 0x767600 /405, TransformSnapshotBox 0x7677A0 /390,

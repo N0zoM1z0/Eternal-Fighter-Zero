@@ -212,3 +212,6 @@ address,name,source,symbol,status,evidence
 0x007642A0,?Slot0@Scene3@@UAEXXZ,src/SceneBattleLoop.cpp,?Slot0@Scene3@@UAEXXZ,complete,docs/evidence/battle-loop-exact.json
 0x007631F0,?ClipFrame@Scene3@@QAEXXZ,src/SceneBattleLoop.cpp,?ClipFrame@Scene3@@QAEXXZ,complete,docs/evidence/battle-loop-exact.json
 0x0075DD50,?RenderBackground@Scene3@@QAEXXZ,src/SceneBattleLoop.cpp,?RenderBackground@Scene3@@QAEXXZ,complete,docs/evidence/battle-loop-exact.json
+0x0075E240,?RenderHealthBars@Scene3@@QAEXXZ,src/SceneBattleDisplay.cpp,?RenderHealthBars@Scene3@@QAEXXZ,complete,docs/evidence/battle-display-exact.json
+0x00760060,?RenderHud@Scene3@@QAEXXZ,src/SceneBattleDisplay.cpp,?RenderHud@Scene3@@QAEXXZ,complete,docs/evidence/battle-display-exact.json
+0x007623B0,?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z,src/SceneBattleDisplay.cpp,?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z,complete,docs/evidence/battle-display-exact.json
