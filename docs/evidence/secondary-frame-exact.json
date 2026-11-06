@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 33 cold source/profile/dependency artifacts shared unchanged across nine new character frame/state/movement units and 134 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 575,
+      "matched_bytes": 575,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 146,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 173,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 203,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 245,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 493,
+          "target": 7896072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@00000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 556,
+          "target": 4256880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CheckAirAction@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0caaf9856b9cd7148a1e7faad5cf79dd458cccc9f591f432650f82f4ebdcc36d",
+      "target_extent_sha256": "0caaf9856b9cd7148a1e7faad5cf79dd458cccc9f591f432650f82f4ebdcc36d",
+      "unit": "secondary-dispatch-state",
+      "symbol": "?DispatchState@Secondary@@QAEXXZ",
+      "target_address": "0x0040F230",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "431d3e1234a53a4dea770a72a309bdff3b246c7005f264b7c5d65912dc4406ab",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 262,
+      "matched_bytes": 262,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 58,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "95e13b747361bf14e2e52210449c384c3c3b8c436783917335b658383aa16c28",
+      "target_extent_sha256": "95e13b747361bf14e2e52210449c384c3c3b8c436783917335b658383aa16c28",
+      "unit": "secondary-check-air-action",
+      "symbol": "?CheckAirAction@Secondary@@QAEXXZ",
+      "target_address": "0x0040F470",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "261a7c11634b0c0743256e93667fc75c87d5bca129ac51866cfb36a087dfe027",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1012,
+      "matched_bytes": 1012,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 115,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 176,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 304,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 329,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 390,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 415,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 474,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 499,
+          "target": 7896088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4083580000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 562,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 587,
+          "target": 7896088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4083580000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 660,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 676,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 845,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d3b0a1b0027abe6e6511dc8394741b14915f62bfd7468962e47b0fa86af529c9",
+      "target_extent_sha256": "d3b0a1b0027abe6e6511dc8394741b14915f62bfd7468962e47b0fa86af529c9",
+      "unit": "secondary-update-movement",
+      "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+      "target_address": "0x0040F580",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e452ef26038b86001b188525bc3fa7497d6e58506c9a63b046d1b5926f623613",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1509,
+      "matched_bytes": 1509,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 89,
+          "target": 4260672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupA@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 118,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 168,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 206,
+          "target": 7896120,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3d99999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 230,
+          "target": 7896072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@00000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 621,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 670,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 701,
+          "target": 4260672,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupA@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 730,
+          "target": 7896104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4024000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 763,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 803,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 826,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 852,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1038,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1342,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1358,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1381,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1397,
+          "target": 7896096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "35d37cc5801e1dc7ef75cad9450de1ca02181470b4dcc01982388a07e21a411f",
+      "target_extent_sha256": "35d37cc5801e1dc7ef75cad9450de1ca02181470b4dcc01982388a07e21a411f",
+      "unit": "secondary-update-timers",
+      "symbol": "?UpdateTimers@Secondary@@QAEXXZ",
+      "target_address": "0x0040F980",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "032ce92cdf6ac4798cfcc5fb937c8898d137900c5fb582d7ff7dee3c77c4518d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 222,
+      "matched_bytes": 222,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 22,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 57,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 92,
+          "target": 7896128,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4071800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 120,
+          "target": 7896088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4083580000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 155,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 201,
+          "target": 7896128,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4071800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "712b502bbb3ed80cebc804305342091aa7e30d9c2df22cfa7dde8b877bbe0f7c",
+      "target_extent_sha256": "712b502bbb3ed80cebc804305342091aa7e30d9c2df22cfa7dde8b877bbe0f7c",
+      "unit": "secondary-collision-side",
+      "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+      "target_address": "0x0040FF70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7dbb4dcb2fc8534e2d63a8cbca8cab9c767c0ab6cd5ae6710bebe6ff7cdf3c38",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 91,
+      "matched_bytes": 91,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "fb2400a9b51084d706a3e2d244e29c79f0e052b8c8656c5bd41b34b5f507e91f",
+      "target_extent_sha256": "fb2400a9b51084d706a3e2d244e29c79f0e052b8c8656c5bd41b34b5f507e91f",
+      "unit": "secondary-state-group-a",
+      "symbol": "?IsStateGroupA@Secondary@@QAEHXZ",
+      "target_address": "0x00410340",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ec25e7c8b3dfeedcfb3408bb591bf000c8a9d008e8c9716c111eeddf023fa110",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 126,
+      "matched_bytes": 126,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "a09ab8a804405eb2682148718688b7e06dd56ddda00b707834f4388a95e322f1",
+      "target_extent_sha256": "a09ab8a804405eb2682148718688b7e06dd56ddda00b707834f4388a95e322f1",
+      "unit": "secondary-state-group-b",
+      "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+      "target_address": "0x004103A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ffb2a113d6a001056bb15b411723f2b8f5c124e4e17752b0d818c5cf27418588",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 31,
+      "matched_bytes": 31,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "0fd8ada3e2fcd03bf8e0d9b7860b9e01a9bd5ced6813af3310b2c0d0a3b47d5c",
+      "target_extent_sha256": "0fd8ada3e2fcd03bf8e0d9b7860b9e01a9bd5ced6813af3310b2c0d0a3b47d5c",
+      "unit": "secondary-clear-buffered-buttons",
+      "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+      "target_address": "0x0040F170",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "32d63da341a7a075fa030c8a0841af09dd432d8b6b2168163bcec888197fd482",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 67,
+      "matched_bytes": 67,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "8cb9f9fcccef87a39bbf4a142af301f047a2d0b4e295cbd91487e97d619e79a2",
+      "target_extent_sha256": "8cb9f9fcccef87a39bbf4a142af301f047a2d0b4e295cbd91487e97d619e79a2",
+      "unit": "secondary-clear-input-history",
+      "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+      "target_address": "0x0040F190",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4472aa06c641f48f0b8d897754fbc02d799fee268b054683c62cf879ebca3bb7",
+      "object_sha256": "6a3ca6c6481b0a1fca67fe92fcf8e5dff8bd874545cc43744b106b4222821cbf",
+      "source_sha256": "fd91ab3f884f98c42a8fb1767e99a6e9383052e60825b26e2efedb2fa2304331",
+      "dependencies": {
+        "src/Engine.h": "14b403d80ee81e1302aee97a0ad6cc48ed797cc96af52afe6a58e29ed09873b1",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "836090ab53aa97a928255829e675cfc9ab70978b926efff4b8dc5a2e6295f349",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "51b1eeab0d0ec4ab6689795bdc16de54b24e5e76587dd752b84a80367be31287",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

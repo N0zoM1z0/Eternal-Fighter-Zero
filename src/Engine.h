@@ -83,7 +83,11 @@ struct SecondaryFrame {
     short field00a0;
     unsigned char unknown_00a2[2];
     float field00a4;
-    short field00a8, field00aa, field00ac, field00ae, field00b0, field00b2, field00b4, field00b6;
+    short field00a8;
+    unsigned short field00aa;
+    short field00ac, field00ae;
+    unsigned short field00b0;
+    short field00b2, field00b4, field00b6;
     float field00b8, field00bc;
     char field00c0, field00c1;
     short field00c2, field00c4;
@@ -228,8 +232,13 @@ public:
     unsigned char unknown_0114[0x4];
     double field0118;
     char field0120;
-    unsigned char unknown_0121[0x13];
-    int field0134;
+    unsigned char unknown_0121[3];
+    short field0124;
+    unsigned char unknown_0126[2];
+    int field0128, field012c;
+    char field0130;
+    unsigned char unknown_0131[3];
+    float field0134;
     short field0138;
     short field013a;
     short field013c;
@@ -285,14 +294,15 @@ public:
     int field30c4;
     int field30c8;
     int field30cc;
-    int field30d0;
+    unsigned int field30d0;
     int field30d4;
     int field30d8;
     int field30dc;
-    unsigned char unknown_30e0[0x8];
+    unsigned int field30e0;
+    unsigned int field30e4;
     int field30e8;
     short field30ec;
-    unsigned char unknown_30ee[0x2];
+    short field30ee;
     int field30f0;
     unsigned char unknown_30f4[0x1];
     char commands[20];
@@ -310,6 +320,15 @@ public:
     void Render(int, int);
     void AdvanceTrail();
     void StartTrail(unsigned char);
+    void DispatchState();
+    void CheckAirAction();
+    void UpdateMovement();
+    void UpdateTimers();
+    char CollisionSide();
+    int IsStateGroupA();
+    int IsStateGroupB();
+    void ClearBufferedButtons();
+    void ClearInputHistory();
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {

@@ -11,7 +11,8 @@ and substantial character-selection update/entry/resource functions plus the
 complete selection renderer and character creation dispatcher, followed by the
 shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O,
 then all three character resource loaders and both character image-transfer methods,
-followed by character input/replay, visual trail ownership and the complete body/trail renderer.
+followed by character input/replay, visual trail ownership and the complete body/trail renderer,
+then common state dispatch, movement and timer updates with their supporting predicates/buffer clears.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -24,10 +25,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 151 |
-| Authored exact instruction bytes | 85,573 |
+| Authored complete exact functions | 160 |
+| Authored exact instruction bytes | 89,468 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 190 / 190 |
+| Reviewed boundaries / origins | 199 / 199 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -229,7 +230,7 @@ proofs were refreshed. Private aggregate replay is
 also retained at .analysis/exact/character-surfaces.json. See
 [the loader facts](KNOWLEDGE_BASE.md#character-resource-loaders).
 
-The latest checkpoint adds six authored functions for 3,700 instruction bytes:
+Checkpoint 6acd870 adds six authored functions for 3,700 instruction bytes:
 UpdateInput 0x411BE0 (1,467), Render 0x4121A0 (1,649), SecondaryTrail Capture
 0x412930 (212) / Begin 0x412A10 (177), and Secondary AdvanceTrail 0x410940 (134) /
 StartTrail 0x4109D0 (61). Full review covers 1,052 instructions, 82 internal
@@ -264,6 +265,36 @@ are refreshed. Private final replay is
 A missing-method declaration in the first private renderer compile caused C2039;
 the required post-failure --execute compiler/linker/resource/execution smoke
 passed before work resumed. All logs/trials are retained in .analysis/.
+
+The latest checkpoint adds nine authored functions for 3,895 instruction bytes:
+DispatchState 0x40F230 (575), CheckAirAction 0x40F470 (262), UpdateMovement
+0x40F580 (1,012), UpdateTimers 0x40F980 (1,509), CollisionSide 0x40FF70 (222),
+two numeric state-group predicates 0x410340/0x4103A0 (91/126), and the buffered-
+button/history clears 0x40F170/0x40F190 (31/67). Full canonical review covers
+1,047 instructions, 144 internal branches, all returns/alignment successors and
+46 explicit relocations. Source is SecondaryFrame.cpp; no auxiliary/table credit
+is added. State-group names are numeric/provisional, not inferred gameplay labels.
+
+The substantial owners recover state dispatch and two virtual calls, airborne
+ID 157/158 transitions, body and 64-slot effect movement, edge tests, timed flags,
+float-state decay/growth, suppression/countdowns and final clamps. Original ECX
+setup corrects hidden decompiler receiver assumptions: movement edge predicates
+and the later timer group query use the opponent. CollisionSide returns signed
+byte +1/-1/0 and uses the actual 280.0 distance constant. Original FPU operand
+order, float conversion and the 0.0*slot70 operation are retained. Float field
+134 replaces the old zero-store-only int view, while InitializeState still
+matches all 795 bytes. Counters 30D0/E0/E4 and frame flags AA/B0 are unsigned from
+explicit reads/tests. Object offsets/extents remain unchanged.
+
+Thirty-three cold artifacts cover nine new and 134 existing Engine.h-dependent
+units: all 143 complete comparisons are strict exact. All 75 local bindings and
+original destinations remain checked. Standalone Input, Reader and Config are
+unaffected and omitted. New proof is secondary-frame-exact.json; involved owner
+proofs are refreshed. Private final replay is
+.analysis/exact/secondary-frame-and-affected.json, with complete trials/reviews
+and the initialization diagnostic under .analysis/probes/secondary-frame/.
+See [the frame/movement facts](KNOWLEDGE_BASE.md#character-frame-state-and-movement).
+No compiler/Wine failure occurred; routine --execute smoke was not repeated.
 
 Important retained limits:
 
@@ -363,14 +394,20 @@ are exact. The coherent shared Secondary base is now substantially recovered:
 lifetime, state initialization, local effect management, resource reuse and
 statistics are accepted. Its three resource loaders and both character image
 transfer methods are exact too, followed by character input/replay, trail
-capture/wrappers and the full body/trail renderer. Continue through the common
-character frame/state routines: provisional candidates 0x40F230 (575 bytes),
-0x40F470 (262), 0x40F580 (1,012) and 0x40F980 (1,509). Target-attested decompiles
-are retained under .analysis/ghidra/; verify complete boundaries and actual
-semantics before naming/acceptance, then build the first complete source early.
-The recovered pose-base conversion and unsigned animation/frame indices support
-that work. Related smaller helpers remain useful when they close the owner.
-Do not treat the old input/pattern scratch labels as actual semantics.
+capture/wrappers and the full body/trail renderer. Common state dispatch,
+air-action transitions, movement, timer updates, numeric state predicates and
+input-buffer clears are now exact too. Continue into the remaining coherent
+character frame/effect/collision helpers: provisional candidates 0x410050 (149),
+0x4100F0 (494), 0x4102E0 (89) and 0x4105A0 (489). Target-attested decompiles are
+retained in .analysis/ghidra/; inspect complete target boundaries, actual
+ECX receivers, floating-point order and record types before naming/acceptance.
+The initial decompiles suggest guard/air-action checks and damage/combo processing;
+these are hypotheses until full raw target review. Related direct callees at
+0x410480/0x410530/0x410560/0x410840 may close the damage owner.
+Build the first complete source early. The 23 individual character constructors
+also remain reviewed but unimplemented. The common pose/base/resource/state
+model now supports those larger per-character owners; avoid optimizing for leaf
+counts or inferring success from decompiler types.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the

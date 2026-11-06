@@ -189,3 +189,12 @@ address,end,size,status,evidence
 0x00410940,0x004109C6,134,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
 0x004109D0,0x00410A0D,61,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
 0x004121A0,0x00412811,1649,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x0040F230,0x0040F46F,575,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040F470,0x0040F576,262,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040F580,0x0040F974,1012,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040F980,0x0040FF65,1509,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040FF70,0x0041004E,222,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x00410340,0x0041039B,91,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x004103A0,0x0041041E,126,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040F170,0x0040F18F,31,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement
+0x0040F190,0x0040F1D3,67,reviewed,docs/KNOWLEDGE_BASE.md#character-frame-state-and-movement

@@ -40,7 +40,7 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **151 complete exact authored functions, 85,573 code bytes**,
+Recovered owners provide **160 complete exact authored functions, 89,468 code bytes**,
 with every relocation field explicitly bound and compared. Twelve compiler-generated
 deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library
@@ -57,7 +57,9 @@ the character-creation dispatcher is exact too. Shared character lifetime, reset
 state, local effects, resource reuse and statistics I/O are now exact. Character
 resource loading and both character image-transfer methods are exact too, followed
 by input/replay, visual trail ownership and the body/trail rendering dispatcher.
-Child constructors, common frame/state updates and pixel rendering kernels remain open.
+Common state dispatch, movement, timers and their supporting predicates are exact
+too. Child constructors, remaining frame/collision helpers and pixel rendering
+kernels remain open.
 The reader/audio historical drafts are
 preserved separately in the [workbench](workbench/reader-audio/README.md).
 Reconstruction resumed on 2026-11-06 with focused new/affected exact comparisons.

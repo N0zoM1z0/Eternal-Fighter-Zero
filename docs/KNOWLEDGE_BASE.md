@@ -1918,3 +1918,112 @@ resources, linking and execution before reconstruction resumed. Retained logs
 are secondary-control-SecondaryRender-first.log and
 secondary-control-toolchain-recovery.log under .analysis/build/. No full CI,
 unrequested cold cohort or runtime/failure-injection matrix was run.
+
+## Character frame state and movement
+
+Nine authored contributions add 3,895 instruction bytes under the pinned
+vc71-od-static profile. Complete canonical target review covers 1,047 instructions,
+144 internal direct branches, all nine final returns and following INT3
+alignment, plus 46 explicitly bound relocation operands. No local tables,
+auxiliary credit, masked fields or size overrides are involved.
+
+| Original | Complete bytes | Recovered contribution |
+| --- | ---: | --- |
+| 0x40F230 | 575 | DispatchState |
+| 0x40F470 | 262 | CheckAirAction |
+| 0x40F580 | 1,012 | UpdateMovement |
+| 0x40F980 | 1,509 | UpdateTimers |
+| 0x40FF70 | 222 | CollisionSide, signed byte return |
+| 0x410340 | 91 | IsStateGroupA |
+| 0x4103A0 | 126 | IsStateGroupB |
+| 0x40F170 | 31 | ClearBufferedButtons |
+| 0x40F190 | 67 | ClearInputHistory |
+
+All are Secondary members in SecondaryFrame.cpp. Names are provisional; the
+state groups are defined numerically rather than assigned speculative gameplay
+categories. Group A covers IDs 150..156 or 168..171. Group B requires own ID
+50..149 and opponent ID other than 97/98/99/96. ClearBufferedButtons clears only
+bytes 1A8/1A9. ClearInputHistory clears all 180 history bytes and sets short 262
+to 99, without resetting the ring index at 260. These smaller functions complement
+the substantial dispatch/movement/timer owners rather than replacing them.
+
+DispatchState requires own short 14A and opponent short 14C to be zero. For IDs
+outside 50..150 or exactly 96 it resets own 124/12C and opponent 174, then reduces
+opponent double 178 by 20 when above 10,000, otherwise setting 10,000. IDs below
+50 invoke virtual slot 3, clear both B8 doubles and apply the original signed
+30EC/30EE configuration paths to short 148, int 108, double 118 and byte 120.
+IDs 50..149 with float 134 <=0 and frame flag AA bit 0x400 clear call CheckAirAction.
+The function ends through virtual slot 4. Both interfaces take no stack arguments
+and consume no result; child bodies remain unimplemented.
+
+CheckAirAction decrements positive short 124. Otherwise, negative y, zero int
+128 and any of the four pulse bytes enable the facing/input test: matching
+horizontal direction selects ID 157; opposite direction selects ID 158. A changed
+ID invokes virtual ResetPose before assignment. Other paths retain state.
+
+UpdateMovement gates body movement on own 14A and opponent 14C. Its horizontal
+sum includes own velocity 30, own double B0 and opponent B8 multiplied by the
+original D0/14C predicate; CollisionSide and signed facing control whether it is
+applied. The edge predicates really call CollisionSide on the opponent, as shown
+by original ECX setup, rather than on self as the initial decompile suggested.
+The x limits are 20 plus a left-edge predicate and 619 minus a right-edge
+predicate. Y advances by double 38 and clamps positive values to zero. Ordered
+comparisons and original branch direction are preserved, including NaN paths.
+
+The local-effect traversal is outside that body gate. It starts at signed read
+index 2CC, stops at write index 2CA and wraps at 64. Active slots move only under
+the original own-freeze/slot-88, slot-86 and opponent-freeze conditions. X adds
+(vx + 0.0 * slot.double70) multiplied by signed byte slot48; Y adds vy. Slot48
+is distinct from the int at 4C. The zero multiplication is real target floating-
+point work and is retained, including its NaN/signed-zero implications. Source
+expression grouping and compound assignment recover the original FPU evaluation
+and register order without temporary padding or opcode wrappers.
+
+CollisionSide returns signed byte +1/-1/0. Its original edge equations use own
+x +/-20, opposite x predicates at 20/619, a 639 upper bound and distance constant
+280.0 at 0x787C40. Complete AL return instructions and sign-extension at callers
+establish the byte return view; Ghidra's reconstructed upper EAX flag fragments
+are not a four-byte return contract.
+
+UpdateTimers skips its gated phase when opponent 14C is positive, then always
+runs its final clamps/counters. The gated phase normalizes/decrements own 14A,
+char 130, shorts 138/13A/13C/13E/140 and active local slot-86 delays. Frame B0
+bit 0x40 sets byte 130 to 27. When not in group A, float 134 decreases by a float
+conversion of 1.0/(4*(y==0)+1) for group B, otherwise by 0.075f, and negative values
+clamp to zero. The original intermediate float store and extended FPU evaluation
+are included in the strict comparison.
+
+Double 118 grows through the original group/flag/500 threshold expression,
+divided by 10.0, with byte-120 and 0/1,000 transition paths. The later group-B
+query really uses the opponent receiver; it resets counters E4/E0 to 900/12.
+When the opponent is outside IDs 50..199 and Context suppression is clear,
+positive unsigned E4 decrements; otherwise positive E0/D0 decrement under their
+original limits and E4 becomes E0 * 5 * 3. The two multiplications are retained.
+The unconditional phase clamps short 148 to 0..3,000 and double 118 with the
+original ordered comparisons, decrements int 30F0 with a 12,600 reset, and
+conditionally decrements short 104. The 12,600 literal (0x3138) is a counter
+constant, not sizeof(Secondary).
+
+The new accesses refine unknown fields 124/128/12C/130, 30E0/E4 and 30EE. Field
+134 is float, correcting the earlier int view supported only by zero stores;
+the accepted InitializeState remains complete strict exact at 795 bytes. Counters
+30D0/E0/E4 and per-frame AA/B0 flags follow explicit unsigned target reads/tests.
+All offsets and the minimum 3138 Secondary view remain unchanged. No original
+unique class/field names or unchecked-path repairs are claimed.
+
+Reviewed constant destinations include double zero 0x7872F8, double one
+0x7875C0, 10,000 at 0x787C00, float zero C08, double 20/619/1,000/10/500 at
+C10/C18/C20/C28/C30, float 0.075 at C38 and double 280 at C40. Every relocation
+is explicit in its complete unit recipe; no address masking is used.
+
+Final replay cold builds 33 source/profile/dependency artifacts for nine new
+and 134 Engine.h-dependent existing units: all 143 complete comparisons are
+strict exact. The four dispatchers retain all 75 original local-offset checks
+and destinations after compiler-local identity refreshes. Standalone Input,
+Reader and Config are unaffected and omitted. New proof is
+secondary-frame-exact.json; involved owner proofs, ledgers and progress are
+refreshed. Private final replay is .analysis/exact/secondary-frame-and-affected.json.
+Full first-source trials, target code, typed-constant/operand/boundary/successor
+reviews and the initialization diagnostic are retained under
+.analysis/probes/secondary-frame/. No full CI, unrequested cold cohort or redundant
+runtime matrix was run; no compiler/Wine failure occurred in this checkpoint.

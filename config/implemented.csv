@@ -150,3 +150,12 @@ address,name,source,symbol,status,evidence
 0x00410940,?AdvanceTrail@Secondary@@QAEXXZ,src/SecondaryInput.cpp,?AdvanceTrail@Secondary@@QAEXXZ,complete,docs/evidence/secondary-input-exact.json
 0x004109D0,?StartTrail@Secondary@@QAEXE@Z,src/SecondaryInput.cpp,?StartTrail@Secondary@@QAEXE@Z,complete,docs/evidence/secondary-input-exact.json
 0x004121A0,?Render@Secondary@@QAEXHH@Z,src/SecondaryRender.cpp,?Render@Secondary@@QAEXHH@Z,complete,docs/evidence/secondary-render-exact.json
+0x0040F230,?DispatchState@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?DispatchState@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040F470,?CheckAirAction@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?CheckAirAction@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040F580,?UpdateMovement@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?UpdateMovement@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040F980,?UpdateTimers@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?UpdateTimers@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040FF70,?CollisionSide@Secondary@@QAEDXZ,src/SecondaryFrame.cpp,?CollisionSide@Secondary@@QAEDXZ,complete,docs/evidence/secondary-frame-exact.json
+0x00410340,?IsStateGroupA@Secondary@@QAEHXZ,src/SecondaryFrame.cpp,?IsStateGroupA@Secondary@@QAEHXZ,complete,docs/evidence/secondary-frame-exact.json
+0x004103A0,?IsStateGroupB@Secondary@@QAEHXZ,src/SecondaryFrame.cpp,?IsStateGroupB@Secondary@@QAEHXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040F170,?ClearBufferedButtons@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?ClearBufferedButtons@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
+0x0040F190,?ClearInputHistory@Secondary@@QAEXXZ,src/SecondaryFrame.cpp,?ClearInputHistory@Secondary@@QAEXXZ,complete,docs/evidence/secondary-frame-exact.json
