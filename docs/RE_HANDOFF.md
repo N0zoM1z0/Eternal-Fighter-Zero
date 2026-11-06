@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 275 |
-| Authored exact instruction bytes | 477,115 |
-| Associated exact local-table bytes | 2,820 |
-| Reviewed boundaries / origins | 314 / 314 |
+| Authored complete exact functions | 276 |
+| Authored exact instruction bytes | 531,254 |
+| Associated exact local-table bytes | 3,192 |
+| Reviewed boundaries / origins | 315 / 315 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,49 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misuzu state checkpoint
+## Latest Misuzu local-effect checkpoint
+
+Character23::Slot07 at 5236D0 is complete exact: 54,139 instruction bytes plus
+372 associated local-table bytes, total contribution 54,511. Code ends 530A4B;
+the 68-destination address table ends 530B5B, followed by a 100-byte selector
+ending 530BBF. One excluded CC byte precedes next entry530BC0. Source:
+src/Character23Effects.cpp, profile vc71-od-static. Public proof:
+docs/evidence/misuzu-effects-exact.json; durable findings:
+[Misuzu local effect dispatch and controls](KNOWLEDGE_BASE.md#misuzu-local-effect-dispatch-and-controls).
+Private full attempts and independent review: .analysis/probes/misuzu-effects/README.md.
+
+Review covers 12,296 contiguous instructions, 832 internal branches, 67 explicit
+effect cases and all 662 relocation fields: 173 direct calls, 419 typed floating
+operands and 70 compiler-local bindings. All 78 literal payloads agree in target
+and COFF. All 112 RandomRange callers zero-extend AX; the 16 rand calls retain
+their original sample/coefficient order. There are 128 real virtual calls.
+
+Preserve original direct case exits, threshold immediates, word frame updates,
+effect/orientation operand order and integer particle subtraction. Sixty particle
+coordinates evaluate and spill their arithmetic before calling RandomRange;
+that natural evaluation order recovers the original frame494. The used72-byte
+descriptor is EBP-50, index EBP-4, duration/count EBP-54/-58 and receiver EBP-5C,
+with saved EBX/ESI. Context selection reads are explicitly signed; actual
+state1420c/state1420e stores use existing fields, without scaled pointer arithmetic.
+
+Formatted source passed one final selected cold complete zero-difference native
+replay, including all table bytes. Public headers and all prior source/recipes
+are unchanged; no old native unit needed replay. Focused tracking, ledger/
+progress CI and whitespace checks passed; no full CI/cohort/runtime matrix ran.
+The initial provisional Context cast syntax failure was corrected; required
+toolchain --execute smoke passed before subsequent native attempts. All inputs,
+objects and compiler exits remain retained.
+
+All 13 original Misuzu table788650 destinations now have complete exact proofs,
+including inherited LoadResources. This closes the virtual-entry code inventory
+only; linked resources/data, original TU partitioning, runtime and game remain
+open. Next substantial family: constructor546480/513 uses canonical "mishio"
+literal788760 and vtable788768. Recheck its creation ID, actual owner and complete
+virtual extents before integrating source; constructor origin/boundary review
+alone is not accepted exact code. Preserve parked PrepareBattle/Shiori controls
+until new target evidence provides a falsifiable instruction prediction.
+
+## Previous Misuzu state checkpoint
 
 Character23::Slot06 at 50C4B0 is complete exact: 54,769 instruction bytes plus
 853 associated local-table bytes, total contribution 55,622. Code ends 519AA1;
@@ -76,10 +118,9 @@ source/recipes are unchanged; no old native unit needed replay. Focused tracking
 ledger/progress CI and whitespace checks passed. No native compiler/Wine failure,
 full CI/cohort or runtime matrix occurred during this checkpoint.
 
-Twelve of the 13 original table788650 destinations now have exact source proofs,
-including inherited LoadResources. Next: local effects 5236D0/54139. Review its
-complete code/table extent before acceptance and build a complete first natural
-source early. Fresh canonical read-only decompile remains at
+Twelve of the 13 original table788650 destinations had exact source proofs at
+this checkpoint, including inherited LoadResources. Local effects5236D0/54139
+has since been accepted above. Fresh canonical read-only decompile remains at
 .analysis/probes/misuzu/calls-annotated-005236d0.txt; it confers no progress credit.
 Keep the parked PrepareBattle/Shiori controls until new target evidence supplies
 a falsifiable instruction prediction. This is not character/runtime or game

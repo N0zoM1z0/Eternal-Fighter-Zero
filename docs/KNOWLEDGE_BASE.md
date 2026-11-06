@@ -4341,3 +4341,94 @@ source-bound proofs, including inherited LoadResources. Local effects5236D0/5413
 remains open, as do linked data/assets, original translation-unit partitioning,
 complete runtime behavior and whole-game reconstruction. This checkpoint gives
 no credit to the parked Shiori state dispatcher.
+
+## Misuzu local effect dispatch and controls
+
+Character23::Slot07 at 0x5236D0 has complete strict exact source in
+`src/Character23Effects.cpp`, profile vc71-od-static. It adds 54,139 instruction
+bytes and 372 associated local-table bytes. Public proof:
+`docs/evidence/misuzu-effects-exact.json`. Every byte of the complete 54,511-byte
+contribution is compared; no prefix, size override or masked address acceptance
+is used. Canonical vtable788650 slot7/operand78866C contains5236D0.
+
+Code ends exclusively at530A4B. A 272-byte table holds 68 original destinations;
+the 100-byte type400..499 selector starts at530B5B and ends at530BBF. There are
+67 explicit effect cases and 33 default selectors. One CC alignment byte precedes
+next prologue530BC0 and is excluded. Independent review covers all12,296
+contiguous instructions, 832 direct internal branches, one indirect switch,
+all table entries, selector values and following code boundary.
+
+All662 relocation fields are independently reviewed:173 direct CALL operands,
+419 typed floating operands and70 compiler-local fields (68 address entries and
+two dispatch operands). Each records a real symbol, original destination and
+evidence. All78 distinct float/double payloads agree in canonical memory, native
+COFF bytes, symbol bits and operand widths. Direct calls include112 RandomRange,
+36 real x87 integer conversions,16 external rand calls and existing shared
+emitter, descriptor, fade and polar-velocity helpers. All112 original RandomRange
+calls immediately zero-extend AX. There are128 real virtual emitter/removal
+calls, using actual owners and slots rather than invented relocations.
+
+The original freeze gate checks the opponent's field014c before traversing the
+64-entry effect ring. Effect active/type/frame/tick and freeze-permission reads
+use the existing actual slot view. The source has one real72-byte EffectSpawn
+descriptor at EBP-50, ring index at EBP-4, active-scope duration/count at
+EBP-54/-58 and receiver at EBP-5C. Sixty coordinate expressions compute and
+spill x/y offsets before their RandomRange calls; recovering that original
+operand evaluation order naturally yields full frame494 and saved EBX/ESI.
+No inert locals, padding, byte wrappers or fake ABI declarations are introduced.
+
+Word-width frame increments/decrements and rollbacks are retained. Float
+comparisons keep actual operand order, including opponent-first collision bounds
+and effect-coordinate-first orientation terms. The main follower multiplies its
+computed velocity by effects[i].flag0048 only after the original scalar operations.
+Particle coordinates preserve integer subtraction before conversion to double;
+negative multiplication plus addition changes native code. Polar emission uses
+`45 - field3154 * 2` and real compound velocity updates, retaining the original
+address calculation across random calls.
+
+Type400's six state transitions jump directly to the ring continuation. The
+initial positive cancellations for412/413/416/419, the hit/lifetime transitions
+for415/418/421..423/453..455, bounce emission for428..430 and the state/collision
+exits for456..458 retain their original branch priority. Cases403/405 have their
+own frame2 exits. Case457 retains distinct completed-frame and outer exits.
+The final raw comparison exposed nine real jump fields that normalized branch
+diagnostics concealed; every original destination was restored in natural
+source before acceptance.
+
+The cutscene449 owner reads Context selection134e through an explicit signed
+char view and writes actual Context state1420c/state1420e members. Provisional
+integer-address decompile expressions must not become scaled Context-pointer
+arithmetic. Original opponent-health tests use <=0 and <=5000, retaining their
+exact immediate values and conditional jumps. Its frame18/tick900 release exits
+before ordinary animation work. Type496 emits all cancellation particles before
+its original direct exit. Types497/498 preserve every independent rand sample's
+coefficient association and their direct expiry exits; algebraically commutative
+rewrites would assign coefficients to different draws.
+
+The first compiling complete contribution was54,096 bytes. Full comparison
+identified lost word updates, unsigned RandomRange reads, pre-call coordinate
+spills, natural compound updates, operand order and original branch polarity.
+The eventual54,511-byte source still had24 differing bytes: nine internal jump
+fields and three threshold comparisons. Restoring original direct exits and
+threshold expressions yielded complete strict zero differences, retained after
+source formatting. Case extents, register-normalized shapes and branch-normalized
+diagnostics never conferred acceptance credit.
+
+One final selected cold artifact passed all54,511 bytes, both complete tables
+and all662 reviewed bindings. Public Engine.h, CharacterViews.h and Input.h,
+all275 earlier authored matches and293 earlier unit recipes remain unchanged;
+no old native unit required replay. Focused tracking, ledger/progress CI and
+whitespace checks passed; no full CI/cohort or runtime matrix ran. An initial
+provisional Context cast syntax failure was corrected, and required toolchain
+--execute C/C++/Windows/CRT/resource/link/execution smoke passed before further
+native compilation. Full attempts, compiler exits, target dumps, read-only
+decompile and independent reviews remain in `.analysis/probes/misuzu-effects/`.
+One-time derivation/refinement/publication scripts must not be rerun over
+accepted or newer sources.
+
+Every one of the13 original Misuzu vtable destinations now has complete exact
+source-bound evidence, including inherited LoadResources. This is a virtual-entry
+code inventory milestone only. Linked data/assets, original translation-unit
+partitioning, runtime behavior and whole-game reconstruction remain open.
+The next constructor546480 uses original "mishio" literal788760 and table788768;
+its creation ID, full virtual extents and exact source still require review.
