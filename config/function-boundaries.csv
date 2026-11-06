@@ -83,3 +83,17 @@ address,end,size,status,evidence
 0x00405950,0x0040596C,28,reviewed,docs/KNOWLEDGE_BASE.md#pattern-reader-exact
 0x00405970,0x00405993,35,reviewed,docs/KNOWLEDGE_BASE.md#pattern-reader-exact
 0x004059A0,0x00405A1D,125,reviewed,docs/KNOWLEDGE_BASE.md#pattern-reader-exact
+0x0040D810,0x0040D86F,95,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040D870,0x0040D92E,190,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040D930,0x0040D9EE,190,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040D9F0,0x0040DAAC,188,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DAB0,0x0040DC43,403,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DC50,0x0040DCC6,118,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DCD0,0x0040DDC5,245,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DDD0,0x0040DE3B,107,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DF50,0x0040DFA3,83,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040DFB0,0x0040E2A3,755,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040E2B0,0x0040E4C2,530,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x0040E4D0,0x0040E5CF,255,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x00786460,0x0078647C,28,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner
+0x007864A0,0x007864AF,15,reviewed,docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner

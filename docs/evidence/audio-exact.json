@@ -1,0 +1,1094 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; sixteen cold source/profile artifacts shared unchanged across 14 new Audio bodies and 62 shared-header-dependent units; reader and configuration units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 95,
+      "matched_bytes": 95,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "e2158872c95b0dd9a73dd1488b80b1241061220289c40f4055dc6a4de9885ece",
+      "target_extent_sha256": "e2158872c95b0dd9a73dd1488b80b1241061220289c40f4055dc6a4de9885ece",
+      "unit": "audio-construct",
+      "symbol": "??0Audio@@QAE@XZ",
+      "target_address": "0x0040D810",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e61cbea9da4520d85016146897f43b99da91020b29a726ff11482edb966bcd52",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 190,
+      "matched_bytes": 190,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 67,
+          "target": 4250704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseBuffer@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9ddbf39ee3b2b244e52104dc61b6b5db0ac981b280b45e1dde2b4e1fc3db5efc",
+      "target_extent_sha256": "9ddbf39ee3b2b244e52104dc61b6b5db0ac981b280b45e1dde2b4e1fc3db5efc",
+      "unit": "audio-destruct",
+      "symbol": "??1Audio@@QAE@XZ",
+      "target_address": "0x0040D870",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2b50ee177e3ab76ae49dc1e75f7329b32303a3603128b7bd04dfe1f285122082",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 190,
+      "matched_bytes": 190,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 67,
+          "target": 4250704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseBuffer@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e902e3348d476744e3c10e297eced253d8794455be6782fe376bd86d01f95c14",
+      "target_extent_sha256": "e902e3348d476744e3c10e297eced253d8794455be6782fe376bd86d01f95c14",
+      "unit": "audio-shutdown",
+      "symbol": "?Shutdown@Audio@@QAEXXZ",
+      "target_address": "0x0040D930",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e21296894bf0b5c89f852a03a4c5b1deaaa0cd4a050508adbabeac8ce45556d2",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 188,
+      "matched_bytes": 188,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 81,
+          "target": 7830848,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_DirectSoundCreate@12",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 7895236,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioinitializeTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 7895240,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioinitializeError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 160,
+          "target": 7895280,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiocooperativeTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 165,
+          "target": 7895284,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiocooperativeError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 178,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b63bf1757c349be82a95f406e2fe05319bd1e1846dfb40d699dbda4aca6c72ee",
+      "target_extent_sha256": "b63bf1757c349be82a95f406e2fe05319bd1e1846dfb40d699dbda4aca6c72ee",
+      "unit": "audio-initialize",
+      "symbol": "?Initialize@Audio@@QAEXPAUHWND__@@@Z",
+      "target_address": "0x0040D9F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c5c313501cfa44ca1b5217a2e49c55e94819a5ded810f9fe5c0e71eee54a31bb",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 403,
+      "matched_bytes": 403,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 226,
+          "target": 7895312,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiolockTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 231,
+          "target": 7895316,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiolockError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 244,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 269,
+          "target": 7833088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 306,
+          "target": 7833088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 375,
+          "target": 7895336,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiounlockTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 380,
+          "target": 7895340,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiounlockError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 393,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c675ccce193348ad5002840b9e367b0a7569dd5c855bc0d78d829377cceffb6b",
+      "target_extent_sha256": "c675ccce193348ad5002840b9e367b0a7569dd5c855bc0d78d829377cceffb6b",
+      "unit": "audio-fill-buffer",
+      "symbol": "?FillBuffer@Audio@@QAEXG@Z",
+      "target_address": "0x0040DAB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6eb0827b355a42b326a7c706dd7e95b0227673bd5269613bcd621a09d01b2095",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 118,
+      "matched_bytes": 118,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 72,
+          "target": 7895364,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreleaseTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 7895368,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreleaseError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 90,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8df71ef6894a667c5bf3ecea8b68d4d5471a519b46c5fef8b928f1904321f26a",
+      "target_extent_sha256": "8df71ef6894a667c5bf3ecea8b68d4d5471a519b46c5fef8b928f1904321f26a",
+      "unit": "audio-release-buffer",
+      "symbol": "?ReleaseBuffer@Audio@@QAEXG@Z",
+      "target_address": "0x0040DC50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6586f4c9c534018cff1b4f86909f5a14f7d53f8fd86616d7abfdae068a2b5b05",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 245,
+      "matched_bytes": 245,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 26,
+          "target": 7830976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 114,
+          "target": 7830976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_memset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 209,
+          "target": 7895400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiocreateTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 214,
+          "target": 7895404,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiocreateError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 227,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 235,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "83d4f2fe5bdfef5c1e3b48b058c2c1f174da432ed52e4be05d8ad016ef62ae95",
+      "target_extent_sha256": "83d4f2fe5bdfef5c1e3b48b058c2c1f174da432ed52e4be05d8ad016ef62ae95",
+      "unit": "audio-create-buffer",
+      "symbol": "?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z",
+      "target_address": "0x0040DCD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "83c6341e04ba4bd8a8e0c1102d913ca3a593695dba24154840c8fa3a0914ae8c",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 107,
+      "matched_bytes": 107,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 77,
+          "target": 7895436,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiofullTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 7895472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiofullError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 95,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "dc1dab158d26543464356717daf88128619a318e89ba0aab48a180fc5c1269d4",
+      "target_extent_sha256": "dc1dab158d26543464356717daf88128619a318e89ba0aab48a180fc5c1269d4",
+      "unit": "audio-find-slot",
+      "symbol": "?FindFreeSlot@Audio@@QAEGXZ",
+      "target_address": "0x0040DDD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b2032d1eabbe894d01fff48de89cdbfc0254582589a2283fb69687ea0a349222",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 83,
+      "matched_bytes": 83,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 18,
+          "target": 4250704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseBuffer@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 55,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7c5dbbfac00ab02ea1206d3f010108381f88ac2d8fe8f074b03e4a19f67f2718",
+      "target_extent_sha256": "7c5dbbfac00ab02ea1206d3f010108381f88ac2d8fe8f074b03e4a19f67f2718",
+      "unit": "audio-release-sound",
+      "symbol": "?ReleaseSound@Audio@@QAEXG@Z",
+      "target_address": "0x0040DF50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "050a06790509f3332bb3e48ff0b644df4c365060dea4047cf665c14c26060a97",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 755,
+      "matched_bytes": 755,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 87,
+          "target": 7893444,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioOpenA@12",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 130,
+          "target": 7893448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioDescend@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 153,
+          "target": 7895544,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioriffTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 158,
+          "target": 7895548,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioriffError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 171,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 207,
+          "target": 7893448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioDescend@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 223,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 230,
+          "target": 7895576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioformatTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 235,
+          "target": 7895580,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioformatError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 248,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 273,
+          "target": 7893456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioRead@12",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 290,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 7895612,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreadFormatTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 302,
+          "target": 7895616,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreadFormatError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 315,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 345,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 7895656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiopcmTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 357,
+          "target": 7895660,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiopcmError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 370,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 395,
+          "target": 7893460,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioAscend@12",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 411,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 418,
+          "target": 7895704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioascendTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 423,
+          "target": 7895708,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioascendError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 472,
+          "target": 7893448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioDescend@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 488,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 495,
+          "target": 7895728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiodataTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 500,
+          "target": 7895732,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audiodataError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 513,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 530,
+          "target": 4251088,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FindFreeSlot@Audio@@QAEGXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 543,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 601,
+          "target": 7895772,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioallocateTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 606,
+          "target": 7895776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioallocateError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 619,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 651,
+          "target": 7893456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioRead@12",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 668,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 675,
+          "target": 7895784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreadDataTitle@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 680,
+          "target": 7895788,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audioreadDataError@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 693,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 711,
+          "target": 7893452,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__mmioClose@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 728,
+          "target": 4250832,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 741,
+          "target": 4250288,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillBuffer@Audio@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2af7172bb69868a33163b285fa5a67059453e3c989b4e3326ea382dbd9416873",
+      "target_extent_sha256": "2af7172bb69868a33163b285fa5a67059453e3c989b4e3326ea382dbd9416873",
+      "unit": "audio-load-wave",
+      "symbol": "?LoadWave@Audio@@QAEGPBD@Z",
+      "target_address": "0x0040DFB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8507f7e5a653522162eb4008b39d408281f68604f872f1a7305942a581515dae",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 530,
+      "matched_bytes": 530,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 15,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 84,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 152,
+          "target": 7893072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__SetFilePointer@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 177,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 517,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "df2fc961b25144c0b6e890ddfa0ad6da785ef9d5bdce7b7bd35d5c55612683e4",
+      "target_extent_sha256": "df2fc961b25144c0b6e890ddfa0ad6da785ef9d5bdce7b7bd35d5c55612683e4",
+      "unit": "audio-loop-markers",
+      "symbol": "?ReadLoopMarkers@Audio@@QAEXPBD@Z",
+      "target_address": "0x0040E2B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b99eb71d3f4191f6b530f561d41f1de94215a732e60209c5e800ee5488d77c2b",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 255,
+      "matched_bytes": 255,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "6fca97614b5c14fb80ffdc1ebebb3ad39d8322d25d1896cbcf3f5be392982749",
+      "target_extent_sha256": "6fca97614b5c14fb80ffdc1ebebb3ad39d8322d25d1896cbcf3f5be392982749",
+      "unit": "audio-maintain-loop",
+      "symbol": "?MaintainLoop@Audio@@QAEXG@Z",
+      "target_address": "0x0040E4D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "dbcb1ac0d66c7f3d3799dd7c88d4d9c287611a64eca2d15a8176e340f554e63c",
+      "source_sha256": "d72361500270e16e24ea1a6ada7b567def9056e675c76c05185c8b1c458a65a6",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e85605477d89e5c7ab543fea09f4d8773b0518c920659ea5984227c73a03f01f",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -5,6 +5,7 @@
 #include <unknwn.h>
 #include <ddraw.h>
 #include <dsound.h>
+#include <mmsystem.h>
 struct SurfaceRect { int left, top, right, bottom; };
 class Video {
     HWND window;
@@ -48,11 +49,23 @@ public:
     void Shutdown();
 };
 class Audio {
-    unsigned char unknown_0000[0x4c0];
+    DWORD loopStart, loopEnd;
+    HWND window;
+    IDirectSound *directSound;
+    unsigned char *samples[150];
+    DWORD sampleSizes[150];
     IDirectSoundBuffer *buffers[150];
 public:
     void Initialize(HWND);
-    void SetMode(short);
+    Audio();
+    ~Audio();
+    void MaintainLoop(unsigned short);
+    void FillBuffer(unsigned short);
+    void ReleaseBuffer(unsigned short);
+    void CreateBuffer(unsigned short, const WAVEFORMATEX *);
+    unsigned short FindFreeSlot();
+    unsigned short LoadWave(const char *);
+    void ReadLoopMarkers(const char *);
     void ReleaseSound(unsigned short);
     void SetSoundVolume(unsigned short, int);
     void Shutdown();

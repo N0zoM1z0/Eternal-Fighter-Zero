@@ -1219,7 +1219,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original comple
 [[units.startup-main.relocations]]
 offset = 1568
 type = "REL32"
-symbol = "?SetMode@Audio@@QAEXF@Z"
+symbol = "?MaintainLoop@Audio@@QAEXG@Z"
 target = 0x0040e4d0
 evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
 
@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L60113"
+symbol = "$L60134"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L60163"
+symbol = "$L60184"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L59819"
+symbol = "$L59840"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L59841"
+symbol = "$L59862"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L59848"
+symbol = "$L59869"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L59853"
+symbol = "$L59874"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L59857"
+symbol = "$L59878"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L59864"
+symbol = "$L59885"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L59871"
+symbol = "$L59892"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L59883"
+symbol = "$L59904"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L59890"
+symbol = "$L59911"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L59897"
+symbol = "$L59918"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L59904"
+symbol = "$L59925"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L59907"
+symbol = "$L59928"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L59910"
+symbol = "$L59931"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L59913"
+symbol = "$L59934"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L59916"
+symbol = "$L59937"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L59919"
+symbol = "$L59940"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L59920"
+symbol = "$L59941"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L59924"
+symbol = "$L59945"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L59931"
+symbol = "$L59952"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L59935"
+symbol = "$L59956"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L59939"
+symbol = "$L59960"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L59943"
+symbol = "$L59964"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L59947"
+symbol = "$L59968"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L59951"
+symbol = "$L59972"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L59955"
+symbol = "$L59976"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L59959"
+symbol = "$L59980"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L59963"
+symbol = "$L59984"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L59967"
+symbol = "$L59988"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L59971"
+symbol = "$L59992"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L59977"
+symbol = "$L59998"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L59983"
+symbol = "$L60004"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L60002"
+symbol = "$L60023"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L60006"
+symbol = "$L60027"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L59816"
+symbol = "$L59837"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -6651,3 +6651,780 @@ type = "REL32"
 symbol = "?Read@PatternReader@@QAEHPAXH@Z"
 target = 0x00405600
 evidence = "docs/KNOWLEDGE_BASE.md#pattern-reader-exact; reviewed complete original operand, reader call graph, PE IAT or CRT body"
+
+[units.audio-construct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-construct/AudioResources.obj"
+symbol = "??0Audio@@QAE@XZ"
+target_address = 0x0040d810
+size = 95
+
+[units.audio-destruct]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-destruct/AudioResources.obj"
+symbol = "??1Audio@@QAE@XZ"
+target_address = 0x0040d870
+size = 190
+
+[[units.audio-destruct.relocations]]
+offset = 67
+type = "REL32"
+symbol = "?ReleaseBuffer@Audio@@QAEXG@Z"
+target = 0x0040dc50
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-destruct.relocations]]
+offset = 104
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-shutdown]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-shutdown/AudioResources.obj"
+symbol = "?Shutdown@Audio@@QAEXXZ"
+target_address = 0x0040d930
+size = 190
+
+[[units.audio-shutdown.relocations]]
+offset = 67
+type = "REL32"
+symbol = "?ReleaseBuffer@Audio@@QAEXG@Z"
+target = 0x0040dc50
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-shutdown.relocations]]
+offset = 104
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-initialize/AudioResources.obj"
+symbol = "?Initialize@Audio@@QAEXPAUHWND__@@@Z"
+target_address = 0x0040d9f0
+size = 188
+
+[[units.audio-initialize.relocations]]
+offset = 81
+type = "REL32"
+symbol = "_DirectSoundCreate@12"
+target = 0x00777d40
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 97
+type = "DIR32"
+symbol = "?audioinitializeTitle@@3QBDB"
+target = 0x007878c4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "?audioinitializeError@@3QBDB"
+target = 0x007878c8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 115
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 160
+type = "DIR32"
+symbol = "?audiocooperativeTitle@@3QBDB"
+target = 0x007878f0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 165
+type = "DIR32"
+symbol = "?audiocooperativeError@@3QBDB"
+target = 0x007878f4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-initialize.relocations]]
+offset = 178
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-fill-buffer]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-fill-buffer/AudioResources.obj"
+symbol = "?FillBuffer@Audio@@QAEXG@Z"
+target_address = 0x0040dab0
+size = 403
+
+[[units.audio-fill-buffer.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "?audiolockTitle@@3QBDB"
+target = 0x00787910
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 231
+type = "DIR32"
+symbol = "?audiolockError@@3QBDB"
+target = 0x00787914
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 244
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 269
+type = "REL32"
+symbol = "_memcpy"
+target = 0x00778600
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 306
+type = "REL32"
+symbol = "_memcpy"
+target = 0x00778600
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 375
+type = "DIR32"
+symbol = "?audiounlockTitle@@3QBDB"
+target = 0x00787928
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 380
+type = "DIR32"
+symbol = "?audiounlockError@@3QBDB"
+target = 0x0078792c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-fill-buffer.relocations]]
+offset = 393
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-release-buffer]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-release-buffer/AudioResources.obj"
+symbol = "?ReleaseBuffer@Audio@@QAEXG@Z"
+target_address = 0x0040dc50
+size = 118
+
+[[units.audio-release-buffer.relocations]]
+offset = 72
+type = "DIR32"
+symbol = "?audioreleaseTitle@@3QBDB"
+target = 0x00787944
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-release-buffer.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "?audioreleaseError@@3QBDB"
+target = 0x00787948
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-release-buffer.relocations]]
+offset = 90
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-create-buffer]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-create-buffer/AudioResources.obj"
+symbol = "?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z"
+target_address = 0x0040dcd0
+size = 245
+
+[[units.audio-create-buffer.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 26
+type = "REL32"
+symbol = "_memset"
+target = 0x00777dc0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 114
+type = "REL32"
+symbol = "_memset"
+target = 0x00777dc0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 209
+type = "DIR32"
+symbol = "?audiocreateTitle@@3QBDB"
+target = 0x00787968
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 214
+type = "DIR32"
+symbol = "?audiocreateError@@3QBDB"
+target = 0x0078796c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 227
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-create-buffer.relocations]]
+offset = 235
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-find-slot]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-find-slot/AudioResources.obj"
+symbol = "?FindFreeSlot@Audio@@QAEGXZ"
+target_address = 0x0040ddd0
+size = 107
+
+[[units.audio-find-slot.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "?audiofullTitle@@3QBDB"
+target = 0x0078798c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-find-slot.relocations]]
+offset = 82
+type = "DIR32"
+symbol = "?audiofullError@@3QBDB"
+target = 0x007879b0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-find-slot.relocations]]
+offset = 95
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-release-sound]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-release-sound/AudioResources.obj"
+symbol = "?ReleaseSound@Audio@@QAEXG@Z"
+target_address = 0x0040df50
+size = 83
+
+[[units.audio-release-sound.relocations]]
+offset = 18
+type = "REL32"
+symbol = "?ReleaseBuffer@Audio@@QAEXG@Z"
+target = 0x0040dc50
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-release-sound.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-load-wave]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-load-wave/AudioResources.obj"
+symbol = "?LoadWave@Audio@@QAEGPBD@Z"
+target_address = 0x0040dfb0
+size = 755
+
+[[units.audio-load-wave.relocations]]
+offset = 87
+type = "DIR32"
+symbol = "__imp__mmioOpenA@12"
+target = 0x007871c4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 130
+type = "DIR32"
+symbol = "__imp__mmioDescend@16"
+target = 0x007871c8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 146
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 153
+type = "DIR32"
+symbol = "?audioriffTitle@@3QBDB"
+target = 0x007879f8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 158
+type = "DIR32"
+symbol = "?audioriffError@@3QBDB"
+target = 0x007879fc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 171
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 207
+type = "DIR32"
+symbol = "__imp__mmioDescend@16"
+target = 0x007871c8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 223
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 230
+type = "DIR32"
+symbol = "?audioformatTitle@@3QBDB"
+target = 0x00787a18
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 235
+type = "DIR32"
+symbol = "?audioformatError@@3QBDB"
+target = 0x00787a1c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 248
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 273
+type = "DIR32"
+symbol = "__imp__mmioRead@12"
+target = 0x007871d0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 290
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 297
+type = "DIR32"
+symbol = "?audioreadFormatTitle@@3QBDB"
+target = 0x00787a3c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 302
+type = "DIR32"
+symbol = "?audioreadFormatError@@3QBDB"
+target = 0x00787a40
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 315
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 345
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 352
+type = "DIR32"
+symbol = "?audiopcmTitle@@3QBDB"
+target = 0x00787a68
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 357
+type = "DIR32"
+symbol = "?audiopcmError@@3QBDB"
+target = 0x00787a6c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 370
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 395
+type = "DIR32"
+symbol = "__imp__mmioAscend@12"
+target = 0x007871d4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 411
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 418
+type = "DIR32"
+symbol = "?audioascendTitle@@3QBDB"
+target = 0x00787a98
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 423
+type = "DIR32"
+symbol = "?audioascendError@@3QBDB"
+target = 0x00787a9c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 472
+type = "DIR32"
+symbol = "__imp__mmioDescend@16"
+target = 0x007871c8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 488
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 495
+type = "DIR32"
+symbol = "?audiodataTitle@@3QBDB"
+target = 0x00787ab0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 500
+type = "DIR32"
+symbol = "?audiodataError@@3QBDB"
+target = 0x00787ab4
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 513
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 530
+type = "REL32"
+symbol = "?FindFreeSlot@Audio@@QAEGXZ"
+target = 0x0040ddd0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 543
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 601
+type = "DIR32"
+symbol = "?audioallocateTitle@@3QBDB"
+target = 0x00787adc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 606
+type = "DIR32"
+symbol = "?audioallocateError@@3QBDB"
+target = 0x00787ae0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 619
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 651
+type = "DIR32"
+symbol = "__imp__mmioRead@12"
+target = 0x007871d0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 668
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 675
+type = "DIR32"
+symbol = "?audioreadDataTitle@@3QBDB"
+target = 0x00787ae8
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 680
+type = "DIR32"
+symbol = "?audioreadDataError@@3QBDB"
+target = 0x00787aec
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 693
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 711
+type = "DIR32"
+symbol = "__imp__mmioClose@8"
+target = 0x007871cc
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 728
+type = "REL32"
+symbol = "?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z"
+target = 0x0040dcd0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-load-wave.relocations]]
+offset = 741
+type = "REL32"
+symbol = "?FillBuffer@Audio@@QAEXG@Z"
+target = 0x0040dab0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-loop-markers]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-loop-markers/AudioResources.obj"
+symbol = "?ReadLoopMarkers@Audio@@QAEXPBD@Z"
+target_address = 0x0040e2b0
+size = 530
+
+[[units.audio-loop-markers.relocations]]
+offset = 15
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 69
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 84
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 105
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 152
+type = "DIR32"
+symbol = "__imp__SetFilePointer@16"
+target = 0x00787050
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 177
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 187
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-loop-markers.relocations]]
+offset = 517
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-maintain-loop]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/AudioResources.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-maintain-loop/AudioResources.obj"
+symbol = "?MaintainLoop@Audio@@QAEXG@Z"
+target_address = 0x0040e4d0
+size = 255
+
+[units.audio-global-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/AudioGlobal.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-global-initialize/AudioGlobal.obj"
+symbol = "_$E1"
+target_address = 0x00786460
+size = 28
+
+[[units.audio-global-initialize.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-global-initialize.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??0Audio@@QAE@XZ"
+target = 0x0040d810
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-global-initialize.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "_$E2"
+target = 0x007864a0
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-global-initialize.relocations]]
+offset = 19
+type = "REL32"
+symbol = "_atexit"
+target = 0x00777f05
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[units.audio-global-destroy]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/AudioGlobal.cpp"
+dependencies = ["src/Engine.h"]
+object = "build/match-units/audio-global-destroy/AudioGlobal.obj"
+symbol = "_$E2"
+target_address = 0x007864a0
+size = 15
+
+[[units.audio-global-destroy.relocations]]
+offset = 4
+type = "DIR32"
+symbol = "?audio@@3VAudio@@A"
+target = 0x007b0b60
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"
+
+[[units.audio-global-destroy.relocations]]
+offset = 9
+type = "REL32"
+symbol = "??1Audio@@QAE@XZ"
+target = 0x0040d870
+evidence = "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body"

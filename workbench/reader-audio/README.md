@@ -1,11 +1,12 @@
-# Reader archive and pending Audio reconstruction
+# Archived reader and Audio reconstruction drafts
 
-The reader was integrated and accepted on 2026-11-06: twenty complete functions,
-1,370 code bytes. Its archived files remain unchanged here. Audio remains an
-unaccepted draft outside `src/` and reconstruction ledgers. The accepted total
-is 73 functions / 32,085 code bytes. Scratch diagnostics confer no exact credit.
+Both owners were integrated and accepted on 2026-11-06. Reader contributes
+20 functions / 1,370 code bytes; Audio contributes 12 / 3,159. The two AudioGlobal
+helpers contribute 43 auxiliary bytes and no authored credit. Accepted totals
+are 85 functions / 35,244 code bytes. Public proofs are in docs/evidence/;
+these historical scratch diagnostics independently confer no progress credit.
 
-## Contents and restore
+## Preserved contents
 
 `PatternReader.cpp`, `PatternReader.h`, `AudioResources.cpp` and `AudioGlobal.cpp`
 are the original draft files, preserved byte-for-byte. `integration.patch`
@@ -14,24 +15,13 @@ commit `4540d24`. `snapshot.json` records all seven original working-source
 hashes and the patch hash. The accepted versions of those three files were
 restored so existing certificates remain current. No draft code was discarded.
 
-Context.cpp and PatternReader.cpp/.h are already integrated. After reviewing
-the remaining Audio patch and checking for new source changes, restore only
-the Audio integration from the repository root:
+All three integration.patch hunks are now integrated into accepted sources.
+Do not apply the patch or copy these drafts over src/: AudioResources.cpp here
+predates the verified scope, initialization and branch corrections. The original
+snapshot remains byte-for-byte evidence; current implementation is authoritative
+in src/PatternReader.cpp/.h and src/AudioResources.cpp/AudioGlobal.cpp.
 
-```bash
-git apply --check --include=src/Engine.h --include=src/Startup.cpp workbench/reader-audio/integration.patch
-git apply --include=src/Engine.h --include=src/Startup.cpp workbench/reader-audio/integration.patch
-cp workbench/reader-audio/AudioResources.cpp src/
-cp workbench/reader-audio/AudioGlobal.cpp src/
-```
-
-The remaining patch introduces `<mmsystem.h>`, expands the provisional Audio
-layout and renames SetMode to MaintainLoop. It deliberately does not update
-Audio recipes or certificates; that integration is pending.
-Retain existing block scopes in Open and ReadLine when formatting: scopes affect
-VC7.1 /Od local allocation. No inert code padding or invented ABI is permitted.
-
-## Diagnostic state at handoff
+## Historical diagnostic state at 2026-11-01 handoff
 
 Retained objects and source receipts are in `build/reader/`; logs are in
 `.analysis/build/`. Reader and AudioResources used
@@ -64,7 +54,7 @@ Original instruction dumps are `raw-004054*.txt` through `raw-004059*.txt`,
 `raw-00786420.txt`. Ghidra queries are retained in `.analysis/ghidra/`.
 Do not rerun `write-audio-first.py`: it would overwrite the draft.
 
-## Findings and remaining hypotheses
+## Historical findings and hypotheses
 
 ReadInt reads four raw bytes; ReadShort/ReadFloat read two/four. Read returns the
 transfer count, not void. Reset at 0x405970 is not evidence for a base constructor.
@@ -101,24 +91,23 @@ Audio's generated initialization/destruction wrappers are candidates at 0x786460
 (28 bytes) and 0x7864A0 (15 bytes), global Audio at 0x7B0B60 and atexit at 0x777F05.
 Verify them and classify as generated, not authored.
 
-## Integration gate
+## Completed integration
 
-1. Finish complete Audio comparisons and independently review all Audio
-   boundaries, origins and relocation destinations. Reader acceptance is in
-   docs/evidence/reader-exact.json; do not republish archived scratch diagnostics.
-2. Replace the startup callee `?SetMode@Audio@@QAEXF@Z` with
-   `?MaintainLoop@Audio@@QAEXG@Z`. Its target stays 0x40E4D0.
-3. Audio recipes depend on Engine.h. Reader/Context dependencies and the Read
-   return-type symbol correction were completed in the reader checkpoint.
-   Use explicit profiles and complete COFF extents.
-4. Engine.h changes involve 62 existing units; Config and reader are untouched.
-   Select only the involved old and new units. Recompile the effect dispatcher
-   and refresh compiler-local symbol IDs without changing target destinations,
-   the complete 14,305-byte extent, or its internal local-offset checks.
-5. Use complete strict oracle reports and cold source/dependency identities
-   before changing ledgers, public certificates or generated progress. Existing
-   private `replay-shared-header.py` and `publish-frame-certificates.py` are
-   examples to adapt, not commands to run blindly: selection/output paths and
-   proof grouping are still specific to earlier checkpoints.
-6. Run target-bound tracking validation and CI. Commit verified progress locally;
-   push only on a new explicit operator instruction.
+The reader checkpoint (b811817) independently reviewed twenty complete bodies,
+41 relocations and nine affected Context.cpp bodies using two cold artifacts.
+The int-returning Read declaration and all Context dependencies were corrected.
+
+The subsequent Audio checkpoint resolved all five differing bodies, reviewed
+all twelve complete boundaries and 85 relocations, and accepted both generated
+global wrappers with six explicit bindings. Sixteen cold source/profile artifacts
+covered 14 new bodies and 62 Engine.h-dependent units. Reader and Config were
+unaffected. No original destination, body extent or dispatcher local-offset check
+was shortened or masked. Current evidence and the explanation of scopes, repeated
+shifts, initialization and early returns are in
+[the knowledge base](../../docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner).
+
+Private final replay is .analysis/exact/audio-and-affected.json; corrected draft
+trials and complete differences remain in .analysis/probes/audio-next/.
+The original table above describes the archived draft only. Future work starts
+from accepted src/ and the current handoff, without rerunning historical writers
+or a full cold cohort.

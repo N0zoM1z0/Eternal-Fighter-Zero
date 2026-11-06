@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; sixteen cold source/profile artifacts shared unchanged across 14 new Audio bodies and 62 shared-header-dependent units; reader and configuration units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 28,
+      "matched_bytes": 28,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 8063840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audio@@3VAudio@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4249616,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Audio@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 14,
+          "target": 7890080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "_$E2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 7831301,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_atexit",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "828dd0e1b2b69d8dd9cc1a918f34e6b2f3df893be3e6bb82d1a4741d971a3175",
+      "target_extent_sha256": "828dd0e1b2b69d8dd9cc1a918f34e6b2f3df893be3e6bb82d1a4741d971a3175",
+      "unit": "audio-global-initialize",
+      "symbol": "_$E1",
+      "target_address": "0x00786460",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "1635d4e5771fb897298c9f1d3df460a3b23cf6c73104535e84ed28ad0acfe39f",
+      "source_sha256": "5def88961a5ac8cef0df14c3cc41a9574de2f5340caaac1ae579527c5adb05e3",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2c3bf4ded38ce8f1488c0d6bcdf1fe252739727b6f07cf2dde0b88ca0eeae14f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 15,
+      "matched_bytes": 15,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 4,
+          "target": 8063840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?audio@@3VAudio@@A",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        },
+        {
+          "offset": 9,
+          "target": 4249712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1Audio@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#audio-resource-and-loop-owner; reviewed complete original operand, data destination, PE import or CRT body",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4de954fee5d79608d776a328039f505c91a7dde537c684f9c4df9a308a44e56c",
+      "target_extent_sha256": "4de954fee5d79608d776a328039f505c91a7dde537c684f9c4df9a308a44e56c",
+      "unit": "audio-global-destroy",
+      "symbol": "_$E2",
+      "target_address": "0x007864A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b4a2ff5649d63fdf65492b74d3ba76d95505384519e5d2d0668396b14753268a",
+      "object_sha256": "1635d4e5771fb897298c9f1d3df460a3b23cf6c73104535e84ed28ad0acfe39f",
+      "source_sha256": "5def88961a5ac8cef0df14c3cc41a9574de2f5340caaac1ae579527c5adb05e3",
+      "dependencies": {
+        "src/Engine.h": "021d5cd5e7d60c3fc598f6d1916c4a5e713061c247dab1ec23a32a51f6d5acd4"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "be491fcc12292ec718da7873bcec5765be344fa321f69b386783a203beb8ef02",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1de39605d3b6003e20bb427e43e2323920582094030e2c932f91dd07ed78116f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -72,3 +72,15 @@ address,name,source,symbol,status,evidence
 0x00405950,?IsOpen@PatternReader@@QAEHXZ,src/PatternReader.cpp,?IsOpen@PatternReader@@QAEHXZ,complete,docs/evidence/reader-exact.json
 0x00405970,?Reset@PatternReader@@QAEHXZ,src/PatternReader.cpp,?Reset@PatternReader@@QAEHXZ,complete,docs/evidence/reader-exact.json
 0x004059A0,?LoadBuffer@PatternReader@@QAEPAEPBD@Z,src/PatternReader.cpp,?LoadBuffer@PatternReader@@QAEPAEPBD@Z,complete,docs/evidence/reader-exact.json
+0x0040D810,??0Audio@@QAE@XZ,src/AudioResources.cpp,??0Audio@@QAE@XZ,complete,docs/evidence/audio-exact.json
+0x0040D870,??1Audio@@QAE@XZ,src/AudioResources.cpp,??1Audio@@QAE@XZ,complete,docs/evidence/audio-exact.json
+0x0040D930,?Shutdown@Audio@@QAEXXZ,src/AudioResources.cpp,?Shutdown@Audio@@QAEXXZ,complete,docs/evidence/audio-exact.json
+0x0040D9F0,?Initialize@Audio@@QAEXPAUHWND__@@@Z,src/AudioResources.cpp,?Initialize@Audio@@QAEXPAUHWND__@@@Z,complete,docs/evidence/audio-exact.json
+0x0040DAB0,?FillBuffer@Audio@@QAEXG@Z,src/AudioResources.cpp,?FillBuffer@Audio@@QAEXG@Z,complete,docs/evidence/audio-exact.json
+0x0040DC50,?ReleaseBuffer@Audio@@QAEXG@Z,src/AudioResources.cpp,?ReleaseBuffer@Audio@@QAEXG@Z,complete,docs/evidence/audio-exact.json
+0x0040DCD0,?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z,src/AudioResources.cpp,?CreateBuffer@Audio@@QAEXGPBUtWAVEFORMATEX@@@Z,complete,docs/evidence/audio-exact.json
+0x0040DDD0,?FindFreeSlot@Audio@@QAEGXZ,src/AudioResources.cpp,?FindFreeSlot@Audio@@QAEGXZ,complete,docs/evidence/audio-exact.json
+0x0040DF50,?ReleaseSound@Audio@@QAEXG@Z,src/AudioResources.cpp,?ReleaseSound@Audio@@QAEXG@Z,complete,docs/evidence/audio-exact.json
+0x0040DFB0,?LoadWave@Audio@@QAEGPBD@Z,src/AudioResources.cpp,?LoadWave@Audio@@QAEGPBD@Z,complete,docs/evidence/audio-exact.json
+0x0040E2B0,?ReadLoopMarkers@Audio@@QAEXPBD@Z,src/AudioResources.cpp,?ReadLoopMarkers@Audio@@QAEXPBD@Z,complete,docs/evidence/audio-exact.json
+0x0040E4D0,?MaintainLoop@Audio@@QAEXG@Z,src/AudioResources.cpp,?MaintainLoop@Audio@@QAEXG@Z,complete,docs/evidence/audio-exact.json

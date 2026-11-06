@@ -93,7 +93,7 @@ extern "C" int WINAPI GameMain(HINSTANCE instance, HINSTANCE previous, LPSTR com
             } else {
                 context->framePhase = !context->framePhase;
                 if (scenes[sceneIndex]) {
-                    audio.SetMode(context->audioMode);
+                    audio.MaintainLoop(context->audioMode);
                     sceneIndex = scenes[sceneIndex]->Step();
                 }
                 WaitForSingleObject(frameEvent, INFINITE);

@@ -741,8 +741,8 @@ Whole-product linking and original/reconstructed game runtime remain open.
 ## Raw file reader and audio loading
 
 These instruction-review findings postdate the accepted frame checkpoint.
-The reader was subsequently accepted on 2026-11-06 as described below; Audio
-remains an unaccepted draft in `workbench/reader-audio/`.
+The reader and Audio owners were subsequently accepted on 2026-11-06 as
+described below. Their earlier drafts remain archived in `workbench/reader-audio/`.
 
 PatternReader::ReadInt at `0x405700` reads four raw bytes through `0x405600`;
 ReadShort/ReadFloat read two/four. There is no custom integer decoder here.
@@ -755,20 +755,20 @@ field or complete original size/alignment.
 
 Audio `0x40E4D0` maintains looping: it checks a selected buffer/sample and loop
 end, queries playback position, then stops/repositions/restarts after the end.
-The accepted SetMode(short) name is a provisional mislabel. The draft corrects
-it to MaintainLoop(unsigned short), with acceptance still pending. Reviewed
+The earlier SetMode(short) name was a provisional mislabel. The accepted source
+now uses MaintainLoop(unsigned short), with the complete caller replayed. Reviewed
 accesses expose loopStart/loopEnd at 0/4, window/DirectSound at 8/0xC, samples
 at 0x10, sample sizes at 0x268 and buffers at 0x4C0 (150 entries, minimum view
 0x718). This expands the earlier buffer-only view without establishing full
 original typing or linked global placement.
 
 The WAV owner at `0x40DFB0` uses MMIO, reads an 18-byte WAVEFORMATEX and requires
-PCM before allocation and DirectSound buffer creation/fill. Source/codegen and
-resource lifetime closure are pending. Preserve original missing checks and
+PCM before allocation and DirectSound buffer creation/fill. Its complete codegen
+is now accepted; whole-product resource closure remains open. Preserve missing checks and
 cleanup behavior rather than hardening them during exact reconstruction.
 Original FillBuffer calls at `0x40DBBC`/`0x40DBE1` target `0x778600`; a scratch
-memcpy binding to `0x778410` was incorrect. The workbench records remaining
-mismatches and the exact integration requirements.
+memcpy binding to `0x778410` was incorrect. The archived workbench records the
+earlier mismatches; their resolution is described below.
 
 ## Pattern reader exact
 
@@ -836,3 +836,102 @@ refreshed docs/evidence/context-exact.json. Private replay is retained at
 .analysis/exact/reader-and-affected.json; original review includes raw-00405*.txt,
 raw-00408330.txt/raw-00408360.txt, reader-pe-review.json and the target-attested
 Ghidra reader-open-review-20261106.txt.
+
+## Audio resource and loop owner
+
+On 2026-11-06, twelve complete Audio members were accepted: 3,159 instruction
+bytes from normal C++, plus two generated global-lifetime wrappers totaling
+43 auxiliary bytes. All 85 authored-body and six wrapper relocations have
+explicit reviewed symbols and destinations; complete native comparison includes
+every operand. These results do not establish a runnable audio subsystem or
+linked global/data closure.
+
+| Member | Entry | Complete bytes |
+| --- | --- | ---: |
+| Constructor | 0x40D810 | 95 |
+| Destructor | 0x40D870 | 190 |
+| Shutdown | 0x40D930 | 190 |
+| Initialize | 0x40D9F0 | 188 |
+| FillBuffer | 0x40DAB0 | 403 |
+| ReleaseBuffer | 0x40DC50 | 118 |
+| CreateBuffer | 0x40DCD0 | 245 |
+| FindFreeSlot | 0x40DDD0 | 107 |
+| ReleaseSound | 0x40DF50 | 83 |
+| LoadWave | 0x40DFB0 | 755 |
+| ReadLoopMarkers | 0x40E2B0 | 530 |
+| MaintainLoop | 0x40E4D0 | 255 |
+| Generated global initializer | 0x786460 | 28 |
+| Generated global destructor | 0x7864A0 | 15 |
+
+All extents include the complete final RET; following alignment bytes are
+excluded. Reviewed direct branches remain within each body. No local table or
+EH contribution is omitted. The constructor initializes loopEnd/loopStart and
+the two pointer arrays; it leaves window, DirectSound and size fields untouched.
+Destructor/Shutdown release samples only inside the buffer-present branch,
+then release DirectSound. ReleaseBuffer treats a nonzero COM reference count
+as an error and clears the slot. FillBuffer retries Lock after buffer loss,
+reports errors and still follows the original copy/unlock path. Both memcpy
+calls bind to 0x778600. None of these failure behaviors was hardened.
+
+CreateBuffer builds a 16-byte PCMWAVEFORMAT inside a 36-byte DSBUFFERDESC scope,
+uses flags 0x80 and computes sample width through the original signed division.
+Its cookie is at EBP-4, description at -0x28, PCM at -0x38 and result at -0x3C.
+FillBuffer retains first/second pointers at EBP-4/-0x10, lengths at -0xC/-8 and
+result at -0x14. Natural block scopes, rather than padding or new ABI types,
+reproduce these allocations. A standard DirectSound local-name trial changed
+offsets without fixing the complete function and was not retained.
+
+LoadWave explicitly zeros the five RIFF fields, then copies the descriptor.
+Aggregate initialization with {0} generated a different instruction sequence.
+Format/chunk/RIFF/file/slot use EBP-0x14/-0x28/-0x3C/-0x40/-0x44. Nested format,
+chunk, file and sample-allocation lifetimes resolved the earlier stack mismatch.
+The owner opens MMIO with 0x10000, locates WAVE, descends fmt with flags zero,
+reads exactly 18 format bytes, requires PCM, ascends, then locates data with
+0x10. It does not add a guard after the 150-slot sentinel, and retains the
+original allocation/read error cleanup and leaks.
+
+ReadLoopMarkers allocates 320 bytes, queries file size before checking the
+handle, reads the last 320 bytes and scans cue/adtl without new bounds checks.
+Two/three repeated shifts by eight reproduce the original byte assembly;
+single shifts by 16/24 shortened the body by eighteen bytes. The original early
+return for missing cue/annotation accounts for the remaining two bytes. Its
+file/cue/size/transferred/annotation/data locals use EBP-4/-8/-0xC/-0x10/-0x14/
+-0x18. Only the successful marker path deletes the allocation. It sets loopEnd
+to (cue + annotation) * 4 and loopStart to annotation * 4. Marker meanings and
+the fixed four-byte conversion remain provisional, rather than a general RIFF
+parser specification.
+
+MaintainLoop tests loopEnd, the 150 sentinel, buffer and sample through four
+separate early returns. Combining them into one conjunction shortened the body
+by four bytes. After GetCurrentPosition, position > loopEnd causes Stop,
+SetCurrentPosition(position - loopStart), then Play(0, 0, 1). Startup now uses
+the unsigned-short MaintainLoop symbol at the original destination 0x40E4D0.
+SetMode(short) is retired from the accepted declaration and relocation recipe.
+
+The reconstructed Audio view has loop fields at 0/4, window at 8, DirectSound
+at 0xC and 150-entry sample/size/buffer arrays at 0x10/0x268/0x4C0 (minimum
+0x718 bytes). Generated normal C++ global initialization binds audio at
+0x7B0B60, constructor 0x40D810, destructor 0x40D870, exit wrapper 0x7864A0 and
+atexit 0x777F05. It does not prove the complete original BSS allocation graph.
+
+The original DirectSoundCreate thunk at 0x777D40 jumps through IAT 0x787010
+(DSOUND ordinal 1). The compiler's import-library symbol and locked SDK header
+identify the API; ordinal metadata alone does not identify every original type.
+MMIO imports are mmioOpenA 0x7871C4, mmioDescend 0x7871C8, mmioClose 0x7871CC,
+mmioRead 0x7871D0 and mmioAscend 0x7871D4. Other bindings use reviewed existing
+Win32/CRT destinations, including memset 0x777DC0 and the CreateBuffer cookie/
+check at 0x78F050/0x7781DC. Error-title/message data operands span 0x7878C4
+through 0x787AEC and remain explicit external data bindings. The full-slot title
+at 0x78798C includes text following DS; it was not normalized to the other titles.
+
+Final verification used sixteen cold source/profile artifacts for 14 new bodies
+and the 62 existing Engine.h-dependent units. AudioResources uses the explicit
+/Od /G6 /MT /Gy /GS /W3 profile; AudioGlobal uses the profile without /GS.
+All 76 complete comparisons are strict exact. Reader and Config recipes were
+unaffected and were not replayed. The dispatcher still compares all 14,305 bytes,
+301 relocations and 36 compiler-local offset bindings; only compiler-local
+symbol identities changed with the header. Public Audio proofs are
+docs/evidence/audio-exact.json and audio-global-exact.json; affected owner
+proofs were refreshed. Private evidence is .analysis/exact/audio-and-affected.json,
+.analysis/probes/audio-next/, the retained raw-0040d*.txt/raw-0040e*.txt and the
+target-attested Ghidra audio-load-wave-review-20261106.txt.
