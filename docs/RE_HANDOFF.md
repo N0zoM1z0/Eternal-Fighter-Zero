@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 246 |
-| Authored exact instruction bytes | 235,667 |
+| Authored complete exact functions | 254 |
+| Authored exact instruction bytes | 246,620 |
 | Associated exact local-table bytes | 783 |
-| Reviewed boundaries / origins | 286 / 286 |
+| Reviewed boundaries / origins | 294 / 294 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,44 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest background checkpoint
+## Latest Mizuka action checkpoint
+
+Eight new complete Character24/Mizuka virtuals add10,953 instruction bytes,
+without local tables. Source: src/Character24.h, Character24Input.cpp and
+Character24Frame.cpp. The partial view moved out of SceneLoadingCharacter.cpp;
+Engine.h and CharacterViews.h are unchanged. Members: InitializeState4F8480/263,
+ResetPose4F8590/58, RemoveLocalEffect4F85D0/80, Slot034F8620/19,
+Slot04 action selection4F8640/10464, Slot014FAF20/11, Slot084FAF30/11,
+EmitLocalEffect4FAF40/47. The original vtable remains7885D0.
+
+Public proof: docs/evidence/mizuka-exact.json; durable findings:
+[Mizuka action selection and lifetime](KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime).
+Private attempts and reviews: .analysis/probes/mizuka/README.md.
+All ten selected complete strict native comparisons passed from three serial
+cold artifacts: eight new functions and the two actual creation-source consumers.
+All26 local table/destination bindings were independently checked; the original
+25-entry character creation table is still compared completely. Focused tracking,
+ledger/progress CI and diff whitespace checks passed. No full cohort or CI ran.
+
+Keep original unsigned latch/countdown checks and byte increments/decrements,
+positive frame-permission masks, >= meter thresholds, x87 operand order and
+structured air-attack branches. Whole-function comparison after any source
+change is essential. The large action selector alone reviews2655 instructions,
+430 internal branches,42 direct calls,42 real virtual calls and87 relocations.
+
+Mizuka Slot02 command scanner4FAF70/11423 has a fresh decompile but no source
+credit. Slot05 CPU4FDC10/16912, shared slot06 at4E7EC0/65782 and slot07 local
+effects501E20/42279 remain available; inspect complete boundaries/local tables.
+A full target-bound character constructor and selected virtuals do not complete
+that character's runtime implementation.
+
+PrepareBattle was retested once with real accepted Backgrounds.h declarations,
+base inheritance and layout. The full4031-byte compiled result against4029
+remained unchanged, including first non-table GPR divergence76D743. Evidence:
+.analysis/probes/loading-owner/README.md. That control is parked; no repeated
+type/layout experiments without a new falsifiable prediction.
+
+## Previous background checkpoint
 
 All four animated background owners for stages1/10/12/16 now have complete
 constructors, destructors, Update and Render implementations, plus both shared
@@ -85,7 +122,7 @@ Step76C790/488, renderer76C980/203, keyboard76DA10/11,
 LoadCharacter76DA20/2551+100, and Mizuka/Character24 constructor4F8300/383.
 Sources: src/SceneLoading.cpp and src/SceneLoadingCharacter.cpp. Scene2 now
 exposes its genuine +434 loading surface while keeping allocation size438.
-Character24's partial view remains local to the creation source; CharacterViews.h
+Character24's partial view has since moved into Character24.h; CharacterViews.h
 is unchanged. Scene1 ID22 and Scene2 ID22 both create Character10; the loading
 dispatch also handles the additional Mizuka ID24, allocation3460.
 

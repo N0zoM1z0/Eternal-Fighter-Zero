@@ -245,3 +245,11 @@ address,name,source,symbol,status,evidence
 0x00752DC0,?Render@Background16@@UAEXHHD@Z,src/Backgrounds.cpp,?Render@Background16@@UAEXHHD@Z,complete,docs/evidence/backgrounds-exact.json
 0x00750D30,?LoadImages@BattleBackground@@QAEXXZ,src/BackgroundResources.cpp,?LoadImages@BattleBackground@@QAEXXZ,complete,docs/evidence/backgrounds-exact.json
 0x00751030,?LoadPatterns@BattleBackground@@QAEXXZ,src/BackgroundResources.cpp,?LoadPatterns@BattleBackground@@QAEXXZ,complete,docs/evidence/backgrounds-exact.json
+0x004F8640,?Slot04@Character24@@UAEXXZ,src/Character24Input.cpp,?Slot04@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004F8480,?InitializeState@Character24@@UAEXXZ,src/Character24Frame.cpp,?InitializeState@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004F8590,?ResetPose@Character24@@UAEXXZ,src/Character24Frame.cpp,?ResetPose@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004F85D0,?RemoveLocalEffect@Character24@@UAEXF@Z,src/Character24Frame.cpp,?RemoveLocalEffect@Character24@@UAEXF@Z,complete,docs/evidence/mizuka-exact.json
+0x004F8620,?Slot03@Character24@@UAEXXZ,src/Character24Frame.cpp,?Slot03@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004FAF20,?Slot01@Character24@@UAEXXZ,src/Character24Frame.cpp,?Slot01@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004FAF30,?Slot08@Character24@@UAEXXZ,src/Character24Frame.cpp,?Slot08@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
+0x004FAF40,?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character24Frame.cpp,?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/mizuka-exact.json

@@ -26792,7 +26792,7 @@ size = 11
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneLoadingCharacter.cpp"
-dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
 object = "build/match-units/scene-loading-character/SceneLoadingCharacter.obj"
 symbol = "?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z"
 target_address = 0x0076DA20
@@ -26808,7 +26808,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; complete o
 [[units.scene-loading-character.relocations]]
 offset = 35
 type = "DIR32"
-symbol = "$L62371"
+symbol = "$L62372"
 target = 0x0076E417
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA43; complete 25-entry local table/branch destination and independent compiled offset"
 
@@ -27165,175 +27165,175 @@ evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 00
 [[units.scene-loading-character.relocations]]
 offset = 2551
 type = "DIR32"
-symbol = "$L62170"
+symbol = "$L62171"
 target = 0x0076DA47
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E417; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2555
 type = "DIR32"
-symbol = "$L62174"
+symbol = "$L62175"
 target = 0x0076DAA2
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2559
 type = "DIR32"
-symbol = "$L62178"
+symbol = "$L62179"
 target = 0x0076DAFD
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2563
 type = "DIR32"
-symbol = "$L62182"
+symbol = "$L62183"
 target = 0x0076DB58
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E423; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2567
 type = "DIR32"
-symbol = "$L62186"
+symbol = "$L62187"
 target = 0x0076DBB3
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E427; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2571
 type = "DIR32"
-symbol = "$L62190"
+symbol = "$L62191"
 target = 0x0076DC0E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2575
 type = "DIR32"
-symbol = "$L62194"
+symbol = "$L62195"
 target = 0x0076DC72
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2579
 type = "DIR32"
-symbol = "$L62198"
+symbol = "$L62199"
 target = 0x0076DCD6
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E433; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2583
 type = "DIR32"
-symbol = "$L62202"
+symbol = "$L62203"
 target = 0x0076DD3A
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E437; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2587
 type = "DIR32"
-symbol = "$L62206"
+symbol = "$L62207"
 target = 0x0076DD9E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2591
 type = "DIR32"
-symbol = "$L62210"
+symbol = "$L62211"
 target = 0x0076DE02
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2595
 type = "DIR32"
-symbol = "$L62214"
+symbol = "$L62215"
 target = 0x0076DE66
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E443; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2599
 type = "DIR32"
-symbol = "$L62218"
+symbol = "$L62219"
 target = 0x0076DECA
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E447; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2603
 type = "DIR32"
-symbol = "$L62222"
+symbol = "$L62223"
 target = 0x0076DF2E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2607
 type = "DIR32"
-symbol = "$L62226"
+symbol = "$L62227"
 target = 0x0076DF92
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2611
 type = "DIR32"
-symbol = "$L62230"
+symbol = "$L62231"
 target = 0x0076DFF6
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E453; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2615
 type = "DIR32"
-symbol = "$L62234"
+symbol = "$L62235"
 target = 0x0076E05A
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E457; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2619
 type = "DIR32"
-symbol = "$L62238"
+symbol = "$L62239"
 target = 0x0076E0BE
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2623
 type = "DIR32"
-symbol = "$L62242"
+symbol = "$L62243"
 target = 0x0076E122
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2627
 type = "DIR32"
-symbol = "$L62246"
+symbol = "$L62247"
 target = 0x0076E186
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E463; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2631
 type = "DIR32"
-symbol = "$L62250"
+symbol = "$L62251"
 target = 0x0076E1EA
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E467; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2635
 type = "DIR32"
-symbol = "$L62254"
+symbol = "$L62255"
 target = 0x0076E24E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2639
 type = "DIR32"
-symbol = "$L62258"
+symbol = "$L62259"
 target = 0x0076E2B2
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2643
 type = "DIR32"
-symbol = "$L62262"
+symbol = "$L62263"
 target = 0x0076E316
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E473; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2647
 type = "DIR32"
-symbol = "$L62266"
+symbol = "$L62267"
 target = 0x0076E377
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E477; complete 25-entry local table/branch destination and independent compiled offset"
 
@@ -27341,7 +27341,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 00
 artifact_kind = "coff"
 profile = "vc71-od-static"
 source = "src/SceneLoadingCharacter.cpp"
-dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
 object = "build/match-units/character-24-constructor/SceneLoadingCharacter.obj"
 symbol = "??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
 target_address = 0x004F8300
@@ -29093,3 +29093,727 @@ type = "REL32"
 symbol = "??3@YAXPAX@Z"
 target = 0x00777E20
 evidence = "docs/KNOWLEDGE_BASE.md#animated-background-owners; operand 00751A2C; complete original call operand and reviewed receiver/argument contract; accepted or new owner/CRT/compiler helper"
+
+[units.character-24-action-select]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Input.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-action-select/Character24Input.obj"
+symbol = "?Slot04@Character24@@UAEXXZ"
+target_address = 0x004F8640
+size = 10464
+
+[[units.character-24-action-select.relocations]]
+offset = 110
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F86AE; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 169
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F86E9; independently checked original IEEE double payload 0000000000407f40"
+
+[[units.character-24-action-select.relocations]]
+offset = 331
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F878B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 352
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F87A0; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 491
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F882B; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 616
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F88A8; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 730
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F891A; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 854
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8996; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 918
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F89D6; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 1093
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8A85; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 1171
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8AD3; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 1345
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8B81; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 1439
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8BDF; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 1614
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8C8E; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 1678
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8CCE; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 1852
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8D7C; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 1931
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8DCB; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 2105
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8E79; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 2198
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8ED6; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 2372
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8F84; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 2420
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8FB4; independently checked original IEEE double payload 0000000000407f40"
+
+[[units.character-24-action-select.relocations]]
+offset = 2504
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9008; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 2629
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9085; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 2751
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F90FF; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 2875
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F917B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 3000
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F91F8; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 3119
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F926F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 3167
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F929F; independently checked original IEEE double payload 0000000000407f40"
+
+[[units.character-24-action-select.relocations]]
+offset = 3251
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F92F3; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 3376
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9370; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 3483
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F93DB; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 3607
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9457; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 3699
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F94B3; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 3823
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F952F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 3915
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F958B; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 4040
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9608; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 4132
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9664; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 4257
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F96E1; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 4349
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F973D; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 4474
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F97BA; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 4522
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F97EA; independently checked original IEEE double payload 0000000000407f40"
+
+[[units.character-24-action-select.relocations]]
+offset = 4709
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F98A5; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 4730
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F98BA; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 4947
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9993; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 4968
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F99A8; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5170
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9A72; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 5191
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9A87; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5273
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9AD9; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5353
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9B29; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5383
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9B47; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5509
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9BC5; independently checked original IEEE double payload 00000000000044c0"
+
+[[units.character-24-action-select.relocations]]
+offset = 5677
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9C6D; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 5784
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9CD8; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 5814
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9CF6; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6069
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9DF5; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 6135
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9E37; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6251
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9EAB; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6281
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9EC9; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6471
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9F87; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 6557
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9FDD; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6587
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9FFB; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 6774
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA0B6; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 6907
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA13B; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 7050
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA1CA; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 7251
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA293; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 7277
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA2AD; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 7446
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA356; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 7671
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA437; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 7896
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA518; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 8015
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA58F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 8041
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA5A9; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 8210
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA652; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 8436
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA734; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 8616
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA7E8; independently checked original IEEE double payload 00000000008051c0"
+
+[[units.character-24-action-select.relocations]]
+offset = 8646
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA806; independently checked original IEEE double payload 0000000000805140"
+
+[[units.character-24-action-select.relocations]]
+offset = 8724
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA854; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 8900
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA904; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 9019
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA97B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 9045
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA995; independently checked original IEEE double payload 0000000000000000"
+
+[[units.character-24-action-select.relocations]]
+offset = 9261
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAA6D; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 9434
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAB1A; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 9660
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FABFC; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 9763
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAC63; independently checked original IEEE double payload 00000000000044c0"
+
+[[units.character-24-action-select.relocations]]
+offset = 9797
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAC85; independently checked original IEEE double payload 0000000000004440"
+
+[[units.character-24-action-select.relocations]]
+offset = 10011
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAD5B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 10188
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAE0C; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[[units.character-24-action-select.relocations]]
+offset = 10447
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAF0F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-initialize]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-initialize/Character24Frame.obj"
+symbol = "?InitializeState@Character24@@UAEXXZ"
+target_address = 0x004F8480
+size = 263
+
+[[units.character-24-initialize.relocations]]
+offset = 255
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F857F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-reset-pose/Character24Frame.obj"
+symbol = "?ResetPose@Character24@@UAEXXZ"
+target_address = 0x004F8590
+size = 58
+
+[[units.character-24-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F85C2; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-remove-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-remove-effect/Character24Frame.obj"
+symbol = "?RemoveLocalEffect@Character24@@UAEXF@Z"
+target_address = 0x004F85D0
+size = 80
+
+[[units.character-24-remove-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8616; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-locomotion]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-locomotion/Character24Frame.obj"
+symbol = "?Slot03@Character24@@UAEXXZ"
+target_address = 0x004F8620
+size = 19
+
+[[units.character-24-locomotion.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F862B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-render-noop]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-render-noop/Character24Frame.obj"
+symbol = "?Slot01@Character24@@UAEXXZ"
+target_address = 0x004FAF20
+size = 11
+
+[units.character-24-frame-noop]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-frame-noop/Character24Frame.obj"
+symbol = "?Slot08@Character24@@UAEXXZ"
+target_address = 0x004FAF30
+size = 11
+
+[units.character-24-emit-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Frame.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-emit-effect/Character24Frame.obj"
+symbol = "?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x004FAF40
+size = 47
+
+[[units.character-24-emit-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAF65; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"

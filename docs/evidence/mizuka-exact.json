@@ -1,0 +1,3363 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen with explicit independently reviewed relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 10464,
+      "matched_bytes": 10464,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 110,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F86AE; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 169,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F86E9; independently checked original IEEE double payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 331,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F878B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F87A0; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 491,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F882B; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 616,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F88A8; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 730,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F891A; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 854,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8996; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 918,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F89D6; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1093,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8A85; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 1171,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8AD3; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1345,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8B81; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 1439,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8BDF; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1614,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8C8E; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 1678,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8CCE; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1852,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8D7C; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 1931,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8DCB; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2105,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8E79; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 2198,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8ED6; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2372,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8F84; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 2420,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8FB4; independently checked original IEEE double payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 2504,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9008; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2629,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9085; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 2751,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F90FF; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2875,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F917B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 3000,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F91F8; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3119,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F926F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 3167,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F929F; independently checked original IEEE double payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 3251,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F92F3; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3376,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9370; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 3483,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F93DB; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3607,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9457; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 3699,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F94B3; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3823,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F952F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 3915,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F958B; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4040,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9608; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 4132,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9664; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4257,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F96E1; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 4349,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F973D; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4474,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F97BA; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 4522,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F97EA; independently checked original IEEE double payload 0000000000407f40",
+          "addend": 0
+        },
+        {
+          "offset": 4709,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F98A5; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 4730,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F98BA; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4947,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9993; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 4968,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F99A8; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5170,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9A72; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 5191,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9A87; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5273,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9AD9; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5353,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9B29; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5383,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9B47; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5509,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9BC5; independently checked original IEEE double payload 00000000000044c0",
+          "addend": 0
+        },
+        {
+          "offset": 5677,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9C6D; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 5784,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9CD8; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5814,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9CF6; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6069,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9DF5; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 6135,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9E37; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6251,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9EAB; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6281,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9EC9; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6471,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9F87; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 6557,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9FDD; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6587,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F9FFB; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6774,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA0B6; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 6907,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA13B; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7050,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA1CA; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 7251,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA293; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 7277,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA2AD; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7446,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA356; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 7671,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA437; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 7896,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA518; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 8015,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA58F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 8041,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA5A9; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8210,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA652; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 8436,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA734; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 8616,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA7E8; independently checked original IEEE double payload 00000000008051c0",
+          "addend": 0
+        },
+        {
+          "offset": 8646,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA806; independently checked original IEEE double payload 0000000000805140",
+          "addend": 0
+        },
+        {
+          "offset": 8724,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA854; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 8900,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA904; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 9019,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA97B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 9045,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FA995; independently checked original IEEE double payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9261,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAA6D; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 9434,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAB1A; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 9660,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FABFC; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 9763,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAC63; independently checked original IEEE double payload 00000000000044c0",
+          "addend": 0
+        },
+        {
+          "offset": 9797,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAC85; independently checked original IEEE double payload 0000000000004440",
+          "addend": 0
+        },
+        {
+          "offset": 10011,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAD5B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 10188,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAE0C; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        },
+        {
+          "offset": 10447,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAF0F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c26d6275c77839c1ae10b8d85cfe0522bde65f39bc956b362de73aacf59687f8",
+      "target_extent_sha256": "c26d6275c77839c1ae10b8d85cfe0522bde65f39bc956b362de73aacf59687f8",
+      "unit": "character-24-action-select",
+      "symbol": "?Slot04@Character24@@UAEXXZ",
+      "target_address": "0x004F8640",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "9f551072d69783150876377f04804a9b04488a440ab52331676b2460c98da2f0",
+      "source_sha256": "bbf010df7cd1438db144f98cb3cd8ccbad88abde71f606cf2b757a2c0fc414fb",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b5560f6102559cb83761e7249fded9f7675c01c40f7d227b3b4d11ac2bd16dce",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 263,
+      "matched_bytes": 263,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 255,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F857F; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "0b4bff82e999b7a82212fe86b03c68cabd463ba7a90139ca3982859267485b47",
+      "target_extent_sha256": "0b4bff82e999b7a82212fe86b03c68cabd463ba7a90139ca3982859267485b47",
+      "unit": "character-24-initialize",
+      "symbol": "?InitializeState@Character24@@UAEXXZ",
+      "target_address": "0x004F8480",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "225bab408d4d6b59a64996d09e80a79ef1342d8a18e20f6914190bdfd7250812",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F85C2; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "397217873ff7cf561a53b0c33d49101285d193fd2095563de2bd3c7594a44341",
+      "target_extent_sha256": "397217873ff7cf561a53b0c33d49101285d193fd2095563de2bd3c7594a44341",
+      "unit": "character-24-reset-pose",
+      "symbol": "?ResetPose@Character24@@UAEXXZ",
+      "target_address": "0x004F8590",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d486b6f84788ea889bbb2c7ce74135579fe565a917d112db65ad441b250938f7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F8616; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "01992375784975a5b977c4028adc173d4dd2b63838859437488a5ac126d3511c",
+      "target_extent_sha256": "01992375784975a5b977c4028adc173d4dd2b63838859437488a5ac126d3511c",
+      "unit": "character-24-remove-effect",
+      "symbol": "?RemoveLocalEffect@Character24@@UAEXF@Z",
+      "target_address": "0x004F85D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0b2aaf3ba72911c87c17c5f906bd4bc5ef7a871925f3f40b409496659f0917df",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004F862B; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "891e2f0e503016d3d431706777e795152886bc2727cf0966af980224587de339",
+      "target_extent_sha256": "891e2f0e503016d3d431706777e795152886bc2727cf0966af980224587de339",
+      "unit": "character-24-locomotion",
+      "symbol": "?Slot03@Character24@@UAEXXZ",
+      "target_address": "0x004F8620",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3daa527248ca5ee25563abe4a2dee1ac33bcb22c3d51d88b55cd3b1349390693",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-24-render-noop",
+      "symbol": "?Slot01@Character24@@UAEXXZ",
+      "target_address": "0x004FAF20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ae9b8a40882559e38eee6fdfdd336de34213825e54e307cf35f11283410fe260",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-24-frame-noop",
+      "symbol": "?Slot08@Character24@@UAEXXZ",
+      "target_address": "0x004FAF30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a3f8e5a6fe7a59da58c96a0d2f78d48746d8cdc3590df34df0b12377721c541a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAF65; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4e354e9d8f2eef17bb92bbd534daa4d1d298726ad2b6affec1dc49d3319c8f7b",
+      "target_extent_sha256": "4e354e9d8f2eef17bb92bbd534daa4d1d298726ad2b6affec1dc49d3319c8f7b",
+      "unit": "character-24-emit-effect",
+      "symbol": "?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x004FAF40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5d162fbeb0520b67e9c88e2d02692930e4dcf7708495d1596eb63934ab051cc2",
+      "object_sha256": "d491f0f5e27998008a19855f51e33328e56130a6cb974d879c22c1108096bb80",
+      "source_sha256": "e6af593d78ec6f7dbcb5dbd990f45f2361685494d56ba6b16b3565da0ac7fff2",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6a6b65b04be3e64b460d60ba39cbf54fb4baa0f1cfc37a9ca9942319550e4a67",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a978d05b6b08400ac6509c4dc114a9876f11b4cc54acd45d2276598491587b92",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "boundary_review": [
+    {
+      "tag": "input",
+      "address": "0x4f8640",
+      "size": 10464,
+      "instructions": 2655,
+      "branches": [
+        [
+          "0x4f8656",
+          "0x4f8662"
+        ],
+        [
+          "0x4f866e",
+          "0x4f867c"
+        ],
+        [
+          "0x4f867a",
+          "0x4f8691"
+        ],
+        [
+          "0x4f869d",
+          "0x4f86a9"
+        ],
+        [
+          "0x4f86bc",
+          "0x4f86cb"
+        ],
+        [
+          "0x4f86d8",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f86f2",
+          "0x4f8706"
+        ],
+        [
+          "0x4f8700",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f8710",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f8720",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f8752",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f877b",
+          "0x4f87b9"
+        ],
+        [
+          "0x4f87a9",
+          "0x4f87b4"
+        ],
+        [
+          "0x4f87b4",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f87c3",
+          "0x4f9aa0"
+        ],
+        [
+          "0x4f87d8",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f87ee",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f8820",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f8839",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f8848",
+          "0x4f8862"
+        ],
+        [
+          "0x4f8854",
+          "0x4f8862"
+        ],
+        [
+          "0x4f8860",
+          "0x4f8871"
+        ],
+        [
+          "0x4f886f",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f8898",
+          "0x4f88ba"
+        ],
+        [
+          "0x4f88b5",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f88c7",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f88dd",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f890f",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f8928",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f8936",
+          "0x4f8950"
+        ],
+        [
+          "0x4f8942",
+          "0x4f8950"
+        ],
+        [
+          "0x4f894e",
+          "0x4f895f"
+        ],
+        [
+          "0x4f895d",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f8986",
+          "0x4f89a8"
+        ],
+        [
+          "0x4f89a3",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f89b5",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f89cb",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f89e4",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f8a16",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f8a25",
+          "0x4f8a3f"
+        ],
+        [
+          "0x4f8a31",
+          "0x4f8a3f"
+        ],
+        [
+          "0x4f8a3d",
+          "0x4f8a4e"
+        ],
+        [
+          "0x4f8a4c",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f8a75",
+          "0x4f8a97"
+        ],
+        [
+          "0x4f8a92",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8aa4",
+          "0x4f8ab9"
+        ],
+        [
+          "0x4f8ab3",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8ac8",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8ae1",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8b13",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8b22",
+          "0x4f8b3c"
+        ],
+        [
+          "0x4f8b2e",
+          "0x4f8b3c"
+        ],
+        [
+          "0x4f8b3a",
+          "0x4f8b4a"
+        ],
+        [
+          "0x4f8b48",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8b71",
+          "0x4f8b93"
+        ],
+        [
+          "0x4f8b8e",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8ba0",
+          "0x4f8bc4"
+        ],
+        [
+          "0x4f8baf",
+          "0x4f8bc4"
+        ],
+        [
+          "0x4f8bbe",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8bd4",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8bed",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8c1f",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8c2e",
+          "0x4f8c48"
+        ],
+        [
+          "0x4f8c3a",
+          "0x4f8c48"
+        ],
+        [
+          "0x4f8c46",
+          "0x4f8c57"
+        ],
+        [
+          "0x4f8c55",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8c7e",
+          "0x4f8ca0"
+        ],
+        [
+          "0x4f8c9b",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8cad",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8cc3",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8cdc",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8d0e",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8d1c",
+          "0x4f8d36"
+        ],
+        [
+          "0x4f8d28",
+          "0x4f8d36"
+        ],
+        [
+          "0x4f8d34",
+          "0x4f8d45"
+        ],
+        [
+          "0x4f8d43",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8d6c",
+          "0x4f8d8e"
+        ],
+        [
+          "0x4f8d89",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8d9b",
+          "0x4f8db0"
+        ],
+        [
+          "0x4f8daa",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8dc0",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8dd9",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8e0b",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8e19",
+          "0x4f8e33"
+        ],
+        [
+          "0x4f8e25",
+          "0x4f8e33"
+        ],
+        [
+          "0x4f8e31",
+          "0x4f8e42"
+        ],
+        [
+          "0x4f8e40",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8e69",
+          "0x4f8e8b"
+        ],
+        [
+          "0x4f8e86",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8e98",
+          "0x4f8ebc"
+        ],
+        [
+          "0x4f8ea7",
+          "0x4f8ebc"
+        ],
+        [
+          "0x4f8eb6",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8ecb",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8ee4",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8f16",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8f25",
+          "0x4f8f3f"
+        ],
+        [
+          "0x4f8f31",
+          "0x4f8f3f"
+        ],
+        [
+          "0x4f8f3d",
+          "0x4f8f4d"
+        ],
+        [
+          "0x4f8f4b",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8f74",
+          "0x4f8f96"
+        ],
+        [
+          "0x4f8f91",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f8fa3",
+          "0x4f9097"
+        ],
+        [
+          "0x4f8fbd",
+          "0x4f8fd1"
+        ],
+        [
+          "0x4f8fcb",
+          "0x4f9097"
+        ],
+        [
+          "0x4f8ffd",
+          "0x4f9097"
+        ],
+        [
+          "0x4f9016",
+          "0x4f9097"
+        ],
+        [
+          "0x4f9025",
+          "0x4f903f"
+        ],
+        [
+          "0x4f9031",
+          "0x4f903f"
+        ],
+        [
+          "0x4f903d",
+          "0x4f904e"
+        ],
+        [
+          "0x4f904c",
+          "0x4f9097"
+        ],
+        [
+          "0x4f9075",
+          "0x4f9097"
+        ],
+        [
+          "0x4f9092",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f90a4",
+          "0x4f90c8"
+        ],
+        [
+          "0x4f90b3",
+          "0x4f90c8"
+        ],
+        [
+          "0x4f90c2",
+          "0x4f918d"
+        ],
+        [
+          "0x4f90f4",
+          "0x4f918d"
+        ],
+        [
+          "0x4f910d",
+          "0x4f918d"
+        ],
+        [
+          "0x4f911c",
+          "0x4f9136"
+        ],
+        [
+          "0x4f9128",
+          "0x4f9136"
+        ],
+        [
+          "0x4f9134",
+          "0x4f9144"
+        ],
+        [
+          "0x4f9142",
+          "0x4f918d"
+        ],
+        [
+          "0x4f916b",
+          "0x4f918d"
+        ],
+        [
+          "0x4f9188",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f919a",
+          "0x4f91be"
+        ],
+        [
+          "0x4f91a9",
+          "0x4f91be"
+        ],
+        [
+          "0x4f91b8",
+          "0x4f9281"
+        ],
+        [
+          "0x4f91ea",
+          "0x4f9281"
+        ],
+        [
+          "0x4f9201",
+          "0x4f9281"
+        ],
+        [
+          "0x4f9210",
+          "0x4f922a"
+        ],
+        [
+          "0x4f921c",
+          "0x4f922a"
+        ],
+        [
+          "0x4f9228",
+          "0x4f9238"
+        ],
+        [
+          "0x4f9236",
+          "0x4f9281"
+        ],
+        [
+          "0x4f925f",
+          "0x4f9281"
+        ],
+        [
+          "0x4f927c",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f928e",
+          "0x4f9382"
+        ],
+        [
+          "0x4f92a8",
+          "0x4f92bc"
+        ],
+        [
+          "0x4f92b6",
+          "0x4f9382"
+        ],
+        [
+          "0x4f92e8",
+          "0x4f9382"
+        ],
+        [
+          "0x4f9301",
+          "0x4f9382"
+        ],
+        [
+          "0x4f9310",
+          "0x4f932a"
+        ],
+        [
+          "0x4f931c",
+          "0x4f932a"
+        ],
+        [
+          "0x4f9328",
+          "0x4f9339"
+        ],
+        [
+          "0x4f9337",
+          "0x4f9382"
+        ],
+        [
+          "0x4f9360",
+          "0x4f9382"
+        ],
+        [
+          "0x4f937d",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f938f",
+          "0x4f93a4"
+        ],
+        [
+          "0x4f939e",
+          "0x4f9469"
+        ],
+        [
+          "0x4f93d0",
+          "0x4f9469"
+        ],
+        [
+          "0x4f93e9",
+          "0x4f9469"
+        ],
+        [
+          "0x4f93f7",
+          "0x4f9411"
+        ],
+        [
+          "0x4f9403",
+          "0x4f9411"
+        ],
+        [
+          "0x4f940f",
+          "0x4f9420"
+        ],
+        [
+          "0x4f941e",
+          "0x4f9469"
+        ],
+        [
+          "0x4f9447",
+          "0x4f9469"
+        ],
+        [
+          "0x4f9464",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9476",
+          "0x4f9541"
+        ],
+        [
+          "0x4f94a8",
+          "0x4f9541"
+        ],
+        [
+          "0x4f94c1",
+          "0x4f9541"
+        ],
+        [
+          "0x4f94d0",
+          "0x4f94ea"
+        ],
+        [
+          "0x4f94dc",
+          "0x4f94ea"
+        ],
+        [
+          "0x4f94e8",
+          "0x4f94f8"
+        ],
+        [
+          "0x4f94f6",
+          "0x4f9541"
+        ],
+        [
+          "0x4f951f",
+          "0x4f9541"
+        ],
+        [
+          "0x4f953c",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f954e",
+          "0x4f961a"
+        ],
+        [
+          "0x4f9580",
+          "0x4f961a"
+        ],
+        [
+          "0x4f9599",
+          "0x4f961a"
+        ],
+        [
+          "0x4f95a8",
+          "0x4f95c2"
+        ],
+        [
+          "0x4f95b4",
+          "0x4f95c2"
+        ],
+        [
+          "0x4f95c0",
+          "0x4f95d1"
+        ],
+        [
+          "0x4f95cf",
+          "0x4f961a"
+        ],
+        [
+          "0x4f95f8",
+          "0x4f961a"
+        ],
+        [
+          "0x4f9615",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9627",
+          "0x4f96f3"
+        ],
+        [
+          "0x4f9659",
+          "0x4f96f3"
+        ],
+        [
+          "0x4f9672",
+          "0x4f96f3"
+        ],
+        [
+          "0x4f9681",
+          "0x4f969b"
+        ],
+        [
+          "0x4f968d",
+          "0x4f969b"
+        ],
+        [
+          "0x4f9699",
+          "0x4f96aa"
+        ],
+        [
+          "0x4f96a8",
+          "0x4f96f3"
+        ],
+        [
+          "0x4f96d1",
+          "0x4f96f3"
+        ],
+        [
+          "0x4f96ee",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9700",
+          "0x4f97cc"
+        ],
+        [
+          "0x4f9732",
+          "0x4f97cc"
+        ],
+        [
+          "0x4f974b",
+          "0x4f97cc"
+        ],
+        [
+          "0x4f975a",
+          "0x4f9774"
+        ],
+        [
+          "0x4f9766",
+          "0x4f9774"
+        ],
+        [
+          "0x4f9772",
+          "0x4f9783"
+        ],
+        [
+          "0x4f9781",
+          "0x4f97cc"
+        ],
+        [
+          "0x4f97aa",
+          "0x4f97cc"
+        ],
+        [
+          "0x4f97c7",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f97d9",
+          "0x4f98d3"
+        ],
+        [
+          "0x4f97f3",
+          "0x4f9807"
+        ],
+        [
+          "0x4f9801",
+          "0x4f98d3"
+        ],
+        [
+          "0x4f9833",
+          "0x4f98d3"
+        ],
+        [
+          "0x4f9845",
+          "0x4f985f"
+        ],
+        [
+          "0x4f9851",
+          "0x4f985f"
+        ],
+        [
+          "0x4f985d",
+          "0x4f986e"
+        ],
+        [
+          "0x4f986c",
+          "0x4f98d3"
+        ],
+        [
+          "0x4f9895",
+          "0x4f98d3"
+        ],
+        [
+          "0x4f98c3",
+          "0x4f98ce"
+        ],
+        [
+          "0x4f98ce",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f98e0",
+          "0x4f98f5"
+        ],
+        [
+          "0x4f98ef",
+          "0x4f99c1"
+        ],
+        [
+          "0x4f9921",
+          "0x4f99c1"
+        ],
+        [
+          "0x4f9934",
+          "0x4f994e"
+        ],
+        [
+          "0x4f9940",
+          "0x4f994e"
+        ],
+        [
+          "0x4f994c",
+          "0x4f995c"
+        ],
+        [
+          "0x4f995a",
+          "0x4f99c1"
+        ],
+        [
+          "0x4f9983",
+          "0x4f99c1"
+        ],
+        [
+          "0x4f99b1",
+          "0x4f99bc"
+        ],
+        [
+          "0x4f99bc",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f99ce",
+          "0x4f9aa0"
+        ],
+        [
+          "0x4f9a00",
+          "0x4f9aa0"
+        ],
+        [
+          "0x4f9a13",
+          "0x4f9a2d"
+        ],
+        [
+          "0x4f9a1f",
+          "0x4f9a2d"
+        ],
+        [
+          "0x4f9a2b",
+          "0x4f9a3b"
+        ],
+        [
+          "0x4f9a39",
+          "0x4f9aa0"
+        ],
+        [
+          "0x4f9a62",
+          "0x4f9aa0"
+        ],
+        [
+          "0x4f9a90",
+          "0x4f9a9b"
+        ],
+        [
+          "0x4f9a9b",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9aaa",
+          "0x4fa0de"
+        ],
+        [
+          "0x4f9abc",
+          "0x4f9ad1"
+        ],
+        [
+          "0x4f9acb",
+          "0x4fa0de"
+        ],
+        [
+          "0x4f9ae2",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9af5",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9b32",
+          "0x4f9b7d"
+        ],
+        [
+          "0x4f9b52",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9b77",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9ba4",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9bb7",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9bce",
+          "0x4f9be0"
+        ],
+        [
+          "0x4f9bda",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9c0c",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9c1f",
+          "0x4f9c39"
+        ],
+        [
+          "0x4f9c2b",
+          "0x4f9c39"
+        ],
+        [
+          "0x4f9c37",
+          "0x4f9c47"
+        ],
+        [
+          "0x4f9c45",
+          "0x4f9caa"
+        ],
+        [
+          "0x4f9c54",
+          "0x4f9c60"
+        ],
+        [
+          "0x4f9ca5",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9ce1",
+          "0x4f9d29"
+        ],
+        [
+          "0x4f9d01",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9d23",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9d50",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9d63",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9d95",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9da7",
+          "0x4f9dc1"
+        ],
+        [
+          "0x4f9db3",
+          "0x4f9dc1"
+        ],
+        [
+          "0x4f9dbf",
+          "0x4f9dd0"
+        ],
+        [
+          "0x4f9dce",
+          "0x4f9e32"
+        ],
+        [
+          "0x4f9ddc",
+          "0x4f9de8"
+        ],
+        [
+          "0x4f9e2d",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9e45",
+          "0x4fa0de"
+        ],
+        [
+          "0x4f9e77",
+          "0x4fa0de"
+        ],
+        [
+          "0x4f9eb4",
+          "0x4f9eff"
+        ],
+        [
+          "0x4f9ed4",
+          "0x4f9faf"
+        ],
+        [
+          "0x4f9ef9",
+          "0x4f9faf"
+        ],
+        [
+          "0x4f9f26",
+          "0x4f9faf"
+        ],
+        [
+          "0x4f9f39",
+          "0x4f9f53"
+        ],
+        [
+          "0x4f9f45",
+          "0x4f9f53"
+        ],
+        [
+          "0x4f9f51",
+          "0x4f9f61"
+        ],
+        [
+          "0x4f9f5f",
+          "0x4f9faf"
+        ],
+        [
+          "0x4f9f6e",
+          "0x4f9f7a"
+        ],
+        [
+          "0x4f9faa",
+          "0x4faf1c"
+        ],
+        [
+          "0x4f9fe6",
+          "0x4fa02e"
+        ],
+        [
+          "0x4fa006",
+          "0x4fa0de"
+        ],
+        [
+          "0x4fa028",
+          "0x4fa0de"
+        ],
+        [
+          "0x4fa055",
+          "0x4fa0de"
+        ],
+        [
+          "0x4fa068",
+          "0x4fa082"
+        ],
+        [
+          "0x4fa074",
+          "0x4fa082"
+        ],
+        [
+          "0x4fa080",
+          "0x4fa090"
+        ],
+        [
+          "0x4fa08e",
+          "0x4fa0de"
+        ],
+        [
+          "0x4fa09d",
+          "0x4fa0a9"
+        ],
+        [
+          "0x4fa0d9",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa0e8",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa0fb",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa12d",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa144",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa157",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa16a",
+          "0x4fa184"
+        ],
+        [
+          "0x4fa176",
+          "0x4fa184"
+        ],
+        [
+          "0x4fa182",
+          "0x4fa196"
+        ],
+        [
+          "0x4fa190",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa1ba",
+          "0x4fa22f"
+        ],
+        [
+          "0x4fa1ff",
+          "0x4fa20a"
+        ],
+        [
+          "0x4fa21f",
+          "0x4fa22a"
+        ],
+        [
+          "0x4fa22a",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa23c",
+          "0x4fa260"
+        ],
+        [
+          "0x4fa24b",
+          "0x4fa260"
+        ],
+        [
+          "0x4fa25a",
+          "0x4fa52a"
+        ],
+        [
+          "0x4fa26c",
+          "0x4fa2a5"
+        ],
+        [
+          "0x4fa283",
+          "0x4fa2a5"
+        ],
+        [
+          "0x4fa2a0",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa2b6",
+          "0x4fa368"
+        ],
+        [
+          "0x4fa2e3",
+          "0x4fa363"
+        ],
+        [
+          "0x4fa311",
+          "0x4fa363"
+        ],
+        [
+          "0x4fa31f",
+          "0x4fa339"
+        ],
+        [
+          "0x4fa32b",
+          "0x4fa339"
+        ],
+        [
+          "0x4fa337",
+          "0x4fa348"
+        ],
+        [
+          "0x4fa346",
+          "0x4fa363"
+        ],
+        [
+          "0x4fa363",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa375",
+          "0x4fa399"
+        ],
+        [
+          "0x4fa384",
+          "0x4fa399"
+        ],
+        [
+          "0x4fa393",
+          "0x4fa449"
+        ],
+        [
+          "0x4fa3c0",
+          "0x4fa449"
+        ],
+        [
+          "0x4fa3f2",
+          "0x4fa449"
+        ],
+        [
+          "0x4fa401",
+          "0x4fa41b"
+        ],
+        [
+          "0x4fa40d",
+          "0x4fa41b"
+        ],
+        [
+          "0x4fa419",
+          "0x4fa429"
+        ],
+        [
+          "0x4fa427",
+          "0x4fa449"
+        ],
+        [
+          "0x4fa444",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa455",
+          "0x4fa479"
+        ],
+        [
+          "0x4fa464",
+          "0x4fa479"
+        ],
+        [
+          "0x4fa473",
+          "0x4fa52a"
+        ],
+        [
+          "0x4fa4a0",
+          "0x4fa52a"
+        ],
+        [
+          "0x4fa4d2",
+          "0x4fa52a"
+        ],
+        [
+          "0x4fa4e1",
+          "0x4fa4fb"
+        ],
+        [
+          "0x4fa4ed",
+          "0x4fa4fb"
+        ],
+        [
+          "0x4fa4f9",
+          "0x4fa50a"
+        ],
+        [
+          "0x4fa508",
+          "0x4fa52a"
+        ],
+        [
+          "0x4fa525",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa537",
+          "0x4fa55b"
+        ],
+        [
+          "0x4fa546",
+          "0x4fa55b"
+        ],
+        [
+          "0x4fa555",
+          "0x4fa916"
+        ],
+        [
+          "0x4fa568",
+          "0x4fa5a1"
+        ],
+        [
+          "0x4fa57f",
+          "0x4fa5a1"
+        ],
+        [
+          "0x4fa59c",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa5b2",
+          "0x4fa664"
+        ],
+        [
+          "0x4fa5df",
+          "0x4fa65f"
+        ],
+        [
+          "0x4fa60d",
+          "0x4fa65f"
+        ],
+        [
+          "0x4fa61c",
+          "0x4fa636"
+        ],
+        [
+          "0x4fa628",
+          "0x4fa636"
+        ],
+        [
+          "0x4fa634",
+          "0x4fa644"
+        ],
+        [
+          "0x4fa642",
+          "0x4fa65f"
+        ],
+        [
+          "0x4fa65f",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa671",
+          "0x4fa695"
+        ],
+        [
+          "0x4fa680",
+          "0x4fa695"
+        ],
+        [
+          "0x4fa68f",
+          "0x4fa746"
+        ],
+        [
+          "0x4fa6bc",
+          "0x4fa746"
+        ],
+        [
+          "0x4fa6ee",
+          "0x4fa746"
+        ],
+        [
+          "0x4fa6fd",
+          "0x4fa717"
+        ],
+        [
+          "0x4fa709",
+          "0x4fa717"
+        ],
+        [
+          "0x4fa715",
+          "0x4fa726"
+        ],
+        [
+          "0x4fa724",
+          "0x4fa746"
+        ],
+        [
+          "0x4fa741",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa752",
+          "0x4fa776"
+        ],
+        [
+          "0x4fa761",
+          "0x4fa776"
+        ],
+        [
+          "0x4fa770",
+          "0x4fa916"
+        ],
+        [
+          "0x4fa79d",
+          "0x4fa866"
+        ],
+        [
+          "0x4fa7cf",
+          "0x4fa866"
+        ],
+        [
+          "0x4fa7f1",
+          "0x4fa866"
+        ],
+        [
+          "0x4fa80f",
+          "0x4fa866"
+        ],
+        [
+          "0x4fa81d",
+          "0x4fa837"
+        ],
+        [
+          "0x4fa829",
+          "0x4fa837"
+        ],
+        [
+          "0x4fa835",
+          "0x4fa846"
+        ],
+        [
+          "0x4fa844",
+          "0x4fa866"
+        ],
+        [
+          "0x4fa861",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa88d",
+          "0x4fa916"
+        ],
+        [
+          "0x4fa8bf",
+          "0x4fa916"
+        ],
+        [
+          "0x4fa8ce",
+          "0x4fa8e8"
+        ],
+        [
+          "0x4fa8da",
+          "0x4fa8e8"
+        ],
+        [
+          "0x4fa8e6",
+          "0x4fa8f6"
+        ],
+        [
+          "0x4fa8f4",
+          "0x4fa916"
+        ],
+        [
+          "0x4fa911",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa923",
+          "0x4fa947"
+        ],
+        [
+          "0x4fa932",
+          "0x4fa947"
+        ],
+        [
+          "0x4fa941",
+          "0x4fae1e"
+        ],
+        [
+          "0x4fa954",
+          "0x4fa98d"
+        ],
+        [
+          "0x4fa96b",
+          "0x4fa98d"
+        ],
+        [
+          "0x4fa988",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fa99e",
+          "0x4fab2c"
+        ],
+        [
+          "0x4fa9cb",
+          "0x4faa7f"
+        ],
+        [
+          "0x4fa9e4",
+          "0x4faa7f"
+        ],
+        [
+          "0x4fa9f6",
+          "0x4faa7f"
+        ],
+        [
+          "0x4faa28",
+          "0x4faa7f"
+        ],
+        [
+          "0x4faa37",
+          "0x4faa51"
+        ],
+        [
+          "0x4faa43",
+          "0x4faa51"
+        ],
+        [
+          "0x4faa4f",
+          "0x4faa5f"
+        ],
+        [
+          "0x4faa5d",
+          "0x4faa7f"
+        ],
+        [
+          "0x4faa7a",
+          "0x4faf1c"
+        ],
+        [
+          "0x4faaa6",
+          "0x4fab27"
+        ],
+        [
+          "0x4faad4",
+          "0x4fab27"
+        ],
+        [
+          "0x4faae3",
+          "0x4faafd"
+        ],
+        [
+          "0x4faaef",
+          "0x4faafd"
+        ],
+        [
+          "0x4faafb",
+          "0x4fab0c"
+        ],
+        [
+          "0x4fab0a",
+          "0x4fab27"
+        ],
+        [
+          "0x4fab27",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fab39",
+          "0x4fab5d"
+        ],
+        [
+          "0x4fab48",
+          "0x4fab5d"
+        ],
+        [
+          "0x4fab57",
+          "0x4fac0e"
+        ],
+        [
+          "0x4fab84",
+          "0x4fac0e"
+        ],
+        [
+          "0x4fabb6",
+          "0x4fac0e"
+        ],
+        [
+          "0x4fabc5",
+          "0x4fabdf"
+        ],
+        [
+          "0x4fabd1",
+          "0x4fabdf"
+        ],
+        [
+          "0x4fabdd",
+          "0x4fabee"
+        ],
+        [
+          "0x4fabec",
+          "0x4fac0e"
+        ],
+        [
+          "0x4fac09",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fac1a",
+          "0x4fac3e"
+        ],
+        [
+          "0x4fac29",
+          "0x4fac3e"
+        ],
+        [
+          "0x4fac38",
+          "0x4fae1e"
+        ],
+        [
+          "0x4fac4a",
+          "0x4fad6d"
+        ],
+        [
+          "0x4fac6c",
+          "0x4fad6d"
+        ],
+        [
+          "0x4fac8e",
+          "0x4fad6d"
+        ],
+        [
+          "0x4facbb",
+          "0x4fad6d"
+        ],
+        [
+          "0x4facd0",
+          "0x4face9"
+        ],
+        [
+          "0x4face3",
+          "0x4fad6d"
+        ],
+        [
+          "0x4fad15",
+          "0x4fad6d"
+        ],
+        [
+          "0x4fad24",
+          "0x4fad3e"
+        ],
+        [
+          "0x4fad30",
+          "0x4fad3e"
+        ],
+        [
+          "0x4fad3c",
+          "0x4fad4d"
+        ],
+        [
+          "0x4fad4b",
+          "0x4fad6d"
+        ],
+        [
+          "0x4fad68",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fad94",
+          "0x4fae1e"
+        ],
+        [
+          "0x4fadc6",
+          "0x4fae1e"
+        ],
+        [
+          "0x4fadd5",
+          "0x4fadef"
+        ],
+        [
+          "0x4fade1",
+          "0x4fadef"
+        ],
+        [
+          "0x4faded",
+          "0x4fadfe"
+        ],
+        [
+          "0x4fadfc",
+          "0x4fae1e"
+        ],
+        [
+          "0x4fae19",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fae28",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fae3b",
+          "0x4fae65"
+        ],
+        [
+          "0x4fae4d",
+          "0x4fae65"
+        ],
+        [
+          "0x4fae5f",
+          "0x4faf1c"
+        ],
+        [
+          "0x4fae8c",
+          "0x4faf1c"
+        ],
+        [
+          "0x4faebe",
+          "0x4faf1c"
+        ],
+        [
+          "0x4faecd",
+          "0x4faee7"
+        ],
+        [
+          "0x4faed9",
+          "0x4faee7"
+        ],
+        [
+          "0x4faee5",
+          "0x4faef5"
+        ],
+        [
+          "0x4faef3",
+          "0x4faf1c"
+        ],
+        [
+          "0x4faeff",
+          "0x4faf1c"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x4f878a",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f88a7",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8995",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8a84",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8b80",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8c8d",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8d7b",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8e78",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f8f83",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9084",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f917a",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f926e",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f936f",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9456",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f952e",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9607",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f96e0",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f97b9",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f98a4",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9992",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9a71",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4f9c6c",
+          "0x40e630",
+          "?FaceOpponent@Secondary@@QAEHXZ"
+        ],
+        [
+          "0x4f9df4",
+          "0x40e630",
+          "?FaceOpponent@Secondary@@QAEHXZ"
+        ],
+        [
+          "0x4f9f86",
+          "0x40e630",
+          "?FaceOpponent@Secondary@@QAEHXZ"
+        ],
+        [
+          "0x4fa0b5",
+          "0x40e630",
+          "?FaceOpponent@Secondary@@QAEHXZ"
+        ],
+        [
+          "0x4fa1c9",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa292",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa355",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa436",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa517",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa58e",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa651",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa733",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa853",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa903",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fa97a",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4faa6c",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fab19",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fabfb",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fad5a",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4fae0b",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ],
+        [
+          "0x4faf0e",
+          "0x40f170",
+          "?ClearBufferedButtons@Secondary@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x4f8785",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f88a2",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8990",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8a7f",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8b7b",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8c88",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8d76",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8e73",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f8f7e",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f907f",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9175",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9269",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f936a",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9451",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9529",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9602",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f96db",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f97b4",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f989f",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f998d",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9a6c",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9c5e",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9de6",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4f9f78",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa0a7",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa1c4",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa28d",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa350",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa431",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa512",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa589",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa64c",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa72e",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa84e",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa8fe",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fa975",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4faa67",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fab14",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fabf6",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fad55",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4fae06",
+          "call   DWORD PTR [edx]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ],
+        [
+          "0x4faf09",
+          "call   DWORD PTR [eax]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ]
+      ],
+      "local_tables": [],
+      "following_cc_bytes": 0,
+      "exit": "ret"
+    },
+    {
+      "tag": "initialize",
+      "address": "0x4f8480",
+      "size": 263,
+      "instructions": 52,
+      "branches": [
+        [
+          "0x4f8535",
+          "0x4f8540"
+        ],
+        [
+          "0x4f8544",
+          "0x4f857b"
+        ],
+        [
+          "0x4f8579",
+          "0x4f8537"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x4f857e",
+          "0x40edf0",
+          "?InitializeState@Secondary@@UAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 9,
+      "exit": "ret"
+    },
+    {
+      "tag": "reset-pose",
+      "address": "0x4f8590",
+      "size": 58,
+      "instructions": 15,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x4f85c1",
+          "0x40f110",
+          "?ResetPose@Secondary@@UAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 6,
+      "exit": "ret"
+    },
+    {
+      "tag": "remove-effect",
+      "address": "0x4f85d0",
+      "size": 80,
+      "instructions": 20,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x4f8615",
+          "0x412e60",
+          "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 0,
+      "exit": "ret    0x4"
+    },
+    {
+      "tag": "locomotion",
+      "address": "0x4f8620",
+      "size": 19,
+      "instructions": 9,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x4f862a",
+          "0x40e740",
+          "?UpdateLocomotionState@Secondary@@QAEXXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 13,
+      "exit": "ret"
+    },
+    {
+      "tag": "render-noop",
+      "address": "0x4faf20",
+      "size": 11,
+      "instructions": 7,
+      "branches": [],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 5,
+      "exit": "ret"
+    },
+    {
+      "tag": "frame-noop",
+      "address": "0x4faf30",
+      "size": 11,
+      "instructions": 7,
+      "branches": [],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 5,
+      "exit": "ret"
+    },
+    {
+      "tag": "emit-effect",
+      "address": "0x4faf40",
+      "size": 47,
+      "instructions": 18,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x4faf64",
+          "0x412b10",
+          "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x4faf5a",
+          "call   DWORD PTR [eax+0x28]",
+          "actual Character24 this receiver; ResetPose slot0 or RemoveLocalEffect slot28 with signed short effectWrite"
+        ]
+      ],
+      "local_tables": [],
+      "following_cc_bytes": 1,
+      "exit": "ret    0x4"
+    }
+  ],
+  "latest_selected_replay": "eight new Mizuka functions and two actual SceneLoadingCharacter source consumers; three selected serial cold artifacts; all10 complete strict comparisons exact; all26 local table/destination offsets checked independently before symbol-name refresh"
+}

@@ -3739,3 +3739,83 @@ local address/table bindings were independently checked before symbol-name
 refresh. Public certificates and per-unit dependencies were refreshed only for
 this selection. No full CI/cohort or runtime matrix ran. Private decompiles,
 full disassembly, attempts and reviews live in `.analysis/probes/backgrounds/`.
+
+## Mizuka action selection and lifetime
+
+Eight additional Character24/Mizuka virtual bodies are complete exact in
+`src/Character24Input.cpp` and `src/Character24Frame.cpp`, adding 10,953
+instruction bytes with no local tables. The existing partial view moved from
+SceneLoadingCharacter.cpp into `src/Character24.h`; fields, allocation extent
+and virtual contracts are preserved. Engine.h and CharacterViews.h are unchanged.
+Public certificate: `docs/evidence/mizuka-exact.json`.
+
+| Member | Entry | Complete bytes |
+| --- | --- | ---: |
+| InitializeState | 0x4F8480 | 263 |
+| ResetPose | 0x4F8590 | 58 |
+| RemoveLocalEffect | 0x4F85D0 | 80 |
+| Slot03 locomotion delegation | 0x4F8620 | 19 |
+| Slot04 action selection | 0x4F8640 | 10,464 |
+| Slot01 render no-op | 0x4FAF20 | 11 |
+| Slot08 frame no-op | 0x4FAF30 | 11 |
+| EmitLocalEffect | 0x4FAF40 | 47 |
+
+Independent boundary/operand review covers 2,783 instructions, 433 internal
+branches, 47 direct calls, 43 actual virtual calls and all 92 relocation fields.
+The action selector alone has 2,655 instructions, 430 branches, 42 direct calls,
+42 genuine ResetPose slot0 calls and 87 relocation fields. Complete RET and
+following CC boundaries were checked. The 13-slot table at 7885D0 confirms
+these members and inherited Secondary::LoadResources at 410B70; other slot
+bodies remain independently open, even where a destination is shared.
+
+InitializeState resets four words at3138..3144, the four constructor pose
+coordinates, five words at3448..3458 and all three64-word arrays, then calls
+Secondary::InitializeState. ResetPose clears only3138/313C/3140 before the base
+reset. RemoveLocalEffect clears the three arrays at the signed short index,
+then calls the base removal routine. EmitLocalEffect first makes the actual
+virtual removal call using effectWrite and then invokes Secondary::EmitLocalEffect.
+The locomotion wrapper calls the already accepted UpdateLocomotionState.
+
+Slot04 is the complete command-to-animation priority owner. It clears buffered
+commands for animation <200, maintains the unsigned input latch/countdown and
+resets field3458 on exact ground height. It preserves the original ordered
+meter/command, animation phase, current-frame permission and frame-limit tests,
+including all repeated field reads and original early returns. Transitions call
+the real virtual ResetPose and shared ClearBufferedButtons; directional movement
+transitions instead retain FaceOpponent and their original byte counters.
+The owner handles ground/air commands, directional actions and button variants,
+using actual current SecondarySequence/SecondaryFrame records, input pulses,
+latched masks and the real opponent slot. No new offset view or fake ABI is used.
+
+Exact source required recovering facts obscured by the decompiler: field01AA,
+01A9 and0159/015A are unsigned, and their positive/<1 checks and byte increment
+or decrement operations must retain original widths. Standard action checks use
+field0168 >=2, but the first command52 special test retains >1. Frame permission
+is a positive `(flags &8)>0` test. Meter comparisons are >=3000/>=2000/>=1000,
+not the decompiler's adjacent strict inequalities. Airborne animation comparisons
+use the unsigned animation field. Preserve the literal half-open ranges and
+any seemingly redundant tests rather than algebraically simplifying them.
+
+The directional product evaluates opponent.x-self.x before `(1-command*2)`;
+its negative-facing test multiplies that integer factor by -1. Commuting x87
+operands, replacing multiply with unary negation, reversing a floating-point
+comparison or expressing the air-command branches as sequential failure returns
+changes the complete VC7.1 /Od function. The final facing-dependent air animation
+store uses an ordinary conditional assignment followed by the common return.
+The entire 10,464-byte result, not a normalized instruction diagnostic, is the
+acceptance authority.
+
+Final formatted public sources passed all ten selected complete strict native
+comparisons from three serial static /Od artifacts: eight new functions plus
+the existing Scene2 creation dispatcher and Mizuka constructor that consume the
+new header. All26 existing compiler-local table/destination offsets were audited
+before symbol-only refresh; the original25-entry dispatcher table remains fully
+compared. Tracking and ledger/progress CI are focused checks; no full cohort,
+full CI or runtime matrix was requested or run. Private decompiles, complete
+attempts, disassembly, derivation and reviews live in `.analysis/probes/mizuka/`.
+
+The earlier PrepareBattle4031/4029 extent issue was tested once using the newly
+accepted real background layout, base inheritance and declarations. Its complete
+native result and first GPR divergence at76D743 were unchanged. The control is
+now parked in `.analysis/probes/loading-owner/README.md`; do not repeat that
+layout/type hypothesis without new evidence. It earns no implementation credit.

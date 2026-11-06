@@ -285,3 +285,11 @@ address,end,size,status,evidence
 0x00750D30,0x00751025,757,reviewed,docs/KNOWLEDGE_BASE.md#animated-background-owners
 0x00751030,0x00751364,820,reviewed,docs/KNOWLEDGE_BASE.md#animated-background-owners
 0x00751A10,0x00751A3C,44,reviewed,docs/KNOWLEDGE_BASE.md#animated-background-owners
+0x004F8640,0x004FAF20,10464,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004F8480,0x004F8587,263,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004F8590,0x004F85CA,58,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004F85D0,0x004F8620,80,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004F8620,0x004F8633,19,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004FAF20,0x004FAF2B,11,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004FAF30,0x004FAF3B,11,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004FAF40,0x004FAF6F,47,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
