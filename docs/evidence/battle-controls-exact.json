@@ -1,0 +1,609 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 466,
+      "matched_bytes": 466,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 302,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0075DC9E; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 399,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0075DCFF; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "85aec008cbab340619a7e34f428eab113a328ae28f579e7ae91550102636872d",
+      "target_extent_sha256": "85aec008cbab340619a7e34f428eab113a328ae28f579e7ae91550102636872d",
+      "unit": "scene-battle-draw-number",
+      "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+      "target_address": "0x0075DB70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "30ae18bb74510630e273fc34e9a562c3014187d8b58037c47c338358c0baca61",
+      "source_sha256": "9e4583b0d94374937f71da84b806f55ccca0deaa28d1070cc598a31df1cd296d",
+      "dependencies": {
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b67f3fc72dde9e36cc93f91ef2097731f0bdfa08ae131c10658fc535b796d174",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1440,
+      "matched_bytes": 1440,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 219,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762D2B; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 327,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762D97; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 368,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762DC0; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 579,
+          "target": 4237232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawShadowSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762E93; complete original 806-byte callee and RET30 reviewed; actual Video receiver, destination/source SurfaceRect values, IUnknown surface, byte color key, int mirror and byte fixed-color index; source mask and bottom-up row stride3, implementation remains open",
+          "addend": 0
+        },
+        {
+          "offset": 975,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076301F; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1051,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076306B; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1125,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007630B5; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1192,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007630F8; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1399,
+          "target": 4237232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawShadowSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007631C7; complete original 806-byte callee and RET30 reviewed; actual Video receiver, destination/source SurfaceRect values, IUnknown surface, byte color key, int mirror and byte fixed-color index; source mask and bottom-up row stride3, implementation remains open",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7b61573442d7b71a192289ca97929d49c7cb4d920d3ffd6049e4e5449cf29daa",
+      "target_extent_sha256": "7b61573442d7b71a192289ca97929d49c7cb4d920d3ffd6049e4e5449cf29daa",
+      "unit": "scene-battle-render-shadows",
+      "symbol": "?RenderShadows@Scene3@@QAEXXZ",
+      "target_address": "0x00762C50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "30ae18bb74510630e273fc34e9a562c3014187d8b58037c47c338358c0baca61",
+      "source_sha256": "9e4583b0d94374937f71da84b806f55ccca0deaa28d1070cc598a31df1cd296d",
+      "dependencies": {
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d55e89911bb2aa8f61e8a3b88774d4ce135ec7ebe6293b287033b48960dac025",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2358,
+      "matched_bytes": 2358,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076566A; original canonical GS security-cookie global at78F050, already independently reviewed by protected input/scene units; actual /GS compiler prologue/check retained",
+          "addend": 0
+        },
+        {
+          "offset": 255,
+          "target": 4220304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PollInput@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076575F; explicit reviewed context-poll-input destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 362,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007657CA; explicit reviewed context-release-music destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 797,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076597D; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1091,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765AA3; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1140,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765AD4; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1218,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B22; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1245,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B3D; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1290,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B6A; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1364,
+          "target": 7758240,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetReplay@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BB4; explicit reviewed new-complete-replay-reset destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1384,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BC8; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1423,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BEF; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1701,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765D05; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 1713,
+          "target": 8065680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?battleKeyHeld@@3HA",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765D11; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit",
+          "addend": 0
+        },
+        {
+          "offset": 2042,
+          "target": 4218800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadWord@WordFile@@QAEGXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765E5A; explicit reviewed word-file-read destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 2075,
+          "target": 4218800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadWord@WordFile@@QAEGXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765E7B; explicit reviewed word-file-read destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 2308,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F64; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 2342,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F86; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 2350,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F8E; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "be17f7fed7a9c3b19f241e181511c64567ad98c138ff582944fcc305bc5a3eec",
+      "target_extent_sha256": "be17f7fed7a9c3b19f241e181511c64567ad98c138ff582944fcc305bc5a3eec",
+      "unit": "scene-battle-keyboard",
+      "symbol": "?PollKeyboard@Scene3@@UAEXXZ",
+      "target_address": "0x00765660",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "926a49a9339c9e4ad750f72db02ccd44c7d62bd81b47003c5966fce54b533976",
+      "source_sha256": "8e911d8122f1ea1bb8203eb2d194b3e590921205f19ceff25437c95f3d187795",
+      "dependencies": {
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "98cae012579e66c98024c22635eb27dcccfca32e7c72b3f7d907f46eb879e5f3",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 734,
+      "matched_bytes": 734,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007661A7; original canonical GS security-cookie global at78F050, already independently reviewed by protected input/scene units; actual /GS compiler prologue/check retained",
+          "addend": 0
+        },
+        {
+          "offset": 84,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007661F4; explicit reviewed scene-fade-out destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 4218704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@WordFile@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766205; explicit reviewed word-file-close destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 106,
+          "target": 7902660,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG61464",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076620A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 7265706c61795c6461746100",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766213; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766232; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 162,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766242; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 170,
+          "target": 7902672,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG61465",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076624A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 2d00",
+          "addend": 0
+        },
+        {
+          "offset": 179,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766253; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 210,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766272; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766282; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 234,
+          "target": 7902676,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG61466",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076628A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 2e72657000",
+          "addend": 0
+        },
+        {
+          "offset": 243,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766293; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 4218624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?OpenWrite@WordFile@@QAEXPBD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662AB; explicit reviewed word-file-open-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 301,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662CD; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 335,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662EF; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 354,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766302; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 386,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766322; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 420,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766344; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 454,
+          "target": 4218912,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?WriteWord@WordFile@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766366; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 465,
+          "target": 4219968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetState@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766371; explicit reviewed context-reset-state destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 685,
+          "target": 7751600,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateCamera@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076644D; explicit reviewed scene-battle-update-camera destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 718,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076646E; explicit reviewed scene-fade-in destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 726,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766476; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "6ac6fe3660f5397dba9dccd9d596f03627611a447955ac1193eb8cff439fc10f",
+      "target_extent_sha256": "6ac6fe3660f5397dba9dccd9d596f03627611a447955ac1193eb8cff439fc10f",
+      "unit": "scene-battle-reset-replay",
+      "symbol": "?ResetReplay@Scene3@@QAEXXZ",
+      "target_address": "0x007661A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "926a49a9339c9e4ad750f72db02ccd44c7d62bd81b47003c5966fce54b533976",
+      "source_sha256": "8e911d8122f1ea1bb8203eb2d194b3e590921205f19ceff25437c95f3d187795",
+      "dependencies": {
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "52913f6848129176370dcf6fec2dd43657b2ed08b54f4702895224c0e4f02ef3",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 55 cold source/profile/dependency artifacts cover four new battle number/shadow/keyboard/replay units and 210 existing Engine/Input/SceneBattle header consumers; unaffected reports retain earlier artifacts"
+}

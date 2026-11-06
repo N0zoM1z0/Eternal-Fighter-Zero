@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 50 cold source/profile/dependency artifacts cover six new battle loop/render/round units and 190 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
+  "method": "selected complete contribution comparison; 55 cold source/profile/dependency artifacts cover four new battle number/shadow/keyboard/replay units and 210 existing Engine/Input/SceneBattle header consumers; unaffected reports retain earlier artifacts",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -458,15 +458,15 @@
       "symbol": "?LoadResources@Secondary@@UAEXXZ",
       "target_address": "0x00410B70",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
-      "object_sha256": "29c2153d63b41eeae7806df87764928e3536db757f7ec0a513447ce55b6079b6",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "fea19b9c141a79437b6acb1265311d71216433a36a98c379ffb00f660c7e3d6e",
       "source_sha256": "7b94091564583e4c9b1526d40e5d984bebf0202bb5215b691009935b366c4e13",
       "dependencies": {
-        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "e63a58f5f3884d43ed523b1154556654701fc16ca9d6c0db5b4ba85ca13bc5ad",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",

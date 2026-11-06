@@ -14,10 +14,7 @@ class Scene3 : public Scene {
     int field0434, field0438, field043c;
     int field0440, field0444, field0448, field044c;
     int field0450, field0454, field0458, field045c, field0460;
-    SurfaceRect field0464, field0474, field0484, field0494;
-    SurfaceRect field04a4, field04b4, field04c4, field04d4, field04e4;
-    SurfaceRect field04f4, field0504, field0514, field0524, field0534;
-    SurfaceRect field0544, field0554, field0564;
+    SurfaceRect numberStyles[17];
     short field0574, field0576;
     unsigned char field0578, unknown_0579[7];
     double field0580;
@@ -32,12 +29,13 @@ public:
     void PlayCharacterSounds();
     void PlayEffectSounds();
     void UpdateIntro();
+    void ResetReplay();
     void UpdateRound();
     int UpdateRoundExit();
     void ResolvePushboxes();
     void RenderBackground();
     void RenderHealthBars();
-    void RenderMeters();
+    void RenderShadows();
     void RenderHud();
     void RenderCombo(Secondary *);
     void ClipFrame();

@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62178"
+symbol = "$L62186"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62228"
+symbol = "$L62236"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61884"
+symbol = "$L61892"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61906"
+symbol = "$L61914"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61913"
+symbol = "$L61921"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61918"
+symbol = "$L61926"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61922"
+symbol = "$L61930"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61929"
+symbol = "$L61937"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61936"
+symbol = "$L61944"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61948"
+symbol = "$L61956"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61955"
+symbol = "$L61963"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61962"
+symbol = "$L61970"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61969"
+symbol = "$L61977"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61972"
+symbol = "$L61980"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61975"
+symbol = "$L61983"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61978"
+symbol = "$L61986"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61981"
+symbol = "$L61989"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61984"
+symbol = "$L61992"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61985"
+symbol = "$L61993"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61989"
+symbol = "$L61997"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61996"
+symbol = "$L62004"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L62000"
+symbol = "$L62008"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L62004"
+symbol = "$L62012"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L62008"
+symbol = "$L62016"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L62012"
+symbol = "$L62020"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L62016"
+symbol = "$L62024"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L62020"
+symbol = "$L62028"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L62024"
+symbol = "$L62032"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L62028"
+symbol = "$L62036"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L62032"
+symbol = "$L62040"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L62036"
+symbol = "$L62044"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L62042"
+symbol = "$L62050"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L62048"
+symbol = "$L62056"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L62067"
+symbol = "$L62075"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L62071"
+symbol = "$L62079"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61881"
+symbol = "$L61889"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61333"
+symbol = "$L61341"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61284"
+symbol = "$L61292"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61285"
+symbol = "$L61293"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61286"
+symbol = "$L61294"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61287"
+symbol = "$L61295"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61288"
+symbol = "$L61296"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61289"
+symbol = "$L61297"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61290"
+symbol = "$L61298"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62271"
+symbol = "$L62279"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61932"
+symbol = "$L61940"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61963"
+symbol = "$L61971"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61966"
+symbol = "$L61974"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61969"
+symbol = "$L61977"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61984"
+symbol = "$L61992"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62299"
+symbol = "$L62307"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62112"
+symbol = "$L62120"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62116"
+symbol = "$L62124"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62120"
+symbol = "$L62128"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62124"
+symbol = "$L62132"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62128"
+symbol = "$L62136"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62132"
+symbol = "$L62140"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62136"
+symbol = "$L62144"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62140"
+symbol = "$L62148"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62144"
+symbol = "$L62152"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62148"
+symbol = "$L62156"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62152"
+symbol = "$L62160"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62156"
+symbol = "$L62164"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62160"
+symbol = "$L62168"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62164"
+symbol = "$L62172"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62168"
+symbol = "$L62176"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62172"
+symbol = "$L62180"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62176"
+symbol = "$L62184"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62180"
+symbol = "$L62188"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62184"
+symbol = "$L62192"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62188"
+symbol = "$L62196"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62192"
+symbol = "$L62200"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62196"
+symbol = "$L62204"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62200"
+symbol = "$L62208"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62204"
+symbol = "$L62212"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -15506,7 +15506,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-constructi
 [[units.character-08-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62104"
+symbol = "$SG62112"
 target = 0x00787df0
 evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
@@ -18579,14 +18579,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; in
 [[units.character-08-update-local-effects.relocations]]
 offset = 343
 type = "DIR32"
-symbol = "$L63450"
+symbol = "$L63458"
 target = 0x00433f9f
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36367 independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 350
 type = "DIR32"
-symbol = "$L63564"
+symbol = "$L63572"
 target = 0x00433eb7
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36135 independently checked"
 
@@ -21141,406 +21141,406 @@ evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; or
 [[units.character-08-update-local-effects.relocations]]
 offset = 36135
 type = "DIR32"
-symbol = "$L62707"
+symbol = "$L62715"
 target = 0x0042b2f2
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36139
 type = "DIR32"
-symbol = "$L62711"
+symbol = "$L62719"
 target = 0x0042b3c8
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 1 for effect types 401; compiler-local offset 568 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36143
 type = "DIR32"
-symbol = "$L62716"
+symbol = "$L62724"
 target = 0x0042b4cc
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 2 for effect types 402; compiler-local offset 828 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36147
 type = "DIR32"
-symbol = "$L62723"
+symbol = "$L62731"
 target = 0x0042b6ec
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 3 for effect types 404; compiler-local offset 1372 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36151
 type = "DIR32"
-symbol = "$L62731"
+symbol = "$L62739"
 target = 0x0042b968
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 4 for effect types 405; compiler-local offset 2008 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36155
 type = "DIR32"
-symbol = "$L62752"
+symbol = "$L62760"
 target = 0x0042be40
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 5 for effect types 407; compiler-local offset 3248 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36159
 type = "DIR32"
-symbol = "$L62760"
+symbol = "$L62768"
 target = 0x0042bfc7
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 6 for effect types 408; compiler-local offset 3639 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36163
 type = "DIR32"
-symbol = "$L62768"
+symbol = "$L62776"
 target = 0x0042c13f
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 7 for effect types 409; compiler-local offset 4015 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36167
 type = "DIR32"
-symbol = "$L62773"
+symbol = "$L62781"
 target = 0x0042c243
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 8 for effect types 410; compiler-local offset 4275 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36171
 type = "DIR32"
-symbol = "$L62781"
+symbol = "$L62789"
 target = 0x0042c3ca
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 9 for effect types 411; compiler-local offset 4666 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36175
 type = "DIR32"
-symbol = "$L62792"
+symbol = "$L62800"
 target = 0x0042c684
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 10 for effect types 412; compiler-local offset 5364 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36179
 type = "DIR32"
-symbol = "$L62809"
+symbol = "$L62817"
 target = 0x0042ca1a
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 11 for effect types 413; compiler-local offset 6282 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36183
 type = "DIR32"
-symbol = "$L62826"
+symbol = "$L62834"
 target = 0x0042cdb6
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 12 for effect types 414; compiler-local offset 7206 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36187
 type = "DIR32"
-symbol = "$L62843"
+symbol = "$L62851"
 target = 0x0042d152
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 13 for effect types 415; compiler-local offset 8130 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36191
 type = "DIR32"
-symbol = "$L62860"
+symbol = "$L62868"
 target = 0x0042d4ee
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 14 for effect types 416; compiler-local offset 9054 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36195
 type = "DIR32"
-symbol = "$L62877"
+symbol = "$L62885"
 target = 0x0042d88a
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 15 for effect types 417; compiler-local offset 9978 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36199
 type = "DIR32"
-symbol = "$L62886"
+symbol = "$L62894"
 target = 0x0042da16
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 16 for effect types 418; compiler-local offset 10374 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36203
 type = "DIR32"
-symbol = "$L62894"
+symbol = "$L62902"
 target = 0x0042dc48
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 17 for effect types 419; compiler-local offset 10936 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36207
 type = "DIR32"
-symbol = "$L62901"
+symbol = "$L62909"
 target = 0x0042de3d
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 18 for effect types 420; compiler-local offset 11437 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36211
 type = "DIR32"
-symbol = "$L62906"
+symbol = "$L62914"
 target = 0x0042df98
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 19 for effect types 421; compiler-local offset 11784 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36215
 type = "DIR32"
-symbol = "$L62911"
+symbol = "$L62919"
 target = 0x0042e0f3
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 20 for effect types 422; compiler-local offset 12131 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36219
 type = "DIR32"
-symbol = "$L62916"
+symbol = "$L62924"
 target = 0x0042e24e
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 21 for effect types 423; compiler-local offset 12478 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36223
 type = "DIR32"
-symbol = "$L62923"
+symbol = "$L62931"
 target = 0x0042e444
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 22 for effect types 424; compiler-local offset 12980 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36227
 type = "DIR32"
-symbol = "$L62930"
+symbol = "$L62938"
 target = 0x0042e63a
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 23 for effect types 425; compiler-local offset 13482 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36231
 type = "DIR32"
-symbol = "$L62937"
+symbol = "$L62945"
 target = 0x0042e830
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 24 for effect types 427; compiler-local offset 13984 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36235
 type = "DIR32"
-symbol = "$L62942"
+symbol = "$L62950"
 target = 0x0042e934
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 25 for effect types 428; compiler-local offset 14244 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36239
 type = "DIR32"
-symbol = "$L62956"
+symbol = "$L62964"
 target = 0x0042eb86
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 26 for effect types 429; compiler-local offset 14838 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36243
 type = "DIR32"
-symbol = "$L62963"
+symbol = "$L62971"
 target = 0x0042ed18
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 27 for effect types 430; compiler-local offset 15240 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36247
 type = "DIR32"
-symbol = "$L62971"
+symbol = "$L62979"
 target = 0x0042eec0
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 28 for effect types 431; compiler-local offset 15664 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36251
 type = "DIR32"
-symbol = "$L62979"
+symbol = "$L62987"
 target = 0x0042f067
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 29 for effect types 432; compiler-local offset 16087 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36255
 type = "DIR32"
-symbol = "$L62983"
+symbol = "$L62991"
 target = 0x0042f13d
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 30 for effect types 433; compiler-local offset 16301 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36259
 type = "DIR32"
-symbol = "$L63015"
+symbol = "$L63023"
 target = 0x0042f827
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 31 for effect types 434; compiler-local offset 18071 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36263
 type = "DIR32"
-symbol = "$L63049"
+symbol = "$L63057"
 target = 0x0042ff8b
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 32 for effect types 435; compiler-local offset 19963 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36267
 type = "DIR32"
-symbol = "$L63061"
+symbol = "$L63069"
 target = 0x0043017d
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 33 for effect types 436; compiler-local offset 20461 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36271
 type = "DIR32"
-symbol = "$L63065"
+symbol = "$L63073"
 target = 0x00430253
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 34 for effect types 437; compiler-local offset 20675 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36275
 type = "DIR32"
-symbol = "$L63074"
+symbol = "$L63082"
 target = 0x00430417
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 35 for effect types 438; compiler-local offset 21127 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36279
 type = "DIR32"
-symbol = "$L63084"
+symbol = "$L63092"
 target = 0x00430638
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 36 for effect types 439; compiler-local offset 21672 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36283
 type = "DIR32"
-symbol = "$L63097"
+symbol = "$L63105"
 target = 0x004308b2
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 37 for effect types 440; compiler-local offset 22306 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36287
 type = "DIR32"
-symbol = "$L63102"
+symbol = "$L63110"
 target = 0x00430a44
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 38 for effect types 441; compiler-local offset 22708 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36291
 type = "DIR32"
-symbol = "$L63116"
+symbol = "$L63124"
 target = 0x00430e2b
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 39 for effect types 442; compiler-local offset 23707 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36295
 type = "DIR32"
-symbol = "$L63111"
+symbol = "$L63119"
 target = 0x00430d07
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 40 for effect types 443; compiler-local offset 23415 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36299
 type = "DIR32"
-symbol = "$L63144"
+symbol = "$L63152"
 target = 0x004313a4
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 41 for effect types 444; compiler-local offset 25108 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36303
 type = "DIR32"
-symbol = "$L63158"
+symbol = "$L63166"
 target = 0x004315f6
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 42 for effect types 445; compiler-local offset 25702 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36307
 type = "DIR32"
-symbol = "$L63177"
+symbol = "$L63185"
 target = 0x00431a70
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 43 for effect types 446; compiler-local offset 26848 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36311
 type = "DIR32"
-symbol = "$L63185"
+symbol = "$L63193"
 target = 0x00431c7e
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 44 for effect types 447; compiler-local offset 27374 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36315
 type = "DIR32"
-symbol = "$L63193"
+symbol = "$L63201"
 target = 0x00431e8c
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 45 for effect types 448; compiler-local offset 27900 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36319
 type = "DIR32"
-symbol = "$L63201"
+symbol = "$L63209"
 target = 0x0043209a
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 46 for effect types 449; compiler-local offset 28426 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36323
 type = "DIR32"
-symbol = "$L63209"
+symbol = "$L63217"
 target = 0x004322a8
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 47 for effect types 450; compiler-local offset 28952 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36327
 type = "DIR32"
-symbol = "$L63217"
+symbol = "$L63225"
 target = 0x0043243f
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 48 for effect types 451; compiler-local offset 29359 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36331
 type = "DIR32"
-symbol = "$L63234"
+symbol = "$L63242"
 target = 0x00432884
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 49 for effect types 452; compiler-local offset 30452 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36335
 type = "DIR32"
-symbol = "$L63242"
+symbol = "$L63250"
 target = 0x00432a1b
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 50 for effect types 453; compiler-local offset 30859 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36339
 type = "DIR32"
-symbol = "$L63250"
+symbol = "$L63258"
 target = 0x00432bb4
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 51 for effect types 454; compiler-local offset 31268 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36343
 type = "DIR32"
-symbol = "$L63263"
+symbol = "$L63271"
 target = 0x00432fc0
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 52 for effect types 495; compiler-local offset 32304 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36347
 type = "DIR32"
-symbol = "$L63268"
+symbol = "$L63276"
 target = 0x004330e8
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 53 for effect types 496; compiler-local offset 32600 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36351
 type = "DIR32"
-symbol = "$L63306"
+symbol = "$L63314"
 target = 0x00433661
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 54 for effect types 497; compiler-local offset 34001 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36355
 type = "DIR32"
-symbol = "$L63323"
+symbol = "$L63331"
 target = 0x004339fd
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 55 for effect types 498; compiler-local offset 34925 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36359
 type = "DIR32"
-symbol = "$L63340"
+symbol = "$L63348"
 target = 0x00433d93
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 56 for effect types 499; compiler-local offset 35843 and canonical destination independently checked"
 
 [[units.character-08-update-local-effects.relocations]]
 offset = 36363
 type = "DIR32"
-symbol = "$L62699"
+symbol = "$L62707"
 target = 0x00433e96
 evidence = "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 57 for effect types 403,406,426,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 36102 and canonical destination independently checked"
 
@@ -24016,7 +24016,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control;
 [[units.scene-battle-render.relocations]]
 offset = 49
 type = "REL32"
-symbol = "?RenderMeters@Scene3@@QAEXXZ"
+symbol = "?RenderShadows@Scene3@@QAEXXZ"
 target = 0x00762c50
 evidence = "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642D1; Scene3 ECX, no stack arguments; original full callee retained, implementation open"
 
@@ -25959,3 +25959,421 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409a90
 evidence = "docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display; operand 00762C43; explicit reviewed reviewed-explicit-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[units.scene-battle-draw-number]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneBattleVisuals.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-draw-number/SceneBattleVisuals.obj"
+symbol = "?DrawNumber@Scene3@@QAEXHHIEEH@Z"
+target_address = 0x0075db70
+size = 466
+
+[[units.scene-battle-draw-number.relocations]]
+offset = 302
+type = "REL32"
+symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
+target = 0x0040a0b0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0075DC9E; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-draw-number.relocations]]
+offset = 399
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0075DCFF; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[units.scene-battle-render-shadows]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneBattleVisuals.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-render-shadows/SceneBattleVisuals.obj"
+symbol = "?RenderShadows@Scene3@@QAEXXZ"
+target_address = 0x00762c50
+size = 1440
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 219
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762D2B; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 327
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762D97; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 368
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762DC0; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 579
+type = "REL32"
+symbol = "?DrawShadowSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHE@Z"
+target = 0x0040a7b0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00762E93; complete original 806-byte callee and RET30 reviewed; actual Video receiver, destination/source SurfaceRect values, IUnknown surface, byte color key, int mirror and byte fixed-color index; source mask and bottom-up row stride3, implementation remains open"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 975
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076301F; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 1051
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076306B; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 1125
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007630B5; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 1192
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007630F8; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-render-shadows.relocations]]
+offset = 1399
+type = "REL32"
+symbol = "?DrawShadowSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHE@Z"
+target = 0x0040a7b0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007631C7; complete original 806-byte callee and RET30 reviewed; actual Video receiver, destination/source SurfaceRect values, IUnknown surface, byte color key, int mirror and byte fixed-color index; source mask and bottom-up row stride3, implementation remains open"
+
+[units.scene-battle-keyboard]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneBattleInput.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-keyboard/SceneBattleInput.obj"
+symbol = "?PollKeyboard@Scene3@@UAEXXZ"
+target_address = 0x00765660
+size = 2358
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076566A; original canonical GS security-cookie global at78F050, already independently reviewed by protected input/scene units; actual /GS compiler prologue/check retained"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 255
+type = "REL32"
+symbol = "?PollInput@Context@@QAEXXZ"
+target = 0x00406590
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076575F; explicit reviewed context-poll-input destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 362
+type = "REL32"
+symbol = "?ReleaseMusic@Context@@QAEXXZ"
+target = 0x00406a10
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007657CA; explicit reviewed context-release-music destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 797
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076597D; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1091
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765AA3; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1140
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765AD4; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1218
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B22; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1245
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B3D; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1290
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765B6A; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1364
+type = "REL32"
+symbol = "?ResetReplay@Scene3@@QAEXXZ"
+target = 0x007661a0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BB4; explicit reviewed new-complete-replay-reset destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1384
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BC8; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1423
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765BEF; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1701
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765D05; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 1713
+type = "DIR32"
+symbol = "?battleKeyHeld@@3HA"
+target = 0x007b1290
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765D11; original DWORD key latch at7B1290; every original read/store and retail disabled controls reviewed; no linked-data/global-owner credit"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 2042
+type = "REL32"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target = 0x00405fb0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765E5A; explicit reviewed word-file-read destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 2075
+type = "REL32"
+symbol = "?ReadWord@WordFile@@QAEGXZ"
+target = 0x00405fb0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765E7B; explicit reviewed word-file-read destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 2308
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F64; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 2342
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F86; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-keyboard.relocations]]
+offset = 2350
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00765F8E; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[units.scene-battle-reset-replay]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneBattleInput.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-reset-replay/SceneBattleInput.obj"
+symbol = "?ResetReplay@Scene3@@QAEXXZ"
+target_address = 0x007661a0
+size = 734
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007661A7; original canonical GS security-cookie global at78F050, already independently reviewed by protected input/scene units; actual /GS compiler prologue/check retained"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 84
+type = "REL32"
+symbol = "?FadeOut@Scene@@QAEXPAEEHH@Z"
+target = 0x00759c90
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007661F4; explicit reviewed scene-fade-out destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 101
+type = "REL32"
+symbol = "?Close@WordFile@@QAEXXZ"
+target = 0x00405f50
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766205; explicit reviewed word-file-close destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 106
+type = "DIR32"
+symbol = "$SG61464"
+target = 0x007895c4
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076620A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 7265706c61795c6461746100"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 115
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766213; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 146
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766232; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 162
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766242; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "$SG61465"
+target = 0x007895d0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076624A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 2d00"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 179
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766253; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 210
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766272; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 226
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766282; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 234
+type = "DIR32"
+symbol = "$SG61466"
+target = 0x007895d4
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076628A; compiler COFF literal payload and original NUL-terminated target bytes independently checked: 2e72657000"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 243
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766293; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 267
+type = "REL32"
+symbol = "?OpenWrite@WordFile@@QAEXPBD@Z"
+target = 0x00405f00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662AB; explicit reviewed word-file-open-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 301
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662CD; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 335
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 007662EF; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 354
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766302; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 386
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766322; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 420
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766344; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 454
+type = "REL32"
+symbol = "?WriteWord@WordFile@@QAEXG@Z"
+target = 0x00406020
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766366; explicit reviewed word-file-write destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 465
+type = "REL32"
+symbol = "?ResetState@Context@@QAEXXZ"
+target = 0x00406440
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766371; explicit reviewed context-reset-state destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 685
+type = "REL32"
+symbol = "?UpdateCamera@Scene3@@QAEXXZ"
+target = 0x007647b0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076644D; explicit reviewed scene-battle-update-camera destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 718
+type = "REL32"
+symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
+target = 0x00759e20
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 0076646E; explicit reviewed scene-fade-in destination; original complete call receiver/arguments and result width"
+
+[[units.scene-battle-reset-replay.relocations]]
+offset = 726
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; operand 00766476; explicit reviewed previously-reviewed-explicit-dependency destination; original complete call receiver/arguments and result width"

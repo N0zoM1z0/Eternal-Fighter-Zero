@@ -253,3 +253,7 @@ address,end,size,status,evidence
 0x0075E240,0x0076005B,7707,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
 0x00760060,0x007623A8,9032,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
 0x007623B0,0x00762C4D,2205,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
+0x0075DB70,0x0075DD42,466,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
+0x00762C50,0x007631F0,1440,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
+0x00765660,0x00765F96,2358,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
+0x007661A0,0x0076647E,734,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control

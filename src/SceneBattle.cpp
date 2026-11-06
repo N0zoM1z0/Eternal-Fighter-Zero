@@ -25,23 +25,23 @@ Scene3::Scene3(HWND handle, Secondary **first, Secondary **second, Context *cont
     field043c = 0;
     contextOwner->counter1354 = 0;
     contextOwner->effectFlag1350 = 1;
-    field0464 = MakeSurfaceRect(0,0xea,8,10);
-    field0474 = MakeSurfaceRect(0,0xd2,0x10,0xf);
-    field0484 = MakeSurfaceRect(0,0xe1,7,9);
-    field0494 = MakeSurfaceRect(0,0x11a,0xe,0x16);
-    field04a4 = MakeSurfaceRect(0,0x160,8,0xc);
-    field04b4 = MakeSurfaceRect(0,0x154,8,0xc);
-    field04c4 = MakeSurfaceRect(0,0x148,8,0xc);
-    field04d4 = MakeSurfaceRect(0,0x13c,8,0xc);
-    field04e4 = MakeSurfaceRect(0,0x130,8,0xc);
-    field04f4 = MakeSurfaceRect(0,0x16c,7,10);
-    field0504 = MakeSurfaceRect(0,0x176,7,10);
-    field0514 = MakeSurfaceRect(0,0x180,7,10);
-    field0524 = MakeSurfaceRect(0,0x18a,7,10);
-    field0534 = MakeSurfaceRect(0,0x194,7,10);
-    field0544 = MakeSurfaceRect(0,0x19e,7,10);
-    field0554 = MakeSurfaceRect(0,0x1a8,7,10);
-    field0564 = MakeSurfaceRect(0,0x1b2,7,10);
+    numberStyles[0] = MakeSurfaceRect(0,0xea,8,10);
+    numberStyles[1] = MakeSurfaceRect(0,0xd2,0x10,0xf);
+    numberStyles[2] = MakeSurfaceRect(0,0xe1,7,9);
+    numberStyles[3] = MakeSurfaceRect(0,0x11a,0xe,0x16);
+    numberStyles[4] = MakeSurfaceRect(0,0x160,8,0xc);
+    numberStyles[5] = MakeSurfaceRect(0,0x154,8,0xc);
+    numberStyles[6] = MakeSurfaceRect(0,0x148,8,0xc);
+    numberStyles[7] = MakeSurfaceRect(0,0x13c,8,0xc);
+    numberStyles[8] = MakeSurfaceRect(0,0x130,8,0xc);
+    numberStyles[9] = MakeSurfaceRect(0,0x16c,7,10);
+    numberStyles[10] = MakeSurfaceRect(0,0x176,7,10);
+    numberStyles[11] = MakeSurfaceRect(0,0x180,7,10);
+    numberStyles[12] = MakeSurfaceRect(0,0x18a,7,10);
+    numberStyles[13] = MakeSurfaceRect(0,0x194,7,10);
+    numberStyles[14] = MakeSurfaceRect(0,0x19e,7,10);
+    numberStyles[15] = MakeSurfaceRect(0,0x1a8,7,10);
+    numberStyles[16] = MakeSurfaceRect(0,0x1b2,7,10);
 }
 
 void Scene3::UpdateCamera()

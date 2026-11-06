@@ -3,6 +3,12 @@
 Only conclusions supported by the locked EFZ input belong here. Compiler and
 engine similarities with other games are hypotheses until compared with EFZ.
 
+This file preserves target findings and historical checkpoints in order. Counts,
+"open" statements and proposed next steps in an older checkpoint describe that
+checkpoint. Consult [PROGRESS.md](PROGRESS.md), the live reviewed ledgers and
+[RE_HANDOFF.md](RE_HANDOFF.md) for current acceptance and operator task state.
+Later findings explicitly supersede earlier provisional names or interpretations.
+
 ## Target identity
 
 The supplied RAR has SHA-256
@@ -3142,7 +3148,8 @@ calls, two named timeGetTime import operands and 16 independently checked IEEE
 operands. The full bodies have no local tables or indirect jumps. All end in
 RET, followed respectively by 11, 6, 3, 11, 1 and 15 CC bytes outside credited
 extents. Scene3's constructor-established table at 7895DC independently identifies
-the render/Step/PollKeyboard entries. PollKeyboard remains open.
+the render/Step/PollKeyboard entries. PollKeyboard was open at this checkpoint
+and is accepted in the later keyboard/replay-control section.
 
 ### Main frame sequencing and cleanup
 
@@ -3210,7 +3217,7 @@ switches at player two's state 200. Each character's X offset includes the
 accepted IsStateGroupB result times signed freeze-word remainder2 times2;
 original signed remainder behavior is retained. The background object can draw
 a foreground layer only with both character tint durations zero and Context
-state14278 zero. Player Slot01 calls, the still-open HUD and combo helpers,
+state14278 zero. Player Slot01 calls, the then-open HUD and combo helpers,
 snapshot capture and final ClipFrame retain their complete order.
 
 The original capture branch writes a screenshot every even signed frame index,
@@ -3251,11 +3258,11 @@ Engine.h exposes the observed existing byte 134C as winner134c and existing
 offsets remain unchanged. It adds the two observed nonvirtual Video declarations.
 SceneBattle.h adds the reviewed Scene3 helper contracts. Numerical names and
 helper names remain provisional; no unimplemented callee receives new function
-credit merely because a caller is accepted. In particular, the current provisional
-RenderMeters label at762C50 is a misnomer: its complete canonical body draws
-compressed player/effect sprite shadows with alpha B0 around the Y210 plane.
-Keep that observed role and rename the contract when recovering its implementation;
-the temporary label proves no meter behavior. HUD760060 owns the meter/status bars.
+credit merely because a caller is accepted. The provisional RenderMeters label
+at762C50 was a misnomer. The later accepted RenderShadows implementation draws
+compressed player/effect sprite shadows around the Y210 plane. The B0 argument
+is a fixed palette color index used by the callee blend lookup, not an alpha
+value. HUD760060 owns the meter/status bars; its later implementation is exact.
 
 The private Background interface in SceneBattleLoop.cpp is the reviewed two-slot
 source view of Context137C: update at slot 0 with no arguments, render at slot 4
@@ -3288,8 +3295,9 @@ a full cold cohort or redundant runtime matrices.
 This checkpoint adds **6 authored complete exact functions /6,385 instruction
 bytes**, bringing acceptance to **213 functions /197,736 instruction bytes**
 plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 251 each.
-The battle keyboard, health/HUD/shadow/combo/number drawing, screenshot/fill,
-background implementations and parked pushbox owner remain open, as do the
+At this loop checkpoint, battle keyboard and health/HUD/shadow/combo/number
+drawing were open; those are accepted in the following sections. Screenshot/fill,
+concrete background implementations and parked pushbox remain open, as do the
 whole game and independent product/runtime/portability phases.
 
 ## Battle health, HUD and combo display
@@ -3397,11 +3405,12 @@ branches contain identical DrawNumber calls. Both branches are present in the
 removed, filled with padding or counted as additional functions. Decimal-point
 rectangles and each side's fade/emission order are included through RET04.
 
-DrawNumber75DB70 remains an explicit reviewed dependency with six stack arguments
+At the display checkpoint, DrawNumber75DB70 was a reviewed dependency with six stack arguments
 (two int coordinates, unsigned number, two byte formatting controls and int mode).
 The existing Video DrawSurface/DrawBlendedSurface/FillRectangle contracts and
 compiler __ftol2 dependency retain their reviewed original destinations. This
-checkpoint grants no authored-function credit to those open implementations.
+checkpoint grants no authored-function credit to those implementations; DrawNumber
+is accepted separately in the later number/shadows/keyboard section.
 
 ### Focused acceptance and retained evidence
 
@@ -3429,7 +3438,116 @@ accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
 The checkpoint adds **3 authored complete exact functions /18,944 instruction
 bytes**, bringing acceptance to **216 functions /216,680 instruction bytes**,
 plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 254 each.
-DrawNumber, the shadow prepass, battle keyboard/replay reset, parked pushbox,
-concrete background implementations and whole-game/product/runtime/portability
-closure remain open. Complete display functions do not establish a runnable
+DrawNumber, the shadow prepass and battle keyboard/replay reset were open at
+this display checkpoint and are accepted below. Parked pushbox, concrete
+background implementations and whole-game/product/runtime/portability closure
+remain open. Complete display functions do not establish a runnable
 replacement or whole-game completion.
+
+## Battle number, shadows and keyboard replay control
+
+Canonical resources/EFZ.exe and pinned VC7.1 RTM13.10.3077 only. The already-running
+reconstruction comparison was completed for the final checkpoint after the
+operator requested cleanup/handoff. Four complete authored functions add 4,998 code
+bytes and no local tables:
+
+| Member | Entry | Bytes | Exclusive end | Instructions | Direct branches | Direct calls | Virtual/COM calls | Relocations |
+| --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |
+| DrawNumber | 0x75DB70 | 466 | 0x75DD42 | 145 | 3 | 2 | 0 | 2 |
+| RenderShadows | 0x762C50 | 1,440 | 0x7631F0 | 407 | 23 | 8 | 0 | 9 |
+| PollKeyboard | 0x765660 | 2,358 | 0x765F96 | 456 | 65 | 8 | 2 | 19 |
+| ResetReplay | 0x7661A0 | 734 | 0x76647E | 201 | 2 | 20 | 3 | 24 |
+
+Complete contiguous instruction, branch, receiver, return and following alignment
+review is retained in .analysis/probes/battle-controls/boundary-review.json.
+The respective following CC lengths are 14,0,10,2, outside credited extents.
+DrawNumber ends in RET18; the other three have no stack arguments. All 54
+relocations are explicit: 38 direct REL32 calls and 16 DIR32 operands comprising
+one IEEE double zero, two security-cookie references, ten actual DWORD latch
+accesses and three independently checked NUL-terminated path literals.
+
+### Number rectangles and shadow semantics
+
+Scene3+464 holds seventeen 16-byte font rectangles, ending at +574. Constructor
+stores and DrawNumber's indexed access agree on the genuine `numberStyles[17]`
+view. No following field moves. DrawNumber uses unsigned remainder/division by10,
+a do-while that draws zero, and right-to-left edge subtraction by glyph width
+plus unsigned byte spacing. The source right edge is width*(digit+1), whose
+original evaluation order matters to codegen. Nonzero mode selects blending.
+
+RenderShadows replaces the incorrect RenderMeters name at762C50. It visits both
+characters and their 64-slot effect rings. It uses min(signed frame v,height),
+with offset v-height only in the latter branch, a source rectangle of full
+frame width and that height, and destination height height/3. Character and
+effect visibility gates, pattern/frame ownership and signed facing reads are
+preserved. Ring wrap uses >=64 as encoded.
+
+The actor Y formula is 210-((int)y-(y<0))+cameraY+offset; the effect formula is
+(cameraY+210)-(int)effectY+offset, without the actor's negative-Y correction.
+Effects read their signed facing BYTE at+48, distinct from the live character
+facing field+4C. Original top<240/bottom>0 visibility tests and all conversions
+remain intact. Work records contain only used indices, pointers and rectangles.
+
+The complete 806-byte original Video callee40A7B0 independently establishes
+DrawShadowSurface(destination SurfaceRect, IUnknown*, source SurfaceRect,
+unsigned byte color key, int mirror, unsigned byte color index), real Video
+receiver, int result and RET30. It locks the mask/back surfaces, reads bottom-up
+mask rows at stride minus3 and applies the fixed-color/destination palette blend
+lookup. B0 is the fixed color index, not an alpha parameter. This corrects the
+older interpretation. Its implementation remains open; a caller match grants
+no callee or linked-data credit. Full original instructions and provisional
+decompile are retained beside the four owner reviews.
+
+### Keyboard and replay behavior
+
+PollKeyboard uses the actual DirectInput keyboard interface, char state[256],
+GetDeviceState slot24 and Acquire slot1C only on DIERR_INPUTLOST. Original failure
+flow does not zero the buffer or add a retry. Mode6 exit checks Context inputs
+and Escape; normal Escape, music release, exhausted replay state and pause stores
+retain their original branch order.
+
+F4/F5 update the original control words and both players'30EC/30EE mirrors.
+F5's positive equality branches and F6/F7 training controls are preserved. F8
+stores the real DWORD key latch at7B1290 before later recomputation from F5..F8.
+The missing decompiler store is included. No reconstructed linked global owner
+is claimed for the external `battleKeyHeld` binding.
+
+The original constant-true skip retains the FULL disabled F1/F2/F3 stepping,
+F9/F10 capture, F11 counter reset and F12 health controls. Natural
+`if (true) {} else { ... }` reproduces the original /Od branch and all fourteen
+Ghidra-removed blocks; they are not padding. Playback reads the control words
+only when signed Context byte1340>0, otherwise substitutes1000/9999. Recording
+writes the two words only while unpaused. Genuine Scene3 friendship exposes
+WordFile's actual exhausted field and Input's actual keyboard pointer.
+
+ResetReplay is guarded by mode5 and recording flag2. Actual GS-protected path[40]
+and number[8] buffers build replay\\data + (signed14282+1) + '-' + (signed14281+1)
++ '.rep'. After fade-out and close, it writes six words: both character IDs,
+104, ContextF32 and both palette indices. Context reset, actual externally owned
+character LoadResources virtual calls, control-word mirroring, intro/camera
+reset, render and fade-in retain the original sequence. Context1340/14281/14282
+replace existing unknown bytes without shifting layout. ResetReplay matched
+its first complete 734-byte compilation.
+
+### Acceptance and session closure
+
+The public sources are src/SceneBattleVisuals.cpp (vc71-od-static) and
+src/SceneBattleInput.cpp (vc71-od-static-gs). Final formatting also received full
+native comparisons. Four new and 210 actual Engine/Input/SceneBattle header
+consumers compare complete strict exact from 55 serial cold artifacts. All135
+existing compiler-local destination/offset bindings were retained; the changed
+Shiori constructor literal ID was independently checked against `shiori` at
+787DF0 before receipts were finalized. No toolchain/Wine failure occurred.
+
+Public proof: docs/evidence/battle-controls-exact.json, plus refreshed involved
+older certificates. Final reports: .analysis/exact/battle-controls-and-affected.json.
+All target dumps, attempts, independent operand/call/constant/boundary reviews
+and native logs remain private. Derivation/publish scripts are one-time history;
+do not rerun them on an evolving baseline.
+
+Authored acceptance now totals 220 functions /221,678 code bytes, with unchanged
+667 local-table bytes and 258 reviewed boundaries/origins each. Only focused
+ledger/progress/whitespace checks accompany acceptance. The operator stopped
+further reconstruction and requested cleanup/handoff; no autonomous task remains.
+Pushbox, Shiori slot6, other characters, pixel kernels and product/runtime/
+portability closure remain open. Follow RE_HANDOFF.md for current task state.

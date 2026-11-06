@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
-  "method": "three new complete health/HUD/combo contributions compared from one serial cold source/profile/dependency artifact; existing sources and shared headers unchanged; no unrelated native replay",
+  "method": "selected complete contribution comparison; 55 cold source/profile/dependency artifacts cover four new battle number/shadow/keyboard/replay units and 210 existing Engine/Input/SceneBattle header consumers; unaffected reports retain earlier artifacts",
   "reports": [
     {
       "result": "exact",
@@ -665,16 +665,16 @@
       "symbol": "?RenderHealthBars@Scene3@@QAEXXZ",
       "target_address": "0x0075E240",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
-      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "20359e8967ad402ccb42b2cc6f8c05f30a60a6f08c9806f98a1c84280017e841",
       "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
       "dependencies": {
-        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
-        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "284a44dc46527b956dc76dd3a45e4b48c873195d774599301a80675207548298",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1729,16 +1729,16 @@
       "symbol": "?RenderHud@Scene3@@QAEXXZ",
       "target_address": "0x00760060",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
-      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "20359e8967ad402ccb42b2cc6f8c05f30a60a6f08c9806f98a1c84280017e841",
       "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
       "dependencies": {
-        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
-        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "3cf294b739e73516af210db91e24bcbc249a8225e87de13de87cebc91e35f8df",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2046,16 +2046,16 @@
       "symbol": "?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z",
       "target_address": "0x007623B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "91524deebe3ccf9780507faaa03a978fa25102bea3121062ff8b06b80f8fb539",
-      "object_sha256": "dc60c13b90199203122fd4dccd0808680654d53b8356fb4e0b74b10c0be26c36",
+      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
+      "object_sha256": "20359e8967ad402ccb42b2cc6f8c05f30a60a6f08c9806f98a1c84280017e841",
       "source_sha256": "a8aa48f35e1478bb67bb27f9990d2c772eebbffc9bcba46b5e9cd644467a1b5f",
       "dependencies": {
-        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
-        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
-        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "131a73e1d41a16d880faa41699102b5dceb53e1f09a641e4e1dcee1dcdb53cbb",
+      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1034bccb89547130c47a54323344bdfff665266ae1b669cdf3d53fc3e5a0b1a3",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

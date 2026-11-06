@@ -47,7 +47,7 @@ def render_svg() -> str:
   <text x="536" y="108" fill="#f4f4f5" text-anchor="end" font-family="monospace" font-size="13">{reviewed} / {total} candidates</text>
   <rect x="24" y="118" width="512" height="12" rx="6" fill="#3b4058"/>
   <rect x="24" y="118" width="{width:.2f}" height="12" rx="0.5" fill="#9b6de3"/>
-  <text x="24" y="154" fill="#c8cad2" font-family="sans-serif" font-size="12">Initial checkpoint; whole-game authored coverage is not established</text>
+  <text x="24" y="154" fill="#c8cad2" font-family="sans-serif" font-size="12">Whole-game authored coverage is not established</text>
 </svg>
 '''
 

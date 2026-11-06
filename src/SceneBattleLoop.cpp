@@ -231,7 +231,7 @@ void Scene3::Slot0()
     secondary[1]->AdvanceTrail();
     RenderBackground();
     RenderHealthBars();
-    RenderMeters();
+    RenderShadows();
     contextOwner->RenderEffects(field045c, field0460, 0);
     secondary[0]->RenderLocalEffects(field045c, field0460, 0);
     secondary[1]->RenderLocalEffects(field045c, field0460, 0);

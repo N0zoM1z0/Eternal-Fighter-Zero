@@ -26,9 +26,10 @@ for leaf count. Recheck prior documentation/hypotheses against target evidence.
 Preserve unfinished work and inspect its handoff before integrating it. Commit
 substantive verified progress using the English prefix `gpt-6.1-sol: `. Replay
 only changed/involved units, never an unrequested full cold cohort. A successful
-unit does not complete the game reconstruction. The operator cleared the prior
-autonomous goal and requested cleanup and handoff on 2026-11-01; do not infer an
-active autonomous reconstruction task from historical notes. Do not spawn
+unit does not complete the game reconstruction. After resuming reconstruction
+on 2026-11-06, the operator cleared the active goal and requested cleanup and
+handoff again that day. Do not infer an active autonomous reconstruction task
+from historical notes or suggested follow-ups. Do not spawn
 subagents unless the operator explicitly requests delegation.
 
 ## Exact work
@@ -73,8 +74,10 @@ builds in `build/`, tool links/Wine state in `.tools/`, private Ghidra state in
 `ghidra-project/`.
 
 Source changes finish with the affected native exact comparison. Infrastructure
-changes need the relevant focused oracle checks. Run `scripts/ci.py` and
-`git diff --check` before a checkpoint; regenerate progress after ledger changes.
+changes need the relevant focused oracle checks. Run the applicable
+`scripts/ci.py --only ...` checks and `git diff --check` before a checkpoint;
+regenerate progress after ledger changes. The operator requested no routine
+full CI or full cold cohort; select only new and affected native units.
 Do not require broad runtime/failure-injection/sanitizer matrices for ordinary
 exact units. Product closure, original/reconstructed runtime comparison and
 portability are later, independently tracked phases.

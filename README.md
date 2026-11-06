@@ -40,29 +40,26 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **171 complete exact authored functions, 91,468 code bytes**,
-with every relocation field explicitly bound and compared. Twelve compiler-generated
-deleting/array-iteration/static-lifetime helpers are checked separately
-as ABI evidence and are excluded from authored progress. Four standard-library
-math wrappers are also checked separately. Complete effect, title-scene and
-character-selection dispatchers add 335 associated switch-table bytes,
-compared in full and counted separately from code. The local Ghidra inventory contains 950 non-external candidates; their boundaries and origins
-remain provisional until separately reviewed. [PROGRESS.md](docs/PROGRESS.md)
-is generated from the live ledgers, and [the handoff](docs/RE_HANDOFF.md) records
-the accepted owners, retained evidence and next work. The complete raw file
-reader, DirectInput owner, DirectSound/WAV/loop/playback members, title scene and
-shared scene fades are accepted at function-codegen level. Character-selection
-update, entry, lifetime, palette helpers and the complete renderer are also exact;
-the character-creation dispatcher is exact too. Shared character lifetime, reset
-state, local effects, resource reuse and statistics I/O are now exact. Character
-resource loading and both character image-transfer methods are exact too, followed
-by input/replay, visual trail ownership and the body/trail rendering dispatcher.
-Common state dispatch, movement, timers, guard/damage/combo decisions, score
-carry, replay-aware random ranges and their supporting predicates are exact too. Child constructors, remaining frame/collision helpers and pixel rendering
-kernels remain open.
-The reader/audio historical drafts are
-preserved separately in the [workbench](workbench/reader-audio/README.md).
-Reconstruction resumed on 2026-11-06 with focused new/affected exact comparisons.
+The [generated progress report](docs/PROGRESS.md) and card above derive current
+counts from the reviewed ledgers. Every accepted function has a complete strict
+comparison with explicit relocation bindings. Compiler-generated helpers and
+standard-library wrappers are recorded separately and excluded from authored
+progress. Automatic Ghidra candidates are not an authored-code denominator.
+
+Accepted owners cover configuration, raw file reading, DirectInput, Audio,
+Context effects/input/music, title and selection scenes, substantial shared
+character control/resources/rendering, the Shiori constructor and ten virtual
+bodies, and substantial battle simulation/collision/display/keyboard/replay
+control. Shiori's large slot-6 animation dispatcher, 22 other character
+constructors and most other character behavior remain open. Pixel kernels,
+concrete background objects, pushbox resolution and additional scenes also
+remain open. Historical reader/audio drafts are preserved in the
+[workbench](workbench/reader-audio/README.md); accepted code lives in `src/`.
+
+On 2026-11-06 the operator stopped further reconstruction and requested cleanup
+and handoff. There is no active autonomous reconstruction task. The
+[current handoff](docs/RE_HANDOFF.md) records the final checkpoint, retained
+evidence, parked work and possible follow-ups for the next agent.
 
 Compiler, linker, resource and native execution smoke checks pass. The original
 translation-unit graph, linked data/resources, full executable and runtime
@@ -82,7 +79,8 @@ scripts/bootstrap-tools.sh \
   --jdk /path/to/jdk-21.0.12.1+1
 scripts/repo-python scripts/verify-target.py
 scripts/repo-python scripts/verify-toolchain.py --execute
-scripts/repo-python scripts/ci.py
+scripts/repo-python scripts/ci.py --only ledgers
+scripts/repo-python scripts/ci.py --only progress
 ```
 
 The selected VC7.1 RTM compiler is **13.10.3077**, linker **7.10.3077**. This

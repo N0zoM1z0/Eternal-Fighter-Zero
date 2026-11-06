@@ -38,8 +38,10 @@ scripts/repo-python scripts/replay-exact-units.py --unit config-read-byte
 ```
 
 Classify a mismatch by complete extent, code, local branch, ABI or bound address.
-Change one supported hypothesis at a time. Keep useful logs under `.analysis/`;
-remove superseded probe sources after retaining the relevant result.
+Change one supported hypothesis at a time. Keep useful logs under `.analysis/`.
+Preserve retained source/object attempts, target reviews and unfinished drafts;
+historical derivation scripts may overwrite the accepted baseline and must not
+be rerun blindly.
 
 ## Record a checkpoint
 
@@ -50,12 +52,16 @@ source and manifest identities in the ledger and durable compact evidence.
 ```bash
 scripts/repo-python scripts/validate-tracking.py --require-target
 scripts/repo-python scripts/progress.py
-scripts/repo-python scripts/ci.py
+scripts/repo-python scripts/ci.py --only ledgers
+scripts/repo-python scripts/ci.py --only progress
 git diff --check
 ```
 
 Default CI is target-free. Its metadata checks do not run the original game,
 Ghidra or proprietary compiler. Native comparison is a distinct selected action.
+Use only the relevant CI selectors for ordinary checkpoints. Add syntax or
+focused oracle checks when the corresponding infrastructure changes; do not
+run a full CI/cold cohort as a routine function-acceptance prerequisite.
 Do not count candidate sizes or source files as global reconstruction progress.
 
 ## Later phases

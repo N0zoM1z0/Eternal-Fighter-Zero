@@ -48,6 +48,7 @@ public:
     int FillRectangle(SurfaceRect, unsigned char);
     int ConvertBackBuffer();
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
+    int DrawShadowSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, unsigned char);
     int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
     int DrawCharacterTint(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, char);
     int DrawCharacterSpecial(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
@@ -361,6 +362,7 @@ public:
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {
+    friend class Scene3;
     int exhausted;
     HANDLE file;
     DWORD remaining, transferred;
@@ -437,8 +439,8 @@ private:
     unsigned char unknown_1335[3];
 public:
     int alternateStyle[2];
-private:
-    unsigned char unknown_1340;
+public:
+    char flag1340;
 public:
     char characterDataMode;
 public:
@@ -529,8 +531,8 @@ public:
 private:
 public:
     char state14280;
-private:
-    unsigned char unknown_14281[2];
+public:
+    char field14281, field14282;
 public:
     char flag14283;
 private:

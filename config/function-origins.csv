@@ -563,12 +563,12 @@ address,origin,status,evidence
 0x0075D8D0,unknown,unreviewed,
 0x0075D970,unknown,unreviewed,
 0x0075DA30,unknown,unreviewed,
-0x0075DB70,unknown,unreviewed,
+0x0075DB70,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x0075DD50,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
 0x0075E240,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
 0x00760060,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
 0x007623B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-health-hud-and-combo-display
-0x00762C50,unknown,unreviewed,
+0x00762C50,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x007631F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
 0x007633A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x00763C00,unknown,unreviewed,
@@ -578,10 +578,10 @@ address,origin,status,evidence
 0x00764DB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x00764F10,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x00765040,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
-0x00765660,unknown,unreviewed,
+0x00765660,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x00765FA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
 0x00766070,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
-0x007661A0,unknown,unreviewed,
+0x007661A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x00766480,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00766B50,unknown,unreviewed,
 0x00767600,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
