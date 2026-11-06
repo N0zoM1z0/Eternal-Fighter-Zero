@@ -18,7 +18,8 @@ then the complete local-effect renderer/reset and the Shiori constructor,
 followed by Shiori command/state control, meter, initialization/effect ownership,
 and the shared facing/grounded locomotion owners, then the complete Shiori
 input-history recognizer and CPU command/movement owner, followed by the complete
-local-effect dispatcher and its shared controls.
+local-effect dispatcher and its shared controls, followed by battle scene
+construction, camera tracking/shake composition, sound consumption and intro events.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -31,10 +32,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 191 |
-| Authored exact instruction bytes | 164,306 |
+| Authored complete exact functions | 196 |
+| Authored exact instruction bytes | 168,890 |
 | Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 229 / 229 |
+| Reviewed boundaries / origins | 234 / 234 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -51,6 +52,35 @@ Context::UpdateEffect (0x401C20) remains exact as a complete 14,305-byte
 contribution with its 301 relocations and 36 local offsets intact.
 
 ## Latest exact progress
+
+The latest checkpoint adds five complete Scene3 battle functions: constructor
+0x7633A0 /2129, UpdateCamera 0x7647B0 /1530, PlayCharacterSounds 0x764DB0 /337,
+PlayEffectSounds 0x764F10 /296 and UpdateIntro 0x766070 /292. All 4,584 instruction
+bytes and 45 explicitly reviewed relocation fields compare strict exact. The
+Scene3 table at 0x7895DC independently identifies renderer 0x7642A0, Step 0x763C20
+and keyboard 0x765660; those entries remain open. Source is SceneBattle.cpp.
+Context exposes short 1352, ints 14238/14240 and SurfaceRect 14248 in previously
+unknown storage. Five new and 174 shared-header-dependent existing units are
+exact from 46 serial cold artifacts; all 135 existing local offsets are checked.
+Proof is scene-battle-exact.json; final private replay is
+.analysis/exact/scene-battle-and-affected.json. Only involved units and focused
+ledger/progress/whitespace checks ran. No full CI or runtime matrix ran.
+
+Next pursue the battle owner from .analysis/probes/scene-battle/. Read its README
+and target-attested decompiles before editing. The complete Step at 0x763C20
+connects the newly accepted helpers to character update, round control and
+collision. Substantial open bodies include collision dispatch 0x766480 /1734,
+pushbox resolution 0x766B50 /2727, hit processing 0x767F60 /6245 and 0x7697D0
+/6334. Inspect real receivers and complete helper signatures before defining new
+methods. The camera and event source can remain accepted while those owners are
+recovered. Scene2 is the random system\nl loading interlude that returns scene
+ID 3, not the battle owner. Its constructor/table/decompiles are retained too.
+
+The Shiori slot-6 first-divergence audit found no new falsifiable explanation
+from slot-7 operand-order evidence: animation 303's scalar tick increment at
+0x41FC1E has no analogous indexed/random expression. No new slot-6 build or
+comparison was run; it remains parked without acceptance. See
+.analysis/probes/shiori-state/new-operand-order-audit.md.
 
 Reader checkpoint b811817 accepts twenty complete PatternReader members for
 1,370 bytes. Context.cpp now shares the int-returning Read declaration and all
@@ -569,7 +599,7 @@ The base table at 0x787BCC has thirteen observed slots and no virtual destructor
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the
 no-stack-argument/unused-result source view are provisional. Separate interface
 review from body recovery and linked-data placement; declarations alone confer
-no child-body credit. Seven Shiori overrides now have separate complete exact proofs. All 23 called character constructors have
+no child-body credit. Ten Shiori overrides now have separate complete exact proofs. All 23 called character constructors have
 reviewed boundary/origin rows; Shiori is accepted and the other 22 remain unimplemented. Their allocation and
 common-base evidence is .analysis/probes/character-create/. Do not count reviewed
 declarations as exact functions. Two 505-element arrays at base offsets 10/164,

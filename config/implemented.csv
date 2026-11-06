@@ -190,3 +190,8 @@ address,name,source,symbol,status,evidence
 0x00410A80,?SetHorizontalShake@Secondary@@QAEXHH@Z,src/SecondaryEffectControls.cpp,?SetHorizontalShake@Secondary@@QAEXHH@Z,complete,docs/evidence/secondary-effect-controls-exact.json
 0x00410B10,?SetTint@Secondary@@QAEXEH@Z,src/SecondaryEffectControls.cpp,?SetTint@Secondary@@QAEXEH@Z,complete,docs/evidence/secondary-effect-controls-exact.json
 0x00407CE0,?RequestTransition@Context@@QAEXD@Z,src/SecondaryEffectControls.cpp,?RequestTransition@Context@@QAEXD@Z,complete,docs/evidence/secondary-effect-controls-exact.json
+0x007633A0,??0Scene3@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,src/SceneBattle.cpp,??0Scene3@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z,complete,docs/evidence/scene-battle-exact.json
+0x007647B0,?UpdateCamera@Scene3@@QAEXXZ,src/SceneBattle.cpp,?UpdateCamera@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
+0x00764DB0,?PlayCharacterSounds@Scene3@@QAEXXZ,src/SceneBattle.cpp,?PlayCharacterSounds@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
+0x00764F10,?PlayEffectSounds@Scene3@@QAEXXZ,src/SceneBattle.cpp,?PlayEffectSounds@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json
+0x00766070,?UpdateIntro@Scene3@@QAEXXZ,src/SceneBattle.cpp,?UpdateIntro@Scene3@@QAEXXZ,complete,docs/evidence/scene-battle-exact.json

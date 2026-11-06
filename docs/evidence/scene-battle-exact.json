@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 2129,
+      "matched_bytes": 2129,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007633D2; reviewed Scene base constructor with seven stack arguments and ECX scene receiver",
+          "addend": 0
+        },
+        {
+          "offset": 62,
+          "target": 7902684,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene3@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007633DE; constructor vptr store to independently read three-entry Scene3 table (Slot0 7642A0, Step 763C20, PollKeyboard 765660); startup constructs Scene3 for scene ID 3 with allocation size 598",
+          "addend": 0
+        },
+        {
+          "offset": 281,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007634B9; original x87 data operand at 007634B9; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 422,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763546; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763596; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 582,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007635E6; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 662,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763636; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 745,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763689; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 852,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007636F4; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 959,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 0076375F; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1066,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007637CA; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1173,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763835; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1280,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007638A0; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1387,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 0076390B; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1494,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763976; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1601,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007639E1; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1708,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763A4C; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1815,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763AB7; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 1922,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763B22; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        },
+        {
+          "offset": 2029,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00763B8D; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "12213288a17e68da6b4bfb34d589af0302e61012ade5aadf866f61e4e61835c0",
+      "target_extent_sha256": "12213288a17e68da6b4bfb34d589af0302e61012ade5aadf866f61e4e61835c0",
+      "unit": "scene-battle-constructor",
+      "symbol": "??0Scene3@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x007633A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
+      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
+      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "dependencies": {
+        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b5477c71a0457977c1c3c80719092f078b268087801cae76235c5ddfb675b951",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1530,
+      "matched_bytes": 1530,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 220,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 0076488C; original x87 data operand at 0076488C; independently checked 8-byte IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 225,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764891; reviewed compiler floating-to-signed-integer helper, live x87 argument",
+          "addend": 0
+        },
+        {
+          "offset": 587,
+          "target": 7897160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c06e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007649FB; original x87 data operand at 007649FB; independently checked 8-byte IEEE payload 0000000000006ec0",
+          "addend": 0
+        },
+        {
+          "offset": 609,
+          "target": 7897160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c06e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764A11; original x87 data operand at 00764A11; independently checked 8-byte IEEE payload 0000000000006ec0",
+          "addend": 0
+        },
+        {
+          "offset": 853,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764B05; original x87 data operand at 00764B05; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 891,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764B2B; original x87 data operand at 00764B2B; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 929,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764B51; original x87 data operand at 00764B51; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 967,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764B77; original x87 data operand at 00764B77; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1014,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764BA6; original x87 data operand at 00764BA6; independently checked 8-byte IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1051,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764BCB; reviewed compiler floating-to-signed-integer helper, live x87 argument",
+          "addend": 0
+        },
+        {
+          "offset": 1070,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764BDE; reviewed compiler floating-to-signed-integer helper, live x87 argument",
+          "addend": 0
+        },
+        {
+          "offset": 1100,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764BFC; reviewed compiler floating-to-signed-integer helper, live x87 argument",
+          "addend": 0
+        },
+        {
+          "offset": 1119,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764C0F; reviewed compiler floating-to-signed-integer helper, live x87 argument",
+          "addend": 0
+        },
+        {
+          "offset": 1351,
+          "target": 4225856,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateCameraShake@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764CF7; reviewed Context UpdateCameraShake with ECX Context receiver",
+          "addend": 0
+        },
+        {
+          "offset": 1399,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764D27; reviewed cdecl MakeSurfaceRect; 16-byte hidden-return value and four int arguments",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "cf3e20e6074d2375378428bc45611f91f3641109eb872b7e03d4982d2c0f74bc",
+      "target_extent_sha256": "cf3e20e6074d2375378428bc45611f91f3641109eb872b7e03d4982d2c0f74bc",
+      "unit": "scene-battle-update-camera",
+      "symbol": "?UpdateCamera@Scene3@@QAEXXZ",
+      "target_address": "0x007647B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
+      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
+      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "dependencies": {
+        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "492706a1558812bb53be48c7c0a596bc13ca7240a71b46515ddf405374f22a73",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 337,
+      "matched_bytes": 337,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 198,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764E76; reviewed Audio StartSound; unsigned-short slot and int repeat, ret 8",
+          "addend": 0
+        },
+        {
+          "offset": 307,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764EE3; reviewed Audio StartSound; unsigned-short slot and int repeat, ret 8",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e387fa4c3e511f438f6b4ae8da040a7c3a1994864b73a0b6d6bf6fc2c060e1c8",
+      "target_extent_sha256": "e387fa4c3e511f438f6b4ae8da040a7c3a1994864b73a0b6d6bf6fc2c060e1c8",
+      "unit": "scene-battle-play-character-sounds",
+      "symbol": "?PlayCharacterSounds@Scene3@@QAEXXZ",
+      "target_address": "0x00764DB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
+      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
+      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "dependencies": {
+        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "b899630c6c75215d4b527ee7a926f7c0887bc07f70b168e3b2a0c3ab39f548ba",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 296,
+      "matched_bytes": 296,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 238,
+          "target": 4251264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartSound@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00764FFE; reviewed Audio StartSound; unsigned-short slot and int repeat, ret 8",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8a7ff9cb2730431a649deb89ccd0f5149bede84be5cc2a8c24c2f7335b4ddfb7",
+      "target_extent_sha256": "8a7ff9cb2730431a649deb89ccd0f5149bede84be5cc2a8c24c2f7335b4ddfb7",
+      "unit": "scene-battle-play-effect-sounds",
+      "symbol": "?PlayEffectSounds@Scene3@@QAEXXZ",
+      "target_address": "0x00764F10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
+      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
+      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "dependencies": {
+        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8647e53f330c8e1f500316aaf909e93aac13ecfcda55157a16f396a8a75fd8ba",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 292,
+      "matched_bytes": 292,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 35,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00766093; reviewed EffectSpawn constructor on the actual 72-byte stack record",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007660C0; original x87 data operand at 007660C0; independently checked 8-byte IEEE payload 0000000000006440",
+          "addend": 0
+        },
+        {
+          "offset": 89,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007660C9; original x87 data operand at 007660C9; independently checked 8-byte IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 139,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 007660FB; reviewed Context EmitEffect with 72-byte record pointer argument",
+          "addend": 0
+        },
+        {
+          "offset": 182,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00766126; original x87 data operand at 00766126; independently checked 8-byte IEEE payload 0000000000006440",
+          "addend": 0
+        },
+        {
+          "offset": 191,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 0076612F; original x87 data operand at 0076612F; independently checked 8-byte IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 256,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events; operand 00766170; reviewed Context EmitEffect with 72-byte record pointer argument",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e995b1581a233cbbad9dea1dbf28eea9c0f629b7a2736f9399a709f4a05effff",
+      "target_extent_sha256": "e995b1581a233cbbad9dea1dbf28eea9c0f629b7a2736f9399a709f4a05effff",
+      "unit": "scene-battle-update-intro",
+      "symbol": "?UpdateIntro@Scene3@@QAEXXZ",
+      "target_address": "0x00766070",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3344a521f17363eee08a87d4827f6578fc1f7431de91e944f7c3944377bbd3ce",
+      "object_sha256": "f4f199b38bc7d4917b77a2f3bf7d99b43fba86cfaa92da7f6cffff1fee027e8a",
+      "source_sha256": "b873f1a9ba1342626fa2a8ce534867aae496d35625eaa63b3e9619deb12fe98a",
+      "dependencies": {
+        "src/Engine.h": "93abbf09803c5b5fff974a0b299a71730b0dd5a490f4276dbd6fcc3099595b9d",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "cbda096ce3264600d92a1e6602183c77a8af61ace63462b8ba7e3f351a3b0276",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1a69af6aab665ac06c6b2a2fb6daa8dc9efd477a755f0af4da10baa90c5d9f2f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 46 cold source/profile/dependency artifacts cover five new battle scene units and 174 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
+}

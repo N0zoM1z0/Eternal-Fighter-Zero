@@ -2646,3 +2646,93 @@ Shiori has ten accepted child virtual bodies plus its constructor, totaling
 69,874 code bytes. Slot 6 remains an unaccepted complete private draft; slot 8
 is still open. No whole-game, original linked-data, runnable replacement,
 runtime equivalence or portability closure is claimed.
+
+## Battle scene construction, camera and events
+
+Scene ID 3 is the battle owner. Startup constructs Scene3 at 0x7633A0 with a
+0x598-byte allocation and the seven established Scene base arguments. The
+constructor stores table 0x7895DC, independently read as renderer 0x7642A0,
+Step 0x763C20 and keyboard 0x765660. Those three bodies remain open. The
+reviewed Step calls the accepted camera, sound and introduction helpers below;
+its collision and round-resolution callees are substantial next targets.
+Scene ID 2 is a loading interlude: its Step 0x76C790 chooses system\\nl\\nl000..174
+resources, performs fades and returns scene ID 3. Do not conflate it with battle.
+
+| Authored owner | Entry | Complete instruction bytes |
+| --- | --- | ---: |
+| Scene3 constructor | 0x7633A0 | 2,129 |
+| Scene3::UpdateCamera | 0x7647B0 | 1,530 |
+| Scene3::PlayCharacterSounds | 0x764DB0 | 337 |
+| Scene3::PlayEffectSounds | 0x764F10 | 296 |
+| Scene3::UpdateIntro | 0x766070 | 292 |
+
+All five boundaries were reviewed from entry through final RET, including every
+conditional path, direct call and following CC alignment. There is no associated
+local table. The constructor has 517 instructions, the camera has 426, the two
+sound consumers 93/81, and the intro owner 73. All 45 relocation operands have
+explicit original destinations: 31 direct calls, one Scene3 vptr and 13 floating
+constant operands. Callee receivers/arguments were checked against original
+instructions and the accepted shared implementations. IEEE payloads were checked
+independently; the vtable is a binding, not reconstructed linked-data credit.
+
+The constructor initializes 17 real SurfaceRect members at 0x464..0x564 using the
+accepted MakeSurfaceRect return ABI. Its actual 0x224-byte frame arises naturally
+from the used struct-return/assignment temporaries and this pointer. Initial
+state includes camera coordinates/weights, an unsigned-byte update count of 3,
+shorts 0/9999 at 574/576, double zero at 580 and three counters at 434/438/43C.
+Context counter1354 becomes zero and effectFlag1350 becomes one. Numeric field
+names intentionally retain uncertainty about unimplemented consumers.
+
+UpdateCamera preserves the original weighted horizontal target, -319..0 clamp,
+integer easing divisors 15 and 10, and 0..240 vertical clamp. It reads Context
+14238/14240 for the temporary horizontal weighting and 1423C/14244 for vertical
+composition. Those hold counters decrement only when both characters' shorts
+14A/14C are zero. The vertical expression deliberately repeats casts and negative
+comparisons, including `(int)y - (y < 0.0)`; replacing it with a generic rounding
+function would change behavior for negative integral values. Preserve signed
+integer division before unary negation. Context::UpdateCameraShake is then called,
+Context cameraBounds at 14248 receives the actual 320x240 world rectangle, and
+shake offsets 1421C/14220 feed Scene3 draw offsets 45C/460. The new Context fields
+replace retained unknown storage without moving later fields.
+
+PlayCharacterSounds consumes signed bytes 2C9 (Context slots 0..64) and 2C8
+(character slots 0..49) for both players, calling Audio::StartSound(slot,0) and
+clearing each consumed request to -1. In scene flag state 2 it only clears both
+requests. PlayEffectSounds walks the 640-entry Context ring from field1382 to
+field1380 and consumes the signed-byte view of record offset 6C, likewise
+clearing requests or suppressing playback in state 2. The existing record member
+is provisionally named palette; its signed sound-consumer view is an explicit
+cast, preserving existing accepted unsigned users and the actual record ABI.
+Do not infer a final semantic record model from that older member name.
+
+UpdateIntro constructs one genuine EffectSpawn only after the initial nonzero
+flag test. Its byte switch handles flag 1 (effect type 27, sound byte 255, hold
+300) and flag 2 (type 5, sound byte effectSelector+11, hold 270). Both emit at
+(160.0,120.0), group/layer 2, payload 1, then store flag 99 and short hold at
+Context 1352. The EffectSpawn constructor, emission and Audio functions are
+already accepted complete dependencies; no fabricated call ABI is introduced.
+
+The first complete constructor source matched immediately. Camera operand order
+and integer-negation grouping were corrected using the full instruction trace.
+Used local declarations/scopes reproduce the remaining VC7.1 /Od stack slots;
+every trial retains a complete comparison. A draft referred to nonexistent
+Secondary x/y names; the source was corrected to the accepted numerical fields
+and the required compiler/Wine execution smoke check passed. This adds no tests
+to ordinary unit acceptance.
+
+Final source is src/SceneBattle.cpp. Five new and 174 Engine.h-dependent existing
+units compare completely from 46 serial cold source/profile/dependency artifacts;
+only explicit involved units were selected. All 135 existing compiler-local
+bindings are checked against original destinations and actual COFF offsets.
+Standalone Input, reader and configuration units remain outside this replay.
+Public proof is docs/evidence/scene-battle-exact.json, with affected certificates
+refreshed. Private complete boundaries, decompiler hypotheses, source attempts
+and operand reviews remain in .analysis/probes/scene-battle/; final full reports
+are .analysis/exact/scene-battle-and-affected.json. Ledger/progress and whitespace
+checks are the only checkpoint checks; no full CI or runtime matrix was requested.
+
+This checkpoint adds **5 complete functions /4,584 instruction bytes**, bringing
+authored acceptance to **196 functions /168,890 instruction bytes**, plus the
+unchanged 667 local-table bytes. Reviewed boundaries and origins are 234 each.
+The complete battle loop, draw/keyboard entries, collision and round-resolution
+owners remain open; these five functions do not establish a playable battle.

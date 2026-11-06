@@ -228,3 +228,8 @@ address,end,size,status,evidence
 0x00410A80,0x00410ABF,63,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410B10,0x00410B70,96,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00407CE0,0x00407D06,38,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
+0x007633A0,0x00763BF1,2129,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
+0x007647B0,0x00764DAA,1530,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
+0x00764DB0,0x00764F01,337,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
+0x00764F10,0x00765038,296,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
+0x00766070,0x00766194,292,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
