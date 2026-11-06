@@ -5068,3 +5068,45 @@ including inherited LoadResources. CPU5E2440/14310, state5C8580/87209 instructio
 bytes and effects5E5C30/10512 instruction bytes remain open; their associated
 table boundaries require independent review. Original class/TU provenance,
 resource/linked-data, runtime and game phases remain independently open.
+
+## Mayu CPU command and movement owner
+
+Character05::Slot05 at0x5E2440 is complete strict exact in
+`src/Character05Cpu.cpp`:14,310 instruction bytes, exclusive end5E5C26,
+without local tables. Ten excluded CC bytes precede effects5E5C30.
+Original vtable788A68 slot05 operand788A7C contains5E2440. Public proof:
+`docs/evidence/mayu-cpu-exact.json`; recipe:character-05-cpu-input,
+pinned vc71-od-static.
+
+Independent review covers3,705 contiguous instructions,649 internal branches
+and all275 relocation fields:100 RandomRange calls, two CollisionSide calls,
+one external fabs and172 typed floating operands. All38 fresh literal payloads
+(eight32-bit floats,30 doubles) match canonical memory and actual native COFF.
+Every RandomRange result zero-extends AX. No indirect calls or tables occur.
+The real used distance record occupies EBP-10/-8, receiver EBP-14 and frameCC.
+The complete external fabs body at77842D..7784DD independently establishes
+cdecl double input, caller cleanup, sign-bit handling, x87 return and RET0;
+its bytes are ABI evidence only, without authored reconstruction credit.
+
+The first complete14,466-byte native source was built early. Target-backed
+entry/owner/tail refinements recover the full function. Preserve sample order,
+unsigned conversions, float operand order, inlined real state predicates,
+positive hurt/action exits and active movement-timer priority. The successful
+near-facing owner performs its random guard before checking forward distance
+<100; failure of that final distance test still exits this update. A single
+remaining branch-destination byte exposed this distinction after all instruction
+forms and extents matched. Keep that outer return explicit. No far-facing guard
+from another character is inferred. Original class/TU provenance stays open.
+
+Formatting received a complete native rebuild and strict comparison. One final
+selected cold replay passes all14,310 bytes and275 reviewed bindings with zero
+differences. Public headers and all330 prior recipes/source owners are unchanged;
+no old replay is needed. Focused tracking, ledgers/progress CI and whitespace
+checks pass; no full CI/cohort or runtime matrix ran. No compiler/Wine failure
+occurred. Preserve all target/operand/ABI evidence and complete source/header /
+object attempts with bounded native exits in `.analysis/probes/mayu-cpu/`.
+
+Eleven of thirteen actual Mayu virtual destinations now have exact proofs.
+State5C8580/87209 and effects5E5C30/10512 instruction bytes remain open, with
+associated tables unreviewed. Resource/data/runtime/TU and game phases remain
+independently open.

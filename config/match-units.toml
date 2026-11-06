@@ -95664,3 +95664,1938 @@ type = "DIR32"
 symbol = "__real@0000000000000000"
 target = 0x007872f8
 evidence = "docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified"
+
+[units.character-05-cpu-input]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character05Cpu.cpp"
+dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-05-cpu-input/Character05Cpu.obj"
+symbol = "?Slot05@Character05@@UAEXXZ"
+target_address = 0x005E2440
+size = 14310
+
+[[units.character-05-cpu-input.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 208
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787f08
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f08; literal 4.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c0; literal 1.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 442
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787f00
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f00; literal 8.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 520
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787efc
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787efc; literal 40.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 716
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842d
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original cdecl double argument, caller stack cleanup, x87 return and target FABS implementation at 0x77842D"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 801
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 856
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1078
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1413
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1456
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1499
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1518
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1542
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1677
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1717
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1733
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1752
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1776
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1853
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1876
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1900
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1924
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1963
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 1998
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2022
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2071
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2095
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872e0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x7872e0; literal 4.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2136
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2160
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2193
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2217
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2261
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787e30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e30; literal -30.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2294
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2313
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2337
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2361
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2394
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2417
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2441
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2465
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2501
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2531
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2552
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2635
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2665
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2715
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2745
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e48; literal -40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2761
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2780
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2810
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2857
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e48; literal -40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2887
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2903
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2922
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2952
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 2999
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7882b8; literal -60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3033
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787d88
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787d88; literal 30.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3049
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3065
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3084
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3114
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3157
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3173
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3192
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3222
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3320
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3348
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3372
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3442
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3481
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3532
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3577
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3622
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3697
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3716
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3812
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3835
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3859
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3921
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 3972
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 4023
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 4060
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 4084
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 4419
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5046
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5076
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5136
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5183
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5239
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5295
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5361
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5403
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5515
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5575
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5607
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5667
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5735
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5802
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5840
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 5886
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6115
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6175
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6194
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6265
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6329
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6361
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6393
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6422
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x788170; literal 45.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6441
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6501
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6525
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6541
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6627
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6706
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6777
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6838
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6895
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 6934
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7029
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7095
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7155
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7174
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7239
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7271
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7303
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7332
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x788170; literal 45.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7351
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7412
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7455
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7477
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7552
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7583
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7649
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7739
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7758
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7821
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7840
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7930
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 7986
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8042
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8108
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8150
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8262
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8326
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8358
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8390
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8419
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x788170; literal 45.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8438
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8498
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8566
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8612
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8841
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8901
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8920
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 8991
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9055
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9087
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9119
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9148
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x788170; literal 45.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9167
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9252
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9327
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9358
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9424
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9514
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9533
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9593
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9612
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9701
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9747
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9793
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea8; literal 125.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 9895
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10000
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10031
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10124
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10257
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10288
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10357
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10381
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10415
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10436
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10466
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10512
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10533
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10609
+type = "DIR32"
+symbol = "__real@4041800000000000"
+target = 0x007882b0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7882b0; literal 35.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10759
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 10925
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11097
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11269
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11285
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11346
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11409
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11502
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11678
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11836
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11870
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ed0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ed0; literal 220.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11922
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11963
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 11991
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12011
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12027
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12088
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c50; literal 0.5 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12107
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12123
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12184
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12222
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12242
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12258
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12274
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12327
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c50; literal 0.5 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12346
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12362
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12423
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12453
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12469
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e80; literal 130.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12485
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787370; literal 160.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12528
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12561
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12602
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12627
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12643
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12713
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12729
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12775
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12791
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12807
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12925
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12963
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12983
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 12999
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13069
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13085
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13131
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13147
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13163
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13281
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13404
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13428
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13452
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13476
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13528
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13566
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13590
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13614
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13666
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e68; literal 240.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13706
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13748
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13764
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13788
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13830
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13846
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13908
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 13975
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14034
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14051
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14085
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14117
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14144
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14179
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14211
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14255
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-05-cpu-input.relocations]]
+offset = 14287
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"

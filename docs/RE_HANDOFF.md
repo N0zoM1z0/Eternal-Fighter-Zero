@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 312 |
-| Authored exact instruction bytes | 819,931 |
+| Authored complete exact functions | 313 |
+| Authored exact instruction bytes | 834,241 |
 | Associated exact local-table bytes | 5,499 |
-| Reviewed boundaries / origins | 348 / 348 |
+| Reviewed boundaries / origins | 349 / 349 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,36 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mayu construction/input/command checkpoint
+## Latest Mayu CPU checkpoint
+
+Character05::Slot05 at5E2440 is complete strict exact:14,310 instruction bytes,
+exclusive end5E5C26, without local tables. Source:src/Character05Cpu.cpp;
+profile vc71-od-static; proof:docs/evidence/mayu-cpu-exact.json. Durable facts:
+[Mayu CPU command and movement owner](KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner).
+Private retained evidence:.analysis/probes/mayu-cpu/README.md.
+
+Independent review covers3,705 instructions,649 branches and275 relocations:
+100 RandomRange, two CollisionSide, one external fabs and172 typed floating
+operands. All38 payloads match target/COFF; all100 random results zero-extend AX.
+Natural frameCC retains receiver EBP-14 and distance record EBP-10/-8. Preserve
+original sample/expression order, positive exits and movement-timer priority.
+The near-facing owner's final distance<100 failure still returns from this
+update; do not merge that distance test into the outer successful guard.
+
+The first full source was compiled early and fully compared after formatting.
+One final selected cold replay passes all14,310 bytes and275 reviewed bindings.
+Public headers and all330 prior recipes/source owners are unchanged. Focused
+tracking, ledgers/progress CI and whitespace checks pass. No old/full replay,
+full CI or runtime matrix ran; no compiler/Wine failure occurred.
+
+Eleven of thirteen Mayu virtual entries are exact. State5C8580/87209 code and
+effects5E5C30/10512 code remain OPEN, with associated tables unreviewed. All13
+fresh read-only annotated decompiles are retained in .analysis/probes/mayu/;
+the buffered state job completed and all Ghidra jobs are terminal. Continue
+complete coherent owners and review canonical boundaries/operands before credit.
+Resource/data/runtime/TU and game phases remain open. Preserve parked controls.
+
+## Previous Mayu construction/input/command checkpoint
 
 Ten complete Character05 owners add17,957 strict exact instruction bytes without
 local tables:constructor5DDDF0/410, initializer5DDF90/270, reset5DE0A0/58,

@@ -367,7 +367,7 @@ address,origin,status,evidence
 0x005E1070,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005E1080,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005E10B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
-0x005E2440,unknown,unreviewed,
+0x005E2440,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner
 0x005E5C30,unknown,unreviewed,
 0x005E85F0,unknown,unreviewed,
 0x005F6D90,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
