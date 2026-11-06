@@ -1,0 +1,2088 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen with explicit independently reviewed relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 74,
+      "matched_bytes": 74,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 39,
+          "target": 7707664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C717; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 48,
+          "target": 7902900,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene2@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C720; original three-entry Scene2 table: render76C980/Step76C790/keyboard76DA10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4426c0e6af818e29b4270c2fa0ea8f44f58c32bebc3af309ef97215ca2245998",
+      "target_extent_sha256": "4426c0e6af818e29b4270c2fa0ea8f44f58c32bebc3af309ef97215ca2245998",
+      "unit": "scene-loading-ctor",
+      "symbol": "??0Scene2@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
+      "target_address": "0x0076C6F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b549022900f78f147f051503f11a23aa146553bb8bbff86ed50f04af667c7b49",
+      "source_sha256": "739dd6459bafd748fd92515ac8e100208e0acd26e62c74774ff1cda0d6afebad",
+      "dependencies": {
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "116c274934c5f72d4f255a29285329d1db2c946eefce54e6ed9bd5931b8ae37c",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 69,
+      "matched_bytes": 69,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7902900,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Scene2@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C74C; original three-entry Scene2 table: render76C980/Step76C790/keyboard76DA10",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e82e4fbb0e459b0ef1ad336bbcf8738e858842bd8d59426999c6789ae5ecfb9d",
+      "target_extent_sha256": "e82e4fbb0e459b0ef1ad336bbcf8738e858842bd8d59426999c6789ae5ecfb9d",
+      "unit": "scene-loading-dtor",
+      "symbol": "??1Scene2@@QAE@XZ",
+      "target_address": "0x0076C740",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b549022900f78f147f051503f11a23aa146553bb8bbff86ed50f04af667c7b49",
+      "source_sha256": "739dd6459bafd748fd92515ac8e100208e0acd26e62c74774ff1cda0d6afebad",
+      "dependencies": {
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1b60d998e19172547e8a54b378ba3c584b70064091de27326d5c5f1bbba9c290",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 488,
+      "matched_bytes": 488,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C797; previously reviewed original GS cookie global",
+          "addend": 0
+        },
+        {
+          "offset": 18,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C7A2; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 73,
+          "target": 7902708,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?loadingPrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C7D9; independently checked NUL-terminated target payload 73797374656d5c6e6c5c6e6c00",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C7E2; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 96,
+          "target": 7902724,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?loadingZeroHundreds@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C7F0; independently checked NUL-terminated target payload 3000",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C7F9; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 119,
+          "target": 7902728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?loadingZeroTens@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C807; independently checked NUL-terminated target payload 3000",
+          "addend": 0
+        },
+        {
+          "offset": 128,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C810; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C822; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 162,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C832; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 179,
+          "target": 7902732,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?loadingDat@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C843; independently checked NUL-terminated target payload 2e64617400",
+          "addend": 0
+        },
+        {
+          "offset": 188,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C84C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 219,
+          "target": 4222384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C86B; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 250,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C88A; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 257,
+          "target": 7902740,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?loadingBmp@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C891; independently checked NUL-terminated target payload 2e626d7000",
+          "addend": 0
+        },
+        {
+          "offset": 266,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C89A; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 300,
+          "target": 4230400,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C8BC; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 331,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C8DB; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 358,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C8F6; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 366,
+          "target": 7785040,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PrepareBattle@Scene2@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C8FE; reviewed complete callee boundary/receiver/stack contract; open Scene2 battle preparation owner",
+          "addend": 0
+        },
+        {
+          "offset": 393,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C919; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 470,
+          "target": 4221104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadMusic@Context@@QAEXG@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C966; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 480,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C970; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "addb440512754abc626639fa0e2d9aefa89c7a19d2bfcf25ec542f988411c682",
+      "target_extent_sha256": "addb440512754abc626639fa0e2d9aefa89c7a19d2bfcf25ec542f988411c682",
+      "unit": "scene-loading-step",
+      "symbol": "?Step@Scene2@@UAEEXZ",
+      "target_address": "0x0076C790",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b549022900f78f147f051503f11a23aa146553bb8bbff86ed50f04af667c7b49",
+      "source_sha256": "739dd6459bafd748fd92515ac8e100208e0acd26e62c74774ff1cda0d6afebad",
+      "dependencies": {
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d78bfd40fdb41fd4e8d1ee9cf0a4e5744ca4e71abc475e1f23260d5fc839dcc3",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 203,
+      "matched_bytes": 203,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 28,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C99C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076C9CD; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 184,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076CA38; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 195,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076CA43; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1f0f6d572ac9bc97f146a97d613c8514e14c2c6cba2c272531002e3f94a964b8",
+      "target_extent_sha256": "1f0f6d572ac9bc97f146a97d613c8514e14c2c6cba2c272531002e3f94a964b8",
+      "unit": "scene-loading-render",
+      "symbol": "?Slot0@Scene2@@UAEXXZ",
+      "target_address": "0x0076C980",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "a699f1df700bc3a0b996622e193d025a909177db49759d4ce94c0fd21455f98f",
+      "source_sha256": "739dd6459bafd748fd92515ac8e100208e0acd26e62c74774ff1cda0d6afebad",
+      "dependencies": {
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9bb3c5f5774c23579c483fc3f262fbd4e46cccfda26c8dfc3177ad588b69d51e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "scene-loading-keyboard",
+      "symbol": "?PollKeyboard@Scene2@@UAEXXZ",
+      "target_address": "0x0076DA10",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b549022900f78f147f051503f11a23aa146553bb8bbff86ed50f04af667c7b49",
+      "source_sha256": "739dd6459bafd748fd92515ac8e100208e0acd26e62c74774ff1cda0d6afebad",
+      "dependencies": {
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d75894a2217a2c42c7cdbace3117aea9d0a39186806124ee5ae62104b9cc89e8",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2651,
+      "matched_bytes": 2651,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 35,
+          "target": 7791639,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62371",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA43; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 2551,
+          "addend": 0
+        },
+        {
+          "offset": 45,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA4D; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 4761376,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA85; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 136,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DAA8; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 192,
+          "target": 7242032,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character01@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DAE0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 227,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DB03; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 283,
+          "target": 6382512,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character02@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DB3B; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DB5E; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 374,
+          "target": 6253968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character03@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DB96; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 409,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DBB9; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 465,
+          "target": 7354832,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character04@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DBF1; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 500,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DC14; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 556,
+          "target": 6151664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character05@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DC4C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 600,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DC78; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 656,
+          "target": 4906384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DCB0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 700,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DCDC; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 756,
+          "target": 5667072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character07@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DD14; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 800,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DD40; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 856,
+          "target": 4337008,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DD78; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 900,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DDA4; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 956,
+          "target": 4482016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character09@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DDDC; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1000,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DE08; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1056,
+          "target": 4591760,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DE40; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1100,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DE6C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1156,
+          "target": 5800720,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character11@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DEA4; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1200,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DED0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1256,
+          "target": 7142320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character12@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DF08; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1300,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DF34; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1356,
+          "target": 6524304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character13@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DF6C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1400,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DF98; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1456,
+          "target": 6969792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character14@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DFD0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1500,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DFFC; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1556,
+          "target": 5530752,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E034; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1600,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E060; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1656,
+          "target": 7477664,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E098; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1700,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E0C4; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1756,
+          "target": 7595920,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E0FC; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1800,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E128; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1856,
+          "target": 5056592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character18@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E160; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1900,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E18C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 1956,
+          "target": 6773888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E1C4; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2000,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E1F0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2056,
+          "target": 6634016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E228; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2100,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E254; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2156,
+          "target": 5939104,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character21@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E28C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2200,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E2B8; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2256,
+          "target": 4591760,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E2F0; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2300,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E31C; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2356,
+          "target": 5348864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character23@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E354; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2397,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E37D; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2453,
+          "target": 5210880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E3B5; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 2551,
+          "target": 7789127,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62170",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E417; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 39,
+          "addend": 0
+        },
+        {
+          "offset": 2555,
+          "target": 7789218,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62174",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 130,
+          "addend": 0
+        },
+        {
+          "offset": 2559,
+          "target": 7789309,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62178",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 221,
+          "addend": 0
+        },
+        {
+          "offset": 2563,
+          "target": 7789400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62182",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E423; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 312,
+          "addend": 0
+        },
+        {
+          "offset": 2567,
+          "target": 7789491,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62186",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E427; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 403,
+          "addend": 0
+        },
+        {
+          "offset": 2571,
+          "target": 7789582,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62190",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 494,
+          "addend": 0
+        },
+        {
+          "offset": 2575,
+          "target": 7789682,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62194",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 594,
+          "addend": 0
+        },
+        {
+          "offset": 2579,
+          "target": 7789782,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62198",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E433; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 694,
+          "addend": 0
+        },
+        {
+          "offset": 2583,
+          "target": 7789882,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62202",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E437; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 794,
+          "addend": 0
+        },
+        {
+          "offset": 2587,
+          "target": 7789982,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62206",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 894,
+          "addend": 0
+        },
+        {
+          "offset": 2591,
+          "target": 7790082,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62210",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 994,
+          "addend": 0
+        },
+        {
+          "offset": 2595,
+          "target": 7790182,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62214",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E443; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1094,
+          "addend": 0
+        },
+        {
+          "offset": 2599,
+          "target": 7790282,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62218",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E447; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1194,
+          "addend": 0
+        },
+        {
+          "offset": 2603,
+          "target": 7790382,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62222",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1294,
+          "addend": 0
+        },
+        {
+          "offset": 2607,
+          "target": 7790482,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62226",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1394,
+          "addend": 0
+        },
+        {
+          "offset": 2611,
+          "target": 7790582,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62230",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E453; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1494,
+          "addend": 0
+        },
+        {
+          "offset": 2615,
+          "target": 7790682,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62234",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E457; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1594,
+          "addend": 0
+        },
+        {
+          "offset": 2619,
+          "target": 7790782,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62238",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1694,
+          "addend": 0
+        },
+        {
+          "offset": 2623,
+          "target": 7790882,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62242",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1794,
+          "addend": 0
+        },
+        {
+          "offset": 2627,
+          "target": 7790982,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62246",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E463; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1894,
+          "addend": 0
+        },
+        {
+          "offset": 2631,
+          "target": 7791082,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62250",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E467; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 1994,
+          "addend": 0
+        },
+        {
+          "offset": 2635,
+          "target": 7791182,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62254",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46B; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 2094,
+          "addend": 0
+        },
+        {
+          "offset": 2639,
+          "target": 7791282,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62258",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46F; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 2194,
+          "addend": 0
+        },
+        {
+          "offset": 2643,
+          "target": 7791382,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62262",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E473; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 2294,
+          "addend": 0
+        },
+        {
+          "offset": 2647,
+          "target": 7791479,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62266",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E477; complete 25-entry local table/branch destination and independent compiled offset",
+          "local_target_offset": 2391,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "907c203705688ae0bb686148af79c74623ae8354d2cc5d3fdbd45af1dd3ce9e0",
+      "target_extent_sha256": "907c203705688ae0bb686148af79c74623ae8354d2cc5d3fdbd45af1dd3ce9e0",
+      "code_size": 2551,
+      "local_data_bytes": 100,
+      "local_data": [
+        {
+          "offset": 2551,
+          "size": 100,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; complete original 25-entry table at76E417 through76E47B"
+        }
+      ],
+      "unit": "scene-loading-character",
+      "symbol": "?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z",
+      "target_address": "0x0076DA20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "8b9cc918cddeb69cd5d77cb7f24ef59a0576c940012da803ec4505719b618139",
+      "source_sha256": "2d6e2a279f90d3ff277fdaac0d93a7aab5470a04b6f4ffae6ed4fc27e05ba58f",
+      "dependencies": {
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "bdcb221066d29586184f53d4ca7f3e1b02c685212b4861e919d4ddd726a6d054",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 383,
+      "matched_bytes": 383,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 004F8325; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7898576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character24@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 004F832E; original 13-slot Mizuka table; inherited LoadResources at410B70; other bodies remain open",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7898568,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?mizukaResourceName@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 004F8333; independently checked NUL-terminated target payload 6d697a756b6100",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 004F8342; reviewed complete callee boundary/receiver/stack contract; explicit existing or new authored/CRT destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b843c8149490db1bc15598da9d61b412048fa50a507717229e9a8fbfb9357a61",
+      "target_extent_sha256": "b843c8149490db1bc15598da9d61b412048fa50a507717229e9a8fbfb9357a61",
+      "unit": "character-24-constructor",
+      "symbol": "??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x004F8300",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "8b9cc918cddeb69cd5d77cb7f24ef59a0576c940012da803ec4505719b618139",
+      "source_sha256": "2d6e2a279f90d3ff277fdaac0d93a7aab5470a04b6f4ffae6ed4fc27e05ba58f",
+      "dependencies": {
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "79feafadc2b68735a68c8fe768702d95e50a8bc344f159ad0148af3a9a748444",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "boundary_review": [
+    {
+      "tag": "ctor",
+      "address": "0x76c6f0",
+      "size": 74,
+      "code_size": 74,
+      "instructions": 28,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x76c716",
+          "0x759c10",
+          "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 6,
+      "exit": "ret    0x1c"
+    },
+    {
+      "tag": "dtor",
+      "address": "0x76c740",
+      "size": 69,
+      "code_size": 69,
+      "instructions": 21,
+      "branches": [
+        [
+          "0x76c75a",
+          "0x76c781"
+        ]
+      ],
+      "direct_calls": [],
+      "indirect_calls": [
+        [
+          "0x76c771",
+          "call   DWORD PTR [eax+0x8]"
+        ]
+      ],
+      "local_tables": [],
+      "following_cc_bytes": 11,
+      "exit": "ret"
+    },
+    {
+      "tag": "step",
+      "address": "0x76c790",
+      "size": 488,
+      "code_size": 488,
+      "instructions": 159,
+      "branches": [
+        [
+          "0x76c7b3",
+          "0x76c7bc"
+        ],
+        [
+          "0x76c7ed",
+          "0x76c800"
+        ],
+        [
+          "0x76c804",
+          "0x76c817"
+        ],
+        [
+          "0x76c840",
+          "0x76c890"
+        ],
+        [
+          "0x76c88e",
+          "0x76c8df"
+        ],
+        [
+          "0x76c927",
+          "0x76c94e"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x76c7a1",
+          "0x777d61",
+          "_rand"
+        ],
+        [
+          "0x76c7e1",
+          "0x778080",
+          "_strcpy"
+        ],
+        [
+          "0x76c7f8",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x76c80f",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x76c821",
+          "0x777f55",
+          "__itoa"
+        ],
+        [
+          "0x76c831",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x76c84b",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x76c86a",
+          "0x406db0",
+          "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+        ],
+        [
+          "0x76c889",
+          "0x40b760",
+          "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+        ],
+        [
+          "0x76c899",
+          "0x778090",
+          "_strcat"
+        ],
+        [
+          "0x76c8bb",
+          "0x408d00",
+          "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+        ],
+        [
+          "0x76c8da",
+          "0x40b640",
+          "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+        ],
+        [
+          "0x76c8f5",
+          "0x759e20",
+          "?FadeIn@Scene@@QAEXPAEE@Z"
+        ],
+        [
+          "0x76c8fd",
+          "0x76ca50",
+          "?PrepareBattle@Scene2@@QAEXXZ"
+        ],
+        [
+          "0x76c918",
+          "0x759c90",
+          "?FadeOut@Scene@@QAEXPAEEHH@Z"
+        ],
+        [
+          "0x76c965",
+          "0x4068b0",
+          "?LoadMusic@Context@@QAEXG@Z"
+        ],
+        [
+          "0x76c96f",
+          "0x7781dc",
+          "@__security_check_cookie@4"
+        ]
+      ],
+      "indirect_calls": [
+        [
+          "0x76c8e7",
+          "call   DWORD PTR [edx]"
+        ],
+        [
+          "0x76c93e",
+          "call   DWORD PTR [ecx+0x8]"
+        ]
+      ],
+      "local_tables": [],
+      "following_cc_bytes": 8,
+      "exit": "ret"
+    },
+    {
+      "tag": "render",
+      "address": "0x76c980",
+      "size": 203,
+      "code_size": 203,
+      "instructions": 70,
+      "branches": [],
+      "direct_calls": [
+        [
+          "0x76c99b",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x76c9cc",
+          "0x40c590",
+          "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+        ],
+        [
+          "0x76ca37",
+          "0x409a90",
+          "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+        ],
+        [
+          "0x76ca42",
+          "0x40b5e0",
+          "?Present@Video@@QAEHXZ"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 5,
+      "exit": "ret"
+    },
+    {
+      "tag": "keyboard",
+      "address": "0x76da10",
+      "size": 11,
+      "code_size": 11,
+      "instructions": 7,
+      "branches": [],
+      "direct_calls": [],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 5,
+      "exit": "ret"
+    },
+    {
+      "tag": "character",
+      "address": "0x76da20",
+      "size": 2651,
+      "code_size": 2551,
+      "instructions": 803,
+      "branches": [
+        [
+          "0x76da37",
+          "0x76e3d6"
+        ],
+        [
+          "0x76da5b",
+          "0x76da8e"
+        ],
+        [
+          "0x76da8c",
+          "0x76da95"
+        ],
+        [
+          "0x76da9d",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dab6",
+          "0x76dae9"
+        ],
+        [
+          "0x76dae7",
+          "0x76daf0"
+        ],
+        [
+          "0x76daf8",
+          "0x76e3d6"
+        ],
+        [
+          "0x76db11",
+          "0x76db44"
+        ],
+        [
+          "0x76db42",
+          "0x76db4b"
+        ],
+        [
+          "0x76db53",
+          "0x76e3d6"
+        ],
+        [
+          "0x76db6c",
+          "0x76db9f"
+        ],
+        [
+          "0x76db9d",
+          "0x76dba6"
+        ],
+        [
+          "0x76dbae",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dbc7",
+          "0x76dbfa"
+        ],
+        [
+          "0x76dbf8",
+          "0x76dc01"
+        ],
+        [
+          "0x76dc09",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dc22",
+          "0x76dc58"
+        ],
+        [
+          "0x76dc56",
+          "0x76dc62"
+        ],
+        [
+          "0x76dc6d",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dc86",
+          "0x76dcbc"
+        ],
+        [
+          "0x76dcba",
+          "0x76dcc6"
+        ],
+        [
+          "0x76dcd1",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dcea",
+          "0x76dd20"
+        ],
+        [
+          "0x76dd1e",
+          "0x76dd2a"
+        ],
+        [
+          "0x76dd35",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dd4e",
+          "0x76dd84"
+        ],
+        [
+          "0x76dd82",
+          "0x76dd8e"
+        ],
+        [
+          "0x76dd99",
+          "0x76e3d6"
+        ],
+        [
+          "0x76ddb2",
+          "0x76dde8"
+        ],
+        [
+          "0x76dde6",
+          "0x76ddf2"
+        ],
+        [
+          "0x76ddfd",
+          "0x76e3d6"
+        ],
+        [
+          "0x76de16",
+          "0x76de4c"
+        ],
+        [
+          "0x76de4a",
+          "0x76de56"
+        ],
+        [
+          "0x76de61",
+          "0x76e3d6"
+        ],
+        [
+          "0x76de7a",
+          "0x76deb0"
+        ],
+        [
+          "0x76deae",
+          "0x76deba"
+        ],
+        [
+          "0x76dec5",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dede",
+          "0x76df14"
+        ],
+        [
+          "0x76df12",
+          "0x76df1e"
+        ],
+        [
+          "0x76df29",
+          "0x76e3d6"
+        ],
+        [
+          "0x76df42",
+          "0x76df78"
+        ],
+        [
+          "0x76df76",
+          "0x76df82"
+        ],
+        [
+          "0x76df8d",
+          "0x76e3d6"
+        ],
+        [
+          "0x76dfa6",
+          "0x76dfdc"
+        ],
+        [
+          "0x76dfda",
+          "0x76dfe6"
+        ],
+        [
+          "0x76dff1",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e00a",
+          "0x76e040"
+        ],
+        [
+          "0x76e03e",
+          "0x76e04a"
+        ],
+        [
+          "0x76e055",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e06e",
+          "0x76e0a4"
+        ],
+        [
+          "0x76e0a2",
+          "0x76e0ae"
+        ],
+        [
+          "0x76e0b9",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e0d2",
+          "0x76e108"
+        ],
+        [
+          "0x76e106",
+          "0x76e112"
+        ],
+        [
+          "0x76e11d",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e136",
+          "0x76e16c"
+        ],
+        [
+          "0x76e16a",
+          "0x76e176"
+        ],
+        [
+          "0x76e181",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e19a",
+          "0x76e1d0"
+        ],
+        [
+          "0x76e1ce",
+          "0x76e1da"
+        ],
+        [
+          "0x76e1e5",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e1fe",
+          "0x76e234"
+        ],
+        [
+          "0x76e232",
+          "0x76e23e"
+        ],
+        [
+          "0x76e249",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e262",
+          "0x76e298"
+        ],
+        [
+          "0x76e296",
+          "0x76e2a2"
+        ],
+        [
+          "0x76e2ad",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e2c6",
+          "0x76e2fc"
+        ],
+        [
+          "0x76e2fa",
+          "0x76e306"
+        ],
+        [
+          "0x76e311",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e32a",
+          "0x76e360"
+        ],
+        [
+          "0x76e35e",
+          "0x76e36a"
+        ],
+        [
+          "0x76e375",
+          "0x76e3d6"
+        ],
+        [
+          "0x76e38b",
+          "0x76e3c1"
+        ],
+        [
+          "0x76e3bf",
+          "0x76e3cb"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x76da4c",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76da84",
+          "0x48a720",
+          "??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76daa7",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dadf",
+          "0x6e8130",
+          "??0Character01@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76db02",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76db3a",
+          "0x6163b0",
+          "??0Character02@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76db5d",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76db95",
+          "0x5f6d90",
+          "??0Character03@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dbb8",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dbf0",
+          "0x7039d0",
+          "??0Character04@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dc13",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dc4b",
+          "0x5dddf0",
+          "??0Character05@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dc77",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dcaf",
+          "0x4add90",
+          "??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dcdb",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dd13",
+          "0x567900",
+          "??0Character07@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dd3f",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dd77",
+          "0x422d70",
+          "??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dda3",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dddb",
+          "0x4463e0",
+          "??0Character09@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76de07",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76de3f",
+          "0x461090",
+          "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76de6b",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dea3",
+          "0x588310",
+          "??0Character11@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76decf",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76df07",
+          "0x6cfbb0",
+          "??0Character12@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76df33",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76df6b",
+          "0x638d90",
+          "??0Character13@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76df97",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76dfcf",
+          "0x6a59c0",
+          "??0Character14@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76dffb",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e033",
+          "0x546480",
+          "??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e05f",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e097",
+          "0x7219a0",
+          "??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e0c3",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e0fb",
+          "0x73e790",
+          "??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e127",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e15f",
+          "0x4d2850",
+          "??0Character18@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e18b",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e1c3",
+          "0x675c80",
+          "??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e1ef",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e227",
+          "0x653a20",
+          "??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e253",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e28b",
+          "0x5a9fa0",
+          "??0Character21@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e2b7",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e2ef",
+          "0x461090",
+          "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e31b",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e353",
+          "0x519e00",
+          "??0Character23@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x76e37c",
+          "0x777d46",
+          "??2@YAPAXI@Z"
+        ],
+        [
+          "0x76e3b4",
+          "0x4f8300",
+          "??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [
+        {
+          "address": "0x76e417",
+          "size": 100,
+          "destinations": [
+            "0x76da47",
+            "0x76daa2",
+            "0x76dafd",
+            "0x76db58",
+            "0x76dbb3",
+            "0x76dc0e",
+            "0x76dc72",
+            "0x76dcd6",
+            "0x76dd3a",
+            "0x76dd9e",
+            "0x76de02",
+            "0x76de66",
+            "0x76deca",
+            "0x76df2e",
+            "0x76df92",
+            "0x76dff6",
+            "0x76e05a",
+            "0x76e0be",
+            "0x76e122",
+            "0x76e186",
+            "0x76e1ea",
+            "0x76e24e",
+            "0x76e2b2",
+            "0x76e316",
+            "0x76e377"
+          ]
+        }
+      ],
+      "following_cc_bytes": 5,
+      "exit": "ret    0x10"
+    },
+    {
+      "tag": "mizuka-ctor",
+      "address": "0x4f8300",
+      "size": 383,
+      "code_size": 383,
+      "instructions": 85,
+      "branches": [
+        [
+          "0x4f8430",
+          "0x4f843b"
+        ],
+        [
+          "0x4f843f",
+          "0x4f8476"
+        ],
+        [
+          "0x4f8474",
+          "0x4f8432"
+        ]
+      ],
+      "direct_calls": [
+        [
+          "0x4f8324",
+          "0x40eae0",
+          "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+        ],
+        [
+          "0x4f8341",
+          "0x778080",
+          "_strcpy"
+        ]
+      ],
+      "indirect_calls": [],
+      "local_tables": [],
+      "following_cc_bytes": 1,
+      "exit": "ret    0x18"
+    }
+  ],
+  "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh"
+}

@@ -890,16 +890,16 @@
       "symbol": "?Slot04@Character08@@UAEXXZ",
       "target_address": "0x00423140",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "e6b06d280d46e1a4e16656091c579b1073c7530aeb25cdddaff2c126172bb482",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "210b1a61ff79ae63080221a7d8e10647a04d011cc065db976c1a6eb253cffad8",
       "source_sha256": "10f4c1b29647d181bb27db1d8555c88f4406f0b698bd1b4ac1e023596aa99f20",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "2c779d06082392e1aaccc4aba4cba547365f227c454147a74294dbd41ff1d077",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -928,16 +928,16 @@
       "symbol": "?InitializeState@Character08@@UAEXXZ",
       "target_address": "0x00422F40",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f0cd964e0db6c8356065890caab7fde4a1bc66383425aeaf5ac493fc4c612b83",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -966,16 +966,16 @@
       "symbol": "?ResetPose@Character08@@UAEXXZ",
       "target_address": "0x00423090",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "e05b80cdeed85b9eb26b12bab773b793d6ab10b57f7edf0732d16e54a4f186b5",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1004,16 +1004,16 @@
       "symbol": "?RemoveLocalEffect@Character08@@UAEXF@Z",
       "target_address": "0x004230D0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "6746e1d999dc141587f3b2f1b933d1ac9988ae827f2f1f7f4a23b41dc6fb480e",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1042,16 +1042,16 @@
       "symbol": "?Slot03@Character08@@UAEXXZ",
       "target_address": "0x00423120",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "7a6be4794c46840fe6b306cd1f873a375935c92aca31b0184d9b3238c37eb7be",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1143,16 +1143,16 @@
       "symbol": "?Slot01@Character08@@UAEXXZ",
       "target_address": "0x00425D70",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "202d6f9055fbdb11058f013bce1541aaaa26d782ad5ee0cf4ce959c4c823b126",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1181,16 +1181,16 @@
       "symbol": "?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z",
       "target_address": "0x004261C0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "409df4deedea8927ca417501775f60291a161830f41cd669c0c8f570c539fed5",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "b5f4baa7d6cfaa346d59ad80f20ed952c2c41426c5bc781b0d893a9ff95cbd65",
       "source_sha256": "c38245b586c1ea27adade024e2708df87df27302f4c8807889fa15eb40cd67ee",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4036b7299e027c53a64e7d0e46131268ea3361291505bfc66bbc8f84f298a4a9",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -1226,7 +1226,7 @@
           "target": 7896560,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$SG62112",
+          "symbol": "$SG62122",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
           "addend": 0
         },
@@ -1246,18 +1246,18 @@
       "symbol": "??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
       "target_address": "0x00422D70",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "14aa0de2c3de45f326a291423be8be7cb6adc7ddf919f783c75055ea60c6cbbe",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "6b7a94f4944f0cd9a9cd188f622881fb0a57844c5708a8d981b0addf5572ab68",
       "source_sha256": "1a9ffcb46076b6b7e39c7a112f70b419a44dbc8f413a07c645d0e3e82509f484",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "2a48201411ae6d59380a756423781958f9dd9b4131b4688bb0830348544e4c52",
+      "unit_sha256": "b4a28d021de5f946edc3b97e75358ca08f05b75099a77beade3862ac40cfad8d",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -1274,16 +1274,16 @@
       "symbol": "?Slot02@Character08@@UAEXXZ",
       "target_address": "0x004261F0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "10eff564e232ed3606f65948fa6afeb42714300b2ebcc3bd9028434ca8b24077",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "20447112e8527cf4ad0497c34c1970fe29d31d4315ccfe0b5bdd941c3f1b86ac",
       "source_sha256": "17774b2b2a46acf365a690faa3001e41b6ff4ece59164f79e1bdef940ad74a97",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "cac3121734d311d2b799e463acb515e1537c38b40cdc28f36fb1f0041b878376",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -3976,16 +3976,16 @@
       "symbol": "?Slot05@Character08@@UAEXXZ",
       "target_address": "0x004276B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "d6f80b2deda22cc9dc62344072007a4a809a1f2e7c36ca914f5bca1a24e39d49",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "03b11b28e47915d72ba46e6914003e09c1c6b23c3ba2d94e5041bd802afc57e0",
       "source_sha256": "429e0e487effcac033e184baae38ff790e5dbe8acbf6460ce6955a5a675435be",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "900d891c594bc7867bb95fbf73c8b9ea8a1c79e8aea991ae0783391cc0feff1b",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -4021,7 +4021,7 @@
           "target": 4407199,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63458",
+          "symbol": "$L63468",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36367 independently checked",
           "local_target_offset": 36367,
           "addend": 0
@@ -4031,7 +4031,7 @@
           "target": 4406967,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63572",
+          "symbol": "$L63582",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; original dispatch operand and complete associated selector/address table; compiler-local offset 36135 independently checked",
           "local_target_offset": 36135,
           "addend": 0
@@ -7317,7 +7317,7 @@
           "target": 4371186,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62715",
+          "symbol": "$L62725",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
           "local_target_offset": 354,
           "addend": 0
@@ -7327,7 +7327,7 @@
           "target": 4371400,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62719",
+          "symbol": "$L62729",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 1 for effect types 401; compiler-local offset 568 and canonical destination independently checked",
           "local_target_offset": 568,
           "addend": 0
@@ -7337,7 +7337,7 @@
           "target": 4371660,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62724",
+          "symbol": "$L62734",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 2 for effect types 402; compiler-local offset 828 and canonical destination independently checked",
           "local_target_offset": 828,
           "addend": 0
@@ -7347,7 +7347,7 @@
           "target": 4372204,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62731",
+          "symbol": "$L62741",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 3 for effect types 404; compiler-local offset 1372 and canonical destination independently checked",
           "local_target_offset": 1372,
           "addend": 0
@@ -7357,7 +7357,7 @@
           "target": 4372840,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62739",
+          "symbol": "$L62749",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 4 for effect types 405; compiler-local offset 2008 and canonical destination independently checked",
           "local_target_offset": 2008,
           "addend": 0
@@ -7367,7 +7367,7 @@
           "target": 4374080,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62760",
+          "symbol": "$L62770",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 5 for effect types 407; compiler-local offset 3248 and canonical destination independently checked",
           "local_target_offset": 3248,
           "addend": 0
@@ -7377,7 +7377,7 @@
           "target": 4374471,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62768",
+          "symbol": "$L62778",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 6 for effect types 408; compiler-local offset 3639 and canonical destination independently checked",
           "local_target_offset": 3639,
           "addend": 0
@@ -7387,7 +7387,7 @@
           "target": 4374847,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62776",
+          "symbol": "$L62786",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 7 for effect types 409; compiler-local offset 4015 and canonical destination independently checked",
           "local_target_offset": 4015,
           "addend": 0
@@ -7397,7 +7397,7 @@
           "target": 4375107,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62781",
+          "symbol": "$L62791",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 8 for effect types 410; compiler-local offset 4275 and canonical destination independently checked",
           "local_target_offset": 4275,
           "addend": 0
@@ -7407,7 +7407,7 @@
           "target": 4375498,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62789",
+          "symbol": "$L62799",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 9 for effect types 411; compiler-local offset 4666 and canonical destination independently checked",
           "local_target_offset": 4666,
           "addend": 0
@@ -7417,7 +7417,7 @@
           "target": 4376196,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62800",
+          "symbol": "$L62810",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 10 for effect types 412; compiler-local offset 5364 and canonical destination independently checked",
           "local_target_offset": 5364,
           "addend": 0
@@ -7427,7 +7427,7 @@
           "target": 4377114,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62817",
+          "symbol": "$L62827",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 11 for effect types 413; compiler-local offset 6282 and canonical destination independently checked",
           "local_target_offset": 6282,
           "addend": 0
@@ -7437,7 +7437,7 @@
           "target": 4378038,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62834",
+          "symbol": "$L62844",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 12 for effect types 414; compiler-local offset 7206 and canonical destination independently checked",
           "local_target_offset": 7206,
           "addend": 0
@@ -7447,7 +7447,7 @@
           "target": 4378962,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62851",
+          "symbol": "$L62861",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 13 for effect types 415; compiler-local offset 8130 and canonical destination independently checked",
           "local_target_offset": 8130,
           "addend": 0
@@ -7457,7 +7457,7 @@
           "target": 4379886,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62868",
+          "symbol": "$L62878",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 14 for effect types 416; compiler-local offset 9054 and canonical destination independently checked",
           "local_target_offset": 9054,
           "addend": 0
@@ -7467,7 +7467,7 @@
           "target": 4380810,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62885",
+          "symbol": "$L62895",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 15 for effect types 417; compiler-local offset 9978 and canonical destination independently checked",
           "local_target_offset": 9978,
           "addend": 0
@@ -7477,7 +7477,7 @@
           "target": 4381206,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62894",
+          "symbol": "$L62904",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 16 for effect types 418; compiler-local offset 10374 and canonical destination independently checked",
           "local_target_offset": 10374,
           "addend": 0
@@ -7487,7 +7487,7 @@
           "target": 4381768,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62902",
+          "symbol": "$L62912",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 17 for effect types 419; compiler-local offset 10936 and canonical destination independently checked",
           "local_target_offset": 10936,
           "addend": 0
@@ -7497,7 +7497,7 @@
           "target": 4382269,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62909",
+          "symbol": "$L62919",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 18 for effect types 420; compiler-local offset 11437 and canonical destination independently checked",
           "local_target_offset": 11437,
           "addend": 0
@@ -7507,7 +7507,7 @@
           "target": 4382616,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62914",
+          "symbol": "$L62924",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 19 for effect types 421; compiler-local offset 11784 and canonical destination independently checked",
           "local_target_offset": 11784,
           "addend": 0
@@ -7517,7 +7517,7 @@
           "target": 4382963,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62919",
+          "symbol": "$L62929",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 20 for effect types 422; compiler-local offset 12131 and canonical destination independently checked",
           "local_target_offset": 12131,
           "addend": 0
@@ -7527,7 +7527,7 @@
           "target": 4383310,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62924",
+          "symbol": "$L62934",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 21 for effect types 423; compiler-local offset 12478 and canonical destination independently checked",
           "local_target_offset": 12478,
           "addend": 0
@@ -7537,7 +7537,7 @@
           "target": 4383812,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62931",
+          "symbol": "$L62941",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 22 for effect types 424; compiler-local offset 12980 and canonical destination independently checked",
           "local_target_offset": 12980,
           "addend": 0
@@ -7547,7 +7547,7 @@
           "target": 4384314,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62938",
+          "symbol": "$L62948",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 23 for effect types 425; compiler-local offset 13482 and canonical destination independently checked",
           "local_target_offset": 13482,
           "addend": 0
@@ -7557,7 +7557,7 @@
           "target": 4384816,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62945",
+          "symbol": "$L62955",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 24 for effect types 427; compiler-local offset 13984 and canonical destination independently checked",
           "local_target_offset": 13984,
           "addend": 0
@@ -7567,7 +7567,7 @@
           "target": 4385076,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62950",
+          "symbol": "$L62960",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 25 for effect types 428; compiler-local offset 14244 and canonical destination independently checked",
           "local_target_offset": 14244,
           "addend": 0
@@ -7577,7 +7577,7 @@
           "target": 4385670,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62964",
+          "symbol": "$L62974",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 26 for effect types 429; compiler-local offset 14838 and canonical destination independently checked",
           "local_target_offset": 14838,
           "addend": 0
@@ -7587,7 +7587,7 @@
           "target": 4386072,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62971",
+          "symbol": "$L62981",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 27 for effect types 430; compiler-local offset 15240 and canonical destination independently checked",
           "local_target_offset": 15240,
           "addend": 0
@@ -7597,7 +7597,7 @@
           "target": 4386496,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62979",
+          "symbol": "$L62989",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 28 for effect types 431; compiler-local offset 15664 and canonical destination independently checked",
           "local_target_offset": 15664,
           "addend": 0
@@ -7607,7 +7607,7 @@
           "target": 4386919,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62987",
+          "symbol": "$L62997",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 29 for effect types 432; compiler-local offset 16087 and canonical destination independently checked",
           "local_target_offset": 16087,
           "addend": 0
@@ -7617,7 +7617,7 @@
           "target": 4387133,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62991",
+          "symbol": "$L63001",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 30 for effect types 433; compiler-local offset 16301 and canonical destination independently checked",
           "local_target_offset": 16301,
           "addend": 0
@@ -7627,7 +7627,7 @@
           "target": 4388903,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63023",
+          "symbol": "$L63033",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 31 for effect types 434; compiler-local offset 18071 and canonical destination independently checked",
           "local_target_offset": 18071,
           "addend": 0
@@ -7637,7 +7637,7 @@
           "target": 4390795,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63057",
+          "symbol": "$L63067",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 32 for effect types 435; compiler-local offset 19963 and canonical destination independently checked",
           "local_target_offset": 19963,
           "addend": 0
@@ -7647,7 +7647,7 @@
           "target": 4391293,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63069",
+          "symbol": "$L63079",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 33 for effect types 436; compiler-local offset 20461 and canonical destination independently checked",
           "local_target_offset": 20461,
           "addend": 0
@@ -7657,7 +7657,7 @@
           "target": 4391507,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63073",
+          "symbol": "$L63083",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 34 for effect types 437; compiler-local offset 20675 and canonical destination independently checked",
           "local_target_offset": 20675,
           "addend": 0
@@ -7667,7 +7667,7 @@
           "target": 4391959,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63082",
+          "symbol": "$L63092",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 35 for effect types 438; compiler-local offset 21127 and canonical destination independently checked",
           "local_target_offset": 21127,
           "addend": 0
@@ -7677,7 +7677,7 @@
           "target": 4392504,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63092",
+          "symbol": "$L63102",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 36 for effect types 439; compiler-local offset 21672 and canonical destination independently checked",
           "local_target_offset": 21672,
           "addend": 0
@@ -7687,7 +7687,7 @@
           "target": 4393138,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63105",
+          "symbol": "$L63115",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 37 for effect types 440; compiler-local offset 22306 and canonical destination independently checked",
           "local_target_offset": 22306,
           "addend": 0
@@ -7697,7 +7697,7 @@
           "target": 4393540,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63110",
+          "symbol": "$L63120",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 38 for effect types 441; compiler-local offset 22708 and canonical destination independently checked",
           "local_target_offset": 22708,
           "addend": 0
@@ -7707,7 +7707,7 @@
           "target": 4394539,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63124",
+          "symbol": "$L63134",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 39 for effect types 442; compiler-local offset 23707 and canonical destination independently checked",
           "local_target_offset": 23707,
           "addend": 0
@@ -7717,7 +7717,7 @@
           "target": 4394247,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63119",
+          "symbol": "$L63129",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 40 for effect types 443; compiler-local offset 23415 and canonical destination independently checked",
           "local_target_offset": 23415,
           "addend": 0
@@ -7727,7 +7727,7 @@
           "target": 4395940,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63152",
+          "symbol": "$L63162",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 41 for effect types 444; compiler-local offset 25108 and canonical destination independently checked",
           "local_target_offset": 25108,
           "addend": 0
@@ -7737,7 +7737,7 @@
           "target": 4396534,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63166",
+          "symbol": "$L63176",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 42 for effect types 445; compiler-local offset 25702 and canonical destination independently checked",
           "local_target_offset": 25702,
           "addend": 0
@@ -7747,7 +7747,7 @@
           "target": 4397680,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63185",
+          "symbol": "$L63195",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 43 for effect types 446; compiler-local offset 26848 and canonical destination independently checked",
           "local_target_offset": 26848,
           "addend": 0
@@ -7757,7 +7757,7 @@
           "target": 4398206,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63193",
+          "symbol": "$L63203",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 44 for effect types 447; compiler-local offset 27374 and canonical destination independently checked",
           "local_target_offset": 27374,
           "addend": 0
@@ -7767,7 +7767,7 @@
           "target": 4398732,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63201",
+          "symbol": "$L63211",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 45 for effect types 448; compiler-local offset 27900 and canonical destination independently checked",
           "local_target_offset": 27900,
           "addend": 0
@@ -7777,7 +7777,7 @@
           "target": 4399258,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63209",
+          "symbol": "$L63219",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 46 for effect types 449; compiler-local offset 28426 and canonical destination independently checked",
           "local_target_offset": 28426,
           "addend": 0
@@ -7787,7 +7787,7 @@
           "target": 4399784,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63217",
+          "symbol": "$L63227",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 47 for effect types 450; compiler-local offset 28952 and canonical destination independently checked",
           "local_target_offset": 28952,
           "addend": 0
@@ -7797,7 +7797,7 @@
           "target": 4400191,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63225",
+          "symbol": "$L63235",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 48 for effect types 451; compiler-local offset 29359 and canonical destination independently checked",
           "local_target_offset": 29359,
           "addend": 0
@@ -7807,7 +7807,7 @@
           "target": 4401284,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63242",
+          "symbol": "$L63252",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 49 for effect types 452; compiler-local offset 30452 and canonical destination independently checked",
           "local_target_offset": 30452,
           "addend": 0
@@ -7817,7 +7817,7 @@
           "target": 4401691,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63250",
+          "symbol": "$L63260",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 50 for effect types 453; compiler-local offset 30859 and canonical destination independently checked",
           "local_target_offset": 30859,
           "addend": 0
@@ -7827,7 +7827,7 @@
           "target": 4402100,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63258",
+          "symbol": "$L63268",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 51 for effect types 454; compiler-local offset 31268 and canonical destination independently checked",
           "local_target_offset": 31268,
           "addend": 0
@@ -7837,7 +7837,7 @@
           "target": 4403136,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63271",
+          "symbol": "$L63281",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 52 for effect types 495; compiler-local offset 32304 and canonical destination independently checked",
           "local_target_offset": 32304,
           "addend": 0
@@ -7847,7 +7847,7 @@
           "target": 4403432,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63276",
+          "symbol": "$L63286",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 53 for effect types 496; compiler-local offset 32600 and canonical destination independently checked",
           "local_target_offset": 32600,
           "addend": 0
@@ -7857,7 +7857,7 @@
           "target": 4404833,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63314",
+          "symbol": "$L63324",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 54 for effect types 497; compiler-local offset 34001 and canonical destination independently checked",
           "local_target_offset": 34001,
           "addend": 0
@@ -7867,7 +7867,7 @@
           "target": 4405757,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63331",
+          "symbol": "$L63341",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 55 for effect types 498; compiler-local offset 34925 and canonical destination independently checked",
           "local_target_offset": 34925,
           "addend": 0
@@ -7877,7 +7877,7 @@
           "target": 4406675,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63348",
+          "symbol": "$L63358",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 56 for effect types 499; compiler-local offset 35843 and canonical destination independently checked",
           "local_target_offset": 35843,
           "addend": 0
@@ -7887,7 +7887,7 @@
           "target": 4406934,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62707",
+          "symbol": "$L62717",
           "evidence": "docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls; complete original switch address entry 57 for effect types 403,406,426,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 36102 and canonical destination independently checked",
           "local_target_offset": 36102,
           "addend": 0
@@ -7915,20 +7915,21 @@
       "symbol": "?Slot07@Character08@@UAEXXZ",
       "target_address": "0x0042B190",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "11ced95d2fbb75898ca3b8d9a451dd144fa33039bf114d759b1ad6851b7202a2",
-      "object_sha256": "f01ffa101d5447280544d391494f135e40bbac8fb038f9fd01e8edbae59b8e12",
+      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
+      "object_sha256": "19dc140b8b0cd2ff312b5633610e06f77e2064bd90aa71a8769fdc3b11a28dee",
       "source_sha256": "48f6c716077dd167b3a580d91f2c8c7e9f0c406afc073590d457ecdb51b37fed",
       "dependencies": {
-        "src/Engine.h": "0e475b9589cfe93dd50629d6c1b805e51fb42622777370e9af3507d1e36e0ab7",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "73bb70d0458a63a0b64a99ff769a1bf25e44e73500f872d8b64dbf57b72406e4",
+      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "cc885df21d9b15fd037bab443329b59bb613c75e792e964afa85288da94e8326",
+      "unit_sha256": "0bf634b945e9c94b3ccb08277707a830dcdc0e14e52121f151c711e2af605607",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
-  ]
+  ],
+  "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh"
 }

@@ -258,3 +258,10 @@ address,end,size,status,evidence
 0x00765660,0x00765F96,2358,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x007661A0,0x0076647E,734,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x0040C1C0,0x0040C582,962,reviewed,docs/KNOWLEDGE_BASE.md#video-screenshot-writer
+0x0076C6F0,0x0076C73A,74,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x0076C740,0x0076C785,69,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x0076C790,0x0076C978,488,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x0076C980,0x0076CA4B,203,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x0076DA10,0x0076DA1B,11,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x0076DA20,0x0076E47B,2651,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation
+0x004F8300,0x004F847F,383,reviewed,docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation

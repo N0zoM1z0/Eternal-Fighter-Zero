@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 221 |
-| Authored exact instruction bytes | 222,640 |
-| Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 259 / 259 |
+| Authored complete exact functions | 228 |
+| Authored exact instruction bytes | 226,419 |
+| Associated exact local-table bytes | 767 |
+| Reviewed boundaries / origins | 266 / 266 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,39 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest resumed checkpoint
+## Latest loading checkpoint
+
+Seven new complete authored functions add 3,779 instruction bytes and100 local
+address-table bytes: Scene2 constructor76C6F0/74, destructor76C740/69,
+Step76C790/488, renderer76C980/203, keyboard76DA10/11,
+LoadCharacter76DA20/2551+100, and Mizuka/Character24 constructor4F8300/383.
+Sources: src/SceneLoading.cpp and src/SceneLoadingCharacter.cpp. Scene2 now
+exposes its genuine +434 loading surface while keeping allocation size438.
+Character24's partial view remains local to the creation source; CharacterViews.h
+is unchanged. Scene1 ID22 and Scene2 ID22 both create Character10; the loading
+dispatch also handles the additional Mizuka ID24, allocation3460.
+
+Public proof: docs/evidence/scene-loading-exact.json; durable findings:
+[Loading scene and Mizuka creation](KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation).
+Private evidence and parked substantial owner: .analysis/probes/scene-loading/README.md.
+Final seven new and204 existing Engine.h consumers passed all211 complete strict
+comparisons from57 selected serial cold source/profile/dependency artifacts.
+All161 compiler-local destination/offset bindings and four original string
+payloads were independently checked before any symbol-name refresh. The replay
+resumed the existing cold artifacts after its initial inventory guard stopped on
+three additional replay literals; no source/compiler failure or native restart.
+Focused tracking, ledger/progress CI and diff whitespace checks passed.
+
+PrepareBattle76CA50 remains OPEN. Complete target4029 bytes includes3893 code
+and136 local address/selector bytes. parked-best preserves the complete4031-byte
+draft and its full source/header/object context; this is not a two-byte-away
+exact claim. First non-table operand mismatch is76D743 (background constructor
+argument GPR choice); a later extra ECX receiver move adds2 bytes. Pointer
+views/casts, destructor declarations and case scopes were byte-neutral and are
+parked. Do not overwrite src with those private headers. Preserve full disabled
+BMP branches and the independently confirmed stage16 scale0.125 and divisor1.5f.
+
+## Previous screenshot checkpoint
 
 `Video::SaveScreenshot` at 0x40C1C0 /962 is now complete exact in
 `src/VideoScreenshot.cpp`, profile vc71-od-static-gs. One final selected cold
@@ -107,7 +139,8 @@ current baseline. They are retained derivation records, not idempotent tools.
 
 ## Parked work and possible follow-ups
 
-Choose substantial owners and useful small functions as reconstruction continues. Review complete boundaries and compile a complete source
+Choose substantial owners and useful small functions as reconstruction continues.
+Review complete boundaries and compile a complete source
 before speculative flag/name sweeps. No future owner has acceptance merely
 because its callers or declarations match.
 
@@ -128,9 +161,9 @@ because its callers or declarations match.
   have reviewed boundaries/origins but no implementation credit. Constructor,
   allocation and 23-table evidence: .analysis/probes/character-create/.
   Other substantial character behavior remains available for recovery.
-- Scene2 is the random system\\nl loading interlude returning scene ID3; its
-  constructor/table/decompiles are retained in .analysis/probes/scene-battle/.
-  Scene6 and concrete background owners are also possible follow-ups.
+- Scene2 interlude and creation dispatcher are accepted, while PrepareBattle
+  remains open as described above. Scene6 and concrete background owners remain
+  possible follow-ups; their declarations/callers give no implementation credit.
 - DrawSurface409A90, blended40A0B0 and kernel40A440 have reviewed body-local
   ESI/EDI saves and AH/AL pixel loops consistent with handwritten assembly.
   No permitted natural-C++ exact strategy is established. Read

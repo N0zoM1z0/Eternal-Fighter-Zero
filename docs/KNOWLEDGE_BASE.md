@@ -3589,3 +3589,75 @@ attempts, disassembly, operand audit and formal log are retained under
 complete review found a second body-local EDI save/restore around a register
 pixel loop, consistent with handwritten assembly. Its decompile alone is not
 evidence for a permitted natural C++ exact implementation.
+
+## Loading scene and Mizuka creation
+
+Scene2 owns the loading interlude, with the reviewed three-entry table at
+0x7896B4: Slot0 76C980, Step 76C790, PollKeyboard 76DA10. Its allocation
+remains 0x438; the actual loading surface pointer is at +434, following four
+unresolved bytes at +430. Replacing the opaque Scene2 declaration with this
+layout preserves every existing member/owner offset.
+
+Seven complete authored contributions are recovered in `src/SceneLoading.cpp`
+and `src/SceneLoadingCharacter.cpp`:
+
+| Member | Entry | Instruction bytes | Local table bytes |
+| --- | --- | ---: | ---: |
+| Scene2 constructor | 0x76C6F0 | 74 | 0 |
+| Scene2 destructor | 0x76C740 | 69 | 0 |
+| Scene2::Step | 0x76C790 | 488 | 0 |
+| Scene2::Slot0 | 0x76C980 | 203 | 0 |
+| Scene2::PollKeyboard | 0x76DA10 | 11 | 0 |
+| Scene2::LoadCharacter | 0x76DA20 | 2,551 | 100 |
+| Character24 constructor | 0x4F8300 | 383 | 0 |
+
+Full native strict comparisons cover 3,779 instruction bytes and all 100 bytes
+of the 25-entry address table at 76E417..76E47B. Independent boundary/operand
+review covers 1,173 instructions, 85 direct internal branches, one computed
+switch jump, 74 direct calls, three genuine virtual/COM calls and all 110
+relocation fields. Complete RET boundaries and following CC alignment are
+checked independently. Public proof: `docs/evidence/scene-loading-exact.json`.
+The constructor, destructor, Step and no-op keyboard use the pinned static
+/Od /GS recipe; renderer and creation/character constructors use static /Od.
+Profiles remain per-unit codegen evidence, not original TU/build attribution.
+
+Step chooses rand()%175, retaining the disabled override to image 112. It
+refreshes both cached actor pointers and constructs system\nl\nlNNN.dat with
+two distinct zero literals, retaining the disabled BMP alternative. It renders,
+fades in, calls the still-open battle preparation owner at 0x76CA50, fades out
+with arguments 0,-500,200, releases the loading surface, loads stage + 10 music
+and returns scene ID 3. The renderer directly passes two MakeSurfaceRect return
+values to DrawSurface, then presents. Named rectangle assignment temporaries
+produce additional copies under VC7.1 /Od and are not equivalent exact source.
+
+LoadCharacter switches on its explicit signed character byte, independently of
+the selection scene's grid. All 25 branches retain allocation null paths and
+call original constructors with opponent slot, Context/Video/Input/Audio and
+player byte. ID 22 uses Character10; ID 24 creates an additional 0x3460-byte
+Mizuka object via 0x4F8300, absent from the earlier selection dispatch. It stores
+the requested ID, updates the cached actor slot, then copies the unsigned
+Context CPU-player flag. The 25 address entries, including ID 22's
+Character10 allocation, are part of the complete source contribution.
+The called constructors remain open unless separately accepted.
+
+Character24's resource name is the original `mizuka` literal at7885C8. Its
+constructor calls Secondary, installs table7885D0, sets surfaceCount 668, four
+state words at 0x3138..3144, three 64-word arrays at 0x3148/3248/3348, and five state
+words at 0x3448..3458. Pose coordinates are -13,-60 and14,0. The six-command
+configuration writes command slots 0/1/2/10 as 6/1/7/18. Its thirteen-entry table
+uses inherited LoadResources at 0x410B70; other virtual bodies remain unaccepted.
+The partial class view is local to the loading creation source. No new character
+behavior/layout claim is inferred beyond the reviewed allocation and accesses.
+
+PrepareBattle at 0x76CA50 remains OPEN. The complete target is 4,029 bytes: 3,893
+code +100 address-table +20 address-table +16 selector bytes, ending at 0x76DA0D.
+The retained complete C++ draft is 4,031 bytes, not a two-byte-away exact claim.
+The first instruction operand difference beyond shifted local-table references
+is at 0x76D743, the first background-constructor argument evaluation; later GPR
+rotation adds a two-byte receiver move before the first LoadResources call.
+Pointer casts/views, destructor declarations and case scopes were byte-neutral;
+do not repeat them without new evidence. Its full random/replay/CPU/stage
+preparation behavior and disabled BMP branch are retained privately. The
+confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division is
+by 1.5f. These correct the decompiler's lost constant types and initial guesses.
+Read `.analysis/probes/scene-loading/README.md` and parked-best before resuming.

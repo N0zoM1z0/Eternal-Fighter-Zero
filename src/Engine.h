@@ -645,7 +645,18 @@ public:
     void LoadStage();
     void LoadPlayerPalette(char);
 };
-DECLARE_SCENE(Scene2, 0x438)
+class Scene2 : public Scene {
+    unsigned char unknown_0430[4];
+    IUnknown *loadingSurface;
+public:
+    Scene2(HWND, Secondary **, Secondary **, Context *, Video *, Input *, Audio *);
+    ~Scene2();
+    virtual void Slot0();
+    virtual unsigned char Step();
+    virtual void PollKeyboard();
+    void PrepareBattle();
+    void LoadCharacter(Secondary **, Secondary **, char, char);
+};
 class Scene3;
 DECLARE_SCENE(Scene5, 0x474)
 DECLARE_SCENE(Scene6, 0x760)
