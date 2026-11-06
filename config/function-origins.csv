@@ -192,7 +192,7 @@ address,origin,status,evidence
 0x00413090,unknown,unreviewed,
 0x00413100,unknown,unreviewed,
 0x004136D0,unknown,unreviewed,
-0x00422D70,unknown,unreviewed,
+0x00422D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00422F40,unknown,unreviewed,
 0x00423090,unknown,unreviewed,
 0x004230D0,unknown,unreviewed,
@@ -206,7 +206,7 @@ address,origin,status,evidence
 0x0042B190,unknown,unreviewed,
 0x00434010,unknown,unreviewed,
 0x00434060,unknown,unreviewed,
-0x004463E0,unknown,unreviewed,
+0x004463E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00446590,unknown,unreviewed,
 0x004466D0,unknown,unreviewed,
 0x00446710,unknown,unreviewed,
@@ -219,7 +219,7 @@ address,origin,status,evidence
 0x0044AB30,unknown,unreviewed,
 0x0044DB60,unknown,unreviewed,
 0x00451850,unknown,unreviewed,
-0x00461090,unknown,unreviewed,
+0x00461090,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00461260,unknown,unreviewed,
 0x004613B0,unknown,unreviewed,
 0x004613F0,unknown,unreviewed,
@@ -233,7 +233,7 @@ address,origin,status,evidence
 0x00468870,unknown,unreviewed,
 0x0046D970,unknown,unreviewed,
 0x0047C130,unknown,unreviewed,
-0x0048A720,unknown,unreviewed,
+0x0048A720,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0048A9B0,unknown,unreviewed,
 0x0048AB00,unknown,unreviewed,
 0x0048ABB0,unknown,unreviewed,
@@ -251,7 +251,7 @@ address,origin,status,evidence
 0x00492DB0,unknown,unreviewed,
 0x00497540,unknown,unreviewed,
 0x0049D610,unknown,unreviewed,
-0x004ADD90,unknown,unreviewed,
+0x004ADD90,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004ADFA0,unknown,unreviewed,
 0x004AE130,unknown,unreviewed,
 0x004AE170,unknown,unreviewed,
@@ -266,7 +266,7 @@ address,origin,status,evidence
 0x004B6680,unknown,unreviewed,
 0x004C0480,unknown,unreviewed,
 0x004C04B0,unknown,unreviewed,
-0x004D2850,unknown,unreviewed,
+0x004D2850,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004D29E0,unknown,unreviewed,
 0x004D2B00,unknown,unreviewed,
 0x004D2B40,unknown,unreviewed,
@@ -292,7 +292,7 @@ address,origin,status,evidence
 0x004FDC10,unknown,unreviewed,
 0x00501E20,unknown,unreviewed,
 0x0050C4B0,unknown,unreviewed,
-0x00519E00,unknown,unreviewed,
+0x00519E00,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0051A070,unknown,unreviewed,
 0x0051A2A0,unknown,unreviewed,
 0x0051A2E0,unknown,unreviewed,
@@ -305,7 +305,7 @@ address,origin,status,evidence
 0x0051F3E0,unknown,unreviewed,
 0x005236D0,unknown,unreviewed,
 0x00530BC0,unknown,unreviewed,
-0x00546480,unknown,unreviewed,
+0x00546480,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00546690,unknown,unreviewed,
 0x00546830,unknown,unreviewed,
 0x00546870,unknown,unreviewed,
@@ -318,7 +318,7 @@ address,origin,status,evidence
 0x0054C250,unknown,unreviewed,
 0x0054FD30,unknown,unreviewed,
 0x005571F0,unknown,unreviewed,
-0x00567900,unknown,unreviewed,
+0x00567900,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00567A90,unknown,unreviewed,
 0x00567BA0,unknown,unreviewed,
 0x00567BE0,unknown,unreviewed,
@@ -331,7 +331,7 @@ address,origin,status,evidence
 0x0056B630,unknown,unreviewed,
 0x0056F920,unknown,unreviewed,
 0x005736D0,unknown,unreviewed,
-0x00588310,unknown,unreviewed,
+0x00588310,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005884B0,unknown,unreviewed,
 0x005885D0,unknown,unreviewed,
 0x00588610,unknown,unreviewed,
@@ -344,7 +344,7 @@ address,origin,status,evidence
 0x0058EE20,unknown,unreviewed,
 0x00594EA0,unknown,unreviewed,
 0x0059C4A0,unknown,unreviewed,
-0x005A9FA0,unknown,unreviewed,
+0x005A9FA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005AA180,unknown,unreviewed,
 0x005AA340,unknown,unreviewed,
 0x005AA380,unknown,unreviewed,
@@ -357,7 +357,7 @@ address,origin,status,evidence
 0x005AEA20,unknown,unreviewed,
 0x005B2D10,unknown,unreviewed,
 0x005C8580,unknown,unreviewed,
-0x005DDDF0,unknown,unreviewed,
+0x005DDDF0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005DDF90,unknown,unreviewed,
 0x005DE0A0,unknown,unreviewed,
 0x005DE0E0,unknown,unreviewed,
@@ -370,7 +370,7 @@ address,origin,status,evidence
 0x005E2440,unknown,unreviewed,
 0x005E5C30,unknown,unreviewed,
 0x005E85F0,unknown,unreviewed,
-0x005F6D90,unknown,unreviewed,
+0x005F6D90,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005F6F20,unknown,unreviewed,
 0x005F7040,unknown,unreviewed,
 0x005F7080,unknown,unreviewed,
@@ -383,7 +383,7 @@ address,origin,status,evidence
 0x005FB040,unknown,unreviewed,
 0x005FF4C0,unknown,unreviewed,
 0x00607930,unknown,unreviewed,
-0x006163B0,unknown,unreviewed,
+0x006163B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00616570,unknown,unreviewed,
 0x006166C0,unknown,unreviewed,
 0x00616700,unknown,unreviewed,
@@ -396,7 +396,7 @@ address,origin,status,evidence
 0x0061B9A0,unknown,unreviewed,
 0x0061F750,unknown,unreviewed,
 0x0062A5E0,unknown,unreviewed,
-0x00638D90,unknown,unreviewed,
+0x00638D90,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00638F10,unknown,unreviewed,
 0x00639030,unknown,unreviewed,
 0x00639070,unknown,unreviewed,
@@ -409,7 +409,7 @@ address,origin,status,evidence
 0x0063C960,unknown,unreviewed,
 0x00640710,unknown,unreviewed,
 0x006429C0,unknown,unreviewed,
-0x00653A20,unknown,unreviewed,
+0x00653A20,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00653C30,unknown,unreviewed,
 0x00653DD0,unknown,unreviewed,
 0x00653E10,unknown,unreviewed,
@@ -422,7 +422,7 @@ address,origin,status,evidence
 0x00659250,unknown,unreviewed,
 0x0065CD30,unknown,unreviewed,
 0x00667570,unknown,unreviewed,
-0x00675C80,unknown,unreviewed,
+0x00675C80,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00675E20,unknown,unreviewed,
 0x00675F40,unknown,unreviewed,
 0x00675F80,unknown,unreviewed,
@@ -436,7 +436,7 @@ address,origin,status,evidence
 0x0067CF50,unknown,unreviewed,
 0x00683550,unknown,unreviewed,
 0x00694D00,unknown,unreviewed,
-0x006A59C0,unknown,unreviewed,
+0x006A59C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x006A5C50,unknown,unreviewed,
 0x006A5DC0,unknown,unreviewed,
 0x006A5E70,unknown,unreviewed,
@@ -454,7 +454,7 @@ address,origin,status,evidence
 0x006B06F0,unknown,unreviewed,
 0x006B7900,unknown,unreviewed,
 0x006BE9C0,unknown,unreviewed,
-0x006CFBB0,unknown,unreviewed,
+0x006CFBB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x006CFD80,unknown,unreviewed,
 0x006CFED0,unknown,unreviewed,
 0x006CFF10,unknown,unreviewed,
@@ -468,7 +468,7 @@ address,origin,status,evidence
 0x006D38E0,unknown,unreviewed,
 0x006D6E40,unknown,unreviewed,
 0x006D93F0,unknown,unreviewed,
-0x006E8130,unknown,unreviewed,
+0x006E8130,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x006E82F0,unknown,unreviewed,
 0x006E8420,unknown,unreviewed,
 0x006E8460,unknown,unreviewed,
@@ -481,7 +481,7 @@ address,origin,status,evidence
 0x006EC160,unknown,unreviewed,
 0x006EF410,unknown,unreviewed,
 0x006F2F20,unknown,unreviewed,
-0x007039D0,unknown,unreviewed,
+0x007039D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00703B70,unknown,unreviewed,
 0x00703C90,unknown,unreviewed,
 0x00703CD0,unknown,unreviewed,
@@ -494,7 +494,7 @@ address,origin,status,evidence
 0x00707E50,unknown,unreviewed,
 0x0070BC00,unknown,unreviewed,
 0x00712500,unknown,unreviewed,
-0x007219A0,unknown,unreviewed,
+0x007219A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00721BA0,unknown,unreviewed,
 0x00721D10,unknown,unreviewed,
 0x00721D50,unknown,unreviewed,
@@ -507,7 +507,7 @@ address,origin,status,evidence
 0x00726F10,unknown,unreviewed,
 0x00729CC0,unknown,unreviewed,
 0x00730710,unknown,unreviewed,
-0x0073E790,unknown,unreviewed,
+0x0073E790,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0073E970,unknown,unreviewed,
 0x0073EAC0,unknown,unreviewed,
 0x0073EB00,unknown,unreviewed,
@@ -543,7 +543,7 @@ address,origin,status,evidence
 0x007538B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x007539F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x00755500,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-rendering
-0x007586B0,unknown,unreviewed,
+0x007586B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-creation-dispatch
 0x00759460,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x007595D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x00759770,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene

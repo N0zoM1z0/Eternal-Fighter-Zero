@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L61801"
+symbol = "$L61802"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L61851"
+symbol = "$L61852"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61507"
+symbol = "$L61508"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61529"
+symbol = "$L61530"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61536"
+symbol = "$L61537"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61541"
+symbol = "$L61542"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61545"
+symbol = "$L61546"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61552"
+symbol = "$L61553"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61559"
+symbol = "$L61560"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61571"
+symbol = "$L61572"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61578"
+symbol = "$L61579"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61585"
+symbol = "$L61586"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61592"
+symbol = "$L61593"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61595"
+symbol = "$L61596"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61598"
+symbol = "$L61599"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61601"
+symbol = "$L61602"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61604"
+symbol = "$L61605"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61607"
+symbol = "$L61608"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61608"
+symbol = "$L61609"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61612"
+symbol = "$L61613"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61619"
+symbol = "$L61620"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61623"
+symbol = "$L61624"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61627"
+symbol = "$L61628"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61631"
+symbol = "$L61632"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61635"
+symbol = "$L61636"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61639"
+symbol = "$L61640"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61643"
+symbol = "$L61644"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61647"
+symbol = "$L61648"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61651"
+symbol = "$L61652"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61655"
+symbol = "$L61656"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L61659"
+symbol = "$L61660"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L61665"
+symbol = "$L61666"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L61671"
+symbol = "$L61672"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L61690"
+symbol = "$L61691"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L61694"
+symbol = "$L61695"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61504"
+symbol = "$L61505"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L60956"
+symbol = "$L60957"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L60907"
+symbol = "$L60908"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L60908"
+symbol = "$L60909"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L60909"
+symbol = "$L60910"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L60910"
+symbol = "$L60911"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L60911"
+symbol = "$L60912"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L60912"
+symbol = "$L60913"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L60913"
+symbol = "$L60914"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L61894"
+symbol = "$L61895"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61555"
+symbol = "$L61556"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61586"
+symbol = "$L61587"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61589"
+symbol = "$L61590"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61592"
+symbol = "$L61593"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61607"
+symbol = "$L61608"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11724,3 +11724,699 @@ type = "REL32"
 symbol = "?Present@Video@@QAEHXZ"
 target = 0x0040b5e0
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[units.scene-create-character]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneCharacterCreate.cpp"
+dependencies = ["src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-create-character/SceneCharacterCreate.obj"
+symbol = "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z"
+target_address = 0x007586b0
+size = 3495
+code_size = 3399
+
+[[units.scene-create-character.local_data]]
+offset = 3399
+size = 96
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; complete original 24-case table at 0x7593F7 through 0x759457"
+
+[[units.scene-create-character.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 69
+type = "DIR32"
+symbol = "$L61544"
+target = 0x007593f7
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 79
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 147
+type = "REL32"
+symbol = "??0Character00@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x0048a720
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 191
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 259
+type = "REL32"
+symbol = "??0Character01@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x006e8130
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 303
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 371
+type = "REL32"
+symbol = "??0Character02@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x006163b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 415
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 483
+type = "REL32"
+symbol = "??0Character03@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x005f6d90
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 527
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 595
+type = "REL32"
+symbol = "??0Character04@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x007039d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 639
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 707
+type = "REL32"
+symbol = "??0Character05@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x005dddf0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 751
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 819
+type = "REL32"
+symbol = "??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x004add90
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 863
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 931
+type = "REL32"
+symbol = "??0Character07@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00567900
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 975
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1043
+type = "REL32"
+symbol = "??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00422d70
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1087
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1155
+type = "REL32"
+symbol = "??0Character09@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x004463e0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1199
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1267
+type = "REL32"
+symbol = "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00461090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1311
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1379
+type = "REL32"
+symbol = "??0Character11@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00588310
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1423
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1491
+type = "REL32"
+symbol = "??0Character12@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x006cfbb0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1535
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1603
+type = "REL32"
+symbol = "??0Character13@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00638d90
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1647
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1715
+type = "REL32"
+symbol = "??0Character14@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x006a59c0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1759
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1827
+type = "REL32"
+symbol = "??0Character15@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00546480
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1871
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1939
+type = "REL32"
+symbol = "??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x007219a0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 1983
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2051
+type = "REL32"
+symbol = "??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x0073e790
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2095
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2163
+type = "REL32"
+symbol = "??0Character18@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x004d2850
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2207
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2275
+type = "REL32"
+symbol = "??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00675c80
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2319
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2387
+type = "REL32"
+symbol = "??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00653a20
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2431
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2508
+type = "REL32"
+symbol = "??0Character21@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x005a9fa0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2552
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2629
+type = "REL32"
+symbol = "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00461090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2670
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2747
+type = "REL32"
+symbol = "??0Character23@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x00519e00
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2873
+type = "DIR32"
+symbol = "?characterSystemDat@@3QBDB"
+target = 0x00789210
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2882
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2906
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2914
+type = "DIR32"
+symbol = "?characterSeparatorDat@@3QBDB"
+target = 0x00789218
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2923
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2946
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2954
+type = "DIR32"
+symbol = "?characterExtensionDat@@3QBDB"
+target = 0x0078921c
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 2963
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3017
+type = "REL32"
+symbol = "?LoadObjectFile@Context@@QAEXPAPAUIUnknown@@PBDEE@Z"
+target = 0x00406db0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3082
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3092
+type = "DIR32"
+symbol = "?characterSystemBmp@@3QBDB"
+target = 0x00789224
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3101
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3124
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3132
+type = "DIR32"
+symbol = "?characterSeparatorBmp@@3QBDB"
+target = 0x0078922c
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3141
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3165
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3173
+type = "DIR32"
+symbol = "?characterExtensionBmp@@3QBDB"
+target = 0x00789230
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3182
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3242
+type = "REL32"
+symbol = "?LoadSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00408d00
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3308
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3332
+type = "REL32"
+symbol = "?ApplyPalette@Video@@QAEHPAE@Z"
+target = 0x0040bd30
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3364
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3389
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original operand, complete external constructor boundary/common-base relationship, resource string or named callee destination"
+
+[[units.scene-create-character.relocations]]
+offset = 3399
+type = "DIR32"
+symbol = "$L61357"
+target = 0x007586f9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3403
+type = "DIR32"
+symbol = "$L61361"
+target = 0x00758769
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3407
+type = "DIR32"
+symbol = "$L61365"
+target = 0x007587d9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3411
+type = "DIR32"
+symbol = "$L61369"
+target = 0x00758849
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3415
+type = "DIR32"
+symbol = "$L61373"
+target = 0x007588b9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3419
+type = "DIR32"
+symbol = "$L61377"
+target = 0x00758929
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3423
+type = "DIR32"
+symbol = "$L61381"
+target = 0x00758999
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3427
+type = "DIR32"
+symbol = "$L61385"
+target = 0x00758a09
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3431
+type = "DIR32"
+symbol = "$L61389"
+target = 0x00758a79
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3435
+type = "DIR32"
+symbol = "$L61393"
+target = 0x00758ae9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3439
+type = "DIR32"
+symbol = "$L61397"
+target = 0x00758b59
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3443
+type = "DIR32"
+symbol = "$L61401"
+target = 0x00758bc9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3447
+type = "DIR32"
+symbol = "$L61405"
+target = 0x00758c39
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3451
+type = "DIR32"
+symbol = "$L61409"
+target = 0x00758ca9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3455
+type = "DIR32"
+symbol = "$L61413"
+target = 0x00758d19
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3459
+type = "DIR32"
+symbol = "$L61417"
+target = 0x00758d89
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3463
+type = "DIR32"
+symbol = "$L61421"
+target = 0x00758df9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3467
+type = "DIR32"
+symbol = "$L61425"
+target = 0x00758e69
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3471
+type = "DIR32"
+symbol = "$L61429"
+target = 0x00758ed9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3475
+type = "DIR32"
+symbol = "$L61433"
+target = 0x00758f49
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3479
+type = "DIR32"
+symbol = "$L61437"
+target = 0x00758fb9
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3483
+type = "DIR32"
+symbol = "$L61441"
+target = 0x00759029
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3487
+type = "DIR32"
+symbol = "$L61445"
+target = 0x007590a2
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
+
+[[units.scene-create-character.relocations]]
+offset = 3491
+type = "DIR32"
+symbol = "$L61449"
+target = 0x00759118
+evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"

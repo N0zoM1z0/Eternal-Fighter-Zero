@@ -1263,8 +1263,8 @@ instruction bytes plus 20 associated local-table bytes. The character-selection
 update body is the substantial owner in this checkpoint. Its constructor,
 destructor, stage loading, player palette loading, keyboard handling and entry
 transition are also exact. At that checkpoint render and character-object construction remained open;
-the subsequent rendering section records its acceptance. Character construction
-still prevents complete Scene1/callee closure. Public proof is
+the subsequent rendering section records its acceptance. The later creation-dispatch section records its acceptance; the external
+character constructors and pixel kernels still prevent callee/product closure. Public proof is
 [scene-select-exact.json](evidence/scene-select-exact.json).
 
 | Member | Entry | Complete contribution bytes |
@@ -1370,8 +1370,7 @@ contiguous contribution independently. The provisional Ghidra body lists only
 contain normal loop instructions in the target, not accepted gaps or table
 padding. Do not copy that incomplete body extent into a comparison recipe.
 Local render disassembly and decompile are retained, alongside the 3,399-byte
-character-loading candidate at 0x7586B0. The latter creates the original
-per-character subclasses; arbitrary opaque constructor/size guesses are not
+character-loading candidate at 0x7586B0. The latter dispatches 24 allocation paths to 23 constructor destinations; arbitrary opaque constructor/size guesses are not
 accepted. DrawSurface and its software conversion callee also remain open.
 
 
@@ -1445,9 +1444,144 @@ missing reviewed boundary. After checking the actual entry column, the reviewed
 row was added and the already compiled final source passed full strict comparison.
 No target bytes, compiler/Wine state or oracle behavior were changed.
 
-The next coherent Scene1 function is LoadCharacter at 0x7586B0, with an original
-3,399-byte candidate body and 24 per-character allocation paths. Before accepting
-its source, inspect the complete dispatcher/table and each called constructor's
-boundary, common base construction, argument widths and observed allocation size.
+The subsequent LoadCharacter review at 0x7586B0 covers its original 3,399-byte
+instruction body and complete 96-byte table. Twenty-four allocation paths use
+23 distinct constructor destinations; see the creation-dispatch and external
+constructor reviews below.
 Character inheritance and full Secondary layout are still provisional. Linked
 vtables/resources and whole-game/runtime closure remain separate work.
+
+
+## Character creation dispatch
+
+On 2026-11-06, Scene1::LoadCharacter at 0x7586B0 was accepted for 3,399 authored
+instruction bytes and all 96 local switch-table bytes. Its full contribution is
+3,495 bytes through 0x759457, with RET 0xC at 0x7593F4 and the 24-entry table
+starting at 0x7593F7. Independent original review covers all 927 instructions,
+74 internal direct branches and 97 original relocation operands. The table
+pointer and all 24 entries have explicit original destinations and checked
+function-relative offsets. Public proof is
+[character-create-exact.json](evidence/character-create-exact.json). The first
+complete natural C++ source was already strict exact, including the complete
+table; there was no prefix, masked relocation or byte-size override.
+
+This completes the nine reconstructed Scene1 function contributions: 26,899
+instruction bytes plus 116 local-table bytes across selection lifecycle, update,
+rendering, palette/stage resources and creation dispatch. It does not complete
+the called character constructors, linked data or rendering kernels, and is
+not a runnable-scene/game closure claim.
+
+The dispatcher switches on the signed selected-character byte, creates the
+chosen object with six original arguments (opponent pointer slot, Context,
+Video, Input, Audio and signed player byte), writes its character ID, stores
+the player's pointer and widens the unsigned CPU flag into an int. Twenty-four
+case bodies use 23 concrete constructor destinations: IDs 10 and 22 both call
+0x461090 with the same 0x3460 allocation. They remain separate cases/new
+expressions in source, retaining the original individual compiler temporaries.
+No default case or null/failure guard was added: the original post-switch
+object dereferences occur after allocation failure or an out-of-range ID too.
+
+Both compiled resource alternatives remain. The DAT path constructs
+system plus the character resource name twice, separator and .dat, loads the
+player portrait at palette base AF+player*40, loads 40 palette entries from
+palette*40 and submits the full original palette wrapper. The BMP alternative
+uses LoadSurface/LoadBitmapPalette with the same observed ranges. Six separate
+string bindings at 0x789210/218/21C and 0x789224/22C/230 preserve original
+addresses, including duplicated prefix/separator contents. Final SurfaceProperty
+sets the selected player's color key. No cleanup, extra validation or error
+behavior was inserted.
+
+Secondary's minimum data view now exposes character ID at 8D, palette index at
+8E, resource-name storage covering 94..A4 and the int CPU flag at A4. All 23
+reviewed constructors copy 3..8 character ASCII resource names to offset 94;
+this view does not prove a unique original array capacity or complete Secondary
+size/alignment/virtual shape. Scene1's color keys at 44C/44D are a natural array
+for player indexing; renderer reads use indices 0/1 and remain fully exact.
+
+CharacterViews.h records only allocation-bounded partial object views and
+external constructor declarations. Their extents are the original immediate
+new sizes, and their zero-offset base relationship follows the reviewed common
+base calls from all 23 complete constructor bodies. Unknown arrays represent
+original object data, not added code padding. No new virtual signature, vptr
+write, thunk, constructor implementation or linked vtable is invented. Each
+new expression uses the ordinary pinned compiler allocation/constructor ABI.
+The matching dispatcher accepts these calls, not the external function bodies.
+
+Final verification uses 24 cold source/profile/dependency artifacts for one new
+and 104 Engine.h-dependent existing units, all 105 complete comparisons strict
+exact. Standalone Input, reader and Config were unaffected and omitted. The
+only old source expression changes are renderer reads of the two color-key array
+elements. The effect, title and selection dispatchers retain every reviewed
+original destination and local offset after refreshing 50 compiler-local symbol
+identities. The new recipe tracks CharacterViews.h, Engine.h and transitive
+Input.h under the explicit VC7.1 /Od /G6 /MT /Gy /GS /W3 profile. Full CI/cold
+cohorts and redundant test matrices were omitted as requested. Private full
+results and evidence remain at .analysis/exact/character-create-and-affected.json
+and .analysis/probes/character-create/.
+
+## Character constructor allocation review
+
+The following external constructors were independently reviewed across their
+complete original boundaries, with every direct branch landing inside the
+body, final RET 0x18 included, a common base-constructor call to 0x40EAE0 in the
+first 64 bytes, and a byte player argument at the sixth original stack slot.
+Each dispatcher table entry was separately decoded and checked against its
+allocation immediate and constructor call. This adds 23 reviewed boundary/origin
+rows only: none of these constructors has source implementation or exact credit.
+Resource identifiers below are original asset strings, not claims about original
+C++ class names. Character00..Character23 remain provisional names, with no
+separate Character22 declaration because that case reuses Character10.
+
+| Selection ID | Resource | Allocation | Constructor | Reviewed code bytes |
+| --- | --- | ---: | --- | ---: |
+| 0 | nanase | 0x3470 | 0x0048A720 | 642 |
+| 1 | ayu | 0x3450 | 0x006E8130 | 436 |
+| 2 | mai | 0x3458 | 0x006163B0 | 442 |
+| 3 | makoto | 0x3450 | 0x005F6D90 | 393 |
+| 4 | akane | 0x3450 | 0x007039D0 | 413 |
+| 5 | mayu | 0x3448 | 0x005DDDF0 | 410 |
+| 6 | nagamori | 0x34B0 | 0x004ADD90 | 517 |
+| 7 | misaki | 0x3448 | 0x00567900 | 390 |
+| 8 | shiori | 0x3458 | 0x00422D70 | 462 |
+| 9 | sayuri | 0x3458 | 0x004463E0 | 419 |
+| 10 | nayuki | 0x3460 | 0x00461090 | 455 |
+| 11 | mio | 0x3458 | 0x00588310 | 407 |
+| 12 | EXnanase | 0x3468 | 0x006CFBB0 | 452 |
+| 13 | kaori | 0x3450 | 0x00638D90 | 383 |
+| 14 | ikumi | 0x3478 | 0x006A59C0 | 647 |
+| 15 | mishio | 0x3478 | 0x00546480 | 513 |
+| 16 | akiko | 0x3468 | 0x007219A0 | 511 |
+| 17 | nayukiB | 0x3458 | 0x0073E790 | 472 |
+| 18 | mizukaB | 0x3460 | 0x004D2850 | 396 |
+| 19 | kanna | 0x3458 | 0x00675C80 | 403 |
+| 20 | kano | 0x3478 | 0x00653A20 | 523 |
+| 21 | minagi | 0x3458 | 0x005A9FA0 | 469 |
+| 22 | nayuki | 0x3460 | 0x00461090 | 455 |
+| 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
+
+All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
+additional 501-element arrays or initialize different state/resource fields;
+those complete bodies remain separate recovery work. Reuse of Nayuki's
+constructor by ID 22 is target evidence, not a guessed extra subclass or name.
+The canonical original resource literals and every constructor's raw disassembly
+are retained privately with the independent boundary/allocation review.
+
+The common base constructor candidate 0x40EAE0 is 463 bytes and lifetime body
+0x40ECB0 is 313 bytes. Their local target-attested decompiles are retained, not
+accepted C++ source. The base vtable at 0x787BCC has thirteen observed entries:
+0x40F110, eight 0x77893D purecall entries, then 0x412B10, 0x412E60, 0x410B70 and
+0x40EDF0. Full virtual signatures and source declarations need caller/body review
+before implementing constructor vptr writes naturally. Do not use fabricated
+ABI declarations or manually assign a vptr to bypass that work. The existing
+minimum Secondary view does not model those virtual methods or imply their
+absence from the original class.
+
+The original base constructor stores the opponent slot at 78 before calling the
+embedded constructor on this+2BC0, then stores Context/Video/Input/Audio at
+7C/80/84/88 and the player byte at 8C. This ordering suggests a pointer member
+initializer followed by automatic embedded-member construction before the body;
+recheck that ordinary C++ model with the first full native build. The embedded
+constructor writes a short at offset 4F4 and bytes at 0/2, while both distinct
+8-byte array-element constructor bodies clear only their dword at +4 and return
+this. Virtual slot zero at 0x40F110 resets shorts at A/C, a double at B8 and ints
+at 168/170, then calls 0x412910. These target facts are not implementation credit.

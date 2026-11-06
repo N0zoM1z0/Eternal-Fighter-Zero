@@ -29,7 +29,7 @@ void Scene1::Slot0()
             if ((contextOwner->mode1364 != 0 && contextOwner->mode1364 != 2) || contextOwner->cpuPlayer[0] != 1) {
                 source = MakeSurfaceRect(0, 0, 320, 240);
                 destination = MakeSurfaceRect(-80 - field0498[0] + portraitOffsets[field0538[0] + field053a[0] * 3], 0, 320, 240);
-                videoOwner->DrawSurface(destination, playerSurfaces[0], source, field044c, 1);
+                videoOwner->DrawSurface(destination, playerSurfaces[0], source, playerColorKey[0], 1);
                 source = MakeSurfaceRect(192, 9, 122, 95);
                 destination = MakeSurfaceRect(0 - field0498[0] / 2, 137, 122, 95);
                 videoOwner->DrawSurface(destination, objectSurface, source, colorKey, 0);
@@ -47,7 +47,7 @@ void Scene1::Slot0()
             if ((contextOwner->mode1364 != 0 && contextOwner->mode1364 != 2) || contextOwner->cpuPlayer[1] != 1) {
                 source = MakeSurfaceRect(0, 0, 320, 240);
                 destination = MakeSurfaceRect(field0498[1] + 80 - portraitOffsets[field0538[1] + field053a[1] * 3], 0, 320, 240);
-                videoOwner->DrawSurface(destination, playerSurfaces[1], source, field044d, 0);
+                videoOwner->DrawSurface(destination, playerSurfaces[1], source, playerColorKey[1], 0);
                 source = MakeSurfaceRect(198, 137, 122, 95);
                 destination = MakeSurfaceRect(field0498[1] / 2 + 198, 137, 122, 95);
                 videoOwner->DrawSurface(destination, objectSurface, source, colorKey, 0);

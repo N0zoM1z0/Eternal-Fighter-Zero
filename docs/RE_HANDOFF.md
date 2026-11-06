@@ -8,7 +8,7 @@ The current checkpoints complete the preserved PatternReader and Audio owners,
 then DirectInput, Audio playback controls, Context input/audio transitions and
 the complete title scene with its shared base/fades and palette/frame wrappers,
 and substantial character-selection update/entry/resource functions plus the
-complete selection renderer.
+complete selection renderer and character creation dispatcher.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -21,10 +21,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 122 |
-| Authored exact instruction bytes | 68,565 |
-| Associated exact local-table bytes | 239 |
-| Reviewed boundaries / origins | 137 / 137 |
+| Authored complete exact functions | 123 |
+| Authored exact instruction bytes | 71,964 |
+| Associated exact local-table bytes | 335 |
+| Reviewed boundaries / origins | 161 / 161 |
 | Compiler-generated auxiliary helpers | 11 functions / 406 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -127,9 +127,10 @@ retain every original destination and offset check after 44 local-symbol-ID
 refreshes. Full CI/cold cohorts and redundant tests were omitted as requested.
 See [the character-selection facts](KNOWLEDGE_BASE.md#character-selection-scene).
 At that checkpoint render and character construction were open. The following
-checkpoint accepts rendering; character construction still prevents full closure.
+checkpoint accepts rendering; the following creation checkpoint accepts the
+dispatcher, while its called constructors still prevent full closure.
 
-The latest checkpoint accepts the complete Scene1 renderer at 0x755500 for
+Checkpoint 5ee3b32 accepts the complete Scene1 renderer at 0x755500 for
 12,720 instruction bytes, with all 175 relocations explicitly bound. Independent
 review covers 3,294 instructions, 63 internal direct branches, 61 rectangle
 constructions, 35 draw calls and one presentation. All 489 bytes missing from
@@ -141,6 +142,29 @@ cold compiled/replayed. Public proof is scene-select-render-exact.json; private
 strict result is .analysis/exact/scene-select-render.json. See
 [rendering facts](KNOWLEDGE_BASE.md#character-selection-rendering). The pixel
 kernels and character construction remain explicit external calls.
+
+The latest checkpoint accepts Scene1::LoadCharacter at 0x7586B0: 3,399 complete
+instruction bytes plus all 96 switch-table bytes, ending at 0x759457. The first
+complete source and final integrated source are strict exact. All 97 relocations,
+including 25 original local-offset bindings, were independently reviewed. The
+24 allocation cases actually use 23 constructors: IDs 10 and 22 share 0x461090
+and size 0x3460. CharacterViews.h records observed extents and external direct
+constructor declarations; no constructor body, virtual layout or original class
+name is claimed. Separate complete-boundary/common-base/argument/allocation
+reviews add 23 reviewed constructor rows only, with no implementation credit.
+
+The nine Scene1 contributions now total 26,899 instruction bytes and 116 local
+table bytes. Called character constructors, rendering kernels and linked data
+remain open. Secondary's minimum view now exposes character ID 8D, palette byte
+8E, a resource-name view at 94..A4 and int CPU flag A4. Scene1 color keys 44C/44D
+are an array; renderer's two reads remain exact. Twenty-four cold artifacts cover
+one new and 104 Engine.h-dependent existing units, all 105 complete comparisons
+strict exact. Standalone Input, reader and Config were unaffected and omitted.
+The three old dispatchers retain every local offset/destination after 50 symbol
+identity refreshes. Public proof is character-create-exact.json; private final
+replay is .analysis/exact/character-create-and-affected.json. See
+[creation facts](KNOWLEDGE_BASE.md#character-creation-dispatch) and the separate
+[external constructor review](KNOWLEDGE_BASE.md#character-constructor-allocation-review).
 
 Important retained limits:
 
@@ -158,10 +182,10 @@ Important retained limits:
 - Scene1 Step's table is 20 bytes at 0x7554EC, with all six original-offset
   bindings checked. Integer branch bounds and the nested path/digits scope are
   codegen evidence; do not flatten/rewrite them without a full comparison.
-  Secondary's palette byte at 8E and string start at 94 are minimum views only,
-  not complete class size/name capacity/inheritance claims. No allocation uses
-  that partial size. Its character constructors remain open; the complete
-  rendering-composition body is now exact.
+  Secondary's exposed fields through A4 are a minimum view, not a complete class
+  size/name capacity/virtual-layout claim. Character allocation extents are
+  separately observed 0x3448..0x34B0 values. Their constructor bodies remain open;
+  the complete selection renderer and creation dispatcher are now exact.
 - Context direction/pulse arrays occupy 0xC..0x17 and four two-int held arrays
   occupy 0x18..0x37. Initialize loads wave\\se\\00.wav..64.wav and sets volume -500
   even on a failed load. LoadMusic calls marker parsing even when loading fails,
@@ -235,26 +259,37 @@ The reader/audio/Input backlog, Context input/audio transitions and the title
 scene/shared fade owner are complete at function-codegen level. Their successful
 units do not complete the game. The base now has three reviewed virtual slots,
 so subsequent scene work can use that shape while keeping per-owner fields and
-ABI provisional. Continue the remaining Scene1 character construction owner,
-LoadCharacter at 0x7586B0. Target-attested decompile and raw reviews are retained
-under .analysis/ghidra/decompile-007586b0.txt and .analysis/probes/scene-select/.
-The 3,399-byte candidate creates 24 concrete character classes. Review the complete
-dispatcher boundary/table and each called constructor's full boundary, common
-base relationship, argument widths and observed allocation sizes before adding
-source declarations. Do not invent opaque sizes solely to force call ABI.
-The base constructor candidate is 0x40EAE0, and its lifetime body at 0x40ECB0 is
-already an explicit startup external destination. Secondary palette index 8E and
-resource-name start 94 are only minimum field views; neither full size nor name
-capacity nor virtual/inheritance layout has been accepted.
+ABI provisional. The nine Scene1 contributions, including the full creation
+switch/table, are now exact. Continue into the coherent Secondary/character
+base owner: constructor 0x40EAE0 (463-byte candidate), destructor 0x40ECB0 (313),
+virtual slot 0 at 0x40F110 (84), embedded-state constructor 0x412840 (39), and
+8-byte array-element constructors 0x408310/0x412820 (24 each). Target-attested local
+decompiles for all six are retained under .analysis/ghidra/. Base construction
+allocates two 501-element arrays and calls the embedded constructor at this+2BC0.
+It stores the opponent slot at 78 before that call, suggesting a member
+initializer before automatic embedded-member construction; owners at 7C..88 are
+stored afterward. Test that natural source order early. The destructor
+releases surfaces/audio/arrays. Ghidra's ATL/stringdispid names on array cleanup
+are provisional compiler folding, not proof of original source types.
 
-The complete renderer source, rejected full-source trials, 175 operand bindings
-and full original disassembly are retained in .analysis/probes/scene-render/.
-Its reviewed body includes the normal loop code omitted by Ghidra. No candidate
-body gap, masked extent or pixel-kernel implementation was accepted. Scene6 also
-offers a larger follow-up owner. Startup's other scene constructors remain
-explicit external destinations. Do not optimize for small-function counts or
-treat decompiler hypotheses as ABI proof. Preserve private trials and avoid
-overwriting src/ with archived workbench drafts.
+The original base table at 0x787BCC has thirteen entries: 0x40F110, eight purecall
+0x77893D destinations, then 0x412B10/0x412E60/0x410B70/0x40EDF0. Review full virtual
+bodies and actual callsites/argument widths before source declarations and
+natural constructor/destructor vptr emission. Do not fabricate signatures, add
+manual vptr stores or assume the current nonvirtual partial data view is a full
+original class model. Keep code, class-layout and linked-vtable acceptance separate.
+The 23 called character constructors now have reviewed boundary/origin rows and
+original allocation/resource/common-base evidence, but all remain unimplemented.
+Private evidence is .analysis/probes/character-create/ and the per-constructor
+raw disassembly there. Do not turn reviewed declarations into exact-function credit.
+
+The selection renderer's full evidence remains in .analysis/probes/scene-render/;
+all 489 Ghidra-omitted instruction bytes are accepted in its complete 12,720-byte
+comparison. The factory's 96-byte table and all failure paths are also retained.
+Scene6 offers another larger follow-up owner after the shared character base.
+Startup's other scene constructors remain explicit external destinations. Do not
+optimize for small-function counts or treat decompiler hypotheses as ABI proof.
+Preserve private trials and avoid overwriting src/ with archived workbench drafts.
 
 The Draw implementations 0x409A90/0x40A0B0 were inspected completely. Like the
 865-byte 0x40A440 kernel, they have body-local ESI/EDI push/pop and AH/AL pixel

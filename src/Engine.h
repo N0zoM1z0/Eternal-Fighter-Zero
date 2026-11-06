@@ -72,13 +72,15 @@ public:
     void Shutdown();
 };
 class Secondary {
-    unsigned char unknown_0000[0x8e];
+    unsigned char unknown_0000[0x8d];
 public:
+    char characterId;
     char paletteIndex;
 private:
     unsigned char unknown_008f[5];
 public:
-    char resourceName[1]; // Observed string start, not a complete object-size claim.
+    char resourceName[16];
+    int cpuControlled;
     ~Secondary();
 };
 // Word-oriented file state; the remaining Context fields are separate members.
@@ -332,7 +334,7 @@ class Scene1 : public Scene {
     unsigned char unknown_0430[4];
     IUnknown *backgroundSurface, *objectSurface, *portraitSurface, *stageSurface;
     IUnknown *playerSurfaces[2];
-    unsigned char field044c, field044d, stageColorKey, portraitColorKey;
+    unsigned char playerColorKey[2], stageColorKey, portraitColorKey;
     double field0450, field0458, field0460, field0468, field0470;
     int field0478, playerDelta[2], field0484, field0488, field048c, field0490;
     short field0494[2], field0498[2];
