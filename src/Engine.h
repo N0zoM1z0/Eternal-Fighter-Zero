@@ -44,6 +44,8 @@ public:
     int ApplyPaletteRange(unsigned char *, unsigned char, unsigned char);
     int ClearPaletteRGB(unsigned char *);
     int Present();
+    void SaveScreenshot(int, const unsigned char *);
+    int FillRectangle(SurfaceRect, unsigned char);
     int ConvertBackBuffer();
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
     int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
@@ -450,8 +452,8 @@ private:
     unsigned char unknown_1347;
 public:
     int counter1348;
-private:
-    unsigned char unknown_134c;
+public:
+    char winner134c;
 public:
     char effectSelector;
 public:
@@ -515,7 +517,7 @@ public:
     int state14244;
 public:
     SurfaceRect cameraBounds;
-    unsigned char unknown_14258[8];
+    double backgroundScale;
 public:
     double fadeLevel;
     int fadeHold;

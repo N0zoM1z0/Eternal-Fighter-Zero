@@ -1,0 +1,1180 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1653,
+      "matched_bytes": 1653,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763C2B; canonical named WINMM timeGetTime IAT slot, independently accepted by startup and shared scene fades",
+          "addend": 0
+        },
+        {
+          "offset": 33,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763C41; canonical named WINMM timeGetTime IAT slot, independently accepted by startup and shared scene fades",
+          "addend": 0
+        },
+        {
+          "offset": 294,
+          "target": 7751600,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateCamera@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763D46; explicit reviewed scene-battle-update-camera destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 327,
+          "target": 7708192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763D67; explicit reviewed scene-fade-in destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 381,
+          "target": 7707792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763D9D; explicit reviewed scene-fade-out destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 414,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763DBE; explicit reviewed startup-secondary-delete destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 471,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763DF7; explicit reviewed startup-secondary-delete destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 534,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763E36; explicit reviewed previously-reviewed-explicit-dependency destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 601,
+          "target": 4218704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@WordFile@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763E79; explicit reviewed word-file-close destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 625,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763E91; explicit reviewed context-release-music destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 728,
+          "target": 7757728,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateRoundExit@Scene3@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763EF8; explicit reviewed new-complete-round-exit destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 788,
+          "target": 4218704,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Close@WordFile@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763F34; explicit reviewed word-file-close destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 812,
+          "target": 4221456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReleaseMusic@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763F4C; explicit reviewed context-release-music destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 845,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763F6D; explicit reviewed startup-secondary-delete destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 902,
+          "target": 4200736,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_GSecondary@@QAEPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763FA6; explicit reviewed startup-secondary-delete destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 965,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763FE5; explicit reviewed previously-reviewed-explicit-dependency destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1100,
+          "target": 4266976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateInput@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076406C; explicit reviewed secondary-update-input destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1111,
+          "target": 4266976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateInput@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764077; explicit reviewed secondary-update-input destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1119,
+          "target": 7757936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateIntro@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076407F; explicit reviewed scene-battle-update-intro destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1130,
+          "target": 4256304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DispatchState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076408A; explicit reviewed secondary-dispatch-state destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1141,
+          "target": 4256304,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DispatchState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764095; explicit reviewed secondary-dispatch-state destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1295,
+          "target": 7758976,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DispatchCollisions@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076412F; explicit reviewed scene-battle-dispatch-collisions destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1303,
+          "target": 7760720,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResolvePushboxes@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764137; Scene3 ECX, no stack arguments, complete canonical 2727-byte callee reviewed earlier; body remains open",
+          "addend": 0
+        },
+        {
+          "offset": 1314,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764142; explicit reviewed secondary-update-movement destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1325,
+          "target": 4257152,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateMovement@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076414D; explicit reviewed secondary-update-movement destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1464,
+          "target": 4258176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateTimers@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007641D8; explicit reviewed secondary-update-timers destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1475,
+          "target": 4258176,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateTimers@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007641E3; explicit reviewed secondary-update-timers destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1483,
+          "target": 7753136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayCharacterSounds@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007641EB; explicit reviewed scene-battle-play-character-sounds destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1491,
+          "target": 7753488,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?PlayEffectSounds@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007641F3; explicit reviewed scene-battle-play-effect-sounds destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1499,
+          "target": 7753792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateRound@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007641FB; explicit reviewed new-complete-round destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1515,
+          "target": 4226320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdatePaletteFade@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076420B; explicit reviewed context-update-palette-fade destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1526,
+          "target": 4225472,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateFrameControls@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764216; explicit reviewed context-update-frame-controls destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1534,
+          "target": 7751600,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateCamera@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076421E; explicit reviewed scene-battle-update-camera destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1600,
+          "target": 4224432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateEffects@Context@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764260; explicit reviewed context-update-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "36a6fd28554389142b33a00174a4aab10f19280fbdbf4d5eed7a3ab5938c447d",
+      "target_extent_sha256": "36a6fd28554389142b33a00174a4aab10f19280fbdbf4d5eed7a3ab5938c447d",
+      "unit": "scene-battle-step",
+      "symbol": "?Step@Scene3@@UAEEXZ",
+      "target_address": "0x00763C20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8301e0b9d9d09d99e12f7be0c9aa2b3eb69879850171bdbc15e439eb50f98148",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1562,
+      "matched_bytes": 1562,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 196,
+          "target": 4260896,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupC@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765104; explicit reviewed secondary-state-group-c destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 4260896,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupC@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765122; explicit reviewed secondary-state-group-c destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 321,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765181; explicit reviewed effect-spawn-construct destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 883,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007653B3; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005440",
+          "addend": 0
+        },
+        {
+          "offset": 892,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007653BC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 942,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007653EE; explicit reviewed context-emit-effect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1079,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765477; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1319,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765567; original 8-byte x87 data operand; independently checked IEEE payload 0000000000006e40",
+          "addend": 0
+        },
+        {
+          "offset": 1328,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765570; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 1378,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007655A2; explicit reviewed context-emit-effect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1535,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076563F; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "31a6463ff34daa0780457bfdd9314e31470af4a2d11963b729d52c1bcce8aa55",
+      "target_extent_sha256": "31a6463ff34daa0780457bfdd9314e31470af4a2d11963b729d52c1bcce8aa55",
+      "unit": "scene-battle-update-round",
+      "symbol": "?UpdateRound@Scene3@@QAEXXZ",
+      "target_address": "0x00765040",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6e656aad5e5edba7622982e044b6393b064aab9fa70c9d410a2e26f605ea2753",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 205,
+      "matched_bytes": 205,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 18,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765FB2; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 34,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765FC2; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 45,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765FCD; reviewed compiler x87 signed conversion dependency; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 76,
+          "target": 4243232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LightenPalette@Video@@QAEXPBEEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765FEC; explicit reviewed video-lighten-palette destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 93,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00765FFD; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 99,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00766003; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000040",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00766008; reviewed compiler x87 signed conversion dependency; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 142,
+          "target": 4253136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSoundVolume@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076602E; explicit reviewed audio-set-volume destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 157,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076603D; original 8-byte x87 data operand; independently checked IEEE payload 000000000000f03f",
+          "addend": 0
+        },
+        {
+          "offset": 181,
+          "target": 7896688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4069000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00766055; original 8-byte x87 data operand; independently checked IEEE payload 0000000000006940",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "45f1760307734037d4d9908781368606d3b3b128ee85de78fa6fa26bc1953df4",
+      "target_extent_sha256": "45f1760307734037d4d9908781368606d3b3b128ee85de78fa6fa26bc1953df4",
+      "unit": "scene-battle-update-round-exit",
+      "symbol": "?UpdateRoundExit@Scene3@@QAEHXZ",
+      "target_address": "0x00765FA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "40d160ea197e207ff872e3227ea1eb60970e7dd44410362561a833193035325e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1285,
+      "matched_bytes": 1285,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 4262208,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AdvanceTrail@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642AE; explicit reviewed secondary-advance-trail destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 25,
+          "target": 4262208,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AdvanceTrail@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642B9; explicit reviewed secondary-advance-trail destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 33,
+          "target": 7724368,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderBackground@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642C1; explicit reviewed new-complete-background destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 41,
+          "target": 7725632,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderHealthBars@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642C9; Scene3 ECX, no stack arguments; original full callee retained, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 49,
+          "target": 7744592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderMeters@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642D1; Scene3 ECX, no stack arguments; original full callee retained, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 4224544,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderEffects@Context@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007642F2; explicit reviewed context-render-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 4272384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderLocalEffects@Secondary@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764313; explicit reviewed secondary-render-local-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 4272384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderLocalEffects@Secondary@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764334; explicit reviewed secondary-render-local-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 191,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076435F; explicit reviewed secondary-state-group-b destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 244,
+          "target": 4268448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Render@Secondary@@QAEXHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764394; explicit reviewed secondary-render destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007643A9; explicit reviewed secondary-state-group-b destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 4268448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Render@Secondary@@QAEXHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007643DE; explicit reviewed secondary-render destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 344,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007643F8; explicit reviewed secondary-state-group-b destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 397,
+          "target": 4268448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Render@Secondary@@QAEXHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076442D; explicit reviewed secondary-render destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 418,
+          "target": 4260768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?IsStateGroupB@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764442; explicit reviewed secondary-state-group-b destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 471,
+          "target": 4268448,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Render@Secondary@@QAEXHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764477; explicit reviewed secondary-render destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 504,
+          "target": 4272384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderLocalEffects@Secondary@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764498; explicit reviewed secondary-render-local-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 537,
+          "target": 4272384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderLocalEffects@Secondary@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007644B9; explicit reviewed secondary-render-local-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 570,
+          "target": 4224544,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderEffects@Context@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007644DA; explicit reviewed context-render-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 603,
+          "target": 4224544,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderEffects@Context@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007644FB; explicit reviewed context-render-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 636,
+          "target": 4224544,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderEffects@Context@@QAEXHHE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076451C; explicit reviewed context-render-effects destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 810,
+          "target": 7733344,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderHud@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007645CA; Scene3 ECX, no stack arguments; original full callee retained, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 860,
+          "target": 7742384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007645FC; Scene3 ECX, live Secondary pointer stack argument; full canonical callee and RET 4, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 910,
+          "target": 7742384,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RenderCombo@Scene3@@QAEXPAVSecondary@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076462E; Scene3 ECX, live Secondary pointer stack argument; full canonical callee and RET 4, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 986,
+          "target": 4243904,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SaveScreenshot@Video@@QAEXHPBE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076467A; Video ECX, int snapshot index and palette pointer; full canonical 962-byte callee writes snap/sn bitmap files, RET 8; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1046,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007646B6; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1075,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007646D3; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1104,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007646F0; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1136,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764710; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1170,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764732; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1202,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764752; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1234,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764772; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1269,
+          "target": 7723888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawNumber@Scene3@@QAEXHHIEEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00764795; Scene3 ECX, two int coordinates, unsigned number, two byte formatting controls and int blend mode; full canonical callee and RET 18, implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1277,
+          "target": 7746032,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClipFrame@Scene3@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076479D; explicit reviewed new-complete-clip destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a2e6123d894adf29b4ce697fe624d58179a9c0b9b5dfd5c220256b5aa523e91c",
+      "target_extent_sha256": "a2e6123d894adf29b4ce697fe624d58179a9c0b9b5dfd5c220256b5aa523e91c",
+      "unit": "scene-battle-render",
+      "symbol": "?Slot0@Scene3@@UAEXXZ",
+      "target_address": "0x007642A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4982d97979cbe7dfe928ccca14bc1f3ca4f8140700c2127d0f6a4084e440d68a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 431,
+      "matched_bytes": 431,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 159,
+          "target": 7833988,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_abs",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076328F; explicit CRT int abs dependency; canonical caller has one cdecl signed-int argument and full-EAX result; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 200,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007632B8; explicit reviewed surface-make-rect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 007632FB; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 276,
+          "target": 7833988,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_abs",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763304; explicit CRT int abs dependency; canonical caller has one cdecl signed-int argument and full-EAX result; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 296,
+          "target": 7833988,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_abs",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763318; explicit CRT int abs dependency; canonical caller has one cdecl signed-int argument and full-EAX result; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 345,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763349; explicit reviewed surface-make-rect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 412,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0076338C; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 423,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 00763397; explicit reviewed video-present destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a9bfcc25881382fe6670d2e5f6991cf354d4e9a899d3460eb497cf986e6e8984",
+      "target_extent_sha256": "a9bfcc25881382fe6670d2e5f6991cf354d4e9a899d3460eb497cf986e6e8984",
+      "unit": "scene-battle-clip-frame",
+      "symbol": "?ClipFrame@Scene3@@QAEXXZ",
+      "target_address": "0x007631F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "05794c741fd71c9e2cc2e7567f5d33a35e615a79088f3d709a329d664e4998e8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1249,
+      "matched_bytes": 1249,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 46,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DD7E; original 8-byte x87 data operand; independently checked IEEE payload 0000000000006440",
+          "addend": 0
+        },
+        {
+          "offset": 58,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DD8A; original 8-byte x87 data operand; independently checked IEEE payload 0000000000006440",
+          "addend": 0
+        },
+        {
+          "offset": 65,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DD91; reviewed compiler x87 signed conversion dependency; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 112,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DDC0; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DDCC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005e40",
+          "addend": 0
+        },
+        {
+          "offset": 131,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DDD3; reviewed compiler x87 signed conversion dependency; no new authored credit",
+          "addend": 0
+        },
+        {
+          "offset": 275,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DE63; explicit reviewed surface-make-rect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DEB0; explicit reviewed surface-make-rect destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 509,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DF4D; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 563,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075DF83; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 723,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075E023; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 856,
+          "target": 4240128,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FillRectangle@Video@@QAEHUSurfaceRect@@E@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075E0A8; Video ECX, genuine SurfaceRect by value and byte color, integer result, original back-surface Lock/Unlock and RET 14; implementation open",
+          "addend": 0
+        },
+        {
+          "offset": 1025,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075E151; explicit reviewed previously-reviewed-explicit-dependency destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        },
+        {
+          "offset": 1175,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control; operand 0075E1E7; explicit reviewed previously-reviewed-explicit-dependency destination; complete original call receiver/arguments and result width",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8e2c58758e9bebadd152cab3237fdf29abb08440502153d4461b3b88afd97a22",
+      "target_extent_sha256": "8e2c58758e9bebadd152cab3237fdf29abb08440502153d4461b3b88afd97a22",
+      "unit": "scene-battle-render-background",
+      "symbol": "?RenderBackground@Scene3@@QAEXXZ",
+      "target_address": "0x0075DD50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "3ea31950698d56e2f7b8edba00bdd929f86e34cace800094ceed0c6ab6b2892a",
+      "source_sha256": "ae22a3be037cebce1230a1445214178ed39e078173a58b049d15c9a9eaf4f573",
+      "dependencies": {
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "06fd5518224bdefc6e0c81c88da0728ada7826713b8675362b0ce253f7a2a879"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ac38e27c99f752dc7df13b28da6e7ff915c532349ec444b1d14d9e54a1da0584",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 50 cold source/profile/dependency artifacts cover six new battle loop/render/round units and 190 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged"
+}

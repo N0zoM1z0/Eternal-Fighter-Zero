@@ -32,6 +32,16 @@ public:
     void PlayCharacterSounds();
     void PlayEffectSounds();
     void UpdateIntro();
+    void UpdateRound();
+    int UpdateRoundExit();
+    void ResolvePushboxes();
+    void RenderBackground();
+    void RenderHealthBars();
+    void RenderMeters();
+    void RenderHud();
+    void RenderCombo(Secondary *);
+    void ClipFrame();
+    void DrawNumber(int, int, unsigned int, unsigned char, unsigned char, int);
     SurfaceRect TransformPoseBox(const SecondaryPose *, const SurfaceRect *);
     SurfaceRect TransformSnapshotBox(const BattleCollisionSnapshot *, const SurfaceRect *);
     int BoxesOverlap(const SurfaceRect *, const SurfaceRect *);

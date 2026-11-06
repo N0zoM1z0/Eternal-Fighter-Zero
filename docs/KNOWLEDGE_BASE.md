@@ -3115,5 +3115,179 @@ checks accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
 This checkpoint adds **4 authored complete exact functions /12,028 instruction
 bytes**, bringing authored acceptance to **207 functions /191,351 instruction
 bytes**, plus unchanged 667 local-table bytes. Reviewed boundaries and origins
-are 245 each. Battle Step/render/keyboard and the parked pushbox owner remain
-open, as do product/runtime/portability closure and the whole game.
+are 245 each. At the effect-collision checkpoint, battle Step/render/keyboard and the parked
+pushbox owner were still open; Step/render and further control are recovered
+below. Product/runtime/portability closure and the whole game remain open.
+
+## Battle main loop, rendering and round control
+
+Canonical target: resources/EFZ.exe, SHA-256
+`3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
+Six complete authored Scene3 members are accepted from src/SceneBattleLoop.cpp
+under the explicit vc71-od-static profile and pinned VC7.1 RTM 13.10.3077:
+
+| Member | Entry | Bytes | Exclusive end | Instructions | Direct branches | Direct calls | Virtual calls | Relocations |
+| --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: |
+| Step | 0x763C20 | 1,653 | 0x764295 | 448 | 41 | 32 | 10 | 34 |
+| UpdateRound | 0x765040 | 1,562 | 0x76565A | 396 | 29 | 5 | 6 | 11 |
+| UpdateRoundExit | 0x765FA0 | 205 | 0x76606D | 58 | 3 | 4 | 0 | 10 |
+| Slot0 / battle render | 0x7642A0 | 1,285 | 0x7647A5 | 397 | 19 | 34 | 3 | 34 |
+| ClipFrame | 0x7631F0 | 431 | 0x76339F | 136 | 6 | 8 | 0 | 8 |
+| RenderBackground | 0x75DD50 | 1,249 | 0x75E231 | 369 | 26 | 10 | 1 | 14 |
+
+All **6,385 instruction bytes** compare complete strict exact. Every original
+instruction, all 124 direct branch destinations, 20 virtual calls and 111
+explicit relocation fields are reviewed. The relocations comprise 93 direct
+calls, two named timeGetTime import operands and 16 independently checked IEEE
+operands. The full bodies have no local tables or indirect jumps. All end in
+RET, followed respectively by 11, 6, 3, 11, 1 and 15 CC bytes outside credited
+extents. Scene3's constructor-established table at 7895DC independently identifies
+the render/Step/PollKeyboard entries. PollKeyboard remains open.
+
+### Main frame sequencing and cleanup
+
+Step performs the original unsigned elapsed-time comparison against 1000,
+refreshes the sampled frame count and increments the live frame count. Entry
+phase 1 captures the two externally owned Secondary pointers, initializes camera/
+simulation fields, updates the camera, invokes the scene's actual render slot,
+fades in the shared character palette and clears entry phase. Keyboard polling
+uses scene vtable offset 8. Pause field588 returns scene ID 3 immediately, before
+simulation, effect updates and the background object's update.
+
+Exit flag 1 fades out, deletes both character pointers and clears their external
+slots, deletes/clears the Context137C allocation when present and resets scene
+phase. This is real C++ deletion: Secondary deletion uses the accepted scalar
+deleting helper at 401920; Context137C cleanup calls operator delete at 777E20.
+The decompiler's _free label and apparent extra character null guards are not
+copied. The guards around Secondary deletion are compiler-generated parts of
+the delete expression. Replay close/music release and the mode 6/normal scene
+returns retain their original positive branch order. Final-round exit uses the
+separate integer-returning UpdateRoundExit; replay cleanup occurs before deleting
+characters, and normal round completion returns scene ID 5.
+
+The live byte578 controls simulation iterations, with the original unsigned byte
+promotion. Each iteration updates both inputs, intro, shared state dispatch,
+then virtual Slot08, Slot06 and Slot07 for both characters. Conditional collision
+dispatch precedes the still-open pushbox callee, movement, signed freeze-word
+clamp/decrement, timers, character/effect sounds and round outcome. Palette fade,
+frame controls, camera and conditional drawing follow the loop. Drawing retains
+the original setting136C/framePhase tests; Context effects and the background
+object update run afterward. Virtual call receivers are real Scene3, Secondary
+or the object stored at Context137C, with no inferred register parameters added.
+
+### Round outcomes and fade
+
+UpdateRound returns early for nonzero custom-health field574 or mode 1. While
+counter1354 is nonzero, it clears all eight player button-pulse bytes and waits
+for both characters' state predicates and absence of exit flag 2, then restores
+health 9999 and requests intro state 2. This nonzero-counter path physically
+precedes the new-outcome path in the original code.
+
+With counter zero, a genuine EffectSpawn is constructed before testing health.
+Simultaneous KO increments both signed win bytes, clamps each below the signed
+round-limit byte, resets both characters to state 59 and advances the event
+selector. A single KO adds the winner's remaining health to field 30DC. A further
+round increments wins, adds 180 to both freeze words, resets the loser and emits
+the exact round descriptor at X 80 or 240, Y 100. Preserve the different original
+reset/emission order for the two player directions. Match completion instead
+sets exit flag 2, zeroes double580 and stores the winning player byte at
+Context134C. Other pending outcome/control states retain their complete early
+returns, state predicates and intro request.
+
+UpdateRoundExit is an **int** result, tested in full EAX by Step; Ghidra's bool
+candidate is not the caller contract. Before double580 reaches 100 it lightens
+the actual palette with integer conversion of 100-T and changes music volume by
+integer conversion of -T*100/2 plus currentVolume. It then increments T by exact
+double 1.0 and returns 1 at T>=200, otherwise 0. The explicit returns preserve the
+original branch/result sequence without introducing a stored Boolean temporary.
+
+### Rendering, disabled diagnostics and background composition
+
+Slot0 advances both trails, draws background/health bars and the sprite-shadow
+prepass, then Context
+and player local effects in their original layer order. Character render order
+switches at player two's state 200. Each character's X offset includes the
+accepted IsStateGroupB result times signed freeze-word remainder2 times2;
+original signed remainder behavior is retained. The background object can draw
+a foreground layer only with both character tint durations zero and Context
+state14278 zero. Player Slot01 calls, the still-open HUD and combo helpers,
+snapshot capture and final ClipFrame retain their complete order.
+
+The original capture branch writes a screenshot every even signed frame index,
+using index/2 and the shared palette, then increments the index. The reviewed
+Video callee at 40C1C0 writes snap/sn bitmap files; the member declaration is
+SaveScreenshot(int,const unsigned char*), and its implementation remains open.
+The decompiler removed **eight disabled diagnostic DrawNumber calls** at
+76469B..764798. The original /Od contribution retains an actual constant-false
+branch and the full player health/type/frame/tick diagnostics. Natural
+`if (false)` C++ reproduces that branch and all dormant calls exactly; they are
+not omitted, copied as bytes, or replaced with padding. DrawNumber's six stack
+arguments are two int coordinates, unsigned number, two formatting bytes and
+an int blending mode, independently reviewed against its full callee.
+
+RenderBackground reads the actual double at Context14258. Its X/Y calculations
+are integer truncation of -cameraX*scale+(160-160*scale) and
+(240-cameraY)*scale+(120-120*scale). Preserve both live x87 inputs and repeated
+reads, followed by the real coordinate clamps, offsets and two rectangle
+assignments. With two active tint durations it uses ContextF33 to select color,
+then decrements both durations only when both freeze words are zero. With one
+active tint it fills that side's color and conditionally decrements that side.
+Otherwise it draws extraB and conditionally decrements state14278, or draws
+extraA and the background object's layer 0. All original rectangles, argument
+order, repeated freeze tests and branch directions compare exact.
+
+ClipFrame clamps camera-derived coordinates and computes the original signed
+edge offsets. It uses three CRT abs calls and two genuine MakeSurfaceRect
+returns to fill horizontal/vertical out-of-view areas with color zero, then calls
+Video::Present. FillRectangle at 40B300 has a genuine SurfaceRect value argument,
+byte color and int result; its full original callee uses back-surface Lock/Unlock
+and RET 14. Its implementation remains open. The rectangles and all intermediate
+return copies are part of the complete native comparison.
+
+### Layout views, dependencies and focused acceptance
+
+Engine.h exposes the observed existing byte 134C as winner134c and existing
+8-byte storage 14258 as double backgroundScale. The Context extent and subsequent
+offsets remain unchanged. It adds the two observed nonvirtual Video declarations.
+SceneBattle.h adds the reviewed Scene3 helper contracts. Numerical names and
+helper names remain provisional; no unimplemented callee receives new function
+credit merely because a caller is accepted. In particular, the current provisional
+RenderMeters label at762C50 is a misnomer: its complete canonical body draws
+compressed player/effect sprite shadows with alpha B0 around the Y210 plane.
+Keep that observed role and rename the contract when recovering its implementation;
+the temporary label proves no meter behavior. HUD760060 owns the meter/status bars.
+
+The private Background interface in SceneBattleLoop.cpp is the reviewed two-slot
+source view of Context137C: update at slot 0 with no arguments, render at slot 4
+with two camera ints and a layer byte. Original object storage remains separately
+owned; no inheritance, original class name, destructor slot or concrete
+implementation is claimed. This view introduces no receiver adjustment, wrapper
+calls or extra stores. Complete codegen does not prove original TU partitioning,
+linked data, downstream implementations or runtime closure.
+
+The first complete Step draft was built at 1693 bytes; removing duplicated
+source-level deletion guards and matching original result/early-return branches
+resolved it. Round/exit also received early complete builds and full retained
+comparisons. Render, ClipFrame and RenderBackground matched their first complete
+source compilations. Initial private header access/declaration errors and their
+inputs/logs are retained; pinned toolchain --execute smoke checks passed before
+subsequent final comparisons. All native builds are bounded, serial, CPU1/nice10
+and use EFZ's own Wine state. Work records contain only used real values.
+
+The final six new and 190 actual Engine.h-dependent existing units compare strict
+exact from **50 serial cold source/profile/dependency artifacts**, retaining every
+original compiler-local destination/offset binding. The standalone Input, reader
+and configuration cohorts are uninvolved. Final public proof is
+docs/evidence/battle-loop-exact.json; private full reports are
+.analysis/exact/battle-loop-and-affected.json. Full canonical instructions,
+decompiles, source/object attempts and independent branch/call/constant/boundary
+reviews remain in .analysis/probes/battle-loop/. Only selected new/affected native
+units and focused ledger/progress/whitespace checks run, without full CI,
+a full cold cohort or redundant runtime matrices.
+
+This checkpoint adds **6 authored complete exact functions /6,385 instruction
+bytes**, bringing acceptance to **213 functions /197,736 instruction bytes**
+plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 251 each.
+The battle keyboard, health/HUD/shadow/combo/number drawing, screenshot/fill,
+background implementations and parked pushbox owner remain open, as do the
+whole game and independent product/runtime/portability phases.

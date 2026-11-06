@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 48 cold source/profile/dependency artifacts cover two new battle body-hit/tint units and 184 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
+  "method": "selected complete contribution comparison; 50 cold source/profile/dependency artifacts cover six new battle loop/render/round units and 190 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -24,7 +24,7 @@
           "target": 7705591,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62293",
+          "symbol": "$L62299",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 3399,
           "addend": 0
@@ -673,7 +673,7 @@
           "target": 7702265,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62106",
+          "symbol": "$L62112",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 73,
           "addend": 0
@@ -683,7 +683,7 @@
           "target": 7702377,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62110",
+          "symbol": "$L62116",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 185,
           "addend": 0
@@ -693,7 +693,7 @@
           "target": 7702489,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62114",
+          "symbol": "$L62120",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 297,
           "addend": 0
@@ -703,7 +703,7 @@
           "target": 7702601,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62118",
+          "symbol": "$L62124",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 409,
           "addend": 0
@@ -713,7 +713,7 @@
           "target": 7702713,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62122",
+          "symbol": "$L62128",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 521,
           "addend": 0
@@ -723,7 +723,7 @@
           "target": 7702825,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62126",
+          "symbol": "$L62132",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 633,
           "addend": 0
@@ -733,7 +733,7 @@
           "target": 7702937,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62130",
+          "symbol": "$L62136",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 745,
           "addend": 0
@@ -743,7 +743,7 @@
           "target": 7703049,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62134",
+          "symbol": "$L62140",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 857,
           "addend": 0
@@ -753,7 +753,7 @@
           "target": 7703161,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62138",
+          "symbol": "$L62144",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 969,
           "addend": 0
@@ -763,7 +763,7 @@
           "target": 7703273,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62142",
+          "symbol": "$L62148",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1081,
           "addend": 0
@@ -773,7 +773,7 @@
           "target": 7703385,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62146",
+          "symbol": "$L62152",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1193,
           "addend": 0
@@ -783,7 +783,7 @@
           "target": 7703497,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62150",
+          "symbol": "$L62156",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1305,
           "addend": 0
@@ -793,7 +793,7 @@
           "target": 7703609,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62154",
+          "symbol": "$L62160",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1417,
           "addend": 0
@@ -803,7 +803,7 @@
           "target": 7703721,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62158",
+          "symbol": "$L62164",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1529,
           "addend": 0
@@ -813,7 +813,7 @@
           "target": 7703833,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62162",
+          "symbol": "$L62168",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1641,
           "addend": 0
@@ -823,7 +823,7 @@
           "target": 7703945,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62166",
+          "symbol": "$L62172",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1753,
           "addend": 0
@@ -833,7 +833,7 @@
           "target": 7704057,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62170",
+          "symbol": "$L62176",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1865,
           "addend": 0
@@ -843,7 +843,7 @@
           "target": 7704169,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62174",
+          "symbol": "$L62180",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 1977,
           "addend": 0
@@ -853,7 +853,7 @@
           "target": 7704281,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62178",
+          "symbol": "$L62184",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2089,
           "addend": 0
@@ -863,7 +863,7 @@
           "target": 7704393,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62182",
+          "symbol": "$L62188",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2201,
           "addend": 0
@@ -873,7 +873,7 @@
           "target": 7704505,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62186",
+          "symbol": "$L62192",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2313,
           "addend": 0
@@ -883,7 +883,7 @@
           "target": 7704617,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62190",
+          "symbol": "$L62196",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2425,
           "addend": 0
@@ -893,7 +893,7 @@
           "target": 7704738,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62194",
+          "symbol": "$L62200",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2546,
           "addend": 0
@@ -903,7 +903,7 @@
           "target": 7704856,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62198",
+          "symbol": "$L62204",
           "evidence": "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding",
           "local_target_offset": 2664,
           "addend": 0
@@ -925,18 +925,18 @@
       "symbol": "?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z",
       "target_address": "0x007586B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "8991290bafbf854be9ea5d058f51b4cdafb07ee50e42012614b9dc0d40626356",
-      "object_sha256": "7b9d3c42b04f8e76554470607b9cb792e7e9fe884d76f1fd36acc581fa0eb73c",
+      "boundary_ledger_sha256": "bb70912eccace1f00e061406c958ed31a7ae4f16368d2e8b5681aa6ae8f6fd07",
+      "object_sha256": "2487a5c267e731ec2eb0e15f8ef09f7ad130167003230d544b91598b3ef2e5f3",
       "source_sha256": "c2949d47b638c3dd460c0c55dd7fc1c60d4ccf8d779909ec035bda04cfd63911",
       "dependencies": {
         "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
-        "src/Engine.h": "69b4497b3d9b83cd89d7c3db6e1287733ce99f8bb59c33cde7cbe88d31b957ba",
+        "src/Engine.h": "079b7069575fbdf0cb00e2a0f5ddfdd276fe324abc9c188e2f3f534e8f5ae885",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "f1c5e3c8821e1f81815b921e5bc56ae6379adb50b569a9b18490316bd849b679",
+      "units_manifest_sha256": "51fb9664d5c7c325e90247145014cc9e0d0525e90bd8c168d9b9006ec00f3737",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "f103d33ddfd5134071a8d5f710e1fc587ca19c2911abdb2d6ff663b9711fd484",
+      "unit_sha256": "eb0955e7db06e2aa03d7a3ded54c1a8bed8928c4d2ada366d606b4a0eebde226",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
       "acceptance_authority": "complete-function-codegen"
     }

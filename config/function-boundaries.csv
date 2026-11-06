@@ -244,3 +244,9 @@ address,end,size,status,evidence
 0x0076BAB0,0x0076BD3A,650,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
 0x0076B090,0x0076BAA2,2578,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
 0x0076BD40,0x0076C6E2,2466,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x00763C20,0x00764295,1653,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x00765040,0x0076565A,1562,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x00765FA0,0x0076606D,205,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x007642A0,0x007647A5,1285,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x007631F0,0x0076339F,431,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
+0x0075DD50,0x0075E231,1249,reviewed,docs/KNOWLEDGE_BASE.md#battle-main-loop-rendering-and-round-control
