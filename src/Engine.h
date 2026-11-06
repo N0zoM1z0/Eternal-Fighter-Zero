@@ -252,7 +252,7 @@ public:
     short field014c;
     short field014e;
     int field0150;
-    unsigned char unknown_0154[0x4];
+    int field0154;
     char field0158;
     unsigned char field0159;
     unsigned char field015a;
@@ -351,6 +351,7 @@ public:
     void AddScore(unsigned int);
     short RandomRange(short, short);
     void SetTint(unsigned char, int);
+    void SetCharacterTint(unsigned char, int);
     void SetVerticalShake(int, int);
     void SetHorizontalShake(int, int);
     int FaceOpponent();

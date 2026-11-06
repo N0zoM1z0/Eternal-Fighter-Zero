@@ -169,7 +169,7 @@ address,origin,status,evidence
 0x00410A10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410A40,unknown,unreviewed,
 0x00410A80,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
-0x00410AC0,unknown,unreviewed,
+0x00410AC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
 0x00410B10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00410B70,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00411080,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
@@ -588,7 +588,7 @@ address,origin,status,evidence
 0x007677A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767930,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x007679B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
-0x00767F60,unknown,unreviewed,
+0x00767F60,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
 0x007697D0,unknown,unreviewed,
 0x0076B090,unknown,unreviewed,
 0x0076BAB0,unknown,unreviewed,

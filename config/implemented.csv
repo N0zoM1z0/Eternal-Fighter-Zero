@@ -200,3 +200,5 @@ address,name,source,symbol,status,evidence
 0x00767930,?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z,src/SceneCollision.cpp,?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z,complete,docs/evidence/scene-collision-exact.json
 0x007679B0,?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z,src/SceneCollision.cpp,?TestBodyInteraction@Scene3@@QAEHPAVSecondary@@0PBUBattleCollisionSnapshot@@1@Z,complete,docs/evidence/scene-collision-exact.json
 0x00766480,?DispatchCollisions@Scene3@@QAEXXZ,src/SceneCollision.cpp,?DispatchCollisions@Scene3@@QAEXXZ,complete,docs/evidence/scene-collision-exact.json
+0x00767F60,?ResolveBodyHit@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1@Z,src/SceneBodyHit.cpp,?ResolveBodyHit@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1@Z,complete,docs/evidence/body-hit-exact.json
+0x00410AC0,?SetCharacterTint@Secondary@@QAEXEH@Z,src/SceneBodyHit.cpp,?SetCharacterTint@Secondary@@QAEXEH@Z,complete,docs/evidence/body-hit-exact.json

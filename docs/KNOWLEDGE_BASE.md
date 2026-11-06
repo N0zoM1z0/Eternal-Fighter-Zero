@@ -2865,3 +2865,124 @@ This checkpoint adds **5 complete functions /4,113 instruction bytes**, for
 **201 authored functions /173,003 instruction bytes**, plus unchanged 667 local-table
 bytes. Reviewed boundaries/origins are 239 each. Complete game, linked resources,
 original/reconstructed runtime and portability remain independently open phases.
+
+## Battle body-hit resolution
+
+Scene3::ResolveBodyHit at **0x767F60 /6,245 instruction bytes** is now complete
+strict exact. It is the full character-versus-character hit owner called by the
+accepted collision dispatcher, including all original special-defense, counter,
+guard, chip, normal-hit, animation, freeze, combo and effect outcomes. Its entry
+has the real Scene3 ECX receiver and four stack arguments: two complete Secondary
+pointers and two genuine BattleCollisionSnapshot pointers, ending RET 10. The
+exclusive end is 0x7697C5; eleven CC bytes precede the still-open effect-hit owner
+at 0x7697D0. No associated local table belongs to this contribution.
+
+The independently reviewed boundary contains **1,373 instructions, 124 direct
+branches, 39 direct calls and six virtual slot-zero calls**. Every direct branch
+lands on an instruction in the full body. Each virtual call uses the complete
+defender Secondary receiver and the established ResetPose slot. All **59 relocation
+fields** bind explicitly: 39 direct callees and 20 floating-data operands. The
+original operand, symbol/destination and four/eight-byte IEEE payload are checked
+independently for every floating binding. No address mask or prefix comparison
+is used. Existing guard, facing, history, factors, scoring and effect functions
+remain independent accepted dependencies; direct calls confer no linked-product
+or runtime closure.
+
+### Collision preparation and outcome order
+
+The owner retains real 200-byte attacker/defender frame copies, the original
+4x5 collision matrix, four attack boxes, five defense boxes and the special
+box transform. An actual EffectSpawn is constructed after the frame copies and
+before box transforms. The snapshot state BYTE at E9 and command WORD at EA
+control eligibility here; the earlier TestBodyInteraction instead reads live
+Secondary fields. Preserve that distinction and the original partially initialized
+matrix path for attack flag 40. Intersection construction/updates are retained
+and supply the hit-effect coordinates.
+
+The full positive outcome chain follows original instruction order, which differs
+from the decompiler's deeply nested negative form: defense flags 1000/800 with
+matching attack direction and no attack flag 100; counter-ready guard; airborne
+guard; grounded guard excluding animations 168/169; the three defense-200
+attack-direction cases; ordinary guard; then normal hit or the original tint-only
+state outcome. Numerical flag names and unimplemented consumers remain provisional.
+Consecutive state168 writes 2 then 6 are actual target stores and remain present.
+No extra state validation, clearing, bounds checks or failure behavior is added.
+
+Guard/chip branches retain the original freeze words, effect emission, history
+clears and minimum defender health of one. Normal guard preserves integer
+`(damage / 30)` before conversion to float; its angle accumulation caps at the
+actual 360.0f payload. The alternate angle-consumption path and field154 reset
+are complete. Secondary field154 is a genuine observed 32-bit zero store, exposed
+with a provisional int view in the previously unknown four-byte region; all later
+fields and object extents remain unchanged.
+
+Normal-hit animation selection first handles nonnegative Y, then the airborne
+case. The explicit ground/air command shorts, fallback animation 59 and original
+flag-derived animation arithmetic are retained. Counter/guard animation selection
+uses `168 + (inputY == 1)` where the target does. The mathematically equivalent
+`169 - (inputY != 1)` produces different VC7.1 /Od Boolean materialization and
+changes subsequent GPR selection, so it is not substituted. Signed command-word
+decrements and combo-word increments use natural --/++; field148 additions use
+compound assignment to preserve the original right-hand-value/member evaluation
+and word-result stores. These are real state operations, not inert codegen padding.
+
+### Original x87 damage and combo expressions
+
+The decompiler omitted two live x87 conversion arguments and incorrectly narrowed
+an existing double in another expression. The complete original instructions
+establish these source operations, including their evaluation order:
+
+- Defender health decreases by integer conversion of frame damage * attacker
+  DamageFactor() * defender HealthFactor() * attacker ComboFactor(). The three
+  accepted member calls and intermediate double spills remain in that order.
+- Defender field124 receives the signed-word conversion of frame fieldB2 *
+  (attacker field178 /10000.0 *0.8). The 0.8 operand is its exact canonical
+  eight-byte payload, not a guessed scaling factor.
+- Frame float fieldA4 is divided by **1000.0f**, then multiplied by the existing
+  **double** attacker field178. There is no intermediate conversion of that
+  member to float. The operation repeats if the resulting double exceeds 10000.
+- Defense flag 10 clears the combo word, subtracts the exact **20.0** payload
+  when field178 is above 10000, and otherwise stores 10000. Preserve original
+  ordered comparisons and branch directions.
+
+The owner also preserves prior-health capture, flag-derived field144, field128/
+12C, three byte clears, combo counters/scores, hit-stop words, command consumption,
+midpoint hit-effect emission and the original KO pose/facing path. The complete
+native comparison includes all of them rather than crediting an initial collision
+or damage prefix.
+
+### Character tint helper and native acceptance
+
+Secondary::SetCharacterTint at **0x410AC0 /75 bytes** is independently complete
+exact. It stores the byte at 30B8 and duration at 30BC, halving duration with signed
+integer division when Context setting136C is zero. Its unsigned-byte argument view
+reproduces the actual positive 0xDF caller push and byte store. It is distinct from
+the accepted SetTint at 0x410B10, which writes 30C0/30C4 and Context F33.
+The helper has 24 instructions, one direct branch, no relocations and RET 08;
+five CC bytes precede the next accepted helper.
+
+The first complete natural C++ body was built early at 6,250 bytes. Four successful
+complete cold source/object trials, including the final readable else-if cleanup,
+have retained full comparisons. Ordinary scopes and local work records preserve
+the actual 3B4-byte body frame and genuine descriptor/frame ownership without
+padding members, assembly or fabricated call ABI objects. One draft source-parser
+edit misread a C++ member arrow as a relational operator; it was corrected and
+the required pinned compiler/Wine --execute check passed before further comparison.
+
+Final source is src/SceneBodyHit.cpp. The two new and 184 Engine.h-dependent
+existing units compare strict exact from **48 serial cold source/profile/dependency
+artifacts**, with all 135 existing compiler-local destination/offset bindings
+checked before final receipts. Uninvolved standalone Input, reader and Config
+units are omitted. Public proof is docs/evidence/body-hit-exact.json and affected
+certificates are refreshed. Private complete bodies, typed-source derivation,
+constant/operand reviews and attempts are retained in .analysis/probes/body-hit/;
+full final reports are .analysis/exact/body-hit-and-affected.json. Only focused
+ledger/progress and whitespace checks ran; no full CI or runtime matrix ran.
+
+The checkpoint adds **2 complete authored functions /6,320 instruction bytes**,
+bringing acceptance to **203 functions /179,323 instruction bytes**, plus unchanged
+667 local-table bytes. Reviewed boundaries/origins are 241 each. ResolveEffectHit
+0x7697D0 /6334 and the remaining effect/body collision owners remain open, as do
+the battle update/draw/keyboard entries and independently tracked product/runtime/
+portability phases. The accepted body-hit owner does not complete battle or game
+reconstruction.
