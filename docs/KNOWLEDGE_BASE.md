@@ -4770,3 +4770,90 @@ All13 original Mishio vtable788768 destinations now have complete exact recipes,
 including inherited LoadResources410B70. The constructor is additional to this
 virtual-entry inventory. This closes only these entry-code proofs; linked
 resources/data, original TU partitioning, runtime and game remain open.
+
+## Misaki construction input and indicator owners
+
+Ten complete authored functions add15,615 exact instruction bytes without local
+tables. Sources: `src/Character07Frame.cpp`, `src/Character07Input.cpp` and
+`src/Character07Commands.cpp`. Public proof: `docs/evidence/misaki-exact.json`.
+Explicit recipes use pinned VC7.1 static /Od and complete strict comparison;
+no masks, size overrides or partial-function credit are used.
+
+| Complete owner | Canonical entry | Exact code bytes |
+| --- | --- | ---: |
+| Character07 constructor | 0x567900 | 390 |
+| Character07::InitializeState | 0x567A90 | 270 |
+| Character07::ResetPose | 0x567BA0 | 58 |
+| Character07::RemoveLocalEffect | 0x567BE0 | 80 |
+| Character07::Slot03 locomotion | 0x567C30 | 19 |
+| Character07::Slot04 action input | 0x567C50 | 10,656 |
+| Character07::Slot01 empty entry | 0x56A5F0 | 11 |
+| Character07::Slot08 empty entry | 0x56A600 | 11 |
+| Character07::EmitLocalEffect | 0x56A610 | 47 |
+| Character07::Slot02 commands | 0x56A640 | 4,073 |
+
+Canonical creation case7 allocates0x3448 and calls567900. The constructor
+copies complete NUL-terminated literal "misaki" from788800 and installs
+vtable788808. All13 canonical destinations were read directly. Nine child
+virtuals above plus inherited LoadResources410B70 now have complete exact proofs.
+CPU56B630/17127, state5571F0/66501 code and effects56F920/15562 code remain
+open; associated table extents for the last two are unreviewed. Constructor
+acceptance is additional to the virtual-entry inventory. Neither code inventory
+nor source similarity establishes character/resource/runtime closure.
+
+Independent complete boundary review covers4,100 contiguous instructions,
+638 internal branches and every following padding/next-entry interval. All100
+relocation fields have explicit reviewed original operands, symbols and
+canonical destinations:49 direct calls,49 typed double operands, the constructor
+resource string and vptr. All eight distinct floating payloads agree independently
+in target and native COFF. There are no new local tables. Prior characters and
+provisional decompiler output supplied hypotheses only.
+
+Only Character07's opaque tail is expanded into four observed scalar ints at
+3138..3144 and three64-int arrays at3148/3248/3348. The final array ends3448,
+preserving actual allocation without padding. Constructor and initializer clear
+those fields/arrays in the original order and use boxes(-13,-60),(14,0),
+(17,-6),(7,-25),(27,-25). Constructor surfaceCount is474, commandCount is5,
+and the four explicit command stores are1,11,18,7 at entries0..3. No extra
+command-ID store is invented. InitializeState calls only the shared initializer.
+Both creation consumers retain complete original allocation/call bytes.
+
+ResetPose clears3138,313c,3140 before the base reset. RemoveLocalEffect clears
+all three arrays at the actual short slot before the base removal. Locomotion
+calls the accepted shared owner. EmitLocalEffect removes effectWrite through its
+real virtual slot before the shared emitter. Slots01 and08 are actual empty
+bodies: each has an ordinary receiver spill and RET,11 bytes including prologue/
+epilogue. Their acceptance does not supply HUD or frame behavior absent in the
+target.
+
+Action input preserves unsigned latch/countdown reads, field01aa<=0, byte
+increments/decrements and positive sequence permission masks. The first phase
+gate is >1; later gates use >=2. Directional products evaluate opponent.x-self.x
+before `1-field0262*2`, with multiplication by-1 for opposite facing. Positive
+combined air guards and the original special/normal attack priorities retain
+all exits. The normal second-button distance window is strict -70..70, while
+the third-button grounded throw first checks opponent height then horizontal
+input; its airborne special retains the original -100..100 range and state gates.
+A first complete10702-byte source became10677 after common corrections, then
+all10656 after target-backed arithmetic/branch/byte recovery.
+
+Commands implement13 ordered scans over the180-entry circular history with
+single-wrap indexing `i-(i>=180)*180`. Preserve each window and sequential stage
+advance, facing-dependent IDs and the actual grounded floating guard. Gate-mask
+!=0 and positive command-ID arithmetic emit distinct branches. The one1000-meter
+threshold is >=1000. The first complete4073-byte source already had the full
+size but four differing bytes: two gate jumps and one threshold pair required
+original-instruction corrections. Equal size alone never conferred acceptance.
+
+Full read-only annotations for all13 new bodies, target dumps, source/object
+attempts, native exits and complete boundary/operand reviews are retained in
+`.analysis/probes/misaki/`. One-time derivation scripts must not overwrite
+accepted/newer source. Public Engine.h and Input.h remain unchanged.
+
+Final formatted sources passed63 complete strict comparisons from29 serial cold
+source/profile/dependency artifacts: ten new units and53 actual CharacterViews.h
+consumers. All726 refreshed generated symbol identities across12 units retain
+reviewed local offsets, destinations or literal payloads (723 local bindings,
+three strings). The other254 existing units retain earlier artifacts. Focused
+tracking, ledger/progress CI and whitespace checks passed; no full CI/cohort or
+runtime matrix ran. No compiler/Wine failure occurred in this checkpoint.

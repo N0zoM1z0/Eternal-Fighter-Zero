@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 289 |
-| Authored exact instruction bytes | 687,169 |
+| Authored complete exact functions | 299 |
+| Authored exact instruction bytes | 702,784 |
 | Associated exact local-table bytes | 4,434 |
-| Reviewed boundaries / origins | 327 / 327 |
+| Reviewed boundaries / origins | 336 / 336 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,51 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mishio local-effect checkpoint
+## Latest Misaki construction, input and command checkpoint
+
+Ten Character07 owners add15,615 complete exact instruction bytes, no local
+tables: constructor567900/390, initializer567A90/270, reset567BA0/58,
+removal567BE0/80, locomotion567C30/19, input567C50/10656,
+empty slots01/08 at56A5F0/11 and56A600/11, emitter56A610/47,
+commands56A640/4073. Sources:src/Character07Frame.cpp, Character07Input.cpp,
+Character07Commands.cpp; profile vc71-od-static. Proof:docs/evidence/misaki-exact.json.
+Durable facts:
+[Misaki construction input and indicator owners](KNOWLEDGE_BASE.md#misaki-construction-input-and-indicator-owners).
+Private attempts/review:.analysis/probes/misaki/README.md.
+
+Canonical creation ID7 allocates3448, copies resource literal788800 "misaki"
+and installs vtable788808. Only Character07's existing opaque tail is expanded
+into four scalar ints and three64-int arrays3148/3248/3348, ending3448 without
+padding. Preserve constructor commandCount5 and four explicit command entries
+1/11/18/7; no extra ID store is inferred. Initializer calls only the shared base.
+Slots01 and08 really are empty; do not invent indicators/frame behavior.
+
+Independent review covers4,100 contiguous instructions,638 internal branches
+and all100 relocation fields:49 direct calls,49 typed double operands,string
+and vptr. Input has frame14 /receiver EBP-4; commands frameC /receiver EBP-C.
+Keep actual unsigned byte operations, positive air guards, directional product
+order, first phase >1 and later >=2 gates. Thirteen ordered command scans
+retain actual windows, grounded guard, one >=1000 threshold and mask semantics.
+
+Formatted public sources passed63 complete strict comparisons from29 serial
+cold source/profile/dependency artifacts: ten new units and53 actual header
+consumers. All726 generated-name refreshes preserve reviewed offsets/destinations
+or literal bytes;254 unrelated existing units retain earlier artifacts.
+Engine.h and Input.h are unchanged. Focused tracking, ledgers/progress CI and
+whitespace checks passed; no full CI/cohort or runtime matrix ran. No native
+compiler/Wine failure occurred. Preserve all analysis/native exits.
+
+Ten of thirteen original Misaki virtual destinations now have complete exact
+proofs (nine new child bodies plus inherited LoadResources). Next substantial
+owner: CPU56B630/17127. State5571F0/66501 and effects56F920/15562 code bytes
+remain OPEN with associated tables unreviewed. Fresh canonical annotated
+decompiles for all13 new bodies are retained in .analysis/probes/misaki/;
+decompiler text confers no acceptance. Build complete first source early and
+review all original boundaries/operands before credit. Resources, runtime, TU
+partitioning and game remain independently open. Keep parked Shiori/PrepareBattle
+controls until new target evidence supplies a falsifiable instruction prediction.
+
+## Previous Mishio local-effect checkpoint
 
 Character15::Slot07 at54FD30 is complete exact:29,568 instruction bytes plus
 308 associated table bytes, total29,876. Code ends5570B0,52-destination address
