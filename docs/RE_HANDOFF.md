@@ -10,7 +10,8 @@ the complete title scene with its shared base/fades and palette/frame wrappers,
 and substantial character-selection update/entry/resource functions plus the
 complete selection renderer and character creation dispatcher, followed by the
 shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O,
-then all three character resource loaders and both character image-transfer methods.
+then all three character resource loaders and both character image-transfer methods,
+followed by character input/replay, visual trail ownership and the complete body/trail renderer.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -23,10 +24,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 145 |
-| Authored exact instruction bytes | 81,873 |
+| Authored complete exact functions | 151 |
+| Authored exact instruction bytes | 85,573 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 184 / 184 |
+| Reviewed boundaries / origins | 190 / 190 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -171,7 +172,7 @@ replay is .analysis/exact/character-create-and-affected.json. See
 Checkpoint 0adebca accepts sixteen authored shared-character/statistics
 functions for 5,156 instruction bytes, plus a 106-byte generated sequence-delete
 helper with auxiliary credit only. Secondary construction/destruction, embedded
-input/sequence lifetime, ResetPose/ResetFrame/InitializeState, all four local
+trail/sequence lifetime, ResetPose/ResetFrame/InitializeState, all four local
 effect-pool methods, LoadResources and statistics Read/Write are complete strict
 exact. All seventeen extents and 117 relocation operands were independently
 reviewed. Source is SecondaryLifetime.cpp, SecondaryState.cpp,
@@ -197,7 +198,7 @@ one selected cold artifact and both complete statistics comparisons (268/357
 bytes), again strict exact; final source hashes and proofs were refreshed.
 Private cleanup replay is .analysis/exact/character-statistics-eof.json.
 
-The latest checkpoint adds six authored functions (4,753 instruction bytes):
+Checkpoint a08605c adds six authored functions (4,753 instruction bytes):
 Secondary LoadImages 0x411080 (1,560), LoadPatterns 0x4116A0 (1,079), LoadSounds
 0x411AE0 (241), SecondarySequence::Allocate 0x412AD0 (51), and Video's character
 BMP/packed transfer methods 0x409090 (980) / 0x409740 (842). All complete target
@@ -227,6 +228,42 @@ proofs were refreshed. Private aggregate replay is
 .analysis/exact/secondary-loaders-and-affected.json, with the final Video stage
 also retained at .analysis/exact/character-surfaces.json. See
 [the loader facts](KNOWLEDGE_BASE.md#character-resource-loaders).
+
+The latest checkpoint adds six authored functions for 3,700 instruction bytes:
+UpdateInput 0x411BE0 (1,467), Render 0x4121A0 (1,649), SecondaryTrail Capture
+0x412930 (212) / Begin 0x412A10 (177), and Secondary AdvanceTrail 0x410940 (134) /
+StartTrail 0x4109D0 (61). Full review covers 1,052 instructions, 82 internal
+branches, all six final returns/alignment successors and 19 explicit relocations.
+No local-table or auxiliary credit is added. Source is SecondaryInput.cpp and
+SecondaryRender.cpp. The 1,649-byte body is rendering, correcting the previous
+handoff's control label. Its first complete source was strict exact; UpdateInput
+needed the observed training-CPU early return to resolve its three-byte delta.
+
+The 2BC0 owner is visual trail history, now named SecondaryTrail/trail. Its
+previously accepted constructor/FinishSample retain their historical unit IDs
+and receive no duplicate credit. It has 60-entry coordinate, facing, animation
+and frame arrays, plus pending/stride/held bytes and position. The two wrappers'
+original null-preserving +8 conversion is naturally reproduced by inheriting
+SecondaryPose at Secondary+8 (current 0x70-byte base view). The existing fields
+keep all offsets, including opponent slot 78 and complete minimum view 3138.
+The full 463-byte constructor remains exact; no manual pointer adjustment/vptr stores or
+unique original source-graph claim are used. Input fields 188..19F and byte 1AA
+are now explicit. Animation/frame indices 8/A are unsigned from target reads.
+Human/CPU/training/replay/suppression paths and full normal/blended/tint/special,
+trail and offscreen-fallback rendering paths are retained. Pixel kernels and
+child virtual bodies remain unimplemented.
+
+Thirty-two cold artifacts cover six new and 128 Engine.h-dependent existing
+units: all 134 complete comparisons are strict exact. All 75 local bindings
+and destinations remain checked. Standalone Input, Reader and Config are
+unaffected and omitted. New proofs are secondary-input-exact.json and
+secondary-render-exact.json; affected-owner proofs and source mapping symbols
+are refreshed. Private final replay is
+.analysis/exact/secondary-control-and-affected.json. See
+[the input/trail/rendering facts](KNOWLEDGE_BASE.md#character-input-trails-and-rendering).
+A missing-method declaration in the first private renderer compile caused C2039;
+the required post-failure --execute compiler/linker/resource/execution smoke
+passed before work resumed. All logs/trials are retained in .analysis/.
 
 Important retained limits:
 
@@ -319,21 +356,21 @@ knowledge and this handoff before a local checkpoint.
 
 The reader/audio/Input backlog, Context input/audio transitions and the title
 scene/shared fade owner are complete at function-codegen level. Their successful
-units do not complete the game. The base now has three reviewed virtual slots,
+units do not complete the game. The Scene base has three reviewed virtual slots,
 so subsequent scene work can use that shape while keeping per-owner fields and
 ABI provisional. The nine Scene1 contributions, including the full creation switch/table,
 are exact. The coherent shared Secondary base is now substantially recovered:
 lifetime, state initialization, local effect management, resource reuse and
 statistics are accepted. Its three resource loaders and both character image
-transfer methods are now exact too. Continue into coherent character input and
-control processing at 0x411BE0 (1,467-byte candidate) and 0x4121A0 (1,649-byte
-candidate). Their target-attested Ghidra decompiles are retained in .analysis/ghidra/;
-raw candidate disassembly is in .analysis/probes/secondary-loaders/ under the
-historical primary/extra-patterns probe names. Those names were only scratch
-labels; neither body is accepted. Review full boundaries/call signatures and
-build the first complete source early. Related embedded input routines at
-0x412930 / 0x412A10 are also open. The recovered base view supports later child
-constructor work without inventing vptr stores.
+transfer methods are exact too, followed by character input/replay, trail
+capture/wrappers and the full body/trail renderer. Continue through the common
+character frame/state routines: provisional candidates 0x40F230 (575 bytes),
+0x40F470 (262), 0x40F580 (1,012) and 0x40F980 (1,509). Target-attested decompiles
+are retained under .analysis/ghidra/; verify complete boundaries and actual
+semantics before naming/acceptance, then build the first complete source early.
+The recovered pose-base conversion and unsigned animation/frame indices support
+that work. Related smaller helpers remain useful when they close the owner.
+Do not treat the old input/pattern scratch labels as actual semantics.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the
@@ -343,7 +380,7 @@ accepted by these declarations. All 23 called character constructors still have
 reviewed boundary/origin rows but remain unimplemented. Their allocation and
 common-base evidence is .analysis/probes/character-create/. Do not count reviewed
 declarations as exact functions. Two 505-element arrays at base offsets 10/164,
-embedded InputHistory at 2BC0, the 64-record local pool at 4D0 and statistics at
+embedded trail history at 2BC0, the 64-record local pool at 4D0 and statistics at
 3118 are target-backed. Keep unobserved bytes and original failure behavior.
 
 The selection renderer's full evidence remains in .analysis/probes/scene-render/;

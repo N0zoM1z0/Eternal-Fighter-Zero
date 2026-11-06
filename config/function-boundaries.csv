@@ -183,3 +183,9 @@ address,end,size,status,evidence
 0x00412AD0,0x00412B03,51,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00409090,0x00409464,980,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00409740,0x00409A8A,842,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00411BE0,0x0041219B,1467,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x00412930,0x00412A04,212,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x00412A10,0x00412AC1,177,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x00410940,0x004109C6,134,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x004109D0,0x00410A0D,61,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering
+0x004121A0,0x00412811,1649,reviewed,docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering

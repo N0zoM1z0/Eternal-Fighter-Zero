@@ -1592,7 +1592,7 @@ There are no local-table bytes or compiler-local bindings in the new functions.
 | 0x412820 | 24 | SecondarySequence construction |
 | 0x4128E0 | 43 | SecondarySequence destruction |
 | 0x412870 | 106 | Generated sequence vector-deleting destructor, auxiliary |
-| 0x412840 | 39 | SecondaryInputHistory construction |
+| 0x412840 | 39 | SecondaryTrail construction (previous InputHistory label) |
 | 0x412910 | 32 | Input-history sample completion |
 | 0x40F110 | 84 | ResetPose, virtual slot 0 |
 | 0x40F1E0 | 74 | ResetFrame |
@@ -1624,7 +1624,7 @@ its first short at offset 8 when the class has eight-byte alignment and a vptr;
 adding an explicit four-byte field after the vptr was an incorrect first trial.
 No artificial front gap, packing pragma or explicit vptr store is used.
 The opponent-slot member initializer writes offset 78 before the automatic
-embedded InputHistory constructor at this+2BC0; Context/Video/Input/Audio stores
+embedded trail-history constructor at this+2BC0; Context/Video/Input/Audio stores
 at 7C/80/84/88 occur in the constructor body afterward. Player, character ID and
 palette are bytes 8C/8D/8E. The resource-name view occupies 94..A4 and the CPU
 flag is an int at A4; original unique buffer capacity remains unproved.
@@ -1640,12 +1640,13 @@ bodies; Ghidra's ATL/string-dispatch names do not establish semantic origins.
 Destruction releases surface indices 0 through surfaceCount inclusive, deletes
 the pointer array, releases non-150 sounds and deletes both record arrays.
 
-InputHistory occupies 0x4F8 bytes at 2BC0. Its constructor initializes byte 0,
+The owner previously called InputHistory occupies 0x4F8 bytes at 2BC0;
+its trail/snapshot role is established in the following input/rendering checkpoint. Its constructor initializes byte 0,
 byte 2 and short 4F4; FinishSample assigns held = pending * 3 and clears pending.
 ResetPose clears shorts A/C, double B8 and ints 168/170 before finishing a sample.
 ResetFrame clears five doubles. InitializeState recovers the full original
 scalar sequence, spawn x = player * 160 + 240, y = 0, facing = 1 - player * 2,
-the 180-byte history clear, local-effect reset and embedded input reset.
+the 180-byte history clear, local-effect reset and embedded trail reset.
 Unobserved state remains explicit unknown data; no speculative initialization
 or guards were added.
 
@@ -1800,3 +1801,120 @@ is .analysis/exact/secondary-loaders-and-affected.json, with the two-method stag
 also retained at .analysis/exact/character-surfaces.json. Complete rejected trials,
 target disassembly, Ghidra output and independent boundary/operand reviews remain
 under .analysis/probes/secondary-loaders/ and .analysis/ghidra/.
+
+## Character input, trails and rendering
+
+Six authored contributions add 3,700 complete instruction bytes, with no local
+tables or auxiliary credit. Independent review covers 1,052 target instructions,
+82 internal direct branches, all final RET instructions and the following INT3
+alignment, plus all 19 explicit relocation operands. The canonical EFZ.exe
+identity is unchanged.
+
+| Original | Complete bytes | Recovered contribution |
+| --- | ---: | --- |
+| 0x411BE0 | 1,467 | Secondary::UpdateInput |
+| 0x4121A0 | 1,649 | Secondary::Render |
+| 0x412930 | 212 | SecondaryTrail::Capture |
+| 0x412A10 | 177 | SecondaryTrail::Begin |
+| 0x410940 | 134 | Secondary::AdvanceTrail |
+| 0x4109D0 | 61 | Secondary::StartTrail |
+
+The second large body is a renderer, correcting the previous handoff's tentative
+control-processing label. The embedded owner at 2BC0 stores visual trail poses,
+not button history. Its reconstruction class/member are now SecondaryTrail/trail,
+replacing SecondaryInputHistory/inputHistory. The already accepted 39-byte
+constructor and 32-byte FinishSample have refreshed symbol bindings under their
+historical unit IDs, with no duplicate credit. The 180-byte button history at
+1AB is a separate owner.
+
+The two original wrappers perform a null-preserving pointer adjustment of +8
+before passing their pose argument. The callee reads words at pose+0/+2,
+doubles at +18/+20 and a facing byte at +48. Ordinary inheritance from the
+nonpolymorphic SecondaryPose view reproduces both complete wrappers, with no
+manual pointer adjustment or vptr stores. The current pose base is 0x70 bytes
+at Secondary+8: the former first data fields at 8..77 now belong to this base,
+with the same inherited source identifiers. Vptr 0, opponent pointer 78,
+embedded trail 2BC0, statistics 3118 and minimum Secondary extent 3138 remain
+unchanged. The original 463-byte constructor also remains strict exact after
+this structural change. This is a target-supported natural C++ model, without
+claiming unique original class names, a unique inheritance graph, linked RTTI
+or vtable/data acceptance.
+
+SecondaryTrail is 0x4F8 bytes: unsigned pending/stride/held bytes at 0/1/2,
+unknown bytes 3..7, sixty x doubles at 8, sixty y doubles at 1E8, sixty signed
+facing bytes at 3C8, sixty ushort animation IDs at 404, sixty ushort frame IDs
+at 47C, signed short position at 4F4 and two unresolved tail bytes. Embedded
+coordinates are 2BC8/2DA8/2F88/2FC4/303C/30B4 respectively. Capture sets stride
+from pending, clears held, writes one pose and advances/wraps position at 60.
+Begin fills all sixty records from the pose only when both pending and held
+are zero, then assigns its spacing byte to pending and stride. It does not reset
+position. The constructor still leaves stride and all sample arrays untouched.
+FinishSample sets held = pending * 3 and clears pending; its name is provisional.
+
+AdvanceTrail only runs its update when the opponent's short 14C is zero.
+Positive pending captures a pose and clears held again, retaining the duplicate
+original store; otherwise positive held decrements. StartTrail delegates through
+the implicit pose-base conversion. No null, range, zero-spacing or failure
+guards were added to these original paths.
+
+UpdateInput has distinct CPU and human branches. CPU mode 1 clears four pulse
+bytes and horizontal direction, assigns vertical direction from signed reads
+of Context byte 1346, and returns early. Other CPU modes invoke virtual slot 5;
+Context effectFlag1350/counter1354 suppress pulses and set short 262 to 99.
+Human input calls the accepted Input::ReadState, replaces its byte from replay
+mode 1 or records it as a word in mode 2, then clears/translates direction and
+pulse fields. The replay member remains at Context+14284. Opposing horizontal
+button priority depends on facing. Four held ints produce rising-edge pulse
+bytes. The same suppression runs before packing the separate 180-byte ring.
+The CPU training early return was the sole three-byte difference in the first
+complete source; recovering that return gives all 1,467 bytes.
+
+The button ring packs four direction comparisons plus pulses weighted 16/32/64/128,
+then advances the signed short position at 260 and wraps at 180. Values >=16
+update byte 1A8 for unsigned animation IDs >=200, or 1A9 and counter byte 1AA
+for IDs 163..166. The horizontal timer at 14E starts at 60 when direction equals
+1 - 2 * (opponent.x - x > 0), with zero timer/latch; it decrements when the
+opponent's short 14A is zero. The latch at 150 follows nonzero direction.
+The human path then invokes virtual slot 2. These two pure-slot interfaces have
+no stack arguments or consumed result; child implementations remain open.
+Explicit signed conversion of Context 1346 retains the already accepted unsigned
+reads elsewhere. Animation/frame indices at Secondary 8/A are unsigned from
+MOVZX evidence; previous initialization/reset bodies retain identical stores.
+
+Render first traverses trail.pending * 3 + trail.held samples with byte stride,
+starting at position minus that span, applying single +/-60 normalization steps.
+It copies each complete 12-byte PatternFrame and forms source/destination
+rectangles with the original signed geometry. Horizontal placement uses facing
+comparisons; vertical placement is int(y) + 210 - (y < 0) - frame.v + offsetY.
+The corresponding _ftol2 and zero-double destinations are explicit bindings.
+Trail draws use DrawBlendedSurface with mode zero.
+
+The current body uses the same geometry. While top <240, nonzero counter 30BC
+selects the tint kernel with byte 30B8 and decrements the counter. Otherwise
+field58 ==3 selects the special kernel, positive field58 selects blended mode
+field58-1, and other values select the normal draw. For top >=240 and short
+13E ==0, frame zero of animation 49 is drawn at top 239-frame.v, without offsetY.
+Normal, blended, tint and special destinations are 0x409A90, 0x40A0B0, 0x40A440
+and 0x40AAE0; the tint parameter is a signed byte. These pixel-kernel bodies
+remain external and receive no implementation credit. Normal C++ scopes recover
+the 0x40 frame; the first complete renderer source was strict exact. Original
+unchecked indices, zero-stride behavior and floating-point paths are retained.
+
+Final replay cold builds 32 distinct source/profile/dependency artifacts and
+compares six new plus 128 Engine.h-dependent existing units: all 134 complete
+comparisons are strict exact. The four dispatchers retain all 75 local-offset
+checks and original destinations after compiler-local symbol identity refresh.
+Standalone Input, Reader and Config are unaffected and omitted. New public proofs
+are secondary-input-exact.json and secondary-render-exact.json; affected-owner
+proofs and symbolic source mappings are refreshed. Private aggregate replay is
+.analysis/exact/secondary-control-and-affected.json. Full trials, canonical raw
+code, caller queries, successor/boundary/operand reviews and the constructor
+diagnostic remain under .analysis/probes/secondary-control/ and .analysis/ghidra/.
+
+The first private renderer compile lacked its two external method declarations
+and exited with C2039. The declarations were completed, and the repository's
+required post-compiler-failure --execute smoke passed C/C++, headers, CRT,
+resources, linking and execution before reconstruction resumed. Retained logs
+are secondary-control-SecondaryRender-first.log and
+secondary-control-toolchain-recovery.log under .analysis/build/. No full CI,
+unrequested cold cohort or runtime/failure-injection matrix was run.

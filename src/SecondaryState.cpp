@@ -64,9 +64,9 @@ void Secondary::InitializeState()
     effectWrite = 0;
     effectRead = 0;
     ClearLocalEffects();
-    inputHistory.position = 0;
-    inputHistory.pending = 0;
-    inputHistory.held = 0;
+    trail.position = 0;
+    trail.pending = 0;
+    trail.held = 0;
     field30f0 = 0;
     field30ec = 0;
     field0058 = 0;

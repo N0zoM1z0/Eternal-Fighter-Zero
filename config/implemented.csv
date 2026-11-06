@@ -126,8 +126,8 @@ address,name,source,symbol,status,evidence
 0x0040ECB0,??1Secondary@@QAE@XZ,src/SecondaryLifetime.cpp,??1Secondary@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x00412820,??0SecondarySequence@@QAE@XZ,src/SecondaryLifetime.cpp,??0SecondarySequence@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x004128E0,??1SecondarySequence@@QAE@XZ,src/SecondaryLifetime.cpp,??1SecondarySequence@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
-0x00412840,??0SecondaryInputHistory@@QAE@XZ,src/SecondaryLifetime.cpp,??0SecondaryInputHistory@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
-0x00412910,?FinishSample@SecondaryInputHistory@@QAEXXZ,src/SecondaryLifetime.cpp,?FinishSample@SecondaryInputHistory@@QAEXXZ,complete,docs/evidence/secondary-lifetime-exact.json
+0x00412840,??0SecondaryTrail@@QAE@XZ,src/SecondaryLifetime.cpp,??0SecondaryTrail@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
+0x00412910,?FinishSample@SecondaryTrail@@QAEXXZ,src/SecondaryLifetime.cpp,?FinishSample@SecondaryTrail@@QAEXXZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x0040F110,?ResetPose@Secondary@@UAEXXZ,src/SecondaryLifetime.cpp,?ResetPose@Secondary@@UAEXXZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x0040F1E0,?ResetFrame@Secondary@@QAEXXZ,src/SecondaryState.cpp,?ResetFrame@Secondary@@QAEXXZ,complete,docs/evidence/secondary-state-exact.json
 0x0040EDF0,?InitializeState@Secondary@@UAEXXZ,src/SecondaryState.cpp,?InitializeState@Secondary@@UAEXXZ,complete,docs/evidence/secondary-state-exact.json
@@ -144,3 +144,9 @@ address,name,source,symbol,status,evidence
 0x00412AD0,?Allocate@SecondarySequence@@QAEXH@Z,src/SecondaryLoaders.cpp,?Allocate@SecondarySequence@@QAEXH@Z,complete,docs/evidence/secondary-loaders-exact.json
 0x00409090,?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z,src/VideoCharacterSurface.cpp,?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z,complete,docs/evidence/character-surfaces-exact.json
 0x00409740,?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z,src/VideoCharacterSurface.cpp,?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z,complete,docs/evidence/character-surfaces-exact.json
+0x00411BE0,?UpdateInput@Secondary@@QAEXXZ,src/SecondaryInput.cpp,?UpdateInput@Secondary@@QAEXXZ,complete,docs/evidence/secondary-input-exact.json
+0x00412930,?Capture@SecondaryTrail@@QAEXPBVSecondaryPose@@@Z,src/SecondaryInput.cpp,?Capture@SecondaryTrail@@QAEXPBVSecondaryPose@@@Z,complete,docs/evidence/secondary-input-exact.json
+0x00412A10,?Begin@SecondaryTrail@@QAEXPBVSecondaryPose@@E@Z,src/SecondaryInput.cpp,?Begin@SecondaryTrail@@QAEXPBVSecondaryPose@@E@Z,complete,docs/evidence/secondary-input-exact.json
+0x00410940,?AdvanceTrail@Secondary@@QAEXXZ,src/SecondaryInput.cpp,?AdvanceTrail@Secondary@@QAEXXZ,complete,docs/evidence/secondary-input-exact.json
+0x004109D0,?StartTrail@Secondary@@QAEXE@Z,src/SecondaryInput.cpp,?StartTrail@Secondary@@QAEXE@Z,complete,docs/evidence/secondary-input-exact.json
+0x004121A0,?Render@Secondary@@QAEXHH@Z,src/SecondaryRender.cpp,?Render@Secondary@@QAEXHH@Z,complete,docs/evidence/secondary-render-exact.json

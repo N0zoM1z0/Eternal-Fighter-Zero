@@ -47,6 +47,8 @@ public:
     int ConvertBackBuffer();
     int DrawSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
     int DrawBlendedSurface(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, int);
+    int DrawCharacterTint(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int, char);
+    int DrawCharacterSpecial(SurfaceRect, IUnknown *, SurfaceRect, unsigned char, int);
 };
 #include "Input.h"
 class Audio {
@@ -95,16 +97,22 @@ public:
     ~SecondarySequence();
     void Allocate(int);
 };
-class SecondaryInputHistory {
+class SecondaryPose;
+class SecondaryTrail {
 public:
     unsigned char pending;
-    unsigned char unknown_0001;
+    unsigned char stride;
     unsigned char held;
-    unsigned char unknown_0003[0x4f1];
+    unsigned char unknown_0003[5];
+    double x[60], y[60];
+    char facing[60];
+    unsigned short type[60], frame[60];
     short position;
     unsigned char unknown_04f6[2];
-    SecondaryInputHistory();
+    SecondaryTrail();
     void FinishSample();
+    void Capture(const SecondaryPose *);
+    void Begin(const SecondaryPose *, unsigned char);
 };
 struct SecondaryEffectSlot {
     unsigned short type, frame, tick;
@@ -151,24 +159,11 @@ public:
     void Read(const char *);
     void Write(const char *);
 };
-class Secondary {
+// Shared nonpolymorphic pose base; field names use Secondary-relative offsets.
+class SecondaryPose {
 public:
-    virtual void ResetPose();
-    virtual void Slot01() = 0;
-    virtual void Slot02() = 0;
-    virtual void Slot03() = 0;
-    virtual void Slot04() = 0;
-    virtual void Slot05() = 0;
-    virtual void Slot06() = 0;
-    virtual void Slot07() = 0;
-    virtual void Slot08() = 0;
-    virtual void EmitLocalEffect(SecondaryEffectSpawn *);
-    virtual void RemoveLocalEffect(short);
-    virtual void LoadResources();
-    virtual void InitializeState();
-public:
-    short field0008;
-    short field000a;
+    unsigned short field0008;
+    unsigned short field000a;
     short field000c;
     unsigned char unknown_000e[0x2];
     PatternSequence * patterns;
@@ -185,6 +180,23 @@ public:
     unsigned char unknown_0059[0x7];
     int field0060;
     unsigned char unknown_0064[0x14];
+};
+class Secondary : public SecondaryPose {
+public:
+    virtual void ResetPose();
+    virtual void Slot01() = 0;
+    virtual void Slot02() = 0;
+    virtual void Slot03() = 0;
+    virtual void Slot04() = 0;
+    virtual void Slot05() = 0;
+    virtual void Slot06() = 0;
+    virtual void Slot07() = 0;
+    virtual void Slot08() = 0;
+    virtual void EmitLocalEffect(SecondaryEffectSpawn *);
+    virtual void RemoveLocalEffect(short);
+    virtual void LoadResources();
+    virtual void InitializeState();
+public:
     Secondary ** opponentSlot;
     Context * contextOwner;
     Video * videoOwner;
@@ -244,10 +256,13 @@ public:
     unsigned char unknown_0176[0x2];
     double field0178;
     double field0180;
-    unsigned char unknown_0188[0x20];
+    char inputX, inputY, buttonPulse[4];
+    unsigned char unknown_018e[2];
+    int buttonHeld[4];
+    unsigned char unknown_01a0[8];
     char field01a8;
     char field01a9;
-    unsigned char unknown_01aa[0x1];
+    char field01aa;
     unsigned char history[180];
     unsigned char unknown_025f[0x1];
     short field0260;
@@ -262,8 +277,9 @@ public:
     int effectActive[64];
     SecondaryEffectSlot effects[64];
     unsigned char unknown_2ad0[0xf0];
-    SecondaryInputHistory inputHistory;
-    unsigned char unknown_30b8[0x4];
+    SecondaryTrail trail;
+    char tint30b8;
+    unsigned char unknown_30b9[3];
     int field30bc;
     unsigned char unknown_30c0[0x4];
     int field30c4;
@@ -290,6 +306,10 @@ public:
     void LoadImages();
     void LoadSounds();
     void LoadPatterns();
+    void UpdateInput();
+    void Render(int, int);
+    void AdvanceTrail();
+    void StartTrail(unsigned char);
 };
 // Word-oriented file state; the remaining Context fields are separate members.
 class WordFile {
@@ -464,7 +484,9 @@ private:
 public:
     char flag14283;
 private:
+public:
     WordFile replayFile;
+private:
     int effectPhase, effectAngleStart, effectAngleEnd;
     unsigned int copiedEffectFrame, copiedEffectTick;
     unsigned char unknown_142a8[0x48];

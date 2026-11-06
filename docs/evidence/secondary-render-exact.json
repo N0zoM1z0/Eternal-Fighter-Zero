@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 32 cold source/profile/dependency artifacts shared unchanged across six new character input/trail/rendering units and 128 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1649,
+      "matched_bytes": 1649,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 273,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 364,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 405,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 560,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 666,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 738,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 772,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 960,
+          "target": 4238048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawCharacterSpecial@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1094,
+          "target": 4235440,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1203,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1325,
+          "target": 4236352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawCharacterTint@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1437,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1638,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-input-trails-and-rendering; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8291bbd494a4aeee8ac95847f3aa33ee26b2b80d1e85864b5b40bc1ba25806f4",
+      "target_extent_sha256": "8291bbd494a4aeee8ac95847f3aa33ee26b2b80d1e85864b5b40bc1ba25806f4",
+      "unit": "secondary-render",
+      "symbol": "?Render@Secondary@@QAEXHH@Z",
+      "target_address": "0x004121A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "fe7edae25fa16ad925062f9a8f0d77d4c66b01f5e4c4fb1af2c62805ace588cc",
+      "object_sha256": "4c28b5e6b53864b563801ba232da673f6a3c53312aa124ca923d00e17a6943ed",
+      "source_sha256": "206e35f48f47c28acc65e25dc70af376a5f9c67f2797dabe8e646f59198724f6",
+      "dependencies": {
+        "src/Engine.h": "0a95e185bcf623c6bc863dbd8c4b4dfc7a014c53d150906ad0a98dc1a9197ed5",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "935d7011ef6e110a7d88972193899320317edb60770c3b10dc96cfc3f492cefc",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ca795a5e8c0a3e1e84c11957178d474822b458219aaa16fa7e910e30a7fa6cbb",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

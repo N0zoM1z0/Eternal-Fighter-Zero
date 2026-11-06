@@ -43,8 +43,8 @@ Secondary::~Secondary()
 
 SecondarySequence::SecondarySequence() { data = 0; }
 SecondarySequence::~SecondarySequence() { if (data) delete[] data; }
-SecondaryInputHistory::SecondaryInputHistory() { position = 0; pending = 0; held = 0; }
-void SecondaryInputHistory::FinishSample() { held = pending * 3; pending = 0; }
+SecondaryTrail::SecondaryTrail() { position = 0; pending = 0; held = 0; }
+void SecondaryTrail::FinishSample() { held = pending * 3; pending = 0; }
 
 void Secondary::ResetPose()
 {
@@ -53,5 +53,5 @@ void Secondary::ResetPose()
     field00b8 = 0.0;
     field0168 = 0;
     field0170 = 0;
-    inputHistory.FinishSample();
+    trail.FinishSample();
 }
