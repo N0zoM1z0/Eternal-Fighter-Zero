@@ -547,16 +547,16 @@
       "symbol": "?ResolveBodyHit@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1@Z",
       "target_address": "0x00767F60",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
-      "object_sha256": "e25807eb8e6dace4949e83b4f22869f727dd169d1a711128e7d1cf694c29c6af",
+      "boundary_ledger_sha256": "5149e891d89f469fefd1e8dffd56f7029addc8ad2522ee643afcdca5107cfc8a",
+      "object_sha256": "f4e4c97d4c3890ae93bbc0cd1c0be82855fffd52bfa3fdd48810dbb139789456",
       "source_sha256": "4a87c37b439023e53cf8e0823a3a397162103a22dbaf79d357cd5780dcb07df8",
       "dependencies": {
-        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Engine.h": "8af397a5ccbf89368dfa4cac96c73b3aed91a773edb4f927f0a1baedb73b07f7",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "units_manifest_sha256": "cedd6bbec0b9dc506698847e7c0cff54be068fa4f44ffb503e2f27194bfdae2a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4def5dfea33ea00a1c4323b7602541309cbe68883fe5658747b034a6d6b9f011",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -575,22 +575,22 @@
       "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
       "target_address": "0x00410AC0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a1629b41a6b090d2f6167395bcac60076f352d017321c6995c3a4ec69e6174f4",
-      "object_sha256": "e25807eb8e6dace4949e83b4f22869f727dd169d1a711128e7d1cf694c29c6af",
+      "boundary_ledger_sha256": "5149e891d89f469fefd1e8dffd56f7029addc8ad2522ee643afcdca5107cfc8a",
+      "object_sha256": "f4e4c97d4c3890ae93bbc0cd1c0be82855fffd52bfa3fdd48810dbb139789456",
       "source_sha256": "4a87c37b439023e53cf8e0823a3a397162103a22dbaf79d357cd5780dcb07df8",
       "dependencies": {
-        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Engine.h": "8af397a5ccbf89368dfa4cac96c73b3aed91a773edb4f927f0a1baedb73b07f7",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
         "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "f092de5ba30d06f1bf53665b32563b97efe4af61dd25de6f8ea390be3d6a02b4",
+      "units_manifest_sha256": "cedd6bbec0b9dc506698847e7c0cff54be068fa4f44ffb503e2f27194bfdae2a",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "342097f48143ef95e006d2a883b4e1e1119636abe07ebfefeeec3bcdd648e9e6",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "method": "selected complete contribution comparison; 55 cold source/profile/dependency artifacts cover four new battle number/shadow/keyboard/replay units and 210 existing Engine/Input/SceneBattle header consumers; unaffected reports retain earlier artifacts",
+  "method": "selected complete contribution comparison; 65 cold source/profile/dependency artifacts cover three new Mizuka local-effect/support units and 241 Engine.h-dependent existing units; unaffected reports retain earlier artifacts; standalone Input, reader and configuration sources unchanged",
   "latest_selected_replay": "seven new loading/Mizuka functions and204 actual Engine.h consumers;57 serial cold artifacts; all211 complete strict comparisons exact; compiler-local destination/offsets and four original string payloads independently checked before symbol-name refresh"
 }

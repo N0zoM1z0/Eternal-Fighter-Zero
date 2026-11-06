@@ -3923,3 +3923,84 @@ full CI/cohort or runtime matrix ran. Private decompile, complete source/header/
 object attempts, retained compiler exits, full disassembly and independent
 reviews are in `.analysis/probes/mizuka-cpu/`. Its one-time derivation scripts
 must not be rerun over accepted or newer sources.
+
+## Mizuka local effect dispatch and controls
+
+Three new authored functions add42,383 exact instruction bytes and348 associated
+local-table bytes. Main source is `src/Character24Effects.cpp`; support source
+is `src/MizukaEffectSupport.cpp`. Public proof:
+`docs/evidence/mizuka-effects-exact.json`. Explicit recipes use pinned VC7.1
+static /Od, never masked or partial comparison.
+
+| Complete owner | Canonical entry | Exact code bytes | Associated local tables |
+| --- | --- | ---: | ---: |
+| Character24::Slot07 | 0x501E20 | 42,279 | 348 |
+| SecondaryPose::VectorAngle | 0x4C0480 | 45 | 0 |
+| Context::StartFade | 0x408040 | 59 | 0 |
+
+The Mizuka dispatcher ends its code at50C347. A62-destination address table
+occupies50C347..50C43E, followed by the100-byte type400..499 selector map at
+50C43F..50C4A2. The complete42,627-byte contribution ends exclusively at50C4A3;
+thirteen following CC bytes precede the next function50C4B0. Original owner
+7885D0 slot7 points from7885EC to501E20. Complete review covers9,600 contiguous
+instructions,715 direct internal branches, one compressed indirect switch and
+61 explicit effect cases;39 selector entries share the default. Every table
+entry and destination was checked independently.
+
+All505 new relocation operands are reviewed: main64 compiler-local fields,
+108 direct calls and331 typed floating operands; VectorAngle adds one CALL and
+one constant. Both native COFF constant bytes and canonical payloads agree for
+65 distinct floating literals. Each field records a real symbol, destination
+and evidence, including each table destination and compiler-local offset.
+The main owner also makes104 real virtual calls to ResetPose, EmitLocalEffect
+or RemoveLocalEffect; their original receiver and slot accesses remain intact.
+They are indirect instruction operands, not invented relocations.
+
+The real72-byte EffectSpawn descriptor is reused through its existing shared
+SecondaryEffectSpawn base for local emission and Context effects. The ordinary
+active-effect scope contains frameDuration/frameCount. Complete source recovers
+index atEBP-4, descriptor atEBP-50, duration/count atEBP-54/-58, receiver atEBP-5C
+and full frame17C without padding or a fake ABI. Animation increments/decrements
+and frame rollback use the original word-width operations; field000C's specific
+unsigned read and the ring-wrap >=64 threshold retain target codegen.
+
+Type437 is physically placed between420 and421; sorting source labels changes
+the full native contribution. Preserve the hit/cancel exits before normal work
+for417..420, the positive first-hit branch for444..451, original group0/else
+bounce ordering and the independent type440 transition/expiry exits. The expiry
+branches in440,497 and498 jump directly out of the switch; a byte-identical-size
+jump merely skipping an else body has a different destination and is rejected.
+The first complete strict comparison exposed these three remaining jump fields;
+normalized branch diagnostics could not establish acceptance.
+
+Particle types497/498 consume independent random samples with ordered scalar
+coefficients. Preserve the association between each actual rand CALL and its
+coefficient rather than reusing an algebraically remembered formula. Floating
+operand order, first/else ordering, integer center-minus-facing products and
+short compound frame updates also matter. Type496 cancellation emits its full
+particle sequence before returning; it is separate from the surviving frame
+update. Original target evidence, rather than similarity with Shiori, proves
+all of these emitted instructions.
+
+VectorAngle is an ordinary method on the existing pose subobject. Its caller
+passes ECX=this+8 and two doubles; the helper stores that receiver, calls
+atan2(y,x), multiplies by the exact57.29579143313326 payload at787FF8 and returns
+with RET10. The CRT entry778970 loads descriptor78F220, which explicitly names
+atan2. This identifies an external CRT dependency, not an authored reconstruction
+of the math runtime. StartFade writes fadeDirection=1, fadeAttack=arg1,
+fadeHold=arg2 and fadeRelease=arg3 in that order, then RET0C. Layouts and original
+class/type names remain reconstruction views, not claims about recovered names.
+
+Only two nonvirtual method declarations change public Engine.h; data layout and
+existing method bodies are unchanged. To keep dependency-bound exact evidence
+current, formal replay selected three new units and241 actual Engine.h consumers,
+compiled once per65 source/profile/dependency groups. Every complete comparison
+passed strict zero-difference acceptance, including the main's full tables.
+Generated local-symbol names were reviewed against unchanged original destinations,
+local offsets and string payloads before refreshing receipts. Thirty-three
+unaffected existing units (31 authored and two auxiliary) retained their earlier
+evidence. This was an explicit affected
+selection; no unrequested full cold cohort, full CI or runtime matrix ran.
+Tracking, ledger/progress CI and whitespace checks passed. Private full attempts,
+compiler exits, decompiles and independent reviews remain in
+`.analysis/probes/mizuka-effects/`.

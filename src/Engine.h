@@ -186,6 +186,7 @@ public:
     unsigned char unknown_0051[0x7];
     char field0058;
     unsigned char unknown_0059[0x7];
+    double VectorAngle(double, double);
     int field0060;
     unsigned char unknown_0064[0x14];
 };
@@ -557,6 +558,7 @@ public:
     void UpdateEffect(short);
     void EmitEffect(EffectSpawn *);
     void RequestTransition(char);
+    void StartFade(int, int, int);
     void RemoveEffect(short);
     void AdvanceEffectWrite();
     void ProbeCharacterData();

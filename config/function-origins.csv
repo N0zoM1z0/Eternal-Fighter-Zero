@@ -64,7 +64,7 @@ address,origin,status,evidence
 0x00407B40,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
 0x00407CE0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00407D10,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
-0x00408040,unknown,unreviewed,
+0x00408040,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x00408080,unknown,unreviewed,
 0x004080C0,unknown,unreviewed,
 0x00408100,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-frame-and-word-files
@@ -264,7 +264,7 @@ address,origin,status,evidence
 0x004B1780,unknown,unreviewed,
 0x004B2AC0,unknown,unreviewed,
 0x004B6680,unknown,unreviewed,
-0x004C0480,unknown,unreviewed,
+0x004C0480,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x004C04B0,unknown,unreviewed,
 0x004D2850,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004D29E0,unknown,unreviewed,
@@ -290,7 +290,7 @@ address,origin,status,evidence
 0x004FAF40,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
 0x004FAF70,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-circular-command-recognition
 0x004FDC10,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner
-0x00501E20,unknown,unreviewed,
+0x00501E20,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x0050C4B0,unknown,unreviewed,
 0x00519E00,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x0051A070,unknown,unreviewed,

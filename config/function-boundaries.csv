@@ -295,3 +295,6 @@ address,end,size,status,evidence
 0x004FAF40,0x004FAF6F,47,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
 0x004FAF70,0x004FDC0F,11423,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-circular-command-recognition
 0x004FDC10,0x00501E20,16912,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner
+0x00501E20,0x0050C4A3,42627,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
+0x004C0480,0x004C04AD,45,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
+0x00408040,0x0040807B,59,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
