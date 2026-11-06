@@ -542,7 +542,7 @@ address,origin,status,evidence
 0x00753260,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x007538B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x007539F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
-0x00755500,unknown,unreviewed,
+0x00755500,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-rendering
 0x007586B0,unknown,unreviewed,
 0x00759460,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene
 0x007595D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-selection-scene

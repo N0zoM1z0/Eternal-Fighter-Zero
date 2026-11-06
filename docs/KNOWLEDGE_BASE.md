@@ -1262,8 +1262,9 @@ On 2026-11-06, seven complete Scene1 functions were accepted for 10,780 authored
 instruction bytes plus 20 associated local-table bytes. The character-selection
 update body is the substantial owner in this checkpoint. Its constructor,
 destructor, stage loading, player palette loading, keyboard handling and entry
-transition are also exact. Render and character-object construction remain open;
-this is not complete Scene1 or game closure. Public proof is
+transition are also exact. At that checkpoint render and character-object construction remained open;
+the subsequent rendering section records its acceptance. Character construction
+still prevents complete Scene1/callee closure. Public proof is
 [scene-select-exact.json](evidence/scene-select-exact.json).
 
 | Member | Entry | Complete contribution bytes |
@@ -1363,8 +1364,8 @@ boundary reviews are retained under .analysis/probes/scene-select/; final replay
 is .analysis/exact/scene-select-and-affected.json. No oracle/toolchain change,
 full CI/cold cohort or runtime matrix was needed.
 
-The next render owner at 0x755500 needs its complete 12,720-byte contiguous
-contribution reviewed independently. The provisional Ghidra body lists only
+The subsequent render review at 0x755500 covers its complete 12,720-byte
+contiguous contribution independently. The provisional Ghidra body lists only
 12,231 addresses: omitted intervals 0x757946..0x75794F and 0x75795F..0x757B3F
 contain normal loop instructions in the target, not accepted gaps or table
 padding. Do not copy that incomplete body extent into a comparison recipe.
@@ -1372,3 +1373,81 @@ Local render disassembly and decompile are retained, alongside the 3,399-byte
 character-loading candidate at 0x7586B0. The latter creates the original
 per-character subclasses; arbitrary opaque constructor/size guesses are not
 accepted. DrawSurface and its software conversion callee also remain open.
+
+
+## Character selection rendering
+
+On 2026-11-06, Scene1::Slot0 at 0x755500 was accepted as a complete 12,720-byte
+authored rendering-composition function, ending with RET at 0x7586AF. Public
+proof is [scene-select-render-exact.json](evidence/scene-select-render-exact.json).
+It follows the seven previously accepted selection functions and is the second
+largest accepted authored instruction body after Context::UpdateEffect. It does
+not implement the still-external pixel rendering/conversion kernels or the
+character-object constructor dispatcher.
+
+Independent original review covers all 3,294 instructions without gaps, tables
+or trailing alignment. All 63 direct branches land on instruction starts within
+the complete extent. The old Ghidra body omitted nine bytes at 0x757946..0x75794F
+and 480 bytes at 0x75795F..0x757B3F (exclusive ends). These are ordinary reachable
+loop instructions, including its counter update, stage exclusion search, rectangle
+construction and draw call. The source retains that entire random-stage-list
+loop. A size derived only from the 12,231-address inventory would have been
+incomplete; the separate reviewed boundary is 0x755500..0x7586B0. The candidate
+inventory remains unchanged and is not the boundary authority.
+
+The complete original body has 61 MakeSurfaceRect calls, 35 DrawSurface calls
+and one Present call. It composes the scrolling selection background, left/right
+player strips and portraits, character names, alternate-style badges, character
+grid, restricted-character overlays, combined/separate player cursors, stage
+cards, stage preview and random-stage panel. It preserves source-rectangle reuse
+across multiple destinations instead of rebuilding the same source for each draw.
+CPU/mode visibility tests, portrait mirroring, palette keys, all dimensions and
+coordinates remain as compiled in the target. Existing Engine.h/Input.h layouts
+were sufficient and were not changed.
+
+Stage-list branches preserve four independent skipped-stage/counter pairs. The
+normal list starts at row 1 and runs through 7; random selection and both slide
+lists run rows 0..8. Unavailable stages are skipped with the original unbounded
+while loops and signed modulo 23. The reverse slide also draws row -1 and uses
+its original backward exclusion search. There are no new bounds guards, clamps,
+extra frame operations or abstracted loop helpers. Background/portrait offsets,
+zero-based coordinate subtraction and per-expression integer conversions retain
+the original order.
+
+All 175 relocation operands were independently decoded from canonical target
+bytes before acceptance. Named destinations are MakeSurfaceRect 0x40C590,
+DrawSurface 0x409A90, Present 0x40B5E0, cos 0x7782B4, sin 0x778204 and ftol2
+0x7783B8, plus six reviewed double constants: zero at 0x7872F8, the degree divisor
+180/3.141592 at 0x787FF8, 190 at 0x788450, 230 at 0x7884B0, 11 at 0x788750 and
+33 at 0x7892D8. The source uses ordinary C++ casts and CRT math calls. No local
+relocation, table, EH/LTCG exception or address mask is present.
+
+The first complete source was 12,648 bytes, 72 short. Reversing the cosine
+multiplication operands recovered five ordinary pre-call double spills and the
+original 0x820 frame; separate rectangle declarations alone did not recover the
+reused source/destination local positions. Keeping the source rectangle in an
+outer scope and the destination in the inner composition scope restored those
+positions naturally. Explicit zero-minus coordinate expressions recovered the
+original XOR/SUB operations in place of NEG; after the last two portrait-offset
+subtractions, the complete 12,720 bytes were zero difference. Every trial retained
+a full comparison and all original loop bodies. No inert locals, padding, byte
+wrappers, assembly or partial acceptance were used.
+
+Final src/SceneSelectRender.cpp was compiled with the pinned VC7.1 /Od /G6 /MT
+/Gy /GS /W3 profile and compared as one explicitly selected cold unit. Existing
+sources and shared headers were unchanged, so no old cohort was replayed. The
+complete strict result, private source trials, original boundary/operand review
+and exit logs remain at .analysis/exact/scene-select-render.json,
+.analysis/probes/scene-render/ and .analysis/build/scene-render-*. The ledger
+preparation initially mistook the previous Step's end-address column for a render
+entry and stopped on an assertion; the first compare correctly rejected the
+missing reviewed boundary. After checking the actual entry column, the reviewed
+row was added and the already compiled final source passed full strict comparison.
+No target bytes, compiler/Wine state or oracle behavior were changed.
+
+The next coherent Scene1 function is LoadCharacter at 0x7586B0, with an original
+3,399-byte candidate body and 24 per-character allocation paths. Before accepting
+its source, inspect the complete dispatcher/table and each called constructor's
+boundary, common base construction, argument widths and observed allocation size.
+Character inheritance and full Secondary layout are still provisional. Linked
+vtables/resources and whole-game/runtime closure remain separate work.

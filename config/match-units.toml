@@ -10489,3 +10489,1238 @@ type = "REL32"
 symbol = "?FadeIn@Scene@@QAEXPAEE@Z"
 target = 0x00759e20
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed complete original operand, mapped resource string or floating constant, callee, vtable or CRT destination"
+
+[units.scene-select-render]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SceneSelectRender.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/scene-select-render/SceneSelectRender.obj"
+symbol = "?Slot0@Scene1@@UAEXXZ"
+target_address = 0x00755500
+size = 12720
+
+[[units.scene-select-render.relocations]]
+offset = 39
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 51
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 124
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 261
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 335
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 433
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 451
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 471
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 643
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 667
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 690
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 710
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 882
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1054
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1076
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1094
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1266
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1290
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1318
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1336
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1508
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1621
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1784
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1956
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 1979
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2097
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2269
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2323
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2441
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2613
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2661
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2782
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 2954
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3067
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3226
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3398
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3424
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3543
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3715
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3772
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 3891
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4063
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4111
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4230
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4402
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4428
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4529
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4544
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4716
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4739
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4858
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 4876
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5048
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5069
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5090
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5262
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5283
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5304
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5476
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5497
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5520
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5692
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5738
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5758
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5930
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5951
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 5974
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6146
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6167
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6190
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6362
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6383
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6406
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6578
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6590
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6756
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 6920
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7092
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7165
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7329
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7501
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7569
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7733
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 7905
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8182
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8324
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8335
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8349
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8377
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8549
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8598
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8697
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8708
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8717
+type = "DIR32"
+symbol = "__real@4067c00000000000"
+target = 0x00788450
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8722
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8745
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8917
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 8943
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9047
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9058
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9067
+type = "DIR32"
+symbol = "__real@406cc00000000000"
+target = 0x007884b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9072
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9089
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9261
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9415
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9557
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9568
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9582
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9610
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9782
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9816
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9920
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9931
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9940
+type = "DIR32"
+symbol = "__real@406cc00000000000"
+target = 0x007884b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9945
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 9962
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10134
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10310
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10452
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10463
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10477
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10497
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10508
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10517
+type = "DIR32"
+symbol = "__real@4040800000000000"
+target = 0x007892d8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10522
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10555
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10566
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10575
+type = "DIR32"
+symbol = "__real@4026000000000000"
+target = 0x00788750
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10580
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10595
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10767
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10798
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10902
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10913
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10922
+type = "DIR32"
+symbol = "__real@406cc00000000000"
+target = 0x007884b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10927
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 10944
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11116
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11300
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11442
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11453
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11467
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11487
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11498
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11507
+type = "DIR32"
+symbol = "__real@4040800000000000"
+target = 0x007892d8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11512
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11539
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11550
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11559
+type = "DIR32"
+symbol = "__real@4026000000000000"
+target = 0x00788750
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11564
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11584
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11756
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 11897
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12039
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12050
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12064
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12084
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12095
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12104
+type = "DIR32"
+symbol = "__real@4040800000000000"
+target = 0x007892d8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12109
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12136
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12147
+type = "REL32"
+symbol = "_sin"
+target = 0x00778204
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12156
+type = "DIR32"
+symbol = "__real@4026000000000000"
+target = 0x00788750
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12161
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12181
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12353
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12379
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12483
+type = "DIR32"
+symbol = "__real@404ca5dc7e61df46"
+target = 0x00787ff8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12494
+type = "REL32"
+symbol = "_cos"
+target = 0x007782b4
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12503
+type = "DIR32"
+symbol = "__real@406cc00000000000"
+target = 0x007884b0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12508
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12525
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12697
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409a90
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"
+
+[[units.scene-select-render.relocations]]
+offset = 12711
+type = "REL32"
+symbol = "?Present@Video@@QAEHXZ"
+target = 0x0040b5e0
+evidence = "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination"

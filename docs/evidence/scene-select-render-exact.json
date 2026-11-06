@@ -1,0 +1,1610 @@
+{
+  "schema_version": 1,
+  "method": "one explicitly selected cold source/profile/dependency artifact for the complete character-selection renderer; existing sources and headers unchanged and omitted",
+  "authority": "complete native instruction contribution under explicit independently reviewed original bindings; no omitted candidate-body gaps",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 12720,
+      "matched_bytes": 12720,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 39,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 124,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 261,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 335,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 433,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 471,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 643,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 667,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 690,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 710,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 882,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 956,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1054,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1076,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1094,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1266,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1290,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1318,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1336,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1508,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1621,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1784,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1956,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 1979,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2097,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2269,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2323,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2441,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2613,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2661,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2782,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 2954,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3067,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3226,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3398,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3424,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3543,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3715,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3772,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 3891,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4063,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4111,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4230,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4402,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4428,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4529,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4544,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4716,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4739,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4858,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 4876,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5048,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5069,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5090,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5262,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5283,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5304,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5476,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5497,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5520,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5692,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5738,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5758,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5930,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5951,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 5974,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6146,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6167,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6190,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6362,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6383,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6406,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6578,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6590,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6756,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 6920,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7092,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7165,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7329,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7501,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7569,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7733,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 7905,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8182,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8324,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8335,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8349,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8377,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8549,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8598,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8697,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8708,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8717,
+          "target": 7898192,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4067c00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8722,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8745,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8917,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 8943,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9047,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9058,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9067,
+          "target": 7898288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406cc00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9072,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9089,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9261,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9415,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9557,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9568,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9582,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9610,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9782,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9816,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9920,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9931,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9940,
+          "target": 7898288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406cc00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9945,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 9962,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10134,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10310,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10452,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10463,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10477,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10497,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10508,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10517,
+          "target": 7901912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4040800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10522,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10555,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10566,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10575,
+          "target": 7898960,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4026000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10580,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10595,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10767,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10798,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10902,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10913,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10922,
+          "target": 7898288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406cc00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10927,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 10944,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11116,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11300,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11442,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11453,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11467,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11487,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11498,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11507,
+          "target": 7901912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4040800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11512,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11539,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11550,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11559,
+          "target": 7898960,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4026000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11564,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11584,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11756,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 11897,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12039,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12050,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12064,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12084,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12095,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12104,
+          "target": 7901912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4040800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12109,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12136,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12147,
+          "target": 7832068,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_sin",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12156,
+          "target": 7898960,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4026000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12161,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12181,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12353,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12379,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12483,
+          "target": 7897080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404ca5dc7e61df46",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12494,
+          "target": 7832244,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_cos",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12503,
+          "target": 7898288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406cc00000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12508,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12525,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12697,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        },
+        {
+          "offset": 12711,
+          "target": 4240864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Present@Video@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-selection-rendering; independently reviewed complete original operand, callee or floating-constant destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "f3b0bc64207da790fce2929055dd6a608e915216250d5bf339b78c783131c761",
+      "target_extent_sha256": "f3b0bc64207da790fce2929055dd6a608e915216250d5bf339b78c783131c761",
+      "unit": "scene-select-render",
+      "symbol": "?Slot0@Scene1@@UAEXXZ",
+      "target_address": "0x00755500",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42fb45e0dc8eb9c9155c6fcb7cfad4987b85743f51234af2f4325a9614199968",
+      "object_sha256": "f1cef50a07822c848ac1c98056fef8de940d2f0c52c80f4f769a160639cd9566",
+      "source_sha256": "bd721d694b05408bd57c037cf35a65fae4da4e5ba17e2c0b22b0891c267b6305",
+      "dependencies": {
+        "src/Engine.h": "6c006d15e12dd4d2cd8d50514c8832c98f7013c9bbb20c7aa5887beda9560286",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "688cd56cfa1b97a9e4f9cda3a6320e706a8de58702d4200a4a017264a097476b",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "aa35a39980730be8c2ec929aab2974c6f6da1e8c544a1ff75bed65ddde7608dc",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
