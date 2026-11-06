@@ -189,10 +189,10 @@ address,origin,status,evidence
 0x00412E60,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00412F10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00413040,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
-0x00413090,unknown,unreviewed,
-0x00413100,unknown,unreviewed,
+0x00413090,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
+0x00413100,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
 0x004136D0,unknown,unreviewed,
-0x00422D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
+0x00422D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
 0x00422F40,unknown,unreviewed,
 0x00423090,unknown,unreviewed,
 0x004230D0,unknown,unreviewed,

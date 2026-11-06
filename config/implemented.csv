@@ -170,3 +170,6 @@ address,name,source,symbol,status,evidence
 0x00410790,?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z,src/SecondaryCombat.cpp,?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z,complete,docs/evidence/secondary-combat-exact.json
 0x00410840,?AddScore@Secondary@@QAEXI@Z,src/SecondaryCombat.cpp,?AddScore@Secondary@@QAEXI@Z,complete,docs/evidence/secondary-combat-exact.json
 0x004108A0,?RandomRange@Secondary@@QAEFFF@Z,src/SecondaryCombat.cpp,?RandomRange@Secondary@@QAEFFF@Z,complete,docs/evidence/secondary-combat-exact.json
+0x00413100,?RenderLocalEffects@Secondary@@QAEXHHE@Z,src/SecondaryLocalRender.cpp,?RenderLocalEffects@Secondary@@QAEXHHE@Z,complete,docs/evidence/secondary-local-render-exact.json
+0x00413090,?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z,src/SecondarySpawn.cpp,?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/secondary-local-render-exact.json
+0x00422D70,??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/Character08.cpp,??0Character08@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/character-08-exact.json

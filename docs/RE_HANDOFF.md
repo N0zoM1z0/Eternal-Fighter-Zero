@@ -13,7 +13,8 @@ shared character lifetime/state/local-effect/resource-reuse owner and statistics
 then all three character resource loaders and both character image-transfer methods,
 followed by character input/replay, visual trail ownership and the complete body/trail renderer,
 then common state dispatch, movement and timer updates with their supporting predicates/buffer clears,
-followed by guard decisions, damage/combo factors, scoring and replay-aware random ranges.
+followed by guard decisions, damage/combo factors, scoring and replay-aware random ranges,
+then the complete local-effect renderer/reset and the Shiori constructor.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -26,10 +27,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 171 |
-| Authored exact instruction bytes | 91,468 |
+| Authored complete exact functions | 174 |
+| Authored exact instruction bytes | 93,524 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 210 / 210 |
+| Reviewed boundaries / origins | 212 / 212 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -429,31 +430,46 @@ capture/wrappers and the full body/trail renderer. Common state dispatch,
 air-action transitions, movement, timer updates, numeric state predicates and
 input-buffer clears are exact too, followed by guard/damage/combo/score/random
 owners. Move into substantial remaining owners rather than accumulating leaf
-counts: local-effect rendering 0x413100 has a 1,488-byte candidate body, and the
-Shiori / Character08 virtual slot-6 animation dispatcher at 0x4136D0 has a 62,273-byte Ghidra body
-candidate through 0x422A10. Target-attested decompiles are retained, including
-5,726 lines for the large dispatcher, which warns about switch normalization.
-Review actual callers/owning virtual slot and the complete instruction plus
-associated address-table/byte-map boundaries before source implementation.
-The candidate body alone is not an acceptance extent; do not drop switch data
-or omitted cases, use compare_size, or accept a prefix. Build the first complete
-source early. Related 0x413090 (106-byte candidate) has retained raw/decompile evidence.
-Fresh canonical table review identifies 0x4136D0 through ID 8's table 0x787DF8,
-slot operand 0x787E10; the constructor is 0x422D70. Do not treat this as a shared
-Secondary implementation. Its direct-caller query returns zero; ownership
-review is .analysis/probes/secondary-combat/next-shiori-owner-review.json.
-The 106-byte 0x413090 saves ECX but writes through [EBP+8] and returns with RET 4;
-it is not a this-only constructor. Actual caller/receiver review is still needed.
-All these targets remain unimplemented/uncredited. The 23 individual character
-constructors remain reviewed but unimplemented; the common pose/base/resource/
-state model supports those owners as another substantial line of work.
+counts. The local-effect renderer 0x413100 /1,488 bytes, reset 0x413090 /106 bytes,
+and Shiori constructor 0x422D70 /462 bytes are now accepted. Full new/affected
+replay covers 157 strict complete units in 37 cold source/profile artifacts;
+standalone Input, Reader and Config units were omitted. New source is
+SecondaryLocalRender.cpp, SecondarySpawn.cpp and Character08.cpp. New proofs are
+secondary-local-render-exact.json and character-08-exact.json. The constructor
+preserves the original command-slot overwrite and 0x3458 extent; 22 other called
+constructors remain reviewed but unimplemented.
+
+The Shiori / Character08 slot-6 animation dispatcher at 0x4136D0 now has a complete
+private C++ draft and a reviewed full extent: 62,273 code bytes, 540 address-table
+bytes and 319 selector bytes, ending at 0x422D6C before alignment and the constructor.
+Do not mistake the Ghidra code-only candidate for the complete contribution.
+Owning table is 0x787DF8, slot operand 0x787E10, resource ID 8 /shiori. The byte map
+has 134 explicit branches plus default over IDs 1..319. Actual reset-call receiver
+and same-descriptor ownership are reviewed. Private helper/header views beyond
+the accepted code are provisional; read .analysis/probes/shiori-state/README.md
+before resuming. Its parked-best/ preserves the full source, private headers,
+cold object and complete comparison, including both switch tables.
+
+The best full draft is 63,133 bytes versus target 63,132, NOT one remaining byte
+difference and NOT accepted progress. First register/instruction divergence is
+0x41FC1E in animation 303. Remaining case diagnostics differ at 303..309 and
+312..318, with extent deltas +1 in 307/308 and -1 in 315. No prefix/size-only/
+masked acceptance or compare_size override is permitted. Pre/post increments,
+extra normal scopes, combined tick comparisons, nested tests, signed tick storage
+with unsigned reads, and signed/unsigned RandomRange caller views did not fix the
+site and are parked. Revisit only with a falsifiable target/compiler prediction;
+otherwise pursue another substantial character state/command owner. Do not blindly
+rerun the retained derivation scripts against the evolving baseline. Keep the
+existing signed RandomRange declaration and use explicit unsigned caller reads
+when the original operand demands them. The current baseline has no child virtual
+body credit and the large method remains absent from accepted match/source rows.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the
 no-stack-argument/unused-result source view are provisional. Separate interface
 review from body recovery and linked-data placement; no child override body is
-accepted by these declarations. All 23 called character constructors still have
-reviewed boundary/origin rows but remain unimplemented. Their allocation and
+accepted by these declarations. All 23 called character constructors have
+reviewed boundary/origin rows; Shiori is accepted and the other 22 remain unimplemented. Their allocation and
 common-base evidence is .analysis/probes/character-create/. Do not count reviewed
 declarations as exact functions. Two 505-element arrays at base offsets 10/164,
 embedded trail history at 2BC0, the 64-record local pool at 4D0 and statistics at

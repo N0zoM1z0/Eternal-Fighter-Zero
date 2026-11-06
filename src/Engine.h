@@ -285,7 +285,10 @@ public:
     int effectOwner[64];
     int effectActive[64];
     SecondaryEffectSlot effects[64];
-    unsigned char unknown_2ad0[0xf0];
+    short field2ad0[5];
+    unsigned char unknown_2ada[0x1e];
+    short field2af8[5];
+    unsigned char unknown_2b02[0xbe];
     SecondaryTrail trail;
     char tint30b8;
     unsigned char unknown_30b9[3];
@@ -304,7 +307,7 @@ public:
     short field30ec;
     short field30ee;
     int field30f0;
-    unsigned char unknown_30f4[0x1];
+    char commandCount;
     char commands[20];
     unsigned char unknown_3109[0xf];
     CharacterStatistics statistics;
@@ -313,6 +316,8 @@ public:
     void ResetFrame();
     void ClearLocalEffects();
     void AdvanceEffectWrite();
+    void ResetLocalEffectSpawn(SecondaryEffectSpawn *);
+    void RenderLocalEffects(int, int, unsigned char);
     void LoadImages();
     void LoadSounds();
     void LoadPatterns();

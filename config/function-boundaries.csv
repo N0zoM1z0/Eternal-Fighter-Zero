@@ -209,3 +209,5 @@ address,end,size,status,evidence
 0x00410790,0x0041083C,172,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
 0x00410840,0x004108A0,96,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
 0x004108A0,0x00410934,148,reviewed,docs/KNOWLEDGE_BASE.md#character-guard-damage-and-score
+0x00413100,0x004136D0,1488,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
+0x00413090,0x004130FA,106,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction

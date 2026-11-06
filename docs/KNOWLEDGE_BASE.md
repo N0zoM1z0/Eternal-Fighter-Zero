@@ -2128,22 +2128,108 @@ trials, canonical code, typed constants and boundary/operand/successor reviews
 remain under .analysis/probes/secondary-combat/. No compiler/Wine failure, full
 CI, unrequested cold cohort or redundant runtime matrix occurred in this checkpoint.
 
-### Next substantial owner: Shiori slot 6 (unaccepted)
+## Character local effects and Shiori construction
 
-A fresh canonical read of the thirteen-word table at 0x787DF8 agrees with the
-retained constructor/table review for resource ID 8, shiori, constructor
-0x422D70 and source view Character08. Slot 6 at operand 0x787E10 points to
-0x4136D0. This identifies the large virtual animation dispatcher with that child;
-it is not established as a common Secondary body. Ghidra's direct-caller query
-returns zero, consistent with a table-referenced method, and its candidate body
-is 0x4136D0..0x422A10 (62,273 bytes). Its 5,726-line decompile warns about switch
-normalization. Complete boundary, case mapping, associated address-table/byte-map
-and exact-source review are still required; none of this contributes exact credit.
+The complete local-effect renderer at 0x413100 (1,488 bytes), descriptor reset at
+0x413090 (106 bytes), and Character08 / Shiori constructor at 0x422D70 (462 bytes)
+are strict native exact. All twelve new relocation operands were independently
+read from the canonical target. These add three authored functions /2,056
+instruction bytes, bringing the accepted baseline to **174 authored complete
+exact functions /93,524 instruction bytes**, with 335 associated local-table bytes.
+Reviewed boundaries and origins are both 212. The other 22 called character
+constructors and all child virtual method bodies remain unimplemented.
 
-The related 0x413090 candidate is also not accepted. Its 106 raw bytes save ECX
-but perform writes through [EBP+8] and end with RET 4. Those operand/cleanup facts
-reject a this-only default-constructor interpretation despite its initializer-like
-stores. Review actual callsites and ownership before a source declaration. The
-retained private ownership and raw helper evidence is in
-.analysis/probes/secondary-combat/next-shiori-owner-review.json and next-413090.txt;
-target-attested queries are in .analysis/ghidra/.
+### Shared local-effect renderer and descriptor reset
+
+RenderLocalEffects takes two signed screen offsets and an unsigned byte layer;
+RET 12 and direct calls at 0x764312/33 and 0x764497/4B8 establish the stack slots,
+character receiver and unused-result view. It walks the existing 64-entry local
+ring, selects active records by layer, and respects record 8C or Context short
+1420E suppression. The frame pointer uses the character's pattern array and the
+record's animation/frame indices. Mirroring changes horizontal placement;
+payload zero enables the screen offsets, with 210 included in the vertical
+coordinate. Position conversion uses the original int truncation through ftol2.
+
+Clipping applies only when the record's top and bottom bounds differ. The source
+rectangle and destination edges are adjusted in the original left/right/top/bottom
+order. Group 3 calls DrawCharacterSpecial (0x40AAE0), positive groups call
+DrawBlendedSurface (0x40A0B0) with group minus one, and other groups call
+DrawSurface (0x409A90). These pixel kernels remain external reconstruction work.
+MakeSurfaceRect is the already-reviewed 0x40C590 helper; its return and assignment
+temporaries explain both intermediate rectangle copies. Source uses two named
+rectangles and a PatternFrame pointer, with normal scopes yielding the original
+0x4C stack frame. No copied code bytes or artificial ABI locals are used.
+
+ResetLocalEffectSpawn is an ordinary Secondary member taking one descriptor
+pointer. The caller at 0x413745/49/4C supplies the same local descriptor first
+constructed at 0x413704/07 and the owning character in ECX. The complete helper
+saves an unused receiver, writes through [EBP+8], and ends with RET 4. It resets
+owner, group, palette, payload, fields 28/30, then bounds top/bottom/left/right in
+that order. It is not a this-only constructor. The accepted source keeps the
+existing SecondaryEffectSpawn record; the large draft's shared EffectSpawn
+inheritance view remains provisional and separate from this proof.
+
+### Shiori constructor and object extent
+
+The constructor calls Secondary's accepted common constructor, installs the
+reviewed Character08 table at 0x787DF8, copies shiori from 0x787DF0, and sets the
+surface count to 782. It clears eight ints at 3138..3154 and three 64-int arrays
+at 3158/3258/3358, preserving the observed 0x3458 allocation extent. Two shared
+short views at 2AD0 and 2AF8 expose only the five element pairs actually written;
+unobserved storage is still opaque. Command count at 30F4 is five. The original
+constructor writes command slot 1 first as 7 and then as 11; source preserves both
+stores rather than repairing this observed behavior. Table ownership and all
+thirteen original words were reread separately. Exact constructor codegen does
+not accept linked virtual-table placement or implement the declared child methods.
+
+The new proofs are secondary-local-render-exact.json and character-08-exact.json.
+Thirty-seven cold source/profile/dependency artifacts cover three new and 154
+Engine.h-dependent existing units: all **157 complete comparisons are strict
+exact**. The four dispatcher recipes retain all 75 checked local offsets and
+original destinations after symbol-identity refreshes. Standalone Input, Reader
+and Config units were untouched. Private full replay is
+.analysis/exact/secondary-local-render-and-affected.json; complete canonical
+boundaries, successor/caller facts and operand/ownership reviews are retained in
+.analysis/probes/secondary-local-render/. Only focused ledger/progress checks
+and whitespace validation are needed for this checkpoint, not a full CI cohort.
+
+### Complete Shiori slot-6 draft remains unaccepted
+
+The thirteen-word Character08 table identifies the animation dispatcher through
+slot operand 0x787E10, destination 0x4136D0. Its direct-caller query returns zero;
+virtual-table ownership is independently established. Ghidra's 62,273-byte code
+candidate ends at 0x422A10, but the complete contribution also includes the
+540-byte jump-address table starting at 0x422A11 and 319-byte selector map at
+0x422C2D. The full extent ends at 0x422D6C, before four INT3 alignment bytes and
+the now-accepted constructor. All 16,876 instructions decode contiguously; direct
+branches and all 135 address entries land on reviewed instruction starts. The
+map selects 134 explicit branches plus the default over animation IDs 1..319.
+
+A complete C++ source was built early, with all branches and both generated
+switch tables retained in the comparison. Target-backed fixes recover the freeze
+gate, real animation IDs, original clamp/landing order, immediate state exits,
+integer particle-coordinate conversions, EAX-sized facing-helper result and
+unsigned byte/word caller reads. The target stack frame is 0x384, with duration
+at EBP-4, frame count at -8, a single effect descriptor at -50 and receiver at -54.
+The private source and its provisional header recover those locations.
+
+The parked complete contribution is **63,133 bytes versus 63,132 target bytes**.
+This is a one-byte extent delta, not one remaining byte difference. The first
+instruction/register divergence is 0x41FC1E, in animation 303 after a conditional
+sound-selector write. Remaining diagnostic differences occur in animations
+303..309 and 312..318; extent differences are +1 in 307/308 and -1 in 315.
+Normalized per-case diagnostics confer no progress credit, and the complete
+function remains outside matches.csv and implemented.csv. Private preservation
+and exact resumption instructions are .analysis/probes/shiori-state/README.md
+and parked-best/. The baseline's signed-short RandomRange declaration is kept;
+the draft uses explicit unsigned-short caller conversions for its AX zero extends.
+
+Pre/post increment, extra normal scope, combined tick comparisons, nested tests,
+signed tick storage with unsigned reads, and the signed/unsigned random caller
+views were neutral for the unresolved register divergence and are parked. A plain
+increment assignment lowered differently; an explicit goto added a branch. Do
+not repeat these controls or introduce padding, bytes, assembly or an acceptance
+size override. The large private prototype/rename source errors were corrected
+and pinned toolchain execution checks passed; all final accepted-unit builds and
+comparisons above succeeded. Original translation-unit context and private draft
+field/helper views remain hypotheses requiring fresh evidence before integration.
