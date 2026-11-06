@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62176"
+symbol = "$L62180"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62226"
+symbol = "$L62230"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61882"
+symbol = "$L61886"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61904"
+symbol = "$L61908"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61911"
+symbol = "$L61915"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61916"
+symbol = "$L61920"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61920"
+symbol = "$L61924"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61927"
+symbol = "$L61931"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61934"
+symbol = "$L61938"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61946"
+symbol = "$L61950"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61953"
+symbol = "$L61957"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61960"
+symbol = "$L61964"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61967"
+symbol = "$L61971"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61970"
+symbol = "$L61974"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61973"
+symbol = "$L61977"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61976"
+symbol = "$L61980"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61979"
+symbol = "$L61983"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61982"
+symbol = "$L61986"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61983"
+symbol = "$L61987"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61987"
+symbol = "$L61991"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61994"
+symbol = "$L61998"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61998"
+symbol = "$L62002"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L62002"
+symbol = "$L62006"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L62006"
+symbol = "$L62010"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L62010"
+symbol = "$L62014"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L62014"
+symbol = "$L62018"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L62018"
+symbol = "$L62022"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L62022"
+symbol = "$L62026"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L62026"
+symbol = "$L62030"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L62030"
+symbol = "$L62034"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L62034"
+symbol = "$L62038"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L62040"
+symbol = "$L62044"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L62046"
+symbol = "$L62050"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L62065"
+symbol = "$L62069"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L62069"
+symbol = "$L62073"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61879"
+symbol = "$L61883"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61331"
+symbol = "$L61335"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61282"
+symbol = "$L61286"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61283"
+symbol = "$L61287"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61284"
+symbol = "$L61288"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61285"
+symbol = "$L61289"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61286"
+symbol = "$L61290"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61287"
+symbol = "$L61291"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61288"
+symbol = "$L61292"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62269"
+symbol = "$L62273"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61930"
+symbol = "$L61934"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61961"
+symbol = "$L61965"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61964"
+symbol = "$L61968"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61967"
+symbol = "$L61971"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61982"
+symbol = "$L61986"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62297"
+symbol = "$L62301"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62110"
+symbol = "$L62114"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62114"
+symbol = "$L62118"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62118"
+symbol = "$L62122"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62122"
+symbol = "$L62126"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62126"
+symbol = "$L62130"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62130"
+symbol = "$L62134"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62134"
+symbol = "$L62138"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62138"
+symbol = "$L62142"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62142"
+symbol = "$L62146"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62146"
+symbol = "$L62150"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62150"
+symbol = "$L62154"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62154"
+symbol = "$L62158"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62158"
+symbol = "$L62162"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62162"
+symbol = "$L62166"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62166"
+symbol = "$L62170"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62170"
+symbol = "$L62174"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62174"
+symbol = "$L62178"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62178"
+symbol = "$L62182"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62182"
+symbol = "$L62186"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62186"
+symbol = "$L62190"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62190"
+symbol = "$L62194"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62194"
+symbol = "$L62198"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62198"
+symbol = "$L62202"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62202"
+symbol = "$L62206"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -15506,7 +15506,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-constructi
 [[units.character-08-constructor.relocations]]
 offset = 51
 type = "DIR32"
-symbol = "$SG62102"
+symbol = "$SG62106"
 target = 0x00787df0
 evidence = "docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
@@ -16449,3 +16449,2092 @@ object = "build/match-units/character-08-recognize-commands/Character08Input.obj
 symbol = "?Slot02@Character08@@UAEXXZ"
 target_address = 0x004261f0
 size = 5299
+
+[units.character-08-cpu-input]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Cpu.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-cpu-input/Character08Cpu.obj"
+symbol = "?Slot05@Character08@@UAEXXZ"
+target_address = 0x004276b0
+size = 15066
+
+[[units.character-08-cpu-input.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 208
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787f08
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f08; literal 4.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c0; literal 1.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 442
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787f00
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f00; literal 8.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 520
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787efc
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787efc; literal 40.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 716
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842d
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original cdecl double argument, caller stack cleanup, x87 return and target FABS implementation at 0x77842D"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 801
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 856
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1078
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1413
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1456
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1499
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1518
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1673
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1721
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c10; literal 20.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1737
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1756
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1829
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1845
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1864
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1960
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 1983
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2007
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2031
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2067
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2091
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2115
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2151
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2189
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2225
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2258
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2282
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2300
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2350
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ed0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ed0; literal 220.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2373
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2397
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2421
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2457
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2481
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2533
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ed0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ed0; literal 220.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2556
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2580
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2604
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2623
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2656
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2686
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2792
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2822
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2872
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2902
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e48; literal -40.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2918
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2937
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 2967
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3014
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c8; literal -100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3044
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3060
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3079
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3109
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3156
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c8; literal -100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3186
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3202
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3221
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3251
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3294
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3310
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3329
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3453
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3481
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3505
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3575
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3614
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3665
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3743
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3869
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3892
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3916
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 3986
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4025
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4103
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4169
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4206
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4230
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 4565
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5351
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5381
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5441
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5489
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5545
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5611
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5653
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea8; literal 125.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5765
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5825
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5857
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5918
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 5964
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6002
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6068
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6106
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6264
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6313
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6415
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6475
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6504
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6565
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6636
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6682
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6740
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6812
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6841
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6901
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 6969
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7033
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7052
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7171
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7237
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7401
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7487
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7575
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7631
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7697
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7739
+type = "DIR32"
+symbol = "__real@4060e00000000000"
+target = 0x00787e90
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e90; literal 135.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7836
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7896
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7925
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 7991
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8037
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8132
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8181
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8283
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8343
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8372
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8433
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8501
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8564
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8583
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8702
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8768
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8855
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8948
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 8994
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9040
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea8; literal 125.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9142
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9239
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9332
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9426
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9515
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9561
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9621
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9670
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9736
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9787
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9816
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9872
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 9940
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10004
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10023
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10142
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10208
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10371
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10457
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10522
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10546
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10580
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10601
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10631
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10677
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10698
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10774
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10827
+type = "DIR32"
+symbol = "__real@4052c00000000000"
+target = 0x00787e88
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e88; literal 75.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10880
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10945
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 10985
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11001
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787e80
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e80; literal 130.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11066
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11082
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11140
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11156
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11214
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11230
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11298
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11314
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11385
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11401
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11465
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11517
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11569
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11655
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11685
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e70; literal 200.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11771
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11804
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e70; literal 200.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11853
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11883
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11899
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11962
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 11978
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12041
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e70; literal 200.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12057
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787e68
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e68; literal 240.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12128
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12156
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12176
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12192
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12253
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12301
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12339
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12359
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12375
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12409
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12456
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12472
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12488
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12553
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12569
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12585
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12601
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12666
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12682
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12698
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12714
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12779
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12827
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12864
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12897
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12938
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12963
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 12979
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13022
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13038
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13054
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13070
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13149
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13165
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13181
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13197
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13261
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13285
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13303
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13352
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13382
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13428
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13447
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13469
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13507
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13527
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13543
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13586
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13602
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13618
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13634
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13713
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13729
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13745
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13761
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13822
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13846
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13864
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 13913
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14032
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14056
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14080
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14171
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14191
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14210
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14234
+type = "DIR32"
+symbol = "__real@40000000"
+target = 0x00787e60
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787e60; literal 2.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14261
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14280
+type = "DIR32"
+symbol = "__real@4080400000000000"
+target = 0x00787e58
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e58; literal 520.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14333
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14371
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14395
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14419
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14471
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14487
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14511
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14553
+type = "DIR32"
+symbol = "__real@4065400000000000"
+target = 0x00787e50
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e50; literal 170.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14569
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14585
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14664
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14731
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14790
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14807
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14841
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14873
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14935
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 14967
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 15011
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-08-cpu-input.relocations]]
+offset = 15043
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#shiori-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"

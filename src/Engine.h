@@ -259,7 +259,8 @@ public:
     int field0160;
     SecondarySequence * sequences;
     int field0168;
-    unsigned char unknown_016c[0x4];
+    short field016c;
+    unsigned char unknown_016e[2];
     int field0170;
     short field0174;
     unsigned char unknown_0176[0x2];
@@ -268,7 +269,7 @@ public:
     char inputX, inputY, buttonPulse[4];
     unsigned char unknown_018e[2];
     int buttonHeld[4];
-    unsigned char unknown_01a0[8];
+    int field01a0, field01a4;
     unsigned char field01a8;
     unsigned char field01a9;
     unsigned char field01aa;
@@ -309,7 +310,8 @@ public:
     int field30f0;
     char commandCount;
     char commands[20];
-    unsigned char unknown_3109[0xf];
+    unsigned char unknown_3109[7];
+    int field3110, field3114;
     CharacterStatistics statistics;
     Secondary(Secondary **, Context *, Video *, Input *, Audio *, char);
     ~Secondary();

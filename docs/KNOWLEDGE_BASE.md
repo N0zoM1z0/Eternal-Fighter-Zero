@@ -2422,3 +2422,103 @@ Authored acceptance is now 184 complete functions /112,788 instruction bytes,
 with 335 associated local-table bytes; reviewed boundaries and origins are 222.
 Product closure, linked data placement, runtime equivalence and portability
 remain independently open.
+
+## Shiori CPU command and movement owner
+
+Character08::Slot05 is the complete CPU input/command owner at 0x4276B0,
+**15,066 instruction bytes**, exclusive end 0x42B18A. All 3,883 instructions,
+722 internal direct branches, 93 direct calls and the single final RET were
+reviewed against the canonical executable. Six following INT3 bytes precede
+slot 7 at 0x42B190. There are no indirect dispatches or associated local tables.
+The independently checked owning table is 0x787DF8, slot 5, operand 0x787E0C.
+Source is src/Character08Cpu.cpp under VC7.1 RTM /Od /G6 /MT /Gy.
+
+The owner initializes command token field0262 to 99, decrements two positive
+signed movement timers at 1A0/1A4, clears directions and all four button pulses,
+and resets short field014E. Three difficulty-weighted random checks can store
+60 into field014E; the mode-2/field0170==1 path stores 30 and exits, clearing the
+CPU mode when current animation is below 200. Opponent animation 96 is a
+separate early exit. The function then computes facing-relative horizontal
+separation and absolute vertical separation using the original external fabs.
+
+Grounded/current-animation priority exits, meter/air-action checks, strategy
+modes, per-animation random choices and fallback movement remain in their
+original order. The animation-50..150/tick-zero branch first chooses a strategy
+mode, then sets a random horizontal direction. Its two button-3 assignments
+really occur consecutively: the second overwrites the first result, while both
+random calls advance the generator. Do not merge them or drop a call. A later
+opponent-animation/frame/distance predicate can clear that pulse again.
+
+The priority command-52 path requires available air action or field0118>500,
+a difficulty-weighted random check, opponent animation 150..156 and one of
+current animations 250/251/252/270/271/272. Later strategy choices produce both
+raw input pulses and the same numeric command tokens as the accepted input
+recognizer. Two final movement-command gates precede fallback random movement.
+Active timer 1A0 moves positively; otherwise active timer 1A4 moves negatively;
+either can be shortened to 15 after CollisionSide. Only when neither is active
+does the function choose new random timer durations. Both facing-dependent
+branches and their original random-call order are preserved.
+
+### Shared views and exact reconstruction
+
+Five typed fields replace existing padding without changing any observed
+extent: signed short field016C plus two retained unknown bytes, signed ints
+field01A0/field01A4, and signed ints field3110/field3114 after the retained seven
+bytes at 3109. Both this and opponent short reads at 16C are signed; movement
+timer and random-bucket comparisons use signed ints. Field3110 holds random
+selection buckets in this owner; field3114 selects CPU strategy modes. These
+are provisional semantic descriptions, not claims about original member names.
+
+All ninety RandomRange calls immediately zero extend AX in the original caller.
+The source therefore retains the accepted signed-short declaration and casts
+each caller result to unsigned short. CollisionSide remains the accepted
+char-returning method. The fabs call binds at 0x77842D with an eight-byte cdecl
+argument, caller cleanup and x87 return. The original implementation's ordinary
+finite path clears the argument's high-word sign bit with 0x7FFFFFFF and loads
+the resulting double; special-value/control handling is also present. This
+binding does not claim that the CRT implementation is reconstructed.
+
+All **297 relocations** were independently checked at their original operand
+positions: 93 direct calls and 204 floating operands. The 38 distinct float or
+double literal payloads were checked in both canonical data and the COFF
+constant sections. Each relocation records its exact symbol, destination,
+width/value evidence and type. There are no masked or inferred-by-size fields.
+
+The first complete source was compiled early. Restoring original early exits,
+positive short conditional tails and the two final command-priority gates
+recovers the real branch ordering hidden by the decompiler's nested conditions.
+Difficulty multiplied by two emits the original single load and FADD ST(0),ST(0),
+where two separate member reads introduce an extra load. Original floating
+operand order, >=1000 meter checks, unsigned random results and both exits in
+the animation-204 branch are retained. A normal sixteen-byte local record groups
+forward/vertical distances and preserves their observed stack positions with
+the complete 0xC0 frame; it has no external ABI role and does not establish the
+original source's record type. Both fields are used. No padding locals,
+assembly, original-byte arrays or byte patches are introduced.
+
+### Focused cold acceptance
+
+One new unit and 167 Engine.h-dependent existing units compare strict exact
+from **43 serial cold source/profile/dependency artifacts**. Every comparison
+includes its complete code and local tables. All 75 existing compiler-local
+symbol offsets/destinations were rechecked; changed local/string symbol names
+are refreshed only after reviewing the COFF offset or literal bytes at the
+same original destinations. Per-unit receipts retain the cold compiler/source
+identity and the final reviewed recipe identity; relocation binding changes
+are oracle inputs and do not alter compiler inputs. Unaffected standalone
+Input, reader and configuration sources were omitted. Public involved proofs
+are refreshed, with the new report in character-08-exact.json.
+
+Private complete source trials, original code, boundary/operand reviews,
+constant payload checks and binding-identity records are retained in
+.analysis/probes/shiori-cpu/. The final formal reports are
+.analysis/exact/shiori-cpu-and-affected.json. Focused ledger/progress and
+whitespace checks pass; no full CI/cohort or runtime matrix was run. No native
+compiler or Wine failure occurred during this checkpoint.
+
+Authored acceptance is now **185 complete functions /127,854 instruction bytes**,
+with 335 associated local-table bytes and 223 reviewed boundaries/origins.
+Shiori has nine accepted child virtual bodies plus its constructor, totaling
+33,739 instruction bytes. Slots 6 and 7 remain substantial open owners; slot 8
+is also open. Original linked-data placement, runnable product/runtime closure
+and portability remain independently open.

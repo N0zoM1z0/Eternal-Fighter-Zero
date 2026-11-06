@@ -183,3 +183,4 @@ address,name,source,symbol,status,evidence
 0x00425D70,?Slot01@Character08@@UAEXXZ,src/Character08Frame.cpp,?Slot01@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
 0x004261C0,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character08Frame.cpp,?EmitLocalEffect@Character08@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-08-exact.json
 0x004261F0,?Slot02@Character08@@UAEXXZ,src/Character08Input.cpp,?Slot02@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json
+0x004276B0,?Slot05@Character08@@UAEXXZ,src/Character08Cpu.cpp,?Slot05@Character08@@UAEXXZ,complete,docs/evidence/character-08-exact.json

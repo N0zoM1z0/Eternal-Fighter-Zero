@@ -17,7 +17,7 @@ followed by guard decisions, damage/combo factors, scoring and replay-aware rand
 then the complete local-effect renderer/reset and the Shiori constructor,
 followed by Shiori command/state control, meter, initialization/effect ownership,
 and the shared facing/grounded locomotion owners, then the complete Shiori
-input-history recognizer.
+input-history recognizer and CPU command/movement owner.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -30,10 +30,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 184 |
-| Authored exact instruction bytes | 112,788 |
+| Authored complete exact functions | 185 |
+| Authored exact instruction bytes | 127,854 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 222 / 222 |
+| Reviewed boundaries / origins | 223 / 223 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -458,7 +458,7 @@ standalone Input, Reader or Config cohort was replayed. Private complete reviews
 first sources and trials are .analysis/probes/shiori-command/; final replay is
 .analysis/exact/shiori-command-and-affected.json.
 
-The latest checkpoint accepts Shiori slot 2, Character08::Slot02 at 0x4261F0:
+Checkpoint 92a602e accepts Shiori slot 2, Character08::Slot02 at 0x4261F0:
 all 5,299 bytes through the final RET at 0x4276A2, followed by thirteen INT3 bytes.
 Source is Character08Input.cpp. Sixteen priority-ordered scans recognize commands
 from the 180-byte history ring and write field0262 for the accepted slot-4
@@ -477,12 +477,33 @@ trials and boundary review are .analysis/probes/shiori-input/; formal comparison
 is .analysis/exact/shiori-input.json. Focused ledger/progress checks and whitespace
 validation pass; no full CI/cold cohort or runtime matrix is needed.
 
-Next substantial leads are Shiori slot 5 at 0x4276B0 and slot 7 at 0x42B190,
-with 15,066-/36,135-byte code candidates. Review their complete code/data extents
-and build the first complete source early. The existing header already declares
-these slots, so prefer new-source-only reconstruction and compare only new or
-involved units. Slot 8 at 0x4261B0 is a tiny empty body; do not prioritize it over
-the remaining substantial owners.
+The latest checkpoint accepts Shiori slot 5, Character08::Slot05 at 0x4276B0:
+15,066 complete code bytes through RET at 0x42B189, followed by six INT3 bytes.
+Source is Character08Cpu.cpp. This is the CPU input/command and strategy/movement
+owner. Full review covers 3,883 instructions, 722 internal jumps and 93 calls;
+no local tables are present. All 297 relocations were independently reviewed,
+including 204 floating operands and 38 distinct COFF/target literal payloads.
+All ninety random calls retain original unsigned AX caller conversions. The
+external fabs binding is reviewed, without claiming its implementation as exact.
+
+Engine.h replaces existing padding with signed short field016C and four signed
+ints at 1A0/1A4/3110/3114, retaining all extents. One new and 167 Engine.h-dependent
+existing units compare strict exact from 43 cold source/profile/dependency
+artifacts. All 75 local offsets/destinations remain explicit; changed local or
+constructor-string identities are reviewed before per-unit receipt finalization.
+Standalone Input, Reader and Config were omitted. Public involved proofs are
+refreshed; formal reports are .analysis/exact/shiori-cpu-and-affected.json.
+Private complete trials and original boundary/operand/constant reviews are
+.analysis/probes/shiori-cpu/. Nine Shiori child virtual bodies plus the
+constructor are accepted, totaling 33,739 instruction bytes. Focused ledger,
+progress and whitespace checks pass; no full CI/cold cohort or runtime matrix.
+
+The next fresh substantial lead is Shiori slot 7 at 0x42B190, with a 36,135-byte
+code candidate. Review its full code/data extent and callers/owner fields before
+building the first COMPLETE source early. Existing CharacterViews.h already
+declares the slot. Slot 8 at 0x4261B0 is a tiny empty body; do not prioritize it
+over the remaining substantial owners. The parked slot-6 draft below is still
+unaccepted; do not reopen byte-neutral trials without a new falsifiable lead.
 
 The Shiori / Character08 slot-6 animation dispatcher at 0x4136D0 now has a complete
 private C++ draft and a reviewed full extent: 62,273 code bytes, 540 address-table
