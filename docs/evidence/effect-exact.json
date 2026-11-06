@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 28 cold source/profile/dependency artifacts shared unchanged across 17 new shared-character/statistics units and 105 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "method": "selected complete contribution comparison; 31 cold source/profile/dependency artifacts shared unchanged across six new character-loader/surface units and 142 Engine.h/PatternReader.h-dependent existing units; standalone Input and configuration source units untouched",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -24,7 +24,7 @@
           "target": 4215754,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62044",
+          "symbol": "$L62086",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca",
           "local_target_offset": 14250,
           "addend": 0
@@ -34,7 +34,7 @@
           "target": 4215618,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62094",
+          "symbol": "$L62136",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342",
           "local_target_offset": 14114,
           "addend": 0
@@ -2420,7 +2420,7 @@
           "target": 4201607,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61750",
+          "symbol": "$L61792",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87",
           "local_target_offset": 103,
           "addend": 0
@@ -2430,7 +2430,7 @@
           "target": 4202427,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61772",
+          "symbol": "$L61814",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb",
           "local_target_offset": 923,
           "addend": 0
@@ -2440,7 +2440,7 @@
           "target": 4202695,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61779",
+          "symbol": "$L61821",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7",
           "local_target_offset": 1191,
           "addend": 0
@@ -2450,7 +2450,7 @@
           "target": 4203266,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61784",
+          "symbol": "$L61826",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302",
           "local_target_offset": 1762,
           "addend": 0
@@ -2460,7 +2460,7 @@
           "target": 4203591,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61788",
+          "symbol": "$L61830",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447",
           "local_target_offset": 2087,
           "addend": 0
@@ -2470,7 +2470,7 @@
           "target": 4203859,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61795",
+          "symbol": "$L61837",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553",
           "local_target_offset": 2355,
           "addend": 0
@@ -2480,7 +2480,7 @@
           "target": 4204127,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61802",
+          "symbol": "$L61844",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f",
           "local_target_offset": 2623,
           "addend": 0
@@ -2490,7 +2490,7 @@
           "target": 4204579,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61814",
+          "symbol": "$L61856",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823",
           "local_target_offset": 3075,
           "addend": 0
@@ -2500,7 +2500,7 @@
           "target": 4204847,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61821",
+          "symbol": "$L61863",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f",
           "local_target_offset": 3343,
           "addend": 0
@@ -2510,7 +2510,7 @@
           "target": 4205115,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61828",
+          "symbol": "$L61870",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b",
           "local_target_offset": 3611,
           "addend": 0
@@ -2520,7 +2520,7 @@
           "target": 4205383,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61835",
+          "symbol": "$L61877",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47",
           "local_target_offset": 3879,
           "addend": 0
@@ -2530,7 +2530,7 @@
           "target": 4205823,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61838",
+          "symbol": "$L61880",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff",
           "local_target_offset": 4319,
           "addend": 0
@@ -2540,7 +2540,7 @@
           "target": 4206187,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61841",
+          "symbol": "$L61883",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b",
           "local_target_offset": 4683,
           "addend": 0
@@ -2550,7 +2550,7 @@
           "target": 4206627,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61844",
+          "symbol": "$L61886",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023",
           "local_target_offset": 5123,
           "addend": 0
@@ -2560,7 +2560,7 @@
           "target": 4206991,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61847",
+          "symbol": "$L61889",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f",
           "local_target_offset": 5487,
           "addend": 0
@@ -2570,7 +2570,7 @@
           "target": 4207368,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61850",
+          "symbol": "$L61892",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308",
           "local_target_offset": 5864,
           "addend": 0
@@ -2580,7 +2580,7 @@
           "target": 4207439,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61851",
+          "symbol": "$L61893",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f",
           "local_target_offset": 5935,
           "addend": 0
@@ -2590,7 +2590,7 @@
           "target": 4207844,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61855",
+          "symbol": "$L61897",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4",
           "local_target_offset": 6340,
           "addend": 0
@@ -2600,7 +2600,7 @@
           "target": 4208088,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61862",
+          "symbol": "$L61904",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8",
           "local_target_offset": 6584,
           "addend": 0
@@ -2610,7 +2610,7 @@
           "target": 4208411,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61866",
+          "symbol": "$L61908",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b",
           "local_target_offset": 6907,
           "addend": 0
@@ -2620,7 +2620,7 @@
           "target": 4208752,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61870",
+          "symbol": "$L61912",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870",
           "local_target_offset": 7248,
           "addend": 0
@@ -2630,7 +2630,7 @@
           "target": 4209093,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61874",
+          "symbol": "$L61916",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5",
           "local_target_offset": 7589,
           "addend": 0
@@ -2640,7 +2640,7 @@
           "target": 4209434,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61878",
+          "symbol": "$L61920",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a",
           "local_target_offset": 7930,
           "addend": 0
@@ -2650,7 +2650,7 @@
           "target": 4209969,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61882",
+          "symbol": "$L61924",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31",
           "local_target_offset": 8465,
           "addend": 0
@@ -2660,7 +2660,7 @@
           "target": 4210370,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61886",
+          "symbol": "$L61928",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2",
           "local_target_offset": 8866,
           "addend": 0
@@ -2670,7 +2670,7 @@
           "target": 4210793,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61890",
+          "symbol": "$L61932",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069",
           "local_target_offset": 9289,
           "addend": 0
@@ -2680,7 +2680,7 @@
           "target": 4211216,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61894",
+          "symbol": "$L61936",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210",
           "local_target_offset": 9712,
           "addend": 0
@@ -2690,7 +2690,7 @@
           "target": 4211639,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61898",
+          "symbol": "$L61940",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7",
           "local_target_offset": 10135,
           "addend": 0
@@ -2700,7 +2700,7 @@
           "target": 4212062,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61902",
+          "symbol": "$L61944",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e",
           "local_target_offset": 10558,
           "addend": 0
@@ -2710,7 +2710,7 @@
           "target": 4212593,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61908",
+          "symbol": "$L61950",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771",
           "local_target_offset": 11089,
           "addend": 0
@@ -2720,7 +2720,7 @@
           "target": 4213190,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61914",
+          "symbol": "$L61956",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6",
           "local_target_offset": 11686,
           "addend": 0
@@ -2730,7 +2730,7 @@
           "target": 4213906,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61933",
+          "symbol": "$L61975",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92",
           "local_target_offset": 12402,
           "addend": 0
@@ -2740,7 +2740,7 @@
           "target": 4214617,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61937",
+          "symbol": "$L61979",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59",
           "local_target_offset": 13113,
           "addend": 0
@@ -2750,7 +2750,7 @@
           "target": 4215323,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L61747",
+          "symbol": "$L61789",
           "evidence": "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b",
           "local_target_offset": 13819,
           "addend": 0
@@ -2778,17 +2778,17 @@
       "symbol": "?UpdateEffect@Context@@QAEXF@Z",
       "target_address": "0x00401C20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "bd3440a2a770a51acfe73b673b95cfea49bb4854f4339a179fdf6f8afb76958b",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "bb29a21f42ed484dffb6605d8f387801f9e867882331af9b1c58a3c8751e8733",
       "source_sha256": "7364cfdfcb8304f1243910d464d3ff380b416ad209ae9cd8b39321bca83170d3",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "b258063b0ceb2e88ea4b9fc19270fc0835e3326d29af6dd0b1c7faa29c3c36e9",
+      "unit_sha256": "673814e025ddc95d1805cdedf6e7300372a69ac9f9f78eb9a95dcc69deb06131",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -2815,15 +2815,15 @@
       "symbol": "??0EffectSpawn@@QAE@XZ",
       "target_address": "0x00405490",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "09ce57524ef5dc813814c8932931300f9698a359a45781508fcdbd77cfc630d7",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "5eb1733c1cb8e564611ec88dad3746923a23794d5b817d35538265631be5fae6",
       "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "64b6cd45571a019417c5ffe7c6bea3fe5f4810c1270ac41a0bbf6e97d119eebf",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2852,15 +2852,15 @@
       "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
       "target_address": "0x00407100",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "09ce57524ef5dc813814c8932931300f9698a359a45781508fcdbd77cfc630d7",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "5eb1733c1cb8e564611ec88dad3746923a23794d5b817d35538265631be5fae6",
       "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "76948b7eca73deb6a333fe20c948ba0642c6b848308234f203bedcf92a02e95a",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2879,15 +2879,15 @@
       "symbol": "?RemoveEffect@Context@@QAEXF@Z",
       "target_address": "0x004072A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "09ce57524ef5dc813814c8932931300f9698a359a45781508fcdbd77cfc630d7",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "5eb1733c1cb8e564611ec88dad3746923a23794d5b817d35538265631be5fae6",
       "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "c084bc2cd7a835a239596c778e0a8feadb38655b12a40cb9f0404d4de7ebfb12",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2906,15 +2906,15 @@
       "symbol": "?AdvanceEffectWrite@Context@@QAEXXZ",
       "target_address": "0x00407370",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "09ce57524ef5dc813814c8932931300f9698a359a45781508fcdbd77cfc630d7",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "5eb1733c1cb8e564611ec88dad3746923a23794d5b817d35538265631be5fae6",
       "source_sha256": "270a78ad081d5ecb9bd085254912a2c638132d96429886e598ac3b1e8498b502",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f9a9a31b0b18a0da13f46f7f084fd518ecbc10de6cd5a09b87d3d213169387e3",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",

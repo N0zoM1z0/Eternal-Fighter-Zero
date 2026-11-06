@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 31 cold source/profile/dependency artifacts shared unchanged across six new character-loader/surface units and 142 Engine.h/PatternReader.h-dependent existing units; standalone Input and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 980,
+      "matched_bytes": 980,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 39,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 54,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 72,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 126,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 377,
+          "target": 7895036,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterBitmapFailure@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 385,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 405,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 834,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 858,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 891,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ec0d99db0b936de978ea085b51ac606edd9579b7029830233dc45c052e6ce314",
+      "target_extent_sha256": "ec0d99db0b936de978ea085b51ac606edd9579b7029830233dc45c052e6ce314",
+      "unit": "video-load-character-bitmap",
+      "symbol": "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+      "target_address": "0x00409090",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "623b3b93f8d5e2eb12f747965636547d3b24475e6312f54005b9a24632cd47b3",
+      "object_sha256": "8f07589033ccca17b34dd1b565a4f3acd0aa80fb8c5023264dbc555624ae402b",
+      "source_sha256": "80ac03d0060b564653a75ac1c718e0fb010aede5f9f78c7333bcfb127f23cc73",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7fb0915b023c9ff32795819ea5f1de6aa70ab05a0ed78b94818f7b49f546c1d1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8b3ef3f2e9d7f7f5774c8603736a9c8f1081ed7194db02f4f971206dee6e993a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 842,
+      "matched_bytes": 842,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 217,
+          "target": 7895116,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterPackedFailure@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        },
+        {
+          "offset": 225,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1f58834855e11a184d736e2a84c74bd85b651114ffd9dcab303713d3218e126c",
+      "target_extent_sha256": "1f58834855e11a184d736e2a84c74bd85b651114ffd9dcab303713d3218e126c",
+      "unit": "video-decode-character-packed",
+      "symbol": "?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+      "target_address": "0x00409740",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "623b3b93f8d5e2eb12f747965636547d3b24475e6312f54005b9a24632cd47b3",
+      "object_sha256": "8f07589033ccca17b34dd1b565a4f3acd0aa80fb8c5023264dbc555624ae402b",
+      "source_sha256": "80ac03d0060b564653a75ac1c718e0fb010aede5f9f78c7333bcfb127f23cc73",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7fb0915b023c9ff32795819ea5f1de6aa70ab05a0ed78b94818f7b49f546c1d1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "eec88fd914628e6117b5d2ee8a0162eebc6f7a861227ff741c47702b90ad2796",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 class PatternReader {
     HANDLE file;
     unsigned char *buffer;
-    unsigned char unknown_0008[4]; // Complete original type/alignment remains unresolved.
+    unsigned int unknown_0008; // Provisional unknown word; original semantics remain unresolved.
 public:
     PatternReader(const char *, int);
     ~PatternReader();

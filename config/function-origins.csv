@@ -86,9 +86,9 @@ address,origin,status,evidence
 0x00408CA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
 0x00408CD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#display-device-lifetime
 0x00408D00,authored,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
-0x00409090,unknown,unreviewed,
+0x00409090,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00409470,authored,reviewed,docs/KNOWLEDGE_BASE.md#surface-transfer
-0x00409740,unknown,unreviewed,
+0x00409740,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00409A90,unknown,unreviewed,
 0x00409DB0,unknown,unreviewed,
 0x0040A0B0,unknown,unreviewed,
@@ -172,9 +172,9 @@ address,origin,status,evidence
 0x00410AC0,unknown,unreviewed,
 0x00410B10,unknown,unreviewed,
 0x00410B70,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
-0x00411080,unknown,unreviewed,
-0x004116A0,unknown,unreviewed,
-0x00411AE0,unknown,unreviewed,
+0x00411080,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x004116A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00411AE0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00411BE0,unknown,unreviewed,
 0x004121A0,unknown,unreviewed,
 0x00412820,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
@@ -184,7 +184,7 @@ address,origin,status,evidence
 0x00412910,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00412930,unknown,unreviewed,
 0x00412A10,unknown,unreviewed,
-0x00412AD0,unknown,unreviewed,
+0x00412AD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
 0x00412B10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00412E60,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00412F10,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base

@@ -1659,8 +1659,9 @@ read entries and searches nonzero owners for at most 63 iterations. Remove and
 Clear preserve the original active/owner updates. Complete comparisons include
 all ring traversal and signed-index paths without added bounds checks.
 
-LoadResources initially calls external LoadImages 0x411080, LoadSounds 0x4116A0
-and LoadPatterns 0x411AE0, then sets field30E8. Reuse follows the original
+LoadResources initially calls LoadImages 0x411080, LoadPatterns 0x4116A0
+and LoadSounds 0x411AE0, then sets field30E8. The latter two provisional names
+were corrected by the subsequent complete loader review below. Reuse follows the original
 constant DAT/BMP alternatives, paletteIndex+1 digit suffix and alternate-style
 fallbacks. The BMP alternative really calls LoadPalette on its first path,
 then LoadBitmapPalette for its fallback; that oddity is preserved. Ten distinct
@@ -1669,7 +1670,8 @@ bound. Context exposes the 1024-byte palette at F35 inside its existing storage,
 without changing subsequent offsets. The virtual InitializeState call precedes
 statistics handling. Only non-CPU players increment the first counter: modes
 0/2 require flag1358 == 1, while modes 1/3/4 take the other original path.
-The three resource-loader callees remain external and unimplemented.
+At this checkpoint the three resource-loader callees were external; the
+following checkpoint recovers all three and both called image-transfer methods.
 
 The statistics object is eight ints at 3118..3138. Caller ECX values establish
 member methods rather than the global-function hypothesis suggested by the
@@ -1693,3 +1695,108 @@ character-statistics-exact.json, with involved owner proofs refreshed.
 Private evidence, rejected trials, full disassembly and independent boundary,
 operand and virtual-table reviews remain under .analysis/probes/secondary-base/;
 the final replay is .analysis/exact/secondary-base-and-affected.json.
+
+## Character resource loaders
+
+The canonical EFZ.exe identity is unchanged. Six complete authored contributions
+are accepted for 4,753 instruction bytes, without local tables or new auxiliary
+credit. Complete target decoding covers 1285 instructions and 77 internal
+direct branches; all 133 relocation operands were independently decoded and
+explicitly bound. No masked fields, size overrides or prefix comparisons are used.
+
+| Original | Complete bytes | Recovered contribution |
+| --- | ---: | --- |
+| 0x411080 | 1,560 | Secondary::LoadImages |
+| 0x4116A0 | 1,079 | Secondary::LoadPatterns |
+| 0x411AE0 | 241 | Secondary::LoadSounds |
+| 0x412AD0 | 51 | SecondarySequence::Allocate |
+| 0x409090 | 980 | Video::LoadBitmapSurface, character palette mapping |
+| 0x409740 | 842 | Video::DecodeCharacterSurface, raw/RLE character palette mapping |
+
+Full target review corrects two old provisional names: 0x4116A0 opens the
+resource-name .pat file and loads animation/collision records; 0x411AE0 builds
+wave-directory WAV paths and loads sounds. The shared LoadResources source and
+its two relocation symbol names were corrected while retaining both original
+call destinations and all 1,286 compared bytes. The call order remains image,
+animation data, then sound. Names remain reconstruction identifiers.
+
+LoadImages allocates surfaceCount+1 pointers and reads the complete resource-name
+.dat file without adding open/read checks. The first byte selects the palette
+header length: pixel data begins at data[0] * 3 + 1. The inclusive surface loop
+passes marker 128 and player * 40 + 0x5F to the packed decoder. A zero consumption
+result displays the original decimal-index message and leaves the byte offset
+unchanged; otherwise it advances by the returned count. After close/delete,
+the normal path submits the selected 40-color palette; alternate style uses a
+paletteIndex+1 .pal suffix. SurfaceProperty on the first surface sets byte 1A.
+
+All unreachable BMP alternatives removed by Ghidra are included in the complete
+1,560-byte comparison. Indices below 1,000 have the original decimal zero-prefix
+paths; larger indices use the A prefix and decimal index. Normal BMP palette
+loading uses the original 000.bmp suffix. Its alternate .pal branch still calls
+LoadPalette rather than LoadBitmapPalette. All thirteen image string operands
+at 0x787B5C/60/68/6C/74/78/7C/84/88/8C/94/98/A0 are independently bound.
+Source uses ordinary constant alternatives and observed local scopes; no dead
+instruction bytes are omitted from acceptance.
+
+LoadPatterns reads a count, then each integer ID, two shorts populated from
+ReadInt results, and an unsigned byte frame count. It allocates the 200-byte
+SecondaryFrame array and the existing 12-byte PatternFrame array separately.
+SecondarySequence now exposes shorts at 0/2 and the frame pointer at 4; its
+constructor/destructor code is unchanged and fully replayed. Allocate only
+replaces the pointer for positive counts, preserving the original nonpositive
+path and lack of prior deletion.
+
+Each animation frame reads texture geometry in original order. Duration uses
+a signed-short conversion of ReadInt before multiplication by three. The extra
+record contains ten 16-byte rectangles spanning 0..9F followed by scalar fields through
+C4 and two unresolved bytes to the 0xC8 stride. Rectangle reads occur in the
+original order: 90, 00/10, 50, 20/30/40, then 60/70/80. No semantic hit/hurt-box
+classification is claimed. Floats at BC/B8 are populated from signed ReadShort,
+then divided by +100.0/-100.0 respectively, explicitly bound to 0x787C5C/58.
+Bytes C1/C0 also consume ReadShort; A4 consumes ReadInt and converts to float.
+Finally, all 64 local effect records receive the shared PatternSequence pointer
+at record offset 8 (parent 4D8 plus 0x98 stride). The previous unknown intervals
+are refined without changing any accepted object offsets or allocation extents.
+
+LoadSounds loads all fifty wave-directory two-digit .wav paths, stores each
+returned ushort slot at 264 and calls SetSoundVolume(slot, -500), retaining the
+sentinel/failure behavior. The animation and sound string destinations are
+0x787BAC/B0 and 0x787BB8/C0/C4. The existing PatternReader and Audio callee bodies
+receive no duplicate implementation credit.
+
+The 12-byte provisional PatternReader view retains known handle/buffer offsets
+0/4. Its unknown final four bytes now use a word placeholder instead of the
+previous character-array placeholder. The array incorrectly made VC7.1 classify
+the local object for /GS stack reordering: reader at EBP-14 and cookie at -8,
+instead of the target reader at -10, cookie at -14, count at -4 and path at -34.
+The word view yields the complete 1,079-byte comparison; Context::Load and all
+twenty reader methods remain complete strict exact. This distinguishes the two
+source views for codegen without proving original field semantics, a unique
+original declaration, or the complete original size/alignment. Normal scopes
+also recover the image loader's local ordering. Full comparisons after these
+source/type changes are retained.
+
+Both newly recovered Video methods implement the character color partition:
+input indices below 40 add the caller's unsigned palette offset; other indices
+add 135, with byte conversion on storage. BMP/raw rows are inverted vertically;
+RLE output is written top-down with the original repeat/value logic. Width and
+height come from the original two-byte expressions, including the BMP width
+padding calculation. DDSURFACEDESC creation, Lock and Unlock calls are natural
+DirectDraw interface calls. Complete method sources compare exact on their first
+build under vc71-od-static, independently of the loader's vc71-od-static-gs
+profile. The separate failure strings are at 0x7877FC and 0x78784C. Original
+unchecked lock results and bitmap failure-path file/buffer leaks are preserved.
+The earlier general surface methods remain distinct accepted contributions.
+
+The shared Engine.h and PatternReader.h changes require 142 existing units;
+standalone Input and Config are unaffected and omitted. Thirty cold artifacts
+cover four new loader units plus those 142 existing units, then one additional
+cold artifact covers the two new Video methods: all 148 complete comparisons
+are strict exact. The four existing dispatchers retain all 75 local-offset
+checks and original destinations after compiler-local identity refreshes.
+New public proofs are secondary-loaders-exact.json and character-surfaces-exact.json;
+involved owner proofs, ledgers and progress are refreshed. Private final evidence
+is .analysis/exact/secondary-loaders-and-affected.json, with the two-method stage
+also retained at .analysis/exact/character-surfaces.json. Complete rejected trials,
+target disassembly, Ghidra output and independent boundary/operand reviews remain
+under .analysis/probes/secondary-loaders/ and .analysis/ghidra/.

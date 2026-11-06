@@ -14,8 +14,8 @@ void Secondary::LoadResources()
     char digits[8];
     if (field30e8 == 0) {
         LoadImages();
-        LoadSounds();
         LoadPatterns();
+        LoadSounds();
         field30e8 = 1;
     } else {
         if (true) {

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "method": "selected complete-function comparison; two cold source/profile artifacts shared unchanged across 20 new reader functions and nine Context.cpp functions; all other source units untouched",
-  "authority": "complete native codegen under explicit reviewed original bindings; compiler-generated helpers remain auxiliary",
+  "method": "selected complete contribution comparison; 31 cold source/profile/dependency artifacts shared unchanged across six new character-loader/surface units and 142 Engine.h/PatternReader.h-dependent existing units; standalone Input and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
       "result": "exact",
@@ -35,14 +35,14 @@
       "symbol": "??0PatternReader@@QAE@PBDH@Z",
       "target_address": "0x00408330",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "0eff2dfbb39d0ee5f72c3ae75babb3ef01148f70ff049e44dbc32c3cebf31081",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -71,14 +71,14 @@
       "symbol": "??1PatternReader@@QAE@XZ",
       "target_address": "0x00408360",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b93120d428c8afefa2a876e4a9c9c72062eac6c4b073c6e3f9162af5210c6ea0",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -116,14 +116,14 @@
       "symbol": "?Open@PatternReader@@QAEHPBDH@Z",
       "target_address": "0x004054B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "c42033f2abf6e953b2f0007b0253b9f6eef86b9fa586ba6d23b6fc9e61369d6e",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -170,14 +170,14 @@
       "symbol": "?Close@PatternReader@@QAEHXZ",
       "target_address": "0x004055A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "e5dbf5f9f0bf398ac2b98cf7f2475deef12dc5784ebec297228abd5f2156dde9",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -215,14 +215,14 @@
       "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
       "target_address": "0x00405600",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b37a17c8d9c00d88dc0193351daa11cdc02a7c2b2e3ddf304fbfbd7b2aa3b6ac",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -278,14 +278,14 @@
       "symbol": "?ReadLine@PatternReader@@QAEHPADH@Z",
       "target_address": "0x00405640",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "81061784f8e194f26779df653ad15331ee43d07aa7bc77e94ab1cf7262748dd7",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -314,14 +314,14 @@
       "symbol": "?ReadInt@PatternReader@@QAEHXZ",
       "target_address": "0x00405700",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "e262c1e40e382408fc4a7b830915b859a1f7d5cfb5a16fe213d82d9c53711de1",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -350,14 +350,14 @@
       "symbol": "?ReadShort@PatternReader@@QAEFXZ",
       "target_address": "0x00405720",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "9444a0d336e1d7784bcbe072f7b4272802bdb1675b9c039d5c64a208a25b582c",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -386,14 +386,14 @@
       "symbol": "?ReadFloat@PatternReader@@QAEMXZ",
       "target_address": "0x00405740",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "5693bb10e163430c5a7a2cd248b066f6898867d6eb13e46d55214f9dbd7219db",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -431,14 +431,14 @@
       "symbol": "?Write@PatternReader@@QAEHPBXH@Z",
       "target_address": "0x00405760",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "f4fe7e10f40b8d272839ece74da8fc263b1e05b5f1b06f9ccbe0488159646e6d",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -467,14 +467,14 @@
       "symbol": "?WriteInt@PatternReader@@QAEXH@Z",
       "target_address": "0x004057A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "dbf709599a4c66084cb9f4bd7f15c01f0ce09fbe5dd17589a6cc8436abcaa99a",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -503,14 +503,14 @@
       "symbol": "?WriteFloat@PatternReader@@QAEXM@Z",
       "target_address": "0x004057C0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "330b20a4d69ae36779df639541c93cdfe7ba2a275906401fb10761869ca25f65",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -575,14 +575,14 @@
       "symbol": "?Printf@PatternReader@@QAAHPBDZZ",
       "target_address": "0x004057E0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "0928b80ff0151c93cebcdfdacf76a58da0a89cb56a48bf8138f70421c7904eb0",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -620,14 +620,14 @@
       "symbol": "?Seek@PatternReader@@QAEKHH@Z",
       "target_address": "0x00405850",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "b3ff49102d00c7155dfcf671526ef9d2fd5c103a51ec9545acaa643e15e78dc0",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -665,14 +665,14 @@
       "symbol": "?SeekStart@PatternReader@@QAEKXZ",
       "target_address": "0x004058C0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "2203acae81e3a472d6c82da4bd30d808bd7a58d6d21b023f2331cc3a1b53bdb9",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -710,14 +710,14 @@
       "symbol": "?SeekEnd@PatternReader@@QAEKXZ",
       "target_address": "0x004058F0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "ad9ccee049bc232df4e800b38ef28b8e7a36860eab9a0eb3bfa7236cdf1c9ac0",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -755,14 +755,14 @@
       "symbol": "?Size@PatternReader@@QAEKXZ",
       "target_address": "0x00405920",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1e9727c38b31926408b25ceb3b7dde6f0ec481c6ca7befb9586c5512fb886508",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -781,14 +781,14 @@
       "symbol": "?IsOpen@PatternReader@@QAEHXZ",
       "target_address": "0x00405950",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "0184252c0ef8c8272050c3b94679f19d72c0d9c1dfb73a2740af3d6df9cd1d11",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -807,14 +807,14 @@
       "symbol": "?Reset@PatternReader@@QAEHXZ",
       "target_address": "0x00405970",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "d90c884ee9169b25760e2473ca5de2bae27479e8f263d17629e6ebaab38c7f3b",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -897,14 +897,14 @@
       "symbol": "?LoadBuffer@PatternReader@@QAEPAEPBD@Z",
       "target_address": "0x004059A0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2e5de39be64ffb2e29e3c7217284782fa9e6ddd464a6e7723f7522af14022dac",
-      "object_sha256": "508aa720d7f5a367d67ecdc943236984c153726324b0c4e90aae53c182c1c0a5",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "be9ba03697af041e272c624858547ffc9a3c98be413cfbeb8ce95a375696d887",
       "source_sha256": "3b7c2cd6ca8425f31831809ce2a02811f2f0ba8a1acd06dd0e4041e1c50063a4",
       "dependencies": {
-        "src/PatternReader.h": "c9dd921e1a8f7a58e9170d814d3600f092b1b71cb4ed5afdf9c998b8895f1dc4"
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "03cc1b47dd4520bc8c4a3f9750e733e56619ffeb6ee80b22fdaee576aa3c4ea8",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "672e209a60eb8a5d62f532ab66a43a32fe2c901a16f379a4e5679cefe0604f4e",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",

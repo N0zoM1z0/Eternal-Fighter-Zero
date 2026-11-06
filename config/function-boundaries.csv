@@ -177,3 +177,9 @@ address,end,size,status,evidence
 0x00410B70,0x00411076,1286,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00405BE0,0x00405CEC,268,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00405CF0,0x00405E55,357,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
+0x00411080,0x00411698,1560,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x004116A0,0x00411AD7,1079,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00411AE0,0x00411BD1,241,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00412AD0,0x00412B03,51,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00409090,0x00409464,980,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders
+0x00409740,0x00409A8A,842,reviewed,docs/KNOWLEDGE_BASE.md#character-resource-loaders

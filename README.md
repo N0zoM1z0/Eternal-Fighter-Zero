@@ -40,7 +40,7 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 
 ## Current status
 
-Recovered owners provide **139 complete exact authored functions, 77,120 code bytes**,
+Recovered owners provide **145 complete exact authored functions, 81,873 code bytes**,
 with every relocation field explicitly bound and compared. Twelve compiler-generated
 deleting/array-iteration/static-lifetime helpers are checked separately
 as ABI evidence and are excluded from authored progress. Four standard-library
@@ -55,7 +55,8 @@ shared scene fades are accepted at function-codegen level. Character-selection
 update, entry, lifetime, palette helpers and the complete renderer are also exact;
 the character-creation dispatcher is exact too. Shared character lifetime, reset
 state, local effects, resource reuse and statistics I/O are now exact. Character
-resource-loader callees, child constructors and pixel rendering kernels remain open.
+resource loading and both character image-transfer methods are exact too. Child
+constructors, character control and pixel rendering kernels remain open.
 The reader/audio historical drafts are
 preserved separately in the [workbench](workbench/reader-audio/README.md).
 Reconstruction resumed on 2026-11-06 with focused new/affected exact comparisons.

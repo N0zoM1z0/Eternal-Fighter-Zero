@@ -1,0 +1,1212 @@
+{
+  "schema_version": 1,
+  "method": "selected complete contribution comparison; 31 cold source/profile/dependency artifacts shared unchanged across six new character-loader/surface units and 142 Engine.h/PatternReader.h-dependent existing units; standalone Input and configuration source units untouched",
+  "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1560,
+      "matched_bytes": 1560,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 10,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 42,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 109,
+          "target": 7895900,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesDatSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 118,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 142,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 150,
+          "target": 7895904,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesDatExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 159,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 190,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 205,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 217,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 366,
+          "target": 4233024,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 390,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 409,
+          "target": 7893380,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__MessageBoxA@16",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 435,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 450,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 511,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 519,
+          "target": 7895912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesAltSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 528,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 553,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 584,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 600,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 608,
+          "target": 7895916,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesAltExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 617,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 681,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 759,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 822,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 830,
+          "target": 7895924,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesBmpSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 839,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 860,
+          "target": 7895928,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesLargePrefix@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 869,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 887,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 903,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 911,
+          "target": 7895932,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesLargeExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 920,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 987,
+          "target": 4231312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1003,
+          "target": 7895940,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesHundredZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1012,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1026,
+          "target": 7895944,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesTenZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1035,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1053,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1069,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1077,
+          "target": 7895948,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesBmpExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1086,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1153,
+          "target": 4231312,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1216,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1224,
+          "target": 7895956,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesBmpAltSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1233,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1258,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1289,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1305,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1313,
+          "target": 7895960,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesBmpAltExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1322,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1386,
+          "target": 4241248,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1410,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1418,
+          "target": 7895968,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterImagesPaletteBitmap@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1427,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1506,
+          "target": 4240960,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1535,
+          "target": 4242624,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1552,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a30f023e72ae41281d57e07a16805521c0a3aba323e2c8c831fa4e6ad9dd311d",
+      "target_extent_sha256": "a30f023e72ae41281d57e07a16805521c0a3aba323e2c8c831fa4e6ad9dd311d",
+      "unit": "secondary-load-images",
+      "symbol": "?LoadImages@Secondary@@QAEXXZ",
+      "target_address": "0x00411080",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "f1e079abeec6c52d5e86c32bb700d5ba2d6fb33024ae6e66d2f4a4de77a77303",
+      "source_sha256": "f6447220e0c633553f5146fb57a8cbe321d389fa364aa1e17ce9679d5019b520",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e107f3444fc828e931f10531d67fbe01b98e2bd4afeee48983e4cae0a24c3c41",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 1079,
+      "matched_bytes": 1079,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 31,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 39,
+          "target": 7895980,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterPatternSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 48,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 7895984,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterPatternExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 86,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 103,
+          "target": 4227888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0PatternReader@@QAE@PBDH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 111,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 152,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 163,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 212,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 264,
+          "target": 4270800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@SecondarySequence@@QAEXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 4227792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 373,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 393,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 408,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 423,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 438,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 453,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 468,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 486,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 504,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 522,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 540,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 558,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 576,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 594,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 612,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 645,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 662,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 695,
+          "target": 7896152,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c2c80000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 712,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 729,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 746,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 764,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 782,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 805,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 835,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 879,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 898,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 942,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 992,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1063,
+          "target": 4227936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternReader@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 1071,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9bde13635a6d327a27b81db4ac1db7d64a52b7fa08dd599b46bc1138a2cd114e",
+      "target_extent_sha256": "9bde13635a6d327a27b81db4ac1db7d64a52b7fa08dd599b46bc1138a2cd114e",
+      "unit": "secondary-load-patterns",
+      "symbol": "?LoadPatterns@Secondary@@QAEXXZ",
+      "target_address": "0x004116A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "f1e079abeec6c52d5e86c32bb700d5ba2d6fb33024ae6e66d2f4a4de77a77303",
+      "source_sha256": "f6447220e0c633553f5146fb57a8cbe321d389fa364aa1e17ce9679d5019b520",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "451302cb74865a2098102d38e5ed79f256760bbdf3d901ecbec61d4a947afb09",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 241,
+      "matched_bytes": 241,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 60,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 68,
+          "target": 7895992,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterWaveSeparator@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 77,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7896000,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterWaveZero@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 118,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 134,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 142,
+          "target": 7896004,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?characterWaveExtension@@3QBDB",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 151,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 172,
+          "target": 4251568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadWave@Audio@@QAEGPBD@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 220,
+          "target": 4253136,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSoundVolume@Audio@@QAEXGH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        },
+        {
+          "offset": 233,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1a67d143084ce64984b006bce95e6b7c40d10d68bd65f87014570794f2453658",
+      "target_extent_sha256": "1a67d143084ce64984b006bce95e6b7c40d10d68bd65f87014570794f2453658",
+      "unit": "secondary-load-sounds",
+      "symbol": "?LoadSounds@Secondary@@QAEXXZ",
+      "target_address": "0x00411AE0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "f1e079abeec6c52d5e86c32bb700d5ba2d6fb33024ae6e66d2f4a4de77a77303",
+      "source_sha256": "f6447220e0c633553f5146fb57a8cbe321d389fa364aa1e17ce9679d5019b520",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "11463b3ac5d704b9e42897fe3cdbfb31738b8fb8a7e7fbf5d3762aebbd0c2cee",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 51,
+      "matched_bytes": 51,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 26,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b19893ab4713c01c45a46421eaf0cfe67f1464dc90bd57b40679e393c9b9668a",
+      "target_extent_sha256": "b19893ab4713c01c45a46421eaf0cfe67f1464dc90bd57b40679e393c9b9668a",
+      "unit": "secondary-sequence-allocate",
+      "symbol": "?Allocate@SecondarySequence@@QAEXH@Z",
+      "target_address": "0x00412AD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "f1e079abeec6c52d5e86c32bb700d5ba2d6fb33024ae6e66d2f4a4de77a77303",
+      "source_sha256": "f6447220e0c633553f5146fb57a8cbe321d389fa364aa1e17ce9679d5019b520",
+      "dependencies": {
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "40b37fe5d2a65165eae6969e9675ae651d190d3c1868bc1621894afd6a27b569",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

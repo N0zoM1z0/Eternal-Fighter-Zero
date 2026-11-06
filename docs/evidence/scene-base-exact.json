@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "selected complete contribution comparison; 28 cold source/profile/dependency artifacts shared unchanged across 17 new shared-character/statistics units and 105 Engine.h-dependent existing units; standalone Input, reader and configuration source units untouched",
+  "method": "selected complete contribution comparison; 31 cold source/profile/dependency artifacts shared unchanged across six new character-loader/surface units and 142 Engine.h/PatternReader.h-dependent existing units; standalone Input and configuration source units untouched",
   "authority": "complete native codegen and associated local tables under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
   "reports": [
     {
@@ -26,15 +26,15 @@
       "symbol": "??0Scene@@QAE@PAUHWND__@@PAPAVSecondary@@1PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@@Z",
       "target_address": "0x00759C10",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "0fb5f5f85b3bfc3aa481d0e4e3bfc0736dfd4907b8e29a1df29f0cb1cf3d9acb",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "3c5fd9a08f772e213e84d44fa5d9bc37a09bb62d262f885bdeddb6756339efdd",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "ce8ecd051054f8831a3dd13ee86f0e17c10b841e8015def3af7172223f50fce5",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -135,15 +135,15 @@
       "symbol": "?FadeOut@Scene@@QAEXPAEEHH@Z",
       "target_address": "0x00759C90",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "0fb5f5f85b3bfc3aa481d0e4e3bfc0736dfd4907b8e29a1df29f0cb1cf3d9acb",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "3c5fd9a08f772e213e84d44fa5d9bc37a09bb62d262f885bdeddb6756339efdd",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "4e725c0c654d1c91448a285742ea86f02db6011d5510575b7d8f276070c8e1d2",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
@@ -226,15 +226,15 @@
       "symbol": "?FadeIn@Scene@@QAEXPAEE@Z",
       "target_address": "0x00759E20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "a64bcbeb4cec3f1026feeec913d7da4233b8179d6778a493df917cb408aa2543",
-      "object_sha256": "0fb5f5f85b3bfc3aa481d0e4e3bfc0736dfd4907b8e29a1df29f0cb1cf3d9acb",
+      "boundary_ledger_sha256": "7c978fb861583f7189f1eb263fbf0283a9258f0129cd1ce3505ecc67447289c1",
+      "object_sha256": "3c5fd9a08f772e213e84d44fa5d9bc37a09bb62d262f885bdeddb6756339efdd",
       "source_sha256": "32dda30f0d95c4f1b21571cfe3695c366cf04d15d54a5c39d2967cebc4eb35c5",
       "dependencies": {
-        "src/Engine.h": "5ac7c82da2651d2e5bc3e6f1fdf442467a392224846b8aaf45507bac38bf3364",
+        "src/Engine.h": "f23f4765c33b37726e6389e37f9a0834157e87b61ee8f2b22600349d10e42484",
         "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "7b726143d4c87be1f4aa14828754031083d2d0963a382e0d0636b097b5c61234",
+      "units_manifest_sha256": "42239f23ad2f00e722bd7f8c06c051eff57308f6a9432c50d081f83aa42fffad",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "1123789c769b07bd0da83a79a62933750d088ce2a328a069169ee3a5ffe210fd",
       "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",

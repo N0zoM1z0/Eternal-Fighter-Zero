@@ -138,3 +138,9 @@ address,name,source,symbol,status,evidence
 0x00410B70,?LoadResources@Secondary@@UAEXXZ,src/SecondaryResources.cpp,?LoadResources@Secondary@@UAEXXZ,complete,docs/evidence/secondary-resources-exact.json
 0x00405BE0,?Write@CharacterStatistics@@QAEXPBD@Z,src/CharacterStatistics.cpp,?Write@CharacterStatistics@@QAEXPBD@Z,complete,docs/evidence/character-statistics-exact.json
 0x00405CF0,?Read@CharacterStatistics@@QAEXPBD@Z,src/CharacterStatistics.cpp,?Read@CharacterStatistics@@QAEXPBD@Z,complete,docs/evidence/character-statistics-exact.json
+0x00411080,?LoadImages@Secondary@@QAEXXZ,src/SecondaryLoaders.cpp,?LoadImages@Secondary@@QAEXXZ,complete,docs/evidence/secondary-loaders-exact.json
+0x004116A0,?LoadPatterns@Secondary@@QAEXXZ,src/SecondaryLoaders.cpp,?LoadPatterns@Secondary@@QAEXXZ,complete,docs/evidence/secondary-loaders-exact.json
+0x00411AE0,?LoadSounds@Secondary@@QAEXXZ,src/SecondaryLoaders.cpp,?LoadSounds@Secondary@@QAEXXZ,complete,docs/evidence/secondary-loaders-exact.json
+0x00412AD0,?Allocate@SecondarySequence@@QAEXH@Z,src/SecondaryLoaders.cpp,?Allocate@SecondarySequence@@QAEXH@Z,complete,docs/evidence/secondary-loaders-exact.json
+0x00409090,?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z,src/VideoCharacterSurface.cpp,?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z,complete,docs/evidence/character-surfaces-exact.json
+0x00409740,?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z,src/VideoCharacterSurface.cpp,?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z,complete,docs/evidence/character-surfaces-exact.json

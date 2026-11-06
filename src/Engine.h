@@ -31,6 +31,8 @@ public:
     int RestoreSurface(IUnknown **);
     void Shutdown();
     int DecodeSurface(IUnknown **, const unsigned char *, unsigned char, unsigned char);
+    int DecodeCharacterSurface(IUnknown **, const unsigned char *, unsigned char, unsigned char);
+    SurfaceRect LoadBitmapSurface(IUnknown **, const char *, unsigned char);
     SurfaceRect LoadSurface(IUnknown **, const char *, unsigned char);
     int LoadPalette(unsigned char *, const char *, int, int, int);
     int LoadBitmapPalette(unsigned char *, const char *, int, int, int);
@@ -74,13 +76,24 @@ public:
 class Context;
 class PatternSequence;
 struct SecondaryEffectSpawn;
+struct SecondaryFrame {
+    SurfaceRect boxes0000[5], boxes0050[4], box0090;
+    short field00a0;
+    unsigned char unknown_00a2[2];
+    float field00a4;
+    short field00a8, field00aa, field00ac, field00ae, field00b0, field00b2, field00b4, field00b6;
+    float field00b8, field00bc;
+    char field00c0, field00c1;
+    short field00c2, field00c4;
+    unsigned char unknown_00c6[2];
+};
 class SecondarySequence {
 public:
-    unsigned char count;
-    unsigned char unknown_0001[3];
-    unsigned char *data;
+    short field0000, field0002;
+    SecondaryFrame *data;
     SecondarySequence();
     ~SecondarySequence();
+    void Allocate(int);
 };
 class SecondaryInputHistory {
 public:
@@ -95,7 +108,9 @@ public:
 };
 struct SecondaryEffectSlot {
     unsigned short type, frame, tick;
-    unsigned char unknown_0006[0x12];
+    unsigned char unknown_0006[2];
+    PatternSequence *patterns;
+    unsigned char unknown_000c[0xc];
     double x, y, vx, vy, ax, ay;
     char flag0048;
     unsigned char unknown_0049[3];
@@ -159,7 +174,8 @@ public:
     PatternSequence * patterns;
     IUnknown ** surfaces;
     unsigned short surfaceCount;
-    unsigned char unknown_001a[0x6];
+    unsigned char colorKey;
+    unsigned char unknown_001b[5];
     double field0020;
     double field0028;
     double field0030, field0038, field0040, field0048;

@@ -9,7 +9,8 @@ then DirectInput, Audio playback controls, Context input/audio transitions and
 the complete title scene with its shared base/fades and palette/frame wrappers,
 and substantial character-selection update/entry/resource functions plus the
 complete selection renderer and character creation dispatcher, followed by the
-shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O.
+shared character lifetime/state/local-effect/resource-reuse owner and statistics I/O,
+then all three character resource loaders and both character image-transfer methods.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -22,10 +23,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 139 |
-| Authored exact instruction bytes | 77,120 |
+| Authored complete exact functions | 145 |
+| Authored exact instruction bytes | 81,873 |
 | Associated exact local-table bytes | 335 |
-| Reviewed boundaries / origins | 178 / 178 |
+| Reviewed boundaries / origins | 184 / 184 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -167,7 +168,7 @@ replay is .analysis/exact/character-create-and-affected.json. See
 [creation facts](KNOWLEDGE_BASE.md#character-creation-dispatch) and the separate
 [external constructor review](KNOWLEDGE_BASE.md#character-constructor-allocation-review).
 
-The latest checkpoint accepts sixteen authored shared-character/statistics
+Checkpoint 0adebca accepts sixteen authored shared-character/statistics
 functions for 5,156 instruction bytes, plus a 106-byte generated sequence-delete
 helper with auxiliary credit only. Secondary construction/destruction, embedded
 input/sequence lifetime, ResetPose/ResetFrame/InitializeState, all four local
@@ -195,6 +196,37 @@ The final trailing-blank-line cleanup in CharacterStatistics.cpp was followed by
 one selected cold artifact and both complete statistics comparisons (268/357
 bytes), again strict exact; final source hashes and proofs were refreshed.
 Private cleanup replay is .analysis/exact/character-statistics-eof.json.
+
+The latest checkpoint adds six authored functions (4,753 instruction bytes):
+Secondary LoadImages 0x411080 (1,560), LoadPatterns 0x4116A0 (1,079), LoadSounds
+0x411AE0 (241), SecondarySequence::Allocate 0x412AD0 (51), and Video's character
+BMP/packed transfer methods 0x409090 (980) / 0x409740 (842). All complete target
+boundaries and 133 relocation operands were independently reviewed. No new
+auxiliary or local-table credit is included. Source is SecondaryLoaders.cpp and
+VideoCharacterSurface.cpp. Full body review corrects the previously swapped
+LoadSounds/LoadPatterns names, preserving original LoadResources destinations.
+
+The three loaders now recover the DAT and unreachable BMP image alternatives,
+the complete animation/rectangle record schema, fifty WAV paths and volume
+calls. The extra animation records have 0xC8 stride; local effect record offset
+8 receives the PatternSequence pointer. Both image-transfer methods retain the
+original <40 versus +135 character color mapping and raw/BMP versus RLE row
+order. Their first complete sources compare exact. PatternReader's unknown
+four-byte tail is a word placeholder now: the old character-array placeholder
+incorrectly triggered VC7.1 /GS stack reordering in LoadPatterns. Its original
+semantics and complete type/alignment remain unresolved. Context::Load and all
+twenty reader members remain exact after that refinement.
+
+Thirty cold source/profile/dependency artifacts cover four new loader units and
+142 existing Engine.h/PatternReader.h-dependent units; one additional artifact
+covers the two Video methods. All 148 complete comparisons are strict exact.
+The four dispatchers preserve all 75 local bindings/destinations after identity
+refresh. Standalone Input and Config are unaffected and omitted. New proofs are
+secondary-loaders-exact.json and character-surfaces-exact.json; affected-owner
+proofs were refreshed. Private aggregate replay is
+.analysis/exact/secondary-loaders-and-affected.json, with the final Video stage
+also retained at .analysis/exact/character-surfaces.json. See
+[the loader facts](KNOWLEDGE_BASE.md#character-resource-loaders).
 
 Important retained limits:
 
@@ -292,10 +324,16 @@ so subsequent scene work can use that shape while keeping per-owner fields and
 ABI provisional. The nine Scene1 contributions, including the full creation switch/table,
 are exact. The coherent shared Secondary base is now substantially recovered:
 lifetime, state initialization, local effect management, resource reuse and
-statistics are accepted. Continue into its three resource loaders: LoadImages
-0x411080, LoadSounds 0x4116A0 and LoadPatterns 0x411AE0. Review complete target
-boundaries and build the first complete source early. The new base model also
-supports subsequent child constructor work without inventing vptr stores.
+statistics are accepted. Its three resource loaders and both character image
+transfer methods are now exact too. Continue into coherent character input and
+control processing at 0x411BE0 (1,467-byte candidate) and 0x4121A0 (1,649-byte
+candidate). Their target-attested Ghidra decompiles are retained in .analysis/ghidra/;
+raw candidate disassembly is in .analysis/probes/secondary-loaders/ under the
+historical primary/extra-patterns probe names. Those names were only scratch
+labels; neither body is accepted. Review full boundaries/call signatures and
+build the first complete source early. Related embedded input routines at
+0x412930 / 0x412A10 are also open. The recovered base view supports later child
+constructor work without inventing vptr stores.
 
 The base table at 0x787BCC has thirteen observed slots and no virtual destructor.
 Child override sets are modeled from all 23 tables. Slot01..Slot08 names and the

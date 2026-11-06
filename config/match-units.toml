@@ -3196,14 +3196,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 92
 type = "DIR32"
-symbol = "$L62044"
+symbol = "$L62086"
 target = 0x004053ca
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4053ca"
 
 [[units.context-update-effect.relocations]]
 offset = 99
 type = "DIR32"
-symbol = "$L62094"
+symbol = "$L62136"
 target = 0x00405342
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x405342"
 
@@ -5058,238 +5058,238 @@ evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; independently reviewed
 [[units.context-update-effect.relocations]]
 offset = 14114
 type = "DIR32"
-symbol = "$L61750"
+symbol = "$L61792"
 target = 0x00401c87
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401c87"
 
 [[units.context-update-effect.relocations]]
 offset = 14118
 type = "DIR32"
-symbol = "$L61772"
+symbol = "$L61814"
 target = 0x00401fbb
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x401fbb"
 
 [[units.context-update-effect.relocations]]
 offset = 14122
 type = "DIR32"
-symbol = "$L61779"
+symbol = "$L61821"
 target = 0x004020c7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4020c7"
 
 [[units.context-update-effect.relocations]]
 offset = 14126
 type = "DIR32"
-symbol = "$L61784"
+symbol = "$L61826"
 target = 0x00402302
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402302"
 
 [[units.context-update-effect.relocations]]
 offset = 14130
 type = "DIR32"
-symbol = "$L61788"
+symbol = "$L61830"
 target = 0x00402447
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402447"
 
 [[units.context-update-effect.relocations]]
 offset = 14134
 type = "DIR32"
-symbol = "$L61795"
+symbol = "$L61837"
 target = 0x00402553
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402553"
 
 [[units.context-update-effect.relocations]]
 offset = 14138
 type = "DIR32"
-symbol = "$L61802"
+symbol = "$L61844"
 target = 0x0040265f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40265f"
 
 [[units.context-update-effect.relocations]]
 offset = 14142
 type = "DIR32"
-symbol = "$L61814"
+symbol = "$L61856"
 target = 0x00402823
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402823"
 
 [[units.context-update-effect.relocations]]
 offset = 14146
 type = "DIR32"
-symbol = "$L61821"
+symbol = "$L61863"
 target = 0x0040292f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40292f"
 
 [[units.context-update-effect.relocations]]
 offset = 14150
 type = "DIR32"
-symbol = "$L61828"
+symbol = "$L61870"
 target = 0x00402a3b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402a3b"
 
 [[units.context-update-effect.relocations]]
 offset = 14154
 type = "DIR32"
-symbol = "$L61835"
+symbol = "$L61877"
 target = 0x00402b47
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402b47"
 
 [[units.context-update-effect.relocations]]
 offset = 14158
 type = "DIR32"
-symbol = "$L61838"
+symbol = "$L61880"
 target = 0x00402cff
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402cff"
 
 [[units.context-update-effect.relocations]]
 offset = 14162
 type = "DIR32"
-symbol = "$L61841"
+symbol = "$L61883"
 target = 0x00402e6b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x402e6b"
 
 [[units.context-update-effect.relocations]]
 offset = 14166
 type = "DIR32"
-symbol = "$L61844"
+symbol = "$L61886"
 target = 0x00403023
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403023"
 
 [[units.context-update-effect.relocations]]
 offset = 14170
 type = "DIR32"
-symbol = "$L61847"
+symbol = "$L61889"
 target = 0x0040318f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40318f"
 
 [[units.context-update-effect.relocations]]
 offset = 14174
 type = "DIR32"
-symbol = "$L61850"
+symbol = "$L61892"
 target = 0x00403308
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403308"
 
 [[units.context-update-effect.relocations]]
 offset = 14178
 type = "DIR32"
-symbol = "$L61851"
+symbol = "$L61893"
 target = 0x0040334f
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40334f"
 
 [[units.context-update-effect.relocations]]
 offset = 14182
 type = "DIR32"
-symbol = "$L61855"
+symbol = "$L61897"
 target = 0x004034e4
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4034e4"
 
 [[units.context-update-effect.relocations]]
 offset = 14186
 type = "DIR32"
-symbol = "$L61862"
+symbol = "$L61904"
 target = 0x004035d8
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4035d8"
 
 [[units.context-update-effect.relocations]]
 offset = 14190
 type = "DIR32"
-symbol = "$L61866"
+symbol = "$L61908"
 target = 0x0040371b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40371b"
 
 [[units.context-update-effect.relocations]]
 offset = 14194
 type = "DIR32"
-symbol = "$L61870"
+symbol = "$L61912"
 target = 0x00403870
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403870"
 
 [[units.context-update-effect.relocations]]
 offset = 14198
 type = "DIR32"
-symbol = "$L61874"
+symbol = "$L61916"
 target = 0x004039c5
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4039c5"
 
 [[units.context-update-effect.relocations]]
 offset = 14202
 type = "DIR32"
-symbol = "$L61878"
+symbol = "$L61920"
 target = 0x00403b1a
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403b1a"
 
 [[units.context-update-effect.relocations]]
 offset = 14206
 type = "DIR32"
-symbol = "$L61882"
+symbol = "$L61924"
 target = 0x00403d31
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403d31"
 
 [[units.context-update-effect.relocations]]
 offset = 14210
 type = "DIR32"
-symbol = "$L61886"
+symbol = "$L61928"
 target = 0x00403ec2
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x403ec2"
 
 [[units.context-update-effect.relocations]]
 offset = 14214
 type = "DIR32"
-symbol = "$L61890"
+symbol = "$L61932"
 target = 0x00404069
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404069"
 
 [[units.context-update-effect.relocations]]
 offset = 14218
 type = "DIR32"
-symbol = "$L61894"
+symbol = "$L61936"
 target = 0x00404210
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404210"
 
 [[units.context-update-effect.relocations]]
 offset = 14222
 type = "DIR32"
-symbol = "$L61898"
+symbol = "$L61940"
 target = 0x004043b7
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4043b7"
 
 [[units.context-update-effect.relocations]]
 offset = 14226
 type = "DIR32"
-symbol = "$L61902"
+symbol = "$L61944"
 target = 0x0040455e
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40455e"
 
 [[units.context-update-effect.relocations]]
 offset = 14230
 type = "DIR32"
-symbol = "$L61908"
+symbol = "$L61950"
 target = 0x00404771
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404771"
 
 [[units.context-update-effect.relocations]]
 offset = 14234
 type = "DIR32"
-symbol = "$L61914"
+symbol = "$L61956"
 target = 0x004049c6
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x4049c6"
 
 [[units.context-update-effect.relocations]]
 offset = 14238
 type = "DIR32"
-symbol = "$L61933"
+symbol = "$L61975"
 target = 0x00404c92
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404c92"
 
 [[units.context-update-effect.relocations]]
 offset = 14242
 type = "DIR32"
-symbol = "$L61937"
+symbol = "$L61979"
 target = 0x00404f59
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x404f59"
 
 [[units.context-update-effect.relocations]]
 offset = 14246
 type = "DIR32"
-symbol = "$L61747"
+symbol = "$L61789"
 target = 0x0040521b
 evidence = "docs/KNOWLEDGE_BASE.md#effect-state-dispatch; reviewed original compressed-switch destination or table address 0x40521b"
 
@@ -8718,7 +8718,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 565
 type = "DIR32"
-symbol = "$L61199"
+symbol = "$L61241"
 target = 0x00776487
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -8816,49 +8816,49 @@ evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independen
 [[units.scene-title-step.relocations]]
 offset = 1239
 type = "DIR32"
-symbol = "$L61150"
+symbol = "$L61192"
 target = 0x007761e9
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1243
 type = "DIR32"
-symbol = "$L61151"
+symbol = "$L61193"
 target = 0x00776268
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1247
 type = "DIR32"
-symbol = "$L61152"
+symbol = "$L61194"
 target = 0x007762e3
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1251
 type = "DIR32"
-symbol = "$L61153"
+symbol = "$L61195"
 target = 0x00776352
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1255
 type = "DIR32"
-symbol = "$L61154"
+symbol = "$L61196"
 target = 0x007763d1
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1259
 type = "DIR32"
-symbol = "$L61155"
+symbol = "$L61197"
 target = 0x00776432
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-title-step.relocations]]
 offset = 1263
 type = "DIR32"
-symbol = "$L61156"
+symbol = "$L61198"
 target = 0x0077645f
 evidence = "docs/KNOWLEDGE_BASE.md#title-scene-and-shared-scene-base; independently reviewed original seven-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9277,7 +9277,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 792
 type = "DIR32"
-symbol = "$L62137"
+symbol = "$L62179"
 target = 0x007554ec
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -9991,35 +9991,35 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently revi
 [[units.scene-select-step.relocations]]
 offset = 6908
 type = "DIR32"
-symbol = "$L61798"
+symbol = "$L61840"
 target = 0x00753d0c
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6912
 type = "DIR32"
-symbol = "$L61829"
+symbol = "$L61871"
 target = 0x007543e8
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6916
 type = "DIR32"
-symbol = "$L61832"
+symbol = "$L61874"
 target = 0x007544d2
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6920
 type = "DIR32"
-symbol = "$L61835"
+symbol = "$L61877"
 target = 0x0075455f
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-select-step.relocations]]
 offset = 6924
 type = "DIR32"
-symbol = "$L61850"
+symbol = "$L61892"
 target = 0x00754802
 evidence = "docs/KNOWLEDGE_BASE.md#character-selection-scene; independently reviewed original five-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -11752,7 +11752,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62156"
+symbol = "$L62198"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12256,168 +12256,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L61969"
+symbol = "$L62011"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L61973"
+symbol = "$L62015"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L61977"
+symbol = "$L62019"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L61981"
+symbol = "$L62023"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L61985"
+symbol = "$L62027"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L61989"
+symbol = "$L62031"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L61993"
+symbol = "$L62035"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L61997"
+symbol = "$L62039"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62001"
+symbol = "$L62043"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62005"
+symbol = "$L62047"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62009"
+symbol = "$L62051"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62013"
+symbol = "$L62055"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62017"
+symbol = "$L62059"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62021"
+symbol = "$L62063"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62025"
+symbol = "$L62067"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62029"
+symbol = "$L62071"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62033"
+symbol = "$L62075"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62037"
+symbol = "$L62079"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62041"
+symbol = "$L62083"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62045"
+symbol = "$L62087"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62049"
+symbol = "$L62091"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62053"
+symbol = "$L62095"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62057"
+symbol = "$L62099"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62061"
+symbol = "$L62103"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12875,14 +12875,14 @@ evidence = "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed
 [[units.secondary-load-resources.relocations]]
 offset = 41
 type = "REL32"
-symbol = "?LoadSounds@Secondary@@QAEXXZ"
+symbol = "?LoadPatterns@Secondary@@QAEXXZ"
 target = 0x004116a0
 evidence = "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
 [[units.secondary-load-resources.relocations]]
 offset = 49
 type = "REL32"
-symbol = "?LoadPatterns@Secondary@@QAEXXZ"
+symbol = "?LoadSounds@Secondary@@QAEXXZ"
 target = 0x00411ae0
 evidence = "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
 
@@ -13409,3 +13409,994 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "docs/KNOWLEDGE_BASE.md#shared-character-base; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-load-images]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SecondaryLoaders.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/PatternReader.h"]
+object = "build/match-units/secondary-load-images/SecondaryLoaders.obj"
+symbol = "?LoadImages@Secondary@@QAEXXZ"
+target_address = 0x00411080
+size = 1560
+
+[[units.secondary-load-images.relocations]]
+offset = 10
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 42
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 101
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 109
+type = "DIR32"
+symbol = "?characterImagesDatSeparator@@3QBDB"
+target = 0x00787b5c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 118
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 142
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 150
+type = "DIR32"
+symbol = "?characterImagesDatExtension@@3QBDB"
+target = 0x00787b60
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 159
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 190
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 205
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 217
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 253
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 366
+type = "REL32"
+symbol = "?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target = 0x00409740
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 390
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 409
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 435
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 450
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 511
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 519
+type = "DIR32"
+symbol = "?characterImagesAltSeparator@@3QBDB"
+target = 0x00787b68
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 528
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 553
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 584
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 600
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 608
+type = "DIR32"
+symbol = "?characterImagesAltExtension@@3QBDB"
+target = 0x00787b6c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 617
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 681
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 759
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 822
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 830
+type = "DIR32"
+symbol = "?characterImagesBmpSeparator@@3QBDB"
+target = 0x00787b74
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 839
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 860
+type = "DIR32"
+symbol = "?characterImagesLargePrefix@@3QBDB"
+target = 0x00787b78
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 869
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 887
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 903
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 911
+type = "DIR32"
+symbol = "?characterImagesLargeExtension@@3QBDB"
+target = 0x00787b7c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 920
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 987
+type = "REL32"
+symbol = "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00409090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1003
+type = "DIR32"
+symbol = "?characterImagesHundredZero@@3QBDB"
+target = 0x00787b84
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1012
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1026
+type = "DIR32"
+symbol = "?characterImagesTenZero@@3QBDB"
+target = 0x00787b88
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1035
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1053
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1069
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1077
+type = "DIR32"
+symbol = "?characterImagesBmpExtension@@3QBDB"
+target = 0x00787b8c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1086
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1153
+type = "REL32"
+symbol = "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target = 0x00409090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1216
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1224
+type = "DIR32"
+symbol = "?characterImagesBmpAltSeparator@@3QBDB"
+target = 0x00787b94
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1233
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1258
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1289
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1305
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1313
+type = "DIR32"
+symbol = "?characterImagesBmpAltExtension@@3QBDB"
+target = 0x00787b98
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1322
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1386
+type = "REL32"
+symbol = "?LoadPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b760
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1410
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1418
+type = "DIR32"
+symbol = "?characterImagesPaletteBitmap@@3QBDB"
+target = 0x00787ba0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1427
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1506
+type = "REL32"
+symbol = "?LoadBitmapPalette@Video@@QAEHPAEPBDHHH@Z"
+target = 0x0040b640
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1535
+type = "REL32"
+symbol = "?SurfaceProperty@Video@@QAEEPAUIUnknown@@@Z"
+target = 0x0040bcc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-images.relocations]]
+offset = 1552
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-load-patterns]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SecondaryLoaders.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/PatternReader.h"]
+object = "build/match-units/secondary-load-patterns/SecondaryLoaders.obj"
+symbol = "?LoadPatterns@Secondary@@QAEXXZ"
+target_address = 0x004116a0
+size = 1079
+
+[[units.secondary-load-patterns.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 31
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 39
+type = "DIR32"
+symbol = "?characterPatternSeparator@@3QBDB"
+target = 0x00787bac
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 48
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 69
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 77
+type = "DIR32"
+symbol = "?characterPatternExtension@@3QBDB"
+target = 0x00787bb0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 86
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 103
+type = "REL32"
+symbol = "??0PatternReader@@QAE@PBDH@Z"
+target = 0x00408330
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 111
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 152
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 163
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 187
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 212
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 264
+type = "REL32"
+symbol = "?Allocate@SecondarySequence@@QAEXH@Z"
+target = 0x00412ad0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 285
+type = "REL32"
+symbol = "?Allocate@PatternSequence@@QAEXH@Z"
+target = 0x004082d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 373
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 393
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 408
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 423
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 438
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 453
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 468
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 486
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 504
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 522
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 540
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 558
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 576
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 594
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 612
+type = "REL32"
+symbol = "?ReadShort@PatternReader@@QAEFXZ"
+target = 0x00405720
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 645
+type = "DIR32"
+symbol = "__real@42c80000"
+target = 0x00787c5c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 662
+type = "REL32"
+symbol = "?ReadShort@PatternReader@@QAEFXZ"
+target = 0x00405720
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 695
+type = "DIR32"
+symbol = "__real@c2c80000"
+target = 0x00787c58
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 712
+type = "REL32"
+symbol = "?ReadShort@PatternReader@@QAEFXZ"
+target = 0x00405720
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 729
+type = "REL32"
+symbol = "?ReadShort@PatternReader@@QAEFXZ"
+target = 0x00405720
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 746
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 764
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 782
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 805
+type = "REL32"
+symbol = "?ReadInt@PatternReader@@QAEHXZ"
+target = 0x00405700
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 835
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 879
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 898
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 942
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 992
+type = "REL32"
+symbol = "?Read@PatternReader@@QAEHPAXH@Z"
+target = 0x00405600
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 1063
+type = "REL32"
+symbol = "??1PatternReader@@QAE@XZ"
+target = 0x00408360
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-patterns.relocations]]
+offset = 1071
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-load-sounds]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SecondaryLoaders.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/PatternReader.h"]
+object = "build/match-units/secondary-load-sounds/SecondaryLoaders.obj"
+symbol = "?LoadSounds@Secondary@@QAEXXZ"
+target_address = 0x00411ae0
+size = 241
+
+[[units.secondary-load-sounds.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 60
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 68
+type = "DIR32"
+symbol = "?characterWaveSeparator@@3QBDB"
+target = 0x00787bb8
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 77
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 91
+type = "DIR32"
+symbol = "?characterWaveZero@@3QBDB"
+target = 0x00787bc0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 100
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 118
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 134
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 142
+type = "DIR32"
+symbol = "?characterWaveExtension@@3QBDB"
+target = 0x00787bc4
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 151
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 172
+type = "REL32"
+symbol = "?LoadWave@Audio@@QAEGPBD@Z"
+target = 0x0040dfb0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 220
+type = "REL32"
+symbol = "?SetSoundVolume@Audio@@QAEXGH@Z"
+target = 0x0040e5d0
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[[units.secondary-load-sounds.relocations]]
+offset = 233
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.secondary-sequence-allocate]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/SecondaryLoaders.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/PatternReader.h"]
+object = "build/match-units/secondary-sequence-allocate/SecondaryLoaders.obj"
+symbol = "?Allocate@SecondarySequence@@QAEXH@Z"
+target_address = 0x00412ad0
+size = 51
+
+[[units.secondary-sequence-allocate.relocations]]
+offset = 26
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed original operand and named callee, import, string, floating-point constant or base virtual-table destination"
+
+[units.video-load-character-bitmap]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoCharacterSurface.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-load-character-bitmap/VideoCharacterSurface.obj"
+symbol = "?LoadBitmapSurface@Video@@QAE?AUSurfaceRect@@PAPAUIUnknown@@PBDE@Z"
+target_address = 0x00409090
+size = 980
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 39
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 54
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 72
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 126
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 377
+type = "DIR32"
+symbol = "?characterBitmapFailure@@3QBDB"
+target = 0x007877fc
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 385
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 405
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 834
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 858
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-load-character-bitmap.relocations]]
+offset = 891
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[units.video-decode-character-packed]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoCharacterSurface.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-decode-character-packed/VideoCharacterSurface.obj"
+symbol = "?DecodeCharacterSurface@Video@@QAEHPAPAUIUnknown@@PBEEE@Z"
+target_address = 0x00409740
+size = 842
+
+[[units.video-decode-character-packed.relocations]]
+offset = 217
+type = "DIR32"
+symbol = "?characterPackedFailure@@3QBDB"
+target = 0x0078784c
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
+
+[[units.video-decode-character-packed.relocations]]
+offset = 225
+type = "DIR32"
+symbol = "__imp__MessageBoxA@16"
+target = 0x00787184
+evidence = "docs/KNOWLEDGE_BASE.md#character-resource-loaders; independently reviewed complete original operand and named import, callee or failure string destination"
