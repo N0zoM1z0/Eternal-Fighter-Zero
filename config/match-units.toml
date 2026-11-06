@@ -29827,3 +29827,2400 @@ object = "build/match-units/character-24-recognize-commands/Character24Commands.
 symbol = "?Slot02@Character24@@UAEXXZ"
 target_address = 0x004FAF70
 size = 11423
+
+[units.character-24-cpu-input]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Cpu.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-cpu-input/Character24Cpu.obj"
+symbol = "?Slot05@Character24@@UAEXXZ"
+target_address = 0x004FDC10
+size = 16912
+
+[[units.character-24-cpu-input.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 208
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787f08
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f08; literal 4.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c0; literal 1.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 442
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787f00
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787f00; literal 8.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 520
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787efc
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787efc; literal 40.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 716
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842d
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original cdecl double argument, caller stack cleanup, x87 return and target FABS implementation at 0x77842D"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 801
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 856
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1078
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1413
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1456
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1499
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1518
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1673
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1721
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c10; literal 20.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1737
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1756
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1829
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1845
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1864
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1960
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 1983
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2007
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2045
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2069
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2093
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2129
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2153
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2177
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2213
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2251
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2304
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2328
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2346
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2397
+type = "DIR32"
+symbol = "__real@4074000000000000"
+target = 0x00788448
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x788448; literal 320.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2420
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2444
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2468
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2504
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2528
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ed8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ed8; literal 1.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2634
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2664
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2714
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2744
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787e48
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e48; literal -40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2760
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2779
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2809
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2856
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c8; literal -100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2886
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2902
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2921
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2951
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 2998
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875c8; literal -100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3032
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3048
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3067
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3097
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787ec8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ec8; literal 5.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3158
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3282
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3310
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3334
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3404
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3443
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3494
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3740
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3763
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3787
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787eb0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787eb0; literal 15.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3857
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3896
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 3974
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4040
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4077
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4101
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4262
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4288
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4313
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4329
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4372
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4388
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4404
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4459
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4475
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4491
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4555
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4579
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4630
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4660
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4706
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4725
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4763
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4783
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4799
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4842
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4858
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4874
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4929
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4945
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 4961
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5025
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5049
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5100
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5130
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5176
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5195
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5315
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5339
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5363
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5454
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5474
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5493
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5517
+type = "DIR32"
+symbol = "__real@40000000"
+target = 0x00787e60
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787e60; literal 2.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5544
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5563
+type = "DIR32"
+symbol = "__real@4080400000000000"
+target = 0x00787e58
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e58; literal 520.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5616
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5664
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5691
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e70; literal 200.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5728
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5795
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5854
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5871
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5905
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5937
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5964
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 5999
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 6031
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 6075
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 6107
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 6151
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 6407
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7245
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7275
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7335
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7383
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7439
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7505
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7547
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea8; literal 125.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7659
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7719
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7751
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7812
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7858
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7896
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 7962
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8000
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8158
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8207
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8309
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8369
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8398
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8459
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8530
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8576
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8634
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8706
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8735
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8795
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8863
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 8927
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9052
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9115
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9217
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9273
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9339
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9381
+type = "DIR32"
+symbol = "__real@4060e00000000000"
+target = 0x00787e90
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e90; literal 135.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9478
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9538
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9567
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9633
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9679
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9774
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9823
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9925
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 9985
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10014
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10074
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10142
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10206
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10259
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10338
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10448
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10511
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10613
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10659
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10705
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787ea8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea8; literal 125.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10807
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10904
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 10997
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11091
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11180
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11226
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11286
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11335
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11401
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11452
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11481
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11537
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11605
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11669
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11688
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11807
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 11873
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12036
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12122
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12187
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12211
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787f10
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787f10; literal 25.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12245
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12266
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12296
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12342
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12363
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12439
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12492
+type = "DIR32"
+symbol = "__real@4052c00000000000"
+target = 0x00787e88
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e88; literal 75.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12545
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12610
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12650
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12666
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12731
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12747
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12805
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12821
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12879
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787370; literal 160.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12895
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12963
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 12979
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13050
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13066
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13130
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787e38
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e38; literal 70.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13182
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13234
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13250
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13350
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13450
+type = "DIR32"
+symbol = "__real@4069000000000000"
+target = 0x00787e70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e70; literal 200.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13499
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13529
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13592
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13655
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13671
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13734
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13750
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13819
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13897
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 13963
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14001
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14029
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14049
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14065
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14126
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787ef0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ef0; literal 150.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14142
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14213
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14233
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14249
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14283
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787c30
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787c30; literal 500.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14330
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14346
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14391
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787ee0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ee0; literal 80.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14407
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787d88
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787d88; literal 30.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14423
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14439
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14504
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14520
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14536
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14552
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14617
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787370; literal 160.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14633
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787d88
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787d88; literal 30.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14681
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787ec0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ec0; literal -50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14734
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14775
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14800
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14816
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14859
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14875
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14891
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14946
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14962
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 14978
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15042
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15066
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15084
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15133
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15163
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15209
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15228
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15250
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15288
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15308
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787e98
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e98; literal 110.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15324
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15367
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787eb8; literal 50.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15383
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15399
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15454
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15470
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15486
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15550
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15574
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15592
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787ea0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ea0; literal 90.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15641
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15671
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7875d0; literal 100.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15717
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15736
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787ce0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce0; literal 40.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15758
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15878
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15902
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 15926
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787ee8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ee8; literal 3.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16017
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787ce8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787ce8; literal 60.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16037
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16056
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16080
+type = "DIR32"
+symbol = "__real@40000000"
+target = 0x00787e60
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787e60; literal 2.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16107
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16126
+type = "DIR32"
+symbol = "__real@4080400000000000"
+target = 0x00787e58
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e58; literal 520.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16179
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16217
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16241
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16265
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787ef8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 32-bit float operand at 0x787ef8; literal 8.0f and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16317
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787340; literal 180.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16333
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16357
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16399
+type = "DIR32"
+symbol = "__real@4065400000000000"
+target = 0x00787e50
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e50; literal 170.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16415
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787e78
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787e78; literal 140.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16431
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x7872f8; literal 0.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16510
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16577
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040ff70
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16636
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16653
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original 64-bit double operand at 0x787368; literal 120.0 and COFF constant bytes independently verified"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16687
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16719
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16746
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16781
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16813
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16857
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[[units.character-24-cpu-input.relocations]]
+offset = 16889
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"

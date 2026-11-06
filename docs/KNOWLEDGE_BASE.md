@@ -3870,3 +3870,56 @@ full CI/cohort or runtime matrix ran. Private complete source/object attempts,
 full target disassembly, derivation and independent review are retained in
 `.analysis/probes/mizuka-command/`. Its generator is derivation evidence rather
 than an idempotent tool for recreating refined accepted source.
+
+## Mizuka CPU command and movement owner
+
+Character24::Slot05 at0x4FDC10 is complete exact:16,912 instruction bytes,
+exclusive end0x501E20. The next local-effect owner begins immediately, with no
+alignment bytes or local tables. Original table7885D0 slot5 points from7885E4
+to this entry. Source: `src/Character24Cpu.cpp`; recipe character-24-cpu-input
+uses pinned VC7.1 static /Od. Public proof: `docs/evidence/mizuka-cpu-exact.json`.
+
+The complete boundary review covers4,368 contiguous instructions,818 internal
+branches and109 direct calls:104 RandomRange calls to4108A0, four CollisionSide
+calls to40FF70 and one cdecl fabs call to77842D. All341 relocation operands are
+explicitly bound and independently checked against the original instruction:
+109 REL32 calls and232 DIR32 float/double operands. The38 distinct floating
+payloads were checked in both the canonical target and the native COFF constant
+sections, including operand width and symbol bits. No virtual/indirect calls or
+local tables occur. The external fabs dependency is identified, not claimed as
+an authored reconstruction.
+
+The owner clears command/input pulses, decays both movement timers and derives
+its forward and absolute vertical distances. Both real values occupy a natural
+sixteen-byte local record; target stack slots are EBP-10 and EBP-8, receiver at
+EBP-14 and complete frameD0. There is no padding member or fake declaration.
+RandomRange returns short under the accepted ABI; every original caller here
+zero-extends AX before integer/floating use, so source preserves the unsigned
+short conversion. Consecutive buttonPulse[3] assignments consume two independent
+random draws even though the second overwrites the first.
+
+Preserve the priority exits before ordinary decisions: special mode2 handling,
+opponent animation96, initial state50..150/tick0 input generation, grounded
+movement/attack guards, command52 and the positive field3458 timer owner. The
+latter has its own attack and movement decisions before returning; merging it
+into the general CPU tree changes the original ordering. Active movement timers
+also exit before selecting new random timers. Conditional tails and separate
+state204 successful-choice/outer exits retain the original control flow.
+
+Exact codegen depends on the target's floating operand order and original
+integer thresholds: >=3000 and >=1000 meter checks, difficulty multiplication
+by two, a signed integer boolean product in the initial threshold, and the
+vertical-minus40 comparison against forward distance. Reassociating subtraction
+or reversing floating operands changes behavior for exceptional values as well
+as emitted x87 instructions. Do not normalize these tests from decompiler output.
+Existing Shiori CPU source supplied field/ABI hypotheses; all Mizuka acceptance
+comes from this canonical target's complete comparison and operand review.
+
+The formatted public source passed one selected cold native artifact with all
+16,912 bytes equal and zero differences after the341 reviewed relocations.
+Public headers and existing sources are unchanged, so no old unit required
+replay. Focused tracking, ledger/progress CI and whitespace checks passed; no
+full CI/cohort or runtime matrix ran. Private decompile, complete source/header/
+object attempts, retained compiler exits, full disassembly and independent
+reviews are in `.analysis/probes/mizuka-cpu/`. Its one-time derivation scripts
+must not be rerun over accepted or newer sources.

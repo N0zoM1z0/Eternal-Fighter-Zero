@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 255 |
-| Authored exact instruction bytes | 258,043 |
+| Authored complete exact functions | 256 |
+| Authored exact instruction bytes | 274,955 |
 | Associated exact local-table bytes | 783 |
-| Reviewed boundaries / origins | 295 / 295 |
+| Reviewed boundaries / origins | 296 / 296 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,30 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mizuka command checkpoint
+## Latest Mizuka CPU checkpoint
+
+Character24::Slot05 at4FDC10 is complete exact /16,912 instruction bytes,
+exclusive end501E20; no local tables or following padding. Source:
+src/Character24Cpu.cpp, profile vc71-od-static. Public proof:
+docs/evidence/mizuka-cpu-exact.json; durable facts:
+[Mizuka CPU command and movement owner](KNOWLEDGE_BASE.md#mizuka-cpu-command-and-movement-owner).
+Private complete attempts and independent review: .analysis/probes/mizuka-cpu/README.md.
+Review covers4,368 instructions,818 internal branches and341 relocation operands:
+109 direct calls plus232 typed floating operands from38 distinct payloads.
+
+The final formatted public source passed one selected cold strict complete
+zero-difference native comparison. Public headers and existing sources are
+unchanged; no old native unit replay was needed. Tracking, ledger/progress CI
+and whitespace checks passed; no full CI/cohort or runtime matrix ran.
+Preserve unsigned AX random conversions, x87 operand order, used distance record,
+positive special-state timer priority, active movement timer exits and the
+separate successful-choice/outer state204 exits. Original vtable is7885D0 slot5.
+
+Remaining Mizuka substantial owners are shared slot06 state4E7EC0/65782 and
+slot07 local effects501E20/42279. Their complete code/table extents remain to be
+reviewed; existing exact owners do not establish runtime/character closure.
+
+## Previous Mizuka command checkpoint
 
 Character24::Slot02 at4FAF70 is now complete exact /11,423 instruction bytes,
 exclusive end4FDC0F; no calls, relocations or local tables. Source:
@@ -61,8 +84,8 @@ Preserve single-wrap history indexing, every scan window, sequential state
 advancement, gate-mask !=0 versus positive command-ID terms, stage6/7 store
 order and the short release/press scan's actual unsigned byte ==1/==0 checks.
 
-Remaining Mizuka owners: Slot05 CPU4FDC10/16912, shared slot06 state4E7EC0/65782,
-slot07 local effects501E20/42279. Inspect complete extents and any attached tables;
+Slot05 CPU4FDC10/16912 has since been accepted above. Remaining Mizuka owners:
+shared slot06 state4E7EC0/65782 and slot07 local effects501E20/42279. Inspect complete extents and any attached tables;
 existing accepted virtuals do not imply a complete runnable character.
 
 ## Previous Mizuka action checkpoint
@@ -91,8 +114,8 @@ change is essential. The large action selector alone reviews2655 instructions,
 430 internal branches,42 direct calls,42 real virtual calls and87 relocations.
 
 Mizuka Slot02 command scanner4FAF70/11423 has since been accepted above.
-Slot05 CPU4FDC10/16912, shared slot06 at4E7EC0/65782 and slot07 local
-effects501E20/42279 remain available; inspect complete boundaries/local tables.
+Slot05 CPU4FDC10/16912 has since been accepted above. Shared slot06 at4E7EC0/65782
+and slot07 local effects501E20/42279 remain available; inspect complete boundaries/local tables.
 A full target-bound character constructor and selected virtuals do not complete
 that character's runtime implementation.
 
