@@ -4857,3 +4857,60 @@ reviewed local offsets, destinations or literal payloads (723 local bindings,
 three strings). The other254 existing units retain earlier artifacts. Focused
 tracking, ledger/progress CI and whitespace checks passed; no full CI/cohort or
 runtime matrix ran. No compiler/Wine failure occurred in this checkpoint.
+
+## Misaki CPU command and movement owner
+
+Character07::Slot05 at0x56B630 is complete strict exact in
+`src/Character07Cpu.cpp`:17,127 instruction bytes, exclusive end56F917,
+without associated local tables. Nine excluded CC alignment bytes precede
+local-effect owner56F920. Public proof:`docs/evidence/misaki-cpu-exact.json`;
+explicit recipe:character-07-cpu-input, pinned vc71-od-static.
+
+Complete independent review covers4,399 contiguous instructions and809 internal
+branches. All318 relocation fields have explicit reviewed symbols, actual
+canonical destinations and evidence:108 RandomRange calls, two CollisionSide
+calls, one external fabs call and207 typed floating operands. All39 distinct
+literal payloads (nine floats,30 doubles) were freshly inventoried from this
+canonical target and independently checked against native COFF. Every random
+caller zero-extends AX. There are no indirect calls or local tables. Original
+virtual slot05 operand78881C contains56B630.
+
+The accepted Character23 CPU source provided a complete natural-source reuse
+hypothesis. Changing only owner names/comments produced all17,127 exact bytes
+on its first complete native build. Acceptance still required this Misaki
+function's own boundary review, original relocation operands, typed literal
+payloads, vptr operand, following padding and final selected cold comparison.
+The relationship establishes shared instruction form and reviewed call/constant
+bindings, not raw identical CALL displacement bytes at different addresses or
+original translation-unit/class partitioning.
+
+Used forward/vertical distance locals occupy EBP-10/-8 and receiver EBP-14;
+the natural frame is FC. Preserve opponent.x-self.x before facing multiplication,
+fabs vertical distance, actual random sample order, unsigned AX conversions,
+positive hurt-state and action-selection priority, direct conditional-tail exits,
+movement-timer priority and original integer constant-minus-boolean arithmetic.
+The three independent guard/recovery comparisons, state-specific command windows,
+meter checks and separate successful/outer exits remain explicit. The actual
+late far-facing condition requires forward distance >800 and <120; the target
+retains both comparisons, so do not simplify or repair their contradiction.
+Shared CPU mode3114 and random selector3110 remain separate from Character07's
+four child fields.
+
+The external fabs call preserves the actual cdecl double argument, caller cleanup
+and x87 return. Retained external callee bytes are ABI evidence only, without
+new authored reconstruction credit. Existing real shared declarations remain
+unchanged; no fake ABI or inert locals were introduced.
+
+One final selected cold native replay passed all17,127 bytes and318 reviewed
+bindings with zero differences. Public headers and all317 existing recipes /
+source owners remain unchanged, so no old native unit needed replay. Focused
+tracking, ledger/progress CI and whitespace checks passed; no full CI/cohort or
+runtime matrix ran. No compiler/Wine failure occurred. Full annotations, target
+review, source/object attempt and native exits remain retained in
+`.analysis/probes/misaki-cpu/`; unused inherited derivation scripts are historical
+templates and must not overwrite accepted/newer source.
+
+Eleven of thirteen original Misaki virtual destinations now have complete exact
+proofs, including inherited LoadResources. State5571F0 and effects56F920 remain
+open with associated tables unreviewed. Resource/data/runtime/TU and game phases
+remain independently open.

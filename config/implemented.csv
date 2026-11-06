@@ -298,3 +298,4 @@ address,name,source,symbol,status,evidence
 0x0056A610,?EmitLocalEffect@Character07@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character07Frame.cpp,?EmitLocalEffect@Character07@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/misaki-exact.json
 0x00567C50,?Slot04@Character07@@UAEXXZ,src/Character07Input.cpp,?Slot04@Character07@@UAEXXZ,complete,docs/evidence/misaki-exact.json
 0x0056A640,?Slot02@Character07@@UAEXXZ,src/Character07Commands.cpp,?Slot02@Character07@@UAEXXZ,complete,docs/evidence/misaki-exact.json
+0x0056B630,Character07::Slot05,src/Character07Cpu.cpp,?Slot05@Character07@@UAEXXZ,complete,docs/evidence/misaki-cpu-exact.json

@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 299 |
-| Authored exact instruction bytes | 702,784 |
+| Authored complete exact functions | 300 |
+| Authored exact instruction bytes | 719,911 |
 | Associated exact local-table bytes | 4,434 |
-| Reviewed boundaries / origins | 336 / 336 |
+| Reviewed boundaries / origins | 337 / 337 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,43 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Misaki construction, input and command checkpoint
+## Latest Misaki CPU checkpoint
+
+Character07::Slot05 at56B630 is complete exact:17,127 instruction bytes,
+exclusive end56F917. Nine excluded CC bytes precede effects56F920; no local
+tables occur. Source:src/Character07Cpu.cpp; profile vc71-od-static.
+Public proof:docs/evidence/misaki-cpu-exact.json. Durable facts:
+[Misaki CPU command and movement owner](KNOWLEDGE_BASE.md#misaki-cpu-command-and-movement-owner).
+Private retained evidence:.analysis/probes/misaki-cpu/README.md.
+
+Independent review covers4,399 instructions,809 internal branches and all318
+relocation fields:108 RandomRange, two CollisionSide, one external fabs and207
+typed floating operands. All39 fresh canonical literal payloads match native
+COFF; all108 random callers zero-extend AX. There are no indirect calls/tables.
+The real distance locals recover frameFC, receiver EBP-14 and distances EBP-10/-8.
+
+Accepted Character23 CPU natural source, with only owner/comment changes,
+matched the entire new target on its first native compile. This is independently
+verified complete codegen reuse, not similarity credit. Preserve original action /
+hurt priorities, random sample order, positive tails, movement timers and the
+actual contradictory distance>800 /<120 guard. Original class/TU origin stays open.
+
+One final selected cold native replay passed with all318 reviewed bindings.
+Public headers and all317 prior recipes/source owners are unchanged; no old unit
+needed replay. Focused tracking, ledgers/progress CI and whitespace checks passed;
+no full CI/cohort or runtime matrix ran. No compiler/Wine failure occurred.
+Preserve all private target evidence, external fabs ABI review and build exits.
+
+Eleven of thirteen Misaki virtual destinations now have complete exact proofs.
+Next substantial owner:state5571F0/66501 instruction bytes; associated tables
+remain unreviewed. Effects56F920/15562 code bytes also remains OPEN. Fresh read-only
+annotated decompiles are in .analysis/probes/misaki/. Build a complete source
+early and review all original code/table boundaries and operands before credit.
+Resource/data/runtime/TU and game reconstruction remain independent open phases.
+Keep parked PrepareBattle/Shiori controls until new target evidence supplies a
+falsifiable instruction prediction.
+
+## Previous Misaki construction, input and command checkpoint
 
 Ten Character07 owners add15,615 complete exact instruction bytes, no local
 tables: constructor567900/390, initializer567A90/270, reset567BA0/58,
