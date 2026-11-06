@@ -240,3 +240,7 @@ address,end,size,status,evidence
 0x00766480,0x00766B46,1734,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767F60,0x007697C5,6245,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
 0x00410AC0,0x00410B0B,75,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
+0x007697D0,0x0076B08E,6334,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076BAB0,0x0076BD3A,650,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076B090,0x0076BAA2,2578,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076BD40,0x0076C6E2,2466,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution

@@ -2981,8 +2981,139 @@ ledger/progress and whitespace checks ran; no full CI or runtime matrix ran.
 
 The checkpoint adds **2 complete authored functions /6,320 instruction bytes**,
 bringing acceptance to **203 functions /179,323 instruction bytes**, plus unchanged
-667 local-table bytes. Reviewed boundaries/origins are 241 each. ResolveEffectHit
-0x7697D0 /6334 and the remaining effect/body collision owners remain open, as do
+667 local-table bytes. Reviewed boundaries/origins are 241 each. At this body-hit
+checkpoint, ResolveEffectHit 0x7697D0 /6334 and the remaining effect/body collision
+owners were still open (subsequently recovered below), as were
 the battle update/draw/keyboard entries and independently tracked product/runtime/
 portability phases. The accepted body-hit owner does not complete battle or game
 reconstruction.
+
+## Battle effect collision resolution
+
+Canonical target: `resources/EFZ.exe`, SHA-256
+`3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
+Four complete Scene3 members are accepted from src/SceneEffectCollision.cpp under
+explicit profile vc71-od-static and pinned VC7.1 RTM 13.10.3077:
+
+| Member | Entry | Instruction bytes | Instructions | Direct branches | Direct calls | Slot-zero calls | Relocations |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| ResolveEffectHit | 0x7697D0 | 6,334 | 1,460 | 120 | 34 | 6 | 54 |
+| ResolveEffectPair | 0x76B090 | 2,578 | 628 | 58 | 15 | 2 | 25 |
+| ResolveEffectClash | 0x76BAB0 | 650 | 175 | 14 | 3 | 0 | 3 |
+| ResolveBodyEffect | 0x76BD40 | 2,466 | 603 | 58 | 15 | 2 | 25 |
+
+All **12,028 instruction bytes** compare strict exact through their original
+RET 10/10/10/14 instructions and exclusive ends 0x76B08E, 0x76BAA2, 0x76BD3A
+and 0x76C6E2. Following CC runs are respectively 2, 14, 6 and 14 bytes;
+none belongs to the credited contribution. Original instructions are contiguous,
+all 250 direct branch destinations are instruction starts inside their respective
+complete contributions, and there are no indirect jumps or local tables.
+All 107 relocation fields retain explicit reviewed symbols and canonical targets:
+67 direct calls and 40 exact IEEE operands. The ten indirect calls are reviewed
+Secondary defender slot-zero ResetPose calls with the real receiver, not fabricated
+Ghidra register parameters. Compiler __ftol2 remains an explicit dependency without
+new authored-function credit. Complete exact codegen does not establish runtime,
+linked-data, original TU partitioning or whole-game closure.
+
+### Effect hit eligibility and distinct outcomes
+
+ResolveEffectHit uses a live SecondaryEffectSlot at Secondary+4D0+index*98,
+its live 200-byte sequence frame, and the genuine defender collision snapshot.
+Eligibility reads slot DWORD80 and signed WORD84, snapshot defense B0 flag20,
+attack AA flag40 against live defender130, AirActionReady and live defender13C.
+Unlike ResolveBodyHit, it does not copy both frames or construct EffectSpawn
+before transforms: the descriptor is constructed only after nonzero collision.
+The four attack boxes use TransformPoseBox with the full effect-slot pointer;
+the five defense boxes and special90 box use TransformSnapshotBox.
+
+The effect-slot cast is a reviewed source view of the actual common pose prefix:
+type0, frame2, patterns8, X18/Y20 and signed facing BYTE48 are exactly the
+positions read by TransformPoseBox. It does not claim original inheritance or
+adjust the slot pointer by Secondary's eight-byte pose-base displacement. The
+real slot has additional independent fields including integer facing4C.
+The AA40 special path sets only matrix column zero before accumulating overlaps;
+the target's remaining uninitialized cells and later reads are preserved.
+
+The full positive outcome chain includes defense B0 flag400 with absent attack
+AA100, special guards/counters, the three defense200 direction cases, ordinary
+guard/chip, angle consumption and normal damage with alternate pose/tint
+decisions. Original
+slot states 2, 3 and 7, signed consumption/freeze words, history clears, minimum
+chip health one, special live-attacker state168 writes, combo/score, descriptor
+emission and KO are all included. Most ResetPose calls set defender facing to
+**negative effect-slot BYTE48** instead of calling FaceOpponent; the KO path
+still calls FaceOpponent. Its tint-only call is SetCharacterTint(E9,3), distinct
+from BodyHit and the other effect-transfer paths using DF,2. Ordinary guard and
+normal hit write defender D0=0, unlike the delegated-hit paths below.
+
+Original x87 code supplies damage from frame A0 * attacker DamageFactor() *
+defender HealthFactor() * attacker ComboFactor(), in that exact call/spill order.
+The signed-word stun expression is frame B2 * (attacker178 /10000.0) *
+(1 + ((attack AA2000 && defense B02000) ? 1 : 0)). Both masks are compared with
+zero as in the original. This owner has **no 0.8 factor** in stun. The factor's
+Boolean is materialized before signed B2 conversion, matching the actual frame.
+Float A4 /1000.0f then multiplies the existing double attacker178 without an
+intermediate float narrowing, and repeats above 10000. Defense flag10 subtracts
+exact double20.0 above 10000 or stores 10000. These live x87 inputs were missing
+or incorrectly narrowed in the provisional decompiler text.
+
+### Effect pair, strength clash and body-to-effect ownership
+
+ResolveEffectPair tests the first slot's state/remaining count and absent AA40,
+then transforms its four attack boxes against five boxes of the second slot.
+On overlap, absent second-frame B010 consumes the first slot and writes state5;
+the second slot always receives state5. With second-frame B02000, the original
+copies the defender character's current 200-byte frame **into the live second
+effect sequence frame**, then uses that overwritten frame for flags. This is a
+real target write to shared frame data; it is not a local snapshot substitution.
+The delegated outcome may select/reset/face the character or tint DF,2, and
+continues through real character damage, combo, hit-stop and KO. Stun uses
+frame B2 * (attacker178 /10000.0 *0.8). D0 is one. The EffectSpawn constructor and
+single midpoint descriptor emission occur after this optional character damage.
+
+ResolveBodyEffect instead receives two genuine collision snapshots plus one
+second-player slot index. Eligibility uses live attacker168/16C and the first
+snapshot's AA40. It copies the second effect's frame into an ordinary local
+SecondaryFrame before box testing. Four attack boxes use the first snapshot;
+five defense boxes use the live slot's pose prefix with the local frame. Its
+B02000 path replaces **only that local frame** with the second snapshot's frame,
+then follows the corresponding delegated character damage/tint/KO operations.
+The initial B010 test consumes live attacker16C/state168 rather than a first
+effect slot. Full copy instructions, tests before/after replacement and the late
+EffectSpawn construction are exact; the local and shared-frame owners are not
+conflated.
+
+ResolveEffectClash requires both live slots state zero, positive remaining counts
+and positive signed sequence field0000 values. After special90 boxes overlap,
+equal sequence values set both states to4; otherwise only the weaker side becomes4.
+Each slot loses one remaining count only if the *opposite* sequence value exceeds
+one. The meaning of numeric sequence field0000 remains provisional beyond these
+observed comparisons.
+
+### Focused native acceptance
+
+The first complete EffectHit source was compiled at 6,311 bytes and its whole
+comparison retained; real value scopes and branch/word expressions resolved the
+remaining codegen. The first complete Pair source differed in two signed versus
+equality condition jumps; original instructions determine the final != tests.
+Clash and BodyEffect were complete exact on their first source builds. All work
+records contain used pointers, indices, matrices, rectangles or real frame values;
+there are no byte wrappers, assembly, padding fields or fake ABI declarations.
+Readable else-if cleanup also received complete native comparisons.
+
+The final public source, including its last formatting edits and actual filename,
+received **one serial cold source/profile/dependency artifact** and four complete
+manifest-bound comparisons, each with zero differences. Shared headers and all
+previous source files are unchanged, so no unrelated unit replay was needed.
+Proof is docs/evidence/effect-collision-exact.json; original full instructions,
+decompiles, all source/object attempts, complete comparisons, independent constant/
+call/branch/boundary reviews and final reports remain in
+.analysis/probes/effect-hit/, .analysis/probes/scene-collision/ and
+.analysis/exact/effect-collision.json. Only focused ledger/progress and whitespace
+checks accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
+
+This checkpoint adds **4 authored complete exact functions /12,028 instruction
+bytes**, bringing authored acceptance to **207 functions /191,351 instruction
+bytes**, plus unchanged 667 local-table bytes. Reviewed boundaries and origins
+are 245 each. Battle Step/render/keyboard and the parked pushbox owner remain
+open, as do product/runtime/portability closure and the whole game.

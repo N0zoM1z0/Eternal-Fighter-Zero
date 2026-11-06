@@ -589,10 +589,10 @@ address,origin,status,evidence
 0x00767930,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x007679B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767F60,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-body-hit-resolution
-0x007697D0,unknown,unreviewed,
-0x0076B090,unknown,unreviewed,
-0x0076BAB0,unknown,unreviewed,
-0x0076BD40,unknown,unreviewed,
+0x007697D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076B090,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076BAB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
+0x0076BD40,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution
 0x0076C6F0,unknown,unreviewed,
 0x0076C740,unknown,unreviewed,
 0x0076C790,unknown,unreviewed,

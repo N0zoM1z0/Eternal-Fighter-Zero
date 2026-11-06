@@ -22770,3 +22770,792 @@ object = "build/match-units/secondary-set-character-tint/SceneBodyHit.obj"
 symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
 target_address = 0x00410ac0
 size = 75
+
+[units.scene-battle-resolve-effect-hit]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneEffectCollision.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-resolve-effect-hit/SceneEffectCollision.obj"
+symbol = "?ResolveEffectHit@Scene3@@QAEXPAVSecondary@@0HPAUBattleCollisionSnapshot@@@Z"
+target_address = 0x007697d0
+size = 6334
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 168
+type = "REL32"
+symbol = "?AirActionReady@Secondary@@QAEHXZ"
+target = 0x004102e0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769878; explicit reviewed secondary-air-action-ready destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 264
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 007698D8; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 354
+type = "REL32"
+symbol = "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z"
+target = 0x007677a0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769932; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 423
+type = "REL32"
+symbol = "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z"
+target = 0x007677a0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769977; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 543
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 007699EF; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 646
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769A56; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 727
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769AA7; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 759
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769AC7; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1401
+type = "REL32"
+symbol = "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z"
+target = 0x004100f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769D49; explicit reviewed secondary-guard-input destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1675
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769E5B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1709
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769E7D; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1770
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769EBA; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1778
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769EC2; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1852
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769F0C; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 1879
+type = "REL32"
+symbol = "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z"
+target = 0x00410050
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769F27; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2131
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A023; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2173
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A04D; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2181
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A055; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2227
+type = "REL32"
+symbol = "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z"
+target = 0x00410050
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A083; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2263
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A0A7; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2560
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A1D0; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2623
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A20F; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2631
+type = "REL32"
+symbol = "?ClearInputHistory@Secondary@@QAEXXZ"
+target = 0x0040f190
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A217; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 2907
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A32B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3078
+type = "DIR32"
+symbol = "__real@43b40000"
+target = 0x007895c0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A3D6; original 4-byte x87 data operand; independently checked IEEE payload 0000b443"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3349
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A4E5; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3520
+type = "DIR32"
+symbol = "__real@43b40000"
+target = 0x007895c0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A590; original 4-byte x87 data operand; independently checked IEEE payload 0000b443"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3617
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A5F1; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3814
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A6B6; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 3985
+type = "DIR32"
+symbol = "__real@43b40000"
+target = 0x007895c0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A761; original 4-byte x87 data operand; independently checked IEEE payload 0000b443"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4026
+type = "REL32"
+symbol = "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z"
+target = 0x00410050
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A78A; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4193
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A831; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4550
+type = "DIR32"
+symbol = "__real@00000000"
+target = 0x00787c08
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A996; original 4-byte x87 data operand; independently checked IEEE payload 00000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4620
+type = "DIR32"
+symbol = "__real@00000000"
+target = 0x00787c08
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A9DC; original 4-byte x87 data operand; independently checked IEEE payload 00000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4732
+type = "DIR32"
+symbol = "__real@43b40000"
+target = 0x007895c0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AA4C; original 4-byte x87 data operand; independently checked IEEE payload 0000b443"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4802
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AA92; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 4913
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AB01; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5263
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410ac0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AC5F; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5318
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AC96; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5340
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ACAC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5360
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ACC0; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5483
+type = "REL32"
+symbol = "?DamageFactor@Secondary@@QAENXZ"
+target = 0x00410480
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD3B; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5503
+type = "REL32"
+symbol = "?HealthFactor@Secondary@@QAENXZ"
+target = 0x00410530
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD4F; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5523
+type = "REL32"
+symbol = "?ComboFactor@Secondary@@QAENXZ"
+target = 0x00410560
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD63; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5534
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD6E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5649
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ADE1; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5679
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ADFF; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5797
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AE75; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5821
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AE8D; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5854
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AEAE; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 5876
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AEC4; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 6251
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B03B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 6312
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B078; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-hit.relocations]]
+offset = 6324
+type = "REL32"
+symbol = "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z"
+target = 0x00410790
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B084; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[units.scene-battle-resolve-effect-clash]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneEffectCollision.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-resolve-effect-clash/SceneEffectCollision.obj"
+symbol = "?ResolveEffectClash@Scene3@@QAEXPAVSecondary@@0HH@Z"
+target_address = 0x0076bab0
+size = 650
+
+[[units.scene-battle-resolve-effect-clash.relocations]]
+offset = 267
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BBBB; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-clash.relocations]]
+offset = 315
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BBEB; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-clash.relocations]]
+offset = 354
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BC12; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[units.scene-battle-resolve-effect-pair]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneEffectCollision.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-resolve-effect-pair/SceneEffectCollision.obj"
+symbol = "?ResolveEffectPair@Scene3@@QAEXPAVSecondary@@0HH@Z"
+target_address = 0x0076b090
+size = 2578
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 250
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B18A; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 340
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B1E4; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 461
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B25D; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 563
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B2C3; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1276
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B58C; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1577
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B6B9; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1606
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410ac0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B6D6; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1648
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B700; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1670
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B716; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1690
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B72A; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1813
+type = "REL32"
+symbol = "?DamageFactor@Secondary@@QAENXZ"
+target = 0x00410480
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7A5; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1833
+type = "REL32"
+symbol = "?HealthFactor@Secondary@@QAENXZ"
+target = 0x00410530
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7B9; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1853
+type = "REL32"
+symbol = "?ComboFactor@Secondary@@QAENXZ"
+target = 0x00410560
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7CD; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1864
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7D8; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1921
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B811; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1927
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B817; original 8-byte x87 data operand; independently checked IEEE payload 9a9999999999e93f"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 1934
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B81E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2052
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B894; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2076
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8AC; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2109
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8CD; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2131
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8E3; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2365
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9CD; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2377
+type = "REL32"
+symbol = "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z"
+target = 0x00410790
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9D9; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2388
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9E4; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-effect-pair.relocations]]
+offset = 2566
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BA96; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[units.scene-battle-resolve-body-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneEffectCollision.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h"]
+object = "build/match-units/scene-battle-resolve-body-effect/SceneEffectCollision.obj"
+symbol = "?ResolveBodyEffect@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1H@Z"
+target_address = 0x0076bd40
+size = 2466
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 211
+type = "REL32"
+symbol = "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z"
+target = 0x007677a0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BE13; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 305
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BE71; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 426
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BEEA; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 528
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040c590
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BF50; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1188
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C1E4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1471
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C2FF; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1500
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410ac0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C31C; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1536
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C340; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1558
+type = "DIR32"
+symbol = "__real@4034000000000000"
+target = 0x00787c10
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C356; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1578
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C36A; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1701
+type = "REL32"
+symbol = "?DamageFactor@Secondary@@QAENXZ"
+target = 0x00410480
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C3E5; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1721
+type = "REL32"
+symbol = "?HealthFactor@Secondary@@QAENXZ"
+target = 0x00410530
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C3F9; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1741
+type = "REL32"
+symbol = "?ComboFactor@Secondary@@QAENXZ"
+target = 0x00410560
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C40D; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1752
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C418; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1809
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C451; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1815
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C457; original 8-byte x87 data operand; independently checked IEEE payload 9a9999999999e93f"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1822
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C45E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1940
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875d0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C4D4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1964
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C4EC; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 1997
+type = "DIR32"
+symbol = "__real@40c3880000000000"
+target = 0x00787c00
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C50D; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 2019
+type = "DIR32"
+symbol = "__real@447a0000"
+target = 0x007895f0
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C523; original 4-byte x87 data operand; independently checked IEEE payload 00007a44"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 2253
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040e630
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C60D; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 2265
+type = "REL32"
+symbol = "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z"
+target = 0x00410790
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C619; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 2276
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C624; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"
+
+[[units.scene-battle-resolve-body-effect.relocations]]
+offset = 2454
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C6D6; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency"

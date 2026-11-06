@@ -1,0 +1,1086 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen under explicit original bindings; compiler-generated and standard-library helpers are auxiliary",
+  "method": "four new complete effect/body collision contributions compared from one serial cold source/profile/dependency artifact; existing sources and shared headers unchanged; no unrelated native replay",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 6334,
+      "matched_bytes": 6334,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 168,
+          "target": 4260576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AirActionReady@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769878; explicit reviewed secondary-air-action-ready destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 264,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 007698D8; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 354,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769932; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 423,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769977; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 543,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 007699EF; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 646,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769A56; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 727,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769AA7; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 759,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769AC7; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1401,
+          "target": 4260080,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?GuardInput@Secondary@@QAEHPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769D49; explicit reviewed secondary-guard-input destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1675,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769E5B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1709,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769E7D; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1770,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769EBA; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1778,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769EC2; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1852,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769F0C; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1879,
+          "target": 4259920,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 00769F27; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2131,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A023; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2173,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A04D; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2181,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A055; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2227,
+          "target": 4259920,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A083; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2263,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A0A7; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2560,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A1D0; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2623,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A20F; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2631,
+          "target": 4256144,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearInputHistory@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A217; explicit reviewed secondary-clear-input-history destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2907,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A32B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3078,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A3D6; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 3349,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A4E5; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3520,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A590; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 3617,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A5F1; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3814,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A6B6; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 3985,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A761; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 4026,
+          "target": 4259920,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CanGuard@Secondary@@QAEHPBUSecondaryFrame@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A78A; explicit reviewed secondary-can-guard destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4193,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A831; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4550,
+          "target": 7896072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@00000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A996; original 4-byte x87 data operand; independently checked IEEE payload 00000000",
+          "addend": 0
+        },
+        {
+          "offset": 4620,
+          "target": 7896072,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@00000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076A9DC; original 4-byte x87 data operand; independently checked IEEE payload 00000000",
+          "addend": 0
+        },
+        {
+          "offset": 4732,
+          "target": 7902656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@43b40000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AA4C; original 4-byte x87 data operand; independently checked IEEE payload 0000b443",
+          "addend": 0
+        },
+        {
+          "offset": 4802,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AA92; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 4913,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AB01; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5263,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AC5F; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5318,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AC96; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 5340,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ACAC; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440",
+          "addend": 0
+        },
+        {
+          "offset": 5360,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ACC0; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 5483,
+          "target": 4260992,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DamageFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD3B; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5503,
+          "target": 4261168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?HealthFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD4F; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5523,
+          "target": 4261216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ComboFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD63; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5534,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AD6E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5649,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ADE1; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 5679,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076ADFF; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 5797,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AE75; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 5821,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AE8D; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 5854,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AEAE; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 5876,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076AEC4; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 6251,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B03B; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6312,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B078; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 6324,
+          "target": 4261776,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B084; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "dbf7cbcfa4c8df4f52f682742c2e4d163d2b8ee7272be503477bde89e69fa0d0",
+      "target_extent_sha256": "dbf7cbcfa4c8df4f52f682742c2e4d163d2b8ee7272be503477bde89e69fa0d0",
+      "unit": "scene-battle-resolve-effect-hit",
+      "symbol": "?ResolveEffectHit@Scene3@@QAEXPAVSecondary@@0HPAUBattleCollisionSnapshot@@@Z",
+      "target_address": "0x007697D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "34a66138452ff731c7300d37c51f55fad9794e491c7acd5f5ae0b947d419682a",
+      "object_sha256": "9dc50f1e064252a9b9ea69e3cbe65157bb78a98a87d8318395b6a151bebdf4f5",
+      "source_sha256": "8bfc3b0651f636982297fa1383482598614ee4a06747d6ff833c44c6c7489443",
+      "dependencies": {
+        "src/Engine.h": "69b4497b3d9b83cd89d7c3db6e1287733ce99f8bb59c33cde7cbe88d31b957ba",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "2a644ea87cf9fce6c515de67eeab049c5a39f10a5c07a3ca92d72bf5f8f19296",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "75fdcc5d6f05b6ec0531eccd60e5302ef96f676ac66603330057a8e3ae2bef46",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 650,
+      "matched_bytes": 650,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 267,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BBBB; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 315,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BBEB; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 354,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BC12; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "69c574ac28e0445e9eaab301ffba8d6187104e752847412fe1a78b62c38b65a7",
+      "target_extent_sha256": "69c574ac28e0445e9eaab301ffba8d6187104e752847412fe1a78b62c38b65a7",
+      "unit": "scene-battle-resolve-effect-clash",
+      "symbol": "?ResolveEffectClash@Scene3@@QAEXPAVSecondary@@0HH@Z",
+      "target_address": "0x0076BAB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "34a66138452ff731c7300d37c51f55fad9794e491c7acd5f5ae0b947d419682a",
+      "object_sha256": "9dc50f1e064252a9b9ea69e3cbe65157bb78a98a87d8318395b6a151bebdf4f5",
+      "source_sha256": "8bfc3b0651f636982297fa1383482598614ee4a06747d6ff833c44c6c7489443",
+      "dependencies": {
+        "src/Engine.h": "69b4497b3d9b83cd89d7c3db6e1287733ce99f8bb59c33cde7cbe88d31b957ba",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "2a644ea87cf9fce6c515de67eeab049c5a39f10a5c07a3ca92d72bf5f8f19296",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0c3a7997587ec11106be88455b57bf989c3e77a560c362bef41fa448692d3fae",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2578,
+      "matched_bytes": 2578,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 250,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B18A; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 340,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B1E4; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 461,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B25D; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 563,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B2C3; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1276,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B58C; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1577,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B6B9; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1606,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B6D6; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1648,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B700; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1670,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B716; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440",
+          "addend": 0
+        },
+        {
+          "offset": 1690,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B72A; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1813,
+          "target": 4260992,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DamageFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7A5; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1833,
+          "target": 4261168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?HealthFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7B9; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1853,
+          "target": 4261216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ComboFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7CD; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1864,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B7D8; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1921,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B811; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1927,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B817; original 8-byte x87 data operand; independently checked IEEE payload 9a9999999999e93f",
+          "addend": 0
+        },
+        {
+          "offset": 1934,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B81E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2052,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B894; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 2076,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8AC; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 2109,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8CD; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 2131,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B8E3; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 2365,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9CD; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2377,
+          "target": 4261776,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9D9; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2388,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076B9E4; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2566,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BA96; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "81d0fd1970284143fc88d66df0e77603894d54e43a1f7823a629ff29f7183dfa",
+      "target_extent_sha256": "81d0fd1970284143fc88d66df0e77603894d54e43a1f7823a629ff29f7183dfa",
+      "unit": "scene-battle-resolve-effect-pair",
+      "symbol": "?ResolveEffectPair@Scene3@@QAEXPAVSecondary@@0HH@Z",
+      "target_address": "0x0076B090",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "34a66138452ff731c7300d37c51f55fad9794e491c7acd5f5ae0b947d419682a",
+      "object_sha256": "9dc50f1e064252a9b9ea69e3cbe65157bb78a98a87d8318395b6a151bebdf4f5",
+      "source_sha256": "8bfc3b0651f636982297fa1383482598614ee4a06747d6ff833c44c6c7489443",
+      "dependencies": {
+        "src/Engine.h": "69b4497b3d9b83cd89d7c3db6e1287733ce99f8bb59c33cde7cbe88d31b957ba",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "2a644ea87cf9fce6c515de67eeab049c5a39f10a5c07a3ca92d72bf5f8f19296",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "37c30c3cec37d49fd324ee80aa4e6f1d0d31a4b1f7eade253d60a7bb7c05ebb0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 2466,
+      "matched_bytes": 2466,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 211,
+          "target": 7763872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformSnapshotBox@Scene3@@QAE?AUSurfaceRect@@PBUBattleCollisionSnapshot@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BE13; explicit reviewed scene-battle-transform-snapshot-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 305,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BE71; explicit reviewed scene-battle-transform-pose-box destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 426,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BEEA; explicit reviewed scene-battle-boxes-overlap destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 528,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076BF50; explicit reviewed surface-make-rect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1188,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C1E4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1471,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C2FF; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1500,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C31C; explicit reviewed secondary-set-character-tint destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1536,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C340; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1558,
+          "target": 7896080,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4034000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C356; original 8-byte x87 data operand; independently checked IEEE payload 0000000000003440",
+          "addend": 0
+        },
+        {
+          "offset": 1578,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C36A; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1701,
+          "target": 4260992,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DamageFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C3E5; explicit reviewed secondary-damage-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1721,
+          "target": 4261168,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?HealthFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C3F9; explicit reviewed secondary-health-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1741,
+          "target": 4261216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ComboFactor@Secondary@@QAENXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C40D; explicit reviewed secondary-combo-factor destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1752,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C418; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1809,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C451; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 1815,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C457; original 8-byte x87 data operand; independently checked IEEE payload 9a9999999999e93f",
+          "addend": 0
+        },
+        {
+          "offset": 1822,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C45E; explicit reviewed reviewed-x87-conversion-dependency destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 1940,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C4D4; original 8-byte x87 data operand; independently checked IEEE payload 0000000000005940",
+          "addend": 0
+        },
+        {
+          "offset": 1964,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C4EC; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 1997,
+          "target": 7896064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40c3880000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C50D; original 8-byte x87 data operand; independently checked IEEE payload 000000000088c340",
+          "addend": 0
+        },
+        {
+          "offset": 2019,
+          "target": 7902704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@447a0000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C523; original 4-byte x87 data operand; independently checked IEEE payload 00007a44",
+          "addend": 0
+        },
+        {
+          "offset": 2253,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C60D; explicit reviewed secondary-face-opponent destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2265,
+          "target": 4261776,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?AwardComboScore@Secondary@@QAEXPBUSecondaryFrame@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C619; explicit reviewed secondary-award-combo-score destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2276,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C624; explicit reviewed effect-spawn-construct destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        },
+        {
+          "offset": 2454,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#battle-effect-collision-resolution; operand 0076C6D6; explicit reviewed context-emit-effect destination, original call receiver/stack arguments and result width; compiler x87 conversion remains an explicit dependency",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "140532d4befad06e41660cbeb90d61ca31cf8ffdf17c4df63250f4c7a1baef10",
+      "target_extent_sha256": "140532d4befad06e41660cbeb90d61ca31cf8ffdf17c4df63250f4c7a1baef10",
+      "unit": "scene-battle-resolve-body-effect",
+      "symbol": "?ResolveBodyEffect@Scene3@@QAEXPAVSecondary@@0PAUBattleCollisionSnapshot@@1H@Z",
+      "target_address": "0x0076BD40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "34a66138452ff731c7300d37c51f55fad9794e491c7acd5f5ae0b947d419682a",
+      "object_sha256": "9dc50f1e064252a9b9ea69e3cbe65157bb78a98a87d8318395b6a151bebdf4f5",
+      "source_sha256": "8bfc3b0651f636982297fa1383482598614ee4a06747d6ff833c44c6c7489443",
+      "dependencies": {
+        "src/Engine.h": "69b4497b3d9b83cd89d7c3db6e1287733ce99f8bb59c33cde7cbe88d31b957ba",
+        "src/Input.h": "10ae5f8441622f06494d4ccb9121dc72265596559b04368abcb8ababf3ccad0f",
+        "src/SceneBattle.h": "9f5d074892c950107560581a82d8b48dde6ada9facad015bc98025358cc27c37"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "2a644ea87cf9fce6c515de67eeab049c5a39f10a5c07a3ca92d72bf5f8f19296",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "53e7622cfb4fd84aed65f7975ae7ce1aa52cadcbf1aa8e466333dc2b8ab75845",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

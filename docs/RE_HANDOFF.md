@@ -21,7 +21,8 @@ input-history recognizer and CPU command/movement owner, followed by the complet
 local-effect dispatcher and its shared controls, followed by battle scene
 construction, camera tracking/shake composition, sound consumption and intro events,
 then collision dispatch, world-box transforms, overlap and body-contact checks,
-followed by the complete character body-hit outcome owner and character tint helper.
+followed by the complete character body-hit outcome owner and character tint helper,
+then all four effect-hit/effect-pair/effect-clash/body-effect outcome owners.
 The full game remains incomplete; continue from the accepted src/ baseline and reviewed ledgers. Never infer whole-game completion from
 these owner-level successes.
 
@@ -34,10 +35,10 @@ checkpoints remain local until the operator explicitly requests a push.
 
 | Fact | Accepted result |
 | --- | ---: |
-| Authored complete exact functions | 203 |
-| Authored exact instruction bytes | 179,323 |
+| Authored complete exact functions | 207 |
+| Authored exact instruction bytes | 191,351 |
 | Associated exact local-table bytes | 667 |
-| Reviewed boundaries / origins | 241 / 241 |
+| Reviewed boundaries / origins | 245 / 245 |
 | Compiler-generated auxiliary helpers | 12 functions / 512 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -55,44 +56,49 @@ contribution with its 301 relocations and 36 local offsets intact.
 
 ## Latest exact progress
 
-The latest checkpoint accepts the complete Scene3::ResolveBodyHit owner at
-0x767F60 /6245 and Secondary::SetCharacterTint at 0x410AC0 /75. All 6,320 bytes
-compare strict exact. The main owner has 1,373 instructions, 124 direct branches,
-39 explicit direct calls, six reviewed slot-zero calls and 59 explicit relocation
-bindings, including 20 independently checked IEEE operands. It contains full
-collision, special-defense, counter, guard/chip, damage/combo, hit-stop, animation,
-effect and KO paths; no prefix or shortened decompiler acceptance is used.
-The helper writes 30B8/30BC, distinct from SetTint's 30C0/30C4 and Context F33.
-Engine.h adds its nonvirtual declaration and a target-backed 32-bit field154 view
-inside existing Secondary unknown storage. The new source SceneBodyHit.cpp
-includes the established battle header; header-only battle work now selects
-16 actual consumer units across four source/profile artifacts.
+The latest checkpoint accepts all four complete effect/body collision outcomes:
+ResolveEffectHit 0x7697D0 /6334, ResolveEffectPair 0x76B090 /2578,
+ResolveEffectClash 0x76BAB0 /650 and ResolveBodyEffect 0x76BD40 /2466.
+All 12,028 instruction bytes, 107 explicit relocations, 250 direct branches and
+ten real defender ResetPose virtual calls are reviewed and strict exact. The
+four new units share src/SceneEffectCollision.cpp and one serial cold native
+source/profile/dependency artifact. Existing sources and shared headers are
+unchanged; no previous-unit replay is needed. Final public-source formatting
+also received complete cold comparisons. Focused ledger/progress/whitespace
+checks accompany the checkpoint, with no full CI or runtime matrix.
 
-Two new and 184 Engine.h-dependent existing units compare exact from 48 serial
-cold artifacts. All 135 prior local destination/offset bindings are checked.
-New public proof is body-hit-exact.json; final private full reports are
-.analysis/exact/body-hit-and-affected.json. Only involved units plus focused
-ledger/progress/whitespace checks ran. The first complete source was built early;
-ordinary word operations, original branch order and live x87 inputs resolved the
-differences. Final readable else-if cleanup also received complete comparison.
+Public proof is docs/evidence/effect-collision-exact.json; final reports are
+.analysis/exact/effect-collision.json. Private source/object iterations and
+independent boundary/operand reviews are in .analysis/probes/effect-hit/;
+canonical full instructions/decompiles remain in .analysis/probes/scene-collision/.
+Do not rerun old one-time make-source/refine/add/prepare/publish mutators on the
+current accepted baseline. src/ is authoritative.
 
-Next pursue ResolveEffectHit 0x7697D0 /6334 using .analysis/probes/body-hit/README.md
-and effect-hit-next.md, then the original full decompile/instruction dumps in
-.analysis/probes/scene-collision/. It uses a real local-effect slot and one genuine
-defender snapshot; unlike BodyHit it constructs EffectSpawn only after a nonzero
-collision result and generally does not call FaceOpponent after ResetPose.
-Keep those original differences and derive new x87 arguments from instructions.
-The pose-transform helper sees the actual common pose prefix of the full effect
-slot; review the precise source view/cast instead of inventing a call ABI.
+Preserve the distinct target owners: EffectHit reads a live slot frame and one
+defender snapshot, constructs EffectSpawn after nonzero overlap, usually sets
+facing from negative slot BYTE48, and uses a 1-or-2 stun factor rather than 0.8.
+Pair's B02000 path overwrites the live second effect frame with a character frame;
+BodyEffect replaces only a local frame copy with the second snapshot. Both then
+use the original delegated character-damage/KO path with 0.8 stun and late effect
+construction. Clash compares live signed sequence field0000 and consumes a slot
+only when the opposite value exceeds one. The full slot's reviewed shared pose
+prefix uses an explicit source view/cast with no invented eight-byte adjustment.
 
-ResolveEffectPair 0x76B090 /2578, ResolveEffectClash 0x76BAB0 /650 and
-ResolveBodyEffect 0x76BD40 /2466 remain open with reviewed dispatcher interfaces
-and full canonical evidence. Use the accepted numeric fields first and refine
-only genuinely required offsets. Keep related Secondary refinements together
-where useful; Engine.h changes affect its true cohort, while battle-header-only
-changes now involve 16 consumer units. Main battle Step/render/keyboard remain
-open and should follow callee recovery.
+Checkpoint d29eee7 accepted ResolveBodyHit 0x767F60 /6245 and
+Secondary::SetCharacterTint 0x410AC0 /75. That earlier Engine.h change replayed
+two new plus 184 genuinely dependent prior units from 48 artifacts. Its public
+proof remains body-hit-exact.json. Tint 30B8/30BC with Context136C is distinct from
+SetTint 30C0/30C4 with ContextF33; field154 is a real 32-bit view.
 
+Next recover the substantial battle scene update/render/keyboard entries now
+that DispatchCollisions and all five hit-outcome callees have accepted complete
+implementations. Recheck their complete canonical instructions and required
+callees early; retain explicit per-unit profiles and build the first complete
+source before speculative flag sweeps. The parked Pushbox 0x766B50 remains open
+because its original write-only Boolean temporaries are not naturally explained;
+do not add dummy stores or resume byte-neutral controls without a falsifiable
+prediction. The private Shiori Slot06 owner and reader-audio workbench retain
+their earlier handoffs and do not gain credit from this checkpoint.
 
 Checkpoint 3adcc03 adds five complete collision members: DispatchCollisions
 0x766480 /1734, TransformPoseBox 0x767600 /405, TransformSnapshotBox 0x7677A0 /390,
