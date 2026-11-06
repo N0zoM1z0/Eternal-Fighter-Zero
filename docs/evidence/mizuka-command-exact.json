@@ -1,0 +1,2915 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen; every byte compared without relocation masks or partial extents",
+  "method": "one selected final cold pinned VC7.1 static /Od artifact; no old source or header changed",
+  "boundary_review": {
+    "address": "0x4faf70",
+    "exclusive_end": "0x4fdc0f",
+    "size": 11423,
+    "instructions": 3352,
+    "direct_branches": [
+      {
+        "address": "0x4faf99",
+        "target": "0x4fafa4",
+        "instruction": "jmp    0x4fafa4"
+      },
+      {
+        "address": "0x4fafb7",
+        "target": "0x4fb0cd",
+        "instruction": "jge    0x4fb0cd"
+      },
+      {
+        "address": "0x4fafe8",
+        "target": "0x4fb004",
+        "instruction": "je     0x4fb004"
+      },
+      {
+        "address": "0x4faff1",
+        "target": "0x4fb004",
+        "instruction": "jne    0x4fb004"
+      },
+      {
+        "address": "0x4fafff",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb00b",
+        "target": "0x4fb01a",
+        "instruction": "je     0x4fb01a"
+      },
+      {
+        "address": "0x4fb014",
+        "target": "0x4fb01a",
+        "instruction": "jne    0x4fb01a"
+      },
+      {
+        "address": "0x4fb023",
+        "target": "0x4fb033",
+        "instruction": "je     0x4fb033"
+      },
+      {
+        "address": "0x4fb02c",
+        "target": "0x4fb033",
+        "instruction": "jne    0x4fb033"
+      },
+      {
+        "address": "0x4fb02e",
+        "target": "0x4fb0cd",
+        "instruction": "jmp    0x4fb0cd"
+      },
+      {
+        "address": "0x4fb04d",
+        "target": "0x4fb05c",
+        "instruction": "jne    0x4fb05c"
+      },
+      {
+        "address": "0x4fb056",
+        "target": "0x4fb05c",
+        "instruction": "jne    0x4fb05c"
+      },
+      {
+        "address": "0x4fb065",
+        "target": "0x4fb072",
+        "instruction": "je     0x4fb072"
+      },
+      {
+        "address": "0x4fb06e",
+        "target": "0x4fb072",
+        "instruction": "jne    0x4fb072"
+      },
+      {
+        "address": "0x4fb070",
+        "target": "0x4fb0cd",
+        "instruction": "jmp    0x4fb0cd"
+      },
+      {
+        "address": "0x4fb079",
+        "target": "0x4fb088",
+        "instruction": "je     0x4fb088"
+      },
+      {
+        "address": "0x4fb082",
+        "target": "0x4fb088",
+        "instruction": "jne    0x4fb088"
+      },
+      {
+        "address": "0x4fb08e",
+        "target": "0x4fb09d",
+        "instruction": "jne    0x4fb09d"
+      },
+      {
+        "address": "0x4fb097",
+        "target": "0x4fb09d",
+        "instruction": "jne    0x4fb09d"
+      },
+      {
+        "address": "0x4fb0a6",
+        "target": "0x4fb0b3",
+        "instruction": "je     0x4fb0b3"
+      },
+      {
+        "address": "0x4fb0af",
+        "target": "0x4fb0b3",
+        "instruction": "jne    0x4fb0b3"
+      },
+      {
+        "address": "0x4fb0b1",
+        "target": "0x4fb0cd",
+        "instruction": "jmp    0x4fb0cd"
+      },
+      {
+        "address": "0x4fb0ba",
+        "target": "0x4fb0c8",
+        "instruction": "je     0x4fb0c8"
+      },
+      {
+        "address": "0x4fb0c2",
+        "target": "0x4fb0c8",
+        "instruction": "jne    0x4fb0c8"
+      },
+      {
+        "address": "0x4fb0c8",
+        "target": "0x4faf9b",
+        "instruction": "jmp    0x4faf9b"
+      },
+      {
+        "address": "0x4fb0e1",
+        "target": "0x4fb0ec",
+        "instruction": "jmp    0x4fb0ec"
+      },
+      {
+        "address": "0x4fb0ff",
+        "target": "0x4fb22a",
+        "instruction": "jge    0x4fb22a"
+      },
+      {
+        "address": "0x4fb133",
+        "target": "0x4fb143",
+        "instruction": "je     0x4fb143"
+      },
+      {
+        "address": "0x4fb13c",
+        "target": "0x4fb143",
+        "instruction": "jne    0x4fb143"
+      },
+      {
+        "address": "0x4fb13e",
+        "target": "0x4fb22a",
+        "instruction": "jmp    0x4fb22a"
+      },
+      {
+        "address": "0x4fb14a",
+        "target": "0x4fb166",
+        "instruction": "je     0x4fb166"
+      },
+      {
+        "address": "0x4fb153",
+        "target": "0x4fb166",
+        "instruction": "jne    0x4fb166"
+      },
+      {
+        "address": "0x4fb161",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb16c",
+        "target": "0x4fb17b",
+        "instruction": "jne    0x4fb17b"
+      },
+      {
+        "address": "0x4fb175",
+        "target": "0x4fb17b",
+        "instruction": "jne    0x4fb17b"
+      },
+      {
+        "address": "0x4fb195",
+        "target": "0x4fb1a4",
+        "instruction": "jne    0x4fb1a4"
+      },
+      {
+        "address": "0x4fb19e",
+        "target": "0x4fb1a4",
+        "instruction": "jne    0x4fb1a4"
+      },
+      {
+        "address": "0x4fb1ad",
+        "target": "0x4fb1ba",
+        "instruction": "je     0x4fb1ba"
+      },
+      {
+        "address": "0x4fb1b6",
+        "target": "0x4fb1ba",
+        "instruction": "jne    0x4fb1ba"
+      },
+      {
+        "address": "0x4fb1b8",
+        "target": "0x4fb22a",
+        "instruction": "jmp    0x4fb22a"
+      },
+      {
+        "address": "0x4fb1c1",
+        "target": "0x4fb1d0",
+        "instruction": "je     0x4fb1d0"
+      },
+      {
+        "address": "0x4fb1ca",
+        "target": "0x4fb1d0",
+        "instruction": "jne    0x4fb1d0"
+      },
+      {
+        "address": "0x4fb1da",
+        "target": "0x4fb1e7",
+        "instruction": "je     0x4fb1e7"
+      },
+      {
+        "address": "0x4fb1e3",
+        "target": "0x4fb1e7",
+        "instruction": "jne    0x4fb1e7"
+      },
+      {
+        "address": "0x4fb1e5",
+        "target": "0x4fb22a",
+        "instruction": "jmp    0x4fb22a"
+      },
+      {
+        "address": "0x4fb1ee",
+        "target": "0x4fb1fd",
+        "instruction": "je     0x4fb1fd"
+      },
+      {
+        "address": "0x4fb1f7",
+        "target": "0x4fb1fd",
+        "instruction": "jne    0x4fb1fd"
+      },
+      {
+        "address": "0x4fb217",
+        "target": "0x4fb225",
+        "instruction": "jne    0x4fb225"
+      },
+      {
+        "address": "0x4fb21f",
+        "target": "0x4fb225",
+        "instruction": "jne    0x4fb225"
+      },
+      {
+        "address": "0x4fb225",
+        "target": "0x4fb0e3",
+        "instruction": "jmp    0x4fb0e3"
+      },
+      {
+        "address": "0x4fb23e",
+        "target": "0x4fb249",
+        "instruction": "jmp    0x4fb249"
+      },
+      {
+        "address": "0x4fb25c",
+        "target": "0x4fb33a",
+        "instruction": "jge    0x4fb33a"
+      },
+      {
+        "address": "0x4fb28d",
+        "target": "0x4fb2a9",
+        "instruction": "je     0x4fb2a9"
+      },
+      {
+        "address": "0x4fb296",
+        "target": "0x4fb2a9",
+        "instruction": "jne    0x4fb2a9"
+      },
+      {
+        "address": "0x4fb2a4",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb2b3",
+        "target": "0x4fb2c2",
+        "instruction": "jne    0x4fb2c2"
+      },
+      {
+        "address": "0x4fb2bc",
+        "target": "0x4fb2c2",
+        "instruction": "jne    0x4fb2c2"
+      },
+      {
+        "address": "0x4fb2c9",
+        "target": "0x4fb2d8",
+        "instruction": "jne    0x4fb2d8"
+      },
+      {
+        "address": "0x4fb2d2",
+        "target": "0x4fb2d8",
+        "instruction": "jne    0x4fb2d8"
+      },
+      {
+        "address": "0x4fb2e2",
+        "target": "0x4fb2f1",
+        "instruction": "jne    0x4fb2f1"
+      },
+      {
+        "address": "0x4fb2eb",
+        "target": "0x4fb2f1",
+        "instruction": "jne    0x4fb2f1"
+      },
+      {
+        "address": "0x4fb2f8",
+        "target": "0x4fb307",
+        "instruction": "jne    0x4fb307"
+      },
+      {
+        "address": "0x4fb301",
+        "target": "0x4fb307",
+        "instruction": "jne    0x4fb307"
+      },
+      {
+        "address": "0x4fb311",
+        "target": "0x4fb320",
+        "instruction": "jne    0x4fb320"
+      },
+      {
+        "address": "0x4fb31a",
+        "target": "0x4fb320",
+        "instruction": "jne    0x4fb320"
+      },
+      {
+        "address": "0x4fb327",
+        "target": "0x4fb335",
+        "instruction": "jne    0x4fb335"
+      },
+      {
+        "address": "0x4fb32f",
+        "target": "0x4fb335",
+        "instruction": "jne    0x4fb335"
+      },
+      {
+        "address": "0x4fb335",
+        "target": "0x4fb240",
+        "instruction": "jmp    0x4fb240"
+      },
+      {
+        "address": "0x4fb34e",
+        "target": "0x4fb359",
+        "instruction": "jmp    0x4fb359"
+      },
+      {
+        "address": "0x4fb36c",
+        "target": "0x4fb48a",
+        "instruction": "jge    0x4fb48a"
+      },
+      {
+        "address": "0x4fb39d",
+        "target": "0x4fb3b9",
+        "instruction": "je     0x4fb3b9"
+      },
+      {
+        "address": "0x4fb3a6",
+        "target": "0x4fb3b9",
+        "instruction": "jne    0x4fb3b9"
+      },
+      {
+        "address": "0x4fb3b4",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb3c0",
+        "target": "0x4fb3cf",
+        "instruction": "je     0x4fb3cf"
+      },
+      {
+        "address": "0x4fb3c9",
+        "target": "0x4fb3cf",
+        "instruction": "jne    0x4fb3cf"
+      },
+      {
+        "address": "0x4fb3d9",
+        "target": "0x4fb3e9",
+        "instruction": "je     0x4fb3e9"
+      },
+      {
+        "address": "0x4fb3e2",
+        "target": "0x4fb3e9",
+        "instruction": "jne    0x4fb3e9"
+      },
+      {
+        "address": "0x4fb3e4",
+        "target": "0x4fb48a",
+        "instruction": "jmp    0x4fb48a"
+      },
+      {
+        "address": "0x4fb408",
+        "target": "0x4fb417",
+        "instruction": "jne    0x4fb417"
+      },
+      {
+        "address": "0x4fb411",
+        "target": "0x4fb417",
+        "instruction": "jne    0x4fb417"
+      },
+      {
+        "address": "0x4fb421",
+        "target": "0x4fb42e",
+        "instruction": "je     0x4fb42e"
+      },
+      {
+        "address": "0x4fb42a",
+        "target": "0x4fb42e",
+        "instruction": "jne    0x4fb42e"
+      },
+      {
+        "address": "0x4fb42c",
+        "target": "0x4fb48a",
+        "instruction": "jmp    0x4fb48a"
+      },
+      {
+        "address": "0x4fb435",
+        "target": "0x4fb444",
+        "instruction": "je     0x4fb444"
+      },
+      {
+        "address": "0x4fb43e",
+        "target": "0x4fb444",
+        "instruction": "jne    0x4fb444"
+      },
+      {
+        "address": "0x4fb44a",
+        "target": "0x4fb459",
+        "instruction": "jne    0x4fb459"
+      },
+      {
+        "address": "0x4fb453",
+        "target": "0x4fb459",
+        "instruction": "jne    0x4fb459"
+      },
+      {
+        "address": "0x4fb463",
+        "target": "0x4fb470",
+        "instruction": "je     0x4fb470"
+      },
+      {
+        "address": "0x4fb46c",
+        "target": "0x4fb470",
+        "instruction": "jne    0x4fb470"
+      },
+      {
+        "address": "0x4fb46e",
+        "target": "0x4fb48a",
+        "instruction": "jmp    0x4fb48a"
+      },
+      {
+        "address": "0x4fb477",
+        "target": "0x4fb485",
+        "instruction": "je     0x4fb485"
+      },
+      {
+        "address": "0x4fb47f",
+        "target": "0x4fb485",
+        "instruction": "jne    0x4fb485"
+      },
+      {
+        "address": "0x4fb485",
+        "target": "0x4fb350",
+        "instruction": "jmp    0x4fb350"
+      },
+      {
+        "address": "0x4fb49e",
+        "target": "0x4fb4a9",
+        "instruction": "jmp    0x4fb4a9"
+      },
+      {
+        "address": "0x4fb4bb",
+        "target": "0x4fb5c4",
+        "instruction": "jge    0x4fb5c4"
+      },
+      {
+        "address": "0x4fb4ec",
+        "target": "0x4fb508",
+        "instruction": "je     0x4fb508"
+      },
+      {
+        "address": "0x4fb4f5",
+        "target": "0x4fb508",
+        "instruction": "jne    0x4fb508"
+      },
+      {
+        "address": "0x4fb503",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb50f",
+        "target": "0x4fb51e",
+        "instruction": "je     0x4fb51e"
+      },
+      {
+        "address": "0x4fb518",
+        "target": "0x4fb51e",
+        "instruction": "jne    0x4fb51e"
+      },
+      {
+        "address": "0x4fb528",
+        "target": "0x4fb538",
+        "instruction": "je     0x4fb538"
+      },
+      {
+        "address": "0x4fb531",
+        "target": "0x4fb538",
+        "instruction": "jne    0x4fb538"
+      },
+      {
+        "address": "0x4fb533",
+        "target": "0x4fb5c4",
+        "instruction": "jmp    0x4fb5c4"
+      },
+      {
+        "address": "0x4fb542",
+        "target": "0x4fb551",
+        "instruction": "jne    0x4fb551"
+      },
+      {
+        "address": "0x4fb54b",
+        "target": "0x4fb551",
+        "instruction": "jne    0x4fb551"
+      },
+      {
+        "address": "0x4fb55b",
+        "target": "0x4fb568",
+        "instruction": "je     0x4fb568"
+      },
+      {
+        "address": "0x4fb564",
+        "target": "0x4fb568",
+        "instruction": "jne    0x4fb568"
+      },
+      {
+        "address": "0x4fb566",
+        "target": "0x4fb5c4",
+        "instruction": "jmp    0x4fb5c4"
+      },
+      {
+        "address": "0x4fb56f",
+        "target": "0x4fb57e",
+        "instruction": "je     0x4fb57e"
+      },
+      {
+        "address": "0x4fb578",
+        "target": "0x4fb57e",
+        "instruction": "jne    0x4fb57e"
+      },
+      {
+        "address": "0x4fb584",
+        "target": "0x4fb593",
+        "instruction": "jne    0x4fb593"
+      },
+      {
+        "address": "0x4fb58d",
+        "target": "0x4fb593",
+        "instruction": "jne    0x4fb593"
+      },
+      {
+        "address": "0x4fb59d",
+        "target": "0x4fb5aa",
+        "instruction": "je     0x4fb5aa"
+      },
+      {
+        "address": "0x4fb5a6",
+        "target": "0x4fb5aa",
+        "instruction": "jne    0x4fb5aa"
+      },
+      {
+        "address": "0x4fb5a8",
+        "target": "0x4fb5c4",
+        "instruction": "jmp    0x4fb5c4"
+      },
+      {
+        "address": "0x4fb5b1",
+        "target": "0x4fb5bf",
+        "instruction": "je     0x4fb5bf"
+      },
+      {
+        "address": "0x4fb5b9",
+        "target": "0x4fb5bf",
+        "instruction": "jne    0x4fb5bf"
+      },
+      {
+        "address": "0x4fb5bf",
+        "target": "0x4fb4a0",
+        "instruction": "jmp    0x4fb4a0"
+      },
+      {
+        "address": "0x4fb5d8",
+        "target": "0x4fb5e3",
+        "instruction": "jmp    0x4fb5e3"
+      },
+      {
+        "address": "0x4fb5f6",
+        "target": "0x4fb742",
+        "instruction": "jge    0x4fb742"
+      },
+      {
+        "address": "0x4fb627",
+        "target": "0x4fb643",
+        "instruction": "je     0x4fb643"
+      },
+      {
+        "address": "0x4fb630",
+        "target": "0x4fb643",
+        "instruction": "jne    0x4fb643"
+      },
+      {
+        "address": "0x4fb63e",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb64a",
+        "target": "0x4fb659",
+        "instruction": "je     0x4fb659"
+      },
+      {
+        "address": "0x4fb653",
+        "target": "0x4fb659",
+        "instruction": "jne    0x4fb659"
+      },
+      {
+        "address": "0x4fb673",
+        "target": "0x4fb691",
+        "instruction": "jne    0x4fb691"
+      },
+      {
+        "address": "0x4fb67c",
+        "target": "0x4fb691",
+        "instruction": "jne    0x4fb691"
+      },
+      {
+        "address": "0x4fb685",
+        "target": "0x4fb68d",
+        "instruction": "je     0x4fb68d"
+      },
+      {
+        "address": "0x4fb68b",
+        "target": "0x4fb691",
+        "instruction": "jmp    0x4fb691"
+      },
+      {
+        "address": "0x4fb6ab",
+        "target": "0x4fb6ba",
+        "instruction": "jne    0x4fb6ba"
+      },
+      {
+        "address": "0x4fb6b4",
+        "target": "0x4fb6ba",
+        "instruction": "jne    0x4fb6ba"
+      },
+      {
+        "address": "0x4fb6c4",
+        "target": "0x4fb6d3",
+        "instruction": "jne    0x4fb6d3"
+      },
+      {
+        "address": "0x4fb6cd",
+        "target": "0x4fb6d3",
+        "instruction": "jne    0x4fb6d3"
+      },
+      {
+        "address": "0x4fb6ed",
+        "target": "0x4fb6fc",
+        "instruction": "jne    0x4fb6fc"
+      },
+      {
+        "address": "0x4fb6f6",
+        "target": "0x4fb6fc",
+        "instruction": "jne    0x4fb6fc"
+      },
+      {
+        "address": "0x4fb716",
+        "target": "0x4fb725",
+        "instruction": "jne    0x4fb725"
+      },
+      {
+        "address": "0x4fb71f",
+        "target": "0x4fb725",
+        "instruction": "jne    0x4fb725"
+      },
+      {
+        "address": "0x4fb72f",
+        "target": "0x4fb73d",
+        "instruction": "jne    0x4fb73d"
+      },
+      {
+        "address": "0x4fb737",
+        "target": "0x4fb73d",
+        "instruction": "jne    0x4fb73d"
+      },
+      {
+        "address": "0x4fb73d",
+        "target": "0x4fb5da",
+        "instruction": "jmp    0x4fb5da"
+      },
+      {
+        "address": "0x4fb756",
+        "target": "0x4fb761",
+        "instruction": "jmp    0x4fb761"
+      },
+      {
+        "address": "0x4fb773",
+        "target": "0x4fb89a",
+        "instruction": "jge    0x4fb89a"
+      },
+      {
+        "address": "0x4fb7b7",
+        "target": "0x4fb7d3",
+        "instruction": "jne    0x4fb7d3"
+      },
+      {
+        "address": "0x4fb7c0",
+        "target": "0x4fb7d3",
+        "instruction": "jne    0x4fb7d3"
+      },
+      {
+        "address": "0x4fb7ce",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb7ed",
+        "target": "0x4fb7fc",
+        "instruction": "jne    0x4fb7fc"
+      },
+      {
+        "address": "0x4fb7f6",
+        "target": "0x4fb7fc",
+        "instruction": "jne    0x4fb7fc"
+      },
+      {
+        "address": "0x4fb806",
+        "target": "0x4fb815",
+        "instruction": "jne    0x4fb815"
+      },
+      {
+        "address": "0x4fb80f",
+        "target": "0x4fb815",
+        "instruction": "jne    0x4fb815"
+      },
+      {
+        "address": "0x4fb82f",
+        "target": "0x4fb83e",
+        "instruction": "jne    0x4fb83e"
+      },
+      {
+        "address": "0x4fb838",
+        "target": "0x4fb83e",
+        "instruction": "jne    0x4fb83e"
+      },
+      {
+        "address": "0x4fb858",
+        "target": "0x4fb867",
+        "instruction": "jne    0x4fb867"
+      },
+      {
+        "address": "0x4fb861",
+        "target": "0x4fb867",
+        "instruction": "jne    0x4fb867"
+      },
+      {
+        "address": "0x4fb871",
+        "target": "0x4fb880",
+        "instruction": "jne    0x4fb880"
+      },
+      {
+        "address": "0x4fb87a",
+        "target": "0x4fb880",
+        "instruction": "jne    0x4fb880"
+      },
+      {
+        "address": "0x4fb887",
+        "target": "0x4fb895",
+        "instruction": "je     0x4fb895"
+      },
+      {
+        "address": "0x4fb88f",
+        "target": "0x4fb895",
+        "instruction": "jne    0x4fb895"
+      },
+      {
+        "address": "0x4fb895",
+        "target": "0x4fb758",
+        "instruction": "jmp    0x4fb758"
+      },
+      {
+        "address": "0x4fb8ab",
+        "target": "0x4fb8b6",
+        "instruction": "jmp    0x4fb8b6"
+      },
+      {
+        "address": "0x4fb8c9",
+        "target": "0x4fb9e6",
+        "instruction": "jge    0x4fb9e6"
+      },
+      {
+        "address": "0x4fb8fa",
+        "target": "0x4fb916",
+        "instruction": "je     0x4fb916"
+      },
+      {
+        "address": "0x4fb903",
+        "target": "0x4fb916",
+        "instruction": "jne    0x4fb916"
+      },
+      {
+        "address": "0x4fb911",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fb91d",
+        "target": "0x4fb92c",
+        "instruction": "je     0x4fb92c"
+      },
+      {
+        "address": "0x4fb926",
+        "target": "0x4fb92c",
+        "instruction": "jne    0x4fb92c"
+      },
+      {
+        "address": "0x4fb935",
+        "target": "0x4fb945",
+        "instruction": "je     0x4fb945"
+      },
+      {
+        "address": "0x4fb93e",
+        "target": "0x4fb945",
+        "instruction": "jne    0x4fb945"
+      },
+      {
+        "address": "0x4fb940",
+        "target": "0x4fb9e6",
+        "instruction": "jmp    0x4fb9e6"
+      },
+      {
+        "address": "0x4fb964",
+        "target": "0x4fb973",
+        "instruction": "jne    0x4fb973"
+      },
+      {
+        "address": "0x4fb96d",
+        "target": "0x4fb973",
+        "instruction": "jne    0x4fb973"
+      },
+      {
+        "address": "0x4fb97d",
+        "target": "0x4fb98a",
+        "instruction": "je     0x4fb98a"
+      },
+      {
+        "address": "0x4fb986",
+        "target": "0x4fb98a",
+        "instruction": "jne    0x4fb98a"
+      },
+      {
+        "address": "0x4fb988",
+        "target": "0x4fb9e6",
+        "instruction": "jmp    0x4fb9e6"
+      },
+      {
+        "address": "0x4fb991",
+        "target": "0x4fb9a0",
+        "instruction": "je     0x4fb9a0"
+      },
+      {
+        "address": "0x4fb99a",
+        "target": "0x4fb9a0",
+        "instruction": "jne    0x4fb9a0"
+      },
+      {
+        "address": "0x4fb9a6",
+        "target": "0x4fb9b5",
+        "instruction": "jne    0x4fb9b5"
+      },
+      {
+        "address": "0x4fb9af",
+        "target": "0x4fb9b5",
+        "instruction": "jne    0x4fb9b5"
+      },
+      {
+        "address": "0x4fb9bf",
+        "target": "0x4fb9cc",
+        "instruction": "je     0x4fb9cc"
+      },
+      {
+        "address": "0x4fb9c8",
+        "target": "0x4fb9cc",
+        "instruction": "jne    0x4fb9cc"
+      },
+      {
+        "address": "0x4fb9ca",
+        "target": "0x4fb9e6",
+        "instruction": "jmp    0x4fb9e6"
+      },
+      {
+        "address": "0x4fb9d3",
+        "target": "0x4fb9e1",
+        "instruction": "je     0x4fb9e1"
+      },
+      {
+        "address": "0x4fb9db",
+        "target": "0x4fb9e1",
+        "instruction": "jne    0x4fb9e1"
+      },
+      {
+        "address": "0x4fb9e1",
+        "target": "0x4fb8ad",
+        "instruction": "jmp    0x4fb8ad"
+      },
+      {
+        "address": "0x4fb9fa",
+        "target": "0x4fba05",
+        "instruction": "jmp    0x4fba05"
+      },
+      {
+        "address": "0x4fba18",
+        "target": "0x4fbbc0",
+        "instruction": "jge    0x4fbbc0"
+      },
+      {
+        "address": "0x4fba4b",
+        "target": "0x4fbaa1",
+        "instruction": "je     0x4fbaa1"
+      },
+      {
+        "address": "0x4fba54",
+        "target": "0x4fbaa1",
+        "instruction": "jne    0x4fbaa1"
+      },
+      {
+        "address": "0x4fba9c",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbabb",
+        "target": "0x4fbb1e",
+        "instruction": "jne    0x4fbb1e"
+      },
+      {
+        "address": "0x4fbac4",
+        "target": "0x4fbb1e",
+        "instruction": "jne    0x4fbb1e"
+      },
+      {
+        "address": "0x4fbacf",
+        "target": "0x4fbb1a",
+        "instruction": "je     0x4fbb1a"
+      },
+      {
+        "address": "0x4fbb15",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbb38",
+        "target": "0x4fbb47",
+        "instruction": "jne    0x4fbb47"
+      },
+      {
+        "address": "0x4fbb41",
+        "target": "0x4fbb47",
+        "instruction": "jne    0x4fbb47"
+      },
+      {
+        "address": "0x4fbb66",
+        "target": "0x4fbb75",
+        "instruction": "jne    0x4fbb75"
+      },
+      {
+        "address": "0x4fbb6f",
+        "target": "0x4fbb75",
+        "instruction": "jne    0x4fbb75"
+      },
+      {
+        "address": "0x4fbb94",
+        "target": "0x4fbba3",
+        "instruction": "jne    0x4fbba3"
+      },
+      {
+        "address": "0x4fbb9d",
+        "target": "0x4fbba3",
+        "instruction": "jne    0x4fbba3"
+      },
+      {
+        "address": "0x4fbbad",
+        "target": "0x4fbbbb",
+        "instruction": "jne    0x4fbbbb"
+      },
+      {
+        "address": "0x4fbbb5",
+        "target": "0x4fbbbb",
+        "instruction": "jne    0x4fbbbb"
+      },
+      {
+        "address": "0x4fbbbb",
+        "target": "0x4fb9fc",
+        "instruction": "jmp    0x4fb9fc"
+      },
+      {
+        "address": "0x4fbbd4",
+        "target": "0x4fbbdf",
+        "instruction": "jmp    0x4fbbdf"
+      },
+      {
+        "address": "0x4fbbf2",
+        "target": "0x4fbdd3",
+        "instruction": "jge    0x4fbdd3"
+      },
+      {
+        "address": "0x4fbc26",
+        "target": "0x4fbc7b",
+        "instruction": "je     0x4fbc7b"
+      },
+      {
+        "address": "0x4fbc2f",
+        "target": "0x4fbc7b",
+        "instruction": "jne    0x4fbc7b"
+      },
+      {
+        "address": "0x4fbc76",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbc9a",
+        "target": "0x4fbcfd",
+        "instruction": "jne    0x4fbcfd"
+      },
+      {
+        "address": "0x4fbca3",
+        "target": "0x4fbcfd",
+        "instruction": "jne    0x4fbcfd"
+      },
+      {
+        "address": "0x4fbcae",
+        "target": "0x4fbcf9",
+        "instruction": "je     0x4fbcf9"
+      },
+      {
+        "address": "0x4fbcf4",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbd17",
+        "target": "0x4fbd26",
+        "instruction": "jne    0x4fbd26"
+      },
+      {
+        "address": "0x4fbd20",
+        "target": "0x4fbd26",
+        "instruction": "jne    0x4fbd26"
+      },
+      {
+        "address": "0x4fbd40",
+        "target": "0x4fbd4f",
+        "instruction": "jne    0x4fbd4f"
+      },
+      {
+        "address": "0x4fbd49",
+        "target": "0x4fbd4f",
+        "instruction": "jne    0x4fbd4f"
+      },
+      {
+        "address": "0x4fbd6e",
+        "target": "0x4fbd7d",
+        "instruction": "jne    0x4fbd7d"
+      },
+      {
+        "address": "0x4fbd77",
+        "target": "0x4fbd7d",
+        "instruction": "jne    0x4fbd7d"
+      },
+      {
+        "address": "0x4fbd97",
+        "target": "0x4fbda6",
+        "instruction": "jne    0x4fbda6"
+      },
+      {
+        "address": "0x4fbda0",
+        "target": "0x4fbda6",
+        "instruction": "jne    0x4fbda6"
+      },
+      {
+        "address": "0x4fbdc0",
+        "target": "0x4fbdce",
+        "instruction": "jne    0x4fbdce"
+      },
+      {
+        "address": "0x4fbdc8",
+        "target": "0x4fbdce",
+        "instruction": "jne    0x4fbdce"
+      },
+      {
+        "address": "0x4fbdce",
+        "target": "0x4fbbd6",
+        "instruction": "jmp    0x4fbbd6"
+      },
+      {
+        "address": "0x4fbde7",
+        "target": "0x4fbdf2",
+        "instruction": "jmp    0x4fbdf2"
+      },
+      {
+        "address": "0x4fbe04",
+        "target": "0x4fbff0",
+        "instruction": "jge    0x4fbff0"
+      },
+      {
+        "address": "0x4fbe38",
+        "target": "0x4fbe8c",
+        "instruction": "je     0x4fbe8c"
+      },
+      {
+        "address": "0x4fbe41",
+        "target": "0x4fbe8c",
+        "instruction": "jne    0x4fbe8c"
+      },
+      {
+        "address": "0x4fbe87",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbea6",
+        "target": "0x4fbf0b",
+        "instruction": "jne    0x4fbf0b"
+      },
+      {
+        "address": "0x4fbeaf",
+        "target": "0x4fbf0b",
+        "instruction": "jne    0x4fbf0b"
+      },
+      {
+        "address": "0x4fbebb",
+        "target": "0x4fbf07",
+        "instruction": "je     0x4fbf07"
+      },
+      {
+        "address": "0x4fbf02",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fbf2a",
+        "target": "0x4fbf39",
+        "instruction": "jne    0x4fbf39"
+      },
+      {
+        "address": "0x4fbf33",
+        "target": "0x4fbf39",
+        "instruction": "jne    0x4fbf39"
+      },
+      {
+        "address": "0x4fbf58",
+        "target": "0x4fbf67",
+        "instruction": "jne    0x4fbf67"
+      },
+      {
+        "address": "0x4fbf61",
+        "target": "0x4fbf67",
+        "instruction": "jne    0x4fbf67"
+      },
+      {
+        "address": "0x4fbf81",
+        "target": "0x4fbf90",
+        "instruction": "jne    0x4fbf90"
+      },
+      {
+        "address": "0x4fbf8a",
+        "target": "0x4fbf90",
+        "instruction": "jne    0x4fbf90"
+      },
+      {
+        "address": "0x4fbfaf",
+        "target": "0x4fbfbe",
+        "instruction": "jne    0x4fbfbe"
+      },
+      {
+        "address": "0x4fbfb8",
+        "target": "0x4fbfbe",
+        "instruction": "jne    0x4fbfbe"
+      },
+      {
+        "address": "0x4fbfdd",
+        "target": "0x4fbfeb",
+        "instruction": "jne    0x4fbfeb"
+      },
+      {
+        "address": "0x4fbfe5",
+        "target": "0x4fbfeb",
+        "instruction": "jne    0x4fbfeb"
+      },
+      {
+        "address": "0x4fbfeb",
+        "target": "0x4fbde9",
+        "instruction": "jmp    0x4fbde9"
+      },
+      {
+        "address": "0x4fc004",
+        "target": "0x4fc00f",
+        "instruction": "jmp    0x4fc00f"
+      },
+      {
+        "address": "0x4fc022",
+        "target": "0x4fc1ca",
+        "instruction": "jge    0x4fc1ca"
+      },
+      {
+        "address": "0x4fc056",
+        "target": "0x4fc0ab",
+        "instruction": "je     0x4fc0ab"
+      },
+      {
+        "address": "0x4fc05f",
+        "target": "0x4fc0ab",
+        "instruction": "jne    0x4fc0ab"
+      },
+      {
+        "address": "0x4fc0a6",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc0ca",
+        "target": "0x4fc12d",
+        "instruction": "jne    0x4fc12d"
+      },
+      {
+        "address": "0x4fc0d3",
+        "target": "0x4fc12d",
+        "instruction": "jne    0x4fc12d"
+      },
+      {
+        "address": "0x4fc0de",
+        "target": "0x4fc129",
+        "instruction": "je     0x4fc129"
+      },
+      {
+        "address": "0x4fc124",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc14c",
+        "target": "0x4fc15b",
+        "instruction": "jne    0x4fc15b"
+      },
+      {
+        "address": "0x4fc155",
+        "target": "0x4fc15b",
+        "instruction": "jne    0x4fc15b"
+      },
+      {
+        "address": "0x4fc175",
+        "target": "0x4fc184",
+        "instruction": "jne    0x4fc184"
+      },
+      {
+        "address": "0x4fc17e",
+        "target": "0x4fc184",
+        "instruction": "jne    0x4fc184"
+      },
+      {
+        "address": "0x4fc19e",
+        "target": "0x4fc1ad",
+        "instruction": "jne    0x4fc1ad"
+      },
+      {
+        "address": "0x4fc1a7",
+        "target": "0x4fc1ad",
+        "instruction": "jne    0x4fc1ad"
+      },
+      {
+        "address": "0x4fc1b7",
+        "target": "0x4fc1c5",
+        "instruction": "jne    0x4fc1c5"
+      },
+      {
+        "address": "0x4fc1bf",
+        "target": "0x4fc1c5",
+        "instruction": "jne    0x4fc1c5"
+      },
+      {
+        "address": "0x4fc1c5",
+        "target": "0x4fc006",
+        "instruction": "jmp    0x4fc006"
+      },
+      {
+        "address": "0x4fc1de",
+        "target": "0x4fc1e9",
+        "instruction": "jmp    0x4fc1e9"
+      },
+      {
+        "address": "0x4fc1fb",
+        "target": "0x4fc38c",
+        "instruction": "jge    0x4fc38c"
+      },
+      {
+        "address": "0x4fc22f",
+        "target": "0x4fc283",
+        "instruction": "je     0x4fc283"
+      },
+      {
+        "address": "0x4fc238",
+        "target": "0x4fc283",
+        "instruction": "jne    0x4fc283"
+      },
+      {
+        "address": "0x4fc27e",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc2a2",
+        "target": "0x4fc308",
+        "instruction": "jne    0x4fc308"
+      },
+      {
+        "address": "0x4fc2ab",
+        "target": "0x4fc308",
+        "instruction": "jne    0x4fc308"
+      },
+      {
+        "address": "0x4fc2b7",
+        "target": "0x4fc304",
+        "instruction": "je     0x4fc304"
+      },
+      {
+        "address": "0x4fc2ff",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc322",
+        "target": "0x4fc331",
+        "instruction": "jne    0x4fc331"
+      },
+      {
+        "address": "0x4fc32b",
+        "target": "0x4fc331",
+        "instruction": "jne    0x4fc331"
+      },
+      {
+        "address": "0x4fc34b",
+        "target": "0x4fc35a",
+        "instruction": "jne    0x4fc35a"
+      },
+      {
+        "address": "0x4fc354",
+        "target": "0x4fc35a",
+        "instruction": "jne    0x4fc35a"
+      },
+      {
+        "address": "0x4fc379",
+        "target": "0x4fc387",
+        "instruction": "jne    0x4fc387"
+      },
+      {
+        "address": "0x4fc381",
+        "target": "0x4fc387",
+        "instruction": "jne    0x4fc387"
+      },
+      {
+        "address": "0x4fc387",
+        "target": "0x4fc1e0",
+        "instruction": "jmp    0x4fc1e0"
+      },
+      {
+        "address": "0x4fc3a0",
+        "target": "0x4fc3ab",
+        "instruction": "jmp    0x4fc3ab"
+      },
+      {
+        "address": "0x4fc3be",
+        "target": "0x4fc54a",
+        "instruction": "jge    0x4fc54a"
+      },
+      {
+        "address": "0x4fc3f2",
+        "target": "0x4fc444",
+        "instruction": "je     0x4fc444"
+      },
+      {
+        "address": "0x4fc3fb",
+        "target": "0x4fc444",
+        "instruction": "jne    0x4fc444"
+      },
+      {
+        "address": "0x4fc43f",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc45e",
+        "target": "0x4fc4c1",
+        "instruction": "jne    0x4fc4c1"
+      },
+      {
+        "address": "0x4fc467",
+        "target": "0x4fc4c1",
+        "instruction": "jne    0x4fc4c1"
+      },
+      {
+        "address": "0x4fc473",
+        "target": "0x4fc4bd",
+        "instruction": "je     0x4fc4bd"
+      },
+      {
+        "address": "0x4fc4b8",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc4e0",
+        "target": "0x4fc4ef",
+        "instruction": "jne    0x4fc4ef"
+      },
+      {
+        "address": "0x4fc4e9",
+        "target": "0x4fc4ef",
+        "instruction": "jne    0x4fc4ef"
+      },
+      {
+        "address": "0x4fc50e",
+        "target": "0x4fc51d",
+        "instruction": "jne    0x4fc51d"
+      },
+      {
+        "address": "0x4fc517",
+        "target": "0x4fc51d",
+        "instruction": "jne    0x4fc51d"
+      },
+      {
+        "address": "0x4fc537",
+        "target": "0x4fc545",
+        "instruction": "jne    0x4fc545"
+      },
+      {
+        "address": "0x4fc53f",
+        "target": "0x4fc545",
+        "instruction": "jne    0x4fc545"
+      },
+      {
+        "address": "0x4fc545",
+        "target": "0x4fc3a2",
+        "instruction": "jmp    0x4fc3a2"
+      },
+      {
+        "address": "0x4fc55e",
+        "target": "0x4fc569",
+        "instruction": "jmp    0x4fc569"
+      },
+      {
+        "address": "0x4fc57c",
+        "target": "0x4fc743",
+        "instruction": "jge    0x4fc743"
+      },
+      {
+        "address": "0x4fc5af",
+        "target": "0x4fc602",
+        "instruction": "je     0x4fc602"
+      },
+      {
+        "address": "0x4fc5b8",
+        "target": "0x4fc602",
+        "instruction": "jne    0x4fc602"
+      },
+      {
+        "address": "0x4fc5fd",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc621",
+        "target": "0x4fc683",
+        "instruction": "jne    0x4fc683"
+      },
+      {
+        "address": "0x4fc62a",
+        "target": "0x4fc683",
+        "instruction": "jne    0x4fc683"
+      },
+      {
+        "address": "0x4fc636",
+        "target": "0x4fc67f",
+        "instruction": "je     0x4fc67f"
+      },
+      {
+        "address": "0x4fc67a",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc6a2",
+        "target": "0x4fc6b1",
+        "instruction": "jne    0x4fc6b1"
+      },
+      {
+        "address": "0x4fc6ab",
+        "target": "0x4fc6b1",
+        "instruction": "jne    0x4fc6b1"
+      },
+      {
+        "address": "0x4fc6bb",
+        "target": "0x4fc6ca",
+        "instruction": "jne    0x4fc6ca"
+      },
+      {
+        "address": "0x4fc6c4",
+        "target": "0x4fc6ca",
+        "instruction": "jne    0x4fc6ca"
+      },
+      {
+        "address": "0x4fc6e9",
+        "target": "0x4fc6f8",
+        "instruction": "jne    0x4fc6f8"
+      },
+      {
+        "address": "0x4fc6f2",
+        "target": "0x4fc6f8",
+        "instruction": "jne    0x4fc6f8"
+      },
+      {
+        "address": "0x4fc717",
+        "target": "0x4fc726",
+        "instruction": "jne    0x4fc726"
+      },
+      {
+        "address": "0x4fc720",
+        "target": "0x4fc726",
+        "instruction": "jne    0x4fc726"
+      },
+      {
+        "address": "0x4fc730",
+        "target": "0x4fc73e",
+        "instruction": "jne    0x4fc73e"
+      },
+      {
+        "address": "0x4fc738",
+        "target": "0x4fc73e",
+        "instruction": "jne    0x4fc73e"
+      },
+      {
+        "address": "0x4fc73e",
+        "target": "0x4fc560",
+        "instruction": "jmp    0x4fc560"
+      },
+      {
+        "address": "0x4fc757",
+        "target": "0x4fc762",
+        "instruction": "jmp    0x4fc762"
+      },
+      {
+        "address": "0x4fc775",
+        "target": "0x4fc929",
+        "instruction": "jge    0x4fc929"
+      },
+      {
+        "address": "0x4fc7a9",
+        "target": "0x4fc7fb",
+        "instruction": "je     0x4fc7fb"
+      },
+      {
+        "address": "0x4fc7b2",
+        "target": "0x4fc7fb",
+        "instruction": "jne    0x4fc7fb"
+      },
+      {
+        "address": "0x4fc7f6",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc815",
+        "target": "0x4fc878",
+        "instruction": "jne    0x4fc878"
+      },
+      {
+        "address": "0x4fc81e",
+        "target": "0x4fc878",
+        "instruction": "jne    0x4fc878"
+      },
+      {
+        "address": "0x4fc82a",
+        "target": "0x4fc874",
+        "instruction": "je     0x4fc874"
+      },
+      {
+        "address": "0x4fc86f",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fc892",
+        "target": "0x4fc8a1",
+        "instruction": "jne    0x4fc8a1"
+      },
+      {
+        "address": "0x4fc89b",
+        "target": "0x4fc8a1",
+        "instruction": "jne    0x4fc8a1"
+      },
+      {
+        "address": "0x4fc8ab",
+        "target": "0x4fc8ba",
+        "instruction": "jne    0x4fc8ba"
+      },
+      {
+        "address": "0x4fc8b4",
+        "target": "0x4fc8ba",
+        "instruction": "jne    0x4fc8ba"
+      },
+      {
+        "address": "0x4fc8d4",
+        "target": "0x4fc8e3",
+        "instruction": "jne    0x4fc8e3"
+      },
+      {
+        "address": "0x4fc8dd",
+        "target": "0x4fc8e3",
+        "instruction": "jne    0x4fc8e3"
+      },
+      {
+        "address": "0x4fc8fd",
+        "target": "0x4fc90c",
+        "instruction": "jne    0x4fc90c"
+      },
+      {
+        "address": "0x4fc906",
+        "target": "0x4fc90c",
+        "instruction": "jne    0x4fc90c"
+      },
+      {
+        "address": "0x4fc916",
+        "target": "0x4fc924",
+        "instruction": "jne    0x4fc924"
+      },
+      {
+        "address": "0x4fc91e",
+        "target": "0x4fc924",
+        "instruction": "jne    0x4fc924"
+      },
+      {
+        "address": "0x4fc924",
+        "target": "0x4fc759",
+        "instruction": "jmp    0x4fc759"
+      },
+      {
+        "address": "0x4fc93d",
+        "target": "0x4fc948",
+        "instruction": "jmp    0x4fc948"
+      },
+      {
+        "address": "0x4fc95b",
+        "target": "0x4fcab8",
+        "instruction": "jge    0x4fcab8"
+      },
+      {
+        "address": "0x4fc98e",
+        "target": "0x4fc9e1",
+        "instruction": "je     0x4fc9e1"
+      },
+      {
+        "address": "0x4fc997",
+        "target": "0x4fc9e1",
+        "instruction": "jne    0x4fc9e1"
+      },
+      {
+        "address": "0x4fc9dc",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fca00",
+        "target": "0x4fca62",
+        "instruction": "jne    0x4fca62"
+      },
+      {
+        "address": "0x4fca09",
+        "target": "0x4fca62",
+        "instruction": "jne    0x4fca62"
+      },
+      {
+        "address": "0x4fca15",
+        "target": "0x4fca5e",
+        "instruction": "je     0x4fca5e"
+      },
+      {
+        "address": "0x4fca59",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fca7c",
+        "target": "0x4fca8b",
+        "instruction": "jne    0x4fca8b"
+      },
+      {
+        "address": "0x4fca85",
+        "target": "0x4fca8b",
+        "instruction": "jne    0x4fca8b"
+      },
+      {
+        "address": "0x4fcaa5",
+        "target": "0x4fcab3",
+        "instruction": "jne    0x4fcab3"
+      },
+      {
+        "address": "0x4fcaad",
+        "target": "0x4fcab3",
+        "instruction": "jne    0x4fcab3"
+      },
+      {
+        "address": "0x4fcab3",
+        "target": "0x4fc93f",
+        "instruction": "jmp    0x4fc93f"
+      },
+      {
+        "address": "0x4fcacc",
+        "target": "0x4fcad7",
+        "instruction": "jmp    0x4fcad7"
+      },
+      {
+        "address": "0x4fcae9",
+        "target": "0x4fcc4a",
+        "instruction": "jge    0x4fcc4a"
+      },
+      {
+        "address": "0x4fcb1d",
+        "target": "0x4fcb6e",
+        "instruction": "je     0x4fcb6e"
+      },
+      {
+        "address": "0x4fcb26",
+        "target": "0x4fcb6e",
+        "instruction": "jne    0x4fcb6e"
+      },
+      {
+        "address": "0x4fcb69",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fcb88",
+        "target": "0x4fcbea",
+        "instruction": "jne    0x4fcbea"
+      },
+      {
+        "address": "0x4fcb91",
+        "target": "0x4fcbea",
+        "instruction": "jne    0x4fcbea"
+      },
+      {
+        "address": "0x4fcb9d",
+        "target": "0x4fcbe6",
+        "instruction": "je     0x4fcbe6"
+      },
+      {
+        "address": "0x4fcbe1",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fcc09",
+        "target": "0x4fcc18",
+        "instruction": "jne    0x4fcc18"
+      },
+      {
+        "address": "0x4fcc12",
+        "target": "0x4fcc18",
+        "instruction": "jne    0x4fcc18"
+      },
+      {
+        "address": "0x4fcc37",
+        "target": "0x4fcc45",
+        "instruction": "jne    0x4fcc45"
+      },
+      {
+        "address": "0x4fcc3f",
+        "target": "0x4fcc45",
+        "instruction": "jne    0x4fcc45"
+      },
+      {
+        "address": "0x4fcc45",
+        "target": "0x4fcace",
+        "instruction": "jmp    0x4fcace"
+      },
+      {
+        "address": "0x4fcc5e",
+        "target": "0x4fcc69",
+        "instruction": "jmp    0x4fcc69"
+      },
+      {
+        "address": "0x4fcc7c",
+        "target": "0x4fcd52",
+        "instruction": "jge    0x4fcd52"
+      },
+      {
+        "address": "0x4fccad",
+        "target": "0x4fccc9",
+        "instruction": "je     0x4fccc9"
+      },
+      {
+        "address": "0x4fccb6",
+        "target": "0x4fccc9",
+        "instruction": "jne    0x4fccc9"
+      },
+      {
+        "address": "0x4fccc4",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fcce3",
+        "target": "0x4fcd0c",
+        "instruction": "jne    0x4fcd0c"
+      },
+      {
+        "address": "0x4fccec",
+        "target": "0x4fcd0c",
+        "instruction": "jne    0x4fcd0c"
+      },
+      {
+        "address": "0x4fccf5",
+        "target": "0x4fcd08",
+        "instruction": "je     0x4fcd08"
+      },
+      {
+        "address": "0x4fcd03",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fcd26",
+        "target": "0x4fcd35",
+        "instruction": "jne    0x4fcd35"
+      },
+      {
+        "address": "0x4fcd2f",
+        "target": "0x4fcd35",
+        "instruction": "jne    0x4fcd35"
+      },
+      {
+        "address": "0x4fcd3f",
+        "target": "0x4fcd4d",
+        "instruction": "jne    0x4fcd4d"
+      },
+      {
+        "address": "0x4fcd47",
+        "target": "0x4fcd4d",
+        "instruction": "jne    0x4fcd4d"
+      },
+      {
+        "address": "0x4fcd4d",
+        "target": "0x4fcc60",
+        "instruction": "jmp    0x4fcc60"
+      },
+      {
+        "address": "0x4fcd66",
+        "target": "0x4fcd71",
+        "instruction": "jmp    0x4fcd71"
+      },
+      {
+        "address": "0x4fcd84",
+        "target": "0x4fced6",
+        "instruction": "jge    0x4fced6"
+      },
+      {
+        "address": "0x4fcdb7",
+        "target": "0x4fce0a",
+        "instruction": "je     0x4fce0a"
+      },
+      {
+        "address": "0x4fcdc0",
+        "target": "0x4fce0a",
+        "instruction": "jne    0x4fce0a"
+      },
+      {
+        "address": "0x4fce05",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fce29",
+        "target": "0x4fce8b",
+        "instruction": "jne    0x4fce8b"
+      },
+      {
+        "address": "0x4fce32",
+        "target": "0x4fce8b",
+        "instruction": "jne    0x4fce8b"
+      },
+      {
+        "address": "0x4fce3e",
+        "target": "0x4fce87",
+        "instruction": "je     0x4fce87"
+      },
+      {
+        "address": "0x4fce82",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fce95",
+        "target": "0x4fcea4",
+        "instruction": "jne    0x4fcea4"
+      },
+      {
+        "address": "0x4fce9e",
+        "target": "0x4fcea4",
+        "instruction": "jne    0x4fcea4"
+      },
+      {
+        "address": "0x4fcec3",
+        "target": "0x4fced1",
+        "instruction": "jne    0x4fced1"
+      },
+      {
+        "address": "0x4fcecb",
+        "target": "0x4fced1",
+        "instruction": "jne    0x4fced1"
+      },
+      {
+        "address": "0x4fced1",
+        "target": "0x4fcd68",
+        "instruction": "jmp    0x4fcd68"
+      },
+      {
+        "address": "0x4fceea",
+        "target": "0x4fcef5",
+        "instruction": "jmp    0x4fcef5"
+      },
+      {
+        "address": "0x4fcf07",
+        "target": "0x4fd04e",
+        "instruction": "jge    0x4fd04e"
+      },
+      {
+        "address": "0x4fcf3b",
+        "target": "0x4fcf8c",
+        "instruction": "je     0x4fcf8c"
+      },
+      {
+        "address": "0x4fcf44",
+        "target": "0x4fcf8c",
+        "instruction": "jne    0x4fcf8c"
+      },
+      {
+        "address": "0x4fcf87",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fcfa6",
+        "target": "0x4fd008",
+        "instruction": "jne    0x4fd008"
+      },
+      {
+        "address": "0x4fcfaf",
+        "target": "0x4fd008",
+        "instruction": "jne    0x4fd008"
+      },
+      {
+        "address": "0x4fcfbb",
+        "target": "0x4fd004",
+        "instruction": "je     0x4fd004"
+      },
+      {
+        "address": "0x4fcfff",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd012",
+        "target": "0x4fd021",
+        "instruction": "jne    0x4fd021"
+      },
+      {
+        "address": "0x4fd01b",
+        "target": "0x4fd021",
+        "instruction": "jne    0x4fd021"
+      },
+      {
+        "address": "0x4fd03b",
+        "target": "0x4fd049",
+        "instruction": "jne    0x4fd049"
+      },
+      {
+        "address": "0x4fd043",
+        "target": "0x4fd049",
+        "instruction": "jne    0x4fd049"
+      },
+      {
+        "address": "0x4fd049",
+        "target": "0x4fceec",
+        "instruction": "jmp    0x4fceec"
+      },
+      {
+        "address": "0x4fd062",
+        "target": "0x4fd06d",
+        "instruction": "jmp    0x4fd06d"
+      },
+      {
+        "address": "0x4fd080",
+        "target": "0x4fd1c6",
+        "instruction": "jge    0x4fd1c6"
+      },
+      {
+        "address": "0x4fd0b3",
+        "target": "0x4fd106",
+        "instruction": "je     0x4fd106"
+      },
+      {
+        "address": "0x4fd0bc",
+        "target": "0x4fd106",
+        "instruction": "jne    0x4fd106"
+      },
+      {
+        "address": "0x4fd101",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd120",
+        "target": "0x4fd180",
+        "instruction": "jne    0x4fd180"
+      },
+      {
+        "address": "0x4fd129",
+        "target": "0x4fd180",
+        "instruction": "jne    0x4fd180"
+      },
+      {
+        "address": "0x4fd134",
+        "target": "0x4fd17c",
+        "instruction": "je     0x4fd17c"
+      },
+      {
+        "address": "0x4fd177",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd19a",
+        "target": "0x4fd1a9",
+        "instruction": "jne    0x4fd1a9"
+      },
+      {
+        "address": "0x4fd1a3",
+        "target": "0x4fd1a9",
+        "instruction": "jne    0x4fd1a9"
+      },
+      {
+        "address": "0x4fd1b3",
+        "target": "0x4fd1c1",
+        "instruction": "jne    0x4fd1c1"
+      },
+      {
+        "address": "0x4fd1bb",
+        "target": "0x4fd1c1",
+        "instruction": "jne    0x4fd1c1"
+      },
+      {
+        "address": "0x4fd1c1",
+        "target": "0x4fd064",
+        "instruction": "jmp    0x4fd064"
+      },
+      {
+        "address": "0x4fd1da",
+        "target": "0x4fd1e5",
+        "instruction": "jmp    0x4fd1e5"
+      },
+      {
+        "address": "0x4fd1f8",
+        "target": "0x4fd34a",
+        "instruction": "jge    0x4fd34a"
+      },
+      {
+        "address": "0x4fd22c",
+        "target": "0x4fd27e",
+        "instruction": "je     0x4fd27e"
+      },
+      {
+        "address": "0x4fd235",
+        "target": "0x4fd27e",
+        "instruction": "jne    0x4fd27e"
+      },
+      {
+        "address": "0x4fd279",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd288",
+        "target": "0x4fd2ea",
+        "instruction": "jne    0x4fd2ea"
+      },
+      {
+        "address": "0x4fd291",
+        "target": "0x4fd2ea",
+        "instruction": "jne    0x4fd2ea"
+      },
+      {
+        "address": "0x4fd29d",
+        "target": "0x4fd2e6",
+        "instruction": "je     0x4fd2e6"
+      },
+      {
+        "address": "0x4fd2e1",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd309",
+        "target": "0x4fd318",
+        "instruction": "jne    0x4fd318"
+      },
+      {
+        "address": "0x4fd312",
+        "target": "0x4fd318",
+        "instruction": "jne    0x4fd318"
+      },
+      {
+        "address": "0x4fd337",
+        "target": "0x4fd345",
+        "instruction": "jne    0x4fd345"
+      },
+      {
+        "address": "0x4fd33f",
+        "target": "0x4fd345",
+        "instruction": "jne    0x4fd345"
+      },
+      {
+        "address": "0x4fd345",
+        "target": "0x4fd1dc",
+        "instruction": "jmp    0x4fd1dc"
+      },
+      {
+        "address": "0x4fd35e",
+        "target": "0x4fd369",
+        "instruction": "jmp    0x4fd369"
+      },
+      {
+        "address": "0x4fd37c",
+        "target": "0x4fd4ce",
+        "instruction": "jge    0x4fd4ce"
+      },
+      {
+        "address": "0x4fd3af",
+        "target": "0x4fd402",
+        "instruction": "je     0x4fd402"
+      },
+      {
+        "address": "0x4fd3b8",
+        "target": "0x4fd402",
+        "instruction": "jne    0x4fd402"
+      },
+      {
+        "address": "0x4fd3fd",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd421",
+        "target": "0x4fd483",
+        "instruction": "jne    0x4fd483"
+      },
+      {
+        "address": "0x4fd42a",
+        "target": "0x4fd483",
+        "instruction": "jne    0x4fd483"
+      },
+      {
+        "address": "0x4fd436",
+        "target": "0x4fd47f",
+        "instruction": "je     0x4fd47f"
+      },
+      {
+        "address": "0x4fd47a",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd4a2",
+        "target": "0x4fd4b1",
+        "instruction": "jne    0x4fd4b1"
+      },
+      {
+        "address": "0x4fd4ab",
+        "target": "0x4fd4b1",
+        "instruction": "jne    0x4fd4b1"
+      },
+      {
+        "address": "0x4fd4bb",
+        "target": "0x4fd4c9",
+        "instruction": "jne    0x4fd4c9"
+      },
+      {
+        "address": "0x4fd4c3",
+        "target": "0x4fd4c9",
+        "instruction": "jne    0x4fd4c9"
+      },
+      {
+        "address": "0x4fd4c9",
+        "target": "0x4fd360",
+        "instruction": "jmp    0x4fd360"
+      },
+      {
+        "address": "0x4fd4e4",
+        "target": "0x4fd4ef",
+        "instruction": "jmp    0x4fd4ef"
+      },
+      {
+        "address": "0x4fd501",
+        "target": "0x4fd561",
+        "instruction": "jge    0x4fd561"
+      },
+      {
+        "address": "0x4fd52e",
+        "target": "0x4fd54a",
+        "instruction": "je     0x4fd54a"
+      },
+      {
+        "address": "0x4fd537",
+        "target": "0x4fd54a",
+        "instruction": "jne    0x4fd54a"
+      },
+      {
+        "address": "0x4fd545",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd551",
+        "target": "0x4fd55f",
+        "instruction": "jne    0x4fd55f"
+      },
+      {
+        "address": "0x4fd559",
+        "target": "0x4fd55f",
+        "instruction": "jne    0x4fd55f"
+      },
+      {
+        "address": "0x4fd55f",
+        "target": "0x4fd4e6",
+        "instruction": "jmp    0x4fd4e6"
+      },
+      {
+        "address": "0x4fd575",
+        "target": "0x4fd580",
+        "instruction": "jmp    0x4fd580"
+      },
+      {
+        "address": "0x4fd593",
+        "target": "0x4fd645",
+        "instruction": "jge    0x4fd645"
+      },
+      {
+        "address": "0x4fd5c7",
+        "target": "0x4fd5e3",
+        "instruction": "je     0x4fd5e3"
+      },
+      {
+        "address": "0x4fd5d0",
+        "target": "0x4fd5e3",
+        "instruction": "jne    0x4fd5e3"
+      },
+      {
+        "address": "0x4fd5de",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd5ed",
+        "target": "0x4fd5fc",
+        "instruction": "jne    0x4fd5fc"
+      },
+      {
+        "address": "0x4fd5f6",
+        "target": "0x4fd5fc",
+        "instruction": "jne    0x4fd5fc"
+      },
+      {
+        "address": "0x4fd603",
+        "target": "0x4fd612",
+        "instruction": "jne    0x4fd612"
+      },
+      {
+        "address": "0x4fd60c",
+        "target": "0x4fd612",
+        "instruction": "jne    0x4fd612"
+      },
+      {
+        "address": "0x4fd61c",
+        "target": "0x4fd62b",
+        "instruction": "jne    0x4fd62b"
+      },
+      {
+        "address": "0x4fd625",
+        "target": "0x4fd62b",
+        "instruction": "jne    0x4fd62b"
+      },
+      {
+        "address": "0x4fd632",
+        "target": "0x4fd640",
+        "instruction": "jne    0x4fd640"
+      },
+      {
+        "address": "0x4fd63a",
+        "target": "0x4fd640",
+        "instruction": "jne    0x4fd640"
+      },
+      {
+        "address": "0x4fd640",
+        "target": "0x4fd577",
+        "instruction": "jmp    0x4fd577"
+      },
+      {
+        "address": "0x4fd659",
+        "target": "0x4fd664",
+        "instruction": "jmp    0x4fd664"
+      },
+      {
+        "address": "0x4fd677",
+        "target": "0x4fd726",
+        "instruction": "jge    0x4fd726"
+      },
+      {
+        "address": "0x4fd6a8",
+        "target": "0x4fd6c4",
+        "instruction": "je     0x4fd6c4"
+      },
+      {
+        "address": "0x4fd6b1",
+        "target": "0x4fd6c4",
+        "instruction": "jne    0x4fd6c4"
+      },
+      {
+        "address": "0x4fd6bf",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd6ce",
+        "target": "0x4fd6dd",
+        "instruction": "jne    0x4fd6dd"
+      },
+      {
+        "address": "0x4fd6d7",
+        "target": "0x4fd6dd",
+        "instruction": "jne    0x4fd6dd"
+      },
+      {
+        "address": "0x4fd6e4",
+        "target": "0x4fd6f3",
+        "instruction": "jne    0x4fd6f3"
+      },
+      {
+        "address": "0x4fd6ed",
+        "target": "0x4fd6f3",
+        "instruction": "jne    0x4fd6f3"
+      },
+      {
+        "address": "0x4fd6fd",
+        "target": "0x4fd70c",
+        "instruction": "jne    0x4fd70c"
+      },
+      {
+        "address": "0x4fd706",
+        "target": "0x4fd70c",
+        "instruction": "jne    0x4fd70c"
+      },
+      {
+        "address": "0x4fd713",
+        "target": "0x4fd721",
+        "instruction": "jne    0x4fd721"
+      },
+      {
+        "address": "0x4fd71b",
+        "target": "0x4fd721",
+        "instruction": "jne    0x4fd721"
+      },
+      {
+        "address": "0x4fd721",
+        "target": "0x4fd65b",
+        "instruction": "jmp    0x4fd65b"
+      },
+      {
+        "address": "0x4fd73a",
+        "target": "0x4fd745",
+        "instruction": "jmp    0x4fd745"
+      },
+      {
+        "address": "0x4fd757",
+        "target": "0x4fd806",
+        "instruction": "jge    0x4fd806"
+      },
+      {
+        "address": "0x4fd788",
+        "target": "0x4fd7a4",
+        "instruction": "je     0x4fd7a4"
+      },
+      {
+        "address": "0x4fd791",
+        "target": "0x4fd7a4",
+        "instruction": "jne    0x4fd7a4"
+      },
+      {
+        "address": "0x4fd79f",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd7ae",
+        "target": "0x4fd7bd",
+        "instruction": "jne    0x4fd7bd"
+      },
+      {
+        "address": "0x4fd7b7",
+        "target": "0x4fd7bd",
+        "instruction": "jne    0x4fd7bd"
+      },
+      {
+        "address": "0x4fd7c4",
+        "target": "0x4fd7d3",
+        "instruction": "jne    0x4fd7d3"
+      },
+      {
+        "address": "0x4fd7cd",
+        "target": "0x4fd7d3",
+        "instruction": "jne    0x4fd7d3"
+      },
+      {
+        "address": "0x4fd7dd",
+        "target": "0x4fd7ec",
+        "instruction": "jne    0x4fd7ec"
+      },
+      {
+        "address": "0x4fd7e6",
+        "target": "0x4fd7ec",
+        "instruction": "jne    0x4fd7ec"
+      },
+      {
+        "address": "0x4fd7f3",
+        "target": "0x4fd801",
+        "instruction": "jne    0x4fd801"
+      },
+      {
+        "address": "0x4fd7fb",
+        "target": "0x4fd801",
+        "instruction": "jne    0x4fd801"
+      },
+      {
+        "address": "0x4fd801",
+        "target": "0x4fd73c",
+        "instruction": "jmp    0x4fd73c"
+      },
+      {
+        "address": "0x4fd81a",
+        "target": "0x4fd825",
+        "instruction": "jmp    0x4fd825"
+      },
+      {
+        "address": "0x4fd838",
+        "target": "0x4fd8e7",
+        "instruction": "jge    0x4fd8e7"
+      },
+      {
+        "address": "0x4fd869",
+        "target": "0x4fd885",
+        "instruction": "je     0x4fd885"
+      },
+      {
+        "address": "0x4fd872",
+        "target": "0x4fd885",
+        "instruction": "jne    0x4fd885"
+      },
+      {
+        "address": "0x4fd880",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd88f",
+        "target": "0x4fd89e",
+        "instruction": "jne    0x4fd89e"
+      },
+      {
+        "address": "0x4fd898",
+        "target": "0x4fd89e",
+        "instruction": "jne    0x4fd89e"
+      },
+      {
+        "address": "0x4fd8a5",
+        "target": "0x4fd8b4",
+        "instruction": "jne    0x4fd8b4"
+      },
+      {
+        "address": "0x4fd8ae",
+        "target": "0x4fd8b4",
+        "instruction": "jne    0x4fd8b4"
+      },
+      {
+        "address": "0x4fd8be",
+        "target": "0x4fd8cd",
+        "instruction": "jne    0x4fd8cd"
+      },
+      {
+        "address": "0x4fd8c7",
+        "target": "0x4fd8cd",
+        "instruction": "jne    0x4fd8cd"
+      },
+      {
+        "address": "0x4fd8d4",
+        "target": "0x4fd8e2",
+        "instruction": "jne    0x4fd8e2"
+      },
+      {
+        "address": "0x4fd8dc",
+        "target": "0x4fd8e2",
+        "instruction": "jne    0x4fd8e2"
+      },
+      {
+        "address": "0x4fd8e2",
+        "target": "0x4fd81c",
+        "instruction": "jmp    0x4fd81c"
+      },
+      {
+        "address": "0x4fd8fb",
+        "target": "0x4fd906",
+        "instruction": "jmp    0x4fd906"
+      },
+      {
+        "address": "0x4fd919",
+        "target": "0x4fda72",
+        "instruction": "jge    0x4fda72"
+      },
+      {
+        "address": "0x4fd94c",
+        "target": "0x4fd99f",
+        "instruction": "je     0x4fd99f"
+      },
+      {
+        "address": "0x4fd955",
+        "target": "0x4fd99f",
+        "instruction": "jne    0x4fd99f"
+      },
+      {
+        "address": "0x4fd99a",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fd9b9",
+        "target": "0x4fda19",
+        "instruction": "jne    0x4fda19"
+      },
+      {
+        "address": "0x4fd9c2",
+        "target": "0x4fda19",
+        "instruction": "jne    0x4fda19"
+      },
+      {
+        "address": "0x4fd9cd",
+        "target": "0x4fda15",
+        "instruction": "je     0x4fda15"
+      },
+      {
+        "address": "0x4fda10",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fda20",
+        "target": "0x4fda2f",
+        "instruction": "jne    0x4fda2f"
+      },
+      {
+        "address": "0x4fda29",
+        "target": "0x4fda2f",
+        "instruction": "jne    0x4fda2f"
+      },
+      {
+        "address": "0x4fda49",
+        "target": "0x4fda58",
+        "instruction": "jne    0x4fda58"
+      },
+      {
+        "address": "0x4fda52",
+        "target": "0x4fda58",
+        "instruction": "jne    0x4fda58"
+      },
+      {
+        "address": "0x4fda5f",
+        "target": "0x4fda6d",
+        "instruction": "jne    0x4fda6d"
+      },
+      {
+        "address": "0x4fda67",
+        "target": "0x4fda6d",
+        "instruction": "jne    0x4fda6d"
+      },
+      {
+        "address": "0x4fda6d",
+        "target": "0x4fd8fd",
+        "instruction": "jmp    0x4fd8fd"
+      },
+      {
+        "address": "0x4fda89",
+        "target": "0x4fda94",
+        "instruction": "jmp    0x4fda94"
+      },
+      {
+        "address": "0x4fdaa7",
+        "target": "0x4fdb40",
+        "instruction": "jge    0x4fdb40"
+      },
+      {
+        "address": "0x4fdadb",
+        "target": "0x4fdaf7",
+        "instruction": "jne    0x4fdaf7"
+      },
+      {
+        "address": "0x4fdae4",
+        "target": "0x4fdaf7",
+        "instruction": "jne    0x4fdaf7"
+      },
+      {
+        "address": "0x4fdaf2",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fdafe",
+        "target": "0x4fdb0d",
+        "instruction": "jne    0x4fdb0d"
+      },
+      {
+        "address": "0x4fdb07",
+        "target": "0x4fdb0d",
+        "instruction": "jne    0x4fdb0d"
+      },
+      {
+        "address": "0x4fdb17",
+        "target": "0x4fdb26",
+        "instruction": "jne    0x4fdb26"
+      },
+      {
+        "address": "0x4fdb20",
+        "target": "0x4fdb26",
+        "instruction": "jne    0x4fdb26"
+      },
+      {
+        "address": "0x4fdb2d",
+        "target": "0x4fdb3b",
+        "instruction": "jne    0x4fdb3b"
+      },
+      {
+        "address": "0x4fdb35",
+        "target": "0x4fdb3b",
+        "instruction": "jne    0x4fdb3b"
+      },
+      {
+        "address": "0x4fdb3b",
+        "target": "0x4fda8b",
+        "instruction": "jmp    0x4fda8b"
+      },
+      {
+        "address": "0x4fdb57",
+        "target": "0x4fdb62",
+        "instruction": "jmp    0x4fdb62"
+      },
+      {
+        "address": "0x4fdb75",
+        "target": "0x4fdc0b",
+        "instruction": "jge    0x4fdc0b"
+      },
+      {
+        "address": "0x4fdba9",
+        "target": "0x4fdbc2",
+        "instruction": "jne    0x4fdbc2"
+      },
+      {
+        "address": "0x4fdbb2",
+        "target": "0x4fdbc2",
+        "instruction": "jne    0x4fdbc2"
+      },
+      {
+        "address": "0x4fdbc0",
+        "target": "0x4fdc0b",
+        "instruction": "jmp    0x4fdc0b"
+      },
+      {
+        "address": "0x4fdbc9",
+        "target": "0x4fdbd8",
+        "instruction": "jne    0x4fdbd8"
+      },
+      {
+        "address": "0x4fdbd2",
+        "target": "0x4fdbd8",
+        "instruction": "jne    0x4fdbd8"
+      },
+      {
+        "address": "0x4fdbe2",
+        "target": "0x4fdbf1",
+        "instruction": "jne    0x4fdbf1"
+      },
+      {
+        "address": "0x4fdbeb",
+        "target": "0x4fdbf1",
+        "instruction": "jne    0x4fdbf1"
+      },
+      {
+        "address": "0x4fdbf8",
+        "target": "0x4fdc06",
+        "instruction": "jne    0x4fdc06"
+      },
+      {
+        "address": "0x4fdc00",
+        "target": "0x4fdc06",
+        "instruction": "jne    0x4fdc06"
+      },
+      {
+        "address": "0x4fdc06",
+        "target": "0x4fdb59",
+        "instruction": "jmp    0x4fdb59"
+      }
+    ],
+    "back_edges": [
+      [
+        "0x4fb0c8",
+        "0x4faf9b"
+      ],
+      [
+        "0x4fb225",
+        "0x4fb0e3"
+      ],
+      [
+        "0x4fb335",
+        "0x4fb240"
+      ],
+      [
+        "0x4fb485",
+        "0x4fb350"
+      ],
+      [
+        "0x4fb5bf",
+        "0x4fb4a0"
+      ],
+      [
+        "0x4fb73d",
+        "0x4fb5da"
+      ],
+      [
+        "0x4fb895",
+        "0x4fb758"
+      ],
+      [
+        "0x4fb9e1",
+        "0x4fb8ad"
+      ],
+      [
+        "0x4fbbbb",
+        "0x4fb9fc"
+      ],
+      [
+        "0x4fbdce",
+        "0x4fbbd6"
+      ],
+      [
+        "0x4fbfeb",
+        "0x4fbde9"
+      ],
+      [
+        "0x4fc1c5",
+        "0x4fc006"
+      ],
+      [
+        "0x4fc387",
+        "0x4fc1e0"
+      ],
+      [
+        "0x4fc545",
+        "0x4fc3a2"
+      ],
+      [
+        "0x4fc73e",
+        "0x4fc560"
+      ],
+      [
+        "0x4fc924",
+        "0x4fc759"
+      ],
+      [
+        "0x4fcab3",
+        "0x4fc93f"
+      ],
+      [
+        "0x4fcc45",
+        "0x4fcace"
+      ],
+      [
+        "0x4fcd4d",
+        "0x4fcc60"
+      ],
+      [
+        "0x4fced1",
+        "0x4fcd68"
+      ],
+      [
+        "0x4fd049",
+        "0x4fceec"
+      ],
+      [
+        "0x4fd1c1",
+        "0x4fd064"
+      ],
+      [
+        "0x4fd345",
+        "0x4fd1dc"
+      ],
+      [
+        "0x4fd4c9",
+        "0x4fd360"
+      ],
+      [
+        "0x4fd55f",
+        "0x4fd4e6"
+      ],
+      [
+        "0x4fd640",
+        "0x4fd577"
+      ],
+      [
+        "0x4fd721",
+        "0x4fd65b"
+      ],
+      [
+        "0x4fd801",
+        "0x4fd73c"
+      ],
+      [
+        "0x4fd8e2",
+        "0x4fd81c"
+      ],
+      [
+        "0x4fda6d",
+        "0x4fd8fd"
+      ],
+      [
+        "0x4fdb3b",
+        "0x4fda8b"
+      ],
+      [
+        "0x4fdc06",
+        "0x4fdb59"
+      ]
+    ],
+    "ordered_scans": 32,
+    "calls": [],
+    "relocations": [],
+    "local_data": [],
+    "following_cc_bytes": 1,
+    "abi": "Character24 thiscall void virtual slot02 at7885D8; receiver stores at EBP-C; i=-4/buttons=-5/stage=-6; RET0"
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 11423,
+      "matched_bytes": 11423,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "9835920648c94f8eb43a9cd6f2f34615f9d20f1e8ca5b718d15bd75f29677583",
+      "target_extent_sha256": "9835920648c94f8eb43a9cd6f2f34615f9d20f1e8ca5b718d15bd75f29677583",
+      "unit": "character-24-recognize-commands",
+      "symbol": "?Slot02@Character24@@UAEXXZ",
+      "target_address": "0x004FAF70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "5ca7a388fcf144ef43ffba0758b44553f6ebd578614655cbe6878cf26b02ba84",
+      "object_sha256": "20f31174e08f8e7e3a9133e6f425b79eb28d436ac75c981b6f21b3edeed66e05",
+      "source_sha256": "148a7f70372e8d21f7cfb0dcbe43be30a6c2f63d1be091a467b7af63a3a84153",
+      "dependencies": {
+        "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
+        "src/CharacterViews.h": "0bb87425ad1907fa0d3ec3587e35718f0a135b648ca7fbcf7318f3673b93cf76",
+        "src/Engine.h": "da5de3f10b6412f28c1ad10f68986dc646a7f1b5c4ef8e630ab05fe1ec81d870",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "a85e632e71daac792d112cb7b9e3054b9efec36474664c1731539b07c3fa4354",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3264672d34069d83271fb2da4cc9927b202dfddeee517b5d8247676ae7c8e789",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

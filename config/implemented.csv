@@ -253,3 +253,4 @@ address,name,source,symbol,status,evidence
 0x004FAF20,?Slot01@Character24@@UAEXXZ,src/Character24Frame.cpp,?Slot01@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
 0x004FAF30,?Slot08@Character24@@UAEXXZ,src/Character24Frame.cpp,?Slot08@Character24@@UAEXXZ,complete,docs/evidence/mizuka-exact.json
 0x004FAF40,?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z,src/Character24Frame.cpp,?EmitLocalEffect@Character24@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/mizuka-exact.json
+0x004FAF70,Character24::Slot02,src/Character24Commands.cpp,?Slot02@Character24@@UAEXXZ,complete,docs/evidence/mizuka-command-exact.json

@@ -293,3 +293,4 @@ address,end,size,status,evidence
 0x004FAF20,0x004FAF2B,11,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
 0x004FAF30,0x004FAF3B,11,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
 0x004FAF40,0x004FAF6F,47,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime
+0x004FAF70,0x004FDC0F,11423,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-circular-command-recognition

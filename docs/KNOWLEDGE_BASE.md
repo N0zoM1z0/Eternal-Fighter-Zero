@@ -3819,3 +3819,54 @@ accepted real background layout, base inheritance and declarations. Its complete
 native result and first GPR divergence at76D743 were unchanged. The control is
 now parked in `.analysis/probes/loading-owner/README.md`; do not repeat that
 layout/type hypothesis without new evidence. It earns no implementation credit.
+
+## Mizuka circular command recognition
+
+Character24::Slot02 at 0x4FAF70 is complete exact: 11,423 instruction bytes,
+ending exclusively at0x4FDC0F, followed by one CC byte and the next owner's
+prologue. It occupies slot2 of the original table7885D0. Source is
+`src/Character24Commands.cpp`; explicit recipe is character-24-recognize-commands
+with pinned static /Od. Public proof: `docs/evidence/mizuka-command-exact.json`.
+
+The complete function has 3,352 instructions, 547 direct internal branches and
+32 backward loop edges corresponding to32 ordered scans. Every instruction,
+branch destination, entry/RET/next-owner boundary and the source COFF extent was
+reviewed. There are no calls, relocations, compiler-local bindings or associated
+local tables. Acceptance compares all11,423 bytes; instruction normalization is
+never used as evidence of a match.
+
+The scanner writes default command99, then applies32 command recognizers in
+priority order, returning immediately after a successful match. It reads the
+unsigned180-byte history at `i - (i >=180)*180`, with signed field0260 as its
+head. Scans use distinct start offsets0,45,90,100,110,125,135 and175 relative to
+that head, each ending at head+180. Preserve the exact single-wrap index and
+individual window start; replacing it with modulo or a common timeout changes
+the target. The source keeps one int index and unsigned byte buttons/stage,
+matching the original12-byte frame including the saved receiver.
+
+Each recognizer uses sequential state tests, so a single input sample can
+advance multiple stages. Failure masks, zero-input transitions and the sequence
+of button/direction checks are significant. Facing is the real signed byte;
+2+(facing==-1?0:-1), the6/5 selection and the other subtractive facing predicates
+retain the original integer codegen. The final short release/press8 scan uses
+the same byte stage with explicit ==1 and ==0 checks, rather than the decompiler's
+inferred separate bool. The existing action selector consumes field0262; its
+implementation and this scanner remain separate exact units.
+
+The first complete natural C++ scanner already had the full11,423-byte extent,
+with14 differing bytes. Original operands exposed the distinction between gate-mask predicates and
+positive boolean command-ID sums, together with the true/false branch and store
+order of the20-button stage6/7 selection. Those differences
+were corrected from the target and the complete body then matched. In source,
+gate masks retain !=0, while command-ID arithmetic retains >0 for each of the
+E0/C0/80 masks without intermediate narrowing casts. Source scopes, scan
+ordering and actual state transitions are preserved; there is no artificial
+padding, byte wrapper or fake ABI.
+
+A final cold artifact for the formatted public source passed strict complete
+comparison. No existing source or header changed, so no old native units needed
+replay. Focused tracking, ledger/progress CI and whitespace checks passed; no
+full CI/cohort or runtime matrix ran. Private complete source/object attempts,
+full target disassembly, derivation and independent review are retained in
+`.analysis/probes/mizuka-command/`. Its generator is derivation evidence rather
+than an idempotent tool for recreating refined accepted source.

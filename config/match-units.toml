@@ -29817,3 +29817,13 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "docs/KNOWLEDGE_BASE.md#mizuka-action-selection-and-lifetime; operand 004FAF65; complete reviewed original call operand; genuine Secondary receiver and independently accepted callee contract"
+
+[units.character-24-recognize-commands]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character24Commands.cpp"
+dependencies = ["src/Character24.h", "src/CharacterViews.h", "src/Engine.h", "src/Input.h"]
+object = "build/match-units/character-24-recognize-commands/Character24Commands.obj"
+symbol = "?Slot02@Character24@@UAEXXZ"
+target_address = 0x004FAF70
+size = 11423

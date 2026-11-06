@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 254 |
-| Authored exact instruction bytes | 246,620 |
+| Authored complete exact functions | 255 |
+| Authored exact instruction bytes | 258,043 |
 | Associated exact local-table bytes | 783 |
-| Reviewed boundaries / origins | 294 / 294 |
+| Reviewed boundaries / origins | 295 / 295 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,29 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mizuka action checkpoint
+## Latest Mizuka command checkpoint
+
+Character24::Slot02 at4FAF70 is now complete exact /11,423 instruction bytes,
+exclusive end4FDC0F; no calls, relocations or local tables. Source:
+src/Character24Commands.cpp, profile vc71-od-static. Public proof:
+docs/evidence/mizuka-command-exact.json; durable facts:
+[Mizuka circular command recognition](KNOWLEDGE_BASE.md#mizuka-circular-command-recognition).
+Private full attempts and independent review: .analysis/probes/mizuka-command/README.md.
+Review covers3352 instructions,547 internal branches and32 ordered scans.
+
+One final selected cold artifact passed strict complete zero-difference
+comparison after numeric-stage/whitespace formatting. Existing source and
+headers are unchanged; no old unit replay was needed. Tracking, ledger/progress
+CI and diff whitespace checks passed; no full cohort/CI/runtime matrix ran.
+Preserve single-wrap history indexing, every scan window, sequential state
+advancement, gate-mask !=0 versus positive command-ID terms, stage6/7 store
+order and the short release/press scan's actual unsigned byte ==1/==0 checks.
+
+Remaining Mizuka owners: Slot05 CPU4FDC10/16912, shared slot06 state4E7EC0/65782,
+slot07 local effects501E20/42279. Inspect complete extents and any attached tables;
+existing accepted virtuals do not imply a complete runnable character.
+
+## Previous Mizuka action checkpoint
 
 Eight new complete Character24/Mizuka virtuals add10,953 instruction bytes,
 without local tables. Source: src/Character24.h, Character24Input.cpp and
@@ -68,8 +90,8 @@ structured air-attack branches. Whole-function comparison after any source
 change is essential. The large action selector alone reviews2655 instructions,
 430 internal branches,42 direct calls,42 real virtual calls and87 relocations.
 
-Mizuka Slot02 command scanner4FAF70/11423 has a fresh decompile but no source
-credit. Slot05 CPU4FDC10/16912, shared slot06 at4E7EC0/65782 and slot07 local
+Mizuka Slot02 command scanner4FAF70/11423 has since been accepted above.
+Slot05 CPU4FDC10/16912, shared slot06 at4E7EC0/65782 and slot07 local
 effects501E20/42279 remain available; inspect complete boundaries/local tables.
 A full target-bound character constructor and selected virtuals do not complete
 that character's runtime implementation.
