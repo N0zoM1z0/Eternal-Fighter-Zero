@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "one selected final cold pinned VC7.1 static /Od artifact; new complete authored source; public headers and prior units unchanged",
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "address": "0x5e5c30",
     "code_size": 10512,
@@ -1136,7 +1136,7 @@
           "target": 6194564,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62370",
+          "symbol": "$L62377",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10580 independently checked",
           "local_target_offset": 10580,
           "addend": 0
@@ -1146,7 +1146,7 @@
           "target": 6194496,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62444",
+          "symbol": "$L62451",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10512 independently checked",
           "local_target_offset": 10512,
           "addend": 0
@@ -2263,7 +2263,7 @@
           "target": 6184338,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62196",
+          "symbol": "$L62203",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
           "local_target_offset": 354,
           "addend": 0
@@ -2273,7 +2273,7 @@
           "target": 6184822,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62203",
+          "symbol": "$L62210",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 838 and canonical destination independently checked",
           "local_target_offset": 838,
           "addend": 0
@@ -2283,7 +2283,7 @@
           "target": 6186213,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62216",
+          "symbol": "$L62223",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 2229 and canonical destination independently checked",
           "local_target_offset": 2229,
           "addend": 0
@@ -2293,7 +2293,7 @@
           "target": 6187602,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62229",
+          "symbol": "$L62236",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 3618 and canonical destination independently checked",
           "local_target_offset": 3618,
           "addend": 0
@@ -2303,7 +2303,7 @@
           "target": 6188017,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62236",
+          "symbol": "$L62243",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 4033 and canonical destination independently checked",
           "local_target_offset": 4033,
           "addend": 0
@@ -2313,7 +2313,7 @@
           "target": 6188386,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62241",
+          "symbol": "$L62248",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 4402 and canonical destination independently checked",
           "local_target_offset": 4402,
           "addend": 0
@@ -2323,7 +2323,7 @@
           "target": 6188573,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62245",
+          "symbol": "$L62252",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 4589 and canonical destination independently checked",
           "local_target_offset": 4589,
           "addend": 0
@@ -2333,7 +2333,7 @@
           "target": 6188908,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62252",
+          "symbol": "$L62259",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 4924 and canonical destination independently checked",
           "local_target_offset": 4924,
           "addend": 0
@@ -2343,7 +2343,7 @@
           "target": 6189244,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62259",
+          "symbol": "$L62266",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 5260 and canonical destination independently checked",
           "local_target_offset": 5260,
           "addend": 0
@@ -2353,7 +2353,7 @@
           "target": 6189838,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62267",
+          "symbol": "$L62274",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 5854 and canonical destination independently checked",
           "local_target_offset": 5854,
           "addend": 0
@@ -2363,7 +2363,7 @@
           "target": 6190401,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62272",
+          "symbol": "$L62279",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 6417 and canonical destination independently checked",
           "local_target_offset": 6417,
           "addend": 0
@@ -2373,7 +2373,7 @@
           "target": 6190695,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62277",
+          "symbol": "$L62284",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 495; compiler-local offset 6711 and canonical destination independently checked",
           "local_target_offset": 6711,
           "addend": 0
@@ -2383,7 +2383,7 @@
           "target": 6190991,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62282",
+          "symbol": "$L62289",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 496; compiler-local offset 7007 and canonical destination independently checked",
           "local_target_offset": 7007,
           "addend": 0
@@ -2393,7 +2393,7 @@
           "target": 6192362,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62320",
+          "symbol": "$L62327",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 497; compiler-local offset 8378 and canonical destination independently checked",
           "local_target_offset": 8378,
           "addend": 0
@@ -2403,7 +2403,7 @@
           "target": 6193286,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62337",
+          "symbol": "$L62344",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 498; compiler-local offset 9302 and canonical destination independently checked",
           "local_target_offset": 9302,
           "addend": 0
@@ -2413,7 +2413,7 @@
           "target": 6194204,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62354",
+          "symbol": "$L62361",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 499; compiler-local offset 10220 and canonical destination independently checked",
           "local_target_offset": 10220,
           "addend": 0
@@ -2423,7 +2423,7 @@
           "target": 6194463,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62188",
+          "symbol": "$L62195",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 10479 and canonical destination independently checked",
           "local_target_offset": 10479,
           "addend": 0
@@ -2451,18 +2451,18 @@
       "symbol": "?Slot07@Character05@@UAEXXZ",
       "target_address": "0x005E5C30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "329b85377a83e423ed4fec65579a291d3ba91803524c9e3ccf089d352347285e",
-      "object_sha256": "fcf318deac1215de10e6f38a15aafa65441c554b1ee8304543a11726fa3303fd",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c5ff8255a2396b8b1affd2de73f941a73bd009f7f9ee5451e5da4ea6fc71377c",
       "source_sha256": "7c0cee9658be2e87c55f3f52dcdcb2bb5e8ea8caa4279f4b958b20d64d3e719c",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "2ee55a2b154dd89c03286a07deb4df2410e81feb575787cf6ba7e29f5595f645",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "2189c20e079bb37262382cc6fcaa7ee7d537574fa815989af5a3b44b1edcb553",
+      "unit_sha256": "8f6ad3c3800a277d3548f3f4da7518ce4fd88d2e5b6f737fc7cd0d1896f4b22c",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

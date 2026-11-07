@@ -32,7 +32,7 @@
           "target": 5210558,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64148",
+          "symbol": "$L64155",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 66302 independently checked",
           "local_target_offset": 66302,
           "addend": 0
@@ -42,7 +42,7 @@
           "target": 5210038,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64316",
+          "symbol": "$L64323",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 65782 independently checked",
           "local_target_offset": 65782,
           "addend": 0
@@ -11932,7 +11932,7 @@
           "target": 5144559,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62191",
+          "symbol": "$L62198",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 0 for animation IDs 1; compiler-local offset 303 and canonical destination independently checked",
           "local_target_offset": 303,
           "addend": 0
@@ -11942,7 +11942,7 @@
           "target": 5144689,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62195",
+          "symbol": "$L62202",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 1 for animation IDs 2; compiler-local offset 433 and canonical destination independently checked",
           "local_target_offset": 433,
           "addend": 0
@@ -11952,7 +11952,7 @@
           "target": 5144819,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62199",
+          "symbol": "$L62206",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 2 for animation IDs 3; compiler-local offset 563 and canonical destination independently checked",
           "local_target_offset": 563,
           "addend": 0
@@ -11962,7 +11962,7 @@
           "target": 5144957,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62203",
+          "symbol": "$L62210",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 3 for animation IDs 4; compiler-local offset 701 and canonical destination independently checked",
           "local_target_offset": 701,
           "addend": 0
@@ -11972,7 +11972,7 @@
           "target": 5145319,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62217",
+          "symbol": "$L62224",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 4 for animation IDs 5; compiler-local offset 1063 and canonical destination independently checked",
           "local_target_offset": 1063,
           "addend": 0
@@ -11982,7 +11982,7 @@
           "target": 5145693,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62231",
+          "symbol": "$L62238",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 5 for animation IDs 6; compiler-local offset 1437 and canonical destination independently checked",
           "local_target_offset": 1437,
           "addend": 0
@@ -11992,7 +11992,7 @@
           "target": 5146030,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62243",
+          "symbol": "$L62250",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 6 for animation IDs 7; compiler-local offset 1774 and canonical destination independently checked",
           "local_target_offset": 1774,
           "addend": 0
@@ -12002,7 +12002,7 @@
           "target": 5146178,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62247",
+          "symbol": "$L62254",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 7 for animation IDs 8; compiler-local offset 1922 and canonical destination independently checked",
           "local_target_offset": 1922,
           "addend": 0
@@ -12012,7 +12012,7 @@
           "target": 5146326,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62251",
+          "symbol": "$L62258",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 8 for animation IDs 9; compiler-local offset 2070 and canonical destination independently checked",
           "local_target_offset": 2070,
           "addend": 0
@@ -12022,7 +12022,7 @@
           "target": 5146516,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62256",
+          "symbol": "$L62263",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 9 for animation IDs 13; compiler-local offset 2260 and canonical destination independently checked",
           "local_target_offset": 2260,
           "addend": 0
@@ -12032,7 +12032,7 @@
           "target": 5146688,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62261",
+          "symbol": "$L62268",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 10 for animation IDs 14; compiler-local offset 2432 and canonical destination independently checked",
           "local_target_offset": 2432,
           "addend": 0
@@ -12042,7 +12042,7 @@
           "target": 5146966,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62268",
+          "symbol": "$L62275",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 11 for animation IDs 15; compiler-local offset 2710 and canonical destination independently checked",
           "local_target_offset": 2710,
           "addend": 0
@@ -12052,7 +12052,7 @@
           "target": 5147244,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62275",
+          "symbol": "$L62282",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 12 for animation IDs 16; compiler-local offset 2988 and canonical destination independently checked",
           "local_target_offset": 2988,
           "addend": 0
@@ -12062,7 +12062,7 @@
           "target": 5147522,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62282",
+          "symbol": "$L62289",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 13 for animation IDs 47; compiler-local offset 3266 and canonical destination independently checked",
           "local_target_offset": 3266,
           "addend": 0
@@ -12072,7 +12072,7 @@
           "target": 5147826,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62290",
+          "symbol": "$L62297",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 14 for animation IDs 50; compiler-local offset 3570 and canonical destination independently checked",
           "local_target_offset": 3570,
           "addend": 0
@@ -12082,7 +12082,7 @@
           "target": 5148330,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62304",
+          "symbol": "$L62311",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 15 for animation IDs 51; compiler-local offset 4074 and canonical destination independently checked",
           "local_target_offset": 4074,
           "addend": 0
@@ -12092,7 +12092,7 @@
           "target": 5148834,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62318",
+          "symbol": "$L62325",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 16 for animation IDs 52; compiler-local offset 4578 and canonical destination independently checked",
           "local_target_offset": 4578,
           "addend": 0
@@ -12102,7 +12102,7 @@
           "target": 5149338,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62332",
+          "symbol": "$L62339",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 17 for animation IDs 53; compiler-local offset 5082 and canonical destination independently checked",
           "local_target_offset": 5082,
           "addend": 0
@@ -12112,7 +12112,7 @@
           "target": 5149842,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62346",
+          "symbol": "$L62353",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 18 for animation IDs 54; compiler-local offset 5586 and canonical destination independently checked",
           "local_target_offset": 5586,
           "addend": 0
@@ -12122,7 +12122,7 @@
           "target": 5150346,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62360",
+          "symbol": "$L62367",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 19 for animation IDs 55; compiler-local offset 6090 and canonical destination independently checked",
           "local_target_offset": 6090,
           "addend": 0
@@ -12132,7 +12132,7 @@
           "target": 5150850,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62374",
+          "symbol": "$L62381",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 20 for animation IDs 56; compiler-local offset 6594 and canonical destination independently checked",
           "local_target_offset": 6594,
           "addend": 0
@@ -12142,7 +12142,7 @@
           "target": 5151330,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62387",
+          "symbol": "$L62394",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 21 for animation IDs 57; compiler-local offset 7074 and canonical destination independently checked",
           "local_target_offset": 7074,
           "addend": 0
@@ -12152,7 +12152,7 @@
           "target": 5151810,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62400",
+          "symbol": "$L62407",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 22 for animation IDs 58; compiler-local offset 7554 and canonical destination independently checked",
           "local_target_offset": 7554,
           "addend": 0
@@ -12162,7 +12162,7 @@
           "target": 5152290,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62413",
+          "symbol": "$L62420",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 23 for animation IDs 59; compiler-local offset 8034 and canonical destination independently checked",
           "local_target_offset": 8034,
           "addend": 0
@@ -12172,7 +12172,7 @@
           "target": 5152808,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62428",
+          "symbol": "$L62435",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 24 for animation IDs 60; compiler-local offset 8552 and canonical destination independently checked",
           "local_target_offset": 8552,
           "addend": 0
@@ -12182,7 +12182,7 @@
           "target": 5153326,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62443",
+          "symbol": "$L62450",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 25 for animation IDs 61; compiler-local offset 9070 and canonical destination independently checked",
           "local_target_offset": 9070,
           "addend": 0
@@ -12192,7 +12192,7 @@
           "target": 5153844,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62458",
+          "symbol": "$L62465",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 26 for animation IDs 62; compiler-local offset 9588 and canonical destination independently checked",
           "local_target_offset": 9588,
           "addend": 0
@@ -12202,7 +12202,7 @@
           "target": 5154290,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62470",
+          "symbol": "$L62477",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 27 for animation IDs 63; compiler-local offset 10034 and canonical destination independently checked",
           "local_target_offset": 10034,
           "addend": 0
@@ -12212,7 +12212,7 @@
           "target": 5154724,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62482",
+          "symbol": "$L62489",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 28 for animation IDs 64; compiler-local offset 10468 and canonical destination independently checked",
           "local_target_offset": 10468,
           "addend": 0
@@ -12222,7 +12222,7 @@
           "target": 5155292,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62498",
+          "symbol": "$L62505",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 29 for animation IDs 65; compiler-local offset 11036 and canonical destination independently checked",
           "local_target_offset": 11036,
           "addend": 0
@@ -12232,7 +12232,7 @@
           "target": 5155860,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62514",
+          "symbol": "$L62521",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 30 for animation IDs 66; compiler-local offset 11604 and canonical destination independently checked",
           "local_target_offset": 11604,
           "addend": 0
@@ -12242,7 +12242,7 @@
           "target": 5156356,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62527",
+          "symbol": "$L62534",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 31 for animation IDs 67; compiler-local offset 12100 and canonical destination independently checked",
           "local_target_offset": 12100,
           "addend": 0
@@ -12252,7 +12252,7 @@
           "target": 5156840,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62540",
+          "symbol": "$L62547",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 32 for animation IDs 68; compiler-local offset 12584 and canonical destination independently checked",
           "local_target_offset": 12584,
           "addend": 0
@@ -12262,7 +12262,7 @@
           "target": 5157237,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62551",
+          "symbol": "$L62558",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 33 for animation IDs 69; compiler-local offset 12981 and canonical destination independently checked",
           "local_target_offset": 12981,
           "addend": 0
@@ -12272,7 +12272,7 @@
           "target": 5157595,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62561",
+          "symbol": "$L62568",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 34 for animation IDs 70; compiler-local offset 13339 and canonical destination independently checked",
           "local_target_offset": 13339,
           "addend": 0
@@ -12282,7 +12282,7 @@
           "target": 5158082,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62573",
+          "symbol": "$L62580",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 35 for animation IDs 71; compiler-local offset 13826 and canonical destination independently checked",
           "local_target_offset": 13826,
           "addend": 0
@@ -12292,7 +12292,7 @@
           "target": 5158516,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62585",
+          "symbol": "$L62592",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 36 for animation IDs 72; compiler-local offset 14260 and canonical destination independently checked",
           "local_target_offset": 14260,
           "addend": 0
@@ -12302,7 +12302,7 @@
           "target": 5158864,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62595",
+          "symbol": "$L62602",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 37 for animation IDs 73; compiler-local offset 14608 and canonical destination independently checked",
           "local_target_offset": 14608,
           "addend": 0
@@ -12312,7 +12312,7 @@
           "target": 5159212,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62605",
+          "symbol": "$L62612",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 38 for animation IDs 74; compiler-local offset 14956 and canonical destination independently checked",
           "local_target_offset": 14956,
           "addend": 0
@@ -12322,7 +12322,7 @@
           "target": 5159536,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62614",
+          "symbol": "$L62621",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 39 for animation IDs 75; compiler-local offset 15280 and canonical destination independently checked",
           "local_target_offset": 15280,
           "addend": 0
@@ -12332,7 +12332,7 @@
           "target": 5160052,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62628",
+          "symbol": "$L62635",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 40 for animation IDs 76; compiler-local offset 15796 and canonical destination independently checked",
           "local_target_offset": 15796,
           "addend": 0
@@ -12342,7 +12342,7 @@
           "target": 5160568,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62642",
+          "symbol": "$L62649",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 41 for animation IDs 77; compiler-local offset 16312 and canonical destination independently checked",
           "local_target_offset": 16312,
           "addend": 0
@@ -12352,7 +12352,7 @@
           "target": 5161060,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62655",
+          "symbol": "$L62662",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 42 for animation IDs 81; compiler-local offset 16804 and canonical destination independently checked",
           "local_target_offset": 16804,
           "addend": 0
@@ -12362,7 +12362,7 @@
           "target": 5161552,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62669",
+          "symbol": "$L62676",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 43 for animation IDs 82; compiler-local offset 17296 and canonical destination independently checked",
           "local_target_offset": 17296,
           "addend": 0
@@ -12372,7 +12372,7 @@
           "target": 5162105,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62684",
+          "symbol": "$L62691",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 44 for animation IDs 83; compiler-local offset 17849 and canonical destination independently checked",
           "local_target_offset": 17849,
           "addend": 0
@@ -12382,7 +12382,7 @@
           "target": 5162693,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62701",
+          "symbol": "$L62708",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 45 for animation IDs 84; compiler-local offset 18437 and canonical destination independently checked",
           "local_target_offset": 18437,
           "addend": 0
@@ -12392,7 +12392,7 @@
           "target": 5163281,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62718",
+          "symbol": "$L62725",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 46 for animation IDs 85; compiler-local offset 19025 and canonical destination independently checked",
           "local_target_offset": 19025,
           "addend": 0
@@ -12402,7 +12402,7 @@
           "target": 5163755,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62732",
+          "symbol": "$L62739",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 47 for animation IDs 86; compiler-local offset 19499 and canonical destination independently checked",
           "local_target_offset": 19499,
           "addend": 0
@@ -12412,7 +12412,7 @@
           "target": 5164244,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62747",
+          "symbol": "$L62754",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 48 for animation IDs 87; compiler-local offset 19988 and canonical destination independently checked",
           "local_target_offset": 19988,
           "addend": 0
@@ -12422,7 +12422,7 @@
           "target": 5164423,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62753",
+          "symbol": "$L62760",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 49 for animation IDs 96; compiler-local offset 20167 and canonical destination independently checked",
           "local_target_offset": 20167,
           "addend": 0
@@ -12432,7 +12432,7 @@
           "target": 5164569,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62759",
+          "symbol": "$L62766",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 50 for animation IDs 97; compiler-local offset 20313 and canonical destination independently checked",
           "local_target_offset": 20313,
           "addend": 0
@@ -12442,7 +12442,7 @@
           "target": 5164824,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62767",
+          "symbol": "$L62774",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 51 for animation IDs 98; compiler-local offset 20568 and canonical destination independently checked",
           "local_target_offset": 20568,
           "addend": 0
@@ -12452,7 +12452,7 @@
           "target": 5165079,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62775",
+          "symbol": "$L62782",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 52 for animation IDs 99; compiler-local offset 20823 and canonical destination independently checked",
           "local_target_offset": 20823,
           "addend": 0
@@ -12462,7 +12462,7 @@
           "target": 5165272,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62782",
+          "symbol": "$L62789",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 53 for animation IDs 150; compiler-local offset 21016 and canonical destination independently checked",
           "local_target_offset": 21016,
           "addend": 0
@@ -12472,7 +12472,7 @@
           "target": 5165652,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62794",
+          "symbol": "$L62801",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 54 for animation IDs 151; compiler-local offset 21396 and canonical destination independently checked",
           "local_target_offset": 21396,
           "addend": 0
@@ -12482,7 +12482,7 @@
           "target": 5166032,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62806",
+          "symbol": "$L62813",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 55 for animation IDs 152; compiler-local offset 21776 and canonical destination independently checked",
           "local_target_offset": 21776,
           "addend": 0
@@ -12492,7 +12492,7 @@
           "target": 5166412,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62818",
+          "symbol": "$L62825",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 56 for animation IDs 153; compiler-local offset 22156 and canonical destination independently checked",
           "local_target_offset": 22156,
           "addend": 0
@@ -12502,7 +12502,7 @@
           "target": 5166768,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62829",
+          "symbol": "$L62836",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 57 for animation IDs 154; compiler-local offset 22512 and canonical destination independently checked",
           "local_target_offset": 22512,
           "addend": 0
@@ -12512,7 +12512,7 @@
           "target": 5167124,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62840",
+          "symbol": "$L62847",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 58 for animation IDs 155; compiler-local offset 22868 and canonical destination independently checked",
           "local_target_offset": 22868,
           "addend": 0
@@ -12522,7 +12522,7 @@
           "target": 5167480,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62851",
+          "symbol": "$L62858",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 59 for animation IDs 156; compiler-local offset 23224 and canonical destination independently checked",
           "local_target_offset": 23224,
           "addend": 0
@@ -12532,7 +12532,7 @@
           "target": 5167752,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62858",
+          "symbol": "$L62865",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 60 for animation IDs 157; compiler-local offset 23496 and canonical destination independently checked",
           "local_target_offset": 23496,
           "addend": 0
@@ -12542,7 +12542,7 @@
           "target": 5168115,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62869",
+          "symbol": "$L62876",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 61 for animation IDs 158; compiler-local offset 23859 and canonical destination independently checked",
           "local_target_offset": 23859,
           "addend": 0
@@ -12552,7 +12552,7 @@
           "target": 5168478,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62880",
+          "symbol": "$L62887",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 62 for animation IDs 163; compiler-local offset 24222 and canonical destination independently checked",
           "local_target_offset": 24222,
           "addend": 0
@@ -12562,7 +12562,7 @@
           "target": 5168866,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62895",
+          "symbol": "$L62902",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 63 for animation IDs 164; compiler-local offset 24610 and canonical destination independently checked",
           "local_target_offset": 24610,
           "addend": 0
@@ -12572,7 +12572,7 @@
           "target": 5169265,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62909",
+          "symbol": "$L62916",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 64 for animation IDs 165; compiler-local offset 25009 and canonical destination independently checked",
           "local_target_offset": 25009,
           "addend": 0
@@ -12582,7 +12582,7 @@
           "target": 5169761,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62921",
+          "symbol": "$L62928",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 65 for animation IDs 166; compiler-local offset 25505 and canonical destination independently checked",
           "local_target_offset": 25505,
           "addend": 0
@@ -12592,7 +12592,7 @@
           "target": 5170261,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62937",
+          "symbol": "$L62944",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 66 for animation IDs 167; compiler-local offset 26005 and canonical destination independently checked",
           "local_target_offset": 26005,
           "addend": 0
@@ -12602,7 +12602,7 @@
           "target": 5170742,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62952",
+          "symbol": "$L62959",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 67 for animation IDs 168; compiler-local offset 26486 and canonical destination independently checked",
           "local_target_offset": 26486,
           "addend": 0
@@ -12612,7 +12612,7 @@
           "target": 5171079,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62961",
+          "symbol": "$L62968",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 68 for animation IDs 169; compiler-local offset 26823 and canonical destination independently checked",
           "local_target_offset": 26823,
           "addend": 0
@@ -12622,7 +12622,7 @@
           "target": 5171416,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62970",
+          "symbol": "$L62977",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 69 for animation IDs 170; compiler-local offset 27160 and canonical destination independently checked",
           "local_target_offset": 27160,
           "addend": 0
@@ -12632,7 +12632,7 @@
           "target": 5171923,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62983",
+          "symbol": "$L62990",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 70 for animation IDs 171; compiler-local offset 27667 and canonical destination independently checked",
           "local_target_offset": 27667,
           "addend": 0
@@ -12642,7 +12642,7 @@
           "target": 5172537,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63001",
+          "symbol": "$L63008",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 71 for animation IDs 178; compiler-local offset 28281 and canonical destination independently checked",
           "local_target_offset": 28281,
           "addend": 0
@@ -12652,7 +12652,7 @@
           "target": 5172844,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63012",
+          "symbol": "$L63019",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 72 for animation IDs 179; compiler-local offset 28588 and canonical destination independently checked",
           "local_target_offset": 28588,
           "addend": 0
@@ -12662,7 +12662,7 @@
           "target": 5173409,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63029",
+          "symbol": "$L63036",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 73 for animation IDs 180; compiler-local offset 29153 and canonical destination independently checked",
           "local_target_offset": 29153,
           "addend": 0
@@ -12672,7 +12672,7 @@
           "target": 5173906,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63046",
+          "symbol": "$L63053",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 74 for animation IDs 181; compiler-local offset 29650 and canonical destination independently checked",
           "local_target_offset": 29650,
           "addend": 0
@@ -12682,7 +12682,7 @@
           "target": 5174401,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63061",
+          "symbol": "$L63068",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 75 for animation IDs 200; compiler-local offset 30145 and canonical destination independently checked",
           "local_target_offset": 30145,
           "addend": 0
@@ -12692,7 +12692,7 @@
           "target": 5174984,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63081",
+          "symbol": "$L63088",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 76 for animation IDs 201; compiler-local offset 30728 and canonical destination independently checked",
           "local_target_offset": 30728,
           "addend": 0
@@ -12702,7 +12702,7 @@
           "target": 5175586,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63103",
+          "symbol": "$L63110",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 77 for animation IDs 202; compiler-local offset 31330 and canonical destination independently checked",
           "local_target_offset": 31330,
           "addend": 0
@@ -12712,7 +12712,7 @@
           "target": 5176020,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63118",
+          "symbol": "$L63125",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 78 for animation IDs 203; compiler-local offset 31764 and canonical destination independently checked",
           "local_target_offset": 31764,
           "addend": 0
@@ -12722,7 +12722,7 @@
           "target": 5176373,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63131",
+          "symbol": "$L63138",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 79 for animation IDs 204; compiler-local offset 32117 and canonical destination independently checked",
           "local_target_offset": 32117,
           "addend": 0
@@ -12732,7 +12732,7 @@
           "target": 5176984,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63152",
+          "symbol": "$L63159",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 80 for animation IDs 205; compiler-local offset 32728 and canonical destination independently checked",
           "local_target_offset": 32728,
           "addend": 0
@@ -12742,7 +12742,7 @@
           "target": 5177595,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63173",
+          "symbol": "$L63180",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 81 for animation IDs 206; compiler-local offset 33339 and canonical destination independently checked",
           "local_target_offset": 33339,
           "addend": 0
@@ -12752,7 +12752,7 @@
           "target": 5178130,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63191",
+          "symbol": "$L63198",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 82 for animation IDs 207; compiler-local offset 33874 and canonical destination independently checked",
           "local_target_offset": 33874,
           "addend": 0
@@ -12762,7 +12762,7 @@
           "target": 5179039,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63216",
+          "symbol": "$L63223",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 83 for animation IDs 208; compiler-local offset 34783 and canonical destination independently checked",
           "local_target_offset": 34783,
           "addend": 0
@@ -12772,7 +12772,7 @@
           "target": 5179948,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63241",
+          "symbol": "$L63248",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 84 for animation IDs 209; compiler-local offset 35692 and canonical destination independently checked",
           "local_target_offset": 35692,
           "addend": 0
@@ -12782,7 +12782,7 @@
           "target": 5180938,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63268",
+          "symbol": "$L63275",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 85 for animation IDs 210; compiler-local offset 36682 and canonical destination independently checked",
           "local_target_offset": 36682,
           "addend": 0
@@ -12792,7 +12792,7 @@
           "target": 5181855,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63294",
+          "symbol": "$L63301",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 86 for animation IDs 211; compiler-local offset 37599 and canonical destination independently checked",
           "local_target_offset": 37599,
           "addend": 0
@@ -12802,7 +12802,7 @@
           "target": 5182226,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63307",
+          "symbol": "$L63314",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 87 for animation IDs 212; compiler-local offset 37970 and canonical destination independently checked",
           "local_target_offset": 37970,
           "addend": 0
@@ -12812,7 +12812,7 @@
           "target": 5182669,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63317",
+          "symbol": "$L63324",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 88 for animation IDs 213; compiler-local offset 38413 and canonical destination independently checked",
           "local_target_offset": 38413,
           "addend": 0
@@ -12822,7 +12822,7 @@
           "target": 5182857,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63323",
+          "symbol": "$L63330",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 89 for animation IDs 214; compiler-local offset 38601 and canonical destination independently checked",
           "local_target_offset": 38601,
           "addend": 0
@@ -12832,7 +12832,7 @@
           "target": 5183144,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63332",
+          "symbol": "$L63339",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 90 for animation IDs 220; compiler-local offset 38888 and canonical destination independently checked",
           "local_target_offset": 38888,
           "addend": 0
@@ -12842,7 +12842,7 @@
           "target": 5183601,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63343",
+          "symbol": "$L63350",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 91 for animation IDs 221; compiler-local offset 39345 and canonical destination independently checked",
           "local_target_offset": 39345,
           "addend": 0
@@ -12852,7 +12852,7 @@
           "target": 5184224,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63359",
+          "symbol": "$L63366",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 92 for animation IDs 230; compiler-local offset 39968 and canonical destination independently checked",
           "local_target_offset": 39968,
           "addend": 0
@@ -12862,7 +12862,7 @@
           "target": 5184733,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63377",
+          "symbol": "$L63384",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 93 for animation IDs 231; compiler-local offset 40477 and canonical destination independently checked",
           "local_target_offset": 40477,
           "addend": 0
@@ -12872,7 +12872,7 @@
           "target": 5185426,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63402",
+          "symbol": "$L63409",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 94 for animation IDs 232; compiler-local offset 41170 and canonical destination independently checked",
           "local_target_offset": 41170,
           "addend": 0
@@ -12882,7 +12882,7 @@
           "target": 5185933,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63420",
+          "symbol": "$L63427",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 95 for animation IDs 249; compiler-local offset 41677 and canonical destination independently checked",
           "local_target_offset": 41677,
           "addend": 0
@@ -12892,7 +12892,7 @@
           "target": 5186253,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63428",
+          "symbol": "$L63435",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 96 for animation IDs 250; compiler-local offset 41997 and canonical destination independently checked",
           "local_target_offset": 41997,
           "addend": 0
@@ -12902,7 +12902,7 @@
           "target": 5186710,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63443",
+          "symbol": "$L63450",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 97 for animation IDs 251; compiler-local offset 42454 and canonical destination independently checked",
           "local_target_offset": 42454,
           "addend": 0
@@ -12912,7 +12912,7 @@
           "target": 5187160,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63458",
+          "symbol": "$L63465",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 98 for animation IDs 252; compiler-local offset 42904 and canonical destination independently checked",
           "local_target_offset": 42904,
           "addend": 0
@@ -12922,7 +12922,7 @@
           "target": 5188199,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63487",
+          "symbol": "$L63494",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 99 for animation IDs 253; compiler-local offset 43943 and canonical destination independently checked",
           "local_target_offset": 43943,
           "addend": 0
@@ -12932,7 +12932,7 @@
           "target": 5188489,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63497",
+          "symbol": "$L63504",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 100 for animation IDs 254; compiler-local offset 44233 and canonical destination independently checked",
           "local_target_offset": 44233,
           "addend": 0
@@ -12942,7 +12942,7 @@
           "target": 5188782,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63507",
+          "symbol": "$L63514",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 101 for animation IDs 255; compiler-local offset 44526 and canonical destination independently checked",
           "local_target_offset": 44526,
           "addend": 0
@@ -12952,7 +12952,7 @@
           "target": 5189232,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63521",
+          "symbol": "$L63528",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 102 for animation IDs 256; compiler-local offset 44976 and canonical destination independently checked",
           "local_target_offset": 44976,
           "addend": 0
@@ -12962,7 +12962,7 @@
           "target": 5190122,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63547",
+          "symbol": "$L63554",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 103 for animation IDs 257; compiler-local offset 45866 and canonical destination independently checked",
           "local_target_offset": 45866,
           "addend": 0
@@ -12972,7 +12972,7 @@
           "target": 5191012,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63573",
+          "symbol": "$L63580",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 104 for animation IDs 258; compiler-local offset 46756 and canonical destination independently checked",
           "local_target_offset": 46756,
           "addend": 0
@@ -12982,7 +12982,7 @@
           "target": 5191902,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63599",
+          "symbol": "$L63606",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 105 for animation IDs 259; compiler-local offset 47646 and canonical destination independently checked",
           "local_target_offset": 47646,
           "addend": 0
@@ -12992,7 +12992,7 @@
           "target": 5192270,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63611",
+          "symbol": "$L63618",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 106 for animation IDs 260; compiler-local offset 48014 and canonical destination independently checked",
           "local_target_offset": 48014,
           "addend": 0
@@ -13002,7 +13002,7 @@
           "target": 5192638,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63623",
+          "symbol": "$L63630",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 107 for animation IDs 261; compiler-local offset 48382 and canonical destination independently checked",
           "local_target_offset": 48382,
           "addend": 0
@@ -13012,7 +13012,7 @@
           "target": 5193261,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63643",
+          "symbol": "$L63650",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 108 for animation IDs 262; compiler-local offset 49005 and canonical destination independently checked",
           "local_target_offset": 49005,
           "addend": 0
@@ -13022,7 +13022,7 @@
           "target": 5193632,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63655",
+          "symbol": "$L63662",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 109 for animation IDs 263; compiler-local offset 49376 and canonical destination independently checked",
           "local_target_offset": 49376,
           "addend": 0
@@ -13032,7 +13032,7 @@
           "target": 5194003,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63667",
+          "symbol": "$L63674",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 110 for animation IDs 264; compiler-local offset 49747 and canonical destination independently checked",
           "local_target_offset": 49747,
           "addend": 0
@@ -13042,7 +13042,7 @@
           "target": 5194862,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63690",
+          "symbol": "$L63697",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 111 for animation IDs 265; compiler-local offset 50606 and canonical destination independently checked",
           "local_target_offset": 50606,
           "addend": 0
@@ -13052,7 +13052,7 @@
           "target": 5195233,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63702",
+          "symbol": "$L63709",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 112 for animation IDs 300; compiler-local offset 50977 and canonical destination independently checked",
           "local_target_offset": 50977,
           "addend": 0
@@ -13062,7 +13062,7 @@
           "target": 5195947,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63725",
+          "symbol": "$L63732",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 113 for animation IDs 301; compiler-local offset 51691 and canonical destination independently checked",
           "local_target_offset": 51691,
           "addend": 0
@@ -13072,7 +13072,7 @@
           "target": 5196661,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63748",
+          "symbol": "$L63755",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 114 for animation IDs 302; compiler-local offset 52405 and canonical destination independently checked",
           "local_target_offset": 52405,
           "addend": 0
@@ -13082,7 +13082,7 @@
           "target": 5197409,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63772",
+          "symbol": "$L63779",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 115 for animation IDs 303; compiler-local offset 53153 and canonical destination independently checked",
           "local_target_offset": 53153,
           "addend": 0
@@ -13092,7 +13092,7 @@
           "target": 5197967,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63787",
+          "symbol": "$L63794",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 116 for animation IDs 304; compiler-local offset 53711 and canonical destination independently checked",
           "local_target_offset": 53711,
           "addend": 0
@@ -13102,7 +13102,7 @@
           "target": 5198525,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63802",
+          "symbol": "$L63809",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 117 for animation IDs 305; compiler-local offset 54269 and canonical destination independently checked",
           "local_target_offset": 54269,
           "addend": 0
@@ -13112,7 +13112,7 @@
           "target": 5199118,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63818",
+          "symbol": "$L63825",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 118 for animation IDs 306; compiler-local offset 54862 and canonical destination independently checked",
           "local_target_offset": 54862,
           "addend": 0
@@ -13122,7 +13122,7 @@
           "target": 5199675,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63832",
+          "symbol": "$L63839",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 119 for animation IDs 307; compiler-local offset 55419 and canonical destination independently checked",
           "local_target_offset": 55419,
           "addend": 0
@@ -13132,7 +13132,7 @@
           "target": 5200574,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63859",
+          "symbol": "$L63866",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 120 for animation IDs 308; compiler-local offset 56318 and canonical destination independently checked",
           "local_target_offset": 56318,
           "addend": 0
@@ -13142,7 +13142,7 @@
           "target": 5201486,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63886",
+          "symbol": "$L63893",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 121 for animation IDs 309; compiler-local offset 57230 and canonical destination independently checked",
           "local_target_offset": 57230,
           "addend": 0
@@ -13152,7 +13152,7 @@
           "target": 5202527,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63907",
+          "symbol": "$L63914",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 122 for animation IDs 310; compiler-local offset 58271 and canonical destination independently checked",
           "local_target_offset": 58271,
           "addend": 0
@@ -13162,7 +13162,7 @@
           "target": 5203905,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63940",
+          "symbol": "$L63947",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 123 for animation IDs 311; compiler-local offset 59649 and canonical destination independently checked",
           "local_target_offset": 59649,
           "addend": 0
@@ -13172,7 +13172,7 @@
           "target": 5205311,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63976",
+          "symbol": "$L63983",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 124 for animation IDs 312; compiler-local offset 61055 and canonical destination independently checked",
           "local_target_offset": 61055,
           "addend": 0
@@ -13182,7 +13182,7 @@
           "target": 5206299,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64008",
+          "symbol": "$L64015",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 125 for animation IDs 313; compiler-local offset 62043 and canonical destination independently checked",
           "local_target_offset": 62043,
           "addend": 0
@@ -13192,7 +13192,7 @@
           "target": 5206778,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64021",
+          "symbol": "$L64028",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 126 for animation IDs 314; compiler-local offset 62522 and canonical destination independently checked",
           "local_target_offset": 62522,
           "addend": 0
@@ -13202,7 +13202,7 @@
           "target": 5207554,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64042",
+          "symbol": "$L64049",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 127 for animation IDs 315; compiler-local offset 63298 and canonical destination independently checked",
           "local_target_offset": 63298,
           "addend": 0
@@ -13212,7 +13212,7 @@
           "target": 5209384,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64090",
+          "symbol": "$L64097",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 128 for animation IDs 316; compiler-local offset 65128 and canonical destination independently checked",
           "local_target_offset": 65128,
           "addend": 0
@@ -13222,7 +13222,7 @@
           "target": 5144429,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62187",
+          "symbol": "$L62194",
           "evidence": "docs/KNOWLEDGE_BASE.md#mizuka-animation-and-state-owner; original switch address entry 129 for animation IDs 10,11,12,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,49,78,79,80,88,89,90,91,92,93,94,95,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,159,160,161,162,172,173,174,175,176,177,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,215,216,217,218,219,222,223,224,225,226,227,228,229,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299; compiler-local offset 173 and canonical destination independently checked",
           "local_target_offset": 173,
           "addend": 0
@@ -13250,19 +13250,19 @@
       "symbol": "?Slot06@Character24@@UAEXXZ",
       "target_address": "0x004E7EC0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
-      "object_sha256": "4d244a7c5d09b8df12ab79bc12bc32ed817ac65048c27264cfee53f31283e62b",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "96f9a2a2798fc7ba6dc620d766931b407404fb884918bd28b4b88e149c2b5789",
       "source_sha256": "15b073792a9fed95ec0432d7235091a799cfa5e8d57b4d9cb163cef9f2783a68",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871",
         "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "8ab92ada72c3ed998d5ac17146723c4424b402a5a7e7793527f5f966ef664f43",
+      "unit_sha256": "0663e533bbff565002b2db37a1db99ba92e507f28adb6dcdd0ece9bbe4ad579f",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -13348,7 +13348,7 @@
       "acceptance_authority": "complete-function-codegen"
     }
   ],
-  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "owner": "Character24::Slot06",

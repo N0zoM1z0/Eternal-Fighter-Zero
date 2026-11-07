@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "one selected final cold pinned VC7.1 static /Od artifact; new complete authored source; public headers and prior units unchanged",
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "owner": "Character05::Slot06",
@@ -12716,7 +12716,7 @@
           "target": 6151329,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64480",
+          "symbol": "$L64487",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 87841 independently checked",
           "local_target_offset": 87841,
           "addend": 0
@@ -12726,7 +12726,7 @@
           "target": 6150697,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64752",
+          "symbol": "$L64759",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 87209 independently checked",
           "local_target_offset": 87209,
           "addend": 0
@@ -29809,7 +29809,7 @@
           "target": 6063773,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62145",
+          "symbol": "$L62152",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 0 for animation IDs 1; compiler-local offset 285 and canonical destination independently checked",
           "local_target_offset": 285,
           "addend": 0
@@ -29819,7 +29819,7 @@
           "target": 6063886,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62149",
+          "symbol": "$L62156",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 1 for animation IDs 2; compiler-local offset 398 and canonical destination independently checked",
           "local_target_offset": 398,
           "addend": 0
@@ -29829,7 +29829,7 @@
           "target": 6063999,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62153",
+          "symbol": "$L62160",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 2 for animation IDs 3; compiler-local offset 511 and canonical destination independently checked",
           "local_target_offset": 511,
           "addend": 0
@@ -29839,7 +29839,7 @@
           "target": 6064120,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62157",
+          "symbol": "$L62164",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 3 for animation IDs 4; compiler-local offset 632 and canonical destination independently checked",
           "local_target_offset": 632,
           "addend": 0
@@ -29849,7 +29849,7 @@
           "target": 6064432,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62167",
+          "symbol": "$L62174",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 4 for animation IDs 5; compiler-local offset 944 and canonical destination independently checked",
           "local_target_offset": 944,
           "addend": 0
@@ -29859,7 +29859,7 @@
           "target": 6064756,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62177",
+          "symbol": "$L62184",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 5 for animation IDs 6; compiler-local offset 1268 and canonical destination independently checked",
           "local_target_offset": 1268,
           "addend": 0
@@ -29869,7 +29869,7 @@
           "target": 6065080,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62187",
+          "symbol": "$L62194",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 6 for animation IDs 7; compiler-local offset 1592 and canonical destination independently checked",
           "local_target_offset": 1592,
           "addend": 0
@@ -29879,7 +29879,7 @@
           "target": 6065211,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62191",
+          "symbol": "$L62198",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 7 for animation IDs 8; compiler-local offset 1723 and canonical destination independently checked",
           "local_target_offset": 1723,
           "addend": 0
@@ -29889,7 +29889,7 @@
           "target": 6065342,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62195",
+          "symbol": "$L62202",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 8 for animation IDs 9; compiler-local offset 1854 and canonical destination independently checked",
           "local_target_offset": 1854,
           "addend": 0
@@ -29899,7 +29899,7 @@
           "target": 6065515,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62200",
+          "symbol": "$L62207",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 9 for animation IDs 10; compiler-local offset 2027 and canonical destination independently checked",
           "local_target_offset": 2027,
           "addend": 0
@@ -29909,7 +29909,7 @@
           "target": 6065688,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62205",
+          "symbol": "$L62212",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 10 for animation IDs 13; compiler-local offset 2200 and canonical destination independently checked",
           "local_target_offset": 2200,
           "addend": 0
@@ -29919,7 +29919,7 @@
           "target": 6065843,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62210",
+          "symbol": "$L62217",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 11 for animation IDs 14; compiler-local offset 2355 and canonical destination independently checked",
           "local_target_offset": 2355,
           "addend": 0
@@ -29929,7 +29929,7 @@
           "target": 6066102,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62217",
+          "symbol": "$L62224",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 12 for animation IDs 15; compiler-local offset 2614 and canonical destination independently checked",
           "local_target_offset": 2614,
           "addend": 0
@@ -29939,7 +29939,7 @@
           "target": 6066361,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62224",
+          "symbol": "$L62231",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 13 for animation IDs 16; compiler-local offset 2873 and canonical destination independently checked",
           "local_target_offset": 2873,
           "addend": 0
@@ -29949,7 +29949,7 @@
           "target": 6066620,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62231",
+          "symbol": "$L62238",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 14 for animation IDs 47; compiler-local offset 3132 and canonical destination independently checked",
           "local_target_offset": 3132,
           "addend": 0
@@ -29959,7 +29959,7 @@
           "target": 6066924,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62239",
+          "symbol": "$L62246",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 15 for animation IDs 50; compiler-local offset 3436 and canonical destination independently checked",
           "local_target_offset": 3436,
           "addend": 0
@@ -29969,7 +29969,7 @@
           "target": 6067411,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62253",
+          "symbol": "$L62260",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 16 for animation IDs 51; compiler-local offset 3923 and canonical destination independently checked",
           "local_target_offset": 3923,
           "addend": 0
@@ -29979,7 +29979,7 @@
           "target": 6067898,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62267",
+          "symbol": "$L62274",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 17 for animation IDs 52; compiler-local offset 4410 and canonical destination independently checked",
           "local_target_offset": 4410,
           "addend": 0
@@ -29989,7 +29989,7 @@
           "target": 6068385,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62281",
+          "symbol": "$L62288",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 18 for animation IDs 53; compiler-local offset 4897 and canonical destination independently checked",
           "local_target_offset": 4897,
           "addend": 0
@@ -29999,7 +29999,7 @@
           "target": 6068872,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62295",
+          "symbol": "$L62302",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 19 for animation IDs 54; compiler-local offset 5384 and canonical destination independently checked",
           "local_target_offset": 5384,
           "addend": 0
@@ -30009,7 +30009,7 @@
           "target": 6069359,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62309",
+          "symbol": "$L62316",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 20 for animation IDs 55; compiler-local offset 5871 and canonical destination independently checked",
           "local_target_offset": 5871,
           "addend": 0
@@ -30019,7 +30019,7 @@
           "target": 6069846,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62323",
+          "symbol": "$L62330",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 21 for animation IDs 56; compiler-local offset 6358 and canonical destination independently checked",
           "local_target_offset": 6358,
           "addend": 0
@@ -30029,7 +30029,7 @@
           "target": 6070309,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62336",
+          "symbol": "$L62343",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 22 for animation IDs 57; compiler-local offset 6821 and canonical destination independently checked",
           "local_target_offset": 6821,
           "addend": 0
@@ -30039,7 +30039,7 @@
           "target": 6070772,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62349",
+          "symbol": "$L62356",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 23 for animation IDs 58; compiler-local offset 7284 and canonical destination independently checked",
           "local_target_offset": 7284,
           "addend": 0
@@ -30049,7 +30049,7 @@
           "target": 6071235,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62362",
+          "symbol": "$L62369",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 24 for animation IDs 59; compiler-local offset 7747 and canonical destination independently checked",
           "local_target_offset": 7747,
           "addend": 0
@@ -30059,7 +30059,7 @@
           "target": 6071746,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62377",
+          "symbol": "$L62384",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 25 for animation IDs 60; compiler-local offset 8258 and canonical destination independently checked",
           "local_target_offset": 8258,
           "addend": 0
@@ -30069,7 +30069,7 @@
           "target": 6072257,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62392",
+          "symbol": "$L62399",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 26 for animation IDs 61; compiler-local offset 8769 and canonical destination independently checked",
           "local_target_offset": 8769,
           "addend": 0
@@ -30079,7 +30079,7 @@
           "target": 6072768,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62407",
+          "symbol": "$L62414",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 27 for animation IDs 62; compiler-local offset 9280 and canonical destination independently checked",
           "local_target_offset": 9280,
           "addend": 0
@@ -30089,7 +30089,7 @@
           "target": 6073207,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62419",
+          "symbol": "$L62426",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 28 for animation IDs 63; compiler-local offset 9719 and canonical destination independently checked",
           "local_target_offset": 9719,
           "addend": 0
@@ -30099,7 +30099,7 @@
           "target": 6073634,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62431",
+          "symbol": "$L62438",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 29 for animation IDs 64; compiler-local offset 10146 and canonical destination independently checked",
           "local_target_offset": 10146,
           "addend": 0
@@ -30109,7 +30109,7 @@
           "target": 6074195,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62447",
+          "symbol": "$L62454",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 30 for animation IDs 65; compiler-local offset 10707 and canonical destination independently checked",
           "local_target_offset": 10707,
           "addend": 0
@@ -30119,7 +30119,7 @@
           "target": 6074756,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62463",
+          "symbol": "$L62470",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 31 for animation IDs 66; compiler-local offset 11268 and canonical destination independently checked",
           "local_target_offset": 11268,
           "addend": 0
@@ -30129,7 +30129,7 @@
           "target": 6075245,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62476",
+          "symbol": "$L62483",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 32 for animation IDs 67; compiler-local offset 11757 and canonical destination independently checked",
           "local_target_offset": 11757,
           "addend": 0
@@ -30139,7 +30139,7 @@
           "target": 6075722,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62489",
+          "symbol": "$L62496",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 33 for animation IDs 68; compiler-local offset 12234 and canonical destination independently checked",
           "local_target_offset": 12234,
           "addend": 0
@@ -30149,7 +30149,7 @@
           "target": 6076038,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62498",
+          "symbol": "$L62505",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 34 for animation IDs 69; compiler-local offset 12550 and canonical destination independently checked",
           "local_target_offset": 12550,
           "addend": 0
@@ -30159,7 +30159,7 @@
           "target": 6076315,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62506",
+          "symbol": "$L62513",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 35 for animation IDs 70; compiler-local offset 12827 and canonical destination independently checked",
           "local_target_offset": 12827,
           "addend": 0
@@ -30169,7 +30169,7 @@
           "target": 6076795,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62518",
+          "symbol": "$L62525",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 36 for animation IDs 71; compiler-local offset 13307 and canonical destination independently checked",
           "local_target_offset": 13307,
           "addend": 0
@@ -30179,7 +30179,7 @@
           "target": 6077222,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62530",
+          "symbol": "$L62537",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 37 for animation IDs 72; compiler-local offset 13734 and canonical destination independently checked",
           "local_target_offset": 13734,
           "addend": 0
@@ -30189,7 +30189,7 @@
           "target": 6077553,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62540",
+          "symbol": "$L62547",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 38 for animation IDs 73; compiler-local offset 14065 and canonical destination independently checked",
           "local_target_offset": 14065,
           "addend": 0
@@ -30199,7 +30199,7 @@
           "target": 6077884,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62550",
+          "symbol": "$L62557",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 39 for animation IDs 74; compiler-local offset 14396 and canonical destination independently checked",
           "local_target_offset": 14396,
           "addend": 0
@@ -30209,7 +30209,7 @@
           "target": 6078191,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62559",
+          "symbol": "$L62566",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 40 for animation IDs 75; compiler-local offset 14703 and canonical destination independently checked",
           "local_target_offset": 14703,
           "addend": 0
@@ -30219,7 +30219,7 @@
           "target": 6078690,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62573",
+          "symbol": "$L62580",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 41 for animation IDs 76; compiler-local offset 15202 and canonical destination independently checked",
           "local_target_offset": 15202,
           "addend": 0
@@ -30229,7 +30229,7 @@
           "target": 6079189,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62587",
+          "symbol": "$L62594",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 42 for animation IDs 77; compiler-local offset 15701 and canonical destination independently checked",
           "local_target_offset": 15701,
           "addend": 0
@@ -30239,7 +30239,7 @@
           "target": 6079664,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62600",
+          "symbol": "$L62607",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 43 for animation IDs 81; compiler-local offset 16176 and canonical destination independently checked",
           "local_target_offset": 16176,
           "addend": 0
@@ -30249,7 +30249,7 @@
           "target": 6080149,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62614",
+          "symbol": "$L62621",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 44 for animation IDs 82; compiler-local offset 16661 and canonical destination independently checked",
           "local_target_offset": 16661,
           "addend": 0
@@ -30259,7 +30259,7 @@
           "target": 6080695,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62629",
+          "symbol": "$L62636",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 45 for animation IDs 83; compiler-local offset 17207 and canonical destination independently checked",
           "local_target_offset": 17207,
           "addend": 0
@@ -30269,7 +30269,7 @@
           "target": 6081276,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62646",
+          "symbol": "$L62653",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 46 for animation IDs 84; compiler-local offset 17788 and canonical destination independently checked",
           "local_target_offset": 17788,
           "addend": 0
@@ -30279,7 +30279,7 @@
           "target": 6081857,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62663",
+          "symbol": "$L62670",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 47 for animation IDs 85; compiler-local offset 18369 and canonical destination independently checked",
           "local_target_offset": 18369,
           "addend": 0
@@ -30289,7 +30289,7 @@
           "target": 6082324,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62677",
+          "symbol": "$L62684",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 48 for animation IDs 86; compiler-local offset 18836 and canonical destination independently checked",
           "local_target_offset": 18836,
           "addend": 0
@@ -30299,7 +30299,7 @@
           "target": 6082806,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62692",
+          "symbol": "$L62699",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 49 for animation IDs 87; compiler-local offset 19318 and canonical destination independently checked",
           "local_target_offset": 19318,
           "addend": 0
@@ -30309,7 +30309,7 @@
           "target": 6082985,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62698",
+          "symbol": "$L62705",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 50 for animation IDs 96; compiler-local offset 19497 and canonical destination independently checked",
           "local_target_offset": 19497,
           "addend": 0
@@ -30319,7 +30319,7 @@
           "target": 6083315,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62708",
+          "symbol": "$L62715",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 51 for animation IDs 97; compiler-local offset 19827 and canonical destination independently checked",
           "local_target_offset": 19827,
           "addend": 0
@@ -30329,7 +30329,7 @@
           "target": 6083563,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62716",
+          "symbol": "$L62723",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 52 for animation IDs 98; compiler-local offset 20075 and canonical destination independently checked",
           "local_target_offset": 20075,
           "addend": 0
@@ -30339,7 +30339,7 @@
           "target": 6083811,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62724",
+          "symbol": "$L62731",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 53 for animation IDs 99; compiler-local offset 20323 and canonical destination independently checked",
           "local_target_offset": 20323,
           "addend": 0
@@ -30349,7 +30349,7 @@
           "target": 6083987,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62731",
+          "symbol": "$L62738",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 54 for animation IDs 150; compiler-local offset 20499 and canonical destination independently checked",
           "local_target_offset": 20499,
           "addend": 0
@@ -30359,7 +30359,7 @@
           "target": 6084405,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62745",
+          "symbol": "$L62752",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 55 for animation IDs 151; compiler-local offset 20917 and canonical destination independently checked",
           "local_target_offset": 20917,
           "addend": 0
@@ -30369,7 +30369,7 @@
           "target": 6084823,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62759",
+          "symbol": "$L62766",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 56 for animation IDs 152; compiler-local offset 21335 and canonical destination independently checked",
           "local_target_offset": 21335,
           "addend": 0
@@ -30379,7 +30379,7 @@
           "target": 6085241,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62773",
+          "symbol": "$L62780",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 57 for animation IDs 153; compiler-local offset 21753 and canonical destination independently checked",
           "local_target_offset": 21753,
           "addend": 0
@@ -30389,7 +30389,7 @@
           "target": 6085635,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62786",
+          "symbol": "$L62793",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 58 for animation IDs 154; compiler-local offset 22147 and canonical destination independently checked",
           "local_target_offset": 22147,
           "addend": 0
@@ -30399,7 +30399,7 @@
           "target": 6086029,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62799",
+          "symbol": "$L62806",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 59 for animation IDs 155; compiler-local offset 22541 and canonical destination independently checked",
           "local_target_offset": 22541,
           "addend": 0
@@ -30409,7 +30409,7 @@
           "target": 6086423,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62812",
+          "symbol": "$L62819",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 60 for animation IDs 156; compiler-local offset 22935 and canonical destination independently checked",
           "local_target_offset": 22935,
           "addend": 0
@@ -30419,7 +30419,7 @@
           "target": 6086695,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62819",
+          "symbol": "$L62826",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 61 for animation IDs 157; compiler-local offset 23207 and canonical destination independently checked",
           "local_target_offset": 23207,
           "addend": 0
@@ -30429,7 +30429,7 @@
           "target": 6087027,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62829",
+          "symbol": "$L62836",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 62 for animation IDs 158; compiler-local offset 23539 and canonical destination independently checked",
           "local_target_offset": 23539,
           "addend": 0
@@ -30439,7 +30439,7 @@
           "target": 6087359,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62839",
+          "symbol": "$L62846",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 63 for animation IDs 161; compiler-local offset 23871 and canonical destination independently checked",
           "local_target_offset": 23871,
           "addend": 0
@@ -30449,7 +30449,7 @@
           "target": 6087635,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62847",
+          "symbol": "$L62854",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 64 for animation IDs 162; compiler-local offset 24147 and canonical destination independently checked",
           "local_target_offset": 24147,
           "addend": 0
@@ -30459,7 +30459,7 @@
           "target": 6088126,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62861",
+          "symbol": "$L62868",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 65 for animation IDs 163; compiler-local offset 24638 and canonical destination independently checked",
           "local_target_offset": 24638,
           "addend": 0
@@ -30469,7 +30469,7 @@
           "target": 6088586,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62877",
+          "symbol": "$L62884",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 66 for animation IDs 164; compiler-local offset 25098 and canonical destination independently checked",
           "local_target_offset": 25098,
           "addend": 0
@@ -30479,7 +30479,7 @@
           "target": 6088934,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62887",
+          "symbol": "$L62894",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 67 for animation IDs 165; compiler-local offset 25446 and canonical destination independently checked",
           "local_target_offset": 25446,
           "addend": 0
@@ -30489,7 +30489,7 @@
           "target": 6089367,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62898",
+          "symbol": "$L62905",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 68 for animation IDs 166; compiler-local offset 25879 and canonical destination independently checked",
           "local_target_offset": 25879,
           "addend": 0
@@ -30499,7 +30499,7 @@
           "target": 6089804,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62913",
+          "symbol": "$L62920",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 69 for animation IDs 167; compiler-local offset 26316 and canonical destination independently checked",
           "local_target_offset": 26316,
           "addend": 0
@@ -30509,7 +30509,7 @@
           "target": 6090278,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62928",
+          "symbol": "$L62935",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 70 for animation IDs 168; compiler-local offset 26790 and canonical destination independently checked",
           "local_target_offset": 26790,
           "addend": 0
@@ -30519,7 +30519,7 @@
           "target": 6090598,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62937",
+          "symbol": "$L62944",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 71 for animation IDs 169; compiler-local offset 27110 and canonical destination independently checked",
           "local_target_offset": 27110,
           "addend": 0
@@ -30529,7 +30529,7 @@
           "target": 6090918,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62946",
+          "symbol": "$L62953",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 72 for animation IDs 170; compiler-local offset 27430 and canonical destination independently checked",
           "local_target_offset": 27430,
           "addend": 0
@@ -30539,7 +30539,7 @@
           "target": 6091334,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62957",
+          "symbol": "$L62964",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 73 for animation IDs 171; compiler-local offset 27846 and canonical destination independently checked",
           "local_target_offset": 27846,
           "addend": 0
@@ -30549,7 +30549,7 @@
           "target": 6091867,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62972",
+          "symbol": "$L62979",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 74 for animation IDs 178; compiler-local offset 28379 and canonical destination independently checked",
           "local_target_offset": 28379,
           "addend": 0
@@ -30559,7 +30559,7 @@
           "target": 6092044,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62978",
+          "symbol": "$L62985",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 75 for animation IDs 180; compiler-local offset 28556 and canonical destination independently checked",
           "local_target_offset": 28556,
           "addend": 0
@@ -30569,7 +30569,7 @@
           "target": 6092414,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62988",
+          "symbol": "$L62995",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 76 for animation IDs 200; compiler-local offset 28926 and canonical destination independently checked",
           "local_target_offset": 28926,
           "addend": 0
@@ -30579,7 +30579,7 @@
           "target": 6092791,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63000",
+          "symbol": "$L63007",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 77 for animation IDs 201; compiler-local offset 29303 and canonical destination independently checked",
           "local_target_offset": 29303,
           "addend": 0
@@ -30589,7 +30589,7 @@
           "target": 6093190,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63014",
+          "symbol": "$L63021",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 78 for animation IDs 202; compiler-local offset 29702 and canonical destination independently checked",
           "local_target_offset": 29702,
           "addend": 0
@@ -30599,7 +30599,7 @@
           "target": 6093497,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63024",
+          "symbol": "$L63031",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 79 for animation IDs 203; compiler-local offset 30009 and canonical destination independently checked",
           "local_target_offset": 30009,
           "addend": 0
@@ -30609,7 +30609,7 @@
           "target": 6093743,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63033",
+          "symbol": "$L63040",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 80 for animation IDs 204; compiler-local offset 30255 and canonical destination independently checked",
           "local_target_offset": 30255,
           "addend": 0
@@ -30619,7 +30619,7 @@
           "target": 6094144,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63046",
+          "symbol": "$L63053",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 81 for animation IDs 205; compiler-local offset 30656 and canonical destination independently checked",
           "local_target_offset": 30656,
           "addend": 0
@@ -30629,7 +30629,7 @@
           "target": 6094709,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63064",
+          "symbol": "$L63071",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 82 for animation IDs 206; compiler-local offset 31221 and canonical destination independently checked",
           "local_target_offset": 31221,
           "addend": 0
@@ -30639,7 +30639,7 @@
           "target": 6095073,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63077",
+          "symbol": "$L63084",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 83 for animation IDs 207; compiler-local offset 31585 and canonical destination independently checked",
           "local_target_offset": 31585,
           "addend": 0
@@ -30649,7 +30649,7 @@
           "target": 6095545,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63090",
+          "symbol": "$L63097",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 84 for animation IDs 208; compiler-local offset 32057 and canonical destination independently checked",
           "local_target_offset": 32057,
           "addend": 0
@@ -30659,7 +30659,7 @@
           "target": 6096017,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63103",
+          "symbol": "$L63110",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 85 for animation IDs 209; compiler-local offset 32529 and canonical destination independently checked",
           "local_target_offset": 32529,
           "addend": 0
@@ -30669,7 +30669,7 @@
           "target": 6096489,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63116",
+          "symbol": "$L63123",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 86 for animation IDs 210; compiler-local offset 33001 and canonical destination independently checked",
           "local_target_offset": 33001,
           "addend": 0
@@ -30679,7 +30679,7 @@
           "target": 6096988,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63129",
+          "symbol": "$L63136",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 87 for animation IDs 211; compiler-local offset 33500 and canonical destination independently checked",
           "local_target_offset": 33500,
           "addend": 0
@@ -30689,7 +30689,7 @@
           "target": 6097395,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63144",
+          "symbol": "$L63151",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 88 for animation IDs 220; compiler-local offset 33907 and canonical destination independently checked",
           "local_target_offset": 33907,
           "addend": 0
@@ -30699,7 +30699,7 @@
           "target": 6097825,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63154",
+          "symbol": "$L63161",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 89 for animation IDs 221; compiler-local offset 34337 and canonical destination independently checked",
           "local_target_offset": 34337,
           "addend": 0
@@ -30709,7 +30709,7 @@
           "target": 6098358,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63169",
+          "symbol": "$L63176",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 90 for animation IDs 230; compiler-local offset 34870 and canonical destination independently checked",
           "local_target_offset": 34870,
           "addend": 0
@@ -30719,7 +30719,7 @@
           "target": 6098882,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63184",
+          "symbol": "$L63191",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 91 for animation IDs 231; compiler-local offset 35394 and canonical destination independently checked",
           "local_target_offset": 35394,
           "addend": 0
@@ -30729,7 +30729,7 @@
           "target": 6099406,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63199",
+          "symbol": "$L63206",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 92 for animation IDs 232; compiler-local offset 35918 and canonical destination independently checked",
           "local_target_offset": 35918,
           "addend": 0
@@ -30739,7 +30739,7 @@
           "target": 6099930,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63214",
+          "symbol": "$L63221",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 93 for animation IDs 233; compiler-local offset 36442 and canonical destination independently checked",
           "local_target_offset": 36442,
           "addend": 0
@@ -30749,7 +30749,7 @@
           "target": 6100098,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63219",
+          "symbol": "$L63226",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 94 for animation IDs 248; compiler-local offset 36610 and canonical destination independently checked",
           "local_target_offset": 36610,
           "addend": 0
@@ -30759,7 +30759,7 @@
           "target": 6100617,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63230",
+          "symbol": "$L63237",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 95 for animation IDs 249; compiler-local offset 37129 and canonical destination independently checked",
           "local_target_offset": 37129,
           "addend": 0
@@ -30769,7 +30769,7 @@
           "target": 6102604,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63258",
+          "symbol": "$L63265",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 96 for animation IDs 250; compiler-local offset 39116 and canonical destination independently checked",
           "local_target_offset": 39116,
           "addend": 0
@@ -30779,7 +30779,7 @@
           "target": 6103355,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63277",
+          "symbol": "$L63284",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 97 for animation IDs 251; compiler-local offset 39867 and canonical destination independently checked",
           "local_target_offset": 39867,
           "addend": 0
@@ -30789,7 +30789,7 @@
           "target": 6104118,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63296",
+          "symbol": "$L63303",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 98 for animation IDs 252; compiler-local offset 40630 and canonical destination independently checked",
           "local_target_offset": 40630,
           "addend": 0
@@ -30799,7 +30799,7 @@
           "target": 6105051,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63319",
+          "symbol": "$L63326",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 99 for animation IDs 253; compiler-local offset 41563 and canonical destination independently checked",
           "local_target_offset": 41563,
           "addend": 0
@@ -30809,7 +30809,7 @@
           "target": 6105898,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63336",
+          "symbol": "$L63343",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 100 for animation IDs 254; compiler-local offset 42410 and canonical destination independently checked",
           "local_target_offset": 42410,
           "addend": 0
@@ -30819,7 +30819,7 @@
           "target": 6106762,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63353",
+          "symbol": "$L63360",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 101 for animation IDs 255; compiler-local offset 43274 and canonical destination independently checked",
           "local_target_offset": 43274,
           "addend": 0
@@ -30829,7 +30829,7 @@
           "target": 6107164,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63365",
+          "symbol": "$L63372",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 102 for animation IDs 256; compiler-local offset 43676 and canonical destination independently checked",
           "local_target_offset": 43676,
           "addend": 0
@@ -30839,7 +30839,7 @@
           "target": 6107507,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63375",
+          "symbol": "$L63382",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 103 for animation IDs 257; compiler-local offset 44019 and canonical destination independently checked",
           "local_target_offset": 44019,
           "addend": 0
@@ -30849,7 +30849,7 @@
           "target": 6107655,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63380",
+          "symbol": "$L63387",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 104 for animation IDs 258; compiler-local offset 44167 and canonical destination independently checked",
           "local_target_offset": 44167,
           "addend": 0
@@ -30859,7 +30859,7 @@
           "target": 6107803,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63385",
+          "symbol": "$L63392",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 105 for animation IDs 259; compiler-local offset 44315 and canonical destination independently checked",
           "local_target_offset": 44315,
           "addend": 0
@@ -30869,7 +30869,7 @@
           "target": 6108261,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63398",
+          "symbol": "$L63405",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 106 for animation IDs 260; compiler-local offset 44773 and canonical destination independently checked",
           "local_target_offset": 44773,
           "addend": 0
@@ -30879,7 +30879,7 @@
           "target": 6108976,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63413",
+          "symbol": "$L63420",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 107 for animation IDs 261; compiler-local offset 45488 and canonical destination independently checked",
           "local_target_offset": 45488,
           "addend": 0
@@ -30889,7 +30889,7 @@
           "target": 6109767,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63431",
+          "symbol": "$L63438",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 108 for animation IDs 262; compiler-local offset 46279 and canonical destination independently checked",
           "local_target_offset": 46279,
           "addend": 0
@@ -30899,7 +30899,7 @@
           "target": 6110150,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63441",
+          "symbol": "$L63448",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 109 for animation IDs 263; compiler-local offset 46662 and canonical destination independently checked",
           "local_target_offset": 46662,
           "addend": 0
@@ -30909,7 +30909,7 @@
           "target": 6110623,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63452",
+          "symbol": "$L63459",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 110 for animation IDs 264; compiler-local offset 47135 and canonical destination independently checked",
           "local_target_offset": 47135,
           "addend": 0
@@ -30919,7 +30919,7 @@
           "target": 6110792,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63457",
+          "symbol": "$L63464",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 111 for animation IDs 265; compiler-local offset 47304 and canonical destination independently checked",
           "local_target_offset": 47304,
           "addend": 0
@@ -30929,7 +30929,7 @@
           "target": 6110961,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63462",
+          "symbol": "$L63469",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 112 for animation IDs 266; compiler-local offset 47473 and canonical destination independently checked",
           "local_target_offset": 47473,
           "addend": 0
@@ -30939,7 +30939,7 @@
           "target": 6111475,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63475",
+          "symbol": "$L63482",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 113 for animation IDs 267; compiler-local offset 47987 and canonical destination independently checked",
           "local_target_offset": 47987,
           "addend": 0
@@ -30949,7 +30949,7 @@
           "target": 6111989,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63488",
+          "symbol": "$L63495",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 114 for animation IDs 268; compiler-local offset 48501 and canonical destination independently checked",
           "local_target_offset": 48501,
           "addend": 0
@@ -30959,7 +30959,7 @@
           "target": 6112720,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63507",
+          "symbol": "$L63514",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 115 for animation IDs 269; compiler-local offset 49232 and canonical destination independently checked",
           "local_target_offset": 49232,
           "addend": 0
@@ -30969,7 +30969,7 @@
           "target": 6113055,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63517",
+          "symbol": "$L63524",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 116 for animation IDs 270; compiler-local offset 49567 and canonical destination independently checked",
           "local_target_offset": 49567,
           "addend": 0
@@ -30979,7 +30979,7 @@
           "target": 6113390,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63527",
+          "symbol": "$L63534",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 117 for animation IDs 271; compiler-local offset 49902 and canonical destination independently checked",
           "local_target_offset": 49902,
           "addend": 0
@@ -30989,7 +30989,7 @@
           "target": 6113926,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63539",
+          "symbol": "$L63546",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 118 for animation IDs 272; compiler-local offset 50438 and canonical destination independently checked",
           "local_target_offset": 50438,
           "addend": 0
@@ -30999,7 +30999,7 @@
           "target": 6115058,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63581",
+          "symbol": "$L63588",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 119 for animation IDs 273; compiler-local offset 51570 and canonical destination independently checked",
           "local_target_offset": 51570,
           "addend": 0
@@ -31009,7 +31009,7 @@
           "target": 6116089,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63608",
+          "symbol": "$L63615",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 120 for animation IDs 274; compiler-local offset 52601 and canonical destination independently checked",
           "local_target_offset": 52601,
           "addend": 0
@@ -31019,7 +31019,7 @@
           "target": 6117236,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63650",
+          "symbol": "$L63657",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 121 for animation IDs 275; compiler-local offset 53748 and canonical destination independently checked",
           "local_target_offset": 53748,
           "addend": 0
@@ -31029,7 +31029,7 @@
           "target": 6118501,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63668",
+          "symbol": "$L63675",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 122 for animation IDs 280; compiler-local offset 55013 and canonical destination independently checked",
           "local_target_offset": 55013,
           "addend": 0
@@ -31039,7 +31039,7 @@
           "target": 6118934,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63679",
+          "symbol": "$L63686",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 123 for animation IDs 281; compiler-local offset 55446 and canonical destination independently checked",
           "local_target_offset": 55446,
           "addend": 0
@@ -31049,7 +31049,7 @@
           "target": 6119367,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63690",
+          "symbol": "$L63697",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 124 for animation IDs 282; compiler-local offset 55879 and canonical destination independently checked",
           "local_target_offset": 55879,
           "addend": 0
@@ -31059,7 +31059,7 @@
           "target": 6119998,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63707",
+          "symbol": "$L63714",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 125 for animation IDs 283; compiler-local offset 56510 and canonical destination independently checked",
           "local_target_offset": 56510,
           "addend": 0
@@ -31069,7 +31069,7 @@
           "target": 6120397,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63717",
+          "symbol": "$L63724",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 126 for animation IDs 284; compiler-local offset 56909 and canonical destination independently checked",
           "local_target_offset": 56909,
           "addend": 0
@@ -31079,7 +31079,7 @@
           "target": 6120813,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63729",
+          "symbol": "$L63736",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 127 for animation IDs 285; compiler-local offset 57325 and canonical destination independently checked",
           "local_target_offset": 57325,
           "addend": 0
@@ -31089,7 +31089,7 @@
           "target": 6121192,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63740",
+          "symbol": "$L63747",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 128 for animation IDs 286; compiler-local offset 57704 and canonical destination independently checked",
           "local_target_offset": 57704,
           "addend": 0
@@ -31099,7 +31099,7 @@
           "target": 6121571,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63751",
+          "symbol": "$L63758",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 129 for animation IDs 287; compiler-local offset 58083 and canonical destination independently checked",
           "local_target_offset": 58083,
           "addend": 0
@@ -31109,7 +31109,7 @@
           "target": 6121950,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63762",
+          "symbol": "$L63769",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 130 for animation IDs 288; compiler-local offset 58462 and canonical destination independently checked",
           "local_target_offset": 58462,
           "addend": 0
@@ -31119,7 +31119,7 @@
           "target": 6122269,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63771",
+          "symbol": "$L63778",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 131 for animation IDs 289; compiler-local offset 58781 and canonical destination independently checked",
           "local_target_offset": 58781,
           "addend": 0
@@ -31129,7 +31129,7 @@
           "target": 6123146,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63796",
+          "symbol": "$L63803",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 132 for animation IDs 290; compiler-local offset 59658 and canonical destination independently checked",
           "local_target_offset": 59658,
           "addend": 0
@@ -31139,7 +31139,7 @@
           "target": 6123529,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63806",
+          "symbol": "$L63813",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 133 for animation IDs 291; compiler-local offset 60041 and canonical destination independently checked",
           "local_target_offset": 60041,
           "addend": 0
@@ -31149,7 +31149,7 @@
           "target": 6123878,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63815",
+          "symbol": "$L63822",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 134 for animation IDs 300; compiler-local offset 60390 and canonical destination independently checked",
           "local_target_offset": 60390,
           "addend": 0
@@ -31159,7 +31159,7 @@
           "target": 6124683,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63844",
+          "symbol": "$L63851",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 135 for animation IDs 301; compiler-local offset 61195 and canonical destination independently checked",
           "local_target_offset": 61195,
           "addend": 0
@@ -31169,7 +31169,7 @@
           "target": 6125793,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63880",
+          "symbol": "$L63887",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 136 for animation IDs 302; compiler-local offset 62305 and canonical destination independently checked",
           "local_target_offset": 62305,
           "addend": 0
@@ -31179,7 +31179,7 @@
           "target": 6127020,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63921",
+          "symbol": "$L63928",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 137 for animation IDs 303; compiler-local offset 63532 and canonical destination independently checked",
           "local_target_offset": 63532,
           "addend": 0
@@ -31189,7 +31189,7 @@
           "target": 6127963,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63941",
+          "symbol": "$L63948",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 138 for animation IDs 304; compiler-local offset 64475 and canonical destination independently checked",
           "local_target_offset": 64475,
           "addend": 0
@@ -31199,7 +31199,7 @@
           "target": 6128678,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63957",
+          "symbol": "$L63964",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 139 for animation IDs 305; compiler-local offset 65190 and canonical destination independently checked",
           "local_target_offset": 65190,
           "addend": 0
@@ -31209,7 +31209,7 @@
           "target": 6130011,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63976",
+          "symbol": "$L63983",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 140 for animation IDs 306; compiler-local offset 66523 and canonical destination independently checked",
           "local_target_offset": 66523,
           "addend": 0
@@ -31219,7 +31219,7 @@
           "target": 6130319,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63983",
+          "symbol": "$L63990",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 141 for animation IDs 307; compiler-local offset 66831 and canonical destination independently checked",
           "local_target_offset": 66831,
           "addend": 0
@@ -31229,7 +31229,7 @@
           "target": 6131998,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64018",
+          "symbol": "$L64025",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 142 for animation IDs 308; compiler-local offset 68510 and canonical destination independently checked",
           "local_target_offset": 68510,
           "addend": 0
@@ -31239,7 +31239,7 @@
           "target": 6133154,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64046",
+          "symbol": "$L64053",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 143 for animation IDs 309; compiler-local offset 69666 and canonical destination independently checked",
           "local_target_offset": 69666,
           "addend": 0
@@ -31249,7 +31249,7 @@
           "target": 6134308,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64074",
+          "symbol": "$L64081",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 144 for animation IDs 310; compiler-local offset 70820 and canonical destination independently checked",
           "local_target_offset": 70820,
           "addend": 0
@@ -31259,7 +31259,7 @@
           "target": 6135485,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64102",
+          "symbol": "$L64109",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 145 for animation IDs 311; compiler-local offset 71997 and canonical destination independently checked",
           "local_target_offset": 71997,
           "addend": 0
@@ -31269,7 +31269,7 @@
           "target": 6137576,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64129",
+          "symbol": "$L64136",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 146 for animation IDs 312; compiler-local offset 74088 and canonical destination independently checked",
           "local_target_offset": 74088,
           "addend": 0
@@ -31279,7 +31279,7 @@
           "target": 6140220,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64172",
+          "symbol": "$L64179",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 147 for animation IDs 313; compiler-local offset 76732 and canonical destination independently checked",
           "local_target_offset": 76732,
           "addend": 0
@@ -31289,7 +31289,7 @@
           "target": 6142873,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64215",
+          "symbol": "$L64222",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 148 for animation IDs 314; compiler-local offset 79385 and canonical destination independently checked",
           "local_target_offset": 79385,
           "addend": 0
@@ -31299,7 +31299,7 @@
           "target": 6143792,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64243",
+          "symbol": "$L64250",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 149 for animation IDs 315; compiler-local offset 80304 and canonical destination independently checked",
           "local_target_offset": 80304,
           "addend": 0
@@ -31309,7 +31309,7 @@
           "target": 6144712,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64270",
+          "symbol": "$L64277",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 150 for animation IDs 316; compiler-local offset 81224 and canonical destination independently checked",
           "local_target_offset": 81224,
           "addend": 0
@@ -31319,7 +31319,7 @@
           "target": 6145666,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64299",
+          "symbol": "$L64306",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 151 for animation IDs 317; compiler-local offset 82178 and canonical destination independently checked",
           "local_target_offset": 82178,
           "addend": 0
@@ -31329,7 +31329,7 @@
           "target": 6146442,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64316",
+          "symbol": "$L64323",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 152 for animation IDs 318; compiler-local offset 82954 and canonical destination independently checked",
           "local_target_offset": 82954,
           "addend": 0
@@ -31339,7 +31339,7 @@
           "target": 6147187,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64341",
+          "symbol": "$L64348",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 153 for animation IDs 319; compiler-local offset 83699 and canonical destination independently checked",
           "local_target_offset": 83699,
           "addend": 0
@@ -31349,7 +31349,7 @@
           "target": 6147963,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64358",
+          "symbol": "$L64365",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 154 for animation IDs 320; compiler-local offset 84475 and canonical destination independently checked",
           "local_target_offset": 84475,
           "addend": 0
@@ -31359,7 +31359,7 @@
           "target": 6148708,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64383",
+          "symbol": "$L64390",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 155 for animation IDs 321; compiler-local offset 85220 and canonical destination independently checked",
           "local_target_offset": 85220,
           "addend": 0
@@ -31369,7 +31369,7 @@
           "target": 6149507,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L64400",
+          "symbol": "$L64407",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 156 for animation IDs 322; compiler-local offset 86019 and canonical destination independently checked",
           "local_target_offset": 86019,
           "addend": 0
@@ -31379,7 +31379,7 @@
           "target": 6063660,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62141",
+          "symbol": "$L62148",
           "evidence": "docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner; original switch address entry 157 for animation IDs 11,12,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,49,78,79,80,88,89,90,91,92,93,94,95,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,159,160,172,173,174,175,176,177,179,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,212,213,214,215,216,217,218,219,222,223,224,225,226,227,228,229,234,235,236,237,238,239,240,241,242,243,244,245,246,247,276,277,278,279,292,293,294,295,296,297,298,299; compiler-local offset 172 and canonical destination independently checked",
           "local_target_offset": 172,
           "addend": 0
@@ -31407,18 +31407,18 @@
       "symbol": "?Slot06@Character05@@UAEXXZ",
       "target_address": "0x005C8580",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "ee5e262e8befc085068ebc360c8ffc849a810ffa21c2e6777dbe0f84397c6103",
-      "object_sha256": "0bfc0b371337a68e5b6a82c9f063998245278c90b4f84f12b316db6b4d30c2a9",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "d284c62fff1bcfdac2fffbd014aaa2c6ab470cc6a4e38fa4851ace41c4e43a72",
       "source_sha256": "fc46657d8796ce5fa3cca03a21aa1730d1bf03a047bbca7dbbba21e166ba309d",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "f520ce77c3a9dc9b6293260843ad60332e54958cfd48f4e13d2fed5ab99fe1f2",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "35f84adf9f9fa1fa72e10a60c65c9aa85fa3c1de1571cf28608896ed4fdbc457",
+      "unit_sha256": "f3076db0db6d676eaa8b0d211493acdd988e4cc8c9631983b64cd7b12f525df0",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

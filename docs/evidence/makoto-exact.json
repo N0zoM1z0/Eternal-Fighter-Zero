@@ -1,0 +1,4543 @@
+{
+  "schema_version": 1,
+  "authority": "complete target-bound native codegen with independently reviewed original symbol destinations; no masks, partial extents or size overrides",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 393,
+      "matched_bytes": 393,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z at 0x40eae0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7899848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character03@@6B@",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original constructor vptr store and all13 canonical virtual destinations at788ac8; existing native inheritance and slot ABI retained",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7899840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62194",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original resource literal at788ac0 and complete native COFF makoto NUL-terminated bytes independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to _strcpy at 0x778080; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "54b5477504669319d9464f0ab06beb596706ace03a8cb3bf2b8af103c5bcaf98",
+      "target_extent_sha256": "54b5477504669319d9464f0ab06beb596706ace03a8cb3bf2b8af103c5bcaf98",
+      "unit": "character-03-constructor",
+      "symbol": "??0Character03@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x005F6D90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "739da5d04bccb8ae61f26cc40d20df35c1ca491b850171421212167641aab86a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 283,
+      "matched_bytes": 283,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 275,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?InitializeState@Secondary@@UAEXXZ at 0x40edf0; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "83d4943b37f11a3a63900df317885b4d64d5a4beb89fb2c434ea381955b29295",
+      "target_extent_sha256": "83d4943b37f11a3a63900df317885b4d64d5a4beb89fb2c434ea381955b29295",
+      "unit": "character-03-initialize-state",
+      "symbol": "?InitializeState@Character03@@UAEXXZ",
+      "target_address": "0x005F6F20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "587404f02a4a64b092846f1d599f7293e4c25f5bfcab524b1bf8a58922c91114",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ResetPose@Secondary@@UAEXXZ at 0x40f110; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "76412b247b8877bdbfda6298642b961eacf5eb4b9fa78cbdbd70759b3b29d91b",
+      "target_extent_sha256": "76412b247b8877bdbfda6298642b961eacf5eb4b9fa78cbdbd70759b3b29d91b",
+      "unit": "character-03-reset-pose",
+      "symbol": "?ResetPose@Character03@@UAEXXZ",
+      "target_address": "0x005F7040",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e95072959dfaffc2c71729ccac0229a2462bacb67cf1c677ba0983e8ee7129d0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x412e60; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "12f4b31838fb407164b2e618abf980cd7f20f68e779113173ecb0c4bcb08d049",
+      "target_extent_sha256": "12f4b31838fb407164b2e618abf980cd7f20f68e779113173ecb0c4bcb08d049",
+      "unit": "character-03-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character03@@UAEXF@Z",
+      "target_address": "0x005F7080",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "196f00bc97ebe01751de5f34209fbed1ca50b8b473b8040d763b54a59eaf2e42",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x40e740; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8d16e2b991152a878fa5c3c462361238e437385820fad611289a58562ac27a4f",
+      "target_extent_sha256": "8d16e2b991152a878fa5c3c462361238e437385820fad611289a58562ac27a4f",
+      "unit": "character-03-locomotion",
+      "symbol": "?Slot03@Character03@@UAEXXZ",
+      "target_address": "0x005F70D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fdf8bdb028d27675d010171196f4c655c1fe9da844ad84c6b6281800fd8dbe7c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-03-render-indicators",
+      "symbol": "?Slot01@Character03@@UAEXXZ",
+      "target_address": "0x005F9D20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9f7104b1fff455e22dc244ff39121c7c812ea3edf3b8e947b8e44b74877e5580",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-03-frame-control",
+      "symbol": "?Slot08@Character03@@UAEXXZ",
+      "target_address": "0x005F9D30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c5d8aede18b1b5c489ed94a65f386237fd7262832d4b98258614d69881efb346",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x412b10; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "177adfed8596f4703140c5044fb5a45944451b2e37ad38a8b1d80b016f4ae07a",
+      "target_extent_sha256": "177adfed8596f4703140c5044fb5a45944451b2e37ad38a8b1d80b016f4ae07a",
+      "unit": "character-03-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character03@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x005F9D40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "c8a9bc3f6d245481f3c4d920ef9519245fa997f8560089ac4e0fb8f432d68ac9",
+      "source_sha256": "93c0e8429bebf985e3e738aab12d19154df75be1f80a01e94978147704ccde81",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ce5e37bd7efa8140bc3b751921abd03e8907175d469e0d1df000adbaef7fb54e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11312,
+      "matched_bytes": 11312,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 297,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 474,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 599,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 713,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 837,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 966,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1090,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1233,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1357,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1471,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1595,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1709,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1834,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1948,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2072,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2289,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2310,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2549,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2570,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2824,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2845,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2900,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2984,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3108,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3215,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3340,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3462,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3586,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3634,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3718,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3858,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 3965,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4106,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4228,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4368,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4416,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4500,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4624,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4731,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4855,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 4977,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5105,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5126,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5181,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787c30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5265,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5390,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5497,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5621,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5713,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5837,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 5912,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5992,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6022,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6147,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e48; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6303,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6410,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6440,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6695,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 6761,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6877,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6907,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7097,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7183,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7213,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7396,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?FaceOpponent@Secondary@@QAEHXZ at 0x40e630; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7508,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7651,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7852,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7902,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8071,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8296,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8521,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8640,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8690,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8859,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9104,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9330,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9510,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e40; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9540,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e38; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9618,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9794,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9913,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9963,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10040,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875c8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10074,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7875d0; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10102,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10316,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10492,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10741,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 10835,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x7872f8; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10874,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787e30; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10908,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original typed 64-bit floating operand at 0x787d88; native COFF payload and symbol bits independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 11122,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 11295,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners; original direct CALL operand to ?ClearBufferedButtons@Secondary@@QAEXXZ at 0x40f170; actual receiver, arguments, return and cleanup reviewed",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c551fb2e3143362bea6085aff01b75c115307fe5b2a738572cfdd8214396834a",
+      "target_extent_sha256": "c551fb2e3143362bea6085aff01b75c115307fe5b2a738572cfdd8214396834a",
+      "unit": "character-03-action-input",
+      "symbol": "?Slot04@Character03@@UAEXXZ",
+      "target_address": "0x005F70F0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "693d74eebbffba4bb7ff5cf1e2502c0e3564973412f6ebae7aff158a91f3aa7d",
+      "source_sha256": "152625976605dbd65dc29df4ee9da9f4df5100c4d50827da4c3083c31e1de2f4",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "61f4039985c62b3102d14faa78bca42007636d1f164bf04dd0aa5898b3a6abf6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 4804,
+      "matched_bytes": 4804,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "78e840f7fbc43a2c0f545813fa632e514966e1edbba03645abed3f31091ca9f7",
+      "target_extent_sha256": "78e840f7fbc43a2c0f545813fa632e514966e1edbba03645abed3f31091ca9f7",
+      "unit": "character-03-recognize-commands",
+      "symbol": "?Slot02@Character03@@UAEXXZ",
+      "target_address": "0x005F9D70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "4aceed9aaa6f22f53884350102d4e999ea21df7186bb6b6a105fc5a6afdafdd9",
+      "source_sha256": "1b630f5b9e7e93353b0c7438299ef74bf9b19d50f9416281c1d3b30c56709f3b",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "36d825abbdb8ae0e1520a391bfd6ec05d0cf91349fcd17cc33b431982fd69c7c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "boundary_review": [
+    {
+      "tag": "constructor",
+      "address": "0x5f6d90",
+      "exclusive_end": "0x5f6f19",
+      "size": 393,
+      "instructions": 87,
+      "branches": [
+        {
+          "address": "0x5f6eca",
+          "target": "0x5f6ed5"
+        },
+        {
+          "address": "0x5f6ed9",
+          "target": "0x5f6f10"
+        },
+        {
+          "address": "0x5f6f0e",
+          "target": "0x5f6ecc"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x5f6db4",
+          "instruction": "call   0x40eae0"
+        },
+        {
+          "address": "0x5f6dd1",
+          "instruction": "call   0x778080"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 7,
+      "next_entry": "0x5f6f20",
+      "local_data": []
+    },
+    {
+      "tag": "initialize",
+      "address": "0x5f6f20",
+      "exclusive_end": "0x5f703b",
+      "size": 283,
+      "instructions": 56,
+      "branches": [
+        {
+          "address": "0x5f6fe9",
+          "target": "0x5f6ff4"
+        },
+        {
+          "address": "0x5f6ff8",
+          "target": "0x5f702f"
+        },
+        {
+          "address": "0x5f702d",
+          "target": "0x5f6feb"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x5f7032",
+          "instruction": "call   0x40edf0"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 5,
+      "next_entry": "0x5f7040",
+      "local_data": []
+    },
+    {
+      "tag": "reset-pose",
+      "address": "0x5f7040",
+      "exclusive_end": "0x5f707a",
+      "size": 58,
+      "instructions": 15,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5f7071",
+          "instruction": "call   0x40f110"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 6,
+      "next_entry": "0x5f7080",
+      "local_data": []
+    },
+    {
+      "tag": "remove-effect",
+      "address": "0x5f7080",
+      "exclusive_end": "0x5f70d0",
+      "size": 80,
+      "instructions": 20,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5f70c5",
+          "instruction": "call   0x412e60"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 0,
+      "next_entry": "0x5f70d0",
+      "local_data": []
+    },
+    {
+      "tag": "locomotion",
+      "address": "0x5f70d0",
+      "exclusive_end": "0x5f70e3",
+      "size": 19,
+      "instructions": 9,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5f70da",
+          "instruction": "call   0x40e740"
+        }
+      ],
+      "virtual_calls": [],
+      "padding": 13,
+      "next_entry": "0x5f70f0",
+      "local_data": []
+    },
+    {
+      "tag": "render-indicators",
+      "address": "0x5f9d20",
+      "exclusive_end": "0x5f9d2b",
+      "size": 11,
+      "instructions": 7,
+      "branches": [],
+      "direct_calls": [],
+      "virtual_calls": [],
+      "padding": 5,
+      "next_entry": "0x5f9d30",
+      "local_data": []
+    },
+    {
+      "tag": "frame-control",
+      "address": "0x5f9d30",
+      "exclusive_end": "0x5f9d3b",
+      "size": 11,
+      "instructions": 7,
+      "branches": [],
+      "direct_calls": [],
+      "virtual_calls": [],
+      "padding": 5,
+      "next_entry": "0x5f9d40",
+      "local_data": []
+    },
+    {
+      "tag": "emit-effect",
+      "address": "0x5f9d40",
+      "exclusive_end": "0x5f9d6f",
+      "size": 47,
+      "instructions": 18,
+      "branches": [],
+      "direct_calls": [
+        {
+          "address": "0x5f9d64",
+          "instruction": "call   0x412b10"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x5f9d5a",
+          "instruction": "call   DWORD PTR [eax+0x28]"
+        }
+      ],
+      "padding": 1,
+      "next_entry": "0x5f9d70",
+      "local_data": []
+    },
+    {
+      "tag": "input",
+      "address": "0x5f70f0",
+      "exclusive_end": "0x5f9d20",
+      "size": 11312,
+      "instructions": 2876,
+      "branches": [
+        {
+          "address": "0x5f7106",
+          "target": "0x5f7112"
+        },
+        {
+          "address": "0x5f711e",
+          "target": "0x5f712c"
+        },
+        {
+          "address": "0x5f712a",
+          "target": "0x5f7141"
+        },
+        {
+          "address": "0x5f714d",
+          "target": "0x5f7159"
+        },
+        {
+          "address": "0x5f7166",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f7180",
+          "target": "0x5f7194"
+        },
+        {
+          "address": "0x5f718e",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f719e",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f71ae",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f71e0",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f7209",
+          "target": "0x5f7247"
+        },
+        {
+          "address": "0x5f7237",
+          "target": "0x5f7242"
+        },
+        {
+          "address": "0x5f7242",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7251",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f7264",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f7277",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f728d",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f72bf",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f72d8",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f72e7",
+          "target": "0x5f7301"
+        },
+        {
+          "address": "0x5f72f3",
+          "target": "0x5f7301"
+        },
+        {
+          "address": "0x5f72ff",
+          "target": "0x5f7310"
+        },
+        {
+          "address": "0x5f730e",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f7337",
+          "target": "0x5f7359"
+        },
+        {
+          "address": "0x5f7354",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7366",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f737c",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f73ae",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f73c7",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f73d5",
+          "target": "0x5f73ef"
+        },
+        {
+          "address": "0x5f73e1",
+          "target": "0x5f73ef"
+        },
+        {
+          "address": "0x5f73ed",
+          "target": "0x5f73fe"
+        },
+        {
+          "address": "0x5f73fc",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f7425",
+          "target": "0x5f7447"
+        },
+        {
+          "address": "0x5f7442",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7454",
+          "target": "0x5f7469"
+        },
+        {
+          "address": "0x5f7463",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f7479",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f74ab",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f74c4",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f74d2",
+          "target": "0x5f74ec"
+        },
+        {
+          "address": "0x5f74de",
+          "target": "0x5f74ec"
+        },
+        {
+          "address": "0x5f74ea",
+          "target": "0x5f74fb"
+        },
+        {
+          "address": "0x5f74f9",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f7522",
+          "target": "0x5f7544"
+        },
+        {
+          "address": "0x5f753f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7551",
+          "target": "0x5f7575"
+        },
+        {
+          "address": "0x5f7560",
+          "target": "0x5f7575"
+        },
+        {
+          "address": "0x5f756f",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f7584",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f75b6",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f75cf",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f75de",
+          "target": "0x5f75f8"
+        },
+        {
+          "address": "0x5f75ea",
+          "target": "0x5f75f8"
+        },
+        {
+          "address": "0x5f75f6",
+          "target": "0x5f7606"
+        },
+        {
+          "address": "0x5f7604",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f762d",
+          "target": "0x5f764f"
+        },
+        {
+          "address": "0x5f764a",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f765c",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f7672",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f76a4",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f76bd",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f76cb",
+          "target": "0x5f76e5"
+        },
+        {
+          "address": "0x5f76d7",
+          "target": "0x5f76e5"
+        },
+        {
+          "address": "0x5f76e3",
+          "target": "0x5f76f4"
+        },
+        {
+          "address": "0x5f76f2",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f771b",
+          "target": "0x5f773d"
+        },
+        {
+          "address": "0x5f7738",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f774a",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f7760",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f7792",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f77ab",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f77ba",
+          "target": "0x5f77d4"
+        },
+        {
+          "address": "0x5f77c6",
+          "target": "0x5f77d4"
+        },
+        {
+          "address": "0x5f77d2",
+          "target": "0x5f77e3"
+        },
+        {
+          "address": "0x5f77e1",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f780a",
+          "target": "0x5f782c"
+        },
+        {
+          "address": "0x5f7827",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7839",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f784f",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f7881",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f789a",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f78a8",
+          "target": "0x5f78c2"
+        },
+        {
+          "address": "0x5f78b4",
+          "target": "0x5f78c2"
+        },
+        {
+          "address": "0x5f78c0",
+          "target": "0x5f78d1"
+        },
+        {
+          "address": "0x5f78cf",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f78f8",
+          "target": "0x5f791a"
+        },
+        {
+          "address": "0x5f7915",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7927",
+          "target": "0x5f7a0f"
+        },
+        {
+          "address": "0x5f793d",
+          "target": "0x5f7a0f"
+        },
+        {
+          "address": "0x5f796f",
+          "target": "0x5f7a0f"
+        },
+        {
+          "address": "0x5f7981",
+          "target": "0x5f799b"
+        },
+        {
+          "address": "0x5f798d",
+          "target": "0x5f799b"
+        },
+        {
+          "address": "0x5f7999",
+          "target": "0x5f79aa"
+        },
+        {
+          "address": "0x5f79a8",
+          "target": "0x5f7a0f"
+        },
+        {
+          "address": "0x5f79d1",
+          "target": "0x5f7a0f"
+        },
+        {
+          "address": "0x5f79ff",
+          "target": "0x5f7a0a"
+        },
+        {
+          "address": "0x5f7a0a",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7a1c",
+          "target": "0x5f7a31"
+        },
+        {
+          "address": "0x5f7a2b",
+          "target": "0x5f7b13"
+        },
+        {
+          "address": "0x5f7a40",
+          "target": "0x5f7b13"
+        },
+        {
+          "address": "0x5f7a72",
+          "target": "0x5f7b13"
+        },
+        {
+          "address": "0x5f7a85",
+          "target": "0x5f7a9f"
+        },
+        {
+          "address": "0x5f7a91",
+          "target": "0x5f7a9f"
+        },
+        {
+          "address": "0x5f7a9d",
+          "target": "0x5f7aae"
+        },
+        {
+          "address": "0x5f7aac",
+          "target": "0x5f7b13"
+        },
+        {
+          "address": "0x5f7ad5",
+          "target": "0x5f7b13"
+        },
+        {
+          "address": "0x5f7b03",
+          "target": "0x5f7b0e"
+        },
+        {
+          "address": "0x5f7b0e",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7b20",
+          "target": "0x5f7b44"
+        },
+        {
+          "address": "0x5f7b2f",
+          "target": "0x5f7b44"
+        },
+        {
+          "address": "0x5f7b3e",
+          "target": "0x5f7c26"
+        },
+        {
+          "address": "0x5f7b54",
+          "target": "0x5f7c26"
+        },
+        {
+          "address": "0x5f7b86",
+          "target": "0x5f7c26"
+        },
+        {
+          "address": "0x5f7b99",
+          "target": "0x5f7bb3"
+        },
+        {
+          "address": "0x5f7ba5",
+          "target": "0x5f7bb3"
+        },
+        {
+          "address": "0x5f7bb1",
+          "target": "0x5f7bc1"
+        },
+        {
+          "address": "0x5f7bbf",
+          "target": "0x5f7c26"
+        },
+        {
+          "address": "0x5f7be8",
+          "target": "0x5f7c26"
+        },
+        {
+          "address": "0x5f7c16",
+          "target": "0x5f7c21"
+        },
+        {
+          "address": "0x5f7c21",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7c33",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7c4d",
+          "target": "0x5f7c61"
+        },
+        {
+          "address": "0x5f7c5b",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7c8d",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7ca6",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7cb4",
+          "target": "0x5f7cce"
+        },
+        {
+          "address": "0x5f7cc0",
+          "target": "0x5f7cce"
+        },
+        {
+          "address": "0x5f7ccc",
+          "target": "0x5f7cdd"
+        },
+        {
+          "address": "0x5f7cdb",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7d04",
+          "target": "0x5f7d26"
+        },
+        {
+          "address": "0x5f7d21",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7d33",
+          "target": "0x5f7d48"
+        },
+        {
+          "address": "0x5f7d42",
+          "target": "0x5f7e0e"
+        },
+        {
+          "address": "0x5f7d74",
+          "target": "0x5f7e0e"
+        },
+        {
+          "address": "0x5f7d8d",
+          "target": "0x5f7e0e"
+        },
+        {
+          "address": "0x5f7d9c",
+          "target": "0x5f7db6"
+        },
+        {
+          "address": "0x5f7da8",
+          "target": "0x5f7db6"
+        },
+        {
+          "address": "0x5f7db4",
+          "target": "0x5f7dc5"
+        },
+        {
+          "address": "0x5f7dc3",
+          "target": "0x5f7e0e"
+        },
+        {
+          "address": "0x5f7dec",
+          "target": "0x5f7e0e"
+        },
+        {
+          "address": "0x5f7e09",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7e1b",
+          "target": "0x5f7e3f"
+        },
+        {
+          "address": "0x5f7e2a",
+          "target": "0x5f7e3f"
+        },
+        {
+          "address": "0x5f7e39",
+          "target": "0x5f7f04"
+        },
+        {
+          "address": "0x5f7e6b",
+          "target": "0x5f7f04"
+        },
+        {
+          "address": "0x5f7e84",
+          "target": "0x5f7f04"
+        },
+        {
+          "address": "0x5f7e93",
+          "target": "0x5f7ead"
+        },
+        {
+          "address": "0x5f7e9f",
+          "target": "0x5f7ead"
+        },
+        {
+          "address": "0x5f7eab",
+          "target": "0x5f7ebb"
+        },
+        {
+          "address": "0x5f7eb9",
+          "target": "0x5f7f04"
+        },
+        {
+          "address": "0x5f7ee2",
+          "target": "0x5f7f04"
+        },
+        {
+          "address": "0x5f7eff",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f7f11",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7f2b",
+          "target": "0x5f7f3f"
+        },
+        {
+          "address": "0x5f7f39",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7f6b",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7f84",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7f94",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7fa3",
+          "target": "0x5f7fbd"
+        },
+        {
+          "address": "0x5f7faf",
+          "target": "0x5f7fbd"
+        },
+        {
+          "address": "0x5f7fbb",
+          "target": "0x5f7fcb"
+        },
+        {
+          "address": "0x5f7fc9",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f7ff2",
+          "target": "0x5f8014"
+        },
+        {
+          "address": "0x5f800f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8021",
+          "target": "0x5f8036"
+        },
+        {
+          "address": "0x5f8030",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f8062",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f807b",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f808b",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f809a",
+          "target": "0x5f80b4"
+        },
+        {
+          "address": "0x5f80a6",
+          "target": "0x5f80b4"
+        },
+        {
+          "address": "0x5f80b2",
+          "target": "0x5f80c3"
+        },
+        {
+          "address": "0x5f80c1",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f80ea",
+          "target": "0x5f810c"
+        },
+        {
+          "address": "0x5f8107",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8119",
+          "target": "0x5f813d"
+        },
+        {
+          "address": "0x5f8128",
+          "target": "0x5f813d"
+        },
+        {
+          "address": "0x5f8137",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f8169",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f8182",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f8192",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f81a0",
+          "target": "0x5f81ba"
+        },
+        {
+          "address": "0x5f81ac",
+          "target": "0x5f81ba"
+        },
+        {
+          "address": "0x5f81b8",
+          "target": "0x5f81c9"
+        },
+        {
+          "address": "0x5f81c7",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f81f0",
+          "target": "0x5f8212"
+        },
+        {
+          "address": "0x5f820d",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f821f",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f8239",
+          "target": "0x5f824d"
+        },
+        {
+          "address": "0x5f8247",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f8279",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f8292",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f82a1",
+          "target": "0x5f82bb"
+        },
+        {
+          "address": "0x5f82ad",
+          "target": "0x5f82bb"
+        },
+        {
+          "address": "0x5f82b9",
+          "target": "0x5f82c9"
+        },
+        {
+          "address": "0x5f82c7",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f82f0",
+          "target": "0x5f8312"
+        },
+        {
+          "address": "0x5f830d",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f831f",
+          "target": "0x5f8334"
+        },
+        {
+          "address": "0x5f832e",
+          "target": "0x5f83f9"
+        },
+        {
+          "address": "0x5f8360",
+          "target": "0x5f83f9"
+        },
+        {
+          "address": "0x5f8379",
+          "target": "0x5f83f9"
+        },
+        {
+          "address": "0x5f8387",
+          "target": "0x5f83a1"
+        },
+        {
+          "address": "0x5f8393",
+          "target": "0x5f83a1"
+        },
+        {
+          "address": "0x5f839f",
+          "target": "0x5f83b0"
+        },
+        {
+          "address": "0x5f83ae",
+          "target": "0x5f83f9"
+        },
+        {
+          "address": "0x5f83d7",
+          "target": "0x5f83f9"
+        },
+        {
+          "address": "0x5f83f4",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8406",
+          "target": "0x5f842a"
+        },
+        {
+          "address": "0x5f8415",
+          "target": "0x5f842a"
+        },
+        {
+          "address": "0x5f8424",
+          "target": "0x5f850f"
+        },
+        {
+          "address": "0x5f8456",
+          "target": "0x5f850f"
+        },
+        {
+          "address": "0x5f846f",
+          "target": "0x5f850f"
+        },
+        {
+          "address": "0x5f8481",
+          "target": "0x5f849b"
+        },
+        {
+          "address": "0x5f848d",
+          "target": "0x5f849b"
+        },
+        {
+          "address": "0x5f8499",
+          "target": "0x5f84aa"
+        },
+        {
+          "address": "0x5f84a8",
+          "target": "0x5f850f"
+        },
+        {
+          "address": "0x5f84d1",
+          "target": "0x5f850f"
+        },
+        {
+          "address": "0x5f84ff",
+          "target": "0x5f850a"
+        },
+        {
+          "address": "0x5f850a",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f851c",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f8536",
+          "target": "0x5f854a"
+        },
+        {
+          "address": "0x5f8544",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f8576",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f858f",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f859e",
+          "target": "0x5f85b8"
+        },
+        {
+          "address": "0x5f85aa",
+          "target": "0x5f85b8"
+        },
+        {
+          "address": "0x5f85b6",
+          "target": "0x5f85c7"
+        },
+        {
+          "address": "0x5f85c5",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f85ee",
+          "target": "0x5f8610"
+        },
+        {
+          "address": "0x5f860b",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f861d",
+          "target": "0x5f8632"
+        },
+        {
+          "address": "0x5f862c",
+          "target": "0x5f86f7"
+        },
+        {
+          "address": "0x5f865e",
+          "target": "0x5f86f7"
+        },
+        {
+          "address": "0x5f8677",
+          "target": "0x5f86f7"
+        },
+        {
+          "address": "0x5f8685",
+          "target": "0x5f869f"
+        },
+        {
+          "address": "0x5f8691",
+          "target": "0x5f869f"
+        },
+        {
+          "address": "0x5f869d",
+          "target": "0x5f86ae"
+        },
+        {
+          "address": "0x5f86ac",
+          "target": "0x5f86f7"
+        },
+        {
+          "address": "0x5f86d5",
+          "target": "0x5f86f7"
+        },
+        {
+          "address": "0x5f86f2",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8704",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f8736",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f874f",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f875e",
+          "target": "0x5f8778"
+        },
+        {
+          "address": "0x5f876a",
+          "target": "0x5f8778"
+        },
+        {
+          "address": "0x5f8776",
+          "target": "0x5f8786"
+        },
+        {
+          "address": "0x5f8784",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f87ad",
+          "target": "0x5f87cf"
+        },
+        {
+          "address": "0x5f87ca",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f87d9",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f87eb",
+          "target": "0x5f8800"
+        },
+        {
+          "address": "0x5f87fa",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8811",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8824",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8861",
+          "target": "0x5f88ac"
+        },
+        {
+          "address": "0x5f8881",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f88a6",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f88d3",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f88e5",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f88fc",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f892e",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f8941",
+          "target": "0x5f895b"
+        },
+        {
+          "address": "0x5f894d",
+          "target": "0x5f895b"
+        },
+        {
+          "address": "0x5f8959",
+          "target": "0x5f8969"
+        },
+        {
+          "address": "0x5f8967",
+          "target": "0x5f89cc"
+        },
+        {
+          "address": "0x5f8976",
+          "target": "0x5f8982"
+        },
+        {
+          "address": "0x5f89c7",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8a03",
+          "target": "0x5f8a4b"
+        },
+        {
+          "address": "0x5f8a23",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8a45",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8a72",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8a85",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8ab7",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8ac9",
+          "target": "0x5f8ae3"
+        },
+        {
+          "address": "0x5f8ad5",
+          "target": "0x5f8ae3"
+        },
+        {
+          "address": "0x5f8ae1",
+          "target": "0x5f8af2"
+        },
+        {
+          "address": "0x5f8af0",
+          "target": "0x5f8b54"
+        },
+        {
+          "address": "0x5f8afe",
+          "target": "0x5f8b0a"
+        },
+        {
+          "address": "0x5f8b4f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8b67",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8b99",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8bd6",
+          "target": "0x5f8c21"
+        },
+        {
+          "address": "0x5f8bf6",
+          "target": "0x5f8cd1"
+        },
+        {
+          "address": "0x5f8c1b",
+          "target": "0x5f8cd1"
+        },
+        {
+          "address": "0x5f8c48",
+          "target": "0x5f8cd1"
+        },
+        {
+          "address": "0x5f8c5b",
+          "target": "0x5f8c75"
+        },
+        {
+          "address": "0x5f8c67",
+          "target": "0x5f8c75"
+        },
+        {
+          "address": "0x5f8c73",
+          "target": "0x5f8c83"
+        },
+        {
+          "address": "0x5f8c81",
+          "target": "0x5f8cd1"
+        },
+        {
+          "address": "0x5f8c90",
+          "target": "0x5f8c9c"
+        },
+        {
+          "address": "0x5f8ccc",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8d08",
+          "target": "0x5f8d50"
+        },
+        {
+          "address": "0x5f8d28",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8d4a",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8d77",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8d86",
+          "target": "0x5f8da0"
+        },
+        {
+          "address": "0x5f8d92",
+          "target": "0x5f8da0"
+        },
+        {
+          "address": "0x5f8d9e",
+          "target": "0x5f8dae"
+        },
+        {
+          "address": "0x5f8dac",
+          "target": "0x5f8de7"
+        },
+        {
+          "address": "0x5f8dbb",
+          "target": "0x5f8dc7"
+        },
+        {
+          "address": "0x5f8de2",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8df1",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e04",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e36",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e4d",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e60",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e8a",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8e9d",
+          "target": "0x5f8eb7"
+        },
+        {
+          "address": "0x5f8ea9",
+          "target": "0x5f8eb7"
+        },
+        {
+          "address": "0x5f8eb5",
+          "target": "0x5f8ec5"
+        },
+        {
+          "address": "0x5f8ec3",
+          "target": "0x5f8f38"
+        },
+        {
+          "address": "0x5f8f08",
+          "target": "0x5f8f13"
+        },
+        {
+          "address": "0x5f8f28",
+          "target": "0x5f8f33"
+        },
+        {
+          "address": "0x5f8f33",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8f45",
+          "target": "0x5f8f69"
+        },
+        {
+          "address": "0x5f8f54",
+          "target": "0x5f8f69"
+        },
+        {
+          "address": "0x5f8f63",
+          "target": "0x5f924b"
+        },
+        {
+          "address": "0x5f8f75",
+          "target": "0x5f8fc6"
+        },
+        {
+          "address": "0x5f8f8c",
+          "target": "0x5f8fc6"
+        },
+        {
+          "address": "0x5f8fb6",
+          "target": "0x5f8fc1"
+        },
+        {
+          "address": "0x5f8fc1",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f8fd7",
+          "target": "0x5f9089"
+        },
+        {
+          "address": "0x5f9004",
+          "target": "0x5f9084"
+        },
+        {
+          "address": "0x5f9032",
+          "target": "0x5f9084"
+        },
+        {
+          "address": "0x5f9040",
+          "target": "0x5f905a"
+        },
+        {
+          "address": "0x5f904c",
+          "target": "0x5f905a"
+        },
+        {
+          "address": "0x5f9058",
+          "target": "0x5f9069"
+        },
+        {
+          "address": "0x5f9067",
+          "target": "0x5f9084"
+        },
+        {
+          "address": "0x5f9084",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9096",
+          "target": "0x5f90ba"
+        },
+        {
+          "address": "0x5f90a5",
+          "target": "0x5f90ba"
+        },
+        {
+          "address": "0x5f90b4",
+          "target": "0x5f916a"
+        },
+        {
+          "address": "0x5f90e1",
+          "target": "0x5f916a"
+        },
+        {
+          "address": "0x5f9113",
+          "target": "0x5f916a"
+        },
+        {
+          "address": "0x5f9122",
+          "target": "0x5f913c"
+        },
+        {
+          "address": "0x5f912e",
+          "target": "0x5f913c"
+        },
+        {
+          "address": "0x5f913a",
+          "target": "0x5f914a"
+        },
+        {
+          "address": "0x5f9148",
+          "target": "0x5f916a"
+        },
+        {
+          "address": "0x5f9165",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9176",
+          "target": "0x5f919a"
+        },
+        {
+          "address": "0x5f9185",
+          "target": "0x5f919a"
+        },
+        {
+          "address": "0x5f9194",
+          "target": "0x5f924b"
+        },
+        {
+          "address": "0x5f91c1",
+          "target": "0x5f924b"
+        },
+        {
+          "address": "0x5f91f3",
+          "target": "0x5f924b"
+        },
+        {
+          "address": "0x5f9202",
+          "target": "0x5f921c"
+        },
+        {
+          "address": "0x5f920e",
+          "target": "0x5f921c"
+        },
+        {
+          "address": "0x5f921a",
+          "target": "0x5f922b"
+        },
+        {
+          "address": "0x5f9229",
+          "target": "0x5f924b"
+        },
+        {
+          "address": "0x5f9246",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9258",
+          "target": "0x5f927c"
+        },
+        {
+          "address": "0x5f9267",
+          "target": "0x5f927c"
+        },
+        {
+          "address": "0x5f9276",
+          "target": "0x5f9744"
+        },
+        {
+          "address": "0x5f9289",
+          "target": "0x5f92da"
+        },
+        {
+          "address": "0x5f92a0",
+          "target": "0x5f92da"
+        },
+        {
+          "address": "0x5f92ca",
+          "target": "0x5f92d5"
+        },
+        {
+          "address": "0x5f92d5",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f92eb",
+          "target": "0x5f939d"
+        },
+        {
+          "address": "0x5f9318",
+          "target": "0x5f9398"
+        },
+        {
+          "address": "0x5f9346",
+          "target": "0x5f9398"
+        },
+        {
+          "address": "0x5f9355",
+          "target": "0x5f936f"
+        },
+        {
+          "address": "0x5f9361",
+          "target": "0x5f936f"
+        },
+        {
+          "address": "0x5f936d",
+          "target": "0x5f937d"
+        },
+        {
+          "address": "0x5f937b",
+          "target": "0x5f9398"
+        },
+        {
+          "address": "0x5f9398",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f93a9",
+          "target": "0x5f93cd"
+        },
+        {
+          "address": "0x5f93b8",
+          "target": "0x5f93cd"
+        },
+        {
+          "address": "0x5f93c7",
+          "target": "0x5f9492"
+        },
+        {
+          "address": "0x5f93f4",
+          "target": "0x5f9492"
+        },
+        {
+          "address": "0x5f9426",
+          "target": "0x5f9492"
+        },
+        {
+          "address": "0x5f943b",
+          "target": "0x5f9492"
+        },
+        {
+          "address": "0x5f944a",
+          "target": "0x5f9464"
+        },
+        {
+          "address": "0x5f9456",
+          "target": "0x5f9464"
+        },
+        {
+          "address": "0x5f9462",
+          "target": "0x5f9472"
+        },
+        {
+          "address": "0x5f9470",
+          "target": "0x5f9492"
+        },
+        {
+          "address": "0x5f948d",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f949f",
+          "target": "0x5f94c3"
+        },
+        {
+          "address": "0x5f94ae",
+          "target": "0x5f94c3"
+        },
+        {
+          "address": "0x5f94bd",
+          "target": "0x5f9574"
+        },
+        {
+          "address": "0x5f94ea",
+          "target": "0x5f9574"
+        },
+        {
+          "address": "0x5f951c",
+          "target": "0x5f9574"
+        },
+        {
+          "address": "0x5f952b",
+          "target": "0x5f9545"
+        },
+        {
+          "address": "0x5f9537",
+          "target": "0x5f9545"
+        },
+        {
+          "address": "0x5f9543",
+          "target": "0x5f9554"
+        },
+        {
+          "address": "0x5f9552",
+          "target": "0x5f9574"
+        },
+        {
+          "address": "0x5f956f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9580",
+          "target": "0x5f95a4"
+        },
+        {
+          "address": "0x5f958f",
+          "target": "0x5f95a4"
+        },
+        {
+          "address": "0x5f959e",
+          "target": "0x5f9744"
+        },
+        {
+          "address": "0x5f95cb",
+          "target": "0x5f9694"
+        },
+        {
+          "address": "0x5f95fd",
+          "target": "0x5f9694"
+        },
+        {
+          "address": "0x5f961f",
+          "target": "0x5f9694"
+        },
+        {
+          "address": "0x5f963d",
+          "target": "0x5f9694"
+        },
+        {
+          "address": "0x5f964b",
+          "target": "0x5f9665"
+        },
+        {
+          "address": "0x5f9657",
+          "target": "0x5f9665"
+        },
+        {
+          "address": "0x5f9663",
+          "target": "0x5f9674"
+        },
+        {
+          "address": "0x5f9672",
+          "target": "0x5f9694"
+        },
+        {
+          "address": "0x5f968f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f96bb",
+          "target": "0x5f9744"
+        },
+        {
+          "address": "0x5f96ed",
+          "target": "0x5f9744"
+        },
+        {
+          "address": "0x5f96fc",
+          "target": "0x5f9716"
+        },
+        {
+          "address": "0x5f9708",
+          "target": "0x5f9716"
+        },
+        {
+          "address": "0x5f9714",
+          "target": "0x5f9724"
+        },
+        {
+          "address": "0x5f9722",
+          "target": "0x5f9744"
+        },
+        {
+          "address": "0x5f973f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9751",
+          "target": "0x5f9775"
+        },
+        {
+          "address": "0x5f9760",
+          "target": "0x5f9775"
+        },
+        {
+          "address": "0x5f976f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9782",
+          "target": "0x5f97d3"
+        },
+        {
+          "address": "0x5f9799",
+          "target": "0x5f97d3"
+        },
+        {
+          "address": "0x5f97c3",
+          "target": "0x5f97ce"
+        },
+        {
+          "address": "0x5f97ce",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f97e4",
+          "target": "0x5f9a15"
+        },
+        {
+          "address": "0x5f97fd",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f980f",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f9831",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f9853",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f986f",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f989c",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f98b1",
+          "target": "0x5f98cb"
+        },
+        {
+          "address": "0x5f98c5",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f98f7",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f9905",
+          "target": "0x5f991f"
+        },
+        {
+          "address": "0x5f9911",
+          "target": "0x5f991f"
+        },
+        {
+          "address": "0x5f991d",
+          "target": "0x5f992e"
+        },
+        {
+          "address": "0x5f992c",
+          "target": "0x5f994e"
+        },
+        {
+          "address": "0x5f9949",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9975",
+          "target": "0x5f9a10"
+        },
+        {
+          "address": "0x5f99a7",
+          "target": "0x5f9a10"
+        },
+        {
+          "address": "0x5f99b6",
+          "target": "0x5f99d0"
+        },
+        {
+          "address": "0x5f99c2",
+          "target": "0x5f99d0"
+        },
+        {
+          "address": "0x5f99ce",
+          "target": "0x5f99de"
+        },
+        {
+          "address": "0x5f99dc",
+          "target": "0x5f9a10"
+        },
+        {
+          "address": "0x5f9a05",
+          "target": "0x5f9a10"
+        },
+        {
+          "address": "0x5f9a10",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9a22",
+          "target": "0x5f9a46"
+        },
+        {
+          "address": "0x5f9a31",
+          "target": "0x5f9a46"
+        },
+        {
+          "address": "0x5f9a40",
+          "target": "0x5f9af7"
+        },
+        {
+          "address": "0x5f9a6d",
+          "target": "0x5f9af7"
+        },
+        {
+          "address": "0x5f9a9f",
+          "target": "0x5f9af7"
+        },
+        {
+          "address": "0x5f9aae",
+          "target": "0x5f9ac8"
+        },
+        {
+          "address": "0x5f9aba",
+          "target": "0x5f9ac8"
+        },
+        {
+          "address": "0x5f9ac6",
+          "target": "0x5f9ad7"
+        },
+        {
+          "address": "0x5f9ad5",
+          "target": "0x5f9af7"
+        },
+        {
+          "address": "0x5f9af2",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9b03",
+          "target": "0x5f9b27"
+        },
+        {
+          "address": "0x5f9b12",
+          "target": "0x5f9b27"
+        },
+        {
+          "address": "0x5f9b21",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9b33",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9b51",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9b73",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9b95",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9bc2",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9bd7",
+          "target": "0x5f9bf0"
+        },
+        {
+          "address": "0x5f9bea",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9c1c",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9c2b",
+          "target": "0x5f9c45"
+        },
+        {
+          "address": "0x5f9c37",
+          "target": "0x5f9c45"
+        },
+        {
+          "address": "0x5f9c43",
+          "target": "0x5f9c54"
+        },
+        {
+          "address": "0x5f9c52",
+          "target": "0x5f9c74"
+        },
+        {
+          "address": "0x5f9c6f",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9c9b",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9cc9",
+          "target": "0x5f9d1c"
+        },
+        {
+          "address": "0x5f9cd8",
+          "target": "0x5f9cf2"
+        },
+        {
+          "address": "0x5f9ce4",
+          "target": "0x5f9cf2"
+        },
+        {
+          "address": "0x5f9cf0",
+          "target": "0x5f9d01"
+        },
+        {
+          "address": "0x5f9cff",
+          "target": "0x5f9d1c"
+        }
+      ],
+      "direct_calls": [
+        {
+          "address": "0x5f7218",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7346",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7434",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7531",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f763c",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f772a",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7819",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7907",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f79e0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7ae4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7bf7",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7d13",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7dfb",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f7ef1",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f8001",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f80f9",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f81ff",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f82ff",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f83e6",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f84e0",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f85fd",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f86e4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f87bc",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f898e",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x5f8b16",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x5f8ca8",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x5f8dd3",
+          "instruction": "call   0x40e630"
+        },
+        {
+          "address": "0x5f8ed2",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f8f9b",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9076",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9157",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9238",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f92af",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f938a",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f947f",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9561",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9681",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9731",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f97a8",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f993b",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f99eb",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9ae4",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9c61",
+          "instruction": "call   0x40f170"
+        },
+        {
+          "address": "0x5f9d0e",
+          "instruction": "call   0x40f170"
+        }
+      ],
+      "virtual_calls": [
+        {
+          "address": "0x5f7213",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7341",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f742f",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f752c",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f7637",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7725",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f7814",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7902",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f79db",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f7adf",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7bf2",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7d0e",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f7df6",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7eec",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f7ffc",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f80f4",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f81fa",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f82fa",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f83e1",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f84db",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f85f8",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f86df",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f87b7",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8980",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8b08",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8c9a",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8dc5",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8ecd",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f8f96",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f9071",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f9152",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9233",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f92aa",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9385",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f947a",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f955c",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f967c",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f972c",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f97a3",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9936",
+          "instruction": "call   DWORD PTR [eax]"
+        },
+        {
+          "address": "0x5f99e6",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9adf",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9c5c",
+          "instruction": "call   DWORD PTR [edx]"
+        },
+        {
+          "address": "0x5f9d09",
+          "instruction": "call   DWORD PTR [edx]"
+        }
+      ],
+      "padding": 0,
+      "next_entry": "0x5f9d20",
+      "local_data": []
+    },
+    {
+      "tag": "commands",
+      "address": "0x5f9d70",
+      "exclusive_end": "0x5fb034",
+      "size": 4804,
+      "instructions": 1383,
+      "branches": [
+        {
+          "address": "0x5f9d99",
+          "target": "0x5f9da4"
+        },
+        {
+          "address": "0x5f9db7",
+          "target": "0x5f9f55"
+        },
+        {
+          "address": "0x5f9deb",
+          "target": "0x5f9e3d"
+        },
+        {
+          "address": "0x5f9df4",
+          "target": "0x5f9e3d"
+        },
+        {
+          "address": "0x5f9e38",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5f9e57",
+          "target": "0x5f9eba"
+        },
+        {
+          "address": "0x5f9e60",
+          "target": "0x5f9eba"
+        },
+        {
+          "address": "0x5f9e6c",
+          "target": "0x5f9eb6"
+        },
+        {
+          "address": "0x5f9eb1",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5f9ed9",
+          "target": "0x5f9ee8"
+        },
+        {
+          "address": "0x5f9ee2",
+          "target": "0x5f9ee8"
+        },
+        {
+          "address": "0x5f9f07",
+          "target": "0x5f9f16"
+        },
+        {
+          "address": "0x5f9f10",
+          "target": "0x5f9f16"
+        },
+        {
+          "address": "0x5f9f30",
+          "target": "0x5f9f50"
+        },
+        {
+          "address": "0x5f9f38",
+          "target": "0x5f9f50"
+        },
+        {
+          "address": "0x5f9f4a",
+          "target": "0x5f9f50"
+        },
+        {
+          "address": "0x5f9f50",
+          "target": "0x5f9d9b"
+        },
+        {
+          "address": "0x5f9f69",
+          "target": "0x5f9f74"
+        },
+        {
+          "address": "0x5f9f86",
+          "target": "0x5fa15f"
+        },
+        {
+          "address": "0x5f9fba",
+          "target": "0x5fa00b"
+        },
+        {
+          "address": "0x5f9fc3",
+          "target": "0x5fa00b"
+        },
+        {
+          "address": "0x5fa006",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa02a",
+          "target": "0x5fa08d"
+        },
+        {
+          "address": "0x5fa033",
+          "target": "0x5fa08d"
+        },
+        {
+          "address": "0x5fa03f",
+          "target": "0x5fa089"
+        },
+        {
+          "address": "0x5fa084",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa0ac",
+          "target": "0x5fa0bb"
+        },
+        {
+          "address": "0x5fa0b5",
+          "target": "0x5fa0bb"
+        },
+        {
+          "address": "0x5fa0c5",
+          "target": "0x5fa0d4"
+        },
+        {
+          "address": "0x5fa0ce",
+          "target": "0x5fa0d4"
+        },
+        {
+          "address": "0x5fa0f3",
+          "target": "0x5fa102"
+        },
+        {
+          "address": "0x5fa0fc",
+          "target": "0x5fa102"
+        },
+        {
+          "address": "0x5fa121",
+          "target": "0x5fa130"
+        },
+        {
+          "address": "0x5fa12a",
+          "target": "0x5fa130"
+        },
+        {
+          "address": "0x5fa13a",
+          "target": "0x5fa15a"
+        },
+        {
+          "address": "0x5fa142",
+          "target": "0x5fa15a"
+        },
+        {
+          "address": "0x5fa154",
+          "target": "0x5fa15a"
+        },
+        {
+          "address": "0x5fa15a",
+          "target": "0x5f9f6b"
+        },
+        {
+          "address": "0x5fa173",
+          "target": "0x5fa17e"
+        },
+        {
+          "address": "0x5fa190",
+          "target": "0x5fa354"
+        },
+        {
+          "address": "0x5fa1c4",
+          "target": "0x5fa215"
+        },
+        {
+          "address": "0x5fa1cd",
+          "target": "0x5fa215"
+        },
+        {
+          "address": "0x5fa210",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa22f",
+          "target": "0x5fa291"
+        },
+        {
+          "address": "0x5fa238",
+          "target": "0x5fa291"
+        },
+        {
+          "address": "0x5fa244",
+          "target": "0x5fa28d"
+        },
+        {
+          "address": "0x5fa288",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa2ab",
+          "target": "0x5fa2ba"
+        },
+        {
+          "address": "0x5fa2b4",
+          "target": "0x5fa2ba"
+        },
+        {
+          "address": "0x5fa2c4",
+          "target": "0x5fa2d3"
+        },
+        {
+          "address": "0x5fa2cd",
+          "target": "0x5fa2d3"
+        },
+        {
+          "address": "0x5fa2ed",
+          "target": "0x5fa2fc"
+        },
+        {
+          "address": "0x5fa2f6",
+          "target": "0x5fa2fc"
+        },
+        {
+          "address": "0x5fa316",
+          "target": "0x5fa325"
+        },
+        {
+          "address": "0x5fa31f",
+          "target": "0x5fa325"
+        },
+        {
+          "address": "0x5fa32f",
+          "target": "0x5fa34f"
+        },
+        {
+          "address": "0x5fa337",
+          "target": "0x5fa34f"
+        },
+        {
+          "address": "0x5fa349",
+          "target": "0x5fa34f"
+        },
+        {
+          "address": "0x5fa34f",
+          "target": "0x5fa175"
+        },
+        {
+          "address": "0x5fa368",
+          "target": "0x5fa373"
+        },
+        {
+          "address": "0x5fa386",
+          "target": "0x5fa4cc"
+        },
+        {
+          "address": "0x5fa3b9",
+          "target": "0x5fa40c"
+        },
+        {
+          "address": "0x5fa3c2",
+          "target": "0x5fa40c"
+        },
+        {
+          "address": "0x5fa407",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa426",
+          "target": "0x5fa486"
+        },
+        {
+          "address": "0x5fa42f",
+          "target": "0x5fa486"
+        },
+        {
+          "address": "0x5fa43a",
+          "target": "0x5fa482"
+        },
+        {
+          "address": "0x5fa47d",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa490",
+          "target": "0x5fa49f"
+        },
+        {
+          "address": "0x5fa499",
+          "target": "0x5fa49f"
+        },
+        {
+          "address": "0x5fa4b9",
+          "target": "0x5fa4c7"
+        },
+        {
+          "address": "0x5fa4c1",
+          "target": "0x5fa4c7"
+        },
+        {
+          "address": "0x5fa4c7",
+          "target": "0x5fa36a"
+        },
+        {
+          "address": "0x5fa4e3",
+          "target": "0x5fa4ee"
+        },
+        {
+          "address": "0x5fa501",
+          "target": "0x5fa64a"
+        },
+        {
+          "address": "0x5fa535",
+          "target": "0x5fa587"
+        },
+        {
+          "address": "0x5fa53e",
+          "target": "0x5fa587"
+        },
+        {
+          "address": "0x5fa582",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa5a1",
+          "target": "0x5fa604"
+        },
+        {
+          "address": "0x5fa5aa",
+          "target": "0x5fa604"
+        },
+        {
+          "address": "0x5fa5b6",
+          "target": "0x5fa600"
+        },
+        {
+          "address": "0x5fa5fb",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa61e",
+          "target": "0x5fa62d"
+        },
+        {
+          "address": "0x5fa627",
+          "target": "0x5fa62d"
+        },
+        {
+          "address": "0x5fa637",
+          "target": "0x5fa645"
+        },
+        {
+          "address": "0x5fa63f",
+          "target": "0x5fa645"
+        },
+        {
+          "address": "0x5fa645",
+          "target": "0x5fa4e5"
+        },
+        {
+          "address": "0x5fa660",
+          "target": "0x5fa66b"
+        },
+        {
+          "address": "0x5fa67d",
+          "target": "0x5fa7cc"
+        },
+        {
+          "address": "0x5fa6b1",
+          "target": "0x5fa702"
+        },
+        {
+          "address": "0x5fa6ba",
+          "target": "0x5fa702"
+        },
+        {
+          "address": "0x5fa6fd",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa70c",
+          "target": "0x5fa76c"
+        },
+        {
+          "address": "0x5fa715",
+          "target": "0x5fa76c"
+        },
+        {
+          "address": "0x5fa720",
+          "target": "0x5fa768"
+        },
+        {
+          "address": "0x5fa763",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa78b",
+          "target": "0x5fa79a"
+        },
+        {
+          "address": "0x5fa794",
+          "target": "0x5fa79a"
+        },
+        {
+          "address": "0x5fa7b9",
+          "target": "0x5fa7c7"
+        },
+        {
+          "address": "0x5fa7c1",
+          "target": "0x5fa7c7"
+        },
+        {
+          "address": "0x5fa7c7",
+          "target": "0x5fa662"
+        },
+        {
+          "address": "0x5fa7e3",
+          "target": "0x5fa7ee"
+        },
+        {
+          "address": "0x5fa801",
+          "target": "0x5fa951"
+        },
+        {
+          "address": "0x5fa835",
+          "target": "0x5fa887"
+        },
+        {
+          "address": "0x5fa83e",
+          "target": "0x5fa887"
+        },
+        {
+          "address": "0x5fa882",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa8a6",
+          "target": "0x5fa906"
+        },
+        {
+          "address": "0x5fa8af",
+          "target": "0x5fa906"
+        },
+        {
+          "address": "0x5fa8ba",
+          "target": "0x5fa902"
+        },
+        {
+          "address": "0x5fa8fd",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa925",
+          "target": "0x5fa934"
+        },
+        {
+          "address": "0x5fa92e",
+          "target": "0x5fa934"
+        },
+        {
+          "address": "0x5fa93e",
+          "target": "0x5fa94c"
+        },
+        {
+          "address": "0x5fa946",
+          "target": "0x5fa94c"
+        },
+        {
+          "address": "0x5fa94c",
+          "target": "0x5fa7e5"
+        },
+        {
+          "address": "0x5fa965",
+          "target": "0x5fa970"
+        },
+        {
+          "address": "0x5fa983",
+          "target": "0x5faa70"
+        },
+        {
+          "address": "0x5fa9b6",
+          "target": "0x5fa9d2"
+        },
+        {
+          "address": "0x5fa9bf",
+          "target": "0x5fa9d2"
+        },
+        {
+          "address": "0x5fa9cd",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fa9ec",
+          "target": "0x5faa18"
+        },
+        {
+          "address": "0x5fa9f5",
+          "target": "0x5faa18"
+        },
+        {
+          "address": "0x5faa01",
+          "target": "0x5faa14"
+        },
+        {
+          "address": "0x5faa0f",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5faa32",
+          "target": "0x5faa41"
+        },
+        {
+          "address": "0x5faa3b",
+          "target": "0x5faa41"
+        },
+        {
+          "address": "0x5faa4b",
+          "target": "0x5faa6b"
+        },
+        {
+          "address": "0x5faa53",
+          "target": "0x5faa6b"
+        },
+        {
+          "address": "0x5faa65",
+          "target": "0x5faa6b"
+        },
+        {
+          "address": "0x5faa6b",
+          "target": "0x5fa967"
+        },
+        {
+          "address": "0x5faa86",
+          "target": "0x5faa91"
+        },
+        {
+          "address": "0x5faaa3",
+          "target": "0x5fab03"
+        },
+        {
+          "address": "0x5faad0",
+          "target": "0x5faaec"
+        },
+        {
+          "address": "0x5faad9",
+          "target": "0x5faaec"
+        },
+        {
+          "address": "0x5faae7",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5faaf3",
+          "target": "0x5fab01"
+        },
+        {
+          "address": "0x5faafb",
+          "target": "0x5fab01"
+        },
+        {
+          "address": "0x5fab01",
+          "target": "0x5faa88"
+        },
+        {
+          "address": "0x5fab17",
+          "target": "0x5fab22"
+        },
+        {
+          "address": "0x5fab35",
+          "target": "0x5fabf3"
+        },
+        {
+          "address": "0x5fab69",
+          "target": "0x5fab85"
+        },
+        {
+          "address": "0x5fab72",
+          "target": "0x5fab85"
+        },
+        {
+          "address": "0x5fab80",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fab8f",
+          "target": "0x5fab9e"
+        },
+        {
+          "address": "0x5fab98",
+          "target": "0x5fab9e"
+        },
+        {
+          "address": "0x5faba5",
+          "target": "0x5fabb4"
+        },
+        {
+          "address": "0x5fabae",
+          "target": "0x5fabb4"
+        },
+        {
+          "address": "0x5fabbe",
+          "target": "0x5fabcd"
+        },
+        {
+          "address": "0x5fabc7",
+          "target": "0x5fabcd"
+        },
+        {
+          "address": "0x5fabd4",
+          "target": "0x5fabee"
+        },
+        {
+          "address": "0x5fabdc",
+          "target": "0x5fabee"
+        },
+        {
+          "address": "0x5fabe8",
+          "target": "0x5fabee"
+        },
+        {
+          "address": "0x5fabee",
+          "target": "0x5fab19"
+        },
+        {
+          "address": "0x5fac07",
+          "target": "0x5fac12"
+        },
+        {
+          "address": "0x5fac24",
+          "target": "0x5facd3"
+        },
+        {
+          "address": "0x5fac55",
+          "target": "0x5fac71"
+        },
+        {
+          "address": "0x5fac5e",
+          "target": "0x5fac71"
+        },
+        {
+          "address": "0x5fac6c",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fac7b",
+          "target": "0x5fac8a"
+        },
+        {
+          "address": "0x5fac84",
+          "target": "0x5fac8a"
+        },
+        {
+          "address": "0x5fac91",
+          "target": "0x5faca0"
+        },
+        {
+          "address": "0x5fac9a",
+          "target": "0x5faca0"
+        },
+        {
+          "address": "0x5facaa",
+          "target": "0x5facb9"
+        },
+        {
+          "address": "0x5facb3",
+          "target": "0x5facb9"
+        },
+        {
+          "address": "0x5facc0",
+          "target": "0x5facce"
+        },
+        {
+          "address": "0x5facc8",
+          "target": "0x5facce"
+        },
+        {
+          "address": "0x5facce",
+          "target": "0x5fac09"
+        },
+        {
+          "address": "0x5facea",
+          "target": "0x5facf5"
+        },
+        {
+          "address": "0x5fad08",
+          "target": "0x5fadb7"
+        },
+        {
+          "address": "0x5fad39",
+          "target": "0x5fad55"
+        },
+        {
+          "address": "0x5fad42",
+          "target": "0x5fad55"
+        },
+        {
+          "address": "0x5fad50",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fad5f",
+          "target": "0x5fad6e"
+        },
+        {
+          "address": "0x5fad68",
+          "target": "0x5fad6e"
+        },
+        {
+          "address": "0x5fad75",
+          "target": "0x5fad84"
+        },
+        {
+          "address": "0x5fad7e",
+          "target": "0x5fad84"
+        },
+        {
+          "address": "0x5fad8e",
+          "target": "0x5fad9d"
+        },
+        {
+          "address": "0x5fad97",
+          "target": "0x5fad9d"
+        },
+        {
+          "address": "0x5fada4",
+          "target": "0x5fadb2"
+        },
+        {
+          "address": "0x5fadac",
+          "target": "0x5fadb2"
+        },
+        {
+          "address": "0x5fadb2",
+          "target": "0x5facec"
+        },
+        {
+          "address": "0x5fadce",
+          "target": "0x5fadd9"
+        },
+        {
+          "address": "0x5fadec",
+          "target": "0x5fae9b"
+        },
+        {
+          "address": "0x5fae1d",
+          "target": "0x5fae39"
+        },
+        {
+          "address": "0x5fae26",
+          "target": "0x5fae39"
+        },
+        {
+          "address": "0x5fae34",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fae43",
+          "target": "0x5fae52"
+        },
+        {
+          "address": "0x5fae4c",
+          "target": "0x5fae52"
+        },
+        {
+          "address": "0x5fae59",
+          "target": "0x5fae68"
+        },
+        {
+          "address": "0x5fae62",
+          "target": "0x5fae68"
+        },
+        {
+          "address": "0x5fae72",
+          "target": "0x5fae81"
+        },
+        {
+          "address": "0x5fae7b",
+          "target": "0x5fae81"
+        },
+        {
+          "address": "0x5fae88",
+          "target": "0x5fae96"
+        },
+        {
+          "address": "0x5fae90",
+          "target": "0x5fae96"
+        },
+        {
+          "address": "0x5fae96",
+          "target": "0x5fadd0"
+        },
+        {
+          "address": "0x5faeb1",
+          "target": "0x5faebc"
+        },
+        {
+          "address": "0x5faece",
+          "target": "0x5faf67"
+        },
+        {
+          "address": "0x5faf02",
+          "target": "0x5faf1e"
+        },
+        {
+          "address": "0x5faf0b",
+          "target": "0x5faf1e"
+        },
+        {
+          "address": "0x5faf19",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5faf25",
+          "target": "0x5faf34"
+        },
+        {
+          "address": "0x5faf2e",
+          "target": "0x5faf34"
+        },
+        {
+          "address": "0x5faf3e",
+          "target": "0x5faf4d"
+        },
+        {
+          "address": "0x5faf47",
+          "target": "0x5faf4d"
+        },
+        {
+          "address": "0x5faf54",
+          "target": "0x5faf62"
+        },
+        {
+          "address": "0x5faf5c",
+          "target": "0x5faf62"
+        },
+        {
+          "address": "0x5faf62",
+          "target": "0x5faeb3"
+        },
+        {
+          "address": "0x5faf7d",
+          "target": "0x5faf88"
+        },
+        {
+          "address": "0x5faf9a",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fafce",
+          "target": "0x5fafe7"
+        },
+        {
+          "address": "0x5fafd7",
+          "target": "0x5fafe7"
+        },
+        {
+          "address": "0x5fafe5",
+          "target": "0x5fb030"
+        },
+        {
+          "address": "0x5fafee",
+          "target": "0x5faffd"
+        },
+        {
+          "address": "0x5faff7",
+          "target": "0x5faffd"
+        },
+        {
+          "address": "0x5fb007",
+          "target": "0x5fb016"
+        },
+        {
+          "address": "0x5fb010",
+          "target": "0x5fb016"
+        },
+        {
+          "address": "0x5fb01d",
+          "target": "0x5fb02b"
+        },
+        {
+          "address": "0x5fb025",
+          "target": "0x5fb02b"
+        },
+        {
+          "address": "0x5fb02b",
+          "target": "0x5faf7f"
+        }
+      ],
+      "direct_calls": [],
+      "virtual_calls": [],
+      "padding": 12,
+      "next_entry": "0x5fb040",
+      "local_data": []
+    }
+  ],
+  "reviewed_relocation_fields": 105,
+  "allocation": "original creation case3 allocates3450; current native creation dispatchers retain the same complete allocation/call bytes",
+  "virtual_table": "0x788ac8"
+}

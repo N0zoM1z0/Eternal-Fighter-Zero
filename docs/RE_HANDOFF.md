@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 315 |
-| Authored exact instruction bytes | 931,962 |
+| Authored complete exact functions | 325 |
+| Authored exact instruction bytes | 948,980 |
 | Associated exact local-table bytes | 6,621 |
-| Reviewed boundaries / origins | 351 / 351 |
+| Reviewed boundaries / origins | 360 / 360 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,46 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mayu animation/state checkpoint
+## Latest Makoto construction/input/command checkpoint
+
+Ten complete Character03 owners add17,018 strict exact instruction bytes without
+local tables:constructor5F6D90/393,initializer5F6F20/283,reset5F7040/58,
+removal5F7080/80,locomotion5F70D0/19,input5F70F0/11312,empty slots01/08
+at5F9D20/11 and5F9D30/11,emitter5F9D40/47,commands5F9D70/4804. Sources:
+src/Character03Frame.cpp,Character03Input.cpp,Character03Commands.cpp;
+profile vc71-od-static; proof:docs/evidence/makoto-exact.json. Durable facts:
+[Makoto construction input and indicator owners](KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners).
+Private retained evidence:.analysis/probes/makoto/README.md.
+
+Canonical creation ID3 allocates3450,copies "makoto" from788AC0 and installs
+vtable788AC8. Only Character03's opaque body is expanded into five scalar ints
+and three64-int arrays314C/324C/334C;four unmodeled bytes344C..344F remain opaque.
+Preserve actual commandCount5 and sparse commands[0]=1,[1]=5,[10]=3 stores.
+Review covers4,478 instructions,693 branches and105 explicit relocations:
+51 calls,52 doubles,string/vptr;all nine literal payloads match target/COFF.
+Input retains its positive action/throw guards, three special-air frame3 changes,
+heavy-air211->209 inputY choice and actual expression order. Commands retain15
+ordered scans and original threshold/mask forms.
+
+The final selected cold comparison passes89 complete units from41 serial native
+artifacts:ten new and79 actual CharacterViews.h consumers. The other254 units
+retain earlier proofs. All changed compiler-generated symbols are checked against
+unchanged canonical targets/local offsets and strings before new receipts.
+Report:.analysis/exact/makoto-and-affected.json;
+log:.analysis/build/makoto-formal-replay.log. Focused tracking,ledgers/progress CI
+and whitespace checks pass. No native compiler/Wine failure,full CI/cohort or
+runtime matrix occurred.
+
+Ten of thirteen actual Makoto virtual destinations are exact,including inherited
+LoadResources. Next substantial owner:CPU5FB040/17531 bytes; state5E85F0/58482 and
+effects5FF4C0/33673 code remain OPEN with associated tables unreviewed. All13 fresh
+read-only annotated decompiles are retained in .analysis/probes/makoto/; the
+Ghidra job is terminal. Preserve target boundaries as provisional until complete
+original review; state has a decompiler warning about03020100. Resource/data /
+runtime/TU/portability/game phases remain open. Preserve parked controls and the
+unaccepted reader-audio workbench.
+
+## Previous Mayu animation/state checkpoint
 
 Character05::Slot06 at5C8580 is complete strict exact:87,209 instruction bytes
 plus954 local-table bytes, total88,163; complete exclusive end5DDDE3. Source:

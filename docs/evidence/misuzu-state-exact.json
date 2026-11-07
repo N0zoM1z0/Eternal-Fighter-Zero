@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
     "owner": "Character23::Slot06",
@@ -8517,7 +8517,7 @@
           "target": 5348537,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63743",
+          "symbol": "$L63750",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 55305 independently checked",
           "local_target_offset": 55305,
           "addend": 0
@@ -8527,7 +8527,7 @@
           "target": 5348001,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63899",
+          "symbol": "$L63906",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original dispatch instruction and complete selector/address table; compiler-local offset 54769 independently checked",
           "local_target_offset": 54769,
           "addend": 0
@@ -18995,7 +18995,7 @@
           "target": 5293517,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62145",
+          "symbol": "$L62152",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 0 for animation IDs 1; compiler-local offset 285 and canonical destination independently checked",
           "local_target_offset": 285,
           "addend": 0
@@ -19005,7 +19005,7 @@
           "target": 5293630,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62149",
+          "symbol": "$L62156",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 1 for animation IDs 2; compiler-local offset 398 and canonical destination independently checked",
           "local_target_offset": 398,
           "addend": 0
@@ -19015,7 +19015,7 @@
           "target": 5293743,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62153",
+          "symbol": "$L62160",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 2 for animation IDs 3; compiler-local offset 511 and canonical destination independently checked",
           "local_target_offset": 511,
           "addend": 0
@@ -19025,7 +19025,7 @@
           "target": 5293864,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62157",
+          "symbol": "$L62164",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 3 for animation IDs 4; compiler-local offset 632 and canonical destination independently checked",
           "local_target_offset": 632,
           "addend": 0
@@ -19035,7 +19035,7 @@
           "target": 5294168,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62167",
+          "symbol": "$L62174",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 4 for animation IDs 5; compiler-local offset 936 and canonical destination independently checked",
           "local_target_offset": 936,
           "addend": 0
@@ -19045,7 +19045,7 @@
           "target": 5294484,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62177",
+          "symbol": "$L62184",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 5 for animation IDs 6; compiler-local offset 1252 and canonical destination independently checked",
           "local_target_offset": 1252,
           "addend": 0
@@ -19055,7 +19055,7 @@
           "target": 5294800,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62187",
+          "symbol": "$L62194",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 6 for animation IDs 7; compiler-local offset 1568 and canonical destination independently checked",
           "local_target_offset": 1568,
           "addend": 0
@@ -19065,7 +19065,7 @@
           "target": 5294931,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62191",
+          "symbol": "$L62198",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 7 for animation IDs 8; compiler-local offset 1699 and canonical destination independently checked",
           "local_target_offset": 1699,
           "addend": 0
@@ -19075,7 +19075,7 @@
           "target": 5295062,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62195",
+          "symbol": "$L62202",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 8 for animation IDs 9; compiler-local offset 1830 and canonical destination independently checked",
           "local_target_offset": 1830,
           "addend": 0
@@ -19085,7 +19085,7 @@
           "target": 5295243,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62200",
+          "symbol": "$L62207",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 9 for animation IDs 13; compiler-local offset 2011 and canonical destination independently checked",
           "local_target_offset": 2011,
           "addend": 0
@@ -19095,7 +19095,7 @@
           "target": 5295394,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62205",
+          "symbol": "$L62212",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 10 for animation IDs 14; compiler-local offset 2162 and canonical destination independently checked",
           "local_target_offset": 2162,
           "addend": 0
@@ -19105,7 +19105,7 @@
           "target": 5295655,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62212",
+          "symbol": "$L62219",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 11 for animation IDs 15; compiler-local offset 2423 and canonical destination independently checked",
           "local_target_offset": 2423,
           "addend": 0
@@ -19115,7 +19115,7 @@
           "target": 5295916,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62219",
+          "symbol": "$L62226",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 12 for animation IDs 16; compiler-local offset 2684 and canonical destination independently checked",
           "local_target_offset": 2684,
           "addend": 0
@@ -19125,7 +19125,7 @@
           "target": 5296177,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62226",
+          "symbol": "$L62233",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 13 for animation IDs 47; compiler-local offset 2945 and canonical destination independently checked",
           "local_target_offset": 2945,
           "addend": 0
@@ -19135,7 +19135,7 @@
           "target": 5296481,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62234",
+          "symbol": "$L62241",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 14 for animation IDs 50; compiler-local offset 3249 and canonical destination independently checked",
           "local_target_offset": 3249,
           "addend": 0
@@ -19145,7 +19145,7 @@
           "target": 5296968,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62248",
+          "symbol": "$L62255",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 15 for animation IDs 51; compiler-local offset 3736 and canonical destination independently checked",
           "local_target_offset": 3736,
           "addend": 0
@@ -19155,7 +19155,7 @@
           "target": 5297455,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62262",
+          "symbol": "$L62269",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 16 for animation IDs 52; compiler-local offset 4223 and canonical destination independently checked",
           "local_target_offset": 4223,
           "addend": 0
@@ -19165,7 +19165,7 @@
           "target": 5297942,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62276",
+          "symbol": "$L62283",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 17 for animation IDs 53; compiler-local offset 4710 and canonical destination independently checked",
           "local_target_offset": 4710,
           "addend": 0
@@ -19175,7 +19175,7 @@
           "target": 5298429,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62290",
+          "symbol": "$L62297",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 18 for animation IDs 54; compiler-local offset 5197 and canonical destination independently checked",
           "local_target_offset": 5197,
           "addend": 0
@@ -19185,7 +19185,7 @@
           "target": 5298916,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62304",
+          "symbol": "$L62311",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 19 for animation IDs 55; compiler-local offset 5684 and canonical destination independently checked",
           "local_target_offset": 5684,
           "addend": 0
@@ -19195,7 +19195,7 @@
           "target": 5299403,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62318",
+          "symbol": "$L62325",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 20 for animation IDs 56; compiler-local offset 6171 and canonical destination independently checked",
           "local_target_offset": 6171,
           "addend": 0
@@ -19205,7 +19205,7 @@
           "target": 5299866,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62331",
+          "symbol": "$L62338",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 21 for animation IDs 57; compiler-local offset 6634 and canonical destination independently checked",
           "local_target_offset": 6634,
           "addend": 0
@@ -19215,7 +19215,7 @@
           "target": 5300329,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62344",
+          "symbol": "$L62351",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 22 for animation IDs 58; compiler-local offset 7097 and canonical destination independently checked",
           "local_target_offset": 7097,
           "addend": 0
@@ -19225,7 +19225,7 @@
           "target": 5300792,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62357",
+          "symbol": "$L62364",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 23 for animation IDs 59; compiler-local offset 7560 and canonical destination independently checked",
           "local_target_offset": 7560,
           "addend": 0
@@ -19235,7 +19235,7 @@
           "target": 5301303,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62372",
+          "symbol": "$L62379",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 24 for animation IDs 60; compiler-local offset 8071 and canonical destination independently checked",
           "local_target_offset": 8071,
           "addend": 0
@@ -19245,7 +19245,7 @@
           "target": 5301814,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62387",
+          "symbol": "$L62394",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 25 for animation IDs 61; compiler-local offset 8582 and canonical destination independently checked",
           "local_target_offset": 8582,
           "addend": 0
@@ -19255,7 +19255,7 @@
           "target": 5302325,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62402",
+          "symbol": "$L62409",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 26 for animation IDs 62; compiler-local offset 9093 and canonical destination independently checked",
           "local_target_offset": 9093,
           "addend": 0
@@ -19265,7 +19265,7 @@
           "target": 5302764,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62414",
+          "symbol": "$L62421",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 27 for animation IDs 63; compiler-local offset 9532 and canonical destination independently checked",
           "local_target_offset": 9532,
           "addend": 0
@@ -19275,7 +19275,7 @@
           "target": 5303191,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62426",
+          "symbol": "$L62433",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 28 for animation IDs 64; compiler-local offset 9959 and canonical destination independently checked",
           "local_target_offset": 9959,
           "addend": 0
@@ -19285,7 +19285,7 @@
           "target": 5303752,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62442",
+          "symbol": "$L62449",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 29 for animation IDs 65; compiler-local offset 10520 and canonical destination independently checked",
           "local_target_offset": 10520,
           "addend": 0
@@ -19295,7 +19295,7 @@
           "target": 5304313,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62458",
+          "symbol": "$L62465",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 30 for animation IDs 66; compiler-local offset 11081 and canonical destination independently checked",
           "local_target_offset": 11081,
           "addend": 0
@@ -19305,7 +19305,7 @@
           "target": 5304802,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62471",
+          "symbol": "$L62478",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 31 for animation IDs 67; compiler-local offset 11570 and canonical destination independently checked",
           "local_target_offset": 11570,
           "addend": 0
@@ -19315,7 +19315,7 @@
           "target": 5305279,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62484",
+          "symbol": "$L62491",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 32 for animation IDs 68; compiler-local offset 12047 and canonical destination independently checked",
           "local_target_offset": 12047,
           "addend": 0
@@ -19325,7 +19325,7 @@
           "target": 5305595,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62493",
+          "symbol": "$L62500",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 33 for animation IDs 69; compiler-local offset 12363 and canonical destination independently checked",
           "local_target_offset": 12363,
           "addend": 0
@@ -19335,7 +19335,7 @@
           "target": 5305872,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62501",
+          "symbol": "$L62508",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 34 for animation IDs 70; compiler-local offset 12640 and canonical destination independently checked",
           "local_target_offset": 12640,
           "addend": 0
@@ -19345,7 +19345,7 @@
           "target": 5306352,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62513",
+          "symbol": "$L62520",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 35 for animation IDs 71; compiler-local offset 13120 and canonical destination independently checked",
           "local_target_offset": 13120,
           "addend": 0
@@ -19355,7 +19355,7 @@
           "target": 5306779,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62525",
+          "symbol": "$L62532",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 36 for animation IDs 72; compiler-local offset 13547 and canonical destination independently checked",
           "local_target_offset": 13547,
           "addend": 0
@@ -19365,7 +19365,7 @@
           "target": 5307110,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62535",
+          "symbol": "$L62542",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 37 for animation IDs 73; compiler-local offset 13878 and canonical destination independently checked",
           "local_target_offset": 13878,
           "addend": 0
@@ -19375,7 +19375,7 @@
           "target": 5307441,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62545",
+          "symbol": "$L62552",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 38 for animation IDs 74; compiler-local offset 14209 and canonical destination independently checked",
           "local_target_offset": 14209,
           "addend": 0
@@ -19385,7 +19385,7 @@
           "target": 5307748,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62554",
+          "symbol": "$L62561",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 39 for animation IDs 75; compiler-local offset 14516 and canonical destination independently checked",
           "local_target_offset": 14516,
           "addend": 0
@@ -19395,7 +19395,7 @@
           "target": 5308247,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62568",
+          "symbol": "$L62575",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 40 for animation IDs 76; compiler-local offset 15015 and canonical destination independently checked",
           "local_target_offset": 15015,
           "addend": 0
@@ -19405,7 +19405,7 @@
           "target": 5308746,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62582",
+          "symbol": "$L62589",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 41 for animation IDs 77; compiler-local offset 15514 and canonical destination independently checked",
           "local_target_offset": 15514,
           "addend": 0
@@ -19415,7 +19415,7 @@
           "target": 5309221,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62595",
+          "symbol": "$L62602",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 42 for animation IDs 81; compiler-local offset 15989 and canonical destination independently checked",
           "local_target_offset": 15989,
           "addend": 0
@@ -19425,7 +19425,7 @@
           "target": 5309706,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62609",
+          "symbol": "$L62616",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 43 for animation IDs 82; compiler-local offset 16474 and canonical destination independently checked",
           "local_target_offset": 16474,
           "addend": 0
@@ -19435,7 +19435,7 @@
           "target": 5310252,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62624",
+          "symbol": "$L62631",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 44 for animation IDs 83; compiler-local offset 17020 and canonical destination independently checked",
           "local_target_offset": 17020,
           "addend": 0
@@ -19445,7 +19445,7 @@
           "target": 5310833,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62641",
+          "symbol": "$L62648",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 45 for animation IDs 84; compiler-local offset 17601 and canonical destination independently checked",
           "local_target_offset": 17601,
           "addend": 0
@@ -19455,7 +19455,7 @@
           "target": 5311414,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62658",
+          "symbol": "$L62665",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 46 for animation IDs 85; compiler-local offset 18182 and canonical destination independently checked",
           "local_target_offset": 18182,
           "addend": 0
@@ -19465,7 +19465,7 @@
           "target": 5311881,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62672",
+          "symbol": "$L62679",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 47 for animation IDs 86; compiler-local offset 18649 and canonical destination independently checked",
           "local_target_offset": 18649,
           "addend": 0
@@ -19475,7 +19475,7 @@
           "target": 5312363,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62687",
+          "symbol": "$L62694",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 48 for animation IDs 87; compiler-local offset 19131 and canonical destination independently checked",
           "local_target_offset": 19131,
           "addend": 0
@@ -19485,7 +19485,7 @@
           "target": 5312542,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62693",
+          "symbol": "$L62700",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 49 for animation IDs 96; compiler-local offset 19310 and canonical destination independently checked",
           "local_target_offset": 19310,
           "addend": 0
@@ -19495,7 +19495,7 @@
           "target": 5312691,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62699",
+          "symbol": "$L62706",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 50 for animation IDs 97; compiler-local offset 19459 and canonical destination independently checked",
           "local_target_offset": 19459,
           "addend": 0
@@ -19505,7 +19505,7 @@
           "target": 5312939,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62707",
+          "symbol": "$L62714",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 51 for animation IDs 98; compiler-local offset 19707 and canonical destination independently checked",
           "local_target_offset": 19707,
           "addend": 0
@@ -19515,7 +19515,7 @@
           "target": 5313187,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62715",
+          "symbol": "$L62722",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 52 for animation IDs 99; compiler-local offset 19955 and canonical destination independently checked",
           "local_target_offset": 19955,
           "addend": 0
@@ -19525,7 +19525,7 @@
           "target": 5313363,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62722",
+          "symbol": "$L62729",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 53 for animation IDs 103; compiler-local offset 20131 and canonical destination independently checked",
           "local_target_offset": 20131,
           "addend": 0
@@ -19535,7 +19535,7 @@
           "target": 5313368,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62723",
+          "symbol": "$L62730",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 54 for animation IDs 107; compiler-local offset 20136 and canonical destination independently checked",
           "local_target_offset": 20136,
           "addend": 0
@@ -19545,7 +19545,7 @@
           "target": 5313373,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62724",
+          "symbol": "$L62731",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 55 for animation IDs 113; compiler-local offset 20141 and canonical destination independently checked",
           "local_target_offset": 20141,
           "addend": 0
@@ -19555,7 +19555,7 @@
           "target": 5313378,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62725",
+          "symbol": "$L62732",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 56 for animation IDs 150; compiler-local offset 20146 and canonical destination independently checked",
           "local_target_offset": 20146,
           "addend": 0
@@ -19565,7 +19565,7 @@
           "target": 5313796,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62739",
+          "symbol": "$L62746",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 57 for animation IDs 151; compiler-local offset 20564 and canonical destination independently checked",
           "local_target_offset": 20564,
           "addend": 0
@@ -19575,7 +19575,7 @@
           "target": 5314214,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62753",
+          "symbol": "$L62760",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 58 for animation IDs 152; compiler-local offset 20982 and canonical destination independently checked",
           "local_target_offset": 20982,
           "addend": 0
@@ -19585,7 +19585,7 @@
           "target": 5314632,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62767",
+          "symbol": "$L62774",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 59 for animation IDs 153; compiler-local offset 21400 and canonical destination independently checked",
           "local_target_offset": 21400,
           "addend": 0
@@ -19595,7 +19595,7 @@
           "target": 5315026,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62780",
+          "symbol": "$L62787",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 60 for animation IDs 154; compiler-local offset 21794 and canonical destination independently checked",
           "local_target_offset": 21794,
           "addend": 0
@@ -19605,7 +19605,7 @@
           "target": 5315420,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62793",
+          "symbol": "$L62800",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 61 for animation IDs 155; compiler-local offset 22188 and canonical destination independently checked",
           "local_target_offset": 22188,
           "addend": 0
@@ -19615,7 +19615,7 @@
           "target": 5315814,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62806",
+          "symbol": "$L62813",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 62 for animation IDs 156; compiler-local offset 22582 and canonical destination independently checked",
           "local_target_offset": 22582,
           "addend": 0
@@ -19625,7 +19625,7 @@
           "target": 5316086,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62813",
+          "symbol": "$L62820",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 63 for animation IDs 157; compiler-local offset 22854 and canonical destination independently checked",
           "local_target_offset": 22854,
           "addend": 0
@@ -19635,7 +19635,7 @@
           "target": 5316418,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62823",
+          "symbol": "$L62830",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 64 for animation IDs 158; compiler-local offset 23186 and canonical destination independently checked",
           "local_target_offset": 23186,
           "addend": 0
@@ -19645,7 +19645,7 @@
           "target": 5316750,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62833",
+          "symbol": "$L62840",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 65 for animation IDs 161; compiler-local offset 23518 and canonical destination independently checked",
           "local_target_offset": 23518,
           "addend": 0
@@ -19655,7 +19655,7 @@
           "target": 5317026,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62841",
+          "symbol": "$L62848",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 66 for animation IDs 162; compiler-local offset 23794 and canonical destination independently checked",
           "local_target_offset": 23794,
           "addend": 0
@@ -19665,7 +19665,7 @@
           "target": 5317517,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62855",
+          "symbol": "$L62862",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 67 for animation IDs 163; compiler-local offset 24285 and canonical destination independently checked",
           "local_target_offset": 24285,
           "addend": 0
@@ -19675,7 +19675,7 @@
           "target": 5318115,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62869",
+          "symbol": "$L62876",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 68 for animation IDs 164; compiler-local offset 24883 and canonical destination independently checked",
           "local_target_offset": 24883,
           "addend": 0
@@ -19685,7 +19685,7 @@
           "target": 5318667,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62887",
+          "symbol": "$L62894",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 69 for animation IDs 165; compiler-local offset 25435 and canonical destination independently checked",
           "local_target_offset": 25435,
           "addend": 0
@@ -19695,7 +19695,7 @@
           "target": 5319117,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62897",
+          "symbol": "$L62904",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 70 for animation IDs 166; compiler-local offset 25885 and canonical destination independently checked",
           "local_target_offset": 25885,
           "addend": 0
@@ -19705,7 +19705,7 @@
           "target": 5319571,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62911",
+          "symbol": "$L62918",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 71 for animation IDs 167; compiler-local offset 26339 and canonical destination independently checked",
           "local_target_offset": 26339,
           "addend": 0
@@ -19715,7 +19715,7 @@
           "target": 5320045,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62926",
+          "symbol": "$L62933",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 72 for animation IDs 168; compiler-local offset 26813 and canonical destination independently checked",
           "local_target_offset": 26813,
           "addend": 0
@@ -19725,7 +19725,7 @@
           "target": 5320365,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62935",
+          "symbol": "$L62942",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 73 for animation IDs 169; compiler-local offset 27133 and canonical destination independently checked",
           "local_target_offset": 27133,
           "addend": 0
@@ -19735,7 +19735,7 @@
           "target": 5320685,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62944",
+          "symbol": "$L62951",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 74 for animation IDs 170; compiler-local offset 27453 and canonical destination independently checked",
           "local_target_offset": 27453,
           "addend": 0
@@ -19745,7 +19745,7 @@
           "target": 5321142,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62956",
+          "symbol": "$L62963",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 75 for animation IDs 171; compiler-local offset 27910 and canonical destination independently checked",
           "local_target_offset": 27910,
           "addend": 0
@@ -19755,7 +19755,7 @@
           "target": 5321621,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62969",
+          "symbol": "$L62976",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 76 for animation IDs 180; compiler-local offset 28389 and canonical destination independently checked",
           "local_target_offset": 28389,
           "addend": 0
@@ -19765,7 +19765,7 @@
           "target": 5321991,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62979",
+          "symbol": "$L62986",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 77 for animation IDs 200; compiler-local offset 28759 and canonical destination independently checked",
           "local_target_offset": 28759,
           "addend": 0
@@ -19775,7 +19775,7 @@
           "target": 5322368,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62991",
+          "symbol": "$L62998",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 78 for animation IDs 201; compiler-local offset 29136 and canonical destination independently checked",
           "local_target_offset": 29136,
           "addend": 0
@@ -19785,7 +19785,7 @@
           "target": 5322863,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63008",
+          "symbol": "$L63015",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 79 for animation IDs 202; compiler-local offset 29631 and canonical destination independently checked",
           "local_target_offset": 29631,
           "addend": 0
@@ -19795,7 +19795,7 @@
           "target": 5323262,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63022",
+          "symbol": "$L63029",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 80 for animation IDs 203; compiler-local offset 30030 and canonical destination independently checked",
           "local_target_offset": 30030,
           "addend": 0
@@ -19805,7 +19805,7 @@
           "target": 5323508,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63031",
+          "symbol": "$L63038",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 81 for animation IDs 204; compiler-local offset 30276 and canonical destination independently checked",
           "local_target_offset": 30276,
           "addend": 0
@@ -19815,7 +19815,7 @@
           "target": 5323909,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63044",
+          "symbol": "$L63051",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 82 for animation IDs 205; compiler-local offset 30677 and canonical destination independently checked",
           "local_target_offset": 30677,
           "addend": 0
@@ -19825,7 +19825,7 @@
           "target": 5324310,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63057",
+          "symbol": "$L63064",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 83 for animation IDs 206; compiler-local offset 31078 and canonical destination independently checked",
           "local_target_offset": 31078,
           "addend": 0
@@ -19835,7 +19835,7 @@
           "target": 5324680,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63068",
+          "symbol": "$L63075",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 84 for animation IDs 207; compiler-local offset 31448 and canonical destination independently checked",
           "local_target_offset": 31448,
           "addend": 0
@@ -19845,7 +19845,7 @@
           "target": 5325151,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63081",
+          "symbol": "$L63088",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 85 for animation IDs 208; compiler-local offset 31919 and canonical destination independently checked",
           "local_target_offset": 31919,
           "addend": 0
@@ -19855,7 +19855,7 @@
           "target": 5325622,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63094",
+          "symbol": "$L63101",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 86 for animation IDs 209; compiler-local offset 32390 and canonical destination independently checked",
           "local_target_offset": 32390,
           "addend": 0
@@ -19865,7 +19865,7 @@
           "target": 5326159,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63108",
+          "symbol": "$L63115",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 87 for animation IDs 210; compiler-local offset 32927 and canonical destination independently checked",
           "local_target_offset": 32927,
           "addend": 0
@@ -19875,7 +19875,7 @@
           "target": 5326625,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63125",
+          "symbol": "$L63132",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 88 for animation IDs 211; compiler-local offset 33393 and canonical destination independently checked",
           "local_target_offset": 33393,
           "addend": 0
@@ -19885,7 +19885,7 @@
           "target": 5327016,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63137",
+          "symbol": "$L63144",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 89 for animation IDs 212; compiler-local offset 33784 and canonical destination independently checked",
           "local_target_offset": 33784,
           "addend": 0
@@ -19895,7 +19895,7 @@
           "target": 5327477,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63147",
+          "symbol": "$L63154",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 90 for animation IDs 213; compiler-local offset 34245 and canonical destination independently checked",
           "local_target_offset": 34245,
           "addend": 0
@@ -19905,7 +19905,7 @@
           "target": 5327665,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63153",
+          "symbol": "$L63160",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 91 for animation IDs 214; compiler-local offset 34433 and canonical destination independently checked",
           "local_target_offset": 34433,
           "addend": 0
@@ -19915,7 +19915,7 @@
           "target": 5327952,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63162",
+          "symbol": "$L63169",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 92 for animation IDs 220; compiler-local offset 34720 and canonical destination independently checked",
           "local_target_offset": 34720,
           "addend": 0
@@ -19925,7 +19925,7 @@
           "target": 5328446,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63173",
+          "symbol": "$L63180",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 93 for animation IDs 221; compiler-local offset 35214 and canonical destination independently checked",
           "local_target_offset": 35214,
           "addend": 0
@@ -19935,7 +19935,7 @@
           "target": 5329328,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63192",
+          "symbol": "$L63199",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 94 for animation IDs 230; compiler-local offset 36096 and canonical destination independently checked",
           "local_target_offset": 36096,
           "addend": 0
@@ -19945,7 +19945,7 @@
           "target": 5329633,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63201",
+          "symbol": "$L63208",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 95 for animation IDs 231; compiler-local offset 36401 and canonical destination independently checked",
           "local_target_offset": 36401,
           "addend": 0
@@ -19955,7 +19955,7 @@
           "target": 5329938,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63210",
+          "symbol": "$L63217",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 96 for animation IDs 232; compiler-local offset 36706 and canonical destination independently checked",
           "local_target_offset": 36706,
           "addend": 0
@@ -19965,7 +19965,7 @@
           "target": 5330243,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63219",
+          "symbol": "$L63226",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 97 for animation IDs 248; compiler-local offset 37011 and canonical destination independently checked",
           "local_target_offset": 37011,
           "addend": 0
@@ -19975,7 +19975,7 @@
           "target": 5330741,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63230",
+          "symbol": "$L63237",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 98 for animation IDs 249; compiler-local offset 37509 and canonical destination independently checked",
           "local_target_offset": 37509,
           "addend": 0
@@ -19985,7 +19985,7 @@
           "target": 5331548,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63251",
+          "symbol": "$L63258",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 99 for animation IDs 250; compiler-local offset 38316 and canonical destination independently checked",
           "local_target_offset": 38316,
           "addend": 0
@@ -19995,7 +19995,7 @@
           "target": 5331798,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63260",
+          "symbol": "$L63267",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 100 for animation IDs 251; compiler-local offset 38566 and canonical destination independently checked",
           "local_target_offset": 38566,
           "addend": 0
@@ -20005,7 +20005,7 @@
           "target": 5332048,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63269",
+          "symbol": "$L63276",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 101 for animation IDs 252; compiler-local offset 38816 and canonical destination independently checked",
           "local_target_offset": 38816,
           "addend": 0
@@ -20015,7 +20015,7 @@
           "target": 5332521,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63285",
+          "symbol": "$L63292",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 102 for animation IDs 253; compiler-local offset 39289 and canonical destination independently checked",
           "local_target_offset": 39289,
           "addend": 0
@@ -20025,7 +20025,7 @@
           "target": 5332840,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63295",
+          "symbol": "$L63302",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 103 for animation IDs 254; compiler-local offset 39608 and canonical destination independently checked",
           "local_target_offset": 39608,
           "addend": 0
@@ -20035,7 +20035,7 @@
           "target": 5333159,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63305",
+          "symbol": "$L63312",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 104 for animation IDs 255; compiler-local offset 39927 and canonical destination independently checked",
           "local_target_offset": 39927,
           "addend": 0
@@ -20045,7 +20045,7 @@
           "target": 5333671,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63320",
+          "symbol": "$L63327",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 105 for animation IDs 256; compiler-local offset 40439 and canonical destination independently checked",
           "local_target_offset": 40439,
           "addend": 0
@@ -20055,7 +20055,7 @@
           "target": 5333859,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63328",
+          "symbol": "$L63335",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 106 for animation IDs 257; compiler-local offset 40627 and canonical destination independently checked",
           "local_target_offset": 40627,
           "addend": 0
@@ -20065,7 +20065,7 @@
           "target": 5334047,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63336",
+          "symbol": "$L63343",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 107 for animation IDs 258; compiler-local offset 40815 and canonical destination independently checked",
           "local_target_offset": 40815,
           "addend": 0
@@ -20075,7 +20075,7 @@
           "target": 5334428,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63349",
+          "symbol": "$L63356",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 108 for animation IDs 259; compiler-local offset 41196 and canonical destination independently checked",
           "local_target_offset": 41196,
           "addend": 0
@@ -20085,7 +20085,7 @@
           "target": 5334954,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63363",
+          "symbol": "$L63370",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 109 for animation IDs 260; compiler-local offset 41722 and canonical destination independently checked",
           "local_target_offset": 41722,
           "addend": 0
@@ -20095,7 +20095,7 @@
           "target": 5335480,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63377",
+          "symbol": "$L63384",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 110 for animation IDs 261; compiler-local offset 42248 and canonical destination independently checked",
           "local_target_offset": 42248,
           "addend": 0
@@ -20105,7 +20105,7 @@
           "target": 5336208,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63397",
+          "symbol": "$L63404",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 111 for animation IDs 262; compiler-local offset 42976 and canonical destination independently checked",
           "local_target_offset": 42976,
           "addend": 0
@@ -20115,7 +20115,7 @@
           "target": 5336611,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63409",
+          "symbol": "$L63416",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 112 for animation IDs 263; compiler-local offset 43379 and canonical destination independently checked",
           "local_target_offset": 43379,
           "addend": 0
@@ -20125,7 +20125,7 @@
           "target": 5337014,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63421",
+          "symbol": "$L63428",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 113 for animation IDs 264; compiler-local offset 43782 and canonical destination independently checked",
           "local_target_offset": 43782,
           "addend": 0
@@ -20135,7 +20135,7 @@
           "target": 5337619,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63439",
+          "symbol": "$L63446",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 114 for animation IDs 265; compiler-local offset 44387 and canonical destination independently checked",
           "local_target_offset": 44387,
           "addend": 0
@@ -20145,7 +20145,7 @@
           "target": 5337860,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63448",
+          "symbol": "$L63455",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 115 for animation IDs 266; compiler-local offset 44628 and canonical destination independently checked",
           "local_target_offset": 44628,
           "addend": 0
@@ -20155,7 +20155,7 @@
           "target": 5338101,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63457",
+          "symbol": "$L63464",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 116 for animation IDs 267; compiler-local offset 44869 and canonical destination independently checked",
           "local_target_offset": 44869,
           "addend": 0
@@ -20165,7 +20165,7 @@
           "target": 5338502,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63470",
+          "symbol": "$L63477",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 117 for animation IDs 300; compiler-local offset 45270 and canonical destination independently checked",
           "local_target_offset": 45270,
           "addend": 0
@@ -20175,7 +20175,7 @@
           "target": 5339191,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63486",
+          "symbol": "$L63493",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 118 for animation IDs 301; compiler-local offset 45959 and canonical destination independently checked",
           "local_target_offset": 45959,
           "addend": 0
@@ -20185,7 +20185,7 @@
           "target": 5339880,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63502",
+          "symbol": "$L63509",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 119 for animation IDs 302; compiler-local offset 46648 and canonical destination independently checked",
           "local_target_offset": 46648,
           "addend": 0
@@ -20195,7 +20195,7 @@
           "target": 5340593,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63518",
+          "symbol": "$L63525",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 120 for animation IDs 303; compiler-local offset 47361 and canonical destination independently checked",
           "local_target_offset": 47361,
           "addend": 0
@@ -20205,7 +20205,7 @@
           "target": 5341048,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63533",
+          "symbol": "$L63540",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 121 for animation IDs 304; compiler-local offset 47816 and canonical destination independently checked",
           "local_target_offset": 47816,
           "addend": 0
@@ -20215,7 +20215,7 @@
           "target": 5342110,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63558",
+          "symbol": "$L63565",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 122 for animation IDs 307; compiler-local offset 48878 and canonical destination independently checked",
           "local_target_offset": 48878,
           "addend": 0
@@ -20225,7 +20225,7 @@
           "target": 5342620,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63570",
+          "symbol": "$L63577",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 123 for animation IDs 308; compiler-local offset 49388 and canonical destination independently checked",
           "local_target_offset": 49388,
           "addend": 0
@@ -20235,7 +20235,7 @@
           "target": 5343133,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63582",
+          "symbol": "$L63589",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 124 for animation IDs 309; compiler-local offset 49901 and canonical destination independently checked",
           "local_target_offset": 49901,
           "addend": 0
@@ -20245,7 +20245,7 @@
           "target": 5343690,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63595",
+          "symbol": "$L63602",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 125 for animation IDs 310; compiler-local offset 50458 and canonical destination independently checked",
           "local_target_offset": 50458,
           "addend": 0
@@ -20255,7 +20255,7 @@
           "target": 5344157,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63606",
+          "symbol": "$L63613",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 126 for animation IDs 311; compiler-local offset 50925 and canonical destination independently checked",
           "local_target_offset": 50925,
           "addend": 0
@@ -20265,7 +20265,7 @@
           "target": 5344624,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63617",
+          "symbol": "$L63624",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 127 for animation IDs 312; compiler-local offset 51392 and canonical destination independently checked",
           "local_target_offset": 51392,
           "addend": 0
@@ -20275,7 +20275,7 @@
           "target": 5345126,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63629",
+          "symbol": "$L63636",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 128 for animation IDs 313; compiler-local offset 51894 and canonical destination independently checked",
           "local_target_offset": 51894,
           "addend": 0
@@ -20285,7 +20285,7 @@
           "target": 5345450,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63637",
+          "symbol": "$L63644",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 129 for animation IDs 314; compiler-local offset 52218 and canonical destination independently checked",
           "local_target_offset": 52218,
           "addend": 0
@@ -20295,7 +20295,7 @@
           "target": 5345774,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63645",
+          "symbol": "$L63652",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 130 for animation IDs 315; compiler-local offset 52542 and canonical destination independently checked",
           "local_target_offset": 52542,
           "addend": 0
@@ -20305,7 +20305,7 @@
           "target": 5346098,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63653",
+          "symbol": "$L63660",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 131 for animation IDs 316; compiler-local offset 52866 and canonical destination independently checked",
           "local_target_offset": 52866,
           "addend": 0
@@ -20315,7 +20315,7 @@
           "target": 5347678,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L63692",
+          "symbol": "$L63699",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 132 for animation IDs 317; compiler-local offset 54446 and canonical destination independently checked",
           "local_target_offset": 54446,
           "addend": 0
@@ -20325,7 +20325,7 @@
           "target": 5293404,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62141",
+          "symbol": "$L62148",
           "evidence": "docs/KNOWLEDGE_BASE.md#misuzu-animation-and-state-owner; original switch address entry 133 for animation IDs 10,11,12,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,48,49,78,79,80,88,89,90,91,92,93,94,95,100,101,102,104,105,106,108,109,110,111,112,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,159,160,172,173,174,175,176,177,178,179,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,215,216,217,218,219,222,223,224,225,226,227,228,229,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,305,306; compiler-local offset 172 and canonical destination independently checked",
           "local_target_offset": 172,
           "addend": 0
@@ -20353,18 +20353,18 @@
       "symbol": "?Slot06@Character23@@UAEXXZ",
       "target_address": "0x0050C4B0",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
-      "object_sha256": "a2792b80fd82476b39d2c18c0aef218a9ae485ec3e0dc600aa6dec1df657d02b",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "738edec2d78e570a58b5a8e2b67b46e14ce5f20e712daec1050afd7b0cb30b36",
       "source_sha256": "7f94440ca4bb10c7b352dbbf2775cfe4b2b0e5ca90b385b84432f522e38b4b2a",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "2c7e3cbc8e78c91a73cf7092ce01431613da6a9d9fedb69b7ccc4e4be3da76f4",
+      "unit_sha256": "45b67a98fddd2ad079ac2599d8fcb82afea1555579974fb54903b27d746edf83",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

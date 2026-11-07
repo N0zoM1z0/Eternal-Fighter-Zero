@@ -5227,3 +5227,71 @@ including inherited LoadResources. This closes these code bodies only. Current
 authored totals:315 functions,931,962 instruction bytes and6,621 associated table
 bytes;351 reviewed boundaries/origins and333 proof recipes. Resource/data,
 runtime, original TU partitioning, portability and game phases remain open.
+
+
+## Makoto construction input and indicator owners
+
+Ten complete Character03 owners add17,018 strict exact instruction bytes without
+local tables:constructor5F6D90/393,initializer5F6F20/283,reset5F7040/58,
+removal5F7080/80,locomotion5F70D0/19,input5F70F0/11312,empty slots01/08
+at5F9D20/11 and5F9D30/11,emitter5F9D40/47,commands5F9D70/4804. Sources:
+`src/Character03Frame.cpp`, `src/Character03Input.cpp`,
+`src/Character03Commands.cpp`; profile:vc71-od-static; public proof:
+`docs/evidence/makoto-exact.json`. These ten bodies were first built complete
+before target-backed refinements; source formatting receives the selected final
+cold complete comparison.
+
+Both original creation paths select constructor5F6D90 for character ID3, push
+allocation3450 at758849/76DB58 and CALL the constructor at758892/76DB95. The
+constructor copies canonical "makoto\0" from788AC0 and installs13-entry table
+788AC8. Only Character03's previously opaque body is expanded:five scalar ints
+3138/313C/3140/3144/3148,three64-int arrays314C/324C/334C and the retained four
+unmodeled bytes344C..344F. The complete allocation remains3450; no other class
+layout or shared ABI is changed. Constructor/initializer clear all five scalars
+and all three arrays. ResetPose clears only the first three scalars; removal
+clears corresponding array entries. Preserve commandCount5 and the actual sparse
+stores commands[0]=1,commands[1]=5,commands[10]=3; do not invent missing stores.
+
+Independent complete boundary review covers4,478 contiguous instructions and
+693 branches, every RET and following CC/next prologue interval. The already
+reviewed393-byte constructor boundary is reused rather than counted again.
+All105 relocation fields have reviewed canonical destinations:51 direct calls,
+52 typed doubles,one string and one vptr. All nine64-bit literal payloads match
+original target memory and actual native COFF. Input has40 ClearBufferedButtons,
+four FaceOpponent and44 virtual ResetPose calls. Constructor/base entry owners
+supply the remaining seven direct calls. Each original13-slot destination is
+checked directly; resource loading remains the inherited accepted owner410B70.
+
+Input preserves positive air/ground action guards, actual sequence/phase order,
+byte updates and signed-facing direction/product association. Its three special
+air frame adjustments set frame3. The heavy airborne normal first selects211,
+then selects209 when inputY>0. Actual air/ground throw predicates retain opponent
+position/state priority. Commands preserve15 ordered circular-history scans,
+each original stage transition/window and directional expression form. Meter
+guards compare>=1000 directly; original 0x80 branch tests remain !=0 while the
+command ID sum retains positive-mask boolean arithmetic. Similarities with other
+characters supplied hypotheses only; complete original bytes are the authority.
+
+The final selected comparison covers89 units from41 serial cold native artifacts:
+ten new bodies and79 actual CharacterViews.h consumers. The other254 units retain
+their earlier proofs. Every compiler-generated local/string symbol rename is
+checked against unchanged canonical destinations/local offsets and native string
+bytes before accepting new receipts. Report:
+`.analysis/exact/makoto-and-affected.json`; log:
+`.analysis/build/makoto-formal-replay.log`. Focused target-required tracking,
+ledgers/progress CI and whitespace checks pass; no full CI/cohort or runtime
+matrix is needed. No native compiler/Wine failure, REA or subagents occurred.
+Preserve all private source/header/object attempts, original disassembly,
+read-only Ghidra annotations, complete boundary/operand reviews and logs in
+`.analysis/probes/makoto/`. Derivation scripts are one-time records and must not
+overwrite accepted/newer source.
+
+Ten of thirteen actual Makoto virtual destinations have complete exact proofs,
+including inherited LoadResources. Next substantial owner:CPU5FB040/17,531 code
+bytes; state5E85F0/58,482 and effects5FF4C0/33,673 instruction bytes remain open,
+with associated tables unreviewed. All thirteen fresh read-only annotations are
+retained and the Ghidra job is terminal. Its state decompiler warning about
+03020100 is provisional analysis, not evidence of an accepted data dependency.
+Current authored totals:325 functions,948,980 instruction bytes and6,621 associated
+table bytes;360 reviewed boundaries/origins and343 proof recipes. Resource/data,
+runtime,TU,portability and game phases remain independently open.

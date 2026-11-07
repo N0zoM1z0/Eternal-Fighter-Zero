@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
-  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix",
   "boundary_review": {
     "address": "0x54fd30",
     "code_size": 29568,
@@ -3096,7 +3096,7 @@
           "target": 5599616,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62735",
+          "symbol": "$L62742",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 29776 independently checked",
           "local_target_offset": 29776,
           "addend": 0
@@ -3106,7 +3106,7 @@
           "target": 5599408,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62805",
+          "symbol": "$L62812",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 29568 independently checked",
           "local_target_offset": 29568,
           "addend": 0
@@ -5123,7 +5123,7 @@
           "target": 5570194,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62196",
+          "symbol": "$L62203",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
           "local_target_offset": 354,
           "addend": 0
@@ -5133,7 +5133,7 @@
           "target": 5570958,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62208",
+          "symbol": "$L62215",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 1118 and canonical destination independently checked",
           "local_target_offset": 1118,
           "addend": 0
@@ -5143,7 +5143,7 @@
           "target": 5571807,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62221",
+          "symbol": "$L62228",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 1967 and canonical destination independently checked",
           "local_target_offset": 1967,
           "addend": 0
@@ -5153,7 +5153,7 @@
           "target": 5572340,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62230",
+          "symbol": "$L62237",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 2500 and canonical destination independently checked",
           "local_target_offset": 2500,
           "addend": 0
@@ -5163,7 +5163,7 @@
           "target": 5572759,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62238",
+          "symbol": "$L62245",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 2919 and canonical destination independently checked",
           "local_target_offset": 2919,
           "addend": 0
@@ -5173,7 +5173,7 @@
           "target": 5573193,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62246",
+          "symbol": "$L62253",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 3353 and canonical destination independently checked",
           "local_target_offset": 3353,
           "addend": 0
@@ -5183,7 +5183,7 @@
           "target": 5573612,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62254",
+          "symbol": "$L62261",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 3772 and canonical destination independently checked",
           "local_target_offset": 3772,
           "addend": 0
@@ -5193,7 +5193,7 @@
           "target": 5574031,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62262",
+          "symbol": "$L62269",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 4191 and canonical destination independently checked",
           "local_target_offset": 4191,
           "addend": 0
@@ -5203,7 +5203,7 @@
           "target": 5574450,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62270",
+          "symbol": "$L62277",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 4610 and canonical destination independently checked",
           "local_target_offset": 4610,
           "addend": 0
@@ -5213,7 +5213,7 @@
           "target": 5575072,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62286",
+          "symbol": "$L62293",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 5232 and canonical destination independently checked",
           "local_target_offset": 5232,
           "addend": 0
@@ -5223,7 +5223,7 @@
           "target": 5575356,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62291",
+          "symbol": "$L62298",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 5516 and canonical destination independently checked",
           "local_target_offset": 5516,
           "addend": 0
@@ -5233,7 +5233,7 @@
           "target": 5575570,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62295",
+          "symbol": "$L62302",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 411; compiler-local offset 5730 and canonical destination independently checked",
           "local_target_offset": 5730,
           "addend": 0
@@ -5243,7 +5243,7 @@
           "target": 5575784,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62299",
+          "symbol": "$L62306",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 412; compiler-local offset 5944 and canonical destination independently checked",
           "local_target_offset": 5944,
           "addend": 0
@@ -5253,7 +5253,7 @@
           "target": 5577040,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62332",
+          "symbol": "$L62339",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 413; compiler-local offset 7200 and canonical destination independently checked",
           "local_target_offset": 7200,
           "addend": 0
@@ -5263,7 +5263,7 @@
           "target": 5576390,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62315",
+          "symbol": "$L62322",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 414; compiler-local offset 6550 and canonical destination independently checked",
           "local_target_offset": 6550,
           "addend": 0
@@ -5273,7 +5273,7 @@
           "target": 5577661,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62349",
+          "symbol": "$L62356",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 415; compiler-local offset 7821 and canonical destination independently checked",
           "local_target_offset": 7821,
           "addend": 0
@@ -5283,7 +5283,7 @@
           "target": 5578294,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62366",
+          "symbol": "$L62373",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 416; compiler-local offset 8454 and canonical destination independently checked",
           "local_target_offset": 8454,
           "addend": 0
@@ -5293,7 +5293,7 @@
           "target": 5578927,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62383",
+          "symbol": "$L62390",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 17 for effect types 417; compiler-local offset 9087 and canonical destination independently checked",
           "local_target_offset": 9087,
           "addend": 0
@@ -5303,7 +5303,7 @@
           "target": 5580051,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62400",
+          "symbol": "$L62407",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 18 for effect types 418; compiler-local offset 10211 and canonical destination independently checked",
           "local_target_offset": 10211,
           "addend": 0
@@ -5313,7 +5313,7 @@
           "target": 5580305,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62405",
+          "symbol": "$L62412",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 19 for effect types 419; compiler-local offset 10465 and canonical destination independently checked",
           "local_target_offset": 10465,
           "addend": 0
@@ -5323,7 +5323,7 @@
           "target": 5580559,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62410",
+          "symbol": "$L62417",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 20 for effect types 420; compiler-local offset 10719 and canonical destination independently checked",
           "local_target_offset": 10719,
           "addend": 0
@@ -5333,7 +5333,7 @@
           "target": 5580813,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62415",
+          "symbol": "$L62422",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 21 for effect types 421; compiler-local offset 10973 and canonical destination independently checked",
           "local_target_offset": 10973,
           "addend": 0
@@ -5343,7 +5343,7 @@
           "target": 5581000,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62419",
+          "symbol": "$L62426",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 22 for effect types 422; compiler-local offset 11160 and canonical destination independently checked",
           "local_target_offset": 11160,
           "addend": 0
@@ -5353,7 +5353,7 @@
           "target": 5581927,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62429",
+          "symbol": "$L62436",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 23 for effect types 423; compiler-local offset 12087 and canonical destination independently checked",
           "local_target_offset": 12087,
           "addend": 0
@@ -5363,7 +5363,7 @@
           "target": 5582854,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62439",
+          "symbol": "$L62446",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 24 for effect types 424; compiler-local offset 13014 and canonical destination independently checked",
           "local_target_offset": 13014,
           "addend": 0
@@ -5373,7 +5373,7 @@
           "target": 5583781,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62449",
+          "symbol": "$L62456",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 25 for effect types 425; compiler-local offset 13941 and canonical destination independently checked",
           "local_target_offset": 13941,
           "addend": 0
@@ -5383,7 +5383,7 @@
           "target": 5584708,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62459",
+          "symbol": "$L62466",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 26 for effect types 426; compiler-local offset 14868 and canonical destination independently checked",
           "local_target_offset": 14868,
           "addend": 0
@@ -5393,7 +5393,7 @@
           "target": 5585635,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62469",
+          "symbol": "$L62476",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 27 for effect types 427; compiler-local offset 15795 and canonical destination independently checked",
           "local_target_offset": 15795,
           "addend": 0
@@ -5403,7 +5403,7 @@
           "target": 5586562,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62479",
+          "symbol": "$L62486",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 28 for effect types 428; compiler-local offset 16722 and canonical destination independently checked",
           "local_target_offset": 16722,
           "addend": 0
@@ -5413,7 +5413,7 @@
           "target": 5587489,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62489",
+          "symbol": "$L62496",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 29 for effect types 429; compiler-local offset 17649 and canonical destination independently checked",
           "local_target_offset": 17649,
           "addend": 0
@@ -5423,7 +5423,7 @@
           "target": 5587798,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62496",
+          "symbol": "$L62503",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 30 for effect types 430; compiler-local offset 17958 and canonical destination independently checked",
           "local_target_offset": 17958,
           "addend": 0
@@ -5433,7 +5433,7 @@
           "target": 5588052,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62501",
+          "symbol": "$L62508",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 31 for effect types 431; compiler-local offset 18212 and canonical destination independently checked",
           "local_target_offset": 18212,
           "addend": 0
@@ -5443,7 +5443,7 @@
           "target": 5588306,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62506",
+          "symbol": "$L62513",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 32 for effect types 432; compiler-local offset 18466 and canonical destination independently checked",
           "local_target_offset": 18466,
           "addend": 0
@@ -5453,7 +5453,7 @@
           "target": 5588560,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62511",
+          "symbol": "$L62518",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 33 for effect types 433; compiler-local offset 18720 and canonical destination independently checked",
           "local_target_offset": 18720,
           "addend": 0
@@ -5463,7 +5463,7 @@
           "target": 5589487,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62521",
+          "symbol": "$L62528",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 34 for effect types 434; compiler-local offset 19647 and canonical destination independently checked",
           "local_target_offset": 19647,
           "addend": 0
@@ -5473,7 +5473,7 @@
           "target": 5590414,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62531",
+          "symbol": "$L62538",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 35 for effect types 435; compiler-local offset 20574 and canonical destination independently checked",
           "local_target_offset": 20574,
           "addend": 0
@@ -5483,7 +5483,7 @@
           "target": 5590761,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62538",
+          "symbol": "$L62545",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 36 for effect types 436; compiler-local offset 20921 and canonical destination independently checked",
           "local_target_offset": 20921,
           "addend": 0
@@ -5493,7 +5493,7 @@
           "target": 5590948,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62542",
+          "symbol": "$L62549",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 37 for effect types 437; compiler-local offset 21108 and canonical destination independently checked",
           "local_target_offset": 21108,
           "addend": 0
@@ -5503,7 +5503,7 @@
           "target": 5591672,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62557",
+          "symbol": "$L62564",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 38 for effect types 438; compiler-local offset 21832 and canonical destination independently checked",
           "local_target_offset": 21832,
           "addend": 0
@@ -5513,7 +5513,7 @@
           "target": 5592396,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62572",
+          "symbol": "$L62579",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 39 for effect types 439; compiler-local offset 22556 and canonical destination independently checked",
           "local_target_offset": 22556,
           "addend": 0
@@ -5523,7 +5523,7 @@
           "target": 5592583,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62576",
+          "symbol": "$L62583",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 40 for effect types 440; compiler-local offset 22743 and canonical destination independently checked",
           "local_target_offset": 22743,
           "addend": 0
@@ -5533,7 +5533,7 @@
           "target": 5592770,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62580",
+          "symbol": "$L62587",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 41 for effect types 441; compiler-local offset 22930 and canonical destination independently checked",
           "local_target_offset": 22930,
           "addend": 0
@@ -5543,7 +5543,7 @@
           "target": 5592957,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62584",
+          "symbol": "$L62591",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 42 for effect types 442; compiler-local offset 23117 and canonical destination independently checked",
           "local_target_offset": 23117,
           "addend": 0
@@ -5553,7 +5553,7 @@
           "target": 5593540,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62599",
+          "symbol": "$L62606",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 43 for effect types 443; compiler-local offset 23700 and canonical destination independently checked",
           "local_target_offset": 23700,
           "addend": 0
@@ -5563,7 +5563,7 @@
           "target": 5594123,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62614",
+          "symbol": "$L62621",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 44 for effect types 444; compiler-local offset 24283 and canonical destination independently checked",
           "local_target_offset": 24283,
           "addend": 0
@@ -5573,7 +5573,7 @@
           "target": 5594850,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62629",
+          "symbol": "$L62636",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 45 for effect types 445; compiler-local offset 25010 and canonical destination independently checked",
           "local_target_offset": 25010,
           "addend": 0
@@ -5583,7 +5583,7 @@
           "target": 5595577,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62644",
+          "symbol": "$L62651",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 46 for effect types 495; compiler-local offset 25737 and canonical destination independently checked",
           "local_target_offset": 25737,
           "addend": 0
@@ -5593,7 +5593,7 @@
           "target": 5595873,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62649",
+          "symbol": "$L62656",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 47 for effect types 496; compiler-local offset 26033 and canonical destination independently checked",
           "local_target_offset": 26033,
           "addend": 0
@@ -5603,7 +5603,7 @@
           "target": 5597274,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62687",
+          "symbol": "$L62694",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 48 for effect types 497; compiler-local offset 27434 and canonical destination independently checked",
           "local_target_offset": 27434,
           "addend": 0
@@ -5613,7 +5613,7 @@
           "target": 5598198,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62703",
+          "symbol": "$L62710",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 49 for effect types 498; compiler-local offset 28358 and canonical destination independently checked",
           "local_target_offset": 28358,
           "addend": 0
@@ -5623,7 +5623,7 @@
           "target": 5599116,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62719",
+          "symbol": "$L62726",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 50 for effect types 499; compiler-local offset 29276 and canonical destination independently checked",
           "local_target_offset": 29276,
           "addend": 0
@@ -5633,7 +5633,7 @@
           "target": 5599375,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62188",
+          "symbol": "$L62195",
           "evidence": "docs/KNOWLEDGE_BASE.md#mishio-local-effect-dispatch-and-controls; original switch address entry 51 for effect types 446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 29535 and canonical destination independently checked",
           "local_target_offset": 29535,
           "addend": 0
@@ -5661,18 +5661,18 @@
       "symbol": "?Slot07@Character15@@UAEXXZ",
       "target_address": "0x0054FD30",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
-      "object_sha256": "3df1833a6a7092b51c92313c3fac455d748712e3aa1f90a5cdef650cd41d5d50",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "83ca65e37a1dc4f94d47ad337f75c83eb7ca8003fe4d5507d77826501c0b3818",
       "source_sha256": "27c926b4db4a2f698617f45c5cb964d648718f3d40b1012f95059aa3c1ef1032",
       "dependencies": {
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "5ed96b7cfbba08fc64e34e05d5f29233a585b4925585df6f653e50fd40a5e307",
+      "unit_sha256": "cb8442462a25b8b084d389956fc10a651641332a8c6dffff41f5d2a965825554",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     }

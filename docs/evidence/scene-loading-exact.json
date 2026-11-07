@@ -423,7 +423,7 @@
           "target": 7791639,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62437",
+          "symbol": "$L62444",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA43; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 2551,
           "addend": 0
@@ -883,7 +883,7 @@
           "target": 7789127,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62236",
+          "symbol": "$L62243",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E417; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 39,
           "addend": 0
@@ -893,7 +893,7 @@
           "target": 7789218,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62240",
+          "symbol": "$L62247",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 130,
           "addend": 0
@@ -903,7 +903,7 @@
           "target": 7789309,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62244",
+          "symbol": "$L62251",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 221,
           "addend": 0
@@ -913,7 +913,7 @@
           "target": 7789400,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62248",
+          "symbol": "$L62255",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E423; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 312,
           "addend": 0
@@ -923,7 +923,7 @@
           "target": 7789491,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62252",
+          "symbol": "$L62259",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E427; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 403,
           "addend": 0
@@ -933,7 +933,7 @@
           "target": 7789582,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62256",
+          "symbol": "$L62263",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 494,
           "addend": 0
@@ -943,7 +943,7 @@
           "target": 7789682,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62260",
+          "symbol": "$L62267",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 594,
           "addend": 0
@@ -953,7 +953,7 @@
           "target": 7789782,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62264",
+          "symbol": "$L62271",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E433; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 694,
           "addend": 0
@@ -963,7 +963,7 @@
           "target": 7789882,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62268",
+          "symbol": "$L62275",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E437; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 794,
           "addend": 0
@@ -973,7 +973,7 @@
           "target": 7789982,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62272",
+          "symbol": "$L62279",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 894,
           "addend": 0
@@ -983,7 +983,7 @@
           "target": 7790082,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62276",
+          "symbol": "$L62283",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 994,
           "addend": 0
@@ -993,7 +993,7 @@
           "target": 7790182,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62280",
+          "symbol": "$L62287",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E443; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1094,
           "addend": 0
@@ -1003,7 +1003,7 @@
           "target": 7790282,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62284",
+          "symbol": "$L62291",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E447; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1194,
           "addend": 0
@@ -1013,7 +1013,7 @@
           "target": 7790382,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62288",
+          "symbol": "$L62295",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1294,
           "addend": 0
@@ -1023,7 +1023,7 @@
           "target": 7790482,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62292",
+          "symbol": "$L62299",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1394,
           "addend": 0
@@ -1033,7 +1033,7 @@
           "target": 7790582,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62296",
+          "symbol": "$L62303",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E453; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1494,
           "addend": 0
@@ -1043,7 +1043,7 @@
           "target": 7790682,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62300",
+          "symbol": "$L62307",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E457; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1594,
           "addend": 0
@@ -1053,7 +1053,7 @@
           "target": 7790782,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62304",
+          "symbol": "$L62311",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1694,
           "addend": 0
@@ -1063,7 +1063,7 @@
           "target": 7790882,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62308",
+          "symbol": "$L62315",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1794,
           "addend": 0
@@ -1073,7 +1073,7 @@
           "target": 7790982,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62312",
+          "symbol": "$L62319",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E463; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1894,
           "addend": 0
@@ -1083,7 +1083,7 @@
           "target": 7791082,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62316",
+          "symbol": "$L62323",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E467; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 1994,
           "addend": 0
@@ -1093,7 +1093,7 @@
           "target": 7791182,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62320",
+          "symbol": "$L62327",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46B; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 2094,
           "addend": 0
@@ -1103,7 +1103,7 @@
           "target": 7791282,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62324",
+          "symbol": "$L62331",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46F; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 2194,
           "addend": 0
@@ -1113,7 +1113,7 @@
           "target": 7791382,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62328",
+          "symbol": "$L62335",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E473; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 2294,
           "addend": 0
@@ -1123,7 +1123,7 @@
           "target": 7791479,
           "type": "DIR32",
           "type_id": 6,
-          "symbol": "$L62332",
+          "symbol": "$L62339",
           "evidence": "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E477; complete 25-entry local table/branch destination and independent compiled offset",
           "local_target_offset": 2391,
           "addend": 0
@@ -1145,19 +1145,19 @@
       "symbol": "?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z",
       "target_address": "0x0076DA20",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
-      "object_sha256": "8d3ec53d5907205b7948882e4173040523c6bd93fdedd0cb849f7776cfdadaf8",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "196cbeafb51570471efa191df904147be7e4cecaedd1fc88b7c56974d16ab85f",
       "source_sha256": "90ce36a5e87f9ab73e4aedeff38bb5368577949844b4505381119f03ef97a4eb",
       "dependencies": {
         "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871",
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
-      "unit_sha256": "efad0f651935d00043e6fe4d4aca02989842f4a26b367ba7648303f2a9f7739b",
+      "unit_sha256": "a1c2e59f012871615e10974012ad172c6d3d660626ab6198fa42196434dfe78e",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
       "acceptance_authority": "complete-function-codegen"
     },
@@ -1211,17 +1211,17 @@
       "symbol": "??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
       "target_address": "0x004F8300",
       "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
-      "boundary_ledger_sha256": "2504b49b3ecc725738b46459aca973b13add51907e1b743fd4b9b4023848f42b",
-      "object_sha256": "8d3ec53d5907205b7948882e4173040523c6bd93fdedd0cb849f7776cfdadaf8",
+      "boundary_ledger_sha256": "ffc4c2ebca5abf9571c05d3bbce6bc38df6b93e6ee76ff77911678c856a0cf6d",
+      "object_sha256": "196cbeafb51570471efa191df904147be7e4cecaedd1fc88b7c56974d16ab85f",
       "source_sha256": "90ce36a5e87f9ab73e4aedeff38bb5368577949844b4505381119f03ef97a4eb",
       "dependencies": {
         "src/Character24.h": "3367078b7e7dc3fe1426a794cbe045db91a7e9bbdfc97f6b182c369f7dd30866",
-        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e",
+        "src/CharacterViews.h": "c0e888aecfbff93603f5df26a161923004c73855b185967ce2b7d05f7c2ba871",
         "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
         "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
       },
       "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
-      "units_manifest_sha256": "6ed3f5860e572bf645998cf3015535de9aefb323057d0f040d769d5827143551",
+      "units_manifest_sha256": "9fa2ba088199ac1d336bc05b8d575c53006c008e55dac6dc99110303e1c4d315",
       "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
       "unit_sha256": "43fb7aa8a6aac127c746792b243f3b963c2dbc29fcec69c196635c8a04e74206",
       "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
@@ -2087,5 +2087,5 @@
     }
   ],
   "latest_selected_replay": "10 new Misuzu units and27 actual CharacterViews.h consumers;17 serial cold artifacts; all37 complete strict comparisons exact; unaffected reports retain earlier evidence",
-  "method": "selected complete contribution comparison; 35 cold source/profile/dependency artifacts cover10 new Mayu constructor/frame/input/command units and66 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix"
+  "method": "selected complete contribution comparison; 41 cold source/profile/dependency artifacts cover10 new Makoto constructor/frame/input/command units and79 actual CharacterViews.h-dependent existing units;254 unrelated existing units retain earlier artifacts; no full CI/cohort or runtime matrix"
 }

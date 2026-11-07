@@ -149,7 +149,7 @@ address,end,size,status,evidence
 0x00588310,0x005884A7,407,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005A9FA0,0x005AA175,469,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x005DDDF0,0x005DDF8A,410,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
-0x005F6D90,0x005F6F19,393,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
+0x005F6D90,0x005F6F19,393,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x006163B0,0x0061656A,442,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00638D90,0x00638F0F,383,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00653A20,0x00653C2B,523,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
@@ -350,3 +350,12 @@ address,end,size,status,evidence
 0x005E2440,0x005E5C26,14310,reviewed,docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner
 0x005E5C30,0x005E85E8,10680,reviewed,docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls
 0x005C8580,0x005DDDE3,88163,reviewed,docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner
+0x005F6F20,0x005F703B,283,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F7040,0x005F707A,58,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F7080,0x005F70D0,80,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F70D0,0x005F70E3,19,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F9D20,0x005F9D2B,11,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F9D30,0x005F9D3B,11,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F9D40,0x005F9D6F,47,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F70F0,0x005F9D20,11312,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005F9D70,0x005FB034,4804,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
