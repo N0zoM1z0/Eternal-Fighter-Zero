@@ -1,0 +1,2470 @@
+{
+  "schema_version": 1,
+  "authority": "complete native codegen; every byte compared with explicit reviewed relocation bindings; no masks or partial extents",
+  "method": "one selected final cold pinned VC7.1 static /Od artifact; new complete authored source; public headers and prior units unchanged",
+  "boundary_review": {
+    "address": "0x5e5c30",
+    "code_size": 10512,
+    "exclusive_code_end": "0x5e8540",
+    "size": 10680,
+    "exclusive_end": "0x5e85e8",
+    "instructions": 2374,
+    "branches": [
+      {
+        "address": "0x5e5c4f",
+        "target": "0x5e5c56"
+      },
+      {
+        "address": "0x5e5c51",
+        "target": "0x5e853a"
+      },
+      {
+        "address": "0x5e5c78",
+        "target": "0x5e853a"
+      },
+      {
+        "address": "0x5e5c8c",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5ca8",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5cba",
+        "target": "0x5e5ce8"
+      },
+      {
+        "address": "0x5e5cc8",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5ce2",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5d7b",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5da8",
+        "target": "0x5e5e1e"
+      },
+      {
+        "address": "0x5e5dc0",
+        "target": "0x5e5e1e"
+      },
+      {
+        "address": "0x5e5dd0",
+        "target": "0x5e5e1e"
+      },
+      {
+        "address": "0x5e5e90",
+        "target": "0x5e5f21"
+      },
+      {
+        "address": "0x5e5f09",
+        "target": "0x5e5f21"
+      },
+      {
+        "address": "0x5e5f3f",
+        "target": "0x5e5f61"
+      },
+      {
+        "address": "0x5e5f5f",
+        "target": "0x5e5f71"
+      },
+      {
+        "address": "0x5e5f71",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e5f8c",
+        "target": "0x5e6007"
+      },
+      {
+        "address": "0x5e5fa4",
+        "target": "0x5e6007"
+      },
+      {
+        "address": "0x5e601e",
+        "target": "0x5e6059"
+      },
+      {
+        "address": "0x5e6070",
+        "target": "0x5e61e1"
+      },
+      {
+        "address": "0x5e60a7",
+        "target": "0x5e61e1"
+      },
+      {
+        "address": "0x5e617d",
+        "target": "0x5e6191"
+      },
+      {
+        "address": "0x5e61dc",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e61f8",
+        "target": "0x5e626c"
+      },
+      {
+        "address": "0x5e6207",
+        "target": "0x5e626c"
+      },
+      {
+        "address": "0x5e6267",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6283",
+        "target": "0x5e6338"
+      },
+      {
+        "address": "0x5e62ba",
+        "target": "0x5e6338"
+      },
+      {
+        "address": "0x5e6333",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e637e",
+        "target": "0x5e64e0"
+      },
+      {
+        "address": "0x5e63f4",
+        "target": "0x5e6482"
+      },
+      {
+        "address": "0x5e6407",
+        "target": "0x5e646c"
+      },
+      {
+        "address": "0x5e646a",
+        "target": "0x5e6482"
+      },
+      {
+        "address": "0x5e649c",
+        "target": "0x5e64e0"
+      },
+      {
+        "address": "0x5e64e0",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e64fb",
+        "target": "0x5e6576"
+      },
+      {
+        "address": "0x5e6513",
+        "target": "0x5e6576"
+      },
+      {
+        "address": "0x5e658d",
+        "target": "0x5e65c8"
+      },
+      {
+        "address": "0x5e65df",
+        "target": "0x5e674e"
+      },
+      {
+        "address": "0x5e6616",
+        "target": "0x5e674e"
+      },
+      {
+        "address": "0x5e66ea",
+        "target": "0x5e66fe"
+      },
+      {
+        "address": "0x5e6749",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6765",
+        "target": "0x5e67d9"
+      },
+      {
+        "address": "0x5e6774",
+        "target": "0x5e67d9"
+      },
+      {
+        "address": "0x5e67d4",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e67f0",
+        "target": "0x5e68a5"
+      },
+      {
+        "address": "0x5e6827",
+        "target": "0x5e68a5"
+      },
+      {
+        "address": "0x5e68a0",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e68eb",
+        "target": "0x5e6a4d"
+      },
+      {
+        "address": "0x5e6961",
+        "target": "0x5e69ef"
+      },
+      {
+        "address": "0x5e6974",
+        "target": "0x5e69d9"
+      },
+      {
+        "address": "0x5e69d7",
+        "target": "0x5e69ef"
+      },
+      {
+        "address": "0x5e6a09",
+        "target": "0x5e6a4d"
+      },
+      {
+        "address": "0x5e6a4d",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6a5c",
+        "target": "0x5e6ac5"
+      },
+      {
+        "address": "0x5e6a74",
+        "target": "0x5e6ac5"
+      },
+      {
+        "address": "0x5e6b0b",
+        "target": "0x5e6b9c"
+      },
+      {
+        "address": "0x5e6b84",
+        "target": "0x5e6b9c"
+      },
+      {
+        "address": "0x5e6bba",
+        "target": "0x5e6bdc"
+      },
+      {
+        "address": "0x5e6bda",
+        "target": "0x5e6bec"
+      },
+      {
+        "address": "0x5e6bec",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6c07",
+        "target": "0x5e6c53"
+      },
+      {
+        "address": "0x5e6c1f",
+        "target": "0x5e6c53"
+      },
+      {
+        "address": "0x5e6cc5",
+        "target": "0x5e6d5d"
+      },
+      {
+        "address": "0x5e6d3e",
+        "target": "0x5e6d5d"
+      },
+      {
+        "address": "0x5e6d5d",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6da8",
+        "target": "0x5e6e18"
+      },
+      {
+        "address": "0x5e6e06",
+        "target": "0x5e6e18"
+      },
+      {
+        "address": "0x5e6e18",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6e7c",
+        "target": "0x5e6f67"
+      },
+      {
+        "address": "0x5e6ef2",
+        "target": "0x5e6f2d"
+      },
+      {
+        "address": "0x5e6efe",
+        "target": "0x5e6f2d"
+      },
+      {
+        "address": "0x5e6f2b",
+        "target": "0x5e6f67"
+      },
+      {
+        "address": "0x5e6f47",
+        "target": "0x5e6f57"
+      },
+      {
+        "address": "0x5e6f55",
+        "target": "0x5e6f67"
+      },
+      {
+        "address": "0x5e6f67",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e6fcb",
+        "target": "0x5e70b7"
+      },
+      {
+        "address": "0x5e7041",
+        "target": "0x5e707c"
+      },
+      {
+        "address": "0x5e704d",
+        "target": "0x5e707c"
+      },
+      {
+        "address": "0x5e707a",
+        "target": "0x5e70b7"
+      },
+      {
+        "address": "0x5e7096",
+        "target": "0x5e70a7"
+      },
+      {
+        "address": "0x5e70a5",
+        "target": "0x5e70b7"
+      },
+      {
+        "address": "0x5e70b7",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7104",
+        "target": "0x5e7134"
+      },
+      {
+        "address": "0x5e711c",
+        "target": "0x5e7134"
+      },
+      {
+        "address": "0x5e717a",
+        "target": "0x5e7240"
+      },
+      {
+        "address": "0x5e71e0",
+        "target": "0x5e71f9"
+      },
+      {
+        "address": "0x5e7213",
+        "target": "0x5e7240"
+      },
+      {
+        "address": "0x5e725e",
+        "target": "0x5e7309"
+      },
+      {
+        "address": "0x5e7304",
+        "target": "0x5e853a"
+      },
+      {
+        "address": "0x5e7309",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7356",
+        "target": "0x5e7386"
+      },
+      {
+        "address": "0x5e736e",
+        "target": "0x5e7386"
+      },
+      {
+        "address": "0x5e73cc",
+        "target": "0x5e7472"
+      },
+      {
+        "address": "0x5e7445",
+        "target": "0x5e7472"
+      },
+      {
+        "address": "0x5e7490",
+        "target": "0x5e753c"
+      },
+      {
+        "address": "0x5e7537",
+        "target": "0x5e853a"
+      },
+      {
+        "address": "0x5e753c",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e756d",
+        "target": "0x5e7591"
+      },
+      {
+        "address": "0x5e7585",
+        "target": "0x5e7591"
+      },
+      {
+        "address": "0x5e75d7",
+        "target": "0x5e7662"
+      },
+      {
+        "address": "0x5e7650",
+        "target": "0x5e7662"
+      },
+      {
+        "address": "0x5e7662",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e76cd",
+        "target": "0x5e76df"
+      },
+      {
+        "address": "0x5e76f9",
+        "target": "0x5e778a"
+      },
+      {
+        "address": "0x5e7772",
+        "target": "0x5e778a"
+      },
+      {
+        "address": "0x5e778a",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7799",
+        "target": "0x5e77bf"
+      },
+      {
+        "address": "0x5e77a5",
+        "target": "0x5e77bf"
+      },
+      {
+        "address": "0x5e77b1",
+        "target": "0x5e77bf"
+      },
+      {
+        "address": "0x5e77bd",
+        "target": "0x5e77f7"
+      },
+      {
+        "address": "0x5e77c9",
+        "target": "0x5e77d7"
+      },
+      {
+        "address": "0x5e77d5",
+        "target": "0x5e77f7"
+      },
+      {
+        "address": "0x5e77e1",
+        "target": "0x5e7c0e"
+      },
+      {
+        "address": "0x5e77f1",
+        "target": "0x5e7c0e"
+      },
+      {
+        "address": "0x5e7c09",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7c54",
+        "target": "0x5e7ce5"
+      },
+      {
+        "address": "0x5e7ccd",
+        "target": "0x5e7ce5"
+      },
+      {
+        "address": "0x5e7ce5",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7d00",
+        "target": "0x5e7eb0"
+      },
+      {
+        "address": "0x5e7d1c",
+        "target": "0x5e7eb0"
+      },
+      {
+        "address": "0x5e7d30",
+        "target": "0x5e7eb0"
+      },
+      {
+        "address": "0x5e7efa",
+        "target": "0x5e7f44"
+      },
+      {
+        "address": "0x5e7f1a",
+        "target": "0x5e7f44"
+      },
+      {
+        "address": "0x5e7f52",
+        "target": "0x5e7f68"
+      },
+      {
+        "address": "0x5e7f76",
+        "target": "0x5e7f8d"
+      },
+      {
+        "address": "0x5e7f88",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e7ff0",
+        "target": "0x5e8081"
+      },
+      {
+        "address": "0x5e8069",
+        "target": "0x5e8081"
+      },
+      {
+        "address": "0x5e8081",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e809c",
+        "target": "0x5e8246"
+      },
+      {
+        "address": "0x5e80b8",
+        "target": "0x5e8246"
+      },
+      {
+        "address": "0x5e80cc",
+        "target": "0x5e8246"
+      },
+      {
+        "address": "0x5e8290",
+        "target": "0x5e82da"
+      },
+      {
+        "address": "0x5e82b0",
+        "target": "0x5e82da"
+      },
+      {
+        "address": "0x5e82e8",
+        "target": "0x5e82fe"
+      },
+      {
+        "address": "0x5e830c",
+        "target": "0x5e8323"
+      },
+      {
+        "address": "0x5e831e",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e8386",
+        "target": "0x5e8417"
+      },
+      {
+        "address": "0x5e83ff",
+        "target": "0x5e8417"
+      },
+      {
+        "address": "0x5e8417",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e8494",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e850d",
+        "target": "0x5e851f"
+      },
+      {
+        "address": "0x5e852c",
+        "target": "0x5e8535"
+      },
+      {
+        "address": "0x5e8535",
+        "target": "0x5e5c6b"
+      }
+    ],
+    "indirect_jumps": [
+      {
+        "address": "0x5e5d8b",
+        "instruction": "jmp    DWORD PTR [ecx*4+0x5e8540]"
+      }
+    ],
+    "calls": [
+      {
+        "address": "0x5e5c66",
+        "instruction": "call   0x405490"
+      },
+      {
+        "address": "0x5e5d4f",
+        "instruction": "call   0x413090"
+      },
+      {
+        "address": "0x5e5f6e",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e6113",
+        "instruction": "call   0x40f1e0"
+      },
+      {
+        "address": "0x5e612c",
+        "instruction": "call   DWORD PTR [eax]"
+      },
+      {
+        "address": "0x5e6169",
+        "instruction": "call   0x4105a0"
+      },
+      {
+        "address": "0x5e61aa",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e61d7",
+        "instruction": "call   0x407100"
+      },
+      {
+        "address": "0x5e6682",
+        "instruction": "call   0x40f1e0"
+      },
+      {
+        "address": "0x5e6699",
+        "instruction": "call   DWORD PTR [eax]"
+      },
+      {
+        "address": "0x5e66d6",
+        "instruction": "call   0x4105a0"
+      },
+      {
+        "address": "0x5e6717",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e6744",
+        "instruction": "call   0x407100"
+      },
+      {
+        "address": "0x5e6be9",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e6d4d",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e6e15",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e6f64",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5e70b4",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e765f",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e76dc",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e7803",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7823",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7851",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7860",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7880",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e78ae",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e78bd",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e78dd",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7911",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7920",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e793a",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e796b",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5e797a",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e79a0",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e79d4",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e79e3",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7a09",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7a3d",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7a4c",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7a72",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7aa6",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7ab5",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7adb",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7b0f",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7b1e",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7b42",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7b76",
+        "instruction": "call   DWORD PTR [eax+0x24]"
+      },
+      {
+        "address": "0x5e7b85",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7bab",
+        "instruction": "call   0x7783b8"
+      },
+      {
+        "address": "0x5e7bdf",
+        "instruction": "call   DWORD PTR [edx+0x24]"
+      },
+      {
+        "address": "0x5e7bf9",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5e7d36",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7d48",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7d88",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7daf",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7ddc",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7e1c",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7e43",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7e70",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e7f85",
+        "instruction": "call   DWORD PTR [eax+0x28]"
+      },
+      {
+        "address": "0x5e80d2",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e80e4",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e8124",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e8145",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e8172",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e81b2",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e81d9",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e8206",
+        "instruction": "call   0x777d61"
+      },
+      {
+        "address": "0x5e831b",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      },
+      {
+        "address": "0x5e851c",
+        "instruction": "call   DWORD PTR [edx+0x28]"
+      }
+    ],
+    "local_data": [
+      {
+        "kind": "address-table",
+        "offset": 10512,
+        "size": 68
+      },
+      {
+        "kind": "selector-map",
+        "offset": 10580,
+        "size": 100
+      }
+    ],
+    "jump_table": [
+      {
+        "index": 0,
+        "address": "0x5e5d92",
+        "effect_types": [
+          400
+        ]
+      },
+      {
+        "index": 1,
+        "address": "0x5e5f76",
+        "effect_types": [
+          401
+        ]
+      },
+      {
+        "index": 2,
+        "address": "0x5e64e5",
+        "effect_types": [
+          402
+        ]
+      },
+      {
+        "index": 3,
+        "address": "0x5e6a52",
+        "effect_types": [
+          403
+        ]
+      },
+      {
+        "index": 4,
+        "address": "0x5e6bf1",
+        "effect_types": [
+          404
+        ]
+      },
+      {
+        "index": 5,
+        "address": "0x5e6d62",
+        "effect_types": [
+          405
+        ]
+      },
+      {
+        "index": 6,
+        "address": "0x5e6e1d",
+        "effect_types": [
+          406
+        ]
+      },
+      {
+        "index": 7,
+        "address": "0x5e6f6c",
+        "effect_types": [
+          407
+        ]
+      },
+      {
+        "index": 8,
+        "address": "0x5e70bc",
+        "effect_types": [
+          408
+        ]
+      },
+      {
+        "index": 9,
+        "address": "0x5e730e",
+        "effect_types": [
+          409
+        ]
+      },
+      {
+        "index": 10,
+        "address": "0x5e7541",
+        "effect_types": [
+          410
+        ]
+      },
+      {
+        "index": 11,
+        "address": "0x5e7667",
+        "effect_types": [
+          495
+        ]
+      },
+      {
+        "index": 12,
+        "address": "0x5e778f",
+        "effect_types": [
+          496
+        ]
+      },
+      {
+        "index": 13,
+        "address": "0x5e7cea",
+        "effect_types": [
+          497
+        ]
+      },
+      {
+        "index": 14,
+        "address": "0x5e8086",
+        "effect_types": [
+          498
+        ]
+      },
+      {
+        "index": 15,
+        "address": "0x5e841c",
+        "effect_types": [
+          499
+        ]
+      },
+      {
+        "index": 16,
+        "address": "0x5e851f",
+        "effect_types": [
+          411,
+          412,
+          413,
+          414,
+          415,
+          416,
+          417,
+          418,
+          419,
+          420,
+          421,
+          422,
+          423,
+          424,
+          425,
+          426,
+          427,
+          428,
+          429,
+          430,
+          431,
+          432,
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457,
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473,
+          474,
+          475,
+          476,
+          477,
+          478,
+          479,
+          480,
+          481,
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494
+        ]
+      }
+    ],
+    "selector": "000102030405060708090a1010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010100b0c0d0e0f",
+    "owner_table": "0x788a68",
+    "owner_slot": 7,
+    "owner_operand": "0x788a84",
+    "padding_bytes": 8
+  },
+  "reports": [
+    {
+      "result": "exact",
+      "size": 10680,
+      "matched_bytes": 10680,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 55,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 288,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 343,
+          "target": 6194564,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62370",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10580 independently checked",
+          "local_target_offset": 10580,
+          "addend": 0
+        },
+        {
+          "offset": 350,
+          "target": 6194496,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62444",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10512 independently checked",
+          "local_target_offset": 10512,
+          "addend": 0
+        },
+        {
+          "offset": 454,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 515,
+          "target": 7896224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f9eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 774,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c8; literal -100.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 806,
+          "target": 7898016,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4089000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7883a0; literal 800.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 922,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 947,
+          "target": 7898000,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c008cccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788390; literal -3.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 972,
+          "target": 7897552,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb47ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881d0; literal 0.08 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1134,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1163,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1232,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1252,
+          "target": 4256224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetFrame@Secondary@@QAEXXZ at 0x40f1e0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1306,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1319,
+          "target": 7899088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887d0; literal 960.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1338,
+          "target": 4261280,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ApplyDamage@Secondary@@QAEXHN@Z at 0x4105a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1403,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1418,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1448,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 1555,
+          "target": 7896912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1580,
+          "target": 7896488,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3faeb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787da8; literal 0.06 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1665,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1690,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1715,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 1740,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2045,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2070,
+          "target": 7898000,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c008cccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788390; literal -3.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2095,
+          "target": 7897552,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb47ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881d0; literal 0.08 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2313,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2338,
+          "target": 7897576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c000cccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881e8; literal -2.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2363,
+          "target": 7897864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb1eb851eb851ec",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788308; literal 0.07 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2525,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2554,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2579,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2643,
+          "target": 4256224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetFrame@Secondary@@QAEXXZ at 0x40f1e0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2695,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2708,
+          "target": 7899088,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@408e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887d0; literal 960.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2727,
+          "target": 4261280,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ApplyDamage@Secondary@@QAEXHN@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ApplyDamage@Secondary@@QAEXHN@Z at 0x4105a0; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2792,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2807,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2837,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 2944,
+          "target": 7896912,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c014000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 2969,
+          "target": 7896488,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3faeb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787da8; literal 0.06 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3054,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3079,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3104,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3129,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3434,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3459,
+          "target": 7897576,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c000cccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881e8; literal -2.1 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3484,
+          "target": 7897864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fb1eb851eb851ec",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788308; literal 0.07 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3722,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 3969,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c8; literal -100.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4001,
+          "target": 7899816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4087200000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788aa8; literal 740.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4095,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4120,
+          "target": 7896432,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d70; literal -2.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 4152,
+          "target": 7897384,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa604189374bc6a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788128; literal 0.043 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5274,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5299,
+          "target": 7896408,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c010000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d58; literal -4.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5543,
+          "target": 7898296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c07e000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7884b8; literal -480.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5669,
+          "target": 7899808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c085400000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788aa0; literal -680.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5816,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5868,
+          "target": 7893816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4008000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 5893,
+          "target": 7897872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4018000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788310; literal 6.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6231,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6260,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6285,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6310,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 6725,
+          "target": 7896864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bf947ae147ae147b",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 7124,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7156,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7217,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7249,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7310,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7342,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7409,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7435,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7499,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7537,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7604,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7642,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7709,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7747,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7814,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7852,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7919,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 7955,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8022,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8060,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8455,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8473,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8537,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8565,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8576,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8604,
+          "target": 7896552,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8621,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8649,
+          "target": 7897032,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ffb333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8661,
+          "target": 7896464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bffccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8685,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8713,
+          "target": 7896504,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8724,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8752,
+          "target": 7893736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3feccccccccccccd",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8769,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 8797,
+          "target": 7896856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff6666666666666",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8809,
+          "target": 7896264,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8853,
+          "target": 7897048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fa999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8897,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 8929,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9379,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9397,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9461,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9494,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9522,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9539,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9567,
+          "target": 7896392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9579,
+          "target": 7896472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff8000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9603,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9631,
+          "target": 7896144,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9642,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9670,
+          "target": 7896448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3fe999999999999a",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9687,
+          "target": 7830881,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_rand",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed",
+          "addend": 0
+        },
+        {
+          "offset": 9715,
+          "target": 7897040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff3333333333333",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9727,
+          "target": 7896248,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@bff0000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9771,
+          "target": 7896224,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f9eb851eb851eb8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9815,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 9847,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified",
+          "addend": 0
+        },
+        {
+          "offset": 10512,
+          "target": 6184338,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62196",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked",
+          "local_target_offset": 354,
+          "addend": 0
+        },
+        {
+          "offset": 10516,
+          "target": 6184822,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62203",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 838 and canonical destination independently checked",
+          "local_target_offset": 838,
+          "addend": 0
+        },
+        {
+          "offset": 10520,
+          "target": 6186213,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62216",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 2229 and canonical destination independently checked",
+          "local_target_offset": 2229,
+          "addend": 0
+        },
+        {
+          "offset": 10524,
+          "target": 6187602,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62229",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 3618 and canonical destination independently checked",
+          "local_target_offset": 3618,
+          "addend": 0
+        },
+        {
+          "offset": 10528,
+          "target": 6188017,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62236",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 4033 and canonical destination independently checked",
+          "local_target_offset": 4033,
+          "addend": 0
+        },
+        {
+          "offset": 10532,
+          "target": 6188386,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62241",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 4402 and canonical destination independently checked",
+          "local_target_offset": 4402,
+          "addend": 0
+        },
+        {
+          "offset": 10536,
+          "target": 6188573,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62245",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 4589 and canonical destination independently checked",
+          "local_target_offset": 4589,
+          "addend": 0
+        },
+        {
+          "offset": 10540,
+          "target": 6188908,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62252",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 4924 and canonical destination independently checked",
+          "local_target_offset": 4924,
+          "addend": 0
+        },
+        {
+          "offset": 10544,
+          "target": 6189244,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62259",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 5260 and canonical destination independently checked",
+          "local_target_offset": 5260,
+          "addend": 0
+        },
+        {
+          "offset": 10548,
+          "target": 6189838,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62267",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 5854 and canonical destination independently checked",
+          "local_target_offset": 5854,
+          "addend": 0
+        },
+        {
+          "offset": 10552,
+          "target": 6190401,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62272",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 6417 and canonical destination independently checked",
+          "local_target_offset": 6417,
+          "addend": 0
+        },
+        {
+          "offset": 10556,
+          "target": 6190695,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62277",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 495; compiler-local offset 6711 and canonical destination independently checked",
+          "local_target_offset": 6711,
+          "addend": 0
+        },
+        {
+          "offset": 10560,
+          "target": 6190991,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62282",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 496; compiler-local offset 7007 and canonical destination independently checked",
+          "local_target_offset": 7007,
+          "addend": 0
+        },
+        {
+          "offset": 10564,
+          "target": 6192362,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62320",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 497; compiler-local offset 8378 and canonical destination independently checked",
+          "local_target_offset": 8378,
+          "addend": 0
+        },
+        {
+          "offset": 10568,
+          "target": 6193286,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62337",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 498; compiler-local offset 9302 and canonical destination independently checked",
+          "local_target_offset": 9302,
+          "addend": 0
+        },
+        {
+          "offset": 10572,
+          "target": 6194204,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62354",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 499; compiler-local offset 10220 and canonical destination independently checked",
+          "local_target_offset": 10220,
+          "addend": 0
+        },
+        {
+          "offset": 10576,
+          "target": 6194463,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$L62188",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 10479 and canonical destination independently checked",
+          "local_target_offset": 10479,
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2841c43f58364d7bec629da8f55c2ada6f969fb7cda8177bbca5f1fbca4c1183",
+      "target_extent_sha256": "2841c43f58364d7bec629da8f55c2ada6f969fb7cda8177bbca5f1fbca4c1183",
+      "code_size": 10512,
+      "local_data_bytes": 168,
+      "local_data": [
+        {
+          "offset": 10512,
+          "size": 68,
+          "kind": "switch-address-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; complete original17-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        },
+        {
+          "offset": 10580,
+          "size": 100,
+          "kind": "switch-index-table",
+          "evidence": "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; complete original17-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+        }
+      ],
+      "unit": "character-05-update-local-effects",
+      "symbol": "?Slot07@Character05@@UAEXXZ",
+      "target_address": "0x005E5C30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "329b85377a83e423ed4fec65579a291d3ba91803524c9e3ccf089d352347285e",
+      "object_sha256": "fcf318deac1215de10e6f38a15aafa65441c554b1ee8304543a11726fa3303fd",
+      "source_sha256": "7c0cee9658be2e87c55f3f52dcdcb2bb5e8ea8caa4279f4b958b20d64d3e719c",
+      "dependencies": {
+        "src/Engine.h": "33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "131f659a25f597a1cf5d302f9f78f56bc7c53591e80ee2f651dbd5f956c9ba2e"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "2ee55a2b154dd89c03286a07deb4df2410e81feb575787cf6ba7e29f5595f645",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2189c20e079bb37262382cc6fcaa7ee7d537574fa815989af5a3b44b1edcb553",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Current handoff — 2026-11-06
+# Current handoff — 2026-11-07
 
 ## Operator state and starting point
 
@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 313 |
-| Authored exact instruction bytes | 834,241 |
-| Associated exact local-table bytes | 5,499 |
-| Reviewed boundaries / origins | 349 / 349 |
+| Authored complete exact functions | 314 |
+| Authored exact instruction bytes | 844,753 |
+| Associated exact local-table bytes | 5,667 |
+| Reviewed boundaries / origins | 350 / 350 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,39 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mayu CPU checkpoint
+## Latest Mayu local-effect checkpoint
+
+Character05::Slot07 at5E5C30 is complete strict exact:10,512 instruction bytes
+plus168 associated table bytes, total10,680; complete exclusive end5E85E8. Source:
+src/Character05Effects.cpp; profile vc71-od-static; proof:
+docs/evidence/mayu-effects-exact.json. Durable facts:
+[Mayu local effect dispatch and controls](KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls).
+Private retained evidence:.analysis/probes/mayu-effects/README.md.
+
+Independent review covers2,374 instructions,146 branches and the full17-address /
+100-selector compressed switch:16 explicit types400..499 and84 defaults. All144
+relocations are independently checked:46 direct calls,79 doubles,19 local bindings.
+All36 payloads match target/COFF. Original vtable788A68 slot7/operand788A84 points
+to5E5C30. Used descriptor/cursor/count locals retain natural frame12C and EBX/ESI.
+Preserve frame3/9 landing exits, frame5 conversion, child counter<=730, coordinate
+association and CRT sample/multiplier order. Types408/409 really return from the
+complete effect update after conversion; do not turn those returns into breaks.
+
+The first complete source was built early; final formatting received another
+whole comparison. One final selected cold replay passes all10,680 bytes and144
+reviewed bindings. Public headers/all331 previous recipes/source owners remain
+unchanged. Focused tracking, ledgers/progress CI and whitespace checks pass.
+No compiler/Wine failure, old/full cold replay, full CI or runtime matrix ran.
+
+Twelve of thirteen actual Mayu virtual entries are exact. Next substantial owner:
+state5C8580/87209 instruction bytes; associated tables remain unreviewed. Fresh
+read-only annotation:.analysis/probes/mayu/calls-annotated-005c8580.txt. It was
+successfully obtained with verified DecompileOptions.setMaxPayloadMBytes(128);
+all Ghidra jobs are terminal. Build a complete source early and independently
+review every original boundary/operand before credit. Resource/data/runtime/TU
+and game phases remain open. Preserve parked PrepareBattle/Shiori controls.
+
+## Previous Mayu CPU checkpoint
 
 Character05::Slot05 at5E2440 is complete strict exact:14,310 instruction bytes,
 exclusive end5E5C26, without local tables. Source:src/Character05Cpu.cpp;

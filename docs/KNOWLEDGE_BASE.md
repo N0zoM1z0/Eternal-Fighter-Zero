@@ -5110,3 +5110,55 @@ Eleven of thirteen actual Mayu virtual destinations now have exact proofs.
 State5C8580/87209 and effects5E5C30/10512 instruction bytes remain open, with
 associated tables unreviewed. Resource/data/runtime/TU and game phases remain
 independently open.
+
+## Mayu local effect dispatch and controls
+
+Character05::Slot07 at0x5E5C30 is complete strict exact in
+`src/Character05Effects.cpp`:10,512 instruction bytes followed by168 local-table
+bytes, total10,680; complete exclusive end5E85E8. The17-entry DWORD address table
+occupies5E8540..5E8583 and100 selector bytes occupy5E8584..5E85E7. Eight excluded
+CC bytes precede next prologue5E85F0. Vtable788A68 slot07 operand788A84 contains
+5E5C30. Public proof:`docs/evidence/mayu-effects-exact.json`;
+recipe:character-05-update-local-effects, pinned vc71-od-static.
+
+Independent review covers2,374 contiguous instructions,146 direct branches,
+the indirect dispatch, full RET/data boundary and every switch destination.
+Effect types400..499 select16 explicit cases and84 defaults. Default entry16
+reaches the shared next-effect tail5E851F. All144 relocation fields have explicit
+reviewed symbols and actual canonical destinations:46 direct calls,79 double
+operands and19 local bindings (17 address entries and two dispatch operands).
+All36 fresh64-bit literal payloads match canonical memory and native COFF.
+Direct calls comprise22 __ftol2,16 CRT rand, two ResetFrame, two ApplyDamage,
+two Context emitters and descriptor construction/reset. Virtual calls comprise
+12 removals,10 local emissions and two opponent ResetPose calls; they remain
+separate from direct CALL relocation evidence. No RandomRange call occurs.
+
+Natural used locals retain frame12C, receiver EBP-5C, ring cursor EBP-4,
+descriptor EBP-50, duration/count EBP-54/-58 and saved EBX/ESI. Preserve the
+separate entry opponent freeze and per-slot activity/own-freeze checks, cursor
+wrap64, positive frame3/frame9 landing transitions and frame5 conversion exits.
+The frame6 loop compares child counter3138<=730 directly. Original damage,
+minimum-opponent-life clamp, effect conversion order and signed-facing coordinate
+association remain explicit. Types408/409 really return from the complete update
+after converting the slot, rather than continue the ring. CRT particle random
+multiplier order follows target instructions. Existing child fields/shared views
+suffice without public-header changes; original class/TU provenance stays open.
+
+The first complete10,647-byte native source was built early. Target-backed word
+updates, positive lifecycle exits, original threshold operands and arithmetic
+order recover the full artifact. Formatting received a complete native rebuild /
+strict comparison. One final selected cold replay passes all10,680 bytes and144
+reviewed bindings with zero differences. Public headers and all331 prior recipes /
+source owners remain unchanged; no old unit needs replay. Focused tracking,
+ledgers/progress CI and whitespace checks pass; no full CI/cohort or runtime
+matrix ran. No compiler/Wine failure occurred. Preserve all private evidence,
+complete source/header/object attempts and bounded native exits in
+`.analysis/probes/mayu-effects/` and `.analysis/build/`; unused inherited derivation
+scripts must not overwrite accepted/newer source.
+
+Twelve of thirteen actual Mayu virtual destinations now have exact proofs.
+The substantial state owner5C8580/87,209 instruction bytes remains open, with
+associated tables unreviewed; its complete fresh read-only annotation is retained.
+Current authored totals:314 functions,844,753 instruction bytes and5,667 associated
+table bytes;350 reviewed boundaries/origins and332 proof recipes. Resource/data /
+runtime/TU and game phases remain independently open.

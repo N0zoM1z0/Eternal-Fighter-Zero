@@ -97599,3 +97599,1034 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108a0
 evidence = "docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[units.character-05-update-local-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character05Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-05-update-local-effects/Character05Effects.obj"
+symbol = "?Slot07@Character05@@UAEXXZ"
+target_address = 0x005e5c30
+size = 10680
+code_size = 10512
+
+[[units.character-05-update-local-effects.local_data]]
+offset = 10512
+size = 68
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; complete original17-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+
+[[units.character-05-update-local-effects.local_data]]
+offset = 10580
+size = 100
+kind = "switch-index-table"
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; complete original17-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 343
+type = "DIR32"
+symbol = "$L62370"
+target = 0x005e8584
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10580 independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 350
+type = "DIR32"
+symbol = "$L62444"
+target = 0x005e8540
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 10512 independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 454
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 515
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787ca0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 774
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c8; literal -100.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 806
+type = "DIR32"
+symbol = "__real@4089000000000000"
+target = 0x007883a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7883a0; literal 800.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 922
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 947
+type = "DIR32"
+symbol = "__real@c008cccccccccccd"
+target = 0x00788390
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788390; literal -3.1 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 972
+type = "DIR32"
+symbol = "__real@3fb47ae147ae147b"
+target = 0x007881d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881d0; literal 0.08 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1134
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1163
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1232
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1252
+type = "REL32"
+symbol = "?ResetFrame@Secondary@@QAEXXZ"
+target = 0x0040f1e0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetFrame@Secondary@@QAEXXZ at 0x40f1e0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1306
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1319
+type = "DIR32"
+symbol = "__real@408e000000000000"
+target = 0x007887d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887d0; literal 960.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1338
+type = "REL32"
+symbol = "?ApplyDamage@Secondary@@QAEXHN@Z"
+target = 0x004105a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ApplyDamage@Secondary@@QAEXHN@Z at 0x4105a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1403
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1418
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1448
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1555
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1580
+type = "DIR32"
+symbol = "__real@3faeb851eb851eb8"
+target = 0x00787da8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787da8; literal 0.06 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1665
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1690
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1715
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 1740
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2045
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2070
+type = "DIR32"
+symbol = "__real@c008cccccccccccd"
+target = 0x00788390
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788390; literal -3.1 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2095
+type = "DIR32"
+symbol = "__real@3fb47ae147ae147b"
+target = 0x007881d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881d0; literal 0.08 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2313
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2338
+type = "DIR32"
+symbol = "__real@c000cccccccccccd"
+target = 0x007881e8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881e8; literal -2.1 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2363
+type = "DIR32"
+symbol = "__real@3fb1eb851eb851ec"
+target = 0x00788308
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788308; literal 0.07 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2525
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2554
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2579
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2643
+type = "REL32"
+symbol = "?ResetFrame@Secondary@@QAEXXZ"
+target = 0x0040f1e0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetFrame@Secondary@@QAEXXZ at 0x40f1e0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2695
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2708
+type = "DIR32"
+symbol = "__real@408e000000000000"
+target = 0x007887d0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7887d0; literal 960.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2727
+type = "REL32"
+symbol = "?ApplyDamage@Secondary@@QAEXHN@Z"
+target = 0x004105a0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?ApplyDamage@Secondary@@QAEXHN@Z at 0x4105a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2792
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2807
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2837
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2944
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 2969
+type = "DIR32"
+symbol = "__real@3faeb851eb851eb8"
+target = 0x00787da8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787da8; literal 0.06 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3054
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3079
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3104
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3129
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3434
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3459
+type = "DIR32"
+symbol = "__real@c000cccccccccccd"
+target = 0x007881e8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881e8; literal -2.1 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3484
+type = "DIR32"
+symbol = "__real@3fb1eb851eb851ec"
+target = 0x00788308
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788308; literal 0.07 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3722
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875c0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c0; literal 1.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 3969
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875c8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7875c8; literal -100.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 4001
+type = "DIR32"
+symbol = "__real@4087200000000000"
+target = 0x00788aa8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788aa8; literal 740.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 4095
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 4120
+type = "DIR32"
+symbol = "__real@c000000000000000"
+target = 0x00787d70
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d70; literal -2.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 4152
+type = "DIR32"
+symbol = "__real@3fa604189374bc6a"
+target = 0x00788128
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788128; literal 0.043 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5274
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5299
+type = "DIR32"
+symbol = "__real@c010000000000000"
+target = 0x00787d58
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d58; literal -4.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5543
+type = "DIR32"
+symbol = "__real@c07e000000000000"
+target = 0x007884b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7884b8; literal -480.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5669
+type = "DIR32"
+symbol = "__real@c085400000000000"
+target = 0x00788aa0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788aa0; literal -680.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5816
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5868
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 5893
+type = "DIR32"
+symbol = "__real@4018000000000000"
+target = 0x00788310
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788310; literal 6.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 6231
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 6260
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 6285
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 6310
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 6725
+type = "DIR32"
+symbol = "__real@bf947ae147ae147b"
+target = 0x00787f20
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7124
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7156
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7217
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7249
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7310
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7342
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7409
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7435
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7499
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7537
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7604
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7642
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7709
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7747
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7814
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7852
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7919
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 7955
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8022
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8060
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8455
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8473
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8537
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8565
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8576
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8604
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8621
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8649
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8661
+type = "DIR32"
+symbol = "__real@bffccccccccccccd"
+target = 0x00787d90
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8685
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8713
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8724
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8752
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872e8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8769
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8797
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787f18
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8809
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8853
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8897
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 8929
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9379
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9397
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9461
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9494
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9522
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9539
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9567
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9579
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9603
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9631
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9642
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9670
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9687
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9715
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9727
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9771
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787ca0
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9815
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 9847
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10512
+type = "DIR32"
+symbol = "$L62196"
+target = 0x005e5d92
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10516
+type = "DIR32"
+symbol = "$L62203"
+target = 0x005e5f76
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 838 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10520
+type = "DIR32"
+symbol = "$L62216"
+target = 0x005e64e5
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 2229 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10524
+type = "DIR32"
+symbol = "$L62229"
+target = 0x005e6a52
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 3618 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10528
+type = "DIR32"
+symbol = "$L62236"
+target = 0x005e6bf1
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 4033 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10532
+type = "DIR32"
+symbol = "$L62241"
+target = 0x005e6d62
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 4402 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10536
+type = "DIR32"
+symbol = "$L62245"
+target = 0x005e6e1d
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 4589 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10540
+type = "DIR32"
+symbol = "$L62252"
+target = 0x005e6f6c
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 4924 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10544
+type = "DIR32"
+symbol = "$L62259"
+target = 0x005e70bc
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 5260 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10548
+type = "DIR32"
+symbol = "$L62267"
+target = 0x005e730e
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 5854 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10552
+type = "DIR32"
+symbol = "$L62272"
+target = 0x005e7541
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 6417 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10556
+type = "DIR32"
+symbol = "$L62277"
+target = 0x005e7667
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 495; compiler-local offset 6711 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10560
+type = "DIR32"
+symbol = "$L62282"
+target = 0x005e778f
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 496; compiler-local offset 7007 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10564
+type = "DIR32"
+symbol = "$L62320"
+target = 0x005e7cea
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 497; compiler-local offset 8378 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10568
+type = "DIR32"
+symbol = "$L62337"
+target = 0x005e8086
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 498; compiler-local offset 9302 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10572
+type = "DIR32"
+symbol = "$L62354"
+target = 0x005e841c
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 499; compiler-local offset 10220 and canonical destination independently checked"
+
+[[units.character-05-update-local-effects.relocations]]
+offset = 10576
+type = "DIR32"
+symbol = "$L62188"
+target = 0x005e851f
+evidence = "docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 10479 and canonical destination independently checked"

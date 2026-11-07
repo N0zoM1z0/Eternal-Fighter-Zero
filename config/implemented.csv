@@ -312,3 +312,4 @@ address,name,source,symbol,status,evidence
 0x005DE150,?Slot04@Character05@@UAEXXZ,src/Character05Input.cpp,?Slot04@Character05@@UAEXXZ,complete,docs/evidence/mayu-exact.json
 0x005E10B0,?Slot02@Character05@@UAEXXZ,src/Character05Commands.cpp,?Slot02@Character05@@UAEXXZ,complete,docs/evidence/mayu-exact.json
 0x005E2440,Character05::Slot05,src/Character05Cpu.cpp,?Slot05@Character05@@UAEXXZ,complete,docs/evidence/mayu-cpu-exact.json
+0x005E5C30,Character05::Slot07,src/Character05Effects.cpp,?Slot07@Character05@@UAEXXZ,complete,docs/evidence/mayu-effects-exact.json
