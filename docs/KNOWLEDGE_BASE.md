@@ -5162,3 +5162,68 @@ associated tables unreviewed; its complete fresh read-only annotation is retaine
 Current authored totals:314 functions,844,753 instruction bytes and5,667 associated
 table bytes;350 reviewed boundaries/origins and332 proof recipes. Resource/data /
 runtime/TU and game phases remain independently open.
+
+
+## Mayu animation and state owner
+
+Character05::Slot06 at0x5C8580 is complete strict exact in
+`src/Character05State.cpp`:87,209 instruction bytes followed by954 local-table
+bytes, total88,163; complete exclusive end5DDDE3. Code ends5DDA29. The158-entry
+DWORD address table occupies5DDA29..5DDCA0 and322 selector bytes occupy
+5DDCA1..5DDDE2. Thirteen excluded CC bytes precede accepted constructor5DDDF0.
+Vtable788A68 slot06 operand788A80 contains5C8580. Public proof:
+`docs/evidence/mayu-state-exact.json`; recipe:character-05-update-state, pinned
+vc71-od-static. The complete selector covers animation IDs1..322, with157 explicit
+cases and165 default selections; address entry157 reaches default5C862C.
+
+Independent original review covers24,252 contiguous instructions,2,361 direct
+branches, the indirect dispatch, full RET/data boundary, all switch destinations
+and following constructor/padding. All2,059 relocation fields have independently
+checked symbols and actual canonical destinations:482 direct calls,1,417 double
+operands and160 local bindings (158 address entries and two dispatch operands).
+All135 fresh64-bit literal payloads match target memory and native COFF. Direct
+calls comprise137 ResetFrame,111 __ftol2,79 FaceOpponent,49 Context emitters,
+25 horizontal shakes,16 tints,13 CollisionSide,13 ApplyDamage,10 scene timers,
+nine horizontal offsets,eight vertical shakes,seven trails,three RandomRange
+and descriptor construction/reset. All three random results zero-extend AX.
+The269 virtual calls comprise260 ResetPose and nine local emissions; these
+remain separate from direct CALL relocation evidence.
+
+Natural used locals retain frame0x448, receiver EBP-54, descriptor EBP-50 and
+16-bit duration/count EBP-4/-8 without a saved ESI. Preserve positive landing,
+action and throw exits, original frame thresholds and branch joins, integer
+particle subtraction, opponent coordinate association, direction-expression
+order and x87 comparisons. State307 tests frame equality9/15/20 for its three
+landing transitions and compares child counter3138<=730 directly. State261's
+frame6 repeat tests counter<4 before its terminating path. State303/304 and
+308..310 retain the original signed-int lower bound before the frame<3 shake
+range. The two WORD stores atF2 use the real existing opaque byte range through
+a typed short reference; shared ABI/headers are unchanged. Original class/TU
+provenance and field semantics remain separate from complete codegen evidence.
+
+The first complete88,250-byte native source was built early. Target-backed
+control flow, actual 16-bit updates, double operands and expression association
+recover the full contribution. A broad private text rewrite accidentally changed
+some hexadecimal !=0x... tests; direct original instruction review corrected
+those draft errors before acceptance. Two native source errors were corrected,
+each followed by the required successful verify-toolchain --execute smoke;
+complete bounded logs and exit records remain private. No compiler/Wine failure
+is outstanding. The read-only typed state decompile completed successfully but
+still split double literals into DWORD stores; those hypotheses were checked
+against fresh target operands rather than trusted as source declarations.
+
+After final formatting, another complete native strict comparison passes.
+One final selected cold replay passes all88,163 bytes and2,059 explicit reviewed
+bindings with zero differences. Public headers and all332 prior recipes/source
+owners remain unchanged; no old unit needs replay. Focused tracking,
+ledgers/progress CI and whitespace checks pass. No full CI/cohort, runtime
+matrix, REA or subagents ran. Preserve complete private evidence, source/header /
+object attempts and native logs in `.analysis/probes/mayu-state/` and
+`.analysis/build/`; derivation scripts are one-time records and must not overwrite
+accepted/newer source.
+
+All thirteen actual Mayu virtual destinations now have complete exact proofs,
+including inherited LoadResources. This closes these code bodies only. Current
+authored totals:315 functions,931,962 instruction bytes and6,621 associated table
+bytes;351 reviewed boundaries/origins and333 proof recipes. Resource/data,
+runtime, original TU partitioning, portability and game phases remain open.

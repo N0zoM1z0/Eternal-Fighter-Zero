@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 314 |
-| Authored exact instruction bytes | 844,753 |
-| Associated exact local-table bytes | 5,667 |
-| Reviewed boundaries / origins | 350 / 350 |
+| Authored complete exact functions | 315 |
+| Authored exact instruction bytes | 931,962 |
+| Associated exact local-table bytes | 6,621 |
+| Reviewed boundaries / origins | 351 / 351 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,41 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Mayu local-effect checkpoint
+## Latest Mayu animation/state checkpoint
+
+Character05::Slot06 at5C8580 is complete strict exact:87,209 instruction bytes
+plus954 local-table bytes, total88,163; complete exclusive end5DDDE3. Source:
+src/Character05State.cpp; profile vc71-od-static; proof:
+docs/evidence/mayu-state-exact.json. Durable facts:
+[Mayu animation and state owner](KNOWLEDGE_BASE.md#mayu-animation-and-state-owner).
+Private retained evidence:.analysis/probes/mayu-state/README.md.
+
+Independent review covers24,252 instructions,2,361 branches and the complete
+158-address /322-selector switch:157 explicit cases and165 defaults. Code ends
+5DDA29; tables end5DDDE3;13 excluded CC bytes precede constructor5DDDF0. Original
+vtable788A68 slot6 operand788A80 points5C8580. All2,059 relocation fields are
+independently checked:482 calls,1,417 doubles,160 local bindings. All135 payloads
+match target/COFF. Natural frame448 retains receiver EBP-54 and descriptor EBP-50;
+duration/count occupy EBP-4/-8. Preserve positive exits, actual equality tests,
+original branch joins and x87/integer operand association. Shared headers stay
+unchanged; both F2 WORD stores use the existing opaque bytes through typed access.
+
+The first complete source was built early and final formatting received a whole
+comparison. One final selected cold replay passes all88,163 bytes and2,059
+reviewed bindings. Public headers/all332 prior recipes/source owners remain
+unchanged. Focused tracking, ledgers/progress CI and whitespace checks pass.
+Two native source errors were fixed, each followed by a successful required
+--execute toolchain smoke; no compiler/Wine issue remains. Retain all draft /
+build logs and artifacts. No old/full replay, full CI or runtime matrix ran.
+
+All thirteen actual Mayu virtual destinations are exact, including inherited
+LoadResources. Next work should select another coherent target-bound character
+owner from the canonical creation/table evidence, build a complete source early
+and independently review every boundary/operand. Do not infer product/game
+closure. All Ghidra jobs are terminal. Preserve parked PrepareBattle/Shiori
+controls and the unaccepted reader-audio workbench.
+
+## Previous Mayu local-effect checkpoint
 
 Character05::Slot07 at5E5C30 is complete strict exact:10,512 instruction bytes
 plus168 associated table bytes, total10,680; complete exclusive end5E85E8. Source:

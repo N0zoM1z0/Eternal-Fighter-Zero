@@ -356,7 +356,7 @@ address,origin,status,evidence
 0x005AD550,unknown,unreviewed,
 0x005AEA20,unknown,unreviewed,
 0x005B2D10,unknown,unreviewed,
-0x005C8580,unknown,unreviewed,
+0x005C8580,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-animation-and-state-owner
 0x005DDDF0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005DDF90,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005DE0A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
