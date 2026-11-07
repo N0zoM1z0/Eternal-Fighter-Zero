@@ -5358,3 +5358,87 @@ retained in `.analysis/probes/makoto/`; all Ghidra jobs are terminal. Current
 authored totals:326 functions,966,511 instruction bytes and6,621 associated table
 bytes;361 reviewed boundaries/origins and344 proof recipes. Resource/data,
 runtime,TU,portability and game phases remain independently open.
+
+
+## Makoto local effect dispatch and controls
+
+Character03::Slot07 at0x5FF4C0 is complete strict exact in
+`src/Character03Effects.cpp`:33,673 instruction bytes plus224 local-table bytes,
+total33,897; complete exclusive end607929. Code ends607849. The31-entry DWORD
+address table occupies607849..6078C4 and100 selector bytes occupy6078C5..607928.
+Seven excluded CC bytes precede next prologue607930. Vtable788AC8 slot07 operand
+788AE4 contains5FF4C0. Public proof:`docs/evidence/makoto-effects-exact.json`;
+recipe:character-03-update-local-effects, pinned vc71-od-static.
+
+Independent review covers7,687 contiguous instructions,544 direct branches,
+the indirect dispatch, full RET/data boundary and every canonical destination.
+Types400..424 and495..499 supply30 explicit cases;70 selectors use default entry30,
+shared next-effect tail607828. All308 relocation fields have independently
+reviewed canonical destinations:73 direct calls,202 double operands and33 local
+bindings (31 entries and two dispatch operands). All52 fresh64-bit payloads match
+target memory and native COFF. Direct calls comprise42 __ftol2,16 CRT rand,nine
+RandomRange,four Context emitters and descriptor construction/reset. Virtual
+calls comprise88 removals and23 local emissions; they are distinct from CALL
+relocation fields. Existing real headers suffice without layout/ABI changes.
+
+Natural frame194 retains cursor EBP-4,receiver EBP-5C,descriptor EBP-50,duration /
+count EBP-54/-58 and saved EBX/ESI. Preserve separate opponent freeze and per-slot
+activity/own-freeze gates,ring wrap64,positive projectile landing/conversion
+exits,and word-width frame/tick updates. Effects403..405 retain the original
+opponent-state/position and own-state250..252 conversion priority. Effects406..408
+retain the phase0 landing and shutdown transitions. Effects410..412 are three
+coherent signed-direction wall-bounce owners. Vertical bounds are tested before
+horizontal bounds; every successful bounce exits the current effect before
+normal frame advancement. Their complete natural branches replace provisional
+decompiler gotos while preserving exact original instructions.
+
+Effects418..420 stop processing the current slot after inactive removal.
+Effect421 removes on child counter>180. Effect422 multiplies own facing by1.5
+before opponent facing. Effect423 negates its slot facing before positive
+integer coordinate multipliers and preserves the actual random-call range.
+Effect496 retains integer coordinate subtraction. Effects497/498 preserve each
+CRT sample's original multiplier/order,the actual counter<10 group transition
+and removal exits. Do not exchange independent random samples or rewrite these
+expressions solely by mathematical equivalence.
+
+The first complete33,862-byte native source was built early. A provisional
+register rewrite initially produced an invalid assignment; the source and real
+camera-bound fields were corrected and the required verify-toolchain --execute
+smoke passed. A broad draft threshold replacement also altered <10; original
+instruction review restored the exact predicate before acceptance. No compiler /
+Wine issue remains. After final formatting, another complete strict comparison
+passes. One final selected cold replay passes all33,897 bytes and308 reviewed
+bindings with zero differences. Public headers and all344 previous recipes/source
+owners remain unchanged; no old unit needs replay. Focused tracking,ledgers /
+progress CI and whitespace checks pass. No full CI/cohort,runtime matrix,REA or
+subagents ran. Complete private evidence and latest source/header/object snapshots
+remain under `.analysis/probes/makoto-effects/`; historical trials are preserved
+in the verified cleanup archive described in RE_ARTIFACTS.md. One-time derivation
+scripts must not overwrite accepted/newer source.
+
+Twelve of thirteen actual Makoto virtual destinations now have exact proofs.
+State5E85F0/58,482 instruction bytes remains open,with associated tables still
+unreviewed. Its fresh read-only annotation is retained. Current authored totals:
+327 functions,1,000,184 instruction bytes and6,845 associated table bytes;
+362 reviewed boundaries/origins and345 proof recipes. This codegen milestone
+does not close resource/data,runtime,TU,portability or game phases.
+
+## Cleanup and handoff on 2026-11-07
+
+The operator cleared the reconstruction goal and requested cleanup and handoff.
+No autonomous reconstruction task remains active. The final in-flight Makoto
+local-effect comparison was completed and recorded; no further owner was started.
+README and AGENTS now reflect the current character coverage and task state.
+Reader/audio integration was already accepted on2026-11-06; its workbench is an
+archive,not an unfinished integration queue. Earlier contrary wording is
+superseded by this clarification and the workbench's completed-integration notes.
+
+The current handoff is condensed around live acceptance,tool state,parked work
+and evidence paths. Historical checkpoint narratives remain here. Selected old
+trial snapshots,retired diagnostic build directories and superseded aggregate
+reports were preserved losslessly in a size/SHA-256-verified private archive
+before redundant live copies were removed. Latest successful source/object
+snapshots,current accepted objects/receipts,per-unit reports,the latest affected
+header replay,and all parked Shiori/PrepareBattle work remain live. Original
+target/toolchain/Wine/Ghidra state is preserved. Storage accounting and exact
+restore commands are in `docs/RE_ARTIFACTS.md`; native logs remain available.

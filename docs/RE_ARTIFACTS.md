@@ -94,3 +94,49 @@ Original bytes, databases, downloaded tools and generated decompiler text are
 ignored. The tracked manifests, natural source, reviewed ledger rows and compact
 evidence provide the reproducible recipe. Loss of a private report is recovered
 by replaying the selected unit; do not replace a lost proof with a size claim.
+
+
+## 2026-11-07 handoff cleanup
+
+At the operator's explicit cleanup request,1,246 historical trial/build/report
+files from213 selected roots were preserved losslessly in
+`.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz`.
+The archive contains104,271,295 logical source bytes in7,991,583 compressed bytes.
+All members were read back and verified by size and SHA-256 before redundant
+live copies were removed. `manifest.json` beside the archive records every
+original path/hash and the archive hash; `plan.json` records the selection.
+Net reclaimed allocated file storage,after archive/manifest/plan accounting:
+**98,967,552 bytes (about94.4 MiB)**. Directory metadata and subsequently regenerated
+interpreter caches are excluded. This is separate from earlier cleanup figures.
+Seven regenerable Python bytecode files were also discarded (90,112 allocated
+bytes), recorded separately in cache-cleanup.json; this is excluded from the
+archive reclamation figure above.
+
+Selection covered older attempts in completed character-owner directories,
+retired diagnostic build directories and superseded *-and-affected.json reports.
+Forty latest successful source/object snapshot roots remain live,including the
+latest object for each source stem and each current last-attempt marker.
+The latest makoto-and-affected.json and all current per-unit exact reports remain
+live. Historical scripts/readmes may still mention an archived path; inspect
+this archive and restore that member before using such a script.
+
+From the repository root:
+
+```bash
+tar -tzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz
+# Example: restore one archived historical aggregate report at its original path.
+tar -xzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz \
+  .analysis/exact/audio-and-affected.json
+```
+
+For a trial directory,use its exact member path shown by tar -tzf. Restore only
+what is needed and avoid overwriting newer local work. The SHA-256 manifest
+allows independent verification after extraction.
+
+Current build/match-units objects/receipts,per-unit reports,source headers,
+all native logs,probe scripts and boundary/operand evidence remain live.
+Unaccepted Shiori-state attempts/parked-best,PrepareBattle/real-background
+controls,reader/audio drafts and all other parked work were excluded.
+The canonical executable,original RAR,toolchain links/installations,EFZ Wine
+prefix and Ghidra database were retained. This archive contains historical
+private evidence; it is ignored and must not be added to Git.

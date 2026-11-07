@@ -46,17 +46,20 @@ comparison with explicit relocation bindings. Compiler-generated helpers and
 standard-library wrappers are recorded separately and excluded from authored
 progress. Automatic Ghidra candidates are not an authored-code denominator.
 
-Accepted owners cover configuration, raw file reading, DirectInput, Audio,
-Context effects/input/music, title and selection scenes, substantial shared
-character control/resources/rendering, the Shiori constructor and ten virtual
-bodies, and substantial battle simulation/collision/display/keyboard/replay
-control. Shiori's large slot-6 animation dispatcher, 22 other character
-constructors and most other character behavior remain open. Pixel kernels,
-concrete background objects, pushbox resolution and additional scenes also
-remain open. Historical reader/audio drafts are preserved in the
-[workbench](workbench/reader-audio/README.md); accepted code lives in `src/`.
+Accepted sources cover configuration, file reading, DirectInput, Audio,
+Context, title/selection/loading scenes, substantial shared character code,
+battle simulation/collision/display/keyboard/replay controls and four concrete
+background owners. Seven character constructors and substantial child bodies
+are exact: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto. Shiori's and
+Makoto's large slot-6 state owners remain open, alongside other character,
+Video and scene work. See the live ledgers for individual acceptance.
 
-On 2026-11-06 the operator stopped further reconstruction and requested cleanup
+Reader/audio integration is complete. The
+[workbench](workbench/reader-audio/README.md) preserves historical drafts and
+an already-integrated patch; it is not an active integration queue. Accepted
+code lives in `src/`.
+
+On 2026-11-07 the operator cleared the reconstruction goal and requested cleanup
 and handoff. There is no active autonomous reconstruction task. The
 [current handoff](docs/RE_HANDOFF.md) records the final checkpoint, retained
 evidence, parked work and possible follow-ups for the next agent.

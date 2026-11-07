@@ -28,7 +28,7 @@ Retained objects and source receipts are in `build/reader/`; logs are in
 `/Od /G6 /MT /Gy /GS /W3`; AudioGlobal used `/Od /G6 /MT /Gy /W3`.
 These receipts do not attest all header dependencies or replace formal replay.
 
-| Draft group / target | Compiled / target bytes | Current diagnostic |
+| Draft group / target | Compiled / target bytes | Archived draft diagnostic |
 | --- | ---: | --- |
 | PatternReader, 20 bodies | 1,370 / 1,370 total | All equal lengths and zero byte differences after explicit scratch relocation |
 | Audio ctor 0x40D810 | 95 / 95 | Zero differences |
@@ -55,6 +55,10 @@ Original instruction dumps are `raw-004054*.txt` through `raw-004059*.txt`,
 Do not rerun `write-audio-first.py`: it would overwrite the draft.
 
 ## Historical findings and hypotheses
+
+The following statements describe the 2026-11-01 draft. They are not current
+blockers; the completed integration and accepted corrections are summarized
+below and in the public knowledge base.
 
 ReadInt reads four raw bytes; ReadShort/ReadFloat read two/four. Read returns the
 transfer count, not void. Reset at 0x405970 is not evidence for a base constructor.
@@ -108,6 +112,10 @@ shifts, initialization and early returns are in
 
 Private final replay is .analysis/exact/audio-and-affected.json; corrected draft
 trials and complete differences remain in .analysis/probes/audio-next/.
+The historical aggregate replay report was losslessly archived during the
+2026-11-07 cleanup; [artifact recovery](../../docs/RE_ARTIFACTS.md) explains how
+to restore its original path. Current per-unit reports and accepted objects
+remain live.
 The original table above describes the archived draft only. Future work starts
 from accepted src/ and the current handoff, without rerunning historical writers
 or a full cold cohort.

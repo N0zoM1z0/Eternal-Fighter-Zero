@@ -116214,3 +116214,2182 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108a0
 evidence = "docs/KNOWLEDGE_BASE.md#makoto-cpu-command-and-movement-owner; original direct CALL operand and accepted shared member destination"
+
+[units.character-03-update-local-effects]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character03Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-03-update-local-effects/Character03Effects.obj"
+symbol = "?Slot07@Character03@@UAEXXZ"
+target_address = 0x005ff4c0
+size = 33897
+code_size = 33673
+
+[[units.character-03-update-local-effects.local_data]]
+offset = 33673
+size = 124
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; complete original31-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+
+[[units.character-03-update-local-effects.local_data]]
+offset = 33797
+size = 100
+kind = "switch-index-table"
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; complete original31-destination /100-type compressed switch, all canonical destinations and contiguous RET/data boundary independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ??0EffectSpawn@@QAE@XZ at 0x405490; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x413090; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 343
+type = "DIR32"
+symbol = "$L62825"
+target = 0x006078c5
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 33797 independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 350
+type = "DIR32"
+symbol = "$L62931"
+target = 0x00607849
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original dispatch instruction and complete selector/address table; compiler-local offset 33673 independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1096
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1129
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1161
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1236
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1261
+type = "DIR32"
+symbol = "__real@c00599999999999a"
+target = 0x007881a8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881a8; literal -2.7 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1286
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1366
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1420
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1445
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1470
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1660
+type = "DIR32"
+symbol = "__real@4039000000000000"
+target = 0x00788098
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788098; literal 25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1703
+type = "DIR32"
+symbol = "__real@c039000000000000"
+target = 0x00788a48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788a48; literal -25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1727
+type = "DIR32"
+symbol = "__real@c034000000000000"
+target = 0x00787fa0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fa0; literal -20.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 1918
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2013
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2038
+type = "DIR32"
+symbol = "__real@bfc70a3d70a3d70a"
+target = 0x00788b30
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b30; literal -0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2070
+type = "DIR32"
+symbol = "__real@c000000000000000"
+target = 0x00787d70
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d70; literal -2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2095
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2228
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2260
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2676
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2836
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2869
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2901
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 2976
+type = "DIR32"
+symbol = "__real@3ff199999999999a"
+target = 0x00787dc8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc8; literal 1.1 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3001
+type = "DIR32"
+symbol = "__real@c00199999999999a"
+target = 0x007881e0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881e0; literal -2.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3026
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3106
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3160
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3185
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3210
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3400
+type = "DIR32"
+symbol = "__real@4039000000000000"
+target = 0x00788098
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788098; literal 25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3443
+type = "DIR32"
+symbol = "__real@c039000000000000"
+target = 0x00788a48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788a48; literal -25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3467
+type = "DIR32"
+symbol = "__real@c034000000000000"
+target = 0x00787fa0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fa0; literal -20.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3777
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3802
+type = "DIR32"
+symbol = "__real@bfc70a3d70a3d70a"
+target = 0x00788b30
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b30; literal -0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3834
+type = "DIR32"
+symbol = "__real@c000000000000000"
+target = 0x00787d70
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d70; literal -2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3859
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 3992
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4024
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4440
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4600
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4633
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4665
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4742
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4757
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4763
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4794
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4809
+type = "DIR32"
+symbol = "__real@3fb999999999999a"
+target = 0x00787fb0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fb0; literal 0.1 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4815
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4852
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4932
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 4986
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5011
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5036
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5226
+type = "DIR32"
+symbol = "__real@4039000000000000"
+target = 0x00788098
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788098; literal 25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5269
+type = "DIR32"
+symbol = "__real@c039000000000000"
+target = 0x00788a48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788a48; literal -25.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5293
+type = "DIR32"
+symbol = "__real@c034000000000000"
+target = 0x00787fa0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fa0; literal -20.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5508
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5603
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787328; literal 2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5628
+type = "DIR32"
+symbol = "__real@bfc70a3d70a3d70a"
+target = 0x00788b30
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b30; literal -0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5660
+type = "DIR32"
+symbol = "__real@c000000000000000"
+target = 0x00787d70
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d70; literal -2.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5685
+type = "DIR32"
+symbol = "__real@3fc70a3d70a3d70a"
+target = 0x00788b38
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b38; literal 0.18 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5818
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 5850
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6266
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6562
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6587
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6677
+type = "DIR32"
+symbol = "__real@3fc999999999999a"
+target = 0x00787300
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787300; literal 0.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6702
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6809
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6830
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6926
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 6975
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7000
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7125
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7157
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7449
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7470
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872c0; literal 5.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7529
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7553
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7595
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7619
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7661
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 7682
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8005
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8030
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8120
+type = "DIR32"
+symbol = "__real@3fd999999999999a"
+target = 0x00787dc0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dc0; literal 0.4 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8145
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8252
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8273
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8398
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8451
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8476
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8545
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8626
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 8658
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9086
+type = "DIR32"
+symbol = "__real@bfe999999999999a"
+target = 0x00787d00
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d00; literal -0.8 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9111
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9201
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9226
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9333
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9354
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9450
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9499
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9524
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9649
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9681
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9973
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 9994
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872c0; literal 5.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10053
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10077
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10119
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10143
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10185
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10206
+type = "DIR32"
+symbol = "__real@c014000000000000"
+target = 0x00787f50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f50; literal -5.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10347
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10851
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 10876
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 11303
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 11328
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 11755
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 11780
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 12207
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 12232
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 12687
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 12712
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 13139
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 13164
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 13591
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 13616
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 14043
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 14068
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15047
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15072
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15499
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15524
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15951
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 15976
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 16403
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 16428
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 16883
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 16908
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 17335
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 17360
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 17787
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 17812
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 18239
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 18264
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 19168
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 19193
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 19664
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 19689
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 20160
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 20185
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 20656
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 20681
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 21180
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 21205
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 21676
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 21701
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 22172
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 22197
+type = "DIR32"
+symbol = "__real@4008000000000000"
+target = 0x00787338
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787338; literal 3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 22668
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 22693
+type = "DIR32"
+symbol = "__real@c008000000000000"
+target = 0x00787f58
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f58; literal -3.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 23685
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 23731
+type = "DIR32"
+symbol = "__real@4014000000000000"
+target = 0x007872c0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872c0; literal 5.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25072
+type = "DIR32"
+symbol = "__real@bfdccccccccccccd"
+target = 0x00787d10
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d10; literal -0.45 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25097
+type = "DIR32"
+symbol = "__real@3f947ae147ae147b"
+target = 0x00787d18
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d18; literal 0.02 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25203
+type = "DIR32"
+symbol = "__real@3f53a92a30553261"
+target = 0x00788b28
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b28; literal 0.0012 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25247
+type = "DIR32"
+symbol = "__real@3ee4f8b588e368f1"
+target = 0x00788b20
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b20; literal 1e-05 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25291
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25316
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25452
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25780
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25805
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 25830
+type = "DIR32"
+symbol = "__real@3f747ae147ae147b"
+target = 0x00787fc0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc0; literal 0.005 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26021
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26046
+type = "DIR32"
+symbol = "__real@bf747ae147ae147b"
+target = 0x00788b18
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b18; literal -0.005 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26078
+type = "DIR32"
+symbol = "__real@bfd3333333333333"
+target = 0x00788438
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788438; literal -0.3 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26103
+type = "DIR32"
+symbol = "__real@3f747ae147ae147b"
+target = 0x00787fc0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc0; literal 0.005 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26535
+type = "DIR32"
+symbol = "__real@bfe0000000000000"
+target = 0x00787d68
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d68; literal -0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26560
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872f0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f0; literal 0.3 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26666
+type = "DIR32"
+symbol = "__real@3f589374bc6a7efa"
+target = 0x00788b10
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b10; literal 0.0015 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 26814
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27058
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27079
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27085
+type = "DIR32"
+symbol = "__real@c004cccccccccccd"
+target = 0x00787cd0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cd0; literal -2.6 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27116
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27137
+type = "DIR32"
+symbol = "__real@3f847ae147ae147b"
+target = 0x00787cf0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cf0; literal 0.01 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27143
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27206
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27245
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27279
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27323
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27405
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27691
+type = "DIR32"
+symbol = "__real@c00999999999999a"
+target = 0x007881d8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7881d8; literal -3.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27716
+type = "DIR32"
+symbol = "__real@bfb1eb851eb851ec"
+target = 0x00788b08
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x788b08; literal -0.07 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27859
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27922
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 27978
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787e40
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787e40; literal -70.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28097
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787dd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787dd8; literal 0.035 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28460
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787eb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787eb8; literal 50.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28558
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28599
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28643
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28657
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28702
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z at 0x407100; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28787
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28848
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28889
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28933
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 28947
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108a0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to ?RandomRange@Secondary@@QAEFFF@Z at 0x4108a0; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 29048
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 29856
+type = "DIR32"
+symbol = "__real@bf947ae147ae147b"
+target = 0x00787f20
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f20; literal -0.02 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30255
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30293
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30360
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30398
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30465
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30503
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30570
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30596
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30660
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30698
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30765
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30803
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30870
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30908
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 30975
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31013
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31080
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31116
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31183
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31221
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783b8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to __ftol2 at 0x7783b8; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31616
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31634
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31698
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31726
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31737
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31765
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787de8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787de8; literal 0.7 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31782
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31810
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787fc8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fc8; literal 1.7 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31822
+type = "DIR32"
+symbol = "__real@bffccccccccccccd"
+target = 0x00787d90
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d90; literal -1.8 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31846
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31874
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787db8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787db8; literal 0.6 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31885
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31913
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872e8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872e8; literal 0.9 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31930
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31958
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787f18
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787f18; literal 1.4 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 31970
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787cc8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cc8; literal -1.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32014
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787fd8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd8; literal 0.05 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32058
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32090
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32540
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32558
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32622
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32655
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32683
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32700
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32728
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787d48
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d48; literal 1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32740
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787d98
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d98; literal -1.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32764
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32792
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787c50
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787c50; literal 0.5 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32803
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32831
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787d80
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787d80; literal 0.8 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32848
+type = "REL32"
+symbol = "_rand"
+target = 0x00777d61
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original direct CALL operand to _rand at 0x777d61; actual receiver, argument order, return and cleanup independently reviewed"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32876
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787fd0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787fd0; literal 1.2 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32888
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787cb8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787cb8; literal -1.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32932
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787ca0
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x787ca0; literal 0.03 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 32976
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33008
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original 64-bit double operand at 0x7872f8; literal 0.0 and native COFF payload independently verified"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33673
+type = "DIR32"
+symbol = "$L62203"
+target = 0x005ff622
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 0 for effect types 400; compiler-local offset 354 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33677
+type = "DIR32"
+symbol = "$L62207"
+target = 0x005ff6f8
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 1 for effect types 401; compiler-local offset 568 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33681
+type = "DIR32"
+symbol = "$L62211"
+target = 0x005ff7ce
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 2 for effect types 402; compiler-local offset 782 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33685
+type = "DIR32"
+symbol = "$L62215"
+target = 0x005ff8a4
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 3 for effect types 403; compiler-local offset 996 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33689
+type = "DIR32"
+symbol = "$L62235"
+target = 0x005fff70
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 4 for effect types 404; compiler-local offset 2736 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33693
+type = "DIR32"
+symbol = "$L62255"
+target = 0x00600654
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 5 for effect types 405; compiler-local offset 4500 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33697
+type = "DIR32"
+symbol = "$L62279"
+target = 0x00600d76
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 6 for effect types 406; compiler-local offset 6326 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33701
+type = "DIR32"
+symbol = "$L62300"
+target = 0x00601319
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 7 for effect types 407; compiler-local offset 7769 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33705
+type = "DIR32"
+symbol = "$L62312"
+target = 0x00601753
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 8 for effect types 408; compiler-local offset 8851 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33709
+type = "DIR32"
+symbol = "$L62333"
+target = 0x00601cf5
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 9 for effect types 409; compiler-local offset 10293 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33713
+type = "DIR32"
+symbol = "$L62338"
+target = 0x00601e3f
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 10 for effect types 410; compiler-local offset 10623 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33717
+type = "DIR32"
+symbol = "$L62429"
+target = 0x00602e8d
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 11 for effect types 411; compiler-local offset 14797 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33721
+type = "DIR32"
+symbol = "$L62520"
+target = 0x00603ef1
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 12 for effect types 412; compiler-local offset 18993 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33725
+type = "DIR32"
+symbol = "$L62609"
+target = 0x0060506a
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 13 for effect types 413; compiler-local offset 23466 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33729
+type = "DIR32"
+symbol = "$L62615"
+target = 0x006051af
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 14 for effect types 414; compiler-local offset 23791 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33733
+type = "DIR32"
+symbol = "$L62619"
+target = 0x00605285
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 15 for effect types 415; compiler-local offset 24005 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33737
+type = "DIR32"
+symbol = "$L62625"
+target = 0x006053c6
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 16 for effect types 416; compiler-local offset 24326 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33741
+type = "DIR32"
+symbol = "$L62631"
+target = 0x00605507
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 17 for effect types 417; compiler-local offset 24647 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33745
+type = "DIR32"
+symbol = "$L62637"
+target = 0x00605648
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 18 for effect types 418; compiler-local offset 24968 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33749
+type = "DIR32"
+symbol = "$L62648"
+target = 0x00605908
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 19 for effect types 419; compiler-local offset 25672 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33753
+type = "DIR32"
+symbol = "$L62661"
+target = 0x00605bff
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 20 for effect types 420; compiler-local offset 26431 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33757
+type = "DIR32"
+symbol = "$L62671"
+target = 0x00605e5a
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 21 for effect types 421; compiler-local offset 27034 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33761
+type = "DIR32"
+symbol = "$L62684"
+target = 0x006060cd
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 22 for effect types 422; compiler-local offset 27661 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33765
+type = "DIR32"
+symbol = "$L62697"
+target = 0x0060639c
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 23 for effect types 423; compiler-local offset 28380 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33769
+type = "DIR32"
+symbol = "$L62727"
+target = 0x00606842
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 24 for effect types 424; compiler-local offset 29570 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33773
+type = "DIR32"
+symbol = "$L62732"
+target = 0x00606952
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 25 for effect types 495; compiler-local offset 29842 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33777
+type = "DIR32"
+symbol = "$L62737"
+target = 0x00606a7a
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 26 for effect types 496; compiler-local offset 30138 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33781
+type = "DIR32"
+symbol = "$L62775"
+target = 0x00606ff3
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 27 for effect types 497; compiler-local offset 31539 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33785
+type = "DIR32"
+symbol = "$L62792"
+target = 0x0060738f
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 28 for effect types 498; compiler-local offset 32463 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33789
+type = "DIR32"
+symbol = "$L62809"
+target = 0x00607725
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 29 for effect types 499; compiler-local offset 33381 and canonical destination independently checked"
+
+[[units.character-03-update-local-effects.relocations]]
+offset = 33793
+type = "DIR32"
+symbol = "$L62195"
+target = 0x00607828
+evidence = "docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls; original switch address entry 30 for effect types 425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494; compiler-local offset 33640 and canonical destination independently checked"

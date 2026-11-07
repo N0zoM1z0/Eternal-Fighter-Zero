@@ -381,7 +381,7 @@ address,origin,status,evidence
 0x005F9D40,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005F9D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005FB040,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-cpu-command-and-movement-owner
-0x005FF4C0,unknown,unreviewed,
+0x005FF4C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls
 0x00607930,unknown,unreviewed,
 0x006163B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00616570,unknown,unreviewed,
