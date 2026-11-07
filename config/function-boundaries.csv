@@ -359,3 +359,4 @@ address,end,size,status,evidence
 0x005F9D40,0x005F9D6F,47,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005F70F0,0x005F9D20,11312,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005F9D70,0x005FB034,4804,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
+0x005FB040,0x005FF4BB,17531,reviewed,docs/KNOWLEDGE_BASE.md#makoto-cpu-command-and-movement-owner

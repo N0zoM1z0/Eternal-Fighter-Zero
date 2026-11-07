@@ -5295,3 +5295,66 @@ retained and the Ghidra job is terminal. Its state decompiler warning about
 Current authored totals:325 functions,948,980 instruction bytes and6,621 associated
 table bytes;360 reviewed boundaries/origins and343 proof recipes. Resource/data,
 runtime,TU,portability and game phases remain independently open.
+
+
+## Makoto CPU command and movement owner
+
+Character03::Slot05 at0x5FB040 is complete strict exact in
+`src/Character03Cpu.cpp`:17,531 instruction bytes without local tables;
+exclusive end5FF4BB. Five excluded CC bytes precede local-effect owner5FF4C0.
+Original vtable788AC8 slot05 operand788ADC contains5FB040. Public proof:
+`docs/evidence/makoto-cpu-exact.json`; recipe:character-03-cpu-input, pinned
+vc71-od-static. Existing shared/member views suffice without header changes;
+original TU/class provenance remains independently open.
+
+Independent original review covers4,504 contiguous instructions,818 internal
+branches, all returns and the complete next-entry/padding boundary. All329
+relocations have independently checked symbols and canonical destinations:
+122 RandomRange calls,two CollisionSide,one external fabs and204 typed floating
+operands (26 DWORD floats and178 QWORD doubles). All39 fresh literal payloads
+(seven floats,32 doubles) match canonical memory and actual native COFF. Random
+returns zero-extend AX at120 calls and directly store low AL at two inputY
+assignments. Full original177-byte external fabs implementation77842D..7784DD
+is retained as ABI evidence only:cdecl double input,caller cleanup,x87 ST0 return,
+RET0 and preserved classification/exception path; no extra authored credit.
+
+Natural frameFC retains receiver EBP-14 and the used16-byte forward/vertical
+distance record at EBP-10/-8 without saved ESI. Preserve the initial airborne
+boolean before the random draw,25.0f factor and mode/state integer additions,
+and the complete double-precision second decision product order. Later random
+thresholds deliberately use different factor/coefficient orders in different
+owners; blanket arithmetic rewrites are invalid. Four opponent-state-dependent
+bounds retain positive constant-minus-condition products; state206 compares
+counter3110 > 600 - (phase==3)*400. Two frame-normal distance>160 tails remain
+positive guards. Opponent vertical velocity tests load the actual member first.
+
+The entry mode/animation owner, special command52, close/far movement choices,
+positive active timers and actual epilogue exits retain physical target order.
+Special command52 checks states256,232-with-random-zero,257,238 in that order.
+The far movement guard really tests distance>800 and distance<80; its contradictory
+conditions are present in original instructions and must not be simplified away.
+The two final timer random draws retain their separate conditions and original
+nested facing/return joins. All of these are target facts rather than inferred
+intent or another character's algorithm.
+
+The first complete17,712-byte native draft was built early. Actual control flow,
+scalar/constant order and integer subtraction recover the complete owner. One
+private text rewrite initially matched the suffix of25.0f and caused a syntax
+error; it was corrected and the required full verify-toolchain --execute smoke
+passed. No compiler/Wine issue remains. After final formatting, another complete
+native strict comparison passes. One final selected cold replay passes all17,531
+bytes and329 reviewed bindings with zero differences. Public headers and all343
+previous recipes/source owners remain unchanged; no old unit needs replay.
+Focused target-required tracking,ledgers/progress CI and whitespace checks pass;
+no full CI/cohort,runtime matrix,REA or subagents ran. Preserve all private
+attempts,boundary/operand/random-return reviews,full fabs ABI and bounded build
+logs in `.analysis/probes/makoto-cpu/` and `.analysis/build/`. Derivation scripts
+remain one-time records and must not overwrite accepted/newer source.
+
+Eleven of thirteen actual Makoto virtual destinations now have complete exact
+proofs. State5E85F0/58,482 and local effects5FF4C0/33,673 instruction bytes remain
+open,with associated tables unreviewed. Their fresh read-only annotations are
+retained in `.analysis/probes/makoto/`; all Ghidra jobs are terminal. Current
+authored totals:326 functions,966,511 instruction bytes and6,621 associated table
+bytes;361 reviewed boundaries/origins and344 proof recipes. Resource/data,
+runtime,TU,portability and game phases remain independently open.

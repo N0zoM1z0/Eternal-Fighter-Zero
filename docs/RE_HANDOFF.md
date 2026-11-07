@@ -21,10 +21,10 @@ Keep code, comments, documentation and metadata English. Commit prefix:
 
 | Fact | Accepted result at this handoff |
 | --- | ---: |
-| Authored complete exact functions | 325 |
-| Authored exact instruction bytes | 948,980 |
+| Authored complete exact functions | 326 |
+| Authored exact instruction bytes | 966,511 |
 | Associated exact local-table bytes | 6,621 |
-| Reviewed boundaries / origins | 360 / 360 |
+| Reviewed boundaries / origins | 361 / 361 |
 | Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
 | Standard-library auxiliary wrappers | 4 functions / 90 bytes |
 | Automatic non-external candidates | 950 |
@@ -43,7 +43,39 @@ checkpoint facts and detailed target findings live in
 [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); its older totals/open statements describe
 those checkpoints, not today's queue.
 
-## Latest Makoto construction/input/command checkpoint
+## Latest Makoto CPU checkpoint
+
+Character03::Slot05 at5FB040 is complete strict exact:17,531 instruction bytes,
+exclusive end5FF4BB,without local tables. Source:src/Character03Cpu.cpp;
+profile vc71-od-static; proof:docs/evidence/makoto-cpu-exact.json. Durable facts:
+[Makoto CPU command and movement owner](KNOWLEDGE_BASE.md#makoto-cpu-command-and-movement-owner).
+Private retained evidence:.analysis/probes/makoto-cpu/README.md.
+
+Independent review covers4,504 instructions,818 branches and329 explicit fields:
+122 RandomRange,two CollisionSide,one external fabs,204 floating operands
+(26 float/178 double). All39 payloads match target/COFF. Random results expand AX
+at120 calls and directly store AL at two inputY assignments. Natural frameFC
+retains receiver EBP-14 and distance record EBP-10/-8. Preserve original expression
+orders,positive exits,state206's600-minus-phase400 threshold,four opponent-state
+constant-minus bounds,and the actual contradictory far-distance>800&&<80 guard.
+The full177-byte fabs implementation is external ABI evidence only.
+
+The first complete source was built early and final formatting received another
+whole comparison. One final selected cold replay passes all17,531 bytes and329
+reviewed bindings. Public headers/all343 prior recipes/source owners are unchanged.
+Focused tracking,ledgers/progress CI and whitespace checks pass. One draft syntax
+error was fixed and the required complete --execute toolchain smoke passed;
+no compiler/Wine issue remains. No old/full replay,full CI or runtime matrix ran.
+
+Eleven of thirteen actual Makoto virtual destinations are exact. Next substantial
+owner:local effects5FF4C0/33673 code; state5E85F0/58482 code also remains OPEN.
+Associated tables remain unreviewed. Both fresh read-only annotations are retained
+under .analysis/probes/makoto/; all Ghidra jobs are terminal. Review complete
+original boundaries and operands,then build a complete source early. Resource /
+data/runtime/TU/portability/game phases remain open; preserve parked controls and
+the unaccepted reader-audio workbench.
+
+## Previous Makoto construction/input/command checkpoint
 
 Ten complete Character03 owners add17,018 strict exact instruction bytes without
 local tables:constructor5F6D90/393,initializer5F6F20/283,reset5F7040/58,
