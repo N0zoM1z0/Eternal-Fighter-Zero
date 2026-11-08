@@ -116,17 +116,22 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   caller ABI uses an explicit output buffer and returns its pointer in EAX.
   Raw assembly corrects CollisionSide signs to -1,+1,+1,-1 and shows that each
   branch masks both velocity locals before comparing them; Ghidra's pseudocode
-  is wrong on these masks. The prior 2901-byte candidate claim is withdrawn:
-  it is not reproducible in the live worktree. Current smallest candidate is
-  3076/2727 bytes, 37 relocations, frame 0x198, but uses a wrong helper class
-  relocation symbol. Best original-helper-symbol candidate is 3087/2727 bytes,
-  37 relocations, frame 0x1B8; 56 fild, no fimul, 51 fmul (target 56/0/52).
-  Neither is accepted. Keep exploring stack lifetimes/x87 order and the natural
-  helper ABI; no padding, masks, assembly, or byte wrappers. Pixel owners
+  is wrong on these masks. The prior 2901-byte candidate claim is withdrawn.
+  Best natural C++ candidate is now 2898/2727 bytes, 37 relocations, frame
+  0x14C, with both original direct TransformPoseBox member calls. It uses a
+  contiguous RectPair and a PushboxScratch union for non-overlapping x87/mask/
+  scratch lifetimes. Counts: 336 mov (target 300), 48 movsx, 56 fild, 51 fmul
+  (target 52), 34 fstp (target 42), 22 fnstsw (target 20); 33 conditional
+  branches (target 28). Still 171 bytes over and not accepted. Keep exploring
+  natural stack layout and x87 order; no padding or hand assembly. Pixel owners
   409A90/40A0B0/40A440 remain open.
 - `Scene3::UpdateRoundExit` (0x765FA0 /205) was independently rebuilt from
   `src/SceneBattleLoop.cpp` in the targeted VC7.1 translation-unit build. Its
   205 bytes and all 10 relocation bindings replay exactly against the canonical
+  target; this was a single-function check, not a full cold replay.
+- `Scene3::ResetReplay` (0x7661A0 /734) was independently rebuilt from
+  `src/SceneBattleInput.cpp` in a targeted VC7.1 translation-unit build. Its
+  734 bytes and all 24 relocation bindings replay exactly against the canonical
   target; this was a single-function check, not a full cold replay.
 - Reader/audio integration is complete. `workbench/reader-audio/` preserves
   historical drafts and an already-integrated patch; it is not unfinished work.
