@@ -1,5 +1,7 @@
 # Eternal Fighter Zero -Memorial-
 
+Agent workflow: follow the highest-priority requirements in [AGENTS.md](AGENTS.md). Use affected exact checks and searchable Markdown knowledge; ordinary notes do not require full CI or replay.
+
 <p align="center">
   <img
     src="resources/title-card.svg"

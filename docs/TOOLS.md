@@ -1,5 +1,11 @@
 # Tool identities and execution
 
+> Current workflow: follow the **Highest priority** section in `AGENTS.md`.
+> Prefer affected exact comparisons and useful Markdown knowledge. Ordinary
+> notes do not require full CI, native replay or document-hash/pin refreshes.
+> Older broad validation instructions apply only when their impact is relevant.
+
+
 ## Compiler and Wine
 
 `.tools/msvc710` selects the operator-supplied VC7.1 RTM tree. The source

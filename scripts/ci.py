@@ -1,53 +1,52 @@
 #!/usr/bin/env python3
-"""Target-free repository checks; native replay is an explicit separate command."""
-import argparse
+"""Check changed machine inputs; exact comparisons are selected by affected scope."""
+from pathlib import Path
 import ast
 import json
+import os
 import subprocess
 import sys
-from common import ROOT, load_toml
-from tracking import validate
+import tomllib
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
-def syntax():
-    for path in (ROOT / "scripts").rglob("*.py"):
-        ast.parse(path.read_text(), filename=str(path))
+def main():
+    if sys.argv[1:] in (["--help"], ["-h"]):
+        print("usage: ci.py [--full | existing explicit check options]\nDefault: changed machine-input syntax and diff checks. Run affected exact/tool commands for the task.")
+        return 0
+    if len(sys.argv) > 1:
+        arguments = sys.argv[1:]
+        if not any(flag in arguments for flag in ('--full', '--only')):
+            print("Unknown CI option; use no arguments for scoped checks or --full for the broad suite.", file=sys.stderr)
+            return 2
+        arguments = [arg for arg in arguments if arg != "--full"]
+        return subprocess.call([sys.executable, str(ROOT / "scripts/ci-full.py"), *arguments], cwd=ROOT)
+    names = set()
+    for command in (["git", "diff", "HEAD", "--name-only", "-z"],
+                    ["git", "ls-files", "--others", "--exclude-standard", "-z"]):
+        names.update(n for n in subprocess.check_output(command, cwd=ROOT).decode().split("\0") if n)
+    if os.environ.get("CI"):
+        # Clean CI checkouts have no worktree diff. Inspect the commit being checked.
+        names.update(n for n in subprocess.check_output(
+            ["git", "show", "--format=", "--first-parent", "--name-only", "-z", "HEAD"],
+            cwd=ROOT).decode().split("\0") if n)
+    for name in sorted(names):
+        path = ROOT / name
+        if not path.is_file() or path.is_symlink():
+            continue
+        if path.suffix == ".py":
+            ast.parse(path.read_text(), filename=name)
+        elif path.suffix == ".json":
+            json.loads(path.read_text())
+        elif path.suffix == ".toml":
+            tomllib.loads(path.read_text())
+        elif path.suffix == ".sh":
+            subprocess.run(["bash", "-n", str(path)], check=True)
+    subprocess.run(["git", "diff", "--check"], cwd=ROOT, check=True)
+    print("Changed machine inputs checked. Use affected exact/tool checks; --full explicitly selects the broad suite.")
+    return 0
 
 
-def declarations():
-    for path in (ROOT / "config").glob("*.toml"):
-        load_toml(path)
-    lock = json.loads((ROOT / "config/analysis-tools.lock.json").read_text())
-    if lock["schema_version"] != 1:
-        raise ValueError("unknown analysis lock schema")
-    toolchain = load_toml(ROOT / "config/tools.lock.toml")
-    if toolchain["msvc71"]["compiler_version"] != "13.10.3077":
-        raise ValueError("unexpected compiler declaration")
-    for expected in [*toolchain["files"].values(), *toolchain["trees"].values()]:
-        if len(expected) != 64 or any(c not in "0123456789abcdef" for c in expected):
-            raise ValueError("invalid tool digest")
-
-
-def command(*args):
-    subprocess.run(args, cwd=ROOT, check=True)
-
-
-def whitespace():
-    command("git", "diff", "--check")
-    command("git", "diff", "--cached", "--check")
-
-
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--only", choices=["syntax", "declarations", "ledgers", "progress", "oracle", "whitespace"])
-args = parser.parse_args()
-checks = dict(syntax=syntax, declarations=declarations, ledgers=validate,
-              progress=lambda: command(sys.executable, "scripts/progress.py", "--check"),
-              oracle=lambda: command(sys.executable, "-m", "unittest", "discover", "-s", "scripts/tests"),
-              whitespace=whitespace)
-try:
-    for name, check in checks.items():
-        if args.only is None or args.only == name:
-            check()
-            print(f"PASS {name}", flush=True)
-except (OSError, ValueError, KeyError, SyntaxError, subprocess.SubprocessError) as error:
-    parser.exit(1, f"CI failed: {error}\n")
+if __name__ == "__main__":
+    raise SystemExit(main())
