@@ -138,6 +138,15 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   at 128 bytes with zero relocations; `Secondary::CollisionSide` (0x40FF70)
   matches all 222 bytes outside six DIR32 fields and matches all six relocation
   offsets/symbols for the 20/619/639 constants. No full cold replay was run.
+- Recompiled the current large battle-collision translation units independently
+  with the pinned VC7.1 profile. `ResolveEffectHit` 6334/54, `ResolveEffectPair`
+  2578/25, `ResolveEffectClash` 650/3, and `ResolveBodyEffect` 2466/25 from
+  `SceneEffectCollision.cpp`, plus `ResolveBodyHit` 6245/59 from
+  `SceneBodyHit.cpp`, all match canonical bytes after relocation normalization
+  and every reviewed relocation offset/type/symbol tuple. Aggregate: 18,273
+  instruction bytes and 166 relocation fields. This is fresh targeted TU
+  compilation and function extraction, not a full cold replay; existing exact
+  evidence/ledgers remain the acceptance record.
   Pixel owners 409A90/40A0B0/40A440 remain open.
 - `Scene3::Step` (0x763C20 /1653) and `Scene3::UpdateRound` (0x765040 /1562)
   were extracted from the targeted `SceneBattleLoop.cpp` object and replayed
