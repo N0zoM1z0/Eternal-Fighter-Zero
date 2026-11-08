@@ -1,0 +1,29 @@
+{
+  "target_entry": "0x005E85F0",
+  "target_code_bytes": 58482,
+  "candidate_instruction_bytes": 58432,
+  "candidate_comdat_bytes": 59242,
+  "candidate_trailing_table_bytes": 810,
+  "target_stack_frame": "0x378",
+  "candidate_stack_frame": "0x378",
+  "direct_calls_target": 369,
+  "direct_calls_candidate": 369,
+  "direct_call_sequence_matches": true,
+  "ftol2_calls_target": 178,
+  "ftol2_calls_candidate": 178,
+  "explicit_animation_cases": 124,
+  "fallback_case": true,
+  "remaining_code_size_delta": -50,
+  "branch_layout_inversions": [
+    210,
+    212,
+    221,
+    232,
+    256,
+    257,
+    258
+  ],
+  "exactness_claimed": false,
+  "case_block_size_delta_sum": -55,
+  "pre_switch_dispatch_delta": 5
+}
