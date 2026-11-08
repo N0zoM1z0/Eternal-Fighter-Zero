@@ -268,7 +268,7 @@
       "animation_id": 69,
       "target_insns": 77,
       "candidate_insns": 77,
-      "diff_runs": 1,
+      "diff_runs": 0,
       "target_bytes": 277,
       "candidate_bytes": 277
     },
@@ -276,7 +276,7 @@
       "animation_id": 70,
       "target_insns": 128,
       "candidate_insns": 128,
-      "diff_runs": 1,
+      "diff_runs": 0,
       "target_bytes": 480,
       "candidate_bytes": 480
     },
@@ -340,7 +340,7 @@
       "animation_id": 81,
       "target_insns": 135,
       "candidate_insns": 135,
-      "diff_runs": 1,
+      "diff_runs": 0,
       "target_bytes": 485,
       "candidate_bytes": 485
     },
@@ -348,7 +348,7 @@
       "animation_id": 82,
       "target_insns": 154,
       "candidate_insns": 154,
-      "diff_runs": 3,
+      "diff_runs": 0,
       "target_bytes": 546,
       "candidate_bytes": 546
     },
@@ -356,7 +356,7 @@
       "animation_id": 83,
       "target_insns": 157,
       "candidate_insns": 157,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 581,
       "candidate_bytes": 581
     },
@@ -364,7 +364,7 @@
       "animation_id": 84,
       "target_insns": 157,
       "candidate_insns": 157,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 581,
       "candidate_bytes": 581
     },
@@ -372,7 +372,7 @@
       "animation_id": 85,
       "target_insns": 125,
       "candidate_insns": 125,
-      "diff_runs": 1,
+      "diff_runs": 0,
       "target_bytes": 467,
       "candidate_bytes": 467
     },
@@ -380,7 +380,7 @@
       "animation_id": 86,
       "target_insns": 127,
       "candidate_insns": 127,
-      "diff_runs": 1,
+      "diff_runs": 0,
       "target_bytes": 482,
       "candidate_bytes": 482
     },
@@ -516,7 +516,7 @@
       "animation_id": 163,
       "target_insns": 141,
       "candidate_insns": 141,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 497,
       "candidate_bytes": 497
     },
@@ -524,7 +524,7 @@
       "animation_id": 164,
       "target_insns": 94,
       "candidate_insns": 94,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 331,
       "candidate_bytes": 331
     },
@@ -532,7 +532,7 @@
       "animation_id": 165,
       "target_insns": 150,
       "candidate_insns": 150,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 519,
       "candidate_bytes": 519
     },
@@ -540,7 +540,7 @@
       "animation_id": 166,
       "target_insns": 152,
       "candidate_insns": 152,
-      "diff_runs": 4,
+      "diff_runs": 0,
       "target_bytes": 523,
       "candidate_bytes": 523
     },
@@ -732,7 +732,7 @@
       "animation_id": 221,
       "target_insns": 154,
       "candidate_insns": 154,
-      "diff_runs": 4,
+      "diff_runs": 0,
       "target_bytes": 545,
       "candidate_bytes": 545
     },
@@ -852,7 +852,7 @@
       "animation_id": 256,
       "target_insns": 146,
       "candidate_insns": 146,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 527,
       "candidate_bytes": 527
     },
@@ -860,7 +860,7 @@
       "animation_id": 257,
       "target_insns": 146,
       "candidate_insns": 146,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 527,
       "candidate_bytes": 527
     },
@@ -868,7 +868,7 @@
       "animation_id": 258,
       "target_insns": 260,
       "candidate_insns": 260,
-      "diff_runs": 4,
+      "diff_runs": 0,
       "target_bytes": 984,
       "candidate_bytes": 984
     },
@@ -884,7 +884,7 @@
       "animation_id": 260,
       "target_insns": 117,
       "candidate_insns": 117,
-      "diff_runs": 2,
+      "diff_runs": 0,
       "target_bytes": 434,
       "candidate_bytes": 434
     },
@@ -993,8 +993,8 @@
       "candidate_bytes": 209
     }
   ],
-  "cases_with_differences": 18,
-  "identical_case_count": 106,
-  "total_diff_runs": 39,
+  "cases_with_differences": 1,
+  "identical_case_count": 123,
+  "total_diff_runs": 3,
   "normalization": "register names, branch destinations, and absolute constant addresses normalized; opcode, operand order, memory addressing, and instruction length retained"
 }

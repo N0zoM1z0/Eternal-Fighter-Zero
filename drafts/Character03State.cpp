@@ -1157,12 +1157,12 @@ void Character03::Slot06()
       }
       if (0.0 <= field0028 + field0038) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -1199,12 +1199,12 @@ void Character03::Slot06()
       if ((0.0 <= field0028 + field0038) &&
          (1 < field000a)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -1475,12 +1475,12 @@ void Character03::Slot06()
       if ((field0028 + field0038 >= 0.0) &&
          (field000a == 1)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -1502,7 +1502,7 @@ void Character03::Slot06()
         field0038 = field00c8;
         field0048 = 0.032;
       }
-      if ((0.0 < field0038) && (field000a == 4)) {
+      if ((field0038 > 0.0) && (field000a == 4)) {
         field000a = 5;
         field000c = 0;
       }
@@ -1524,12 +1524,12 @@ void Character03::Slot06()
       if ((0.0 <= field0028 + field0038) &&
          (4 < field000a)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -1571,7 +1571,7 @@ void Character03::Slot06()
         if (1 < field000a) {
           field0030 = field0030 + 0.06;
         }
-        if (0.0 < field0030) {
+        if (field0030 > 0.0) {
           field0030 = 0.0;
         }
         ++field000c;
@@ -1623,7 +1623,7 @@ void Character03::Slot06()
         if (1 < field000a) {
           field0030 = field0030 + 0.06;
         }
-        if (0.0 < field0030) {
+        if (field0030 > 0.0) {
           field0030 = 0.0;
         }
         ++field000c;
@@ -1672,12 +1672,12 @@ void Character03::Slot06()
       }
       if (0.0 <= field0028 + field0038) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -1717,12 +1717,12 @@ void Character03::Slot06()
       }
       if (0.0 <= field0028 + field0038) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -2262,12 +2262,12 @@ void Character03::Slot06()
             return;
           }
         }
-        if ((((char)inputX == (char)facing) && (0x4f < field313c)) &&
+        if ((((char)inputX == (char)facing) && (field313c >= 0x50)) &&
            (field000a < 4)) {
           field0008 = 0xb2;
           ResetPose();
         }
-        if ((((char)inputX != (char)facing) && (0x3b < field3138)) &&
+        if ((((char)inputX != (char)facing) && (field3138 >= 0x3c)) &&
            (field000a < 4)) {
           field0008 = 0xb2;
           ResetPose();
@@ -2285,7 +2285,7 @@ void Character03::Slot06()
         field0030 = -2.2;
       }
       field0030 = field0030 + 0.02;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       ++field000c;
@@ -2332,7 +2332,7 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if (((char)inputX == (char)facing) && (0x77 < field313c)) {
+      if (((char)inputX == (char)facing) && (field313c >= 0x78)) {
         field0008 = 9;
         ResetPose();
         field0048 = 0.03;
@@ -2340,7 +2340,7 @@ void Character03::Slot06()
           field0030 = -field0030;
         }
       }
-      if (((char)inputX != (char)facing) && (0x2f < field3138)) {
+      if (((char)inputX != (char)facing) && (field3138 >= 0x30)) {
         field0008 = 9;
         ResetPose();
         field0048 = 0.03;
@@ -2361,7 +2361,7 @@ void Character03::Slot06()
       }
       field0038 = field0038 + field0048;
       field0030 = field0030 + field0040;
-      if (-0.5 < field0030) {
+      if (field0030 > -0.5) {
         field0030 = -0.5;
       }
       if (field0038 < -1.5) {
@@ -2377,7 +2377,7 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if (((int)(char)inputX == -(int)(char)facing) && (0x77 < field313c)) {
+      if (((int)(char)inputX == -(int)(char)facing) && (field313c >= 0x78)) {
         field0008 = 9;
         ResetPose();
         field0048 = 0.03;
@@ -2385,7 +2385,7 @@ void Character03::Slot06()
           field0030 = -field0030;
         }
       }
-      if (((int)(char)inputX != -(int)(char)facing) && (0x2f < field3138)) {
+      if (((int)(char)inputX != -(int)(char)facing) && (field3138 >= 0x30)) {
         field0008 = 9;
         ResetPose();
         field0048 = 0.03;
@@ -3326,7 +3326,7 @@ void Character03::Slot06()
     case 221:
       if ((field000a == 1) && (field000c == 0)) {
         (*opponentSlot)->ResetPose();
-        ResetFrame();
+        (*opponentSlot)->ResetFrame();
         (*opponentSlot)->field0008 = 0x32;
       }
       if (2 < field000a) {
@@ -3336,11 +3336,11 @@ void Character03::Slot06()
           field0030 = 0.0;
         }
       }
-      if (((field000a <= 8) && (field000a >= 3)) && (field0038 + field0028 > 0.0)) {
+      if (((field000a < 9) && (field000a > 2)) && (field0038 + field0028 > 0.0)) {
         field000a = 9;
         field000c = 0;
         field0028 = 0.0;
-        (*opponentSlot)->ResetFrame();
+        ResetFrame();
       } else {
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3898,7 +3898,7 @@ void Character03::Slot06()
           field0030 = 0.0;
         }
       }
-      if (((field000a <= 7) && (field000a >= 2)) && (field0038 + field0028 > 0.0)) {
+      if (((field000a < 8) && (field000a > 1)) && (field0038 + field0028 > 0.0)) {
         field000a = 8;
         field000c = 0;
         field0028 = 0.0;
@@ -3947,7 +3947,7 @@ void Character03::Slot06()
           field0030 = 0.0;
         }
       }
-      if (((field000a <= 7) && (field000a >= 2)) && (field0038 + field0028 > 0.0)) {
+      if (((field000a < 8) && (field000a > 1)) && (field0038 + field0028 > 0.0)) {
         field000a = 8;
         field000c = 0;
         field0028 = 0.0;
@@ -4009,13 +4009,13 @@ void Character03::Slot06()
           field0030 = 0.0;
         }
       }
-      if (((field000a <= 7) && (field000a >= 2)) && (field0038 + field0028 > 0.0)) {
+      if (((field000a < 8) && (field000a > 1)) && (field0038 + field0028 > 0.0)) {
         field000a = 8;
         field000c = 0;
         field0028 = 0.0;
         ResetFrame();
       } else {
-        if (((field000a <= 0x12) && (field000a >= 0xd)) && (field0038 + field0028 > 0.0)) {
+        if (((field000a < 0x13) && (field000a > 0xc)) && (field0038 + field0028 > 0.0)) {
           field000a = 0x13;
           field000c = 0;
           field0028 = 0.0;
@@ -4114,7 +4114,7 @@ void Character03::Slot06()
       }
       if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x19b;
-        effect.x = (double)((int)field0020 + (char)facing * -0x24);
+        effect.x = (double)((int)field0020 - (char)facing * 0x24);
         effect.y = (double)((int)field0028 + -0x4e);
         effect.flag0018 = (char)facing;
         effect.layer = 1;
@@ -4122,7 +4122,7 @@ void Character03::Slot06()
         effect.group = 2;
         EmitLocalEffect(&effect);
         effect.type = 0x192;
-        effect.x = (double)((int)field0020 + (char)facing * -0x24);
+        effect.x = (double)((int)field0020 - (char)facing * 0x24);
         effect.y = (double)((int)field0028 + -0x4e);
         effect.flag0018 = -(char)facing;
         effect.layer = 1;
