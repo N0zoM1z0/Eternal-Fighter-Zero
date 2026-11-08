@@ -2897,31 +2897,34 @@ accepted 0x767600 function body. This is a call-site typing technique, not a new
 owner or an accepted implementation.
 
 Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-A fresh audit did not reproduce the previously recorded 2,901-byte candidate;
-that figure is withdrawn. The current best natural C++ candidate is 2,898 bytes
-with a 0x14C frame and 37 relocation sites, 171 bytes larger than the 2,727-byte
-target. It preserves both direct calls to the original `Scene3::TransformPoseBox`
-member symbol. It combines a contiguous `RectPair` with a local `PushboxScratch`
-union that reuses the x87 result, two sign-mask integers, and sequential pose /
-displacement / boundary temporaries. It is still an experiment, not an accepted
-implementation or match-unit claim.
+The 2,901-byte historical candidate is not reproducible and remains withdrawn.
+The later 2,898-byte candidate is also withdrawn: its `PushboxScratch::work`
+member stored the horizontal displacement and was overwritten by a boundary
+Boolean before both position updates consumed it. That was a semantic aliasing
+bug, not a valid optimization.
 
-The earlier 3,076-byte candidate used the temporary `TransformPoseBoxAbi`
-class relocation symbol; the 3,087-byte aggregate-return variant was superseded.
-Neither is the current best. The current 2,898-byte candidate has 336 `mov`
-(target 300), 48 `movsx` (48), 56 `fild` (56), 51 `fmul` (52), 34 `fstp` (42),
-16 `fcomp` (16), and 22 `fnstsw` (20); it has 33 conditional jumps (target 28).
-The remaining gap is therefore not just the frame: receiver/member reloads,
-branch materialization, and x87 store/order differences remain.
+The corrected direct-member candidate is 2,910 bytes (frame 0x154, 37
+relocations). Caching both stable `Secondary *` values reduces the corrected
+candidate to 2,637 bytes (frame 0x15C, 37 relocations); caching only one is
+2,760 bytes. The cached pointers are safe for this body because
+`TransformPoseBox` and `BoxesOverlap` only read their arguments and
+`CollisionSide` operates on the Secondary object; none rewrites
+`Scene3::secondary[]`.
+
+A target-local inventory candidate is 2,724 bytes (frame 0x194, 37 relocations).
+Making its `dVar1` volatile produces 2,727 bytes, exactly the target's *size*,
+but not an exact match: it has 668 decoded instructions versus 708 in the
+original, frame 0x194 versus 0x148, 252 `mov` versus 300, 51 `fmul` versus 52,
+35 `fstp` versus 42, and 22 `fnstsw` versus 20. Equal byte length is coincidental;
+no candidate is accepted and no pushbox unit recipe or exact-ledger claim exists.
 
 The velocity reconstruction is grounded in raw x87 instruction order, not the
 provisional Ghidra expression tree. All four CollisionSide predicates are
 (-1,+1,+1,-1); each branch materializes two sign booleans, masks both velocity
-locals in original order, then compares the masked values. The candidate
-preserves all four branch-specific boundary materializations and the
-null-preserving Secondary base adjustment (+8). No pushbox source, unit recipe,
-boundary promotion, or exact-ledger claim is accepted. Continue from the full
-target disassembly and retained variants; do not pad, hand-assemble, or copy a
+locals in original order, then compares the masked values. The corrected
+candidates preserve the four branch-specific boundary predicates and the
+null-preserving Secondary base adjustment (+8). Continue from the full target
+disassembly and retained variants; do not pad, hand-assemble, or copy a
 provisional draft into src/.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
