@@ -2897,25 +2897,30 @@ accepted 0x767600 function body. This is a call-site typing technique, not a new
 owner or an accepted implementation.
 
 Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-The best current raw-assembly-derived candidate is 2,901 bytes with a 0x18C
-frame and 37 relocation sites, 174 bytes larger than the 2,727-byte target. It
-uses the four CollisionSide predicates (-1,+1,+1,-1), the four branch-specific
-boundary materializations, and the null-preserving Secondary base adjustment
-(+8). More importantly, it corrects the Ghidra velocity pseudocode: each branch
-materializes two sign booleans, applies them to the two velocity locals in the
-original order, then compares the masked velocities. The decompiler instead
-folded one mask into the comparison and attached several masks to the wrong
-velocity. The corrected candidate has 56 `fild`, no `fimul`, and 51 `fmul`
-(target: 56, 0, 52 respectively); one multiply and the remaining stack/codegen
-layout still differ. A local `Scene3 * volatile scene = this` keeps repeated
-receiver loads on short EBP displacements. The 2,901-byte trial uses an explicit
-output-buffer ABI view for TransformPoseBox; its call sequence matches the
-callee ABI but its COFF relocation symbol differs from the aggregate-return
-member symbol. The 3,104-byte aggregate-return candidate retains the original
-helper symbol. Neither is accepted. No pushbox source, unit recipe, boundary
-promotion, or exact-ledger claim is accepted. Continue from the complete target
-disassembly and retained variants; do not pad, mask, hand-assemble, or copy a
-provisional draft into src/.
+A fresh audit did not reproduce the previously recorded 2,901-byte candidate;
+that figure is withdrawn. The smallest currently reproducible corrected-sign
+candidate is 3,076 bytes with a 0x198 frame and 37 relocation sites, but its two
+TransformPoseBox calls relocate to the temporary `TransformPoseBoxAbi` class
+symbol, not the original Scene3 helper. The smallest candidate preserving the
+original helper symbol is 3,087 bytes with a 0x1B8 frame and 37 relocations,
+using direct address-of-aggregate-return expressions. Both remain 360+ bytes
+larger than the 2,727-byte target and have different stack layouts.
+
+The velocity reconstruction is now grounded in the raw x87 instruction order,
+not the provisional Ghidra expression tree. All four CollisionSide predicates
+are (-1,+1,+1,-1); each branch materializes two sign booleans, masks the two
+velocity locals in the original order, and compares those masked velocities.
+The corrected candidate has 56 `fild`, no `fimul`, and 51 `fmul` (target:
+56, 0, 52 respectively). It also preserves all four branch-specific boundary
+materializations and the null-preserving Secondary base adjustment (+8). A
+local `Scene3 * volatile scene = this` reduces receiver reload cost; it does
+not by itself reproduce the target frame (0x148). The explicit-output member
+pointer cast preserves the helper symbol but emits an indirect call and only
+one helper relocation; it is not a substitute for the two original direct
+calls. No pushbox source, unit recipe, boundary promotion, or exact-ledger
+claim is accepted. Continue from the complete target disassembly and retained
+variants; do not pad, mask, hand-assemble, or copy a provisional draft into
+src/.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
