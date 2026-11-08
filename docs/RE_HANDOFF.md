@@ -119,13 +119,20 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   is wrong on these masks. The prior 2901-byte candidate is not reproducible.
   The 2898-byte candidate is withdrawn as semantically wrong: its union scratch
   overwrote a still-live horizontal displacement with a boundary Boolean.
-  Corrected natural C++ trials: direct-member 2910/2727 bytes (frame 0x154);
-  stable cached Secondary pointers 2637/2727 bytes (frame 0x15C, 37 relocs).
-  A target-local trial reaches 2724 bytes; making dVar1 volatile reaches
-  2727 bytes, but this is only a size coincidence: 668 decoded instructions
-  versus target 708, frame 0x194 versus 0x148, 252 mov versus 300, 51 fmul
-  versus 52, 35 fstp versus 42, 22 fnstsw versus 20. No candidate is exact or
-  accepted. Continue natural stack/x87 exploration; no padding or hand assembly.
+  Earlier 2910/2637-byte and target-local/volatile trials remain non-exact.
+  New raw-assembly correction: the first horizontal branch is `centerDiff > 0`
+  and the opposite branch is `<= 0`, emitted as `sub; test; jle`; a direct
+  center comparison reverses the branch layout. Removing the unused comma
+  temporary also removes one extra x87 `fst`. Candidate 150 adds one natural
+  success-path `return` to restore the missing exit jump. It is 2725 bytes
+  versus target 2727, frame 0x148, 708 instructions, and matches every target
+  mnemonic count (300 mov, 20 jmp, 4 sub, 22 test, 20 fld, 56 fild, 52 fmul,
+  42 fstp, 16 fcomp, 4 fcompp, 20 fnstsw); object has 35 relocs. It is still
+  not byte-exact: stack offsets, registers, and instruction ordering differ;
+  no Oracle receipt or accepted claim. Continue from
+  `.analysis/probes/scene-battle/Pushboxes-onehundredfiftieth.cpp` and explore
+  natural local declaration/stack-layout changes. Do not pad, hand-assemble,
+  or copy the candidate into `src/`.
   Pixel owners 409A90/40A0B0/40A440 remain open.
 - `Scene3::Step` (0x763C20 /1653) and `Scene3::UpdateRound` (0x765040 /1562)
   were extracted from the targeted `SceneBattleLoop.cpp` object and replayed

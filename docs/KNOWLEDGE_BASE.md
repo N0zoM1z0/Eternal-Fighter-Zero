@@ -2926,6 +2926,32 @@ candidates preserve the four branch-specific boundary predicates and the
 null-preserving Secondary base adjustment (+8). Continue from the full target
 disassembly and retained variants; do not pad, hand-assemble, or copy a
 provisional draft into src/.
+
+A fresh natural-C++ line of attack now gets substantially closer. The first
+horizontal correction is selected by `(first.left + first.right) -
+(second.left + second.right) > 0`; the opposite branch is taken for `<= 0`.
+This direction is established by the raw `sub; test; jle` at 0x766caa-0x766cae,
+not by the earlier pseudocode assumptions. A direct center `<=` comparison is
+not equivalent code generation. The comma-expression assignment used only to
+feed the final right-facing comparison also emits an unwanted `fst`; removing
+that dead temporary removes it without changing the x87 count.
+
+The 150th natural-C++ candidate (source retained as
+`.analysis/probes/scene-battle/Pushboxes-onehundredfiftieth.cpp`) adds one
+success-path `return` in the nested CollisionSide branch. This restores the
+separate exit jump that the target emits for the successful path and leaves the
+no-write path on its own exit. Its 2,725-byte `.text` has 708 decoded
+instructions and matches the target's complete mnemonic histogram, including
+300 `mov`, 20 `jmp`, 4 `sub`, 22 `test`, 20 `fld`, 56 `fild`, 52 `fmul`, 42
+`fstp`, 16 `fcomp`, 4 `fcompp`, and 20 `fnstsw`; frame is 0x148 and the object
+has 35 relocations. The target body is 2,727 bytes. This is the closest
+instruction-inventory candidate so far, not byte-exact: stack-slot placement,
+register choices, and instruction ordering still differ, and no Oracle replay
+receipt or accepted codegen claim exists. Candidate 149 with both success and
+no-op returns overshoots to 21 `jmp`; candidate 151 (no-op-path return only)
+shares the 2,725-byte / 20-`jmp` inventory but has a different object hash.
+Continue from candidate 150 and test local declaration/stack-layout order;
+do not promote it to `src/`, pad it, or hand-assemble it.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
