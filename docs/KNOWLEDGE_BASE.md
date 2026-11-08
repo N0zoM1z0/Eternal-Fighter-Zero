@@ -2883,11 +2883,13 @@ second five-byte jump to the shared epilogue. These are semantic/control-flow
 corrections, not padding.
 
 The remaining mismatch is concentrated in local stack allocation and some
-x87 temporary lifetimes. The current source candidate still saves `this` at
-EBP-0x70 rather than EBP-0x60; its conditional pose-pointer temporaries are at
-EBP-0x74/-0x78 rather than EBP-0x64/-0x68; and its hidden return buffers are at
-EBP-0x5c/-0x6c rather than EBP-0x4c/-0x5c. Its left-branch boundary stores use
-EBP-0x44/-0x40 instead of the target EBP-0x6c/-0x70. Keep using the focused
+x87 temporary lifetimes. The target saves `this` at EBP-0x60, its two
+conditional pose pointers at EBP-0x64/-0x68, and its hidden return buffers at
+EBP-0x4c/-0x5c. Its left-branch boundary stores use EBP-0x6c/-0x70 and its
+right-branch boundary stores use EBP-0xdc/-0xe0. The current candidate instead
+saves `this` at EBP-0x70, places the pose pointers at EBP-0x74/-0x78, the return
+buffers at EBP-0x5c/-0x6c, and the left/right boundary pairs at EBP-0x44/-0x40
+and EBP-0x4c/-0x48 respectively. Keep using the focused
 `scene-battle-resolve-pushboxes` unit; do not run a full cold replay for these
 local experiments.
 
@@ -2916,6 +2918,30 @@ another outer-scope declaration, and splitting `displacement` into direction
 branches also failed to improve the match. These negative controls narrow the
 search; they do not establish that the current local aggregate is the original
 source declaration.
+
+A further focused pass on 2026-11-08 tested natural alternatives rather than
+assuming the aggregate was correct: independent `SurfaceRect`/velocity locals,
+16-byte frame records containing the boundary flags and pose pointers, explicit
+pose-pointer locals, function-scope versus branch-scope flags, and removal of
+the outer/transform braces. Independent locals move `this` farther down to
+EBP-0x74 and the hidden returns to EBP-0x60/-0x70; the frame-record variants
+move `this` to EBP-0x78. None preserves the target's return-copy instructions
+and stack ownership. A free `__fastcall ResolvePushboxes(Scene3 *)` control
+produces the same prologue as the member function, so the current mismatch is
+not explained by member-versus-free-function calling convention. Register and
+ordinary `char`/ `signed char` facing locals, aggregate padding, and simple
+scope-brace removal are also rejected controls.
+
+The scan of 643 locally built objects containing this function found no
+candidate with the target's combined prologue, pose-pointer, and hidden-return
+buffer offsets. Three direct-initialization probes place the first return
+buffer at the target EBP-0x4c, but they change the post-call copy sequence and
+grow the function to 2,729 bytes; they are diagnostics, not source candidates.
+The target's 12-byte drift at relocation 617 remains independently explained:
+two integer-to-x87 spill slots are EBP-0x7c/-0x80 in the target but EBP-0x84/
+-0x88 in the candidate, forcing longer `mov` and `fild` encodings. Keep the
+average computed once and continue searching for the natural lifetime/layout
+that moves those spills without changing the two aggregate-return call sites.
 
 ### Complete dispatch and body-contact test
 
@@ -3035,12 +3061,12 @@ which overwrote a still-live displacement with a boundary Boolean before both
 position updates consumed it. That earlier attempt is semantically wrong and
 must not be revived.
 
-The next useful experiment is to recover the target's contiguous stack ownership
-(`this` at `-0x60`, pose pointers at `-0x64/-0x68`, and the left-boundary stores
-at `-0x6c/-0x70`) without introducing duplicate aggregate-return temporaries.
-The 12-byte drift at relocation 617 is a concrete stack-offset/encoding problem;
-keep the average value computed once as in the target, and vary natural C++ local
-scope/ownership around the two hidden `SurfaceRect` returns. Compare all 2,727
+The next useful experiment is to recover the target's *different lifetimes*
+for the left/right boundary results, pose pointers, and the two hidden
+`SurfaceRect` return buffers. Simple declaration-order permutations and
+aggregate-versus-independent locals are now negative controls. Keep the average
+computed once, preserve the target's two return-copy sequences, and target the
+EBP-0x7c/-0x80 x87 spill slots that explain relocation 617. Compare all 2,727
 bytes and every relocation after each focused build. Do not infer exactness from
 matching size or histogram, and do not promote a probe into `src/` before strict
 acceptance. Earlier probes are archived losslessly in
