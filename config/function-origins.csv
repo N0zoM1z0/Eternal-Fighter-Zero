@@ -369,7 +369,7 @@ address,origin,status,evidence
 0x005E10B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-construction-input-and-indicator-owners
 0x005E2440,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-cpu-command-and-movement-owner
 0x005E5C30,authored,reviewed,docs/KNOWLEDGE_BASE.md#mayu-local-effect-dispatch-and-controls
-0x005E85F0,unknown,unreviewed,
+0x005E85F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping
 0x005F6D90,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005F6F20,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners
 0x005F7040,authored,reviewed,docs/KNOWLEDGE_BASE.md#makoto-construction-input-and-indicator-owners

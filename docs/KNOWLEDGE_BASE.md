@@ -5442,3 +5442,33 @@ snapshots,current accepted objects/receipts,per-unit reports,the latest affected
 header replay,and all parked Shiori/PrepareBattle work remain live. Original
 target/toolchain/Wine/Ghidra state is preserved. Storage accounting and exact
 restore commands are in `docs/RE_ARTIFACTS.md`; native logs remain available.
+
+## Makoto state dispatch boundary and selector mapping
+
+`Character03::Slot06` begins at `0x5E85F0`. The Character03 vtable at
+`0x788AC8` has `ResetPose` at slot 0, `Slot01` through `Slot08` at slots 1
+through 8, and the DWORD at slot-6 operand `0x788AE0` is exactly
+`0x5E85F0`. This is an authored, non-thunk character state machine; the
+`Character03` declaration and the neighboring accepted Character03 slot owners
+confirm the class/slot interpretation.
+
+The independently decoded code extent is `[0x5E85F0, 0x5F6A62)`: 58,482 bytes
+ending with `RET` at `0x5F6A61`. The indirect dispatch at `0x5E8696` indexes a
+125-entry DWORD jump table at `0x5F6A62` (500 bytes). Its destinations are all
+unique instruction starts inside the code extent. The selector map begins at
+`0x5F6C56` and contains 310 bytes for animation IDs 1 through 310. Its values
+0 through 123 each occur exactly once; value 124 occurs 186 times and selects
+the default path at `0x5E869D`. Thus there are 124 explicit animation cases and
+186 defaulted IDs. Ghidra's normalized `case 0..124` values are dispatch-table
+indices, not the original animation IDs; the exact animation-to-case mapping is
+retained in `.analysis/probes/makoto/state-case-map.csv` and the full review in
+`.analysis/probes/makoto/state-boundary-review.json`.
+
+The selector map ends at `0x5F6D8C`. Four `CC` bytes follow, and the next
+Character03 constructor begins at `0x5F6D90`. The complete owned code-plus-table
+extent is therefore `[0x5E85F0, 0x5F6D8C)`, 59,292 bytes. The function boundary
+and authored origin are now reviewed in the ledgers. The source reconstruction,
+external/local relocation ownership, strict code-generation match, and runtime
+validation remain open; this boundary review is not an exactness claim. The
+Ghidra switch-normalization warning remains provisional and is not treated as a
+source-level case map.

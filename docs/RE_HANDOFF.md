@@ -83,11 +83,15 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
 
 ## Retained work and optional leads
 
-- Makoto has 12/13 actual virtual destinations exact. State5E85F0/58,482 code
-  bytes is open; its associated tables remain unreviewed. Fresh read-only
-  annotation:.analysis/probes/makoto/calls-annotated-005e85f0.txt. Its decompiler
-  warning about03020100 is provisional. Review the complete original extent
-  and operands and build complete source early before any acceptance claim.
+- Makoto has 12/13 actual virtual destinations exact. State5E85F0 is the
+  authored Character03::Slot06 owner. Its complete target boundary is now
+  reviewed:58,482 code +500 jump-table +310 selector-map bytes =59,292 bytes;
+  124 animation IDs have explicit cases and186 map to the default. Four CC
+  bytes precede the next constructor at5F6D90. The vtable slot6 operand788AE0
+  points to5E85F0. Fresh evidence and the complete animation-to-case map are in
+  .analysis/probes/makoto/state-boundary-review.json and state-case-map.csv.
+  Source reconstruction, relocation ownership and exact code generation remain
+  open. The Ghidra warning about03020100 remains provisional.
 - Shiori Slot06 at4136D0 is unaccepted. Read
   .analysis/probes/shiori-state/README.md and parked-best/ first. Complete target:
   63,132 bytes =62,273 code + 540 addresses + 319 selectors,end422D6C. Best complete
