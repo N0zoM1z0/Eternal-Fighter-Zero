@@ -1,8 +1,3 @@
-// PROVISIONAL RECONSTRUCTION DRAFT — NOT INCLUDED IN THE BUILD.
-// Target: Character03::Slot06 at 0x005E85F0. All 124 explicit animation
-// branches and the selector fallback are represented as natural C++. The
-// first VC7.1 build is 77,210 bytes versus 58,482 target code bytes; exactness
-// is not claimed. Continue using the original PE as the authority.
 #include "CharacterViews.h"
 
 void Character03::Slot06()
@@ -14,8 +9,8 @@ void Character03::Slot06()
     return;
   }
   EffectSpawn effect;
-    unsigned int local_a0, local_9c, local_98, local_94, local_90, local_8c;
-    unsigned int local_80, local_7c, local_78, local_74, local_70, local_6c, local_68, local_64, local_60;
+    unsigned int local_60, local_64, local_68, local_6c, local_70, local_74, local_78, local_7c, local_80;
+    unsigned int local_8c, local_90, local_94, local_98, local_9c, local_a0;
     char cVar1;
     int iVar2;
   frameDuration = patterns[field0008].frames[field000a].duration;
