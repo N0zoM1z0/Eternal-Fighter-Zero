@@ -362,3 +362,4 @@ address,end,size,status,evidence
 0x005FB040,0x005FF4BB,17531,reviewed,docs/KNOWLEDGE_BASE.md#makoto-cpu-command-and-movement-owner
 0x005FF4C0,0x00607929,33897,reviewed,docs/KNOWLEDGE_BASE.md#makoto-local-effect-dispatch-and-controls
 0x005E85F0,0x005F6D8C,59292,reviewed,docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping
+0x007783B8,0x0077842D,117,reviewed,docs/KNOWLEDGE_BASE.md#vc71-x87-floating-to-integer-helper

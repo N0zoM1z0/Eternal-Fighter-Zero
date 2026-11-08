@@ -91,7 +91,9 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   points to5E85F0. Fresh evidence and the complete animation-to-case map are in
   .analysis/probes/makoto/state-boundary-review.json and state-case-map.csv.
   Source reconstruction, relocation ownership and exact code generation remain
-  open. The Ghidra warning about03020100 remains provisional.
+  open. The 0x7783B8 leaf is the compiler-generated x87-to-integer helper (178
+  calls in Slot06); source should use natural conversions, not call it. The
+  Ghidra warning about03020100 remains provisional.
 - Shiori Slot06 at4136D0 is unaccepted. Read
   .analysis/probes/shiori-state/README.md and parked-best/ first. Complete target:
   63,132 bytes =62,273 code + 540 addresses + 319 selectors,end422D6C. Best complete

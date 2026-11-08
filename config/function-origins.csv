@@ -662,7 +662,7 @@ address,origin,status,evidence
 0x007782BD,unknown,unreviewed,
 0x0077834F,unknown,unreviewed,
 0x00778397,unknown,unreviewed,
-0x007783B8,unknown,unreviewed,
+0x007783B8,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#vc71-x87-floating-to-integer-helper
 0x0077842D,unknown,unreviewed,
 0x007784E0,unknown,unreviewed,
 0x0077856B,unknown,unreviewed,

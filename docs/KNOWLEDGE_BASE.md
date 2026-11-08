@@ -5472,3 +5472,19 @@ external/local relocation ownership, strict code-generation match, and runtime
 validation remain open; this boundary review is not an exactness claim. The
 Ghidra switch-normalization warning remains provisional and is not treated as a
 source-level case map.
+
+## VC7.1 x87 floating-to-integer helper
+
+`0x007783B8` is a 117-byte compiler-generated VC7.1 floating-to-integer
+support leaf, ending at `0x0077842D` (exclusive); `_fabs` begins immediately
+at `0x0077842D`. Its input is already in x87 `ST(0)`, it uses `FISTP`/`FILD`
+and an x87 fractional-correction sequence, returns the 64-bit integer in
+`EDX:EAX`, and makes no calls. The Ghidra `FUN_007783b8(void)` signature is
+therefore incomplete: the value is passed through the x87 stack, not ordinary
+arguments. `Character03::Slot06` contains 178 direct calls to this helper.
+
+Do not reconstruct this as a game-authored C++ leaf or call it explicitly from
+source. Write the original floating-point expression and its natural integer
+conversion; VC7.1 should emit the helper as a compiler-support dependency. Its
+boundary and compiler-generated origin are now reviewed, but this does not
+close the Makoto state function's code-generation or relocation proof.
