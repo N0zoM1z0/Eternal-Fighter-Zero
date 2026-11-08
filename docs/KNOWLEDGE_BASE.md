@@ -2822,6 +2822,39 @@ arithmetic shift; a conventional strict-overlap predicate changes behavior.
 It is a member with two box pointers and RET 08, not an invented free-function ABI.
 A fresh isolated SceneCollision.cpp compile reconfirmed all 128 target bytes and the zero-relocation contract.
 
+### Pushbox response: boundary verified, implementation still open
+
+A fresh canonical-target review establishes the complete extent of the large
+pushbox resolver at 0x766B50: 2,727 bytes, 708 instructions, ending with the
+sole RET at 0x7675F6. All 48 direct branch instructions target addresses inside
+that extent. Its seven direct calls are two TransformPoseBox calls, one
+BoxesOverlap call and four CollisionSide calls. The only caller is the battle
+step at 0x763C20. Nine 0xCC alignment bytes follow the RET; the next function
+starts at 0x767600. The reviewed boundary is therefore [0x766B50, 0x7675F7),
+not an assumed range inferred only from a candidate object.
+
+The original operands were also checked against the canonical PE data bytes:
+zero at 0x7872F8 is 0.0, the divisor at 0x787328 is 2.0, the left-side limit at
+0x787370 is 160.0, and the right-side limit at 0x7895E8 is 479.0. These are
+separate from CollisionSide's 20.0 / 619.0 / 280.0 constants. Do not substitute
+those character-edge thresholds for the pushbox stage limits.
+
+The resolver first transforms both current-pose boxes and tests their overlap.
+On overlap it selects the separation direction from the box-center ordering,
+computes an integer edge displacement, and splits that displacement between
+the two world X positions. Its subsequent velocity response is asymmetric:
+CollisionSide results select different sign-clamping and shared-velocity paths
+for the two directions. Four before/after boundary comparisons are explicitly
+materialized in separate stack slots. Preserve their order while reconstructing
+the natural C++ scopes; their apparent lack of high-level consumers is not a
+reason to delete them prematurely.
+
+The older 708-instruction candidate is not an accepted reconstruction: its
+extent is 2,726 bytes and its saved-this, pose-pointer and hidden-return-buffer
+stack slots differ from the original. It remains a diagnostic experiment only.
+The boundary and data operands are reviewed, but ResolvePushboxes itself remains
+open until a complete relocated function comparison is exact.
+
 ### Complete dispatch and body-contact test
 
 DispatchCollisions first tests both character directions with TestBodyInteraction
