@@ -116,15 +116,21 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   caller ABI uses an explicit output buffer and returns its pointer in EAX.
   Raw assembly corrects CollisionSide signs to -1,+1,+1,-1 and shows that each
   branch masks both velocity locals before comparing them; Ghidra's pseudocode
-  is wrong on these masks. The prior 2901-byte candidate claim is withdrawn.
-  Best natural C++ candidate is now 2898/2727 bytes, 37 relocations, frame
-  0x14C, with both original direct TransformPoseBox member calls. It uses a
-  contiguous RectPair and a PushboxScratch union for non-overlapping x87/mask/
-  scratch lifetimes. Counts: 336 mov (target 300), 48 movsx, 56 fild, 51 fmul
-  (target 52), 34 fstp (target 42), 22 fnstsw (target 20); 33 conditional
-  branches (target 28). Still 171 bytes over and not accepted. Keep exploring
-  natural stack layout and x87 order; no padding or hand assembly. Pixel owners
-  409A90/40A0B0/40A440 remain open.
+  is wrong on these masks. The prior 2901-byte candidate is not reproducible.
+  The 2898-byte candidate is withdrawn as semantically wrong: its union scratch
+  overwrote a still-live horizontal displacement with a boundary Boolean.
+  Corrected natural C++ trials: direct-member 2910/2727 bytes (frame 0x154);
+  stable cached Secondary pointers 2637/2727 bytes (frame 0x15C, 37 relocs).
+  A target-local trial reaches 2724 bytes; making dVar1 volatile reaches
+  2727 bytes, but this is only a size coincidence: 668 decoded instructions
+  versus target 708, frame 0x194 versus 0x148, 252 mov versus 300, 51 fmul
+  versus 52, 35 fstp versus 42, 22 fnstsw versus 20. No candidate is exact or
+  accepted. Continue natural stack/x87 exploration; no padding or hand assembly.
+  Pixel owners 409A90/40A0B0/40A440 remain open.
+- `Scene3::Step` (0x763C20 /1653) and `Scene3::UpdateRound` (0x765040 /1562)
+  were extracted from the targeted `SceneBattleLoop.cpp` object and replayed
+  independently against canonical target bytes. Step is exact with all 34
+  relocation bindings; UpdateRound is exact with all 11. No full cold replay.
 - `Scene3::UpdateRoundExit` (0x765FA0 /205) was independently rebuilt from
   `src/SceneBattleLoop.cpp` in the targeted VC7.1 translation-unit build. Its
   205 bytes and all 10 relocation bindings replay exactly against the canonical
