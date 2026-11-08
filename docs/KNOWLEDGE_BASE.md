@@ -3592,6 +3592,9 @@ character LoadResources virtual calls, control-word mirroring, intro/camera
 reset, render and fade-in retain the original sequence. Context1340/14281/14282
 replace existing unknown bytes without shifting layout. ResetReplay matched
 its first complete 734-byte compilation.
+A fresh targeted rebuild of `src/SceneBattleInput.cpp` also replayed
+`Scene3::ResetReplay` (0x7661A0) at 734/734 bytes with all 24 relocation
+bindings exact; no full cold replay was run.
 
 ### Acceptance and session closure
 

@@ -133,6 +133,10 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   `src/SceneBattleInput.cpp` in a targeted VC7.1 translation-unit build. Its
   734 bytes and all 24 relocation bindings replay exactly against the canonical
   target; this was a single-function check, not a full cold replay.
+- `Scene3::UpdateIntro` (0x766070 /292) was independently rebuilt from
+  `src/SceneBattle.cpp` in a targeted VC7.1 translation-unit build. Its 292
+  bytes and all 7 relocation bindings replay exactly against the canonical
+  target; this was a single-function check, not a full cold replay.
 - Reader/audio integration is complete. `workbench/reader-audio/` preserves
   historical drafts and an already-integrated patch; it is not unfinished work.
   Read its README; never apply the old patch or copy drafts over accepted src/.
