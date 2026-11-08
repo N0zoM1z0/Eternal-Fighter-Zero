@@ -102,3 +102,13 @@ Do not delete retained
 analysis evidence or the toolchain/Wine/Ghidra state as routine cache cleanup.
 The verified lossless cleanup archives and restore instructions are recorded in
 `docs/RE_ARTIFACTS.md`; restore an archived historical artifact before using it.
+
+## Shared Factory runtime
+
+Follow [the shared tools instructions](docs/SHARED_TOOLS.md). Ghidra/JDK and
+Wine executables are shared through Factory; repository scripts also work
+without MCP. Use `scripts/shared_runtime.py` and the existing compiler/analysis
+frontends. Keep this game's prefix, analyzer project, Java home/cache, target
+and compiler profile isolated. Do not install duplicate tools or inherit
+another game's `WINEPREFIX`. This shared-runtime procedure supersedes older
+per-repository installation instructions; pinned versions/hashes still apply.

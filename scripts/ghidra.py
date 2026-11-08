@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+from shared_runtime import command as shared_command
+
 import argparse
 from datetime import datetime, timezone
 import fcntl
@@ -208,7 +210,7 @@ def main() -> int:
         ]
         for address, payload, _ in regions:
             attestation.extend([hex(address), str(len(payload)), hashlib.sha256(payload).hexdigest()])
-        command = [str(analyzer), str(PROJECT), "EFZ", "-max-cpu", "1"]
+        command = [*shared_command("ghidra"), str(PROJECT), "EFZ", "-max-cpu", "1"]
         if args.command == "import":
             command += ["-import", str((ROOT / "resources" / str(expected["filename"])).resolve()), "-analysisTimeoutPerFile", str(max(10, args.timeout - 120))]
         else:

@@ -1,6 +1,8 @@
 """Pinned VC7.1 execution with an isolated Wine prefix and retained logs."""
 from __future__ import annotations
 
+from shared_runtime import command as shared_command
+
 import fcntl
 import json
 import os
@@ -52,7 +54,7 @@ def run_tool(tool: str, arguments: list[str], log: Path, timeout: int = 120,
     (ROOT / ".tools").mkdir(exist_ok=True)
     log.parent.mkdir(parents=True, exist_ok=True)
     command = ["xvfb-run", "-a", "-s", "-screen 0 1024x768x24 -nolisten tcp",
-               "/usr/bin/wine", str(binary.resolve()), *arguments]
+               *shared_command("wine"), str(binary.resolve()), *arguments]
 
     def constrain() -> None:
         os.nice(10)

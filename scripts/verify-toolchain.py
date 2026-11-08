@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Check pinned compiler surfaces; --execute also compiles, links and runs smoke."""
 import argparse
+
+from shared_runtime import command as shared_command
 import json
 from common import ROOT, sha256
 from native_build import TOOL_ROOT, compile_source, run_tool, verify_toolchain, winpath
@@ -39,7 +41,7 @@ def main() -> int:
             import os, subprocess
             env = os.environ.copy()
             env.update(WINEARCH="win32", WINEPREFIX=str(ROOT / ".tools/wine-msvc710"), WINEDEBUG="-all")
-            completed = subprocess.run(["xvfb-run", "-a", "/usr/bin/wine", str(executable)],
+            completed = subprocess.run(["xvfb-run", "-a", *shared_command("wine"), str(executable)],
                                        cwd=ROOT, env=env, capture_output=True, timeout=30)
             (logdir / "run.log").write_bytes(completed.stdout + completed.stderr)
             if completed.returncode != 0 or b"EFZ compiler smoke OK" not in completed.stdout:
