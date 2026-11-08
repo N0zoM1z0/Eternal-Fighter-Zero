@@ -8,18 +8,16 @@ relocations have been independently reviewed.
 `Character03State.cpp` is the current natural-C++ reconstruction for Makoto's
 `Character03::Slot06` (124 explicit animation cases plus fallback). The source
 uses direct integer-to-double casts for the 178 x87 conversions and restores
-the target's FPU `<= 0.0` comparisons rather than preserving Ghidra's boolean
-XOR decomposition. It restores the target's branch layout in the large
-animation groups, including explicit unsigned frame-index comparisons and
-byte-counter increments. `SecondaryPose::field000c` is `unsigned short`,
-matching target `MOVZX` loads. Opponent-owned `ResetFrame` and
-`SetHorizontalShake` calls now pass the opponent as `this` where required.
-The VC7.1 stack frame matches the target exactly (`0x378`), the 369 direct-call
-sequence matches in order, and case 212 now follows the target's outer `field0168 > 1` exit and
-negative-frame / nonnegative-landing split, with its 453-byte block matching
-the target extent. The whole emitted instruction body is 58,484 bytes versus
-58,482 target bytes (+2); per-animation size deltas remain in
-`docs/evidence/makoto-slot06-case-deltas.csv`, so byte-for-byte identity is
-not yet claimed. The
-draft remains excluded from the normal build until instruction-level
-verification is complete.
+the target's FPU branch ordering rather than preserving Ghidra's boolean XOR
+decomposition. The `SecondaryPose::field000c` frame counter is `unsigned
+short`, matching target `MOVZX` loads. Opponent-owned `ResetFrame` and
+`SetHorizontalShake` calls pass the opponent as `this` where required.
+Animation groups 64-68, 83-84, 162, 170, 212 and 249 now have target-sized
+blocks; the 212/162/170 landing branches use explicit function exits to retain
+the target's near jump layout. The VC7.1 stack frame is `0x378`, the 369
+direct-call sequence matches in order, and the emitted instruction body is
+58,482 bytes, matching the target extent. Cases 300-302 remain one byte short
+each while the dispatch prelude is three bytes longer, so function-size
+agreement is not evidence of byte-for-byte identity. Per-animation deltas
+remain in `docs/evidence/makoto-slot06-case-deltas.csv`; instruction-level
+verification is still in progress.
