@@ -1086,14 +1086,19 @@ Ghidra decompile-00409a90.txt. The blended body's last argument is loaded as a
 signed byte before accepting modes 0/1; existing external names/types remain
 provisional until complete owner and caller review.
 
-Timer thread 0x401850 has a 157-byte complete body. It writes three zero locals,
-updates lastTick at 0x790100, waits on tickEvent 0x79013C with the byte at
-0x78F040 as timeout, and signals frameEvent 0x790140. Every elapsed second it
-increments that byte only when the signed count exceeds 64, resets the count
-and samples time again. Two initialized locals have no later reads in this
-body. It remains unimplemented; do not add inert source merely to force its
-frame. Complete original disassembly is timing-00401850-review.txt. These
-follow-up observations confer no exact credit or automatic ledger changes.
+Timer thread 0x401850 is reconstructed as a complete 157-byte natural C++
+function in src/FrameThread.cpp. It initializes the three target locals, stores
+timeGetTime() in lastTick at 0x790100, waits on tickEvent at 0x79013C using the
+byte at 0x78F040 as the timeout, then signals frameEvent at 0x790140. Each
+elapsed second it increments that timeout byte only when the signed loop count
+exceeds 64, resets the count and samples time again. The byte at 0x78F040 is
+initialized to 10 in the original .data section; it is not `active`. The active
+WPARAM global is separately bound at 0x790134 by WindowProcedure. Two of the
+three initialized stack locals have no later reads in this body; their source
+names are unknown and the exact source uses nested scope to reproduce the
+observed -4/-8/-C stack layout without padding. All 157 bytes and 13 relocation
+operands compare exactly. Evidence: docs/evidence/frame-thread-exact.json and
+.analysis/probes/timing/FrameThread-third-reviewed-relocations.json.
 
 ## Context input and audio transitions
 

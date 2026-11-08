@@ -1,7 +1,7 @@
 address,origin,status,evidence
 0x00401000,authored,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401670,authored,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
-0x00401850,unknown,unreviewed,
+0x00401850,authored,reviewed,docs/evidence/frame-thread-exact.json
 0x004018F0,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401920,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401950,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables

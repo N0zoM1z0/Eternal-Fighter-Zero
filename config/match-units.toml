@@ -1272,6 +1272,107 @@ symbol = "__imp__WaitForSingleObject@8"
 target = 0x00787024
 evidence = "docs/KNOWLEDGE_BASE.md#startup-and-window-ownership; original complete disassembly and named PE imports"
 
+[units.startup-frame-thread]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/FrameThread.cpp"
+dependencies = []
+object = "build/match-units/startup-frame-thread/FrameThread.obj"
+symbol = "_FrameThread@4"
+target_address = 0x00401850
+size = 157
+
+[[units.startup-frame-thread.relocations]]
+offset = 29
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 34
+type = "DIR32"
+symbol = "?lastTick@@3KA"
+target = 0x00790100
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 50
+type = "DIR32"
+symbol = "?tickTimeout@@3EA"
+target = 0x0078f040
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 57
+type = "DIR32"
+symbol = "?tickEvent@@3PAXA"
+target = 0x0079013c
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 64
+type = "DIR32"
+symbol = "__imp__WaitForSingleObject@8"
+target = 0x00787024
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 69
+type = "DIR32"
+symbol = "?frameEvent@@3PAXA"
+target = 0x00790140
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 76
+type = "DIR32"
+symbol = "__imp__SetEvent@4"
+target = 0x00787030
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 91
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 97
+type = "DIR32"
+symbol = "?lastTick@@3KA"
+target = 0x00790100
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 116
+type = "DIR32"
+symbol = "?tickTimeout@@3EA"
+target = 0x0078f040
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 125
+type = "DIR32"
+symbol = "?tickTimeout@@3EA"
+target = 0x0078f040
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 138
+type = "DIR32"
+symbol = "__imp__timeGetTime@0"
+target = 0x007871e0
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
+[[units.startup-frame-thread.relocations]]
+offset = 143
+type = "DIR32"
+symbol = "?lastTick@@3KA"
+target = 0x00790100
+evidence = "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer"
+
 [units.startup-window-procedure]
 artifact_kind = "coff"
 profile = "vc71-od-static"

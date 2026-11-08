@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "method": "Single-unit cold native VC7.1 replay using scripts/replay-exact-units.py --unit startup-frame-thread; complete source/profile/object contribution compared after explicit original relocation binding",
+  "authority": "complete function codegen and all 13 original relocation operands; no padding, masked comparison, assembly wrapper or manual bytes",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 157,
+      "matched_bytes": 157,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 29,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 34,
+          "target": 7930112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?lastTick@@3KA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 50,
+          "target": 7925824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?tickTimeout@@3EA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 57,
+          "target": 7930172,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?tickEvent@@3PAXA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 64,
+          "target": 7893028,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WaitForSingleObject@8",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 7930176,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?frameEvent@@3PAXA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 76,
+          "target": 7893040,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__SetEvent@4",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 97,
+          "target": 7930112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?lastTick@@3KA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 116,
+          "target": 7925824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?tickTimeout@@3EA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 125,
+          "target": 7925824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?tickTimeout@@3EA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 138,
+          "target": 7893472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__timeGetTime@0",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        },
+        {
+          "offset": 143,
+          "target": 7930112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?lastTick@@3KA",
+          "evidence": "docs/evidence/frame-thread-exact.json; original instruction operands, named PE imports, and independently inspected .data initializer",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ba7a3f20e78c3a5805002c016cd131309672fd8030ff033b8d1cf8347f3083d8",
+      "target_extent_sha256": "ba7a3f20e78c3a5805002c016cd131309672fd8030ff033b8d1cf8347f3083d8",
+      "unit": "startup-frame-thread",
+      "symbol": "_FrameThread@4",
+      "target_address": "0x00401850",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "39875d91547aa96cfb05a678a3b3cffcff97c607a1609af5b525c265010437c0",
+      "object_sha256": "7ba1b870ab0706feaf9c7b29343f0597c59837db48642e21952c27dd71917dbb",
+      "source_sha256": "563eddd63fd4c1e8014578751259ef2b22aceea2a08bf3adb8d4f41b51431655",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "10436edb9e46359df77976700f47bc129e82cd978618b833fb7d9401d112e138",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "e638b056e926f89bbf08047f5212ec617c6f9718e1e6bbe7262b6a94fcd0013d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "notes": [
+    "The byte at 0x78F040 is initialized to 10 in the original PE .data section and is passed as the WaitForSingleObject timeout; the FrameThread body increments it when its one-second count exceeds 64.",
+    "The distinct active global is at 0x790134, independently bound by the accepted WindowProcedure relocation.",
+    "The target initializes three local stack slots; the first is the frame counter and the other two have no reads in this body. Their source names are unknown; nested scope reproduces the exact stack-slot order."
+  ]
+}

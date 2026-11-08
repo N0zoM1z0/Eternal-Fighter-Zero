@@ -106,7 +106,7 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   Best4,031-byte draft is not a two-byte-difference claim. The real-background
   control in .analysis/probes/loading-owner/README.md was neutral. Do not repeat
   pointer/type/case controls without a new falsifiable target prediction.
-- Pushbox766B50/2727 and timing thread401850/157 remain open. Preserve the
+- Pushbox766B50/2727 remains open. Preserve the
   write-only-local audit in .analysis/probes/scene-collision/; do not invent
   padding or inert locals. Pixel owners409A90/40A0B0/40A440 retain evidence of
   body-local saves and AH/AL loops; no permitted natural-C++ exact strategy is
