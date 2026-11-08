@@ -107,15 +107,17 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   control in .analysis/probes/loading-owner/README.md was neutral. Do not repeat
   pointer/type/case controls without a new falsifiable target prediction.
 - Pushbox766B50/2727 remains open. The fresh audit identifies four write-only
-  x87 comparison materializations: first fighter X vs 160.0 before/after the
-  first correction, second fighter X vs 479.0 before/after the opposite
-  correction. Their JP/JNE masks differ; see KNOWLEDGE_BASE.md and the full
+  x87 comparisons: first fighter X `<=160` before and `>160` after the first
+  correction; second fighter X `>=479` before and `<479` after the opposite
+  correction. Raw assembly also reverses all four CollisionSide signs relative
+  to provisional Ghidra: first branch fighter 0 `-1`, fighter 1 `+1`; opposite
+  branch fighter 0 `+1`, fighter 1 `-1`. See KNOWLEDGE_BASE.md and the full
   .analysis/probes/scene-battle/pushbox-target.txt. The transform helper's
-  caller ABI uses an explicit output buffer and returns its pointer in EAX; the
-  aggregate-return C++ view adds copies. Best current natural C++ candidate is
-  still 3370/2727 bytes, not accepted. Keep exploring stack lifetimes/VC7.1
-  codegen; no padding, masks, assembly, or byte wrappers. Pixel owners
-  409A90/40A0B0/40A440 remain open.
+  caller ABI uses an explicit output buffer and returns its pointer in EAX;
+  aggregate-return assignment introduces extra copies. Best corrected-sign C++
+  candidate is 3447/2727 bytes with 37 relocation sites, not accepted. Keep
+  exploring local lifetimes and VC7.1 codegen; no padding, masks, assembly, or
+  byte wrappers. Pixel owners 409A90/40A0B0/40A440 remain open.
 - Reader/audio integration is complete. `workbench/reader-audio/` preserves
   historical drafts and an already-integrated patch; it is not unfinished work.
   Read its README; never apply the old patch or copy drafts over accepted src/.

@@ -2872,8 +2872,20 @@ before and once after the position correction (sites 0x766CD3/0x766CDC and
 comparisons of the second fighter's X against 479.0 at 0x7895E8, again before
 and after correction (0x767164/0x767170 and 0x7671AB/0x7671B7). None of these
 four stack slots has a later read in this body. They are real dead local stores,
-not stack padding; their distinct x87 condition masks (JP/JNE) matter, so do not
-replace them with one guessed C++ relational expression or silently omit them.
+not stack padding. Their exact predicates, independently reproduced with the
+locked VC7.1 compiler, are first-X `<= 160.0` before correction and `> 160.0`
+after correction, then second-X `>= 479.0` before the opposite correction and
+`< 479.0` after it. The corresponding original x87 tests are respectively
+`test ah,0x41; jp`, `test ah,0x41; jne`, `test ah,0x1; jne`, and
+`test ah,0x5; jp`. Do not replace them with one guessed comparison or silently
+omit them.
+
+The four `CollisionSide()` predicates are another place where the provisional
+Ghidra decompile is reversed. Raw call-site instructions show the first
+horizontal branch tests fighter 0 for `-1`, then fighter 1 for `+1`; the opposite
+branch tests fighter 0 for `+1`, then fighter 1 for `-1`. The four sites are
+0x766D45, 0x766EB9, 0x7671E2 and 0x767371; each following `movsx`/`cmp` immediate
+is authoritative over the decompiler's displayed literals.
 
 The box-transform call ABI is also now clearer. 0x767600 is a Scene3 member with
 ECX=this, stack +8 output SurfaceRect pointer, +C SecondaryPose pointer, +10
@@ -2885,12 +2897,13 @@ accepted 0x767600 function body. This is a call-site typing technique, not a new
 owner or an accepted implementation.
 
 Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-The best current explicit-output-buffer candidate is 3,370 bytes with a 0x1D4
-frame, still 643 bytes larger than the 2,727-byte target; its 33 relocations and
-remaining local-layout/codegen differences are not an exact comparison. No
-pushbox source, unit recipe, boundary promotion, or exact-ledger claim is
-accepted. Continue from the complete target disassembly and the retained
-variants; do not pad, mask, hand-assemble, or copy a provisional draft into src/.
+The best current corrected-sign candidate is 3,447 bytes with a 0x1BC frame and
+37 relocation sites, still 720 bytes larger than the 2,727-byte target. It now
+uses the four raw-assembly CollisionSide predicates and all four boundary
+materializations, but its local layout and instruction stream are not exact.
+No pushbox source, unit recipe, boundary promotion, or exact-ledger claim is
+accepted. Continue from the complete target disassembly and retained variants;
+do not pad, mask, hand-assemble, or copy a provisional draft into src/.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
