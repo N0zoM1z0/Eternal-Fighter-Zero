@@ -788,7 +788,7 @@
       "animation_id": 248,
       "target_insns": 118,
       "candidate_insns": 118,
-      "diff_runs": 3,
+      "diff_runs": 0,
       "target_bytes": 426,
       "candidate_bytes": 426
     },
@@ -993,8 +993,8 @@
       "candidate_bytes": 209
     }
   ],
-  "cases_with_differences": 1,
-  "identical_case_count": 123,
-  "total_diff_runs": 3,
+  "cases_with_differences": 0,
+  "identical_case_count": 124,
+  "total_diff_runs": 0,
   "normalization": "register names, branch destinations, and absolute constant addresses normalized; opcode, operand order, memory addressing, and instruction length retained"
 }

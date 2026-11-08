@@ -3592,14 +3592,14 @@ void Character03::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
           field000c = 0;
           ++field000a;
-          if (((field000a != 1) ||
-              (0.0 <= (*opponentSlot)->field0028)) ||
-             ((0x31 < (*opponentSlot)->field0008 &&
-              ((*opponentSlot)->field0008 < 0x96)))) {
-            field016c = 0;
+          if ((field000a == 1) &&
+              ((*opponentSlot)->field0028 < 0.0) &&
+             (((*opponentSlot)->field0008 < 0x32) ||
+              (0x95 < (*opponentSlot)->field0008))) {
+            field016c = 1;
           }
           else {
-            field016c = 1;
+            field016c = 0;
           }
           field0168 = 0;
           if (field000a >= frameCount) {
