@@ -2,7 +2,7 @@
 // Target: Character03::Slot06 at 0x005E85F0; 124 explicit animation cases.
 // Direct x87 conversions now preserve per-expression VC7.1 temporaries.
 // Exactness is not claimed; the original PE remains the authority.
-#include "CharacterViews.h"
+#include <CharacterViews.h>
 
 void Character03::Slot06()
 {
@@ -132,7 +132,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -164,7 +164,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -281,7 +281,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -306,7 +306,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -339,10 +339,10 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a == 2) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -1;
+          field000a = field000a + -1;
         }
       }
       break;
@@ -730,7 +730,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -779,7 +779,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -828,7 +828,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -869,7 +869,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -909,7 +909,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -959,7 +959,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
         if ((0.0 <= field0028 + field0038) &&
@@ -1014,7 +1014,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
         if ((0.0 <= field0028 + field0038) &&
@@ -1061,7 +1061,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
         if ((0.0 <= field0028 + field0038) &&
@@ -1107,7 +1107,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
         if ((0.0 <= field0028 + field0038) &&
@@ -1141,7 +1141,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
         if (0.0 <= field0028 + field0038) {
@@ -1173,7 +1173,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if (0.0 <= field0028 + field0038) {
@@ -1254,7 +1254,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -1491,7 +1491,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -1;
+          field000a = field000a + -1;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -1540,7 +1540,7 @@ void Character03::Slot06()
           field3138 = field3138 + 1;
         }
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if ((0.0 <= field0028 + field0038) &&
@@ -1578,7 +1578,7 @@ void Character03::Slot06()
         field0148 = (short)field0148 + 0x1e;
       }
       field0038 = field0038 + 0.04;
-      if (((short)field000a != 0) ||
+      if ((field000a > 0) ||
          (field0038 + field0028 <= 0.0)) {
         if (field000a == 1) {
           field0030 = field0030 + 0.01;
@@ -1632,7 +1632,7 @@ void Character03::Slot06()
         field0148 = (short)field0148 + 0x1e;
       }
       field0038 = field0038 + 0.04;
-      if (((short)field000a != 0) ||
+      if ((field000a > 0) ||
          (field0038 + field0028 <= 0.0)) {
         if (field000a == 1) {
           field0030 = field0030 + 0.01;
@@ -2145,7 +2145,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if (0.0 <= field0028 + field0038) {
@@ -2177,7 +2177,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if (0.0 <= field0028 + field0038) {
@@ -2244,7 +2244,7 @@ void Character03::Slot06()
             field0048 = 0.035;
           }
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
       }
@@ -2259,7 +2259,7 @@ void Character03::Slot06()
       if ((field000a == 0) && (field000c == 0)) {
         StartTrail(3);
       }
-      if ((inputY == -1) && ((short)field000a != 0)) {
+      if ((inputY == -1) && (field000a > 0)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2284,7 +2284,7 @@ void Character03::Slot06()
           field000c = 0;
           ++field000a;
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -6;
+            field000a = field000a + -6;
             return;
           }
         }
@@ -2319,7 +2319,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if ((field000a == 4) && (field3138 < 2)) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
           field3138 = field3138 + 1;
         }
         if (field000a >= frameCount) {
@@ -2355,7 +2355,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if (((char)inputX == (char)facing) && (0x77 < field313c)) {
@@ -2400,7 +2400,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
       }
       if (((int)(char)inputX == -(int)(char)facing) && (0x77 < field313c)) {
@@ -2657,7 +2657,7 @@ void Character03::Slot06()
           field0048 = 0.028;
         }
         if (field000a == 10) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
           ResetPose();
@@ -2677,7 +2677,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.03;
       }
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
+      if ((((inputY == -1) && (field000a > 0)) &&
           (field015c < 3)) && (1 < field0168)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
@@ -2722,7 +2722,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.03;
       }
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
+      if ((((inputY == -1) && (field000a > 0)) &&
           (field015c < 3)) && (1 < field0168)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
@@ -2866,7 +2866,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.03;
       }
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
+      if ((((inputY == -1) && (field000a > 0)) &&
           (field015c < 3)) && (1 < field0168)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
@@ -2914,7 +2914,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.03;
       }
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
+      if ((((inputY == -1) && (field000a > 0)) &&
           (field015c < 3)) && (1 < field0168)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
@@ -2987,7 +2987,7 @@ void Character03::Slot06()
           field0030 = 1.9;
         }
         if ((field000a == 6) && (field3138 < 4)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
           field3138 = field3138 + 1;
           if (2 < field3138) {
             field016c = 0;
@@ -3002,10 +3002,10 @@ void Character03::Slot06()
       break;
     case 207:
       field0038 = field0038 + field0048;
-      if (((inputY == -1) && ((short)field000a != 0)) &&
-         ((field015c < 3 && ((1 < field0168 && (field015a == '\0')))))
+      if (((inputY == -1) && (field000a > 0)) &&
+         ((field015c < 3 && ((field0168 >= 2 && (field015a == '\0')))))
          ) {
-        field015a = field015a + '\x01';
+        ++field015a;
         field0008 = 0xe;
         if ((char)inputX == (char)facing) {
           field0008 = 0xf;
@@ -3022,7 +3022,12 @@ void Character03::Slot06()
           field02c9 = 0x15;
           field016c = 1;
         }
-        if (field0028 + field0038 < 0.0) {
+        if (field0028 + field0038 >= 0.0) {
+          field0028 = 0.0;
+          field0008 = 0xd;
+          ResetPose();
+          break;
+        } else {
           ++field000c;
           if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -3036,19 +3041,14 @@ void Character03::Slot06()
             }
           }
         }
-        else {
-          field0028 = 0.0;
-          field0008 = 0xd;
-          ResetPose();
-        }
       }
       break;
     case 208:
       field0038 = field0038 + field0048;
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
-          (field015c < 3)) && ((1 < field0168 && (field015a == '\0')))
+      if ((((inputY == -1) && (field000a > 0)) &&
+          (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
          ) {
-        field015a = field015a + '\x01';
+        ++field015a;
         field0008 = 0xe;
         if ((char)inputX == (char)facing) {
           field0008 = 0xf;
@@ -3065,7 +3065,12 @@ void Character03::Slot06()
           field02c9 = 0x14;
           field016c = 1;
         }
-        if (field0028 + field0038 < 0.0) {
+        if (field0028 + field0038 >= 0.0) {
+          field0028 = 0.0;
+          field0008 = 0xd;
+          ResetPose();
+          break;
+        } else {
           ++field000c;
           if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -3079,19 +3084,14 @@ void Character03::Slot06()
             }
           }
         }
-        else {
-          field0028 = 0.0;
-          field0008 = 0xd;
-          ResetPose();
-        }
       }
       break;
     case 209:
       field0038 = field0038 + field0048;
-      if (((inputY == -1) && ((short)field000a != 0)) &&
-         ((field015c < 3 && ((1 < field0168 && (field015a == '\0')))))
+      if (((inputY == -1) && (field000a > 0)) &&
+         ((field015c < 3 && ((field0168 >= 2 && (field015a == '\0')))))
          ) {
-        field015a = field015a + '\x01';
+        ++field015a;
         field0008 = 0xe;
         if ((char)inputX == (char)facing) {
           field0008 = 0xf;
@@ -3110,7 +3110,11 @@ void Character03::Slot06()
           field3138 = field3138 + 1;
           field0168 = 0;
         }
-        if (field0028 + field0038 < 0.0) {
+        if (field0028 + field0038 >= 0.0) {
+          field0028 = 0.0;
+          field0008 = 0xd;
+          ResetPose();
+        } else {
           ++field000c;
           if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -3132,14 +3136,9 @@ void Character03::Slot06()
               field0168 = 0;
             }
             if (field000a >= frameCount) {
-              field000a = (short)field000a + -2;
+              field000a = field000a + -2;
             }
           }
-        }
-        else {
-          field0028 = 0.0;
-          field0008 = 0xd;
-          ResetPose();
         }
       }
       break;
@@ -3161,11 +3160,12 @@ void Character03::Slot06()
       if (2 < field000a) {
         field0038 = field0038 + field0048;
       }
-      if (((field0028 + field0038 > 0.0) && (field000a <= 8)) && (field000a >= 4)) {
+      if (((field0028 + field0038 > 0.0) && (field000a < 9)) && (field000a > 3)) {
         field0028 = 0.0;
         ResetFrame();
         field000c = 0;
         field000a = 9;
+        break;
       } else {
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3179,15 +3179,15 @@ void Character03::Slot06()
             FaceOpponent();
             ResetPose();
           }
+          break;
         }
       }
-      break;
     case 211:
       field0038 = field0038 + field0048;
-      if ((((inputY == -1) && ((short)field000a != 0)) &&
-          (field015c < 3)) && ((1 < field0168 && (field015a == '\0')))
+      if ((((inputY == -1) && (field000a > 0)) &&
+          (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
          ) {
-        field015a = field015a + '\x01';
+        ++field015a;
         field0008 = 0xe;
         if ((char)inputX == (char)facing) {
           field0008 = 0xf;
@@ -3198,7 +3198,11 @@ void Character03::Slot06()
         field0168 = 0;
         ResetPose();
       }
-      else if (field0028 + field0038 < 0.0) {
+      else if (field0028 + field0038 >= 0.0) {
+        field0028 = 0.0;
+        field0008 = 0xd;
+        ResetPose();
+      } else {
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
           field000c = 0;
@@ -3220,14 +3224,9 @@ void Character03::Slot06()
             field0168 = 0;
           }
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
-      }
-      else {
-        field0028 = 0.0;
-        field0008 = 0xd;
-        ResetPose();
       }
       break;
     case 212:
@@ -3239,23 +3238,8 @@ void Character03::Slot06()
         field0030 = field0030 / 2.0;
         field0048 = 0.07;
       }
-      if (field0168 >= 2) {
-        field0008 = 0xd5;
-        ResetPose();
-        ResetFrame();
-      } else {
+      if (field0168 < 2) {
         if (field0028 + field0038 < 0.0) {
-          ++field000c;
-          if ((unsigned short)field000c >= frameDuration) {
-            field000c = 0;
-            ++field000a;
-            field0168 = 0;
-            if (field000a >= frameCount) {
-              field000a = (short)field000a + -2;
-            }
-          }
-        }
-        else {
           field0028 = 0.0;
           field0038 = 0.0;
           SetVerticalShake(3,0);
@@ -3269,7 +3253,21 @@ void Character03::Slot06()
           field02c9 = 7;
           field0008 = 0xd6;
           ResetPose();
+        } else {
+          ++field000c;
+          if ((unsigned short)field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            field0168 = 0;
+            if (field000a >= frameCount) {
+              field000a = field000a + -2;
+            }
+          }
         }
+      } else {
+        field0008 = 0xd5;
+        ResetPose();
+        ResetFrame();
       }
       break;
     case 213:
@@ -3485,7 +3483,7 @@ void Character03::Slot06()
         field0148 = (short)field0148 + 0x19;
         field02c9 = 0x14;
       }
-      if (((short)field000a == 3) && (field0038 = field0038 + field0048, field0028 + field0038 > 0.0)) {
+      if ((field000a == 3) && (field0038 = field0038 + field0048, field0028 + field0038 > 0.0)) {
         field0028 = 0.0;
         ResetFrame();
         field000c = 0;
@@ -3598,7 +3596,7 @@ void Character03::Slot06()
           field0168 = 0;
         }
         if ((field000a == 6) && (field3138 < 4)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
           field3138 = field3138 + 1;
           if (2 < field3138) {
             field016c = 0;
@@ -3631,7 +3629,7 @@ void Character03::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
           field000c = 0;
           ++field000a;
-          if ((((short)field000a != 1) ||
+          if (((field000a != 1) ||
               (0.0 <= (*opponentSlot)->field0028)) ||
              ((0x31 < (*opponentSlot)->field0008 &&
               ((*opponentSlot)->field0008 < 0x96)))) {
@@ -3705,7 +3703,7 @@ void Character03::Slot06()
             (*opponentSlot)->field0008 = 0x79;
           }
           if (field000a >= frameCount) {
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
         }
       }
@@ -4272,7 +4270,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if ((short)field000a != 0) {
+      if (field000a > 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
@@ -4304,10 +4302,10 @@ void Character03::Slot06()
           contextOwner->EmitEffect(&effect);
         }
         if ((field000a == 5) && (0 < (short)field014c)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if ((field000a == 8) && (field3138 < 3)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
           field3138 = field3138 + 1;
         }
         field0168 = 0;
@@ -4327,7 +4325,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if ((short)field000a != 0) {
+      if (field000a > 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
@@ -4359,10 +4357,10 @@ void Character03::Slot06()
           contextOwner->EmitEffect(&effect);
         }
         if ((field000a == 5) && (0 < (short)field014c)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if ((field000a == 8) && (field3138 < 3)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
           field3138 = field3138 + 1;
         }
         field0168 = 0;
@@ -4382,7 +4380,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if ((short)field000a != 0) {
+      if (field000a > 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
@@ -4414,10 +4412,10 @@ void Character03::Slot06()
           contextOwner->EmitEffect(&effect);
         }
         if ((field000a == 5) && (0 < (short)field014c)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if ((field000a == 8) && (field3138 < 3)) {
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
           field3138 = field3138 + 1;
         }
         field0168 = 0;
@@ -4443,7 +4441,7 @@ void Character03::Slot06()
         SetHorizontalShake(0x32,3);
       }
       if (0xb < field000a) {
-        SetHorizontalShake(0x32,3);
+        (*opponentSlot)->SetHorizontalShake(0x32,3);
       }
       if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
@@ -4532,7 +4530,7 @@ void Character03::Slot06()
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&
-         (0.0 < field0038 + field0028)) {
+         (field0038 + field0028 > 0.0)) {
         field0028 = 0.0;
         ResetFrame();
         field000a = 0x16;
@@ -4545,10 +4543,10 @@ void Character03::Slot06()
         field0168 = 0;
         if ((field000a == 0x14) && (field3138 < 8)) {
           field3138 = field3138 + 1;
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if (field000a == 0x16) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
           field0008 = 7;
@@ -4572,7 +4570,7 @@ void Character03::Slot06()
         SetHorizontalShake(0x32,3);
       }
       if (0xb < field000a) {
-        SetHorizontalShake(0x32,3);
+        (*opponentSlot)->SetHorizontalShake(0x32,3);
       }
       if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
@@ -4662,7 +4660,7 @@ void Character03::Slot06()
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&
-         (0.0 < field0038 + field0028)) {
+         (field0038 + field0028 > 0.0)) {
         field0028 = 0.0;
         ResetFrame();
         field000a = 0x16;
@@ -4675,10 +4673,10 @@ void Character03::Slot06()
         field0168 = 0;
         if ((field000a == 0x14) && (field3138 < 0xf)) {
           field3138 = field3138 + 1;
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if (field000a == 0x16) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
           field0008 = 7;
@@ -4702,7 +4700,7 @@ void Character03::Slot06()
         SetHorizontalShake(0x32,3);
       }
       if (0xb < field000a) {
-        SetHorizontalShake(0x32,3);
+        (*opponentSlot)->SetHorizontalShake(0x32,3);
       }
       if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
@@ -4796,7 +4794,7 @@ void Character03::Slot06()
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&
-         (0.0 < field0038 + field0028)) {
+         (field0038 + field0028 > 0.0)) {
         field0028 = 0.0;
         ResetFrame();
         field000a = 0x16;
@@ -4809,10 +4807,10 @@ void Character03::Slot06()
         field0168 = 0;
         if ((field000a == 0x14) && (field3138 < 0x19)) {
           field3138 = field3138 + 1;
-          field000a = (short)field000a + -3;
+          field000a = field000a + -3;
         }
         if (field000a == 0x16) {
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
           field0008 = 7;
@@ -4870,7 +4868,7 @@ void Character03::Slot06()
          field0030 < 0.0)) {
         field0030 = 0.0;
       }
-      if ((short)field000a != 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       ++field000c;
@@ -4878,7 +4876,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if ((field000a == 2) && (field313c < 9)) {
-          field000a = (short)field000a + -2;
+          field000a = field000a - 2;
           field313c = field313c + 1;
         }
         if (field000a == 5) {
@@ -4889,7 +4887,7 @@ void Character03::Slot06()
           field02c8 = 4;
         }
         if (field000a == 6) {
-          field000a = (short)field000a + -1;
+          --field000a;
         }
         field0168 = 0;
         if (field000a >= frameCount) {
@@ -4948,7 +4946,7 @@ void Character03::Slot06()
          field0030 < 0.0)) {
         field0030 = 0.0;
       }
-      if ((short)field000a != 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       ++field000c;
@@ -4956,7 +4954,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if ((field000a == 2) && (field313c < 9)) {
-          field000a = (short)field000a + -2;
+          field000a = field000a - 2;
           field313c = field313c + 1;
         }
         if (field000a == 5) {
@@ -4975,7 +4973,7 @@ void Character03::Slot06()
           contextOwner->EmitEffect(&effect);
         }
         if (field000a == 6) {
-          field000a = (short)field000a + -1;
+          --field000a;
         }
         field0168 = 0;
         if (field000a >= frameCount) {
@@ -5047,7 +5045,7 @@ void Character03::Slot06()
          field0030 < 0.0)) {
         field0030 = 0.0;
       }
-      if ((short)field000a != 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       ++field000c;
@@ -5055,7 +5053,7 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if ((field000a == 2) && (field313c < 9)) {
-          field000a = (short)field000a + -2;
+          field000a = field000a - 2;
           field313c = field313c + 1;
         }
         if (field000a == 5) {
@@ -5066,7 +5064,7 @@ void Character03::Slot06()
           field02c8 = 4;
         }
         if (field000a == 6) {
-          field000a = (short)field000a + -1;
+          --field000a;
         }
         field0168 = 0;
         if (field000a >= frameCount) {
@@ -5133,11 +5131,11 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
           }
           if (field000a == 6) {
-            field000a = (short)field000a + -1;
+            field000a = field000a + -1;
           }
           if ((field000a == 0xd) && (field3138 < 2)) {
             field3138 = field3138 + 1;
-            field000a = (short)field000a + -2;
+            field000a = field000a + -2;
           }
           field0168 = 0;
           if (field000a >= frameCount) {
@@ -5157,7 +5155,7 @@ void Character03::Slot06()
         ++field000a;
         if ((field000a == 2) && (field3138 < 8)) {
           field3138 = field3138 + 1;
-          field000a = (short)field000a + -2;
+          field000a = field000a + -2;
         }
         field0168 = 0;
         if (field000a >= frameCount) {

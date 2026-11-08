@@ -9,13 +9,15 @@ relocations have been independently reviewed.
 `Character03::Slot06` (124 explicit animation cases plus fallback). The source
 uses direct integer-to-double casts for the 178 x87 conversions and restores
 the target's FPU `<= 0.0` comparisons rather than preserving Ghidra's boolean
-XOR decomposition. Seven conditional branch structures were inverted to match
-the target's machine-code branch layout. The `SecondaryPose::field000c` frame
-counter is now `unsigned short`, matching the target's zero-extending `MOVZX`
-loads; three `ResetFrame` calls also now target the opponent object where the
-machine code passes the opponent as `this`. The VC7.1 stack frame matches the
-target exactly (`0x378`), and the 369 direct-call sequence matches in order.
-The emitted instruction body is 58,456 bytes versus 58,482 target bytes (26
-bytes short); per-animation deltas are tracked in
-`docs/evidence/makoto-slot06-case-deltas.csv`. The draft remains excluded from
-the normal build until byte-level verification is complete.
+XOR decomposition. It restores the target's branch layout in the large
+animation groups, including explicit unsigned frame-index comparisons and
+byte-counter increments. `SecondaryPose::field000c` is `unsigned short`,
+matching target `MOVZX` loads. Opponent-owned `ResetFrame` and
+`SetHorizontalShake` calls now pass the opponent as `this` where required.
+The VC7.1 stack frame matches the target exactly (`0x378`), the 369 direct-call
+sequence matches in order, and the emitted instruction body is now exactly
+58,482 bytes, matching the target's extent. Per-animation size deltas remain
+in `docs/evidence/makoto-slot06-case-deltas.csv`; several still differ and
+cancel at function scope, so byte-for-byte identity is not yet claimed. The
+draft remains excluded from the normal build until instruction-level
+verification is complete.
