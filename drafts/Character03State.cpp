@@ -71,7 +71,7 @@ void Character03::Slot06()
       break;
     case 4:
       if ((field000a == 0) && (field000c == 0)) {
-        if ((char)field0158 == '\0') {
+        if ((unsigned char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
@@ -79,7 +79,7 @@ void Character03::Slot06()
       if ((field000a == 3) && (field000c == 0)) {
         field0048 = 0.042;
         field0038 = -2.9;
-        if ((char)field0158 == '\x01') {
+        if ((unsigned char)field0158 == '\x01') {
           field0030 = 0.4;
           field0158 = 0;
         }
@@ -107,7 +107,7 @@ void Character03::Slot06()
       break;
     case 5:
       if ((field000a == 0) && (field000c == 0)) {
-        if ((char)field0158 == '\0') {
+        if ((unsigned char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
@@ -116,7 +116,7 @@ void Character03::Slot06()
         field0048 = 0.042;
         field0038 = -2.9;
         field0030 = 0.7;
-        if ((char)field0158 == '\x01') {
+        if ((unsigned char)field0158 == '\x01') {
           field0030 = 1.1;
           field0158 = 0;
         }
@@ -143,7 +143,7 @@ void Character03::Slot06()
       break;
     case 6:
       if ((field000a == 0) && (field000c == 0)) {
-        if ((char)field0158 == '\0') {
+        if ((unsigned char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
@@ -705,9 +705,10 @@ void Character03::Slot06()
              field0038 * 0.75 + field00c8;
         if (field0038 < -2.0) {
           field0038 = -2.0;
-        }
-        else if (field0038 > -0.5) {
-          field0038 = -0.5;
+        } else {
+          if (field0038 > -0.5) {
+            field0038 = -0.5;
+          }
         }
         field0048 = 0.032;
       }
@@ -734,8 +735,7 @@ void Character03::Slot06()
         if (field012c != 0) {
           field0008 = 0x61;
           ResetPose();
-        }
-        else {
+        } else {
           field0008 = 0x62;
           ResetPose();
         }
@@ -752,9 +752,10 @@ void Character03::Slot06()
              field0038 * 0.75 + field00c8;
         if (field0038 < -4.0) {
           field0038 = -4.0;
-        }
-        else if (field0038 > -0.5) {
-          field0038 = -0.5;
+        } else {
+          if (field0038 > -0.5) {
+            field0038 = -0.5;
+          }
         }
         field0048 = 0.032;
       }
@@ -781,8 +782,7 @@ void Character03::Slot06()
         if (field012c != 0) {
           field0008 = 0x61;
           ResetPose();
-        }
-        else {
+        } else {
           field0008 = 0x62;
           ResetPose();
         }
@@ -799,9 +799,10 @@ void Character03::Slot06()
              field0038 * 0.75 + field00c8;
         if (field0038 < -6.0) {
           field0038 = -6.0;
-        }
-        else if (field0038 > -0.5) {
-          field0038 = -0.5;
+        } else {
+          if (field0038 > -0.5) {
+            field0038 = -0.5;
+          }
         }
         field0048 = 0.032;
       }
@@ -828,8 +829,7 @@ void Character03::Slot06()
         if (field012c != 0) {
           field0008 = 0x61;
           ResetPose();
-        }
-        else {
+        } else {
           field0008 = 0x62;
           ResetPose();
         }
@@ -850,7 +850,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -863,15 +863,14 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
-         (1 < field000a)) {
+      if ((field0028 + field0038 >= 0.0) &&
+         (field000a > 1)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
-          ResetPose();
-        }
-        else {
+        if (field012c != 0) {
           field0008 = 0x61;
+          ResetPose();
+        } else {
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -890,7 +889,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -903,15 +902,14 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
-         (1 < field000a)) {
+      if ((field0028 + field0038 >= 0.0) &&
+         (field000a > 1)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
-          ResetPose();
-        }
-        else {
+        if (field012c != 0) {
           field0008 = 0x61;
+          ResetPose();
+        } else {
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -920,7 +918,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a != 0) && (CollisionSide() != '\0')) {
+      if ((field000a > 0) && (CollisionSide() != '\0')) {
         field0008 = 0x46;
         ResetPose();
       } else {
@@ -929,13 +927,12 @@ void Character03::Slot06()
           field0030 = field00c0;
           field0038 =
                field0038 * 0.75 + field00c8;
-          if (field0038 >= -2.0) {
+          if (field0038 < -2.0) {
+            field0038 = -2.0;
+          } else {
             if (field0038 > -0.5) {
               field0038 = -0.5;
             }
-          }
-          else {
-            field0038 = -2.0;
           }
           field0048 = 0.032;
         }
@@ -943,7 +940,7 @@ void Character03::Slot06()
           field000a = 1;
           field000c = 0;
         }
-        if ((field0038 >= 0.0) && (field000a < 2)) {
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
           field000a = 2;
           field000c = 0;
         }
@@ -959,12 +956,11 @@ void Character03::Slot06()
         if ((field0028 + field0038 >= 0.0) &&
            (field000a > 1)) {
           field0028 = 0.0;
-          if (field012c == 0) {
-            field0008 = 0x62;
-            ResetPose();
-          }
-          else {
+          if (field012c != 0) {
             field0008 = 0x61;
+            ResetPose();
+          } else {
+            field0008 = 0x62;
             ResetPose();
           }
         }
@@ -974,7 +970,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a != 0) && (CollisionSide() != '\0')) {
+      if ((field000a > 0) && (CollisionSide() != '\0')) {
         field0008 = 0x46;
         ResetPose();
       } else {
@@ -983,13 +979,12 @@ void Character03::Slot06()
           field0030 = field00c0;
           field0038 =
                field0038 * 0.75 + field00c8;
-          if (field0038 >= -4.0) {
+          if (field0038 < -4.0) {
+            field0038 = -4.0;
+          } else {
             if (field0038 > -0.5) {
               field0038 = -0.5;
             }
-          }
-          else {
-            field0038 = -4.0;
           }
           field0048 = 0.032;
         }
@@ -997,7 +992,7 @@ void Character03::Slot06()
           field000a = 1;
           field000c = 0;
         }
-        if ((field0038 >= 0.0) && (field000a < 2)) {
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
           field000a = 2;
           field000c = 0;
         }
@@ -1013,12 +1008,11 @@ void Character03::Slot06()
         if ((field0028 + field0038 >= 0.0) &&
            (field000a > 1)) {
           field0028 = 0.0;
-          if (field012c == 0) {
-            field0008 = 0x62;
-            ResetPose();
-          }
-          else {
+          if (field012c != 0) {
             field0008 = 0x61;
+            ResetPose();
+          } else {
+            field0008 = 0x62;
             ResetPose();
           }
         }
@@ -1028,7 +1022,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a != 0) && (CollisionSide() != '\0')) {
+      if ((field000a > 0) && (CollisionSide() != '\0')) {
         field0008 = 0x46;
         ResetPose();
       } else {
@@ -1043,7 +1037,7 @@ void Character03::Slot06()
           field000a = 1;
           field000c = 0;
         }
-        if ((field0038 >= 0.0) && (field000a < 2)) {
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
           field000a = 2;
           field000c = 0;
         }
@@ -1059,12 +1053,11 @@ void Character03::Slot06()
         if ((field0028 + field0038 >= 0.0) &&
            (field000a > 1)) {
           field0028 = 0.0;
-          if (field012c == 0) {
-            field0008 = 0x62;
-            ResetPose();
-          }
-          else {
+          if (field012c != 0) {
             field0008 = 0x61;
+            ResetPose();
+          } else {
+            field0008 = 0x62;
             ResetPose();
           }
         }
@@ -1074,7 +1067,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a != 0) && (CollisionSide() != '\0')) {
+      if ((field000a > 0) && (CollisionSide() != '\0')) {
         field0008 = 0x46;
         ResetPose();
       } else {
@@ -1088,7 +1081,7 @@ void Character03::Slot06()
           field000a = 1;
           field000c = 0;
         }
-        if ((field0038 >= 0.0) && (field000a < 2)) {
+        if ((field0038 >= 0.0) && (field000a <= 1)) {
           field000a = 2;
           field000c = 0;
         }
@@ -1104,12 +1097,11 @@ void Character03::Slot06()
         if ((field0028 + field0038 >= 0.0) &&
            (field000a > 1)) {
           field0028 = 0.0;
-          if (field012c == 0) {
-            field0008 = 0x62;
-            ResetPose();
-          }
-          else {
+          if (field012c != 0) {
             field0008 = 0x61;
+            ResetPose();
+          } else {
+            field0008 = 0x62;
             ResetPose();
           }
         }
@@ -1126,7 +1118,9 @@ void Character03::Slot06()
       if (CollisionSide() != '\0') {
         field0008 = 0x46;
         ResetPose();
-      } else {
+      
+        return;
+      }
         if ((unsigned short)field000c >= frameDuration) {
           field000c = 0;
           ++field000a;
@@ -1136,16 +1130,15 @@ void Character03::Slot06()
         }
         if (field0028 + field0038 >= 0.0) {
           field0028 = 0.0;
-          if (field012c == 0) {
+          if (field012c != 0) {
+            field0008 = 0x61;
+            ResetPose();
+          } else {
             field0008 = 0x62;
             ResetPose();
           }
-          else {
-            field0008 = 0x61;
-            ResetPose();
-          }
         }
-      }
+      
       break;
     case 69:
       if ((char)field0120 != '\0') {
@@ -1230,7 +1223,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -1243,15 +1236,14 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
-         (1 < field000a)) {
+      if ((field0028 + field0038 >= 0.0) &&
+         (field000a > 1)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
-          ResetPose();
-        }
-        else {
+        if (field012c != 0) {
           field0008 = 0x61;
+          ResetPose();
+        } else {
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -2648,19 +2640,18 @@ void Character03::Slot06()
       }
       break;
     case 200:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((((inputY == -1) && (field000a > 0)) &&
-          (field015c < 3)) && (1 < field0168)) {
+          (field015c < 3)) && (field0168 >= 2)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2693,19 +2684,18 @@ void Character03::Slot06()
       }
       break;
     case 201:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((((inputY == -1) && (field000a > 0)) &&
-          (field015c < 3)) && (1 < field0168)) {
+          (field015c < 3)) && (field0168 >= 2)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2738,17 +2728,16 @@ void Character03::Slot06()
       }
       break;
     case 202:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((field000a == 3) && (field000c == 0)) {
         field0148 = (short)field0148 + 0xf;
         field02c9 = 0x14;
@@ -2779,17 +2768,16 @@ void Character03::Slot06()
       }
       break;
     case 203:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.06;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.06;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((field000a == 0) && (field000c == 0)) {
         field016c = 1;
       }
@@ -2837,19 +2825,18 @@ void Character03::Slot06()
       }
       break;
     case 204:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((((inputY == -1) && (field000a > 0)) &&
-          (field015c < 3)) && (1 < field0168)) {
+          (field015c < 3)) && (field0168 >= 2)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2885,19 +2872,18 @@ void Character03::Slot06()
       }
       break;
     case 205:
-      if ((char)field0158 == '\0') {
+      if ((unsigned char)field0158 == '\0') {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
-        field0030 = 0.0;
-        field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
-      }
+      if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
+          field0030 = 0.0;
+          field0158 = 0;
+        }
       if ((((inputY == -1) && (field000a > 0)) &&
-          (field015c < 3)) && (1 < field0168)) {
+          (field015c < 3)) && (field0168 >= 2)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2934,19 +2920,18 @@ void Character03::Slot06()
       break;
     case 206:
       if (field000a < 2) {
-        if ((char)field0158 == '\0') {
+        if ((unsigned char)field0158 == '\0') {
           field0030 = 0.0;
           field0038 = 0.0;
         }
-        if ((field0030 <= 0.0) || ((char)field0158 != '\x01')) {
+        if ((field0030 > 0.0) && ((unsigned char)field0158 == '\x01')) {
+          field0030 = field0030 - 0.03;
+        } else {
           field0030 = 0.0;
           field0158 = 0;
         }
-        else {
-          field0030 = field0030 - 0.03;
-        }
       }
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0158 = 0;
         field0030 = field0030 - 0.02;
         if (field0030 < 0.0) {

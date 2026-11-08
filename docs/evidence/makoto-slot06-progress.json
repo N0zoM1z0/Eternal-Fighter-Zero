@@ -20,10 +20,12 @@
   "direct_call_sequence_matches": true,
   "ftol2_calls_target": 178,
   "ftol2_calls_candidate": 178,
-  "normalized_instruction_identical_cases": 74,
-  "cases_with_instruction_differences": 50,
-  "normalized_diff_runs": 142,
-  "case50_through_58_instruction_shapes_match": true,
-  "case59_through_61_instruction_shapes_match": true,
+  "normalized_instruction_identical_cases": 92,
+  "cases_with_instruction_differences": 32,
+  "normalized_diff_runs": 67,
+  "cases_4_5_6_unsigned_field0158": true,
+  "cases_50_through_61_instruction_shapes_match": true,
+  "cases_64_through_68_revalidated_dirty_edits": true,
+  "cases_200_through_206_instruction_shapes_match": true,
   "instruction_byte_identity_claimed": false
 }
