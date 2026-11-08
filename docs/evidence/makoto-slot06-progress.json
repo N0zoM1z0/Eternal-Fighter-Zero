@@ -15,24 +15,15 @@
   "epilogue_boundary_matches": true,
   "explicit_animation_cases": 124,
   "all_explicit_case_block_sizes_match": true,
-  "nonzero_case_size_deltas": {},
   "direct_calls_target": 369,
   "direct_calls_candidate": 369,
   "direct_call_sequence_matches": true,
   "ftol2_calls_target": 178,
   "ftol2_calls_candidate": 178,
-  "fallback_case": true,
-  "combined_early_exit_or": true,
-  "matched_animation_blocks": "all 124 explicit cases",
-  "opponent_ResetFrame_receivers_corrected": [
-    220,
-    221,
-    248
-  ],
-  "opponent_SetHorizontalShake_receivers_corrected": [
-    303,
-    304,
-    305
-  ],
+  "normalized_instruction_identical_cases": 74,
+  "cases_with_instruction_differences": 50,
+  "normalized_diff_runs": 142,
+  "case50_through_58_instruction_shapes_match": true,
+  "case59_through_61_instruction_shapes_match": true,
   "instruction_byte_identity_claimed": false
 }

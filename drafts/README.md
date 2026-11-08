@@ -14,8 +14,11 @@ decomposition. `SecondaryPose::field000c` is `unsigned short`, matching target
 the opponent as `this` where required. The two early-return guards are now one
 short-circuit OR, matching the target's shared exit jump. All 124 explicit
 animation blocks have the same byte extent as the target; dispatch prelude and
-epilogue boundaries also align. The VC7.1 stack frame is `0x378`, the 369
+epilogue boundaries also align. Cases 50-61 now also match instruction shape
+after normalizing registers and branch targets, including the nested x87 clamp
+branches in 59-61. The VC7.1 stack frame is `0x378`, the 369
 direct-call sequence matches in order, and the emitted instruction body is
 58,482 bytes, matching the target extent. This is structural/extent alignment,
-not a claim that every instruction byte is identical; instruction-level
-comparison remains in progress.
+not a claim that every instruction byte is identical; normalized instruction-shape comparison currently identifies 74 of 124 cases
+as identical; remaining differences are recorded in
+`docs/evidence/makoto-slot06-instruction-diff-summary.json`.

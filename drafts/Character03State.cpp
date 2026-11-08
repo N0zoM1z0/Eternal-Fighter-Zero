@@ -360,7 +360,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -400,7 +400,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -440,7 +440,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -480,7 +480,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -520,7 +520,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -560,7 +560,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -600,7 +600,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -637,7 +637,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -674,7 +674,7 @@ void Character03::Slot06()
       field0038 = 0.0;
       field0028 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -703,13 +703,11 @@ void Character03::Slot06()
         field0030 = field00c0;
         field0038 =
              field0038 * 0.75 + field00c8;
-        if (-2.0 <= field0038) {
-          if (-0.5 < field0038) {
-            field0038 = -0.5;
-          }
-        }
-        else {
+        if (field0038 < -2.0) {
           field0038 = -2.0;
+        }
+        else if (field0038 > -0.5) {
+          field0038 = -0.5;
         }
         field0048 = 0.032;
       }
@@ -717,7 +715,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -730,15 +728,15 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
+      if ((field0028 + field0038 >= 0.0) &&
          (1 < field000a)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -752,13 +750,11 @@ void Character03::Slot06()
         field0030 = field00c0;
         field0038 =
              field0038 * 0.75 + field00c8;
-        if (-4.0 <= field0038) {
-          if (-0.5 < field0038) {
-            field0038 = -0.5;
-          }
-        }
-        else {
+        if (field0038 < -4.0) {
           field0038 = -4.0;
+        }
+        else if (field0038 > -0.5) {
+          field0038 = -0.5;
         }
         field0048 = 0.032;
       }
@@ -766,7 +762,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -779,15 +775,15 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
+      if ((field0028 + field0038 >= 0.0) &&
          (1 < field000a)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
@@ -801,13 +797,11 @@ void Character03::Slot06()
         field0030 = field00c0;
         field0038 =
              field0038 * 0.75 + field00c8;
-        if (-6.0 <= field0038) {
-          if (-0.5 < field0038) {
-            field0038 = -0.5;
-          }
-        }
-        else {
+        if (field0038 < -6.0) {
           field0038 = -6.0;
+        }
+        else if (field0038 > -0.5) {
+          field0038 = -0.5;
         }
         field0048 = 0.032;
       }
@@ -815,7 +809,7 @@ void Character03::Slot06()
         field000a = 1;
         field000c = 0;
       }
-      if ((0.0 <= field0038) && (field000a < 2)) {
+      if ((field0038 >= 0.0) && (field000a <= 1)) {
         field000a = 2;
         field000c = 0;
       }
@@ -828,15 +822,15 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
+      if ((field0028 + field0038 >= 0.0) &&
          (1 < field000a)) {
         field0028 = 0.0;
-        if (field012c == 0) {
-          field0008 = 0x62;
+        if (field012c != 0) {
+          field0008 = 0x61;
           ResetPose();
         }
         else {
-          field0008 = 0x61;
+          field0008 = 0x62;
           ResetPose();
         }
       }
