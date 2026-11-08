@@ -2862,11 +2862,35 @@ is docs/evidence/scene-collision-exact.json, with affected certificates refreshe
 Private evidence and native attempts are retained in .analysis/probes/scene-collision/;
 full formal reports are .analysis/exact/scene-collision-and-affected.json.
 
-The 0x766B50 /2727 pushbox owner stays open. Its complete instruction inventory
-finds four Boolean temporary slots (EBP-6C/-70/-DC/-E0) with two immediate stores
-each and no observed reads. Ghidra omits these comparisons/materializations.
-The private audit records their exact sites; do not add dummy stores or accept
-the decompiler's shorter semantics. Revisit with a natural source explanation.
+The 0x766B50 /2727 pushbox owner remains unimplemented; its full target body is
+708 instructions. A fresh review of the original operands clarifies four
+write-only Boolean materializations which Ghidra omits. In the first horizontal
+correction branch, EBP-6C and EBP-70 are each assigned from x87 comparisons of
+the first fighter's X against the original 160.0 constant at 0x787370, once
+before and once after the position correction (sites 0x766CD3/0x766CDC and
+0x766D14/0x766D1D). In the opposite branch, EBP-DC and EBP-E0 are assigned from
+comparisons of the second fighter's X against 479.0 at 0x7895E8, again before
+and after correction (0x767164/0x767170 and 0x7671AB/0x7671B7). None of these
+four stack slots has a later read in this body. They are real dead local stores,
+not stack padding; their distinct x87 condition masks (JP/JNE) matter, so do not
+replace them with one guessed C++ relational expression or silently omit them.
+
+The box-transform call ABI is also now clearer. 0x767600 is a Scene3 member with
+ECX=this, stack +8 output SurfaceRect pointer, +C SecondaryPose pointer, +10
+explicit source-box pointer, and RET 0C; EAX returns the output pointer. The
+normal aggregate-return C++ declaration can make VC7.1 materialize and copy an
+extra temporary at this call site. A private ABI view with an explicit
+`SurfaceRect *out` parameter emits the same call contract without changing the
+accepted 0x767600 function body. This is a call-site typing technique, not a new
+owner or an accepted implementation.
+
+Natural C++ experiments are retained under .analysis/probes/scene-battle/.
+The best current explicit-output-buffer candidate is 3,370 bytes with a 0x1D4
+frame, still 643 bytes larger than the 2,727-byte target; its 33 relocations and
+remaining local-layout/codegen differences are not an exact comparison. No
+pushbox source, unit recipe, boundary promotion, or exact-ledger claim is
+accepted. Continue from the complete target disassembly and the retained
+variants; do not pad, mask, hand-assemble, or copy a provisional draft into src/.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They

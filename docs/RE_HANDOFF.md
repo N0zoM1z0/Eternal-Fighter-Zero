@@ -106,11 +106,16 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   Best4,031-byte draft is not a two-byte-difference claim. The real-background
   control in .analysis/probes/loading-owner/README.md was neutral. Do not repeat
   pointer/type/case controls without a new falsifiable target prediction.
-- Pushbox766B50/2727 remains open. Preserve the
-  write-only-local audit in .analysis/probes/scene-collision/; do not invent
-  padding or inert locals. Pixel owners409A90/40A0B0/40A440 retain evidence of
-  body-local saves and AH/AL loops; no permitted natural-C++ exact strategy is
-  established. Do not use assembly/byte wrappers.
+- Pushbox766B50/2727 remains open. The fresh audit identifies four write-only
+  x87 comparison materializations: first fighter X vs 160.0 before/after the
+  first correction, second fighter X vs 479.0 before/after the opposite
+  correction. Their JP/JNE masks differ; see KNOWLEDGE_BASE.md and the full
+  .analysis/probes/scene-battle/pushbox-target.txt. The transform helper's
+  caller ABI uses an explicit output buffer and returns its pointer in EAX; the
+  aggregate-return C++ view adds copies. Best current natural C++ candidate is
+  still 3370/2727 bytes, not accepted. Keep exploring stack lifetimes/VC7.1
+  codegen; no padding, masks, assembly, or byte wrappers. Pixel owners
+  409A90/40A0B0/40A440 remain open.
 - Reader/audio integration is complete. `workbench/reader-audio/` preserves
   historical drafts and an already-integrated patch; it is not unfinished work.
   Read its README; never apply the old patch or copy drafts over accepted src/.
