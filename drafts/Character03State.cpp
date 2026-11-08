@@ -73,13 +73,13 @@ void Character03::Slot06()
       }
       break;
     case 4:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if ((char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0048 = 0.042;
         field0038 = -2.9;
         if ((char)field0158 == '\x01') {
@@ -109,13 +109,13 @@ void Character03::Slot06()
       }
       break;
     case 5:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if ((char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0048 = 0.042;
         field0038 = -2.9;
         field0030 = 0.7;
@@ -145,13 +145,13 @@ void Character03::Slot06()
       }
       break;
     case 6:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if ((char)field0158 == '\0') {
           FaceOpponent();
         }
         field0030 = 0.0;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0048 = 0.042;
         field0038 = -2.9;
         field0030 = -0.7;
@@ -244,7 +244,7 @@ void Character03::Slot06()
       break;
     case 14:
       field0048 = 0.042;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.9;
         field0030 = 0.0;
         field0158 = 0;
@@ -270,7 +270,7 @@ void Character03::Slot06()
       break;
     case 15:
       field0048 = 0.042;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.9;
         field0030 = 0.7;
         field0158 = 0;
@@ -295,7 +295,7 @@ void Character03::Slot06()
       break;
     case 16:
       field0048 = 0.042;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.9;
         field0030 = -0.7;
         field0158 = 0;
@@ -319,7 +319,7 @@ void Character03::Slot06()
       }
       break;
     case 47:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0030 = 0.6;
         field0048 = 0.035;
       }
@@ -351,7 +351,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 10;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -391,7 +391,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0xf;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -431,7 +431,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x14;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -471,7 +471,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 10;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -511,7 +511,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0xf;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -551,7 +551,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x14;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -591,7 +591,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 10;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -628,7 +628,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0xf;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -665,7 +665,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x14;
         field0030 =
              (2.0 - (*opponentSlot)->field0178 / 10000.0) *
@@ -701,7 +701,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 =
@@ -750,7 +750,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 =
@@ -799,7 +799,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 =
@@ -848,7 +848,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 =
@@ -889,7 +889,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 = field00c8;
@@ -930,7 +930,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.8;
       }
       if ((field000a == 0) || (CollisionSide() == '\0')) {
-        if ((field000a == 0) && ((short)field000c == 0)) {
+        if ((field000a == 0) && (field000c == 0)) {
           field0148 = (short)field0148 + 0x1e;
           field0030 = field00c0;
           field0038 =
@@ -985,7 +985,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.8;
       }
       if ((field000a == 0) || (CollisionSide() == '\0')) {
-        if ((field000a == 0) && ((short)field000c == 0)) {
+        if ((field000a == 0) && (field000c == 0)) {
           field0148 = (short)field0148 + 0x1e;
           field0030 = field00c0;
           field0038 =
@@ -1040,7 +1040,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.8;
       }
       if ((field000a == 0) || (CollisionSide() == '\0')) {
-        if ((field000a == 0) && ((short)field000c == 0)) {
+        if ((field000a == 0) && (field000c == 0)) {
           field0148 = (short)field0148 + 0x1e;
           field0030 = field00c0;
           field0038 =
@@ -1087,7 +1087,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.8;
       }
       if ((field000a == 0) || (CollisionSide() == '\0')) {
-        if ((field000a == 0) && ((short)field000c == 0)) {
+        if ((field000a == 0) && (field000c == 0)) {
           field0148 = (short)field0148 + 0x1e;
           field0030 = field00c0;
           field0038 = field00c8;
@@ -1192,7 +1192,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if (((field000a == 0) && ((short)field000c == 0)) &&
+      if (((field000a == 0) && (field000c == 0)) &&
          (field3138 == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field3138 = field3138 + 1;
@@ -1234,7 +1234,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field0030 = field00c0;
         field0038 = field00c8;
@@ -1353,7 +1353,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         if ((char)field0120 != '\0') {
           field0118 = field0118 - 30.0;
@@ -1393,7 +1393,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         if ((char)field0120 != '\0') {
           field0118 = field0118 - 30.0;
@@ -1433,7 +1433,7 @@ void Character03::Slot06()
         field0118 = field0118 - 0.6;
       }
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         if ((char)field0120 != '\0') {
           field0118 = field0118 - 30.0;
@@ -1469,7 +1469,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         effect.type = 499;
         effect.x = (double)(int)field0020;
         effect.y = (double)(int)field0028;
@@ -1511,7 +1511,7 @@ void Character03::Slot06()
       if ((char)field0120 != '\0') {
         field0118 = field0118 - 0.8;
       }
-      if (((field000a == 0) && ((short)field000c == 0)) &&
+      if (((field000a == 0) && (field000c == 0)) &&
          (field3138 == 0)) {
         field02c9 = 0x1e;
         field0038 = -0.45;
@@ -1519,7 +1519,7 @@ void Character03::Slot06()
         field3138 = field3138 + 1;
         field0148 = (short)field0148 + 0x1e;
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         field0030 = field00c0;
         field0038 = field00c8;
         field0048 = 0.032;
@@ -1557,7 +1557,7 @@ void Character03::Slot06()
       }
       break;
     case 83:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3144 == 0) {
           effect.type = 0x1f0;
           effect.x = (double)(int)field0020;
@@ -1583,7 +1583,7 @@ void Character03::Slot06()
         if (field000a == 1) {
           field0030 = field0030 + 0.01;
         }
-        if ((field000a == 2) && ((short)field000c == 0)) {
+        if ((field000a == 2) && (field000c == 0)) {
           field0030 = -2.0;
         }
         if (1 < field000a) {
@@ -1611,7 +1611,7 @@ void Character03::Slot06()
       }
       break;
     case 84:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3144 == 0) {
           effect.type = 0x1f0;
           effect.x = (double)(int)field0020;
@@ -1637,7 +1637,7 @@ void Character03::Slot06()
         if (field000a == 1) {
           field0030 = field0030 + 0.01;
         }
-        if ((field000a == 2) && ((short)field000c == 0)) {
+        if ((field000a == 2) && (field000c == 0)) {
           field0030 = -2.0;
         }
         if (1 < field000a) {
@@ -1665,7 +1665,7 @@ void Character03::Slot06()
       }
       break;
     case 85:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3144 == 0) {
           effect.type = 0x1f0;
           effect.x = (double)(int)field0020;
@@ -1709,7 +1709,7 @@ void Character03::Slot06()
       }
       break;
     case 86:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3144 == 0) {
           effect.type = 0x1f0;
           effect.x = (double)(int)field0020;
@@ -1754,7 +1754,7 @@ void Character03::Slot06()
       }
       break;
     case 87:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         effect.type = 0x1ef;
         effect.x = 60.0;
         effect.y = 40.0;
@@ -1794,7 +1794,7 @@ void Character03::Slot06()
     case 97:
       field0030 = 0.0;
       field0038 = 0.0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         SetVerticalShake(3,0);
         effect.type = 3;
         effect.x = (double)(int)field0020;
@@ -1817,7 +1817,7 @@ void Character03::Slot06()
     case 98:
       field0030 = 0.0;
       field0038 = 0.0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         SetVerticalShake(3,0);
         effect.type = 3;
         effect.x = (double)(int)field0020;
@@ -1863,7 +1863,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x96;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 10;
         field0030 = -1.5;
@@ -1905,7 +1905,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x97;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 0xf;
         field0030 = -1.8;
@@ -1947,7 +1947,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x98;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 0x14;
         field0030 = -2.3;
@@ -1989,7 +1989,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x96;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 10;
         field0030 = -1.5;
@@ -2028,7 +2028,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x97;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 0xf;
         field0030 = -1.8;
@@ -2067,7 +2067,7 @@ void Character03::Slot06()
       if (inputY != '\x01') {
         field0008 = 0x98;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0148 = (short)field0148 + 0x14;
         field0030 = -2.3;
@@ -2100,7 +2100,7 @@ void Character03::Slot06()
       }
       break;
     case 156:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.6;
         field0148 = (short)field0148 + 0xf;
         field0048 = 0.06;
@@ -2128,7 +2128,7 @@ void Character03::Slot06()
       field0030 = 1.0;
       field0048 = 0.045;
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.3;
         effect.type = 8;
         effect.x = (double)(int)field0020;
@@ -2160,7 +2160,7 @@ void Character03::Slot06()
       field0030 = -1.0;
       field0048 = 0.045;
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = -2.3;
         effect.type = 8;
         effect.x = (double)(int)field0020;
@@ -2189,7 +2189,7 @@ void Character03::Slot06()
       }
       break;
     case 161:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         ResetFrame();
         effect.type = 9;
         effect.x = (double)(int)field0020;
@@ -2213,15 +2213,15 @@ void Character03::Slot06()
       }
       break;
     case 162:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         ResetFrame();
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0038 = -1.5;
         field0048 = 0.025;
         field016c = 1;
       }
-      if ((field000a == 7) && ((short)field000c == 0)) {
+      if ((field000a == 7) && (field000c == 0)) {
         ResetFrame();
         effect.type = 9;
         effect.x = (double)(int)field0020;
@@ -2256,7 +2256,7 @@ void Character03::Slot06()
       }
       break;
     case 163:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         StartTrail(3);
       }
       if ((inputY == -1) && ((short)field000a != 0)) {
@@ -2271,7 +2271,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 0) && ((short)field000c == 0)) {
+        if ((field000a == 0) && (field000c == 0)) {
           field0038 = 0.0;
           field0048 = 0.0;
         }
@@ -2303,11 +2303,11 @@ void Character03::Slot06()
     case 164:
       StartTrail(3);
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0030 = 0.0;
         field0038 = 0.0;
       }
-      if ((field000a == 1) && ((short)field000c == 0)) {
+      if ((field000a == 1) && (field000c == 0)) {
         field0030 = -2.2;
       }
       field0030 = field0030 + 0.02;
@@ -2331,7 +2331,7 @@ void Character03::Slot06()
       }
       break;
     case 165:
-      if (((field000a == 0) && ((short)field000c == 0)) &&
+      if (((field000a == 0) && (field000c == 0)) &&
          (field3138 == 0)) {
         field0030 = 1.9;
         field0038 = 1.3;
@@ -2376,7 +2376,7 @@ void Character03::Slot06()
       }
       break;
     case 166:
-      if (((field000a == 0) && ((short)field000c == 0)) &&
+      if (((field000a == 0) && (field000c == 0)) &&
          (field3138 == 0)) {
         field0030 = -1.9;
         field0038 = 1.3;
@@ -2421,7 +2421,7 @@ void Character03::Slot06()
       }
       break;
     case 167:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -2433,7 +2433,7 @@ void Character03::Slot06()
         field014c = 0x5a;
         SetTint(0xb0,3);
       }
-      if ((field000a == 1) && ((short)field000c == 0)) {
+      if ((field000a == 1) && (field000c == 0)) {
         field02c9 = 0x12;
         effect.type = 1;
         effect.x = (double)(int)field0020;
@@ -2442,7 +2442,7 @@ void Character03::Slot06()
         effect.layer = 1;
         contextOwner->EmitEffect(&effect);
       }
-      if ((field000a == 2) && ((short)field000c == 0)) {
+      if ((field000a == 2) && (field000c == 0)) {
         effect.type = 4;
         effect.x = (double)(int)field0020;
         effect.y = (double)(int)field0028;
@@ -2463,7 +2463,7 @@ void Character03::Slot06()
       }
       break;
     case 168:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -2493,7 +2493,7 @@ void Character03::Slot06()
       }
       break;
     case 169:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -2523,7 +2523,7 @@ void Character03::Slot06()
       }
       break;
     case 170:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field3138 = (int)(field0030 * 100.0);
         field313c = (int)(field0038 * 100.0);
         field0030 = 0.0;
@@ -2561,7 +2561,7 @@ void Character03::Slot06()
       }
       break;
     case 171:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field3138 = (int)(field0030 * 100.0);
         field313c = (int)(field0038 * 100.0);
         field0030 = 0.0;
@@ -2574,7 +2574,7 @@ void Character03::Slot06()
         field014c = 0x5a;
         SetTint(0xb0,3);
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field02c9 = 0x12;
         effect.type = 1;
         effect.x = (double)(int)field0020;
@@ -2603,7 +2603,7 @@ void Character03::Slot06()
       if (field0030 < 0.0) {
         field0030 = 0.0;
       }
-      if ((inputY == -1) && ((short)field000a != 0)) {
+      if ((inputY == -1) && (field000a > 0)) {
         field0008 = 4;
         if ((char)inputX == (char)facing) {
           field0008 = 5;
@@ -2613,6 +2613,7 @@ void Character03::Slot06()
         }
         field0168 = 0;
         ResetPose();
+        return;
       }
       else {
         ++field000c;
@@ -2622,12 +2623,14 @@ void Character03::Slot06()
           if (field000a >= frameCount) {
             field0008 = 7;
             ResetPose();
+            return;
           }
         }
+        return;
       }
       break;
     case 180:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         StartTrail(2);
         field0030 = 0.0;
         field0038 = 0.0;
@@ -2687,7 +2690,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 2) && ((short)field000c == 0)) {
+        if ((field000a == 2) && (field000c == 0)) {
           field0148 = (short)field0148 + 5;
           field02c9 = 0x15;
           field016c = 1;
@@ -2732,7 +2735,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 1) && ((short)field000c == 0)) {
+        if ((field000a == 1) && (field000c == 0)) {
           field0148 = (short)field0148 + 0xf;
           field02c9 = 0x14;
           field016c = 1;
@@ -2764,7 +2767,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.03;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0148 = (short)field0148 + 0xf;
         field02c9 = 0x14;
         field016c = 1;
@@ -2805,7 +2808,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.06;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field016c = 1;
       }
       if (((field000a == 10) && ((char)buttonPulse[2] == '\x01')) &&
@@ -2876,7 +2879,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 1) && ((short)field000c == 0)) {
+        if ((field000a == 1) && (field000c == 0)) {
           field0148 = (short)field0148 + 5;
           field02c9 = 0x15;
           field016c = 1;
@@ -2924,7 +2927,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 2) && ((short)field000c == 0)) {
+        if ((field000a == 2) && (field000c == 0)) {
           field0148 = (short)field0148 + 0xd;
           field02c9 = 0x14;
           field016c = 1;
@@ -2968,7 +2971,7 @@ void Character03::Slot06()
           field0030 = 0.0;
         }
       }
-      if ((field000a == 2) && ((short)field000c == 0)) {
+      if ((field000a == 2) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x19;
         field02c9 = 0x14;
         field016c = 1;
@@ -3014,7 +3017,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 2) && ((short)field000c == 0)) {
+        if ((field000a == 2) && (field000c == 0)) {
           field0148 = (short)field0148 + 5;
           field02c9 = 0x15;
           field016c = 1;
@@ -3057,7 +3060,7 @@ void Character03::Slot06()
         ResetPose();
       }
       else {
-        if ((field000a == 3) && ((short)field000c == 0)) {
+        if ((field000a == 3) && (field000c == 0)) {
           field0148 = (short)field0148 + 0xd;
           field02c9 = 0x14;
           field016c = 1;
@@ -3141,16 +3144,16 @@ void Character03::Slot06()
       }
       break;
     case 210:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0030 = 0.6;
         field0038 = -1.4;
         field0048 = 0.036;
       }
-      if ((field000a == 6) && ((short)field000c == 0)) {
+      if ((field000a == 6) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x14;
         field02c9 = 0x14;
         field016c = 1;
@@ -3229,7 +3232,7 @@ void Character03::Slot06()
       break;
     case 212:
       field0038 = field0038 + field0048;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x1e;
         field02c9 = 0x14;
         field016c = 1;
@@ -3272,7 +3275,7 @@ void Character03::Slot06()
     case 213:
       field0048 = 0.042;
       field0038 = field0038 + field0048;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0030 = -1.0;
         field0038 = -2.4;
       }
@@ -3290,7 +3293,7 @@ void Character03::Slot06()
     case 214:
       field0030 = 0.0;
       field0038 = 0.0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         SetVerticalShake(3,0);
         effect.type = 3;
         effect.x = (double)(int)field0020;
@@ -3319,7 +3322,7 @@ void Character03::Slot06()
       field0030 = 0.0;
       field0038 = 0.0;
       field0158 = 0;
-      if (((field000a == 1) && ((short)field000c == 0)) &&
+      if (((field000a == 1) && (field000c == 0)) &&
          ((*opponentSlot)->field0028 == 0.0)) {
         field016c = 1;
       }
@@ -3332,7 +3335,7 @@ void Character03::Slot06()
         field00b8 = 0.0;
         ResetPose();
         (*opponentSlot)->ResetPose();
-        ResetFrame();
+        (*opponentSlot)->ResetFrame();
         field0008 = 0xdd;
         (*opponentSlot)->field0008 = 0x6b;
         effect.type = 0;
@@ -3355,7 +3358,7 @@ void Character03::Slot06()
       }
       break;
     case 221:
-      if ((field000a == 1) && ((short)field000c == 0)) {
+      if ((field000a == 1) && (field000c == 0)) {
         (*opponentSlot)->ResetPose();
         ResetFrame();
         (*opponentSlot)->field0008 = 0x32;
@@ -3371,7 +3374,7 @@ void Character03::Slot06()
         field000a = 9;
         field000c = 0;
         field0028 = 0.0;
-        ResetFrame();
+        (*opponentSlot)->ResetFrame();
       } else {
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3415,10 +3418,10 @@ void Character03::Slot06()
       if (field0030 < 0.0) {
         field0030 = 0.0;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = 0.0;
       }
-      if ((field000a == 1) && ((short)field000c == 0)) {
+      if ((field000a == 1) && (field000c == 0)) {
         field0148 = (short)field0148 + 5;
         field02c9 = 0x15;
         field016c = 1;
@@ -3447,10 +3450,10 @@ void Character03::Slot06()
       if (field0030 < 0.0) {
         field0030 = 0.0;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = 0.0;
       }
-      if ((field000a == 2) && ((short)field000c == 0)) {
+      if ((field000a == 2) && (field000c == 0)) {
         field0148 = (short)field0148 + 10;
         field02c9 = 0x14;
         field016c = 1;
@@ -3469,7 +3472,7 @@ void Character03::Slot06()
     case 232:
       field0158 = 0;
       StartTrail(3);
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0040 = 0.0;
         field016c = 1;
       }
@@ -3478,7 +3481,7 @@ void Character03::Slot06()
          field0030 < 0.0)) {
         field0030 = 0.0;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x19;
         field02c9 = 0x14;
       }
@@ -3518,10 +3521,10 @@ void Character03::Slot06()
       if (field0030 < 0.0) {
         field0030 = 0.0;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = 0.0;
       }
-      if ((field000a == 1) && ((short)field000c == 0)) {
+      if ((field000a == 1) && (field000c == 0)) {
         field0148 = (short)field0148 + 5;
         field02c9 = 0x15;
         field016c = 1;
@@ -3550,10 +3553,10 @@ void Character03::Slot06()
       if (field0030 < 0.0) {
         field0030 = 0.0;
       }
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0038 = 0.0;
       }
-      if ((field000a == 2) && ((short)field000c == 0)) {
+      if ((field000a == 2) && (field000c == 0)) {
         field0148 = (short)field0148 + 10;
         field02c9 = 0x14;
         field016c = 1;
@@ -3572,7 +3575,7 @@ void Character03::Slot06()
     case 235:
       field0158 = 0;
       StartTrail(3);
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0040 = 0.0;
         field016c = 1;
       }
@@ -3583,7 +3586,7 @@ void Character03::Slot06()
       else {
         field0030 = field0030 - 0.01;
       }
-      if ((field000a == 2) && ((short)field000c == 0)) {
+      if ((field000a == 2) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x19;
         field02c9 = 0x14;
       }
@@ -3611,7 +3614,7 @@ void Character03::Slot06()
     case 248:
       field0038 = field0038 + field0048;
       if ((field000a == 1) && (field0168 == 3)) {
-        ResetFrame();
+        (*opponentSlot)->ResetFrame();
         (*opponentSlot)->ResetPose();
         ResetFrame();
         (*opponentSlot)->field0128 = 1;
@@ -3649,7 +3652,7 @@ void Character03::Slot06()
       field013e = 0x1e;
       (*opponentSlot)->field013e = 0x1e;
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0030 = -2.5;
         field0038 = -4.5;
         field0048 = 0.045;
@@ -3681,12 +3684,12 @@ void Character03::Slot06()
           return;
         }
       }
-      if ((field000a == 8) && ((short)field000c == 0)) {
+      if ((field000a == 8) && (field000c == 0)) {
         field014a = 0x3c;
         (*opponentSlot)->field014a = 0x3c;
         ApplyDamage(0x44c, 500.0);
       }
-      if ((field000a == 9) && ((short)field000c == 0)) {
+      if ((field000a == 9) && (field000c == 0)) {
         field0038 = -1.5;
         field0030 = -1.3;
         field0048 = 0.035;
@@ -3714,7 +3717,7 @@ void Character03::Slot06()
       }
       break;
     case 250:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3743,7 +3746,7 @@ void Character03::Slot06()
       }
       break;
     case 251:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3772,7 +3775,7 @@ void Character03::Slot06()
       }
       break;
     case 252:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3825,7 +3828,7 @@ void Character03::Slot06()
       }
       break;
     case 253:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3854,7 +3857,7 @@ void Character03::Slot06()
       }
       break;
     case 254:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3883,7 +3886,7 @@ void Character03::Slot06()
       }
       break;
     case 255:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field0148 = (short)field0148 + 0x2d;
@@ -3925,7 +3928,7 @@ void Character03::Slot06()
       }
       break;
     case 256:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
       }
@@ -3974,7 +3977,7 @@ void Character03::Slot06()
       }
       break;
     case 257:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
       }
@@ -4023,7 +4026,7 @@ void Character03::Slot06()
       }
       break;
     case 258:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         if ((char)field0120 == '\0') {
@@ -4110,11 +4113,11 @@ void Character03::Slot06()
       }
       break;
     case 259:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x19a;
         effect.x = (double)((int)field0020 + (char)facing * 0x24);
         effect.y = (double)((int)field0028 + -0x4e);
@@ -4146,11 +4149,11 @@ void Character03::Slot06()
       }
       break;
     case 260:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x19b;
         effect.x = (double)((int)field0020 + (char)facing * -0x24);
         effect.y = (double)((int)field0028 + -0x4e);
@@ -4182,7 +4185,7 @@ void Character03::Slot06()
       }
       break;
     case 261:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         if ((char)field0120 == '\0') {
@@ -4199,7 +4202,7 @@ void Character03::Slot06()
         effect.layer = 1;
         contextOwner->EmitEffect(&effect);
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x19c;
         effect.x = (double)((int)field0020 + (char)facing * 0x24);
         effect.y = (double)((int)field0028 + -0x4e);
@@ -4231,7 +4234,7 @@ void Character03::Slot06()
       }
       break;
     case 262:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0030 = field0030 * 0.25;
         field0038 = field0038 * 0.25;
       }
@@ -4260,7 +4263,7 @@ void Character03::Slot06()
       }
       break;
     case 300:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -4272,7 +4275,7 @@ void Character03::Slot06()
       if ((short)field000a != 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
-      if (((field000a == 5) && ((short)field000c == 0)) &&
+      if (((field000a == 5) && (field000c == 0)) &&
          (field3138 == 0)) {
         effect.type = 0x1a2;
         effect.x = (double)((int)field0020 + (char)facing * 0x4d);
@@ -4315,7 +4318,7 @@ void Character03::Slot06()
       }
       break;
     case 301:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -4327,7 +4330,7 @@ void Character03::Slot06()
       if ((short)field000a != 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
-      if (((field000a == 5) && ((short)field000c == 0)) &&
+      if (((field000a == 5) && (field000c == 0)) &&
          (field3138 == 0)) {
         effect.type = 0x1a3;
         effect.x = (double)((int)field0020 + (char)facing * 0x4d);
@@ -4370,7 +4373,7 @@ void Character03::Slot06()
       }
       break;
     case 302:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
@@ -4382,7 +4385,7 @@ void Character03::Slot06()
       if ((short)field000a != 0) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
-      if (((field000a == 5) && ((short)field000c == 0)) &&
+      if (((field000a == 5) && (field000c == 0)) &&
          (field3138 == 0)) {
         effect.type = 0x1a4;
         effect.x = (double)((int)field0020 + (char)facing * 0x4d);
@@ -4425,12 +4428,12 @@ void Character03::Slot06()
       }
       break;
     case 303:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field016c = 99;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0038 = -2.4;
         field0030 = -0.4;
         field0048 = 0.029;
@@ -4442,7 +4445,7 @@ void Character03::Slot06()
       if (0xb < field000a) {
         SetHorizontalShake(0x32,3);
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
         field0148 = (short)field0148 + -1000;
         SetTint(0xb0,3);
@@ -4455,15 +4458,15 @@ void Character03::Slot06()
         effect.layer = 1;
         contextOwner->EmitEffect(&effect);
       }
-      if ((field000a == 0xb) && ((short)field000c == 0)) {
+      if ((field000a == 0xb) && (field000c == 0)) {
         ResetFrame();
       }
-      if ((field000a == 0xc) && ((short)field000c == 0)) {
+      if ((field000a == 0xc) && (field000c == 0)) {
         field0030 = -0.2;
         field0038 = -0.8;
         field0048 = 0.015;
       }
-      if ((field000a == 0xe) && ((short)field000c == 0)) {
+      if ((field000a == 0xe) && (field000c == 0)) {
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0xb4));
         effect.y = 0.0;
@@ -4497,7 +4500,7 @@ void Character03::Slot06()
         EmitLocalEffect(&effect);
         field02c8 = 0;
       }
-      if ((field000a == 0x12) && ((short)field000c == 0)) {
+      if ((field000a == 0x12) && (field000c == 0)) {
         effect.owner = 0;
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0xb4));
@@ -4554,12 +4557,12 @@ void Character03::Slot06()
       }
       break;
     case 304:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field016c = 99;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0038 = -2.4;
         field0030 = -0.4;
         field0048 = 0.029;
@@ -4571,7 +4574,7 @@ void Character03::Slot06()
       if (0xb < field000a) {
         SetHorizontalShake(0x32,3);
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
         field0148 = (short)field0148 + -2000;
         SetTint(0xb0,3);
@@ -4584,15 +4587,15 @@ void Character03::Slot06()
         effect.layer = 1;
         contextOwner->EmitEffect(&effect);
       }
-      if ((field000a == 0xb) && ((short)field000c == 0)) {
+      if ((field000a == 0xb) && (field000c == 0)) {
         ResetFrame();
       }
-      if ((field000a == 0xc) && ((short)field000c == 0)) {
+      if ((field000a == 0xc) && (field000c == 0)) {
         field0030 = -0.2;
         field0038 = -0.8;
         field0048 = 0.015;
       }
-      if ((field000a == 0xe) && ((short)field000c == 0)) {
+      if ((field000a == 0xe) && (field000c == 0)) {
         effect.owner = 0;
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0xf0));
@@ -4627,7 +4630,7 @@ void Character03::Slot06()
         EmitLocalEffect(&effect);
         field02c8 = 0;
       }
-      if ((field000a == 0x12) && ((short)field000c == 0)) {
+      if ((field000a == 0x12) && (field000c == 0)) {
         effect.owner = 0;
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0xf0));
@@ -4684,12 +4687,12 @@ void Character03::Slot06()
       }
       break;
     case 305:
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field0158 = 0;
         ResetFrame();
         field016c = 99;
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field0038 = -2.4;
         field0030 = -0.4;
         field0048 = 0.029;
@@ -4701,7 +4704,7 @@ void Character03::Slot06()
       if (0xb < field000a) {
         SetHorizontalShake(0x32,3);
       }
-      if ((field000a == 3) && ((short)field000c == 0)) {
+      if ((field000a == 3) && (field000c == 0)) {
         field014c = 0x78;
         field0148 = (short)field0148 + -3000;
         SetTint(0xb0,3);
@@ -4715,18 +4718,18 @@ void Character03::Slot06()
         contextOwner->EmitEffect(&effect);
         field02c9 = 0x25;
       }
-      if ((field000a == 0xb) && ((short)field000c == 0)) {
+      if ((field000a == 0xb) && (field000c == 0)) {
         ResetFrame();
       }
       if (10 < field000a) {
         contextOwner->SetSceneTimer(0xf);
       }
-      if ((field000a == 0xc) && ((short)field000c == 0)) {
+      if ((field000a == 0xc) && (field000c == 0)) {
         field0030 = -0.2;
         field0038 = -0.8;
         field0048 = 0.015;
       }
-      if ((field000a == 0xe) && ((short)field000c == 0)) {
+      if ((field000a == 0xe) && (field000c == 0)) {
         effect.owner = 0;
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0x140));
@@ -4761,7 +4764,7 @@ void Character03::Slot06()
         EmitLocalEffect(&effect);
         field02c8 = 0;
       }
-      if ((field000a == 0x12) && ((short)field000c == 0)) {
+      if ((field000a == 0x12) && (field000c == 0)) {
         effect.owner = 0;
         effect.type = 3;
         effect.x = (double)(int)(field0020 + facing * (unsigned short)RandomRange(0,0x140));
@@ -4819,7 +4822,7 @@ void Character03::Slot06()
       break;
     case 306:
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3138 == 0) {
           field014c = 0x78;
           field0148 = (short)field0148 + -1000;
@@ -4839,7 +4842,7 @@ void Character03::Slot06()
         field0038 = 0.0;
         field0048 = 0.0;
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x1a7;
         effect.x = (double)((int)field0020 + (char)facing * 0x2d);
         effect.y = (double)((int)field0028 + -0x2b);
@@ -4897,7 +4900,7 @@ void Character03::Slot06()
       break;
     case 307:
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3138 == 0) {
           field014c = 0x78;
           field0148 = (short)field0148 + -2000;
@@ -4917,7 +4920,7 @@ void Character03::Slot06()
         field0038 = 0.0;
         field0048 = 0.0;
       }
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x1a7;
         effect.x = (double)((int)field0020 + (char)facing * 0x2d);
         effect.y = (double)((int)field0028 + -0x2b);
@@ -4983,7 +4986,7 @@ void Character03::Slot06()
       break;
     case 308:
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         if (field3138 == 0) {
           field014c = 0x78;
           field0148 = (short)field0148 + -3000;
@@ -5016,7 +5019,7 @@ void Character03::Slot06()
         field3140 = 0xc;
       }
       field3140 = field3140 + -1;
-      if ((field000a == 4) && ((short)field000c == 0)) {
+      if ((field000a == 4) && (field000c == 0)) {
         effect.type = 0x1a7;
         effect.x = (double)((int)field0020 + (char)facing * 0x2d);
         effect.y = (double)((int)field0028 + -0x2b);
@@ -5074,7 +5077,7 @@ void Character03::Slot06()
       break;
     case 309:
       field0158 = 0;
-      if ((field000a == 0) && ((short)field000c == 0)) {
+      if ((field000a == 0) && (field000c == 0)) {
         field016c = 1;
         field02c9 = 0x25;
         field014c = 0x78;

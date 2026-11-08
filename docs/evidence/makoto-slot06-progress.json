@@ -1,9 +1,10 @@
 {
   "target_entry": "0x005E85F0",
-  "target_code_bytes": 58482,
-  "candidate_instruction_bytes": 58432,
-  "candidate_comdat_bytes": 59242,
-  "candidate_trailing_table_bytes": 810,
+  "target_instruction_bytes": 58482,
+  "candidate_instruction_bytes": 58456,
+  "instruction_delta": -26,
+  "candidate_comdat_bytes": 59266,
+  "candidate_switch_table_bytes": 810,
   "target_stack_frame": "0x378",
   "candidate_stack_frame": "0x378",
   "direct_calls_target": 369,
@@ -13,17 +14,14 @@
   "ftol2_calls_candidate": 178,
   "explicit_animation_cases": 124,
   "fallback_case": true,
-  "remaining_code_size_delta": -50,
-  "branch_layout_inversions": [
-    210,
-    212,
+  "case_block_size_delta_sum": -31,
+  "pre_switch_dispatch_delta": 5,
+  "field000c_type": "unsigned short (confirmed by target MOVZX loads at Secondary+0x0c)",
+  "opponent_ResetFrame_receivers_corrected": [
+    220,
     221,
-    232,
-    256,
-    257,
-    258
+    248
   ],
-  "exactness_claimed": false,
-  "case_block_size_delta_sum": -55,
-  "pre_switch_dispatch_delta": 5
+  "case178_explicit_early_returns": true,
+  "exactness_claimed": false
 }

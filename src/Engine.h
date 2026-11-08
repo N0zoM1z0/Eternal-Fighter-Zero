@@ -172,7 +172,8 @@ class SecondaryPose {
 public:
     unsigned short field0008;
     unsigned short field000a;
-    short field000c;
+    unsigned short field000c; // target reads this frame counter with MOVZX
+
     unsigned char unknown_000e[0x2];
     PatternSequence * patterns;
     IUnknown ** surfaces;
