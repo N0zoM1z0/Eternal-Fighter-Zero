@@ -2858,11 +2858,17 @@ the post-mask comparison is `facing1 * secondVelocity > facing0 * firstVelocity`
 the source candidate now reflects that raw-instruction result rather than the
 old reversed expression.
 
-The current source compiles to 2,726 bytes and 708 instructions. It is still
-not an accepted reconstruction: the target extent is 2,727 bytes, and the
-saved-this, pose-pointer and hidden-return-buffer stack slots still differ.
-The boundary and data operands are reviewed, but ResolvePushboxes itself
-remains open until a complete relocated function comparison is exact.
+The current source keeps the before/after stage-boundary stores in their
+respective separation branches as volatile 32-bit integers. This preserves the
+original dword store width and the left-branch-before / left-branch-after and
+right-branch-before / right-branch-after evaluation order; the earlier shared
+four-`bool` approximation did not.
+
+The current candidate is still not an accepted reconstruction. The original
+extent is 2,727 bytes, and the saved-this, pose-pointer and hidden-return-buffer
+stack slots still require alignment. The boundary and data operands are
+reviewed, but ResolvePushboxes itself remains open until a complete relocated
+function comparison is exact.
 
 ### Complete dispatch and body-contact test
 
