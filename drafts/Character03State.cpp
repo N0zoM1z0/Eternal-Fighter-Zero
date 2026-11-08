@@ -7,10 +7,7 @@
 void Character03::Slot06()
 {
   unsigned short frameDuration, frameCount;
-  if (0 < field014a) {
-    return;
-  }
-  if (0 < (*opponentSlot)->field014c) {
+  if ((0 < field014a) || (0 < (*opponentSlot)->field014c)) {
     return;
   }
   EffectSpawn effect;
@@ -324,7 +321,7 @@ void Character03::Slot06()
         field0048 = 0.035;
       }
       field0038 = field0038 + field0048;
-      if ((0.0 < field0028 + field0038) &&
+      if ((field0028 + field0038 > 0.0) &&
          (field000a < 2)) {
         field000c = 0;
         field000a = 2;
@@ -342,7 +339,7 @@ void Character03::Slot06()
           field000a = field000a + -2;
         }
         if (field000a >= frameCount) {
-          field000a = field000a + -1;
+          --field000a;
         }
       }
       break;
@@ -1478,7 +1475,7 @@ void Character03::Slot06()
       }
       field0030 = field0030 + 0.02;
       field0038 = field0038 + field0048;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       ++field000c;
@@ -1486,10 +1483,10 @@ void Character03::Slot06()
         field000c = 0;
         ++field000a;
         if (field000a >= frameCount) {
-          field000a = field000a + -1;
+          --field000a;
         }
       }
-      if ((0.0 <= field0028 + field0038) &&
+      if ((field0028 + field0038 >= 0.0) &&
          (field000a == 1)) {
         field0028 = 0.0;
         if (field012c == 0) {
@@ -4260,7 +4257,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if (field000a > 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
@@ -4315,7 +4312,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if (field000a > 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
@@ -4370,7 +4367,7 @@ void Character03::Slot06()
       if (field000a < 5) {
         SetHorizontalShake(0x32,3);
       }
-      if (field000a > 0) {
+      if (field000a >= 1) {
         *reinterpret_cast<short *>(reinterpret_cast<char *>(this) + 0xf2) = 10;
       }
       if (((field000a == 5) && (field000c == 0)) &&
