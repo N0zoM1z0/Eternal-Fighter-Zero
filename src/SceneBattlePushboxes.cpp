@@ -26,9 +26,9 @@ void Scene3::ResolvePushboxes()
             volatile int leftBefore, leftAfter;
             displacement = locals.second.right - locals.first.left;
             if (this->secondary[0]->field0020 <= collisionLeftBoundary) leftBefore = 1; else leftBefore = 0;
-            this->secondary[0]->field0020 = (double)displacement / collisionTwo + this->secondary[0]->field0020;
-            this->secondary[1]->field0020 = this->secondary[1]->field0020 - (double)displacement / collisionTwo;
+            this->secondary[0]->field0020 = this->secondary[0]->field0020 + (double)displacement / collisionTwo;
             if (this->secondary[0]->field0020 > collisionLeftBoundary) leftAfter = 1; else leftAfter = 0;
+            this->secondary[1]->field0020 = this->secondary[1]->field0020 - (double)displacement / collisionTwo;
             if (this->secondary[0]->CollisionSide() == -1) {
                 locals.firstVelocity = (double)((double)(int)this->secondary[0]->facing * locals.firstVelocity < collisionZero) * locals.firstVelocity;
                 locals.secondVelocity = (double)((double)(int)this->secondary[0]->facing * locals.firstVelocity +
@@ -37,8 +37,8 @@ void Scene3::ResolvePushboxes()
                     (double)(int)this->secondary[1]->facing * locals.secondVelocity) {
                     locals.average = ((double)(int)this->secondary[0]->facing * locals.firstVelocity +
                         (double)(int)this->secondary[1]->facing * locals.secondVelocity) / collisionTwo;
-                                        this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                     locals.secondVelocity = (double)(int)(signed char)this->secondary[1]->facing * locals.average;
+                    this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                     this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
                 }
             } else {
@@ -51,19 +51,19 @@ void Scene3::ResolvePushboxes()
                         (double)(int)this->secondary[1]->facing * locals.secondVelocity) {
                         locals.average = ((double)(int)this->secondary[0]->facing * locals.firstVelocity +
                             (double)(int)this->secondary[1]->facing * locals.secondVelocity) / collisionTwo;
-                        this->secondary[0]->field00b0 = (double)(int)this->secondary[0]->facing * locals.average - this->secondary[0]->field0030;
+                        locals.firstVelocity = (double)(int)this->secondary[0]->facing * locals.average;
+                        this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                         this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
                     }
                 } else {
-                    locals.average = (double)(int)this->secondary[1]->facing * locals.secondVelocity;
-                    if ((collisionZero <= locals.average) &&
+                    if ((collisionZero <= (double)(int)this->secondary[1]->facing * locals.secondVelocity) &&
                         ((double)(int)this->secondary[0]->facing * locals.firstVelocity < collisionZero)) {
                         locals.average = ((double)(int)this->secondary[1]->facing * locals.secondVelocity +
                             (double)(int)this->secondary[0]->facing * locals.firstVelocity) / collisionTwo;
-                                                locals.firstVelocity = (double)(int)this->secondary[0]->facing * locals.average;
-                    this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
+                        locals.firstVelocity = (double)(int)this->secondary[0]->facing * locals.average;
                         locals.secondVelocity = (double)(int)(signed char)this->secondary[1]->facing * locals.average;
-                    this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
+                        this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
+                        this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
                         return;
                     }
                 }
@@ -72,9 +72,9 @@ void Scene3::ResolvePushboxes()
             volatile int rightBefore, rightAfter;
             displacement = locals.second.left - locals.first.right;
             if (this->secondary[1]->field0020 >= collisionRightBoundary) rightBefore = 1; else rightBefore = 0;
-            this->secondary[0]->field0020 = (double)displacement / collisionTwo + this->secondary[0]->field0020;
-            this->secondary[1]->field0020 = this->secondary[1]->field0020 - (double)displacement / collisionTwo;
+            this->secondary[0]->field0020 = this->secondary[0]->field0020 + (double)displacement / collisionTwo;
             if (this->secondary[1]->field0020 < collisionRightBoundary) rightAfter = 1; else rightAfter = 0;
+            this->secondary[1]->field0020 = this->secondary[1]->field0020 - (double)displacement / collisionTwo;
             if (this->secondary[0]->CollisionSide() == 1) {
                 locals.firstVelocity = (double)(collisionZero < (double)(int)this->secondary[0]->facing * locals.firstVelocity) * locals.firstVelocity;
                 locals.secondVelocity = (double)(collisionZero <
@@ -84,8 +84,8 @@ void Scene3::ResolvePushboxes()
                     (double)(int)this->secondary[1]->facing * locals.secondVelocity) {
                     locals.average = ((double)(int)this->secondary[0]->facing * locals.firstVelocity +
                         (double)(int)this->secondary[1]->facing * locals.secondVelocity) / collisionTwo;
-                                        this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                     locals.secondVelocity = (double)(int)(signed char)this->secondary[1]->facing * locals.average;
+                    this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                     this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
                 }
             } else {
@@ -105,9 +105,9 @@ void Scene3::ResolvePushboxes()
                     (collisionZero <= (double)(int)this->secondary[0]->facing * locals.firstVelocity)) {
                     locals.average = ((double)(int)this->secondary[1]->facing * locals.secondVelocity +
                         (double)(int)this->secondary[0]->facing * locals.firstVelocity) / collisionTwo;
-                                        locals.firstVelocity = (double)(int)this->secondary[0]->facing * locals.average;
-                    this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
+                    locals.firstVelocity = (double)(int)this->secondary[0]->facing * locals.average;
                     locals.secondVelocity = (double)(int)(signed char)this->secondary[1]->facing * locals.average;
+                    this->secondary[0]->field00b0 = locals.firstVelocity - this->secondary[0]->field0030;
                     this->secondary[1]->field00b0 = locals.secondVelocity - this->secondary[1]->field0030;
                 }
             }
