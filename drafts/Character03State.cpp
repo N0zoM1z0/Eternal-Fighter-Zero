@@ -3238,8 +3238,12 @@ void Character03::Slot06()
         field0030 = field0030 / 2.0;
         field0048 = 0.07;
       }
-      if (field0168 < 2) {
-        if (field0028 + field0038 < 0.0) {
+      if (field0168 > 1) {
+        field0008 = 0xd5;
+        ResetPose();
+        ResetFrame();
+      } else {
+        if (field0028 + field0038 >= 0.0) {
           field0028 = 0.0;
           field0038 = 0.0;
           SetVerticalShake(3,0);
@@ -3253,6 +3257,7 @@ void Character03::Slot06()
           field02c9 = 7;
           field0008 = 0xd6;
           ResetPose();
+          return;
         } else {
           ++field000c;
           if ((unsigned short)field000c >= frameDuration) {
@@ -3260,14 +3265,10 @@ void Character03::Slot06()
             ++field000a;
             field0168 = 0;
             if (field000a >= frameCount) {
-              field000a = field000a + -2;
+              field000a = field000a - 2;
             }
           }
         }
-      } else {
-        field0008 = 0xd5;
-        ResetPose();
-        ResetFrame();
       }
       break;
     case 213:

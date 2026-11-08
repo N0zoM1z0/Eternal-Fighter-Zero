@@ -15,9 +15,11 @@ byte-counter increments. `SecondaryPose::field000c` is `unsigned short`,
 matching target `MOVZX` loads. Opponent-owned `ResetFrame` and
 `SetHorizontalShake` calls now pass the opponent as `this` where required.
 The VC7.1 stack frame matches the target exactly (`0x378`), the 369 direct-call
-sequence matches in order, and the emitted instruction body is now exactly
-58,482 bytes, matching the target's extent. Per-animation size deltas remain
-in `docs/evidence/makoto-slot06-case-deltas.csv`; several still differ and
-cancel at function scope, so byte-for-byte identity is not yet claimed. The
+sequence matches in order, and case 212 now follows the target's outer `field0168 > 1` exit and
+negative-frame / nonnegative-landing split, with its 453-byte block matching
+the target extent. The whole emitted instruction body is 58,484 bytes versus
+58,482 target bytes (+2); per-animation size deltas remain in
+`docs/evidence/makoto-slot06-case-deltas.csv`, so byte-for-byte identity is
+not yet claimed. The
 draft remains excluded from the normal build until instruction-level
 verification is complete.
