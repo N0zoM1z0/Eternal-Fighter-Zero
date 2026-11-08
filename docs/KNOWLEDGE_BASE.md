@@ -1996,6 +1996,15 @@ x +/-20, opposite x predicates at 20/619, a 639 upper bound and distance constan
 establish the byte return view; Ghidra's reconstructed upper EAX flag fragments
 are not a four-byte return contract.
 
+Fresh isolated VC7.1 `/Od /G6 /MT /Gy /W3` recompiles reconfirm these two
+collision leaves. `Secondary::CollisionSide` (0x40FF70) is 222 bytes; all
+non-relocation bytes match the original, and all six DIR32 fields match by
+offset and symbol (20.0, 20.0, 619.0, 639.0, 20.0, 619.0). `Scene3::BoxesOverlap`
+(0x767930) is 128 bytes and matches the original byte-for-byte with no
+relocations. These were fresh translation-unit compiles and focused function
+extractions, not a full cold replay; the existing exact evidence/ledger remains
+the authority for accepted ownership.
+
 UpdateTimers skips its gated phase when opponent 14C is positive, then always
 runs its final clamps/counters. The gated phase normalizes/decrements own 14A,
 char 130, shorts 138/13A/13C/13E/140 and active local slot-86 delays. Frame B0
@@ -2808,6 +2817,7 @@ Its signed result is -1 or 0, not Boolean 1. Edge contact counts when both boxes
 are themselves nonempty. Keep all subtraction/bit operations and the signed
 arithmetic shift; a conventional strict-overlap predicate changes behavior.
 It is a member with two box pointers and RET 08, not an invented free-function ABI.
+A fresh isolated SceneCollision.cpp compile reconfirmed all 128 target bytes and the zero-relocation contract.
 
 ### Complete dispatch and body-contact test
 

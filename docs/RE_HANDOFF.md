@@ -133,6 +133,11 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   `.analysis/probes/scene-battle/Pushboxes-onehundredfiftieth.cpp` and explore
   natural local declaration/stack-layout changes. Do not pad, hand-assemble,
   or copy the candidate into `src/`.
+- Two collision leafs were independently rechecked with fresh targeted VC7.1
+  translation-unit builds: `Scene3::BoxesOverlap` (0x767930) is byte-identical
+  at 128 bytes with zero relocations; `Secondary::CollisionSide` (0x40FF70)
+  matches all 222 bytes outside six DIR32 fields and matches all six relocation
+  offsets/symbols for the 20/619/639 constants. No full cold replay was run.
   Pixel owners 409A90/40A0B0/40A440 remain open.
 - `Scene3::Step` (0x763C20 /1653) and `Scene3::UpdateRound` (0x765040 /1562)
   were extracted from the targeted `SceneBattleLoop.cpp` object and replayed
