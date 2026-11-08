@@ -23,7 +23,7 @@ void Scene3::ResolvePushboxes()
     if (this->BoxesOverlap(&locals.first, &locals.second) != 0) {
         if ((locals.first.left + locals.first.right) -
             (locals.second.left + locals.second.right) > 0) {
-            volatile int leftBefore, leftAfter;
+            int leftBefore, leftAfter;
             displacement = locals.second.right - locals.first.left;
             if (this->secondary[0]->field0020 <= collisionLeftBoundary) leftBefore = 1; else leftBefore = 0;
             this->secondary[0]->field0020 = this->secondary[0]->field0020 + (double)displacement / collisionTwo;
@@ -69,7 +69,7 @@ void Scene3::ResolvePushboxes()
                 }
             }
         } else {
-            volatile int rightBefore, rightAfter;
+            int rightBefore, rightAfter;
             displacement = locals.second.left - locals.first.right;
             if (this->secondary[1]->field0020 >= collisionRightBoundary) rightBefore = 1; else rightBefore = 0;
             this->secondary[0]->field0020 = this->secondary[0]->field0020 + (double)displacement / collisionTwo;

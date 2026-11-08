@@ -2859,12 +2859,12 @@ the source candidate now reflects that raw-instruction result rather than the
 old reversed expression.
 
 The current candidate materializes the four before/after stage-boundary stores
-in their respective separation branches as `volatile int`. This is presently a
-code-generation tactic, not a proven source-level qualifier: the target proves
-four ordered 32-bit stores, but `/Od` can also retain ordinary unused locals.
-Do not treat `volatile` as recovered semantics until an exact source form requires
-it. The shared four-`bool` approximation is rejected because it changed store
-widths and/or stack ownership.
+in their respective separation branches as ordinary `int` locals. A focused
+VC7.1 build confirmed that removing `volatile` leaves all 2,727 function bytes
+and all 35 relocation records identical to the earlier volatile probe. Thus the
+target proves four ordered 32-bit stores, not a source-level `volatile`
+qualifier; `/Od` retains these unused locals. The shared four-`bool` approximation
+is rejected because it changed store widths and/or stack ownership.
 
 The focused `scene-battle-resolve-pushboxes` match unit is present in
 `config/match-units.toml` and binds all 35 external relocations: the four
