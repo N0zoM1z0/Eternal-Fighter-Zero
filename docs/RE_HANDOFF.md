@@ -130,9 +130,19 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   42 fstp, 16 fcomp, 4 fcompp, 20 fnstsw); object has 35 relocs. It is still
   not byte-exact: stack offsets, registers, and instruction ordering differ;
   no Oracle receipt or accepted claim. Continue from
-  `.analysis/probes/scene-battle/Pushboxes-onehundredfiftieth.cpp` and explore
-  natural local declaration/stack-layout changes. Do not pad, hand-assemble,
-  or copy the candidate into `src/`.
+  The next best natural-C++ candidate is 174:
+  `.analysis/probes/scene-battle/Pushboxes-onehundredseventyfourth.cpp`.
+  Direct bool-to-double mask expressions restore target `fild` widths; a
+  16-direct/19-cached split of the 35 first-Secondary references restores all
+  300 target `mov` instructions. Candidate 174 is 2729 bytes vs 2727, frame
+  0x148, 708 instructions, with all mnemonic counts exact (including 10 `jp`,
+  20 `jmp`, 56 `fild`, 52 `fmul`, 42 `fstp`, 20 `fnstsw`). It remains non-exact:
+  two extra bytes arise from MOV displacement widths and a short/near JP form;
+  ordering and stack-slot ownership differ. Candidate 162 is 2677 bytes but
+  misses 16 `mov`; candidate 171 is 2729 with 300 `mov`; separate pose/boundary
+  locals expanded the frame, and volatile scratch did not change codegen.
+  Continue from 174 and recover target local/stack layout. No padding, hand
+  assembly, or promotion into `src/`.
 - Two collision leafs were independently rechecked with fresh targeted VC7.1
   translation-unit builds: `Scene3::BoxesOverlap` (0x767930) is byte-identical
   at 128 bytes with zero relocations; `Secondary::CollisionSide` (0x40FF70)

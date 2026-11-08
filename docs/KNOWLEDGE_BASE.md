@@ -2962,6 +2962,26 @@ no-op returns overshoots to 21 `jmp`; candidate 151 (no-op-path return only)
 shares the 2,725-byte / 20-`jmp` inventory but has a different object hash.
 Continue from candidate 150 and test local declaration/stack-layout order;
 do not promote it to `src/`, pad it, or hand-assemble it.
+
+The next natural-expression experiments improve the inventory further. Candidate
+162 (`Pushboxes-onehundredsixtysecond.cpp`) removes the intermediate unsigned
+mask locals and directly converts each comparison result to `double`; this
+retains the 0x148 frame and all 56 `fild` forms, but leaves 16 fewer `mov`
+than target and is only 2,677 bytes. A targeted mixed-access sweep over the 35
+`left->` references shows that 16 direct `this->secondary[0]->` accesses and
+19 cached accesses recover the exact 300-`mov` target count. Candidate 174
+(`Pushboxes-onehundredseventyfourth.cpp`, direct references at source-order
+indices 0,2,...,30) is 2,729 bytes, frame 0x148, 708 instructions, and matches
+the target counts for every mnemonic: 300 `mov`, 20 `jmp`, 10 `jp`, 56 `fild`,
+52 `fmul`, 42 `fstp`, and 20 `fnstsw`. It is still not exact: its two-byte
+size excess is accounted for by different MOV displacement widths and one
+short/near JP form, and instruction ordering/stack-slot assignments remain
+different. Candidate 174 is the best current natural-C++ inventory candidate;
+keep it and candidate 171 as probes only, not production source. Making the
+shared scratch member volatile did not change codegen. Separate pose-pointer
+and boundary-result locals expanded the frame to 0x150-0x160 and were worse.
+Continue by recovering the original stack-slot ownership and local expression
+ordering, not by optimizing for byte count alone.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
