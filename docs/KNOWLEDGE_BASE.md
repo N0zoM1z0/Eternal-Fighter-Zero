@@ -2943,6 +2943,22 @@ two integer-to-x87 spill slots are EBP-0x7c/-0x80 in the target but EBP-0x84/
 average computed once and continue searching for the natural lifetime/layout
 that moves those spills without changing the two aggregate-return call sites.
 
+A canonical focused exact-unit replay on 2026-11-08 independently accepted
+`scene-battle-transform-pose-box` (405/405 bytes, 11 reviewed relocations,
+including eight `__ftol2` calls and three 0.5 operands) and
+`scene-battle-boxes-overlap` (128/128 bytes, no relocations). Their receipts are
+`.analysis/exact/scene-battle-transform-pose-box.json` and
+`.analysis/exact/scene-battle-boxes-overlap.json`; both carry
+`acceptance_authority: complete-function-codegen`. This is leaf-only evidence
+and does not confer exactness on `ResolvePushboxes`.
+
+One additional natural-layout control put `displacement` first in the local
+record. It reproduced the target's displacement/rectangle/double stack slots
+(EBP-0x40, -0x3c..-0x20, -0x1c/-0x14, -0x08), but expanded the frame to 0x14c
+and moved `this` to EBP-0x74 and the hidden returns to -0x60/-0x70. It is a
+useful layout clue, not a viable candidate; keep the accepted source untouched
+until the entire call/return layout improves together.
+
 ### Complete dispatch and body-contact test
 
 DispatchCollisions first tests both character directions with TestBodyInteraction
