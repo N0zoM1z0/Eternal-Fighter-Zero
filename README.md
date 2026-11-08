@@ -43,10 +43,19 @@ See [target evidence](docs/KNOWLEDGE_BASE.md#target-identity).
 ## Current status
 
 The [generated progress report](docs/PROGRESS.md) and card above derive current
-counts from the reviewed ledgers. Every accepted function has a complete strict
-comparison with explicit relocation bindings. Compiler-generated helpers and
-standard-library wrappers are recorded separately and excluded from authored
-progress. Automatic Ghidra candidates are not an authored-code denominator.
+counts from the reviewed ledgers. Each ledgered exact claim has a complete
+strict comparison with explicit relocation bindings at its last recorded replay.
+Compiler-generated helpers and standard-library wrappers are recorded separately
+and excluded from authored progress. Automatic Ghidra candidates are not an
+authored-code denominator.
+
+Current proof freshness is not fully attested: `validate-tracking.py --require-target`
+reports 296 public certificates with an old `src/Engine.h` dependency hash after
+commit `17edf49` changed `SecondaryPose::field000c` from signed to unsigned.
+The ledger counts remain useful inventory, but they must not be mistaken for a
+fresh revalidation of those 296 units. See the [handoff](docs/RE_HANDOFF.md) for
+the affected 35 direct-use units and the targeted next step; no full cold replay
+or manual receipt rewrite was performed.
 
 Accepted sources cover configuration, file reading, DirectInput, Audio,
 Context, title/selection/loading scenes, substantial shared character code,
@@ -61,12 +70,14 @@ Reader/audio integration is complete. The
 an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
-On 2026-11-07 the operator cleared the reconstruction goal and requested cleanup
-and handoff. There is no active autonomous reconstruction task. The
-[current handoff](docs/RE_HANDOFF.md) records the final checkpoint, retained
-evidence, parked work and possible follow-ups for the next agent.
+On 2026-11-08 the operator requested a handoff to another agent and continuation
+of reconstruction. The 2026-11-07 statement that no further task was active is
+historical and superseded. The [current handoff](docs/RE_HANDOFF.md) records the
+latest accepted baseline, active large-function work, retained probes and the
+operator's current workflow requirements.
 
-Compiler, linker, resource and native execution smoke checks pass. The original
+The last recorded compiler, linker, resource and native execution smoke checks
+passed. The original
 translation-unit graph, linked data/resources, full executable and runtime
 comparison remain open. No whole-game completion percentage is claimed.
 

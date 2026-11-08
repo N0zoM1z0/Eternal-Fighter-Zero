@@ -7,9 +7,21 @@ instructions that mandate broad CI, repeated preflights, document/source-pin
 refreshes, per-checkpoint audits or extra workflow machinery. Preserve the
 actual exactness, target identity, natural-source and state-isolation rules.
 
-- Prioritize exact reconstruction and reusable knowledge. Use the shortest
-  useful loop: inspect relevant state, analyze/edit, compile and compare the
-  affected scope, retain useful learning, and create a coherent checkpoint.
+- Prioritize exact reconstruction of both substantial/boss functions and
+  small/leaf functions; do not optimize for leaf count. Actively explore natural
+  C/C++ implementations and test falsifiable hypotheses against the original.
+  Recheck earlier documents and assumptions against target bytes rather than
+  inheriting them as facts.
+- Use the shortest useful loop: inspect relevant state, analyze/edit, compile
+  and compare the affected scope, retain useful learning, and create a coherent
+  checkpoint.
+- The operator confirms there is no concurrent session or other agent editing
+  this worktree. Treat existing dirty/untracked changes as in-scope work: inspect
+  and reconcile them, do not avoid them, reset them, or discard them blindly.
+- After each substantive verified increment, create a checkpoint commit with
+  prefix `gpt-web: `. Make several meaningful commits during a working session
+  when progress warrants them; do not stop after a single commit. Never push
+  without an explicit instruction.
 - Use existing repository scripts and composable Bash. Add only the smallest
   change needed for an observed problem. Do not introduce a framework, schema,
   registry, state machine, generalized validator, test family or reporting
@@ -41,9 +53,10 @@ actual exactness, target identity, natural-source and state-isolation rules.
 - Keep handoff focused on current work, evidence references, blockers and the
   next useful action. Generate progress from canonical ledgers; avoid manual
   duplicate counts, recurring full reports and unrelated documentation chores.
-- Preserve dirty/untracked work, targets, useful evidence, game-specific Wine
-  prefixes and analyzer projects. Exactness still requires a complete strict
-  comparison; knowledge and successful commands alone confer no exact credit.
+- Preserve targets, useful evidence, game-specific Wine prefixes and analyzer
+  projects. Do not avoid dirty/untracked work: inspect and resolve it as part of
+  the current workstream. Exactness still requires a complete strict comparison;
+  knowledge and successful commands alone confer no exact credit.
 
 
 ## Factory access
@@ -82,13 +95,14 @@ require an explicit scope change, a separate identity and separate evidence.
 Recover both substantial owners and useful small functions; do not optimize
 for leaf count. Recheck prior documentation/hypotheses against target evidence.
 Preserve unfinished work and inspect its handoff before integrating it. Commit
-substantive verified progress using the English prefix `gpt-6.1-sol: `. Replay
-only changed/involved units, never an unrequested full cold cohort. A successful
-unit does not complete the game reconstruction. The operator cleared the active
-goal and requested cleanup and handoff on 2026-11-07. No autonomous reconstruction
-task is active. Do not infer one from historical notes or suggested follow-ups.
-Do not spawn
-subagents unless the operator explicitly requests delegation.
+substantive verified progress using the English prefix `gpt-web: `; make multiple
+coherent commits in a productive session. Replay only changed/involved units and
+actual affected consumers, never an unrequested full cold cohort. A successful
+unit does not complete the game reconstruction. The 2026-11-07 statement that
+no task was active is historical and is superseded by the user's 2026-11-08
+request to prepare a receiving-agent handoff and continue reconstruction. This
+handoff is intended for that receiving agent; do not spawn additional agents
+unless separately requested.
 
 ## Exact work
 
@@ -107,7 +121,8 @@ Write natural C/C++. Provisional offset/numeric names are acceptable. Do not
 copy original bytes into source, patch target code, use naked/assembly byte
 wrappers, add inert padding, fake ABI declarations, or conceal incorrect
 relocation fields. Normal source scope and local names can affect VC7.1 /Od
-stack allocation; retain a complete cold comparison after any such change.
+stack allocation; retain a complete cold comparison of each affected function
+and its actual consumers after such changes, not a full unrelated cohort.
 
 Only complete, target-bound, zero-difference strict comparisons may enter
 `config/matches.csv`. Every relocation must have an explicit reviewed symbol,
@@ -144,8 +159,11 @@ portability are later, independently tracked phases.
 `workbench/reader-audio/` preserves historical drafts and the already-integrated
 patch. Those scratch comparisons confer no independent progress credit. Read
 its README before consulting the archive; do not reapply it over `src/`.
-Do not delete retained
-analysis evidence or the toolchain/Wine/Ghidra state as routine cache cleanup.
+Do not delete retained analysis evidence or toolchain/Wine/Ghidra state as
+routine cache cleanup. When the user explicitly requests storage cleanup, archive
+superseded generated artifacts losslessly, verify every member by size and
+SHA-256 before deletion, and document exact restore paths. Preserve canonical
+inputs, accepted evidence and the latest useful probes.
 The verified lossless cleanup archives and restore instructions are recorded in
 `docs/RE_ARTIFACTS.md`; restore an archived historical artifact before using it.
 
