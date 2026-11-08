@@ -140,3 +140,32 @@ controls,reader/audio drafts and all other parked work were excluded.
 The canonical executable,original RAR,toolchain links/installations,EFZ Wine
 prefix and Ghidra database were retained. This archive contains historical
 private evidence; it is ignored and must not be added to Git.
+
+
+## 2026-11-08 pushbox probe cleanup
+
+The superseded natural-C++ `Pushboxes-*` variants and their generated
+disassemblies, COFF objects and build metadata were archived before their live
+copies were removed. The cleanup covered **1,095 files / 10,749,392 logical
+bytes** from `.analysis/probes/scene-battle/`, `build/scene-battle/` and
+`.analysis/build/`. The compressed archive is 1,374,059 bytes; the private
+`manifest.json` records every original path, size and SHA-256, plus the archive
+SHA-256. Every archived member was read back and verified before deletion.
+The operation reclaimed approximately **12,546,048 allocated bytes (12.0 MiB)**
+after accounting for the retained archive, manifest and README.
+
+Archive SHA-256:
+`6a55df500bcc8f0bc07a48e7e50e04ba7d0cbc4caa8df005db960d377ecdb8c3`.
+
+The latest useful probes remain live: 150, 174, 236, 259, 265–271 and 276–277.
+The target disassembly, canonical executable, accepted build objects/receipts,
+other parked work, toolchain, Wine prefix and Ghidra project were not touched.
+Restore only a needed historical candidate or artifact from the repository root:
+
+```bash
+tar -tzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz
+tar -xzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz \
+  .analysis/probes/scene-battle/Pushboxes-onehundredseventyfirst.cpp
+```
+
+The archive and manifest are private, ignored artifacts; do not add them to Git.
