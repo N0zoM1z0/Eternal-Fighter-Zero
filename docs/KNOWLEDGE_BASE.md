@@ -2959,6 +2959,17 @@ and moved `this` to EBP-0x74 and the hidden returns to -0x60/-0x70. It is a
 useful layout clue, not a viable candidate; keep the accepted source untouched
 until the entire call/return layout improves together.
 
+The side-response fallthrough predicates were re-derived from the target's
+x87 status-word branches, not from the old source comments. On the left-separation
+path, the fallback is `facing1 * secondVelocity >= 0` and
+`facing0 * firstVelocity <= 0`; on the right-separation path it is
+`facing1 * secondVelocity <= 0` and `facing0 * firstVelocity >= 0`. The source
+had strict `< 0` on the two inclusive sides. Changing only those two operators
+to `<=` makes the corresponding target `test ah,0x41` / `test ah,0x1` branch
+sequences line up. The targeted boss replay still rejects the relocation
+inventory: candidate relocation 629 remains target 617, so this is a semantic
+correction and a partial codegen improvement, not a completed function.
+
 ### Complete dispatch and body-contact test
 
 DispatchCollisions first tests both character directions with TestBodyInteraction
