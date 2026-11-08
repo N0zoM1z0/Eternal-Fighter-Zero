@@ -2858,11 +2858,13 @@ the post-mask comparison is `facing1 * secondVelocity > facing0 * firstVelocity`
 the source candidate now reflects that raw-instruction result rather than the
 old reversed expression.
 
-The current source keeps the before/after stage-boundary stores in their
-respective separation branches as volatile 32-bit integers. This preserves the
-original dword store width and the left-branch-before / left-branch-after and
-right-branch-before / right-branch-after evaluation order; the earlier shared
-four-`bool` approximation did not.
+The current candidate materializes the four before/after stage-boundary stores
+in their respective separation branches as `volatile int`. This is presently a
+code-generation tactic, not a proven source-level qualifier: the target proves
+four ordered 32-bit stores, but `/Od` can also retain ordinary unused locals.
+Do not treat `volatile` as recovered semantics until an exact source form requires
+it. The shared four-`bool` approximation is rejected because it changed store
+widths and/or stack ownership.
 
 The focused `scene-battle-resolve-pushboxes` match unit is present in
 `config/match-units.toml` and binds all 35 external relocations: the four
@@ -2880,13 +2882,40 @@ separate explicit exit in the right-separation fallback reproduces the target's
 second five-byte jump to the shared epilogue. These are semantic/control-flow
 corrections, not padding.
 
-The remaining mismatch is now concentrated in local stack allocation and
-some instruction ordering. The candidate still saves `this` at EBP-0x70 rather
-than EBP-0x60; its two pose-pointer temporaries are at EBP-0x74/-0x78 rather
-than EBP-0x64/-0x68; and its hidden return buffers are at EBP-0x5c/-0x6c
-rather than EBP-0x4c/-0x5c. The first-direction boundary temporaries are also
-being assigned to different slots. Continue with this function's focused unit
-only; do not run a full cold replay for these local experiments.
+The remaining mismatch is concentrated in local stack allocation and some
+x87 temporary lifetimes. The current source candidate still saves `this` at
+EBP-0x70 rather than EBP-0x60; its conditional pose-pointer temporaries are at
+EBP-0x74/-0x78 rather than EBP-0x64/-0x68; and its hidden return buffers are at
+EBP-0x5c/-0x6c rather than EBP-0x4c/-0x5c. Its left-branch boundary stores use
+EBP-0x44/-0x40 instead of the target EBP-0x6c/-0x70. Keep using the focused
+`scene-battle-resolve-pushboxes` unit; do not run a full cold replay for these
+local experiments.
+
+A fresh focused pass on 2026-11-08 independently reconfirmed the two most
+important leaves: `TransformPoseBox` is exact at 405/405 bytes (its accepted
+relocations include the x87 `__ftol2` conversions and original 0.5 operands),
+and `BoxesOverlap` is exact at 128/128 bytes with no relocations. These results
+do not confer exactness on the caller.
+
+The first 11 relocation offsets in the current 2,727-byte resolver candidate
+match the target. The next target relocation is at function+0x269 (offset 617),
+while the candidate places it at 629. Instruction inspection traced this 12-byte
+drift to two integer-to-x87 temporary slots: target uses disp8 accesses at
+`[ebp-0x7c]` and `[ebp-0x80]`, while the candidate spills them at
+`[ebp-0x84]` and `[ebp-0x88]`, forcing longer `mov` and `fild` encodings. A probe
+that removes the aggregate's `average` field and inlines the average expression
+moves the relocation back to 617, but duplicates the x87 average computation
+and expands the function to 2,805 bytes; it is a rejected diagnostic, not a
+candidate implementation. Retain the shared average computation and recover its
+natural local lifetime/placement instead.
+
+Changing the compiler's `/G5`, `/G7`, `/GB`, `/Gd`, `/Gz` or `/Gr` mode did not
+change the current object's 2,727-byte layout or relocation offsets. Simple
+reordering of the existing aggregate's declarations, moving its `average` to
+another outer-scope declaration, and splitting `displacement` into direction
+branches also failed to improve the match. These negative controls narrow the
+search; they do not establish that the current local aggregate is the original
+source declaration.
 
 ### Complete dispatch and body-contact test
 
@@ -2941,13 +2970,13 @@ is docs/evidence/scene-collision-exact.json, with affected certificates refreshe
 Private evidence and native attempts are retained in .analysis/probes/scene-collision/;
 full formal reports are .analysis/exact/scene-collision-and-affected.json.
 
-The `Scene3::ResolvePushboxes` owner at `0x766B50` is still unimplemented. Its
-complete target extent is 2,727 bytes / 708 instructions. The raw target dump is
-`.analysis/probes/scene-battle/pushbox-target.txt`; the canonical owner is called
-from `Scene3::Step` at `0x764137`. `src/SceneBattle.h` contains only the member
-declaration and `src/SceneBattleLoop.cpp` contains the call. The existing
-`scene-battle-step` relocation proves the call site, not the pushbox body; there
-is no pushbox source definition, unit recipe, or exact-match receipt.
+The old note below this point claiming that `ResolvePushboxes` had no source
+owner or match-unit recipe is stale and superseded by the current state above:
+`src/SceneBattlePushboxes.cpp` defines the member and
+`config/match-units.toml` contains `scene-battle-resolve-pushboxes`. The source
+builds to the correct 2,727-byte extent, but strict byte comparison still fails;
+there is deliberately no exact-match receipt or exactness credit for the boss
+function yet.
 
 The target's `TransformPoseBox` call at `0x767600` uses ECX=`this`, stack `+8`
 for the output `SurfaceRect *`, `+0xC` for the `SecondaryPose *`, and `+0x10`
@@ -3006,15 +3035,16 @@ which overwrote a still-live displacement with a boundary Boolean before both
 position updates consumed it. That earlier attempt is semantically wrong and
 must not be revived.
 
-The next useful experiment is to start from probe 277's four distinct boundary
-comparisons and test natural `volatile int` locals, preferably with branch-local
-lifetimes, so the compiler emits the target's 32-bit stores. Recover the target
-stack ownership (`this` at `-0x60`, pose pointers at `-0x64/-0x68`, and the four
-boundary slots) while keeping the complete instruction histogram. Compare the
-entire 2,727-byte function and all relocation bindings after each focused build.
-Do not infer exactness from matching size or histogram, and do not promote a
-probe into `src/` before strict acceptance. Earlier probes are archived losslessly
-in `.analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz`; the current
+The next useful experiment is to recover the target's contiguous stack ownership
+(`this` at `-0x60`, pose pointers at `-0x64/-0x68`, and the left-boundary stores
+at `-0x6c/-0x70`) without introducing duplicate aggregate-return temporaries.
+The 12-byte drift at relocation 617 is a concrete stack-offset/encoding problem;
+keep the average value computed once as in the target, and vary natural C++ local
+scope/ownership around the two hidden `SurfaceRect` returns. Compare all 2,727
+bytes and every relocation after each focused build. Do not infer exactness from
+matching size or histogram, and do not promote a probe into `src/` before strict
+acceptance. Earlier probes are archived losslessly in
+`.analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz`; the current
 controls listed above remain live.
 
 The large battle-collision owners `ResolveBodyHit` (0x767F60),
