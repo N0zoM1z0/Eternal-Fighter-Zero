@@ -2864,11 +2864,24 @@ original dword store width and the left-branch-before / left-branch-after and
 right-branch-before / right-branch-after evaluation order; the earlier shared
 four-`bool` approximation did not.
 
-The current candidate is still not an accepted reconstruction. The original
-extent is 2,727 bytes, and the saved-this, pose-pointer and hidden-return-buffer
-stack slots still require alignment. The boundary and data operands are
-reviewed, but ResolvePushboxes itself remains open until a complete relocated
-function comparison is exact.
+The focused `scene-battle-resolve-pushboxes` match unit is now actually present
+in `config/match-units.toml` (the earlier note claiming it was wired was
+premature). It binds all 35 external relocations: the four pushbox globals,
+two `TransformPoseBox` calls, `BoxesOverlap`, and four `CollisionSide` calls.
+The VC7.1 unit build succeeds and records a source/toolchain/dependency receipt.
+The focused exact replay correctly rejects the current object at the extent
+gate: it is 2,755 bytes / 729 instructions, 28 bytes and 21 instructions
+longer than the reviewed 2,727-byte / 708-instruction target, so it receives
+no exactness credit.
+
+The four `FCOMPP` comparison sites have now been explored with equivalent C++
+operand orderings; the current probe reproduces the target's `TEST` masks and
+conditional-jump forms at those sites. The remaining stack-layout mismatch is
+concrete: this candidate saves `this` at EBP-0x70 instead of EBP-0x60, its two
+pose-pointer temporaries are at EBP-0x74/-0x78 instead of EBP-0x64/-0x68, and
+its hidden return buffers are at EBP-0x5c/-0x6c instead of EBP-0x4c/-0x5c.
+Continue with this function's focused unit only; do not run a full cold replay
+for these local experiments.
 
 ### Complete dispatch and body-contact test
 

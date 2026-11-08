@@ -22286,6 +22286,263 @@ symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
 target_address = 0x00767930
 size = 128
 
+
+[units.scene-battle-resolve-pushboxes]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SceneBattlePushboxes.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/SceneBattle.h", "src/SceneBattleGlobals.h"]
+object = "build/match-units/scene-battle-resolve-pushboxes/SceneBattlePushboxes.obj"
+symbol = "?ResolvePushboxes@Scene3@@QAEXXZ"
+target_address = 0x00766B50
+size = 2727
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 44
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766B7C; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 62
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766B8E; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 164
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766BF4; Scene3 ECX, hidden SurfaceRect return buffer, SecondaryPose pointer and source pushbox rectangle pointer"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 283
+type = "REL32"
+symbol = "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z"
+target = 0x00767600
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766C6B; Scene3 ECX, hidden SurfaceRect return buffer, SecondaryPose pointer and source pushbox rectangle pointer"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 322
+type = "REL32"
+symbol = "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z"
+target = 0x00767930
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766C92; Scene3 ECX, two SurfaceRect pointers and int overlap result"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 367
+type = "DIR32"
+symbol = "?collisionLeftBoundary@@3NA"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766CBF; original left arena boundary x87 global (160.0)"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 408
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766CE8; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 441
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766D09; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 468
+type = "DIR32"
+symbol = "?collisionLeftBoundary@@3NA"
+target = 0x00787370
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766D24; original left arena boundary x87 global (160.0)"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766D46; Secondary ECX, no stack arguments and signed-char CollisionSide result in AL"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 539
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766D6B; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 629
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766DC5; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 791
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766E67; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 886
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766EC6; Secondary ECX, no stack arguments and signed-char CollisionSide result in AL"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 929
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766EF1; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1028
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766F54; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1190
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00766FF6; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1305
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767069; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1347
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767093; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1416
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007670D8; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1548
+type = "DIR32"
+symbol = "?collisionRightBoundary@@3NA"
+target = 0x007895E8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x0076715C; original right arena boundary x87 global (479.0)"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1589
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767185; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1622
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007671A6; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1649
+type = "DIR32"
+symbol = "?collisionRightBoundary@@3NA"
+target = 0x007895E8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007671C1; original right arena boundary x87 global (479.0)"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1683
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007671E3; Secondary ECX, no stack arguments and signed-char CollisionSide result in AL"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1726
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x0076720E; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1825
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767271; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 1987
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767313; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2082
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767372; Secondary ECX, no stack arguments and signed-char CollisionSide result in AL"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2125
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x0076739D; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2224
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767400; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2386
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007674A2; original two-valued x87 global used to split penetration and average velocities"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2529
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x00767531; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2571
+type = "DIR32"
+symbol = "?collisionZero@@3NA"
+target = 0x007872F8
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x0076755B; original zero-valued x87 global used by pushbox velocity clipping"
+
+[[units.scene-battle-resolve-pushboxes.relocations]]
+offset = 2640
+type = "DIR32"
+symbol = "?collisionTwo@@3NA"
+target = 0x00787328
+evidence = "docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes; operand 0x007675A0; original two-valued x87 global used to split penetration and average velocities"
+
+
 [units.scene-battle-test-body-interaction]
 artifact_kind = "coff"
 profile = "vc71-od-static"
