@@ -1846,7 +1846,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -1888,7 +1888,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -1930,7 +1930,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -1972,7 +1972,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -2011,7 +2011,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -2050,7 +2050,7 @@ void Character03::Slot06()
       }
       field0038 = 0.0;
       field0030 = field0030 + 0.06;
-      if (0.0 < field0030) {
+      if (field0030 > 0.0) {
         field0030 = 0.0;
       }
       if ((field0020 - 20.0 <= 0.0) ||
@@ -3374,12 +3374,11 @@ void Character03::Slot06()
     case 230:
       StartTrail(3);
       field0158 = 0;
-      if (field0030 <= 0.0) {
+      if (field0030 > 0.0) {
+        field0030 = field0030 - 0.03;
+      } else {
         field0030 = 0.0;
         field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
       }
       if (field0030 < 0.0) {
         field0030 = 0.0;
@@ -3406,12 +3405,11 @@ void Character03::Slot06()
     case 231:
       StartTrail(3);
       field0158 = 0;
-      if (field0030 <= 0.0) {
+      if (field0030 > 0.0) {
+        field0030 = field0030 - 0.03;
+      } else {
         field0030 = 0.0;
         field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
       }
       if (field0030 < 0.0) {
         field0030 = 0.0;
@@ -3477,12 +3475,11 @@ void Character03::Slot06()
     case 233:
       field0158 = 0;
       StartTrail(3);
-      if (field0030 <= 0.0) {
+      if (field0030 > 0.0) {
+        field0030 = field0030 - 0.03;
+      } else {
         field0030 = 0.0;
         field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
       }
       if (field0030 < 0.0) {
         field0030 = 0.0;
@@ -3509,12 +3506,11 @@ void Character03::Slot06()
     case 234:
       StartTrail(3);
       field0158 = 0;
-      if (field0030 <= 0.0) {
+      if (field0030 > 0.0) {
+        field0030 = field0030 - 0.03;
+      } else {
         field0030 = 0.0;
         field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.03;
       }
       if (field0030 < 0.0) {
         field0030 = 0.0;
@@ -3545,12 +3541,11 @@ void Character03::Slot06()
         field0040 = 0.0;
         field016c = 1;
       }
-      if (field0030 <= 0.0) {
+      if (field0030 > 0.0) {
+        field0030 = field0030 - 0.01;
+      } else {
         field0030 = 0.0;
         field0158 = 0;
-      }
-      else {
-        field0030 = field0030 - 0.01;
       }
       if ((field000a == 2) && (field000c == 0)) {
         field0148 = (short)field0148 + 0x19;
@@ -4492,7 +4487,7 @@ void Character03::Slot06()
         field02c8 = 0;
       }
       field0038 = field0038 + field0048;
-      if ((field000a < 0x14) && (0.15 < field0038)) {
+      if ((field000a < 0x14) && (field0038 > 0.15)) {
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&
@@ -4622,7 +4617,7 @@ void Character03::Slot06()
         field02c8 = 0;
       }
       field0038 = field0038 + field0048;
-      if ((field000a < 0x14) && (0.15 < field0038)) {
+      if ((field000a < 0x14) && (field0038 > 0.15)) {
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&
@@ -4756,7 +4751,7 @@ void Character03::Slot06()
         field02c8 = 0;
       }
       field0038 = field0038 + field0048;
-      if ((field000a < 0x14) && (0.15 < field0038)) {
+      if ((field000a < 0x14) && (field0038 > 0.15)) {
         field0038 = 0.15;
       }
       if (((0xe < field000a) && (field000a < 0x16)) &&

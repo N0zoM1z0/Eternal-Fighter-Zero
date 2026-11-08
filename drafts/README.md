@@ -17,9 +17,9 @@ animation blocks have the same byte extent as the target; dispatch prelude and
 epilogue boundaries also align. The VC7.1 stack frame is `0x378`, the 369
 direct-call sequence matches in order, and the emitted instruction body is
 58,482 bytes, matching the target extent. A normalized instruction-sequence
-comparison now matches 92 of 124 animation blocks (register allocation and
-branch destinations normalized); the other 32 remain under reconstruction.
-Cases 4-6 now use unsigned-byte reads for `field0158`, and cases 200-206
-reconstruct the charge/decay gate and frame transitions with matching
+comparison now matches 106 of 124 animation blocks (register allocation and
+branch destinations normalized); the other 18 remain under reconstruction.
+Cases 4-6 use unsigned-byte reads for `field0158`; charge/decay groups 200-206
+and 230-235, clamps 150-155, and large finisher groups 303-305 now match
 instruction shape.
 This is not a claim of byte-for-byte identity.
