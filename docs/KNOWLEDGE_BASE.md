@@ -2849,11 +2849,20 @@ materialized in separate stack slots. Preserve their order while reconstructing
 the natural C++ scopes; their apparent lack of high-level consumers is not a
 reason to delete them prematurely.
 
-The older 708-instruction candidate is not an accepted reconstruction: its
-extent is 2,726 bytes and its saved-this, pose-pointer and hidden-return-buffer
-stack slots differ from the original. It remains a diagnostic experiment only.
-The boundary and data operands are reviewed, but ResolvePushboxes itself remains
-open until a complete relocated function comparison is exact.
+A full natural C++ candidate now lives in `src/SceneBattlePushboxes.cpp`, with
+the four verified stage constants declared in `SceneBattleGlobals.h` and defined
+in `SceneBattleGlobals.cpp`. The first probe had a reversed comparison in the
+right-separation / secondary-1 `CollisionSide() == -1` path. Reading the actual
+x87 FCOMPP operand load order and the following condition-code test shows that
+the post-mask comparison is `facing1 * secondVelocity > facing0 * firstVelocity`;
+the source candidate now reflects that raw-instruction result rather than the
+old reversed expression.
+
+The current source compiles to 2,726 bytes and 708 instructions. It is still
+not an accepted reconstruction: the target extent is 2,727 bytes, and the
+saved-this, pose-pointer and hidden-return-buffer stack slots still differ.
+The boundary and data operands are reviewed, but ResolvePushboxes itself
+remains open until a complete relocated function comparison is exact.
 
 ### Complete dispatch and body-contact test
 
