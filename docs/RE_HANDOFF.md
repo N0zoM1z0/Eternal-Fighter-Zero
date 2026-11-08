@@ -114,12 +114,15 @@ ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran
   branch fighter 0 `+1`, fighter 1 `-1`. See KNOWLEDGE_BASE.md and the full
   .analysis/probes/scene-battle/pushbox-target.txt. The transform helper's
   caller ABI uses an explicit output buffer and returns its pointer in EAX.
-  Raw assembly corrects the Ghidra CollisionSide signs to -1,+1,+1,-1. Best
-  corrected-sign C++ candidate is 3104/2727 bytes, 37 relocations, frame 0x1B0;
-  a volatile local receiver pointer cut 291 bytes from the prior candidate by
-  forcing short EBP receiver loads. Still not accepted. Keep exploring stack
-  lifetimes and x87 codegen; no padding, masks, assembly, or byte wrappers.
-  Pixel owners 409A90/40A0B0/40A440 remain open.
+  Raw assembly corrects CollisionSide signs to -1,+1,+1,-1 and shows that each
+  branch masks both velocity locals before comparing them; Ghidra's pseudocode
+  is wrong on these masks. Best raw-assembly-derived candidate is 2901/2727
+  bytes, 37 relocations, frame 0x18C; 56 fild, no fimul, 51 fmul (target 56/0/52).
+  The explicit output-buffer ABI view has a different helper relocation symbol;
+  aggregate-return variant is 3104 bytes. Neither is accepted. Keep exploring
+  stack lifetimes/x87 order and a natural way to express the exact helper ABI;
+  no padding, masks, assembly, or byte wrappers. Pixel owners 409A90/40A0B0/40A440
+  remain open.
 - Reader/audio integration is complete. `workbench/reader-audio/` preserves
   historical drafts and an already-integrated patch; it is not unfinished work.
   Read its README; never apply the old patch or copy drafts over accepted src/.

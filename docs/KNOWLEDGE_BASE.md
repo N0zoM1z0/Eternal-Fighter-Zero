@@ -2897,20 +2897,25 @@ accepted 0x767600 function body. This is a call-site typing technique, not a new
 owner or an accepted implementation.
 
 Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-The best current corrected-sign candidate is 3,104 bytes with a 0x1B0 frame and
-37 relocation sites, still 377 bytes larger than the 2,727-byte target. It uses
-the four raw-assembly CollisionSide predicates (-1,+1,+1,-1), all four
-branch-specific boundary materializations, and the explicit null-preserving
-Secondary base adjustment (+8). A local `Scene3 * volatile scene = this`, used
-for every receiver/member access, is the key codegen control: it keeps repeated
-receiver loads on an 8-bit EBP displacement and reduces the prior 3,395-byte
-candidate by 291 bytes. The receiver still occupies a different slot from the
-target and the full local/x87 instruction stream is not exact. An explicit
-output-buffer ABI call variant is 3,373 bytes but currently uses a different
-callee symbol; the aggregate-return variant retains the original helper symbol.
-No pushbox source, unit recipe, boundary promotion, or exact-ledger claim is
-accepted. Continue from the complete target disassembly and retained variants;
-do not pad, mask, hand-assemble, or copy a provisional draft into src/.
+The best current raw-assembly-derived candidate is 2,901 bytes with a 0x18C
+frame and 37 relocation sites, 174 bytes larger than the 2,727-byte target. It
+uses the four CollisionSide predicates (-1,+1,+1,-1), the four branch-specific
+boundary materializations, and the null-preserving Secondary base adjustment
+(+8). More importantly, it corrects the Ghidra velocity pseudocode: each branch
+materializes two sign booleans, applies them to the two velocity locals in the
+original order, then compares the masked velocities. The decompiler instead
+folded one mask into the comparison and attached several masks to the wrong
+velocity. The corrected candidate has 56 `fild`, no `fimul`, and 51 `fmul`
+(target: 56, 0, 52 respectively); one multiply and the remaining stack/codegen
+layout still differ. A local `Scene3 * volatile scene = this` keeps repeated
+receiver loads on short EBP displacements. The 2,901-byte trial uses an explicit
+output-buffer ABI view for TransformPoseBox; its call sequence matches the
+callee ABI but its COFF relocation symbol differs from the aggregate-return
+member symbol. The 3,104-byte aggregate-return candidate retains the original
+helper symbol. Neither is accepted. No pushbox source, unit recipe, boundary
+promotion, or exact-ledger claim is accepted. Continue from the complete target
+disassembly and retained variants; do not pad, mask, hand-assemble, or copy a
+provisional draft into src/.
 The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
 0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
 canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
