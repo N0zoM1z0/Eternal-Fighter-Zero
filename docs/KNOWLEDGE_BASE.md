@@ -2897,10 +2897,17 @@ accepted 0x767600 function body. This is a call-site typing technique, not a new
 owner or an accepted implementation.
 
 Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-The best current corrected-sign candidate is 3,447 bytes with a 0x1BC frame and
-37 relocation sites, still 720 bytes larger than the 2,727-byte target. It now
-uses the four raw-assembly CollisionSide predicates and all four boundary
-materializations, but its local layout and instruction stream are not exact.
+The best current corrected-sign candidate is 3,104 bytes with a 0x1B0 frame and
+37 relocation sites, still 377 bytes larger than the 2,727-byte target. It uses
+the four raw-assembly CollisionSide predicates (-1,+1,+1,-1), all four
+branch-specific boundary materializations, and the explicit null-preserving
+Secondary base adjustment (+8). A local `Scene3 * volatile scene = this`, used
+for every receiver/member access, is the key codegen control: it keeps repeated
+receiver loads on an 8-bit EBP displacement and reduces the prior 3,395-byte
+candidate by 291 bytes. The receiver still occupies a different slot from the
+target and the full local/x87 instruction stream is not exact. An explicit
+output-buffer ABI call variant is 3,373 bytes but currently uses a different
+callee symbol; the aggregate-return variant retains the original helper symbol.
 No pushbox source, unit recipe, boundary promotion, or exact-ledger claim is
 accepted. Continue from the complete target disassembly and retained variants;
 do not pad, mask, hand-assemble, or copy a provisional draft into src/.
