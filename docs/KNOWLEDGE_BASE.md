@@ -8,6 +8,9 @@ This file preserves target findings and historical checkpoints in order. Counts,
 checkpoint. Consult [PROGRESS.md](PROGRESS.md), the live reviewed ledgers and
 [RE_HANDOFF.md](RE_HANDOFF.md) for current acceptance and operator task state.
 Later findings explicitly supersede earlier provisional names or interpretations.
+The 2026-11-07 statement that reconstruction had stopped is a historical
+checkpoint, superseded by the 2026-11-08 request to continue through a receiving
+agent. Follow `RE_HANDOFF.md` for current task state and operator instructions.
 
 ## Target identity
 
@@ -2872,120 +2875,90 @@ is docs/evidence/scene-collision-exact.json, with affected certificates refreshe
 Private evidence and native attempts are retained in .analysis/probes/scene-collision/;
 full formal reports are .analysis/exact/scene-collision-and-affected.json.
 
-The 0x766B50 /2727 pushbox owner remains unimplemented; its full target body is
-708 instructions. A fresh review of the original operands clarifies four
-write-only Boolean materializations which Ghidra omits. In the first horizontal
-correction branch, EBP-6C and EBP-70 are each assigned from x87 comparisons of
-the first fighter's X against the original 160.0 constant at 0x787370, once
-before and once after the position correction (sites 0x766CD3/0x766CDC and
-0x766D14/0x766D1D). In the opposite branch, EBP-DC and EBP-E0 are assigned from
-comparisons of the second fighter's X against 479.0 at 0x7895E8, again before
-and after correction (0x767164/0x767170 and 0x7671AB/0x7671B7). None of these
-four stack slots has a later read in this body. They are real dead local stores,
-not stack padding. Their exact predicates, independently reproduced with the
-locked VC7.1 compiler, are first-X `<= 160.0` before correction and `> 160.0`
-after correction, then second-X `>= 479.0` before the opposite correction and
-`< 479.0` after it. The corresponding original x87 tests are respectively
-`test ah,0x41; jp`, `test ah,0x41; jne`, `test ah,0x1; jne`, and
-`test ah,0x5; jp`. Do not replace them with one guessed comparison or silently
-omit them.
+The `Scene3::ResolvePushboxes` owner at `0x766B50` is still unimplemented. Its
+complete target extent is 2,727 bytes / 708 instructions. The raw target dump is
+`.analysis/probes/scene-battle/pushbox-target.txt`; the canonical owner is called
+from `Scene3::Step` at `0x764137`. `src/SceneBattle.h` contains only the member
+declaration and `src/SceneBattleLoop.cpp` contains the call. The existing
+`scene-battle-step` relocation proves the call site, not the pushbox body; there
+is no pushbox source definition, unit recipe, or exact-match receipt.
 
-The four `CollisionSide()` predicates are another place where the provisional
-Ghidra decompile is reversed. Raw call-site instructions show the first
-horizontal branch tests fighter 0 for `-1`, then fighter 1 for `+1`; the opposite
-branch tests fighter 0 for `+1`, then fighter 1 for `-1`. The four sites are
-0x766D45, 0x766EB9, 0x7671E2 and 0x767371; each following `movsx`/`cmp` immediate
-is authoritative over the decompiler's displayed literals.
+The target's `TransformPoseBox` call at `0x767600` uses ECX=`this`, stack `+8`
+for the output `SurfaceRect *`, `+0xC` for the `SecondaryPose *`, and `+0x10`
+for the source box pointer; it returns the output pointer in EAX and uses `RET
+0xC`. Preserve this explicit caller contract when experimenting with natural
+C++ aggregate-return declarations. `BoxesOverlap` at `0x767930` is an accepted
+128-byte leaf with no relocations. `Secondary::CollisionSide` at `0x40FF70` is
+also independently exact: all 222 bytes outside its six DIR32 fields match,
+and all six relocation offsets/symbols are reviewed.
 
-The box-transform call ABI is also now clearer. 0x767600 is a Scene3 member with
-ECX=this, stack +8 output SurfaceRect pointer, +C SecondaryPose pointer, +10
-explicit source-box pointer, and RET 0C; EAX returns the output pointer. The
-normal aggregate-return C++ declaration can make VC7.1 materialize and copy an
-extra temporary at this call site. A private ABI view with an explicit
-`SurfaceRect *out` parameter emits the same call contract without changing the
-accepted 0x767600 function body. This is a call-site typing technique, not a new
-owner or an accepted implementation.
+Raw target instructions, rather than the provisional Ghidra pseudocode, establish
+these control-flow facts:
 
-Natural C++ experiments are retained under .analysis/probes/scene-battle/.
-The 2,901-byte historical candidate is not reproducible and remains withdrawn.
-The later 2,898-byte candidate is also withdrawn: its `PushboxScratch::work`
-member stored the horizontal displacement and was overwritten by a boundary
-Boolean before both position updates consumed it. That was a semantic aliasing
-bug, not a valid optimization.
+- The first horizontal correction is selected by
+  `(first.left + first.right) - (second.left + second.right) > 0`; the opposite
+  branch is `<= 0`. The target emits `sub; test; jle` at `0x766CAA..0x766CAE`.
+- The four `CollisionSide()` tests are fighter 0 `-1`, fighter 1 `+1` in the
+  first branch, then fighter 0 `+1`, fighter 1 `-1` in the opposite branch.
+  Each branch masks both velocity locals before comparing them.
+- Four additional x87 comparisons materialize boundary results even though the
+  results are never read later in this function. First-fighter X is `<= 160.0`
+  before and `> 160.0` after the first correction; second-fighter X is `>= 479.0`
+  before and `< 479.0` after the opposite correction. The target stores four
+  32-bit values at `[ebp-0x6c]`, `[ebp-0x70]`, `[ebp-0xdc]`, and `[ebp-0xe0]`.
+  The x87 status tests are respectively `test ah,0x41; jp`,
+  `test ah,0x41; jne`, `test ah,0x1; jne`, and `test ah,0x5; jp`.
 
-The corrected direct-member candidate is 2,910 bytes (frame 0x154, 37
-relocations). Caching both stable `Secondary *` values reduces the corrected
-candidate to 2,637 bytes (frame 0x15C, 37 relocations); caching only one is
-2,760 bytes. The cached pointers are safe for this body because
-`TransformPoseBox` and `BoxesOverlap` only read their arguments and
-`CollisionSide` operates on the Secondary object; none rewrites
-`Scene3::secondary[]`.
+Natural C++ probes have progressed beyond the old 150/174 inventory. The
+important current controls are:
 
-A target-local inventory candidate is 2,724 bytes (frame 0x194, 37 relocations).
-Making its `dVar1` volatile produces 2,727 bytes, exactly the target's *size*,
-but not an exact match: it has 668 decoded instructions versus 708 in the
-original, frame 0x194 versus 0x148, 252 `mov` versus 300, 51 `fmul` versus 52,
-35 `fstp` versus 42, and 22 `fnstsw` versus 20. Equal byte length is coincidental;
-no candidate is accepted and no pushbox unit recipe or exact-ledger claim exists.
+| Probe | `.text` | Frame | Instructions | Result |
+| --- | ---: | ---: | ---: | --- |
+| 150 | 2,725 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack ownership differs |
+| 174 | 2,729 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack ownership differs |
+| 259 | 2,535 | `0x140` | 708 | 276 `mov`, 16 `jmp`, 8 `jp`; velocity and rectangle result slots align better, but four boundary comparisons are absent |
+| 276 | 2,711 | `0x148` | 708 | Full target mnemonic histogram; one reused volatile Boolean creates byte stores at the wrong slots |
+| 277 | 2,726 | `0x150` | 708 | Full target mnemonic histogram; 35 relocations; four distinct volatile Booleans, but byte-store widths/stack slots and frame differ |
 
-The velocity reconstruction is grounded in raw x87 instruction order, not the
-provisional Ghidra expression tree. All four CollisionSide predicates are
-(-1,+1,+1,-1); each branch materializes two sign booleans, masks both velocity
-locals in original order, then compares the masked values. The corrected
-candidates preserve the four branch-specific boundary predicates and the
-null-preserving Secondary base adjustment (+8). Continue from the full target
-disassembly and retained variants; do not pad, hand-assemble, or copy a
-provisional draft into src/.
+The latest and most useful instruction-inventory probe is
+`.analysis/probes/scene-battle/Pushboxes-twohundredseventyseventh.cpp`.
+It is one byte shorter than the target and matches the complete 708-instruction
+mnemonic histogram, but it is **not** byte-exact: its frame is eight bytes larger
+(`0x150` vs `0x148`), `this` is at `[ebp-0x78]` rather than `[ebp-0x60]`, and
+its four `volatile bool` stores are bytes at `[ebp-0x79]`, `[ebp-0x7a]`,
+`[ebp-0xe5]`, and `[ebp-0xe6]`, unlike the target's four 32-bit stores. The
+pose-pointer and output-temporary slots also differ. Probe 276 has the target
+frame size but reuses one volatile Boolean and is 16 bytes short. Probe 259 is a
+useful local-lifetime control: its initial velocity stores and rectangle-result
+slots match the target more closely, but its frame/`this`/pose slots differ and
+it omits the four boundary comparisons.
 
-A fresh natural-C++ line of attack now gets substantially closer. The first
-horizontal correction is selected by `(first.left + first.right) -
-(second.left + second.right) > 0`; the opposite branch is taken for `<= 0`.
-This direction is established by the raw `sub; test; jle` at 0x766caa-0x766cae,
-not by the earlier pseudocode assumptions. A direct center `<=` comparison is
-not equivalent code generation. The comma-expression assignment used only to
-feed the final right-facing comparison also emits an unwanted `fst`; removing
-that dead temporary removes it without changing the x87 count.
+The `WorkScratch` union in probes 276/277 aliases only the horizontal
+`displacement` and the later `facing` byte; their live ranges do not overlap.
+This is distinct from the withdrawn 2,898-byte `PushboxScratch::work` attempt,
+which overwrote a still-live displacement with a boundary Boolean before both
+position updates consumed it. That earlier attempt is semantically wrong and
+must not be revived.
 
-The 150th natural-C++ candidate (source retained as
-`.analysis/probes/scene-battle/Pushboxes-onehundredfiftieth.cpp`) adds one
-success-path `return` in the nested CollisionSide branch. This restores the
-separate exit jump that the target emits for the successful path and leaves the
-no-write path on its own exit. Its 2,725-byte `.text` has 708 decoded
-instructions and matches the target's complete mnemonic histogram, including
-300 `mov`, 20 `jmp`, 4 `sub`, 22 `test`, 20 `fld`, 56 `fild`, 52 `fmul`, 42
-`fstp`, 16 `fcomp`, 4 `fcompp`, and 20 `fnstsw`; frame is 0x148 and the object
-has 35 relocations. The target body is 2,727 bytes. This is the closest
-instruction-inventory candidate so far, not byte-exact: stack-slot placement,
-register choices, and instruction ordering still differ, and no Oracle replay
-receipt or accepted codegen claim exists. Candidate 149 with both success and
-no-op returns overshoots to 21 `jmp`; candidate 151 (no-op-path return only)
-shares the 2,725-byte / 20-`jmp` inventory but has a different object hash.
-Continue from candidate 150 and test local declaration/stack-layout order;
-do not promote it to `src/`, pad it, or hand-assemble it.
+The next useful experiment is to start from probe 277's four distinct boundary
+comparisons and test natural `volatile int` locals, preferably with branch-local
+lifetimes, so the compiler emits the target's 32-bit stores. Recover the target
+stack ownership (`this` at `-0x60`, pose pointers at `-0x64/-0x68`, and the four
+boundary slots) while keeping the complete instruction histogram. Compare the
+entire 2,727-byte function and all relocation bindings after each focused build.
+Do not infer exactness from matching size or histogram, and do not promote a
+probe into `src/` before strict acceptance. Earlier probes are archived losslessly
+in `.analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz`; the current
+controls listed above remain live.
 
-The next natural-expression experiments improve the inventory further. Candidate
-162 (`Pushboxes-onehundredsixtysecond.cpp`) removes the intermediate unsigned
-mask locals and directly converts each comparison result to `double`; this
-retains the 0x148 frame and all 56 `fild` forms, but leaves 16 fewer `mov`
-than target and is only 2,677 bytes. A targeted mixed-access sweep over the 35
-`left->` references shows that 16 direct `this->secondary[0]->` accesses and
-19 cached accesses recover the exact 300-`mov` target count. Candidate 174
-(`Pushboxes-onehundredseventyfourth.cpp`, direct references at source-order
-indices 0,2,...,30) is 2,729 bytes, frame 0x148, 708 instructions, and matches
-the target counts for every mnemonic: 300 `mov`, 20 `jmp`, 10 `jp`, 56 `fild`,
-52 `fmul`, 42 `fstp`, and 20 `fnstsw`. It is still not exact: its two-byte
-size excess is accounted for by different MOV displacement widths and one
-short/near JP form, and instruction ordering/stack-slot assignments remain
-different. Candidate 174 is the best current natural-C++ inventory candidate;
-keep it and candidate 171 as probes only, not production source. Making the
-shared scratch member volatile did not change codegen. Separate pose-pointer
-and boundary-result locals expanded the frame to 0x150-0x160 and were worse.
-Continue by recovering the original stack-slot ownership and local expression
-ordering, not by optimizing for byte count alone.
-The large 0x767F60 /6245 body-hit and 0x7697D0 /6334 effect-hit owners, effect pair
-0x76B090 /2578, clash 0x76BAB0 /650 and body-effect 0x76BD40 /2466 have fresh
-canonical decompiles, raw full bodies and reviewed dispatcher interfaces. They
-remain implementation work, along with the main battle update/draw/keyboard.
+The large battle-collision owners `ResolveBodyHit` (0x767F60),
+`ResolveEffectHit` (0x7697D0), `ResolveEffectPair` (0x76B090),
+`ResolveEffectClash` (0x76BAB0), and `ResolveBodyEffect` (0x76BD40) have since
+been independently rebuilt and matched against their canonical target bytes
+with reviewed relocation fields. `Scene3::Step`, round update/exit, replay reset,
+intro update and battle input/control owners have also been accepted. Check the
+current ledgers and `RE_HANDOFF.md` rather than treating this older open-work list
+as current. Pixel owners 0x409A90, 0x40A0B0 and 0x40A440 remain open.
 
 This checkpoint adds **5 complete functions /4,113 instruction bytes**, for
 **201 authored functions /173,003 instruction bytes**, plus unchanged 667 local-table
@@ -5546,11 +5519,13 @@ unreviewed. Its fresh read-only annotation is retained. Current authored totals:
 362 reviewed boundaries/origins and345 proof recipes. This codegen milestone
 does not close resource/data,runtime,TU,portability or game phases.
 
-## Cleanup and handoff on 2026-11-07
+## Cleanup and handoff on 2026-11-07 (historical checkpoint)
 
-The operator cleared the reconstruction goal and requested cleanup and handoff.
-No autonomous reconstruction task remains active. The final in-flight Makoto
-local-effect comparison was completed and recorded; no further owner was started.
+At that checkpoint the operator requested cleanup and stated that no further
+owner should be started. This task-state statement is historical and was
+superseded on 2026-11-08 by the request to prepare a handoff to another agent and
+continue reconstruction. The final in-flight Makoto local-effect comparison
+was completed and recorded at that earlier checkpoint.
 README and AGENTS now reflect the current character coverage and task state.
 Reader/audio integration was already accepted on2026-11-06; its workbench is an
 archive,not an unfinished integration queue. Earlier contrary wording is

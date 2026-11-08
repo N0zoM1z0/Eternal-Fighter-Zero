@@ -1,229 +1,190 @@
-# Current handoff — 2026-11-07
+# Current handoff — 2026-11-08
 
-> Current workflow: follow the **Highest priority** section in `AGENTS.md`.
-> Prefer affected exact comparisons and useful Markdown knowledge. Ordinary
-> notes do not require full CI, native replay or document-hash/pin refreshes.
-> Older broad validation instructions apply only when their impact is relevant.
+This handoff supersedes the 2026-11-07 statement that reconstruction had stopped.
+The operator now requests that another agent continue the EFZ reconstruction.
 
+## Current operator instructions
 
-## Operator state
+- Reconstruct both substantial/boss functions and small/leaf functions. Do not
+  optimize for leaf count or avoid difficult owners.
+- Use natural C/C++ and explore multiple falsifiable source hypotheses. Recheck
+  earlier documents, decompiles and assumptions against the original target;
+  none is automatically authoritative.
+- The operator confirms there is no concurrent session or other agent editing
+  this worktree. Inspect and reconcile existing dirty/untracked work as part of
+  the task; do not avoid it, reset it, or discard it blindly.
+- After each substantive verified increment, commit with prefix
+  `gpt-web: `. Make several meaningful commits during a productive session;
+  do not stop after one commit. Never push without explicit permission.
+- Replay only the changed/affected functions and their actual consumers. Do not
+  run a full cold replay/cohort merely for reassurance.
+- Keep source, comments and documentation in English. Do not use copied target
+  bytes, handwritten assembly, padding or fake ABI declarations to force a match.
 
-The operator cleared the reconstruction goal and requested cleanup and handoff
-on 2026-11-07. **No autonomous reconstruction task is active.** The in-flight
-Makoto local-effect verification was completed before this handoff; no further
-owner was started. Leads below are possibilities for a newly authorized task.
+## Repository and accepted baseline
 
-Work in this repository. Start with `git status --short --branch`, the diff,
-AGENTS.md, this file and the selected source/ledger rows. Preserve unrelated work.
-Local checkpoints have not been pushed. Never push without an explicit instruction.
-Repository: https://github.com/N0zoM1z0/Eternal-Fighter-Zero.
-Use Bash and local `scripts/ghidra.py`; no REA, Factory prerequisites or subagents.
-Code/comments/docs/metadata stay English. Commit prefix: `gpt-6.1-sol: `.
+- Repository: `N0zoM1z0/Eternal-Fighter-Zero`, branch `main`.
+- Handoff checkpoint: `4754cc2b5e4b487cb738a2c7eb7e846910847d57`;
+  the worktree was clean and `main` was in sync with `origin/main` when checked.
+- Canonical ignored/read-only input: `resources/EFZ.exe`, 3,743,744 bytes,
+  SHA-256 `3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
+- `docs/PROGRESS.md` was regenerated and the canonical ledgers currently record
+  328 exact claims, 1,000,341 code bytes, 6,845 associated local-table bytes,
+  365 reviewed boundaries and 365 reviewed origins. This is the ledger count,
+  not a fresh dependency-validation attestation for every claim. The Windows
+  product, original-vs-native runtime comparison and portability remain open.
+- **Existing proof-freshness blocker:**
+  `scripts/repo-python scripts/validate-tracking.py --require-target` currently
+  fails with `public comparison certificate has stale source dependencies` for
+  296 exact-unit certificates. The only mismatched dependency path is
+  `src/Engine.h`: certificates record SHA-256
+  `33ba6c7d2b60fe5ad92c45d30952e09ef652e181547fb47be3bec4963d68496e`, while the
+  current header is `6a561f046e674c673a089ed3b5c7aa2dabea99d8e803b39466036b1f739d0a3e`.
+  This originates in commit `17edf49` (`gpt-web: correct Makoto frame counter
+  and receivers`), which changed `SecondaryPose::field000c` from `short` to
+  `unsigned short` to match the target's MOVZX reads. No receipts were edited or
+  refreshed during this handoff, and no 296-unit cold replay was run.
+- A focused source scan finds 18 source files / 35 exact units with direct
+  `field000c` references. These are the first targeted replay candidates:
+  `secondary-construct`, `secondary-destruct`, `secondary-sequence-construct`,
+  `secondary-sequence-destruct`, `secondary-input-construct`,
+  `secondary-input-finish`, `secondary-reset-pose`, `secondary-reset-frame`,
+  `secondary-initialize-state`, `secondary-emit-local-effect`,
+  `secondary-remove-local-effect`, `secondary-advance-local-effect`,
+  `secondary-clear-local-effects`, `character-08-cpu-input`,
+  `character-08-update-local-effects`, `secondary-effect-set-polar-velocity`,
+  `scene-battle-step`, `scene-battle-update-round`,
+  `scene-battle-update-round-exit`, `scene-battle-render`,
+  `scene-battle-clip-frame`, `scene-battle-render-background`,
+  `character-24-cpu-input`, `character-24-update-local-effects`,
+  `character-24-update-state`, `character-23-cpu-input`,
+  `character-23-update-state`, `character-23-update-local-effects`,
+  `character-15-cpu-input`, `character-15-update-state`,
+  `character-07-cpu-input`, `character-07-update-state`,
+  `character-05-cpu-input`, `character-05-update-state`, and
+  `character-03-cpu-input`. Other stale certificates still need triage; do not
+  hand-edit their dependency hashes. Replay only affected units/consumers and
+  distinguish codegen impact from a dependency-only freshness mismatch.
+- Reader/audio integration is complete. Do not reapply the historical
+  `workbench/reader-audio/` patch over accepted `src/` files.
+- Pinned native compiler: VC7.1 RTM 13.10.3077, profile `vc71-od-static`.
+  Keep the EFZ Wine prefix and Ghidra project isolated. Use the repository's
+  `scripts/repo-python` wrapper for Python commands.
 
-## Accepted baseline
+## Immediate large owner: `Scene3::ResolvePushboxes`
 
-| Fact | Current result |
-| --- | ---: |
-| Authored complete exact functions | 327 |
-| Authored exact instruction bytes | 1,000,184 |
-| Associated exact local-table bytes | 6,845 |
-| Reviewed boundaries / origins | 362 / 362 |
-| Per-unit proof recipes | 345 |
-| Compiler-generated auxiliary helpers | 14 functions / 579 bytes |
-| Standard-library auxiliary wrappers | 4 functions / 90 bytes |
-| Automatic non-external candidates | 950 |
+The target body begins at `0x766B50`, spans 2,727 bytes and contains 708
+instructions. It is called by `Scene3::Step` at `0x764137`. `src/SceneBattle.h`
+contains only the declaration; `src/SceneBattleLoop.cpp` contains the call.
+The `scene-battle-step` relocation at unit offset 1303 is accepted evidence for
+the caller, not for the pushbox body. There is no pushbox implementation in
+`src/`, no dedicated match-unit recipe and no exact receipt.
 
-[PROGRESS.md](PROGRESS.md) is generated from live ledgers. Acceptance authority:
-config/matches.csv, docs/evidence/ and config/match-units.toml. Auxiliary helpers
-are excluded from authored totals; automatic candidates are not a denominator.
-A runnable product, linked data/resources, original TU partitioning, runtime
-comparison and portability remain independently open.
+### Target facts that must survive reconstruction
 
-Accepted sources include reader/Audio/Input/Context, title/selection/loading,
-substantial shared Secondary code, battle controls/collision/display, four
-concrete background owners and seven character constructors with substantial
-child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto. This is
-partial game reconstruction. Historical facts/checkpoints remain in
-[KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md); older totals and next-work statements
-are historical, not today's task queue.
+- The first horizontal branch is
+  `(first.left + first.right) - (second.left + second.right) > 0`; the other
+  branch is `<= 0`, matching target `sub; test; jle` at `0x766CAA..0x766CAE`.
+- The four `CollisionSide()` signs are fighter 0 `-1`, fighter 1 `+1` in the
+  first branch, then fighter 0 `+1`, fighter 1 `-1` in the opposite branch.
+  Both velocity locals are masked in the original order before comparison.
+- Four x87 boundary comparisons materialize values that are never read later:
+  first-fighter X `<=160.0` before and `>160.0` after the first correction;
+  second-fighter X `>=479.0` before and `<479.0` after the opposite correction.
+  The target writes four 32-bit values to `[ebp-0x6c]`, `[ebp-0x70]`,
+  `[ebp-0xdc]` and `[ebp-0xe0]`. They are real code-generation effects, not
+  padding. A C++ `volatile bool` is not equivalent: it emits byte stores.
+- `TransformPoseBox` at `0x767600` is called with ECX=`this`, stack `+8`
+  output `SurfaceRect *`, `+0xC` `SecondaryPose *`, and `+0x10` source-box
+  pointer; EAX returns the output pointer and the callee uses `RET 0xC`.
+- `BoxesOverlap` at `0x767930` is already exact (128 bytes, no relocations).
+  `Secondary::CollisionSide` at `0x40FF70` is independently exact across all
+  222 bytes and six reviewed DIR32 fields.
 
-## Latest exact checkpoints
+### Latest natural-C++ probes — verified against the live objects
 
-- Mayu state: `d6cd8d9`, Character05::Slot06 at 0x5C8580,87,209 code + 954 table bytes,
-  total 88,163;2,059 reviewed relocation fields. All 13 actual Mayu virtual
-  destinations have exact proofs. Source:src/Character05State.cpp;
-  proof:docs/evidence/mayu-state-exact.json; private:.analysis/probes/mayu-state/.
-- Makoto construction/input/commands: `72df266`, ten bodies/17,018 code bytes.
-  ID 3 allocates 0x3450,uses canonical "makoto"788AC0 and table788AC8. Character03
-  alone gained five scalar ints,three64-int arrays and retained opaque bytes
-  344C..344F. Final89-unit comparison used 41 cold artifacts:ten new and 79 actual
-  CharacterViews.h consumers. Other 254 units retained prior proofs. All 1,074
-  generated symbol renames and 1,069 local offsets were independently checked.
-  Proof:docs/evidence/makoto-exact.json; private:.analysis/probes/makoto/.
-- Makoto CPU: `3e6619d`, Slot05 at 0x5FB040,17,531 code bytes,no tables;329 reviewed
-  fields. Preserve120 AX zero extensions/two direct AL stores,actual expression
-  order and contradictory far-distance>800&&<80 guard. Proof:
-  docs/evidence/makoto-cpu-exact.json; private:.analysis/probes/makoto-cpu/.
-- Final Makoto effects: Slot07 at 0x5FF4C0,33,673 code + 224 table bytes,total 33,897,
-  exclusive end607929. All 308 fields are reviewed:73 calls,202 doubles,33 local
-  bindings. Complete31-address/100-selector switch covers30 explicit types and
-  70 defaults. Source:src/Character03Effects.cpp;
-  proof:docs/evidence/makoto-effects-exact.json;
-  private:.analysis/probes/makoto-effects/README.md. Preserve vertical-before-
-  horizontal wall-bounce exits,word updates,removal exits and CRT sample order.
+| Probe | `.text` | Frame | Instructions | Interpretation |
+| --- | ---: | ---: | ---: | --- |
+| 150 | 2,725 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack slots differ |
+| 174 | 2,729 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack slots differ |
+| 259 | 2,535 | `0x140` | 708 | Better rectangle/velocity result slots; only 276 `mov`, 16 `jmp`, 8 `jp`; four boundary comparisons absent |
+| 276 | 2,711 | `0x148` | 708 | Full target mnemonic histogram; one reused volatile Boolean, wrong byte stores |
+| 277 | 2,726 | `0x150` | 708 | Full target mnemonic histogram; 35 relocations; four volatile Booleans, wrong store widths/slots and frame |
 
-The last two owners each passed their own final selected cold replay after
-formatting. Their public headers and previous recipes/sources are unchanged;
-no old/full cohort was replayed. Current single-unit reports are live under
-.analysis/exact/character-03-*.json. Latest header replay:
-.analysis/exact/makoto-and-affected.json. Native logs:
-.analysis/build/makoto-formal-replay.log,makoto-cpu-formal-replay.log and
-makoto-effects-formal-replay.log. Focused target-required tracking,
-ledgers/progress CI and whitespace checks pass. No full CI or runtime matrix ran.
+The best current instruction-inventory/size probe is
+`.analysis/probes/scene-battle/Pushboxes-twohundredseventyseventh.cpp`.
+Its object is `build/scene-battle/Pushboxes-twohundredseventyseventh.obj` and
+its disassembly is `Pushboxes-twohundredseventyseventh.txt` beside the other
+private scene-battle probes. It is one byte shorter than the target and matches
+the complete 708-instruction mnemonic histogram, but it is not byte-exact:
+frame `0x150` vs target `0x148`, `this` at `[ebp-0x78]` vs `[ebp-0x60]`, and
+four byte stores at `-0x79/-0x7a/-0xe5/-0xe6` vs target 32-bit stores at
+`-0x6c/-0x70/-0xdc/-0xe0`. Pose-pointer and output-temporary stack slots also
+differ. Probe 276 has the target frame but reuses one volatile Boolean and is
+16 bytes short. Probe 259's initial velocity slots (`-0x10/-0x18`) and rectangle
+result slots align more closely, but its frame and pointer slots do not, and it
+omits the four boundary comparisons.
 
-## Retained work and optional leads
+The `WorkScratch` union in 276/277 shares only `displacement` and `facing`, whose
+live ranges do not overlap. This is not the withdrawn 2,898-byte bug where one
+union member overwrote a still-live displacement with a boundary Boolean before
+both position updates consumed it.
 
-- Makoto has 12/13 actual virtual destinations exact. State5E85F0 is the
-  authored Character03::Slot06 owner. Its complete target boundary is now
-  reviewed:58,482 code +500 jump-table +310 selector-map bytes =59,292 bytes;
-  124 animation IDs have explicit cases and186 map to the default. Four CC
-  bytes precede the next constructor at5F6D90. The vtable slot6 operand788AE0
-  points to5E85F0. Fresh evidence and the complete animation-to-case map are in
-  .analysis/probes/makoto/state-boundary-review.json and state-case-map.csv.
-  Source reconstruction, relocation ownership and exact code generation remain
-  open. The 0x7783B8 leaf is the compiler-generated x87-to-integer helper (178
-  calls in Slot06); source should use natural conversions, not call it. The
-  Ghidra warning about03020100 remains provisional.
-- Shiori Slot06 at4136D0 is unaccepted. Read
-  .analysis/probes/shiori-state/README.md and parked-best/ first. Complete target:
-  63,132 bytes =62,273 code + 540 addresses + 319 selectors,end422D6C. Best complete
-  draft:63,133 bytes; this is an extent delta,not one remaining different byte.
-  First divergence41FC1E in animation303. Repeated scope/increment/signedness
-  controls were neutral. Private headers predate accepted changes and must not
-  overwrite src/. All parked drafts and attempts remain live.
-- PrepareBattle76CA50 is unaccepted:4,029 complete bytes =3,893 code+136 tables,
-  end76DA0D. Read .analysis/probes/scene-loading/README.md and parked-best/.
-  Best4,031-byte draft is not a two-byte-difference claim. The real-background
-  control in .analysis/probes/loading-owner/README.md was neutral. Do not repeat
-  pointer/type/case controls without a new falsifiable target prediction.
-- Pushbox766B50/2727 remains open. The fresh audit identifies four write-only
-  x87 comparisons: first fighter X `<=160` before and `>160` after the first
-  correction; second fighter X `>=479` before and `<479` after the opposite
-  correction. Raw assembly also reverses all four CollisionSide signs relative
-  to provisional Ghidra: first branch fighter 0 `-1`, fighter 1 `+1`; opposite
-  branch fighter 0 `+1`, fighter 1 `-1`. See KNOWLEDGE_BASE.md and the full
-  .analysis/probes/scene-battle/pushbox-target.txt. The transform helper's
-  caller ABI uses an explicit output buffer and returns its pointer in EAX.
-  Raw assembly corrects CollisionSide signs to -1,+1,+1,-1 and shows that each
-  branch masks both velocity locals before comparing them; Ghidra's pseudocode
-  is wrong on these masks. The prior 2901-byte candidate is not reproducible.
-  The 2898-byte candidate is withdrawn as semantically wrong: its union scratch
-  overwrote a still-live horizontal displacement with a boundary Boolean.
-  Earlier 2910/2637-byte and target-local/volatile trials remain non-exact.
-  New raw-assembly correction: the first horizontal branch is `centerDiff > 0`
-  and the opposite branch is `<= 0`, emitted as `sub; test; jle`; a direct
-  center comparison reverses the branch layout. Removing the unused comma
-  temporary also removes one extra x87 `fst`. Candidate 150 adds one natural
-  success-path `return` to restore the missing exit jump. It is 2725 bytes
-  versus target 2727, frame 0x148, 708 instructions, and matches every target
-  mnemonic count (300 mov, 20 jmp, 4 sub, 22 test, 20 fld, 56 fild, 52 fmul,
-  42 fstp, 16 fcomp, 4 fcompp, 20 fnstsw); object has 35 relocs. It is still
-  not byte-exact: stack offsets, registers, and instruction ordering differ;
-  no Oracle receipt or accepted claim. Continue from
-  The next best natural-C++ candidate is 174:
-  `.analysis/probes/scene-battle/Pushboxes-onehundredseventyfourth.cpp`.
-  Direct bool-to-double mask expressions restore target `fild` widths; a
-  16-direct/19-cached split of the 35 first-Secondary references restores all
-  300 target `mov` instructions. Candidate 174 is 2729 bytes vs 2727, frame
-  0x148, 708 instructions, with all mnemonic counts exact (including 10 `jp`,
-  20 `jmp`, 56 `fild`, 52 `fmul`, 42 `fstp`, 20 `fnstsw`). It remains non-exact:
-  two extra bytes arise from MOV displacement widths and a short/near JP form;
-  ordering and stack-slot ownership differ. Candidate 162 is 2677 bytes but
-  misses 16 `mov`; candidate 171 is 2729 with 300 `mov`; separate pose/boundary
-  locals expanded the frame, and volatile scratch did not change codegen.
-  Continue from 174 and recover target local/stack layout. No padding, hand
-  assembly, or promotion into `src/`.
-- Two collision leafs were independently rechecked with fresh targeted VC7.1
-  translation-unit builds: `Scene3::BoxesOverlap` (0x767930) is byte-identical
-  at 128 bytes with zero relocations; `Secondary::CollisionSide` (0x40FF70)
-  matches all 222 bytes outside six DIR32 fields and matches all six relocation
-  offsets/symbols for the 20/619/639 constants. No full cold replay was run.
-- Recompiled the current large battle-collision translation units independently
-  with the pinned VC7.1 profile. `ResolveEffectHit` 6334/54, `ResolveEffectPair`
-  2578/25, `ResolveEffectClash` 650/3, and `ResolveBodyEffect` 2466/25 from
-  `SceneEffectCollision.cpp`, plus `ResolveBodyHit` 6245/59 from
-  `SceneBodyHit.cpp`, all match canonical bytes after relocation normalization
-  and every reviewed relocation offset/type/symbol tuple. Aggregate: 18,273
-  instruction bytes and 166 relocation fields. This is fresh targeted TU
-  compilation and function extraction, not a full cold replay; existing exact
-  evidence/ledgers remain the acceptance record.
-  Pixel owners 409A90/40A0B0/40A440 remain open.
-- `Scene3::Step` (0x763C20 /1653) and `Scene3::UpdateRound` (0x765040 /1562)
-  were extracted from the targeted `SceneBattleLoop.cpp` object and replayed
-  independently against canonical target bytes. Step is exact with all 34
-  relocation bindings; UpdateRound is exact with all 11. No full cold replay.
-- `Scene3::UpdateRoundExit` (0x765FA0 /205) was independently rebuilt from
-  `src/SceneBattleLoop.cpp` in the targeted VC7.1 translation-unit build. Its
-  205 bytes and all 10 relocation bindings replay exactly against the canonical
-  target; this was a single-function check, not a full cold replay.
-- `Scene3::ResetReplay` (0x7661A0 /734) was independently rebuilt from
-  `src/SceneBattleInput.cpp` in a targeted VC7.1 translation-unit build. Its
-  734 bytes and all 24 relocation bindings replay exactly against the canonical
-  target; this was a single-function check, not a full cold replay.
-- `Scene3::UpdateIntro` (0x766070 /292) was independently rebuilt from
-  `src/SceneBattle.cpp` in a targeted VC7.1 translation-unit build. Its 292
-  bytes and all 7 relocation bindings replay exactly against the canonical
-  target; this was a single-function check, not a full cold replay.
-- Reader/audio integration is complete. `workbench/reader-audio/` preserves
-  historical drafts and an already-integrated patch; it is not unfinished work.
-  Read its README; never apply the old patch or copy drafts over accepted src/.
+**Next experiment:** start from 277 and try branch-local `volatile int` boundary
+locals (not `volatile bool`) to produce the target's 32-bit stores. Recover the
+four target stack slots, `this` at `-0x60`, pose pointers at `-0x64/-0x68`, and
+the `0x148` frame while retaining the complete instruction histogram. Compare
+the entire 2,727-byte function and every relocation binding after each focused
+build. Do not infer exactness from byte size or mnemonic counts, and do not
+promote any probe into `src/` until a strict complete match exists.
 
-Do not run private make/refine/prepare/publish scripts over accepted source.
-They are one-time derivation records and may contain superseded draft controls.
-A successful unit does not close character resources, production TU structure,
-runtime or the game.
+### Other open substantial owners
 
-## Storage cleanup and recovery
+- Makoto/Character03 still has three substantial open owners: CPU at
+  `0x5FB040` / 17,531 bytes, state Slot06 at `0x5E85F0` / 58,482 bytes, and
+  effects at `0x5FF4C0` / 33,673 bytes. The state/effects associated tables
+  still need review. Ten other Character03 construction/input/command bodies
+  are accepted. See `.analysis/probes/makoto/README.md`,
+  `state-boundary-review.json` and `state-case-map.csv`.
+- Shiori Slot06 at `0x4136D0` remains unaccepted. Its target contribution is
+  63,132 bytes including code and both tables; the parked natural-C++ draft is
+  63,133 bytes and has a known register divergence. No part of this function is
+  accepted. Read `.analysis/probes/shiori-state/README.md` and `parked-best/`
+  first; do not overwrite current shared headers from the parked snapshot.
+- `PrepareBattle` at `0x76CA50` / 4,029 bytes remains open. Read
+  `.analysis/probes/scene-loading/README.md` and parked evidence.
+- The battle-scene renderer at `0x7642A0` / 1,285 bytes and pixel owners
+  `0x409A90`, `0x40A0B0` and `0x40A440` remain open.
 
-The 2026-11-07 cleanup losslessly archived 1,246 older trial/build/report files
-before removing redundant live copies. Every file was checked by size and
-SHA-256. Archive:
-.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz;
-manifest.json beside it records original paths and hashes. About 94.4 MiB of
-allocated file storage was reclaimed after archive/manifest accounting.
+Do not let this list limit exploration: inspect the current ledgers and choose
+both high-value owners and useful leaves based on evidence.
 
-Forty latest successful source/object snapshot roots,current accepted objects /
-receipts,all current per-unit reports,the latest Makoto affected report,all native
-logs and all parked Shiori/PrepareBattle evidence remain live. Original target,
-RAR,toolchain links/installations,EFZ Wine prefix and Ghidra database are retained.
-See [RE_ARTIFACTS.md](RE_ARTIFACTS.md) before following an older aggregate-report
-or trial path; restore only the needed member. No original bytes or generated
-analysis text were added to Git.
-
-## Verification for a newly authorized task
-
-Canonical ignored,read-only input:resources/EFZ.exe,3,743,744 bytes,SHA-256
-`3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
-Release/modification provenance remains open. Do not substitute EFZ.OLD,netplay
-binaries or another release.
+## Focused startup and verification
 
 ```bash
 scripts/repo-python scripts/verify-target.py
 scripts/repo-python scripts/verify-toolchain.py --check
-# Only when Ghidra analysis is needed:
+# Only if Ghidra analysis is needed:
 scripts/repo-python scripts/ghidra.py verify
-# Replay only the new/changed/header-dependent units actually selected:
+# Replay only the new/changed unit and actual consumers:
 scripts/repo-python scripts/replay-exact-units.py --unit ACTUAL_UNIT_ID
 scripts/repo-python scripts/validate-tracking.py --require-target
 scripts/repo-python scripts/progress.py
-scripts/repo-python scripts/ci.py --only ledgers
-scripts/repo-python scripts/ci.py --only progress
 git diff --check
 ```
 
-Pinned VC7.1 RTM13.10.3077; EFZ's own Wine prefix; serial CPU1,nice10,bounded
-native commands with retained exits. Run --execute only for setup/tool changes
-or compiler/Wine failures. All observed draft source failures were corrected and
-followed by successful required smoke checks. No compiler/Wine issue remains.
-All Ghidra/headless jobs are terminal; annotations were read-only and unsaved.
-Custom large-function decompiles used a verified 128 MiB response limit.
+Documentation-only changes do not need compiler, Ghidra, cold replay or full CI.
+For source changes, compare the complete affected function and recheck actual
+consumers of changed shared inputs. Do not run an unrelated full cold cohort.
+Never push without explicit permission.
+
+## Storage cleanup and recovery
+
+On 2026-11-08, 1,095 superseded Pushboxes probe/source/disassembly/object/build
+files (10,749,392 logical bytes) were archived and SHA-256 verified before the
+live copies were removed. Archive:
+`.analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz`; manifest and
+restore commands are in `docs/RE_ARTIFACTS.md` and the archive's `README.md`.
+The target dump and selected controls 150, 174, 236, 259, 265–271 and 276–277
+remain live. The canonical executable, toolchain, EFZ Wine prefix, Ghidra
+project, accepted objects/receipts and unrelated parked evidence were untouched.
