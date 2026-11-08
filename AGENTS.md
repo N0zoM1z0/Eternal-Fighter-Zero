@@ -1,5 +1,17 @@
 # EFZ reconstruction rules
 
+## Factory access
+
+When working through the shared Reconstruction Factory, select repository
+`efz` and analysis provider `efz-ghidra`. The live Bash tool exposes this
+worktree, its ignored `resources/EFZ.exe`, repository Python, VC7.1 tools and
+EFZ-only Wine prefix. Use the existing repository build and oracle scripts for
+explicit selected-unit verification; Factory receipts are not prerequisites.
+Other registered source trees are read-only at `/references/<repository_id>`.
+Cross-game code is hypothesis material, not EFZ evidence. Native analysis
+previews are bounded; recover complete output from the returned artifact path
+through live Bash. The local `scripts/ghidra.py` workflow remains available.
+
 ## Session recovery
 
 Work in this repository. Inspect `git status --short --branch` and the diff,
