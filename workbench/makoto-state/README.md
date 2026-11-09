@@ -611,6 +611,22 @@ work, not the original behavior for valid unimplemented animations.
   pose gates were checked against EFZ.exe; the partial VC7.1 build
   succeeds. This owner is still partial, not an Exact function.
 
+- Animation IDs 207 and 208 (0x005F0669..0x005F0840 and
+  0x005F0840..0x005F0A17, 471 bytes each) are separate aerial attacks.
+  Each adds gravity to velocityY before checking an air-jump cancel:
+  inputY=-1, nonzero pose, field015c<3, attackCollisionResult>=2,
+  and airActionCount==0. A successful cancel increments airActionCount,
+  selects 14/15/16 from inputX/facing, clears attackCollisionResult
+  and resets pose. State 207 grants 5 meter, sound 21 and one hit on
+  pose 2/tick zero; state 208 grants 13 meter, sound 20 and one hit
+  on pose 3/tick zero. Their *independent* original blocks both land
+  at positionY+velocityY>=0 into state 13 and ResetPose without
+  playing sound or calling FaceOpponent. Otherwise they advance the
+  unsigned pose, clear attackCollisionResult below pose 2 and switch
+  to airborne state 9 on sequence exhaustion. All 942 target bytes,
+  immediate values and the 0x15A airActionCount gate were checked
+  directly; the partial owner compiles with VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -636,7 +652,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 207 and onward directly from reviewed target instructions,
+Extend case 209 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

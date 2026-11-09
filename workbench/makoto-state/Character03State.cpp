@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-206 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-208 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2904,9 +2904,91 @@ void Character03::Slot06()
         }
         return;
 
+    case 207: // Original block 0x005F0669: aerial attack with jump cancel
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 208: // Original block 0x005F0840: aerial attack with jump cancel
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 13);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 42 explicit cases. The target's true default path also
+        // the other 40 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
