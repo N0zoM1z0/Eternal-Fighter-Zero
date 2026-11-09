@@ -82,6 +82,12 @@ work, not the original behavior for valid unimplemented animations.
   20/639 stage bounds. On animation exhaustion, inputY=1 selects state 3;
   otherwise state 0 is selected before ResetPose. Independent target case
   ranges all occupy 497 bytes, with distinct original immediates/operands.
+- Animation IDs 53–55 (blocks 0x005E994B, 0x005E9B3C, 0x005E9D2D)
+  independently repeat the 10/15/20 meter, -1.1/-1.5/-1.8 recoil and
+  10/20/30 optional resource deductions in separate target blocks. Each
+  original block is 497 bytes and has the same stage-edge correction and
+  inputY-dependent 0-or-3 recovery as 50–52. Keeping distinct switch arms
+  preserves their independent dispatch targets and code-generation structure.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -101,7 +107,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 53 and onward directly from reviewed target instructions,
+Extend cases 56 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

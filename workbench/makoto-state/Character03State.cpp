@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-52 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47 and 50-55 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -429,9 +429,117 @@ void Character03::Slot06()
         }
         return;
 
+    case 53: // Original block 0x005e994b: grounded recoil continuation 1
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 54: // Original block 0x005e9b3c: grounded recoil continuation 2
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 55: // Original block 0x005e9d2d: grounded recoil continuation 3
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 107 explicit cases. The target's true default path also
+        // the other 104 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
