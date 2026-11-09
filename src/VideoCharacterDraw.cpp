@@ -63,29 +63,44 @@ int Video::DrawCharacterTint(SurfaceRect destination, IUnknown *surface,
     unsigned char tintIndex = static_cast<unsigned char>(tint);
 
     // The original no-key path does not enter either keyed flip loop.
+    // Traverse keyed and unkeyed palette rows with explicit pitch advances.
     if (colorKey > 0) {
         if (flip != 0) {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char pixel = sourcePixels[y * sourcePitch + (width - 1 - x)];
-                    if (pixel != colorKey) destinationPixels[y * destinationPitch + x] = sumBlend[pixel][tintIndex];
-                }
-            }
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[width - 1 - x];
+                    if (pixel != colorKey)
+                        destinationPixels[x] = sumBlend[pixel][tintIndex];
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
         } else {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char pixel = sourcePixels[y * sourcePitch + x];
-                    if (pixel != colorKey) destinationPixels[y * destinationPitch + x] = sumBlend[pixel][tintIndex];
-                }
-            }
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[x];
+                    if (pixel != colorKey)
+                        destinationPixels[x] = sumBlend[pixel][tintIndex];
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
         }
     } else {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                unsigned char pixel = sourcePixels[y * sourcePitch + x];
-                destinationPixels[y * destinationPitch + x] = sumBlend[pixel][tintIndex];
-            }
-        }
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[x];
+                    destinationPixels[x] = sumBlend[pixel][tintIndex];
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
     }
 
     backSurface->Unlock(destinationDescription.lpSurface);
