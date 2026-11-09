@@ -961,6 +961,19 @@ work, not the original behavior for valid unimplemented animations.
   bytes were checked against EFZ.exe, and the partial VC7.1
   compilation succeeds.
 
+- Animation ID 262 (0x005F3C6F..0x005F3DC5, 342 bytes) is
+  an aerial local finisher. Only on pose/tick zero does it multiply
+  both X/Y velocities by **0.25** (x87 constant at 0x00787D28;
+  an initial 0.5 guess was rejected by inspecting the target).
+  Upon frame expiration it advances the unsigned pose and assigns
+  attackCollisionResult=3. On *advancing to pose 4*, it grants
+  45 meter and emits local effect 0x196 at truncated X+14*facing,
+  truncated Y-35, owner=1/group 0/layer 1/facing byte/field0028=1,
+  then requests context sound 21. Sequence exhaustion enters airborne
+  state 9 with ResetPose, not idle state 0. All 342 original bytes
+  and local-effect stores were checked against EFZ.exe; the partial
+  C++ owner compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -986,7 +999,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 262 and onward directly from reviewed target instructions,
+Extend case 300 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
