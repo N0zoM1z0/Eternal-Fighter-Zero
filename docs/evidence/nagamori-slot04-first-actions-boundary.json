@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-owner-and-first-fourteen-actions-not-full-Exact",
+  "status": "reviewed-original-owner-and-first-seventeen-actions-not-full-Exact",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function": "Character06::Slot04",
   "original_vtable_pointer": "0x0078840C",
@@ -30,14 +30,17 @@
     "0x64/0x65/0x66",
     "0x2A",
     "0x29/0x2A",
-    "0x28"
+    "0x28",
+    "0x16",
+    "0x15/0x16",
+    "0x14"
   ],
-  "first_fourteen_actions": {
+  "first_seventeen_actions": {
     "start": "0x004AE2E0",
-    "end_exclusive": "0x004AF16E",
-    "size": 3726,
-    "original_instructions": 919,
-    "sha256": "cd5655f5c38c03d3126425474e6d057c9937bba34fe77445227e1f0614823e63",
-    "qualification": "First 918/919 instruction positions match native C++ after normalizing local branch targets, direct calls and PE x87 constant addresses; one prologue allocation width differs because later branches remain absent. Final shared epilogue not yet present."
+    "end_exclusive": "0x004AF413",
+    "size": 4403,
+    "original_instructions": 1086,
+    "sha256": "e137dbdbf697a4aaa86bf2b11730a374eb153958b42f7d9d7420be807b013145",
+    "qualification": "First 1085/1086 original instruction positions match compiled native C++ with normalized numeric jump/call destinations and x87 PE constants; single prologue stack allocation width differs while later states remain absent. No whole owner Exact."
   }
 }

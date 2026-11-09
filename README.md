@@ -88,10 +88,10 @@ candidate tracked in `workbench/shiori-state/`. The substantial
 at `workbench/prepare-battle/` and a reviewed 4,029-byte original
 boundary. Ikumi's independent Slot08 effects owner now has a 1,592-byte
 reviewed boundary and a separate still-unaccepted C++ draft in
-`workbench/ikumi-effects/`. Nagamori's 12,277-byte Slot04 action owner now has the first fourteen
+`workbench/ikumi-effects/`. Nagamori's 12,277-byte Slot04 action owner now has the first seventeen
 action guards reconstructed in an independent, still-unaccepted C++
 workbench (`workbench/nagamori-action/`), with an original-bound
-3,726-byte diagnostic prefix. Video and other scene/character work
+4,403-byte diagnostic prefix. Video and other scene/character work
 remain open. See the live ledgers for individual acceptance.
 
 Reader/audio integration is complete. The
