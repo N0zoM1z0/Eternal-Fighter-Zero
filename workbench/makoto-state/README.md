@@ -362,6 +362,22 @@ work, not the original behavior for valid unimplemented animations.
   advanced pose equals animationFrameCount and then returns to state 96
   on exhaustion. Target instructions were checked independently.
 
+- Animation IDs 150–152 (0x005ED5FF..0x005EDB03, 1,284 bytes)
+  implement three grounded recoil strengths, and 153–155
+  (0x005EDB03..0x005EDFBF, 1,212 bytes) are their crouch-terminal
+  counterparts. Each **reselects its stand/crouch ID every tick** from
+  inputY (150/153, 151/154 or 152/155). On pose/tick zero it clears
+  dash momentum, adds 10/15/20 meter, initializes velocityX to
+  -1.5/-1.8/-2.3 and grounds position/velocityY. Every tick it holds
+  velocityY at zero, adds 0.06 to horizontal speed (clamped at zero),
+  and only writes horizontal pushback near x<=20 or x>=619. Both
+  three-case families call FaceOpponent when the frame reaches the
+  sequence count. The 150–152 end paths select idle 0 or crouch 3
+  based on inputY, whereas 153–155 **always** select crouch 3.
+  Original constants, independently dispatched blocks, exact direct
+  FaceOpponent calls and all 2,496 instruction bytes were checked
+  against the current EFZ.exe. The partial draft compiles with VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the

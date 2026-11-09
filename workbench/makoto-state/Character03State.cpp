@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87 and 96-99 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99 and 150-155 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1770,9 +1770,246 @@ void Character03::Slot06()
         }
         return;
 
+    case 150: // Original block 0x005ED5FF: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 153;
+        }
+        if (inputY != 1) {
+            field0008 = 150;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 10);
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 151: // Original block 0x005ED7AB: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 154;
+        }
+        if (inputY != 1) {
+            field0008 = 151;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 15);
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 152: // Original block 0x005ED957: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 155;
+        }
+        if (inputY != 1) {
+            field0008 = 152;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 20);
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 153: // Original block 0x005EDB03: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 153;
+        }
+        if (inputY != 1) {
+            field0008 = 150;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 10);
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 154: // Original block 0x005EDC97: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 154;
+        }
+        if (inputY != 1) {
+            field0008 = 151;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 15);
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 155: // Original block 0x005EDE2B: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 155;
+        }
+        if (inputY != 1) {
+            field0008 = 152;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 20);
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 71 explicit cases. The target's true default path also
+        // the other 65 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
