@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-171 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178 and 180 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2509,9 +2509,75 @@ void Character03::Slot06()
         }
         return;
 
+    case 178: // Original block 0x005EF5E8: dash slide and jump cancel
+        velocityX -= 0.03;
+        velocityX = velocityX;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 180: // Original block 0x005EF70A: trailing aerial landing
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(2);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (positionY < 0.0) {
+            velocityY += gravity;
+        }
+        if (positionY + velocityY > 0.0 && field000a < 10) {
+            ResetFrame();
+            positionY = 0.0;
+            field000c = 0;
+            field000a = 10;
+            pendingContextSoundSlot = 9;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                velocityX = -0.5;
+                velocityY = -1.0;
+                gravity = 0.028;
+            }
+            if (field000a == 10) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= animationFrameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 51 explicit cases. The target's true default path also
+        // the other 49 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

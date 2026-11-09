@@ -511,6 +511,26 @@ work, not the original behavior for valid unimplemented animations.
   100.0/0.01 constants were checked against EFZ.exe. The partial
   owner compiles under VC7.1.
 
+- Animation ID 178 (0x005EF5E8..0x005EF70A, 290 bytes) slows
+  velocityX by 0.03 every tick, retains the source's otherwise
+  redundant self-assignment, and clamps negative horizontal speed
+  to zero while clearing dash momentum. Down+jump from a nonzero pose
+  chooses states 4/5/6 by inputX and facing, clears the attack collision
+  result and resets pose. Ordinary sequence exhaustion chooses
+  **state 7**, not state 0 as in the comparable Character07 branch.
+
+- Animation ID 180 (0x005EF70A..0x005EF87C, 370 bytes) first starts
+  trail 2 and clears velocity/gravity. While airborne (positionY<0),
+  it adds gravity. If next-position Y is strictly positive before
+  pose 10, ResetFrame forces pose 10, clears tick/Y and requests sound
+  9; the duration counter still advances this update. On advancing
+  to **pose 1**, it assigns velocity (-0.5,-1.0) and gravity 0.028,
+  not on pose 3 as in the Character07 implementation. Pose 10 loops
+  backward by two; on sequence exhaustion it calls ResetPose
+  **before** selecting animation 0. The original 660-byte span and
+  all four x87 constants were checked against EFZ.exe; the draft
+  compiles with VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
