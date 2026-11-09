@@ -179,6 +179,18 @@ work, not the original behavior for valid unimplemented animations.
   call and the transition to animation 70. Original block 68 spans 316 bytes;
   block 69 spans 277 bytes, accounting for this separate collision branch.
 
+- Animation ID 70 (block 0x005EB881, 480 bytes) handles the wall-hit
+  recovery reached from cases 64-68. On its first frame/tick only, when
+  field3138 is zero, it grants 30 meter, increments field3138, adds
+  120 airActionLockFrames, sets velocity (0.5, -2.5) and gravity 0.025,
+  requests context sound 31, and emits global effect type 0 at truncated
+  character position with group 2 and layer 1. Unlike normal aerial
+  reactions it rolls an expired frame index back to zero rather than
+  subtracting 2. Ground contact after pose 1 still selects state 0x61/0x62
+  according to knockdownOnLanding. All constants and side effects are
+  cross-checked against the original target instructions and the existing
+  independent Character23 state-70 implementation.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -198,7 +210,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 70 and onward directly from reviewed target instructions,
+Extend cases 71 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
