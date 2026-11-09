@@ -819,6 +819,20 @@ work, not the original behavior for valid unimplemented animations.
   bytes were checked against EFZ.exe, including x87 constants;
   the partial VC7.1 owner compiles.
 
+- Animation IDs 250 and 251 (0x005F2562..0x005F26A9 and
+  0x005F26A9..0x005F27F0, 327 bytes each) are separate local-effect
+  finishers. On pose/tick zero they clear dash momentum, call
+  ResetFrame and award 45 meter. Each expired duration advances the
+  unsigned pose and assigns attackCollisionResult=3 (no separate
+  remainingHitCount write). On the advance to pose 3, state 250
+  emits type 0x193 and state 251 emits type 0x194 with
+  owner=1, group=0, layer=1, facing byte, at truncated
+  X+23*facing and truncated Y-76. The local-effect call occurs
+  **before** context sound 21 and character sound 5 requests;
+  do not use a context effect. Both finish in idle state 0 and
+  ResetPose. All 654 original bytes were verified against EFZ.exe,
+  and the partial VC7.1 owner builds.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -844,7 +858,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 250 and onward directly from reviewed target instructions,
+Extend case 252 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
