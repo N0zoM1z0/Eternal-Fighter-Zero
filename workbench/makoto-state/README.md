@@ -893,6 +893,23 @@ work, not the original behavior for valid unimplemented animations.
   EFZ.exe; the partial VC7.1 draft compiles. This retained earlier
   uncommitted source rather than discarding it.
 
+- Animation IDs 256 and 257 (0x005F2EC9..0x005F30D8 and
+  0x005F30D8..0x005F32E7, 527 bytes each) independently implement
+  an aerial launch with a grounded hit flash. On first pose/tick
+  they clear dash momentum and ResetFrame. After pose 1 they add
+  gravity to velocityY, subtract 0.045 from velocityX and clamp
+  negative horizontal speed to zero. Ground contact during poses
+  2..7 forces pose 8/tick zero, grounds Y and ResetFrame before the
+  ordinary pose counter. An expired frame advances pose and clears
+  attackCollisionResult below pose 2. Advancing to pose 1 sets
+  velocityX=1.5, gravity=0.05 and velocityY=-1.5 for 256 or -1.8
+  for 257; both emit context effect type 31, group/layer 0,
+  X=truncated positionX, Y=0, facing=(facing!=1). Advancing to pose
+  3 grants 30 meter, one hit and context sound 21. On exhaustion
+  both enter idle 0 and ResetPose. The two independent 1,054-byte
+  target blocks and their differing x87 startup constants were
+  rechecked against EFZ.exe and the partial dispatcher compiled.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -918,7 +935,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 256 and onward directly from reviewed target instructions,
+Extend case 258 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

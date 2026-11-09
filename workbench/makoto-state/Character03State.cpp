@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-255 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-257 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3834,9 +3834,111 @@ void Character03::Slot06()
         }
         return;
 
+    case 256: // Original block 0x005F2EC9: aerial launcher and hit flash
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 1) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a > 1 && field000a < 8 &&
+            positionY + velocityY >= 0.0) {
+            field000a = 8;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                velocityX = 1.5;
+                velocityY = -1.5;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 257: // Original block 0x005F30D8: aerial launcher and hit flash
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 1) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a > 1 && field000a < 8 &&
+            positionY + velocityY >= 0.0) {
+            field000a = 8;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                velocityX = 1.5;
+                velocityY = -1.8;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 18 explicit cases. The target's true default path also
+        // the other 16 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
