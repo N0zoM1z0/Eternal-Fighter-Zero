@@ -17,7 +17,7 @@ void Secondary::DispatchState()
             (*opponentSlot)->outgoingPushbackVelocityX = 0.0;
             if (field30ec != 0 && (*opponentSlot)->field0008 < 50) {
                 meter = 3000;
-                field0108 = field30ee;
+                health = field30ee;
                 if (field30ec > 0) {
                     if (field30ec < 1000) {
                         field0118 = field30ec;

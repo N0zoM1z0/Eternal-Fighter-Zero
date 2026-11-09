@@ -30,7 +30,7 @@ void Character08::Slot04()
         return;
     }
     if (field015c < 2) {
-        if (((((field0108 < 0xd05) && (field0262 == 0x5f)) &&
+        if (((((health < 0xd05) && (field0262 == 0x5f)) &&
             (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (positionY == 0.0))) &&

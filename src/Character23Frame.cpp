@@ -136,9 +136,9 @@ void Character23::Slot08()
         (*opponentSlot)->SetCharacterTint(203, 3);
         ++field3458;
         if (field3458 > 45 - field3460 * 7) {
-            (*opponentSlot)->field0108 = (*opponentSlot)->field0108 - 10;
-            if ((*opponentSlot)->field0108 <= 0) {
-                (*opponentSlot)->field0108 = 1;
+            (*opponentSlot)->health = (*opponentSlot)->health - 10;
+            if ((*opponentSlot)->health <= 0) {
+                (*opponentSlot)->health = 1;
             }
             field3458 = 0;
         }
@@ -147,7 +147,7 @@ void Character23::Slot08()
             field345c = 0;
         }
     }
-    if ((field345c <= 0 && field3460 > 0) || (*opponentSlot)->field0108 <= 0) {
+    if ((field345c <= 0 && field3460 > 0) || (*opponentSlot)->health <= 0) {
         field3460 = 0;
         field345c = 0;
     }

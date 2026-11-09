@@ -70,8 +70,8 @@ void Scene3::PollKeyboard()
             secondary[1]->field30ec = field0574;
             secondary[0]->field30ee = field0576;
             secondary[1]->field30ee = field0576;
-            secondary[0]->field0108 = 9999;
-            secondary[1]->field0108 = 9999;
+            secondary[0]->health = 9999;
+            secondary[1]->health = 9999;
         }
         if ((state[DIK_F5] & 0x80) || (state[DIK_F6] & 0x80) || (state[DIK_F7] & 0x80) || (state[DIK_F8] & 0x80)) battleKeyHeld = 1;
         else battleKeyHeld = 0;
@@ -85,8 +85,8 @@ void Scene3::PollKeyboard()
             if (state[DIK_F10] & 0x80) field058c = 0;
             if (state[DIK_F11] & 0x80) field0590 = 0;
             if (state[DIK_F12] & 0x80) {
-                secondary[0]->field0108 = 1;
-                secondary[1]->field0108 = 1;
+                secondary[0]->health = 1;
+                secondary[1]->health = 1;
             }
         }
         if (contextOwner->flag14283 == 1 && field0588 == 0) {

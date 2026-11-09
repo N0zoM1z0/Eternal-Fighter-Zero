@@ -27,7 +27,7 @@ field0008 = 0xab;
 return;
     }
     if (field015c < 2) {
-        if ((((field0108 < 0xd05) && (field0262 == 0x5d)) && ((meter >= 3000 && (((positionY == 0.0 &&
+        if ((((health < 0xd05) && (field0262 == 0x5d)) && ((meter >= 3000 && (((positionY == 0.0 &&
             (attackCollisionResult != 6)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))))) &&
             (sequences[field0008].field0002 <= sequences[316].field0000)) {
             ResetPose();

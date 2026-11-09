@@ -1768,7 +1768,7 @@ void Character05::Slot06()
         break;
     case 99:
         ++field000c;
-        if (((0 < field0108) && (0x45 < (unsigned short)field000c)) &&
+        if (((0 < health) && (0x45 < (unsigned short)field000c)) &&
             (field000a == 0)) {
             field0008 = 0x60;
             ResetPose();

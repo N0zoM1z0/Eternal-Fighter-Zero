@@ -24,9 +24,9 @@ void Secondary::InitializeState()
     field000c = 0;
     field30bc = 0;
     field30c4 = 0;
-    field0108 = 9999;
-    field010c = 9999;
-    field0110 = 9999;
+    health = 9999;
+    damageTrailHealth = 9999;
+    animatedHealth = 9999;
     meter = 0;
     field0118 = 0.0;
     field0120 = 0;

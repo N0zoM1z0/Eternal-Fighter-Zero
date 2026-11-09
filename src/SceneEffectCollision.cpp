@@ -156,9 +156,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
-                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
-                            if (second->field0108 <= 0) {
-                                second->field0108 = 1;
+                            second->health = second->health - (int)work.attack->guardDamage;
+                            if (second->health <= 0) {
+                                second->health = 1;
                             }
                             second->airActionGauge =
                             (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
@@ -180,9 +180,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
-                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
-                            if (second->field0108 <= 0) {
-                                second->field0108 = 1;
+                            second->health = second->health - (int)work.attack->guardDamage;
+                            if (second->health <= 0) {
+                                second->health = 1;
                             }
                             second->airActionGauge =
                             (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
@@ -204,9 +204,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
-                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
-                            if (second->field0108 <= 0) {
-                                second->field0108 = 1;
+                            second->health = second->health - (int)work.attack->guardDamage;
+                            if (second->health <= 0) {
+                                second->health = 1;
                             }
                             second->airActionGauge =
                             (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
@@ -238,9 +238,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.group = 2;
                             effect.layer = 1;
                             effect.payload = 0;
-                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
-                            if (second->field0108 <= 0) {
-                                second->field0108 = 1;
+                            second->health = second->health - (int)work.attack->guardDamage;
+                            if (second->health <= 0) {
+                                second->health = 1;
                             }
                             if (first->airActionGauge > 0.0f) {
                                 first->airActionGauge =
@@ -306,9 +306,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                             second->outgoingPushbackActive = 0;
                             if (first->comboHitCount == 0) {
-                                second->field010c = second->field0108;
+                                second->damageTrailHealth = second->health;
                             }
-                            second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                            second->health -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                             second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0)
                                 * ((((work.attack->attackFlags & 0x2000) > 0 && (work.defense->frameFlags & 0x2000) > 0) ? 1 : 0) + 1));
                             second->airActionDisabled = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
@@ -328,7 +328,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             ++first->comboHitCount;
                             first->comboDisplayHitCount = first->comboHitCount;
                             first->comboDisplayTimer = 0xb4;
-                            first->comboDamage = second->field010c - second->field0108;
+                            first->comboDamage = second->damageTrailHealth - second->health;
                             first->meter += work.attack->hitMeterGain;
                             work.slot->field0086 = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
@@ -343,7 +343,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.payload = 0;
                             effect.palette = work.attack->hitEffectPalette;
                             contextOwner->EmitEffect(&effect);
-                            if ((second->field0108 <= 0) && (second->koDelayFrames == 0)) {
+                            if ((second->health <= 0) && (second->koDelayFrames == 0)) {
                                 second->field0008 = work.attack->airHitState;
                                 second->ResetPose();
                                 second->FaceOpponent();
@@ -482,8 +482,8 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
-                        if (first->comboHitCount == 0) second->field010c = second->field0108;
-                        second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                        if (first->comboHitCount == 0) second->damageTrailHealth = second->health;
+                        second->health -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->airActionDisabled = (work.attack->attackFlags & 0x400) > 0;
                         second->knockdownOnLanding = (work.attack->attackFlags & 0x800) > 0;
@@ -496,11 +496,11 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         ++first->comboHitCount;
                         first->comboDisplayHitCount = first->comboHitCount;
                         first->comboDisplayTimer = 180;
-                        first->comboDamage = second->field010c - second->field0108;
+                        first->comboDamage = second->damageTrailHealth - second->health;
                         first->meter += work.attack->hitMeterGain;
                         first->hitstopFrames = work.attack->attackerHitstopFrames;
                         second->hitstopFrames = work.attack->defenderHitstopFrames;
-                        if (second->field0108 <= 0 && second->koDelayFrames == 0) {
+                        if (second->health <= 0 && second->koDelayFrames == 0) {
                             second->field0008 = work.attack->airHitState;
                             second->ResetPose();
                             second->FaceOpponent();
@@ -615,8 +615,8 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
-                        if (first->comboHitCount == 0) second->field010c = second->field0108;
-                        second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                        if (first->comboHitCount == 0) second->damageTrailHealth = second->health;
+                        second->health -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->airActionDisabled = (work.attack->attackFlags & 0x400) > 0;
                         second->knockdownOnLanding = (work.attack->attackFlags & 0x800) > 0;
@@ -629,11 +629,11 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         ++first->comboHitCount;
                         first->comboDisplayHitCount = first->comboHitCount;
                         first->comboDisplayTimer = 180;
-                        first->comboDamage = second->field010c - second->field0108;
+                        first->comboDamage = second->damageTrailHealth - second->health;
                         first->meter += work.attack->hitMeterGain;
                         first->hitstopFrames = work.attack->attackerHitstopFrames;
                         second->hitstopFrames = work.attack->defenderHitstopFrames;
-                        if (second->field0108 <= 0 && second->koDelayFrames == 0) {
+                        if (second->health <= 0 && second->koDelayFrames == 0) {
                             second->field0008 = work.attack->airHitState;
                             second->ResetPose();
                             second->FaceOpponent();

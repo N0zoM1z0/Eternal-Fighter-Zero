@@ -133,12 +133,12 @@ void Scene3::UpdateRound()
             if ((secondary[0]->field0008 >= 50 && secondary[0]->IsStateGroupC() == 0) ||
                 (secondary[1]->field0008 >= 50 && secondary[1]->IsStateGroupC() == 0) || flag002d == 2) return;
             contextOwner->counter1354 = 0;
-            secondary[0]->field0108 = 9999;
-            secondary[1]->field0108 = 9999;
+            secondary[0]->health = 9999;
+            secondary[1]->health = 9999;
             contextOwner->effectFlag1350 = 2;
         } else {
             EffectSpawn effect;
-            if (secondary[0]->field0108 <= 0 && secondary[1]->field0108 <= 0) {
+            if (secondary[0]->health <= 0 && secondary[1]->health <= 0) {
                 ++secondary[0]->field00ac;
                 ++secondary[1]->field00ac;
                 if (secondary[0]->field00ac >= (char)contextOwner->selection134e) --secondary[0]->field00ac;
@@ -149,8 +149,8 @@ void Scene3::UpdateRound()
                 secondary[1]->ResetPose();
                 contextOwner->counter1354 = 1;
                 if (contextOwner->effectSelector < 9) ++contextOwner->effectSelector;
-            } else if (secondary[0]->field0108 <= 0 && secondary[0]->koDelayFrames == 0) {
-                secondary[1]->field30dc += secondary[1]->field0108;
+            } else if (secondary[0]->health <= 0 && secondary[0]->koDelayFrames == 0) {
+                secondary[1]->field30dc += secondary[1]->health;
                 if (secondary[1]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[1]->field00ac;
                     secondary[0]->hitstunFrames += 180;
@@ -176,8 +176,8 @@ void Scene3::UpdateRound()
                     field0580 = 0.0;
                     contextOwner->winner134c = 1;
                 }
-            } else if (secondary[1]->field0108 <= 0 && secondary[1]->koDelayFrames == 0) {
-                secondary[0]->field30dc += secondary[0]->field0108;
+            } else if (secondary[1]->health <= 0 && secondary[1]->koDelayFrames == 0) {
+                secondary[0]->field30dc += secondary[0]->health;
                 if (secondary[0]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[0]->field00ac;
                     secondary[0]->hitstunFrames += 180;
@@ -257,11 +257,11 @@ void Scene3::Slot0()
     }
     // Disabled diagnostics are present in the complete original /Od contribution.
     if (false) {
-        DrawNumber(80, 100, secondary[0]->field0108, 2, 0, 0);
+        DrawNumber(80, 100, secondary[0]->health, 2, 0, 0);
         DrawNumber(80, 110, secondary[0]->field0008, 2, 0, 0);
         DrawNumber(80, 120, secondary[0]->field000a, 2, 0, 0);
         DrawNumber(80, 130, (unsigned short)secondary[0]->field000c, 2, 0, 0);
-        DrawNumber(280, 100, secondary[1]->field0108, 2, 0, 0);
+        DrawNumber(280, 100, secondary[1]->health, 2, 0, 0);
         DrawNumber(280, 110, secondary[1]->field0008, 2, 0, 0);
         DrawNumber(280, 120, secondary[1]->field000a, 2, 0, 0);
         DrawNumber(280, 130, (unsigned short)secondary[1]->field000c, 2, 0, 0);

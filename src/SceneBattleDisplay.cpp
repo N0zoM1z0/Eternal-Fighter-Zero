@@ -9,29 +9,29 @@ void Scene3::RenderHealthBars()
         int width;
         SurfaceRect destination;
     } work;
-    if (secondary[0]->field0110 > secondary[0]->field0108) {
-        secondary[0]->field0110 = secondary[0]->field0110 - 200;
-        if (secondary[0]->field0110 < secondary[0]->field0108) secondary[0]->field0110 = secondary[0]->field0108;
+    if (secondary[0]->animatedHealth > secondary[0]->health) {
+        secondary[0]->animatedHealth = secondary[0]->animatedHealth - 200;
+        if (secondary[0]->animatedHealth < secondary[0]->health) secondary[0]->animatedHealth = secondary[0]->health;
     }
-    if (secondary[0]->field0110 < secondary[0]->field0108) {
-        secondary[0]->field0110 = secondary[0]->field0110 + 200;
-        if (secondary[0]->field0110 > secondary[0]->field0108) secondary[0]->field0110 = secondary[0]->field0108;
+    if (secondary[0]->animatedHealth < secondary[0]->health) {
+        secondary[0]->animatedHealth = secondary[0]->animatedHealth + 200;
+        if (secondary[0]->animatedHealth > secondary[0]->health) secondary[0]->animatedHealth = secondary[0]->health;
     }
     if (secondary[1]->comboHitCount == 0) {
-        secondary[0]->field010c -= (secondary[0]->field010c > secondary[0]->field0108) * 100;
-        if (secondary[0]->field010c < secondary[0]->field0108) secondary[0]->field010c = secondary[0]->field0108;
+        secondary[0]->damageTrailHealth -= (secondary[0]->damageTrailHealth > secondary[0]->health) * 100;
+        if (secondary[0]->damageTrailHealth < secondary[0]->health) secondary[0]->damageTrailHealth = secondary[0]->health;
     }
-    if (secondary[1]->field0110 > secondary[1]->field0108) {
-        secondary[1]->field0110 = secondary[1]->field0110 - 200;
-        if (secondary[1]->field0110 < secondary[1]->field0108) secondary[1]->field0110 = secondary[1]->field0108;
+    if (secondary[1]->animatedHealth > secondary[1]->health) {
+        secondary[1]->animatedHealth = secondary[1]->animatedHealth - 200;
+        if (secondary[1]->animatedHealth < secondary[1]->health) secondary[1]->animatedHealth = secondary[1]->health;
     }
-    if (secondary[1]->field0110 < secondary[1]->field0108) {
-        secondary[1]->field0110 = secondary[1]->field0110 + 200;
-        if (secondary[1]->field0110 > secondary[1]->field0108) secondary[1]->field0110 = secondary[1]->field0108;
+    if (secondary[1]->animatedHealth < secondary[1]->health) {
+        secondary[1]->animatedHealth = secondary[1]->animatedHealth + 200;
+        if (secondary[1]->animatedHealth > secondary[1]->health) secondary[1]->animatedHealth = secondary[1]->health;
     }
     if (secondary[0]->comboHitCount == 0) {
-        secondary[1]->field010c -= (secondary[1]->field010c > secondary[1]->field0108) * 100;
-        if (secondary[1]->field010c < secondary[1]->field0108) secondary[1]->field010c = secondary[1]->field0108;
+        secondary[1]->damageTrailHealth -= (secondary[1]->damageTrailHealth > secondary[1]->health) * 100;
+        if (secondary[1]->damageTrailHealth < secondary[1]->health) secondary[1]->damageTrailHealth = secondary[1]->health;
     }
     if (contextOwner->state1420c > 0) return;
     {
@@ -51,13 +51,13 @@ void Scene3::RenderHealthBars()
         work.destination = MakeSurfaceRect(0x13f - secondary[1]->patterns[45].frames->width, 0x28, (int)secondary[1]->patterns[45].frames->width, (int)secondary[1]->patterns[45].frames->height);
         videoOwner->DrawSurface(work.destination, secondary[1]->surfaces[secondary[1]->patterns[45].frames->texture], work.source, secondary[1]->colorKey, 0);
         // The trail and current bars use distinct live health fields.
-        work.width = (int)(secondary[0]->field010c * 120.0 / 9999.0);
+        work.width = (int)(secondary[0]->damageTrailHealth * 120.0 / 9999.0);
         if (work.width > 0) {
             work.source = MakeSurfaceRect(0x78 - work.width, 0x5b, work.width, 6);
             work.destination = MakeSurfaceRect(0x8a - work.width, 0x12, work.width, 6);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         }
-        work.width = (int)(secondary[0]->field0110 * 120.0 / 9999.0);
+        work.width = (int)(secondary[0]->animatedHealth * 120.0 / 9999.0);
         if (work.width >= 40) {
             work.source = MakeSurfaceRect(0x78 - work.width, 0x49, work.width, 6);
             work.destination = MakeSurfaceRect(0x8a - work.width, 0x12, work.width, 6);
@@ -69,13 +69,13 @@ void Scene3::RenderHealthBars()
                 videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
             }
         }
-        work.width = (int)(secondary[1]->field010c * 120.0 / 9999.0);
+        work.width = (int)(secondary[1]->damageTrailHealth * 120.0 / 9999.0);
         if (work.width > 0) {
             work.source = MakeSurfaceRect(0x78, 0x5b, work.width, 6);
             work.destination = MakeSurfaceRect(0xb6, 0x12, work.width, 6);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         }
-        work.width = (int)(secondary[1]->field0110 * 120.0 / 9999.0);
+        work.width = (int)(secondary[1]->animatedHealth * 120.0 / 9999.0);
         if (work.width >= 40) {
             work.source = MakeSurfaceRect(0x78, 0x49, work.width, 6);
             work.destination = MakeSurfaceRect(0xb6, 0x12, work.width, 6);

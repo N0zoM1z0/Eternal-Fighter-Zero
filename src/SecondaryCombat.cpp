@@ -53,7 +53,7 @@ double Secondary::DamageFactor()
 
 double Secondary::HealthFactor()
 {
-    return (field0108 * 0.5 / 10000.0 + 0.5) * field0180;
+    return (health * 0.5 / 10000.0 + 0.5) * field0180;
 }
 
 double Secondary::ComboFactor()
@@ -64,15 +64,15 @@ double Secondary::ComboFactor()
 
 void Secondary::ApplyDamage(int damage, double scaling)
 {
-    if (comboHitCount == 0) (*opponentSlot)->field010c = (*opponentSlot)->field0108;
-    (*opponentSlot)->field0108 -= int(damage * DamageFactor() * (*opponentSlot)->HealthFactor() * ComboFactor());
+    if (comboHitCount == 0) (*opponentSlot)->damageTrailHealth = (*opponentSlot)->health;
+    (*opponentSlot)->health -= int(damage * DamageFactor() * (*opponentSlot)->HealthFactor() * ComboFactor());
     comboDamageScaleDisplay = comboDamageScale / 100.0;
     comboDamageScale = (scaling / 1000.0) * comboDamageScale;
     if (comboDamageScale > 10000.0) comboDamageScale = (scaling / 1000.0) * comboDamageScale;
     ++comboHitCount;
     comboDisplayHitCount = comboHitCount;
     comboDisplayTimer = 180;
-    comboDamage = (*opponentSlot)->field010c - (*opponentSlot)->field0108;
+    comboDamage = (*opponentSlot)->damageTrailHealth - (*opponentSlot)->health;
     if (comboHitCount > field30d4) field30d4 = comboHitCount;
     if (comboDamage > field30d8) field30d8 = comboDamage;
     ++field30d0;

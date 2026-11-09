@@ -2017,11 +2017,11 @@ void Character23::Slot07()
                 effects[i].field008c = 30000;
                 if ((effects[i].frame == 0x10) &&
                     (effects[i].tick == 0)) {
-                    (*opponentSlot)->field0108 =
-                    (*opponentSlot)->field0108 + -5000;
+                    (*opponentSlot)->health =
+                    (*opponentSlot)->health + -5000;
                     (*opponentSlot)->koDelayFrames = 30000;
                     if ((field00ac + 1 < (int)(char)contextOwner->selection134e) ||
-                        (0 < (*opponentSlot)->field0108)) {
+                        (0 < (*opponentSlot)->health)) {
                         (*opponentSlot)->field0008 = 99;
                         (*opponentSlot)->field000c = 0;
                         (*opponentSlot)->field000a = 0;
@@ -2035,7 +2035,7 @@ void Character23::Slot07()
                 if ((((effects[i].frame == 0x10) &&
                     (effects[i].tick == 0x1c2)) &&
                     (contextOwner->StartFade(0x32,100,100),
-                    (*opponentSlot)->field0108 <= 0)) &&
+                    (*opponentSlot)->health <= 0)) &&
                     (field00ac + 1 == (int)(char)contextOwner->selection134e)) {
                     contextOwner->StartFade(0x32,100,0x50);
                 }
@@ -2057,12 +2057,12 @@ void Character23::Slot07()
                         ++effects[i].frame;
                         effects[i].field0080 = 0;
                         if (((effects[i].frame == 1) &&
-                            ((*opponentSlot)->field0108 <= 5000)) &&
+                            ((*opponentSlot)->health <= 5000)) &&
                             (field00ac + 1 == (int)(char)contextOwner->selection134e)) {
                             pendingCharacterSoundSlot = 0xd;
                         }
                         if (effects[i].frame == 0x11) {
-                            if (((*opponentSlot)->field0108 <= 0) &&
+                            if (((*opponentSlot)->health <= 0) &&
                                 (field00ac + 1 == (int)(char)contextOwner->selection134e)) {
                                 effects[i].frame = 0x11;
                             }

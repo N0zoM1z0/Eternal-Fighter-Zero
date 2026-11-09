@@ -160,9 +160,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->attackCollisionResult = 2;
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
-                                second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
-                                if (second->field0108 <= 0) {
-                                    second->field0108 = 1;
+                                second->health = second->health - (int)work.firstFrame.guardDamage;
+                                if (second->health <= 0) {
+                                    second->health = 1;
                                 }
                                 second->airActionGauge = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->airActionGauge;
                                 if (second->airActionGauge > 360.0f) {
@@ -183,9 +183,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->attackCollisionResult = 2;
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
-                                second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
-                                if (second->field0108 <= 0) {
-                                    second->field0108 = 1;
+                                second->health = second->health - (int)work.firstFrame.guardDamage;
+                                if (second->health <= 0) {
+                                    second->health = 1;
                                 }
                                 second->airActionGauge = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->airActionGauge;
                                 if (second->airActionGauge > 360.0f) {
@@ -206,9 +206,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->attackCollisionResult = 2;
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
-                                second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
-                                if (second->field0108 <= 0) {
-                                    second->field0108 = 1;
+                                second->health = second->health - (int)work.firstFrame.guardDamage;
+                                if (second->health <= 0) {
+                                    second->health = 1;
                                 }
                             } else if ((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0)) {
                                 first->attackCollisionResult = 2;
@@ -233,9 +233,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->FaceOpponent();
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
-                                second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
-                                if (second->field0108 <= 0) {
-                                    second->field0108 = 1;
+                                second->health = second->health - (int)work.firstFrame.guardDamage;
+                                if (second->health <= 0) {
+                                    second->health = 1;
                                 }
                                 if (first->airActionGauge > 0.0f) {
                                     first->airActionGauge =
@@ -295,10 +295,10 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->knockbackVelocityY = (double)work.firstFrame.outgoingPushbackVelocityY;
                                 second->outgoingPushbackActive = 1;
                                 if (first->comboHitCount == 0) {
-                                    second->field010c = second->field0108;
+                                    second->damageTrailHealth = second->health;
                                 }
                                 first->field0144 = (((work.firstFrame.attackFlags & 0x2000) > 0) && ((work.secondFrame.frameFlags & 0x2000) > 0)) ? 1 : 0;
-                                second->field0108 -= (int)(work.firstFrame.damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                                second->health -= (int)(work.firstFrame.damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                                 second->airActionLockFrames = (short)(work.firstFrame.airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                                 second->airActionDisabled = (unsigned int)((work.firstFrame.attackFlags & 0x400) > 0);
                                 second->knockdownOnLanding = (unsigned int)((work.firstFrame.attackFlags & 0x800) > 0);
@@ -317,7 +317,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 ++first->comboHitCount;
                                 first->comboDisplayHitCount = first->comboHitCount;
                                 first->comboDisplayTimer = 0xb4;
-                                first->comboDamage = second->field010c - second->field0108;
+                                first->comboDamage = second->damageTrailHealth - second->health;
                                 first->meter += work.firstFrame.hitMeterGain;
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
@@ -332,7 +332,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.payload = 0;
                                 effect.palette = work.firstFrame.hitEffectPalette;
                                 contextOwner->EmitEffect(&effect);
-                                if ((second->field0108 <= 0) && (second->koDelayFrames == 0)) {
+                                if ((second->health <= 0) && (second->koDelayFrames == 0)) {
                                     second->field0008 = work.firstFrame.airHitState;
                                     second->ResetPose();
                                     second->FaceOpponent();

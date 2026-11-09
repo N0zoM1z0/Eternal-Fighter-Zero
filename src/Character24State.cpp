@@ -1875,7 +1875,7 @@ void Character24::Slot06()
         break;
     case 99:
         field0058 = 0;
-        if (((0 < field0108) && (99 < (unsigned short)field000c)) &&
+        if (((0 < health) && (99 < (unsigned short)field000c)) &&
             (field000a == 0)) {
             field0008 = 0x60;
             ResetPose();
@@ -2598,7 +2598,7 @@ void Character24::Slot06()
         break;
     case 179:
         airDashCount = 0;
-        if ((*opponentSlot)->field0108 <= 0) {
+        if ((*opponentSlot)->health <= 0) {
             field3458 = 0;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
@@ -2655,7 +2655,7 @@ void Character24::Slot06()
         break;
     case 180:
         airDashCount = 0;
-        if ((*opponentSlot)->field0108 <= 0) {
+        if ((*opponentSlot)->health <= 0) {
             field3458 = 0;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
@@ -2709,7 +2709,7 @@ void Character24::Slot06()
         break;
     case 181:
         airDashCount = 0;
-        if ((*opponentSlot)->field0108 <= 0) {
+        if ((*opponentSlot)->health <= 0) {
             field3458 = 0;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
@@ -5119,8 +5119,8 @@ void Character24::Slot06()
                 (*opponentSlot)->field0008 = 0x61;
                 (*opponentSlot)->knockdownOnLanding = 1;
                 ApplyDamage(300,980.0);
-                if ((*opponentSlot)->field0108 <= 0) {
-                    (*opponentSlot)->field0108 = 1;
+                if ((*opponentSlot)->health <= 0) {
+                    (*opponentSlot)->health = 1;
                 }
             }
             if ((field000a == 6) && (field3138 < 3)) {

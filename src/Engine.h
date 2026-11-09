@@ -235,9 +235,11 @@ public:
     unsigned int comboDamage;
     short comboDisplayTimer;
     unsigned char unknown_0106[0x2];
-    int field0108;
-    int field010c;
-    int field0110;
+    int health;
+    // Captured at combo start, then trails toward live health between combos.
+    int damageTrailHealth;
+    // The primary health display interpolates toward live health every frame.
+    int animatedHealth;
     unsigned char unknown_0114[0x4];
     double field0118;
     char field0120;

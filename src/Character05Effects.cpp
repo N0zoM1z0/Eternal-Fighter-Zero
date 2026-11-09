@@ -64,8 +64,8 @@ void Character05::Slot07()
                     (*opponentSlot)->field0008 = 0x62;
                     effects[i].y = 0.0;
                     ApplyDamage(300,960.0);
-                    if ((*opponentSlot)->field0108 <= 0) {
-                        (*opponentSlot)->field0108 = 1;
+                    if ((*opponentSlot)->health <= 0) {
+                        (*opponentSlot)->health = 1;
                     }
                     spawn.type = 0;
                     spawn.x = (double)(int(effects[i].x));
@@ -138,8 +138,8 @@ void Character05::Slot07()
                     (*opponentSlot)->field0008 = 0x62;
                     effects[i].y = 0.0;
                     ApplyDamage(300,960.0);
-                    if ((*opponentSlot)->field0108 <= 0) {
-                        (*opponentSlot)->field0108 = 1;
+                    if ((*opponentSlot)->health <= 0) {
+                        (*opponentSlot)->health = 1;
                     }
                     spawn.type = 0;
                     spawn.x = (double)(int(effects[i].x));

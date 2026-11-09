@@ -1820,7 +1820,7 @@ void Character15::Slot06()
     case 99:
         ++field000c;
         dashMomentumFlag = 0;
-        if (((0 < field0108) && (99 < (unsigned short)field000c)) &&
+        if (((0 < health) && (99 < (unsigned short)field000c)) &&
             (field000a == 0)) {
             field0008 = 0x60;
             ResetPose();

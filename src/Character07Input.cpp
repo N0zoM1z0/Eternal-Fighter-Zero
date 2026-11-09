@@ -27,7 +27,7 @@ void Character07::Slot04()
         return;
     }
     if (field015c < 2) {
-        if ((((field0108 < 0xd05) && (field0262 == 0x5c)) && (meter >= 3000 &&
+        if ((((health < 0xd05) && (field0262 == 0x5c)) && (meter >= 3000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))) && (((field0008
             >= 200 && (attackCollisionResult >= 2 && (attackCollisionResult != 6))) || (field0008 < 200)) &&
             (sequences[field0008].field0002 <= sequences[313].field0000))) {

@@ -992,7 +992,7 @@ void Character24::Slot07()
                 if (((effects[i].frame == 4) &&
                     ((unsigned int)effects[i].tick == frameDuration - 0xc)) &&
                     ((field00ac == '\0' ||
-                    ((field00ac == '\x01' && (0 < (*opponentSlot)->field0108))))))
+                    ((field00ac == '\x01' && (0 < (*opponentSlot)->health))))))
                 {
                     contextOwner->StartFade(9,3,0xc);
                 }
@@ -1069,7 +1069,7 @@ void Character24::Slot07()
                     effects[i].vy =
                     effects[i].vy + 0.035;
                     if ((effects[i].field0080 == 3) &&
-                        (0 < (*opponentSlot)->field0108)) {
+                        (0 < (*opponentSlot)->health)) {
                         effects[i].layer = 0;
                         field3448 = 1;
                         effects[i].field0086 = 0x3c;
