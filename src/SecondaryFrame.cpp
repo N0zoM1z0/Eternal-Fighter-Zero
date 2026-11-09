@@ -55,9 +55,9 @@ void Secondary::UpdateMovement()
     int i = effectRead;
     if (field014a == 0 && (*opponentSlot)->field014c == 0) {
         if ((CollisionSide() * facing) * (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
-        * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) >= 0.0) {
+        * ((*opponentSlot)->outgoingPushbackActive != 0 && field014c == 0)) >= 0.0) {
             positionX = (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
-            * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) * facing + positionX;
+            * ((*opponentSlot)->outgoingPushbackActive != 0 && field014c == 0)) * facing + positionX;
         }
         if (positionX < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0)) {
             positionX = 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0);

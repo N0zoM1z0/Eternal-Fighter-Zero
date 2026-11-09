@@ -224,7 +224,7 @@ public:
     double velocityXCorrection;
     double outgoingPushbackVelocityX;
     double knockbackVelocityX, knockbackVelocityY;
-    int field00d0;
+    int outgoingPushbackActive;
     unsigned char unknown_00d4[8];
     short field00dc;
     unsigned char field00de;

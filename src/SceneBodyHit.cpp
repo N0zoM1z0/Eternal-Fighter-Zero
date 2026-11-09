@@ -77,7 +77,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
-                                second->field00d0 = 1;
+                                second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -104,7 +104,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
-                                second->field00d0 = 1;
+                                second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -126,7 +126,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
-                                second->field00d0 = 1;
+                                second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -214,7 +214,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
-                                second->field00d0 = 1;
+                                second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -293,7 +293,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                                 second->knockbackVelocityX = (double)work.firstFrame.outgoingPushbackVelocityX;
                                 second->knockbackVelocityY = (double)work.firstFrame.field00bc;
-                                second->field00d0 = 1;
+                                second->outgoingPushbackActive = 1;
                                 if (first->field0174 == 0) {
                                     second->field010c = second->field0108;
                                 }

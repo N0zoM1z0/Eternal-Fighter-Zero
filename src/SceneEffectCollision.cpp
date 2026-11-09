@@ -74,7 +74,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             work.slot->field0080 = 2;
                             first->field0148 += work.attack->field00b6;
                             --work.slot->field0084;
-                            second->field00d0 = 1;
+                            second->outgoingPushbackActive = 1;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
                             effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -101,7 +101,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             work.slot->field0080 = 2;
                             first->field0148 += work.attack->field00b6;
                             --work.slot->field0084;
-                            second->field00d0 = 1;
+                            second->outgoingPushbackActive = 1;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
                             effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -123,7 +123,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             work.slot->field0080 = 2;
                             first->field0148 += work.attack->field00b6;
                             --work.slot->field0084;
-                            second->field00d0 = 1;
+                            second->outgoingPushbackActive = 1;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
                             effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -230,7 +230,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->field014a = work.attack->field00c4;
                             first->field0148 += work.attack->field00b6;
                             --work.slot->field0084;
-                            second->field00d0 = 0;
+                            second->outgoingPushbackActive = 0;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
                             effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -304,7 +304,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             }
                             second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                             second->knockbackVelocityY = (double)work.attack->field00bc;
-                            second->field00d0 = 0;
+                            second->outgoingPushbackActive = 0;
                             if (first->field0174 == 0) {
                                 second->field010c = second->field0108;
                             }
@@ -481,7 +481,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->field00bc;
-                        second->field00d0 = 1;
+                        second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->field00b2 * (first->field0178 / 10000.0 * 0.8));
@@ -614,7 +614,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->field00bc;
-                        second->field00d0 = 1;
+                        second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->field00b2 * (first->field0178 / 10000.0 * 0.8));

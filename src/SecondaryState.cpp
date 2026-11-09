@@ -18,7 +18,7 @@ void Secondary::InitializeState()
     facing = 1 - player * 2;
     ResetFrame();
     velocityXCorrection = 0.0;
-    field00d0 = 0;
+    outgoingPushbackActive = 0;
     field0008 = 0;
     field000a = 0;
     field000c = 0;

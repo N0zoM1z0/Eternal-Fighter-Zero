@@ -5017,7 +5017,7 @@ void Character07::Slot06()
             if (0x97 < field3138) {
                 field3138 = 0x96;
             }
-            field00d0 = 1;
+            outgoingPushbackActive = 1;
             if ((*opponentSlot)->positionX > positionX) {
                 outgoingPushbackVelocityX =
                 (double)field3138 * 0.01 * (double)-(int)(*opponentSlot)->facing;
@@ -5108,7 +5108,7 @@ void Character07::Slot06()
             if (0xc9 < field3138) {
                 field3138 = 200;
             }
-            field00d0 = 1;
+            outgoingPushbackActive = 1;
             if ((*opponentSlot)->positionX > positionX) {
                 outgoingPushbackVelocityX =
                 (double)field3138 * 0.01 * (double)-(int)(*opponentSlot)->facing;
@@ -5199,7 +5199,7 @@ void Character07::Slot06()
             if (0xc9 < field3138) {
                 field3138 = 200;
             }
-            field00d0 = 1;
+            outgoingPushbackActive = 1;
             if ((*opponentSlot)->positionX > positionX) {
                 outgoingPushbackVelocityX =
                 (double)field3138 * 0.01 * (double)-(int)(*opponentSlot)->facing;
