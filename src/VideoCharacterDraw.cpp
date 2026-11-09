@@ -257,39 +257,55 @@ int Video::DrawBlendedSurface(SurfaceRect destination, IUnknown *surface,
     int width = destination.right - destination.left;
     int height = destination.bottom - destination.top;
 
+    // Use descending pixels inside pitch-stepped rows, matching the original
+    // keyed and unkeyed palette-blending paths.
     if (colorKey > 0) {
         if (flip != 0) {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char pixel = sourcePixels[y * sourcePitch + (width - 1 - x)];
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[width - 1 - x];
                     if (pixel != colorKey) {
-                        unsigned char destinationPixel = destinationPixels[y * destinationPitch + x];
-                        destinationPixels[y * destinationPitch + x] =
+                        unsigned char destinationPixel = destinationPixels[x];
+                        destinationPixels[x] =
                             blendTable[(static_cast<unsigned int>(pixel) << 8) | destinationPixel];
                     }
-                }
-            }
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
         } else {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char pixel = sourcePixels[y * sourcePitch + x];
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[x];
                     if (pixel != colorKey) {
-                        unsigned char destinationPixel = destinationPixels[y * destinationPitch + x];
-                        destinationPixels[y * destinationPitch + x] =
+                        unsigned char destinationPixel = destinationPixels[x];
+                        destinationPixels[x] =
                             blendTable[(static_cast<unsigned int>(pixel) << 8) | destinationPixel];
                     }
-                }
-            }
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
         }
     } else {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                unsigned char pixel = sourcePixels[y * sourcePitch + x];
-                unsigned char destinationPixel = destinationPixels[y * destinationPitch + x];
-                destinationPixels[y * destinationPitch + x] =
-                    blendTable[(static_cast<unsigned int>(pixel) << 8) | destinationPixel];
-            }
-        }
+            int rows = height - 1;
+            do {
+                int x = width - 1;
+                do {
+                    unsigned char pixel = sourcePixels[x];
+                    {
+                        unsigned char destinationPixel = destinationPixels[x];
+                        destinationPixels[x] =
+                            blendTable[(static_cast<unsigned int>(pixel) << 8) | destinationPixel];
+                    }
+                } while (--x >= 0);
+                sourcePixels += sourcePitch;
+                destinationPixels += destinationPitch;
+            } while (--rows >= 0);
     }
 
     backSurface->Unlock(destinationDescription.lpSurface);
