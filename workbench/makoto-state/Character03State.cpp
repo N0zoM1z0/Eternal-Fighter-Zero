@@ -1705,7 +1705,7 @@ void Character03::Slot06()
             effect.type = 0x1ef;
             effect.x = 60.0;
             effect.y = 40.0;
-            effect.palette = 1;
+            effect.payload = 1;
             effect.flag0018 = 1;
             effect.group = 0;
             effect.layer = 0;
@@ -4082,6 +4082,7 @@ void Character03::Slot06()
             effect.type = 0x192;
             effect.x = (double)((int)positionX + (int)facing * 36);
             effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
             effect.group = 2;
             EmitLocalEffect(&effect);

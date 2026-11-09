@@ -333,8 +333,10 @@ work, not the original behavior for valid unimplemented animations.
 
 - Animation ID 87 (0x005ED218..0x005ED2CB, 179 bytes) is a short,
   independent first-tick effect owner. It emits local type 0x1EF at fixed
-  coordinates (60.0, 40.0), with palette=1, flag0018=1, group=0 and
-  layer=0. These are actual target data constants and field stores,
+  coordinates (60.0, 40.0), with **payload=1**, flag0018=1,
+  group=0 and layer=0. The original DWORD store at EBP-0x2C is
+  effect.payload (offset +0x24), **not** the byte effect.palette
+  (offset +0x2C) assumed by an earlier draft. These are target stores,
   not character-position calculations. Its unsigned pose counter returns
   to animation 0 and calls ResetPose on exhaustion. The effect event is
   only on pose/tick zero; neither velocity nor gravity is written.
@@ -1153,6 +1155,16 @@ work, not the original behavior for valid unimplemented animations.
   bytes. These are meaningful structural advances, *not* a strict
   complete COFF match: function stack frame/relocations and other
   code still differ, so no Exact credit is taken.
+
+- A fresh native per-branch disassembly exposed two source errors
+  missed by earlier manual notes: state 87 stored `effect.palette=1`
+  where the target writes DWORD `effect.payload=1`; state 259 omitted
+  an explicit second `effect.flag0018=facing` assignment just before
+  its second local-effect emission. Both were fixed as natural C++.
+  After a targeted VC7.1 rebuild, the emitted **87 and 259 branch
+  lengths now equal their exact original 179 and 431 bytes**. This is
+  a semantic and code-layout correction; the overall 59,292-byte
+  function still requires complete exact binary verification.
 
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
