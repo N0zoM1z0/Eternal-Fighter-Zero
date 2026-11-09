@@ -64,19 +64,19 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                             }
                             if (((((work.secondFrame.frameFlags & 0x1000) > 0) && ((work.firstFrame.attackFlags & 0x100) == 0)) && ((work.firstFrame.attackFlags & 1) > 0))) {
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 first->field0168 = 2;
                                 first->field0168 = 6;
                                 second->field0168 = 6;
                             } else if (((((work.secondFrame.frameFlags & 0x800) > 0) && ((work.firstFrame.attackFlags & 0x100) == 0)) && ((work.firstFrame.attackFlags & 2) > 0))) {
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 first->field0168 = 2;
                                 first->field0168 = 6;
                                 second->field0168 = 6;
                             } else if ((((second->attackWasGuarded != 0) && (second->guardInputFrames >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.attackFlags & 0x80) == 0))))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -103,7 +103,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                             } else if ((((second->guardInputFrames >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -125,7 +125,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                             } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->guardInputFrames >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -146,7 +146,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->hitstunFrames = 0x3c;
                                 first->attackWasGuarded = 1;
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 1) > 0) && ((work.firstFrame.attackFlags & 1) > 0)))) {
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -169,7 +169,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     second->field0134 = 360.0f;
                                 }
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 2) > 0) && ((work.firstFrame.attackFlags & 2) > 0)))) {
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -192,7 +192,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     second->field0134 = 360.0f;
                                 }
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && ((((work.secondFrame.attackFlags & 4) > 0) && ((work.firstFrame.attackFlags & 4) > 0)) && (second->positionY < 0.0)))) {
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
@@ -213,7 +213,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                             } else if ((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0)) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -321,7 +321,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->meter += work.firstFrame.hitMeterGain;
                                 first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
                                 second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
-                                --first->field016c;
+                                --first->remainingHitCount;
                                 effect.owner = 0;
                                 effect.type = (short)work.firstFrame.hitEffectType;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);

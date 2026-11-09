@@ -269,7 +269,7 @@ public:
     int field0160;
     SecondarySequence * sequences;
     int field0168;
-    short field016c;
+    short remainingHitCount;
     unsigned char unknown_016e[2];
     int attackWasGuarded;
     short field0174;

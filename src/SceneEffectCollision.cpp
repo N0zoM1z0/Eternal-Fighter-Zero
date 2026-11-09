@@ -534,7 +534,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
     } work;
     work.slot = &second->effects[index];
     work.attack = &firstPose->frame;
-    if (first->field0168 == 0 && first->field016c > 0 && (work.attack->attackFlags & 0x40) == 0) {
+    if (first->field0168 == 0 && first->remainingHitCount > 0 && (work.attack->attackFlags & 0x40) == 0) {
         struct CollisionBoxes {
             int overlap[4][5];
             SurfaceRect defenseBoxes[5];
@@ -576,7 +576,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         }
                     }
                     if ((boxes.defense.frameFlags & 0x10) == 0) {
-                        --first->field016c;
+                        --first->remainingHitCount;
                         first->field0168 = 5;
                     }
                     work.slot->field0080 = 5;

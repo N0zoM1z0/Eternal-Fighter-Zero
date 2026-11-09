@@ -125,9 +125,9 @@ void Scene3::DispatchCollisions()
         if (pass.i >= 64) pass.i = 0;
     }
     pass.first.state = (char)secondary[0]->field0168;
-    pass.first.command = secondary[0]->field016c;
+    pass.first.command = secondary[0]->remainingHitCount;
     pass.second.state = (char)secondary[1]->field0168;
-    pass.second.command = secondary[1]->field016c;
+    pass.second.command = secondary[1]->remainingHitCount;
     if (pass.secondResult == 0) ResolveBodyHit(secondary[0], secondary[1], &pass.first, &pass.second);
     if (pass.firstResult == 0) ResolveBodyHit(secondary[1], secondary[0], &pass.second, &pass.first);
 }
@@ -160,7 +160,7 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
             }
             specialBounds = TransformSnapshotBox(secondPose, &pass.secondFrame.bodyBox);
             if (first->field0168 == 0 && (pass.secondFrame.frameFlags & 0x20) == 0 &&
-                first->field016c > 0 &&
+                first->remainingHitCount > 0 &&
                 !(second->field0130 > 0 && (pass.firstFrame.attackFlags & 0x40) > 0) &&
                 second->AirActionReady() == 0 && second->field013c == 0) {
                 if ((pass.firstFrame.attackFlags & 0x40) > 0) {

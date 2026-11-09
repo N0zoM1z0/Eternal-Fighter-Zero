@@ -2789,7 +2789,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2849,7 +2849,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2880,7 +2880,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
             effect.type = 0x191;
             effect.x = (double)((int(positionX)) - facing * 0x24);
             effect.y = (double)((int(positionY)) + -0x35);
@@ -2919,7 +2919,7 @@ void Character24::Slot06()
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2963,7 +2963,7 @@ void Character24::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
             effect.type = 0x1ba;
             effect.x = (double)((int(positionX)) - facing * 0x28);
             effect.y = (double)((int(positionY)) + -10);
@@ -3017,7 +3017,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
             effect.type = 0x192;
             effect.x = (double)((int(positionX)) - facing * 0x1a);
             effect.y = (double)((int(positionY)) + -0x10);
@@ -3059,7 +3059,7 @@ void Character24::Slot06()
             velocityX = 0.0;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (((field000a == 3) && ((unsigned short)field000c == 0)) &&
             (field3138 == 0)) {
@@ -3134,7 +3134,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
             effect.type = 0x1bb;
             effect.x = (double)((int(positionX)) - facing * 7);
             effect.y = (double)((int(positionY)) + -0x2f);
@@ -3212,7 +3212,7 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 2;
+            remainingHitCount = 2;
             effect.type = 0x194;
             effect.x = (double)((int(positionX)) + facing * 0x25);
             effect.y = (double)((int(positionY)) + -0x48);
@@ -3290,7 +3290,7 @@ void Character24::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 3;
+            remainingHitCount = 3;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3375,7 +3375,7 @@ void Character24::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3431,7 +3431,7 @@ void Character24::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3450,7 +3450,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
             velocityX = velocityX / 2.0;
             gravity = 0.07;
         }
@@ -3538,10 +3538,10 @@ void Character24::Slot06()
         field0158 = 0;
         if (((field000a == 1) && ((unsigned short)field000c == 0)) &&
             ((*opponentSlot)->positionY == 0.0)) {
-            field016c = 1;
+            remainingHitCount = 1;
         }
         else {
-            field016c = 0;
+            remainingHitCount = 0;
         }
         if ((field000a == 1) && (field0168 == 3)) {
             velocityX = 0.0;
@@ -3641,7 +3641,7 @@ void Character24::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
             field013c = 2;
@@ -3714,7 +3714,7 @@ void Character24::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
             field013c = 2;
@@ -3761,7 +3761,7 @@ void Character24::Slot06()
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
             field013c = 2;
@@ -3790,7 +3790,7 @@ void Character24::Slot06()
             field00dc = 4;
             field00de = 0xec;
             velocityX = 0.0;
-            field016c = 1;
+            remainingHitCount = 1;
             guardInputFrames = 0;
             hitstunFrames = 0x3c;
             effect.type = 0x28;
@@ -4237,7 +4237,7 @@ void Character24::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -4271,7 +4271,7 @@ void Character24::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -4305,7 +4305,7 @@ void Character24::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 1;
+            remainingHitCount = 1;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -4322,7 +4322,7 @@ void Character24::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 3;
+            remainingHitCount = 3;
         }
         if (((field000a == 5) && ((unsigned short)field000c == 0)) && (field3138 < 2)
             ) {
@@ -5322,7 +5322,7 @@ void Character24::Slot06()
                 (*opponentSlot)->knockbackVelocityX = 0.2;
                 (*opponentSlot)->knockbackVelocityY = -1.9;
                 ApplyDamage(1000,1000.0);
-                field016c = 1;
+                remainingHitCount = 1;
             }
             if ((field000a == 7) && (field3138 < 9)) {
                 ++field3138;
@@ -5359,7 +5359,7 @@ void Character24::Slot06()
             velocityX = 0.0;
             velocityY = 0.0;
             gravity = 0.0;
-            field016c = 2;
+            remainingHitCount = 2;
         }
         if ((field000a == 6) && ((unsigned short)field000c == 0)) {
             SetHorizontalShake(0x32,0x2d);
@@ -5502,7 +5502,7 @@ void Character24::Slot06()
             contextOwner->EmitEffect(&effect);
             ++field3138;
             pendingContextSoundSlot = 0x25;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (field000a > 0) {
             contextOwner->SetSceneTimer(0xf);

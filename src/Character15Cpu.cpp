@@ -63,13 +63,13 @@ void Character15::Slot05()
     if (((field0008 >= 4 && field0008 <= 6) ||
         (field0008 >= 10 && field0008 <= 12)) && positionY == 0.0) { return; }
     if ((*opponentSlot)->field0008 >= 50 && (*opponentSlot)->field0008 < 150 &&
-        field0008 == 264 && field016c > 1) { return; }
+        field0008 == 264 && remainingHitCount > 1) { return; }
     if ((field0008 == 0xa8) && ((unsigned short)field000c < 6)) {
         if (((*opponentSlot)->field0008 != 200) &&
             (((((*opponentSlot)->field0008 != 0xcc &&
             ((*opponentSlot)->field0008 < 0xfa)) &&
             ((*opponentSlot)->positionY == 0.0)) &&
-            ((*opponentSlot)->field016c == 0)))) {
+            ((*opponentSlot)->remainingHitCount == 0)))) {
             if ((distance.forward < 40.0) &&
                 (
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f)) {
@@ -90,7 +90,7 @@ void Character15::Slot05()
             ((*opponentSlot)->field0008 == 0xcd)) &&
             ((((*opponentSlot)->field0008 < 0xfa &&
             ((*opponentSlot)->positionY == 0.0)) &&
-            ((*opponentSlot)->field016c == 0)))) {
+            ((*opponentSlot)->remainingHitCount == 0)))) {
             if (((distance.forward > 20.0) && (distance.forward < 60.0)) &&
                 (
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 2)) {

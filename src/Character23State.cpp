@@ -2128,7 +2128,7 @@ void Character23::Slot06()
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 1;
+            remainingHitCount = 1;
             pendingContextSoundSlot = 0x3e;
             ++field3138;
         }
@@ -2150,7 +2150,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             velocityY = -1.5;
             gravity = 0.025;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
             ResetFrame();
@@ -2160,7 +2160,7 @@ void Character23::Slot06()
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 1;
+            remainingHitCount = 1;
             pendingContextSoundSlot = 0x3e;
             meter = meter + -1000;
             ++field3138;
@@ -2579,7 +2579,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2619,7 +2619,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((1 < field000a) &&
             (velocityX = velocityX - 0.02,
@@ -2661,7 +2661,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2685,7 +2685,7 @@ void Character23::Slot06()
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2720,7 +2720,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2758,7 +2758,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2783,7 +2783,7 @@ void Character23::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x19;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2831,7 +2831,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -2872,7 +2872,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -2913,7 +2913,7 @@ void Character23::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -2951,7 +2951,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
@@ -2990,7 +2990,7 @@ void Character23::Slot06()
         if ((field000a == 8) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY < 0.0) {
             velocityY = velocityY + 0.055;
@@ -3025,7 +3025,7 @@ void Character23::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
             velocityX = velocityX / 2.0;
             gravity = 0.07;
         }
@@ -3113,10 +3113,10 @@ void Character23::Slot06()
         velocityY = 0.0;
         if (((field000a == 1) && ((unsigned short)field000c == 0)) &&
             ((*opponentSlot)->positionY == 0.0)) {
-            field016c = 1;
+            remainingHitCount = 1;
         }
         else {
-            field016c = 0;
+            remainingHitCount = 0;
         }
         if ((field000a == 1) && (field0168 == 3)) {
             velocityX = 0.0;
@@ -3220,7 +3220,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3248,7 +3248,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3276,7 +3276,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3320,8 +3320,8 @@ void Character23::Slot06()
             ++field000a;
             if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 149)) {
-                field016c = 1;
-            } else { field016c = 0; }
+                remainingHitCount = 1;
+            } else { remainingHitCount = 0; }
             field0168 = 0;
             if (field000a >= frameCount) {
                 field0008 = 0xd1;
@@ -3667,7 +3667,7 @@ void Character23::Slot06()
             velocityX = 1.2;
             velocityY = -1.6;
             gravity = 0.035;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -3712,7 +3712,7 @@ void Character23::Slot06()
             velocityX = 1.4;
             velocityY = -1.5;
             gravity = 0.035;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -3749,7 +3749,7 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 1;
+            remainingHitCount = 1;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -3774,7 +3774,7 @@ void Character23::Slot06()
             velocityX = 1.8;
             velocityY = -1.6;
             gravity = 0.035;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -3813,7 +3813,7 @@ void Character23::Slot06()
             velocityX = 1.2;
             velocityY = -1.3;
             gravity = 0.025;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -3852,7 +3852,7 @@ void Character23::Slot06()
             velocityX = 1.2;
             velocityY = -1.5;
             gravity = 0.025;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -3889,7 +3889,7 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field016c = 1;
+            remainingHitCount = 1;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -3908,7 +3908,7 @@ void Character23::Slot06()
             velocityX = 1.8;
             velocityY = -1.3;
             gravity = 0.025;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityX < 0.0) {
             velocityY = velocityY + gravity;
@@ -4775,10 +4775,10 @@ void Character23::Slot06()
                 if ((((*opponentSlot)->field0008 < 0x32) ||
                     (0x95 < (*opponentSlot)->field0008)) &&
                     ((*opponentSlot)->positionY == 0.0)) {
-                    field016c = 1;
+                    remainingHitCount = 1;
                 }
                 else {
-                    field016c = 0;
+                    remainingHitCount = 0;
                 }
             }
             if (field000a == 0x26) {

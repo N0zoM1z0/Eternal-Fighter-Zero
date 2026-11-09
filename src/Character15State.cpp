@@ -2178,7 +2178,7 @@ void Character15::Slot06()
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 1;
+            remainingHitCount = 1;
             pendingContextSoundSlot = 0x3e;
             ++field3138;
         }
@@ -2200,7 +2200,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             velocityY = -1.5;
             gravity = 0.025;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((field000a == 6) && ((unsigned short)field000c == 0)) {
             ResetFrame();
@@ -2210,7 +2210,7 @@ void Character15::Slot06()
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 1;
+            remainingHitCount = 1;
             pendingContextSoundSlot = 0x3e;
             meter = meter + -1000;
             ++field3138;
@@ -2663,7 +2663,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2706,7 +2706,7 @@ void Character15::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2739,7 +2739,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2782,7 +2782,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2825,7 +2825,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2871,7 +2871,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2904,7 +2904,7 @@ void Character15::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x19;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2943,7 +2943,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -2984,7 +2984,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3025,7 +3025,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3037,7 +3037,7 @@ void Character15::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            if (0 < field016c) {
+            if (0 < remainingHitCount) {
                 field0168 = 0;
             }
             if (field000a >= frameCount) {
@@ -3055,7 +3055,7 @@ void Character15::Slot06()
         if ((field000a == 8) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if (positionY < 0.0) {
             velocityY = velocityY + 0.035;
@@ -3120,7 +3120,7 @@ void Character15::Slot06()
             if ((field000a == 3) && ((unsigned short)field000c == 0)) {
                 meter = meter + 0x1e;
                 pendingContextSoundSlot = 0x14;
-                field016c = 1;
+                remainingHitCount = 1;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -3134,7 +3134,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
             velocityX = velocityX / 2.0;
             gravity = 0.07;
         }
@@ -3243,10 +3243,10 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 2) &&
                 ((*opponentSlot)->positionY == 0.0)) {
-                field016c = 1;
+                remainingHitCount = 1;
             }
             else {
-                field016c = 0;
+                remainingHitCount = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 7;
@@ -3310,7 +3310,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3359,7 +3359,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3408,7 +3408,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             pendingContextSoundSlot = 0x14;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3437,7 +3437,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3473,7 +3473,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3509,7 +3509,7 @@ void Character15::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
             pendingContextSoundSlot = 0x15;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3553,8 +3553,8 @@ void Character15::Slot06()
             ++field000a;
             if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 149)) {
-                field016c = 1;
-            } else { field016c = 0; }
+                remainingHitCount = 1;
+            } else { remainingHitCount = 0; }
             field0168 = 0;
             if (field000a >= frameCount) {
                 field0008 = 0xd1;
@@ -3647,7 +3647,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3679,7 +3679,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3710,7 +3710,7 @@ void Character15::Slot06()
             field0158 = 0;
             ResetFrame();
             meter = meter + 0x2d;
-            field016c = 2;
+            remainingHitCount = 2;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -3762,7 +3762,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0158 = 0;
             ResetFrame();
-            field016c = 6;
+            remainingHitCount = 6;
         }
         if ((velocityX > 0.0) &&
             (velocityX = velocityX - 0.035,
@@ -3808,7 +3808,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0158 = 0;
             ResetFrame();
-            field016c = 4;
+            remainingHitCount = 4;
         }
         if (((((field000a == 6) || (field000a == 9)) ||
             (field000a == 0xc)) || (field000a == 0xf)) &&
@@ -3850,7 +3850,7 @@ void Character15::Slot06()
             contextOwner->EmitEffect(&effect);
             field0158 = 0;
             ResetFrame();
-            field016c = 99;
+            remainingHitCount = 99;
         }
         if ((velocityX > 0.0) &&
             (velocityX = velocityX - 0.035,
@@ -3965,7 +3965,7 @@ void Character15::Slot06()
             }
             if ((field000a == 5) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x1f;
@@ -4059,7 +4059,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 5) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x1f;
@@ -4153,7 +4153,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 5) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x1f;
@@ -4248,7 +4248,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 3) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x195;
@@ -4344,7 +4344,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 4) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x196;
@@ -4440,7 +4440,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 4) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 meter = meter + 0x14;
                 effect.type = 0x197;
@@ -4474,7 +4474,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 meter = meter + 5;
                 effect.type = 0x193;
@@ -4514,7 +4514,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 meter = meter + 5;
                 effect.type = 0x194;
@@ -4554,7 +4554,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 meter = meter + 5;
                 effect.type = 0x195;
@@ -4602,7 +4602,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 8) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 meter = meter + 5;
                 effect.type = 0x196;
@@ -4650,7 +4650,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 8) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 5;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 meter = meter + 5;
                 effect.type = 0x197;
@@ -4988,7 +4988,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -5024,7 +5024,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((velocityX > 0.0) &&
             (velocityX = velocityX - 0.04500000178813934,
@@ -5063,7 +5063,7 @@ void Character15::Slot06()
             field0158 = 0;
             ResetFrame();
             meter = meter + 0x2d;
-            field016c = 1;
+            remainingHitCount = 1;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -5107,7 +5107,7 @@ void Character15::Slot06()
                 EmitLocalEffect(&effect);
             }
             if (field000a == 9) {
-                field016c = 1;
+                remainingHitCount = 1;
                 field0168 = 0;
                 pendingCharacterSoundSlot = 5;
                 effect.type = 0x1b5;
@@ -5133,7 +5133,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -5174,7 +5174,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((velocityX > 0.0) &&
             (velocityX = velocityX - 0.04500000178813934,
@@ -5227,7 +5227,7 @@ void Character15::Slot06()
             field0158 = 0;
             ResetFrame();
             meter = meter + 0x2d;
-            field016c = 1;
+            remainingHitCount = 1;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -5277,7 +5277,7 @@ void Character15::Slot06()
                 EmitLocalEffect(&effect);
             }
             if (field000a == 9) {
-                field016c = 1;
+                remainingHitCount = 1;
                 field0168 = 0;
                 pendingCharacterSoundSlot = 4;
                 effect.type = 0x1b6;
@@ -5310,7 +5310,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -5334,7 +5334,7 @@ void Character15::Slot06()
             ResetFrame();
             meter = meter + 0x2d;
             field3138 = 5;
-            field016c = 1;
+            remainingHitCount = 1;
         }
         if ((velocityX > 0.0) &&
             (velocityX = velocityX - 0.04500000178813934,
@@ -5363,7 +5363,7 @@ void Character15::Slot06()
             field0158 = 0;
             ResetFrame();
             meter = meter + 0x2d;
-            field016c = 2;
+            remainingHitCount = 2;
             if (field0120 == '\0') {
                 field0118 = field0118 - 500.0;
             }
@@ -5623,7 +5623,7 @@ void Character15::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 99;
+            remainingHitCount = 99;
             field3150 = 0;
             ResetFrame();
         }
@@ -5710,7 +5710,7 @@ void Character15::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 99;
+            remainingHitCount = 99;
             field3150 = 0;
             ResetFrame();
         }
@@ -5807,7 +5807,7 @@ void Character15::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field016c = 99;
+            remainingHitCount = 99;
             field3150 = 0;
             pendingContextSoundSlot = 0x25;
             ResetFrame();
@@ -5989,7 +5989,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 9) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 effect.type = 0x1f;
                 effect.x = (double)(int(positionX));
@@ -6103,7 +6103,7 @@ void Character15::Slot06()
             ++field000a;
             field0168 = 0;
             if ((field000a == 9) && ((unsigned short)field000c == 0)) {
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 pendingCharacterSoundSlot = 10;
                 effect.type = 0x1f;
@@ -6220,7 +6220,7 @@ void Character15::Slot06()
             ++field000a;
             field0168 = 0;
             if ((field000a == 9) && ((unsigned short)field000c == 0)) {
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 field013c = 0x2d;
                 pendingCharacterSoundSlot = 10;
@@ -6328,7 +6328,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 effect.type = 0x19c;
                 effect.owner = 1;
@@ -6433,7 +6433,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 effect.type = 0x19e;
                 effect.owner = 1;
@@ -6538,7 +6538,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 7) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 effect.type = 0x19d;
                 effect.owner = 1;
@@ -6652,7 +6652,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 8) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 effect.type = 0x19f;
                 effect.x = (double)(int(positionX));
@@ -6766,7 +6766,7 @@ void Character15::Slot06()
             field0168 = 0;
             if ((field000a == 8) && ((unsigned short)field000c == 0)) {
                 pendingCharacterSoundSlot = 10;
-                field016c = 1;
+                remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 effect.type = 0x1a0;
                 effect.x = (double)(int(positionX));
