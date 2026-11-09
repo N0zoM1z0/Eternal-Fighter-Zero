@@ -81,13 +81,13 @@ void Character03::Slot06()
 
     case 4: // Original block 0x005E8891: jump with optional dash follow-through
         if (field000a == 0 && field000c == 0) {
-            if (dashMomentumFlag == 0) FaceOpponent();
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
             velocityX = 0.0;
         }
         if (field000a == 3 && field000c == 0) {
             gravity = 0.042;
             velocityY = -2.9;
-            if (dashMomentumFlag == 1) {
+            if ((unsigned char)dashMomentumFlag == 1) {
                 velocityX = 0.4;
                 dashMomentumFlag = 0;
             }
@@ -117,14 +117,14 @@ void Character03::Slot06()
 
     case 5: // Original block 0x005E89F4: forward jump with a two-frame loop
         if (field000a == 0 && field000c == 0) {
-            if (dashMomentumFlag == 0) FaceOpponent();
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
             velocityX = 0.0;
         }
         if (field000a == 3 && field000c == 0) {
             gravity = 0.042;
             velocityY = -2.9;
             velocityX = 0.7;
-            if (dashMomentumFlag == 1) {
+            if ((unsigned char)dashMomentumFlag == 1) {
                 velocityX = 1.1;
                 dashMomentumFlag = 0;
             }
@@ -153,7 +153,7 @@ void Character03::Slot06()
 
     case 6: // Original block 0x005E8B61: backward jump with a two-frame loop
         if (field000a == 0 && field000c == 0) {
-            if (dashMomentumFlag == 0) FaceOpponent();
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
             velocityX = 0.0;
         }
         if (field000a == 3 && field000c == 0) {
@@ -1315,7 +1315,7 @@ void Character03::Slot06()
         gravity = 0.0;
         horizontalDeceleration = 0.06;
         velocityX -= horizontalDeceleration;
-        if (velocityX <= 0.0) {
+        if (velocityX < 0.0) {
             velocityX = 0.0;
         }
         if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
@@ -1355,7 +1355,7 @@ void Character03::Slot06()
         gravity = 0.0;
         horizontalDeceleration = 0.06;
         velocityX -= horizontalDeceleration;
-        if (velocityX <= 0.0) {
+        if (velocityX < 0.0) {
             velocityX = 0.0;
         }
         if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
@@ -1395,7 +1395,7 @@ void Character03::Slot06()
         gravity = 0.0;
         horizontalDeceleration = 0.06;
         velocityX -= horizontalDeceleration;
-        if (velocityX <= 0.0) {
+        if (velocityX < 0.0) {
             velocityX = 0.0;
         }
         if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {

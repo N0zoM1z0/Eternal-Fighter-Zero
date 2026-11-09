@@ -1212,6 +1212,26 @@ extent has a longer text disassembly in
 The evidence and extent are documented under
 docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
+## Fresh original-instruction corrections to early branches
+
+Recompiling the full partial dispatcher and comparing each case's
+individual x86 instruction stream against EFZ.exe (without replaying
+other functions) exposed two real source-level mistakes:
+
+- Animation IDs **4–6** read `dashMomentumFlag` as an unsigned byte,
+  emitting `movzx` rather than signed `movsx`. Earlier source tests
+  could interpret values 0x80..0xFF incorrectly; the casts are now
+  explicit at all original flag reads in these three arms.
+- Animation IDs **75–77** clamp horizontal speed only for a **strictly
+  negative** speed, `velocityX < 0.0`. The previous `<=` had a different
+  equality/NaN path; the target `fcomp` followed by `test ah,0x5`
+  and `jp` is now generated directly from the natural C++ condition.
+
+All six changed arms were compiled under VC7.1 and each relevant
+`movzx`/x87 status test was checked against the target instructions.
+This does not imply whole-owner COFF Exact: its frame-stack locals
+and relocated target constants remain separate acceptance tasks.
+
 ## Next implementation work
 
 The 2026-11-09 handoff storage cleanup archived 61 historical candidate
