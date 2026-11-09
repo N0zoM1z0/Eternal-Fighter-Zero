@@ -249,6 +249,20 @@ work, not the original behavior for valid unimplemented animations.
   six fewer than 75/76; the eliminated instructions match the conditional
   terminal-state selection. The independent x87 scratch home is EBP-0x9C.
 
+- Animation ID 81 (0x005EC5D2..0x005EC7B7, 485 bytes, 135
+  instructions) is a distinct airborne recoil and local-effect state.
+  If field0120 is set it drains 0.8 from field0118 per tick. On pose/tick
+  zero it emits effect 499 with truncated X/Y, facing and layer 1 through
+  the virtual local-effect slot; awards 30 meter; copies both incoming
+  knockback velocities; and sets gravity=0.032. Every tick adds 0.02 to
+  horizontal speed (clamped back to zero if positive), applies gravity,
+  advances the unsigned pose counter and holds the last animation frame.
+  Landing at positionY+velocityY >= 0 while pose==1 selects 0x61 or
+  0x62 depending on knockdownOnLanding and calls ResetPose. The target
+  contains two calls to the VC7.1 x87-to-integer helper for effect X/Y,
+  and independently accesses virtual effect slot +0x24; this case must
+  not be folded into the previous grounded recoil family.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -268,7 +282,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 81 and onward directly from reviewed target instructions,
+Extend case 82 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

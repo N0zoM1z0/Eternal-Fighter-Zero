@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77 and 81 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1370,6 +1370,47 @@ void Character03::Slot06()
             ++field000a;
             if (field000a >= animationFrameCount) {
                 field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 81: // Original block 0x005EC5D2: airborne recoil and local hit effect
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 499;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        velocityX += 0.02;
+        velocityY += gravity;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                --field000a;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a == 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
                 ResetPose();
             }
         }
