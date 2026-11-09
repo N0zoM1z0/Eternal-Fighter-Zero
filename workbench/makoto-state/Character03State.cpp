@@ -4497,7 +4497,7 @@ void Character03::Slot06()
             pendingCharacterSoundSlot = 0;
         }
         velocityY += gravity;
-        if (field000a < 20 && velocityY >= 0.15) {
+        if (field000a < 20 && velocityY > 0.15) {
             velocityY = 0.15;
         }
         if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
@@ -4636,7 +4636,7 @@ void Character03::Slot06()
             pendingCharacterSoundSlot = 0;
         }
         velocityY += gravity;
-        if (field000a < 20 && velocityY >= 0.15) {
+        if (field000a < 20 && velocityY > 0.15) {
             velocityY = 0.15;
         }
         if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
@@ -4779,7 +4779,7 @@ void Character03::Slot06()
             pendingCharacterSoundSlot = 0;
         }
         velocityY += gravity;
-        if (field000a < 20 && velocityY >= 0.15) {
+        if (field000a < 20 && velocityY > 0.15) {
             velocityY = 0.15;
         }
         if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {

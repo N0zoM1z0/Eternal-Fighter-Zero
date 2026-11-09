@@ -1269,6 +1269,20 @@ home numbers. This check does **not** claim a full function byte match:
 frame layout, relocations, and cross-case codegen still require a
 complete target-bound comparison.
 
+## Exact x87 super-speed clamp correction
+
+The target's pose<20 vertical-speed cap in the large Makoto super
+states **303, 304 and 305** checks `velocityY > 0.15` strictly;
+`>= 0.15` had emitted an x87 `test ah,0x1` instead of the
+original `test ah,0x41` after `fcomp 0x787FB8`. All three were
+corrected and recompiled together. A fresh 124-case normalized
+instruction audit now matches **123/124** complete switch arms; the
+one remaining apparent mismatch is the **four shared epilogue
+instructions following state 310**, because the diagnostic assigns
+those instructions to the last case instead of the function exit.
+This count normalizes stack-home offsets, explicit relocation values
+and branches and **is not a whole-function strict byte match**.
+
 ## Next implementation work
 
 The 2026-11-09 handoff storage cleanup archived 61 historical candidate
