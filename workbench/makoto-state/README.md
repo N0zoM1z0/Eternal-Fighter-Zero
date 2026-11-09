@@ -1025,6 +1025,26 @@ work, not the original behavior for valid unimplemented animations.
   against every original instruction and all named x87 constants;
   the isolated VC7.1 draft builds, but this is not whole-function Exact.
 
+- Animation IDs 304 and 305 (0x005F4C63..0x005F5341, 1,758 bytes,
+  and 0x005F5341..0x005F5A42, 1,793 bytes) retain the multi-stage
+  effect choreography of 303 but differ materially in the target.
+  Their pose-3 super startup spends respectively **2,000/3,000 meter**,
+  emits context effect 0x45/palette 5 or 0x46/palette 0x40, and tints
+  with hitstun=120. The high-tier 305 also requests context sound 37
+  and calls context SetSceneTimer(15) every tick after pose 10.
+  Both pose-14/18 randomized context flashes use RandomRange(0,240)
+  for 304 or (0,320) for 305, whereas state 303 uses (0,180).
+  The first pose-14 local effect is type 0x1A0 or 0x1A1 (303: 0x19F).
+  Both 304/305 explicitly clear the effect owner before the pose-14
+  global flash; the multi-effect sequence and pose-18 owner reset
+  remain in the target's original order. Frame-advance pose 20
+  rewinds three frames while field3138<15 or <25, respectively,
+  instead of 303's threshold 8; pose 22 still rewinds two frames.
+  Structurally these original routines contain 474/484 instructions,
+  including only the differences verified from raw target blocks.
+  Every 3,551 instruction byte across both original functions was
+  rechecked in EFZ.exe, and all natural C++ source compiles under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1050,7 +1070,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 304 and onward directly from reviewed target instructions,
+Extend case 306 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
