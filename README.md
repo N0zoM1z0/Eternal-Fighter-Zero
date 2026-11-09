@@ -49,13 +49,13 @@ Compiler-generated helpers and standard-library wrappers are recorded separately
 and excluded from authored progress. Automatic Ghidra candidates are not an
 authored-code denominator.
 
-Current proof freshness is not fully attested: `validate-tracking.py --require-target`
-reports 296 public certificates with an old `src/Engine.h` dependency hash after
-commit `17edf49` changed `SecondaryPose::field000c` from signed to unsigned.
-The ledger counts remain useful inventory, but they must not be mistaken for a
-fresh revalidation of those 296 units. See the [handoff](docs/RE_HANDOFF.md) for
-the affected 35 direct-use units and the targeted next step; no full cold replay
-or manual receipt rewrite was performed.
+Proof freshness remains incomplete: `validate-tracking.py --require-target`
+currently reports stale source dependencies in public exact certificates,
+including previous changes to `src/Engine.h`. The old stale-certificate count
+and header hashes are no longer a current audit. Ledger totals remain useful
+inventory, not a substitute for refreshing affected proofs. See the
+[handoff](docs/RE_HANDOFF.md); do not run a full cold replay or hand-edit proof
+records merely to update this note.
 
 Accepted sources cover configuration, file reading, DirectInput, Audio,
 Context, title/selection/loading scenes, substantial shared character code,
@@ -70,11 +70,13 @@ Reader/audio integration is complete. The
 an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
-On 2026-11-08 the operator requested a handoff to another agent and continuation
-of reconstruction. The 2026-11-07 statement that no further task was active is
-historical and superseded. The [current handoff](docs/RE_HANDOFF.md) records the
-latest accepted baseline, active large-function work, retained probes and the
-operator's current workflow requirements.
+The current substantial owner is Makoto/Character03 Slot06 in
+`workbench/makoto-state/`, partially reconstructed through selected states
+including 85 but not complete or Exact. The formerly open
+`Scene3::ResolvePushboxes` has passed a complete **local** 2,727-byte,
+35-relocation comparison; origin review and ledger acceptance remain separate.
+The [current handoff](docs/RE_HANDOFF.md) gives the receiving agent its
+starting points and the next focused actions.
 
 The last recorded compiler, linker, resource and native execution smoke checks
 passed. The original

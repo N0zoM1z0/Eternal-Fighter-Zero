@@ -332,8 +332,9 @@ is Secondary::FaceOpponent.
 
 The selector contains 124 explicit animation IDs and 186 defaulted IDs.
 The reviewed mapping is in the ignored
-.analysis/probes/makoto/state-case-map.csv; the original 58 KB disassembly
-is in .analysis/probes/makoto/state-code-005e85f0.txt.
+.analysis/probes/makoto/state-case-map.csv; the 58,482-byte target code
+extent has a longer text disassembly in
+.analysis/probes/makoto/state-code-005e85f0.txt.
 The evidence and extent are documented under
 docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
