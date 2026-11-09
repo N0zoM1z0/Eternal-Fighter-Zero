@@ -910,6 +910,26 @@ work, not the original behavior for valid unimplemented animations.
   target blocks and their differing x87 startup constants were
   rechecked against EFZ.exe and the partial dispatcher compiled.
 
+- Animation ID 258 (0x005F32E7..0x005F36BF, 984 bytes) has two
+  separate aerial impact waves, not the opponent-capture behavior of
+  the superficially similar Character07 state. Initial pose/tick
+  clears dash momentum, ResetFrame and drains 500 resource when
+  field0120==0 (250 otherwise), then emits global effect 33,
+  palette 11, group 2/layer 1 at truncated X and Y-50. After pose 1
+  it adds gravity and subtracts 0.045 horizontal velocity, clamping
+  negative horizontal speed. Projected ground contact in poses 2..7
+  forces pose 8/tick zero, Y=0 and ResetFrame; the independent second
+  window, poses 13..18, forces pose 19 similarly. Normal frame
+  expiration first clears the collision result below pose 2. Pose 1
+  initializes velocity (0.9,-1.0)/gravity 0.05 and emits global
+  effect 31 at truncated X/Y=0, group/layer 0 and facing!=(1);
+  pose 3 awards 30 meter, sound 21 and one hit. Pose 12 repeats the
+  effect with velocity (1.4,-2.9)/gravity 0.05 while clearing the
+  collision result, and pose 13 awards the second 30 meter/sound 21
+  and hit. Sequence exhaustion enters idle and ResetPose. Original
+  984-byte target instructions, x87 constants, three global-effect
+  calls and three ResetFrame sites were reviewed; VC7.1 compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -935,7 +955,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 258 and onward directly from reviewed target instructions,
+Extend case 259 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
