@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-302 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-303 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -4345,9 +4345,147 @@ void Character03::Slot06()
         }
         return;
 
+    case 303: // Original block 0x005F458D: extended super and repeated hit bursts
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            remainingHitCount = 99;
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -2.4;
+            velocityX = -0.4;
+            gravity = 0.029;
+            remainingHitCount = 99;
+        }
+        if (field000a == 3) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a > 11) {
+            (*opponentSlot)->SetHorizontalShake(50, 3);
+        }
+        if (field000a == 3 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 1000);
+            SetTint(0xb0, 3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 11 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 12 && field000c == 0) {
+            velocityX = -0.2;
+            velocityY = -0.8;
+            gravity = 0.015;
+        }
+        if (field000a == 14 && field000c == 0) {
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 180)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.owner = 1;
+            effect.type = 0x19f;
+            effect.x = (double)(int)positionX;
+            effect.y = 0.0;
+            effect.flag0018 = (unsigned char)facing;
+            effect.group = 2;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 18 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 180)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        velocityY += gravity;
+        if (field000a < 20 && velocityY >= 0.15) {
+            velocityY = 0.15;
+        }
+        if (field000a > 14 && field000a < 22 && positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            field000a = 22;
+            field000c = 0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 20 && field3138 < 8) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 22) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 8 explicit cases. The target's true default path also
+        // the other 7 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

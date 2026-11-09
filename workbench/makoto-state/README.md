@@ -997,6 +997,34 @@ work, not the original behavior for valid unimplemented animations.
   compiled under VC7.1. No full cold replay or Whole Slot06 Exact
   conclusion follows from this isolated recovery.
 
+- Animation ID 303 (0x005F458D..0x005F4C63, 1,750 bytes,
+  473 original instructions) begins a significantly larger three-phase
+  super sequence. Initial pose/tick clears dash momentum, calls
+  ResetFrame and assigns remainingHitCount=99. Pose 3/tick zero
+  launches with velocityX=-0.4, velocityY=-2.4 and gravity=0.029,
+  rearms 99 hits, sets hitstunFrames=120, spends 1,000 meter, calls
+  SetTint(0xB0,3) and emits **global** effect 0x44 with palette
+  0x13, at truncated X/Y-40, owner=1 and group 2/layer 1. Pose 3
+  applies self horizontal shake (50,3); poses above 11 shake the
+  opponent instead. Pose 11/tick zero ResetFrame, and pose 12/tick
+  zero assigns velocityX=-0.2, velocityY=-0.8 and gravity=0.015.
+
+  On pose 14/tick zero it emits a randomized *context* type-3 flash
+  at X+facing*RandomRange(0,180), then **four local effects** in order:
+  0x19F (X/Y=truncated X/0), 0x191 (X+27*facing/Y-28), and two
+  0x1A5 effects (X+16*facing/Y-43, X+21*facing/Y-51) with their
+  original group/layer changes. Pose 18/tick zero repeats the global
+  flash and three latter local effects but sets owner=0 before the
+  global flash. Both event blocks clear the pending character sound
+  slot after emissions. Gravity is integrated afterward and vertical
+  speed is capped at +0.15 before pose 20. Ground contact in poses
+  15–21 enters pose 22 through ResetFrame but **still advances the
+  frame tick**. At frame expiry, pose 20 loops back three frames
+  until field3138 reaches 8; pose 22 loops back two frames. Normal
+  exhaustion selects animation 7 with ResetPose. Source was checked
+  against every original instruction and all named x87 constants;
+  the isolated VC7.1 draft builds, but this is not whole-function Exact.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1022,7 +1050,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 303 and onward directly from reviewed target instructions,
+Extend case 304 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
