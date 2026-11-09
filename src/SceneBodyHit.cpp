@@ -259,8 +259,8 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     (((work.secondFrame.field00b0 & 4) > 0 || second->field0138 > 0) && (work.firstFrame.field00aa & 0x100) > 0) ||
                                     (work.firstFrame.field00aa & 0x40) > 0) {
                                     if (second->positionY >= 0.0) {
-                                        if (work.firstFrame.field00ae > 0) {
-                                            second->field0008 = work.firstFrame.field00ae;
+                                        if (work.firstFrame.groundHitState > 0) {
+                                            second->field0008 = work.firstFrame.groundHitState;
                                         } else if ((work.secondFrame.field00b0 & 3) == 3) {
                                             second->field0008 = 59;
                                         } else if ((work.secondFrame.field00b0 & 1) != 0) {
@@ -271,7 +271,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                             + ((work.firstFrame.field00aa & 0x20) > 0) * 2;
                                         }
                                     } else {
-                                        if (work.firstFrame.field00ac > 0) second->field0008 = work.firstFrame.field00ac;
+                                        if (work.firstFrame.airHitState > 0) second->field0008 = work.firstFrame.airHitState;
                                         else second->field0008 = 59;
                                     }
                                     first->field0168 = 3;
@@ -299,7 +299,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                                 first->field0144 = (((work.firstFrame.field00aa & 0x2000) > 0) && ((work.secondFrame.field00b0 & 0x2000) > 0)) ? 1 : 0;
                                 second->field0108 -= (int)(work.firstFrame.damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                                second->field0124 = (short)(work.firstFrame.field00b2 * (first->field0178 / 10000.0 * 0.8));
+                                second->field0124 = (short)(work.firstFrame.airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
                                 second->field0128 = (unsigned int)((work.firstFrame.field00aa & 0x400) > 0);
                                 second->field012c = (unsigned int)((work.firstFrame.field00aa & 0x800) > 0);
                                 second->field0158 = 0;
@@ -307,11 +307,11 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field015a = 0;
                                 first->field00f8 = first->field0178 / 100.0;
                                 first->field0178 =
-                                (double)((work.firstFrame.field00a4 / 1000.0f) *
+                                (double)((work.firstFrame.comboDamageScale / 1000.0f) *
                                     first->field0178);
                                 if (first->field0178 > 10000.0) {
                                     first->field0178 =
-                                    (double)((work.firstFrame.field00a4 / 1000.0f) *
+                                    (double)((work.firstFrame.comboDamageScale / 1000.0f) *
                                         first->field0178);
                                 }
                                 ++first->field0174;
@@ -333,7 +333,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.palette = work.firstFrame.field00c1;
                                 contextOwner->EmitEffect(&effect);
                                 if ((second->field0108 <= 0) && (second->field0140 == 0)) {
-                                    second->field0008 = work.firstFrame.field00ac;
+                                    second->field0008 = work.firstFrame.airHitState;
                                     second->ResetPose();
                                     second->FaceOpponent();
                                 }

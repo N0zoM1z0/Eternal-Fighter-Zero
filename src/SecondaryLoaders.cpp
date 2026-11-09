@@ -147,9 +147,9 @@ void Secondary::LoadPatterns()
                                         frame->v = reader.ReadInt();
                                         extra->damage = reader.ReadInt();
                                         extra->field00aa = reader.ReadInt();
-                                        extra->field00ac = reader.ReadInt();
+                                        extra->airHitState = reader.ReadInt();
                                         extra->field00b0 = reader.ReadInt();
-                                        extra->field00b2 = reader.ReadInt();
+                                        extra->airActionLockFrames = reader.ReadInt();
                                         extra->guardDamage = reader.ReadInt();
                                         extra->hitMeterGain = reader.ReadInt();
                                         extra->guardMeterGain = reader.ReadInt();
@@ -161,8 +161,8 @@ void Secondary::LoadPatterns()
                                         extra->field00c0 = reader.ReadShort();
                                         extra->attackerHitstopFrames = reader.ReadInt();
                                         extra->defenderHitstopFrames = reader.ReadInt();
-                                        extra->field00a4 = reader.ReadInt();
-                                        extra->field00ae = reader.ReadInt();
+                                        extra->comboDamageScale = reader.ReadInt();
+                                        extra->groundHitState = reader.ReadInt();
                                         reader.Read(&extra->box0090, 16);
                                         for (k = 0; k < 2; ++k) reader.Read(&extra->boxes0000[k], 16);
                                         reader.Read(&extra->boxes0050[0], 16);

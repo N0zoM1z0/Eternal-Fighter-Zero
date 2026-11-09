@@ -85,12 +85,12 @@ struct SecondaryFrame {
     SurfaceRect boxes0000[5], boxes0050[4], box0090;
     short damage;
     unsigned char unknown_00a2[2];
-    float field00a4;
+    float comboDamageScale;
     short guardDamage;
     unsigned short field00aa;
-    short field00ac, field00ae;
+    short airHitState, groundHitState;
     unsigned short field00b0;
-    short field00b2, hitMeterGain, guardMeterGain;
+    short airActionLockFrames, hitMeterGain, guardMeterGain;
     float outgoingPushbackVelocityX, outgoingPushbackVelocityY;
     char field00c0, field00c1;
     short attackerHitstopFrames, defenderHitstopFrames;
