@@ -157,8 +157,8 @@ void Secondary::LoadPatterns()
                                         extra->outgoingPushbackVelocityY = extra->outgoingPushbackVelocityY / 100.0f;
                                         extra->outgoingPushbackVelocityX = reader.ReadShort();
                                         extra->outgoingPushbackVelocityX = extra->outgoingPushbackVelocityX / -100.0f;
-                                        extra->field00c1 = reader.ReadShort();
-                                        extra->field00c0 = reader.ReadShort();
+                                        extra->hitEffectPalette = reader.ReadShort();
+                                        extra->hitEffectType = reader.ReadShort();
                                         extra->attackerHitstopFrames = reader.ReadInt();
                                         extra->defenderHitstopFrames = reader.ReadInt();
                                         extra->comboDamageScale = reader.ReadInt();
