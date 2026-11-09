@@ -433,7 +433,9 @@ int Video::DrawCharacterSpecial(SurfaceRect destination, IUnknown *surface,
         destination.top = 0;
     }
     if (destination.left < 3) {
-        source.left -= destination.left - 3;
+        // The source edge only tracks the original destination clipping offset.
+        // The three-pixel destination inset is not also added to source.left.
+        source.left -= destination.left;
         destination.left = 3;
     }
     if (destination.bottom > 240) {
