@@ -31,9 +31,9 @@ void Secondary::InitializeState()
     field0118 = 0.0;
     field0120 = 0;
     hitstunFrames = 0;
-    field0159 = 0;
-    field0158 = 0;
-    field015a = 0;
+    airDashCount = 0;
+    dashMomentumFlag = 0;
+    airActionCount = 0;
     guardInputFrames = 0;
     field0150 = 0;
     field00ac = 0;

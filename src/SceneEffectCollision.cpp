@@ -313,9 +313,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 * ((((work.attack->attackFlags & 0x2000) > 0 && (work.defense->frameFlags & 0x2000) > 0) ? 1 : 0) + 1));
                             second->field0128 = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
                             second->field012c = (unsigned int)((work.attack->attackFlags & 0x800) > 0);
-                            second->field0158 = 0;
-                            second->field0159 = 0;
-                            second->field015a = 0;
+                            second->dashMomentumFlag = 0;
+                            second->airDashCount = 0;
+                            second->airActionCount = 0;
                             first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
                             first->comboDamageScale =
                             (double)((work.attack->comboDamageScale / 1000.0f) *
@@ -487,9 +487,9 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->field0128 = (work.attack->attackFlags & 0x400) > 0;
                         second->field012c = (work.attack->attackFlags & 0x800) > 0;
-                        second->field0158 = 0;
-                        second->field0159 = 0;
-                        second->field015a = 0;
+                        second->dashMomentumFlag = 0;
+                        second->airDashCount = 0;
+                        second->airActionCount = 0;
                         first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
                         first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
                         if (first->comboDamageScale > 10000.0) first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
@@ -620,9 +620,9 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->field0128 = (work.attack->attackFlags & 0x400) > 0;
                         second->field012c = (work.attack->attackFlags & 0x800) > 0;
-                        second->field0158 = 0;
-                        second->field0159 = 0;
-                        second->field015a = 0;
+                        second->dashMomentumFlag = 0;
+                        second->airDashCount = 0;
+                        second->airActionCount = 0;
                         first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
                         first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
                         if (first->comboDamageScale > 10000.0) first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;

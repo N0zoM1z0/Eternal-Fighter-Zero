@@ -302,9 +302,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field0124 = (short)(work.firstFrame.airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                                 second->field0128 = (unsigned int)((work.firstFrame.attackFlags & 0x400) > 0);
                                 second->field012c = (unsigned int)((work.firstFrame.attackFlags & 0x800) > 0);
-                                second->field0158 = 0;
-                                second->field0159 = 0;
-                                second->field015a = 0;
+                                second->dashMomentumFlag = 0;
+                                second->airDashCount = 0;
+                                second->airActionCount = 0;
                                 first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
                                 first->comboDamageScale =
                                 (double)((work.firstFrame.comboDamageScale / 1000.0f) *

@@ -4,8 +4,8 @@
 void Secondary::UpdateLocomotionState()
 {
     if (positionY == 0.0) {
-        field0159 = 0;
-        field015a = 0;
+        airDashCount = 0;
+        airActionCount = 0;
     }
     if (positionY >= 0.0 && field0008 != 4 && field0008 != 5 && field0008 != 6
     && field0008 != 10 && field0008 != 11 && field0008 != 12) {

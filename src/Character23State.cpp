@@ -2814,10 +2814,10 @@ void Character23::Slot06()
     case 207:
         velocityY = velocityY + gravity;
         if (((inputY == -1) && (field000a > 0)) &&
-            ((field015c < 3 && ((attackCollisionResult >= 2 && (field015a == '\0')))))
+            ((field015c < 3 && ((attackCollisionResult >= 2 && (airActionCount == '\0')))))
             ) {
             field0008 = 0xe;
-            ++field015a;
+            ++airActionCount;
             if (inputX == facing) {
                 field0008 = 0xf;
             }
@@ -2855,9 +2855,9 @@ void Character23::Slot06()
     case 208:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a == '\0')))
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount == '\0')))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -2896,9 +2896,9 @@ void Character23::Slot06()
     case 209:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a == '\0')))
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount == '\0')))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3653,7 +3653,7 @@ void Character23::Slot06()
         break;
     case 259:
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
-            (field0158 = 0, positionY == 0.0)) {
+            (dashMomentumFlag = 0, positionY == 0.0)) {
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -3698,7 +3698,7 @@ void Character23::Slot06()
         break;
     case 260:
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
-            (field0158 = 0, positionY == 0.0)) {
+            (dashMomentumFlag = 0, positionY == 0.0)) {
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -3743,7 +3743,7 @@ void Character23::Slot06()
         break;
     case 261:
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
-            (field0158 = 0, positionY == 0.0)) {
+            (dashMomentumFlag = 0, positionY == 0.0)) {
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -3805,7 +3805,7 @@ void Character23::Slot06()
         break;
     case 262:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -3844,7 +3844,7 @@ void Character23::Slot06()
         break;
     case 263:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -3883,7 +3883,7 @@ void Character23::Slot06()
         break;
     case 264:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
         }
@@ -4026,7 +4026,7 @@ void Character23::Slot06()
         }
         break;
     case 300:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             meter = meter + -1000;
@@ -4085,7 +4085,7 @@ void Character23::Slot06()
         }
         break;
     case 301:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             meter = meter + -2000;
@@ -4145,7 +4145,7 @@ void Character23::Slot06()
         break;
     case 302:
         contextOwner->SetSceneTimer(0xf);
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             meter = meter + -3000;
@@ -4331,7 +4331,7 @@ void Character23::Slot06()
         }
         break;
     case 307:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         ResetFrame();
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + -1000;
@@ -4373,7 +4373,7 @@ void Character23::Slot06()
         }
         break;
     case 308:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         ResetFrame();
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + -2000;
@@ -4415,7 +4415,7 @@ void Character23::Slot06()
         }
         break;
     case 309:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if (3 < field000a) {
             contextOwner->SetSceneTimer(0xf);
         }
@@ -4462,7 +4462,7 @@ void Character23::Slot06()
         }
         break;
     case 310:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             meter = meter + -1000;
@@ -4500,7 +4500,7 @@ void Character23::Slot06()
         }
         break;
     case 311:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             meter = meter + -2000;
@@ -4538,7 +4538,7 @@ void Character23::Slot06()
         }
         break;
     case 312:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if (3 < field000a) {
             contextOwner->SetSceneTimer(0xf);
         }
@@ -4580,7 +4580,7 @@ void Character23::Slot06()
         }
         break;
     case 313:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
@@ -4609,7 +4609,7 @@ void Character23::Slot06()
         }
         break;
     case 314:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
@@ -4638,7 +4638,7 @@ void Character23::Slot06()
         }
         break;
     case 315:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
@@ -4667,7 +4667,7 @@ void Character23::Slot06()
         }
         break;
     case 316:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         ResetFrame();
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             effect.type = 0x1c2;
@@ -4804,7 +4804,7 @@ void Character23::Slot06()
         }
         break;
     case 317:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if (field000a < 4) {
             (*opponentSlot)->field000c = 0;
         }

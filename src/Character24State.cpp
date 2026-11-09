@@ -15,7 +15,7 @@ void Character24::Slot06()
         velocityX = 0.0;
         velocityY = 0.0;
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -26,7 +26,7 @@ void Character24::Slot06()
         }
         break;
     case 1:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         field0058 = 0;
         velocityX = 0.8;
         velocityY = 0.0;
@@ -40,7 +40,7 @@ void Character24::Slot06()
         }
         break;
     case 2:
-        field0158 = 0;
+        dashMomentumFlag = 0;
         field0058 = 0;
         velocityX = -0.8;
         velocityY = 0.0;
@@ -57,7 +57,7 @@ void Character24::Slot06()
         velocityX = 0.0;
         velocityY = 0.0;
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -71,7 +71,7 @@ void Character24::Slot06()
     case 4:
         field0058 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            if ((unsigned char)field0158 == '\0') {
+            if ((unsigned char)dashMomentumFlag == '\0') {
                 FaceOpponent();
             }
             velocityX = 0.0;
@@ -79,9 +79,9 @@ void Character24::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             gravity = 0.043;
             velocityY = -3.0;
-            if ((unsigned char)field0158 == '\x01') {
+            if ((unsigned char)dashMomentumFlag == '\x01') {
                 velocityX = 0.4;
-                field0158 = 0;
+                dashMomentumFlag = 0;
             }
         }
         if (2 < field000a) {
@@ -108,7 +108,7 @@ void Character24::Slot06()
     case 5:
         field0058 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            if ((unsigned char)field0158 == '\0') {
+            if ((unsigned char)dashMomentumFlag == '\0') {
                 FaceOpponent();
             }
             velocityX = 0.0;
@@ -117,9 +117,9 @@ void Character24::Slot06()
             gravity = 0.043;
             velocityY = -3.0;
             velocityX = 1.0;
-            if ((unsigned char)field0158 == '\x01') {
+            if ((unsigned char)dashMomentumFlag == '\x01') {
                 velocityX = 1.1;
-                field0158 = 0;
+                dashMomentumFlag = 0;
             }
         }
         if (2 < field000a) {
@@ -146,7 +146,7 @@ void Character24::Slot06()
     case 6:
         field0058 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            if ((unsigned char)field0158 == '\0') {
+            if ((unsigned char)dashMomentumFlag == '\0') {
                 FaceOpponent();
             }
             velocityX = 0.0;
@@ -181,7 +181,7 @@ void Character24::Slot06()
         field0058 = 0;
         velocityX = 0.0;
         velocityY = 0.0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -197,7 +197,7 @@ void Character24::Slot06()
         field0058 = 0;
         velocityX = 0.0;
         velocityY = 0.0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -212,7 +212,7 @@ void Character24::Slot06()
     case 9:
         field0058 = 0;
         velocityY = velocityY + gravity;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -232,7 +232,7 @@ void Character24::Slot06()
         field0058 = 0;
         velocityX = 0.0;
         velocityY = 0.0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -253,7 +253,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -3.0;
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         velocityY = velocityY + gravity;
         ++field000c;
@@ -280,7 +280,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -3.0;
             velocityX = 1.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         velocityY = velocityY + gravity;
         ++field000c;
@@ -307,7 +307,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -3.0;
             velocityX = -1.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         velocityY = velocityY + gravity;
         ++field000c;
@@ -361,7 +361,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
@@ -403,7 +403,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
@@ -445,7 +445,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
@@ -487,7 +487,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
@@ -529,7 +529,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
@@ -571,7 +571,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
@@ -613,7 +613,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
@@ -652,7 +652,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
@@ -691,7 +691,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
@@ -1299,7 +1299,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.8;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if ((positionX - 20.0 <= 0.0) ||
@@ -1328,7 +1328,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.8;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if ((positionX - 20.0 <= 0.0) ||
@@ -1357,7 +1357,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.8;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if ((positionX - 20.0 <= 0.0) ||
@@ -1383,7 +1383,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             if (field0120 != '\0') {
@@ -1425,7 +1425,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             if (field0120 != '\0') {
@@ -1467,7 +1467,7 @@ void Character24::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 0.6;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
             if (field0120 != '\0') {
@@ -1879,7 +1879,7 @@ void Character24::Slot06()
             (field000a == 0)) {
             field0008 = 0x60;
             ResetPose();
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -1896,7 +1896,7 @@ void Character24::Slot06()
         break;
     case 150:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 10;
             velocityX = -1.5;
             velocityY = 0.0;
@@ -1932,7 +1932,7 @@ void Character24::Slot06()
         break;
     case 151:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 0xf;
             velocityX = -1.8;
             velocityY = 0.0;
@@ -1968,7 +1968,7 @@ void Character24::Slot06()
         break;
     case 152:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 0x14;
             velocityX = -2.3;
             velocityY = 0.0;
@@ -2004,7 +2004,7 @@ void Character24::Slot06()
         break;
     case 153:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 10;
             velocityX = -1.5;
             velocityY = 0.0;
@@ -2037,7 +2037,7 @@ void Character24::Slot06()
         break;
     case 154:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 0xf;
             velocityX = -1.8;
             velocityY = 0.0;
@@ -2070,7 +2070,7 @@ void Character24::Slot06()
         break;
     case 155:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             meter = meter + 0x14;
             velocityX = -2.3;
             velocityY = 0.0;
@@ -2129,7 +2129,7 @@ void Character24::Slot06()
     case 157:
         velocityX = 1.0;
         gravity = 0.045;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -2.3;
             effect.type = 8;
@@ -2165,7 +2165,7 @@ void Character24::Slot06()
     case 158:
         velocityX = -1.0;
         gravity = 0.045;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -2.3;
             effect.type = 8;
@@ -2214,7 +2214,7 @@ void Character24::Slot06()
         if ((field000a == 6) && ((unsigned short)field000c == 0)) {
             field0058 = 3;
         }
-        field0158 = 1;
+        dashMomentumFlag = 1;
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -2239,7 +2239,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
             (field3138 == 0)) {
             velocityX = -2.5;
@@ -2413,7 +2413,7 @@ void Character24::Slot06()
     case 168:
         field0058 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             positionY = 0.0;
@@ -2444,7 +2444,7 @@ void Character24::Slot06()
     case 169:
         field0058 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0158 = 0;
+            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             positionY = 0.0;
@@ -2568,7 +2568,7 @@ void Character24::Slot06()
         velocityX = velocityX - 0.03;
         if (velocityX < 0.0) {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((inputY == -1) && (field000a > 0)) {
             field0008 = 4;
@@ -2597,12 +2597,12 @@ void Character24::Slot06()
         }
         break;
     case 179:
-        field0159 = 0;
+        airDashCount = 0;
         if ((*opponentSlot)->field0108 <= 0) {
             field3458 = 0;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field015a = 1;
+            airActionCount = 1;
             field3458 = 1000;
             velocityY = -2.5;
             velocityX = 0.0;
@@ -2654,7 +2654,7 @@ void Character24::Slot06()
         }
         break;
     case 180:
-        field0159 = 0;
+        airDashCount = 0;
         if ((*opponentSlot)->field0108 <= 0) {
             field3458 = 0;
         }
@@ -2708,7 +2708,7 @@ void Character24::Slot06()
         }
         break;
     case 181:
-        field0159 = 0;
+        airDashCount = 0;
         if ((*opponentSlot)->field0108 <= 0) {
             field3458 = 0;
         }
@@ -2763,15 +2763,15 @@ void Character24::Slot06()
         break;
     case 200:
         field0058 = 0;
-        if ((unsigned char)field0158 == '\0') {
+        if ((unsigned char)dashMomentumFlag == '\0') {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
             velocityX = velocityX - 0.06;
         } else {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
             (field015c < 3)) && (attackCollisionResult >= 2)) {
@@ -2814,15 +2814,15 @@ void Character24::Slot06()
         break;
     case 201:
         field0058 = 0;
-        if ((unsigned char)field0158 == '\0') {
+        if ((unsigned char)dashMomentumFlag == '\0') {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
             velocityX = velocityX - 0.03;
         } else {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
             (field015c < 3)) && (attackCollisionResult >= 2)) {
@@ -2867,15 +2867,15 @@ void Character24::Slot06()
         break;
     case 202:
         field0058 = 0;
-        if ((unsigned char)field0158 == '\0') {
+        if ((unsigned char)dashMomentumFlag == '\0') {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
             velocityX = velocityX - 0.06;
         } else {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
@@ -2937,15 +2937,15 @@ void Character24::Slot06()
         break;
     case 204:
         field0058 = 0;
-        if ((unsigned char)field0158 == '\0') {
+        if ((unsigned char)dashMomentumFlag == '\0') {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
             velocityX = velocityX - 0.03;
         } else {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
             (field015c < 3)) && (attackCollisionResult >= 2)) {
@@ -2991,15 +2991,15 @@ void Character24::Slot06()
         break;
     case 205:
         field0058 = 0;
-        if ((unsigned char)field0158 == '\0') {
+        if ((unsigned char)dashMomentumFlag == '\0') {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
             velocityX = velocityX - 0.03;
         } else {
             velocityX = 0.0;
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
             (field015c < 3)) && (attackCollisionResult >= 2)) {
@@ -3045,15 +3045,15 @@ void Character24::Slot06()
         break;
     case 206:
         field0058 = 0;
-        if ((((unsigned char)field0158 == '\0') && (field000a == 0)) &&
+        if ((((unsigned char)dashMomentumFlag == '\0') && (field000a == 0)) &&
             ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
             velocityY = 0.0;
         }
-        if (velocityX > 0.0 && (unsigned char)field0158 == 1 && field000a < 3) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1 && field000a < 3) {
             velocityX = velocityX - 0.03;
         } else {
-            field0158 = 0;
+            dashMomentumFlag = 0;
         }
         if (velocityX < 0.0) {
             velocityX = 0.0;
@@ -3117,9 +3117,9 @@ void Character24::Slot06()
             }
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (attackCollisionResult >= 2)) && ((field015a == '\0' && (field015c < 3)))
+            (attackCollisionResult >= 2)) && ((airActionCount == '\0' && (field015c < 3)))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3195,9 +3195,9 @@ void Character24::Slot06()
             }
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (attackCollisionResult >= 2)) && ((field015a == '\0' && (field015c < 3)))
+            (attackCollisionResult >= 2)) && ((airActionCount == '\0' && (field015c < 3)))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3273,9 +3273,9 @@ void Character24::Slot06()
             }
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (attackCollisionResult >= 2)) && ((field015a == '\0' && (field015c < 3)))
+            (attackCollisionResult >= 2)) && ((airActionCount == '\0' && (field015c < 3)))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3358,9 +3358,9 @@ void Character24::Slot06()
             }
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a == '\0')))
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount == '\0')))
             ) {
-            ++field015a;
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3535,7 +3535,7 @@ void Character24::Slot06()
         velocityX = 0.0;
         velocityY = 0.0;
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if (((field000a == 1) && ((unsigned short)field000c == 0)) &&
             ((*opponentSlot)->positionY == 0.0)) {
             remainingHitCount = 1;
@@ -3633,7 +3633,7 @@ void Character24::Slot06()
         if (velocityX < 0.0) {
             velocityX = 0.0;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 2.0;
             velocityY = 0.0;
@@ -3677,7 +3677,7 @@ void Character24::Slot06()
         break;
     case 231:
         StartTrail(3);
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((((inputY == -1) && (field000a > 0)) &&
             (field015c < 3)) && (attackCollisionResult >= 2)) {
             field0008 = 4;
@@ -3744,7 +3744,7 @@ void Character24::Slot06()
         if (velocityX < 0.0) {
             velocityX = 0.0;
         }
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 2.0;
             velocityY = 0.0;
@@ -3815,7 +3815,7 @@ void Character24::Slot06()
         break;
     case 250:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -3853,7 +3853,7 @@ void Character24::Slot06()
         break;
     case 251:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -3890,7 +3890,7 @@ void Character24::Slot06()
         break;
     case 252:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             StartTrail(3);
             ResetFrame();
@@ -3963,7 +3963,7 @@ void Character24::Slot06()
         break;
     case 253:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -3990,7 +3990,7 @@ void Character24::Slot06()
         break;
     case 254:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4017,7 +4017,7 @@ void Character24::Slot06()
         break;
     case 255:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             if (field0120 == '\0') {
@@ -4057,7 +4057,7 @@ void Character24::Slot06()
         break;
     case 256:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4116,7 +4116,7 @@ void Character24::Slot06()
         break;
     case 257:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4175,7 +4175,7 @@ void Character24::Slot06()
         break;
     case 258:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4234,7 +4234,7 @@ void Character24::Slot06()
         break;
     case 259:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             remainingHitCount = 1;
@@ -4268,7 +4268,7 @@ void Character24::Slot06()
         break;
     case 260:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             remainingHitCount = 1;
@@ -4302,7 +4302,7 @@ void Character24::Slot06()
         break;
     case 261:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             remainingHitCount = 1;
@@ -4513,7 +4513,7 @@ void Character24::Slot06()
         break;
     case 300:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4568,7 +4568,7 @@ void Character24::Slot06()
         break;
     case 301:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4623,7 +4623,7 @@ void Character24::Slot06()
         break;
     case 302:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -4682,7 +4682,7 @@ void Character24::Slot06()
         break;
     case 303:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -4732,7 +4732,7 @@ void Character24::Slot06()
         break;
     case 304:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -4782,7 +4782,7 @@ void Character24::Slot06()
         break;
     case 305:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -5481,7 +5481,7 @@ void Character24::Slot06()
         break;
     case 314:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
@@ -5734,7 +5734,7 @@ void Character24::Slot06()
         break;
     case 316:
         field0058 = 0;
-        field0158 = 0;
+        dashMomentumFlag = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }

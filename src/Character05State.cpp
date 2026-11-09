@@ -2813,9 +2813,9 @@ void Character05::Slot06()
     case 207:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a < 1)))) {
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount < 1)))) {
             field0008 = 0xe;
-            ++field015a;
+            ++airActionCount;
             if (inputX == facing) {
                 field0008 = 0xf;
             }
@@ -2853,8 +2853,8 @@ void Character05::Slot06()
     case 208:
         velocityY = velocityY + gravity;
         if (((inputY == -1) && (field000a > 0)) &&
-            ((field015c < 3 && ((attackCollisionResult >= 2 && (field015a < 1)))))) {
-            ++field015a;
+            ((field015c < 3 && ((attackCollisionResult >= 2 && (airActionCount < 1)))))) {
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -2893,8 +2893,8 @@ void Character05::Slot06()
     case 209:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a < 1)))) {
-            ++field015a;
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount < 1)))) {
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3094,8 +3094,8 @@ void Character05::Slot06()
         velocityY = velocityY + gravity;
         StartTrail(3);
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a < 1)))) {
-            ++field015a;
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount < 1)))) {
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3139,8 +3139,8 @@ void Character05::Slot06()
         velocityY = velocityY + gravity;
         StartTrail(3);
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a < 1)))) {
-            ++field015a;
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount < 1)))) {
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;
@@ -3184,8 +3184,8 @@ void Character05::Slot06()
         velocityY = velocityY + gravity;
         StartTrail(3);
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a < 1)))) {
-            ++field015a;
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (airActionCount < 1)))) {
+            ++airActionCount;
             field0008 = 0xe;
             if (inputX == facing) {
                 field0008 = 0xf;

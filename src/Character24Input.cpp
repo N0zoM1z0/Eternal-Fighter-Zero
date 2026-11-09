@@ -204,7 +204,7 @@ void Character24::Slot04()
         }
     }
     if (((int)field015c < 1) && ((field0262 == 0 || (field0262 == 1)))) {
-        if ((positionY < 0.0) && (field0159 < 1)) {
+        if ((positionY < 0.0) && (airDashCount < 1)) {
             if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0 ) ||
                 (((*opponentSlot)->positionX - positionX == 0.0 && ((int)facing == ((1 - field0262 * 2) * -1))) ))
                 && (sequences[field0008].field0002 <= sequences[165].field0000)) && ((field0008 != 0xaa &&
@@ -216,8 +216,8 @@ void Character24::Slot04()
                 }
                 field0008 = 0xa5;
                 FaceOpponent();
-                ++field0159;
-                ++field015a;
+                ++airDashCount;
+                ++airActionCount;
                 field01a8 = 0;
                 return;
             }
@@ -231,8 +231,8 @@ void Character24::Slot04()
                 }
                 field0008 = 0xa6;
                 FaceOpponent();
-                ++field0159;
-                ++field015a;
+                ++airDashCount;
+                ++airActionCount;
                 field01a8 = 0;
                 return;
             }
@@ -247,7 +247,7 @@ void Character24::Slot04()
                 }
                 field0008 = 0xa3;
                 FaceOpponent();
-                ++field0158;
+                ++dashMomentumFlag;
                 field01a8 = 0;
                 return;
             }
@@ -260,18 +260,18 @@ void Character24::Slot04()
                 }
                 field0008 = 0xa4;
                 FaceOpponent();
-                ++field0158;
+                ++dashMomentumFlag;
                 field01a8 = 0;
                 return;
             }
         }
     }
     if ((((((int)field015c < 3) && (field0262 == 6)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0))
-        && ((positionY < 0.0 && (field015a < 1)))) && ((((field0008 >= 200 && ((attackCollisionResult >= 2 && (attackCollisionResult !=
+        && ((positionY < 0.0 && (airActionCount < 1)))) && ((((field0008 >= 200 && ((attackCollisionResult >= 2 && (attackCollisionResult !=
         6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[14].field0000)))) {
         ResetPose();
         ClearBufferedButtons();
-        ++field015a;
+        ++airActionCount;
         field0008 = 0xe;
         if (inputX == facing) {
             field0008 = 0xf;

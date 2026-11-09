@@ -337,7 +337,7 @@ void Character08::Slot04()
     }
     if ((field015c == 0) &&
         (field0262 == 0 || (field0262 == 1))) {
-        if ((positionY < 0.0) && (field0159 < 2)) {
+        if ((positionY < 0.0) && (airDashCount < 2)) {
             if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0
                 ) || (0.0 ==
                 (*opponentSlot)->positionX - positionX &&
@@ -354,8 +354,8 @@ void Character08::Slot04()
                 }
                 field0008 = 0xa5;
                 FaceOpponent();
-                ++field0159;
-                ++field015a;
+                ++airDashCount;
+                ++airActionCount;
                 field01a8 = 0;
                 return;
             }
@@ -374,8 +374,8 @@ void Character08::Slot04()
                 }
                 field0008 = 0xa6;
                 FaceOpponent();
-                ++field0159;
-                ++field015a;
+                ++airDashCount;
+                ++airActionCount;
                 field01a8 = 0;
                 return;
             }
@@ -394,7 +394,7 @@ void Character08::Slot04()
                 }
                 field0008 = 0xa3;
                 FaceOpponent();
-                ++field0158;
+                ++dashMomentumFlag;
                 field01a8 = 0;
                 return;
             }
@@ -418,14 +418,14 @@ void Character08::Slot04()
     }
     if ((((((field015c < 3) && (field0262 == 6)) &&
         ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
-        (positionY < 0.0 && (field015a < 1)))
+        (positionY < 0.0 && (airActionCount < 1)))
         && (sequences[field0008].field0002 <=
         sequences[14].field0000)) &&
         (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
         (field0008 < 200))) {
         ResetPose();
         ClearBufferedButtons();
-        ++field015a;
+        ++airActionCount;
         field0008 = 0xe;
         if (inputX == facing) {
             field0008 = 0xf;

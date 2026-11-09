@@ -261,9 +261,9 @@ public:
     short guardInputFrames;
     int field0150;
     int field0154;
-    char field0158;
-    unsigned char field0159;
-    unsigned char field015a;
+    char dashMomentumFlag;
+    unsigned char airDashCount;
+    unsigned char airActionCount;
     unsigned char unknown_015b[0x1];
     int field015c;
     int field0160;
