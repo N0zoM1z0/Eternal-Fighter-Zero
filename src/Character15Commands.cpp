@@ -61,7 +61,7 @@ void Character15::Slot02()
         if (((buttons & 0xf) == 6 - (facing == -1 ? 1 : 0)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }
@@ -86,7 +86,7 @@ void Character15::Slot02()
         if (((buttons & 0xf) == 2 - (facing == -1 ? 1 : 0)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }
@@ -148,7 +148,7 @@ void Character15::Slot02()
         if (((buttons & 0xf) == 6 - (facing == -1 ? 1 : 0)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }

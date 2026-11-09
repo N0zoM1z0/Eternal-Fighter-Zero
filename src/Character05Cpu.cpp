@@ -111,13 +111,13 @@ void Character05::Slot05()
                 return;
             }
             if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 4.0f) &&
-                (field0148 >= 1000)) &&
+                (meter >= 1000)) &&
                 ((*opponentSlot)->positionY == 0.0)) {
                 field0262 = (unsigned short)RandomRange(0, 3) + 100;
                 return;
             }
             if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) &&
-                (field0148 == 3000)) &&
+                (meter == 3000)) &&
                 ((*opponentSlot)->positionY < -30.0)) {
                 field0262 = 0x7a;
                 return;
@@ -190,7 +190,7 @@ void Character05::Slot05()
         ((positionY == 0.0 &&
         (
         (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)))) &&
-        ((field3114 != 2 && ((*opponentSlot)->field014c == 0)))) {
+        ((field3114 != 2 && ((*opponentSlot)->hitstunFrames == 0)))) {
         field3110 = (unsigned short)RandomRange(0, 100);
         if ((field3110 < 4) && (field0118 > 500.0)) {
             field0262 = 0x16;
@@ -208,7 +208,7 @@ void Character05::Slot05()
             field0262 = 0x20;
             return;
         }
-        if ((((field3110 < 0x11) && (0xc < field3110)) && (field0148 >= 1000))
+        if ((((field3110 < 0x11) && (0xc < field3110)) && (meter >= 1000))
             && (distance.forward < 80.0)) {
             field0262 = (unsigned short)RandomRange(0, 2) * 100;
             return;
@@ -220,7 +220,7 @@ void Character05::Slot05()
         ((positionY < 0.0 &&
         (
         (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)))) &&
-        ((field3114 != 2 && ((*opponentSlot)->field014c == 0)))) {
+        ((field3114 != 2 && ((*opponentSlot)->hitstunFrames == 0)))) {
         field3110 = (unsigned short)RandomRange(0, 100);
         if (field3110 < 0x14) {
             field3114 = 2;
@@ -297,7 +297,7 @@ void Character05::Slot05()
         }
     }
     else {
-        if ((((1 < field0168) && (field014a == 0)) &&
+        if ((((1 < field0168) && (hitstopFrames == 0)) &&
             (
             (float)(unsigned short)RandomRange(0, 100) < field00a8 * 25.0f)) &&
             ((field3114 != 0 && (field3114 != 2)))) {
@@ -356,7 +356,7 @@ void Character05::Slot05()
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (400 < field3110)) &&
-                    ((field3110 < 500 && (field0148 >= 1000)))) {
+                    ((field3110 < 500 && (meter >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
@@ -420,7 +420,7 @@ void Character05::Slot05()
                 if (((((*opponentSlot)->positionY < 0.0) &&
                     ((*opponentSlot)->positionY < -50.0)) &&
                     ((distance.forward < 70.0 && ((field3110 < 200 && (field0168 == 3))))))
-                    && (field0148 == 3000)) {
+                    && (meter == 3000)) {
                     field0262 = 0x7a;
                     return;
                 }
@@ -449,7 +449,7 @@ void Character05::Slot05()
                     return;
                 }
                 if (((0x1e0 < field3110) && (field3110 < 0x226)) &&
-                    ((field0168 == 3 && (field0148 >= 1000)))) {
+                    ((field0168 == 3 && (meter >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
                 }
@@ -504,7 +504,7 @@ void Character05::Slot05()
                 }
                 if (((0x226 < field3110) && (field3110 < 600)) &&
                     ((field0168 == 3 &&
-                    ((field0148 >= 1000 && (distance.forward < 90.0)))))) {
+                    ((meter >= 1000 && (distance.forward < 90.0)))))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
                 }
@@ -653,7 +653,7 @@ void Character05::Slot05()
                     return;
                 }
                 if ((((0x226 < field3110) && (field3110 < 600)) && (field0168 == 3))
-                    && ((field0148 >= 1000 && (distance.forward < 70.0)))) {
+                    && ((meter >= 1000 && (distance.forward < 70.0)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
@@ -832,7 +832,7 @@ void Character05::Slot05()
                         if (((((distance.forward < distance.vertical * 0.5) && (distance.vertical > 50.0)) &&
                             (distance.vertical < 180.0)) &&
                             ((0x28 < field3110 && (field3110 < 0x46)))) &&
-                            (field0148 >= 1000)) {
+                            (meter >= 1000)) {
                             field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                             return;
                         }
@@ -847,7 +847,7 @@ void Character05::Slot05()
                         if (((((distance.forward < distance.vertical * 0.5) && (distance.vertical > 50.0)) &&
                             (distance.vertical < 180.0)) &&
                             ((0x28 < field3110 && (field3110 < 0x46)))) &&
-                            (field0148 >= 1000)) {
+                            (meter >= 1000)) {
                             field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                             return;
                         }

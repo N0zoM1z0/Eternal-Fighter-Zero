@@ -5,15 +5,15 @@
 void Character23::Slot07()
 {
     int i;
-    if ((*opponentSlot)->field014c > 0) return;
+    if ((*opponentSlot)->hitstunFrames > 0) return;
     i = (int)effectRead;
     // Both emitter kinds use this real descriptor and its shared base view.
     EffectSpawn spawn;
     while (i != effectWrite) {
         if (((effectActive[i] != 0) &&
             (effects[i].field0086 == 0)) &&
-            ((field014c == 0 ||
-            ((0 < field014c && (effects[i].field0088 != 0)))))) {
+            ((hitstunFrames == 0 ||
+            ((0 < hitstunFrames && (effects[i].field0088 != 0)))))) {
             unsigned short frameDuration = patterns[effects[i].type].frames[effects[i].frame].duration;
             unsigned short frameCount = patterns[effects[i].type].count;
             ResetLocalEffectSpawn(&spawn);
@@ -152,7 +152,7 @@ void Character23::Slot07()
                     }
                 }
                 if ((effects[i].field0080 == 3) && (field3158[i] == 0)) {
-                    (*opponentSlot)->field014a = 0x3c;
+                    (*opponentSlot)->hitstopFrames = 0x3c;
                     effects[i].field0086 = 0x3c;
                     ++field3158[i];
                 }
@@ -201,7 +201,7 @@ void Character23::Slot07()
                     }
                 }
                 if ((effects[i].field0080 == 3) && (field3158[i] == 0)) {
-                    (*opponentSlot)->field014a = 0x3c;
+                    (*opponentSlot)->hitstopFrames = 0x3c;
                     effects[i].field0086 = 0x3c;
                     ++field3158[i];
                 }
@@ -247,7 +247,7 @@ void Character23::Slot07()
                     }
                 }
                 if ((effects[i].field0080 == 3) && (field3158[i] == 0)) {
-                    (*opponentSlot)->field014a = 0x5a;
+                    (*opponentSlot)->hitstopFrames = 0x5a;
                     effects[i].field0086 = 0x5a;
                     ++field3158[i];
                 }
@@ -1722,7 +1722,7 @@ void Character23::Slot07()
                     }
                 }
                 if (((effects[i].frame == 0xe) &&
-                    (field014c == 0)) && (effects[i].tick >= 30)
+                    (hitstunFrames == 0)) && (effects[i].tick >= 30)
                     ) {
                     effects[i].tick = 0;
                     effects[i].frame = 0xf;
@@ -1801,7 +1801,7 @@ void Character23::Slot07()
                     }
                 }
                 if ((effects[i].frame == 3) &&
-                    (field014c == 0)) {
+                    (hitstunFrames == 0)) {
                     effects[i].tick = 0;
                     effects[i].frame = 4;
                     effects[i].field0088 = 0;
@@ -1879,7 +1879,7 @@ void Character23::Slot07()
                     }
                 }
                 if ((effects[i].frame == 3) &&
-                    (field014c == 0)) {
+                    (hitstunFrames == 0)) {
                     effects[i].tick = 0;
                     effects[i].frame = 4;
                     effects[i].field0088 = 0;
@@ -2025,13 +2025,13 @@ void Character23::Slot07()
                         (*opponentSlot)->field0008 = 99;
                         (*opponentSlot)->field000c = 0;
                         (*opponentSlot)->field000a = 0;
-                        (*opponentSlot)->field014a = 0;
+                        (*opponentSlot)->hitstopFrames = 0;
                         field000a = 0;
                         field000c = 0;
                         field0008 = 0x13d;
                     }
                 }
-                field014c = 2;
+                hitstunFrames = 2;
                 if ((((effects[i].frame == 0x10) &&
                     (effects[i].tick == 0x1c2)) &&
                     (contextOwner->StartFade(0x32,100,100),
@@ -2046,8 +2046,8 @@ void Character23::Slot07()
                 if ((effects[i].frame == 0x12) &&
                     (effects[i].tick == 900)) {
                     (*opponentSlot)->field0140 = 0;
-                    (*opponentSlot)->field014a = 0;
-                    field014c = 0;
+                    (*opponentSlot)->hitstopFrames = 0;
+                    hitstunFrames = 0;
                     break;
                 }
                 else {

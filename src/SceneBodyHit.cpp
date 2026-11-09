@@ -75,7 +75,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field0168 = 6;
                             } else if ((((second->field0170 != 0) && (second->field014e >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.attackFlags & 0x80) == 0))))) {
                                 first->field0168 = 2;
-                                first->field0148 += work.firstFrame.guardMeterGain;
+                                first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
@@ -97,12 +97,12 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                                 first->ClearInputHistory();
                                 second->ClearInputHistory();
-                                second->field014c = 0x3c;
+                                second->hitstunFrames = 0x3c;
                                 second->field0170 = 0;
                                 first->field0170 = 1;
                             } else if ((((second->field014e >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
                                 first->field0168 = 2;
-                                first->field0148 += work.firstFrame.guardMeterGain;
+                                first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
@@ -120,11 +120,11 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field0008 = 0xaa;
                                 first->ClearInputHistory();
                                 second->ClearInputHistory();
-                                second->field014c = 0x3c;
+                                second->hitstunFrames = 0x3c;
                                 first->field0170 = 1;
                             } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->field014e >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
                                 first->field0168 = 2;
-                                first->field0148 += work.firstFrame.guardMeterGain;
+                                first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
@@ -143,7 +143,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 0xa8 + (second->inputY == 1);
                                 first->ClearInputHistory();
                                 second->ClearInputHistory();
-                                second->field014c = 0x3c;
+                                second->hitstunFrames = 0x3c;
                                 first->field0170 = 1;
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 1) > 0) && ((work.firstFrame.attackFlags & 1) > 0)))) {
                                 --first->field016c;
@@ -158,8 +158,8 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.palette = 3;
                                 contextOwner->EmitEffect(&effect);
                                 first->field0168 = 2;
-                                first->field014a = work.firstFrame.attackerHitstopFrames;
-                                second->field014a = work.firstFrame.defenderHitstopFrames;
+                                first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
+                                second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
                                 second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
@@ -181,8 +181,8 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.palette = 3;
                                 contextOwner->EmitEffect(&effect);
                                 first->field0168 = 2;
-                                first->field014a = work.firstFrame.attackerHitstopFrames;
-                                second->field014a = work.firstFrame.defenderHitstopFrames;
+                                first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
+                                second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
                                 second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
@@ -204,15 +204,15 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.palette = 3;
                                 contextOwner->EmitEffect(&effect);
                                 first->field0168 = 2;
-                                first->field014a = work.firstFrame.attackerHitstopFrames;
-                                second->field014a = work.firstFrame.defenderHitstopFrames;
+                                first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
+                                second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
                                 second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
                                 }
                             } else if ((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0)) {
                                 first->field0168 = 2;
-                                first->field0148 += work.firstFrame.guardMeterGain;
+                                first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
                                 second->outgoingPushbackActive = 1;
                                 effect.owner = 0;
@@ -231,8 +231,8 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                                 second->ResetPose();
                                 second->FaceOpponent();
-                                first->field014a = work.firstFrame.attackerHitstopFrames;
-                                second->field014a = work.firstFrame.defenderHitstopFrames;
+                                first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
+                                second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
                                 second->field0108 = second->field0108 - (int)work.firstFrame.guardDamage;
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
@@ -318,9 +318,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field00f4 = first->field0174;
                                 first->field0104 = 0xb4;
                                 first->field0100 = second->field010c - second->field0108;
-                                first->field0148 += work.firstFrame.hitMeterGain;
-                                first->field014a = work.firstFrame.attackerHitstopFrames;
-                                second->field014a = work.firstFrame.defenderHitstopFrames;
+                                first->meter += work.firstFrame.hitMeterGain;
+                                first->hitstopFrames = work.firstFrame.attackerHitstopFrames;
+                                second->hitstopFrames = work.firstFrame.defenderHitstopFrames;
                                 --first->field016c;
                                 effect.owner = 0;
                                 effect.type = (short)work.firstFrame.hitEffectType;

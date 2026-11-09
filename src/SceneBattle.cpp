@@ -51,8 +51,8 @@ void Scene3::UpdateCamera()
     field0448 = field0440;
     if (contextOwner->state14240 > 0) {
         field0448 = contextOwner->state14238;
-        if (secondary[0]->field014a == 0 && secondary[1]->field014a == 0 &&
-            secondary[0]->field014c == 0 && secondary[1]->field014c == 0) {
+        if (secondary[0]->hitstopFrames == 0 && secondary[1]->hitstopFrames == 0 &&
+            secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) {
             --contextOwner->state14240;
         }
     }
@@ -80,8 +80,8 @@ void Scene3::UpdateCamera()
     }
     if (contextOwner->state14244 > 0) {
         field044c = contextOwner->state1423c * (1 - (secondary[0]->positionY < secondary[1]->positionY) * 2);
-        if (secondary[0]->field014a == 0 && secondary[1]->field014a == 0 &&
-            secondary[0]->field014c == 0 && secondary[1]->field014c == 0) {
+        if (secondary[0]->hitstopFrames == 0 && secondary[1]->hitstopFrames == 0 &&
+            secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) {
             --contextOwner->state14244;
         }
     }

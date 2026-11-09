@@ -2,7 +2,7 @@
 #include "CharacterViews.h"
 void Character23::Slot06()
 {
-    if (field014a > 0 || (*opponentSlot)->field014c > 0) {
+    if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) {
         return;
     }
     unsigned short frameDuration, frameCount;
@@ -323,7 +323,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.1;
@@ -363,7 +363,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.5;
@@ -403,7 +403,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x14;
+            meter = meter + 0x14;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.8;
@@ -443,7 +443,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.1;
@@ -483,7 +483,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.5;
@@ -523,7 +523,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x14;
+            meter = meter + 0x14;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.8;
@@ -563,7 +563,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.1;
@@ -600,7 +600,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.5;
@@ -637,7 +637,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x14;
+            meter = meter + 0x14;
             velocityX =
             (2.0 - (*opponentSlot)->field0178 / 10000.0) *
             -1.8;
@@ -674,7 +674,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -719,7 +719,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -764,7 +764,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -809,7 +809,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -849,7 +849,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             gravity = 0.032;
@@ -893,7 +893,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -943,7 +943,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -993,7 +993,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY =
             velocityY * 0.75 + knockbackVelocityY;
@@ -1038,7 +1038,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             gravity = 0.032;
@@ -1076,7 +1076,7 @@ void Character23::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 1.5;
         }
-        field0148 = field0148 + 3;
+        meter = meter + 3;
         velocityX = knockbackVelocityX;
         velocityY = knockbackVelocityY;
         ++field000c;
@@ -1107,7 +1107,7 @@ void Character23::Slot06()
         if (field0120 != '\0') {
             field0118 = field0118 - 1.5;
         }
-        field0148 = field0148 + 3;
+        meter = meter + 3;
         velocityX = knockbackVelocityX;
         velocityY = knockbackVelocityY;
         ++field000c;
@@ -1135,7 +1135,7 @@ void Character23::Slot06()
         }
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
             (field3138 == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             ++field3138;
             field0124 = field0124 + 0x78;
             velocityX = 0.5;
@@ -1175,7 +1175,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.8;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             gravity = 0.072;
@@ -1292,7 +1292,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
@@ -1332,7 +1332,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
@@ -1372,7 +1372,7 @@ void Character23::Slot06()
             field0118 = field0118 - 0.6;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
@@ -1415,7 +1415,7 @@ void Character23::Slot06()
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
             EmitLocalEffect(&effect);
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             gravity = 0.032;
@@ -1455,7 +1455,7 @@ void Character23::Slot06()
             velocityY = -0.45;
             velocityX = -0.1;
             ++field3138;
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             velocityX = knockbackVelocityX;
@@ -1512,7 +1512,7 @@ void Character23::Slot06()
             field02c9 = 0x21;
             velocityY = -1.5;
             velocityX = -0.8;
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
         }
         velocityY = velocityY + 0.04;
         if (field000a == 0 && velocityY + positionY > 0.0) {
@@ -1564,7 +1564,7 @@ void Character23::Slot06()
             field02c9 = 0x21;
             velocityY = -1.5;
             velocityX = -0.8;
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
         }
         velocityY = velocityY + 0.04;
         if (field000a == 0 && velocityY + positionY > 0.0) {
@@ -1616,7 +1616,7 @@ void Character23::Slot06()
             field02c9 = 0x21;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
         }
         velocityY = velocityY + 0.04;
         ++field000c;
@@ -1660,7 +1660,7 @@ void Character23::Slot06()
                 field02c9 = 0x21;
                 velocityX = knockbackVelocityX;
                 velocityY = knockbackVelocityY;
-                field0148 = field0148 + 0x1e;
+                meter = meter + 0x1e;
                 ++field3138;
             }
         }
@@ -1801,7 +1801,7 @@ void Character23::Slot06()
             field0008 = 0x96;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             velocityX = -1.5;
             velocityY = 0.0;
             positionY = 0.0;
@@ -1842,7 +1842,7 @@ void Character23::Slot06()
             field0008 = 0x97;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             velocityX = -1.8;
             velocityY = 0.0;
             positionY = 0.0;
@@ -1883,7 +1883,7 @@ void Character23::Slot06()
             field0008 = 0x98;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x14;
+            meter = meter + 0x14;
             velocityX = -2.3;
             velocityY = 0.0;
             positionY = 0.0;
@@ -1924,7 +1924,7 @@ void Character23::Slot06()
             field0008 = 0x96;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             velocityX = -1.5;
             velocityY = 0.0;
             positionY = 0.0;
@@ -1962,7 +1962,7 @@ void Character23::Slot06()
             field0008 = 0x97;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             velocityX = -1.8;
             velocityY = 0.0;
             positionY = 0.0;
@@ -2000,7 +2000,7 @@ void Character23::Slot06()
             field0008 = 0x98;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x14;
+            meter = meter + 0x14;
             velocityX = -2.3;
             velocityY = 0.0;
             positionY = 0.0;
@@ -2033,7 +2033,7 @@ void Character23::Slot06()
     case 156:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityY = -2.6;
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             gravity = 0.06;
         }
         velocityX = -1.2;
@@ -2162,7 +2162,7 @@ void Character23::Slot06()
             contextOwner->EmitEffect(&effect);
             field016c = 1;
             field02c9 = 0x3e;
-            field0148 = field0148 + -1000;
+            meter = meter + -1000;
             ++field3138;
         }
         velocityY = velocityY + gravity;
@@ -2360,7 +2360,7 @@ void Character23::Slot06()
                 field0118 * 5.0 + field0178;
             }
             field0118 = 0.0;
-            field014c = 0x5a;
+            hitstunFrames = 0x5a;
             SetTint(0xb0,3);
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
@@ -2461,14 +2461,14 @@ void Character23::Slot06()
             }
             field014e = 0;
             outgoingPushbackVelocityX = 0.0;
-            field014c = 0x3c;
+            hitstunFrames = 0x3c;
         }
-        if ((field014c == 0) && (field3140 == 0)) {
+        if ((hitstunFrames == 0) && (field3140 == 0)) {
             ++field3140;
             velocityX = (double)field3138 * 0.01;
             velocityY = (double)field313c * 0.01;
         }
-        if (field014c == 0) {
+        if (hitstunFrames == 0) {
             velocityY = velocityY + gravity;
         }
         if (velocityY + positionY > 0.0) {
@@ -2498,7 +2498,7 @@ void Character23::Slot06()
                 field0118 * 5.0 + field0178;
             }
             field0118 = 0.0;
-            field014c = 0x5a;
+            hitstunFrames = 0x5a;
             SetTint(0xb0,3);
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
@@ -2577,7 +2577,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 5;
+            meter = meter + 5;
             field02c9 = 0x15;
             field016c = 1;
         }
@@ -2617,7 +2617,7 @@ void Character23::Slot06()
             velocityX = 0.5;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2659,7 +2659,7 @@ void Character23::Slot06()
             velocityY = 0.0;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2683,7 +2683,7 @@ void Character23::Slot06()
             velocityY = 0.0;
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x23;
+            meter = meter + 0x23;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2718,7 +2718,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 5;
+            meter = meter + 5;
             field02c9 = 0x15;
             field016c = 1;
         }
@@ -2756,7 +2756,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xd;
+            meter = meter + 0xd;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2781,7 +2781,7 @@ void Character23::Slot06()
         velocityX = 0.0;
         velocityY = 0.0;
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x19;
+            meter = meter + 0x19;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2829,7 +2829,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 5;
+            meter = meter + 5;
             field02c9 = 0x15;
             field016c = 1;
         }
@@ -2870,7 +2870,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xd;
+            meter = meter + 0xd;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2911,7 +2911,7 @@ void Character23::Slot06()
             break;
         }
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2949,7 +2949,7 @@ void Character23::Slot06()
             gravity = 0.08;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -2988,7 +2988,7 @@ void Character23::Slot06()
             velocityY = 0.0;
         }
         if ((field000a == 8) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x23;
+            meter = meter + 0x23;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -3023,7 +3023,7 @@ void Character23::Slot06()
     case 212:
         velocityY = velocityY + gravity;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0x1e;
+            meter = meter + 0x1e;
             field02c9 = 0x14;
             field016c = 1;
             velocityX = velocityX / 2.0;
@@ -3218,7 +3218,7 @@ void Character23::Slot06()
             gravity = 0.03;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 5;
+            meter = meter + 5;
             field02c9 = 0x15;
             field016c = 1;
         }
@@ -3246,7 +3246,7 @@ void Character23::Slot06()
             gravity = 0.03;
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             field02c9 = 0x15;
             field016c = 1;
         }
@@ -3274,7 +3274,7 @@ void Character23::Slot06()
             gravity = 0.03;
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 10;
+            meter = meter + 10;
             field02c9 = 0x14;
             field016c = 1;
         }
@@ -3395,7 +3395,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x193;
             effect.x = positionX;
             effect.y = positionY - 80.0;
@@ -3420,7 +3420,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x194;
             effect.x = positionX;
             effect.y = positionY - 80.0;
@@ -3463,7 +3463,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x195;
             effect.x = positionX;
             effect.y = positionY - 80.0;
@@ -3495,7 +3495,7 @@ void Character23::Slot06()
                 field000a = field000a + -2;
                 ++field3138;
                 if (field3138 == 1) {
-                    field0148 = field0148 + 0xf;
+                    meter = meter + 0xf;
                     effect.type = 0x196;
                     effect.x = (double)(facing * 0x1e) + positionX;
                     effect.y = positionY;
@@ -3523,7 +3523,7 @@ void Character23::Slot06()
                 field000a = field000a + -2;
                 ++field3138;
                 if (field3138 == 1) {
-                    field0148 = field0148 + 0xf;
+                    meter = meter + 0xf;
                     effect.type = 0x197;
                     effect.x = (double)(facing * 0x1e) + positionX;
                     effect.y = positionY;
@@ -3566,7 +3566,7 @@ void Character23::Slot06()
                 field000a = field000a + -2;
                 ++field3138;
                 if (field3138 == 1) {
-                    field0148 = field0148 + 0xf;
+                    meter = meter + 0xf;
                     effect.type = 0x198;
                     effect.x = (double)(facing * 0x1e) + positionX;
                     effect.y = positionY;
@@ -3587,7 +3587,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3605,7 +3605,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3638,7 +3638,7 @@ void Character23::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3942,7 +3942,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 0xc) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x19d;
             effect.x = positionX;
             effect.y = positionY;
@@ -3967,7 +3967,7 @@ void Character23::Slot06()
             ResetFrame();
         }
         if ((field000a == 0xc) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x1a0;
             effect.x = positionX;
             effect.y = positionY;
@@ -4005,7 +4005,7 @@ void Character23::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         if ((field000a == 0xc) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + 0xf;
+            meter = meter + 0xf;
             effect.type = 0x1a3;
             effect.x = positionX;
             effect.y = positionY;
@@ -4029,9 +4029,9 @@ void Character23::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -1000;
+            meter = meter + -1000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4046,7 +4046,7 @@ void Character23::Slot06()
             ResetPose();
             field000a = 8;
             field0168 = 0;
-            field014c = 0x9f;
+            hitstunFrames = 0x9f;
             field02c9 = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
@@ -4088,9 +4088,9 @@ void Character23::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -2000;
+            meter = meter + -2000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
@@ -4105,7 +4105,7 @@ void Character23::Slot06()
             ResetPose();
             field000a = 8;
             field0168 = 0;
-            field014c = 0x9f;
+            hitstunFrames = 0x9f;
             field02c9 = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
@@ -4148,9 +4148,9 @@ void Character23::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -3000;
+            meter = meter + -3000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
@@ -4166,7 +4166,7 @@ void Character23::Slot06()
             ResetPose();
             field000a = 8;
             field0168 = 0;
-            field014c = 0x9f;
+            hitstunFrames = 0x9f;
             field02c9 = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
@@ -4252,9 +4252,9 @@ void Character23::Slot06()
             field313c = (int(velocityY * 100.0));
             field3140 = (int(gravity * 1000.0));
             ResetFrame();
-            field0148 = field0148 + -1000;
+            meter = meter + -1000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4288,7 +4288,7 @@ void Character23::Slot06()
             ResetPose();
             field000a = 8;
             field0168 = 0;
-            field014c = 0x9f;
+            hitstunFrames = 0x9f;
             field02c9 = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
@@ -4334,9 +4334,9 @@ void Character23::Slot06()
         field0158 = 0;
         ResetFrame();
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + -1000;
+            meter = meter + -1000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4376,9 +4376,9 @@ void Character23::Slot06()
         field0158 = 0;
         ResetFrame();
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + -2000;
+            meter = meter + -2000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
@@ -4421,9 +4421,9 @@ void Character23::Slot06()
         }
         ResetFrame();
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + -3000;
+            meter = meter + -3000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
@@ -4465,9 +4465,9 @@ void Character23::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -1000;
+            meter = meter + -1000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4503,9 +4503,9 @@ void Character23::Slot06()
         field0158 = 0;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -2000;
+            meter = meter + -2000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
@@ -4544,9 +4544,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
-            field0148 = field0148 + -3000;
+            meter = meter + -3000;
             SetHorizontalShake(0x32,0x2d);
-            field014c = 0x78;
+            hitstunFrames = 0x78;
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
@@ -4584,7 +4584,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
-            field014c = 0xb4;
+            hitstunFrames = 0xb4;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4613,7 +4613,7 @@ void Character23::Slot06()
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
-            field014c = 0xb4;
+            hitstunFrames = 0xb4;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4642,7 +4642,7 @@ void Character23::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             SetHorizontalShake(0x32,3);
-            field014c = 0xb4;
+            hitstunFrames = 0xb4;
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
@@ -4681,10 +4681,10 @@ void Character23::Slot06()
             EmitLocalEffect(&effect);
         }
         if ((6 < field000a) && (field000a < 0x2a)) {
-            field014c = 2;
+            hitstunFrames = 2;
         }
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
-            field0148 = field0148 + -3000;
+            meter = meter + -3000;
             SetHorizontalShake(0x32,0x2d);
             SetTint(0xb0,3);
             effect.type = 0x46;

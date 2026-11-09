@@ -27,10 +27,10 @@ void Secondary::InitializeState()
     field0108 = 9999;
     field010c = 9999;
     field0110 = 9999;
-    field0148 = 0;
+    meter = 0;
     field0118 = 0.0;
     field0120 = 0;
-    field014c = 0;
+    hitstunFrames = 0;
     field0159 = 0;
     field0158 = 0;
     field015a = 0;
@@ -45,7 +45,7 @@ void Secondary::InitializeState()
     field015c = 0;
     field0160 = 0;
     field0168 = 0;
-    field014a = 0;
+    hitstopFrames = 0;
     field0134 = 0;
     field0174 = 0;
     field00f4 = 0;

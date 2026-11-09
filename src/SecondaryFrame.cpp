@@ -3,7 +3,7 @@
 
 void Secondary::DispatchState()
 {
-    if (field014a == 0 && (*opponentSlot)->field014c == 0) {
+    if (hitstopFrames == 0 && (*opponentSlot)->hitstunFrames == 0) {
         if (field0008 < 50 || field0008 > 150 || field0008 == 96) {
             field0124 = 0;
             field012c = 0;
@@ -16,7 +16,7 @@ void Secondary::DispatchState()
             outgoingPushbackVelocityX = 0.0;
             (*opponentSlot)->outgoingPushbackVelocityX = 0.0;
             if (field30ec != 0 && (*opponentSlot)->field0008 < 50) {
-                field0148 = 3000;
+                meter = 3000;
                 field0108 = field30ee;
                 if (field30ec > 0) {
                     if (field30ec < 1000) {
@@ -53,11 +53,11 @@ void Secondary::CheckAirAction()
 void Secondary::UpdateMovement()
 {
     int i = effectRead;
-    if (field014a == 0 && (*opponentSlot)->field014c == 0) {
+    if (hitstopFrames == 0 && (*opponentSlot)->hitstunFrames == 0) {
         if ((CollisionSide() * facing) * (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
-        * ((*opponentSlot)->outgoingPushbackActive != 0 && field014c == 0)) >= 0.0) {
+        * ((*opponentSlot)->outgoingPushbackActive != 0 && hitstunFrames == 0)) >= 0.0) {
             positionX = (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
-            * ((*opponentSlot)->outgoingPushbackActive != 0 && field014c == 0)) * facing + positionX;
+            * ((*opponentSlot)->outgoingPushbackActive != 0 && hitstunFrames == 0)) * facing + positionX;
         }
         if (positionX < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0)) {
             positionX = 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0);
@@ -70,8 +70,8 @@ void Secondary::UpdateMovement()
         if (positionY > 0.0) positionY = 0.0;
     }
     while (i != effectWrite) {
-        if (effectActive[i] != 0 && (field014c <= 0 || effects[i].field0088 != 0)
-        && effects[i].field0086 == 0 && (*opponentSlot)->field014c == 0) {
+        if (effectActive[i] != 0 && (hitstunFrames <= 0 || effects[i].field0088 != 0)
+        && effects[i].field0086 == 0 && (*opponentSlot)->hitstunFrames == 0) {
             effects[i].x += (effects[i].vx + 0.0 * effects[i].field0070) * effects[i].flag0048;
             effects[i].y = effects[i].y + effects[i].vy;
         }
@@ -83,10 +83,10 @@ void Secondary::UpdateMovement()
 void Secondary::UpdateTimers()
 {
     int i;
-    if ((*opponentSlot)->field014c > 0) goto ClampState;
+    if ((*opponentSlot)->hitstunFrames > 0) goto ClampState;
     {
-        if (field014a > 0) --field014a;
-        else field014a = 0;
+        if (hitstopFrames > 0) --hitstopFrames;
+        else hitstopFrames = 0;
         if (IsStateGroupA() == 0) {
             if (IsStateGroupB() != 0) field0134 -= float(1.0 / ((positionY == 0.0) * 4 + 1));
             else field0134 -= 0.075f;
@@ -138,8 +138,8 @@ void Secondary::UpdateTimers()
         }
     }
     ClampState:
-    if (field0148 < 0) field0148 = 0;
-    else if (field0148 > 3000) field0148 = 3000;
+    if (meter < 0) meter = 0;
+    else if (meter > 3000) meter = 3000;
     if (field0118 < 0.0) field0118 = 0.0;
     else if (field0118 > 1000.0) field0118 = 1000.0;
     --field30f0;

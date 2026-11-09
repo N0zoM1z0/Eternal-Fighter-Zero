@@ -29,7 +29,7 @@ void Character07::Slot02()
         if (((buttons & 0xf) == 4) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 0) && (stage == '\0')) && (field0148 == 3000)) {
+        if ((((buttons & 0xf) == 0) && (stage == '\0')) && (meter == 3000)) {
             stage = '\x01';
         }
     }
@@ -97,7 +97,7 @@ void Character07::Slot02()
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }

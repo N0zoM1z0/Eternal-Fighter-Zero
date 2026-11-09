@@ -27,7 +27,7 @@ void Character15::Slot04()
         return;
     }
     if (field015c < 2) {
-        if ((((((field0108 < 0xd05) && (field0262 == 0x62)) && (field0148 >= 3000)) &&
+        if ((((((field0108 < 0xd05) && (field0262 == 0x62)) && (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0))) && (field0168 !=
             6)) && (sequences[field0008].field0002 <= sequences[318].field0000)) {
             ResetPose();
@@ -35,7 +35,7 @@ void Character15::Slot04()
             field0008 = 0x13e;
             return;
         }
-        if (((((field3158 == 2) || (field3158 == 3)) && (field0262 == 0x7a && ((field0148 >= 3000 &&
+        if (((((field3158 == 2) || (field3158 == 3)) && (field0262 == 0x7a && ((meter >= 3000 &&
             (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) &&
             (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200))) &&
             (sequences[field0008].field0002 <= sequences[314].field0000)) {
@@ -45,7 +45,7 @@ void Character15::Slot04()
             return;
         }
         if (((((field3158 == 2) || (field3158 == 3)) && ((field0262 == 0x7a || (field0262 == 0x79)) &&
-            ((field0148 >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
+            ((meter >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
             8) > 0)))) && (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))
             && (sequences[field0008].field0002 <= sequences[313].field0000)) {
             ResetPose();
@@ -54,7 +54,7 @@ void Character15::Slot04()
             return;
         }
         if ((((field3158 == 2) || (field3158 == 3)) && (field0262 == 0x78 || (field0262 == 0x79 || (field0262
-            == 0x7a)) )) && (((field0148 >= 1000 && (positionY == 0.0 &&
+            == 0x7a)) )) && (((meter >= 1000 && (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) && ((field0008 >= 200 && (field0168
             >= 2 && (field0168 != 6))) || (field0008 < 200))) && (sequences[field0008].field0002 <=
             sequences[312].field0000))) {
@@ -63,7 +63,7 @@ void Character15::Slot04()
             field0008 = 0x138;
             return;
         }
-        if (((((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x70)) && (field0148 >= 3000 &&
+        if (((((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x70)) && (meter >= 3000 &&
             (positionY == 0.0))) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200))) &&
             (sequences[field0008].field0002 <= sequences[305].field0000)) {
@@ -73,7 +73,7 @@ void Character15::Slot04()
             return;
         }
         if ((((field3158 == 1) || (field3158 == 3)) && ((field0262 == 0x70 || (field0262 == 0x6f)) &&
-            ((field0148 >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
+            ((meter >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
             8) > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200))
             && (sequences[field0008].field0002 <= sequences[304].field0000))) {
             ResetPose();
@@ -82,7 +82,7 @@ void Character15::Slot04()
             return;
         }
         if (((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x6e || (field0262 == 0x6f || (field0262
-            == 0x70)) )) && (field0148 >= 1000 && (positionY == 0.0 &&
+            == 0x70)) )) && (meter >= 1000 && (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && (field0168
             >= 2 && (field0168 != 6))) || (field0008 < 200)) && (sequences[field0008].field0002 <=
             sequences[303].field0000))) {
@@ -91,7 +91,7 @@ void Character15::Slot04()
             field0008 = 0x12f;
             return;
         }
-        if (((((field3158 == 2) || (field3158 == 3)) && (field0262 == 0x66)) && ((field0148 >= 3000 &&
+        if (((((field3158 == 2) || (field3158 == 3)) && (field0262 == 0x66)) && ((meter >= 3000 &&
             (positionY < 0.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) &&
             (sequences[field0008].field0002 <= sequences[302].field0000))) {
@@ -101,7 +101,7 @@ void Character15::Slot04()
             return;
         }
         if ((((field3158 == 2) || (field3158 == 3)) && ((field0262 == 0x66 || (field0262 == 0x65)) &&
-            ((field0148 >= 2000 && (positionY < 0.0)) && ((sequences[field0008].data[field000a].frameFlags & 8)
+            ((meter >= 2000 && (positionY < 0.0)) && ((sequences[field0008].data[field000a].frameFlags & 8)
             > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) &&
             (sequences[field0008].field0002 <= sequences[301].field0000))) {
             ResetPose();
@@ -110,7 +110,7 @@ void Character15::Slot04()
             return;
         }
         if (((field3158 == 2) || (field3158 == 3)) && (((field0262 == 100 || (field0262 == 0x65 || (field0262
-            == 0x66)) ) && (field0148 >= 1000 && (positionY < 0.0 &&
+            == 0x66)) ) && (meter >= 1000 && (positionY < 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && (field0168
             >= 2 && (field0168 != 6))) || (field0008 < 200)) && (sequences[field0008].field0002 <=
             sequences[300].field0000)))) {
@@ -119,7 +119,7 @@ void Character15::Slot04()
             field0008 = 0x13b;
             return;
         }
-        if ((((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x66)) && (field0148 >= 3000 &&
+        if ((((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x66)) && (meter >= 3000 &&
             (positionY == 0.0))) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (((field0008
             >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) &&
             (sequences[field0008].field0002 <= sequences[302].field0000)) {
@@ -129,7 +129,7 @@ void Character15::Slot04()
             return;
         }
         if (((((field3158 == 1) || (field3158 == 3)) && (field0262 == 0x66 || (field0262 == 0x65))) &&
-            ((field0148 >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
+            ((meter >= 2000 && (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags &
             8) > 0))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200))
             && (sequences[field0008].field0002 <= sequences[301].field0000))) {
             ResetPose();
@@ -138,7 +138,7 @@ void Character15::Slot04()
             return;
         }
         if ((((((field3158 == 1) || (field3158 == 3)) && (field0262 == 100 || (field0262 == 0x65 || (field0262
-            == 0x66) ))) && (field0148 >= 1000 && (positionY == 0.0 &&
+            == 0x66) ))) && (meter >= 1000 && (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((field0008 >= 200 && (field0168
             >= 2 && (field0168 != 6))) || (field0008 < 200))) && (sequences[field0008].field0002 <=
             sequences[300].field0000)) {

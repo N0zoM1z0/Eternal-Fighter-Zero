@@ -28,7 +28,7 @@ void Character23::Slot02()
             stage = '\x02';
         }
         if (((buttons & 0xe0) != 0) && (stage == '\x01')) break;
-        if (((buttons & 0x10) != 0) && ((stage == '\0' && (field0148 == 3000)))) {
+        if (((buttons & 0x10) != 0) && ((stage == '\0' && (meter == 3000)))) {
             stage = '\x01';
         }
     }
@@ -84,7 +84,7 @@ void Character23::Slot02()
         if (((buttons & 0xf) == 6 - (facing == -1 ? 1 : 0)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }
@@ -115,7 +115,7 @@ void Character23::Slot02()
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000)) {
             stage = '\x01';
         }
     }

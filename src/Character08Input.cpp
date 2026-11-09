@@ -36,7 +36,7 @@ void Character08::Slot02()
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == 1)) {
             stage = 2;
         }
-        if ((((buttons & 0xf) == 4) && (stage == 0)) && (field0148 == 3000)) {
+        if ((((buttons & 0xf) == 4) && (stage == 0)) && (meter == 3000)) {
             stage = 1;
         }
     }
@@ -68,7 +68,7 @@ void Character08::Slot02()
         if (((buttons & 0xf) == 6 - (facing == -1 ? 1 : 0)) && (stage == 1)) {
             stage = 2;
         }
-        if ((((buttons & 0xf) == 4) && (stage == 0)) && (field0148 >= 1000)) {
+        if ((((buttons & 0xf) == 4) && (stage == 0)) && (meter >= 1000)) {
             stage = 1;
         }
     }
@@ -98,7 +98,7 @@ void Character08::Slot02()
             stage = 2;
         }
         if ((((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == 0)) &&
-            (field0148 >= 1000)) {
+            (meter >= 1000)) {
             stage = 1;
         }
     }
@@ -134,7 +134,7 @@ void Character08::Slot02()
             stage = 2;
         }
         if ((((buttons & 0xf) == 4) && (stage == 0)) &&
-            (field0148 == 3000)) {
+            (meter == 3000)) {
             stage = 1;
         }
     }
@@ -174,7 +174,7 @@ void Character08::Slot02()
             stage = 2;
         }
         if ((((buttons & 0xf) == 4) && (stage == 0)) &&
-            (field0148 >= 1000)) {
+            (meter >= 1000)) {
             stage = 1;
         }
     }

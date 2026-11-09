@@ -6,14 +6,14 @@
 void Character08::Slot07()
 {
     int i;
-    if ((*opponentSlot)->field014c > 0) return;
+    if ((*opponentSlot)->hitstunFrames > 0) return;
     i = (int)effectRead;
     EffectSpawn effect;
     while (i != effectWrite) {
         if (((effectActive[i] != 0) &&
             (effects[i].field0086 == 0)) &&
-            (field014c == 0 ||
-            (0 < field014c && (effects[i].field0088 != 0)))) {
+            (hitstunFrames == 0 ||
+            (0 < hitstunFrames && (effects[i].field0088 != 0)))) {
             unsigned short frameDuration = patterns[effects[i].type].frames[effects[i].frame].duration;
             unsigned short frameCount = patterns[effects[i].type].count;
             ResetLocalEffectSpawn(&effect);
@@ -1377,7 +1377,7 @@ void Character08::Slot07()
                     ApplyDamage(5000,700.0);
                     SetVerticalShake(8,5);
                     contextOwner->RequestTransition('\x01');
-                    (*opponentSlot)->field014a = 0;
+                    (*opponentSlot)->hitstopFrames = 0;
                     (*opponentSlot)->field0008 = 0x3f;
                     (*opponentSlot)->field000a = 0;
                     (*opponentSlot)->field000c = 0;

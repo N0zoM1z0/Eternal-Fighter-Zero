@@ -28,7 +28,7 @@ void Character24::Slot04()
         return;
     }
     if ((int)field015c < 2) {
-        if (((((field0262 == 0x84) && (field0148 >= 3000)) && (((sequences[field0008].data[field000a].frameFlags & 8)
+        if (((((field0262 == 0x84) && (meter >= 3000)) && (((sequences[field0008].data[field000a].frameFlags & 8)
             > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[316].field0000)) {
             ResetPose();
@@ -36,7 +36,7 @@ void Character24::Slot04()
             field0008 = 0x13c;
             return;
         }
-        if ((((field0262 == 0x70) && (field0148 >= 3000)) && (((sequences[field0008].data[field000a].frameFlags & 8)
+        if ((((field0262 == 0x70) && (meter >= 3000)) && (((sequences[field0008].data[field000a].frameFlags & 8)
             > 0 && (positionY == 0.0)))) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[314].field0000)))) {
             ResetPose();
@@ -44,7 +44,7 @@ void Character24::Slot04()
             field0008 = 0x13a;
             return;
         }
-        if (((((field0262 == 0x66) && (field0148 >= 3000)) && (positionY == 0.0)) &&
+        if (((((field0262 == 0x66) && (meter >= 3000)) && (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((((field0008 >= 200 && (field0168 >=
             2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <=
             sequences[300].field0000)))) {
@@ -53,7 +53,7 @@ void Character24::Slot04()
             field0008 = 0x12e;
             return;
         }
-        if ((((field0262 == 0x65) || (field0262 == 0x66)) && ((field0148 >= 2000 && ((positionY == 0.0 &&
+        if ((((field0262 == 0x65) || (field0262 == 0x66)) && ((meter >= 2000 && ((positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))))) && ((((field0008 >= 200 && ((field0168
             >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <=
             sequences[301].field0000)))) {
@@ -62,7 +62,7 @@ void Character24::Slot04()
             field0008 = 0x12d;
             return;
         }
-        if ((((((field0262 == 100) || (field0262 == 0x65)) || (field0262 == 0x66)) && ((field0148 >= 1000 &&
+        if ((((((field0262 == 100) || (field0262 == 0x65)) || (field0262 == 0x66)) && ((meter >= 1000 &&
             (positionY == 0.0)))) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && ((((field0008 >=
             200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) &&
             (sequences[field0008].field0002 <= sequences[300].field0000)) {
@@ -71,7 +71,7 @@ void Character24::Slot04()
             field0008 = 300;
             return;
         }
-        if (((((field0262 == 0x7a) && (field0148 >= 3000)) && (positionY == 0.0)) &&
+        if (((((field0262 == 0x7a) && (meter >= 3000)) && (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((((field0008 >= 200 && (field0168 >=
             2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <=
             sequences[305].field0000)))) {
@@ -80,7 +80,7 @@ void Character24::Slot04()
             field0008 = 0x131;
             return;
         }
-        if (((((field0262 == 0x79) || (field0262 == 0x7a)) && ((field0148 >= 2000 && ((positionY == 0.0 &&
+        if (((((field0262 == 0x79) || (field0262 == 0x7a)) && ((meter >= 2000 && ((positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))))) && (((field0008 >= 200 && ((field0168 >=
             2 && (field0168 != 6)))) || (field0008 < 200)))) && (sequences[field0008].field0002 <=
             sequences[304].field0000)) {
@@ -89,7 +89,7 @@ void Character24::Slot04()
             field0008 = 0x130;
             return;
         }
-        if ((((((field0262 == 0x78) || (field0262 == 0x79) ) || (field0262 == 0x7a)) && (((field0148 >= 1000 &&
+        if ((((((field0262 == 0x78) || (field0262 == 0x79) ) || (field0262 == 0x7a)) && (((meter >= 1000 &&
             (positionY == 0.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((((field0008 >=
             200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002
             <= sequences[303].field0000)) {

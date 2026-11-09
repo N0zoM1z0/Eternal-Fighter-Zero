@@ -255,9 +255,9 @@ public:
     short field0140;
     unsigned char unknown_0142[2];
     int field0144;
-    short field0148;
-    short field014a;
-    short field014c;
+    short meter;
+    short hitstopFrames;
+    short hitstunFrames;
     short field014e;
     int field0150;
     int field0154;

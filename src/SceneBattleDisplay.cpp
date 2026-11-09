@@ -151,19 +151,19 @@ void Scene3::RenderHud()
         work.source = MakeSurfaceRect(0, 0x28, 0x140, 0x21);
         work.destination = MakeSurfaceRect(0, 0xce, 0x140, 0x21);
         videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
-        work.width = (secondary[0]->field0148 * 0x6c) / 3000;
-        if (secondary[0]->field0148 < 1000) {
+        work.width = (secondary[0]->meter * 0x6c) / 3000;
+        if (secondary[0]->meter < 1000) {
             work.source = MakeSurfaceRect(0x6c - work.width, 0x73, work.width, 4);
             work.destination = MakeSurfaceRect(0x8c - work.width, 0xe0, work.width, 4);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
-        } else if (secondary[0]->field0148 < 2000) {
+        } else if (secondary[0]->meter < 2000) {
             work.source = MakeSurfaceRect(0, 0x94, 0x18, 0x18);
             work.destination = MakeSurfaceRect(6, 0xd1, 0x18, 0x18);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
             work.source = MakeSurfaceRect(0x6c - work.width, 0x77, work.width, 4);
             work.destination = MakeSurfaceRect(0x8c - work.width, 0xe0, work.width, 4);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
-        } else if (secondary[0]->field0148 < 3000) {
+        } else if (secondary[0]->meter < 3000) {
             work.source = MakeSurfaceRect(0x18, 0x94, 0x18, 0x18);
             work.destination = MakeSurfaceRect(6, 0xd1, 0x18, 0x18);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
@@ -178,19 +178,19 @@ void Scene3::RenderHud()
             work.destination = MakeSurfaceRect(0x8c - work.width, 0xe0, work.width, 4);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         }
-        work.width = (secondary[1]->field0148 * 0x6c) / 3000;
-        if (secondary[1]->field0148 < 1000) {
+        work.width = (secondary[1]->meter * 0x6c) / 3000;
+        if (secondary[1]->meter < 1000) {
             work.source = MakeSurfaceRect(0x6c, 0x73, work.width, 4);
             work.destination = MakeSurfaceRect(0xb4, 0xe0, work.width, 4);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
-        } else if (secondary[1]->field0148 < 2000) {
+        } else if (secondary[1]->meter < 2000) {
             work.source = MakeSurfaceRect(0, 0x94, 0x18, 0x18);
             work.destination = MakeSurfaceRect(0x122, 0xd1, 0x18, 0x18);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
             work.source = MakeSurfaceRect(0x6c, 0x77, work.width, 4);
             work.destination = MakeSurfaceRect(0xb4, 0xe0, work.width, 4);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
-        } else if (secondary[1]->field0148 < 3000) {
+        } else if (secondary[1]->meter < 3000) {
             work.source = MakeSurfaceRect(0x18, 0x94, 0x18, 0x18);
             work.destination = MakeSurfaceRect(0x122, 0xd1, 0x18, 0x18);
             videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);

@@ -96,10 +96,10 @@ unsigned char Scene3::Step()
             ResolvePushboxes();
             secondary[0]->UpdateMovement();
             secondary[1]->UpdateMovement();
-            if (secondary[0]->field014c > 0) --secondary[0]->field014c;
-            else secondary[0]->field014c = 0;
-            if (secondary[1]->field014c > 0) --secondary[1]->field014c;
-            else secondary[1]->field014c = 0;
+            if (secondary[0]->hitstunFrames > 0) --secondary[0]->hitstunFrames;
+            else secondary[0]->hitstunFrames = 0;
+            if (secondary[1]->hitstunFrames > 0) --secondary[1]->hitstunFrames;
+            else secondary[1]->hitstunFrames = 0;
             secondary[0]->UpdateTimers();
             secondary[1]->UpdateTimers();
             PlayCharacterSounds();
@@ -153,8 +153,8 @@ void Scene3::UpdateRound()
                 secondary[1]->field30dc += secondary[1]->field0108;
                 if (secondary[1]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[1]->field00ac;
-                    secondary[0]->field014c += 180;
-                    secondary[1]->field014c += 180;
+                    secondary[0]->hitstunFrames += 180;
+                    secondary[1]->hitstunFrames += 180;
                     secondary[0]->ResetPose();
                     effect.owner = 0;
                     effect.x = 80.0;
@@ -180,8 +180,8 @@ void Scene3::UpdateRound()
                 secondary[0]->field30dc += secondary[0]->field0108;
                 if (secondary[0]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[0]->field00ac;
-                    secondary[0]->field014c += 180;
-                    secondary[1]->field014c += 180;
+                    secondary[0]->hitstunFrames += 180;
+                    secondary[1]->hitstunFrames += 180;
                     effect.owner = 0;
                     effect.x = 240.0;
                     effect.y = 100.0;
@@ -230,11 +230,11 @@ void Scene3::Slot0()
     secondary[0]->RenderLocalEffects(field045c, field0460, 0);
     secondary[1]->RenderLocalEffects(field045c, field0460, 0);
     if (secondary[1]->field0008 >= 200) {
-        secondary[0]->Render(field045c + secondary[0]->IsStateGroupB() * (secondary[0]->field014a % 2) * 2, field0460);
-        secondary[1]->Render(field045c + secondary[1]->IsStateGroupB() * (secondary[1]->field014a % 2) * 2, field0460);
+        secondary[0]->Render(field045c + secondary[0]->IsStateGroupB() * (secondary[0]->hitstopFrames % 2) * 2, field0460);
+        secondary[1]->Render(field045c + secondary[1]->IsStateGroupB() * (secondary[1]->hitstopFrames % 2) * 2, field0460);
     } else {
-        secondary[1]->Render(field045c + secondary[1]->IsStateGroupB() * (secondary[1]->field014a % 2) * 2, field0460);
-        secondary[0]->Render(field045c + secondary[0]->IsStateGroupB() * (secondary[0]->field014a % 2) * 2, field0460);
+        secondary[1]->Render(field045c + secondary[1]->IsStateGroupB() * (secondary[1]->hitstopFrames % 2) * 2, field0460);
+        secondary[0]->Render(field045c + secondary[0]->IsStateGroupB() * (secondary[0]->hitstopFrames % 2) * 2, field0460);
     }
     secondary[0]->RenderLocalEffects(field045c, field0460, 1);
     secondary[1]->RenderLocalEffects(field045c, field0460, 1);
@@ -331,19 +331,19 @@ void Scene3::RenderBackground()
     if (secondary[0]->field30c4 > 0 && secondary[1]->field30c4 > 0) {
         if (contextOwner->field0f33 == 0) videoOwner->FillRectangle(work.source, secondary[0]->field30c0);
         else videoOwner->FillRectangle(work.source, secondary[1]->field30c0);
-        if (secondary[0]->field014c == 0 && secondary[1]->field014c == 0) {
+        if (secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) {
             --secondary[0]->field30c4;
             --secondary[1]->field30c4;
         }
     } else if (secondary[0]->field30c4 > 0) {
         videoOwner->FillRectangle(work.source, secondary[0]->field30c0);
-        if (secondary[0]->field014c == 0 && secondary[1]->field014c == 0) --secondary[0]->field30c4;
+        if (secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) --secondary[0]->field30c4;
     } else if (secondary[1]->field30c4 > 0) {
         videoOwner->FillRectangle(work.source, secondary[1]->field30c0);
-        if (secondary[0]->field014c == 0 && secondary[1]->field014c == 0) --secondary[1]->field30c4;
+        if (secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) --secondary[1]->field30c4;
     } else if (contextOwner->state14278 > 0) {
         videoOwner->DrawSurface(work.source, contextOwner->extraB, work.destination, 0, 0);
-        if (secondary[0]->field014c == 0 && secondary[1]->field014c == 0) --contextOwner->state14278;
+        if (secondary[0]->hitstunFrames == 0 && secondary[1]->hitstunFrames == 0) --contextOwner->state14278;
     } else {
         videoOwner->DrawSurface(work.source, contextOwner->extraA, work.destination, 0, 0);
         if (contextOwner->blob != 0) reinterpret_cast<BattleBackground *>(contextOwner->blob)->Render(field045c, field0460, 0);

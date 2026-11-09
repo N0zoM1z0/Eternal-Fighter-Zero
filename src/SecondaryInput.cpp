@@ -72,7 +72,7 @@ void Secondary::UpdateInput()
         if (field0260 >= 180) field0260 = 0;
         if (inputX == 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && field014e == 0 && field0150 == 0) field014e = 60;
-        if ((*opponentSlot)->field014a == 0 && field014e > 0) --field014e;
+        if ((*opponentSlot)->hitstopFrames == 0 && field014e > 0) --field014e;
         if (inputX == 0) field0150 = 0;
         else field0150 = 1;
         Slot02();
@@ -109,7 +109,7 @@ void SecondaryTrail::Begin(const SecondaryPose *pose, unsigned char spacing)
 
 void Secondary::AdvanceTrail()
 {
-    if ((*opponentSlot)->field014c == 0) {
+    if ((*opponentSlot)->hitstunFrames == 0) {
         if (trail.pending > 0) {
             trail.Capture(this);
             trail.held = 0;

@@ -5,15 +5,15 @@
 void Character24::Slot07()
 {
     int i;
-    if ((*opponentSlot)->field014c > 0) return;
+    if ((*opponentSlot)->hitstunFrames > 0) return;
     i = (int)effectRead;
     // Both emitter kinds use this real descriptor and its shared base view.
     EffectSpawn spawn;
     while (i != effectWrite) {
         if (((effectActive[i] != 0) &&
             (effects[i].field0086 == 0)) &&
-            ((field014c == 0 ||
-            ((0 < field014c && (effects[i].field0088 != 0)))))) {
+            ((hitstunFrames == 0 ||
+            ((0 < hitstunFrames && (effects[i].field0088 != 0)))))) {
             unsigned short frameDuration = patterns[effects[i].type].frames[effects[i].frame].duration;
             unsigned short frameCount = patterns[effects[i].type].count;
             ResetLocalEffectSpawn(&spawn);
@@ -1073,7 +1073,7 @@ void Character24::Slot07()
                         effects[i].layer = 0;
                         field3448 = 1;
                         effects[i].field0086 = 0x3c;
-                        (*opponentSlot)->field014a = 0x3c;
+                        (*opponentSlot)->hitstopFrames = 0x3c;
                         effects[i].field0080 = 0;
                         break;
                     }
@@ -1133,7 +1133,7 @@ void Character24::Slot07()
                         (effects[i].frame == 0xb)) ||
                         (effects[i].frame == 0xe)))) {
                         effects[i].field0086 = 0x1e;
-                        (*opponentSlot)->field014a = 0x1e;
+                        (*opponentSlot)->hitstopFrames = 0x1e;
                         field344c = 0;
                         if (effects[i].frame == 0xe) {
                             field02c8 = 9;

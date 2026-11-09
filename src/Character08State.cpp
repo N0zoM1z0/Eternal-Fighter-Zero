@@ -31,7 +31,7 @@ void Character08::Slot04()
     }
     if (field015c < 2) {
         if (((((field0108 < 0xd05) && (field0262 == 0x5f)) &&
-            (field0148 >= 3000)) &&
+            (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (positionY == 0.0))) &&
             (field0168 != 6 &&
@@ -42,7 +42,7 @@ void Character08::Slot04()
             field0008 = 0x13e;
             return;
         }
-        if (((((field0262 == 0xac) && (field0148 >= 3000)) &&
+        if (((((field0262 == 0xac) && (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200))) &&
@@ -57,7 +57,7 @@ void Character08::Slot04()
             return;
         }
         if (((((field0262 == 0xab) || (field0262 == 0xac))
-            && (field0148 >= 2000 &&
+            && (meter >= 2000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200))) &&
@@ -73,7 +73,7 @@ void Character08::Slot04()
         }
         if (((((field0262 == 0xaa) || (field0262 == 0xab))
             || (field0262 == 0xac)) &&
-            (field0148 >= 1000 &&
+            (meter >= 1000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             (((field0008 >= 200 && (field0168 >= 2 && (field0168 != 6))) ||
             (field0008 < 200)) &&
@@ -87,7 +87,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0x7a) && (field0148 >= 3000)) &&
+        if (((((field0262 == 0x7a) && (meter >= 3000)) &&
             (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
@@ -100,7 +100,7 @@ void Character08::Slot04()
             return;
         }
         if ((((field0262 == 0x7a) || (field0262 == 0x79))
-            && (field0148 >= 2000 &&
+            && (meter >= 2000 &&
             (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) &&
             (((field0008 >= 200 && (field0168 >= 2 && (field0168 != 6))) ||
@@ -114,7 +114,7 @@ void Character08::Slot04()
         }
         if (((((field0262 == 0x78) || (field0262 == 0x79))
             || (field0262 == 0x7a)) &&
-            ((field0148 >= 1000 && (positionY == 0.0)) &&
+            ((meter >= 1000 && (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200)) &&
@@ -125,7 +125,7 @@ void Character08::Slot04()
             field0008 = 0x12f;
             return;
         }
-        if (((((field0262 == 0x70) && (field0148 >= 3000)) &&
+        if (((((field0262 == 0x70) && (meter >= 3000)) &&
             (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
@@ -138,7 +138,7 @@ void Character08::Slot04()
             return;
         }
         if ((((field0262 == 0x70) || (field0262 == 0x6f))
-            && (field0148 >= 2000 &&
+            && (meter >= 2000 &&
             (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) &&
             (((field0008 >= 200 && (field0168 >= 2 && (field0168 != 6))) ||
@@ -153,7 +153,7 @@ void Character08::Slot04()
         if (((((((field0262 == 0x6e) ||
             (field0262 == 0x6f)) ||
             (field0262 == 0x70)) &&
-            (field0148 >= 1000 && (positionY == 0.0))) &&
+            (meter >= 1000 && (positionY == 0.0))) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) ||
             (field0008 < 200))) &&

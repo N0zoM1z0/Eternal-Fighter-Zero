@@ -120,11 +120,11 @@ void Character03::Slot05()
                 inputY = 0;
                 return;
             }
-            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) && (field0148 >= 1000)) {
+            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) && (meter >= 1000)) {
                 field0262 = (unsigned short)RandomRange(0, 3) + 0x6e;
                 return;
             }
-            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) && (field0148 >= 2000)) {
+            if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) && (meter >= 2000)) {
                 field0262 = (unsigned short)RandomRange(0, 2) + 0x79;
                 return;
             }
@@ -142,7 +142,7 @@ void Character03::Slot05()
                 return;
             }
             if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 2) &&
-                (field0148 >= 2000)) {
+                (meter >= 2000)) {
                 field0262 = (unsigned short)RandomRange(0, 2) + 0x79;
                 return;
             }
@@ -198,7 +198,7 @@ void Character03::Slot05()
         ((*opponentSlot)->field0008 == 0xaa)) &&
         ((((positionY == 0.0 &&
         ( (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)) &&
-        (field3114 != 2)) && ((*opponentSlot)->field014c == 0)))) {
+        (field3114 != 2)) && ((*opponentSlot)->hitstunFrames == 0)))) {
         field3110 = (unsigned short)RandomRange(0, 100);
         if (((field3110 < 3) && (field0118 > 500.0)) && (distance.forward < 80.0)) {
             field0262 = 0x14;
@@ -214,12 +214,12 @@ void Character03::Slot05()
             return;
         }
         if (((field3110 < 0x11) && (0xc < field3110)) &&
-            ((field0148 >= 1000 && (distance.forward < 100.0)))) {
+            ((meter >= 1000 && (distance.forward < 100.0)))) {
             field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
             return;
         }
         if (((field3110 < 0x11) && (0xc < field3110)) &&
-            ((field0148 >= 1000 && (distance.forward > 90.0)))) {
+            ((meter >= 1000 && (distance.forward > 90.0)))) {
             field0262 = (unsigned short)RandomRange(0, 3) + 0x6e;
             return;
         }
@@ -233,10 +233,10 @@ void Character03::Slot05()
         ((*opponentSlot)->field0008 == 0xaa)) &&
         ((positionY < 0.0 &&
         ( (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)))) &&
-        (field3114 != 2)) && ((*opponentSlot)->field014c == 0)) {
+        (field3114 != 2)) && ((*opponentSlot)->hitstunFrames == 0)) {
         field3110 = (unsigned short)RandomRange(0, 100);
         if (((field3110 < 0x11) && (0xc < field3110)) &&
-            ((field0148 >= 1000 && (distance.forward > 50.0)))) {
+            ((meter >= 1000 && (distance.forward > 50.0)))) {
             field0262 = (unsigned short)RandomRange(0, 3) + 0x6e;
             return;
         }
@@ -365,7 +365,7 @@ void Character03::Slot05()
         }
     }
     else {
-        if ((((1 < field0168) && (field014a == 0)) &&
+        if ((((1 < field0168) && (hitstopFrames == 0)) &&
             ( (float)(unsigned short)RandomRange(0, 100) < field00a8 * 25.0f))
             && ((field3114 != 1 && (field3114 != 2)))) {
             field3110 = (unsigned short)RandomRange(0, 1000);
@@ -430,7 +430,7 @@ void Character03::Slot05()
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) && (0x226 < field3110))
-                    && ((field3110 < 600 && (field0148 >= 1000)))) {
+                    && ((field3110 < 600 && (meter >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
@@ -490,7 +490,7 @@ void Character03::Slot05()
             }
             if (field0008 == 0xca) {
                 if (((((*opponentSlot)->positionY < 0.0) && (0x96 < field3110))
-                    && (field3110 < 200)) && ((field0148 >= 1000 && (distance.forward < 120.0))))
+                    && (field3110 < 200)) && ((meter >= 1000 && (distance.forward < 120.0))))
                 {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
@@ -542,7 +542,7 @@ void Character03::Slot05()
                     return;
                 }
                 if (((0x28a < field3110) && (field3110 < 0x29e)) &&
-                    (field0148 >= 1000)) {
+                    (meter >= 1000)) {
                     field0262 = 0x65;
                     return;
                 }
@@ -612,7 +612,7 @@ void Character03::Slot05()
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) && (0x226 < field3110))
-                    && ((field3110 < 600 && (field0148 >= 1000)))) {
+                    && ((field3110 < 600 && (meter >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
@@ -697,7 +697,7 @@ void Character03::Slot05()
                     return;
                 }
                 if (((0x28a < field3110) && (field3110 < 0x29e)) &&
-                    (field0148 >= 1000)) {
+                    (meter >= 1000)) {
                     field0262 = 0x65;
                     return;
                 }
@@ -954,7 +954,7 @@ void Character03::Slot05()
                         return;
                     }
                     if ((((distance.forward < 80.0) && (field3110 < 0x118)) && (0x113 < field3110)) &&
-                        ((field0148 >= 1000 && (199 < (*opponentSlot)->field0008))
+                        ((meter >= 1000 && (199 < (*opponentSlot)->field0008))
                         )) {
                         field0262 = (unsigned short)RandomRange(0, 3) + 0x65;
                         return;
@@ -1042,7 +1042,7 @@ void Character03::Slot05()
                         if (((distance.forward < 70.0) && (field3110 < 0xdc)) &&
                             (((200 < field3110 &&
                             (((*opponentSlot)->positionY < -50.0 && (distance.vertical < 90.0))))
-                            && (field0148 >= 2000)))) {
+                            && (meter >= 2000)))) {
                             field0262 = (unsigned short)RandomRange(0, 2) + 0x79;
                             return;
                         }
