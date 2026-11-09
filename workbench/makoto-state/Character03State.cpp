@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-166 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-167 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2329,9 +2329,51 @@ void Character03::Slot06()
         }
         return;
 
+    case 167: // Original block 0x005EEDC4: stunned recovery with two effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 56 explicit cases. The target's true default path also
+        // the other 55 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

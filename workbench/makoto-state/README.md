@@ -459,6 +459,20 @@ work, not the original behavior for valid unimplemented animations.
   Character07 cases have different initial velocities and thus cannot
   be copied as equivalent source.
 
+- Animation ID 167 (0x005EEDC4..0x005EEFAC, 488 bytes) performs a
+  stunned recovery with independent pose-based effects. On the first
+  pose/tick it clears dash momentum and movement, adds field0118*5.0
+  to comboDamageScale only when field0120==1, clears field0118,
+  sets hitstunFrames=90, and calls SetTint(0xB0,3). Pose 1/tick
+  zero requests sound 18 and emits global effect type 1, while pose
+  2/tick zero emits global type 4. Both effects are placed at the
+  independently truncated character coordinates with group 2/layer
+  1. After duration expiry, every pose advance clears
+  attackCollisionResult. On sequence exhaustion it requests idle,
+  faces the opponent, and resets the pose. The entire 488-byte
+  original range was checked in canonical EFZ.exe; VC7.1 builds the
+  added natural C++ branch.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
