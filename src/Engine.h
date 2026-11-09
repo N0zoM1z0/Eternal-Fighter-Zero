@@ -87,9 +87,9 @@ struct SecondaryFrame {
     unsigned char unknown_00a2[2];
     float comboDamageScale;
     short guardDamage;
-    unsigned short field00aa;
+    unsigned short attackFlags;
     short airHitState, groundHitState;
-    unsigned short field00b0;
+    unsigned short frameFlags;
     short airActionLockFrames, hitMeterGain, guardMeterGain;
     float outgoingPushbackVelocityX, outgoingPushbackVelocityY;
     char field00c0, field00c1;

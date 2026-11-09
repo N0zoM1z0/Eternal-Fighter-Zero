@@ -12,9 +12,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
     work.slot = &first->effects[index];
     work.attack = &first->sequences[work.slot->type].data[work.slot->frame];
     work.defense = &pose->frame;
-    if (work.slot->field0080 == 0 && (work.defense->field00b0 & 0x20) == 0 &&
+    if (work.slot->field0080 == 0 && (work.defense->frameFlags & 0x20) == 0 &&
         work.slot->field0084 > 0 &&
-        !(second->field0130 > 0 && (work.attack->field00aa & 0x40) > 0) &&
+        !(second->field0130 > 0 && (work.attack->attackFlags & 0x40) > 0) &&
         second->AirActionReady() == 0 && second->field013c == 0) {
         struct CollisionBoxes {
             int overlap[4][5];
@@ -35,7 +35,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                         boxes.defenseBoxes[work.i] = TransformSnapshotBox(pose, &work.defense->boxes0000[work.i]);
                     }
                     specialBounds = TransformSnapshotBox(pose, &work.defense->box0090);
-                    if ((work.attack->field00aa & 0x40) > 0) {
+                    if ((work.attack->attackFlags & 0x40) > 0) {
                         for (work.i = 0; work.i < 4; ++work.i) {
                             boxes.overlap[work.i][0] = 1;
                             found |= BoxesOverlap(&boxes.attackBoxes[work.i], &specialBounds);
@@ -65,12 +65,12 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 }
                             }
                         }
-                        if (((work.defense->field00b0 & 0x400) > 0) && ((work.attack->field00aa & 0x100) == 0)) {
+                        if (((work.defense->frameFlags & 0x400) > 0) && ((work.attack->attackFlags & 0x100) == 0)) {
                             --work.slot->field0084;
                             work.slot->field0080 = 2;
                             first->field0168 = 6;
                             second->field0168 = 6;
-                        } else if (((second->field0170 != 0) && (((second->field014e >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->field00aa & 0x80) == 0)) {
+                        } else if (((second->field0170 != 0) && (((second->field014e >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->attackFlags & 0x80) == 0)) {
                             work.slot->field0080 = 2;
                             first->field0148 += work.attack->guardMeterGain;
                             --work.slot->field0084;
@@ -141,7 +141,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->ClearInputHistory();
                             second->field014c = 0x3c;
                             first->field0170 = 1;
-                        } else if (((work.defense->field00b0 & 0x200) > 0) && (((work.defense->field00aa & 1) > 0) && ((work.attack->field00aa & 1) > 0))) {
+                        } else if (((work.defense->frameFlags & 0x200) > 0) && (((work.defense->attackFlags & 1) > 0) && ((work.attack->attackFlags & 1) > 0))) {
                             --work.slot->field0084;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -165,7 +165,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0134 > 360.0f) {
                                 second->field0134 = 360.0f;
                             }
-                        } else if (((work.defense->field00b0 & 0x200) > 0) && (((work.defense->field00aa & 2) > 0) && ((work.attack->field00aa & 2) > 0))) {
+                        } else if (((work.defense->frameFlags & 0x200) > 0) && (((work.defense->attackFlags & 2) > 0) && ((work.attack->attackFlags & 2) > 0))) {
                             --work.slot->field0084;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -189,7 +189,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0134 > 360.0f) {
                                 second->field0134 = 360.0f;
                             }
-                        } else if (((work.defense->field00b0 & 0x200) > 0) && ((((work.defense->field00aa & 4) > 0) && ((work.attack->field00aa & 4) > 0)) && (second->positionY < 0.0))) {
+                        } else if (((work.defense->frameFlags & 0x200) > 0) && ((((work.defense->attackFlags & 4) > 0) && ((work.attack->attackFlags & 4) > 0)) && (second->positionY < 0.0))) {
                             --work.slot->field0084;
                             effect.owner = 0;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -215,10 +215,10 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             }
                         } else if (second->CanGuard(work.attack, work.defense) != 0) {
                             second->field0008 =
-                            ((work.attack->field00aa & 0x10) / 16) + 0x96 +
-                            ((work.attack->field00aa & 0x20) / 32) * 2 +
+                            ((work.attack->attackFlags & 0x10) / 16) + 0x96 +
+                            ((work.attack->attackFlags & 0x20) / 32) * 2 +
                             (((second->inputY == '\x01') ||
-                                (((work.attack->field00aa & work.defense->field00b0 & 5) == 0 &&
+                                (((work.attack->attackFlags & work.defense->frameFlags & 5) == 0 &&
                                 (second->cpuControlled != 0)))) ? 1 : 0) * 3;
                             if (second->positionY < 0.0) {
                                 second->field0008 = 0x9c;
@@ -262,23 +262,23 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
                         } else {
-                            if ((((work.defense->field00b0 & 4) == 0) &&
+                            if ((((work.defense->frameFlags & 4) == 0) &&
                                 (second->field0138 == 0)) ||
-                                (((((work.defense->field00b0 & 4) > 0 ||
+                                (((((work.defense->frameFlags & 4) > 0 ||
                                 (0 < second->field0138)) &&
-                                ((work.attack->field00aa & 0x100) > 0)) ||
-                                ((work.attack->field00aa & 0x40) > 0)))) {
+                                ((work.attack->attackFlags & 0x100) > 0)) ||
+                                ((work.attack->attackFlags & 0x40) > 0)))) {
                                 if (second->positionY >= 0.0) {
                                     if (work.attack->groundHitState > 0) {
                                         second->field0008 = work.attack->groundHitState;
                                     } else {
-                                        if ((work.defense->field00b0 & 3) == 3) second->field0008 = 59;
-                                        else if ((work.defense->field00b0 & 1) != 0) {
-                                            second->field0008 = ((work.attack->field00aa & 8) > 0) * 3 + 50
-                                            + ((work.attack->field00aa & 0x10) > 0) + ((work.attack->field00aa & 0x20) > 0) * 2;
-                                        } else if ((work.defense->field00b0 & 2) != 0) {
-                                            second->field0008 = ((work.attack->field00aa & 0x10) > 0) + 56
-                                            + ((work.attack->field00aa & 0x20) > 0) * 2;
+                                        if ((work.defense->frameFlags & 3) == 3) second->field0008 = 59;
+                                        else if ((work.defense->frameFlags & 1) != 0) {
+                                            second->field0008 = ((work.attack->attackFlags & 8) > 0) * 3 + 50
+                                            + ((work.attack->attackFlags & 0x10) > 0) + ((work.attack->attackFlags & 0x20) > 0) * 2;
+                                        } else if ((work.defense->frameFlags & 2) != 0) {
+                                            second->field0008 = ((work.attack->attackFlags & 0x10) > 0) + 56
+                                            + ((work.attack->attackFlags & 0x20) > 0) * 2;
                                         }
                                     }
                                 } else {
@@ -293,7 +293,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 second->SetCharacterTint(0xe9,3);
                                 work.slot->field0080 = 7;
                             }
-                            if ((work.defense->field00b0 & 0x10) > 0) {
+                            if ((work.defense->frameFlags & 0x10) > 0) {
                                 first->field0174 = 0;
                                 if (first->field0178 > 10000.0) {
                                     first->field0178 =
@@ -310,9 +310,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             }
                             second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                             second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0)
-                                * ((((work.attack->field00aa & 0x2000) > 0 && (work.defense->field00b0 & 0x2000) > 0) ? 1 : 0) + 1));
-                            second->field0128 = (unsigned int)((work.attack->field00aa & 0x400) > 0);
-                            second->field012c = (unsigned int)((work.attack->field00aa & 0x800) > 0);
+                                * ((((work.attack->attackFlags & 0x2000) > 0 && (work.defense->frameFlags & 0x2000) > 0) ? 1 : 0) + 1));
+                            second->field0128 = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
+                            second->field012c = (unsigned int)((work.attack->attackFlags & 0x800) > 0);
                             second->field0158 = 0;
                             second->field0159 = 0;
                             second->field015a = 0;
@@ -404,7 +404,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
     work.secondSlot = &second->effects[secondIndex];
     work.attack = &first->sequences[work.firstSlot->type].data[work.firstSlot->frame];
     work.defense = &second->sequences[work.secondSlot->type].data[work.secondSlot->frame];
-    if (work.firstSlot->field0080 == 0 && work.firstSlot->field0084 > 0 && (work.attack->field00aa & 0x40) == 0) {
+    if (work.firstSlot->field0080 == 0 && work.firstSlot->field0084 > 0 && (work.attack->attackFlags & 0x40) == 0) {
         struct CollisionBoxes {
             int overlap[4][5];
             SurfaceRect defenseBoxes[5], attackBoxes[4];
@@ -442,27 +442,27 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                             }
                         }
                     }
-                    if ((work.defense->field00b0 & 0x10) == 0) {
+                    if ((work.defense->frameFlags & 0x10) == 0) {
                         --work.firstSlot->field0084;
                         work.firstSlot->field0080 = 5;
                     }
                     work.secondSlot->field0080 = 5;
-                    if ((work.defense->field00b0 & 0x2000) > 0) {
+                    if ((work.defense->frameFlags & 0x2000) > 0) {
                         // This path overwrites the live effect frame with the character frame.
                         *work.defense = second->sequences[second->field0008].data[second->field000a];
-                        if (((work.defense->field00b0 & 4) == 0 && second->field0138 == 0) ||
-                            (((work.defense->field00b0 & 4) > 0 || second->field0138 > 0) && (work.attack->field00aa & 0x100) > 0) ||
-                            (work.attack->field00aa & 0x40) > 0) {
+                        if (((work.defense->frameFlags & 4) == 0 && second->field0138 == 0) ||
+                            (((work.defense->frameFlags & 4) > 0 || second->field0138 > 0) && (work.attack->attackFlags & 0x100) > 0) ||
+                            (work.attack->attackFlags & 0x40) > 0) {
                             if (second->positionY >= 0.0) {
                                 if (work.attack->groundHitState > 0) {
                                     second->field0008 = work.attack->groundHitState;
-                                } else if ((work.defense->field00b0 & 3) == 3) {
+                                } else if ((work.defense->frameFlags & 3) == 3) {
                                     second->field0008 = 59;
-                                } else if ((work.defense->field00b0 & 1) != 0) {
-                                    second->field0008 = ((work.attack->field00aa & 8) > 0) * 3 + 50
-                                    + ((work.attack->field00aa & 0x10) > 0) + ((work.attack->field00aa & 0x20) > 0) * 2;
-                                } else if ((work.defense->field00b0 & 2) != 0) {
-                                    second->field0008 = ((work.attack->field00aa & 0x10) > 0) + 56 + ((work.attack->field00aa & 0x20) > 0) * 2;
+                                } else if ((work.defense->frameFlags & 1) != 0) {
+                                    second->field0008 = ((work.attack->attackFlags & 8) > 0) * 3 + 50
+                                    + ((work.attack->attackFlags & 0x10) > 0) + ((work.attack->attackFlags & 0x20) > 0) * 2;
+                                } else if ((work.defense->frameFlags & 2) != 0) {
+                                    second->field0008 = ((work.attack->attackFlags & 0x10) > 0) + 56 + ((work.attack->attackFlags & 0x20) > 0) * 2;
                                 }
                             } else {
                                 if (work.attack->airHitState > 0) second->field0008 = work.attack->airHitState;
@@ -474,7 +474,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                             first->field0174 = 0;
                             second->SetCharacterTint(0xdf, 2);
                         }
-                        if ((work.defense->field00b0 & 0x10) > 0) {
+                        if ((work.defense->frameFlags & 0x10) > 0) {
                             first->field0174 = 0;
                             if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
                             else first->field0178 = 10000.0;
@@ -485,8 +485,8 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
-                        second->field0128 = (work.attack->field00aa & 0x400) > 0;
-                        second->field012c = (work.attack->field00aa & 0x800) > 0;
+                        second->field0128 = (work.attack->attackFlags & 0x400) > 0;
+                        second->field012c = (work.attack->attackFlags & 0x800) > 0;
                         second->field0158 = 0;
                         second->field0159 = 0;
                         second->field015a = 0;
@@ -534,7 +534,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
     } work;
     work.slot = &second->effects[index];
     work.attack = &firstPose->frame;
-    if (first->field0168 == 0 && first->field016c > 0 && (work.attack->field00aa & 0x40) == 0) {
+    if (first->field0168 == 0 && first->field016c > 0 && (work.attack->attackFlags & 0x40) == 0) {
         struct CollisionBoxes {
             int overlap[4][5];
             SurfaceRect defenseBoxes[5];
@@ -575,27 +575,27 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                             }
                         }
                     }
-                    if ((boxes.defense.field00b0 & 0x10) == 0) {
+                    if ((boxes.defense.frameFlags & 0x10) == 0) {
                         --first->field016c;
                         first->field0168 = 5;
                     }
                     work.slot->field0080 = 5;
-                    if ((boxes.defense.field00b0 & 0x2000) > 0) {
+                    if ((boxes.defense.frameFlags & 0x2000) > 0) {
                         // Body attacks replace only the local defense copy.
                         boxes.defense = secondPose->frame;
-                        if (((boxes.defense.field00b0 & 4) == 0 && second->field0138 == 0) ||
-                            (((boxes.defense.field00b0 & 4) > 0 || second->field0138 > 0) && (work.attack->field00aa & 0x100) > 0) ||
-                            (work.attack->field00aa & 0x40) > 0) {
+                        if (((boxes.defense.frameFlags & 4) == 0 && second->field0138 == 0) ||
+                            (((boxes.defense.frameFlags & 4) > 0 || second->field0138 > 0) && (work.attack->attackFlags & 0x100) > 0) ||
+                            (work.attack->attackFlags & 0x40) > 0) {
                             if (second->positionY >= 0.0) {
                                 if (work.attack->groundHitState > 0) {
                                     second->field0008 = work.attack->groundHitState;
-                                } else if ((boxes.defense.field00b0 & 3) == 3) {
+                                } else if ((boxes.defense.frameFlags & 3) == 3) {
                                     second->field0008 = 59;
-                                } else if ((boxes.defense.field00b0 & 1) != 0) {
-                                    second->field0008 = ((work.attack->field00aa & 8) > 0) * 3 + 50
-                                    + ((work.attack->field00aa & 0x10) > 0) + ((work.attack->field00aa & 0x20) > 0) * 2;
-                                } else if ((boxes.defense.field00b0 & 2) != 0) {
-                                    second->field0008 = ((work.attack->field00aa & 0x10) > 0) + 56 + ((work.attack->field00aa & 0x20) > 0) * 2;
+                                } else if ((boxes.defense.frameFlags & 1) != 0) {
+                                    second->field0008 = ((work.attack->attackFlags & 8) > 0) * 3 + 50
+                                    + ((work.attack->attackFlags & 0x10) > 0) + ((work.attack->attackFlags & 0x20) > 0) * 2;
+                                } else if ((boxes.defense.frameFlags & 2) != 0) {
+                                    second->field0008 = ((work.attack->attackFlags & 0x10) > 0) + 56 + ((work.attack->attackFlags & 0x20) > 0) * 2;
                                 }
                             } else {
                                 if (work.attack->airHitState > 0) second->field0008 = work.attack->airHitState;
@@ -607,7 +607,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                             first->field0174 = 0;
                             second->SetCharacterTint(0xdf, 2);
                         }
-                        if ((boxes.defense.field00b0 & 0x10) > 0) {
+                        if ((boxes.defense.frameFlags & 0x10) > 0) {
                             first->field0174 = 0;
                             if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
                             else first->field0178 = 10000.0;
@@ -618,8 +618,8 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
-                        second->field0128 = (work.attack->field00aa & 0x400) > 0;
-                        second->field012c = (work.attack->field00aa & 0x800) > 0;
+                        second->field0128 = (work.attack->attackFlags & 0x400) > 0;
+                        second->field012c = (work.attack->attackFlags & 0x800) > 0;
                         second->field0158 = 0;
                         second->field0159 = 0;
                         second->field015a = 0;

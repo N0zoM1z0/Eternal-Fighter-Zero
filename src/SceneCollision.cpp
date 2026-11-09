@@ -159,11 +159,11 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
                 pass.defenseBoxes[i] = TransformSnapshotBox(secondPose, &pass.secondFrame.boxes0000[i]);
             }
             specialBounds = TransformSnapshotBox(secondPose, &pass.secondFrame.box0090);
-            if (first->field0168 == 0 && (pass.secondFrame.field00b0 & 0x20) == 0 &&
+            if (first->field0168 == 0 && (pass.secondFrame.frameFlags & 0x20) == 0 &&
                 first->field016c > 0 &&
-                !(second->field0130 > 0 && (pass.firstFrame.field00aa & 0x40) > 0) &&
+                !(second->field0130 > 0 && (pass.firstFrame.attackFlags & 0x40) > 0) &&
                 second->AirActionReady() == 0 && second->field013c == 0) {
-                if ((pass.firstFrame.field00aa & 0x40) > 0) {
+                if ((pass.firstFrame.attackFlags & 0x40) > 0) {
                     for (i = 0; i < 4; ++i) {
                         pass.overlap[i][0] = 1;
                         pass.found |= BoxesOverlap(&pass.attackBoxes[i], &specialBounds);
@@ -193,7 +193,7 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
                         }
                     }
                     if (second->field0170 != 0 && second->field014e >= 30 && second->field013a == 0 &&
-                        second->GuardInput(&pass.firstFrame) != 0 && (pass.firstFrame.field00aa & 0x80) == 0) {
+                        second->GuardInput(&pass.firstFrame) != 0 && (pass.firstFrame.attackFlags & 0x80) == 0) {
                         return 1;
                     }
                 }

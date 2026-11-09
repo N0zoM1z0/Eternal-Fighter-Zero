@@ -30,7 +30,7 @@ void Secondary::DispatchState()
             }
         }
         if (field0008 >= 50 && field0008 < 150 && field0134 <= 0.0f
-        && (sequences[field0008].data[field000a].field00aa & 0x400) == 0) CheckAirAction();
+        && (sequences[field0008].data[field000a].attackFlags & 0x400) == 0) CheckAirAction();
         Slot04();
     }
 }
@@ -94,7 +94,7 @@ void Secondary::UpdateTimers()
         }
         if (field0130 > 0) --field0130;
         else field0130 = 0;
-        if ((sequences[field0008].data[field000a].field00b0 & 0x40) > 0) field0130 = 27;
+        if ((sequences[field0008].data[field000a].frameFlags & 0x40) > 0) field0130 = 27;
         if (field0138 > 0) --field0138;
         else field0138 = 0;
         if (field013a > 0) --field013a;
