@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete VC7.1 natural source, strict original extent and reviewed 4 relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 469,
+      "matched_bytes": 469,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x005A9FC4: original Secondary six-argument base constructor, reviewed 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7899456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character21@@6B@",
+          "evidence": "EFZ.exe @ 0x005A9FCC: Minagi original 13-slot child vtable at 0x788940",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7899448,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62268",
+          "evidence": "EFZ.exe @ 0x005A9FD2: literal minagi NUL bytes verified at 0x788938",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x005A9FE1: reviewed CRT strcpy call at 0x778080, original Secondary.resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "276080ed11e086b2e22131810a351370339abd2d9f50e8241ba8b7c8c9240828",
+      "target_extent_sha256": "276080ed11e086b2e22131810a351370339abd2d9f50e8241ba8b7c8c9240828",
+      "unit": "character-21-constructor",
+      "symbol": "??0Character21@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x005A9FA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "7c14d716b371cba5ca077a41e9a9caa94c8b1a03e8c572462034db385376ddb7",
+      "source_sha256": "2327d17beed0fc9a3a0873f792fd5aa6e40555e6d0acefab758d3dabf2bf5e0a",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "d26fe95ec3e791a6916d454952cc7884452dc1da468a4822d829b1398db7fe68"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "102252c2365582d5305ffea1fa32ac6d9cfe49f699edf64128fe77dd718e354b",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "134c3517526bb86e57a9e4f6b74b0f80bea9d4d1f462536a92efcdad089e4d79",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Character21 natural C++ constructor recovers seven state integers, five collision pairs, eight command fields and 3x64 arrays within same 0x3458 object. Entire 469-byte original target and 4 direct relocations matched under selected vc71-od-static."
+}

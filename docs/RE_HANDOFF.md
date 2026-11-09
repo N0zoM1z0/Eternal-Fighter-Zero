@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **336 exact functions**, **1,064,238 code bytes**,
+  ledgers currently count **337 exact functions**, **1,064,707 code bytes**,
   **7,655 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -246,6 +246,27 @@ All 25/26 compiler-local symbol changes (+13) were bound to unchanged
 original jump destinations before complete code/table comparison.
 `docs/evidence/akiko-creation-consumers-exact.json` retains this
 focused proof. No full cold replay or whole-game linkage is claimed.
+
+## New exact Minagi constructor and affected callers
+
+`Character21::Character21` at `0x005A9FA0` is newly strict-Exact,
+**469/469 bytes** with all **four** canonical relocation bindings.
+Selected unit `character-21-constructor`, source
+`src/Character21Frame.cpp`, public proof
+`docs/evidence/minagi-constructor-exact.json`. The original-size
+0x3458 class view exposes seven state fields, three arrays of 64
+integers and a deliberately unwritten 4-byte tail.
+
+Three actual source dependents were selectively recompiled and
+independently verified: the scene creation function remains
+**3495/3495 Exact** (97 bindings), the scene loading function remains
+**2651/2651 Exact** (76), and the **full Makoto Slot06 remains
+59292/59292 Exact** (1,386 bindings). Their 25/26/127 compiler-local
+labels shifted by +9 with unchanged canonical branch targets; all
+new symbol bindings were verified before accepting the receipts.
+`docs/evidence/minagi-creation-consumers-exact.json` contains all
+three renewed reports. No full cold replay or runtime-equivalence
+claim is implied. Other historical proof freshness remains open.
 
 ## Other open substantial work
 

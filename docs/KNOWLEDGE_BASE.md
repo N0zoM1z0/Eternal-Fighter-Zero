@@ -1820,6 +1820,33 @@ both owned switch tables. Public proof:
 refresh unrelated historical stale-header certificates or prove
 whole-game runtime equivalence. No full cold replay was performed.
 
+### Minagi constructor: independently accepted exact source (2026-11-09)
+
+`Character21::Character21` at `0x005A9FA0` now has authored natural C++
+`src/Character21Frame.cpp`. A selected VC7.1 compile matched **469/469
+original bytes** with **four reviewed relocations**: the six-argument
+Secondary constructor at `0x40EAE0`, Minagi 13-slot child vtable
+`0x788940`, original `minagi` NUL string `0x788938`, and CRT `strcpy`
+`0x778080`. The 0x3458 class retains seven state integers, five
+collision coordinate pairs, eight command bytes, three 64-int scratch
+arrays and four unknown trailing bytes. Independent original offsets,
+not another character's guessed layout, determine the assignments.
+
+The actual affected constructor callers, `scene-create-character`
+(**3495/3495** bytes with 97 bound relocations) and
+`scene-loading-character` (**2651/2651**, 76), were rebuilt and
+strictly compared including both owned switch tables. The shared
+header also affects `Character03::Slot06`; its complete **59292/59292**
+source and both tables were recompiled, preserving all **1,386**
+original-bound relocations. The changed compiler-local switch-label
+symbols numbered 25, 26 and 127, each shifted +9 and rebound at the
+same original offsets/targets using simultaneous non-cascading
+replacement. Certificates:
+`docs/evidence/minagi-constructor-exact.json` and
+`docs/evidence/minagi-creation-consumers-exact.json`; the Makoto
+full-owner certificate was independently refreshed. These selected
+checks do not assert freshness of unrelated older header proofs.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's
