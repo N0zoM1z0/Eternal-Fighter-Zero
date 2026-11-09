@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **337 exact functions**, **1,064,707 code bytes**,
-  **7,655 associated table bytes**, 371 reviewed complete boundaries and 366
+  ledgers currently count **338 exact functions**, **1,065,159 code bytes**,
+  **7,655 associated table bytes**, 373 reviewed complete boundaries and 368
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -267,6 +267,25 @@ new symbol bindings were verified before accepting the receipts.
 `docs/evidence/minagi-creation-consumers-exact.json` contains all
 three renewed reports. No full cold replay or runtime-equivalence
 claim is implied. Other historical proof freshness remains open.
+
+## New EX Nanase constructor and full dependent exact comparisons
+
+`Character12::Character12` at `0x006CFBB0` is now **452/452 Exact**
+with four original-bound relocations. Source `src/Character12Frame.cpp`,
+selected unit `character-12-constructor`, receipt
+`docs/evidence/exnanase-constructor-exact.json`. Source uses the true
+0x3468 child size, including the separately initialized byte at
++0x3460; sparse command fields were verified at original offsets.
+
+Three real affected units were recompiled with the changed shared
+class view and all remain Exact: `scene-create-character` 3,495
+bytes/97 relocations, `scene-loading-character` 2,651/76, and
+**Makoto Slot06 59,292/1,386**, including all local tables.
+Their 25/26/127 compiler-local labels shifted +12 but retained
+original jump target and relocation offsets; the simultaneous mapping
+and full byte proofs are in
+`docs/evidence/exnanase-creation-consumers-exact.json` and the fresh
+Makoto receipt. No unrelated replay or linked-product/runtime claim.
 
 ## Other open substantial work
 

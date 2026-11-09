@@ -121,7 +121,7 @@ address,name,source,symbol,status,evidence
 0x00759770,?PollKeyboard@Scene1@@UAEXXZ,src/SceneSelect.cpp,?PollKeyboard@Scene1@@UAEXXZ,complete,docs/evidence/scene-select-exact.json
 0x007598D0,?Enter@Scene1@@QAEXXZ,src/SceneSelect.cpp,?Enter@Scene1@@QAEXXZ,complete,docs/evidence/scene-select-exact.json
 0x00755500,?Slot0@Scene1@@UAEXXZ,src/SceneSelectRender.cpp,?Slot0@Scene1@@UAEXXZ,complete,docs/evidence/scene-select-render-exact.json
-0x007586B0,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,src/SceneCharacterCreate.cpp,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,complete,docs/evidence/minagi-creation-consumers-exact.json
+0x007586B0,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,src/SceneCharacterCreate.cpp,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,complete,docs/evidence/exnanase-creation-consumers-exact.json
 0x0040EAE0,??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/SecondaryLifetime.cpp,??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/secondary-lifetime-exact.json
 0x0040ECB0,??1Secondary@@QAE@XZ,src/SecondaryLifetime.cpp,??1Secondary@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x00412820,??0SecondarySequence@@QAE@XZ,src/SecondaryLifetime.cpp,??0SecondarySequence@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
@@ -225,7 +225,7 @@ address,name,source,symbol,status,evidence
 0x0076C790,?Step@Scene2@@UAEEXZ,src/SceneLoading.cpp,?Step@Scene2@@UAEEXZ,complete,docs/evidence/scene-loading-exact.json
 0x0076C980,?Slot0@Scene2@@UAEXXZ,src/SceneLoading.cpp,?Slot0@Scene2@@UAEXXZ,complete,docs/evidence/scene-loading-exact.json
 0x0076DA10,?PollKeyboard@Scene2@@UAEXXZ,src/SceneLoading.cpp,?PollKeyboard@Scene2@@UAEXXZ,complete,docs/evidence/scene-loading-exact.json
-0x0076DA20,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,src/SceneLoadingCharacter.cpp,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,complete,docs/evidence/minagi-creation-consumers-exact.json
+0x0076DA20,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,src/SceneLoadingCharacter.cpp,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,complete,docs/evidence/exnanase-creation-consumers-exact.json
 0x004F8300,??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/SceneLoadingCharacter.cpp,??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/scene-loading-exact.json
 0x00751370,??0Background01@@QAE@PAVVideo@@@Z,src/Backgrounds.cpp,??0Background01@@QAE@PAVVideo@@@Z,complete,docs/evidence/backgrounds-exact.json
 0x00751500,??1Background01@@QAE@XZ,src/Backgrounds.cpp,??1Background01@@QAE@XZ,complete,docs/evidence/backgrounds-exact.json
@@ -333,6 +333,7 @@ address,name,source,symbol,status,evidence
 0x00675C80,Character19::Character19,src/Character19Frame.cpp,??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/kanna-constructor-exact.json
 0x0073E790,Character17::Character17,src/Character17Frame.cpp,??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/nayukib-constructor-exact.json
 0x00653A20,Character20::Character20,src/Character20Frame.cpp,??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/kano-constructor-exact.json
-0x005E85F0,Character03::Slot06,src/Character03State.cpp,?Slot06@Character03@@UAEXXZ,complete,docs/evidence/minagi-creation-consumers-exact.json
+0x005E85F0,Character03::Slot06,src/Character03State.cpp,?Slot06@Character03@@UAEXXZ,complete,docs/evidence/exnanase-creation-consumers-exact.json
 0x007219A0,Character16::Character16,src/Character16Frame.cpp,??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/akiko-constructor-exact.json
 0x005A9FA0,Character21::Character21,src/Character21Frame.cpp,??0Character21@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/minagi-constructor-exact.json
+0x006CFBB0,Character12::Character12,src/Character12Frame.cpp,??0Character12@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/exnanase-constructor-exact.json

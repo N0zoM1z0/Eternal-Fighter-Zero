@@ -1847,6 +1847,34 @@ replacement. Certificates:
 full-owner certificate was independently refreshed. These selected
 checks do not assert freshness of unrelated older header proofs.
 
+### EX Nanase constructor: complete exact source (2026-11-09)
+
+`Character12::Character12` at `0x006CFBB0` now has authored natural
+C++ in `src/Character12Frame.cpp`. A fresh VC7.1 selected native
+rebuild matches **452/452 bytes**, zero differences, with all four
+reviewed relocations: Secondary construction `0x40EAE0`, EXnanase
+13-slot vtable `0x788DE4`, original `EXnanase` NUL resource name at
+`0x788DD8` and CRT `strcpy` at `0x778080`. The original **0x3468**
+object view preserves seven zeroed state integers, three 64-element
+integer arrays, a trailing int at +0x3454, and a separately zeroed
+byte at +0x3460. The remaining bytes are explicitly unknown,
+not arbitrarily initialized. Five collision coordinate pairs and the
+original sparse command assignments were checked against the complete
+target instructions before accepting the source.
+
+After updating the shared view, three genuine dependent exact units
+were selectively rebuilt: `scene-create-character` **3495/3495**
+bytes (97 relocations), `scene-loading-character` **2651/2651**
+(76), and the complete Makoto Slot06 **59292/59292** (1,386).
+Their 25/26/127 compiler-local labels shifted by +12, and were
+bound simultaneously by unchanged relocation positions/types and
+original target destinations, followed by strict complete comparison.
+Public evidence: `docs/evidence/exnanase-constructor-exact.json`
+and `docs/evidence/exnanase-creation-consumers-exact.json`; the Makoto
+whole-owner certificate was separately refreshed. These targeted
+checks do not certify unrelated historical header dependencies,
+whole-game linkage or native runtime equivalence.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

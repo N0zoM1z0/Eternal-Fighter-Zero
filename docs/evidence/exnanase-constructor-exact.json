@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "full natural C++ VC7.1 native codegen, strict original target and all four relocation bindings",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 452,
+      "matched_bytes": 452,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x006CFBD4: original Secondary six-argument base constructor call to 0x0040EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7900644,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character12@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x006CFBDC: original EXnanase child vtable at 0x00788DE4, separately decoded virtual destinations",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7900632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62280",
+          "evidence": "resources/EFZ.exe @ 0x006CFBE2: verified exact EXnanase NUL resource literal at 0x00788DD8",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x006CFBF1: CRT strcpy direct call at 0x00778080 to Secondary.resourceName at +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b37cdde06eaf68014ad568e8d09307029f8a07f4697329e059634665db6616e6",
+      "target_extent_sha256": "b37cdde06eaf68014ad568e8d09307029f8a07f4697329e059634665db6616e6",
+      "unit": "character-12-constructor",
+      "symbol": "??0Character12@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x006CFBB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b3ce66695f66d5394af74a7efa516ba78796234a6f9ce5da038ac2160f084034",
+      "object_sha256": "229c1de423e8ff434d2172f9b2f3acb3589f3d67a2ddf6116e579957abfb356f",
+      "source_sha256": "191fe1c1477a112f9597faa78b3972dd6d9096d5581613c9c8e37fac84ff7c91",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "a9fb49c6f52ba35c33f74815c70e0c46584543def1422771febf3b15f513b445"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5711b3ab843e725785babefe6ccf88cf308a95d48f990efcb462700d4aa81720",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7b620a16fb3c85714a34e994ed56e9c348a4066594e206fc4ab5d4159c65ac48",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Independent canonical EFZ.exe 452-byte complete constructor, reviewed original EXnanase string, character vtable, Secondary base constructor and CRT strcpy; original 0x3460 byte and 0x3454 int retained. No broad cold replay."
+}
