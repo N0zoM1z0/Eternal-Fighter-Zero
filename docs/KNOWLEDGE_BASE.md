@@ -2189,6 +2189,26 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori locomotion, timer and effect emission: three exact methods (2026-11-09)
+
+Three new independent Nagamori virtual functions have complete natural
+C++ in `src/Character06Delegates.cpp`. Original vtable at `0x7883FC`
+selects slot 3 `Slot03` at `0x004AE2C0`, **19/19 strict exact**
+with one bound call to `Secondary::UpdateLocomotionState` at `0x40E740`;
+slot 8 `Slot08` at `0x004B1720`, **44/44 strict exact** with no
+relocations, decrementing child state +0x315C only when positive;
+and slot 9 `EmitLocalEffect` at `0x004B1750`, **47/47 strict exact**
+with one original direct base-emitter call at `0x412B10`.
+
+The emitter first dispatches virtual `RemoveLocalEffect` at the
+**effectWrite** short cursor +0x2CA, not the similarly placed
+read cursor +0x2CC. Both original relocation destinations and all
+three complete unpadded function boundaries were reviewed before
+accepting them; all code differs by **zero bytes**. Public proof:
+`docs/evidence/nagamori-delegates-exact.json`. These exact methods
+are independent of the still-open, much larger Nagamori Slot04 and
+Slot06 state functions.
+
 ### Nagamori InitializeState: complete 387-byte owner (2026-11-09)
 
 `Character06::InitializeState` at `0x004ADFA0` is now a complete

@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **356 exact functions**, **1,075,311 code bytes**,
-  **7,655 associated table bytes**, 387 reviewed complete boundaries and 382
+  ledgers currently count **359 exact functions**, **1,075,421 code bytes**,
+  **7,655 associated table bytes**, 390 reviewed complete boundaries and 385
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,18 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Three more Nagamori virtual methods exact
+
+Nagamori `Slot03` (`0x004AE2C0`) is **19/19 Exact** and delegates
+to base locomotion; `Slot08` (`0x004B1720`) is **44/44 Exact** and
+counts down state at +0x315C; `EmitLocalEffect` (`0x004B1750`)
+is **47/47 Exact**, removing `effectWrite` via virtual slot 10 before
+base emission. The selected functions have two original-bound call
+relocations in total, source `src/Character06Delegates.cpp`, public
+proof `docs/evidence/nagamori-delegates-exact.json`. Their distinct
+vtable slots, original complete code boundaries and padding were
+independently verified. No broad cold replay.
 
 ## Nagamori complete initialization Exact
 

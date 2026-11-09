@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "authority": "complete original-bound VC7.1 code for three independent Nagamori virtual methods",
+  "method": "Canonical Nagamori vtable slots 3/8/9 selected at 0x4AE2C0/0x4B1720/0x4B1750; natural C++ produces respectively 19/44/47 complete original bytes. Slot03 delegates to Secondary::UpdateLocomotionState, Slot08 decrements +0x315C only if positive, and EmitLocalEffect first invokes virtual RemoveLocalEffect(effectWrite at +0x2CA) then direct base emitter at 0x412B10. All bytes and both original relocations strictly reviewed with no cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original direct locomotion delegate call at 0x004AE2CA, Nagamori vtable slot 3",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "06762108223d11805c5f3a91c2c4ff7044bf1b19890382802079d8439fa3fbfe",
+      "target_extent_sha256": "06762108223d11805c5f3a91c2c4ff7044bf1b19890382802079d8439fa3fbfe",
+      "unit": "character-06-slot03",
+      "symbol": "?Slot03@Character06@@UAEXXZ",
+      "target_address": "0x004AE2C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2c72a0d8ad084b7135c827fd8f8df3ca51579680ce27eedda60e3286ed7de2ae",
+      "object_sha256": "d90d34aa2321a242d794805e746c0f3068e6453f1ff83770e060d34ed7f6fa44",
+      "source_sha256": "7da7de63d2507d9eeb62f43a1433904fdf3660790afe2dbfa073e8aab5e0c29e",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5082b380a87d7502d2d9866757bad4dabaaaefa660ff333759f86d5b99b92dbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "56e6b6a43ab9a8b328376cef925bd6baeffcb8a6e96306761d68617d1d473425",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 44,
+      "matched_bytes": 44,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "903b50371507c346b46cd91d96b106be76106365b9acc65af6ade64ea11ed535",
+      "target_extent_sha256": "903b50371507c346b46cd91d96b106be76106365b9acc65af6ade64ea11ed535",
+      "unit": "character-06-slot08",
+      "symbol": "?Slot08@Character06@@UAEXXZ",
+      "target_address": "0x004B1720",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2c72a0d8ad084b7135c827fd8f8df3ca51579680ce27eedda60e3286ed7de2ae",
+      "object_sha256": "1469793d6ebc5adb1f8f2175e798521289b36880c29c303bda69107cd58cf3d3",
+      "source_sha256": "7da7de63d2507d9eeb62f43a1433904fdf3660790afe2dbfa073e8aab5e0c29e",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5082b380a87d7502d2d9866757bad4dabaaaefa660ff333759f86d5b99b92dbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "3c39c633a9954bfbab033cdce67b50016577fcb8de448e53127be6a68aa7d9b8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "EFZ.exe original base effect spawn call at 0x004B1774 after calling virtual RemoveLocalEffect(effectWrite), Nagamori vtable slot 9",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7a05a897e06dbd23f9de55899128e54c9a34d31a2db5e39fbd67da678f289fdd",
+      "target_extent_sha256": "7a05a897e06dbd23f9de55899128e54c9a34d31a2db5e39fbd67da678f289fdd",
+      "unit": "character-06-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character06@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x004B1750",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2c72a0d8ad084b7135c827fd8f8df3ca51579680ce27eedda60e3286ed7de2ae",
+      "object_sha256": "c6ed79c2db66502508c90d1b5befc782ee747fc6af76e4c10948195db11b339d",
+      "source_sha256": "7da7de63d2507d9eeb62f43a1433904fdf3660790afe2dbfa073e8aab5e0c29e",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5082b380a87d7502d2d9866757bad4dabaaaefa660ff333759f86d5b99b92dbb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "5a5372687945f56678b992f9053454031350e3aa64d7f4c6511a81065d8b79ee",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

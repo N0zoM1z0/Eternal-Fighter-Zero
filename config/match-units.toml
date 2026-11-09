@@ -129597,3 +129597,47 @@ type = "REL32"
 symbol = "?InitializeState@Secondary@@UAEXXZ"
 target = 0x0040EDF0
 evidence = "EFZ.exe canonical original direct call at 0x004AE11A, to Secondary::InitializeState 0x0040EDF0 after 64 byte flags and three 64-int bank resets"
+
+[units.character-06-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot03/Character06Delegates.obj"
+symbol = "?Slot03@Character06@@UAEXXZ"
+target_address = 0x004AE2C0
+size = 19
+
+[[units.character-06-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "EFZ.exe original direct locomotion delegate call at 0x004AE2CA, Nagamori vtable slot 3"
+
+[units.character-06-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot08/Character06Delegates.obj"
+symbol = "?Slot08@Character06@@UAEXXZ"
+target_address = 0x004B1720
+size = 44
+
+[units.character-06-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-emit-local-effect/Character06Delegates.obj"
+symbol = "?EmitLocalEffect@Character06@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x004B1750
+size = 47
+
+[[units.character-06-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "EFZ.exe original base effect spawn call at 0x004B1774 after calling virtual RemoveLocalEffect(effectWrite), Nagamori vtable slot 9"
