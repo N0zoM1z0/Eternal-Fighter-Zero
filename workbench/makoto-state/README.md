@@ -565,6 +565,24 @@ work, not the original behavior for valid unimplemented animations.
   445-byte range was independently rechecked against EFZ.exe and
   the C++ draft compiles under VC7.1.
 
+- Animation ID 203 (0x005EFDDF..0x005F008D, 686 bytes) is an
+  input-repeatable charged hit, not the superficially similar
+  Character07 pose-4 local effect. It applies momentum friction 0.06
+  every tick when velocityX is positive and dashMomentumFlag==1,
+  otherwise clears horizontal momentum and flag. At pose/tick zero
+  it sets remainingHitCount=1. If pose==10, buttonPulse[2]==1 and
+  field3138<2, it clears pendingCharacterSoundSlot, resets tick and
+  pose to 0/6, clears that sound slot a second time and the collision
+  result, grants 15 meter, increments field3138 and emits **local**
+  effect 400 at truncated X+90*facing, truncated Y-50 with facing,
+  group 2/layer 1. Independently, after frame expiration advances
+  the pose, it clears the collision result below pose 7 and emits
+  the same local effect when the new pose equals 6. Both paths are
+  required to retain their ordering. At sequence exhaustion it
+  enters idle, FaceOpponent then ResetPose. The full 686 bytes of
+  original instructions were rechecked against the canonical target
+  and the natural C++ owner compiles with VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -590,7 +608,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 203 and onward directly from reviewed target instructions,
+Extend case 204 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
