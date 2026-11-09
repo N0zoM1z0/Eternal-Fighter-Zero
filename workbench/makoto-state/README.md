@@ -279,6 +279,23 @@ work, not the original behavior for valid unimplemented animations.
   checked against the target instead of assuming another character's
   similar implementation must be correct.
 
+- Animation ID 83 (0x005EC9D9..0x005ECC1E, 581 bytes,
+  157 instructions) is the first distinct airborne ground-impact recovery
+  entry. Its pose/tick-zero gate emits local effect 0x1F0 once while
+  field3144 is clear, using truncated position, group/layer zero,
+  owner 1, and the signed facing byte, then marks field3144.
+  It conditionally deducts 30 resource, requests context sound 33,
+  sets velocity (-0.8,-1.5), and grants 30 meter. Each tick applies
+  vertical acceleration 0.04. Early ground contact on pose zero clears
+  vertical motion and sets pose 1/tick 0; on pose 1 horizontal speed rises
+  by 0.01. Pose 2/tick zero sets horizontal speed -2, and poses past
+  one apply 0.06 friction, clamped to nonpositive speed.
+  On frame exhaustion the function returns to animation 0, calls
+  ResetPose then FaceOpponent. The original contains both x87-to-int
+  helper calls, the local effect virtual call and the explicit
+  FaceOpponent call. These controls were independently reviewed at
+  the original address; no whole-owner Exact assertion is made.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -298,7 +315,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 83 and onward directly from reviewed target instructions,
+Extend case 84 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
