@@ -382,30 +382,38 @@ int Video::DrawShadowSurface(SurfaceRect destination, IUnknown *surface,
     int height = destination.bottom - destination.top;
     int sourceRowOffset = (source.bottom - source.top - 1) * sourcePitch;
 
+    // Scan backward through every third source scanline, stepping the
+    // locked destination pointer forward by its pitch on each output row.
     if (flip != 0) {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
                 unsigned char mask = sourcePixels[sourceRowOffset + (width - 1 - x)];
                 if (mask != colorKey) {
-                    unsigned char destinationPixel = destinationPixels[y * destinationPitch + x];
-                    destinationPixels[y * destinationPitch + x] =
+                    unsigned char destinationPixel = destinationPixels[x];
+                    destinationPixels[x] =
                         blendTable[(static_cast<unsigned int>(destinationPixel) << 8) | colorIndex];
                 }
-            }
+            } while (--x >= 0);
             sourceRowOffset -= sourcePitch * 3;
-        }
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     } else {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
                 unsigned char mask = sourcePixels[sourceRowOffset + x];
                 if (mask != colorKey) {
-                    unsigned char destinationPixel = destinationPixels[y * destinationPitch + x];
-                    destinationPixels[y * destinationPitch + x] =
+                    unsigned char destinationPixel = destinationPixels[x];
+                    destinationPixels[x] =
                         blendTable[(static_cast<unsigned int>(destinationPixel) << 8) | colorIndex];
                 }
-            }
+            } while (--x >= 0);
             sourceRowOffset -= sourcePitch * 3;
-        }
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     }
 
     backSurface->Unlock(destinationDescription.lpSurface);
