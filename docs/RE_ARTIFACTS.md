@@ -98,74 +98,110 @@ by replaying the selected unit; do not replace a lost proof with a size claim.
 
 ## 2026-11-07 handoff cleanup
 
-At the operator's explicit cleanup request,1,246 historical trial/build/report
-files from213 selected roots were preserved losslessly in
-`.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz`.
-The archive contains104,271,295 logical source bytes in7,991,583 compressed bytes.
-All members were read back and verified by size and SHA-256 before redundant
-live copies were removed. `manifest.json` beside the archive records every
-original path/hash and the archive hash; `plan.json` records the selection.
-Net reclaimed allocated file storage,after archive/manifest/plan accounting:
-**98,967,552 bytes (about94.4 MiB)**. Directory metadata and subsequently regenerated
-interpreter caches are excluded. This is separate from earlier cleanup figures.
-Seven regenerable Python bytecode files were also discarded (90,112 allocated
-bytes), recorded separately in cache-cleanup.json; this is excluded from the
-archive reclamation figure above.
+At the operator's explicit cleanup request, 1,246 historical trial/build/report
+files from 213 selected roots were preserved losslessly in
+.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz. The archive
+contains 104,271,295 logical bytes in 7,991,583 compressed bytes. Every member
+was read back and verified by size and SHA-256 before redundant live copies
+were removed. The adjacent manifest.json records every original path/hash and
+the archive hash; plan.json records the selection.
 
-Selection covered older attempts in completed character-owner directories,
-retired diagnostic build directories and superseded *-and-affected.json reports.
-Forty latest successful source/object snapshot roots remain live,including the
-latest object for each source stem and each current last-attempt marker.
-The latest makoto-and-affected.json and all current per-unit exact reports remain
-live. Historical scripts/readmes may still mention an archived path; inspect
-this archive and restore that member before using such a script.
+Net reclaimed allocated file storage, after archive/manifest/plan accounting:
+98,967,552 bytes (about 94.4 MiB). Directory metadata and subsequently
+regenerated interpreter caches are excluded. Seven regenerable Python bytecode
+files were also discarded (90,112 allocated bytes), recorded separately in
+cache-cleanup.json and excluded from the archive reclamation figure.
+
+At the time, selection covered older attempts in completed character-owner
+directories, retired diagnostic build directories and superseded
+*-and-affected.json reports. Forty latest successful source/object snapshot
+roots remained live, including the latest object for each source stem and each
+current last-attempt marker. The latest makoto-and-affected.json and current
+per-unit exact reports remained live. Later cleanup rounds further retired
+obsolete Pushbox variants; see the 2026-11-08 and 2026-11-09 sections below.
 
 From the repository root:
 
-```bash
-tar -tzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz
-# Example: restore one archived historical aggregate report at its original path.
-tar -xzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz \
-  .analysis/exact/audio-and-affected.json
-```
+    tar -tzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz
+    tar -xzf .analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz .analysis/exact/audio-and-affected.json
 
-For a trial directory,use its exact member path shown by tar -tzf. Restore only
-what is needed and avoid overwriting newer local work. The SHA-256 manifest
-allows independent verification after extraction.
+For a trial directory, use its exact member path shown by tar -tzf. Restore
+only what is needed and avoid overwriting newer local work. The SHA-256
+manifest allows independent verification after extraction.
 
-Current build/match-units objects/receipts,per-unit reports,source headers,
-all native logs,probe scripts and boundary/operand evidence remain live.
-Unaccepted Shiori-state attempts/parked-best,PrepareBattle/real-background
-controls,reader/audio drafts and all other parked work were excluded.
-The canonical executable,original RAR,toolchain links/installations,EFZ Wine
-prefix and Ghidra database were retained. This archive contains historical
-private evidence; it is ignored and must not be added to Git.
+Current build/match-units objects, per-unit reports, source headers, unrelated
+native logs, selected probe scripts and boundary/operand evidence remain live.
+The canonical executable, original RAR, toolchain links/installations, EFZ Wine
+prefix and Ghidra database were retained. The archive is private, ignored and
+must not be added to Git.
 
 
 ## 2026-11-08 pushbox probe cleanup
 
-The superseded natural-C++ `Pushboxes-*` variants and their generated
+The superseded natural-C++ Pushboxes variants and their generated
 disassemblies, COFF objects and build metadata were archived before their live
-copies were removed. The cleanup covered **1,095 files / 10,749,392 logical
-bytes** from `.analysis/probes/scene-battle/`, `build/scene-battle/` and
-`.analysis/build/`. The compressed archive is 1,374,059 bytes; the private
-`manifest.json` records every original path, size and SHA-256, plus the archive
-SHA-256. Every archived member was read back and verified before deletion.
-The operation reclaimed approximately **12,546,048 allocated bytes (12.0 MiB)**
-after accounting for the retained archive, manifest and README.
+copies were removed. This round covered 1,095 files / 10,749,392 logical bytes
+from .analysis/probes/scene-battle/, build/scene-battle/ and .analysis/build/.
+The compressed archive is 1,374,059 bytes. The adjacent manifest.json records
+every original path, size and SHA-256, plus the archive SHA-256. Every member
+was read back and verified before deletion. The operation reclaimed
+approximately 12,546,048 allocated bytes (12.0 MiB) after accounting for the
+retained archive, manifest and README.
 
 Archive SHA-256:
-`6a55df500bcc8f0bc07a48e7e50e04ba7d0cbc4caa8df005db960d377ecdb8c3`.
+6a55df500bcc8f0bc07a48e7e50e04ba7d0cbc4caa8df005db960d377ecdb8c3.
 
-The latest useful probes remain live: 150, 174, 236, 259, 265–271 and 276–277.
-The target disassembly, canonical executable, accepted build objects/receipts,
-other parked work, toolchain, Wine prefix and Ghidra project were not touched.
-Restore only a needed historical candidate or artifact from the repository root:
+The 13 useful controls remained live: probes 150, 174, 236, 259, 265–271,
+276 and 277, with their selected disassemblies. The 2026-11-09 follow-up
+re-evaluated the old candidate inventory and retained these controls while
+archiving the other variants and their old build logs. The old 277 probe is a
+historical control, not the current best implementation; see RE_HANDOFF.md.
 
-```bash
-tar -tzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz
-tar -xzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz \
-  .analysis/probes/scene-battle/Pushboxes-onehundredseventyfirst.cpp
-```
+Restore a specific historical candidate from the repository root:
+
+    tar -tzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz
+    tar -xzf .analysis/cleanup/2026-11-08/retired-pushbox-variants.tar.gz .analysis/probes/scene-battle/Pushboxes-onehundredseventyfirst.cpp
 
 The archive and manifest are private, ignored artifacts; do not add them to Git.
+
+
+## 2026-11-09 handoff cleanup
+
+Two additional lossless archives retire generated experiments and stale Pushbox
+variants while preserving the current natural-C++ source, focused match-unit,
+target disassembly, reviewed evidence and selected historical controls.
+
+The first archive, retired-handoff-scratch.tar.gz, contains 2,225 files /
+6,033,925 logical bytes and compresses to 691,101 bytes. Its SHA-256 is
+2e0a7d07e669864a0e8995539af9ad04195c36dca686ad54d1428774e8e2e9f3. It includes
+the scratch build/scene-battle directory, non-baseline build/video objects,
+32 recent Pushbox frame/pointer/lifetime experiments, 22 recent video loop
+variants and their build metadata/logs. Three baseline video source controls
+and ten corresponding build artifacts remain live. The adjacent manifest.json
+records all 2,225 paths, sizes and hashes.
+
+The second archive, retired-pushbox-variant-sources-and-logs.tar.gz, contains
+3,134 files / 12,207,974 logical bytes and compresses to 327,481 bytes. Its
+SHA-256 is 0acaf8453761b0c8ca5bd949bbfc92d3b1c5dca1b44d207dd7b1213f63967b15.
+It contains 1,032 superseded Pushboxes source variants and 2,102 associated
+build logs/receipts. Exactly 13 selected historical source/disassembly controls
+remain live: 150, 174, 236, 259, 265–271, 276 and 277. The current implementation
+is src/SceneBattlePushboxes.cpp, not any of those old probes. The adjacent
+retired-pushbox-variant-sources-and-logs.manifest.json records every member.
+
+All 5,359 archived members across both archives were read back from the
+completed gzip tar files and checked by exact size and SHA-256 before live
+copies were deleted. Combined logical bytes are 18,241,899; combined compressed
+archive bytes are 1,018,582. The build tree fell from about 26 MiB to about
+14 MiB; build/match-units remains live. The target executable, original RAR,
+toolchain links/installations, EFZ Wine prefix and Ghidra project were untouched.
+
+Inspect or restore only what a concrete experiment needs:
+
+    tar -tzf .analysis/cleanup/2026-11-09/retired-handoff-scratch.tar.gz
+    tar -xzf .analysis/cleanup/2026-11-09/retired-handoff-scratch.tar.gz .analysis/probes/scene-battle/Pushboxes-flag-order-branch_flags_swapped.cpp
+    tar -tzf .analysis/cleanup/2026-11-09/retired-pushbox-variant-sources-and-logs.tar.gz
+    tar -xzf .analysis/cleanup/2026-11-09/retired-pushbox-variant-sources-and-logs.tar.gz .analysis/probes/scene-battle/Pushboxes-abi-G5.cpp
+
+Both archives, sidecar manifests and README files are private ignored artifacts.
+Do not add them to Git. The detailed current task state is in RE_HANDOFF.md.
