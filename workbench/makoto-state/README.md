@@ -1045,6 +1045,27 @@ work, not the original behavior for valid unimplemented animations.
   Every 3,551 instruction byte across both original functions was
   rechecked in EFZ.exe, and all natural C++ source compiles under VC7.1.
 
+- Animation ID 306 (0x005F5A42..0x005F5DE3, 929 bytes) is a
+  multi-cycle super and rising impact distinct from Character07's
+  throw entry. Every tick clears dash momentum. Initial pose/tick
+  gives a single field3138-gated super activation: hitstun 120,
+  1,000 meter spent, tint (0xB0,3), global type 0x44/palette 0x13
+  at truncated X+5*facing and Y-43, then increments field3138 and
+  arms remainingHitCount=5. Movement is zeroed on each initial tick.
+  Pose 4/tick zero emits **local** type 0x1A7 at X+45*facing/Y-43,
+  owner 1/group 2/layer 0 and flag0018=-facing. Below pose 5 it
+  shakes horizontally (50,3). During pose 5 it adds 0.01 to vertical
+  velocity and sets pose 6/tick 0 when the projected Y lands; after
+  pose 5 it subtracts 0.025 from horizontal velocity and clamps it
+  to zero. From pose 1 the original unnamed short at +0xF2 is 10.
+  On frame advance, pose 2 rewinds by two while field313c<9,
+  incrementing field313c. Advancing to pose 5 launches with speed
+  (1.9,-0.4), adds 30*facing to positionX and requests character
+  sound 4. Advancing to pose 6 rolls back one frame; each advance
+  clears attackCollisionResult, with idle/ResetPose on exhaustion.
+  All 929 original instruction bytes and four x87 constants were
+  verified against EFZ.exe, and the partial owner builds under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1070,7 +1091,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 306 and onward directly from reviewed target instructions,
+Extend case 307 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-305 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-306 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -4765,9 +4765,87 @@ void Character03::Slot06()
         }
         return;
 
+    case 306: // Original block 0x005F5A42: sustained super impact and rise
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            if (field3138 == 0) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 5);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                ++field3138;
+                remainingHitCount = 5;
+            }
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 0x1a7;
+            effect.x = (double)((int)positionX + (int)facing * 45);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)(-facing);
+            EmitLocalEffect(&effect);
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a == 5) {
+            velocityY += 0.01;
+        }
+        if (field000a == 5 && positionY + velocityY >= 0.0) {
+            field000a = 6;
+            field000c = 0;
+            positionY = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a > 5) {
+            velocityX -= 0.025;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a >= 1) {
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field313c < 9) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field313c;
+            }
+            if (field000a == 5) {
+                velocityX = 1.9;
+                velocityY = -0.4;
+                positionX += (double)((int)facing * 30);
+                pendingCharacterSoundSlot = 4;
+            }
+            if (field000a == 6) {
+                field000a = (unsigned short)(field000a - 1);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 5 explicit cases. The target's true default path also
+        // the other 4 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
