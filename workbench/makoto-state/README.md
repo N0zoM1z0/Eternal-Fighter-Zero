@@ -88,6 +88,10 @@ work, not the original behavior for valid unimplemented animations.
   original block is 497 bytes and has the same stage-edge correction and
   inputY-dependent 0-or-3 recovery as 50–52. Keeping distinct switch arms
   preserves their independent dispatch targets and code-generation structure.
+- Animation ID 56 (block 0x005E9F1E) uses the first recoil strength,
+  but its 473-byte target owner is 24 bytes shorter than the 50–55 variants:
+  when the sequence expires, it always selects crouching state 3 and calls
+  ResetPose. It does not read inputY or select state 0 on this exit.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -107,7 +111,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 56 and onward directly from reviewed target instructions,
+Extend cases 57 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
