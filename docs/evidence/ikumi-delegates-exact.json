@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "authority": "complete selected VC7.1 code and reviewed original call relocations",
+  "method": "Ikumi vtable slot 3 at 0x788D80 dispatches its 19-byte original locomotion delegate to Secondary::UpdateLocomotionState. Vtable slot 9 at 0x788D98 dispatches the 47-byte original emitter: remove current effectWrite (+0x2CA), virtual slot-10 removal, then direct base Secondary::EmitLocalEffect(spawn). Both complete source functions and original single relocations strict exact; no cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original call at 0x006A631A: Secondary::UpdateLocomotionState direct thiscall to 0x0040E740; vtable slot 3 at 0x788D80",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "38ae9a2c5346f3aad37b5b5c99fa9c0995aafc3bcc8cc160a6266503771c37da",
+      "target_extent_sha256": "38ae9a2c5346f3aad37b5b5c99fa9c0995aafc3bcc8cc160a6266503771c37da",
+      "unit": "character-14-slot03",
+      "symbol": "?Slot03@Character14@@UAEXXZ",
+      "target_address": "0x006A6310",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a8f1c5fcc699601135629a58f00c9ac955dba49f2fdb0bc275ccda8a069d2d71",
+      "object_sha256": "1c5352d215d7041e4e0a2bc72ec717fbdd571a9f370286997bf7b7aeb5fdb7a1",
+      "source_sha256": "a986ebb63500aa11f60e876de9466763e372fd8d1ce27c85e34d69987f458b33",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "fd5f91db119bfe6d3021690ea7ed5ed65f951822369097b4bffcf8edc9b4cc48"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8671809a0e6d5acfb81e3656aae0296b7b6912e2e3cf17c5410fb6b1016fa32b",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "dc01ee8948b77551ec166abd971a19bef61f837bd749aedec2d16df5eecdab27",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "EFZ.exe original direct base emitter call at 0x006AB7D4 after virtual RemoveLocalEffect(effectWrite) with cursor at +0x2CA; original vtable pointer at 0x788D98",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ffbb446f303965c646e5e79961c012579cb920409656e4f83478b904f05cdb36",
+      "target_extent_sha256": "ffbb446f303965c646e5e79961c012579cb920409656e4f83478b904f05cdb36",
+      "unit": "character-14-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character14@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x006AB7B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a8f1c5fcc699601135629a58f00c9ac955dba49f2fdb0bc275ccda8a069d2d71",
+      "object_sha256": "b80dc5c30f971e588bbee25df231f6291405b2947b75c8fcb50433a96cd203db",
+      "source_sha256": "a986ebb63500aa11f60e876de9466763e372fd8d1ce27c85e34d69987f458b33",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "fd5f91db119bfe6d3021690ea7ed5ed65f951822369097b4bffcf8edc9b4cc48"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "8671809a0e6d5acfb81e3656aae0296b7b6912e2e3cf17c5410fb6b1016fa32b",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "091ee7686d0cfc59a4034fffb89e15a07f6d6095e8680cccd4241c91f39a29be",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

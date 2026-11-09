@@ -129088,3 +129088,37 @@ type = "REL32"
 symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
 target = 0x00412E60
 evidence = "EFZ.exe direct base RemoveLocalEffect call at 0x006A6305 after three array-slot clears, reviewed original 0x00412E60"
+
+[units.character-14-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-slot03/Character14Delegates.obj"
+symbol = "?Slot03@Character14@@UAEXXZ"
+target_address = 0x006A6310
+size = 19
+
+[[units.character-14-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "EFZ.exe original call at 0x006A631A: Secondary::UpdateLocomotionState direct thiscall to 0x0040E740; vtable slot 3 at 0x788D80"
+
+[units.character-14-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-emit-local-effect/Character14Delegates.obj"
+symbol = "?EmitLocalEffect@Character14@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x006AB7B0
+size = 47
+
+[[units.character-14-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "EFZ.exe original direct base emitter call at 0x006AB7D4 after virtual RemoveLocalEffect(effectWrite) with cursor at +0x2CA; original vtable pointer at 0x788D98"

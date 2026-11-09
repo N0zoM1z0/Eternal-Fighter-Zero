@@ -1954,6 +1954,28 @@ blindly adding a float sum can make lengths coincide while leaving
 incorrect FP instructions. The full body has not yet achieved strict
 Exact and must not be included in the matches ledger.
 
+### Ikumi locomotion and local-effect delegates: two exact functions (2026-11-09)
+
+Two more Ikumi overrides now have independently accepted normal C++
+source `src/Character14Delegates.cpp`. Vtable slot 3
+(`0x788D80`) selects `Character14::Slot03` at `0x6A6310`, an exact
+**19/19-byte** delegate to the reviewed `Secondary::UpdateLocomotionState`
+at `0x40E740`. Vtable slot 9 (`0x788D98`) selects
+`Character14::EmitLocalEffect` at `0x6AB7B0`, **47/47 bytes Exact**
+with one original-bound base call at `0x412B10`.
+
+Importantly, the original emitter reads the **effectWrite** short
+at object offset `+0x2CA`, then invokes the virtual slot-10
+`RemoveLocalEffect` before the base `Secondary::EmitLocalEffect` call.
+An earlier natural draft incorrectly used **effectRead** (`+0x2CC`):
+only one displacement byte differed, but the pool behavior was wrong.
+Correcting the member to `effectWrite` matches all 47 bytes without
+masks, and the single direct relocation is bound. Both function
+extents and vtable pointers were independently checked from EFZ.exe;
+the selected full receipts are
+`docs/evidence/ikumi-delegates-exact.json`. This does not confer
+Exact status on Ikumi's 1,592-byte Slot08 effect-state boss.
+
 ### Ikumi pose reset and effect-slot removal: two exact overrides (2026-11-09)
 
 The original Ikumi child vtable at `0x788D74` confirms its
