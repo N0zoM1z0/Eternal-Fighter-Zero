@@ -1,4 +1,8 @@
-"""Focused VC7.1 check of the recovered Ikumi Slot02 command scans (NOT Exact)."""
+"""Check exact native instructions of recovered Ikumi command-scan prefix.
+
+This verifies ONLY the prefix, not the full 5153-byte Slot02 owner.
+No whole-repository build or cold replay runs.
+"""
 import hashlib
 import re
 import subprocess
@@ -12,9 +16,12 @@ from coff import object_function
 from native_build import compile_source
 
 ORIGIN = 0x006AB7E0
-FIRST_SCAN_END = 0x006AB9D3
-SECOND_SCAN_END = 0x006ABC42
-THIRD_SCAN_END = 0x006ABE3C
+SCANS = [
+    (0x006AB7E0, 0x006AB9D3, 153),
+    (0x006AB9D3, 0x006ABC42, 193),
+    (0x006ABC42, 0x006ABE3C, 148),
+    (0x006ABE3C, 0x006AC046, 157),
+]
 SOURCE = ROOT / 'workbench/ikumi-commands/Character14Commands.cpp'
 OBJECT = ROOT / 'build/ikumi-commands/Character14Commands.partial.obj'
 
@@ -30,32 +37,32 @@ def disasm(code, file):
     for line in out.splitlines():
         match = re.match(r'^\s*([0-9a-f]+):\s+(?:[0-9a-f]{2}\s+)+\s*\t(.+)', line)
         if match:
-            text = re.sub(r'\b(j\w+)\s+(?:0x)?[0-9a-f]+', r'\1 TARGET', match[2])
-            inst.append(text)
+            inst.append(re.sub(r'\b(j\w+)\s+(?:0x)?[0-9a-f]+',
+                               r'\1 TARGET', match[2]))
     return inst
 
 
 def main():
-    original = target_bytes(verify_target(), ORIGIN, THIRD_SCAN_END - ORIGIN)
+    assert SCANS[0][0] == ORIGIN
+    assert all(a[1] == b[0] for a, b in zip(SCANS, SCANS[1:]))
+    full = target_bytes(verify_target(), ORIGIN, SCANS[-1][1] - ORIGIN)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/ikumi-commands-workbench.log')
     built, relocs = object_function(OBJECT, '?Slot02@Character14@@UAEXXZ')
-    target_ins = disasm(original, ROOT / 'build/ikumi-commands/first-scan.original.bin')
-    built_ins = disasm(built, ROOT / 'build/ikumi-commands/first-scan.compiled.bin')
-    assert len(original) == 1628 and len(target_ins) == 494
-    assert len(built) == 1632 and len(built_ins) == 497 and not relocs
-    assert target_ins == built_ins[:494]
-    assert built_ins[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    first = target_bytes(verify_target(), ORIGIN, FIRST_SCAN_END - ORIGIN)
-    second = target_bytes(verify_target(), FIRST_SCAN_END, SECOND_SCAN_END - FIRST_SCAN_END)
-    third = target_bytes(verify_target(), SECOND_SCAN_END, THIRD_SCAN_END - SECOND_SCAN_END)
-    assert len(first) == 499 and len(second) == 623 and len(third) == 506
-    print('Ikumi command scans 1–3: 494/494 original x86 instructions'
-          ' match after normalizing only branch destinations; 1,628 target bytes')
-    print('Full owner is 5,153 bytes; this 1,632-byte partial TU is NOT Exact.')
-    print('Scan 1 SHA256:', hashlib.sha256(first).hexdigest())
-    print('Scan 2 SHA256:', hashlib.sha256(second).hexdigest())
-    print('Scan 3 SHA256:', hashlib.sha256(third).hexdigest())
+    original_inst = disasm(full, ROOT / 'build/ikumi-commands/scans.original.bin')
+    compiled_inst = disasm(built, ROOT / 'build/ikumi-commands/scans.compiled.bin')
+    expected_instructions = sum(s[2] for s in SCANS)
+    assert len(original_inst) == expected_instructions
+    assert len(built) == len(full) + 4 and len(compiled_inst) == expected_instructions + 3
+    assert not relocs and original_inst == compiled_inst[:expected_instructions]
+    assert compiled_inst[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
+    print(f'Ikumi first {len(SCANS)} command scans: {expected_instructions}/{expected_instructions}'
+          f' original instructions match, normalizing only jump destinations; {len(full)} target bytes')
+    print(f'Whole owner 5153 bytes remains NOT Exact; partial source {len(built)} bytes')
+    for i, (start, stop, instruction_count) in enumerate(SCANS, 1):
+        data = target_bytes(verify_target(), start, stop-start)
+        print(f'Scan {i}: {len(data)} target bytes, {instruction_count} instructions,'
+              f' SHA256 {hashlib.sha256(data).hexdigest()}')
 
 
 if __name__ == '__main__':

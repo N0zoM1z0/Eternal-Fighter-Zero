@@ -20,7 +20,7 @@
     "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
   },
   "following_padding_bytes": 15,
-  "qualification": "The first three natural C++ priority scans produce 494/494 matching original instructions after normalizing only branch destination numbers; 12 further scans are not implemented. The partial 1632-byte TU is NOT complete 5153-byte owner Exact.",
+  "qualification": "First 4 natural C++ scans recover 2150 original bytes/651 complete instruction sequences; only jump destinations normalized. The final 11 command scans are absent, so this is not a full owner Exact certificate.",
   "second_scan": {
     "start": "0x006AB9D3",
     "end_exclusive": "0x006ABC42",
@@ -30,11 +30,11 @@
   },
   "natural_cpp_recovered_prefix": {
     "start": "0x006AB7E0",
-    "end_exclusive": "0x006ABE3C",
-    "size": 1628,
-    "instructions": 494,
-    "compiled_partial_size": 1632,
-    "qualification": "All 494 original x86 instructions and operands match compiled C++ after normalizing only unimplemented future jump destinations; remaining twelve scans are missing."
+    "end_exclusive": "0x006AC046",
+    "size": 2150,
+    "instructions": 651,
+    "compiled_partial_size": 2154,
+    "qualification": "First 4 scans reproduce all 651 original x86 instructions and operands with only branch destination normalization; remaining 11 scans not yet authored."
   },
   "third_scan": {
     "start": "0x006ABC42",
@@ -42,5 +42,12 @@
     "size": 506,
     "original_instructions": 148,
     "sha256": "feafc66af973b1f4ea1689948cd70cba55e8003ebb36670b07db1054f5ca6626"
+  },
+  "fourth_scan": {
+    "start": "0x006ABE3C",
+    "end_exclusive": "0x006AC046",
+    "size": 522,
+    "original_instructions": 157,
+    "sha256": "965bb3365a4b0acd5a52837c76d313e92c17798d297b8ba1aa316c3a890ce0a7"
   }
 }

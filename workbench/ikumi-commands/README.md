@@ -4,14 +4,14 @@ Original vtable slot 2 at `0x00788D7C` points to `0x006AB7E0`.
 Its complete owner occupies **5,153 bytes** through exclusive
 `0x006ACC01`; 15 following `CC` bytes align the next owner.
 The original function has 15 separately ordered input scans.
-The tracked `Character14Commands.cpp` currently reconstructs **three**
-scans, covering 1,628 original bytes and 494 x86 instructions.
+The tracked `Character14Commands.cpp` currently reconstructs **four**
+scans, covering 2,150 original bytes and 651 x86 instructions.
 **It remains a workbench, not a full-function Exact match.**
 
 ## Source recovery
 
 The selected VC7.1 compiler (`/Od /G6 /MT /Gy /W3`) reproduces every
-one of the **494 original instructions**, including register choices,
+one of the **651 original instructions**, including register choices,
 stack-home offsets, immediate values and all condition/instruction
 mnemonics, after normalizing **only** numeric branch destinations.
 The first three original scans and their meanings:
@@ -21,6 +21,7 @@ The first three original scans and their meanings:
 | 1 | `0x006AB7E0..0x006AB9D3` | 499 | 153 | Ten-stage directional motion, command 0x5E |
 | 2 | `0x006AB9D3..0x006ABC42` | 623 | 193 | 45–179-frame motion, base command 0x96 plus button flags, including the original early-finish and stage-5→8 path |
 | 3 | `0x006ABC42..0x006ABE3C` | 506 | 148 | 90–179-frame charged motion, command 0xAA or early 0xA0 plus button flags |
+| 4 | `0x006ABE3C..0x006AC046` | 522 | 157 | 90–179-frame meter-gated 4/6/2 directional chain, command base 0x6E |
 
 Scan 3 permits the initial directional state only when either
 `meter >= 1000` **or `field315c > 0`** — this Ikumi-specific override
@@ -42,15 +43,15 @@ scripts/repo-python workbench/ikumi-commands/check_first_scan.py
 ```
 
 The check compiles only this translation unit with pinned VC7.1,
-verifies the canonical EFZ.exe and asserts **494/494** instruction
+verifies the canonical EFZ.exe and asserts **651/651** instruction
 matches under the stated branch-target normalization.
-Because the other **12** scans are absent, the compiled temporary
-function is **1,632 bytes**: the 1,628-byte original prefix followed
+Because the other **11** scans are absent, the compiled temporary
+function is **2,154 bytes**: the 2,150-byte original prefix followed
 by a four-byte *temporary* shared epilogue. Branch destinations
 throughout the final 5,153-byte owner cannot yet match. No byte
 masking, claimed whole-function Exact or cold replay is involved.
 
 Canonical full-owner and per-scan SHA-256 evidence is in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-Next: start with the fourth scan at `0x006ABE3C`, then the remaining
+Next: start with the fifth scan at `0x006AC046`, then the remaining
 priority-ordered scans; retain correct input priority and early returns.

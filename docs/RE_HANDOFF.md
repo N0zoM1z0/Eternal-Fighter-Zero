@@ -394,21 +394,21 @@ no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
 
-## Ikumi Slot02: first three command scans recovered (not Exact)
+## Ikumi Slot02: first four command scans recovered (not Exact)
 
 `workbench/ikumi-commands/Character14Commands.cpp` now implements
-**three complete natural-C++ input-history scans**, covering the
-first **1,628 original bytes / 494 instructions** of the
+**four complete natural-C++ input-history scans**, covering the
+first **2,150 original bytes / 651 instructions** of the
 5,153-byte `Character14::Slot02` boss. The reproducible focused
-`check_first_scan.py` matches 494/494 original instruction mnemonics,
+`check_first_scan.py` matches 651/651 original instruction mnemonics,
 registers, stack operands and immediates (normalizing numeric future
 branch destinations only). Scan 3 adds Ikumi's true
 `meter >= 1000 || field315c > 0` gate; the original facing terms
 were corrected against source disassembly instead of trusting the
 Ghidra Boolean rendering. Original boundary and full SHA are in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-The **remaining 12 scans** must still be reconstructed. Next original
-start: `0x006ABE3C`. This workbench is NOT a strict full-function
+The **remaining 11 scans** must still be reconstructed. Next original
+start: `0x006AC046`. This workbench is NOT a strict full-function
 Exact result; keep it out of production `src/` and the exact ledger.
 
 ## Ikumi exact derived destructor with two base cleanup calls
