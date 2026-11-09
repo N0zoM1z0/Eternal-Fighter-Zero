@@ -44,7 +44,7 @@ void Secondary::InitializeState()
     field0140 = 0;
     field015c = 0;
     field0160 = 0;
-    field0168 = 0;
+    attackCollisionResult = 0;
     hitstopFrames = 0;
     field0134 = 0;
     field0174 = 0;

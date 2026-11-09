@@ -68,8 +68,8 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                         if (((work.defense->frameFlags & 0x400) > 0) && ((work.attack->attackFlags & 0x100) == 0)) {
                             --work.slot->field0084;
                             work.slot->field0080 = 2;
-                            first->field0168 = 6;
-                            second->field0168 = 6;
+                            first->attackCollisionResult = 6;
+                            second->attackCollisionResult = 6;
                         } else if (((second->attackWasGuarded != 0) && (((second->guardInputFrames >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->attackFlags & 0x80) == 0)) {
                             work.slot->field0080 = 2;
                             first->meter += work.attack->guardMeterGain;
@@ -153,7 +153,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.type = 2;
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
-                            first->field0168 = 2;
+                            first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
                             second->field0108 = second->field0108 - (int)work.attack->guardDamage;
@@ -177,7 +177,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.type = 2;
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
-                            first->field0168 = 2;
+                            first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
                             second->field0108 = second->field0108 - (int)work.attack->guardDamage;
@@ -201,7 +201,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.type = 2;
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
-                            first->field0168 = 2;
+                            first->attackCollisionResult = 2;
                             first->hitstopFrames = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
                             second->field0108 = second->field0108 - (int)work.attack->guardDamage;
@@ -534,7 +534,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
     } work;
     work.slot = &second->effects[index];
     work.attack = &firstPose->frame;
-    if (first->field0168 == 0 && first->remainingHitCount > 0 && (work.attack->attackFlags & 0x40) == 0) {
+    if (first->attackCollisionResult == 0 && first->remainingHitCount > 0 && (work.attack->attackFlags & 0x40) == 0) {
         struct CollisionBoxes {
             int overlap[4][5];
             SurfaceRect defenseBoxes[5];
@@ -577,7 +577,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                     }
                     if ((boxes.defense.frameFlags & 0x10) == 0) {
                         --first->remainingHitCount;
-                        first->field0168 = 5;
+                        first->attackCollisionResult = 5;
                     }
                     work.slot->field0080 = 5;
                     if ((boxes.defense.frameFlags & 0x2000) > 0) {

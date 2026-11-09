@@ -268,7 +268,7 @@ public:
     int field015c;
     int field0160;
     SecondarySequence * sequences;
-    int field0168;
+    int attackCollisionResult;
     short remainingHitCount;
     unsigned char unknown_016e[2];
     int attackWasGuarded;

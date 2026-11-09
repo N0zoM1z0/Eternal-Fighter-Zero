@@ -470,7 +470,7 @@ void Character24::Slot05()
             (field0262 = 0x14, field0008 == 0x103)) {
             field3114 = 0;
         }
-        if ((((1 < field0168) && (hitstopFrames == 0)) &&
+        if ((((1 < attackCollisionResult) && (hitstopFrames == 0)) &&
             (
             (float)(unsigned short)RandomRange(0, 100) < field00a8 * 25.0f)) &&
             ((field3114 != 1 && (field3114 != 2)))) {
@@ -485,7 +485,7 @@ void Character24::Slot05()
                 if ((distance.forward < 50.0) && (field3110 < 400)) {
                     buttonPulse[0] = 1;
                     inputY = 0;
-                    if (field0168 == 2) {
+                    if (attackCollisionResult == 2) {
                         if ((unsigned short)RandomRange(0, 100) < 30) {
                             buttonPulse[2] = 1;
                             inputY = 1;
@@ -518,7 +518,7 @@ void Character24::Slot05()
             }
             if (field0008 == 0xc9) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 300)) && (field0168 == 3)) {
+                    (field3110 < 300)) && (attackCollisionResult == 3)) {
                     field0262 = (unsigned short)RandomRange(0, 2) + 0x14;
                     return;
                 }
@@ -531,7 +531,7 @@ void Character24::Slot05()
                 }
                 if (((((*opponentSlot)->positionY < 0.0) &&
                     (0x140 < field3110)) && (field3110 < 600)
-                    ) && (field0168 == 3)) {
+                    ) && (attackCollisionResult == 3)) {
                     inputX = facing;
                     inputY = 0xff;
                     return;
@@ -584,7 +584,7 @@ void Character24::Slot05()
                     buttonPulse[2] = 1;
                     return;
                 }
-                if (((field3110 < 500) && (field0168 == 3)) &&
+                if (((field3110 < 500) && (attackCollisionResult == 3)) &&
                     (distance.forward < 80.0)) {
                     buttonPulse[2] = 1;
                     inputY = 0;
@@ -603,7 +603,7 @@ void Character24::Slot05()
             }
             if (field0008 == 0xcb) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 300)) && (field0168 == 3)) {
+                    (field3110 < 300)) && (attackCollisionResult == 3)) {
                     field0262 = 0x14;
                     return;
                 }
@@ -611,7 +611,7 @@ void Character24::Slot05()
                     (299 < field3110)) &&
                     ((field3110 < 0x131 &&
                     ((meter >= 3000 && (distance.forward < 90.0)))))) &&
-                    (field0168 == 3)) {
+                    (attackCollisionResult == 3)) {
                     field0262 = 0x84;
                     return;
                 }
@@ -645,7 +645,7 @@ void Character24::Slot05()
                 if ((distance.forward < 50.0) && (field3110 < 400)) {
                     buttonPulse[0] = 1;
                     inputY = 0;
-                    if (field0168 == 2) {
+                    if (attackCollisionResult == 2) {
                         if ((unsigned short)RandomRange(0, 100) < 20) {
                             buttonPulse[2] = 1;
                             inputY = 1;
@@ -718,7 +718,7 @@ void Character24::Slot05()
             }
             if (field0008 == 0xce) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 300)) && (field0168 == 3)) {
+                    (field3110 < 300)) && (attackCollisionResult == 3)) {
                     field0262 = 0x14;
                     return;
                 }
@@ -726,14 +726,14 @@ void Character24::Slot05()
                     (299 < field3110)) &&
                     (((field3110 < 0x131 &&
                     ((meter >= 3000 && (distance.forward < 90.0)))) &&
-                    (field0168 == 3)))) {
+                    (attackCollisionResult == 3)))) {
                     field0262 = 0x84;
                     return;
                 }
                 if (((((*opponentSlot)->positionY < 0.0) &&
                     (0x131 < field3110)) &&
                     (field3110 < 0x15e)) &&
-                    ((meter >= 1000 && (field0168 == 3)))) {
+                    ((meter >= 1000 && (attackCollisionResult == 3)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 100;
                     return;
                 }
@@ -783,7 +783,7 @@ void Character24::Slot05()
             }
             if (field0008 == 0xd0) {
                 if (((0x14 < field3110) && (field3110 < 0x3c))
-                    && ((field0168 == 3 &&
+                    && ((attackCollisionResult == 3 &&
                     ((*opponentSlot)->positionY < 0.0)))) {
                     field0262 = 10;
                     return;
@@ -813,13 +813,13 @@ void Character24::Slot05()
             }
             if (field0008 == 0xe7) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 300)) && (field0168 == 3)) {
+                    (field3110 < 300)) && (attackCollisionResult == 3)) {
                     field0262 = (unsigned short)RandomRange(0, 2) + 0x14;
                     return;
                 }
                 if (((200 < field3110) && (field3110 < 0xdc))
                     && ((distance.forward < 90.0 &&
-                    ((field0168 == 3 && (meter >= 1000)))
+                    ((attackCollisionResult == 3 && (meter >= 1000)))
                     ))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
@@ -837,7 +837,7 @@ void Character24::Slot05()
             }
             if (field0008 == 0xe8) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 300)) && (field0168 == 3)) {
+                    (field3110 < 300)) && (attackCollisionResult == 3)) {
                     field0262 = 10;
                     return;
                 }
@@ -848,7 +848,7 @@ void Character24::Slot05()
                     return;
                 }
                 if (((0 < field3110) && (field3110 < 200)) &&
-                    (field0168 == 3)) {
+                    (attackCollisionResult == 3)) {
                     field0262 = 10;
                     return;
                 }
@@ -862,20 +862,20 @@ void Character24::Slot05()
                     return;
                 }
                 if (((400 < field3110) && (field3110 < 0x1ae))
-                    && ((field0168 == 3 && (meter == 3000))
+                    && ((attackCollisionResult == 3 && (meter == 3000))
                     )) {
                     field0262 = 0x5f;
                     return;
                 }
                 if (((0x1ae < field3110) &&
-                    (field3110 < 0x21c)) && (field0168 != 3)) {
+                    (field3110 < 0x21c)) && (attackCollisionResult != 3)) {
                     field0262 = 0x28;
                     if (distance.forward > 120.0) {
                         field0262 = 0x29;
                     }
                     return;
                 }
-                if ((0x38e < field3110) && (field0168 == 3)) {
+                if ((0x38e < field3110) && (attackCollisionResult == 3)) {
                     field3114 = 4;
                     inputY = 0xff;
                     inputX = (unsigned short)RandomRange(0, 2) + -1;

@@ -2237,7 +2237,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2414,7 +2414,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -2554,7 +2554,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 9;
                 velocityX = (double)field3138 * 0.01;
@@ -2579,7 +2579,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2642,7 +2642,7 @@ void Character07::Slot06()
             field0158 = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && (field0168 >= 2)) {
+            (field015c < 3)) && (attackCollisionResult >= 2)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -2650,7 +2650,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2664,7 +2664,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -2685,7 +2685,7 @@ void Character07::Slot06()
             field0158 = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && (field0168 >= 2)) {
+            (field015c < 3)) && (attackCollisionResult >= 2)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -2693,7 +2693,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2707,7 +2707,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -2737,7 +2737,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -2758,7 +2758,7 @@ void Character07::Slot06()
             field0158 = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && (field0168 == 3)) {
+            (field015c < 3)) && (attackCollisionResult == 3)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -2766,7 +2766,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2788,7 +2788,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if ((field000a == 8) && (field313c < 2)) {
                 ++field313c;
@@ -2813,7 +2813,7 @@ void Character07::Slot06()
             field0158 = 0;
         }
         if (((inputY == -1) && (field000a > 0)) &&
-            (field0168 >= 2)) {
+            (attackCollisionResult >= 2)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -2821,7 +2821,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2835,7 +2835,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -2859,7 +2859,7 @@ void Character07::Slot06()
             field0158 = 0;
         }
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && (field0168 >= 2)) {
+            (field015c < 3)) && (attackCollisionResult >= 2)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -2867,7 +2867,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2881,7 +2881,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -2924,7 +2924,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 5) && (velocityX > 0.6)) {
                 field000a = 3;
             }
@@ -2941,7 +2941,7 @@ void Character07::Slot06()
     case 207:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a == '\0')))
             ) {
             ++field015a;
             field0008 = 0xe;
@@ -2951,7 +2951,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 0x10;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -2971,7 +2971,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 9;
@@ -2982,7 +2982,7 @@ void Character07::Slot06()
     case 208:
         velocityY = velocityY + gravity;
         if (((inputY == -1) && (field000a > 0)) &&
-            ((field015c < 3 && ((field0168 >= 2 && (field015a == '\0')))))
+            ((field015c < 3 && ((attackCollisionResult >= 2 && (field015a == '\0')))))
             ) {
             ++field015a;
             field0008 = 0xe;
@@ -2992,7 +2992,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 0x10;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -3012,7 +3012,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 4) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 9;
@@ -3023,7 +3023,7 @@ void Character07::Slot06()
     case 209:
         velocityY = velocityY + gravity;
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && ((field0168 >= 2 && (field015a == '\0')))
+            (field015c < 3)) && ((attackCollisionResult >= 2 && (field015a == '\0')))
             ) {
             ++field015a;
             field0008 = 0xe;
@@ -3033,7 +3033,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 0x10;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -3053,7 +3053,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 9;
@@ -3088,7 +3088,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 5) {
                 if (positionY + velocityY < 0.0) {
                     --field000a;
@@ -3105,7 +3105,7 @@ void Character07::Slot06()
         break;
     case 211:
         if ((((inputY == -1) && (field000a > 0)) &&
-            (field015c < 3)) && (field0168 >= 2)) {
+            (field015c < 3)) && (attackCollisionResult >= 2)) {
             field0008 = 4;
             if (inputX == facing) {
                 field0008 = 5;
@@ -3113,7 +3113,7 @@ void Character07::Slot06()
             if ((int)inputX == -(int)facing) {
                 field0008 = 6;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             ResetPose();
             break;
         }
@@ -3130,7 +3130,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -3147,7 +3147,7 @@ void Character07::Slot06()
             velocityX = velocityX / 2.0;
             gravity = 0.07;
         }
-        if (field0168 > 1) {
+        if (attackCollisionResult > 1) {
             field0008 = 0xd5;
             ResetPose();
             ResetFrame();
@@ -3172,7 +3172,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field000a = field000a + -2;
             }
@@ -3189,7 +3189,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 9;
                 ResetPose();
@@ -3213,7 +3213,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 7;
                 if (inputY == '\x01') {
@@ -3234,7 +3234,7 @@ void Character07::Slot06()
         else {
             remainingHitCount = 0;
         }
-        if ((field000a == 1) && (field0168 == 3)) {
+        if ((field000a == 1) && (attackCollisionResult == 3)) {
             velocityX = 0.0;
             velocityY = 0.0;
             ResetPose();
@@ -3255,7 +3255,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 if (inputY == '\x01') {
@@ -3274,7 +3274,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 1) {
                 (*opponentSlot)->field0008 = 0x67;
                 (*opponentSlot)->ResetFrame();
@@ -3332,7 +3332,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -3361,7 +3361,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -3398,7 +3398,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -3427,7 +3427,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 5) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 3;
@@ -3456,7 +3456,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 3;
@@ -3496,7 +3496,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a == 3) {
                 velocityX = 1.5;
@@ -3541,7 +3541,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a == 3) {
                 velocityX = 1.5;
@@ -3556,7 +3556,7 @@ void Character07::Slot06()
         break;
     case 248:
         velocityY = velocityY + gravity;
-        if ((field000a == 1) && (field0168 == 3)) {
+        if ((field000a == 1) && (attackCollisionResult == 3)) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
@@ -3584,7 +3584,7 @@ void Character07::Slot06()
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 149)) {
                 remainingHitCount = 1;
             } else { remainingHitCount = 0; }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0xd1;
                 field000a = 2;
@@ -3597,7 +3597,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 1) {
                 (*opponentSlot)->field0008 = 100;
                 (*opponentSlot)->positionY = positionY - 59.0;
@@ -3709,13 +3709,13 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a == 0xd) {
                 field000a = 7;
             }
             if ((field000a == 5) || (field000a == 0xe)) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0xfd;
@@ -3785,10 +3785,10 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if ((field000a == 5) || (field000a == 0xe)) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0xfd;
@@ -3872,7 +3872,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 0xd) {
                 field000a = 7;
             }
@@ -3880,7 +3880,7 @@ void Character07::Slot06()
                 field013c = 0x3c;
             }
             if ((field000a == 5) || (field000a == 0x11)) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0xfd;
@@ -3907,11 +3907,11 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 2) {
                 field000a = 0;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 ResetPose();
@@ -3937,7 +3937,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 3;
+            attackCollisionResult = 3;
             if ((field000a == 0xc) && (field3138 != 0)) {
                 --field3138;
                 field000a = field000a + -2;
@@ -3968,7 +3968,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 3;
+            attackCollisionResult = 3;
             if ((field000a == 0xc) && (field3138 != 0)) {
                 --field3138;
                 field000a = field000a + -2;
@@ -4014,7 +4014,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 3;
+            attackCollisionResult = 3;
             if ((field000a == 0xc) && (field3138 != 0)) {
                 --field3138;
                 field000a = field000a + -2;
@@ -4032,7 +4032,7 @@ void Character07::Slot06()
             remainingHitCount = 0;
         }
         if (6 < field000a) {
-            field0168 = 3;
+            attackCollisionResult = 3;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
@@ -4042,7 +4042,7 @@ void Character07::Slot06()
                 field000a = 5;
             }
         }
-        if (field000a > 4 && field000a < 7 && field0168 == 3 && (*opponentSlot)->positionY < 0.0) {
+        if (field000a > 4 && field000a < 7 && attackCollisionResult == 3 && (*opponentSlot)->positionY < 0.0) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
@@ -4084,7 +4084,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (positionY < -40.0 && (*opponentSlot)->positionY < 0.0) {
                 remainingHitCount = 1;
             } else {
@@ -4165,7 +4165,7 @@ void Character07::Slot06()
             velocityY = 0.0;
             horizontalDeceleration = 0.0;
         }
-        if ((field000a == 4) && (field0168 == 3)) {
+        if ((field000a == 4) && (attackCollisionResult == 3)) {
             field3138 = 0;
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
@@ -4193,7 +4193,7 @@ void Character07::Slot06()
             } else {
                 remainingHitCount = 0;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -4239,7 +4239,7 @@ void Character07::Slot06()
                     (*opponentSlot)->field0008 = 0x3f;
                     (*opponentSlot)->ResetPose();
                     remainingHitCount = 1;
-                    field0168 = 0;
+                    attackCollisionResult = 0;
                 }
             }
             if ((field000a == 6) && (field3138 < 3)) {
@@ -4251,7 +4251,7 @@ void Character07::Slot06()
                 (*opponentSlot)->field0008 = 0x67;
                 (*opponentSlot)->ResetPose();
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -4265,7 +4265,7 @@ void Character07::Slot06()
             remainingHitCount = 0;
         }
         if (6 < field000a) {
-            field0168 = 3;
+            attackCollisionResult = 3;
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             velocityX = 0.0;
@@ -4275,7 +4275,7 @@ void Character07::Slot06()
                 field000a = 5;
             }
         }
-        if (field000a > 4 && field000a < 7 && field0168 == 3 && (*opponentSlot)->positionY < 0.0) {
+        if (field000a > 4 && field000a < 7 && attackCollisionResult == 3 && (*opponentSlot)->positionY < 0.0) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
@@ -4317,7 +4317,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (positionY < -40.0 && (*opponentSlot)->positionY < 0.0) {
                 remainingHitCount = 1;
             } else {
@@ -4384,9 +4384,9 @@ void Character07::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
         }
-        if ((field0168 == 6) && (field000a == 3)) {
+        if ((attackCollisionResult == 6) && (field000a == 3)) {
             ResetPose();
-            field0168 = 0;
+            attackCollisionResult = 0;
             hitstunFrames = 0x5a;
             pendingContextSoundSlot = 3;
             field0008 = 0x106;
@@ -4402,7 +4402,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -4432,7 +4432,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -4462,7 +4462,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if ((field000a == 4) && ((unsigned short)field000c == 0)) {
                 effect.type = 8;
@@ -4481,7 +4481,7 @@ void Character07::Slot06()
             }
             if (field000a == 0xd) {
                 remainingHitCount = 1;
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a == 0x13) {
                 field000a = field000a + -2;
@@ -4513,7 +4513,7 @@ void Character07::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a < 3) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if ((field000a == 4) && ((unsigned short)field000c == 0)) {
                 effect.type = 8;
@@ -4546,9 +4546,9 @@ void Character07::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
         }
-        if ((field0168 == 6) && (field000a == 3)) {
+        if ((attackCollisionResult == 6) && (field000a == 3)) {
             ResetPose();
-            field0168 = 0;
+            attackCollisionResult = 0;
             hitstunFrames = 0x5a;
             pendingContextSoundSlot = 3;
             field0008 = 0x106;
@@ -4564,7 +4564,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -4622,7 +4622,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xd) && (velocityY < 0.0)
                 ) {
                 field000a = 10;
@@ -4684,7 +4684,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xd) && (velocityY < 0.0)
                 ) {
                 field000a = 10;
@@ -4750,7 +4750,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xd) && (velocityY < 0.0)
                 ) {
                 field000a = 10;
@@ -4819,7 +4819,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xb) && (field313c < 0x1b)) {
                 field000a = 4;
                 field313c = field313c + 2;
@@ -4889,7 +4889,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xb) && (field313c < 0x27)) {
                 field000a = 4;
                 field313c = field313c + 2;
@@ -4963,7 +4963,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 0xb) && (field313c < 0x39)) {
                 field000a = 4;
                 field313c = field313c + 2;
@@ -5027,7 +5027,7 @@ void Character07::Slot06()
                 (double)field3138 * 0.01 * (double)(int)(*opponentSlot)->facing;
             }
         }
-        if (field000a > 4 && field0168 == 3) {
+        if (field000a > 4 && attackCollisionResult == 3) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
@@ -5051,7 +5051,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 5) {
                 pendingContextSoundSlot = 0x12;
             }
@@ -5118,7 +5118,7 @@ void Character07::Slot06()
                 (double)field3138 * 0.01 * (double)(int)(*opponentSlot)->facing;
             }
         }
-        if (field000a > 4 && field0168 == 3) {
+        if (field000a > 4 && attackCollisionResult == 3) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
@@ -5142,7 +5142,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 5) {
                 pendingContextSoundSlot = 0x12;
             }
@@ -5209,7 +5209,7 @@ void Character07::Slot06()
                 (double)field3138 * 0.01 * (double)(int)(*opponentSlot)->facing;
             }
         }
-        if (field000a > 4 && field0168 == 3) {
+        if (field000a > 4 && attackCollisionResult == 3) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
@@ -5233,7 +5233,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a == 5) {
                 pendingContextSoundSlot = 0x12;
             }
@@ -5321,7 +5321,7 @@ void Character07::Slot06()
                 velocityX = 0.3;
                 gravity = 0.15;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0;
                 FaceOpponent();
@@ -5411,7 +5411,7 @@ void Character07::Slot06()
                 field000a = field000a + -3;
                 ++field3140;
             }
-            field0168 = 0;
+            attackCollisionResult = 0;
             if (field000a >= frameCount) {
                 field0008 = 0xfd;
                 FaceOpponent();
@@ -5435,7 +5435,7 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            field0168 = 0;
+            attackCollisionResult = 0;
             if ((field000a == 3) || (field000a == 6)) {
                 effect.type = 0;
                 effect.palette = 2;
@@ -5590,7 +5590,7 @@ void Character07::Slot06()
             effect.layer = 1;
             EmitLocalEffect(&effect);
         }
-        if ((field000a == 2) && (field0168 == 3)) {
+        if ((field000a == 2) && (attackCollisionResult == 3)) {
             SetVerticalShake(6,0x3c);
             (*opponentSlot)->hitstopFrames = 500;
             contextOwner->SetSceneTimer(0xf);
@@ -5602,11 +5602,11 @@ void Character07::Slot06()
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
-            if ((field0168 != 3) && (field000a == 6)) {
+            if ((attackCollisionResult != 3) && (field000a == 6)) {
                 field000a = 0xc;
             }
             if ((field000a == 9) || (field000a == 1)) {
-                field0168 = 0;
+                attackCollisionResult = 0;
             }
             if (field000a >= frameCount) {
                 field0008 = 0;
@@ -5638,10 +5638,10 @@ void Character07::Slot06()
             effect.type = 0x47;
             contextOwner->EmitEffect(&effect);
         }
-        if ((field0168 == 6) && (field000a == 2)) {
+        if ((attackCollisionResult == 6) && (field000a == 2)) {
             ResetPose();
             field000a = 3;
-            field0168 = 0;
+            attackCollisionResult = 0;
             hitstunFrames = 0xa0;
             pendingContextSoundSlot = 3;
             effect.type = 0;
@@ -5656,7 +5656,7 @@ void Character07::Slot06()
             if ((unsigned short)field000c >= frameDuration) {
                 field000c = 0;
                 ++field000a;
-                field0168 = 0;
+                attackCollisionResult = 0;
                 if (field000a == 3) {
                     field000a = 4;
                 }

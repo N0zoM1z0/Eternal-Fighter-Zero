@@ -297,7 +297,7 @@ void Character05::Slot05()
         }
     }
     else {
-        if ((((1 < field0168) && (hitstopFrames == 0)) &&
+        if ((((1 < attackCollisionResult) && (hitstopFrames == 0)) &&
             (
             (float)(unsigned short)RandomRange(0, 100) < field00a8 * 25.0f)) &&
             ((field3114 != 0 && (field3114 != 2)))) {
@@ -317,7 +317,7 @@ void Character05::Slot05()
                 if ((distance.forward < 50.0) && (field3110 < 400)) {
                     buttonPulse[0] = 1;
                     inputY = 0;
-                    if (field0168 == 2) {
+                    if (attackCollisionResult == 2) {
                         if ((unsigned short)RandomRange(0, 100) < 20) {
                             buttonPulse[2] = 1;
                             inputY = 1;
@@ -350,7 +350,7 @@ void Character05::Slot05()
             }
             if (field0008 == 0xc9) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 400)) && (field0168 == 3)) {
+                    (field3110 < 400)) && (attackCollisionResult == 3)) {
                     field0262 = 0x14;
                     return;
                 }
@@ -419,7 +419,7 @@ void Character05::Slot05()
             if (field0008 == 0xca) {
                 if (((((*opponentSlot)->positionY < 0.0) &&
                     ((*opponentSlot)->positionY < -50.0)) &&
-                    ((distance.forward < 70.0 && ((field3110 < 200 && (field0168 == 3))))))
+                    ((distance.forward < 70.0 && ((field3110 < 200 && (attackCollisionResult == 3))))))
                     && (meter == 3000)) {
                     field0262 = 0x7a;
                     return;
@@ -436,7 +436,7 @@ void Character05::Slot05()
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (399 < field3110)) && ((field3110 < 500 && (field0168 == 3)))) {
+                    (399 < field3110)) && ((field3110 < 500 && (attackCollisionResult == 3)))) {
                     field0262 = (unsigned short)RandomRange(0, 2) + 100;
                     return;
                 }
@@ -449,7 +449,7 @@ void Character05::Slot05()
                     return;
                 }
                 if (((0x1e0 < field3110) && (field3110 < 0x226)) &&
-                    ((field0168 == 3 && (meter >= 1000)))) {
+                    ((attackCollisionResult == 3 && (meter >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
                 }
@@ -484,13 +484,13 @@ void Character05::Slot05()
             if (field0008 == 0xcb) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (field3110 < 200)) &&
-                    ((field0168 == 3 &&
+                    ((attackCollisionResult == 3 &&
                     ((distance.vertical < 70.0 && (field0118 > 500.0))))))
                 {
                     field0262 = 0xc;
                     return;
                 }
-                if ((((0 < field3110) && (field3110 < 100)) && (field0168 != 3)) &&
+                if ((((0 < field3110) && (field3110 < 100)) && (attackCollisionResult != 3)) &&
                     (field0118 > 500.0)) {
                     field0262 = 10;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
@@ -503,7 +503,7 @@ void Character05::Slot05()
                     return;
                 }
                 if (((0x226 < field3110) && (field3110 < 600)) &&
-                    ((field0168 == 3 &&
+                    ((attackCollisionResult == 3 &&
                     ((meter >= 1000 && (distance.forward < 90.0)))))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
@@ -533,7 +533,7 @@ void Character05::Slot05()
                 if ((distance.forward < 50.0) && (field3110 < 400)) {
                     buttonPulse[0] = 1;
                     inputY = 0;
-                    if (field0168 == 2) {
+                    if (attackCollisionResult == 2) {
                         if ((unsigned short)RandomRange(0, 100) < 20) {
                             buttonPulse[2] = 1;
                             inputY = 1;
@@ -574,7 +574,7 @@ void Character05::Slot05()
             }
             if (field0008 == 0xcd) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
-                    (field3110 < 400)) && (field0168 == 3)) {
+                    (field3110 < 400)) && (attackCollisionResult == 3)) {
                     field0262 = 0x14;
                     return;
                 }
@@ -635,13 +635,13 @@ void Character05::Slot05()
                 }
             }
             if (field0008 == 0xce) {
-                if (((field3110 < 200) && (field0168 == 3)) &&
+                if (((field3110 < 200) && (attackCollisionResult == 3)) &&
                     (field0118 > 500.0)) {
                     field0262 = 0xc;
                     return;
                 }
                 if (((0 < field3110) && (field3110 < 100)) &&
-                    ((field0168 != 3 && (field0118 > 500.0)))) {
+                    ((attackCollisionResult != 3 && (field0118 > 500.0)))) {
                     field0262 = 10;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
                         field0262 = 0xb;
@@ -652,7 +652,7 @@ void Character05::Slot05()
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
-                if ((((0x226 < field3110) && (field3110 < 600)) && (field0168 == 3))
+                if ((((0x226 < field3110) && (field3110 < 600)) && (attackCollisionResult == 3))
                     && ((meter >= 1000 && (distance.forward < 70.0)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
@@ -693,7 +693,7 @@ void Character05::Slot05()
             }
             if (field0008 == 0xd0) {
                 if (((0x14 < field3110) &&
-                    (field3110 < (int)((unsigned int)(field0168 != 3) * 0x32 + 0x32))) &&
+                    (field3110 < (int)((unsigned int)(attackCollisionResult != 3) * 0x32 + 0x32))) &&
                     ((*opponentSlot)->positionY < 0.0)) {
                     field0262 = 0x1e;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
@@ -716,7 +716,7 @@ void Character05::Slot05()
             }
             if (field0008 == 0xd1) {
                 if (((0x14 < field3110) &&
-                    (field3110 < (int)((unsigned int)(field0168 != 3) * 0x32 + 0x32))) &&
+                    (field3110 < (int)((unsigned int)(attackCollisionResult != 3) * 0x32 + 0x32))) &&
                     ((*opponentSlot)->positionY < 0.0)) {
                     field0262 = 0x1e;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
