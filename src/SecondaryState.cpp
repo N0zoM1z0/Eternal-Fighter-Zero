@@ -56,8 +56,8 @@ void Secondary::InitializeState()
     field0180 = 1.0;
     actionBufferedInput = 0;
     stateGroupCBufferedInput = 0;
-    field0262 = 99;
-    field0260 = 0;
+    recognizedCommand = 99;
+    inputHistoryWriteIndex = 0;
     for (i = 0; i < 180; ++i) history[i] = 0;
     pendingCharacterSoundSlot = -1;
     pendingContextSoundSlot = -1;

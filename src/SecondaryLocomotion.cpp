@@ -11,18 +11,18 @@ void Secondary::UpdateLocomotionState()
     && field0008 != 10 && field0008 != 11 && field0008 != 12) {
         if (field015c < 3 && inputY == -1) {
             FaceOpponent();
-            if (field0262 >= 3 && field0262 <= 5) {
-                if (field0262 == 3) {
+            if (recognizedCommand >= 3 && recognizedCommand <= 5) {
+                if (recognizedCommand == 3) {
                     if (field0008 != 10) ResetPose();
                     field0008 = 10;
                     return;
                 }
-                if (field0262 == 4) {
+                if (recognizedCommand == 4) {
                     if (field0008 != 11) ResetPose();
                     field0008 = 11;
                     return;
                 }
-                if (field0262 == 5) {
+                if (recognizedCommand == 5) {
                     if (field0008 != 12) ResetPose();
                     field0008 = 12;
                     return;

@@ -15,7 +15,7 @@ void Character08::Slot04()
     if (stateGroupCBufferedInput == '\0') {
         stateGroupCBufferFrames = 0;
     }
-    if ((((field0262 == 0x34) &&
+    if ((((recognizedCommand == 0x34) &&
         ((field0118 >= 500.0 && (1 < attackCollisionResult)) ||
         ('\0' < field0120 && (1 < attackCollisionResult && (attackCollisionResult != 6))))
         ) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
@@ -30,7 +30,7 @@ void Character08::Slot04()
         return;
     }
     if (field015c < 2) {
-        if (((((health < 0xd05) && (field0262 == 0x5f)) &&
+        if (((((health < 0xd05) && (recognizedCommand == 0x5f)) &&
             (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (positionY == 0.0))) &&
@@ -42,7 +42,7 @@ void Character08::Slot04()
             field0008 = 0x13e;
             return;
         }
-        if (((((field0262 == 0xac) && (meter >= 3000)) &&
+        if (((((recognizedCommand == 0xac) && (meter >= 3000)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
             (field0008 < 200))) &&
@@ -56,7 +56,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0xab) || (field0262 == 0xac))
+        if (((((recognizedCommand == 0xab) || (recognizedCommand == 0xac))
             && (meter >= 2000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -71,8 +71,8 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0xaa) || (field0262 == 0xab))
-            || (field0262 == 0xac)) &&
+        if (((((recognizedCommand == 0xaa) || (recognizedCommand == 0xab))
+            || (recognizedCommand == 0xac)) &&
             (meter >= 1000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2 && (attackCollisionResult != 6))) ||
@@ -87,7 +87,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0x7a) && (meter >= 3000)) &&
+        if (((((recognizedCommand == 0x7a) && (meter >= 3000)) &&
             (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -99,7 +99,7 @@ void Character08::Slot04()
             field0008 = 0x131;
             return;
         }
-        if ((((field0262 == 0x7a) || (field0262 == 0x79))
+        if ((((recognizedCommand == 0x7a) || (recognizedCommand == 0x79))
             && (meter >= 2000 &&
             (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) &&
@@ -112,8 +112,8 @@ void Character08::Slot04()
             field0008 = 0x130;
             return;
         }
-        if (((((field0262 == 0x78) || (field0262 == 0x79))
-            || (field0262 == 0x7a)) &&
+        if (((((recognizedCommand == 0x78) || (recognizedCommand == 0x79))
+            || (recognizedCommand == 0x7a)) &&
             ((meter >= 1000 && (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -125,7 +125,7 @@ void Character08::Slot04()
             field0008 = 0x12f;
             return;
         }
-        if (((((field0262 == 0x70) && (meter >= 3000)) &&
+        if (((((recognizedCommand == 0x70) && (meter >= 3000)) &&
             (positionY == 0.0)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -137,7 +137,7 @@ void Character08::Slot04()
             field0008 = 0x134;
             return;
         }
-        if ((((field0262 == 0x70) || (field0262 == 0x6f))
+        if ((((recognizedCommand == 0x70) || (recognizedCommand == 0x6f))
             && (meter >= 2000 &&
             (positionY == 0.0 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) &&
@@ -150,9 +150,9 @@ void Character08::Slot04()
             field0008 = 0x133;
             return;
         }
-        if (((((((field0262 == 0x6e) ||
-            (field0262 == 0x6f)) ||
-            (field0262 == 0x70)) &&
+        if (((((((recognizedCommand == 0x6e) ||
+            (recognizedCommand == 0x6f)) ||
+            (recognizedCommand == 0x70)) &&
             (meter >= 1000 && (positionY == 0.0))) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -164,7 +164,7 @@ void Character08::Slot04()
             field0008 = 0x132;
             return;
         }
-        if ((((field0262 == 0x2a) &&
+        if ((((recognizedCommand == 0x2a) &&
             ((field0118 >= 500.0 || ('\0' < field0120)) ||
             (positionY == 0.0))) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
@@ -180,7 +180,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x29) || (field0262 == 0x2a))
+        if ((((recognizedCommand == 0x29) || (recognizedCommand == 0x2a))
             && ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6))
             || (field0008 < 200)))) &&
@@ -194,7 +194,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((field0262 == 0x28) &&
+        if (((recognizedCommand == 0x28) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2 && (attackCollisionResult != 6))) ||
             (field0008 < 200)) &&
@@ -208,7 +208,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x16) &&
+        if ((((recognizedCommand == 0x16) &&
             (((field0118 >= 500.0 || ('\0' < field0120)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (positionY == 0.0))) &&
@@ -221,7 +221,7 @@ void Character08::Slot04()
             field0008 = 0xff;
             return;
         }
-        if ((((field0262 == 0x15) || (field0262 == 0x16))
+        if ((((recognizedCommand == 0x15) || (recognizedCommand == 0x16))
             && ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (positionY == 0.0))) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -233,7 +233,7 @@ void Character08::Slot04()
             field0008 = 0xfe;
             return;
         }
-        if (((field0262 == 0x14) &&
+        if (((recognizedCommand == 0x14) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (positionY == 0.0 &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -245,7 +245,7 @@ void Character08::Slot04()
             field0008 = 0xfd;
             return;
         }
-        if ((((field0262 == 0x20) &&
+        if ((((recognizedCommand == 0x20) &&
             ((field0118 >= 500.0 || ('\0' < field0120)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -261,7 +261,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x1f) || (field0262 == 0x20))
+        if ((((recognizedCommand == 0x1f) || (recognizedCommand == 0x20))
             && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
             (field0008 < 200)) &&
@@ -276,7 +276,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x1e) &&
+        if ((((recognizedCommand == 0x1e) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             ((field0008 >= 200 && (attackCollisionResult >= 2 && (attackCollisionResult != 6))) ||
             (field0008 < 200))) &&
@@ -291,7 +291,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((field0262 == 0xc) &&
+        if (((recognizedCommand == 0xc) &&
             ((field0118 >= 500.0 || ('\0' < field0120)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0))) &&
             ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -306,7 +306,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0xb) || (field0262 == 0xc)) &&
+        if ((((recognizedCommand == 0xb) || (recognizedCommand == 0xc)) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
             (field0008 < 200)))) &&
@@ -320,7 +320,7 @@ void Character08::Slot04()
             }
             return;
         }
-        if (((field0262 == 10) &&
+        if (((recognizedCommand == 10) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
             (((field0008 >= 200 && (attackCollisionResult >= 2 && (attackCollisionResult != 6))) ||
             (field0008 < 200)) &&
@@ -336,12 +336,12 @@ void Character08::Slot04()
         }
     }
     if ((field015c == 0) &&
-        (field0262 == 0 || (field0262 == 1))) {
+        (recognizedCommand == 0 || (recognizedCommand == 1))) {
         if ((positionY < 0.0) && (airDashCount < 2)) {
-            if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0
                 ) || (0.0 ==
                 (*opponentSlot)->positionX - positionX &&
-                ((int)facing == (1 - field0262 * 2) * -1)
+                ((int)facing == (1 - recognizedCommand * 2) * -1)
                 )) &&
                 (sequences[field0008].field0002 <=
                 sequences[165].field0000)) &&
@@ -360,9 +360,9 @@ void Character08::Slot04()
                 return;
             }
             if (((((0.0 <
-                ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) ||
+                ((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2)) ||
                 (0.0 == (*opponentSlot)->positionX - positionX
-                && ((int)facing == 1 - field0262 * 2))) &&
+                && ((int)facing == 1 - recognizedCommand * 2))) &&
                 (sequences[field0008].field0002 <=
                 sequences[166].field0000)) &&
                 (field0008 != 0xaa &&
@@ -382,9 +382,9 @@ void Character08::Slot04()
         }
         if ((positionY == 0.0) &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) {
-            if (((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0)
+            if (((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0)
                 || (0.0 == (*opponentSlot)->positionX - positionX
-                && ((int)facing == (1 - field0262 * 2) * -1)))
+                && ((int)facing == (1 - recognizedCommand * 2) * -1)))
                 && (sequences[field0008].field0002 <=
                 sequences[163].field0000 &&
                 (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)
@@ -399,9 +399,9 @@ void Character08::Slot04()
                 return;
             }
             if ((((0.0 <
-                ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) ||
+                ((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2)) ||
                 (0.0 == (*opponentSlot)->positionX - positionX
-                && ((int)facing == 1 - field0262 * 2))) &&
+                && ((int)facing == 1 - recognizedCommand * 2))) &&
                 (sequences[field0008].field0002 <=
                 sequences[164].field0000)) &&
                 (((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) ||
@@ -416,7 +416,7 @@ void Character08::Slot04()
             }
         }
     }
-    if ((((((field015c < 3) && (field0262 == 6)) &&
+    if ((((((field015c < 3) && (recognizedCommand == 6)) &&
         ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) &&
         (positionY < 0.0 && (airActionCount < 1)))
         && (sequences[field0008].field0002 <=

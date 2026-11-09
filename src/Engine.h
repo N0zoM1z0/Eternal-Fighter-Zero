@@ -290,8 +290,10 @@ public:
     unsigned char stateGroupCBufferFrames;
     unsigned char history[180];
     unsigned char unknown_025f[0x1];
-    short field0260;
-    short field0262;
+    // Write cursor for the 180-frame packed input history ring.
+    short inputHistoryWriteIndex;
+    // Command recognized from that history (99 means none); CPU sets it directly.
+    short recognizedCommand;
     unsigned short soundSlots[50];
     char pendingCharacterSoundSlot;
     char pendingContextSoundSlot;

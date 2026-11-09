@@ -3922,7 +3922,7 @@ void Character05::Slot06()
             velocityX < 0.0)) {
             velocityX = 0.0;
         }
-        if ((field0262 == 10) && (0xd < field000a)) {
+        if ((recognizedCommand == 10) && (0xd < field000a)) {
             ResetPose();
             field0008 = 0x122;
             break;
@@ -4416,7 +4416,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
-        if (field000a > 19 && field0262 == 10) {
+        if (field000a > 19 && recognizedCommand == 10) {
             ResetPose();
             field0008 = 0x106;
             break;
@@ -4589,7 +4589,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
         }
-        if (field000a > 19 && field0262 == 10) {
+        if (field000a > 19 && recognizedCommand == 10) {
             ResetPose();
             field0008 = 0x106;
             break;

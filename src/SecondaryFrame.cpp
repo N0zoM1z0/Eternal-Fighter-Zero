@@ -172,5 +172,5 @@ void Secondary::ClearBufferedButtons() { actionBufferedInput = 0; stateGroupCBuf
 void Secondary::ClearInputHistory()
 {
     for (int i = 0; i < 180; ++i) history[i] = 0;
-    field0262 = 99;
+    recognizedCommand = 99;
 }

@@ -22,7 +22,7 @@ void Secondary::UpdateInput()
             buttonPulse[1] = 0;
             buttonPulse[2] = 0;
             buttonPulse[3] = 0;
-            field0262 = 99;
+            recognizedCommand = 99;
         }
     } else {
         state = inputOwner->ReadState(player);
@@ -56,20 +56,20 @@ void Secondary::UpdateInput()
             buttonPulse[1] = 0;
             buttonPulse[2] = 0;
             buttonPulse[3] = 0;
-            field0262 = 99;
+            recognizedCommand = 99;
         }
-        history[field0260] = (inputX == 1) + (inputX == -1) * 2
+        history[inputHistoryWriteIndex] = (inputX == 1) + (inputX == -1) * 2
         + (inputY == 1) * 4 + (inputY == -1) * 8
         + buttonPulse[0] * 16 + buttonPulse[1] * 32 + buttonPulse[2] * 64 + buttonPulse[3] * 128;
-        if (history[field0260] >= 16) {
-            if (field0008 >= 200) actionBufferedInput = history[field0260];
+        if (history[inputHistoryWriteIndex] >= 16) {
+            if (field0008 >= 200) actionBufferedInput = history[inputHistoryWriteIndex];
             if (field0008 >= 163 && field0008 <= 166) {
-                stateGroupCBufferedInput = history[field0260];
+                stateGroupCBufferedInput = history[inputHistoryWriteIndex];
                 stateGroupCBufferFrames = 15;
             }
         }
-        ++field0260;
-        if (field0260 >= 180) field0260 = 0;
+        ++inputHistoryWriteIndex;
+        if (inputHistoryWriteIndex >= 180) inputHistoryWriteIndex = 0;
         if (inputX == 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && guardInputFrames == 0 && guardInputLatched == 0) guardInputFrames = 60;
         if ((*opponentSlot)->hitstopFrames == 0 && guardInputFrames > 0) --guardInputFrames;

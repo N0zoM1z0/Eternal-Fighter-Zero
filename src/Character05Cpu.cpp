@@ -6,7 +6,7 @@ void Character05::Slot05()
 {
     // Both distances are used throughout the original decision owner.
     struct { double forward, vertical; } distance;
-    field0262 = 99;
+    recognizedCommand = 99;
     if (0 < cpuMoveRightFrames) {
         --cpuMoveRightFrames;
     }
@@ -103,23 +103,23 @@ void Character05::Slot05()
         if (distance.forward < 80.0) {
             if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) &&
                 (field0118 > 500.0)) {
-                field0262 = 0x16;
+                recognizedCommand = 0x16;
                 return;
             }
             if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f + (float)((field0118 > 500.0 ? 1 : 0) << 1)) {
-                field0262 = 0xc;
+                recognizedCommand = 0xc;
                 return;
             }
             if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 4.0f) &&
                 (meter >= 1000)) &&
                 ((*opponentSlot)->positionY == 0.0)) {
-                field0262 = (unsigned short)RandomRange(0, 3) + 100;
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 100;
                 return;
             }
             if ((((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) &&
                 (meter == 3000)) &&
                 ((*opponentSlot)->positionY < -30.0)) {
-                field0262 = 0x7a;
+                recognizedCommand = 0x7a;
                 return;
             }
         }
@@ -127,17 +127,17 @@ void Character05::Slot05()
             (
             (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f)) &&
             (field0118 > 500.0)) {
-            field0262 = 0xc;
+            recognizedCommand = 0xc;
             return;
         }
         if (distance.forward > 120.0) {
             if (((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) &&
                 (field0118 > 500.0)) {
-                field0262 = 0xc;
+                recognizedCommand = 0xc;
                 return;
             }
             if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) {
-                field0262 = (unsigned short)RandomRange(0, 0) * 2 + 0x1e;
+                recognizedCommand = (unsigned short)RandomRange(0, 0) * 2 + 0x1e;
                 return;
             }
         }
@@ -180,7 +180,7 @@ void Character05::Slot05()
         if (((distance.vertical < 50.0) && (distance.forward < 100.0)) &&
             (
             (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f)) {
-            field0262 = 0x1e;
+            recognizedCommand = 0x1e;
             return;
         }
     }
@@ -193,24 +193,24 @@ void Character05::Slot05()
         ((field3114 != 2 && ((*opponentSlot)->hitstunFrames == 0)))) {
         field3110 = (unsigned short)RandomRange(0, 100);
         if ((field3110 < 4) && (field0118 > 500.0)) {
-            field0262 = 0x16;
+            recognizedCommand = 0x16;
             return;
         }
         if ((field3110 < 10) && (field0118 > 500.0)) {
-            field0262 = 0xc;
+            recognizedCommand = 0xc;
             return;
         }
         if ((field3110 < 0xd) && (distance.forward > 100.0)) {
-            field0262 = 0x1e;
+            recognizedCommand = 0x1e;
             return;
         }
         if ((field3110 < 0xd) && (distance.forward < 90.0)) {
-            field0262 = 0x20;
+            recognizedCommand = 0x20;
             return;
         }
         if ((((field3110 < 0x11) && (0xc < field3110)) && (meter >= 1000))
             && (distance.forward < 80.0)) {
-            field0262 = (unsigned short)RandomRange(0, 2) * 100;
+            recognizedCommand = (unsigned short)RandomRange(0, 2) * 100;
             return;
         }
     }
@@ -227,7 +227,7 @@ void Character05::Slot05()
             return;
         }
         if ((distance.forward < 100.0) && (field3110 < 0x16)) {
-            field0262 = 0x1e;
+            recognizedCommand = 0x1e;
             return;
         }
     }
@@ -236,7 +236,7 @@ void Character05::Slot05()
         (*opponentSlot)->field0008 > 149 && (*opponentSlot)->field0008 < 157 &&
         (field0008 == 259 || field0008 == 260 || field0008 == 266 || field0008 == 267 ||
         field0008 == 301 || field0008 == 302)) {
-        field0262 = 52; return;
+        recognizedCommand = 52; return;
     }
     if ((0 < field3114) &&
         ((0x31 < field0008 && (field0008 < 0x9e)))) {
@@ -254,7 +254,7 @@ void Character05::Slot05()
         inputX = (unsigned short)RandomRange(0, 2) + -1;
         if (((field0008 == 4) || (field0008 == 5)) || (field0008 == 6)
             ) {
-            field0262 = (unsigned short)(facing == '\x01');
+            recognizedCommand = (unsigned short)(facing == '\x01');
             if (field0008 == 0xa5) {
                 field3114 = 0;
             }
@@ -265,11 +265,11 @@ void Character05::Slot05()
     }
     if ((field3114 == 5) && (field0008 < 0x32)) {
         field3114 = 0;
-        field0262 = (unsigned short)(facing == '\x01');
+        recognizedCommand = (unsigned short)(facing == '\x01');
     }
     else if ((field3114 == 6) && (field0008 < 0x32)) {
         field3114 = 7;
-        field0262 = (unsigned short)(facing == '\x01');
+        recognizedCommand = (unsigned short)(facing == '\x01');
     }
     else if ((field3114 == 7) && (field0008 == 0xa3)) {
         inputX = -facing;
@@ -279,7 +279,7 @@ void Character05::Slot05()
         }
     }
     else if ((field3114 == 8) && (field0008 < 0x32)) {
-        field0262 = (unsigned short)(facing == '\x01');
+        recognizedCommand = (unsigned short)(facing == '\x01');
         field3114 = 9;
     }
     else if ((field3114 == 9) && (field0008 == 0xa3)) {
@@ -351,13 +351,13 @@ void Character05::Slot05()
             if (field0008 == 0xc9) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (field3110 < 400)) && (attackCollisionResult == 3)) {
-                    field0262 = 0x14;
+                    recognizedCommand = 0x14;
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (400 < field3110)) &&
                     ((field3110 < 500 && (meter >= 1000)))) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
                 if (((((*opponentSlot)->positionY < 0.0) &&
@@ -383,12 +383,12 @@ void Character05::Slot05()
                     return;
                 }
                 if ((0x226 < field3110) && (field3110 < 600)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
                 if (((600 < field3110) && (field3110 < 0x26c)) &&
                     (distance.forward > 80.0)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
                     return;
                 }
                 if (0x398 < field3110) {
@@ -421,7 +421,7 @@ void Character05::Slot05()
                     ((*opponentSlot)->positionY < -50.0)) &&
                     ((distance.forward < 70.0 && ((field3110 < 200 && (attackCollisionResult == 3))))))
                     && (meter == 3000)) {
-                    field0262 = 0x7a;
+                    recognizedCommand = 0x7a;
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
@@ -432,12 +432,12 @@ void Character05::Slot05()
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (400 < field3110)) && (field3110 < 500)) {
-                    field0262 = 0xb;
+                    recognizedCommand = 0xb;
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (399 < field3110)) && ((field3110 < 500 && (attackCollisionResult == 3)))) {
-                    field0262 = (unsigned short)RandomRange(0, 2) + 100;
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 100;
                     return;
                 }
                 if (((0 < field3110) && (field3110 < 400)) && (distance.forward < 90.0)) {
@@ -450,16 +450,16 @@ void Character05::Slot05()
                 }
                 if (((0x1e0 < field3110) && (field3110 < 0x226)) &&
                     ((attackCollisionResult == 3 && (meter >= 1000)))) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
                 }
                 if ((0x226 < field3110) && (field3110 < 600)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
                 if (((600 < field3110) && (field3110 < 0x26c)) &&
                     (distance.forward > 80.0)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
                     return;
                 }
                 if (0x26c < field3110) {
@@ -487,30 +487,30 @@ void Character05::Slot05()
                     ((attackCollisionResult == 3 &&
                     ((distance.vertical < 70.0 && (field0118 > 500.0))))))
                 {
-                    field0262 = 0xc;
+                    recognizedCommand = 0xc;
                     return;
                 }
                 if ((((0 < field3110) && (field3110 < 100)) && (attackCollisionResult != 3)) &&
                     (field0118 > 500.0)) {
-                    field0262 = 10;
+                    recognizedCommand = 10;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
-                        field0262 = 0xb;
+                        recognizedCommand = 0xb;
                     }
                     return;
                 }
                 if ((0xfa < field3110) && (field3110 < 0x226)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
                 if (((0x226 < field3110) && (field3110 < 600)) &&
                     ((attackCollisionResult == 3 &&
                     ((meter >= 1000 && (distance.forward < 90.0)))))) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0xaa;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0xaa;
                     return;
                 }
                 if (((600 < field3110) && (field3110 < 0x2a8)) &&
                     (distance.forward > 80.0)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
                     return;
                 }
                 if (799 < field3110) {
@@ -575,7 +575,7 @@ void Character05::Slot05()
             if (field0008 == 0xcd) {
                 if ((((*opponentSlot)->positionY < 0.0) &&
                     (field3110 < 400)) && (attackCollisionResult == 3)) {
-                    field0262 = 0x14;
+                    recognizedCommand = 0x14;
                     return;
                 }
                 if ((((*opponentSlot)->positionY < 0.0) &&
@@ -601,12 +601,12 @@ void Character05::Slot05()
                     return;
                 }
                 if ((0x226 < field3110) && (field3110 < 600)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
                 if (((600 < field3110) && (field3110 < 0x26c)) &&
                     (distance.forward > 80.0)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
                     return;
                 }
                 if (0x398 < field3110) {
@@ -637,29 +637,29 @@ void Character05::Slot05()
             if (field0008 == 0xce) {
                 if (((field3110 < 200) && (attackCollisionResult == 3)) &&
                     (field0118 > 500.0)) {
-                    field0262 = 0xc;
+                    recognizedCommand = 0xc;
                     return;
                 }
                 if (((0 < field3110) && (field3110 < 100)) &&
                     ((attackCollisionResult != 3 && (field0118 > 500.0)))) {
-                    field0262 = 10;
+                    recognizedCommand = 10;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
-                        field0262 = 0xb;
+                        recognizedCommand = 0xb;
                     }
                     return;
                 }
                 if ((0xfa < field3110) && (field3110 < 0x226)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                     return;
                 }
                 if ((((0x226 < field3110) && (field3110 < 600)) && (attackCollisionResult == 3))
                     && ((meter >= 1000 && (distance.forward < 70.0)))) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
                 if (((600 < field3110) && (field3110 < 0x2a8)) &&
                     (distance.forward > 80.0)) {
-                    field0262 = (unsigned short)RandomRange(0, 3) + 0x46;
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
                     return;
                 }
                 if (799 < field3110) {
@@ -695,9 +695,9 @@ void Character05::Slot05()
                 if (((0x14 < field3110) &&
                     (field3110 < (int)((unsigned int)(attackCollisionResult != 3) * 0x32 + 0x32))) &&
                     ((*opponentSlot)->positionY < 0.0)) {
-                    field0262 = 0x1e;
+                    recognizedCommand = 0x1e;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
-                        field0262 = 0x20;
+                        recognizedCommand = 0x20;
                     }
                     return;
                 }
@@ -718,9 +718,9 @@ void Character05::Slot05()
                 if (((0x14 < field3110) &&
                     (field3110 < (int)((unsigned int)(attackCollisionResult != 3) * 0x32 + 0x32))) &&
                     ((*opponentSlot)->positionY < 0.0)) {
-                    field0262 = 0x1e;
+                    recognizedCommand = 0x1e;
                     if ((unsigned short)RandomRange(0, 2) == 0) {
-                        field0262 = 0x20;
+                        recognizedCommand = 0x20;
                     }
                     return;
                 }
@@ -786,17 +786,17 @@ void Character05::Slot05()
                     }
                     if (((distance.forward > 80.0) && (field3110 < 0x154)) &&
                         (0x140 < field3110)) {
-                        field0262 = 0x1e;
+                        recognizedCommand = 0x1e;
                         return;
                     }
                     if (((distance.forward > 150.0) && (field3110 < 0x172)) &&
                         (0x15e < field3110)) {
-                        field0262 = 0x20;
+                        recognizedCommand = 0x20;
                         return;
                     }
                     if (((field3110 < 400) && (0x1a4 < field3110)) &&
                         (distance.forward > 150.0)) {
-                        field0262 = (short)facing;
+                        recognizedCommand = (short)facing;
                         field3114 = 5;
                         return;
                     }
@@ -817,7 +817,7 @@ void Character05::Slot05()
                     if (((distance.forward < 220.0) && (field3110 < 700)) &&
                         ((0x2c6 < field3110 && (field0118 > 500.0))))
                     {
-                        field0262 = 0xc;
+                        recognizedCommand = 0xc;
                         return;
                     }
                 }
@@ -833,7 +833,7 @@ void Character05::Slot05()
                             (distance.vertical < 180.0)) &&
                             ((0x28 < field3110 && (field3110 < 0x46)))) &&
                             (meter >= 1000)) {
-                            field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
+                            recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x78;
                             return;
                         }
                     }
@@ -848,13 +848,13 @@ void Character05::Slot05()
                             (distance.vertical < 180.0)) &&
                             ((0x28 < field3110 && (field3110 < 0x46)))) &&
                             (meter >= 1000)) {
-                            field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
+                            recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x78;
                             return;
                         }
                         if (((distance.forward < 80.0) && (distance.vertical > 130.0)) &&
                             ((distance.vertical < 160.0 &&
                             ((0x46 < field3110 && (field3110 < 0x50)))))) {
-                            field0262 = (unsigned short)RandomRange(0, 3) + 0x14;
+                            recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x14;
                             return;
                         }
                     }
@@ -881,7 +881,7 @@ void Character05::Slot05()
                         return;
                     }
                     if ((0x28a < field3110) && (field3110 < 0x294)) {
-                        field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                        recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                         return;
                     }
                 }
@@ -905,7 +905,7 @@ void Character05::Slot05()
                         return;
                     }
                     if ((0x28a < field3110) && (field3110 < 700)) {
-                        field0262 = (unsigned short)RandomRange(0, 3) + 0x1e;
+                        recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x1e;
                         return;
                     }
                 }
@@ -915,7 +915,7 @@ void Character05::Slot05()
             (((*opponentSlot)->field0008 > 149 && (*opponentSlot)->field0008 < 156) ||
             ((*opponentSlot)->field0008 > 49 && (*opponentSlot)->field0008 < 59)) &&
             positionY == 0.0 && (float)(unsigned short)RandomRange(0, 100) < 1.0f * field00a8) {
-            if (distance.forward < 100.0) { field0262 = (unsigned short)(facing == 1); }
+            if (distance.forward < 100.0) { recognizedCommand = (unsigned short)(facing == 1); }
             return;
         }
         if ((unsigned short)RandomRange(0, 1000) < 2) {

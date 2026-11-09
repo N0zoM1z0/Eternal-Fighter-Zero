@@ -5,14 +5,14 @@ void Character15::Slot02()
 {
     int i;
     unsigned char buttons, stage;
-    field0262 = 99;
+    recognizedCommand = 99;
     stage = '\0';
-    for (i = (int)field0260;
-        i < field0260 + 0xb4;
+    for (i = (int)inputHistoryWriteIndex;
+        i < inputHistoryWriteIndex + 0xb4;
         i = i + 1) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0x10) != 0) && (stage == '\x06')) {
-            field0262 = 0x62;
+            recognizedCommand = 0x62;
             return;
         }
         if (((buttons & 0x40) != 0) && (stage == '\x05')) {
@@ -38,16 +38,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x05')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0xaa + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0xaa + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x04')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0xa0 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0xa0 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x05';
@@ -66,16 +66,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x69;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x69;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x04')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0x78 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x78 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x03')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0x78 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x78 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x04';
@@ -91,16 +91,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 100;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 100;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x06')) {
-            field0262 = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x05')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x06';
@@ -122,16 +122,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x06')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0x6e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x6e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 2 - (facing == -1 ? 1 : 0)) && (stage == '\x05')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0x6e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x6e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x06';
@@ -153,16 +153,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x78;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x78;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x03')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x02')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x03';
@@ -175,16 +175,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x87;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x87;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x03')) {
-            field0262 = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x02')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 10 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x03';
@@ -197,16 +197,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x87;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x87;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x03')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0x28 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x28 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 4) && (stage == '\x02')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0x28 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x28 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x03';
@@ -219,16 +219,16 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x87;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x87;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf0) != 0) && (stage == '\x03')) {
-            field0262 = ((buttons & 0xe0) > 0) + 0x1e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x1e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
             return;
         }
         if (((buttons & 0xf) == 2 - (facing == -1 ? 1 : 0)) && (stage == '\x02')) {
             if ((buttons & 0xf0) != 0) {
-                field0262 = ((buttons & 0xe0) > 0) + 0x1e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x1e + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
                 return;
             }
             stage = '\x03';
@@ -241,11 +241,11 @@ void Character15::Slot02()
         }
     }
     stage = 0;
-    i = field0260 + 0xaf;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0xaf;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 8) != 0) && (stage == 1)) {
-            field0262 = 6;
+            recognizedCommand = 6;
             return;
         }
         if (((buttons & 8) == 0) && (stage == 0)) {
@@ -253,11 +253,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0x80) != 0) && (stage == '\x04')) {
-            field0262 = 0x35;
+            recognizedCommand = 0x35;
             return;
         }
         if (((buttons & 0xf) == 4) && (stage == '\x03')) {
@@ -274,11 +274,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0x40) != 0) && (stage == '\x04')) {
-            field0262 = 0x34;
+            recognizedCommand = 0x34;
             return;
         }
         if (((buttons & 0xf) == 4) && (stage == '\x03')) {
@@ -295,11 +295,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0x20) != 0) && (stage == '\x04')) {
-            field0262 = 0x33;
+            recognizedCommand = 0x33;
             return;
         }
         if (((buttons & 0xf) == 4) && (stage == '\x03')) {
@@ -316,11 +316,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x5a;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x5a;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0x10) != 0) && (stage == '\x04')) {
-            field0262 = 0x32;
+            recognizedCommand = 0x32;
             return;
         }
         if (((buttons & 0xf) == 4) && (stage == '\x03')) {
@@ -337,11 +337,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x87;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x87;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf) == 1) && (stage == '\x03')) {
-            field0262 = 1;
+            recognizedCommand = 1;
             return;
         }
         if (((buttons & 0xf) == 0) && (stage == '\x02')) {
@@ -355,11 +355,11 @@ void Character15::Slot02()
         }
     }
     stage = '\0';
-    i = field0260 + 0x87;
-    for (;  i < field0260 + 0xb4;  ++i) {
+    i = inputHistoryWriteIndex + 0x87;
+    for (;  i < inputHistoryWriteIndex + 0xb4;  ++i) {
         buttons = history[i - (i >= 180) * 180];
         if (((buttons & 0xf) == 2) && (stage == '\x03')) {
-            field0262 = 0;
+            recognizedCommand = 0;
             return;
         }
         if (((buttons & 0xf) == 0) && (stage == '\x02')) {
