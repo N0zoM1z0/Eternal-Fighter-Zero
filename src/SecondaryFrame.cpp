@@ -168,7 +168,7 @@ int Secondary::IsStateGroupB()
     && (*opponentSlot)->field0008 != 96) ? 1 : 0;
 }
 
-void Secondary::ClearBufferedButtons() { field01a8 = 0; field01a9 = 0; }
+void Secondary::ClearBufferedButtons() { actionBufferedInput = 0; stateGroupCBufferedInput = 0; }
 void Secondary::ClearInputHistory()
 {
     for (int i = 0; i < 180; ++i) history[i] = 0;

@@ -62,10 +62,10 @@ void Secondary::UpdateInput()
         + (inputY == 1) * 4 + (inputY == -1) * 8
         + buttonPulse[0] * 16 + buttonPulse[1] * 32 + buttonPulse[2] * 64 + buttonPulse[3] * 128;
         if (history[field0260] >= 16) {
-            if (field0008 >= 200) field01a8 = history[field0260];
+            if (field0008 >= 200) actionBufferedInput = history[field0260];
             if (field0008 >= 163 && field0008 <= 166) {
-                field01a9 = history[field0260];
-                field01aa = 15;
+                stateGroupCBufferedInput = history[field0260];
+                stateGroupCBufferFrames = 15;
             }
         }
         ++field0260;

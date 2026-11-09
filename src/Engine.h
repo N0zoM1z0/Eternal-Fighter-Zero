@@ -283,9 +283,11 @@ public:
     int buttonHeld[4];
     // AI-held absolute horizontal direction, decremented every CPU frame.
     int cpuMoveRightFrames, cpuMoveLeftFrames;
-    unsigned char field01a8;
-    unsigned char field01a9;
-    unsigned char field01aa;
+    // Preserve a sampled direction/button mask while an attack action is active.
+    unsigned char actionBufferedInput;
+    // States 163-166 preserve the same mask for up to 15 action-select frames.
+    unsigned char stateGroupCBufferedInput;
+    unsigned char stateGroupCBufferFrames;
     unsigned char history[180];
     unsigned char unknown_025f[0x1];
     short field0260;

@@ -54,8 +54,8 @@ void Secondary::InitializeState()
     comboDamageScaleDisplay = 10000.0;
     attackWasGuarded = 0;
     field0180 = 1.0;
-    field01a8 = 0;
-    field01a9 = 0;
+    actionBufferedInput = 0;
+    stateGroupCBufferedInput = 0;
     field0262 = 99;
     field0260 = 0;
     for (i = 0; i < 180; ++i) history[i] = 0;

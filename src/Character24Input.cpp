@@ -4,16 +4,16 @@
 void Character24::Slot04()
 {
     if (field0008 < 200) {
-        field01a8 = 0;
+        actionBufferedInput = 0;
     }
-    if (field01aa <= 0) {
-        field01a9 = 0;
+    if (stateGroupCBufferFrames <= 0) {
+        stateGroupCBufferedInput = 0;
     }
     else {
-        --field01aa;
+        --stateGroupCBufferFrames;
     }
-    if (field01a9 == '\0') {
-        field01aa = 0;
+    if (stateGroupCBufferedInput == '\0') {
+        stateGroupCBufferFrames = 0;
     }
     if (positionY == 0.0) {
         field3458 = 0;
@@ -218,7 +218,7 @@ void Character24::Slot04()
                 FaceOpponent();
                 ++airDashCount;
                 ++airActionCount;
-                field01a8 = 0;
+                actionBufferedInput = 0;
                 return;
             }
             if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) > 0.0) ||
@@ -233,7 +233,7 @@ void Character24::Slot04()
                 FaceOpponent();
                 ++airDashCount;
                 ++airActionCount;
-                field01a8 = 0;
+                actionBufferedInput = 0;
                 return;
             }
         }
@@ -248,7 +248,7 @@ void Character24::Slot04()
                 field0008 = 0xa3;
                 FaceOpponent();
                 ++dashMomentumFlag;
-                field01a8 = 0;
+                actionBufferedInput = 0;
                 return;
             }
             if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) > 0.0) ||
@@ -261,7 +261,7 @@ void Character24::Slot04()
                 field0008 = 0xa4;
                 FaceOpponent();
                 ++dashMomentumFlag;
-                field01a8 = 0;
+                actionBufferedInput = 0;
                 return;
             }
         }
@@ -279,7 +279,7 @@ void Character24::Slot04()
         if ((int)inputX == -(int)facing) field0008 = 0x10;
         return;
     }
-    if (((buttonPulse[0] == '\x01') || ((field01a8 & 0x10) != 0)) || ((field01a9 & 0x10) != 0)) {
+    if (((buttonPulse[0] == '\x01') || ((actionBufferedInput & 0x10) != 0)) || ((stateGroupCBufferedInput & 0x10) != 0)) {
         if ((field0008 == 0xa3) && ((int)inputX != -(int)facing)) {
             ResetPose();
             ClearBufferedButtons();
@@ -296,7 +296,7 @@ void Character24::Slot04()
             }
             return;
         }
-        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) &&
+        if (((((inputY == '\x01') || ((actionBufferedInput & 4) != 0)) || ((stateGroupCBufferedInput & 4) != 0)) &&
             ((sequences[field0008].field0002 <= sequences[204].field0000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((attackCollisionResult >= 2
             && (attackCollisionResult != 6)))) || (field0008 < 200)))) {
@@ -305,7 +305,7 @@ void Character24::Slot04()
             field0008 = 0xcc;
             return;
         }
-        if (((((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) &&
+        if (((((inputY == '\0') || ((actionBufferedInput & 4) == 0)) || ((stateGroupCBufferedInput & 4) == 0)) &&
             ((sequences[field0008].field0002 <= sequences[200].field0000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((attackCollisionResult >= 2
             && (attackCollisionResult != 6)))) || (field0008 < 200)))) {
@@ -315,7 +315,7 @@ void Character24::Slot04()
             return;
         }
     }
-    if (((buttonPulse[1] == '\x01') || ((field01a8 & 0x20) != 0)) || ((field01a9 & 0x20) != 0)) {
+    if (((buttonPulse[1] == '\x01') || ((actionBufferedInput & 0x20) != 0)) || ((stateGroupCBufferedInput & 0x20) != 0)) {
         if ((field0008 == 0xa3) && ((int)inputX != -(int)facing)) {
             ResetPose();
             ClearBufferedButtons();
@@ -332,7 +332,7 @@ void Character24::Slot04()
             }
             return;
         }
-        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) &&
+        if (((((inputY == '\x01') || ((actionBufferedInput & 4) != 0)) || ((stateGroupCBufferedInput & 4) != 0)) &&
             ((sequences[field0008].field0002 <= sequences[205].field0000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((attackCollisionResult >= 2
             && (attackCollisionResult != 6)))) || (field0008 < 200)))) {
@@ -341,7 +341,7 @@ void Character24::Slot04()
             field0008 = 0xcd;
             return;
         }
-        if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
+        if (((inputY == '\0') || ((actionBufferedInput & 4) == 0)) || ((stateGroupCBufferedInput & 4) == 0)) {
             if ((((sequences[field0008].field0002 <= sequences[201].field0000) &&
                 ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((positionX -
                 (*opponentSlot)->positionX > -70.0 && (positionX - (*opponentSlot)->positionX < 70.0)))) &&
@@ -361,7 +361,7 @@ void Character24::Slot04()
             }
         }
     }
-    if (((buttonPulse[2] == '\x01') || ((field01a8 & 0x40) != 0)) || ((field01a9 & 0x40) != 0)) {
+    if (((buttonPulse[2] == '\x01') || ((actionBufferedInput & 0x40) != 0)) || ((stateGroupCBufferedInput & 0x40) != 0)) {
         if ((field0008 == 0xa3) && ((int)inputX != -(int)facing)) {
             ResetPose();
             ClearBufferedButtons();
@@ -386,7 +386,7 @@ void Character24::Slot04()
             }
             return;
         }
-        if ((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) &&
+        if ((((inputY == '\x01') || ((actionBufferedInput & 4) != 0)) || ((stateGroupCBufferedInput & 4) != 0)) &&
             (((sequences[field0008].field0002 <= sequences[206].field0000 &&
             ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((field0008 >= 200 && ((attackCollisionResult >= 2
             && (attackCollisionResult != 6)))) || (field0008 < 200)))))) {
@@ -395,7 +395,7 @@ void Character24::Slot04()
             field0008 = 0xce;
             return;
         }
-        if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
+        if (((inputY == '\0') || ((actionBufferedInput & 4) == 0)) || ((stateGroupCBufferedInput & 4) == 0)) {
             if ((((inputX != '\0') && (positionX - (*opponentSlot)->positionX > -40.0)) && ((positionX -
                 (*opponentSlot)->positionX < 40.0 && (sequences[field0008].field0002 <= sequences[220].field0000))))
                 && (((((*opponentSlot)->field0008 < 0x32 || ((*opponentSlot)->field0008 > 0x9c)) &&
@@ -416,7 +416,7 @@ void Character24::Slot04()
             }
         }
     }
-    if (((((int)field015c < 2) && ((((buttonPulse[3] == '\x01' || ((field01a8 & 0x80) != 0)) || ((field01a9 & 0x80)
+    if (((((int)field015c < 2) && ((((buttonPulse[3] == '\x01' || ((actionBufferedInput & 0x80) != 0)) || ((stateGroupCBufferedInput & 0x80)
         != 0)) && ((sequences[field0008].field0002 <= sequences[179].field0000 &&
         ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))))) && (((field0008 >= 200 && ((attackCollisionResult >= 2
         && (attackCollisionResult != 6)))) || (field0008 < 200)))) && (field3458 <= 0)) {
