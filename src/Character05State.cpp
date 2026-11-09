@@ -670,8 +670,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -2.0) {
                 velocityY = -2.0;
             } else if (velocityY > -0.5) {
@@ -714,8 +714,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -4.0) {
                 velocityY = -4.0;
             } else if (velocityY > -0.5) {
@@ -758,8 +758,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -6.0) {
                 velocityY = -6.0;
             } else if (velocityY > -0.5) {
@@ -802,8 +802,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -841,8 +841,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -885,8 +885,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -2.0) {
                 velocityY = -2.0;
             } else if (velocityY > -0.5) {
@@ -934,8 +934,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -4.0) {
                 velocityY = -4.0;
             } else if (velocityY > -0.5) {
@@ -983,8 +983,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = velocityY * 0.75 + field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -1027,8 +1027,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -1065,8 +1065,8 @@ void Character05::Slot06()
             field0118 = field0118 - 1.5;
         }
         field0148 = field0148 + 3;
-        velocityX = field00c0;
-        velocityY = field00c8;
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
         ++field000c;
         if (CollisionSide() != 0) {
             field0008 = 0x46;
@@ -1096,8 +1096,8 @@ void Character05::Slot06()
             field0118 = field0118 - 1.5;
         }
         field0148 = field0148 + 3;
-        velocityX = field00c0;
-        velocityY = field00c8;
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -1164,8 +1164,8 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.072;
         }
         if (velocityY <= 0.0) {
@@ -1398,8 +1398,8 @@ void Character05::Slot06()
             effect.layer = 1;
             EmitLocalEffect(&effect);
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         velocityX = velocityX + 0.02;
@@ -1440,8 +1440,8 @@ void Character05::Slot06()
             field0148 = field0148 + 0x1e;
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if ((velocityY > 0.0) && (field000a == 4)) {
@@ -1596,8 +1596,8 @@ void Character05::Slot06()
                 field0118 = field0118 - 30.0;
             }
             field02c9 = 0x21;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             field0148 = field0148 + 0x1e;
         }
         velocityY = velocityY + 0.04;
@@ -1640,8 +1640,8 @@ void Character05::Slot06()
                     field0118 = field0118 - 30.0;
                 }
                 field02c9 = 0x21;
-                velocityX = field00c0;
-                velocityY = field00c8;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
                 field0148 = field0148 + 0x1e;
                 ++field3138;
             }
@@ -3060,8 +3060,8 @@ void Character05::Slot06()
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             (*opponentSlot)->field0008 = 0x3b;
             (*opponentSlot)->ResetPose();
-            (*opponentSlot)->field00c0 = -2.5;
-            (*opponentSlot)->field00c8 = -1.0;
+            (*opponentSlot)->knockbackVelocityX = -2.5;
+            (*opponentSlot)->knockbackVelocityY = -1.0;
             (*opponentSlot)->gravity = 0.035;
             velocityX = -1.8;
             velocityY = -1.9;
@@ -3682,8 +3682,8 @@ void Character05::Slot06()
             ApplyDamage(500,750.0);
             --field0174;
             --field00f4;
-            (*opponentSlot)->field00c0 = 0.8;
-            (*opponentSlot)->field00c8 = -3.2;
+            (*opponentSlot)->knockbackVelocityX = 0.8;
+            (*opponentSlot)->knockbackVelocityY = -3.2;
         }
         if (field000a < 4) {
             SetHorizontalOffset(0x32,3);
@@ -3751,8 +3751,8 @@ void Character05::Slot06()
             --field0174;
             --field00f4;
             (*opponentSlot)->facing = facing;
-            (*opponentSlot)->field00c0 = -4.0;
-            (*opponentSlot)->field00c8 = -0.8;
+            (*opponentSlot)->knockbackVelocityX = -4.0;
+            (*opponentSlot)->knockbackVelocityY = -0.8;
         }
         if (field000a < 4) {
             SetHorizontalOffset(0x32,3);
@@ -6358,8 +6358,8 @@ void Character05::Slot06()
                 (*opponentSlot)->positionY = -1.0;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->ResetFrame();
-                (*opponentSlot)->field00c0 = -1.2;
-                (*opponentSlot)->field00c8 = -2.0;
+                (*opponentSlot)->knockbackVelocityX = -1.2;
+                (*opponentSlot)->knockbackVelocityY = -2.0;
                 (*opponentSlot)->field0008 = 0x3b;
             }
             if (field000a >= frameCount) {
@@ -6551,8 +6551,8 @@ void Character05::Slot06()
                 gravity = 0.035;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->ResetFrame();
-                (*opponentSlot)->field00c0 = -1.8;
-                (*opponentSlot)->field00c8 = -2.3;
+                (*opponentSlot)->knockbackVelocityX = -1.8;
+                (*opponentSlot)->knockbackVelocityY = -2.3;
                 (*opponentSlot)->field0008 = 0x3b;
             }
             if (field000a >= frameCount) {
@@ -6745,8 +6745,8 @@ void Character05::Slot06()
                 gravity = 0.035;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->ResetFrame();
-                (*opponentSlot)->field00c0 = -1.8;
-                (*opponentSlot)->field00c8 = -2.3;
+                (*opponentSlot)->knockbackVelocityX = -1.8;
+                (*opponentSlot)->knockbackVelocityY = -2.3;
                 (*opponentSlot)->field0008 = 0x3b;
             }
             if (field000a >= frameCount) {

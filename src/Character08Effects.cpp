@@ -1381,8 +1381,8 @@ void Character08::Slot07()
                     (*opponentSlot)->field0008 = 0x3f;
                     (*opponentSlot)->field000a = 0;
                     (*opponentSlot)->field000c = 0;
-                    (*opponentSlot)->field00c0 = -0.2;
-                    (*opponentSlot)->field00c8 = -1.0;
+                    (*opponentSlot)->knockbackVelocityX = -0.2;
+                    (*opponentSlot)->knockbackVelocityY = -1.0;
                     (*opponentSlot)->field0128 = 1;
                     effect.type = 0x34;
                     effect.x = (double)(int(effects[i].x));

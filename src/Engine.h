@@ -223,7 +223,7 @@ public:
     unsigned char unknown_00ad[0x3];
     double velocityXCorrection;
     double outgoingPushbackVelocityX;
-    double field00c0, field00c8;
+    double knockbackVelocityX, knockbackVelocityY;
     int field00d0;
     unsigned char unknown_00d4[8];
     short field00dc;

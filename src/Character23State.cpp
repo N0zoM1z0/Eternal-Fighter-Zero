@@ -675,9 +675,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -2.0) {
                 velocityY = -2.0;
             } else if (velocityY > -0.5) {
@@ -720,9 +720,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -4.0) {
                 velocityY = -4.0;
             } else if (velocityY > -0.5) {
@@ -765,9 +765,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -6.0) {
                 velocityY = -6.0;
             } else if (velocityY > -0.5) {
@@ -810,9 +810,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -850,8 +850,8 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -894,9 +894,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -2.0) {
                 velocityY = -2.0;
             } else if (velocityY > -0.5) {
@@ -944,9 +944,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             if (velocityY < -4.0) {
                 velocityY = -4.0;
             } else if (velocityY > -0.5) {
@@ -994,9 +994,9 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
+            velocityX = knockbackVelocityX;
             velocityY =
-            velocityY * 0.75 + field00c8;
+            velocityY * 0.75 + knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -1039,8 +1039,8 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {
@@ -1077,8 +1077,8 @@ void Character23::Slot06()
             field0118 = field0118 - 1.5;
         }
         field0148 = field0148 + 3;
-        velocityX = field00c0;
-        velocityY = field00c8;
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
         ++field000c;
         if (CollisionSide() != 0) {
             field0008 = 0x46;
@@ -1108,8 +1108,8 @@ void Character23::Slot06()
             field0118 = field0118 - 1.5;
         }
         field0148 = field0148 + 3;
-        velocityX = field00c0;
-        velocityY = field00c8;
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
             field000c = 0;
@@ -1176,8 +1176,8 @@ void Character23::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.072;
         }
         if (velocityY <= 0.0) {
@@ -1416,8 +1416,8 @@ void Character23::Slot06()
             effect.layer = 1;
             EmitLocalEffect(&effect);
             field0148 = field0148 + 0x1e;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         velocityX = velocityX + 0.02;
@@ -1458,8 +1458,8 @@ void Character23::Slot06()
             field0148 = field0148 + 0x1e;
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if ((velocityY > 0.0) && (field000a == 4)) {
@@ -1614,8 +1614,8 @@ void Character23::Slot06()
                 field0118 = field0118 - 30.0;
             }
             field02c9 = 0x21;
-            velocityX = field00c0;
-            velocityY = field00c8;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             field0148 = field0148 + 0x1e;
         }
         velocityY = velocityY + 0.04;
@@ -1658,8 +1658,8 @@ void Character23::Slot06()
                     field0118 = field0118 - 30.0;
                 }
                 field02c9 = 0x21;
-                velocityX = field00c0;
-                velocityY = field00c8;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
                 field0148 = field0148 + 0x1e;
                 ++field3138;
             }
@@ -3163,8 +3163,8 @@ void Character23::Slot06()
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x3b;
-            (*opponentSlot)->field00c0 = 2.0;
-            (*opponentSlot)->field00c8 = -1.0;
+            (*opponentSlot)->knockbackVelocityX = 2.0;
+            (*opponentSlot)->knockbackVelocityY = -1.0;
             (*opponentSlot)->gravity = 0.035;
             (*opponentSlot)->positionY = -59.0;
             (*opponentSlot)->positionX =
@@ -3371,8 +3371,8 @@ void Character23::Slot06()
             (*opponentSlot)->field0008 = 0x3f;
             ApplyDamage(0x4b0,500.0);
             (*opponentSlot)->ResetPose();
-            (*opponentSlot)->field00c0 = -2.0;
-            (*opponentSlot)->field00c8 = 0.0;
+            (*opponentSlot)->knockbackVelocityX = -2.0;
+            (*opponentSlot)->knockbackVelocityY = 0.0;
         }
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
             gravity = 0.035;

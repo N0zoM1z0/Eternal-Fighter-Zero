@@ -964,8 +964,8 @@ void Character24::Slot07()
                     effects[i].x;
                     (*opponentSlot)->ResetPose();
                     (*opponentSlot)->ResetFrame();
-                    (*opponentSlot)->field00c0 = -6.0;
-                    (*opponentSlot)->field00c8 = 4.0;
+                    (*opponentSlot)->knockbackVelocityX = -6.0;
+                    (*opponentSlot)->knockbackVelocityY = 4.0;
                     (*opponentSlot)->facing = -effects[i].flag0048;
                 }
                 if ((effects[i].frame == 2) ||
@@ -1170,8 +1170,8 @@ void Character24::Slot07()
                             effects[i].layer = 1;
                             (*opponentSlot)->field0008 = 0x47;
                             (*opponentSlot)->ResetPose();
-                            (*opponentSlot)->field00c8 = -13.0;
-                            (*opponentSlot)->field00c0 = 0.0;
+                            (*opponentSlot)->knockbackVelocityY = -13.0;
+                            (*opponentSlot)->knockbackVelocityX = 0.0;
                             if (effects[i].frame == 8) {
                                 ApplyDamage(0x708,50.0);
                                 effects[i].frame = 0xf;
@@ -1194,8 +1194,8 @@ void Character24::Slot07()
                             effects[i].group = 1;
                             (*opponentSlot)->field0008 = 0x3b;
                             (*opponentSlot)->ResetPose();
-                            (*opponentSlot)->field00c8 = -2.0;
-                            (*opponentSlot)->field00c0 = 0.0;
+                            (*opponentSlot)->knockbackVelocityY = -2.0;
+                            (*opponentSlot)->knockbackVelocityX = 0.0;
                         }
                     }
                     if (((((effects[i].frame == 8 || effects[i].frame == 11) && effects[i].tick == 345) ||
@@ -1893,8 +1893,8 @@ void Character24::Slot07()
                         (*opponentSlot)->field000a = 0;
                         (*opponentSlot)->field000c = 0;
                         (*opponentSlot)->facing = -effects[i].flag0048;
-                        (*opponentSlot)->field00c0 = -2.1;
-                        (*opponentSlot)->field00c8 = -1.5;
+                        (*opponentSlot)->knockbackVelocityX = -2.1;
+                        (*opponentSlot)->knockbackVelocityY = -1.5;
                         (*opponentSlot)->field0008 = 0x40;
                         ApplyDamage(0x4b0,750.0);
                     }
