@@ -162,7 +162,7 @@ void Character15::Slot08()
                 }
             }
             spawn.x = (double)(int(positionX) + (20 - (unsigned short)RandomRange(0, 40)) * facing);
-            spawn.y = (double)(int(field0028) - (unsigned short)RandomRange(0, 90));
+            spawn.y = (double)(int(positionY) - (unsigned short)RandomRange(0, 90));
             spawn.group = 2;
             spawn.layer = 1;
             contextOwner->EmitEffect(&spawn);

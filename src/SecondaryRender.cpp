@@ -39,7 +39,7 @@ void Secondary::Render(int offsetX, int offsetY)
                     source.bottom = frame.height;
                     destination.left = int(positionX) + offsetX - frame.u * (facing == 1)
                     - (frame.width - frame.u) * (facing == -1);
-                    destination.top = int(field0028) + 210 - (field0028 < 0.0) - frame.v + offsetY;
+                    destination.top = int(positionY) + 210 - (positionY < 0.0) - frame.v + offsetY;
                     destination.right = frame.width + destination.left;
                     destination.bottom = frame.height + destination.top;
                     if (destination.top < 240) {

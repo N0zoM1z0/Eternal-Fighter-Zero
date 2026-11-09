@@ -7,7 +7,7 @@ int Secondary::CanGuard(const SecondaryFrame *attack, const SecondaryFrame *defe
     if (field013a > 0) return 0;
     if ((attack->field00aa & 0x80) > 0) return 0;
     if ((defense->field00b0 & 0x10) == 0) return 0;
-    if ((attack->field00aa & 4) == 0 && field0028 < 0.0 && field014e < 30) return 0;
+    if ((attack->field00aa & 4) == 0 && positionY < 0.0 && field014e < 30) return 0;
     if (GuardInput(attack) == 0) return 0;
     return 1;
 }
@@ -22,20 +22,20 @@ int Secondary::GuardInput(const SecondaryFrame *attack)
             if ((attack->field00aa & 1) == 0) inputY = 1;
             else if ((attack->field00aa & 2) == 0) inputY = 0;
         }
-        if (((attack->field00aa & 2) == 0 && inputY == 1 && field0028 == 0.0)
-        || ((attack->field00aa & 1) == 0 && inputY != 1 && field0028 == 0.0)) return 0;
+        if (((attack->field00aa & 2) == 0 && inputY == 1 && positionY == 0.0)
+        || ((attack->field00aa & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
     } else {
         if (inputX != 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && (IsStateGroupA() == 0 || inputX == 0)) return 0;
-        if (((attack->field00aa & 2) == 0 && inputY == 1 && field0028 == 0.0)
-        || ((attack->field00aa & 1) == 0 && inputY != 1 && field0028 == 0.0)) return 0;
+        if (((attack->field00aa & 2) == 0 && inputY == 1 && positionY == 0.0)
+        || ((attack->field00aa & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
     }
     return 1;
 }
 
 int Secondary::AirActionReady()
 {
-    return (field0124 <= 0 && field0028 < 0.0 && field0128 == 0 && IsStateGroupB() != 0) ? 1 : 0;
+    return (field0124 <= 0 && positionY < 0.0 && field0128 == 0 && IsStateGroupB() != 0) ? 1 : 0;
 }
 
 int Secondary::IsStateGroupC()

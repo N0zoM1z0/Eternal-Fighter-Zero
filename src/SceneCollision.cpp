@@ -10,13 +10,13 @@ SurfaceRect Scene3::TransformPoseBox(const SecondaryPose *pose, const SurfaceRec
         {
             short offsetY = pose->patterns[pose->field0008].frames[pose->field000a].v;
             if (pose->facing == 1) {
-                result.top = (int)(pose->field0028 - offsetY + box->top);
-                result.bottom = (int)(pose->field0028 - offsetY + box->bottom);
+                result.top = (int)(pose->positionY - offsetY + box->top);
+                result.bottom = (int)(pose->positionY - offsetY + box->bottom);
                 result.left = (int)(pose->positionX - 0.5 - offsetX + box->left);
                 result.right = (int)(pose->positionX - 0.5 - offsetX + box->right);
             } else {
-                result.top = (int)(pose->field0028 - offsetY + box->top);
-                result.bottom = (int)(pose->field0028 - offsetY + box->bottom);
+                result.top = (int)(pose->positionY - offsetY + box->top);
+                result.bottom = (int)(pose->positionY - offsetY + box->bottom);
                 result.left = (int)(pose->positionX + 0.5 + offsetX - box->right);
                 result.right = (int)(pose->positionX + 0.5 + offsetX - box->left);
             }
@@ -68,12 +68,12 @@ void Scene3::DispatchCollisions()
     pass.first.frame = secondary[0]->sequences[secondary[0]->field0008].data[secondary[0]->field000a];
     pass.first.sprite = secondary[0]->patterns[secondary[0]->field0008].frames[secondary[0]->field000a];
     pass.first.x = secondary[0]->positionX;
-    pass.first.y = secondary[0]->field0028;
+    pass.first.y = secondary[0]->positionY;
     pass.first.facing = secondary[0]->facing;
     pass.second.frame = secondary[1]->sequences[secondary[1]->field0008].data[secondary[1]->field000a];
     pass.second.sprite = secondary[1]->patterns[secondary[1]->field0008].frames[secondary[1]->field000a];
     pass.second.x = secondary[1]->positionX;
-    pass.second.y = secondary[1]->field0028;
+    pass.second.y = secondary[1]->positionY;
     pass.second.facing = secondary[1]->facing;
     pass.firstResult = TestBodyInteraction(secondary[0], secondary[1], &pass.first, &pass.second);
     pass.secondResult = TestBodyInteraction(secondary[1], secondary[0], &pass.second, &pass.first);

@@ -73,21 +73,21 @@ void Scene3::UpdateCamera()
         field044c += field0450;
         if (field044c > field0444) field044c = field0444;
     }
-    if (secondary[0]->field0028 < -240.0 || secondary[1]->field0028 < -240.0) {
+    if (secondary[0]->positionY < -240.0 || secondary[1]->positionY < -240.0) {
         field044c = field0444;
     } else {
         field044c = 20;
     }
     if (contextOwner->state14244 > 0) {
-        field044c = contextOwner->state1423c * (1 - (secondary[0]->field0028 < secondary[1]->field0028) * 2);
+        field044c = contextOwner->state1423c * (1 - (secondary[0]->positionY < secondary[1]->positionY) * 2);
         if (secondary[0]->field014a == 0 && secondary[1]->field014a == 0 &&
             secondary[0]->field014c == 0 && secondary[1]->field014c == 0) {
             --contextOwner->state14244;
         }
     }
-    y = -(((int)secondary[0]->field0028 - (secondary[0]->field0028 < 0.0) + (int)secondary[1]->field0028 - (secondary[1]->field0028 < 0.0)) / 2)
-        + (((int)secondary[0]->field0028 - (secondary[0]->field0028 < 0.0) - (int)secondary[1]->field0028 + (secondary[1]->field0028 < 0.0)) * field044c / 100)
-          * ((secondary[0]->field0028 - secondary[1]->field0028 < 0.0) * 2 - 1);
+    y = -(((int)secondary[0]->positionY - (secondary[0]->positionY < 0.0) + (int)secondary[1]->positionY - (secondary[1]->positionY < 0.0)) / 2)
+        + (((int)secondary[0]->positionY - (secondary[0]->positionY < 0.0) - (int)secondary[1]->positionY + (secondary[1]->positionY < 0.0)) * field044c / 100)
+          * ((secondary[0]->positionY - secondary[1]->positionY < 0.0) * 2 - 1);
     if (y < 0) y = 0;
     else if (y > 240) y = 240;
     if (field0458 < y) {

@@ -90,7 +90,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 contextOwner->EmitEffect(&effect);
                                 second->ResetPose();
                                 second->FaceOpponent();
-                                if (second->field0028 == 0.0) {
+                                if (second->positionY == 0.0) {
                                     second->field0008 = 0xa8 + (second->inputY == 1);
                                 } else {
                                     second->field0008 = 0xaa;
@@ -100,7 +100,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field014c = 0x3c;
                                 second->field0170 = 0;
                                 first->field0170 = 1;
-                            } else if ((((second->field014e >= 0x1e) && (second->field0028 < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
+                            } else if ((((second->field014e >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
@@ -122,7 +122,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->ClearInputHistory();
                                 second->field014c = 0x3c;
                                 first->field0170 = 1;
-                            } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->field014e >= 0x1e)) && ((second->field0028 == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
+                            } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->field014e >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.field00b6;
                                 --first->field016c;
@@ -191,7 +191,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0134 > 360.0f) {
                                     second->field0134 = 360.0f;
                                 }
-                            } else if ((((work.secondFrame.field00b0 & 0x200) > 0) && ((((work.secondFrame.field00aa & 4) > 0) && ((work.firstFrame.field00aa & 4) > 0)) && (second->field0028 < 0.0)))) {
+                            } else if ((((work.secondFrame.field00b0 & 0x200) > 0) && ((((work.secondFrame.field00aa & 4) > 0) && ((work.firstFrame.field00aa & 4) > 0)) && (second->positionY < 0.0)))) {
                                 --first->field016c;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -226,7 +226,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 ((work.firstFrame.field00aa & 0x10) / 16) + 0x96 +
                                 ((work.firstFrame.field00aa & 0x20) / 32) * 2 + (((second->inputY == '\x01') ||
                                     (((work.firstFrame.field00aa & work.secondFrame.field00b0 & 5) == 0 && (second->cpuControlled != 0)))) ? 1 : 0) * 3;
-                                if (second->field0028 < 0.0) {
+                                if (second->positionY < 0.0) {
                                     second->field0008 = 0x9c;
                                 }
                                 second->ResetPose();
@@ -258,7 +258,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (((work.secondFrame.field00b0 & 4) == 0 && second->field0138 == 0) ||
                                     (((work.secondFrame.field00b0 & 4) > 0 || second->field0138 > 0) && (work.firstFrame.field00aa & 0x100) > 0) ||
                                     (work.firstFrame.field00aa & 0x40) > 0) {
-                                    if (second->field0028 >= 0.0) {
+                                    if (second->positionY >= 0.0) {
                                         if (work.firstFrame.field00ae > 0) {
                                             second->field0008 = work.firstFrame.field00ae;
                                         } else if ((work.secondFrame.field00b0 & 3) == 3) {

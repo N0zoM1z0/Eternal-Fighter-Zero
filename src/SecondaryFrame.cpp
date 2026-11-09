@@ -38,7 +38,7 @@ void Secondary::DispatchState()
 void Secondary::CheckAirAction()
 {
     if (field0124 > 0) --field0124;
-    else if (field0028 < 0.0 && field0128 == 0
+    else if (positionY < 0.0 && field0128 == 0
     && (buttonPulse[0] != 0 || buttonPulse[1] != 0 || buttonPulse[2] != 0 || buttonPulse[3] != 0)) {
         if (inputX == facing) {
             if (field0008 != 157) ResetPose();
@@ -54,9 +54,9 @@ void Secondary::UpdateMovement()
 {
     int i = effectRead;
     if (field014a == 0 && (*opponentSlot)->field014c == 0) {
-        if ((CollisionSide() * facing) * (field0030 + field00b0 + (*opponentSlot)->field00b8
+        if ((CollisionSide() * facing) * (velocityX + field00b0 + (*opponentSlot)->field00b8
         * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) >= 0.0) {
-            positionX = (field0030 + field00b0 + (*opponentSlot)->field00b8
+            positionX = (velocityX + field00b0 + (*opponentSlot)->field00b8
             * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) * facing + positionX;
         }
         if (positionX < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0)) {
@@ -66,8 +66,8 @@ void Secondary::UpdateMovement()
                 positionX = 619 - ((*opponentSlot)->CollisionSide() == -1 && (*opponentSlot)->positionX >= 619.0);
             }
         }
-        field0028 = field0028 + field0038;
-        if (field0028 > 0.0) field0028 = 0.0;
+        positionY = positionY + velocityY;
+        if (positionY > 0.0) positionY = 0.0;
     }
     while (i != effectWrite) {
         if (effectActive[i] != 0 && (field014c <= 0 || effects[i].field0088 != 0)
@@ -88,7 +88,7 @@ void Secondary::UpdateTimers()
         if (field014a > 0) --field014a;
         else field014a = 0;
         if (IsStateGroupA() == 0) {
-            if (IsStateGroupB() != 0) field0134 -= float(1.0 / ((field0028 == 0.0) * 4 + 1));
+            if (IsStateGroupB() != 0) field0134 -= float(1.0 / ((positionY == 0.0) * 4 + 1));
             else field0134 -= 0.075f;
             if (field0134 < 0.0f) field0134 = 0.0f;
         }

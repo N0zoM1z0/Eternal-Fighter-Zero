@@ -3,11 +3,11 @@
 
 void Secondary::UpdateLocomotionState()
 {
-    if (field0028 == 0.0) {
+    if (positionY == 0.0) {
         field0159 = 0;
         field015a = 0;
     }
-    if (field0028 >= 0.0 && field0008 != 4 && field0008 != 5 && field0008 != 6
+    if (positionY >= 0.0 && field0008 != 4 && field0008 != 5 && field0008 != 6
     && field0008 != 10 && field0008 != 11 && field0008 != 12) {
         if (field015c < 3 && inputY == -1) {
             FaceOpponent();

@@ -84,7 +84,7 @@ void SecondaryTrail::Capture(const SecondaryPose *pose)
     stride = pending;
     held = 0;
     x[position] = pose->positionX;
-    y[position] = pose->field0028;
+    y[position] = pose->positionY;
     facing[position] = pose->facing;
     type[position] = pose->field0008;
     frame[position] = pose->field000a;
@@ -97,7 +97,7 @@ void SecondaryTrail::Begin(const SecondaryPose *pose, unsigned char spacing)
     if (pending == 0 && held == 0) {
         for (int i = 0; i < 60; ++i) {
             x[i] = pose->positionX;
-            y[i] = pose->field0028;
+            y[i] = pose->positionY;
             facing[i] = pose->facing;
             type[i] = pose->field0008;
             frame[i] = pose->field000a;

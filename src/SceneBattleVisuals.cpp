@@ -57,7 +57,7 @@ void Scene3::RenderShadows()
             work.destination.left = (int)secondary[work.player]->positionX + field045c
             - work.frame->u * (secondary[work.player]->facing == 1)
             - (work.frame->width - work.frame->u) * (secondary[work.player]->facing == -1);
-            work.destination.top = (210 - ((int)secondary[work.player]->field0028 - (secondary[work.player]->field0028 < 0.0))) + field0460 + work.offset;
+            work.destination.top = (210 - ((int)secondary[work.player]->positionY - (secondary[work.player]->positionY < 0.0))) + field0460 + work.offset;
             work.destination.right = work.frame->width + work.destination.left;
             work.destination.bottom = work.height / 3 + work.destination.top;
             if (work.destination.top < 240 && work.destination.bottom > 0) {

@@ -68,7 +68,7 @@ void Character24::Slot07()
                 }
                 effects[i].x =
                 (double)(facing * 0x25) + positionX;
-                effects[i].y = field0028 - 72.0;
+                effects[i].y = positionY - 72.0;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
@@ -82,7 +82,7 @@ void Character24::Slot07()
             case 0x195:
                 effects[i].x =
                 (double)((int)facing << 2) + positionX;
-                effects[i].y = field0028 + 5.0;
+                effects[i].y = positionY + 5.0;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
@@ -385,7 +385,7 @@ void Character24::Slot07()
                     {
                         (*opponentSlot)->ResetPose();
                         (*opponentSlot)->ResetFrame();
-                        (*opponentSlot)->field0028 = -480.0;
+                        (*opponentSlot)->positionY = -480.0;
                         (*opponentSlot)->positionX = positionX;
                         (*opponentSlot)->field0008 = 0x3b;
                     }
@@ -439,7 +439,7 @@ void Character24::Slot07()
                     {
                         (*opponentSlot)->ResetPose();
                         (*opponentSlot)->ResetFrame();
-                        (*opponentSlot)->field0028 = -480.0;
+                        (*opponentSlot)->positionY = -480.0;
                         (*opponentSlot)->positionX = positionX;
                         (*opponentSlot)->field0008 = 0x3b;
                     }
@@ -448,7 +448,7 @@ void Character24::Slot07()
             case 0x1a3:
                 if ((effects[i].frame >= 4) &&
                     (effects[i].frame < 0x25)) {
-                    field3348[i] = (int(VectorAngle( (*opponentSlot)->positionX - effects[i].x, ((*opponentSlot)->field0028 - 50.0 ) - effects[i].y)));
+                    field3348[i] = (int(VectorAngle( (*opponentSlot)->positionX - effects[i].x, ((*opponentSlot)->positionY - 50.0 ) - effects[i].y)));
                     effects[i].SetVelocityPolar((double)field3348[i],
                         -0.00875);
                     effects[i].ax =
@@ -508,7 +508,7 @@ void Character24::Slot07()
                     {
                         (*opponentSlot)->ResetPose();
                         (*opponentSlot)->ResetFrame();
-                        (*opponentSlot)->field0028 = -480.0;
+                        (*opponentSlot)->positionY = -480.0;
                         (*opponentSlot)->positionX = positionX;
                         (*opponentSlot)->field0008 = 0x3b;
                     }
@@ -569,7 +569,7 @@ void Character24::Slot07()
                     {
                         (*opponentSlot)->ResetPose();
                         (*opponentSlot)->ResetFrame();
-                        (*opponentSlot)->field0028 = -480.0;
+                        (*opponentSlot)->positionY = -480.0;
                         (*opponentSlot)->positionX = positionX;
                         (*opponentSlot)->field0008 = 0x3b;
                     }
@@ -958,7 +958,7 @@ void Character24::Slot07()
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
                     (*opponentSlot)->field0008 = 0x45;
-                    (*opponentSlot)->field0028 =
+                    (*opponentSlot)->positionY =
                     effects[i].y - 81.0;
                     (*opponentSlot)->positionX =
                     effects[i].x;
@@ -972,7 +972,7 @@ void Character24::Slot07()
                     (effects[i].frame == 3)) {
                     --field3138;
                 }
-                if ((((*opponentSlot)->field0028 == 0.0) &&
+                if ((((*opponentSlot)->positionY == 0.0) &&
                     (field3348[i] == 0)) &&
                     (effects[i].frame == 2)) {
                     ApplyDamage(0x170c,500.0);
@@ -1264,7 +1264,7 @@ void Character24::Slot07()
             case 0x1bb:
                 effects[i].x =
                 positionX - (double)(facing * 7);
-                effects[i].y = field0028 - 41.0;
+                effects[i].y = positionY - 41.0;
                 if (field0008 != 0xcf) {
                     RemoveLocalEffect((short)i);
                 }
@@ -1838,11 +1838,11 @@ void Character24::Slot07()
                 }
                 if ((effects[i].frame == 1) &&
                     (0.0 <
-                    (*opponentSlot)->field0028 -
+                    (*opponentSlot)->positionY -
                     effects[i].y)) {
                     spawn.type = 0;
                     spawn.x = (double)((int(positionX)) + facing * 0x25);
-                    spawn.y = (double)((int(field0028)) + -0x2a);
+                    spawn.y = (double)((int(positionY)) + -0x2a);
                     spawn.group = 2;
                     spawn.layer = 1;
                     contextOwner->EmitEffect(&spawn);
@@ -1855,7 +1855,7 @@ void Character24::Slot07()
                     effects[i].tick = 0;
                 }
                 if (effects[i].frame == 2) {
-                    (*opponentSlot)->field0028 =
+                    (*opponentSlot)->positionY =
                     effects[i].y - 50.0;
                     (*opponentSlot)->positionX =
                     effects[i].x;
@@ -1879,7 +1879,7 @@ void Character24::Slot07()
                     (effects[i].frame < 6)) &&
                     (field3148[i] == 0)) {
                     effects[i].vx = 2.1;
-                    (*opponentSlot)->field0028 =
+                    (*opponentSlot)->positionY =
                     effects[i].y - 50.0;
                     (*opponentSlot)->positionX =
                     effects[i].x;
@@ -1994,7 +1994,7 @@ void Character24::Slot07()
             case 0x1cc:
                 effects[i].x =
                 (double)(facing * 0x38) + positionX;
-                effects[i].y = field0028 - 44.0;
+                effects[i].y = positionY - 44.0;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
@@ -2030,70 +2030,70 @@ void Character24::Slot07()
                     (field0008 == 83 && field000a > 1) || (field0008 == 84 && field000a > 1)) {
                     spawn.type = 0x1f1;
                     spawn.x = (double)((int(positionX)) + facing * 0x17);
-                    spawn.y = (double)((int(field0028)) + -4);
+                    spawn.y = (double)((int(positionY)) + -4);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
                     spawn.x = (double)((int(positionX)) - facing * 4);
-                    spawn.y = (double)((int(field0028)) + -6);
+                    spawn.y = (double)((int(positionY)) + -6);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
                     spawn.x = (double)((int(positionX)) - facing * 0xe);
-                    spawn.y = (double)((int(field0028)) + -0x1a);
+                    spawn.y = (double)((int(positionY)) + -0x1a);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
                     spawn.x = (double)(int(positionX));
-                    spawn.y = (double)(int(field0028));
+                    spawn.y = (double)(int(positionY));
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
                     spawn.x = (double)((int(positionX)) + facing * 0x1e);
-                    spawn.y = (double)((int(field0028)) + -0x28);
+                    spawn.y = (double)((int(positionY)) + -0x28);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
                     spawn.x = (double)((int(positionX)) - facing * 0x19);
-                    spawn.y = (double)((int(field0028)) + -0x50);
+                    spawn.y = (double)((int(positionY)) + -0x50);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
                     spawn.x = (double)((int(positionX)) - facing * 0x23);
-                    spawn.y = (double)((int(field0028)) + -0x2a);
+                    spawn.y = (double)((int(positionY)) + -0x2a);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
                     spawn.x = (double)((int(positionX)) - facing * 0x12);
-                    spawn.y = (double)((int(field0028)) + -0x14);
+                    spawn.y = (double)((int(positionY)) + -0x14);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
                     spawn.x = (double)((int(positionX)) + facing * 2);
-                    spawn.y = (double)((int(field0028)) + -0x41);
+                    spawn.y = (double)((int(positionY)) + -0x41);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
                     spawn.x = (double)((int(positionX)) + facing * 0x10);
-                    spawn.y = (double)((int(field0028)) + -0x50);
+                    spawn.y = (double)((int(positionY)) + -0x50);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
@@ -2192,7 +2192,7 @@ void Character24::Slot07()
                 break;
             case 499:
                 effects[i].x = positionX;
-                effects[i].y = field0028;
+                effects[i].y = positionY;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;

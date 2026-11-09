@@ -181,8 +181,8 @@ public:
     unsigned char colorKey;
     unsigned char unknown_001b[5];
     double positionX;
-    double field0028;
-    double field0030, field0038, field0040, field0048;
+    double positionY;
+    double velocityX, velocityY, field0040, field0048;
     char facing;
     unsigned char unknown_0051[0x7];
     char field0058;

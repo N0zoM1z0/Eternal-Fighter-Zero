@@ -3,8 +3,8 @@
 
 void Secondary::ResetFrame()
 {
-    field0030 = 0.0;
-    field0038 = 0.0;
+    velocityX = 0.0;
+    velocityY = 0.0;
     field0040 = 0.0;
     field0048 = 0.0;
     field00b8 = 0.0;
@@ -14,7 +14,7 @@ void Secondary::InitializeState()
 {
     int i;
     positionX = player * 160 + 240;
-    field0028 = 0.0;
+    positionY = 0.0;
     facing = 1 - player * 2;
     ResetFrame();
     field00b0 = 0.0;

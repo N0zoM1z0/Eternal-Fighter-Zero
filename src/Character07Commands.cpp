@@ -66,7 +66,7 @@ void Character07::Slot02()
         if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x01')) {
             stage = '\x02';
         }
-        if ((((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\0')) && (field0028 == 0.0)) {
+        if ((((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\0')) && (positionY == 0.0)) {
             stage = '\x01';
         }
     }

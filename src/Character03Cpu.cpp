@@ -21,7 +21,7 @@ void Character03::Slot05()
     buttonPulse[3] = 0;
     field014e = 0;
     if ((float)(unsigned short)RandomRange(0, 1000) <
-        25.0f * field00a8 + (field0028 < 0.0 ? 1 : 0) * 30 * field00a8 +
+        25.0f * field00a8 + (positionY < 0.0 ? 1 : 0) * 30 * field00a8 +
         (float)((field3114 == 3) * 400) + (float)((field0008 == 0xaa ? 1 : 0) * 300)) {
         field014e = 0x3c;
     }
@@ -42,7 +42,7 @@ void Character03::Slot05()
     }
     if ((*opponentSlot)->field0008 == 0x60) { return; }
     distance.forward = ((*opponentSlot)->positionX - positionX) * facing;
-    distance.vertical = fabs(field0028 - (*opponentSlot)->field0028);
+    distance.vertical = fabs(positionY - (*opponentSlot)->positionY);
     if (!( ((field0008 < 0x32) || (0x96 < field0008)) ||
         ((unsigned short)field000c != 0) )) {
         if ((float)(unsigned short)RandomRange(0, 100) < 8.0f * field00a8) {
@@ -59,14 +59,14 @@ void Character03::Slot05()
         return;
     }
     if (((field0008 >= 4 && field0008 <= 6) ||
-        (field0008 >= 10 && field0008 <= 12)) && field0028 == 0.0) { return; }
+        (field0008 >= 10 && field0008 <= 12)) && positionY == 0.0) { return; }
     if ((*opponentSlot)->field0008 >= 50 && (*opponentSlot)->field0008 < 150 &&
         field0008 == 264 && field016c > 1) { return; }
     if ((field0008 == 0xa8) && ((unsigned short)field000c < 6)) {
         if (((*opponentSlot)->field0008 != 200) &&
             (((((*opponentSlot)->field0008 != 0xcc &&
             ((*opponentSlot)->field0008 < 0xfa)) &&
-            ((*opponentSlot)->field0028 == 0.0)) &&
+            ((*opponentSlot)->positionY == 0.0)) &&
             ((*opponentSlot)->field016c == 0)))) {
             if ((distance.forward < 45.0) &&
                 (
@@ -87,7 +87,7 @@ void Character03::Slot05()
             ((*opponentSlot)->field0008 == 0xca)) ||
             ((*opponentSlot)->field0008 == 0xcd)) &&
             ((((*opponentSlot)->field0008 < 0xfa &&
-            ((*opponentSlot)->field0028 == 0.0)) &&
+            ((*opponentSlot)->positionY == 0.0)) &&
             (((*opponentSlot)->field016c == 0 && ((distance.forward > 60.0 && (distance.forward < 70.0)))
             ))))) &&
             ( (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f)) {
@@ -165,22 +165,22 @@ void Character03::Slot05()
             field3114 = 3;
             return;
         }
-        if (((field0028 - (*opponentSlot)->field0028 < 0.0) &&
-            (-40.0 < field0028 - (*opponentSlot)->field0028)) &&
+        if (((positionY - (*opponentSlot)->positionY < 0.0) &&
+            (-40.0 < positionY - (*opponentSlot)->positionY)) &&
             ((distance.forward < 80.0 &&
             ( (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)))) {
             buttonPulse[0] = 1;
             return;
         }
-        if (((0.0 < field0028 - (*opponentSlot)->field0028) &&
-            (field0028 - (*opponentSlot)->field0028 < 50.0)) &&
+        if (((0.0 < positionY - (*opponentSlot)->positionY) &&
+            (positionY - (*opponentSlot)->positionY < 50.0)) &&
             ((distance.forward < 100.0 &&
             ( (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)))) {
             buttonPulse[1] = 1;
             return;
         }
-        if ((((field0028 - (*opponentSlot)->field0028 < -20.0) &&
-            (-90.0 < field0028 - (*opponentSlot)->field0028)) &&
+        if ((((positionY - (*opponentSlot)->positionY < -20.0) &&
+            (-90.0 < positionY - (*opponentSlot)->positionY)) &&
             (distance.forward < 110.0)) &&
             ( (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f)) {
             buttonPulse[2] = 1;
@@ -196,7 +196,7 @@ void Character03::Slot05()
     if (((((*opponentSlot)->field0008 == 0xa8) ||
         ((*opponentSlot)->field0008 == 0xa9)) ||
         ((*opponentSlot)->field0008 == 0xaa)) &&
-        ((((field0028 == 0.0 &&
+        ((((positionY == 0.0 &&
         ( (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)) &&
         (field3114 != 2)) && ((*opponentSlot)->field014c == 0)))) {
         field3110 = (unsigned short)RandomRange(0, 100);
@@ -231,7 +231,7 @@ void Character03::Slot05()
     if (((((((*opponentSlot)->field0008 == 0xa8) ||
         ((*opponentSlot)->field0008 == 0xa9)) ||
         ((*opponentSlot)->field0008 == 0xaa)) &&
-        ((field0028 < 0.0 &&
+        ((positionY < 0.0 &&
         ( (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8)))) &&
         (field3114 != 2)) && ((*opponentSlot)->field014c == 0)) {
         field3110 = (unsigned short)RandomRange(0, 100);
@@ -370,7 +370,7 @@ void Character03::Slot05()
             && ((field3114 != 1 && (field3114 != 2)))) {
             field3110 = (unsigned short)RandomRange(0, 1000);
             if (field0008 == 200) {
-                if (((*opponentSlot)->field0028 < 0.0) && (field3110 < 300)) {
+                if (((*opponentSlot)->positionY < 0.0) && (field3110 < 300)) {
                     buttonPulse[1] = 1;
                     inputY = 0;
                     return;
@@ -419,22 +419,22 @@ void Character03::Slot05()
                 }
             }
             if (field0008 == 0xc9) {
-                if ((((*opponentSlot)->field0028 < 0.0) && (field3110 < 300)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (field3110 < 300)) &&
                     (field0168 == 3)) {
                     field0262 = (unsigned short)RandomRange(0, 2) + 0x15;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (300 < field3110)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (300 < field3110)) &&
                     (field3110 < 0x226)) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x28;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (0x226 < field3110))
+                if ((((*opponentSlot)->positionY < 0.0) && (0x226 < field3110))
                     && ((field3110 < 600 && (field0148 >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (600 < field3110)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (600 < field3110)) &&
                     (field3110 < 0x2ee)) {
                     inputX = facing;
                     inputY = 0xff;
@@ -450,7 +450,7 @@ void Character03::Slot05()
                     inputY = 0;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (0x1c2 < field3110))
+                if ((((*opponentSlot)->positionY < 0.0) && (0x1c2 < field3110))
                     && ((field3110 < 600 && (distance.forward < 70.0)))) {
                     buttonPulse[2] = 1;
                     return;
@@ -489,7 +489,7 @@ void Character03::Slot05()
                 }
             }
             if (field0008 == 0xca) {
-                if (((((*opponentSlot)->field0028 < 0.0) && (0x96 < field3110))
+                if (((((*opponentSlot)->positionY < 0.0) && (0x96 < field3110))
                     && (field3110 < 200)) && ((field0148 >= 1000 && (distance.forward < 120.0))))
                 {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
@@ -552,7 +552,7 @@ void Character03::Slot05()
                 }
             }
             if (field0008 == 0xcc) {
-                if (((*opponentSlot)->field0028 < 0.0) && (field3110 < 300)) {
+                if (((*opponentSlot)->positionY < 0.0) && (field3110 < 300)) {
                     buttonPulse[1] = 1;
                     inputY = 0;
                     return;
@@ -601,22 +601,22 @@ void Character03::Slot05()
                 }
             }
             if (field0008 == 0xcd) {
-                if ((((*opponentSlot)->field0028 < 0.0) && (field3110 < 300)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (field3110 < 300)) &&
                     (field0168 == 3)) {
                     field0262 = (unsigned short)RandomRange(0, 2) + 0x15;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (300 < field3110)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (300 < field3110)) &&
                     (field3110 < 0x226)) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x28;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (0x226 < field3110))
+                if ((((*opponentSlot)->positionY < 0.0) && (0x226 < field3110))
                     && ((field3110 < 600 && (field0148 >= 1000)))) {
                     field0262 = (unsigned short)RandomRange(0, 3) + 0x78;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (600 < field3110)) &&
+                if ((((*opponentSlot)->positionY < 0.0) && (600 < field3110)) &&
                     (field3110 < 0x2ee)) {
                     inputX = facing;
                     inputY = 0xff;
@@ -632,7 +632,7 @@ void Character03::Slot05()
                     inputY = 0;
                     return;
                 }
-                if ((((*opponentSlot)->field0028 < 0.0) && (0x1c2 < field3110))
+                if ((((*opponentSlot)->positionY < 0.0) && (0x1c2 < field3110))
                     && ((field3110 < 600 && (distance.forward < 70.0)))) {
                     buttonPulse[2] = 1;
                     return;
@@ -707,7 +707,7 @@ void Character03::Slot05()
                 }
             }
             if (field0008 == 0xcf) {
-                if (((*opponentSlot)->field0028 < 0.0) && (field3110 < 300)) {
+                if (((*opponentSlot)->positionY < 0.0) && (field3110 < 300)) {
                     buttonPulse[1] = 1;
                     return;
                 }
@@ -730,7 +730,7 @@ void Character03::Slot05()
             }
             if (field0008 == 0xd0) {
                 if (((0x14 < field3110) && (field3110 < 0x3c)) &&
-                    ((field0168 == 3 && ((*opponentSlot)->field0028 < 0.0)))) {
+                    ((field0168 == 3 && ((*opponentSlot)->positionY < 0.0)))) {
                     field0262 = 10;
                     return;
                 }
@@ -875,11 +875,11 @@ void Character03::Slot05()
         }
         if ((float)(unsigned short)RandomRange(0, 100) < 25.0f * field00a8) {
             field3110 = (unsigned short)RandomRange(0, 1000);
-            if (field0028 == 0.0) {
-                if (((*opponentSlot)->field0028 == 0.0) &&
+            if (positionY == 0.0) {
+                if (((*opponentSlot)->positionY == 0.0) &&
                     ((*opponentSlot)->field0008 != 99)) {
                     if ((distance.forward < 40.0) &&
-                        (((*opponentSlot)->field0028 == 0.0 && (field3110 < 5)))) {
+                        (((*opponentSlot)->positionY == 0.0 && (field3110 < 5)))) {
                         buttonPulse[2] = 1;
                         inputX = -facing;
                         inputY = 0;
@@ -993,8 +993,8 @@ void Character03::Slot05()
                         return;
                     }
                 }
-                if ((*opponentSlot)->field0028 < 0.0) {
-                    if ((*opponentSlot)->field0038 < 0.0) {
+                if ((*opponentSlot)->positionY < 0.0) {
+                    if ((*opponentSlot)->velocityY < 0.0) {
                         if (((distance.forward < 80.0) && (distance.vertical < 120.0)) && (field3110 < 10)) {
                             inputY = 0xff;
                             inputX = -facing;
@@ -1007,7 +1007,7 @@ void Character03::Slot05()
                             return;
                         }
                     }
-                    if ((*opponentSlot)->field0038 > 0.0) {
+                    if ((*opponentSlot)->velocityY > 0.0) {
                         if (((((distance.forward < 90.0) && (distance.vertical < 140.0)) && (distance.vertical > 80.0)) &&
                             (field3110 < 6)) &&
                             ((field0118 > 500.0 || ('\0' < field0120)))) {
@@ -1041,7 +1041,7 @@ void Character03::Slot05()
                         }
                         if (((distance.forward < 70.0) && (field3110 < 0xdc)) &&
                             (((200 < field3110 &&
-                            (((*opponentSlot)->field0028 < -50.0 && (distance.vertical < 90.0))))
+                            (((*opponentSlot)->positionY < -50.0 && (distance.vertical < 90.0))))
                             && (field0148 >= 2000)))) {
                             field0262 = (unsigned short)RandomRange(0, 2) + 0x79;
                             return;
@@ -1049,8 +1049,8 @@ void Character03::Slot05()
                     }
                 }
             }
-            if ((field0028 < 0.0) && (field3114 != 3)) {
-                if ((*opponentSlot)->field0028 == 0.0) {
+            if ((positionY < 0.0) && (field3114 != 3)) {
+                if ((*opponentSlot)->positionY == 0.0) {
                     if (((distance.forward < 80.0) && (distance.vertical < 100.0)) && (field3110 < 100)) {
                         buttonPulse[0] = 1;
                         return;
@@ -1067,7 +1067,7 @@ void Character03::Slot05()
                         return;
                     }
                 }
-                if ((*opponentSlot)->field0028 < 0.0) {
+                if ((*opponentSlot)->positionY < 0.0) {
                     if (((distance.forward < 80.0) && (distance.vertical < 100.0)) && (field3110 < 0x14)) {
                         buttonPulse[0] = 1;
                         return;
@@ -1075,7 +1075,7 @@ void Character03::Slot05()
                     if ((((distance.forward > 20.0) && (distance.forward < 100.0)) &&
                         ((distance.vertical > 0.0 &&
                         (((distance.vertical < 90.0 &&
-                        ((*opponentSlot)->field0028 < field0028)) &&
+                        ((*opponentSlot)->positionY < positionY)) &&
                         (0x14 < field3110)))))) && (field3110 < 0x3c)) {
                         buttonPulse[1] = 1;
                         return;
@@ -1086,7 +1086,7 @@ void Character03::Slot05()
         if (field0008 < 50 &&
             (((*opponentSlot)->field0008 > 149 && (*opponentSlot)->field0008 < 156) ||
             ((*opponentSlot)->field0008 > 49 && (*opponentSlot)->field0008 < 59)) &&
-            field0028 == 0.0 && (float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8 &&
+            positionY == 0.0 && (float)(unsigned short)RandomRange(0, 100) < 5.0f * field00a8 &&
             distance.forward > 120.0) {
             field0262 = (unsigned short)(facing == 1); return;
         }
@@ -1104,13 +1104,13 @@ void Character03::Slot05()
             if ((float)(unsigned short)RandomRange(0, 100) < 8.0f * field00a8) {
                 field3114 = 3;
             } else { field3114 = 0; }
-            if (((distance.forward > 180.0) && (field0028 == 0.0)) &&
+            if (((distance.forward > 180.0) && (positionY == 0.0)) &&
                 ( (unsigned short)RandomRange(0, 100) < 2)) {
                 inputX = 0;
                 inputY = 0xff;
                 return;
             }
-            if ((((distance.forward < 170.0) && (distance.forward > 140.0)) && (field0028 == 0.0)
+            if ((((distance.forward < 170.0) && (distance.forward > 140.0)) && (positionY == 0.0)
                 ) && ((*opponentSlot)->field0008 < 0x32)) {
                 inputX = facing;
                 inputY = 0xff;
