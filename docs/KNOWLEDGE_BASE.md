@@ -2189,6 +2189,44 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori constructor: exact byte-flag and three scratch banks (2026-11-09)
+
+The original `Character06::Character06` at `0x004ADD90` now has
+complete natural C++ source in `src/Character06Frame.cpp`, selected
+`character-06-constructor` unit and a strict original-bound
+**517/517-byte Exact** certificate with **4/4 verified relocations**.
+The source preserves the unusual **0x34B0-byte** object allocation:
+13 explicit 32-bit child-state integers from +0x3138 through +0x3168,
+64 bytes of per-frame flags starting at +0x316C, followed by three
+64-element integer scratch banks at +0x31AC/+0x32AC/+0x33AC and a
+four-byte uninitialized tail. The original zero-initialization
+sequence deliberately sets the state fields in a non-monotonic order;
+reordering those writes would alter VC7.1 code generation.
+
+Five original collision-pair offsets, commandCount=5 and sparse
+command indices `[0]=0`, `[1]=5`, `[2]=10`, `[3]=1`, `[10]=6`,
+`surfaceCount=727` and the exact `nagamori` literal at `0x7883F0`
+were verified from canonical EFZ.exe instructions. Its four direct
+relocations target Secondary construction (`0x40EAE0`), the Nagamori
+13-slot vtable (`0x7883FC`), the original string, and CRT strcpy
+(`0x778080`). Proof: `docs/evidence/nagamori-constructor-exact.json`.
+
+The shared view change retains the original size, but changes some
+compiler-internal symbol numbering. Scene creation **3495/3495**
+(97 relocation sites), scene loading **2651/2651** (76) and full
+Makoto Slot06 **59292/59292** (1,386) were selectively rebuilt.
+Their 25/26/127 compiler-local `$L` symbols shifted **+16** and
+were rebound simultaneously using the *same original relocation
+positions and actual branch destinations* before full strict byte
+checks. All eleven existing Ikumi source owners, including the newly
+accepted 5,153-byte Slot02 boss, were also selectively rebuilt and
+retained Exact; two compiler-local string labels shifted +16 with
+their canonical literal targets unchanged. Public focused proof:
+`docs/evidence/nagamori-affected-consumers-exact.json`; all affected
+older Ikumi receipts and the Makoto whole-owner receipt were refreshed
+from actual rebuilt source. No full cold replay or game-runtime
+closure follows from these individual Exact matches.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **352 exact functions**, **1,074,254 code bytes**,
+  ledgers currently count **353 exact functions**, **1,074,771 code bytes**,
   **7,655 associated table bytes**, 384 reviewed complete boundaries and 379
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -489,6 +489,32 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori constructor strict Exact and all affected owners reverified
+
+`Character06::Character06` at `0x004ADD90` is new strict **517/517
+byte Exact** (4 reviewed relocations), natural source
+`src/Character06Frame.cpp`, selected unit `character-06-constructor`.
+Unlike simpler constructors, Nagamori has a 0x34B0 child object
+with 13 integers, a 64-byte flag array and three 64-int scratch banks.
+Original collision coordinates, 727 surfaces, sparse command IDs and
+`nagamori` resource literal are all included. Certificate:
+`docs/evidence/nagamori-constructor-exact.json`.
+
+After the class-view update, three exact scene/major-state consumers
+were fully rebuilt: `scene-create-character` **3495/3495** with 97
+relocations, `scene-loading-character` **2651/2651** with 76, and
+**Makoto Slot06 59292/59292** with 1386. All 25/26/127 `$L` labels
+shifted +16 and were rebound to the identical canonical destinations
+at the original relocation positions. Eleven separately accepted
+Ikumi methods were also selectively recompiled and kept Strict Exact,
+including the full 5,153-byte Slot02 boss. Two Ikumi string literal
+symbols shifted by +16, but their original destinations remained
+unchanged. The complete focused proof for scene/Makoto consumers is
+`docs/evidence/nagamori-affected-consumers-exact.json`; the current
+original-bound certificates for Ikumi/Makoto were updated.
+No full cold replay, overall executable link or runtime equivalence
+is claimed.
 
 ## Other open substantial work
 

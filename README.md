@@ -66,7 +66,8 @@ Kaori (383 bytes), MizukaB (396 bytes), Kanna (403 bytes),
 NayukiB (472 bytes), Kano (523 bytes), Akiko (511 bytes), Minagi
 (469 bytes), EX Nanase (452 bytes), Sayuri (419 bytes) and Ikumi
 (647 bytes, including two 505-element vector allocations), Mio
-(407 bytes, including two x87 double fields), and Nayuki (455 bytes)
+(407 bytes, including two x87 double fields), Nayuki (455 bytes)
+and Nagamori (517 bytes, including byte flags plus three 64-int banks)
 also have independently exact natural constructors. Ikumi's separate
 257-byte `SetAlternateMode`, 949-byte second pattern-bank parser and
 60-byte resource wrapper now have independent strict Exact receipts.

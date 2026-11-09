@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete selected native VC7.1 C++ code, canonical original 517-byte extent and 4 original-bound relocations",
+  "method": "Natural Character06::Character06 reconstruction at 0x004ADD90 includes 13 explicit state fields, an exact 64-byte flag array and three 64-int scratch arrays, 5 verified collision pairs and sparse command slots, preserving the original 0x34B0 object size and unknown 4-byte tail. Full code compared strictly, zero differences. No full replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 517,
+      "matched_bytes": 517,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "Original EFZ.exe @ 0x004ADDB4: original six-argument Secondary base constructor call at 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7898108,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character06@@6B@",
+          "evidence": "Original EFZ.exe @ 0x004ADDBC: Nagamori child 13-method vtable at 0x7883FC",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7898096,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62344",
+          "evidence": "Original EFZ.exe @ 0x004ADDC2: exact nine-byte nagamori NUL literal at 0x7883F0",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "Original EFZ.exe @ 0x004ADDD1: CRT strcpy call to resourceName +0x94, reviewed target 0x778080",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7f84e9fde922ef85810c4680a5c7cc04d5b9ccfdcbd9b0af82996c54711c1573",
+      "target_extent_sha256": "7f84e9fde922ef85810c4680a5c7cc04d5b9ccfdcbd9b0af82996c54711c1573",
+      "unit": "character-06-constructor",
+      "symbol": "??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x004ADD90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2a7b7f55af1618492e202d7f8b6b9b8eec94f47c3a9211aca6fea619e4d3260f",
+      "object_sha256": "7fd17126f96f5ab61b7dc5d6db005e579a64c6c708e1dc5124e6bb9ddc2996b3",
+      "source_sha256": "ae7131de90fa89e549b145f0ac53ed635955f99b39f20c4852142e13f1dc0a1f",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "198c1326ce35ee1244340e65bf17d57b7431ae6f4f7806e8d64c4f777b7b1b26",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "c03f9c585ec8bc0a3b37b574a94b1253755669547c758d9c7fce362d9b20b9c0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
