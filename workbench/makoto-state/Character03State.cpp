@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-309 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-310 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -5092,9 +5092,29 @@ void Character03::Slot06()
         }
         return;
 
+    case 310: // Original block 0x005F698C: final stationary super recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        gravity = 0.0;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field3138 < 8) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 2);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 1 explicit case. The target's true default path also
+        // no other explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

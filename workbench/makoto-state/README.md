@@ -1109,6 +1109,24 @@ work, not the original behavior for valid unimplemented animations.
   exhaustion returns to state 0/ResetPose. All 864 target bytes,
   event calls and field updates were checked; VC7.1 compiles.
 
+- Animation ID 310 (0x005F698C..0x005F6A5D, 209 bytes) is
+  the final stationary super-recovery dispatch. It forces X/Y
+  velocities and gravity to zero on every tick, then advances the
+  frame timer. On advancing into pose 2, if field3138<8 it
+  increments that field and rewinds exactly two poses; unlike
+  earlier super states, it performs **no** effect or resource
+  write. Each expired duration clears attackCollisionResult.
+  On sequence exhaustion it enters idle state 0 and calls ResetPose.
+  All 209 original bytes match the reviewed EFZ.exe disassembly and
+  the partial draft builds with VC7.1.
+
+  All **124/124 explicitly mapped switch animation IDs** are now
+  represented by natural C++ source. This is *not* acceptance of
+  the entire Slot06 function: its original true default path,
+  complete 58,482-byte code generation, 500-byte jump table and
+  310-byte selector table must still be recovered/strictly matched
+  before a source or Exact ledger entry is permitted.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1134,7 +1152,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 310 and the true default path directly from reviewed target instructions,
+Review the true default path, the complete switch code generation and both associated tables directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
