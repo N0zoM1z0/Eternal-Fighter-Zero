@@ -71,6 +71,17 @@ work, not the original behavior for valid unimplemented animations.
   all motion and gravity. Its pose counter has a special 2-to-0 loop before
   the ordinary end-of-sequence clamp. This behavior is checked against the
   original x87 tests, immediate values and unsigned pose-counter instructions.
+- Animation IDs 50–52 (blocks 0x005E9378, 0x005E9569, 0x005E975A)
+  implement three strengths of grounded recoil. Each removes 0.6 from
+  field0118 per tick when field0120 is set, clears dash momentum, and on
+  frame 0/tick 0 grants 10/15/20 meter and initializes horizontal velocity
+  from the opponent's combo damage scale with factors -1.1/-1.5/-1.8.
+  The optional resource deductions are 10/20/30. Every tick resets vertical
+  position/velocity, slows the negative horizontal motion by 0.06 (clamping
+  positive speed to zero), and conditionally writes edge pushback at the
+  20/639 stage bounds. On animation exhaustion, inputY=1 selects state 3;
+  otherwise state 0 is selected before ResetPose. Independent target case
+  ranges all occupy 497 bytes, with distinct original immediates/operands.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -90,7 +101,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 50 and onward directly from reviewed target instructions,
+Extend cases 53 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
