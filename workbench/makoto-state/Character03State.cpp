@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-169 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-171 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2433,9 +2433,85 @@ void Character03::Slot06()
         }
         return;
 
+    case 170: // Original block 0x005EF240: delayed stored-velocity release
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (gravity == 0.0) {
+                gravity = 0.035;
+            }
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            hitstunFrames = 60;
+        }
+        if (hitstunFrames == 0 && field3140 == 0) {
+            ++field3140;
+            velocityX = (double)field3138 * 0.01;
+            velocityY = (double)field313c * 0.01;
+        }
+        if (hitstunFrames == 0) {
+            velocityY += gravity;
+        }
+        if (positionY + velocityY > 0.0) {
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 169;
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 171: // Original block 0x005EF409: frozen hit, one immediate effect
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        // This effect is also on pose zero, unlike reference characters.
+        if (field000a == 0 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                velocityX = (double)field3138 * 0.01;
+                velocityY = (double)field313c * 0.01;
+                gravity = 0.035;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 53 explicit cases. The target's true default path also
+        // the other 51 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

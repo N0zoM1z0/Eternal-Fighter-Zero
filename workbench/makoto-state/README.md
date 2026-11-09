@@ -486,6 +486,31 @@ work, not the original behavior for valid unimplemented animations.
   EFZ.exe; the draft compiles with VC7.1. The shared source body
   does not imply a shared jump destination or identical terminal ID.
 
+- Animation ID 170 (0x005EF240..0x005EF409, 457 bytes) saves
+  (int)(velocityX*100) and (int)(velocityY*100) into field3138/313c
+  on the first tick, clears both velocities, conditionally initializes
+  gravity=0.035 if it was zero, clears guardInputFrames and outgoing
+  pushback, and assigns hitstunFrames=60. When hitstun reaches zero
+  and field3140 is still zero, it increments field3140 and restores
+  both velocities at *0.01; until the freeze ends there is no gravity
+  integration. Positive ground penetration calls **ResetFrame**, sets
+  positionY=0 and switches to state 169 without calling ResetPose.
+  Otherwise the pose advances and returns to animation 9 on expiry.
+
+- Animation ID 171 (0x005EF409..0x005EF5E8, 479 bytes) also saves the
+  scaled velocities on initial pose/tick, zeroes speed, transfers the
+  5.0*field0118 resource component to comboDamageScale when enabled,
+  clears field0118, sets hitstunFrames=90 and SetTint(0xB0,3).
+  It **immediately emits effect type 1 at pose 0/tick 0** (with sound
+  18, context/group 2/layer 1). Unlike the superficially similar
+  Character07 case, Makoto has no separate pose-1/pose-2 effect block.
+  Every duration expiry advances the pose and clears
+  attackCollisionResult; sequence exhaustion enters state 9, restores
+  stored velocities with factor 0.01, initializes gravity=0.035 and
+  calls ResetPose. This entire 936-byte target range and the x87
+  100.0/0.01 constants were checked against EFZ.exe. The partial
+  owner compiles under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
