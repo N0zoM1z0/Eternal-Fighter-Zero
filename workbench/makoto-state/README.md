@@ -627,6 +627,33 @@ work, not the original behavior for valid unimplemented animations.
   immediate values and the 0x15A airActionCount gate were checked
   directly; the partial owner compiles with VC7.1.
 
+- Animation ID 209 (0x005F0A17..0x005F0CB7, 672 bytes) is a
+  repeatable aerial local attack with the same jump-cancel gate as
+  207/208 but an additional pose>4, buttonPulse[2]==1 and
+  field3138<2 loop: it rewinds to pose 3/tick zero, increments
+  field3138 and clears the hit result. Ground contact goes directly
+  to animation 13 and ResetPose. When frame advancement reaches
+  pose 4, it grants 15 meter, requests sound 20 and one remaining hit,
+  clears pendingCharacterSoundSlot, then emits local effect type
+  0x191 at truncated X+27*facing and truncated Y-28, group 2/layer 1.
+  This is an *advanced-pose* event, not a pose-4 initial-tick event.
+  Only below pose 2 does the advance clear attackCollisionResult;
+  an expired sequence rewinds the pose by two, remaining airborne.
+
+- Animation ID 210 (0x005F0CB7..0x005F0E5C, 421 bytes) starts
+  by clearing dash momentum and calling ResetFrame on pose/tick zero.
+  At pose 3/tick zero it starts motion (velocityX=0.6,
+  velocityY=-1.4, gravity=0.036); at pose 6/tick zero it awards
+  20 meter, sound 20 and one remaining hit. Gravity only advances
+  past pose 2. A nonnegative projected Y while pose is 4..8 resets
+  the frame, zeros tick/Y and forces pose 9 **without** ResetPose or
+  sound. Ordinary expiry resets the hit result below pose 2 and ends
+  in crouch state 3 through FaceOpponent and ResetPose. Constants
+  and the distinct event gates were checked against original target
+  instructions rather than copying the Character07 case. Both
+  branches compile under VC7.1; all 1,093 bytes of their source
+  instruction ranges were independently rechecked in EFZ.exe.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -652,7 +679,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 209 and onward directly from reviewed target instructions,
+Extend case 211 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
