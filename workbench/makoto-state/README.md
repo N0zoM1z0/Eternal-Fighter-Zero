@@ -141,6 +141,13 @@ work, not the original behavior for valid unimplemented animations.
   and sets gravity=0.032. Otherwise it retains the original two-pose
   airborne loop and knockdown-dependent landing selection.
 
+- Animation ID 65 (block 0x005EB039, 561 bytes) is the stronger
+  wall-contact variant of 64. Both target blocks contain 160 instructions
+  and independently dispatch to state 70 after a nonzero CollisionSide()
+  past pose zero. The vertical lower clamp references -4.0 at 0x00787D58
+  instead of -2.0 at 0x00787D70; the upper -0.5 clamp, meter award, velocity
+  blend, gravity, frame advance and landing outcomes are unchanged.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -160,7 +167,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 65 and onward directly from reviewed target instructions,
+Extend cases 66 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
