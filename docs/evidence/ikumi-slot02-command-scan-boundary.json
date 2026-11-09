@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-function-boundary-and-first-of-fifteen-scans-not-whole-function-exact",
+  "status": "full-function-exact-boundary-and-all-fifteen-scans-verified",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function_name": "Character14::Slot02",
   "vtable_slot_index": 2,
@@ -20,7 +20,7 @@
     "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
   },
   "following_padding_bytes": 15,
-  "qualification": "Natural C++ recovers first eleven scans, 4294 original bytes / 1267 instructions, with only branch targets normalized; four scans remain and whole 5153-byte Exact is NOT claimed.",
+  "qualification": "Full original 5153-byte Slot02 owner now accepted as separate strict Exact COFF unit; all 1508 original instructions exactly match, no normalization, no masks or relocation exceptions.",
   "second_scan": {
     "start": "0x006AB9D3",
     "end_exclusive": "0x006ABC42",
@@ -30,11 +30,11 @@
   },
   "natural_cpp_recovered_prefix": {
     "start": "0x006AB7E0",
-    "end_exclusive": "0x006AC8A6",
-    "size": 4294,
-    "instructions": 1267,
-    "compiled_partial_size": 4295,
-    "qualification": "First eleven priority-ordered command scans reproduce all 1267 original instruction mnemonics/registers/operands; only future branch destinations normalized. Four scans remain."
+    "end_exclusive": "0x006ACC01",
+    "size": 5153,
+    "instructions": 1508,
+    "compiled_partial_size": 5153,
+    "qualification": "Now complete original function. All 15 scan bodies and final epilogue match original x86 byte-for-byte, zero relocations."
   },
   "third_scan": {
     "start": "0x006ABC42",
@@ -98,5 +98,35 @@
     "size": 224,
     "original_instructions": 63,
     "sha256": "92d83a3f4f267a803bc5b96e4ac56cac828f09b14cd48872e39bef647420dbe9"
-  }
+  },
+  "twelfth_scan": {
+    "start": "0x006AC8A6",
+    "end_exclusive": "0x006AC987",
+    "size": 225,
+    "original_instructions": 63,
+    "sha256": "cdda4911ee7525e09383d3324606c98e7b41f26a573d6a67ee96e2049e40217e"
+  },
+  "thirteenth_scan": {
+    "start": "0x006AC987",
+    "end_exclusive": "0x006ACA68",
+    "size": 225,
+    "original_instructions": 63,
+    "sha256": "461e25cb3406bcb93defd34c8ed73000bad78447a9646c77a94bd68472180ac2"
+  },
+  "fourteenth_scan": {
+    "start": "0x006ACA68",
+    "end_exclusive": "0x006ACB34",
+    "size": 204,
+    "original_instructions": 56,
+    "sha256": "e321526d9cdcc1726110d7908ede5028c2a8640e5ad2c66f5c5da2a5f1234bf7"
+  },
+  "fifteenth_scan": {
+    "start": "0x006ACB34",
+    "end_exclusive": "0x006ACBFD",
+    "size": 201,
+    "original_instructions": 56,
+    "sha256": "b1084655947b02aa3f5538b81aef9382d25a20166fbae1d2f6a6788297eddff0"
+  },
+  "complete_source": "src/Character14Commands.cpp",
+  "strict_certificate": "docs/evidence/ikumi-slot02-exact.json"
 }

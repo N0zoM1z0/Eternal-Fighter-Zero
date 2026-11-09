@@ -129498,3 +129498,13 @@ type = "REL32"
 symbol = "??1Secondary@@QAE@XZ"
 target = 0x0040ECB0
 evidence = "EFZ.exe @ 0x006A5E5A: second original Secondary base destructor call, implicit by compiler at end of child destructor"
+
+[units.character-14-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-slot02/Character14Commands.obj"
+symbol = "?Slot02@Character14@@UAEXXZ"
+target_address = 0x006AB7E0
+size = 5153

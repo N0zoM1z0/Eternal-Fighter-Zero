@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **351 exact functions**, **1,069,101 code bytes**,
+  ledgers currently count **352 exact functions**, **1,074,254 code bytes**,
   **7,655 associated table bytes**, 384 reviewed complete boundaries and 379
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -394,22 +394,26 @@ no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
 
-## Ikumi Slot02: first eleven command scans recovered (not Exact)
+## Accepted major Ikumi Slot02 command-recognition boss
 
-`workbench/ikumi-commands/Character14Commands.cpp` now implements
-**eleven complete natural-C++ input-history scans**, covering the
-first **4,294 original bytes / 1,267 instructions** of the
-5,153-byte `Character14::Slot02` boss. The reproducible focused
-`check_first_scan.py` matches 1,267/1,267 original instruction mnemonics,
-registers, stack operands and immediates (normalizing numeric future
-branch destinations only). Scan 3 adds Ikumi's true
-`meter >= 1000 || field315c > 0` gate; the original facing terms
-were corrected against source disassembly instead of trusting the
-Ghidra Boolean rendering. Original boundary and full SHA are in
+The original **5,153-byte** `Character14::Slot02` at
+`0x006AB7E0` (vtable slot 2, `0x00788D7C`) is now completely
+**strict Exact** under native VC7.1. Natural accepted source:
+`src/Character14Commands.cpp`; selected unit:
+`character-14-slot02`; public full-source certificate:
+`docs/evidence/ikumi-slot02-exact.json`.
+
+All **15 original priority-ordered circular-input scans and their
+common return path** match the canonical target **5,153/5,153
+bytes**, all **1,508 instructions**, with **zero relocations and zero
+differences**. No code was patched or masked, and full native SHA
+matches `752ea6e701bca768800303e3a6a370d0d0ce8f17d238378528e2e8f678e1466c`.
+The formerly partial `workbench/ikumi-commands/` now retains a full
+independent source and runnable focused strict comparison; original
+per-scan boundaries/hashes remain in the reviewed
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-The **remaining 4 scans** must still be reconstructed. Next original
-start: `0x006AC8A6`. This workbench is NOT a strict full-function
-Exact result; keep it out of production `src/` and the exact ledger.
+The earlier handoff notes describing 12 missing scans are historical
+and superseded. No broad cold replay or whole-game runtime claim.
 
 ## Ikumi exact derived destructor with two base cleanup calls
 

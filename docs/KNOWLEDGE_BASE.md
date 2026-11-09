@@ -1929,31 +1929,35 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
-## Ikumi Slot02 input command scanner: eleven verified original scans
+## Ikumi Slot02 input recognizer: complete 5,153-byte strict Exact
 
-Original `Character14::Slot02` is confirmed by vtable slot 2 at
-`0x00788D7C`; the full **5,153-byte** function owns
-`[0x006AB7E0,0x006ACC01)` followed by 15 `CC` alignment bytes.
-The complete boundary and authored origin have been reviewed in
+`Character14::Slot02` is now fully reconstructed in natural C++ at
+`src/Character14Commands.cpp` and independently selected unit
+`character-14-slot02` under VC7.1 `/Od /G6 /MT /Gy /W3`.
+Original vtable slot 2 at `0x00788D7C` resolves to
+`0x006AB7E0`; its complete original function owns **5,153 bytes**
+through `0x006ACC01`, followed by 15 alignment `CC` bytes.
+The complete rebuilt function **matches 5,153/5,153 source-code
+bytes, all 1,508 original x86 instructions, and 0 relocation sites**.
+Every original byte matches unmasked, including all 15 independently
+reconstructed priority-ordered input-history scans and the common
+function epilogue. Relocated/native and canonical original SHA-256
+are both `752ea6e701bca768800303e3a6a370d0d0ce8f17d238378528e2e8f678e1466c`.
+
+Each scan preserves signed-facing directional arithmetic, the
+180-frame circular history, its distinct 5–135 tick window,
+release/early-finish semantics and priority over later scans.
+The third scan's meter threshold includes Ikumi's original
+`field315c > 0` override; the early decompiler-based reversed
+facing boolean was corrected from original `neg/sbb/add` assembly.
+The focused per-scan source reconstruction and regression checker
+remain in `workbench/ikumi-commands/`. Complete authoritative native
+receipt: `docs/evidence/ikumi-slot02-exact.json`; separately verified
+original per-scan boundaries and SHA-256 values:
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-
-Natural C++ at `workbench/ikumi-commands/Character14Commands.cpp`
-now implements **the first eleven of fifteen priority-ordered command
-scans**, exactly **4,294 original bytes / 1,267 instructions** from
-`0x006AB7E0` through `0x006AC8A6`. The separate scanners are
-499/153, 623/193, 506/148, 522/157, 402/119, 376/109, 379/109, 387/113, 149/40, 227/63 and 224/63 bytes/instructions. The first scan
-recognizes 0x5E, the second recognizes base 0x96 plus button flags,
-and the third uses base 0xAA or 0xA0 with the original early-finish
-branch. Ikumi's third scan starts when either meter is at least 1000
-**or `field315c > 0`**. The fourth adds a 1,000-meter gated 4/6/2 command with base ID 0x6E. The input-history cursor, 180-entry wrap,
-order of directional conditions and signed-facing terms were verified
-against original x86, not assumed from related characters.
-
-A focused VC7.1 build and `check_first_scan.py` compare all **1,267/1,267
-opcodes and operands**, normalizing only jump destinations because the
-last **4 scans have not yet been authored**. The current 1,632-byte
-partial function is NOT the full 5,153-byte function and is **not
-Exact**; no match-unit or source ledger acceptance has been claimed.
+No full cold replay was run. This is one complete original function,
+not proof of overall Windows linkage, gameplay runtime equivalence,
+or freshness of unrelated historical certificates.
 
 ## Ikumi Slot08 effects owner: reviewed 1,592-byte partial reconstruction
 

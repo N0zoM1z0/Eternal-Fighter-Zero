@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 C++ code generation, strict all-original byte comparison with zero relocations and no masks",
+  "method": "Accepted natural C++ Character14::Slot02 implements all 15 original priority-ordered input-history scans over the 180-entry circular ring. Complete original source code 0x006AB7E0..0x006ACC01, 5153/5153 bytes and all 1508 x86 instructions, direct SHA256 equal to verified EFZ.exe, zero relocations. Target separately tied to Ikumi vtable slot2 pointer at 0x788D7C; following 15 INT3 alignment bytes excluded. No full cold replay or runtime equivalence claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 5153,
+      "matched_bytes": 5153,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "752ea6e701bca768800303e3a6a370d0d0ce8f17d238378528e2e8f678e1466c",
+      "target_extent_sha256": "752ea6e701bca768800303e3a6a370d0d0ce8f17d238378528e2e8f678e1466c",
+      "unit": "character-14-slot02",
+      "symbol": "?Slot02@Character14@@UAEXXZ",
+      "target_address": "0x006AB7E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2a7b7f55af1618492e202d7f8b6b9b8eec94f47c3a9211aca6fea619e4d3260f",
+      "object_sha256": "f26f564d4f4fe860e65b7a8a6829b6a243449fcad4e4077d6d5afb2cd1bc1ecc",
+      "source_sha256": "35abd7ad9e29e26e88ecb02d24f8581a0a68687ab43a23b84e8d2498d8d196f1",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "b44a252c92dfd17945e40fab4cb59096f0059e26d650285f02f2f3ed5ce7113c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "625202843f47eb05702320ee95a18baa4d97e53d56569a25b9bdacb8c6621cc7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f5bea4ad85aa7d172fbe27f34e71a1aa90284b5a47603d510dcda68a8b82e953",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

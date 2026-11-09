@@ -1,6 +1,6 @@
-// Ikumi command recognition: independently recovered highest-priority input scan.
-// This is a workbench PARTIAL implementation of the original 5,153-byte Slot02,
-// not accepted as a strict Exact whole function or production source.
+// Complete natural C++ Ikumi input-command recognizer (all fifteen scans).
+// Accepted production source lives in src/Character14Commands.cpp, and the
+// selected full 5153-byte COFF contribution is strictly Exact.
 #include "../../src/CharacterViews.h"
 
 void Character14::Slot02()
@@ -329,5 +329,86 @@ void Character14::Slot02()
             stage = 1;
         }
     }
-    // Four original priority scans remain to be recovered.
+    // Twelfth priority scan: neutral/4/neutral/4 finished by button 0x20.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0x20) != 0) && (stage == 4)) {
+            recognizedCommand = 0x33;
+            return;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Thirteenth priority scan: same neutral/4 prefix, button 0x10.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0x10) != 0) && (stage == 4)) {
+            recognizedCommand = 0x32;
+            return;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Fourteenth priority scan: neutral, direction 1, neutral, direction 1.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x87;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf) == 1) && (stage == 3)) {
+            recognizedCommand = 1;
+            return;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 1) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Fifteenth priority scan: neutral, direction 2, neutral, direction 2.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x87;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf) == 2) && (stage == 3)) {
+            recognizedCommand = 0;
+            return;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 2) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
 }

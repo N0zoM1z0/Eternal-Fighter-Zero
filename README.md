@@ -73,11 +73,11 @@ also have independently exact natural constructors. Ikumi's separate
 Ikumi's 163-byte derived destructor is also strict Exact, including the
 original double base teardown and two vector-array deletes.
 Other child owners, including Ikumi Slot08 effects, remain open.
-Ikumi's separate 5,153-byte Slot02 input command owner now has its
-first eleven history scans reconstructed in natural C++ under
-`workbench/ikumi-commands/` with **1,267/1,267 original instructions**
-matched after normalizing branch destinations (4,294 target bytes);
-the full function is still open and is not counted Exact.
+Ikumi's separate **5,153-byte Slot02 command-recognition boss is now
+strict Exact**, all **1,508 original instructions and 15 ordered input
+scans** reconstructed in `src/Character14Commands.cpp` with zero
+code-byte differences and no relocations. The original per-scan
+research remains in `workbench/ikumi-commands/`.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386
 relocations strictly bound. Shiori's 63,132-byte Slot06 is now
