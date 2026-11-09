@@ -785,6 +785,20 @@ work, not the original behavior for valid unimplemented animations.
   original block and 0.01 x87 constant were checked against EFZ.exe;
   the VC7.1 partial owner compiles.
 
+- Animation ID 248 (0x005F2090..0x005F223A, 426 bytes) is an
+  aerial capture, not the effect-emitting Character07 throw entry.
+  Gravity is integrated first. A pose-1 collision result of 3 calls
+  opponent ResetFrame/ResetPose, self ResetFrame, disables opponent
+  air actions, resets own pose/tick and selects animation 249,
+  selects opponent animation **110**, and aligns opponent Y with
+  character Y and X to X+19*facing. The target emits **no effect**
+  and does not reset the opponent pose after setting animation 110.
+  Normal frame progression on entering pose 1 arms one hit only when
+  the opponent is airborne and its animation ID is outside [50,149];
+  otherwise it clears that hit. Expiration enters state 211 and pose
+  1 directly, with no ResetPose call. The original 426-byte block
+  was checked against EFZ.exe; the C++ draft compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -810,7 +824,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 248 and onward directly from reviewed target instructions,
+Extend case 249 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
