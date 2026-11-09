@@ -287,9 +287,37 @@ void Character03::Slot06()
         }
         return;
 
+    case 47: // Original block 0x005E9248: low aerial strike / ground contact
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.6;
+            gravity = 0.035;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0 && field000a < 2) {
+            field000c = 0;
+            field000a = 2;
+            pendingContextSoundSlot = 7;
+            positionY = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= animationFrameCount) {
+                --field000a;
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 121 explicit cases. The target's true default path also
+        // the other 110 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

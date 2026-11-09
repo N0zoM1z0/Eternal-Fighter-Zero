@@ -65,6 +65,12 @@ work, not the original behavior for valid unimplemented animations.
   duration; on animation exhaustion, select animation 9 and ResetPose.
   Landing at pose >3 with positionY+velocityY >=0 requests context sound 9,
   faces the opponent, selects animation 13, and ResetPose.
+- Animation ID 47 (block 0x005E9248): a low aerial strike starts with
+  horizontal velocity 0.6 and gravity 0.035. Ground contact with pose index
+  below 2 switches directly to pose 2, requests context sound 7 and clears
+  all motion and gravity. Its pose counter has a special 2-to-0 loop before
+  the ordinary end-of-sequence clamp. This behavior is checked against the
+  original x87 tests, immediate values and unsigned pose-counter instructions.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -84,7 +90,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 47 and onward directly from reviewed target instructions,
+Extend cases 50 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
