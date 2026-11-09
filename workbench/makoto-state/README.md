@@ -116,6 +116,14 @@ work, not the original behavior for valid unimplemented animations.
   per branch shows only the two references to the lower-clamp constant
   differ from state 59. The meter award, airborne frame transitions,
   gravity, and 0x61/0x62 landing outcomes are otherwise the same.
+- Animation ID 62 (block 0x005EAAA6, 439 bytes) continues the airborne
+  hit-reaction family without any vertical-speed clamp. On pose 0/tick 0,
+  it grants 30 meter, copies knockbackVelocityX, computes
+  velocityY = velocityY * 0.75 + knockbackVelocityY, and sets gravity=0.032.
+  The velocity sign transitions, two-pose end loop and landing-to-0x61/0x62
+  rule are independently present in the original 0x005EAAA6..0x005EAC5D
+  instructions. Unlike cases 59-61, no -2/-4/-6 or -0.5 clamp is executed.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -135,7 +143,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 62 and onward directly from reviewed target instructions,
+Extend cases 63 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
