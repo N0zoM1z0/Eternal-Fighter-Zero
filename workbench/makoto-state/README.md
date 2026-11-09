@@ -654,6 +654,20 @@ work, not the original behavior for valid unimplemented animations.
   branches compile under VC7.1; all 1,093 bytes of their source
   instruction ranges were independently rechecked in EFZ.exe.
 
+- Animation ID 211 (0x005F0E5C..0x005F10A0, 580 bytes) is an
+  airborne strike with the same one-time jump-cancel condition as
+  207–209. Gravity is integrated first; a legal down+jump cancel
+  increments airActionCount, chooses states 14/15/16 by facing and
+  resets pose. Nonnegative projected Y switches to landing state 13.
+  When the duration counter advances the pose to **5**, it grants
+  15 meter, requests context sound 20 and one remaining hit, clears
+  pendingCharacterSoundSlot, and emits character-local effect 400 at
+  truncated X+45*facing, truncated Y-62 (group 2/layer 1, facing
+  byte). It clears attackCollisionResult when the new pose is below
+  2 and loops the last two pose frames rather than returning to
+  state 9. The 580 original instructions/code bytes were checked
+  against the current target and the natural C++ branch compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -679,7 +693,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 211 and onward directly from reviewed target instructions,
+Extend case 212 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
