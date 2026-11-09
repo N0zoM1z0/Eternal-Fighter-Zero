@@ -3080,10 +3080,10 @@ sequence is the authority for this condition.
 The saved exact report .analysis/exact/scene-battle-resolve-pushboxes.json is
 stale: it describes source 9c1232e2..., object 35deac04..., and 1460/2727
 matching bytes. After the 2026-11-09 whitespace-only source cleanup, the current
-source SHA-256 is 86987a06a3c9d57bc892d126cb9fc10e377073196849868a0f834a6d4dc9566b
-and the current object SHA-256 is
-b98e04bcc717de1fbd7caed6f998d2565badd20c9f8a08f3ab28b00428aa41fb. A
-relocation-normalized diagnostic comparison gives 1652/2727, but the strict
+source SHA-256 is 86987a06a3c9d57bc892d126cb9fc10e377073196849868a0f834a6d4dc9566b.
+The current focused build receipt is
+.analysis/build/scene-battle-resolve-pushboxes.build.json. A relocation-normalized
+diagnostic comparison gives 1652/2727, but the strict
 comparator rejects the relocation inventory before full code comparison.
 In particular, target relocation function+0x269 (617) is still at candidate
 function+0x275 (629). The final strict failure is recorded in

@@ -78,8 +78,8 @@ is 0x766B50..0x7675F7; the unit binds 35 original relocations.
 The current VC7.1 /Od build is
 build/match-units/scene-battle-resolve-pushboxes/SceneBattlePushboxes.obj.
 Its source SHA-256 is 86987a06a3c9d57bc892d126cb9fc10e377073196849868a0f834a6d4dc9566b;
-the build receipt records object SHA-256
-b98e04bcc717de1fbd7caed6f998d2565badd20c9f8a08f3ab28b00428aa41fb. It is
+the current focused build receipt is
+.analysis/build/scene-battle-resolve-pushboxes.build.json. The object is
 exactly 2,727 bytes with 35 relocations, but it is not exact. The strict
 compare rejects it because its relocation offsets differ from the target.
 A relocation-normalized diagnostic comparison matches 1,652/2,727 bytes and
