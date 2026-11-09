@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-211 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3128,9 +3128,99 @@ void Character03::Slot06()
         }
         return;
 
+    case 212: // Original block 0x005F10A0: aerial bounce and landing flash
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+            velocityX /= 2.0;
+            gravity = 0.07;
+        }
+        if (attackCollisionResult > 1) {
+            field0008 = 213;
+            ResetPose();
+            ResetFrame();
+            return;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+            field0008 = 214;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 213: // Original block 0x005F1265: upward hit recoil
+        gravity = 0.042;
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = -1.0;
+            velocityY = -2.4;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 214: // Original block 0x005F1321: grounded hit flash and recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 37 explicit cases. The target's true default path also
+        // the other 34 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

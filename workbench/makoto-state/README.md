@@ -668,6 +668,32 @@ work, not the original behavior for valid unimplemented animations.
   state 9. The 580 original instructions/code bytes were checked
   against the current target and the natural C++ branch compiles.
 
+- Animation ID 212 (0x005F10A0..0x005F1265, 453 bytes) first
+  integrates the *old* gravity, then on pose/tick zero gives 30 meter,
+  sound 20, one hit, halves velocityX and sets gravity=0.07. A hit
+  result above 1 immediately enters state 213, calls ResetPose and
+  then ResetFrame. Ground contact instead clears Y/vertical speed,
+  calls SetVerticalShake(3,0), emits context effect type 3 with
+  palette 7/group 2/layer 0 at truncated position, requests sound 7
+  and enters state 214. Otherwise the unsigned pose advances,
+  clearing attackCollisionResult after each duration; end-of-sequence
+  poses loop backward by two.
+
+- Animation ID 213 (0x005F1265..0x005F1321, 188 bytes) sets gravity
+  0.042 every tick and adds it to velocityY *before* its initial
+  pose/tick-zero velocity assignment (-1.0,-2.4). Each duration
+  expiration clears attackCollisionResult; exhaustion enters airborne
+  state 9 through ResetPose. No landing or effect branch appears.
+
+- Animation ID 214 (0x005F1321..0x005F1440, 287 bytes) zeroes both
+  velocities each tick. Pose/tick zero shakes the screen (3,0) and
+  emits a palette-7 global effect type 3 (group 2/layer 0). Frame
+  advancement clears attackCollisionResult. End-of-sequence recovery
+  selects state 7 or crouch state 3 from inputY, FaceOpponent and
+  ResetPose in that order. These three independently dispatched
+  original blocks cover 928 bytes, checked along with every x87
+  constant and effect call directly in EFZ.exe; the C++ draft builds.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -693,7 +719,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 212 and onward directly from reviewed target instructions,
+Extend case 220 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
