@@ -334,14 +334,14 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->field014a = work.attack->defenderHitstopFrames;
                             --work.slot->field0084;
                             effect.owner = 0;
-                            effect.type = (short)work.attack->field00c0;
+                            effect.type = (short)work.attack->hitEffectType;
                             effect.x = (double)((intersection.right + intersection.left) / 2);
                             effect.y = (double)((intersection.bottom + intersection.top) / 2);
                             effect.facing = (unsigned int)(first->facing < '\0');
                             effect.group = 2;
                             effect.layer = 1;
                             effect.payload = 0;
-                            effect.palette = work.attack->field00c1;
+                            effect.palette = work.attack->hitEffectPalette;
                             contextOwner->EmitEffect(&effect);
                             if ((second->field0108 <= 0) && (second->field0140 == 0)) {
                                 second->field0008 = work.attack->airHitState;
@@ -509,14 +509,14 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                     }
                     EffectSpawn effect;
                     effect.owner = 0;
-                    effect.type = (short)work.attack->field00c0;
+                    effect.type = (short)work.attack->hitEffectType;
                     effect.x = (double)((intersection.right + intersection.left) / 2);
                     effect.y = (double)((intersection.bottom + intersection.top) / 2);
                     effect.facing = (unsigned int)(first->facing < 0);
                     effect.group = 2;
                     effect.layer = 1;
                     effect.payload = 0;
-                    effect.palette = work.attack->field00c1;
+                    effect.palette = work.attack->hitEffectPalette;
                     contextOwner->EmitEffect(&effect);
                 }
             }
@@ -642,14 +642,14 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                     }
                     EffectSpawn effect;
                     effect.owner = 0;
-                    effect.type = (short)work.attack->field00c0;
+                    effect.type = (short)work.attack->hitEffectType;
                     effect.x = (double)((intersection.right + intersection.left) / 2);
                     effect.y = (double)((intersection.bottom + intersection.top) / 2);
                     effect.facing = (unsigned int)(first->facing < 0);
                     effect.group = 2;
                     effect.layer = 1;
                     effect.payload = 0;
-                    effect.palette = work.attack->field00c1;
+                    effect.palette = work.attack->hitEffectPalette;
                     contextOwner->EmitEffect(&effect);
                 }
             }

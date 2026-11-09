@@ -323,14 +323,14 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->field014a = work.firstFrame.defenderHitstopFrames;
                                 --first->field016c;
                                 effect.owner = 0;
-                                effect.type = (short)work.firstFrame.field00c0;
+                                effect.type = (short)work.firstFrame.hitEffectType;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
                                 effect.y = (double)((intersection.bottom + intersection.top) / 2);
                                 effect.facing = (unsigned int)(first->facing < '\0');
                                 effect.group = 2;
                                 effect.layer = 1;
                                 effect.payload = 0;
-                                effect.palette = work.firstFrame.field00c1;
+                                effect.palette = work.firstFrame.hitEffectPalette;
                                 contextOwner->EmitEffect(&effect);
                                 if ((second->field0108 <= 0) && (second->field0140 == 0)) {
                                     second->field0008 = work.firstFrame.airHitState;

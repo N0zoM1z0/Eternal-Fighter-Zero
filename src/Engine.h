@@ -92,7 +92,7 @@ struct SecondaryFrame {
     unsigned short frameFlags;
     short airActionLockFrames, hitMeterGain, guardMeterGain;
     float outgoingPushbackVelocityX, outgoingPushbackVelocityY;
-    char field00c0, field00c1;
+    char hitEffectType, hitEffectPalette;
     short attackerHitstopFrames, defenderHitstopFrames;
     unsigned char unknown_00c6[2];
 };
