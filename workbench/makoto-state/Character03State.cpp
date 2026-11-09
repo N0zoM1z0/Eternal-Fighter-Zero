@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Animations outside cases 1-8 have not yet been reconstructed.
+// game sources. Animations outside cases 1-9 have not yet been reconstructed.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -171,6 +171,25 @@ void Character03::Slot06()
                 field0008 = 3;
                 ResetPose();
             }
+        }
+        return;
+
+    case 9: // Original block 0x005E8DC3: airborne fall and landing reset
+        velocityY += gravity;
+        dashMomentumFlag = 0;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0; // Repeat this animation while in the air.
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            field0008 = 13;
+            ResetPose();
         }
         return;
 
