@@ -351,7 +351,10 @@ public:
     virtual void InitializeState();
 };
 class Character19 : public Secondary {
-    unsigned char unknown_body[0x3458 - sizeof(Secondary)];
+    int field3138, field313c, field3140, field3144, field3148;
+    unsigned char unknown_314c[8];
+    int field3154[64], field3254[64], field3354[64];
+    unsigned char unknown_3454[4];
 public:
     Character19(Secondary **, Context *, Video *, Input *, Audio *, char);
     virtual void ResetPose();

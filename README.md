@@ -62,11 +62,10 @@ Context, title/selection/loading scenes, substantial shared character code,
 battle simulation/collision/display/keyboard/replay controls and four concrete
 background owners. Seven characters have exact constructors and substantial
 child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
-Kaori's constructor (383 bytes) and MizukaB's constructor (396 bytes)
-are also independently exact; their other child owners remain open.
-Shiori's and
-Makoto's large slot-6 state owners remain open, alongside other character,
-Video and scene work. See the live ledgers for individual acceptance.
+Kaori (383 bytes), MizukaB (396 bytes) and Kanna (403 bytes) also
+have independently exact natural constructors; their other child owners
+remain open. Shiori's and Makoto's large slot-6 state owners remain open,
+alongside other character, Video and scene work. See the live ledgers for individual acceptance.
 
 Reader/audio integration is complete. The
 [workbench](workbench/reader-audio/README.md) preserves historical drafts and
@@ -74,8 +73,9 @@ an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
 The current substantial owner is Makoto/Character03 Slot06 in
-`workbench/makoto-state/`, partially reconstructed across 86 selected states
-through 210 but not complete or Exact. `Scene3::ResolvePushboxes` has a fresh
+`workbench/makoto-state/`, with all 124 explicit states and the default
+branch reconstructed as a natural C++ draft. Its complete code generation,
+relocations and both local tables are still not accepted Exact. `Scene3::ResolvePushboxes` has a fresh
 complete **local** 2,727-byte, 35-relocation exact comparison, independently
 reviewed authored origin and a public exact-ledger entry. Whole-image/runtime
 closure and freshness of unrelated older certificates remain open.

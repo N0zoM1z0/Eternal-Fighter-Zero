@@ -1712,6 +1712,34 @@ Proof: `docs/evidence/mizukab-constructor-exact.json` and
 Unrelated `CharacterViews.h` dependents still have historical proof
 freshness issues, not re-certified by this targeted check.
 
+### Kanna constructor: complete exact native code generation (2026-11-09)
+
+The authored selection-ID 19 constructor `Character19::Character19` at
+`0x00675C80` is now natural C++ in `src/Character19Frame.cpp`, accepted
+via `character-19-constructor`: **403/403 original code bytes**, zero
+mismatches, **four reviewed relocations**. Original ELF/PE evidence was
+independently confirmed using the canonical EFZ.exe: Secondary base
+constructor at `0x40EAE0`, child vptr at `0x788CE0` (13 slots), exact
+`kanna` NUL literal at `0x788CD8`, and CRT `strcpy` at `0x778080`.
+The class view retains the reviewed **0x3458** allocation and makes
+five child state integers (last = 60), five pairs of collision
+coordinates, four command IDs and three 64-int scratch arrays visible.
+Eight bytes at +0x314C and four trailing bytes at +0x3454 remain
+unknown and uninitialized rather than being invented.
+
+The only two original constructor callers were rebuilt with the new
+class view. The 3,495-byte `Scene1::LoadCharacter` and 2,651-byte
+`Scene2::LoadCharacter` remain **fully Exact** (97/97 and 76/76
+relocations) including complete switch-table ownership. Compiler-local
+label numbers shifted by **+8** for 25/26 operands; symbols were
+rebound simultaneously by their *unchanged offsets and original target
+destinations*, avoiding text-substitution cascades, then all bytes
+were strictly compared. New public proofs:
+`docs/evidence/kanna-constructor-exact.json` and
+`docs/evidence/kanna-creation-consumers-exact.json`.
+The unrelated historical stale-header certificates were not
+silently refreshed, and no full cold replay was run.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

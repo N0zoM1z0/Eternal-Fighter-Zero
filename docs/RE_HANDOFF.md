@@ -30,7 +30,7 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **331 exact functions**, **1,003,847 code bytes**,
+  ledgers currently count **332 exact functions**, **1,004,250 code bytes**,
   **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -56,13 +56,20 @@ All remain in an isolated partial C++ owner, not in the exact ledger.
 
 - Target function `0x005E85F0`: **58,482 bytes of code** plus 500-byte jump
   table and 310-byte selector table (**59,292 owned bytes**).
-- The workbench implements **86 of 124 explicit dispatch IDs**, spread
-  across selected states through 210. Its default branch is an unfinished
-  marker, not real behavior; this file is not integrated into `src/` or ledgered exact.
-- **Next task: implement case 211 onward**, one branch at a time from target
-  instructions. Preserve unsigned pose/frame arithmetic, x87 operations,
-  distinct switch dispatches, sound/effect calls, and table ownership. Do not
-  blindly copy equivalent-looking cases from another character.
+- The workbench now implements **124/124 explicit dispatch IDs** and
+  the original true default behavior. It is not integrated into `src/`
+  or accepted as an Exact whole owner.
+- **Next task: close native code generation and relocation differences.**
+  Its current selected VC7.1 build is about 59.28 KB, very close to the
+  target's 59,292 owned bytes, and the first 35 case-table targets match
+  target-relative offsets. The first divergence is case 70's two
+  6-byte instructions addressing `[ebp-0x84]` instead of the target's
+  3-byte `[ebp-0x80]` forms: a four-byte extra local-stack home shifts
+  subsequent case addresses by +6. Simple local declaration order,
+  `volatile` and alignment probes did **not** fix this. Do not pad
+  machine code or claim Exact on a near-size match. Review the actual
+  locals/temporary-lifetime cause and other late-state offsets before
+  adding the selected match unit and strict comparator.
 - Starting evidence: the workbench README, ignored
   `.analysis/probes/makoto/state-case-map.csv` and
   `.analysis/probes/makoto/state-code-005e85f0.txt`, tracked
@@ -162,6 +169,25 @@ Targeted reproduction: `scripts/repo-python scripts/build-match-unit.py
 scripts/compare-coff-function.py --unit <name>` for only these three
 names. Do not claim this refreshes other stale `CharacterViews.h`
 certificates or the unbuilt Windows product.
+
+## New exact Kanna constructor and actual creation callers
+
+`Character19::Character19` at `0x00675C80` is accepted Exact:
+**403/403 code bytes**, zero mismatches, four reviewed relocated
+operands, authored source `src/Character19Frame.cpp`, selected unit
+`character-19-constructor` and certificate
+`docs/evidence/kanna-constructor-exact.json`. Its updated
+`CharacterViews.h` class stays 0x3458 bytes. The two direct consumers
+`scene-create-character` and `scene-loading-character` were rebuilt
+and fully reverified with **3,495/3,495 (97 relocations)** and
+**2,651/2,651 (76 relocations)**, respectively, including the complete
+owned jump tables. Original relocation positions and target values
+were retained; 25/26 compiler-local labels received a verified +8
+renumbering with *simultaneous* substitutions. Certificate:
+`docs/evidence/kanna-creation-consumers-exact.json`.
+Only the three affected units were recompiled and strictly compared.
+Other stale source-dependency certificates remain open; no full cold
+replay, runtime equivalence or whole-image completion is claimed.
 
 ## Other open substantial work
 
