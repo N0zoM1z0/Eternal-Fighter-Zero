@@ -368,3 +368,4 @@ address,end,size,status,evidence
 0x0040A440,0x0040A7A1,865,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; raw RET 0x30 at 0x0040A79E and next Video method at 0x0040A7B0 after INT3 alignment
 0x00409A90,0x00409DAF,799,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; Ghidra body inventory 799 bytes, raw RET 0x2C at 0x00409DAC and next Video method at 0x00409DB0 after INT3 alignment
 0x0040A0B0,0x0040A431,897,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; Ghidra body inventory 897 bytes, raw RET 0x30 at 0x0040A42E and next Video method at 0x0040A440 after INT3 alignment
+0x0040A7B0,0x0040AAD6,806,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; Ghidra body inventory 806 bytes, raw RET 0x30 at 0x0040AAD3 and next Video method at 0x0040AAE0 after 10 INT3 alignment

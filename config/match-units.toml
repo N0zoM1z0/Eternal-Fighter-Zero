@@ -2716,6 +2716,16 @@ symbol = "?DrawBlendedSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHH@Z"
 target_address = 0x0040A0B0
 size = 897
 
+[units.video-draw-shadow-surface]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoCharacterDraw.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-draw-shadow-surface/VideoCharacterDraw.obj"
+symbol = "?DrawShadowSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EHE@Z"
+target_address = 0x0040A7B0
+size = 806
+
 [units.video-draw-surface]
 artifact_kind = "coff"
 profile = "vc71-od-static"

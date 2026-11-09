@@ -3824,15 +3824,28 @@ Effects read their signed facing BYTE at+48, distinct from the live character
 facing field+4C. Original top<240/bottom>0 visibility tests and all conversions
 remain intact. Work records contain only used indices, pointers and rectangles.
 
-The complete 806-byte original Video callee40A7B0 independently establishes
-DrawShadowSurface(destination SurfaceRect, IUnknown*, source SurfaceRect,
-unsigned byte color key, int mirror, unsigned byte color index), real Video
-receiver, int result and RET30. It locks the mask/back surfaces, reads bottom-up
-mask rows at stride minus3 and applies the fixed-color/destination palette blend
-lookup. B0 is the fixed color index, not an alpha parameter. This corrects the
-older interpretation. Its implementation remains open; a caller match grants
-no callee or linked-data credit. Full original instructions and provisional
-decompile are retained beside the four owner reviews.
+The complete 806-byte original Video callee at `0x40A7B0` independently
+establishes `DrawShadowSurface(destination SurfaceRect, IUnknown*, source
+SurfaceRect, unsigned byte color key, int mirror, unsigned byte color index)`,
+the real Video receiver, int result and `RET 0x30`. Its natural C++ owner now
+lives in `src/VideoCharacterDraw.cpp` under unit `video-draw-shadow-surface`.
+The source preserves the asymmetric clipping rules (top and bottom only clamp
+the destination, while left/right also adjust the source), source-right-relative
+mirror transform, DirectDraw lock flags and lost-surface return. It reads the
+mask bottom-up, stepping three source pitches for each destination row; mask
+pixels equal to the key are skipped, and the others blend the current
+ destination pixel through `meanBlend[destinationPixel][colorIndex]`. Destination
+then source unlock order is preserved. `0xB0` is the fixed color index, not an
+alpha parameter. This corrects the older interpretation.
+
+This is a semantic candidate, not exact. The pinned VC7.1 `/Od` object is
+1,091 bytes; the pointer-row/do-while control is 1,078 bytes. `/O2` variants
+are 618 and 590 bytes respectively, versus the 806-byte target. Strict
+comparison rejects all complete extents. The original body uses ESI/EDI/EBX,
+body-local ESI/EDI saves, AH/AL comparisons and three repeated source-pitch
+subtractions per row; those compiler-visible details remain unrecovered. No
+exactness credit is assigned. Full original instructions and provisional
+decompile are retained beside the caller reviews.
 
 ### Keyboard and replay behavior
 
