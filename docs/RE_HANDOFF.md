@@ -2,7 +2,7 @@
 
 Start with [AGENTS.md](../AGENTS.md), then the specific source and evidence
 linked below. The live workbench now covers selected Makoto states through
-203 and the pushbox resolver has a fresh exact-ledger certificate. Recheck
+210 and the pushbox resolver has a fresh exact-ledger certificate. Recheck
 `git status` and the newest commits when resuming.
 
 ## Working agreement
@@ -30,7 +30,7 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **329 exact functions**, **1,003,068 code bytes**,
+  ledgers currently count **330 exact functions**, **1,003,451 code bytes**,
   **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -50,16 +50,16 @@ The active substantial work is the **partial, isolated** draft
 Its [case-by-case README](../workbench/makoto-state/README.md) is the current
 detailed record. Commits `13e9199`, `6871f0b`, `0e58464`, and `6325ad5`
 reconstruct states 86–87, 96–99, 150–155 and 156–158 after the earlier
-state-85 work. Later `gpt-web:` commits reconstruct 161–171, 178, 180 and 200–203;
+state-85 work. Later `gpt-web:` commits reconstruct 161–171, 178, 180 and 200–210;
 the independent recheck removed a stray dash-momentum clear from state 178.
 All remain in an isolated partial C++ owner, not in the exact ledger.
 
 - Target function `0x005E85F0`: **58,482 bytes of code** plus 500-byte jump
   table and 310-byte selector table (**59,292 owned bytes**).
-- The workbench implements **79 of 124 explicit dispatch IDs**, spread
-  across selected states through 203. Its default branch is an unfinished
+- The workbench implements **86 of 124 explicit dispatch IDs**, spread
+  across selected states through 210. Its default branch is an unfinished
   marker, not real behavior; this file is not integrated into `src/` or ledgered exact.
-- **Next task: implement case 204 onward**, one branch at a time from target
+- **Next task: implement case 211 onward**, one branch at a time from target
   instructions. Preserve unsigned pose/frame arithmetic, x87 operations,
   distinct switch dispatches, sound/effect calls, and table ownership. Do not
   blindly copy equivalent-looking cases from another character.
@@ -115,6 +115,29 @@ scripts/repo-python scripts/compare-coff-function.py --unit scene-battle-resolve
 
 The neighboring collision dispatch, body/effect hit and geometry helpers are
 already ledgered exact. Avoid reopening them without target evidence.
+
+## Newly accepted Kaori constructor and affected creation callers
+
+Character13/Kaori constructor at `0x00638D90` is **Exact** for the complete
+383-byte function under `vc71-od-static`; all four target relocations and
+the original 13-slot vtable/string operands were reviewed. Accepted natural
+source: `src/Character13Frame.cpp`, selected unit
+`character-13-constructor`, certificate
+`docs/evidence/kaori-constructor-exact.json`. The class view in
+`src/CharacterViews.h` now exposes five initialization integers and three
+64-element scratch arrays with unchanged 0x3450 object size.
+
+Because this view changes compiler-local labels, both actual constructor
+callers were rebuilt and strictly compared, not assumed unchanged:
+`scene-create-character` remained **3495/3495 Exact** with 97 bound
+relocations, and `scene-loading-character` remained **2651/2651 Exact**
+with 76 relocations (both include full switch table ownership). New
+proof: `docs/evidence/kaori-creation-consumers-exact.json`. The 25/26
+rebound internal label names were individually checked by original
+jump destinations and complete bytes. Reproduce only these three units
+with `build-match-unit.py --unit ...` then `compare-coff-function.py`.
+The remaining historical `CharacterViews.h` certificate staleness is
+not cleared; do not relabel proofs or invoke a full cold replay.
 
 ## Other open substantial work
 

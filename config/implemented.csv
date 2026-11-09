@@ -121,7 +121,7 @@ address,name,source,symbol,status,evidence
 0x00759770,?PollKeyboard@Scene1@@UAEXXZ,src/SceneSelect.cpp,?PollKeyboard@Scene1@@UAEXXZ,complete,docs/evidence/scene-select-exact.json
 0x007598D0,?Enter@Scene1@@QAEXXZ,src/SceneSelect.cpp,?Enter@Scene1@@QAEXXZ,complete,docs/evidence/scene-select-exact.json
 0x00755500,?Slot0@Scene1@@UAEXXZ,src/SceneSelectRender.cpp,?Slot0@Scene1@@UAEXXZ,complete,docs/evidence/scene-select-render-exact.json
-0x007586B0,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,src/SceneCharacterCreate.cpp,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,complete,docs/evidence/character-create-exact.json
+0x007586B0,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,src/SceneCharacterCreate.cpp,?LoadCharacter@Scene1@@QAEXPAPAVSecondary@@0D@Z,complete,docs/evidence/kaori-creation-consumers-exact.json
 0x0040EAE0,??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/SecondaryLifetime.cpp,??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/secondary-lifetime-exact.json
 0x0040ECB0,??1Secondary@@QAE@XZ,src/SecondaryLifetime.cpp,??1Secondary@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
 0x00412820,??0SecondarySequence@@QAE@XZ,src/SecondaryLifetime.cpp,??0SecondarySequence@@QAE@XZ,complete,docs/evidence/secondary-lifetime-exact.json
@@ -225,7 +225,7 @@ address,name,source,symbol,status,evidence
 0x0076C790,?Step@Scene2@@UAEEXZ,src/SceneLoading.cpp,?Step@Scene2@@UAEEXZ,complete,docs/evidence/scene-loading-exact.json
 0x0076C980,?Slot0@Scene2@@UAEXXZ,src/SceneLoading.cpp,?Slot0@Scene2@@UAEXXZ,complete,docs/evidence/scene-loading-exact.json
 0x0076DA10,?PollKeyboard@Scene2@@UAEXXZ,src/SceneLoading.cpp,?PollKeyboard@Scene2@@UAEXXZ,complete,docs/evidence/scene-loading-exact.json
-0x0076DA20,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,src/SceneLoadingCharacter.cpp,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,complete,docs/evidence/scene-loading-exact.json
+0x0076DA20,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,src/SceneLoadingCharacter.cpp,?LoadCharacter@Scene2@@QAEXPAPAVSecondary@@0DD@Z,complete,docs/evidence/kaori-creation-consumers-exact.json
 0x004F8300,??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,src/SceneLoadingCharacter.cpp,??0Character24@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/scene-loading-exact.json
 0x00751370,??0Background01@@QAE@PAVVideo@@@Z,src/Backgrounds.cpp,??0Background01@@QAE@PAVVideo@@@Z,complete,docs/evidence/backgrounds-exact.json
 0x00751500,??1Background01@@QAE@XZ,src/Backgrounds.cpp,??1Background01@@QAE@XZ,complete,docs/evidence/backgrounds-exact.json
@@ -328,3 +328,4 @@ address,name,source,symbol,status,evidence
 0x005FF4C0,Character03::Slot07,src/Character03Effects.cpp,?Slot07@Character03@@UAEXXZ,complete,docs/evidence/makoto-effects-exact.json
 0x00401850,FrameThread,src/FrameThread.cpp,_FrameThread@4,complete,docs/evidence/frame-thread-exact.json
 0x00766B50,Scene3::ResolvePushboxes,src/SceneBattlePushboxes.cpp,?ResolvePushboxes@Scene3@@QAEXXZ,complete,docs/evidence/scene-pushboxes-exact.json
+0x00638D90,Character13::Character13,src/Character13Frame.cpp,??0Character13@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/kaori-constructor-exact.json

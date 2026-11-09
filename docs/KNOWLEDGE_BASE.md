@@ -1657,6 +1657,34 @@ separate Character22 declaration because that case reuses Character10.
 | 22 | nayuki | 0x3460 | 0x00461090 | 455 |
 | 23 | misuzu | 0x3488 | 0x00519E00 | 615 |
 
+### Kaori constructor: complete exact native code generation (2026-11-09)
+
+The selection-ID 13 constructor `Character13::Character13` at `0x00638D90`
+now has a complete natural C++ implementation in
+`src/Character13Frame.cpp`. Its selected VC7.1 `character-13-constructor`
+comparison matches **383/383 bytes** with zero differences and all four
+reviewed relocations: Secondary construction at `0x0040EAE0`, the
+13-slot child vtable at `0x00788BF8`, the original `kaori` string at
+`0x00788BF0`, and CRT `strcpy` at `0x00778080`. The code initializes
+surfaceCount=430, five child state integers, five pairs of collision
+parameters, two command slots and three 64-int scratch arrays. The
+class view retains the original total size `0x3450` with four unknown
+trailing bytes. None of the unknown fields were fabricated as initialized.
+
+Two direct construction consumers, `Scene1::LoadCharacter` at `0x007586B0`
+and `Scene2::LoadCharacter` at `0x0076DA20`, were rebuilt and compared
+individually against their complete **3,495-byte/97-relocation** and
+**2,651-byte/76-relocation** target contributions, including their
+96- and 100-byte switch tables. Both are still Exact with zero
+differences. The new Character13 view shifted compiler-local switch-label
+numbers by seven; the 25 and 26 changed symbols were rebound only after
+checking identical relocation offsets, internal target destinations and
+complete target bytes. The new public receipts are
+`docs/evidence/kaori-constructor-exact.json` and
+`docs/evidence/kaori-creation-consumers-exact.json`. Existing historical
+certificates were left unchanged; unrelated `CharacterViews.h` users still
+have earlier stale dependency metadata and were not cold-replayed.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

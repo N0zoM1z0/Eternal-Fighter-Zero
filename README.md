@@ -60,8 +60,10 @@ records merely to update this note.
 Accepted sources cover configuration, file reading, DirectInput, Audio,
 Context, title/selection/loading scenes, substantial shared character code,
 battle simulation/collision/display/keyboard/replay controls and four concrete
-background owners. Seven character constructors and substantial child bodies
-are exact: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto. Shiori's and
+background owners. Seven characters have exact constructors and substantial
+child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
+Kaori's constructor is also newly exact (383 bytes), while its other child
+owners are still open. Shiori's and
 Makoto's large slot-6 state owners remain open, alongside other character,
 Video and scene work. See the live ledgers for individual acceptance.
 
@@ -71,8 +73,8 @@ an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
 The current substantial owner is Makoto/Character03 Slot06 in
-`workbench/makoto-state/`, partially reconstructed across 79 selected states
-through 203 but not complete or Exact. `Scene3::ResolvePushboxes` has a fresh
+`workbench/makoto-state/`, partially reconstructed across 86 selected states
+through 210 but not complete or Exact. `Scene3::ResolvePushboxes` has a fresh
 complete **local** 2,727-byte, 35-relocation exact comparison, independently
 reviewed authored origin and a public exact-ledger entry. Whole-image/runtime
 closure and freshness of unrelated older certificates remain open.
