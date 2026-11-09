@@ -366,3 +366,4 @@ address,end,size,status,evidence
 0x007783B8,0x0077842D,117,reviewed,docs/KNOWLEDGE_BASE.md#vc71-x87-floating-to-integer-helper
 0x00401850,0x004018ED,157,reviewed,docs/evidence/frame-thread-exact.json
 0x0040A440,0x0040A7A1,865,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; raw RET 0x30 at 0x0040A79E and next Video method at 0x0040A7B0 after INT3 alignment
+0x00409A90,0x00409DAF,799,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; Ghidra body inventory 799 bytes, raw RET 0x2C at 0x00409DAC and next Video method at 0x00409DB0 after INT3 alignment

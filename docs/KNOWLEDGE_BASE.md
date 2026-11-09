@@ -555,6 +555,18 @@ continue exploring natural C++ layouts before considering any assembly-based
 recovery. The 14,114-byte `0x401C20` state dispatcher was subsequently accepted
 as described below; that acceptance is independent of this rendering owner.
 
+The adjacent 799-byte `0x409A90` target is now boundary-reviewed as
+`Video::DrawSurface`. Its `ret 0x2c` is at `0x409DAC`, ending at `0x409DAF`;
+the next Video method starts at `0x409DB0` after one INT3 byte. The natural C++
+owner is in the same `src/VideoCharacterDraw.cpp` file under unit
+`video-draw-surface`. It preserves the same clipping and original-right-relative
+mirror transform, source/destination DirectDraw lock flags, lost-surface return,
+transparent-key branches, and destination-then-source unlock order. The pinned
+VC7.1 `/Od` object is 1,098 bytes; a pointer-row/register-hint probe is 1,079
+bytes. Both remain larger than the 799-byte target and strict comparison
+rejects the complete extents. These are semantic C++ candidates, not exact
+owners; the target's body-local ESI/EDI saves and AH/AL loops remain unrecovered.
+
 A focused tracking audit also exposed a pre-existing certificate problem.
 `17edf49` changed `SecondaryPose::field000c` in `src/Engine.h` from `short`
 to `unsigned short` after the prior exact certificates were generated. The

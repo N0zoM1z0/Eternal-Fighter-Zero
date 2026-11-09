@@ -2706,6 +2706,16 @@ symbol = "?BuildBlendTables@Video@@QAEXPAE@Z"
 target_address = 0x0040b8a0
 size = 1054
 
+[units.video-draw-surface]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/VideoCharacterDraw.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/video-draw-surface/VideoCharacterDraw.obj"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target_address = 0x00409A90
+size = 799
+
 [units.video-draw-character-tint]
 artifact_kind = "coff"
 profile = "vc71-od-static"
