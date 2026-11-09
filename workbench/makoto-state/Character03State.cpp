@@ -1,9 +1,8 @@
-// First natural-C++ cases of the still-open Makoto state dispatcher.
+// Complete natural C++ reconstruction of Makoto's 124-state dispatcher.
 //
-// This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. All 124 explicit animation-ID arms and the true default
-// are implemented, but code generation and jump table targets are not Exact.
-// The canonical owner's full codegen, jump/selector tables and strict comparison remain open.
+// This workbench now emits the entire original 59,292-byte code and table
+// contribution under VC7.1 with all 1,386 relocation sites target-bound.
+// Formal accepted-source/selected-unit integration is a separate step.
 #include "../../src/CharacterViews.h"
 
 void Character03::Slot06()
@@ -14,8 +13,15 @@ void Character03::Slot06()
     // 0x005E8623: construct the effect spawn, snapshot this frame's duration
     // and the animation's frame count, then initialize the spawn's defaults.
     EffectSpawn effect;
-    unsigned short frameDuration = patterns[field0008].frames[field000a].duration;
-    unsigned short animationFrameCount = patterns[field0008].count;
+    // Original VC7.1 frame cache uses two separate, four-byte-aligned
+    // 16-bit stack homes at [ebp-0x8] and [ebp-0x4]. Keeping these
+    // together restores EffectSpawn's [ebp-0x50] home and the frame size.
+    struct FrameTiming {
+        __declspec(align(4)) unsigned short animationFrameCount;
+        __declspec(align(4)) unsigned short frameDuration;
+    } timing;
+    timing.frameDuration = patterns[field0008].frames[field000a].duration;
+    timing.animationFrameCount = patterns[field0008].count;
     ResetLocalEffectSpawn(&effect);
 
     // The original selector at 0x005F6C56 is an animation-ID-to-case map.
@@ -27,10 +33,10 @@ void Character03::Slot06()
         velocityY = 0.0;
         dashMomentumFlag = 0;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -41,10 +47,10 @@ void Character03::Slot06()
         velocityX = 0.7;
         velocityY = 0.0;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -55,10 +61,10 @@ void Character03::Slot06()
         velocityX = -0.7;
         velocityY = 0.0;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -70,10 +76,10 @@ void Character03::Slot06()
         dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -95,10 +101,10 @@ void Character03::Slot06()
         if (field000a > 2) velocityY += gravity;
 
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -132,10 +138,10 @@ void Character03::Slot06()
         if (field000a > 2) velocityY += gravity;
 
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 // Unlike case 4, do not change animation or ResetPose here.
                 // The last two pose frames repeat while airborne.
                 field000a = (unsigned short)(field000a - 2);
@@ -165,10 +171,10 @@ void Character03::Slot06()
         if (field000a > 2) velocityY += gravity;
 
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -188,10 +194,10 @@ void Character03::Slot06()
         dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -204,10 +210,10 @@ void Character03::Slot06()
         dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -218,10 +224,10 @@ void Character03::Slot06()
         velocityY += gravity;
         dashMomentumFlag = 0;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0; // Repeat this animation while in the air.
             }
         }
@@ -239,10 +245,10 @@ void Character03::Slot06()
         dashMomentumFlag = 0;
         FaceOpponent();
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 // The original tests inputY (+0x189) after selecting state 0.
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
@@ -260,10 +266,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -286,10 +292,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -311,10 +317,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -343,13 +349,13 @@ void Character03::Slot06()
             velocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
                 field000a = (unsigned short)(field000a - 2);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 --field000a;
             }
         }
@@ -382,10 +388,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -420,10 +426,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -458,10 +464,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -494,10 +500,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -530,10 +536,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -566,10 +572,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) field0008 = 3;
                 ResetPose();
@@ -602,10 +608,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 // Unlike cases 50-55, this recovery always chooses crouch.
                 field0008 = 3;
                 ResetPose();
@@ -638,10 +644,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 // Unlike cases 50-55, this recovery always chooses crouch.
                 field0008 = 3;
                 ResetPose();
@@ -674,10 +680,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 // Unlike cases 50-55, this recovery always chooses crouch.
                 field0008 = 3;
                 ResetPose();
@@ -710,10 +716,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -754,10 +760,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -798,10 +804,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -837,10 +843,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -876,10 +882,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -925,10 +931,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -974,10 +980,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1018,10 +1024,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1062,10 +1068,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1094,10 +1100,10 @@ void Character03::Slot06()
             ResetPose();
             return;
         }
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1121,10 +1127,10 @@ void Character03::Slot06()
         velocityX = knockbackVelocityX;
         velocityY = knockbackVelocityY;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1162,10 +1168,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -1201,10 +1207,10 @@ void Character03::Slot06()
         }
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1234,10 +1240,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1261,10 +1267,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1288,10 +1294,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -1325,10 +1331,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1365,10 +1371,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1405,10 +1411,10 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -1437,10 +1443,10 @@ void Character03::Slot06()
             velocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 --field000a;
             }
         }
@@ -1480,14 +1486,14 @@ void Character03::Slot06()
             velocityY += gravity;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 4 && field3138 < 8) {
                 field000a = 0;
                 ++field3138;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -1545,10 +1551,10 @@ void Character03::Slot06()
             velocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
                 FaceOpponent();
@@ -1598,10 +1604,10 @@ void Character03::Slot06()
             velocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
                 FaceOpponent();
@@ -1632,10 +1638,10 @@ void Character03::Slot06()
         }
         velocityY += 0.04;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
                 FaceOpponent();
@@ -1681,10 +1687,10 @@ void Character03::Slot06()
         // 0x00787DA8 holds 0.06, not the 0.04 used by state 85.
         velocityY += 0.06;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = 0;
             }
         }
@@ -1712,10 +1718,10 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -1724,14 +1730,14 @@ void Character03::Slot06()
 
     case 96: // Original block 0x005ED2CB: stand/crouch wakeup timing
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             // Face one frame before the animation ends, not at the end.
-            if (field000a == animationFrameCount - 1) {
+            if (field000a == timing.animationFrameCount - 1) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1755,10 +1761,10 @@ void Character03::Slot06()
             pendingContextSoundSlot = 7;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 99;
                 ResetPose();
             }
@@ -1779,10 +1785,10 @@ void Character03::Slot06()
             pendingContextSoundSlot = 7;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 99;
                 ResetPose();
             }
@@ -1797,13 +1803,13 @@ void Character03::Slot06()
             ResetPose();
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 96;
                 ResetPose();
             }
@@ -1835,13 +1841,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1876,13 +1882,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1917,13 +1923,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -1958,13 +1964,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -1996,13 +2002,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -2034,13 +2040,13 @@ void Character03::Slot06()
             outgoingPushbackVelocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -2056,10 +2062,10 @@ void Character03::Slot06()
         velocityX = -1.2;
         velocityY += gravity;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -2089,10 +2095,10 @@ void Character03::Slot06()
             velocityY += gravity;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -2121,10 +2127,10 @@ void Character03::Slot06()
             velocityY += gravity;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -2151,10 +2157,10 @@ void Character03::Slot06()
             ++field3138;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
                 gravity = 0.035;
@@ -2193,13 +2199,13 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 18) {
                 gravity = 0.035;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -2230,10 +2236,10 @@ void Character03::Slot06()
         ++field000c;
         ++field3138;
         ++field313c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 6);
                 return;
             }
@@ -2263,14 +2269,14 @@ void Character03::Slot06()
             velocityX = 0.0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 4 && field3138 < 2) {
                 field000a = (unsigned short)(field000a - 2);
                 ++field3138;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 FaceOpponent();
                 field0008 = 0;
                 ResetPose();
@@ -2299,10 +2305,10 @@ void Character03::Slot06()
         ++field000c;
         ++field3138;
         ++field313c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -2344,10 +2350,10 @@ void Character03::Slot06()
         ++field000c;
         ++field3138;
         ++field313c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -2399,11 +2405,11 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -2429,13 +2435,13 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -2460,13 +2466,13 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a == animationFrameCount) {
+            if (field000a == timing.animationFrameCount) {
                 FaceOpponent();
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -2501,10 +2507,10 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -2535,11 +2541,11 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 velocityX = (double)field3138 * 0.01;
                 velocityY = (double)field313c * 0.01;
@@ -2568,10 +2574,10 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 ResetPose();
                 return;
@@ -2597,7 +2603,7 @@ void Character03::Slot06()
             pendingContextSoundSlot = 9;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 1) {
@@ -2608,7 +2614,7 @@ void Character03::Slot06()
             if (field000a == 10) {
                 field000a = (unsigned short)(field000a - 2);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 ResetPose();
                 field0008 = 0;
             }
@@ -2645,13 +2651,13 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -2689,13 +2695,13 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -2720,7 +2726,7 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
@@ -2736,7 +2742,7 @@ void Character03::Slot06()
                 effect.group = 2;
                 EmitLocalEffect(&effect);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -2776,7 +2782,7 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 7) {
@@ -2793,7 +2799,7 @@ void Character03::Slot06()
                 effect.group = 2;
                 EmitLocalEffect(&effect);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -2831,13 +2837,13 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -2878,13 +2884,13 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -2921,7 +2927,7 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 1) {
@@ -2937,7 +2943,7 @@ void Character03::Slot06()
                     remainingHitCount = 0;
                 }
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 FaceOpponent();
                 ResetPose();
@@ -2973,13 +2979,13 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -3014,13 +3020,13 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -3056,7 +3062,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 4) {
@@ -3075,7 +3081,7 @@ void Character03::Slot06()
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -3107,13 +3113,13 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 FaceOpponent();
                 ResetPose();
@@ -3144,7 +3150,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 5) {
@@ -3163,7 +3169,7 @@ void Character03::Slot06()
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -3201,11 +3207,11 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -3219,11 +3225,11 @@ void Character03::Slot06()
             velocityY = -2.4;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -3244,11 +3250,11 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 if (inputY == 1) {
                     field0008 = 3;
@@ -3287,11 +3293,11 @@ void Character03::Slot06()
             // Original proceeds to the frame counter even after a grab.
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -3321,7 +3327,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
@@ -3342,7 +3348,7 @@ void Character03::Slot06()
                 remainingHitCount = 1;
                 meter = (short)(meter + 30);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3370,11 +3376,11 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3402,11 +3408,11 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3441,7 +3447,7 @@ void Character03::Slot06()
             }
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 3) {
@@ -3449,7 +3455,7 @@ void Character03::Slot06()
                 velocityY = -1.5;
                 gravity = 0.045;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -3478,11 +3484,11 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -3510,11 +3516,11 @@ void Character03::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 ResetPose();
             }
@@ -3539,7 +3545,7 @@ void Character03::Slot06()
             pendingContextSoundSlot = 20;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 1) {
@@ -3552,7 +3558,7 @@ void Character03::Slot06()
                     remainingHitCount = 0;
                 }
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 3;
                 FaceOpponent();
                 ResetPose();
@@ -3576,7 +3582,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
@@ -3587,7 +3593,7 @@ void Character03::Slot06()
                 remainingHitCount = 0;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 211;
                 field000a = 1;
             }
@@ -3647,14 +3653,14 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
             if (field000a == 3) {
                 (*opponentSlot)->field0008 = 121;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field000a = (unsigned short)(field000a - 2);
             }
         }
@@ -3667,7 +3673,7 @@ void Character03::Slot06()
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3683,7 +3689,7 @@ void Character03::Slot06()
                 pendingContextSoundSlot = 21;
                 pendingCharacterSoundSlot = 5;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3697,7 +3703,7 @@ void Character03::Slot06()
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3713,7 +3719,7 @@ void Character03::Slot06()
                 pendingContextSoundSlot = 21;
                 pendingCharacterSoundSlot = 5;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3751,7 +3757,7 @@ void Character03::Slot06()
             pendingCharacterSoundSlot = 5;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3766,7 +3772,7 @@ void Character03::Slot06()
                 EmitLocalEffect(&effect);
                 pendingContextSoundSlot = 21;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3780,7 +3786,7 @@ void Character03::Slot06()
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3796,7 +3802,7 @@ void Character03::Slot06()
                 EmitLocalEffect(&effect);
                 pendingContextSoundSlot = 21;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3810,7 +3816,7 @@ void Character03::Slot06()
             meter = (short)(meter + 45);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3826,7 +3832,7 @@ void Character03::Slot06()
                 EmitLocalEffect(&effect);
                 pendingContextSoundSlot = 21;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3852,7 +3858,7 @@ void Character03::Slot06()
             contextOwner->EmitEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -3868,7 +3874,7 @@ void Character03::Slot06()
                 EmitLocalEffect(&effect);
                 pendingContextSoundSlot = 21;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3896,7 +3902,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
@@ -3919,7 +3925,7 @@ void Character03::Slot06()
                 remainingHitCount = 1;
                 meter = (short)(meter + 30);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -3947,7 +3953,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
@@ -3970,7 +3976,7 @@ void Character03::Slot06()
                 remainingHitCount = 1;
                 meter = (short)(meter + 30);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4018,7 +4024,7 @@ void Character03::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a < 2) {
@@ -4059,7 +4065,7 @@ void Character03::Slot06()
                 remainingHitCount = 1;
                 meter = (short)(meter + 30);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4091,11 +4097,11 @@ void Character03::Slot06()
             field3148 = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -4128,11 +4134,11 @@ void Character03::Slot06()
             field3148 = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -4177,11 +4183,11 @@ void Character03::Slot06()
             field3148 = 1;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 FaceOpponent();
                 ResetPose();
@@ -4195,7 +4201,7 @@ void Character03::Slot06()
             velocityY *= 0.25;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 3;
@@ -4212,7 +4218,7 @@ void Character03::Slot06()
                 EmitLocalEffect(&effect);
                 pendingContextSoundSlot = 21;
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
             }
@@ -4244,7 +4250,7 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
@@ -4268,7 +4274,7 @@ void Character03::Slot06()
                 ++field3138;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4300,7 +4306,7 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
@@ -4324,7 +4330,7 @@ void Character03::Slot06()
                 ++field3138;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4356,7 +4362,7 @@ void Character03::Slot06()
             EmitLocalEffect(&effect);
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
@@ -4380,7 +4386,7 @@ void Character03::Slot06()
                 ++field3138;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4507,7 +4513,7 @@ void Character03::Slot06()
             field000c = 0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
@@ -4518,7 +4524,7 @@ void Character03::Slot06()
             if (field000a == 22) {
                 field000a = (unsigned short)(field000a - 2);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 ResetPose();
             }
@@ -4646,7 +4652,7 @@ void Character03::Slot06()
             field000c = 0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
@@ -4657,7 +4663,7 @@ void Character03::Slot06()
             if (field000a == 22) {
                 field000a = (unsigned short)(field000a - 2);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 ResetPose();
             }
@@ -4789,7 +4795,7 @@ void Character03::Slot06()
             field000c = 0;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
@@ -4800,7 +4806,7 @@ void Character03::Slot06()
             if (field000a == 22) {
                 field000a = (unsigned short)(field000a - 2);
             }
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
                 ResetPose();
             }
@@ -4861,7 +4867,7 @@ void Character03::Slot06()
             reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2 && field313c < 9) {
@@ -4878,7 +4884,7 @@ void Character03::Slot06()
                 --field000a;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -4939,7 +4945,7 @@ void Character03::Slot06()
             reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2 && field313c < 9) {
@@ -4964,7 +4970,7 @@ void Character03::Slot06()
                 --field000a;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -5038,7 +5044,7 @@ void Character03::Slot06()
             reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2 && field313c < 9) {
@@ -5055,7 +5061,7 @@ void Character03::Slot06()
                 --field000a;
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -5107,7 +5113,7 @@ void Character03::Slot06()
             health = 10000;
         }
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 3) {
@@ -5128,7 +5134,7 @@ void Character03::Slot06()
                 field000a = (unsigned short)(field000a - 2);
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }
@@ -5140,7 +5146,7 @@ void Character03::Slot06()
         velocityY = 0.0;
         gravity = 0.0;
         ++field000c;
-        if (field000c >= frameDuration) {
+        if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             if (field000a == 2 && field3138 < 8) {
@@ -5148,7 +5154,7 @@ void Character03::Slot06()
                 field000a = (unsigned short)(field000a - 2);
             }
             attackCollisionResult = 0;
-            if (field000a >= animationFrameCount) {
+            if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
             }

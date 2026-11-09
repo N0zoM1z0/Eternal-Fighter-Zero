@@ -1283,6 +1283,39 @@ those instructions to the last case instead of the function exit.
 This count normalizes stack-home offsets, explicit relocation values
 and branches and **is not a whole-function strict byte match**.
 
+## Complete 59,292-byte native code-generation breakthrough
+
+The initial scratch source had two separate `unsigned short` timing
+locals. VC7.1 gave the second one an extra stack home below the effect
+object, increasing the frame by four bytes and widening two case-70
+accesses by three bytes each. Declaration reordering, `volatile` and
+single-member alignments did not reproduce the target homes.
+
+The complete owner now uses a **natural `FrameTiming` local structure**
+with two four-byte-aligned `unsigned short` fields. They compile to
+`[ebp-0x8]` (animationFrameCount) and `[ebp-0x4]` (frameDuration),
+with effect storage at `[ebp-0x50]`, the `this` pointer at
+`[ebp-0x54]`, and the original `sub esp,0x378` prologue. No manual
+instruction bytes or target-byte padding were added.
+
+A fresh VC7.1 `/Od /G6 /MT /Gy /W3` rebuild of this workbench yields
+an exact **59,292-byte** COFF-owned contribution: **58,482 function
+code bytes, 500-byte (125-target) jump table and 310-byte selector**.
+All 125 compiled jump destinations match canonical target-relative
+addresses. The 310-byte selector matches byte-for-byte. A full
+original-bound relocation audit of **all 1,386 COFF relocation sites**
+(127 internal, 1,259 external) resolved **220 distinct symbols** with
+zero per-symbol target disagreements. All internal local-label targets
+coincide with the compiler's own offsets. After binding, the entire
+59,292-byte sequence matches `EFZ.exe` with **zero differing bytes**,
+SHA-256 `430e18ae01c539e7b2b93228261cba667760633e16e0a10769910ece8aea3d2d`.
+
+This is a reproducible complete-owner code-generation match, not yet a
+formal exact-ledger acceptance at this intermediate checkpoint. Copy
+the source into the production `src/` tree, declare every relocation
+and its independently checked original target, and run the strict
+selected COFF oracle before ledgering the whole function.
+
 ## Next implementation work
 
 The 2026-11-09 handoff storage cleanup archived 61 historical candidate
