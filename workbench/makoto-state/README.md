@@ -263,6 +263,22 @@ work, not the original behavior for valid unimplemented animations.
   and independently accesses virtual effect slot +0x24; this case must
   not be folded into the previous grounded recoil family.
 
+- Animation ID 82 (0x005EC7B7..0x005EC9D9, 546 bytes, 154
+  instructions) is a repeated airborne lift before restoring stored
+  knockback. A first tick with field3138==0 requests context sound 30,
+  sets vertical speed -0.45 and horizontal speed -0.1, increments
+  field3138 and grants 30 meter. At pose 4/tick zero it restores
+  knockbackVelocityX/Y and gravity 0.032; if descending while still at
+  pose 4 it switches immediately to pose 5 with the tick reset.
+  Gravity applies only past pose 3. On frame expiration a newly reached
+  pose 4 loops to pose 0 while field3138 is below 8, incrementing that
+  counter. Otherwise the end-of-animation frame is reduced by two.
+  Landing at pose>4 selects knockdown state 0x61 or 0x62 and ResetPose.
+  The original case includes a separate 0.8 resource drain each tick.
+  Its loop, sound, stored-velocity, and landing paths were independently
+  checked against the target instead of assuming another character's
+  similar implementation must be correct.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -282,7 +298,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 82 and onward directly from reviewed target instructions,
+Extend case 83 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

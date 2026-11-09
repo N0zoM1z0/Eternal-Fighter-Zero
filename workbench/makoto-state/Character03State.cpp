@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 and 81 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-82 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1405,6 +1405,53 @@ void Character03::Slot06()
             }
         }
         if (positionY + velocityY >= 0.0 && field000a == 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 82: // Original block 0x005EC7B7: repeated airborne lift and knockback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            pendingContextSoundSlot = 30;
+            velocityY = -0.45;
+            velocityX = -0.1;
+            ++field3138;
+            meter = (short)(meter + 30);
+        }
+        if (field000a == 4 && field000c == 0) {
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY > 0.0 && field000a == 4) {
+            field000a = 5;
+            field000c = 0;
+        }
+        if (field000a > 3) {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && field3138 < 8) {
+                field000a = 0;
+                ++field3138;
+            }
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 4) {
             positionY = 0.0;
             if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
