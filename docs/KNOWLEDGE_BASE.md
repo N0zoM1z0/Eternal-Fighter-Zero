@@ -596,6 +596,12 @@ pointer-row/do-while control is 1,066 bytes, while the `/O2` pointer-row control
 is 601 bytes. All are larger or smaller than the 808-byte target and strict
 comparison rejects the complete extents. No exactness credit is assigned.
 
+The target's 3-pixel source of the destination copy is not a palette blend or
+an offset in the source mask: it is a rightward in-place shift of the back
+surface, gated by the mask only when the color key is nonzero. The descending
+column loop is important because each pixel reads three bytes to its left;
+processing right-to-left preserves the unmodified input pixels.
+
 The ordinary, blended, tint, shadow and special rendering kernels now all have
 natural C++ semantic owners in `src/VideoCharacterDraw.cpp` and focused build
 units. None has passed complete strict code comparison. The target bodies use
