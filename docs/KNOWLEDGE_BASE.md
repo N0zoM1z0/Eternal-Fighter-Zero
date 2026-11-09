@@ -1978,6 +1978,31 @@ Public receipts: `docs/evidence/mio-constructor-exact.json` and
 `docs/evidence/mio-creation-consumers-exact.json`; the existing Makoto
 receipt was freshly updated. No unrelated full cold replay ran.
 
+### Nayuki constructor: original nonzero state exactness (2026-11-09)
+
+`Character10::Character10` at `0x00461090` now has accepted natural
+C++ in `src/Character10Frame.cpp` with **455/455 code bytes** and
+**4/4 independently reviewed original relocations**. The target
+constructor initializes nine child state integers, including the
+**nonzero +0x3148 value 3**, five collision coordinate pairs,
+four sparse command IDs, and three complete 64-int scratch arrays.
+The child class stays the observed **0x3460** bytes; its last four
+bytes are explicitly unknown. Its resource literal `nayuki`,
+child vtable at `0x788270`, six-argument Secondary constructor and
+CRT `strcpy` match their actual original target locations.
+This is separate from the already Exact `NayukiB` constructor.
+
+After the class-view change, only three target-bound dependent Exact
+functions were rebuilt: `scene-create-character` **3495/3495** bytes
+with 97 relocations, `scene-loading-character` **2651/2651** with 76,
+and the complete Makoto Slot06 boss **59292/59292** with 1,386.
+The 25/26/127 changed compiler-local label references shifted by
++11. All were rebound simultaneously at unchanged original target
+positions before strict byte comparison including local tables.
+Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
+`docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
+receipt was refreshed. No full cold replay or game runtime claim.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

@@ -65,9 +65,9 @@ child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
 Kaori (383 bytes), MizukaB (396 bytes), Kanna (403 bytes),
 NayukiB (472 bytes), Kano (523 bytes), Akiko (511 bytes), Minagi
 (469 bytes), EX Nanase (452 bytes), Sayuri (419 bytes) and Ikumi
-(647 bytes, including two 505-element vector allocations) and Mio
-(407 bytes, including two x87 double fields) also have independently
-exact natural constructors. Ikumi's separately authored 257-byte
+(647 bytes, including two 505-element vector allocations), Mio
+(407 bytes, including two x87 double fields), and Nayuki (455 bytes)
+also have independently exact natural constructors. Ikumi's separate 257-byte
 `SetAlternateMode` helper is also fully Exact; other child owners remain open.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386

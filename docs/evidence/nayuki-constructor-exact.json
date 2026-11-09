@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete original-bound natural VC7.1 code generation exactness",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 455,
+      "matched_bytes": 455,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x004610B4: original Secondary six-argument base construction to reviewed 0x0040EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7897712,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character10@@6B@",
+          "evidence": "EFZ.exe @ 0x004610BC: original Nayuki 13-slot child vptr at 0x788270",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7897704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62327",
+          "evidence": "EFZ.exe @ 0x004610C2: exact original nayuki NUL literal at 0x788268",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x004610D1: original direct CRT strcpy at 0x778080, Secondary.resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e0f0009c46737e0bb7044d351b7f736273e0a571904c0f4fd20ab16b09c0b4f2",
+      "target_extent_sha256": "e0f0009c46737e0bb7044d351b7f736273e0a571904c0f4fd20ab16b09c0b4f2",
+      "unit": "character-10-constructor",
+      "symbol": "??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x00461090",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "798a1f0ea82913cbb7b2ac2a179eac197b13fd7eae096f02561649901a1c2289",
+      "object_sha256": "0193cbe08771b57793f6a772e194afa9fda7c132ecdba8540fb3909642e73ab2",
+      "source_sha256": "34ae2629d8ae3361c7514be830ca9a0038d5141d06b994a23786a07511855941",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "fd5f91db119bfe6d3021690ea7ed5ed65f951822369097b4bffcf8edc9b4cc48"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "65610f484b59f276dd81c1f14d50123e694d1efd9aa1a2c6932a7a61f913c8af",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cdb146b34d19d8ebe55d153b25629cab43212af4fb2c7e93c4eba690be4e5b67",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Natural Nayuki constructor has nonzero original state at +0x3148=3, nine child integers, five collision pairs and 3x64 scratch arrays, complete 455-byte canonical target with 4 reviewed relocations. Nayuki and NayukiB are separate original functions."
+}

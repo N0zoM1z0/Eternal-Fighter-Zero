@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **342 exact functions**, **1,066,889 code bytes**,
+  ledgers currently count **343 exact functions**, **1,067,344 code bytes**,
   **7,655 associated table bytes**, 374 reviewed complete boundaries and 369
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -360,6 +360,24 @@ Makoto `Slot06` **59292/59292** with 1,386. All 25/26/127 compiler-
 local symbols shifted +7 and were mapped simultaneously at their
 unchanged canonical target offsets. Focused proof:
 `docs/evidence/mio-creation-consumers-exact.json`; no full replay.
+
+## Nayuki original constructor Exact, separately from NayukiB
+
+`Character10::Character10` at `0x00461090` is newly **455/455-byte
+Exact** with **four** original-bound relocations, natural source
+`src/Character10Frame.cpp`, selected unit `character-10-constructor`
+and public proof `docs/evidence/nayuki-constructor-exact.json`.
+Original 0x3460 class size, the nonzero +0x3148 state value 3, sparse
+commands and three 64-slot arrays are all source-level, not stubs.
+
+The three actual dependent units were selectively rebuilt and strictly
+reverified after the class view change: `scene-create-character` is
+**3495/3495** (97 relocations), `scene-loading-character` is
+**2651/2651** (76), and Makoto Slot06 is **59292/59292** (1,386).
+All 25/26/127 compiler-local references shifted +11 with unchanged
+original relocation positions/targets. Proof:
+`docs/evidence/nayuki-creation-consumers-exact.json`. No full cold
+replay or whole-product runtime claim.
 
 ## Other open substantial work
 
