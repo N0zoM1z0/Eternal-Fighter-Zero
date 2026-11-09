@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99 and 150-158 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-162 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2097,9 +2097,77 @@ void Character03::Slot06()
         }
         return;
 
+    case 161: // Original block 0x005EE377: aerial impact and trail reset
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 60);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            ++field3138;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+                gravity = 0.035;
+            }
+        }
+        return;
+
+    case 162: // Original block 0x005EE48B: staged aerial launch and impact
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -1.5;
+            gravity = 0.025;
+            remainingHitCount = 1;
+        }
+        if (field000a == 7 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 60);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            meter = (short)(meter - 1000);
+            ++field3138;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0) {
+            field0008 = 13;
+            ResetPose();
+            ResetPose();
+            positionY = 0.0;
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 18) {
+                gravity = 0.035;
+            }
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 62 explicit cases. The target's true default path also
+        // the other 60 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

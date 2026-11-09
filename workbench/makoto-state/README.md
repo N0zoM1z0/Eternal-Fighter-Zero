@@ -397,6 +397,25 @@ work, not the original behavior for valid unimplemented animations.
   All three original 952-byte blocks and constants were checked against
   EFZ.exe and the partial source compiled under VC7.1.
 
+- Animation ID 161 (0x005EE377..0x005EE48B, 276 bytes) resets its
+  current frame on pose/tick zero and emits global effect type 9 at the
+  character's truncated X and truncated Y minus 60, group 2/layer 1.
+  It grants one remaining hit, requests context sound 62 and advances
+  field3138. The animation finishes by switching to state 9,
+  resetting the pose, then setting gravity to 0.035 in that order.
+
+- Animation ID 162 (0x005EE48B..0x005EE676, 491 bytes) is a staged
+  airborne attack: first-tick ResetFrame; at pose 3/tick zero it sets
+  vertical speed -1.5, gravity 0.025 and one remaining hit; at pose
+  7/tick zero it resets the frame again, emits the same type-9 global
+  effect, requests sound 62, consumes 1,000 meter and increments
+  field3138. Gravity is added every tick. Positive ground penetration
+  triggers **two** ResetPose calls before setting positionY to zero;
+  do not collapse these calls to one. On advancing to pose 18, gravity
+  changes to 0.035; the final pose loops backward by two frames.
+  The raw 767-byte target range was checked against the canonical
+  executable and the draft was rebuilt under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
