@@ -3877,7 +3877,7 @@ void Character07::Slot06()
                 field000a = 7;
             }
             if (field000a == 6) {
-                field013c = 0x3c;
+                hitInvulnerabilityFrames = 0x3c;
             }
             if ((field000a == 5) || (field000a == 0x11)) {
                 attackCollisionResult = 0;
@@ -4851,7 +4851,7 @@ void Character07::Slot06()
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
             SetHorizontalShake(0x32,0x2d);
-            field013c = 0x87;
+            hitInvulnerabilityFrames = 0x87;
         }
         if ((field000a == 9) && ((unsigned short)field000c == 0)) {
             field3138 = 0;
@@ -4922,7 +4922,7 @@ void Character07::Slot06()
             contextOwner->EmitEffect(&effect);
             SetHorizontalShake(0x32,0x2d);
             pendingContextSoundSlot = 0x25;
-            field013c = 0x99;
+            hitInvulnerabilityFrames = 0x99;
         }
         if (2 < field000a) {
             contextOwner->SetSceneTimer(0xf);
@@ -5266,7 +5266,7 @@ void Character07::Slot06()
                 SetVerticalShake(0xf,10);
                 pendingContextSoundSlot = 0x16;
                 ApplyDamage(0x578,900.0);
-                (*opponentSlot)->field0140 = 0;
+                (*opponentSlot)->koDelayFrames = 0;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 effect.type = 400;

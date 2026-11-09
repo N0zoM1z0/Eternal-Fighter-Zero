@@ -33,7 +33,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                     if (firstPose->state == 0 && (work.secondFrame.frameFlags & 0x20) == 0 &&
                         firstPose->command > 0 &&
                         !(second->field0130 > 0 && (work.firstFrame.attackFlags & 0x40) > 0) &&
-                        second->AirActionReady() == 0 && second->field013c == 0) {
+                        second->AirActionReady() == 0 && second->hitInvulnerabilityFrames == 0) {
                         if ((work.firstFrame.attackFlags & 0x40) > 0) {
                             for (i = 0; i < 4; ++i) {
                                 work.overlap[i][0] = 1;
@@ -332,7 +332,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.payload = 0;
                                 effect.palette = work.firstFrame.hitEffectPalette;
                                 contextOwner->EmitEffect(&effect);
-                                if ((second->field0108 <= 0) && (second->field0140 == 0)) {
+                                if ((second->field0108 <= 0) && (second->koDelayFrames == 0)) {
                                     second->field0008 = work.firstFrame.airHitState;
                                     second->ResetPose();
                                     second->FaceOpponent();

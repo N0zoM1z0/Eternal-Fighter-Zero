@@ -2019,7 +2019,7 @@ void Character23::Slot07()
                     (effects[i].tick == 0)) {
                     (*opponentSlot)->field0108 =
                     (*opponentSlot)->field0108 + -5000;
-                    (*opponentSlot)->field0140 = 30000;
+                    (*opponentSlot)->koDelayFrames = 30000;
                     if ((field00ac + 1 < (int)(char)contextOwner->selection134e) ||
                         (0 < (*opponentSlot)->field0108)) {
                         (*opponentSlot)->field0008 = 99;
@@ -2045,7 +2045,7 @@ void Character23::Slot07()
                 }
                 if ((effects[i].frame == 0x12) &&
                     (effects[i].tick == 900)) {
-                    (*opponentSlot)->field0140 = 0;
+                    (*opponentSlot)->koDelayFrames = 0;
                     (*opponentSlot)->hitstopFrames = 0;
                     hitstunFrames = 0;
                     break;

@@ -5288,7 +5288,7 @@ void Character05::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field013c = 0x7e;
+            hitInvulnerabilityFrames = 0x7e;
             SetHorizontalShake(0x32,0x78);
         }
         if (field000a >= 1) {
@@ -5311,7 +5311,7 @@ void Character05::Slot06()
                 attackCollisionResult = 0;
             }
             if (field000a == 2) {
-                field013c = 9;
+                hitInvulnerabilityFrames = 9;
             }
             if (field000a == 6) {
                 positionX = (double)(facing * 0xf) + positionX;
@@ -5357,7 +5357,7 @@ void Character05::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field013c = 0x84;
+            hitInvulnerabilityFrames = 0x84;
             SetHorizontalShake(0x32,0x78);
         }
         if (field000a >= 1) {
@@ -5398,7 +5398,7 @@ void Character05::Slot06()
                 attackCollisionResult = 0;
             }
             if (field000a == 2) {
-                field013c = 0x1e;
+                hitInvulnerabilityFrames = 0x1e;
             }
             if (field000a == 6) {
                 positionX = (double)(facing * 0xf) + positionX;
@@ -5452,7 +5452,7 @@ void Character05::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field013c = 0x84;
+            hitInvulnerabilityFrames = 0x84;
             SetHorizontalShake(0x32,0x78);
             pendingContextSoundSlot = 0x25;
         }
@@ -5503,7 +5503,7 @@ void Character05::Slot06()
                 attackCollisionResult = 0;
             }
             if (field000a == 2) {
-                field013c = 0x3c;
+                hitInvulnerabilityFrames = 0x3c;
             }
             if (field000a == 6) {
                 positionX = (double)(facing * 0xf) + positionX;
@@ -5674,7 +5674,7 @@ void Character05::Slot06()
             velocityY = velocityY + gravity;
         }
         if (field000a == 4) {
-            (*opponentSlot)->field0140 = 30000;
+            (*opponentSlot)->koDelayFrames = 30000;
             (*opponentSlot)->field0008 = 0x67;
             (*opponentSlot)->positionX =
             (23.0 + velocityX) * facing +
@@ -5838,7 +5838,7 @@ void Character05::Slot06()
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x62;
             positionY = 0.0;
-            (*opponentSlot)->field0140 = 30000;
+            (*opponentSlot)->koDelayFrames = 30000;
             ApplyDamage(300,960.0);
             effect.type = 0;
             effect.x = (double)(int(positionX));
@@ -5858,7 +5858,7 @@ void Character05::Slot06()
             (*opponentSlot)->field0008 = 0x62;
             positionY = 0.0;
             ApplyDamage(0x578,960.0);
-            (*opponentSlot)->field0140 = 0;
+            (*opponentSlot)->koDelayFrames = 0;
             SetVerticalShake(10,10);
             (*opponentSlot)->hitstopFrames = 0x78;
             effect.type = 0;
@@ -5998,7 +5998,7 @@ void Character05::Slot06()
                 velocityX = 2.0;
                 velocityY = -3.2;
                 gravity = 0.035;
-                field013c = 6;
+                hitInvulnerabilityFrames = 6;
             }
             if ((field000a == 5) && (field3138 < 1)) {
                 field000a = field000a + -2;
@@ -6092,7 +6092,7 @@ void Character05::Slot06()
                 velocityX = 2.0;
                 velocityY = -3.2;
                 gravity = 0.035;
-                field013c = 0xc;
+                hitInvulnerabilityFrames = 0xc;
             }
             if ((field000a == 5) && (field3138 < 3)) {
                 field000a = field000a + -2;
@@ -6188,7 +6188,7 @@ void Character05::Slot06()
                 velocityX = 2.0;
                 velocityY = -3.2;
                 gravity = 0.035;
-                field013c = 0x12;
+                hitInvulnerabilityFrames = 0x12;
             }
             if ((field000a == 5) && (field3138 < 5)) {
                 field000a = field000a + -2;
@@ -6401,7 +6401,7 @@ void Character05::Slot06()
                 (*opponentSlot)->facing = -facing;
                 ApplyDamage(1000,980.0);
                 SetVerticalShake(10,0);
-                (*opponentSlot)->field0140 = 30000;
+                (*opponentSlot)->koDelayFrames = 30000;
                 field000c = 0;
                 field000a = 0xd;
                 pendingContextSoundSlot = 0x16;
@@ -6420,7 +6420,7 @@ void Character05::Slot06()
                 (*opponentSlot)->hitstopFrames = 0x7e;
                 SetVerticalShake(0xf,0);
                 ApplyDamage(0x834,980.0);
-                (*opponentSlot)->field0140 = 0;
+                (*opponentSlot)->koDelayFrames = 0;
                 field000c = 0;
                 field000a = 0x19;
                 pendingContextSoundSlot = 0x16;
@@ -6595,7 +6595,7 @@ void Character05::Slot06()
                 (*opponentSlot)->facing = -facing;
                 ApplyDamage(1000,980.0);
                 SetVerticalShake(10,0);
-                (*opponentSlot)->field0140 = 30000;
+                (*opponentSlot)->koDelayFrames = 30000;
                 field000c = 0;
                 field000a = 0xd;
                 pendingContextSoundSlot = 0x16;
@@ -6613,7 +6613,7 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->hitstopFrames = 0xba;
                 ApplyDamage(0xed8,980.0);
-                (*opponentSlot)->field0140 = 0;
+                (*opponentSlot)->koDelayFrames = 0;
                 SetVerticalShake(0x14,0x1e);
                 field000c = 0;
                 field000a = 0x19;

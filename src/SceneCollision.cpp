@@ -162,7 +162,7 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
             if (first->attackCollisionResult == 0 && (pass.secondFrame.frameFlags & 0x20) == 0 &&
                 first->remainingHitCount > 0 &&
                 !(second->field0130 > 0 && (pass.firstFrame.attackFlags & 0x40) > 0) &&
-                second->AirActionReady() == 0 && second->field013c == 0) {
+                second->AirActionReady() == 0 && second->hitInvulnerabilityFrames == 0) {
                 if ((pass.firstFrame.attackFlags & 0x40) > 0) {
                     for (i = 0; i < 4; ++i) {
                         pass.overlap[i][0] = 1;

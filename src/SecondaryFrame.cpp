@@ -99,12 +99,12 @@ void Secondary::UpdateTimers()
         else field0138 = 0;
         if (field013a > 0) --field013a;
         else field013a = 0;
-        if (field013c > 0) --field013c;
-        else field013c = 0;
+        if (hitInvulnerabilityFrames > 0) --hitInvulnerabilityFrames;
+        else hitInvulnerabilityFrames = 0;
         if (field013e > 0) --field013e;
         else field013e = 0;
-        if (field0140 > 0) --field0140;
-        else field0140 = 0;
+        if (koDelayFrames > 0) --koDelayFrames;
+        else koDelayFrames = 0;
         field0118 = double((IsStateGroupA() + 1) * (IsStateGroupB() == 0 && field0120 == 0)
         * ((field0118 < 500.0) * 2 + 1)) / 10.0 + field0118;
         if (field0118 >= 1000.0 && field0120 == 0) {

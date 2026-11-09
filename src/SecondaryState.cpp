@@ -35,13 +35,13 @@ void Secondary::InitializeState()
     dashMomentumFlag = 0;
     airActionCount = 0;
     guardInputFrames = 0;
-    field0150 = 0;
+    guardInputLatched = 0;
     field00ac = 0;
     field0138 = 0;
     field013a = 0;
-    field013c = 0;
+    hitInvulnerabilityFrames = 0;
     field013e = 0;
-    field0140 = 0;
+    koDelayFrames = 0;
     field015c = 0;
     field0160 = 0;
     attackCollisionResult = 0;

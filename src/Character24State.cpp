@@ -3644,7 +3644,7 @@ void Character24::Slot06()
             remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
-            field013c = 2;
+            hitInvulnerabilityFrames = 2;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3717,7 +3717,7 @@ void Character24::Slot06()
             remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
-            field013c = 2;
+            hitInvulnerabilityFrames = 2;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3764,7 +3764,7 @@ void Character24::Slot06()
             remainingHitCount = 1;
         }
         if ((field0058 == '\x03') || (field0058 == '\x01')) {
-            field013c = 2;
+            hitInvulnerabilityFrames = 2;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {

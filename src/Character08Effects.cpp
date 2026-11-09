@@ -1335,7 +1335,7 @@ void Character08::Slot07()
                 SetHorizontalShake(0x32,3);
                 (*opponentSlot)->ResetFrame();
                 SetTint(0xb0,3);
-                (*opponentSlot)->field013c = 0x1e;
+                (*opponentSlot)->hitInvulnerabilityFrames = 0x1e;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;

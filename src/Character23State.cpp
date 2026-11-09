@@ -4814,7 +4814,7 @@ void Character23::Slot06()
             ++field313c;
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
-            (*opponentSlot)->field0140 = 0;
+            (*opponentSlot)->koDelayFrames = 0;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {

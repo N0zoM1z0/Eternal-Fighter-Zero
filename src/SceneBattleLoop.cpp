@@ -149,7 +149,7 @@ void Scene3::UpdateRound()
                 secondary[1]->ResetPose();
                 contextOwner->counter1354 = 1;
                 if (contextOwner->effectSelector < 9) ++contextOwner->effectSelector;
-            } else if (secondary[0]->field0108 <= 0 && secondary[0]->field0140 == 0) {
+            } else if (secondary[0]->field0108 <= 0 && secondary[0]->koDelayFrames == 0) {
                 secondary[1]->field30dc += secondary[1]->field0108;
                 if (secondary[1]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[1]->field00ac;
@@ -176,7 +176,7 @@ void Scene3::UpdateRound()
                     field0580 = 0.0;
                     contextOwner->winner134c = 1;
                 }
-            } else if (secondary[1]->field0108 <= 0 && secondary[1]->field0140 == 0) {
+            } else if (secondary[1]->field0108 <= 0 && secondary[1]->koDelayFrames == 0) {
                 secondary[0]->field30dc += secondary[0]->field0108;
                 if (secondary[0]->field00ac < (char)contextOwner->selection134e - 1) {
                     ++secondary[0]->field00ac;

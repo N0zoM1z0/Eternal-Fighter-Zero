@@ -6222,7 +6222,7 @@ void Character15::Slot06()
             if ((field000a == 9) && ((unsigned short)field000c == 0)) {
                 remainingHitCount = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
-                field013c = 0x2d;
+                hitInvulnerabilityFrames = 0x2d;
                 pendingCharacterSoundSlot = 10;
                 effect.type = 0x1f;
                 effect.x = (double)(int(positionX));
@@ -7025,7 +7025,7 @@ void Character15::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 6) {
-                field013c = 0xf;
+                hitInvulnerabilityFrames = 0xf;
                 pendingCharacterSoundSlot = 6;
                 effect.type = 0x1a1;
                 effect.x = (double)((int(positionX)) + facing * 0xf);
@@ -7129,7 +7129,7 @@ void Character15::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 6) {
-                field013c = 0x1e;
+                hitInvulnerabilityFrames = 0x1e;
                 pendingCharacterSoundSlot = 6;
                 effect.type = 0x1a1;
                 effect.x = (double)((int(positionX)) + facing * 0xf);
