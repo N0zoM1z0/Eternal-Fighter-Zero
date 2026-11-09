@@ -2189,6 +2189,27 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+## Nagamori Slot02 command scanner: first original scan recovered
+
+Original Nagamori vtable slot 2 at `0x00788404` resolves to
+`Character06::Slot02` at `0x004B1780`, a complete **4,917-byte**
+original function through `0x004B2AB5`, followed by 11 `CC` bytes.
+The first **412 original bytes / 120 instructions**, ending at
+`0x004B191C`, now have a natural C++ reproduction in
+`workbench/nagamori-command/`. It requires `meter == 3000` and
+`positionY == 0.0` to enter its first history stage, and can
+recognize command 0x5B after the original multi-stage button sequence.
+A focused selected VC7.1 translation-unit compile matches all 120
+x86 instruction forms, registers and operands after normalizing only
+forward jump addresses and the PE address of the 0.0 x87 constant.
+The current 416-byte draft contains a temporary 3-instruction return.
+
+This is an independently reviewed function boundary and **first-scan
+source recovery**, not whole-function Exact. Evidence:
+`docs/evidence/nagamori-slot02-first-scan-boundary.json`, reproducible
+`workbench/nagamori-command/check_first_scan.py`. Later priority
+scans are still open; no full cold replay was run.
+
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
 The original Nagamori vtable slot 4 at `0x0078840C` points to

@@ -31,7 +31,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
   ledgers currently count **361 exact functions**, **1,088,778 code bytes**,
-  **7,655 associated table bytes**, 392 reviewed complete boundaries and 387
+  **7,655 associated table bytes**, 393 reviewed complete boundaries and 388
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,22 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori Slot02 next command boss: first scan reconstructed
+
+Original Nagamori vtable slot 2 (`0x00788404`) points to
+`Character06::Slot02` at `0x004B1780`, an independently reviewed
+**4,917-byte** owner through `0x004B2AB5` followed by 11 `CC`
+alignment bytes. The natural C++
+`workbench/nagamori-command/Character06Command.cpp` reproduces its
+first **412 bytes / 120 original instructions** under pinned VC7.1,
+normalizing only future jump targets and the 0.0 constant's PE address.
+Unlike superficially similar characters, this scan requires original
+**3000 meter AND on-ground** entry and recognizes command 0x5B.
+The compiled 416-byte partial translation unit still has its own
+return; later scans are missing, so this is **NOT whole-owner Exact**.
+Canonical proof `docs/evidence/nagamori-slot02-first-scan-boundary.json`,
+focused `workbench/nagamori-command/check_first_scan.py`.
 
 ## Newly accepted major boss: Nagamori full Slot04 action selector
 

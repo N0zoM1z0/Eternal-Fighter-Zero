@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-original-complete-boundary-with-partial-source-first-scan-only-not-exact",
+  "canonical_target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "original_vtable_slot_pointer": "0x00788404",
+  "function": "Character06::Slot02",
+  "complete_original": {
+    "start": "0x004B1780",
+    "end_exclusive": "0x004B2AB5",
+    "size": 4917,
+    "sha256": "a3f3e30b48a3763a54ee34d5a3d35ea5f0f83e321e65f804ceaf5c33a815bb00"
+  },
+  "first_scan": {
+    "start": "0x004B1780",
+    "end_exclusive": "0x004B191C",
+    "size": 412,
+    "instruction_count": 120,
+    "sha256": "9638068e17877eaafbb9603e4b068c9b6243d944dee8142ee6792f6d0558347a"
+  },
+  "following_alignment_bytes": 11,
+  "partial_source": "workbench/nagamori-command/Character06Command.cpp",
+  "reproducer": "workbench/nagamori-command/check_first_scan.py",
+  "limitations": "Only 120/120 instructions of first priority scan checked after normalization of numeric branch destinations and one original double constant reference; later scans absent, temporary 3-instruction epilogue. Whole 4917-byte Slot02 NOT Exact."
+}
