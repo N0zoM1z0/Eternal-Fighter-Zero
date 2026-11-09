@@ -92,6 +92,12 @@ work, not the original behavior for valid unimplemented animations.
   but its 473-byte target owner is 24 bytes shorter than the 50–55 variants:
   when the sequence expires, it always selects crouching state 3 and calls
   ResetPose. It does not read inputY or select state 0 on this exit.
+- Animation IDs 57 and 58 (blocks 0x005EA0F7 and 0x005EA2D0) are
+  stronger variants of animation 56. Their exact 473-byte target branches
+  use 15/20 additional meter, -1.5/-1.8 horizontal recoil, and optional
+  20/30 resource deductions. Like state 56, they always end in crouching
+  state 3 without reading inputY. Original branch bytes independently
+  confirm the per-strength immediates and state-3 termination.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -111,7 +117,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 57 and onward directly from reviewed target instructions,
+Extend cases 59 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

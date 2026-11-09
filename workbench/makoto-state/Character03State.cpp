@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-56 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47 and 50-58 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -573,9 +573,81 @@ void Character03::Slot06()
         }
         return;
 
+    case 57: // Original block 0x5ea0f7: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 58: // Original block 0x5ea2d0: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 103 explicit cases. The target's true default path also
+        // the other 101 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
