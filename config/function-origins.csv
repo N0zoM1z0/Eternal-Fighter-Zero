@@ -253,8 +253,8 @@ address,origin,status,evidence
 0x0049D610,unknown,unreviewed,
 0x004ADD90,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x004ADFA0,unknown,unreviewed,
-0x004AE130,unknown,unreviewed,
-0x004AE170,unknown,unreviewed,
+0x004AE130,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-reset-and-effect-cleanup-overrides
+0x004AE170,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-reset-and-effect-cleanup-overrides
 0x004AE1D0,unknown,unreviewed,
 0x004AE2C0,unknown,unreviewed,
 0x004AE2E0,unknown,unreviewed,

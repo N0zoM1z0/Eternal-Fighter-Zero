@@ -352,3 +352,5 @@ address,name,source,symbol,status,evidence
 0x006A5DC0,Character14::~Character14,src/Character14Destructor.cpp,??1Character14@@QAE@XZ,complete,docs/evidence/ikumi-destructor-exact.json
 0x006AB7E0,Character14::Slot02,src/Character14Commands.cpp,?Slot02@Character14@@UAEXXZ,complete,docs/evidence/ikumi-slot02-exact.json
 0x004ADD90,Character06::Character06,src/Character06Frame.cpp,??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/nagamori-constructor-exact.json
+0x004AE130,Character06::ResetPose,src/Character06Core.cpp,?ResetPose@Character06@@UAEXXZ,complete,docs/evidence/nagamori-core-overrides-exact.json
+0x004AE170,Character06::RemoveLocalEffect,src/Character06Core.cpp,?RemoveLocalEffect@Character06@@UAEXF@Z,complete,docs/evidence/nagamori-core-overrides-exact.json

@@ -129546,3 +129546,37 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "Original EFZ.exe @ 0x004ADDD1: CRT strcpy call to resourceName +0x94, reviewed target 0x778080"
+
+[units.character-06-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Core.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-reset-pose/Character06Core.obj"
+symbol = "?ResetPose@Character06@@UAEXXZ"
+target_address = 0x004AE130
+size = 58
+
+[[units.character-06-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "EFZ.exe original base ResetPose call at 0x004AE161, immediately after clearing three original Nagamori child state integers"
+
+[units.character-06-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Core.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-remove-local-effect/Character06Core.obj"
+symbol = "?RemoveLocalEffect@Character06@@UAEXF@Z"
+target_address = 0x004AE170
+size = 95
+
+[[units.character-06-remove-local-effect.relocations]]
+offset = 85
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "EFZ.exe original base effect removal call at 0x004AE1C4 after clearing byte flags and three per-slot int arrays, signed-short index"

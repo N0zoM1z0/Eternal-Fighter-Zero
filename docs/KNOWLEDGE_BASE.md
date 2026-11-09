@@ -2189,6 +2189,25 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori reset and effect cleanup overrides: two exact methods (2026-11-09)
+
+Original Nagamori vtable `0x7883FC` slot 0 resolves to
+`Character06::ResetPose` at `0x004AE130`, now complete natural C++
+**58/58-byte Strict Exact** from `src/Character06Core.cpp`, with the
+original one bound `Secondary::ResetPose` call at `0x40F110`. The
+source clears exactly three child-state integers +0x3138/+0x313C/
++0x3140 before delegating, not the remaining eleven constructor fields.
+
+Nagamori slot 10 at `0x788424` resolves to `RemoveLocalEffect` at
+`0x004AE170`, **95/95-byte Strict Exact** with one original bound
+call to `Secondary::RemoveLocalEffect` (`0x412E60`). It clears a
+64-byte flag at +0x316C and the corresponding slot in three
+64-int arrays at +0x31AC/+0x32AC/+0x33AC, using the original signed
+short index. Both reviewed complete boundaries omit external `CC`
+alignment, and both recompiled original target bytes have zero
+differences. Focused certificates:
+`docs/evidence/nagamori-core-overrides-exact.json`.
+
 ### Nagamori constructor: exact byte-flag and three scratch banks (2026-11-09)
 
 The original `Character06::Character06` at `0x004ADD90` now has

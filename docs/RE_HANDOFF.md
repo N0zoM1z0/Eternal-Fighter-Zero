@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **353 exact functions**, **1,074,771 code bytes**,
-  **7,655 associated table bytes**, 384 reviewed complete boundaries and 379
+  ledgers currently count **355 exact functions**, **1,074,924 code bytes**,
+  **7,655 associated table bytes**, 386 reviewed complete boundaries and 381
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,18 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori first two virtual overrides Strict Exact
+
+Two independent original Nagamori methods in `src/Character06Core.cpp`
+are now accepted: `ResetPose` at `0x004AE130`, **58/58 bytes**,
+`RemoveLocalEffect` at `0x004AE170`, **95/95 bytes**. Each has one
+reviewed original-bound base-call relocation. The first clears three
+child-state integers; the second clears a signed-short effect slot in
+one byte flag bank and three distinct 64-int arrays before base
+effect removal. Original vtable slots 0/10, complete target boundaries
+and focused strict receipts are in
+`docs/evidence/nagamori-core-overrides-exact.json`. No cold replay.
 
 ## Nagamori constructor strict Exact and all affected owners reverified
 

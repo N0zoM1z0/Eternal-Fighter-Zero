@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 selected source code and reviewed original relocations",
+  "method": "Canonical Nagamori vtable at 0x7883FC: slot0 ResetPose 58 bytes with 3 child-state clears and base ResetPose 0x40F110; slot10 RemoveLocalEffect 95 bytes with one byte flag, 3 per-effect int array clears and base RemoveLocalEffect 0x412E60. All original byte extents and direct relocations exact; original inter-function alignment excluded, no cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe original base ResetPose call at 0x004AE161, immediately after clearing three original Nagamori child state integers",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1731ffd9d4b4aca44595e9de9f36b1f516de17d132a864ef140108fddc93a51e",
+      "target_extent_sha256": "1731ffd9d4b4aca44595e9de9f36b1f516de17d132a864ef140108fddc93a51e",
+      "unit": "character-06-reset-pose",
+      "symbol": "?ResetPose@Character06@@UAEXXZ",
+      "target_address": "0x004AE130",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7a8d1b7db05bd2adc61879d88f30a1633dbdd3a98702f16a22c556b32f2aa6",
+      "object_sha256": "1afe0f8e679d3f93aa0902a7621efb723a5c1a62941a31bb4ef104cb82640f87",
+      "source_sha256": "55766768742254f7c996a541e2e5db53829f449fc387f23fe3753c1ec25d7edc",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d2897ec447a763e3804f34af4a8f9282c05123544626dc33fa3dee3b7f350c04",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1c9a915f9ce832610eaec73bff975c3e53e1c80127e96efe8e93c1898fdfa468",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 95,
+      "matched_bytes": 95,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 85,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "EFZ.exe original base effect removal call at 0x004AE1C4 after clearing byte flags and three per-slot int arrays, signed-short index",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9c7089f610592509552f6c1bf406f36a502a03514dca5a779a70973093777595",
+      "target_extent_sha256": "9c7089f610592509552f6c1bf406f36a502a03514dca5a779a70973093777595",
+      "unit": "character-06-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character06@@UAEXF@Z",
+      "target_address": "0x004AE170",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4b7a8d1b7db05bd2adc61879d88f30a1633dbdd3a98702f16a22c556b32f2aa6",
+      "object_sha256": "4bafba7cd57c08b6297c4584332bbf45aca1e0105073a35b07de0aa464597ec9",
+      "source_sha256": "55766768742254f7c996a541e2e5db53829f449fc387f23fe3753c1ec25d7edc",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d2897ec447a763e3804f34af4a8f9282c05123544626dc33fa3dee3b7f350c04",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "fccdbb11d6e57b8987edca8080a8615ed7bb5207d480da1d77aa4f6a1d55aa41",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
