@@ -742,6 +742,21 @@ work, not the original behavior for valid unimplemented animations.
   private original disassembly for all 652 bytes; the partial C++
   owner builds under VC7.1 (not whole-owner Exact).
 
+- Animation ID 232 (0x005F1ABB..0x005F1C6F, 436 bytes) is a
+  three-phase launched strike, not the generic momentum attack in
+  Character07. Every tick clears dashMomentumFlag and starts trail
+  3. The first pose/tick sets horizontalDeceleration=0 and one hit.
+  While pose<3, it removes 0.035 from horizontal speed and clamps
+  negative speed to zero. Pose 3/tick zero grants 25 meter and sound
+  20, but does not separately rearm the remaining-hit field. During
+  pose 3 it applies gravity, and a nonnegative projected Y forces
+  Y=0, ResetFrame, tick=0, pose=4 *before* ordinary frame advance.
+  A normal frame advance into pose 3 initializes horizontal speed
+  1.8, vertical speed -1.5 and gravity 0.045; expiry selects state 0,
+  calls FaceOpponent, then ResetPose. All 436 original bytes and four
+  double constants were checked directly in EFZ.exe; the complete
+  partial dispatcher compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -767,7 +782,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 232 and onward directly from reviewed target instructions,
+Extend case 233 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

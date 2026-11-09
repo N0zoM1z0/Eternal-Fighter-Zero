@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-231 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-232 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3372,9 +3372,53 @@ void Character03::Slot06()
         }
         return;
 
+    case 232: // Original block 0x005F1ABB: launched strike with landing shortcut
+        dashMomentumFlag = 0;
+        StartTrail(3);
+        if (field000a == 0 && field000c == 0) {
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 1;
+        }
+        if (field000a < 3) {
+            velocityX -= 0.035;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+        }
+        if (field000a == 3) {
+            velocityY += gravity;
+            if (positionY + velocityY >= 0.0) {
+                positionY = 0.0;
+                ResetFrame();
+                field000c = 0;
+                field000a = 4;
+                return;
+            }
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 3) {
+                velocityX = 1.8;
+                velocityY = -1.5;
+                gravity = 0.045;
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 30 explicit cases. The target's true default path also
+        // the other 29 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
