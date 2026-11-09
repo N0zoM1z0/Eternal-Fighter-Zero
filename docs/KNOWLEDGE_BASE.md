@@ -1929,7 +1929,7 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
-## Ikumi Slot02 input command scanner: eight verified original scans
+## Ikumi Slot02 input command scanner: eleven verified original scans
 
 Original `Character14::Slot02` is confirmed by vtable slot 2 at
 `0x00788D7C`; the full **5,153-byte** function owns
@@ -1938,10 +1938,10 @@ The complete boundary and authored origin have been reviewed in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
 
 Natural C++ at `workbench/ikumi-commands/Character14Commands.cpp`
-now implements **the first eight of fifteen priority-ordered command
-scans**, exactly **3,694 original bytes / 1,101 instructions** from
-`0x006AB7E0` through `0x006AC64E`. The separate scanners are
-499/153, 623/193, 506/148, 522/157, 402/119, 376/109, 379/109 and 387/113 bytes/instructions. The first scan
+now implements **the first eleven of fifteen priority-ordered command
+scans**, exactly **4,294 original bytes / 1,267 instructions** from
+`0x006AB7E0` through `0x006AC8A6`. The separate scanners are
+499/153, 623/193, 506/148, 522/157, 402/119, 376/109, 379/109, 387/113, 149/40, 227/63 and 224/63 bytes/instructions. The first scan
 recognizes 0x5E, the second recognizes base 0x96 plus button flags,
 and the third uses base 0xAA or 0xA0 with the original early-finish
 branch. Ikumi's third scan starts when either meter is at least 1000
@@ -1949,9 +1949,9 @@ branch. Ikumi's third scan starts when either meter is at least 1000
 order of directional conditions and signed-facing terms were verified
 against original x86, not assumed from related characters.
 
-A focused VC7.1 build and `check_first_scan.py` compare all **1,101/1,101
+A focused VC7.1 build and `check_first_scan.py` compare all **1,267/1,267
 opcodes and operands**, normalizing only jump destinations because the
-last **7 scans have not yet been authored**. The current 1,632-byte
+last **4 scans have not yet been authored**. The current 1,632-byte
 partial function is NOT the full 5,153-byte function and is **not
 Exact**; no match-unit or source ledger acceptance has been claimed.
 

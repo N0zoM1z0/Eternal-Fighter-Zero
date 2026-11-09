@@ -272,5 +272,62 @@ void Character14::Slot02()
             stage = 1;
         }
     }
-    // Further 7 original priority scans remain to be recovered.
+    // Ninth priority scan: a five-tick release-to-button-8 pulse.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0xaf;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 8) != 0) && (stage == 1)) {
+            recognizedCommand = 6;
+            return;
+        }
+        if (((buttons & 8) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Tenth priority scan: neutral/4/neutral/4 then button 0x80.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0x80) != 0) && (stage == 4)) {
+            recognizedCommand = 0x35;
+            return;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Eleventh priority scan mirrors the tenth but finishes with 0x40.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0x40) != 0) && (stage == 4)) {
+            recognizedCommand = 0x34;
+            return;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 0) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Four original priority scans remain to be recovered.
 }
