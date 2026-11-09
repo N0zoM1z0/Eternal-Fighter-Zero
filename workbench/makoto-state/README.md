@@ -878,6 +878,21 @@ work, not the original behavior for valid unimplemented animations.
   the two distinct effect destinations were reviewed against the
   canonical executable; the partial VC7.1 build succeeded.
 
+- Animation ID 255 (0x005F2CE5..0x005F2EC9, 484 bytes) is a
+  resource-draining, two-effect impact finisher. On pose/tick zero it
+  clears dash momentum, calls ResetFrame, awards 45 meter, and
+  subtracts 500.0 from field0118 when field0120==0 (250.0 otherwise).
+  It emits context effect 33 with palette 11, group 2/layer 1 at
+  truncated character X, Y-50. On frame *advance to pose 4* (not a
+  separately gated tick) it sets attackCollisionResult=3 and emits
+  local effect type 0x198, at truncated X+17*facing and Y-26 with
+  owner=1, group=0/layer=1, flag0018=facing and field0028=1. It
+  requests context sound 21 after that local call. Sequence exhaustion
+  returns to state 0 via ResetPose. All 484 original instruction bytes
+  and both x87 resource constants were independently checked against
+  EFZ.exe; the partial VC7.1 draft compiles. This retained earlier
+  uncommitted source rather than discarding it.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
