@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **340 exact functions**, **1,066,225 code bytes**,
-  **7,655 associated table bytes**, 373 reviewed complete boundaries and 368
+  ledgers currently count **341 exact functions**, **1,066,482 code bytes**,
+  **7,655 associated table bytes**, 374 reviewed complete boundaries and 369
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -313,12 +313,13 @@ fresh replay of unrelated certificates or whole-game runtime proof.
 `Character14::Character14` at `0x006A59C0` is newly **647/647 exact**
 with **11** reviewed relocations, including two real C++ `new[505]`
 vector constructions and the original mode-switch call
-`SetAlternateMode(0)` at `0x006AB6A0`. Natural source:
+`SetAlternateMode(0)` at `0x006AB6A0`. That called function has since
+also been accepted as an independent strict Exact owner. Natural source:
 `src/Character14Frame.cpp`; selected unit `character-14-constructor`;
 proof `docs/evidence/ikumi-constructor-exact.json`. The original 0x3478
 class view includes two new pattern/sequence arrays, two saved pointers
-and the separate +0x3460 byte. The called mode-switch function remains
-a separate owner requiring strict reconstruction.
+and the separate +0x3460 byte. The called mode-switch function is a separate owner, now also
+independently strict-Exact (details immediately below).
 
 Three real callers/header dependents were selectively rebuilt:
 `scene-create-character` is still 3495/3495 exact (97 relocs),
@@ -327,6 +328,19 @@ Slot06 59292/59292 exact (1386 relocs). Their 25/26/127 internal label
 references shifted +20 but retained all original canonical target
 values and relocation fields; full selected evidence is in
 `docs/evidence/ikumi-creation-consumers-exact.json`. No cold replay.
+
+## New exact Ikumi mode-switch helper
+
+`Character14::SetAlternateMode(char)` at `0x006AB6A0` is now
+**257/257 strict Exact** with zero relocations, natural source
+`src/Character14Mode.cpp`, selected unit `character-14-alternate-mode`
+and public proof `docs/evidence/ikumi-alternate-mode-exact.json`.
+The original constructor calls this exact function with argument zero.
+Two branch-specific loops update 64 pattern pointers in 0x98-byte
+records; the function switches pattern/sequence bank pointers and the
++0x3460 mode flag in the exact original order. Reviewed thiscall
+`RET 4` at the function end and complete boundary were added to the
+provenance ledgers. No additional header changes or broad replays.
 
 ## Other open substantial work
 

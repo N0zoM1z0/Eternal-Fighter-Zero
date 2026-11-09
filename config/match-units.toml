@@ -128954,3 +128954,13 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "resources/EFZ.exe @ 0x006A5ABE: original direct CRT strcpy into resourceName +0x94"
+
+[units.character-14-alternate-mode]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Mode.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-alternate-mode/Character14Mode.obj"
+symbol = "?SetAlternateMode@Character14@@QAEXD@Z"
+target_address = 0x006AB6A0
+size = 257

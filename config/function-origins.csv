@@ -447,7 +447,7 @@ address,origin,status,evidence
 0x006A6330,unknown,unreviewed,
 0x006A93F0,unknown,unreviewed,
 0x006AB060,unknown,unreviewed,
-0x006AB6A0,unknown,unreviewed,
+0x006AB6A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-alternate-mode-exact
 0x006AB7B0,unknown,unreviewed,
 0x006AB7E0,unknown,unreviewed,
 0x006ACC10,unknown,unreviewed,

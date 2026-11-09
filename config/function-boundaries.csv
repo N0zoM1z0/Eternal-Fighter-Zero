@@ -372,3 +372,4 @@ address,end,size,status,evidence
 0x0040A7B0,0x0040AAD6,806,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control; Ghidra body inventory 806 bytes, raw RET 0x30 at 0x0040AAD3 and next Video method at 0x0040AAE0 after 10 INT3 alignment
 0x0040AAE0,0x0040AE08,808,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; Ghidra body inventory 808 bytes, raw RET 0x2C at 0x0040AE05 and next Video method at 0x0040AE10 after 8 INT3 alignment
 0x0076CA50,0x0076DA0D,4029,reviewed,docs/KNOWLEDGE_BASE.md#scene2-preparebattle-owner-boundary
+0x006AB6A0,0x006AB7A1,257,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-alternate-mode-exact

@@ -1925,9 +1925,31 @@ shifted by +20 for 25/26/127 references, rebound at unchanged original
 relocation positions and destinations before full byte comparison.
 Certificates: `docs/evidence/ikumi-constructor-exact.json` and
 `docs/evidence/ikumi-creation-consumers-exact.json`; the Makoto proof
-was refreshed from this selected build. The called `SetAlternateMode`
-function is a *separate owner* and must receive its own reconstruction
-and strict comparison rather than inheriting Exact status.
+was refreshed from this selected build. The called `SetAlternateMode` is a **separate owner** and now
+has its own complete independently accepted Exact proof immediately
+below; constructor proof alone was never treated as covering it.
+
+### Ikumi alternate mode switch: 257-byte strict Exact (2026-11-09)
+
+`Character14::SetAlternateMode(char)` at `0x006AB6A0` is now a natural
+C++ member source in `src/Character14Mode.cpp`, accepted as selected
+unit `character-14-alternate-mode`, with full **257/257 original code
+bytes**, **zero different bytes and zero relocation entries**.
+Its provenance is not inferred from a name: the exact Ikumi constructor
+calls this real owner at `0x006A5AA1` with argument zero and an original
+thiscall `RET 4` closes the target function at `0x006AB7A1`.
+
+The source uses an explicit *partial* 0x98-byte pattern-slot view
+located at +0x4D8 for each of 64 slots. Entering alternate mode swaps
+the active patterns/sequences to the alternate banks, updates all
+64 slot pointers, and sets the byte at +0x3460 to one; leaving it
+restores the saved banks and resets the byte. Both separate loops and
+the signed-char mode comparisons compile to the exact original stack
+homes, pointer arithmetic and branches without inline assembly.
+Full proof `docs/evidence/ikumi-alternate-mode-exact.json`.
+The constructor, its called switch owner and all original source
+extents are accepted **independently**, not by assuming the call
+produces runtime-equivalent behavior for the entire game.
 
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
