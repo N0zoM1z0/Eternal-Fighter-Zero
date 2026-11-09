@@ -945,6 +945,22 @@ work, not the original behavior for valid unimplemented animations.
   instruction blocks were checked against EFZ.exe, and VC7.1 builds
   the draft.
 
+- Animation ID 261 (0x005F3A20..0x005F3C6F, 591 bytes)
+  combines resource-draining startup with a paired local-effect
+  attack. On first pose/tick it clears dash momentum, ResetFrame,
+  subtracts 500 from field0118 when field0120==0 (250 otherwise),
+  then emits global effect 33 with palette 11, group 2/layer 1 at
+  truncated X and Y-50. On pose 4/tick zero it emits local type
+  0x19C and subsequently local type 0x192, both at truncated
+  X+36*facing, Y-78, owner 1/group 2/layer 1 with facing, before
+  clearing pendingCharacterSoundSlot and setting field3148=1.
+  Every expired frame clears attackCollisionResult and eventual
+  exhaustion returns to state 0 through FaceOpponent and ResetPose.
+  The original block has exactly one Context::EmitEffect call and
+  two independent local virtual-effect calls; all 591 instruction
+  bytes were checked against EFZ.exe, and the partial VC7.1
+  compilation succeeds.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -970,7 +986,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 261 and onward directly from reviewed target instructions,
+Extend case 262 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
