@@ -2917,7 +2917,50 @@ arithmetic shift; a conventional strict-overlap predicate changes behavior.
 It is a member with two box pointers and RET 08, not an invented free-function ABI.
 A fresh isolated SceneCollision.cpp compile reconfirmed all 128 target bytes and the zero-relocation contract.
 
-### Pushbox response: boundary verified, implementation still open
+### Pushbox response: local VC7.1 exact code generation
+
+**Current 2026-11-09 result (supersedes the unsuccessful probes below):**
+`Scene3::ResolvePushboxes` at 0x00766B50 is now a complete local
+`scene-battle-resolve-pushboxes` exact match. The source fix is checkpointed
+in `cabe2d9` (`gpt-web: exact match battle pushbox resolution`).
+A fresh `scripts/repo-python scripts/build-match-unit.py --unit
+scene-battle-resolve-pushboxes` followed by
+`scripts/repo-python scripts/compare-coff-function.py --unit
+scene-battle-resolve-pushboxes` returns `result: exact`, 2,727 of 2,727
+matched bytes, `difference_count: 0`, and all 35 target COFF relocations
+at identical offsets with matching owners. This is **local complete-function
+code-generation evidence**, not a Factory-accepted canonical replay receipt
+or proof of whole-image/runtime completion.
+
+**Actual source-level breakthrough:** Four boundary checks originally
+looked like unused named `int` locals, but declaring such locals before the
+rest of the expression spills changes MSVC 7.1's stack allocation.
+The exact C++ candidate instead evaluates the stand-alone conditional
+expressions `(condition) ? 1 : 0;` with no named receiver; at `/Od` MSVC
+still materializes their 32-bit comparison results at the original
+stack locations. This moves `this` back from EBP-0x70 to EBP-0x60,
+conditional pose pointers to EBP-0x64/-0x68, and the two hidden
+`SurfaceRect` return buffers to EBP-0x4c/-0x5c. It also brings the x87
+integer-to-float slots back inside the disp8 range: the former
+function+0x269 relocation drift to 0x275 disappears.
+
+**Final control-flow correction:** Two `return;` statements belong
+*after* their inner velocity comparison blocks, but *inside* their
+respective `CollisionSide()` branches. They select the original
+function-end jump from offsets 0x35E and 0x4ED directly to 0xAA3;
+putting the return inside the nested comparison instead introduces
+extra unconditional jumps and expands the function to 2,737 bytes.
+The completed source retains the asymmetric sign/clamping rules and
+single shared-velocity average exactly as observed in x87 instructions.
+
+The following paragraphs preserve the **historical pre-exact diagnosis**,
+including rejected hypotheses, old source SHA-256s and earlier partial
+replay scores. Their statements that the owner is "still open", that
+the best source remains non-exact, or that relocation 617 still drifts to
+629 are now superseded by the focused exact comparison above.
+
+#### Pre-exact investigations (historical, superseded)
+
 
 A fresh canonical-target review establishes the complete extent of the large
 pushbox resolver at 0x766B50: 2,727 bytes, 708 instructions, ending with the
