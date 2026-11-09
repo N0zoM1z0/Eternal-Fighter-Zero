@@ -2991,6 +2991,30 @@ candidate function+0x275 (629). Do not use the old 1460-byte receipt as the
 current baseline, and do not claim acceptance from the diagnostic rebound
 score.
 
+A second stack-layout pass on 2026-11-09 inspected 911 built COFF objects that
+contain `ResolvePushboxes`; 304 had the exact 2,727-byte extent. No same-size
+object in that corpus has the target's combined `this` home and both hidden
+return-buffer addresses. The target's first `TransformPoseBox` call uses the
+EBP-0x4c hidden buffer and the second uses EBP-0x5c; the current candidate uses
+EBP-0x5c and EBP-0x6c. The target saves `this` at EBP-0x60 and its conditional
+pose pointers at EBP-0x64/-0x68, whereas the candidate saves `this` at
+EBP-0x70 and the pointers at EBP-0x74/-0x78. The target's left boundary result
+stores are at EBP-0x6c/-0x70 (right results at EBP-0xdc/-0xe0); the current
+branch locals are at EBP-0x44/-0x40 and EBP-0x4c/-0x48. The common displacement
+(-0x3c), rectangle locals (-0x38..-0x1c), and three double locals
+(-0x18/-0x10/-0x08) already agree. This makes local lifetime/slot ownership,
+not aggregate size, the remaining prologue and spill-layout problem.
+
+The target's first facing-to-x87 integer spill is EBP-0x74, followed by the
+EBP-0x7c/-0x80 pair that explains the target relocation at function+0x269
+(offset 617). The candidate's corresponding first spill starts at EBP-0x7c and
+its later pair is EBP-0x84/-0x88, producing the 12-byte relocation drift to
+offset 629. Reversing the rectangle members while remapping logical player
+references scored only 1615/2727; grouping boundary flags into a local struct
+left the 1652/2727 score unchanged, while explicit pointer/flag scratch records
+expanded the function to 2754 bytes. Four function-scope flag locals scored
+1586/2727. These are retained negative controls, not accepted source changes.
+
 ### Complete dispatch and body-contact test
 
 DispatchCollisions first tests both character directions with TestBodyInteraction
