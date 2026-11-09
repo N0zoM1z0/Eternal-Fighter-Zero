@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **347 exact functions**, **1,067,561 code bytes**,
-  **7,655 associated table bytes**, 379 reviewed complete boundaries and 374
+  ledgers currently count **348 exact functions**, **1,067,929 code bytes**,
+  **7,655 associated table bytes**, 380 reviewed complete boundaries and 375
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -393,6 +393,17 @@ at the opponent X load immediately before repeated CRT `rand()` calls;
 no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
+
+## Ikumi mode-aware state initializer now fully Exact
+
+`Character14::InitializeState` at `0x006A5C50` is now **368/368
+strict-Exact**, with two reviewed original-bound call relocations:
+`SetAlternateMode(0)` and base `Secondary::InitializeState`.
+Its natural C++ source `src/Character14Initialize.cpp` resets all
+ten child state integers, five collision-coordinate pairs and
+192 scratch entries. The canonical reviewed boundary ends at
+`0x006A5DC0`, **before** a separate following function.
+Proof: `docs/evidence/ikumi-initialize-state-exact.json`.
 
 ## Two more Ikumi overrides Exact: locomotion and effect emission
 

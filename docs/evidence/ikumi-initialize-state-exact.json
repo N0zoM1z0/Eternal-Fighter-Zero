@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authority": "complete original-bound selected VC7.1 native codegen without masks",
+  "method": "Ikumi vtable slot 12 pointer at 0x788DA4 binds original 368-byte InitializeState. Natural C++ first calls exact SetAlternateMode(0), clears original mode flag and ten child integers, restores five collision pairs and all 192 scratch integers, then calls exact base Secondary::InitializeState. Complete function and two original-bound call relocations matched; boundary ends just before separately identified 0x6A5DC0 function. No full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 368,
+      "matched_bytes": 368,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 15,
+          "target": 6993568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetAlternateMode@Character14@@QAEXD@Z",
+          "evidence": "EFZ.exe original direct mode reset call at 0x006A5C5E to independently Exact SetAlternateMode, after argument zero",
+          "addend": 0
+        },
+        {
+          "offset": 360,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe original direct base initialization call at 0x006A5DB7 after three complete 64-int child array resets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "7fcdb1dcf58908e0563eebb5c0540ae1c294c9edbe6b46e896e723a020057bcf",
+      "target_extent_sha256": "7fcdb1dcf58908e0563eebb5c0540ae1c294c9edbe6b46e896e723a020057bcf",
+      "unit": "character-14-initialize-state",
+      "symbol": "?InitializeState@Character14@@UAEXXZ",
+      "target_address": "0x006A5C50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "3ced76cd243bd2bbd276f8ba6622e3174b413f52f15ff4ec0c5deb8d4f7e0952",
+      "object_sha256": "8bdea1d25b0ebe2d5bf26103b6f74f9037f5d866960406a5a964c6b1a01100ed",
+      "source_sha256": "b8ad22f4e68b3cc7fdfdcf4b3df172fa981ea883d4aff5a6867fe1f4fa7b772f",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "fd5f91db119bfe6d3021690ea7ed5ed65f951822369097b4bffcf8edc9b4cc48"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f33be02f1dda09e8cf62534c9e00549cafc6f5bc786f3f98098f1da01a74d885",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "90774fcb652cbefb0cff99d183e1b1ef4f652b3a2e3e59b2142f45315eab69b7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

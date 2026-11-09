@@ -1954,6 +1954,24 @@ blindly adding a float sum can make lengths coincide while leaving
 incorrect FP instructions. The full body has not yet achieved strict
 Exact and must not be included in the matches ledger.
 
+### Ikumi mode-aware InitializeState: complete 368-byte exact owner (2026-11-09)
+
+Ikumi's original vtable slot 12 at `0x788DA4` points to the real
+`Character14::InitializeState` at `0x6A5C50`, whose complete
+un-padded function ends at **`0x6A5DC0`**. Newly authored natural
+source `src/Character14Initialize.cpp` strictly matches **368/368
+original bytes with 2/2 relocations**, targeting the separately Exact
+`Character14::SetAlternateMode(0)` and the already-Exact base
+`Secondary::InitializeState` (`0x40EDF0`). It restores the mode flag,
+all ten child state integers, five original collision coordinate
+pairs and three arrays of 64 zeroed integers, in original order.
+The next original function begins immediately at `0x6A5DC0`; the
+later resource/destructor code must **not** be attributed to this
+368-byte owner. Canonical selected evidence:
+`docs/evidence/ikumi-initialize-state-exact.json`, with no ignored
+bytes or cold replay. The separate 1,592-byte Ikumi Slot08 boss
+remains open.
+
 ### Ikumi locomotion and local-effect delegates: two exact functions (2026-11-09)
 
 Two more Ikumi overrides now have independently accepted normal C++

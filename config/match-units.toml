@@ -129122,3 +129122,27 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "EFZ.exe original direct base emitter call at 0x006AB7D4 after virtual RemoveLocalEffect(effectWrite) with cursor at +0x2CA; original vtable pointer at 0x788D98"
+
+[units.character-14-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-initialize-state/Character14Initialize.obj"
+symbol = "?InitializeState@Character14@@UAEXXZ"
+target_address = 0x006A5C50
+size = 368
+
+[[units.character-14-initialize-state.relocations]]
+offset = 15
+type = "REL32"
+symbol = "?SetAlternateMode@Character14@@QAEXD@Z"
+target = 0x006AB6A0
+evidence = "EFZ.exe original direct mode reset call at 0x006A5C5E to independently Exact SetAlternateMode, after argument zero"
+
+[[units.character-14-initialize-state.relocations]]
+offset = 360
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "EFZ.exe original direct base initialization call at 0x006A5DB7 after three complete 64-int child array resets"

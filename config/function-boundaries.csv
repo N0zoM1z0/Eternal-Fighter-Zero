@@ -378,3 +378,4 @@ address,end,size,status,evidence
 0x006A62C0,0x006A6310,80,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides
 0x006A6310,0x006A6323,19,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-locomotion-and-effect-emission
 0x006AB7B0,0x006AB7DF,47,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-locomotion-and-effect-emission
+0x006A5C50,0x006A5DC0,368,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-initialization-with-bank-reset
