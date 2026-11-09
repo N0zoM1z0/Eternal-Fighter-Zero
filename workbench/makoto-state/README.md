@@ -132,6 +132,15 @@ work, not the original behavior for valid unimplemented animations.
   landing choice. The removed x87 multiply/add accounts for the target
   block being 12 bytes shorter than animation 62.
 
+- Animation ID 64 (block 0x005EAE08, 561 bytes) introduces an
+  early wall-contact exit: once the pose index is positive, a nonzero
+  CollisionSide() result selects animation 70 (0x46) and calls ResetPose
+  before updating gravity or animation counters. At frame 0/tick 0 it
+  grants 30 meter, copies knockbackVelocityX, blends old vertical speed
+  by 0.75 with knockbackVelocityY, clamps velocityY to [-2.0, -0.5],
+  and sets gravity=0.032. Otherwise it retains the original two-pose
+  airborne loop and knockdown-dependent landing selection.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -151,7 +160,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 64 and onward directly from reviewed target instructions,
+Extend cases 65 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
