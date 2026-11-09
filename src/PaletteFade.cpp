@@ -33,7 +33,7 @@ void Context::UpdatePaletteFade()
         if (fadeAttack > 0) {
             fadeLevel = (100.0 - fadeLevel) / fadeAttack + fadeLevel;
             if (fadeLevel > 100.0) fadeLevel = 100.0;
-            if (fadeLevel > 0.0) videoOwner->LightenPalette(reinterpret_cast<unsigned char *>(this) + 0xf35, 1, 255, 100 - (int)fadeLevel);
+            if (fadeLevel > 0.0) videoOwner->LightenPalette(this->characterPalette, 1, 255, 100 - (int)fadeLevel);
             --fadeAttack;
         } else {
             if (fadeHold > 0) --fadeHold;
@@ -41,7 +41,7 @@ void Context::UpdatePaletteFade()
                 if (fadeLevel > 0.0) {
                     fadeLevel = fadeLevel - 100.0 / fadeRelease;
                     if (fadeLevel <= 0.0) fadeLevel = 0.0;
-                    videoOwner->LightenPalette(reinterpret_cast<unsigned char *>(this) + 0xf35, 1, 255, 100 - (int)fadeLevel);
+                    videoOwner->LightenPalette(this->characterPalette, 1, 255, 100 - (int)fadeLevel);
                 } else fadeDirection = 0;
             }
         }
@@ -49,7 +49,7 @@ void Context::UpdatePaletteFade()
         if (fadeAttack > 0) {
             fadeLevel = fadeLevel - (fadeLevel + 100.0) / fadeAttack;
             if (fadeLevel < -100.0) fadeLevel = -100.0;
-            if (fadeLevel < 0.0) videoOwner->DarkenPalette(reinterpret_cast<unsigned char *>(this) + 0xf35, 1, 255, (int)fadeLevel + 100);
+            if (fadeLevel < 0.0) videoOwner->DarkenPalette(this->characterPalette, 1, 255, (int)fadeLevel + 100);
             --fadeAttack;
         } else {
             if (fadeHold > 0) --fadeHold;
@@ -57,7 +57,7 @@ void Context::UpdatePaletteFade()
                 if (fadeLevel < 0.0) {
                     fadeLevel = 100.0 / fadeRelease + fadeLevel;
                     if (fadeLevel >= 0.0) fadeLevel = 0.0;
-                    videoOwner->DarkenPalette(reinterpret_cast<unsigned char *>(this) + 0xf35, 1, 255, (int)fadeLevel + 100);
+                    videoOwner->DarkenPalette(this->characterPalette, 1, 255, (int)fadeLevel + 100);
                 } else fadeDirection = 0;
             }
         }

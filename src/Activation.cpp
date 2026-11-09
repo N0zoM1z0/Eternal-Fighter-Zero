@@ -41,7 +41,7 @@ void Context::Activate()
             }
         }
         LoadObjectFile(&extraC, objectDataPath, 0, 0xaf);
-        videoOwner->LoadPalette(reinterpret_cast<unsigned char *>(this) + 0xf35,
+        videoOwner->LoadPalette(this->characterPalette,
             objectPalettePath, 0, 0xaf, 0x50);
     } else {
         for (int j = 0; j <= 0x397; ++j) {
@@ -54,10 +54,10 @@ void Context::Activate()
             videoOwner->LoadSurface(&textures[j], path, 0xaf);
         }
         videoOwner->LoadSurface(&extraC, objectBitmapPath, 0xaf);
-        videoOwner->LoadBitmapPalette(reinterpret_cast<unsigned char *>(this) + 0xf35,
+        videoOwner->LoadBitmapPalette(this->characterPalette,
             objectBitmapPalettePath, 0, 0xaf, 0x50);
     }
-    *(reinterpret_cast<unsigned char *>(this) + 0xf34) = videoOwner->SurfaceProperty(extraC);
+    this->colorKey = videoOwner->SurfaceProperty(extraC);
 }
 
 void Context::LoadObjectFile(IUnknown **surface, const char *path,
