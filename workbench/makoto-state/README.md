@@ -596,6 +596,21 @@ work, not the original behavior for valid unimplemented animations.
   immediates and distinct destinations. All 982 target bytes were
   rechecked against EFZ.exe, and the VC7.1 partial owner compiles.
 
+- Animation ID 206 (0x005F0463..0x005F0669, 518 bytes) has a
+  two-phase dash/attack loop that is not the Character07 reference
+  behavior. Below pose 2 it runs the 0.03 dash-momentum gate; after
+  that, every tick with *positive* horizontal velocity clears the
+  momentum flag, subtracts an additional 0.02 and clamps negative
+  speed to zero. Pose 2/tick zero grants 25 meter, sound 20 and one
+  hit. Only on frame expiry does pose 1 clear attackCollisionResult,
+  pose 2 set velocityX=1.9, and pose 6 loop back three poses while
+  field3138<4. Each loop increments field3138; when it exceeds two,
+  remainingHitCount is cleared. Sequence exhaustion chooses crouch
+  state 3, calls FaceOpponent, then ResetPose. The original 518-byte
+  instruction range, x87 0.02 and 1.9 constants, and the separate
+  pose gates were checked against EFZ.exe; the partial VC7.1 build
+  succeeds. This owner is still partial, not an Exact function.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -621,7 +636,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 206 and onward directly from reviewed target instructions,
+Extend case 207 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
