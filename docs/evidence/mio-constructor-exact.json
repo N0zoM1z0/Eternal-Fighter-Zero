@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "authority": "complete natural VC7.1 C++ source with original-bound relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 407,
+      "matched_bytes": 407,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe original base constructor call at 0x00588334, six original arguments, reviewed address 0x0040EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7899260,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character11@@6B@",
+          "evidence": "EFZ.exe @ 0x0058833C: reviewed Mio 13-slot child vtable pointer at 0x78887C",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7899256,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62316",
+          "evidence": "EFZ.exe @ 0x00588342: original mio NUL resource literal, verified bytes at 0x788878",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x00588351: direct CRT strcpy call to reviewed 0x778080",
+          "addend": 0
+        },
+        {
+          "offset": 100,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe @ 0x00588372: original 64-bit IEEE-754 positive zero constant at 0x7872F8 loaded into +0x3140",
+          "addend": 0
+        },
+        {
+          "offset": 115,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe @ 0x00588381: the same original 64-bit zero constant reused for +0x3148; independently checked",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b6ce8348e1d2aa188a223a03c6f5365a95a1788b0da1a28bce04940f332a3059",
+      "target_extent_sha256": "b6ce8348e1d2aa188a223a03c6f5365a95a1788b0da1a28bce04940f332a3059",
+      "unit": "character-11-constructor",
+      "symbol": "??0Character11@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x00588310",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "798a1f0ea82913cbb7b2ac2a179eac197b13fd7eae096f02561649901a1c2289",
+      "object_sha256": "590315041724817d74a45b81efdf295cd0d8cb218c639f6c4e064ff4332a7962",
+      "source_sha256": "0b8956ebd15018fbe5a7488f83441d1c1ca32638c208b601f57a934dc6ecdfd5",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "3ceb918ba4e182d907259e0f0743ab83e88ddcfb99644eb51c3db14554140be9"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ffe9c21cf75f97929fedca4b391205da48d365f66c40b9d87157086581b154b0",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ebb4783d0f851c56bbce3b3dfae920b2cc3c25a21dda0981d4b68aef7c7a68e7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Native Mio constructor exactly 407 original bytes with six relocation bindings, including two independent references to the IEEE-754 0.0 literal at 0x007872F8 for field +0x3140 and +0x3148. 4-byte child field +0x313c deliberately left unknown, no zero initialization invented; no full cold replay."
+}

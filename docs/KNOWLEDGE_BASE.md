@@ -1951,6 +1951,33 @@ The constructor, its called switch owner and all original source
 extents are accepted **independently**, not by assuming the call
 produces runtime-equivalent behavior for the entire game.
 
+### Mio constructor: original x87 double state initialization (2026-11-09)
+
+`Character11::Character11` at `0x00588310` has new natural C++
+`src/Character11Frame.cpp`, strict **407/407-byte Exact** under VC7.1
+with **six reviewed original relocations**. The four direct bindings
+are its Secondary constructor (`0x40EAE0`), 13-slot child vtable
+(`0x78887C`), `mio` NUL literal (`0x788878`) and CRT `strcpy`
+(`0x778080`). The two extra relocations are both references to the
+**same original 64-bit IEEE-754 positive zero** at `0x7872F8`, used
+for distinct `double` fields at object offsets **+0x3140** and
+**+0x3148**. The explicit class view retains the original 0x3458
+allocation and leaves the originally untouched +0x313C four bytes
+unknown, rather than inventing an initialization. Five collision
+coordinate pairs, four sparse command IDs and three 64-element
+integer arrays compile to exact original instructions.
+
+Because `CharacterViews.h` changed, only the three actual target-bound
+Exact consumers were rebuilt: `scene-create-character` remains
+**3495/3495** bytes / 97 relocations, `scene-loading-character`
+**2651/2651** / 76 and Makoto `Slot06` **59292/59292** / 1,386.
+Their 25/26/127 compiler-local labels shifted by +7 and were
+rebound simultaneously at unchanged canonical positions and targets,
+then each complete function plus owned tables compared strictly.
+Public receipts: `docs/evidence/mio-constructor-exact.json` and
+`docs/evidence/mio-creation-consumers-exact.json`; the existing Makoto
+receipt was freshly updated. No unrelated full cold replay ran.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

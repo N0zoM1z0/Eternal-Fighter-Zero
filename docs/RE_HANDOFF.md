@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **341 exact functions**, **1,066,482 code bytes**,
+  ledgers currently count **342 exact functions**, **1,066,889 code bytes**,
   **7,655 associated table bytes**, 374 reviewed complete boundaries and 369
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -341,6 +341,25 @@ records; the function switches pattern/sequence bank pointers and the
 +0x3460 mode flag in the exact original order. Reviewed thiscall
 `RET 4` at the function end and complete boundary were added to the
 provenance ledgers. No additional header changes or broad replays.
+
+## Mio constructor Exact with two original x87 doubles
+
+`Character11::Character11` at `0x00588310` is now a natural C++
+**407/407-byte strict Exact** function with six original-bound
+relocations, including two reads of the 0.0 double constant at
+`0x7872F8`. Source: `src/Character11Frame.cpp`; selected unit:
+`character-11-constructor`; receipt:
+`docs/evidence/mio-constructor-exact.json`. The class view preserves
+original size 0x3458, initializes doubles at +0x3140/+0x3148 and
+leaves the four bytes at +0x313C unknown rather than writing zero.
+
+The three actual shared-header consumers were selectively rebuilt:
+`scene-create-character` remains **3495/3495** Exact with 97
+relocations, `scene-loading-character` **2651/2651** with 76 and
+Makoto `Slot06` **59292/59292** with 1,386. All 25/26/127 compiler-
+local symbols shifted +7 and were mapped simultaneously at their
+unchanged canonical target offsets. Focused proof:
+`docs/evidence/mio-creation-consumers-exact.json`; no full replay.
 
 ## Other open substantial work
 
