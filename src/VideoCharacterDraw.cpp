@@ -367,3 +367,97 @@ int Video::DrawShadowSurface(SurfaceRect destination, IUnknown *surface,
     reinterpret_cast<IDirectDrawSurface *>(surface)->Unlock(sourceDescription.lpSurface);
     return 1;
 }
+
+int Video::DrawCharacterSpecial(SurfaceRect destination, IUnknown *surface,
+    SurfaceRect source, unsigned char colorKey, int flip)
+{
+    int originalSourceRight = source.right;
+    if (destination.top >= destination.bottom || destination.left >= destination.right) return 1;
+    if (source.top >= source.bottom || source.left >= source.right) return 1;
+
+    if (destination.top < 0) {
+        source.top -= destination.top;
+        destination.top = 0;
+    }
+    if (destination.left < 3) {
+        source.left -= destination.left - 3;
+        destination.left = 3;
+    }
+    if (destination.bottom > 240) {
+        source.bottom -= destination.bottom - 240;
+        destination.bottom = 240;
+    }
+    if (destination.right > 320) {
+        source.right -= destination.right - 320;
+        destination.right = 320;
+    }
+    if (flip != 0) {
+        int sourceWidth = originalSourceRight - source.left;
+        source.left = originalSourceRight - source.right;
+        source.right = sourceWidth;
+    }
+
+    if (destination.top >= destination.bottom || destination.left >= destination.right) return 1;
+    if (source.top >= source.bottom || source.left >= source.right) return 1;
+
+    DDSURFACEDESC sourceDescription;
+    DDSURFACEDESC destinationDescription;
+    HRESULT result;
+    sourceDescription.dwSize = sizeof(DDSURFACEDESC);
+    destinationDescription.dwSize = sizeof(DDSURFACEDESC);
+
+    result = reinterpret_cast<IDirectDrawSurface *>(surface)->Lock(
+        reinterpret_cast<RECT *>(&source), &sourceDescription, DDLOCK_WAIT | DDLOCK_READONLY, 0);
+    if (result != DD_OK) {
+        if (result == DDERR_SURFACELOST) return 0;
+        return 1;
+    }
+    result = backSurface->Lock(reinterpret_cast<RECT *>(&destination),
+        &destinationDescription, DDLOCK_WAIT, 0);
+    if (result != DD_OK) {
+        if (result == DDERR_SURFACELOST) return 0;
+        return 1;
+    }
+
+    unsigned char *sourcePixels = static_cast<unsigned char *>(sourceDescription.lpSurface);
+    unsigned char *destinationPixels = static_cast<unsigned char *>(destinationDescription.lpSurface);
+    int sourcePitch = sourceDescription.lPitch;
+    int destinationPitch = destinationDescription.lPitch;
+    int width = destination.right - destination.left;
+    int height = destination.bottom - destination.top;
+
+    if (colorKey > 0) {
+        if (flip != 0) {
+            for (int y = 0; y < height; ++y) {
+                for (int x = width - 1; x >= 0; --x) {
+                    unsigned char mask = sourcePixels[y * sourcePitch + (width - 1 - x)];
+                    if (mask != colorKey) {
+                        destinationPixels[y * destinationPitch + x] =
+                            destinationPixels[y * destinationPitch + x - 3];
+                    }
+                }
+            }
+        } else {
+            for (int y = 0; y < height; ++y) {
+                for (int x = width - 1; x >= 0; --x) {
+                    unsigned char mask = sourcePixels[y * sourcePitch + x];
+                    if (mask != colorKey) {
+                        destinationPixels[y * destinationPitch + x] =
+                            destinationPixels[y * destinationPitch + x - 3];
+                    }
+                }
+            }
+        }
+    } else {
+        for (int y = 0; y < height; ++y) {
+            for (int x = width - 1; x >= 0; --x) {
+                destinationPixels[y * destinationPitch + x] =
+                    destinationPixels[y * destinationPitch + x - 3];
+            }
+        }
+    }
+
+    backSurface->Unlock(destinationDescription.lpSurface);
+    reinterpret_cast<IDirectDrawSurface *>(surface)->Unlock(sourceDescription.lpSurface);
+    return 1;
+}

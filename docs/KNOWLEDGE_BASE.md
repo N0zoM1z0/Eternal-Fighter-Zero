@@ -580,6 +580,28 @@ relocations; strict comparison rejects the complete extents. All three pixel
 kernels now have independent reviewed boundaries, focused units and natural
 C++ semantic owners, but none has exactness credit.
 
+The 808-byte target at `0x40AAE0` is now boundary-reviewed as
+`Video::DrawCharacterSpecial`. Its `ret 0x2c` is at `0x40AE05`, ending at
+`0x40AE08`; the next Video method starts at `0x40AE10` after eight INT3 bytes.
+The natural C++ owner is in `src/VideoCharacterDraw.cpp` under unit
+`video-draw-character-special`. It preserves the unusual three-pixel minimum
+left edge, source-rectangle clipping/mirror transform, DirectDraw lock/error
+flow and destination-then-source unlock order. With a nonzero color key, the
+source surface is a mask: non-key mask pixels copy the destination pixel at
+`x-3` into `x`; mirror reverses the mask read, not the destination shift. With
+key zero, every destination pixel is shifted from `x-3` and the mask is not
+read (the source surface is still locked). The left-edge clamp protects those
+three-byte look-behind reads. The pinned `/Od` candidate is 1,167 bytes; a
+pointer-row/do-while control is 1,066 bytes, while the `/O2` pointer-row control
+is 601 bytes. All are larger or smaller than the 808-byte target and strict
+comparison rejects the complete extents. No exactness credit is assigned.
+
+The ordinary, blended, tint, shadow and special rendering kernels now all have
+natural C++ semantic owners in `src/VideoCharacterDraw.cpp` and focused build
+units. None has passed complete strict code comparison. The target bodies use
+hand-shaped register loops and local ESI/EDI saves that remain open research;
+these semantic implementations are not byte-exact claims.
+
 A focused tracking audit also exposed a pre-existing certificate problem.
 `17edf49` changed `SecondaryPose::field000c` in `src/Engine.h` from `short`
 to `unsigned short` after the prior exact certificates were generated. The
@@ -1958,10 +1980,11 @@ field58 ==3 selects the special kernel, positive field58 selects blended mode
 field58-1, and other values select the normal draw. For top >=240 and short
 13E ==0, frame zero of animation 49 is drawn at top 239-frame.v, without offsetY.
 Normal, blended, tint and special destinations are 0x409A90, 0x40A0B0, 0x40A440
-and 0x40AAE0; the tint parameter is a signed byte. These pixel-kernel bodies
-remain external and receive no implementation credit. Normal C++ scopes recover
-the 0x40 frame; the first complete renderer source was strict exact. Original
-unchecked indices, zero-stride behavior and floating-point paths are retained.
+and 0x40AAE0; the tint parameter is a signed byte. Their natural C++ semantic
+owners now exist, but none has complete strict codegen credit. Normal C++ scopes
+recover the 0x40 frame; the first complete renderer source was strict exact.
+Original unchecked indices, zero-stride behavior and floating-point paths are
+retained.
 
 Final replay cold builds 32 distinct source/profile/dependency artifacts and
 compares six new plus 128 Engine.h-dependent existing units: all 134 complete
