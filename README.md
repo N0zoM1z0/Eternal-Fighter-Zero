@@ -74,9 +74,9 @@ Ikumi's 163-byte derived destructor is also strict Exact, including the
 original double base teardown and two vector-array deletes.
 Other child owners, including Ikumi Slot08 effects, remain open.
 Ikumi's separate 5,153-byte Slot02 input command owner now has its
-first two history scans reconstructed in natural C++ under
-`workbench/ikumi-commands/` with **346/346 original instructions**
-matched after normalizing branch destinations (1,122 target bytes);
+first three history scans reconstructed in natural C++ under
+`workbench/ikumi-commands/` with **494/494 original instructions**
+matched after normalizing branch destinations (1,628 target bytes);
 the full function is still open and is not counted Exact.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386

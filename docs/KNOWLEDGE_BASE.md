@@ -1929,34 +1929,31 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
-## Ikumi Slot02 input command scanner: two complete opcode-level scans
+## Ikumi Slot02 input command scanner: three verified original scans
 
-The original Ikumi vtable slot 2 at `0x00788D7C` points to
-`Character14::Slot02` at `0x006AB7E0`, a **5,153-byte** command
-recognizer ending just before `0x006ACC01` (15 following `CC`
-alignment bytes). The full unpadded owner and authored origin have
-been newly reviewed against canonical EFZ.exe and recorded in
+Original `Character14::Slot02` is confirmed by vtable slot 2 at
+`0x00788D7C`; the full **5,153-byte** function owns
+`[0x006AB7E0,0x006ACC01)` followed by 15 `CC` alignment bytes.
+The complete boundary and authored origin have been reviewed in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
 
-The first **two** of the original 15 priority-ordered history scans
-have been reconstructed as **normal C++** in the separate unaccepted
-`workbench/ikumi-commands/` source. Scan 1 reads 70–179 ticks of the
-180-frame circular history, advances nine directional stages and
-recognizes command 0x5E; it covers **499 bytes / 153 instructions**.
-Scan 2 reads 45–179 ticks and recognizes a special command with base
-0x96 plus the input-button flags, retaining an early-finish branch and
-an original stage-5→8 transition; it covers **623 bytes / 193
-instructions**. The complete first-two-scan extent
-`0x006AB7E0..0x006ABC42` totals **1,122 bytes / 346 instructions**.
-The natural VC7.1 compilation matches **346/346 original mnemonics,
-registers, immediate values, and stack operands**, normalizing *only
-absolute branch destinations* because the last 13 scans are missing. The source path contains a focused,
-reproducible VC7.1 verification script. The correct original facing
-term is `2 + (facing == -1 ? 0 : -1)` (and the corresponding term
-starting from 6); an earlier algebraic reading of Ghidra's decompile
-had reversed the direction. The new form matches both behavior and
-codegen. **The complete 5,153-byte owner is not Exact** and has not
-been integrated into production `src/` or the matches ledger.
+Natural C++ at `workbench/ikumi-commands/Character14Commands.cpp`
+now implements **the first three of fifteen priority-ordered command
+scans**, exactly **1,628 original bytes / 494 instructions** from
+`0x006AB7E0` through `0x006ABE3C`. The separate scanners are
+499/153, 623/193 and 506/148 bytes/instructions. The first scan
+recognizes 0x5E, the second recognizes base 0x96 plus button flags,
+and the third uses base 0xAA or 0xA0 with the original early-finish
+branch. Ikumi's third scan starts when either meter is at least 1000
+**or `field315c > 0`**. The input-history cursor, 180-entry wrap,
+order of directional conditions and signed-facing terms were verified
+against original x86, not assumed from related characters.
+
+A focused VC7.1 build and `check_first_scan.py` compare all **494/494
+opcodes and operands**, normalizing only jump destinations because the
+last **12 scans have not yet been authored**. The current 1,632-byte
+partial function is NOT the full 5,153-byte function and is **not
+Exact**; no match-unit or source ledger acceptance has been claimed.
 
 ## Ikumi Slot08 effects owner: reviewed 1,592-byte partial reconstruction
 

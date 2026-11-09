@@ -99,5 +99,42 @@ void Character14::Slot02()
             stage = 1;
         }
     }
-    // Further 13 original ordered scans remain to be recovered.
+    // Third priority scan: a charged motion whose start is also allowed
+    // when Ikumi's field315c override is positive, even below 1000 meter.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf0) != 0) && (stage == 5)) {
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0xaa +
+                                ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            return;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) &&
+            (stage == 4)) {
+            if ((buttons & 0xf0) != 0) {
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0xa0 +
+                                    ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                return;
+            }
+            stage = 5;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) &&
+            (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 2 - (facing == -1)) &&
+            (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 6 - (facing == -1)) &&
+            (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 0) &&
+            (meter >= 1000 || field315c > 0)) {
+            stage = 1;
+        }
+    }
+    // Further 12 original ordered scans remain to be recovered.
 }

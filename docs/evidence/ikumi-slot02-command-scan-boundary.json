@@ -20,7 +20,7 @@
     "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
   },
   "following_padding_bytes": 15,
-  "qualification": "The first two natural C++ scans reproduce 346/346 original instructions after normalizing only branch destinations; thirteen remaining scans and original far jump targets are still missing, so the 1,126-byte workbench TU is NOT a full 5,153-byte Exact match.",
+  "qualification": "The first three natural C++ priority scans produce 494/494 matching original instructions after normalizing only branch destination numbers; 12 further scans are not implemented. The partial 1632-byte TU is NOT complete 5153-byte owner Exact.",
   "second_scan": {
     "start": "0x006AB9D3",
     "end_exclusive": "0x006ABC42",
@@ -30,10 +30,17 @@
   },
   "natural_cpp_recovered_prefix": {
     "start": "0x006AB7E0",
-    "end_exclusive": "0x006ABC42",
-    "size": 1122,
-    "instructions": 346,
-    "compiled_partial_size": 1126,
-    "qualification": "All 346 original x86 mnemonics, operands, registers and stack homes match compiled natural C++ after normalizing only branch destination numbers. The missing 13 later scans make the full TU non-Exact."
+    "end_exclusive": "0x006ABE3C",
+    "size": 1628,
+    "instructions": 494,
+    "compiled_partial_size": 1632,
+    "qualification": "All 494 original x86 instructions and operands match compiled C++ after normalizing only unimplemented future jump destinations; remaining twelve scans are missing."
+  },
+  "third_scan": {
+    "start": "0x006ABC42",
+    "end_exclusive": "0x006ABE3C",
+    "size": 506,
+    "original_instructions": 148,
+    "sha256": "feafc66af973b1f4ea1689948cd70cba55e8003ebb36670b07db1054f5ca6626"
   }
 }

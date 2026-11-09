@@ -394,22 +394,22 @@ no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
 
-## Ikumi Slot02 command boss: first original scan source recovered
+## Ikumi Slot02: first three command scans recovered (not Exact)
 
-The source `workbench/ikumi-commands/Character14Commands.cpp` now
-reconstructs Ikumi Slot02's first **two** ordered priority scans:
-**1,122 original bytes / 346 instructions**. The focused
-`check_first_scan.py` recompile test passes all 346 opcode and
-operand comparisons after normalizing only future jump addresses;
-the separate scans are 499/153 and 623/193 bytes/instructions. Crucially the original direction term is
-`2 + (facing == -1 ? 0 : -1)`, not the reverse condition suggested
-by one decompiler rendering. The original **5,153-byte complete
-boundary** `[0x006AB7E0,0x006ACC01)` and authored vtable slot 2
-are independently reviewed, with target proof
+`workbench/ikumi-commands/Character14Commands.cpp` now implements
+**three complete natural-C++ input-history scans**, covering the
+first **1,628 original bytes / 494 instructions** of the
+5,153-byte `Character14::Slot02` boss. The reproducible focused
+`check_first_scan.py` matches 494/494 original instruction mnemonics,
+registers, stack operands and immediates (normalizing numeric future
+branch destinations only). Scan 3 adds Ikumi's true
+`meter >= 1000 || field315c > 0` gate; the original facing terms
+were corrected against source disassembly instead of trusting the
+Ghidra Boolean rendering. Original boundary and full SHA are in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-The **remaining 13 command scans still require source**; do not
-claim whole-owner Exact. Continue first with scan 3 beginning
-at `0x006ABC42` and preserve the original priority ordering.
+The **remaining 12 scans** must still be reconstructed. Next original
+start: `0x006ABE3C`. This workbench is NOT a strict full-function
+Exact result; keep it out of production `src/` and the exact ledger.
 
 ## Ikumi exact derived destructor with two base cleanup calls
 
