@@ -17,7 +17,7 @@ void Secondary::InitializeState()
     positionY = 0.0;
     facing = 1 - player * 2;
     ResetFrame();
-    field00b0 = 0.0;
+    velocityXCorrection = 0.0;
     field00d0 = 0;
     field0008 = 0;
     field000a = 0;

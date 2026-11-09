@@ -221,7 +221,7 @@ public:
     float field00a8;
     char field00ac;
     unsigned char unknown_00ad[0x3];
-    double field00b0;
+    double velocityXCorrection;
     double field00b8;
     double field00c0, field00c8;
     int field00d0;
