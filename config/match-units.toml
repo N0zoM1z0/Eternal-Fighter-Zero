@@ -129641,3 +129641,69 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "EFZ.exe original base effect spawn call at 0x004B1774 after calling virtual RemoveLocalEffect(effectWrite), Nagamori vtable slot 9"
+
+[units.character-06-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot01/Character06Render.obj"
+symbol = "?Slot01@Character06@@UAEXXZ"
+target_address = 0x004B12E0
+size = 1080
+
+[[units.character-06-slot01.relocations]]
+offset = 86
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B1336 original source rectangle construction via 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 196
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B13A4 original player-zero destination rectangle constructor 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 299
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B140B original mirrored destination rectangle constructor 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 451
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "EFZ.exe @ 0x004B14A3 first original Video::DrawSurface call to 0x00409A90"
+
+[[units.character-06-slot01.relocations]]
+offset = 553
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B1509 original partial-width source rectangle constructor 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 717
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B15AD original meter-scaled first destination rectangle constructor 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 895
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "EFZ.exe @ 0x004B165F original meter-scaled mirrored destination rectangle constructor 0x0040C590"
+
+[[units.character-06-slot01.relocations]]
+offset = 1071
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "EFZ.exe @ 0x004B170F second original Video::DrawSurface call to 0x00409A90"

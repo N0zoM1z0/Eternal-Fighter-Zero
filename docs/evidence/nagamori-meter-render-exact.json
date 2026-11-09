@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "complete native selected VC7.1 C++ plus all eight reviewed original call relocations",
+  "method": "Original Nagamori vtable slot1 at 0x788400 points to 1080-byte Slot01 meter overlay. Natural C++ renders sprite 43 and a meter-scaled width from sprite 44, using distinct player-dependent mirrored placements and 1200 denominator. All 6 calls to MakeSurfaceRect (0x40C590) and both Video::DrawSurface calls (0x409A90) have original target-bound relocations. Full canonical source code and eight excluded INT3 padding bytes separately reviewed, no masks or cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1080,
+      "matched_bytes": 1080,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 86,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B1336 original source rectangle construction via 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 196,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B13A4 original player-zero destination rectangle constructor 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 299,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B140B original mirrored destination rectangle constructor 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "EFZ.exe @ 0x004B14A3 first original Video::DrawSurface call to 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 553,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B1509 original partial-width source rectangle constructor 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 717,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B15AD original meter-scaled first destination rectangle constructor 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 895,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "EFZ.exe @ 0x004B165F original meter-scaled mirrored destination rectangle constructor 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 1071,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "EFZ.exe @ 0x004B170F second original Video::DrawSurface call to 0x00409A90",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "83d29f3cc853d1520947f4bef6e8d4ad346dc0b33e04fccae8a6a7e71a84b419",
+      "target_extent_sha256": "83d29f3cc853d1520947f4bef6e8d4ad346dc0b33e04fccae8a6a7e71a84b419",
+      "unit": "character-06-slot01",
+      "symbol": "?Slot01@Character06@@UAEXXZ",
+      "target_address": "0x004B12E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "8275e0e84194ee8976f78353f9cd8cc568ddd2ceeaa9bca4dac89eda54bd1943",
+      "object_sha256": "59b27fd5c00c29dbec9be8e68d133954457fcbd4d3932ace5f32ad3c9043f4a2",
+      "source_sha256": "276072263b7be3983262d89da95043b68beebcb24e1c5db6697566535126aaad",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "d595efa45d1c29bbec41275fc8fe2603f7bd86de1844f697d2ad1cbc89872d66",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "71c9b0082c6fab544ae9cb5d6cbb096edb941f6bd08e021c33bf82c7b12b028b",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

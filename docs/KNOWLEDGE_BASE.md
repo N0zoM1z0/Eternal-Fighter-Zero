@@ -2189,6 +2189,26 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori 1,080-byte meter overlay renderer: complete Exact (2026-11-09)
+
+The substantial nontrivial `Character06::Slot01` at `0x004B12E0`
+now has natural accepted C++ in `src/Character06Render.cpp` and a
+selected **1,080/1,080-byte Strict Exact** certificate. Original
+Nagamori vtable slot 1 at `0x788400` points directly to this entry.
+Unlike an empty delegate, it draws both animation-bank sprites 43 and
+44 with player-dependent horizontal mirroring, original texture,
+color key, placement and the Nagamori-specific **`field3150 / 1200`**
+width scale. The initial C++ source form was independently tested
+against the original x86; only after all non-relocation bytes matched
+were the **eight direct relocations** individually bound to their
+actual original targets. Six calls resolve to
+`MakeSurfaceRect` at `0x40C590`, and two to
+`Video::DrawSurface` at `0x409A90`. All original and compiled bytes
+then matched, without masks. Complete original owner is
+`[0x004B12E0,0x004B1718)`; eight subsequent `CC` bytes belong to
+alignment, not to the function. Public proof:
+`docs/evidence/nagamori-meter-render-exact.json`.
+
 ### Nagamori locomotion, timer and effect emission: three exact methods (2026-11-09)
 
 Three new independent Nagamori virtual functions have complete natural

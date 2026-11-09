@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **359 exact functions**, **1,075,421 code bytes**,
-  **7,655 associated table bytes**, 390 reviewed complete boundaries and 385
+  ledgers currently count **360 exact functions**, **1,076,501 code bytes**,
+  **7,655 associated table bytes**, 391 reviewed complete boundaries and 386
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,18 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori meter renderer, 1,080-byte full source Exact
+
+`Character06::Slot01` at `0x004B12E0` (vtable slot 1) is newly
+**1,080/1,080 bytes Strict Exact** with **8/8 original-bound calls**.
+Normal C++ `src/Character06Render.cpp` draws animation-bank frames
+43/44 through the original `MakeSurfaceRect`/`Video::DrawSurface`
+helpers, including player mirroring and the correct original
+`field3150 * width / 1200` meter scale. Selected unit
+`character-06-slot01`; full proof
+`docs/evidence/nagamori-meter-render-exact.json`. No code padding,
+masks or full replay; the following eight `CC` bytes are excluded.
 
 ## Three more Nagamori virtual methods exact
 

@@ -258,7 +258,7 @@ address,origin,status,evidence
 0x004AE1D0,unknown,unreviewed,
 0x004AE2C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004AE2E0,unknown,unreviewed,
-0x004B12E0,unknown,unreviewed,
+0x004B12E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-exact-meter-overlay-renderer
 0x004B1720,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B1750,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B1780,unknown,unreviewed,
