@@ -262,6 +262,39 @@ void Character06::Slot04()
             }
             return;
         }
+        if (recognizedCommand == 0x0c &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 && field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[262].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x106;
+            return;
+        }
+        if (recognizedCommand == 0x0b &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 && field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[261].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x105;
+            return;
+        }
+        if (recognizedCommand == 0x0a &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 && field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[260].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x104;
+            return;
+        }
     }
     // Other priority-ordered actions and the final original default remain open.
 }
