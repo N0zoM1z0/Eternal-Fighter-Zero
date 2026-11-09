@@ -191,6 +191,13 @@ work, not the original behavior for valid unimplemented animations.
   cross-checked against the original target instructions and the existing
   independent Character23 state-70 implementation.
 
+- Animation ID 71 (block 0x005EBA61, 427 bytes) is the higher-gravity
+  direct-speed airborne reaction. On initial pose 0/tick 0 it grants 30
+  meter, copies both knockback velocities, and sets gravity to 0.072
+  (original double at 0x00787D30). Case 63 instead uses gravity 0.032.
+  The two-pose rising/falling cycle, unsigned frame progression, and
+  knockdown-dependent landing outcomes match the original 71 block.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -210,7 +217,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 71 and onward directly from reviewed target instructions,
+Extend cases 72 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
