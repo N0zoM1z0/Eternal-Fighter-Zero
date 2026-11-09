@@ -66,8 +66,10 @@ following independent work on 81–84 and earlier branches.
   `docs/evidence/makoto-state-case-map.csv` and the Makoto state section of
   [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md).
 - Preserve current `build/makoto-state/Character03State.obj` and
-  `Character03State.HEAD-verify.obj`; older named experiments may be in the
-  lossless archives listed in RE_ARTIFACTS.md.
+  `Character03State.HEAD-verify.obj`. Earlier named trial objects and
+  disassemblies were archived losslessly under
+  `.analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz`;
+  [RE_ARTIFACTS.md](RE_ARTIFACTS.md) gives the manifest and restore command.
 - Do **not** ledger this state owner until its full function, relocations and
   810 associated table bytes match. Makoto CPU Slot05 and effects Slot07 are
   separate, previously ledgered exact owners.

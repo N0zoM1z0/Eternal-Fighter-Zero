@@ -205,3 +205,57 @@ Inspect or restore only what a concrete experiment needs:
 
 Both archives, sidecar manifests and README files are private ignored artifacts.
 Do not add them to Git. The detailed current task state is in RE_HANDOFF.md.
+
+## 2026-11-09 Makoto historical trials: receiving-agent cleanup
+
+A fresh cleanup for the handoff consolidated **128 superseded generated files**
+(67,696,008 logical bytes) into the following **lossless private archive**:
+
+`.analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz`
+
+Its SHA-256 is:
+
+`fa5548f148ecdf112dee15afcde5abb3b68263addeaa1f5094e1de8225316908`
+
+The archive contains 61 older `.analysis/probes/makoto/ours-*-disasm.txt`
+compiler-disassembly outputs and 67 version-suffixed
+`build/makoto-state/Character03State.*.obj` trial objects. The adjacent
+`retired-makoto-trial-disassemblies-and-objects.manifest.json` records the
+original relative path, logical size, allocated size and SHA-256 of **every**
+member. All 128 were read back from the completed gzip archive and verified
+by exact size and SHA-256 **before** their old live copies were removed.
+The manifest also records the archive digest and the explicit set of preserved
+live controls.
+
+The 8,266,984-byte compressed archive plus its manifest replace
+68,108,288 allocated bytes of loose experiments, yielding a **net
+59,805,696 allocated bytes saved (about 57.0 MiB)** after archive/manifest
+accounting. This figure excludes directory metadata and is not added to
+earlier cleanups' historical totals.
+
+The current Makoto workbench source/README, original target and reviewed
+state-case map, `.analysis/probes/makoto/README.md`,
+`state-code-005e85f0.txt`, selected current `ours-disasm.txt` controls,
+`build/makoto-state/Character03State.obj`,
+`Character03State.HEAD-verify.obj` and partial-build receipts remain live.
+No tracked source, target, toolchain/Wine state, Ghidra database, approved
+comparison certificate or current `build/match-units` output was deleted.
+
+Inspect the member list and restore **only an individual needed trial**
+from the repository root:
+
+```bash
+tar -tzf .analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz
+
+# Example; restores an old generated disassembly to its previous path:
+tar -xzf .analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz \
+  .analysis/probes/makoto/ours-case248-positive-condition-disasm.txt
+
+# Example historical compiler object:
+tar -xzf .analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz \
+  build/makoto-state/Character03State.case248-positive-condition.obj
+```
+
+Check the recorded per-file digest after restoration. Do not overwrite a newer
+live artifact with an old trial. The archive and manifest remain private,
+ignored, and must **not** be committed.
