@@ -82,7 +82,7 @@ class Context;
 class PatternSequence;
 struct SecondaryEffectSpawn;
 struct SecondaryFrame {
-    SurfaceRect boxes0000[5], boxes0050[4], box0090;
+    SurfaceRect hurtBoxes[5], attackBoxes[4], bodyBox;
     short damage;
     unsigned char unknown_00a2[2];
     float comboDamageScale;

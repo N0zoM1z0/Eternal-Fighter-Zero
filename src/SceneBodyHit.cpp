@@ -24,12 +24,12 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                 {
                     SurfaceRect specialBounds;
                     for (i = 0; i < 4; ++i) {
-                        work.attackBoxes[i] = TransformSnapshotBox(firstPose, &work.firstFrame.boxes0050[i]);
+                        work.attackBoxes[i] = TransformSnapshotBox(firstPose, &work.firstFrame.attackBoxes[i]);
                     }
                     for (i = 0; i < 5; ++i) {
-                        work.defenseBoxes[i] = TransformSnapshotBox(secondPose, &work.secondFrame.boxes0000[i]);
+                        work.defenseBoxes[i] = TransformSnapshotBox(secondPose, &work.secondFrame.hurtBoxes[i]);
                     }
-                    specialBounds = TransformSnapshotBox(secondPose, &work.secondFrame.box0090);
+                    specialBounds = TransformSnapshotBox(secondPose, &work.secondFrame.bodyBox);
                     if (firstPose->state == 0 && (work.secondFrame.frameFlags & 0x20) == 0 &&
                         firstPose->command > 0 &&
                         !(second->field0130 > 0 && (work.firstFrame.attackFlags & 0x40) > 0) &&

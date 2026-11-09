@@ -163,11 +163,11 @@ void Secondary::LoadPatterns()
                                         extra->defenderHitstopFrames = reader.ReadInt();
                                         extra->comboDamageScale = reader.ReadInt();
                                         extra->groundHitState = reader.ReadInt();
-                                        reader.Read(&extra->box0090, 16);
-                                        for (k = 0; k < 2; ++k) reader.Read(&extra->boxes0000[k], 16);
-                                        reader.Read(&extra->boxes0050[0], 16);
-                                        for (k = 2; k < 5; ++k) reader.Read(&extra->boxes0000[k], 16);
-                                        for (k = 1; k < 4; ++k) reader.Read(&extra->boxes0050[k], 16);
+                                        reader.Read(&extra->bodyBox, 16);
+                                        for (k = 0; k < 2; ++k) reader.Read(&extra->hurtBoxes[k], 16);
+                                        reader.Read(&extra->attackBoxes[0], 16);
+                                        for (k = 2; k < 5; ++k) reader.Read(&extra->hurtBoxes[k], 16);
+                                        for (k = 1; k < 4; ++k) reader.Read(&extra->attackBoxes[k], 16);
                                     }
                                 }
                                 for (i = 0; i < 64; ++i) effects[i].patterns = patterns;

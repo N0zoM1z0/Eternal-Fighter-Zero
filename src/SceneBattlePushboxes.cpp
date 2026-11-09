@@ -15,10 +15,10 @@ void Scene3::ResolvePushboxes()
     {
         locals.first = this->TransformPoseBox(
             this->secondary[0] != 0 ? (SecondaryPose *)((int)this->secondary[0] + 8) : 0,
-            &this->secondary[0]->sequences[this->secondary[0]->field0008].data[this->secondary[0]->field000a].box0090);
+            &this->secondary[0]->sequences[this->secondary[0]->field0008].data[this->secondary[0]->field000a].bodyBox);
         locals.second = this->TransformPoseBox(
             this->secondary[1] != 0 ? (SecondaryPose *)((int)this->secondary[1] + 8) : 0,
-            &this->secondary[1]->sequences[this->secondary[1]->field0008].data[this->secondary[1]->field000a].box0090);
+            &this->secondary[1]->sequences[this->secondary[1]->field0008].data[this->secondary[1]->field000a].bodyBox);
     }
     if (this->BoxesOverlap(&locals.first, &locals.second) != 0) {
         if ((locals.first.left + locals.first.right) -
