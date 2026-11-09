@@ -1227,6 +1227,18 @@ other functions) exposed two real source-level mistakes:
   equality/NaN path; the target `fcomp` followed by `test ah,0x5`
   and `jp` is now generated directly from the natural C++ condition.
 
+- Animation IDs **210, 221, 232, 303–306** now use the target's
+  strictly positive contact condition where original `fcomp` tests
+  AH with 0x41. The former `>=0.0` incorrectly transitioned on an
+  exact-zero projected landing; the new comparison compiles to the
+  original x87 status test at all seven independently reviewed sites.
+- For states **83–84, 170, 221 and 303–305**, the x87 source expression
+  order is deliberately `velocityY + positionY` as evidenced by
+  original `fld velocityY; fadd positionY` (not the other order).
+  This is significant for exact FP exception/rounding and VC7.1 code
+  generation even though ordinary finite double addition looks
+  commutative in high-level math.
+
 All six changed arms were compiled under VC7.1 and each relevant
 `movzx`/x87 status test was checked against the target instructions.
 This does not imply whole-owner COFF Exact: its frame-stack locals
