@@ -1,4 +1,4 @@
-"""Focused original-PE verification of Nagamori command scan 1, not whole Exact."""
+"""Focused original-PE verification of Nagamori command scans 1-2, not whole Exact."""
 import hashlib
 import re
 import subprocess
@@ -13,6 +13,7 @@ from coff import object_function
 
 START = 0x004B1780
 FIRST_END = 0x004B191C
+SECOND_END = 0x004B1AD7
 SOURCE = ROOT / 'workbench/nagamori-command/Character06Command.cpp'
 OBJECT = ROOT / 'build/nagamori-command/Character06Command.partial.obj'
 
@@ -36,20 +37,20 @@ def original_instructions(data, path):
 
 
 def main():
-    original = target_bytes(verify_target(), START, FIRST_END - START)
+    original = target_bytes(verify_target(), START, SECOND_END - START)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/nagamori-command-workbench.log')
     built, relocations = object_function(OBJECT, '?Slot02@Character06@@UAEXXZ')
     original_ins = original_instructions(original, ROOT / 'build/nagamori-command/target.bin')
     compiled_ins = original_instructions(built, ROOT / 'build/nagamori-command/partial.bin')
-    assert len(original) == 412 and len(original_ins) == 120
-    assert len(built) == 416 and len(compiled_ins) == 123 and len(relocations) == 1
-    assert compiled_ins[:120] == original_ins
-    assert compiled_ins[120:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori first priority command scan: 120/120 x86 instructions match,')
+    assert len(original) == 855 and len(original_ins) == 253
+    assert len(built) == 859 and len(compiled_ins) == 256 and len(relocations) == 1
+    assert compiled_ins[:253] == original_ins
+    assert compiled_ins[253:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
+    print('Nagamori first two priority command scans: 253/253 original x86 instructions match,')
     print('normalizing ONLY forward branch targets and PE constant addresses.')
-    print('Original first-scan bytes: 412; partial source: 416, with local epilogue.')
-    print('Original scan SHA256:', hashlib.sha256(original).hexdigest())
+    print('Original two scans: 855 bytes; partial source: 859 with temporary local epilogue.')
+    print('Two-scan prefix SHA256:', hashlib.sha256(original).hexdigest())
     print('Entire Nagamori Slot02: 4917 bytes — NOT accepted Exact.')
 
 

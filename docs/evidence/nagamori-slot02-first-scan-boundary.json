@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-complete-boundary-with-partial-source-first-scan-only-not-exact",
+  "status": "reviewed-original-complete-boundary-and-two-priority-scans-not-exact",
   "canonical_target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "original_vtable_slot_pointer": "0x00788404",
   "function": "Character06::Slot02",
@@ -20,5 +20,19 @@
   "following_alignment_bytes": 11,
   "partial_source": "workbench/nagamori-command/Character06Command.cpp",
   "reproducer": "workbench/nagamori-command/check_first_scan.py",
-  "limitations": "Only 120/120 instructions of first priority scan checked after normalization of numeric branch destinations and one original double constant reference; later scans absent, temporary 3-instruction epilogue. Whole 4917-byte Slot02 NOT Exact."
+  "limitations": "First two scans matched 253/253 original instructions after only jump destination and one original 0.0 x87 constant address normalization; remaining scans absent, temporary local epilogue. Full 4,917-byte Slot02 NOT Exact.",
+  "second_scan": {
+    "start": "0x004B191C",
+    "end_exclusive": "0x004B1AD7",
+    "size": 443,
+    "instruction_count": 133,
+    "sha256": "7a3ef3f531f5c64d0142ec68f53d7d2a985b96117477dd6a3ef0d8ff5e1c5f68"
+  },
+  "verified_prefix": {
+    "start": "0x004B1780",
+    "end_exclusive": "0x004B1AD7",
+    "size": 855,
+    "instruction_count": 253,
+    "sha256": "3209d25391c2aab11a26a0185b402fdc720106c047351aec3037d688f22e4e26"
+  }
 }
