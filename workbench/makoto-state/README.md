@@ -583,6 +583,19 @@ work, not the original behavior for valid unimplemented animations.
   original instructions were rechecked against the canonical target
   and the natural C++ owner compiles with VC7.1.
 
+- Animation IDs 204 and 205 (0x005F008D..0x005F0278 and
+  0x005F0278..0x005F0463, 491 bytes each) retain the 0.03
+  dash-momentum friction and allow a downward jump cancel only after
+  pose zero with field015c<3 and attackCollisionResult>=2. State 204
+  awards 5 meter, sound 21 and one hit on pose 1/tick zero; state 205
+  awards 13 meter, sound 20 and one hit on pose 2/tick zero. Both
+  clear attackCollisionResult after frame expiration only while the
+  advanced pose is below 2. On exhaustion, they choose state 0 or
+  crouch 3 from inputY, then call FaceOpponent and ResetPose. The
+  original instructions independently confirm their pose gates,
+  immediates and distinct destinations. All 982 target bytes were
+  rechecked against EFZ.exe, and the VC7.1 partial owner compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -608,7 +621,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 204 and onward directly from reviewed target instructions,
+Extend case 206 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
