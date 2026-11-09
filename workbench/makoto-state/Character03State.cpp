@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Animations outside cases 1-4 have not yet been reconstructed.
+// game sources. Animations outside cases 1-5 have not yet been reconstructed.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -66,6 +66,42 @@ void Character03::Slot06()
 
         // Landing is checked after the animation counters advance.
         // On the original path the sound request precedes FaceOpponent.
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 5: // Original block 0x005E89F4: forward jump with a two-frame loop
+        if (field000a == 0 && field000c == 0) {
+            if (dashMomentumFlag == 0) FaceOpponent();
+            velocityX = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            gravity = 0.042;
+            velocityY = -2.9;
+            velocityX = 0.7;
+            if (dashMomentumFlag == 1) {
+                velocityX = 1.1;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (field000a > 2) velocityY += gravity;
+
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                // Unlike case 4, do not change animation or ResetPose here.
+                // The last two pose frames repeat while airborne.
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+
         if (positionY + velocityY >= 0.0 && field000a > 3) {
             positionY = 0.0;
             pendingContextSoundSlot = 9;
