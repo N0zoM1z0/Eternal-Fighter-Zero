@@ -308,6 +308,18 @@ work, not the original behavior for valid unimplemented animations.
   Retaining both arms is necessary until the whole dispatch and
   selector table have been reconstructed.
 
+- Animation ID 85 (0x005ECE63..0x005ED036, 467 bytes) differs
+  materially from 83/84. It has the same guarded one-time effect 0x1F0
+  producer, 30 resource drain, sound 33 and +30 meter, but copies the
+  stored knockbackVelocityX/Y rather than hard-coding -0.8/-1.5.
+  Every frame adds 0.04 to velocityY, advances the animation and
+  calls ResetPose/FaceOpponent if the animation ends. A separate
+  positionY+velocityY >= 0 check (with no pose gate) then resets
+  positionY and chooses 0x61/0x62 based on knockdownOnLanding.
+  Both independent state transitions remain in the natural C++ arm,
+  matching the observed original order instead of merging the
+  cases by their common effect prefix.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -327,7 +339,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 85 and onward directly from reviewed target instructions,
+Extend case 86 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-84 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-85 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1565,6 +1565,50 @@ void Character03::Slot06()
                 field0008 = 0;
                 ResetPose();
                 FaceOpponent();
+            }
+        }
+        return;
+
+    case 85: // Original block 0x005ECE63: direct airborne knockback and landing
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
             }
         }
         return;
