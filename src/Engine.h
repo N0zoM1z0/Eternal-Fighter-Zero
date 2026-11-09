@@ -91,7 +91,7 @@ struct SecondaryFrame {
     short field00ac, field00ae;
     unsigned short field00b0;
     short field00b2, field00b4, field00b6;
-    float field00b8, field00bc;
+    float outgoingPushbackVelocityX, field00bc;
     char field00c0, field00c1;
     short field00c2, field00c4;
     unsigned char unknown_00c6[2];
@@ -222,7 +222,7 @@ public:
     char field00ac;
     unsigned char unknown_00ad[0x3];
     double velocityXCorrection;
-    double field00b8;
+    double outgoingPushbackVelocityX;
     double field00c0, field00c8;
     int field00d0;
     unsigned char unknown_00d4[8];

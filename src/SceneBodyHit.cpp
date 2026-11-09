@@ -291,7 +291,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                         first->field0178 = 10000.0;
                                     }
                                 }
-                                second->field00c0 = (double)work.firstFrame.field00b8;
+                                second->field00c0 = (double)work.firstFrame.outgoingPushbackVelocityX;
                                 second->field00c8 = (double)work.firstFrame.field00bc;
                                 second->field00d0 = 1;
                                 if (first->field0174 == 0) {

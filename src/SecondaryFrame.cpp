@@ -13,8 +13,8 @@ void Secondary::DispatchState()
         }
         if (field0008 < 50) {
             Slot03();
-            field00b8 = 0.0;
-            (*opponentSlot)->field00b8 = 0.0;
+            outgoingPushbackVelocityX = 0.0;
+            (*opponentSlot)->outgoingPushbackVelocityX = 0.0;
             if (field30ec != 0 && (*opponentSlot)->field0008 < 50) {
                 field0148 = 3000;
                 field0108 = field30ee;
@@ -54,9 +54,9 @@ void Secondary::UpdateMovement()
 {
     int i = effectRead;
     if (field014a == 0 && (*opponentSlot)->field014c == 0) {
-        if ((CollisionSide() * facing) * (velocityX + velocityXCorrection + (*opponentSlot)->field00b8
+        if ((CollisionSide() * facing) * (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
         * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) >= 0.0) {
-            positionX = (velocityX + velocityXCorrection + (*opponentSlot)->field00b8
+            positionX = (velocityX + velocityXCorrection + (*opponentSlot)->outgoingPushbackVelocityX
             * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) * facing + positionX;
         }
         if (positionX < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0)) {

@@ -7,7 +7,7 @@ void Secondary::ResetFrame()
     velocityY = 0.0;
     horizontalDeceleration = 0.0;
     gravity = 0.0;
-    field00b8 = 0.0;
+    outgoingPushbackVelocityX = 0.0;
 }
 
 void Secondary::InitializeState()

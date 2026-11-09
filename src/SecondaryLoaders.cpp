@@ -155,8 +155,8 @@ void Secondary::LoadPatterns()
                                         extra->field00b6 = reader.ReadInt();
                                         extra->field00bc = reader.ReadShort();
                                         extra->field00bc = extra->field00bc / 100.0f;
-                                        extra->field00b8 = reader.ReadShort();
-                                        extra->field00b8 = extra->field00b8 / -100.0f;
+                                        extra->outgoingPushbackVelocityX = reader.ReadShort();
+                                        extra->outgoingPushbackVelocityX = extra->outgoingPushbackVelocityX / -100.0f;
                                         extra->field00c1 = reader.ReadShort();
                                         extra->field00c0 = reader.ReadShort();
                                         extra->field00c2 = reader.ReadInt();

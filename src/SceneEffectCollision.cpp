@@ -302,7 +302,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                     first->field0178 = 10000.0;
                                 }
                             }
-                            second->field00c0 = (double)work.attack->field00b8;
+                            second->field00c0 = (double)work.attack->outgoingPushbackVelocityX;
                             second->field00c8 = (double)work.attack->field00bc;
                             second->field00d0 = 0;
                             if (first->field0174 == 0) {
@@ -479,7 +479,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                             if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
                             else first->field0178 = 10000.0;
                         }
-                        second->field00c0 = (double)work.attack->field00b8;
+                        second->field00c0 = (double)work.attack->outgoingPushbackVelocityX;
                         second->field00c8 = (double)work.attack->field00bc;
                         second->field00d0 = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
@@ -612,7 +612,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                             if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
                             else first->field0178 = 10000.0;
                         }
-                        second->field00c0 = (double)work.attack->field00b8;
+                        second->field00c0 = (double)work.attack->outgoingPushbackVelocityX;
                         second->field00c8 = (double)work.attack->field00bc;
                         second->field00d0 = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;

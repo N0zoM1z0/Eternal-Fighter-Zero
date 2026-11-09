@@ -50,7 +50,7 @@ void Secondary::ResetPose()
 {
     field000a = 0;
     field000c = 0;
-    field00b8 = 0.0;
+    outgoingPushbackVelocityX = 0.0;
     field0168 = 0;
     field0170 = 0;
     trail.FinishSample();
