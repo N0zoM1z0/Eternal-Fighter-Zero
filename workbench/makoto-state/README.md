@@ -727,6 +727,21 @@ work, not the original behavior for valid unimplemented animations.
   block, all four doubles and effect field stores were rechecked
   against EFZ.exe, and the partial owner compiled under VC7.1.
 
+- Animation IDs 230 and 231 (0x005F182F..0x005F1975 and
+  0x005F1975..0x005F1ABB, 326 bytes each) are independent grounded
+  trail attacks. Each calls StartTrail(3) and clears dash momentum on
+  *every* tick, subtracts 0.03 from positive horizontal speed (or
+  clears it otherwise), and clamps negative horizontal speed to zero.
+  Their pose/tick-zero entry only zeroes velocityY: Makoto does **not**
+  assign the first-tick horizontal speed 2.0 used by the analogous
+  Character07 arms. State 230 awards 5 meter, sound 21 and one hit on
+  pose 1/tick zero; state 231 awards 10 meter, sound 20 and one hit on
+  pose 2/tick zero. Every expired frame clears attackCollisionResult,
+  and sequence exhaustion enters idle with ResetPose, without a
+  FaceOpponent call. Both target blocks independently matched the
+  private original disassembly for all 652 bytes; the partial C++
+  owner builds under VC7.1 (not whole-owner Exact).
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -752,7 +767,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 230 and onward directly from reviewed target instructions,
+Extend case 232 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
