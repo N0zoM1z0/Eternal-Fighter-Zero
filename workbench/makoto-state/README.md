@@ -550,6 +550,21 @@ work, not the original behavior for valid unimplemented animations.
   analogous Character07 cases. All 934 target instruction bytes were
   verified against EFZ.exe and the isolated draft was rebuilt.
 
+- Animation ID 202 (0x005EFC22..0x005EFDDF, 445 bytes) starts
+  with the same momentum gate/0.03 friction as states 200/201 but
+  does not permit their down+jump cancel. At pose 3/tick zero it
+  grants 15 meter, requests sound 20 and one remaining hit. On
+  advancing the pose it clears attackCollisionResult only while the
+  new pose is below 2. On the **advance to pose 4** (not at an
+  independent pose-4 first-tick gate), it clears
+  pendingCharacterSoundSlot, emits character-local effect type 0x19D
+  at truncated X+34*facing and truncated Y-31 with facing,
+  group 2/layer 1, then checks animation exhaustion. The effect is a
+  virtual local-effect call, not Context::EmitEffect. Expiration
+  returns to idle, FaceOpponent and ResetPose. The complete original
+  445-byte range was independently rechecked against EFZ.exe and
+  the C++ draft compiles under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -575,7 +590,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 202 and onward directly from reviewed target instructions,
+Extend case 203 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
