@@ -974,6 +974,29 @@ work, not the original behavior for valid unimplemented animations.
   and local-effect stores were checked against EFZ.exe; the partial
   C++ owner compiled under VC7.1.
 
+- Animation IDs 300–302 (0x005F3DC5..0x005F458D, three complete
+  664-byte arms) are separately dispatched super-freeze owners. Their
+  original 177-instruction sequences are identical after adjusting
+  internal branch addresses **except** for the local-effect type:
+  0x1A2, 0x1A3 or 0x1A4. First pose/tick clears dash momentum and
+  all three velocity/gravity doubles. Below pose 5 they call
+  SetHorizontalShake(50,3) each tick; from pose 1 they set the
+  still-unnamed short at shared offset +0xF2 to 10 without altering
+  Engine.h or unrelated header consumers. Only pose 5/tick zero
+  with field3138==0 emits the character-local effect (owner=1,
+  group 2/layer 1, facing byte) at truncated X+77*facing, Y-43.
+  On **frame advance to pose 2**, it sets hitstunFrames=120,
+  deducts 1,000 meter, tints the character (0xB0,3) and emits
+  context effect type 0x44, palette 0x13 at truncated X+47*facing,
+  Y-43, owner 1/group 2/layer 1. Pose 5 rewinds three frames while
+  hitstunFrames remains positive; pose 8 rewinds three frames up to
+  three cycles via field3138. Every frame advance clears
+  attackCollisionResult and normal exhaustion returns to idle/ResetPose.
+  All 1,992 canonical instruction bytes were rechecked, each distinct
+  effect immediate was verified, and the full partial C++ draft
+  compiled under VC7.1. No full cold replay or Whole Slot06 Exact
+  conclusion follows from this isolated recovery.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -999,7 +1022,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 300 and onward directly from reviewed target instructions,
+Extend case 303 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

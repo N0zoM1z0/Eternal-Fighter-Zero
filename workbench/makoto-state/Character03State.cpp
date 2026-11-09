@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-302 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -4177,9 +4177,177 @@ void Character03::Slot06()
         }
         return;
 
+    case 300: // Original block 0x005F3DC5: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 418;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 301: // Original block 0x005F405D: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 419;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 302: // Original block 0x005F42F5: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 420;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 11 explicit cases. The target's true default path also
+        // the other 8 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
