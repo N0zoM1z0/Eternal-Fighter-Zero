@@ -2200,25 +2200,27 @@ separately Exact `Slot01`. Original complete-owner SHA-256 is
 This is now a formally **reviewed authored boundary**, but not Exact.
 
 A new, real natural C++ candidate in `workbench/nagamori-action/`
-has recovered the **first seventeen priority-ordered action conditions**
+has recovered the **first twenty priority-ordered action conditions**
 with the original state clears, command IDs, animation flags, frame
 cancel windows, meter thresholds, grouped attack state guards and
 resulting action IDs. A target-bound focused VC7.1 check verifies the
-original first **4,403 bytes / 1,086 instructions** through three
+original first **5,177 bytes / 1,275 instructions** through three
 additional `0x66/0x65/0x64` meter-tier action guards plus three
 `0x2A`/`0x29`/`0x28` priority branches (different animation ceilings
 272, 271, 270), followed by the `0x16`/`0x15`/`0x14`
-attack-priority guards and their distinct 252/251/250 animation ceilings. The compiled
+attack-priority guards and their distinct 252/251/250 animation ceilings,
+then `0x20`/`0x1F`/`0x1E` (the `meter > 50` tiers,
+257/256/255 animation ceilings and airborne follow-on actions). The compiled
 source now includes the original 3000/2000/1000 tier thresholds and
 the distinct sequence-index caps 302, 301 and 300. These frame caps
 must be checked before the final hit-state guard; an earlier source
 trial reversed that order and displaced three complete instruction
 blocks despite similar Boolean behavior.
 Apart from the one prologue frame-size instruction (the incomplete
-function has fewer stack locals), the first **1,085 matched instruction
+function has fewer stack locals), the first **1,274 matched instruction
 positions** have identical register choices and operands after
 normalizing only numeric calls/branches and x87 constant addresses.
-The temporary source emits 4,405 bytes with a temporary local return,
+The temporary source emits 5,179 bytes with a temporary local return,
 not the original shared long epilogue jump. The full 12,277-byte owner
 remains open; no selected Exact unit or code-byte masking was used.
 Evidence `docs/evidence/nagamori-slot04-first-actions-boundary.json`,

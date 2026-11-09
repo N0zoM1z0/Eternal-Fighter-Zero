@@ -220,6 +220,48 @@ void Character06::Slot04()
             field0008 = 0xfa;
             return;
         }
+        if (recognizedCommand == 0x20 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[257].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x101;
+            if (positionY < 0.0) {
+                field0008 = 0x115;
+            }
+            return;
+        }
+        if (recognizedCommand == 0x1f &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[256].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x100;
+            if (positionY < 0.0) {
+                field0008 = 0x114;
+            }
+            return;
+        }
+        if (recognizedCommand == 0x1e &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field3148 == 0 && meter > 50 &&
+            sequences[field0008].field0002 <= sequences[255].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0xff;
+            if (positionY < 0.0) {
+                field0008 = 0x113;
+            }
+            return;
+        }
     }
     // Other priority-ordered actions and the final original default remain open.
 }
