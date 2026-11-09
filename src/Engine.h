@@ -271,7 +271,7 @@ public:
     int field0168;
     short field016c;
     unsigned char unknown_016e[2];
-    int field0170;
+    int attackWasGuarded;
     short field0174;
     unsigned char unknown_0176[0x2];
     double field0178;

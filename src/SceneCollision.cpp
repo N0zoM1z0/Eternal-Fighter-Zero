@@ -192,7 +192,7 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
                             }
                         }
                     }
-                    if (second->field0170 != 0 && second->guardInputFrames >= 30 && second->field013a == 0 &&
+                    if (second->attackWasGuarded != 0 && second->guardInputFrames >= 30 && second->field013a == 0 &&
                         second->GuardInput(&pass.firstFrame) != 0 && (pass.firstFrame.attackFlags & 0x80) == 0) {
                         return 1;
                     }

@@ -34,7 +34,7 @@ void Character07::Slot05()
     if (((float)(unsigned short)RandomRange(0, 1000) < 40.0f * field00a8) && (199 < field0008)) {
         guardInputFrames = 0x3c;
     }
-    if ((field0170 == 1) && (field3114 == 2)) {
+    if ((attackWasGuarded == 1) && (field3114 == 2)) {
         guardInputFrames = 0x1e;
         if (field0008 < 200) {
             field3114 = 0;
@@ -272,7 +272,7 @@ void Character07::Slot05()
     if ((field3114 == 1) && (field0008 < 200)) {
         field3114 = 0;
     }
-    if ((field3114 == 2) && (field0170 != 1)) {
+    if ((field3114 == 2) && (attackWasGuarded != 1)) {
         field3114 = 0;
         return;
     }

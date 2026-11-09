@@ -70,7 +70,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             work.slot->field0080 = 2;
                             first->field0168 = 6;
                             second->field0168 = 6;
-                        } else if (((second->field0170 != 0) && (((second->guardInputFrames >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->attackFlags & 0x80) == 0)) {
+                        } else if (((second->attackWasGuarded != 0) && (((second->guardInputFrames >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->attackFlags & 0x80) == 0)) {
                             work.slot->field0080 = 2;
                             first->meter += work.attack->guardMeterGain;
                             --work.slot->field0084;
@@ -95,8 +95,8 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->ClearInputHistory();
                             second->ClearInputHistory();
                             second->hitstunFrames = 0x3c;
-                            second->field0170 = 0;
-                            first->field0170 = 1;
+                            second->attackWasGuarded = 0;
+                            first->attackWasGuarded = 1;
                         } else if (((second->guardInputFrames >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(work.attack, work.defense) != 0)) {
                             work.slot->field0080 = 2;
                             first->meter += work.attack->guardMeterGain;
@@ -118,7 +118,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->ClearInputHistory();
                             second->ClearInputHistory();
                             second->hitstunFrames = 0x3c;
-                            first->field0170 = 1;
+                            first->attackWasGuarded = 1;
                         } else if (((second->CanGuard(work.attack, work.defense) != 0) && (second->guardInputFrames >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9)))) {
                             work.slot->field0080 = 2;
                             first->meter += work.attack->guardMeterGain;
@@ -140,7 +140,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->ClearInputHistory();
                             second->ClearInputHistory();
                             second->hitstunFrames = 0x3c;
-                            first->field0170 = 1;
+                            first->attackWasGuarded = 1;
                         } else if (((work.defense->frameFlags & 0x200) > 0) && (((work.defense->attackFlags & 1) > 0) && ((work.attack->attackFlags & 1) > 0))) {
                             --work.slot->field0084;
                             effect.owner = 0;

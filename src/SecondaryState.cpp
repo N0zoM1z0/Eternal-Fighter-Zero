@@ -52,7 +52,7 @@ void Secondary::InitializeState()
     field0104 = 0;
     field0178 = 10000.0;
     field00f8 = 10000.0;
-    field0170 = 0;
+    attackWasGuarded = 0;
     field0180 = 1.0;
     field01a8 = 0;
     field01a9 = 0;

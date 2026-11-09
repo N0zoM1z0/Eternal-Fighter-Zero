@@ -52,6 +52,6 @@ void Secondary::ResetPose()
     field000c = 0;
     outgoingPushbackVelocityX = 0.0;
     field0168 = 0;
-    field0170 = 0;
+    attackWasGuarded = 0;
     trail.FinishSample();
 }
