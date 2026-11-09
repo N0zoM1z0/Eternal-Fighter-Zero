@@ -162,6 +162,16 @@ work, not the original behavior for valid unimplemented animations.
   operation (12 bytes). The collision-side escape to state 70, meter award,
   gravity, two-pose loop and knockdown landing behavior are preserved.
 
+- Animation ID 68 (block 0x005EB630, 316 bytes) uses a different
+  airborne recovery rhythm. While field0120 is set it deducts 0.3 from
+  field0118, then it adds 3 meter, copies both stored knockback velocities
+  directly and increments the pose tick counter on every update (not
+  only the first frame). A nonzero CollisionSide() immediately switches
+  to animation 70 and ResetPose. Otherwise the frame index wraps by
+  subtracting 2 at exhaustion. Landing is checked without any pose-index
+  threshold, setting positionY=0 and selecting 0x61/0x62 by knockdownOnLanding.
+  No gravity or velocity-clamp operation appears in the target block.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -181,7 +191,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 68 and onward directly from reviewed target instructions,
+Extend cases 69 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
