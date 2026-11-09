@@ -471,35 +471,44 @@ int Video::DrawCharacterSpecial(SurfaceRect destination, IUnknown *surface,
     int width = destination.right - destination.left;
     int height = destination.bottom - destination.top;
 
+    // Source masks and destination copies advance one locked row at a time.
     if (colorKey > 0) {
         if (flip != 0) {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char mask = sourcePixels[y * sourcePitch + (width - 1 - x)];
-                    if (mask != colorKey) {
-                        destinationPixels[y * destinationPitch + x] =
-                            destinationPixels[y * destinationPitch + x - 3];
-                    }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                unsigned char mask = sourcePixels[width - 1 - x];
+                if (mask != colorKey) {
+                    destinationPixels[x] = destinationPixels[x - 3];
                 }
-            }
+            } while (--x >= 0);
+            sourcePixels += sourcePitch;
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
         } else {
-            for (int y = 0; y < height; ++y) {
-                for (int x = width - 1; x >= 0; --x) {
-                    unsigned char mask = sourcePixels[y * sourcePitch + x];
-                    if (mask != colorKey) {
-                        destinationPixels[y * destinationPitch + x] =
-                            destinationPixels[y * destinationPitch + x - 3];
-                    }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                unsigned char mask = sourcePixels[x];
+                if (mask != colorKey) {
+                    destinationPixels[x] = destinationPixels[x - 3];
                 }
-            }
+            } while (--x >= 0);
+            sourcePixels += sourcePitch;
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
         }
     } else {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                destinationPixels[y * destinationPitch + x] =
-                    destinationPixels[y * destinationPitch + x - 3];
-            }
-        }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                destinationPixels[x] = destinationPixels[x - 3];
+            } while (--x >= 0);
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     }
 
     backSurface->Unlock(destinationDescription.lpSurface);
