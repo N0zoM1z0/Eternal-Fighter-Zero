@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **360 exact functions**, **1,076,501 code bytes**,
-  **7,655 associated table bytes**, 391 reviewed complete boundaries and 386
+  ledgers currently count **361 exact functions**, **1,088,778 code bytes**,
+  **7,655 associated table bytes**, 392 reviewed complete boundaries and 387
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -490,21 +490,26 @@ three different 64-entry child arrays at the signed-short index
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
 
-## Nagamori Slot04 major boss: 8,824-byte natural C++ prefix
+## Newly accepted major boss: Nagamori full Slot04 action selector
 
-The canonical original `Character06::Slot04` target at `0x004AE2E0`
-(vtable slot 4, `0x0078840C`) is a reviewed **12,277-byte** owner.
-Its isolated `workbench/nagamori-action/` C++ now reconstructs the
-first **32 priority guards** and the actual **8,824-byte / 2,201
-instruction** original prefix. The focused test matches every native
-instruction form after normalizing only future branch/call targets
-and original constant addresses, including the now-correct natural
-20-byte stack frame. Air/ground dash actions and input-X facing
-transitions are implemented; the next original branch starts at
-`0x004B055D`. **3,453 bytes remain, whole Slot04 NOT Exact**.
-Evidence and executable focused test:
-`docs/evidence/nagamori-slot04-first-actions-boundary.json` and
-`workbench/nagamori-action/check_prefix.py`. No broad cold replay.
+`Character06::Slot04` at `0x004AE2E0`, Nagamori vtable slot 4
+`0x0078840C`, is now a **complete 12,277/12,277-byte Strict Exact
+natural C++ function** at `src/Character06Input.cpp`. Selected unit
+`character-06-slot04` matches all **3,092 x86 instructions** and
+**100/100 original relocations** (44 ClearBufferedButtons calls,
+4 FaceOpponent calls, and 52 independently verified canonical double
+constants), zero byte differences. Original complete owner ends at
+`0x004B12D5`, then 11 external `CC` bytes; original SHA
+`bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f`.
+Complete proof: `docs/evidence/nagamori-slot04-exact.json`.
+
+The prior 8,824-byte partial prefix and its `check_prefix.py` remain
+in `workbench/nagamori-action/` for historical reproducibility only.
+The last 3,453 bytes were finished by correcting Nagamori-specific
+0xD8/0xD1/0xCE/0xD7 action paths rather than accepting copied sibling
+C++. There are **no remaining unimplemented branches in this owner**;
+earlier notes that Slot04 is not Exact are superseded by the full
+certificate. No full cold replay or linked-product runtime claim.
 
 ## Nagamori meter renderer, 1,080-byte full source Exact
 

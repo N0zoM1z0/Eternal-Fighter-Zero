@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-owner-and-first-thirty-two-actions-not-full-Exact",
+  "status": "historical-partial-prefix-proof-superseded-by-accepted-complete-strict-Exact",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function": "Character06::Slot04",
   "original_vtable_pointer": "0x0078840C",
@@ -15,7 +15,7 @@
   "source": "workbench/nagamori-action/Character06Input.cpp",
   "reproducer": "workbench/nagamori-action/check_prefix.py",
   "alignment_after_owner": "11 bytes CC before Slot01 at 0x004B12E0",
-  "whole_owner_exact": false,
+  "whole_owner_exact": true,
   "recovered_actions": [
     "0x34",
     "0x5B",
@@ -57,5 +57,11 @@
     "original_instructions": 2201,
     "sha256": "4714c5e0f69c1224ae9e676bd763871975b128f24ebc6c67ee6f2e6b87e8462a",
     "qualification": "All 2201 original native instruction forms and operands match the compiled natural C++ after normalizing numeric branch/direct-call targets and original PE constants. Natural local FP arithmetic restores original 20-byte stack frame. The incomplete source still has a temporary local epilogue, not full original owner Exact."
-  }
+  },
+  "accepted_full_source": "src/Character06Input.cpp",
+  "accepted_match_unit": "character-06-slot04",
+  "full_exact_certificate": "docs/evidence/nagamori-slot04-exact.json",
+  "qualification": "Historic first-32-action diagnostic (8824 original bytes and 2201 instructions) is retained for reproduction and context. It was superseded by independent complete 12277/12277-byte strict codegen Exact with all 100 canonical relocations; see full_exact_certificate. The partial workbench itself remains intentionally incomplete.",
+  "strict_certificate": "docs/evidence/nagamori-slot04-exact.json",
+  "accepted_production_source": "src/Character06Input.cpp"
 }

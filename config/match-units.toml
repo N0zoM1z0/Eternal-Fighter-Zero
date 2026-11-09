@@ -129707,3 +129707,713 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "EFZ.exe @ 0x004B170F second original Video::DrawSurface call to 0x00409A90"
+
+[units.character-06-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Input.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot04/Character06Input.obj"
+symbol = "?Slot04@Character06@@UAEXXZ"
+target_address = 0x004AE2E0
+size = 12277
+
+[[units.character-06-slot04.relocations]]
+offset = 135
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE367: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30"
+
+[[units.character-06-slot04.relocations]]
+offset = 317
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE41D: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 338
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE432: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 489
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE4C9: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 572
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE51C: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 652
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE56C: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 826
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE61A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 921
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE679: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 1095
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE727: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 1205
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE795: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 1379
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE843: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 1525
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE8D5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 1653
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AE955: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 1674
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AE96A: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 1914
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AEA5A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 1935
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEA6F: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 2175
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AEB5F: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 2196
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEB74: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 2267
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEBBB: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 2441
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AEC69: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 2520
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AECB8: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 2694
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AED66: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 2787
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEDC3: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 2961
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AEE71: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 3009
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEEA1: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30"
+
+[[units.character-06-slot04.relocations]]
+offset = 3093
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEEF5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 3233
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AEF81: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 3340
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AEFEC: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 3481
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF079: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 3573
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF0D5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 3713
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF161: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 3761
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF191: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30"
+
+[[units.character-06-slot04.relocations]]
+offset = 3961
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF259: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 4183
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF337: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 4390
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF406: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 4620
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF4EC: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 4641
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF501: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 4878
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF5EE: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 4899
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF603: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 5136
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF6F0: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 5157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF705: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 5259
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF76B: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 5414
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF806: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 5509
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF865: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 5664
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF900: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 5759
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AF95F: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 5914
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AF9FA: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 5978
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFA3A: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30"
+
+[[units.character-06-slot04.relocations]]
+offset = 6062
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFA8E: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 6186
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AFB0A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 6294
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFB76: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 6418
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AFBF2: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 6525
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFC5D: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 6653
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AFCDD: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 6766
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFD4E: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 6895
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AFDCF: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 7027
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFE53: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 7170
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004AFEE2: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 7328
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFF80: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 7408
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFFD0: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 7438
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004AFFEE: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 7564
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B006C: Canonical original double constant bit pattern __real@c044000000000000 at 0x00787E48"
+
+[[units.character-06-slot04.relocations]]
+offset = 7721
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0109: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630"
+
+[[units.character-06-slot04.relocations]]
+offset = 7826
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0172: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 7856
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0190: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8112
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0290: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630"
+
+[[units.character-06-slot04.relocations]]
+offset = 8176
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B02D0: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8292
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0344: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8322
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0362: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8511
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B041F: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630"
+
+[[units.character-06-slot04.relocations]]
+offset = 8597
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0475: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8627
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0493: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 8810
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B054A: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630"
+
+[[units.character-06-slot04.relocations]]
+offset = 8929
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B05C1: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 8979
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B05F3: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 9148
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B069C: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 9373
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B077D: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 9598
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B085E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 9717
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B08D5: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 9767
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0907: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 9936
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B09B0: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10162
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0A92: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10350
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0B4E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10482
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0BD2: Canonical original double constant bit pattern __real@c051800000000000 at 0x00787E40"
+
+[[units.character-06-slot04.relocations]]
+offset = 10512
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0BF0: Canonical original double constant bit pattern __real@4051800000000000 at 0x00787E38"
+
+[[units.character-06-slot04.relocations]]
+offset = 10590
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0C3E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10766
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0CEE: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10885
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0D65: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 10935
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0D97: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 11012
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0DE4: Canonical original double constant bit pattern __real@c059000000000000 at 0x007875C8"
+
+[[units.character-06-slot04.relocations]]
+offset = 11046
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0E06: Canonical original double constant bit pattern __real@4059000000000000 at 0x007875D0"
+
+[[units.character-06-slot04.relocations]]
+offset = 11074
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B0E22: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 11288
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0EF8: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 11460
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B0FA4: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 11686
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B1086: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 11801
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B10F9: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8"
+
+[[units.character-06-slot04.relocations]]
+offset = 11840
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B1120: Canonical original double constant bit pattern __real@c03e000000000000 at 0x00787E30"
+
+[[units.character-06-slot04.relocations]]
+offset = 11874
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "EFZ.exe exact original DIR32 relocation operand 0x004B1142: Canonical original double constant bit pattern __real@403e000000000000 at 0x00787D88"
+
+[[units.character-06-slot04.relocations]]
+offset = 12088
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B1218: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+
+[[units.character-06-slot04.relocations]]
+offset = 12260
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe exact original REL32 relocation operand 0x004B12C4: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"

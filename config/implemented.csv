@@ -359,3 +359,4 @@ address,name,source,symbol,status,evidence
 0x004B1720,Character06::Slot08,src/Character06Delegates.cpp,?Slot08@Character06@@UAEXXZ,complete,docs/evidence/nagamori-delegates-exact.json
 0x004B1750,Character06::EmitLocalEffect,src/Character06Delegates.cpp,?EmitLocalEffect@Character06@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/nagamori-delegates-exact.json
 0x004B12E0,Character06::Slot01,src/Character06Render.cpp,?Slot01@Character06@@UAEXXZ,complete,docs/evidence/nagamori-meter-render-exact.json
+0x004AE2E0,Character06::Slot04,src/Character06Input.cpp,?Slot04@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot04-exact.json

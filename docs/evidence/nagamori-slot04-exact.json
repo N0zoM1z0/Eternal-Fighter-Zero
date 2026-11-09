@@ -1,0 +1,936 @@
+{
+  "schema_version": 1,
+  "authority": "full pinned VC7.1 natural C++ codegen and strict canonical original 12277-byte function with all 100 original-bound relocations",
+  "method": "Character06::Slot04 at 0x004AE2E0 virtual slot 4 is an original 12277-byte authored owner with no local tables. Natural C++ rebuild reproduces all 3092 original x86 instructions and 20-byte stack frame, with 0 differences after binding every real original relocation: 44 ClearBufferedButtons direct calls, 4 FaceOpponent calls and 52 IEEE-754 double literals (including 500,0, -40, -70,+70,-100,+100,-30,+30). Every constant bit pattern at the original address was independently validated. Full target SHA256 bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f, and 11 following INT3 alignment bytes excluded. Previous sibling-character similarity was only a test hypothesis; actual Nagamori-specific 0xD8/0xD1/0xCE/0xD7 guarded action branches restored. No masks, pasted machine bytes, whole cold replay or runtime equivalence claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 12277,
+      "matched_bytes": 12277,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 135,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE367: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 317,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE41D: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 338,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE432: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 489,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE4C9: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 572,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE51C: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 652,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE56C: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 826,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE61A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 921,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE679: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1095,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE727: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1205,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE795: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1379,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE843: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1525,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE8D5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1653,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AE955: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1674,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AE96A: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1914,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AEA5A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1935,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEA6F: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2175,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AEB5F: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2196,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEB74: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2267,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEBBB: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2441,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AEC69: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2520,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AECB8: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2694,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AED66: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2787,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEDC3: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2961,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AEE71: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3009,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEEA1: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3093,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEEF5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3233,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AEF81: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3340,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AEFEC: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3481,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF079: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3573,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF0D5: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3713,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF161: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3761,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF191: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3961,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF259: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4183,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF337: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4390,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF406: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4620,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF4EC: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4641,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF501: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4878,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF5EE: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4899,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF603: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5136,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF6F0: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5157,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF705: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5259,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF76B: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5414,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF806: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5509,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF865: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5664,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF900: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5759,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AF95F: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5914,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AF9FA: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5978,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFA3A: Canonical original double constant bit pattern __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 6062,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFA8E: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6186,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AFB0A: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 6294,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFB76: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6418,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AFBF2: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 6525,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFC5D: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6653,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AFCDD: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 6766,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFD4E: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6895,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AFDCF: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7027,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFE53: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7170,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004AFEE2: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7328,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFF80: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7408,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFFD0: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7438,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004AFFEE: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7564,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B006C: Canonical original double constant bit pattern __real@c044000000000000 at 0x00787E48",
+          "addend": 0
+        },
+        {
+          "offset": 7721,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0109: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 7826,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0172: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7856,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0190: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8112,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0290: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 8176,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B02D0: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8292,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0344: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8322,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0362: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8511,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B041F: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 8597,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0475: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8627,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0493: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8810,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B054A: Canonical original direct thiscall ?FaceOpponent@Secondary@@QAEHXZ to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 8929,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B05C1: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8979,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B05F3: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9148,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B069C: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9373,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B077D: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9598,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B085E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9717,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B08D5: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9767,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0907: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9936,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B09B0: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10162,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0A92: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10350,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0B4E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10482,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0BD2: Canonical original double constant bit pattern __real@c051800000000000 at 0x00787E40",
+          "addend": 0
+        },
+        {
+          "offset": 10512,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0BF0: Canonical original double constant bit pattern __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 10590,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0C3E: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10766,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0CEE: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10885,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0D65: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10935,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0D97: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11012,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0DE4: Canonical original double constant bit pattern __real@c059000000000000 at 0x007875C8",
+          "addend": 0
+        },
+        {
+          "offset": 11046,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0E06: Canonical original double constant bit pattern __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11074,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B0E22: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11288,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0EF8: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 11460,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B0FA4: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 11686,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B1086: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 11801,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B10F9: Canonical original double constant bit pattern __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11840,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B1120: Canonical original double constant bit pattern __real@c03e000000000000 at 0x00787E30",
+          "addend": 0
+        },
+        {
+          "offset": 11874,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "EFZ.exe exact original DIR32 relocation operand 0x004B1142: Canonical original double constant bit pattern __real@403e000000000000 at 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 12088,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B1218: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 12260,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe exact original REL32 relocation operand 0x004B12C4: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f",
+      "target_extent_sha256": "bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f",
+      "unit": "character-06-slot04",
+      "symbol": "?Slot04@Character06@@UAEXXZ",
+      "target_address": "0x004AE2E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4982889102718f204c11129fc878286ffdb136e1ba6f975d3a996f14217f5ee9",
+      "object_sha256": "751f8d7d0b25f36781adc1bd5da77dfd8eea242abd85c3a89d5309c994fe7c38",
+      "source_sha256": "0a89047fdec18a1e97e32a54cd673e2e29cbe5450bb05aeb3ff0da5f8cecfed6",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c87fd5eb1e6411386daa53d82b20a8584a8fcf382786a214202fd19cc509feda",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "72c34cf7a0cc61c49080a53959bea06d93f5897e3e25bc14a6b781121f4b57e2",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

@@ -2189,39 +2189,42 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
-## Nagamori Slot04 action boss: 8,824-byte verified natural-source prefix
+## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
-Nagamori vtable slot 4 at `0x0078840C` confirms the original
-`Character06::Slot04` target `0x004AE2E0` and full **12,277-byte**
-owner `[0x004AE2E0,0x004B12D5)`, then 11 `CC` alignment bytes.
-Complete original SHA-256:
+The original Nagamori vtable slot 4 at `0x0078840C` points to
+`Character06::Slot04` at `0x004AE2E0`; independently verified complete
+extent `[0x004AE2E0,0x004B12D5)` is **12,277 code bytes**, followed
+by 11 `CC` alignment bytes excluded from the function. The full
+natural C++ owner `src/Character06Input.cpp` is now **strict Exact**
+under selected pinned VC7.1: **12,277/12,277 code bytes, zero byte
+differences and 100/100 original-bound relocations**. All 3,092
+original x86 instructions match. The SHA-256 of the complete original
+relocated contribution is
 `bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f`.
-A reviewed authored boundary is recorded, but **no whole-owner Exact**.
 
-The separate natural C++ `workbench/nagamori-action/Character06Input.cpp`
-now implements the first **32** ordered action and input guards.
-Canonical first **8,824 bytes / 2,201 x86 instructions** through
-`0x004B0558` match the selected VC7.1 source's complete instruction
-forms, including registers and the **original 20-byte stack frame**.
-Only future numeric branch/direct-call targets and x87 PE constant
-address operands are normalized for this *diagnostic prefix* check;
-the temporary source retains its own four-byte local epilogue.
+The hundred relocations were checked from the canonical target byte
+operands and independently validated for all 11 symbol/data kinds:
+44 base `ClearBufferedButtons` calls at `0x40F170`, 4
+`FaceOpponent` calls at `0x40E630`, and 52 `DIR32` references to
+actual original IEEE-754 double bit patterns. In particular both
+floating-point comparison boundaries and all signed numeric values
+were checked, not masked. The normal source reconstructs the complete
+original buffer management, priority-ordered action tree, special
+meter tiers, airborne/ground cancels, X-coordinate comparison branches,
+air-dash and ground-dash transitions, and all input-button paths. The
+original Nagamori-only `0xD8`, `0xD1`, and `0xCE/0xD7` variants were
+identified by independently checking the original function and
+correcting an earlier sibling-derived trial. The final natural
+function emits the original 20-byte stack frame without artificial
+locals. Its exact source, relocation and target receipt is
+`docs/evidence/nagamori-slot04-exact.json`.
 
-This includes three meter-priority tiers with strict target evaluation
-order; distinct airborne-versus-grounded x87 sign tests; 0x0C/0x0B/0x0A
-variant branches; a byte counter and `inputX` direction selecting
-0x0E/0x0F/0x10; and four opponent-X relative air/ground dash actions
-(0xA5/0xA6/0xA3/0xA4). Reusing another character's C++ was only an
-experimental hypothesis, not evidence: independently disassembling
-Nagamori's target confirmed all 2,201 instruction forms. The real
-floating-point temporaries restored the target `sub esp,0x14`
-prologue, eliminating an earlier width mismatch naturally.
-
-Unimplemented continuation begins at original `0x004B055D`;
-**3,453 original code bytes remain**. Strict original whole-function
-codegen/relocation acceptance has not occurred. Focused evidence:
-`docs/evidence/nagamori-slot04-first-actions-boundary.json`;
-reproducer: `workbench/nagamori-action/check_prefix.py`.
+The earlier `workbench/nagamori-action/` source and
+`docs/evidence/nagamori-slot04-first-actions-boundary.json` now
+preserve the **historical 8,824-byte diagnostic prefix** and the
+original-scope proof; they are not the accepted production owner.
+There was **no cold full replay or whole-game runtime equivalence**
+claim. Unrelated stale certificates remain to be addressed separately.
 
 ### Nagamori 1,080-byte meter overlay renderer: complete Exact (2026-11-09)
 
@@ -2260,8 +2263,8 @@ read cursor +0x2CC. Both original relocation destinations and all
 three complete unpadded function boundaries were reviewed before
 accepting them; all code differs by **zero bytes**. Public proof:
 `docs/evidence/nagamori-delegates-exact.json`. These exact methods
-are independent of the still-open, much larger Nagamori Slot04 and
-Slot06 state functions.
+are independently exact methods; Nagamori Slot04 is now also a
+fully accepted 12,277-byte owner, while Slot06 remains open.
 
 ### Nagamori InitializeState: complete 387-byte owner (2026-11-09)
 
