@@ -295,6 +295,57 @@ void Character06::Slot04()
             field0008 = 0x104;
             return;
         }
+        if (recognizedCommand == 0x0c && field3148 == 0 &&
+            (field0118 >= 500.0 || field0120 > 0) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            sequences[field0008].field0002 <= sequences[269].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x10d;
+            return;
+        }
+        if (recognizedCommand == 0x0c && field3148 != 0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            sequences[field0008].field0002 <= sequences[280].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x118;
+            return;
+        }
+        if ((recognizedCommand == 0x0b || recognizedCommand == 0x0c) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            sequences[field0008].field0002 <= sequences[268].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x10c;
+            if (field3148 != 0) {
+                field0008 = 0x117;
+            }
+            return;
+        }
+        if (recognizedCommand == 0x0a &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            sequences[field0008].field0002 <= sequences[267].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x10b;
+            if (field3148 != 0) {
+                field0008 = 0x116;
+            }
+            return;
+        }
     }
     // Other priority-ordered actions and the final original default remain open.
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-owner-and-first-twenty-three-actions-not-full-Exact",
+  "status": "reviewed-original-owner-and-first-twenty-seven-actions-not-full-Exact",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function": "Character06::Slot04",
   "original_vtable_pointer": "0x0078840C",
@@ -39,14 +39,18 @@
     "0x1E",
     "0x0C airborne",
     "0x0B airborne",
-    "0x0A airborne"
+    "0x0A airborne",
+    "0x0C baseline/permission",
+    "0x0C alternate field3148",
+    "0x0B or 0x0C selector",
+    "0x0A selector"
   ],
-  "first_twenty_three_actions": {
+  "first_twenty_seven_actions": {
     "start": "0x004AE2E0",
-    "end_exclusive": "0x004AFA07",
-    "size": 5927,
-    "original_instructions": 1458,
-    "sha256": "4867c35d1cc59a8dc662676263f043ce85ac65bc8166e52672a87d3ac6148bd2",
-    "qualification": "1457 of 1458 instruction positions match current native C++ including all register/operand choices; exclude one future stack frame instruction. Numeric jump/call destinations and PE x87 constant addresses normalized; remaining original actions and shared epilogue absent, not full exact."
+    "end_exclusive": "0x004AFDF1",
+    "size": 6929,
+    "original_instructions": 1708,
+    "sha256": "2b20c3bf2ba928dd9ccb7e7fda348937d597b98f40f1300680b2459fe06a3f9e",
+    "qualification": "1,707 of 1,708 original positions match native C++ after normalizing numeric local calls/branches and x87 PE constants; one incomplete-function stack frame width differs. Remaining action group and shared exit absent; no whole-owner Exact."
   }
 }
