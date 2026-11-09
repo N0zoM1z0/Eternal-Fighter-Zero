@@ -2189,6 +2189,32 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+## Nagamori Slot04 action boss: reviewed boundary and actual partial source
+
+Nagamori's vtable slot 4 at `0x0078840C` points to the real
+`Character06::Slot04` at `0x004AE2E0`. Independent canonical PE-byte
+checks confirm the complete **12,277-byte** function owner
+`[0x004AE2E0,0x004B12D5)` and eleven `CC` padding bytes before the
+separately Exact `Slot01`. Original complete-owner SHA-256 is
+`bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f`.
+This is now a formally **reviewed authored boundary**, but not Exact.
+
+A new, real natural C++ candidate in `workbench/nagamori-action/`
+has recovered the **first eight priority-ordered action conditions**
+with the original state clears, command IDs, animation flags, frame
+cancel windows, meter thresholds, grouped attack state guards and
+resulting action IDs. A target-bound focused VC7.1 check verifies the
+original first **2,216 bytes / 542 instructions** through action 0x6E.
+Apart from the one prologue frame-size instruction (the incomplete
+function has fewer stack locals), the first **541 matched instruction
+positions** have identical register choices and operands after
+normalizing only numeric calls/branches and x87 constant addresses.
+The temporary source emits 2,218 bytes with a temporary local return,
+not the original shared long epilogue jump. The full 12,277-byte owner
+remains open; no selected Exact unit or code-byte masking was used.
+Evidence `docs/evidence/nagamori-slot04-first-actions-boundary.json`,
+reproducer `workbench/nagamori-action/check_prefix.py`.
+
 ### Nagamori 1,080-byte meter overlay renderer: complete Exact (2026-11-09)
 
 The substantial nontrivial `Character06::Slot01` at `0x004B12E0`

@@ -390,3 +390,4 @@ address,end,size,status,evidence
 0x004B1720,0x004B174C,44,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B1750,0x004B177F,47,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B12E0,0x004B1718,1080,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-exact-meter-overlay-renderer
+0x004AE2E0,0x004B12D5,12277,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot04-action-boss-boundary-and-partial-source
