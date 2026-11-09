@@ -365,3 +365,4 @@ address,end,size,status,evidence
 0x005E85F0,0x005F6D8C,59292,reviewed,docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping
 0x007783B8,0x0077842D,117,reviewed,docs/KNOWLEDGE_BASE.md#vc71-x87-floating-to-integer-helper
 0x00401850,0x004018ED,157,reviewed,docs/evidence/frame-thread-exact.json
+0x0040A440,0x0040A7A1,865,reviewed,docs/KNOWLEDGE_BASE.md#character-surface-rendering-kernels; raw RET 0x30 at 0x0040A79E and next Video method at 0x0040A7B0 after INT3 alignment

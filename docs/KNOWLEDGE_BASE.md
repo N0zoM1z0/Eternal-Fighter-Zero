@@ -534,11 +534,35 @@ Private evidence includes `.analysis/ghidra/decompile-004083b0.txt`,
 `decompile-00408850.txt`, `callers-00408b50.txt`, `callers-00401950.txt`,
 `callers-004019b0.txt`, and `.analysis/probes/raw-00408*.txt`,
 `raw-00786420.txt`, `Device-first.cpp`, `device.py`, and `video-global.py`.
-An original 865-byte rendering candidate at `0x40A440` was also inspected:
-its inner loops explicitly manipulate AH/AL and push/pop ESI/EDI within branch
-bodies. A faithful natural-C++ exact strategy remains open. The 14,114-byte
-`0x401C20` state dispatcher was subsequently accepted as described below;
-the rendering inspection independently confers no source or exact credit.
+The 865-byte target at `0x40A440` is now boundary-reviewed as
+`Video::DrawCharacterTint`. Its `ret 0x30` is at `0x40A79E`, so the body ends at
+`0x40A7A1`; the next Video method starts at `0x40A7B0` after 15 INT3 alignment
+bytes. A natural C++ owner is present in `src/VideoCharacterDraw.cpp` under the
+focused `video-draw-character-tint` unit. It reconstructs the four-sided clip,
+the source-right-relative mirror transform, source/destination DirectDraw lock
+flags (`0x11` and `1`), the special `DDERR_SURFACELOST` return, color-key
+handling, `sumBlend[pixel][tint]` lookup and destination-then-source unlock
+order. It also preserves the original early return on a failed destination lock
+without unlocking the already-locked source surface.
+
+This is a semantic source candidate, not an exact reconstruction. The pinned
+VC7.1 `/Od` object is 1,202 bytes versus the target's 865 bytes, with no
+relocations; strict comparison rejects the differing complete extents. A
+register-oriented pointer-loop control is 1,237 bytes. The target's inner loops
+explicitly manipulate AH/AL and push/pop ESI/EDI within branch bodies, while
+ordinary C++ emits stack-based loop state. No exactness credit is assigned;
+continue exploring natural C++ layouts before considering any assembly-based
+recovery. The 14,114-byte `0x401C20` state dispatcher was subsequently accepted
+as described below; that acceptance is independent of this rendering owner.
+
+A focused tracking audit also exposed a pre-existing certificate problem.
+`17edf49` changed `SecondaryPose::field000c` in `src/Engine.h` from `short`
+to `unsigned short` after the prior exact certificates were generated. The
+current header hash is `6a561f04...`, while the public certificates still bind
+`33ba6c7d...`. Of 328 exact-ledger entries, 296 have stale dependency hashes.
+This is not caused by the new tint unit, which is not in the exact ledger. No
+full cold replay or blind receipt rewrite was run; the affected exact units need
+selective rebuild/revalidation before the public tracking validator can pass.
 
 ## Effect state dispatch
 
