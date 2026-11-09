@@ -292,7 +292,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     }
                                 }
                                 second->knockbackVelocityX = (double)work.firstFrame.outgoingPushbackVelocityX;
-                                second->knockbackVelocityY = (double)work.firstFrame.field00bc;
+                                second->knockbackVelocityY = (double)work.firstFrame.outgoingPushbackVelocityY;
                                 second->outgoingPushbackActive = 1;
                                 if (first->field0174 == 0) {
                                     second->field010c = second->field0108;

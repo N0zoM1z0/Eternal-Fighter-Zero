@@ -303,7 +303,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 }
                             }
                             second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
-                            second->knockbackVelocityY = (double)work.attack->field00bc;
+                            second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                             second->outgoingPushbackActive = 0;
                             if (first->field0174 == 0) {
                                 second->field010c = second->field0108;
@@ -480,7 +480,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                             else first->field0178 = 10000.0;
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
-                        second->knockbackVelocityY = (double)work.attack->field00bc;
+                        second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
@@ -613,7 +613,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                             else first->field0178 = 10000.0;
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
-                        second->knockbackVelocityY = (double)work.attack->field00bc;
+                        second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
