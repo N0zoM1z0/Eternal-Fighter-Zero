@@ -205,8 +205,8 @@ void Character24::Slot04()
     }
     if (((int)field015c < 1) && ((field0262 == 0 || (field0262 == 1)))) {
         if ((field0028 < 0.0) && (field0159 < 1)) {
-            if (((((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) < 0.0 ) ||
-                (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)facing == ((1 - field0262 * 2) * -1))) ))
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0 ) ||
+                (((*opponentSlot)->positionX - positionX == 0.0 && ((int)facing == ((1 - field0262 * 2) * -1))) ))
                 && (sequences[field0008].field0002 <= sequences[165].field0000)) && ((field0008 != 0xaa &&
                 (((field0028 < -40.0 || (0 < (int)field3458)) && ((sequences[field0008].data[field000a].field00b0 &
                 8) > 0)))))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 <
@@ -221,8 +221,8 @@ void Character24::Slot04()
                 field01a8 = 0;
                 return;
             }
-            if ((((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) > 0.0) ||
-                (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)facing == 1 - field0262 * 2)))) &&
+            if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) > 0.0) ||
+                (((*opponentSlot)->positionX - positionX == 0.0 && ((int)facing == 1 - field0262 * 2)))) &&
                 ((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa &&
                 ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))))) && (((field0008 >= 200 &&
                 ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
@@ -238,8 +238,8 @@ void Character24::Slot04()
             }
         }
         if ((field0028 == 0.0) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) {
-            if (((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) < 0.0) ||
-                (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)facing == ((1 - field0262 * 2) * -1))))) &&
+            if (((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0) ||
+                (((*opponentSlot)->positionX - positionX == 0.0 && ((int)facing == ((1 - field0262 * 2) * -1))))) &&
                 ((sequences[field0008].field0002 <= sequences[163].field0000 && ((((field0008 >= 200 && (field0168
                 >= 2)) && (field0168 != 6) ) || (field0008 < 200)))))) {
                 if (field0008 != 0xa3) {
@@ -251,8 +251,8 @@ void Character24::Slot04()
                 field01a8 = 0;
                 return;
             }
-            if ((((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) > 0.0) ||
-                (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)facing == 1 - field0262 * 2)))) &&
+            if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) > 0.0) ||
+                (((*opponentSlot)->positionX - positionX == 0.0 && ((int)facing == 1 - field0262 * 2)))) &&
                 (sequences[field0008].field0002 <= sequences[164].field0000)) && ((((field0008 >= 200 && (field0168
                 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa4) {
@@ -343,8 +343,8 @@ void Character24::Slot04()
         }
         if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
             if ((((sequences[field0008].field0002 <= sequences[201].field0000) &&
-                ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((field0020 -
-                (*opponentSlot)->field0020 > -70.0 && (field0020 - (*opponentSlot)->field0020 < 70.0)))) &&
+                ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((positionX -
+                (*opponentSlot)->positionX > -70.0 && (positionX - (*opponentSlot)->positionX < 70.0)))) &&
                 ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -396,8 +396,8 @@ void Character24::Slot04()
             return;
         }
         if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
-            if ((((inputX != '\0') && (field0020 - (*opponentSlot)->field0020 > -40.0)) && ((field0020 -
-                (*opponentSlot)->field0020 < 40.0 && (sequences[field0008].field0002 <= sequences[220].field0000))))
+            if ((((inputX != '\0') && (positionX - (*opponentSlot)->positionX > -40.0)) && ((positionX -
+                (*opponentSlot)->positionX < 40.0 && (sequences[field0008].field0002 <= sequences[220].field0000))))
                 && (((((*opponentSlot)->field0008 < 0x32 || ((*opponentSlot)->field0008 > 0x9c)) &&
                 ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((((field0008 >= 200 && (field0168 >=
                 2)) && (field0168 != 6)) || (field0008 < 200)))))) {

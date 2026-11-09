@@ -180,7 +180,7 @@ public:
     unsigned short surfaceCount;
     unsigned char colorKey;
     unsigned char unknown_001b[5];
-    double field0020;
+    double positionX;
     double field0028;
     double field0030, field0038, field0040, field0048;
     char facing;

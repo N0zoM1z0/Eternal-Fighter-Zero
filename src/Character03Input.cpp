@@ -172,7 +172,7 @@ void Character03::Slot04()
     }
     if ((field015c < 1) && ((field0262 == 0 || (field0262 == 1)))) {
         if ((field0028 < 0.0) && (field0159 < 1)) {
-            if (((((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) < 0.0) || (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (field0028 < -40.0)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (field0028 < -40.0)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa5) {
                     ResetPose();
                 }
@@ -183,7 +183,7 @@ void Character03::Slot04()
                 field01a8 = 0;
                 return;
             }
-            if ((((0.0 < ((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2)) || (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)(char)facing == 1 - field0262 * 2)))) && ((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
+            if ((((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == 1 - field0262 * 2)))) && ((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
                 if (field0008 != 0xa6) {
                     ResetPose();
                 }
@@ -196,7 +196,7 @@ void Character03::Slot04()
             }
         }
         if ((field0028 == 0.0) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) {
-            if ((((((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2) < 0.0) || (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[163].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[163].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa3) {
                     ResetPose();
                 }
@@ -206,7 +206,7 @@ void Character03::Slot04()
                 field01a8 = 0;
                 return;
             }
-            if (((0.0 < ((*opponentSlot)->field0020 - field0020) * (1 - field0262 * 2)) || (((*opponentSlot)->field0020 - field0020 == 0.0 && ((int)(char)facing == 1 - field0262 * 2)))) && ((sequences[field0008].field0002 <= sequences[164].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
+            if (((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == 1 - field0262 * 2)))) && ((sequences[field0008].field0002 <= sequences[164].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
                 if (field0008 != 0xa4) {
                     ResetPose();
                 }
@@ -296,7 +296,7 @@ void Character03::Slot04()
             return;
         }
         if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
-            if ((((sequences[field0008].field0002 <= sequences[201].field0000) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((field0020 - (*opponentSlot)->field0020 > -70.0 && (field0020 - (*opponentSlot)->field0020 < 70.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if ((((sequences[field0008].field0002 <= sequences[201].field0000) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((positionX - (*opponentSlot)->positionX > -70.0 && (positionX - (*opponentSlot)->positionX < 70.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xc9;
@@ -322,8 +322,8 @@ void Character03::Slot04()
         }
         if (field0028 < 0.0) {
             if (inputX == facing && inputY == 0 &&
-                field0020 - (*opponentSlot)->field0020 > -100.0 &&
-                field0020 - (*opponentSlot)->field0020 < 100.0 &&
+                positionX - (*opponentSlot)->positionX > -100.0 &&
+                positionX - (*opponentSlot)->positionX < 100.0 &&
                 (*opponentSlot)->field0028 < 0.0 &&
                 sequences[field0008].field0002 <= sequences[248].field0000 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 156) &&
@@ -357,8 +357,8 @@ void Character03::Slot04()
         }
         if (inputY == 0 || (field01a8 & 4) == 0 || (field01a9 & 4) == 0) {
             if (inputX != 0 && (*opponentSlot)->field0028 == 0.0 &&
-                field0020 - (*opponentSlot)->field0020 > -30.0 &&
-                field0020 - (*opponentSlot)->field0020 < 30.0 &&
+                positionX - (*opponentSlot)->positionX > -30.0 &&
+                positionX - (*opponentSlot)->positionX < 30.0 &&
                 sequences[field0008].field0002 <= sequences[220].field0000 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 156) &&
                 (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&

@@ -161,7 +161,7 @@ void Character15::Slot08()
                     spawn.type = 36;
                 }
             }
-            spawn.x = (double)(int(field0020) + (20 - (unsigned short)RandomRange(0, 40)) * facing);
+            spawn.x = (double)(int(positionX) + (20 - (unsigned short)RandomRange(0, 40)) * facing);
             spawn.y = (double)(int(field0028) - (unsigned short)RandomRange(0, 90));
             spawn.group = 2;
             spawn.layer = 1;

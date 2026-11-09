@@ -25,7 +25,7 @@ int Secondary::GuardInput(const SecondaryFrame *attack)
         if (((attack->field00aa & 2) == 0 && inputY == 1 && field0028 == 0.0)
         || ((attack->field00aa & 1) == 0 && inputY != 1 && field0028 == 0.0)) return 0;
     } else {
-        if (inputX != 1 - 2 * ((*opponentSlot)->field0020 - field0020 > 0.0)
+        if (inputX != 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && (IsStateGroupA() == 0 || inputX == 0)) return 0;
         if (((attack->field00aa & 2) == 0 && inputY == 1 && field0028 == 0.0)
         || ((attack->field00aa & 1) == 0 && inputY != 1 && field0028 == 0.0)) return 0;

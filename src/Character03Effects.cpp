@@ -79,8 +79,8 @@ void Character03::Slot07()
                 }
                 if (((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 199) &&
                     effects[i].frame > 2 && effects[i].frame < 6 &&
-                    ((effects[i].x - (*opponentSlot)->field0020 < 25.0 &&
-                    effects[i].x - (*opponentSlot)->field0020 > -25.0 &&
+                    ((effects[i].x - (*opponentSlot)->positionX < 25.0 &&
+                    effects[i].x - (*opponentSlot)->positionX > -25.0 &&
                     (*opponentSlot)->field0028 > -20.0 &&
                     ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 150)) ||
                     (field0008 > 249 && field0008 < 253))) {
@@ -161,8 +161,8 @@ void Character03::Slot07()
                 }
                 if (((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 199) &&
                     effects[i].frame > 2 && effects[i].frame < 6 &&
-                    ((effects[i].x - (*opponentSlot)->field0020 < 25.0 &&
-                    effects[i].x - (*opponentSlot)->field0020 > -25.0 &&
+                    ((effects[i].x - (*opponentSlot)->positionX < 25.0 &&
+                    effects[i].x - (*opponentSlot)->positionX > -25.0 &&
                     (*opponentSlot)->field0028 > -20.0 &&
                     ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 150)) ||
                     (field0008 > 249 && field0008 < 253))) {
@@ -244,8 +244,8 @@ void Character03::Slot07()
                 }
                 if (((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 199) &&
                     effects[i].frame > 2 && effects[i].frame < 6 &&
-                    ((effects[i].x - (*opponentSlot)->field0020 < 25.0 &&
-                    effects[i].x - (*opponentSlot)->field0020 > -25.0 &&
+                    ((effects[i].x - (*opponentSlot)->positionX < 25.0 &&
+                    effects[i].x - (*opponentSlot)->positionX > -25.0 &&
                     (*opponentSlot)->field0028 > -20.0 &&
                     ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 150)) ||
                     (field0008 > 249 && field0008 < 253))) {
@@ -1516,7 +1516,7 @@ void Character03::Slot07()
             case 0x1a7:
                 if (effects[i].frame < 0x1d) {
                     effects[i].x =
-                    (double)(facing * 0xc) + field0020;
+                    (double)(facing * 0xc) + positionX;
                     effects[i].y = field0028 - 50.0;
                 }
                 if ((effects[i].frame < 0x1d) &&
@@ -1599,70 +1599,70 @@ void Character03::Slot07()
             case 0x1f0:
                 if ((field0008 != 83 && field0008 != 84 && field0008 != 85 && field0008 != 86) || (field0008 == 83 && field000a > 1) || (field0008 == 84 && field000a > 1)) {
                     spawn.type = 0x1f1;
-                    spawn.x = (double)((int(field0020)) + facing * 0x17);
+                    spawn.x = (double)((int(positionX)) + facing * 0x17);
                     spawn.y = (double)((int(field0028)) + -4);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
-                    spawn.x = (double)((int(field0020)) - facing * 4);
+                    spawn.x = (double)((int(positionX)) - facing * 4);
                     spawn.y = (double)((int(field0028)) + -6);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
-                    spawn.x = (double)((int(field0020)) - facing * 0xe);
+                    spawn.x = (double)((int(positionX)) - facing * 0xe);
                     spawn.y = (double)((int(field0028)) + -0x1a);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
-                    spawn.x = (double)(int(field0020));
+                    spawn.x = (double)(int(positionX));
                     spawn.y = (double)(int(field0028));
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
-                    spawn.x = (double)((int(field0020)) + facing * 0x1e);
+                    spawn.x = (double)((int(positionX)) + facing * 0x1e);
                     spawn.y = (double)((int(field0028)) + -0x28);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f1;
-                    spawn.x = (double)((int(field0020)) - facing * 0x19);
+                    spawn.x = (double)((int(positionX)) - facing * 0x19);
                     spawn.y = (double)((int(field0028)) + -0x50);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
-                    spawn.x = (double)((int(field0020)) - facing * 0x23);
+                    spawn.x = (double)((int(positionX)) - facing * 0x23);
                     spawn.y = (double)((int(field0028)) + -0x2a);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
-                    spawn.x = (double)((int(field0020)) - facing * 0x12);
+                    spawn.x = (double)((int(positionX)) - facing * 0x12);
                     spawn.y = (double)((int(field0028)) + -0x14);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
-                    spawn.x = (double)((int(field0020)) + facing * 2);
+                    spawn.x = (double)((int(positionX)) + facing * 2);
                     spawn.y = (double)((int(field0028)) + -0x41);
                     spawn.group = 0;
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
                     spawn.type = 0x1f2;
-                    spawn.x = (double)((int(field0020)) + facing * 0x10);
+                    spawn.x = (double)((int(positionX)) + facing * 0x10);
                     spawn.y = (double)((int(field0028)) + -0x50);
                     spawn.group = 0;
                     spawn.layer = 1;
@@ -1764,7 +1764,7 @@ void Character03::Slot07()
                 }
                 break;
             case 499:
-                effects[i].x = field0020;
+                effects[i].x = positionX;
                 effects[i].y = field0028;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {

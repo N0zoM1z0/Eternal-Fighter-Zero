@@ -42,7 +42,7 @@ void Character07::Slot05()
         return;
     }
     if ((*opponentSlot)->field0008 == 0x60) { return; }
-    distance.forward = ((*opponentSlot)->field0020 - field0020) * facing;
+    distance.forward = ((*opponentSlot)->positionX - positionX) * facing;
     distance.vertical = fabs(field0028 - (*opponentSlot)->field0028);
     if (!( ((field0008 < 0x32) || (0x96 < field0008)) ||
         ((unsigned short)field000c != 0) )) {
@@ -1113,7 +1113,7 @@ void Character07::Slot05()
         if (field0008 < 50 && (*opponentSlot)->field0008 < 50 &&
             distance.forward > 800.0 && distance.forward < 120.0 &&
             (float)(unsigned short)RandomRange(0, 100) < 2.0f * field00a8 &&
-            field0020 > 150.0 && field0020 < 490.0) {
+            positionX > 150.0 && positionX < 490.0) {
             field0262 = (unsigned short)(facing != 1);
             return;
         }

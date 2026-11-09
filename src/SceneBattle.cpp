@@ -56,7 +56,7 @@ void Scene3::UpdateCamera()
             --contextOwner->state14240;
         }
     }
-    x = 160 - (int)((secondary[0]->field0020 * (field0448 + 50) + secondary[1]->field0020 * (50 - field0448)) / 100.0);
+    x = 160 - (int)((secondary[0]->positionX * (field0448 + 50) + secondary[1]->positionX * (50 - field0448)) / 100.0);
     if (x < -319) x = -319;
     else if (x > 0) x = 0;
     if (field0454 < x) {

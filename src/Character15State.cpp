@@ -373,8 +373,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -414,8 +414,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -455,8 +455,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -496,8 +496,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -537,8 +537,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -577,8 +577,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -618,8 +618,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -656,8 +656,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -694,8 +694,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
@@ -1186,7 +1186,7 @@ void Character15::Slot06()
             field0048 = 0.025;
             field02c9 = 0x1f;
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -1259,8 +1259,8 @@ void Character15::Slot06()
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1287,8 +1287,8 @@ void Character15::Slot06()
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1315,8 +1315,8 @@ void Character15::Slot06()
         field0158 = 0;
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1353,8 +1353,8 @@ void Character15::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1394,8 +1394,8 @@ void Character15::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1435,8 +1435,8 @@ void Character15::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 =
             (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
@@ -1459,7 +1459,7 @@ void Character15::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             effect.type = 499;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
@@ -1546,7 +1546,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1598,7 +1598,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1650,7 +1650,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1693,7 +1693,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1777,7 +1777,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -1800,7 +1800,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -1856,8 +1856,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1898,8 +1898,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1940,8 +1940,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1982,8 +1982,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -2021,8 +2021,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -2060,8 +2060,8 @@ void Character15::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -2111,7 +2111,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0038 = -2.3;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -2143,7 +2143,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0038 = -2.3;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -2173,7 +2173,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             effect.type = 9;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x3c);
             effect.group = 2;
             effect.layer = 1;
@@ -2205,7 +2205,7 @@ void Character15::Slot06()
         if ((field000a == 6) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             effect.type = 9;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x3c);
             effect.group = 2;
             effect.layer = 1;
@@ -2410,7 +2410,7 @@ void Character15::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             field02c9 = 0x12;
             effect.type = 1;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2418,7 +2418,7 @@ void Character15::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             effect.type = 4;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2447,7 +2447,7 @@ void Character15::Slot06()
             field00b8 = 0.0;
             field0040 = 0.0;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2477,7 +2477,7 @@ void Character15::Slot06()
             field00b8 = 0.0;
             field0040 = 0.0;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2550,7 +2550,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field02c9 = 0x12;
             effect.type = 1;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -3149,7 +3149,7 @@ void Character15::Slot06()
             field0038 = 0.0;
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -3194,7 +3194,7 @@ void Character15::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -3230,7 +3230,7 @@ void Character15::Slot06()
             field0008 = 0xdd;
             (*opponentSlot)->field0008 = 0x6b;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x24);
+            effect.x = (double)((int(positionX)) + facing * 0x24);
             effect.y = (double)((int(field0028)) + -0x2e);
             effect.group = 2;
             effect.layer = 1;
@@ -3265,23 +3265,23 @@ void Character15::Slot06()
             ++field000a;
             field0168 = 3;
             if (field000a == 1) {
-                (*opponentSlot)->field0020 =
-                (double)(facing * 0x1e) + field0020;
+                (*opponentSlot)->positionX =
+                (double)(facing * 0x1e) + positionX;
                 (*opponentSlot)->field0008 = 0x6c;
                 (*opponentSlot)->ResetPose();
             }
             if (field000a == 2) {
-                (*opponentSlot)->field0020 =
-                (double)(facing * 0xd) + field0020;
+                (*opponentSlot)->positionX =
+                (double)(facing * 0xd) + positionX;
                 (*opponentSlot)->field0008 = 0x6c;
                 (*opponentSlot)->ResetPose();
             }
             if (field000a == 3) {
                 if ((CollisionSide()) != '\0') {
-                    field0020 = (double)(facing * 5) + field0020;
+                    positionX = (double)(facing * 5) + positionX;
                 }
-                (*opponentSlot)->field0020 =
-                field0020 - (double)(facing * 5);
+                (*opponentSlot)->positionX =
+                positionX - (double)(facing * 5);
                 (*opponentSlot)->field0008 = 0x34;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->facing = -(*opponentSlot)->facing;
@@ -3349,7 +3349,7 @@ void Character15::Slot06()
             field0038 = 0.0;
             field0030 = field0030 + 2.0;
             effect.type = 0x1f;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 0;
             effect.layer = 0;
@@ -3398,7 +3398,7 @@ void Character15::Slot06()
             field0038 = 0.0;
             field0030 = field0030 + 2.0;
             effect.type = 0x1f;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 0;
             effect.layer = 0;
@@ -3463,7 +3463,7 @@ void Character15::Slot06()
             field0038 = 0.0;
             field0030 = field0030 + 2.0;
             effect.type = 0x1f;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 0;
             effect.layer = 0;
@@ -3499,7 +3499,7 @@ void Character15::Slot06()
             field0038 = 0.0;
             field0030 = field0030 + 2.0;
             effect.type = 0x1f;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 0;
             effect.layer = 0;
@@ -3533,7 +3533,7 @@ void Character15::Slot06()
             ResetFrame();
             ResetPose();
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x20);
+            effect.x = (double)((int(positionX)) + facing * 0x20);
             effect.y = (double)((int(field0028)) + -0x39);
             effect.group = 2;
             effect.layer = 1;
@@ -3542,8 +3542,8 @@ void Character15::Slot06()
             field000c = 0;
             field0008 = 0xf9;
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x1d) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x1d) + positionX;
             (*opponentSlot)->field0028 = field0028 - 73.0;
             break;
         }
@@ -3578,8 +3578,8 @@ void Character15::Slot06()
         if ((1 < field000a) && (field000a < 4)) {
             field0038 = field0038 + 0.05;
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x11) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x11) + positionX;
             (*opponentSlot)->field0028 = field0028 + 11.0;
             if (0.0 < field0028 + field0038) {
                 ResetFrame();
@@ -3587,12 +3587,12 @@ void Character15::Slot06()
                 field000a = 4;
                 field000c = 0;
                 (*opponentSlot)->field0028 = 0.0;
-                (*opponentSlot)->field0020 =
-                field0020 - (double)(facing * 6);
+                (*opponentSlot)->positionX =
+                positionX - (double)(facing * 6);
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 effect.type = 0;
-                effect.x = (double)((int(field0020)) - facing * 9);
+                effect.x = (double)((int(positionX)) - facing * 9);
                 effect.y = (double)((int(field0028)) + 4);
                 effect.group = 2;
                 effect.layer = 1;
@@ -3619,8 +3619,8 @@ void Character15::Slot06()
             if (field000a == 1) {
                 (*opponentSlot)->field0008 = 0x75;
                 (*opponentSlot)->field0028 = field0028 - 22.0;
-                (*opponentSlot)->field0020 =
-                (double)(facing * 0x27) + field0020;
+                (*opponentSlot)->positionX =
+                (double)(facing * 0x27) + positionX;
             }
             if (field000a == 4) {
                 field000a = field000a + -2;
@@ -3719,7 +3719,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -3782,7 +3782,7 @@ void Character15::Slot06()
             }
             if (field000a == 5) {
                 effect.type = 0x1f;
-                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.x = (double)((int(positionX)) + facing * 0x28);
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -3843,7 +3843,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -3874,7 +3874,7 @@ void Character15::Slot06()
             }
             if (field000a == 5) {
                 effect.type = 0x1f;
-                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.x = (double)((int(positionX)) + facing * 0x28);
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -3969,14 +3969,14 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
                 effect.facing = (facing == -1);
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x194;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4063,14 +4063,14 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
                 effect.facing = (facing == -1);
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x194;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4157,14 +4157,14 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
                 effect.facing = (facing == -1);
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x193;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4252,7 +4252,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x195;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4348,7 +4348,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x196;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4444,7 +4444,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 field0148 = field0148 + 0x14;
                 effect.type = 0x197;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4478,7 +4478,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 field0148 = field0148 + 5;
                 effect.type = 0x193;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4518,7 +4518,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 field0148 = field0148 + 5;
                 effect.type = 0x194;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4558,7 +4558,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 field0148 = field0148 + 5;
                 effect.type = 0x195;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4606,7 +4606,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 field0148 = field0148 + 5;
                 effect.type = 0x196;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4654,7 +4654,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 field0148 = field0148 + 5;
                 effect.type = 0x197;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -4790,7 +4790,7 @@ void Character15::Slot06()
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
             field02c8 = 1;
             effect.type = 400;
-            effect.x = (double)((int(field0020)) + facing * 0x40);
+            effect.x = (double)((int(positionX)) + facing * 0x40);
             effect.y = (double)(int(field0028));
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
@@ -4819,7 +4819,7 @@ void Character15::Slot06()
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
             field02c8 = 1;
             effect.type = 0x191;
-            effect.x = (double)((int(field0020)) + facing * 0x40);
+            effect.x = (double)((int(positionX)) + facing * 0x40);
             effect.y = (double)(int(field0028));
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
@@ -4853,7 +4853,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -4864,7 +4864,7 @@ void Character15::Slot06()
         if ((field000a == 7) && ((unsigned short)field000c == 0)) {
             field02c8 = 2;
             effect.type = 0x192;
-            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.x = (double)((int(positionX)) + facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x3c);
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
@@ -4895,15 +4895,15 @@ void Character15::Slot06()
         field0038 = field0038 + field0048;
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
             effect.type = 0x198;
-            if (field0020 - (*opponentSlot)->field0020 < 150.0 &&
-                field0020 - (*opponentSlot)->field0020 > -150.0) {
-                effect.x = (*opponentSlot)->field0020;
+            if (positionX - (*opponentSlot)->positionX < 150.0 &&
+                positionX - (*opponentSlot)->positionX > -150.0) {
+                effect.x = (*opponentSlot)->positionX;
             } else {
-                if ((*opponentSlot)->field0020 > field0020) {
-                    effect.x = field0020 + 150.0;
+                if ((*opponentSlot)->positionX > positionX) {
+                    effect.x = positionX + 150.0;
                 }
-                if ((*opponentSlot)->field0020 < field0020) {
-                    effect.x = field0020 - 150.0;
+                if ((*opponentSlot)->positionX < positionX) {
+                    effect.x = positionX - 150.0;
                 }
             }
             effect.y = (double)(int(field0028));
@@ -4941,17 +4941,17 @@ void Character15::Slot06()
         field0038 = field0038 + field0048;
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
             effect.type = 0x198;
-            if ((150.0 < field0020 - (*opponentSlot)->field0020)
-                || (field0020 - (*opponentSlot)->field0020 < -150.0)
+            if ((150.0 < positionX - (*opponentSlot)->positionX)
+                || (positionX - (*opponentSlot)->positionX < -150.0)
                 ) {
-                effect.x = (*opponentSlot)->field0020;
+                effect.x = (*opponentSlot)->positionX;
             }
             else {
-                if ((*opponentSlot)->field0020 > field0020) {
-                    effect.x = field0020 + 150.0;
+                if ((*opponentSlot)->positionX > positionX) {
+                    effect.x = positionX + 150.0;
                 }
-                if ((*opponentSlot)->field0020 < field0020) {
-                    effect.x = field0020 - 150.0;
+                if ((*opponentSlot)->positionX < positionX) {
+                    effect.x = positionX - 150.0;
                 }
             }
             effect.y = (double)(int(field0028));
@@ -4999,7 +4999,7 @@ void Character15::Slot06()
             }
             if (field000a == 2) {
                 effect.type = 0x1b5;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
@@ -5042,7 +5042,7 @@ void Character15::Slot06()
                 field02c8 = 5;
                 field0030 = 2.5;
                 effect.type = 0x1b5;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
@@ -5072,7 +5072,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -5099,7 +5099,7 @@ void Character15::Slot06()
             if (field000a == 3) {
                 field02c8 = 5;
                 effect.type = 0x1bc;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
@@ -5111,7 +5111,7 @@ void Character15::Slot06()
                 field0168 = 0;
                 field02c8 = 5;
                 effect.type = 0x1b5;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
@@ -5145,14 +5145,14 @@ void Character15::Slot06()
             if (field000a == 3) {
                 field02c8 = 4;
                 effect.type = 0x1b6;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1b8;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 2;
                 effect.layer = 1;
@@ -5191,14 +5191,14 @@ void Character15::Slot06()
             if (field000a == 3) {
                 field02c8 = 4;
                 effect.type = 0x1b6;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1b8;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 2;
                 effect.layer = 1;
@@ -5206,7 +5206,7 @@ void Character15::Slot06()
                 EmitLocalEffect(&effect);
                 effect.type = 0x1ba;
                 effect.owner = 1;
-                effect.x = (double)((int(field0020)) + facing * 0x5a);
+                effect.x = (double)((int(positionX)) + facing * 0x5a);
                 effect.y = (double)((int(field0028)) + -0x3c);
                 effect.group = 2;
                 effect.layer = 1;
@@ -5236,7 +5236,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -5262,14 +5262,14 @@ void Character15::Slot06()
             if (field000a == 3) {
                 field02c8 = 4;
                 effect.type = 0x1bd;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1b8;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 2;
                 effect.layer = 1;
@@ -5281,14 +5281,14 @@ void Character15::Slot06()
                 field0168 = 0;
                 field02c8 = 4;
                 effect.type = 0x1b6;
-                effect.x = (double)((int(field0020)) + facing * 0x26);
+                effect.x = (double)((int(positionX)) + facing * 0x26);
                 effect.y = (double)((int(field0028)) + -0x28);
                 effect.group = 2;
                 effect.layer = 1;
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1b8;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 2;
                 effect.layer = 1;
@@ -5372,7 +5372,7 @@ void Character15::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -5617,7 +5617,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -5660,7 +5660,7 @@ void Character15::Slot06()
             }
             if (field000a == 8) {
                 effect.type = 0x1f;
-                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.x = (double)((int(positionX)) + facing * 0x28);
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -5704,7 +5704,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -5734,7 +5734,7 @@ void Character15::Slot06()
         if (((0x15 < field000a) && (field000a < 0x1f)) &&
             ((unsigned short)RandomRange(0, 100) < 10)) {
             effect.type = 0x19a;
-            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.x = (double)(int)((int(positionX)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
             effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
             effect.group = 2;
             effect.layer = 1;
@@ -5757,7 +5757,7 @@ void Character15::Slot06()
             }
             if (field000a == 8) {
                 effect.type = 0x1f;
-                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.x = (double)((int(positionX)) + facing * 0x28);
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -5801,7 +5801,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -5834,7 +5834,7 @@ void Character15::Slot06()
         if (((0x15 < field000a) && (field000a < 0x1f)) &&
             ((unsigned short)RandomRange(0, 100) < 10)) {
             effect.type = 0x19a;
-            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.x = (double)(int)((int(positionX)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
             effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
             effect.group = 2;
             effect.layer = 1;
@@ -5844,7 +5844,7 @@ void Character15::Slot06()
         if (((0x15 < field000a) && (field000a < 0x1f)) &&
             ((unsigned short)RandomRange(0, 100) < 5)) {
             effect.type = 0x19b;
-            effect.x = (double)(int)((int(field0020)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
+            effect.x = (double)(int)((int(positionX)) + (((unsigned short)RandomRange(0, 0x6e)) - 0x14) * (int)facing);
             effect.y = (double)(int)((int(field0028)) - ((unsigned short)RandomRange(0, 0x5a)));
             effect.group = 2;
             effect.layer = 1;
@@ -5867,7 +5867,7 @@ void Character15::Slot06()
             }
             if (field000a == 8) {
                 effect.type = 0x1f;
-                effect.x = (double)((int(field0020)) + facing * 0x28);
+                effect.x = (double)((int(positionX)) + facing * 0x28);
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -5913,7 +5913,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -5992,7 +5992,7 @@ void Character15::Slot06()
                 field016c = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -6000,7 +6000,7 @@ void Character15::Slot06()
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x19e;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6028,7 +6028,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -6107,7 +6107,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 field02c8 = 10;
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -6115,7 +6115,7 @@ void Character15::Slot06()
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x19e;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6144,7 +6144,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x2a);
             effect.group = 2;
             effect.owner = 1;
@@ -6225,7 +6225,7 @@ void Character15::Slot06()
                 field013c = 0x2d;
                 field02c8 = 10;
                 effect.type = 0x1f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -6233,7 +6233,7 @@ void Character15::Slot06()
                 contextOwner->EmitEffect(&effect);
                 effect.type = 0x19e;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6332,7 +6332,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-90.0,2.2);
                 effect.type = 0x19c;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6437,7 +6437,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(-45.0,2.2);
                 effect.type = 0x19e;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6542,7 +6542,7 @@ void Character15::Slot06()
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(0.0,2.2);
                 effect.type = 0x19d;
                 effect.owner = 1;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6655,7 +6655,7 @@ void Character15::Slot06()
                 field016c = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,2.2);
                 effect.type = 0x19f;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.owner = 1;
@@ -6769,7 +6769,7 @@ void Character15::Slot06()
                 field016c = 1;
                 reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(90.0,2.2);
                 effect.type = 0x1a0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.flag0018 = (unsigned char)facing;
                 effect.layer = 1;
@@ -6913,7 +6913,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.x = (double)((int(positionX)) + facing * 0x43);
             effect.y = (double)((int(field0028)) + -0x29);
             effect.group = 2;
             effect.owner = 1;
@@ -6928,7 +6928,7 @@ void Character15::Slot06()
             if (field000a == 6) {
                 field02c8 = 6;
                 effect.type = 0x1a1;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -6936,7 +6936,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1ad;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -6947,7 +6947,7 @@ void Character15::Slot06()
             if (field000a == 10) {
                 if (8 < field3138) {
                     effect.type = 0x1a5;
-                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.x = (double)((int(positionX)) + facing * 0xf);
                     effect.y = (double)((int(field0028)) + -0x94);
                     effect.group = 2;
                     effect.owner = 1;
@@ -6969,7 +6969,7 @@ void Character15::Slot06()
                 if (8 < field3138) {
                     effect.type = 0x1ae;
                 }
-                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.x = (double)((int(positionX)) + facing * 0x68);
                 effect.y = (double)((int(field0028)) + -0x32);
                 if (field313c == 1) {
                     effect.y = (double)((int(field0028)) + -0x3c);
@@ -7012,7 +7012,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.x = (double)((int(positionX)) + facing * 0x43);
             effect.y = (double)((int(field0028)) + -0x29);
             effect.group = 2;
             effect.owner = 1;
@@ -7028,7 +7028,7 @@ void Character15::Slot06()
                 field013c = 0xf;
                 field02c8 = 6;
                 effect.type = 0x1a1;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7036,7 +7036,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1ad;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7047,7 +7047,7 @@ void Character15::Slot06()
             if (field000a == 10) {
                 if (8 < field3138) {
                     effect.type = 0x1a5;
-                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.x = (double)((int(positionX)) + facing * 0xf);
                     effect.y = (double)((int(field0028)) + -0x94);
                     effect.group = 2;
                     effect.owner = 1;
@@ -7069,7 +7069,7 @@ void Character15::Slot06()
                 if (8 < field3138) {
                     effect.type = 0x1af;
                 }
-                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.x = (double)((int(positionX)) + facing * 0x68);
                 effect.y = (double)((int(field0028)) + -0x32);
                 if (field313c == 1) {
                     effect.y = (double)((int(field0028)) + -0x3c);
@@ -7115,7 +7115,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) + facing * 0x43);
+            effect.x = (double)((int(positionX)) + facing * 0x43);
             effect.y = (double)((int(field0028)) + -0x29);
             effect.group = 2;
             effect.owner = 1;
@@ -7132,7 +7132,7 @@ void Character15::Slot06()
                 field013c = 0x1e;
                 field02c8 = 6;
                 effect.type = 0x1a1;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7140,7 +7140,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1ad;
-                effect.x = (double)((int(field0020)) + facing * 0xf);
+                effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(field0028)) + -0x94);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7151,7 +7151,7 @@ void Character15::Slot06()
             if (field000a == 10) {
                 if (8 < field3138) {
                     effect.type = 0x1a5;
-                    effect.x = (double)((int(field0020)) + facing * 0xf);
+                    effect.x = (double)((int(positionX)) + facing * 0xf);
                     effect.y = (double)((int(field0028)) + -0x94);
                     effect.group = 2;
                     effect.owner = 1;
@@ -7173,7 +7173,7 @@ void Character15::Slot06()
                 if (8 < field3138) {
                     effect.type = 0x1b0;
                 }
-                effect.x = (double)((int(field0020)) + facing * 0x68);
+                effect.x = (double)((int(positionX)) + facing * 0x68);
                 effect.y = (double)((int(field0028)) + -0x32);
                 if (field313c == 1) {
                     effect.y = (double)((int(field0028)) + -0x3c);
@@ -7217,7 +7217,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.x = (double)((int(positionX)) - facing * 0x1f);
             effect.y = (double)((int(field0028)) + -0x61);
             effect.group = 2;
             effect.owner = 1;
@@ -7250,7 +7250,7 @@ void Character15::Slot06()
                 field0030 = -1.3;
                 field0038 = -0.8;
                 effect.type = 0x1a6;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7258,7 +7258,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1a5;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7291,7 +7291,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.x = (double)((int(positionX)) - facing * 0x1f);
             effect.y = (double)((int(field0028)) + -0x61);
             effect.group = 2;
             effect.owner = 1;
@@ -7324,7 +7324,7 @@ void Character15::Slot06()
                 field0030 = -1.3;
                 field0038 = -0.8;
                 effect.type = 0x1a8;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7332,7 +7332,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1a5;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7350,7 +7350,7 @@ void Character15::Slot06()
                 if (field313c == 2) {
                     effect.type = 0x1a7;
                 }
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7358,7 +7358,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1a5;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7394,7 +7394,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) - facing * 0x1f);
+            effect.x = (double)((int(positionX)) - facing * 0x1f);
             effect.y = (double)((int(field0028)) + -0x61);
             effect.group = 2;
             effect.owner = 1;
@@ -7428,7 +7428,7 @@ void Character15::Slot06()
                 field0030 = -1.3;
                 field0038 = -0.8;
                 effect.type = 0x1ac;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7436,7 +7436,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1a5;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7460,7 +7460,7 @@ void Character15::Slot06()
                 if (field313c == 4) {
                     effect.type = 0x1a9;
                 }
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7468,7 +7468,7 @@ void Character15::Slot06()
                 effect.flag0018 = (unsigned char)facing;
                 EmitLocalEffect(&effect);
                 effect.type = 0x1a5;
-                effect.x = (double)((int(field0020)) + facing * 0x32);
+                effect.x = (double)((int(positionX)) + facing * 0x32);
                 effect.y = (double)((int(field0028)) + -0x20);
                 effect.group = 2;
                 effect.owner = 1;
@@ -7500,7 +7500,7 @@ void Character15::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) + facing * 0xd);
+            effect.x = (double)((int(positionX)) + facing * 0xd);
             effect.y = (double)((int(field0028)) + -0x34);
             effect.group = 2;
             effect.owner = 1;
@@ -7510,7 +7510,7 @@ void Character15::Slot06()
             effect.type = 0x47;
             contextOwner->EmitEffect(&effect);
             effect.type = 0x1b4;
-            effect.x = (double)((int(field0020)) + facing * 0xd);
+            effect.x = (double)((int(positionX)) + facing * 0xd);
             effect.y = (double)((int(field0028)) + -0x34);
             effect.group = 2;
             effect.owner = 1;
@@ -7525,7 +7525,7 @@ void Character15::Slot06()
             field3158 = 3;
             field3168 = 0x1194;
             effect.type = 0x1b3;
-            effect.x = (double)((int(field0020)) + facing * 5);
+            effect.x = (double)((int(positionX)) + facing * 5);
             effect.y = (double)((int(field0028)) + -0x2d);
             effect.group = 2;
             effect.owner = 1;
@@ -7533,7 +7533,7 @@ void Character15::Slot06()
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
             effect.type = 0x1ad;
-            effect.x = (double)((int(field0020)) + facing * 5);
+            effect.x = (double)((int(positionX)) + facing * 5);
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.owner = 1;
@@ -7541,7 +7541,7 @@ void Character15::Slot06()
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
             effect.type = 0x1ad;
-            effect.x = (double)((int(field0020)) + facing * 0x2d);
+            effect.x = (double)((int(positionX)) + facing * 0x2d);
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.owner = 1;
@@ -7549,7 +7549,7 @@ void Character15::Slot06()
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
             effect.type = 0x1ad;
-            effect.x = (double)((int(field0020)) - facing * 0x23);
+            effect.x = (double)((int(positionX)) - facing * 0x23);
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.owner = 1;

@@ -13,7 +13,7 @@ void Secondary::ResetFrame()
 void Secondary::InitializeState()
 {
     int i;
-    field0020 = player * 160 + 240;
+    positionX = player * 160 + 240;
     field0028 = 0.0;
     facing = 1 - player * 2;
     ResetFrame();

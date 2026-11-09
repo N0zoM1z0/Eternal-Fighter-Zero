@@ -349,8 +349,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -387,8 +387,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -425,8 +425,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -463,8 +463,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -501,8 +501,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -539,8 +539,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -577,8 +577,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -612,8 +612,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -647,8 +647,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)((field0028 < 0.0)) * 0.2) * field0030;
         }
         else {
@@ -1131,7 +1131,7 @@ void Character05::Slot06()
             field0048 = 0.025;
             field02c9 = 0x1f;
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -1203,8 +1203,8 @@ void Character05::Slot06()
         }
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1229,8 +1229,8 @@ void Character05::Slot06()
         }
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1255,8 +1255,8 @@ void Character05::Slot06()
         }
         field0030 = 0.0;
         field0038 = 0.0;
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1291,8 +1291,8 @@ void Character05::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1330,8 +1330,8 @@ void Character05::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1369,8 +1369,8 @@ void Character05::Slot06()
         if (field0030 < 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = (1.0 - (double)(((*opponentSlot)->field0028 < 0.0)) * 0.25) * field0030;
         }
         else {
@@ -1392,7 +1392,7 @@ void Character05::Slot06()
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             effect.type = 499;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
@@ -1479,7 +1479,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1531,7 +1531,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1583,7 +1583,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1626,7 +1626,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 0;
                 effect.layer = 0;
@@ -1726,7 +1726,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -1749,7 +1749,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             SetVerticalShake(3,0);
             effect.type = 3;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -1803,8 +1803,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1844,8 +1844,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1885,8 +1885,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1926,8 +1926,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -1964,8 +1964,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -2002,8 +2002,8 @@ void Character05::Slot06()
         if (field0030 > 0.0) {
             field0030 = 0.0;
         }
-        if ((field0020 - 20.0 <= 0.0) ||
-            (639.0 <= field0020 + 20.0)) {
+        if ((positionX - 20.0 <= 0.0) ||
+            (639.0 <= positionX + 20.0)) {
             field00b8 = field0030;
         }
         else {
@@ -2053,7 +2053,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0038 = -2.3;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -2085,7 +2085,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field0038 = -2.3;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 0;
@@ -2115,7 +2115,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             effect.type = 9;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x3c);
             effect.group = 2;
             effect.layer = 1;
@@ -2147,7 +2147,7 @@ void Character05::Slot06()
         if ((field000a == 6) && ((unsigned short)field000c == 0)) {
             ResetFrame();
             effect.type = 9;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x3c);
             effect.group = 2;
             effect.layer = 1;
@@ -2345,7 +2345,7 @@ void Character05::Slot06()
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             field02c9 = 0x12;
             effect.type = 1;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2353,7 +2353,7 @@ void Character05::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             effect.type = 4;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2381,7 +2381,7 @@ void Character05::Slot06()
             field00b8 = 0.0;
             field0040 = 0.0;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2410,7 +2410,7 @@ void Character05::Slot06()
             field00b8 = 0.0;
             field0040 = 0.0;
             effect.type = 8;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -2483,7 +2483,7 @@ void Character05::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             field02c9 = 0x12;
             effect.type = 1;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.group = 2;
             effect.layer = 1;
@@ -3024,7 +3024,7 @@ void Character05::Slot06()
             field0008 = 0xdd;
             (*opponentSlot)->field0008 = 0x6b;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x25);
+            effect.x = (double)((int(positionX)) + facing * 0x25);
             effect.y = (double)((int(field0028)) + -0x30);
             effect.group = 2;
             effect.layer = 1;
@@ -3052,8 +3052,8 @@ void Character05::Slot06()
         break;
     case 221:
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field0020 =
-            (*opponentSlot)->field0020 -
+            positionX =
+            (*opponentSlot)->positionX -
             (double)((int)(*opponentSlot)->field2ad0[0] * (int)facing);
             field0028 = (double)((*opponentSlot)->field2af8[0] + 0x1e);
         }
@@ -3068,7 +3068,7 @@ void Character05::Slot06()
             field0048 = 0.04;
             effect.type = 0;
             effect.palette = 2;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x2d);
             effect.group = 2;
             effect.layer = 1;
@@ -3250,7 +3250,7 @@ void Character05::Slot06()
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0128 = 1;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x16);
+            effect.x = (double)((int(positionX)) + facing * 0x16);
             effect.y = (double)((int(field0028)) + -0x36);
             effect.group = 2;
             effect.layer = 1;
@@ -3259,8 +3259,8 @@ void Character05::Slot06()
             field000c = 0;
             field0008 = 0xf9;
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
             break;
         }
@@ -3282,12 +3282,12 @@ void Character05::Slot06()
     case 249:
         field013e = 2;
         if (field000a < 0xb) {
-            if ((field0020 > 6100.0) && (facing == '\x01')) {
-                field0020 = 6100.0;
+            if ((positionX > 6100.0) && (facing == '\x01')) {
+                positionX = 6100.0;
                 field0030 = 0.0;
             }
-            if ((field0020 < 30.0) && (facing == -1)) {
-                field0020 = 30.0;
+            if ((positionX < 30.0) && (facing == -1)) {
+                positionX = 30.0;
                 field0030 = 0.0;
             }
             SetHorizontalOffset(0x32,3);
@@ -3303,13 +3303,13 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 (*opponentSlot)->field0028 = 0;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetFrame();
                 ApplyDamage(1000,500.0);
                 effect.type = 0;
-                effect.x = (double)(int(field0020));
+                effect.x = (double)(int(positionX));
                 effect.y = (double)(int(field0028));
                 effect.group = 2;
                 effect.layer = 1;
@@ -3329,86 +3329,86 @@ void Character05::Slot06()
         }
         if (field000a < 1) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
         }
         if (field000a == 1) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if (field000a == 2) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-25.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -65.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 3) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -43.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 4) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -29.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 5) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -23.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 6) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -36.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 7) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -58.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 8) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (14.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -73.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 9) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -78.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
@@ -3445,10 +3445,10 @@ void Character05::Slot06()
             ResetPose();
             field0008 = 0xfd;
             field0028 = (double)(field2af8[0] + 0x32);
-            field0020 =
-            (*opponentSlot)->field0020 + (-field2ad0[0] - 0x14) * facing;
+            positionX =
+            (*opponentSlot)->positionX + (-field2ad0[0] - 0x14) * facing;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 7);
+            effect.x = (double)((int(positionX)) + facing * 7);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -3508,10 +3508,10 @@ void Character05::Slot06()
             ResetPose();
             field0008 = 0xfd;
             field0028 = (double)(field2af8[0] + 0x32);
-            field0020 =
-            (*opponentSlot)->field0020 + (-field2ad0[0] - 0x14) * facing;
+            positionX =
+            (*opponentSlot)->positionX + (-field2ad0[0] - 0x14) * facing;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 7);
+            effect.x = (double)((int(positionX)) + facing * 7);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -3572,7 +3572,7 @@ void Character05::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.x = (double)((int(positionX)) + facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -3586,10 +3586,10 @@ void Character05::Slot06()
             ResetFrame();
             field0008 = 0xfe;
             field0028 = (double)(field2af8[0] + 0x32);
-            field0020 =
-            (*opponentSlot)->field0020 + (-field2ad0[0] - 0x14) * facing;
+            positionX =
+            (*opponentSlot)->positionX + (-field2ad0[0] - 0x14) * facing;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 7);
+            effect.x = (double)((int(positionX)) + facing * 7);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -3648,16 +3648,16 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetFrame();
             }
             if (((*opponentSlot)->CollisionSide()) == '\0') {
-                (*opponentSlot)->field0020 =
+                (*opponentSlot)->positionX =
                 (double)((field2ad0[0] + 0x14) * (int)facing) +
-                field0020;
+                positionX;
             }
         }
         if (field000a == 3) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -69.0 + field0038 + field0028;
         }
@@ -3674,9 +3674,9 @@ void Character05::Slot06()
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x3f;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-31.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -33.0 + field0038 + field0028;
             ApplyDamage(500,750.0);
@@ -3716,16 +3716,16 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetFrame();
             }
             if (((*opponentSlot)->CollisionSide()) == '\0') {
-                (*opponentSlot)->field0020 =
+                (*opponentSlot)->positionX =
                 (double)((field2ad0[0] + 0x14) * (int)facing) +
-                field0020;
+                positionX;
             }
         }
         if (field000a == 3) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -69.0 + field0038 + field0028;
         }
@@ -3742,9 +3742,9 @@ void Character05::Slot06()
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x43;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-41.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -43.0 + field0038 + field0028;
             ApplyDamage(1000,800.0);
@@ -3986,7 +3986,7 @@ void Character05::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.x = (double)((int(positionX)) + facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -4260,7 +4260,7 @@ void Character05::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.x = (double)((int(positionX)) + facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -4459,10 +4459,10 @@ void Character05::Slot06()
         }
         if ((0xb < field000a) && (field000a < 0x10)) {
             if (facing == '\x01') {
-                field0020 = (double)(contextOwner->cameraBounds.left + 0xf);
+                positionX = (double)(contextOwner->cameraBounds.left + 0xf);
             }
             if (facing == -1) {
-                field0020 = (double)(contextOwner->cameraBounds.right + -0xf);
+                positionX = (double)(contextOwner->cameraBounds.right + -0xf);
             }
         }
         if (field0028 + field0038 >= 0.0 && field000a > 4 && field000a < 20) {
@@ -4526,10 +4526,10 @@ void Character05::Slot06()
             ResetFrame();
             field0008 = 0x113;
             field0028 = (double)(field2af8[0] + 0x32);
-            field0020 =
-            (*opponentSlot)->field0020 + (-field2ad0[0] - 0x14) * facing;
+            positionX =
+            (*opponentSlot)->positionX + (-field2ad0[0] - 0x14) * facing;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 7);
+            effect.x = (double)((int(positionX)) + facing * 7);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -4542,10 +4542,10 @@ void Character05::Slot06()
         }
         if ((0xb < field000a) && (field000a < 0x10)) {
             if (facing == '\x01') {
-                field0020 = (double)(contextOwner->cameraBounds.left + 0xf);
+                positionX = (double)(contextOwner->cameraBounds.left + 0xf);
             }
             if (facing == -1) {
-                field0020 = (double)(contextOwner->cameraBounds.right + -0xf);
+                positionX = (double)(contextOwner->cameraBounds.right + -0xf);
             }
         }
         if (field0028 + field0038 >= 0.0 && field000a > 15 && field000a < 19) {
@@ -4632,10 +4632,10 @@ void Character05::Slot06()
         }
         if ((0xb < field000a) && (field000a < 0x10)) {
             if (facing == '\x01') {
-                field0020 = (double)(contextOwner->cameraBounds.left + 0xf);
+                positionX = (double)(contextOwner->cameraBounds.left + 0xf);
             }
             if (facing == -1) {
-                field0020 = (double)(contextOwner->cameraBounds.right + -0xf);
+                positionX = (double)(contextOwner->cameraBounds.right + -0xf);
             }
         }
         if (field0028 + field0038 >= 0.0 && field000a > 4 && field000a < 20) {
@@ -4681,52 +4681,52 @@ void Character05::Slot06()
         SetHorizontalShake(0x32,3);
         if (field000a == 4) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -54.0 + field0038 + field0028;
         }
         if (field000a == 5) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if (field000a == 6) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-31.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -62.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 7) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-34.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -34.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 8) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-6.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -3.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 9) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-4.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -2.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
@@ -4736,10 +4736,10 @@ void Character05::Slot06()
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x62;
             (*opponentSlot)->field0028 = 0;
-            (*opponentSlot)->field0020 = field0020;
+            (*opponentSlot)->positionX = positionX;
             ApplyDamage(0x4b0,960.0);
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.palette = 2;
             effect.group = 2;
@@ -4870,7 +4870,7 @@ void Character05::Slot06()
             }
             effect.type = 0x21;
             effect.palette = 0xb;
-            effect.x = (double)((int(field0020)) + facing * 0x14);
+            effect.x = (double)((int(positionX)) + facing * 0x14);
             effect.y = (double)((int(field0028)) + -0x32);
             effect.group = 2;
             effect.layer = 1;
@@ -4974,8 +4974,8 @@ void Character05::Slot06()
             ++field000a;
             field0168 = 0;
             if (field000a == 1) {
-                field0020 =
-                (*opponentSlot)->field0020 -
+                positionX =
+                (*opponentSlot)->positionX -
                 (double)((int)(*opponentSlot)->field2ad0[0] * (int)facing);
                 field0028 =
                 ((*opponentSlot)->field0028 + (double)(int)(*opponentSlot)->field2af8[0]) - 20.0;
@@ -5149,10 +5149,10 @@ void Character05::Slot06()
         }
         if ((0xb < field000a) && (field000a < 0x10)) {
             if (facing == '\x01') {
-                field0020 = (double)(contextOwner->cameraBounds.left + 0xf);
+                positionX = (double)(contextOwner->cameraBounds.left + 0xf);
             }
             if (facing == -1) {
-                field0020 = (double)(contextOwner->cameraBounds.right + -0xf);
+                positionX = (double)(contextOwner->cameraBounds.right + -0xf);
             }
         }
         if (field0028 + field0038 >= 0.0 && field000a > 15 && field000a < 19) {
@@ -5181,12 +5181,12 @@ void Character05::Slot06()
                 ResetPose();
                 ResetFrame();
                 field0008 = 0x11f;
-                if ((field0020 - (*opponentSlot)->field0020 < 140.0) &&
-                    (-140.0 < field0020 - (*opponentSlot)->field0020)) {
+                if ((positionX - (*opponentSlot)->positionX < 140.0) &&
+                    (-140.0 < positionX - (*opponentSlot)->positionX)) {
                     field0008 = 0x11e;
                 }
-                if ((field0020 - (*opponentSlot)->field0020 < 70.0) &&
-                    (-70.0 < field0020 - (*opponentSlot)->field0020)) {
+                if ((positionX - (*opponentSlot)->positionX < 70.0) &&
+                    (-70.0 < positionX - (*opponentSlot)->positionX)) {
                     field0008 = 0x11d;
                 }
                 break;
@@ -5282,7 +5282,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5314,20 +5314,20 @@ void Character05::Slot06()
                 field013c = 9;
             }
             if (field000a == 6) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 7) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 9) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
                 if (1 < field3138) {
                     field000a = 0xc;
                     return;
                 }
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xc) && (field3138 < 1)) {
                 field000a = 2;
@@ -5351,7 +5351,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5401,20 +5401,20 @@ void Character05::Slot06()
                 field013c = 0x1e;
             }
             if (field000a == 6) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 7) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 9) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
                 if (2 < field3138) {
                     field000a = 0xc;
                     return;
                 }
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xc) && (field3138 < 2)) {
                 field000a = 2;
@@ -5446,7 +5446,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5506,20 +5506,20 @@ void Character05::Slot06()
                 field013c = 0x3c;
             }
             if (field000a == 6) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 7) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 9) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
                 if (3 < field3138) {
                     field000a = 0xc;
                     return;
                 }
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xc) && (field3138 < 3)) {
                 field000a = 2;
@@ -5543,7 +5543,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5567,10 +5567,10 @@ void Character05::Slot06()
             ResetFrame();
             field0008 = 0x131;
             field0028 = (double)(field2af8[0] + 0x32);
-            field0020 =
-            (*opponentSlot)->field0020 + (-field2ad0[0] - 0x14) * facing;
+            positionX =
+            (*opponentSlot)->positionX + (-field2ad0[0] - 0x14) * facing;
             effect.type = 0;
-            effect.x = (double)((int((*opponentSlot)->field0020)) + field2ad0[0]);
+            effect.x = (double)((int((*opponentSlot)->positionX)) + field2ad0[0]);
             effect.y = (double)((int((*opponentSlot)->field0028)) + field2af8[0]);
             effect.group = 2;
             effect.layer = 1;
@@ -5617,7 +5617,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5639,10 +5639,10 @@ void Character05::Slot06()
             ResetFrame();
             field0008 = 0x132;
             (*opponentSlot)->field014a = 0x78;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x1e) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x1e) + positionX;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x2c);
+            effect.x = (double)((int(positionX)) + facing * 0x2c);
             effect.y = (double)((int(field0028)) + -7);
             effect.group = 2;
             effect.layer = 1;
@@ -5676,52 +5676,52 @@ void Character05::Slot06()
         if (field000a == 4) {
             (*opponentSlot)->field0140 = 30000;
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -52.0 + field0038 + field0028;
         }
         if (field000a == 5) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if (field000a == 6) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-31.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -65.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 7) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-36.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -32.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 8) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-7.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -8.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 9) || (field000a == 10)) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-4.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -6.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
@@ -5733,12 +5733,12 @@ void Character05::Slot06()
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->field0008 = 0x62;
             (*opponentSlot)->field0028 = 0;
-            (*opponentSlot)->field0020 = field0020;
+            (*opponentSlot)->positionX = positionX;
             field0028 = 0.0;
             field0008 = 0x133;
             ApplyDamage(1000,960.0);
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.palette = 2;
             effect.group = 2;
@@ -5753,7 +5753,7 @@ void Character05::Slot06()
             field0168 = 0;
             if (field000a == 4) {
                 field0030 =
-                (double)(1 - 2 * (field0020 > 320.0)) * 0.6 * (double)(int)facing;
+                (double)(1 - 2 * (positionX > 320.0)) * 0.6 * (double)(int)facing;
                 field0038 = -5.0;
                 field0048 = 0.06;
             }
@@ -5777,7 +5777,7 @@ void Character05::Slot06()
                 field000a = 4;
                 (*opponentSlot)->field014a = 0;
                 field0030 =
-                (double)(1 - 2 * (field0020 > 320.0)) * 0.6 * (double)(int)facing;
+                (double)(1 - 2 * (positionX > 320.0)) * 0.6 * (double)(int)facing;
                 field0038 = -5.0;
                 field0048 = 0.06;
             }
@@ -5795,7 +5795,7 @@ void Character05::Slot06()
             ((field000a < 0xc && (unsigned short)RandomRange(0, 100) < 5))
             ))) {
             effect.type = 0x195;
-            effect.x = (field0020 + 80.0) - (double)((unsigned short)RandomRange(0, 0xa0));
+            effect.x = (positionX + 80.0) - (double)((unsigned short)RandomRange(0, 0xa0));
             effect.y = (double)-(int)(unsigned short)RandomRange(0, 0x32);
             effect.group = 0;
             effect.layer = 1;
@@ -5810,7 +5810,7 @@ void Character05::Slot06()
         }
         if (field3138 == 0x50) {
             effect.type = 0x191;
-            effect.x = (double)((int(field0020)) + facing * 0x1e);
+            effect.x = (double)((int(positionX)) + facing * 0x1e);
             effect.y = -320.0;
             effect.group = 0;
             effect.layer = 1;
@@ -5821,7 +5821,7 @@ void Character05::Slot06()
         }
         if (field3138 == 0x78) {
             effect.type = 0x192;
-            effect.x = (double)((int(field0020)) - facing * 0x14);
+            effect.x = (double)((int(positionX)) - facing * 0x14);
             effect.y = -320.0;
             effect.group = 0;
             effect.layer = 1;
@@ -5841,7 +5841,7 @@ void Character05::Slot06()
             (*opponentSlot)->field0140 = 30000;
             ApplyDamage(300,960.0);
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.palette = 2;
             effect.group = 2;
@@ -5862,7 +5862,7 @@ void Character05::Slot06()
             SetVerticalShake(10,10);
             (*opponentSlot)->field014a = 0x78;
             effect.type = 0;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)(int(field0028));
             effect.palette = 0x16;
             effect.group = 2;
@@ -5931,7 +5931,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -5943,25 +5943,25 @@ void Character05::Slot06()
         }
         if (((field000a == 3) || (field000a == 4)) &&
             (field0168 == 3)) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
             ResetPose();
             field0048 = 0.025;
             field0008 = 0x137;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x2c);
+            effect.x = (double)((int(positionX)) + facing * 0x2c);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -6025,7 +6025,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -6037,25 +6037,25 @@ void Character05::Slot06()
         }
         if (((field000a == 3) || (field000a == 4)) &&
             (field0168 == 3)) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
             ResetPose();
             field0048 = 0.025;
             field0008 = 0x138;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x2c);
+            effect.x = (double)((int(positionX)) + facing * 0x2c);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -6119,7 +6119,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -6133,25 +6133,25 @@ void Character05::Slot06()
         }
         if (((field000a == 3) || (field000a == 4)) &&
             (field0168 == 3)) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
             ResetPose();
             field0048 = 0.025;
             field0008 = 0x139;
             effect.type = 0;
-            effect.x = (double)((int(field0020)) + facing * 0x2c);
+            effect.x = (double)((int(positionX)) + facing * 0x2c);
             effect.y = (double)((int(field0028)) + -0x2c);
             effect.group = 2;
             effect.layer = 1;
@@ -6210,12 +6210,12 @@ void Character05::Slot06()
     case 311:
         field013e = 2;
         if (field000a < 0xe) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             SetHorizontalOffset(0x32,3);
@@ -6231,8 +6231,8 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 (*opponentSlot)->field0028 = 0;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->field014a = 0x7e;
@@ -6258,86 +6258,86 @@ void Character05::Slot06()
         }
         if (field000a < 4) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
         }
         if (field000a == 4) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if (field000a == 5) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-25.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -65.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 6) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -43.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 7) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -29.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if (field000a == 8) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -23.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 9) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -36.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 10) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -58.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 0xb) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (14.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -73.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if (field000a == 0xc) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -78.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
@@ -6372,12 +6372,12 @@ void Character05::Slot06()
     case 312:
         field013e = 2;
         if (field000a < 0x19) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             SetHorizontalOffset(0x32,3);
@@ -6396,8 +6396,8 @@ void Character05::Slot06()
                 (*opponentSlot)->field0028 = 0;
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->field014a = 0x96;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 ApplyDamage(1000,980.0);
                 SetVerticalShake(10,0);
@@ -6413,8 +6413,8 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 (*opponentSlot)->field0028 = 0;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->field014a = 0x7e;
@@ -6446,87 +6446,87 @@ void Character05::Slot06()
         }
         if (field000a < 4) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
         }
         if (((field000a == 4) || (field000a == 0xf)) ||
             (field000a == 0x10)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if ((field000a == 5) || (field000a == 0x11)) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-25.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -65.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 6) || (field000a == 0x12)) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -43.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 7) || (field000a == 0x13)) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -29.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 8) || (field000a == 0x14)) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -23.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 9) || (field000a == 0x15)) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -36.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 10) || (field000a == 0x16)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -58.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 0xb) || (field000a == 0x17)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (14.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -73.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 0xc) || (field000a == 0x18)) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -78.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
@@ -6566,12 +6566,12 @@ void Character05::Slot06()
         field013e = 2;
         contextOwner->SetSceneTimer(0xf);
         if (field000a < 0x19) {
-            if (field0020 > 580.0) {
-                field0020 = 580.0;
+            if (positionX > 580.0) {
+                positionX = 580.0;
                 field0030 = 0.0;
             }
-            if (field0020 < 60.0) {
-                field0020 = 60.0;
+            if (positionX < 60.0) {
+                positionX = 60.0;
                 field0030 = 0.0;
             }
             SetHorizontalOffset(0x32,3);
@@ -6590,8 +6590,8 @@ void Character05::Slot06()
                 (*opponentSlot)->field0028 = 0;
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->field014a = 0x96;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 ApplyDamage(1000,980.0);
                 SetVerticalShake(10,0);
@@ -6607,8 +6607,8 @@ void Character05::Slot06()
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x62;
                 (*opponentSlot)->field0028 = 0;
-                (*opponentSlot)->field0020 =
-                (double)(int)facing + field0020;
+                (*opponentSlot)->positionX =
+                (double)(int)facing + positionX;
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->field014a = 0xba;
@@ -6640,87 +6640,87 @@ void Character05::Slot06()
         }
         if (field000a < 4) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x16) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x16) + positionX;
             (*opponentSlot)->field0028 = field0028 - 52.0;
         }
         if (((field000a == 4) || (field000a == 0xf)) ||
             (field000a == 0x10)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (15.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -70.0 + field0038 + field0028;
         }
         if ((field000a == 5) || (field000a == 0x11)) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-25.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -65.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 6) || (field000a == 0x12)) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -43.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 7) || (field000a == 0x13)) {
             (*opponentSlot)->field0008 = 0x75;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -29.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
         }
         if ((field000a == 8) || (field000a == 0x14)) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -23.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 9) || (field000a == 0x15)) {
             (*opponentSlot)->field0008 = 0x68;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (23.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -36.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 10) || (field000a == 0x16)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (28.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -58.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 0xb) || (field000a == 0x17)) {
             (*opponentSlot)->field0008 = 0x67;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (14.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -73.0 + field0038 + field0028;
             (*opponentSlot)->facing = -facing;
         }
         if ((field000a == 0xc) || (field000a == 0x18)) {
             (*opponentSlot)->field0008 = 0x76;
-            (*opponentSlot)->field0020 =
+            (*opponentSlot)->positionX =
             (-12.0 + field0030) * facing +
-            field0020;
+            positionX;
             (*opponentSlot)->field0028 =
             -78.0 + field0038 + field0028;
             (*opponentSlot)->facing = facing;
@@ -6768,7 +6768,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)((int(field0020)) + facing * 0xf);
+            effect.x = (double)((int(positionX)) + facing * 0xf);
             effect.y = (double)((int(field0028)) + -0x22);
             effect.group = 2;
             effect.owner = 1;
@@ -6835,7 +6835,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)((int(field0020)) + facing * 0xf);
+            effect.x = (double)((int(positionX)) + facing * 0xf);
             effect.y = (double)((int(field0028)) + -0x22);
             effect.group = 2;
             effect.owner = 1;
@@ -6905,7 +6905,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)((int(field0020)) + facing * 0xf);
+            effect.x = (double)((int(positionX)) + facing * 0xf);
             effect.y = (double)((int(field0028)) + -0x22);
             effect.group = 2;
             effect.owner = 1;
@@ -6973,7 +6973,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x44;
             effect.palette = 0x13;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -6989,8 +6989,8 @@ void Character05::Slot06()
             (*opponentSlot)->field014a = 0xb4;
             (*opponentSlot)->field0028 = 0;
             (*opponentSlot)->field0008 = 0x49;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x1e) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x1e) + positionX;
             field0008 = 0x13e;
             (*opponentSlot)->facing = -facing;
             break;
@@ -7054,20 +7054,20 @@ void Character05::Slot06()
             ++field000a;
             field0168 = 0;
             if (field000a == 9) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xc) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xd) {
                 if (1 < field3138) {
                     field000a = 0xf;
                     return;
                 }
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xf) && (field3138 < 1)) {
                 field000a = 5;
@@ -7099,7 +7099,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x45;
             effect.palette = 5;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -7115,8 +7115,8 @@ void Character05::Slot06()
             (*opponentSlot)->field014a = 0xb4;
             (*opponentSlot)->field0028 = 0;
             (*opponentSlot)->field0008 = 0x49;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x1e) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x1e) + positionX;
             field0008 = 0x140;
             (*opponentSlot)->facing = -facing;
             break;
@@ -7180,20 +7180,20 @@ void Character05::Slot06()
             ++field000a;
             field0168 = 0;
             if (field000a == 9) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xc) {
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xd) {
                 if (1 < field3138) {
                     field000a = 0xf;
                     return;
                 }
-                field0020 = (double)(facing * 0xf) + field0020;
+                positionX = (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xf) && (field3138 < 2)) {
                 field000a = 5;
@@ -7226,7 +7226,7 @@ void Character05::Slot06()
             SetTint(0xb0,3);
             effect.type = 0x46;
             effect.palette = 0x40;
-            effect.x = (double)(int(field0020));
+            effect.x = (double)(int(positionX));
             effect.y = (double)((int(field0028)) + -0x28);
             effect.group = 2;
             effect.owner = 1;
@@ -7243,8 +7243,8 @@ void Character05::Slot06()
             (*opponentSlot)->field014a = 0xb4;
             (*opponentSlot)->field0028 = 0;
             (*opponentSlot)->field0008 = 0x49;
-            (*opponentSlot)->field0020 =
-            (double)(facing * 0x1e) + field0020;
+            (*opponentSlot)->positionX =
+            (double)(facing * 0x1e) + positionX;
             field0008 = 0x142;
             (*opponentSlot)->facing = -facing;
             break;
@@ -7322,36 +7322,36 @@ void Character05::Slot06()
             ++field000a;
             field0168 = 0;
             if (field000a == 9) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if (field000a == 10) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xc) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0xd) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xf) && (field3138 < 10)) {
                 ++field3138;
                 field000a = 5;
             }
             if (field000a == 0x13) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0x14) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if (field000a == 0x16) {
-                field0020 =
-                (double)(facing * 0xf) + field0020;
+                positionX =
+                (double)(facing * 0xf) + positionX;
             }
             if ((field000a == 0xf) && (field3138 < 8)) {
                 field000a = 5;

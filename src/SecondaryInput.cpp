@@ -70,7 +70,7 @@ void Secondary::UpdateInput()
         }
         ++field0260;
         if (field0260 >= 180) field0260 = 0;
-        if (inputX == 1 - 2 * ((*opponentSlot)->field0020 - field0020 > 0.0)
+        if (inputX == 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && field014e == 0 && field0150 == 0) field014e = 60;
         if ((*opponentSlot)->field014a == 0 && field014e > 0) --field014e;
         if (inputX == 0) field0150 = 0;
@@ -83,7 +83,7 @@ void SecondaryTrail::Capture(const SecondaryPose *pose)
 {
     stride = pending;
     held = 0;
-    x[position] = pose->field0020;
+    x[position] = pose->positionX;
     y[position] = pose->field0028;
     facing[position] = pose->facing;
     type[position] = pose->field0008;
@@ -96,7 +96,7 @@ void SecondaryTrail::Begin(const SecondaryPose *pose, unsigned char spacing)
 {
     if (pending == 0 && held == 0) {
         for (int i = 0; i < 60; ++i) {
-            x[i] = pose->field0020;
+            x[i] = pose->positionX;
             y[i] = pose->field0028;
             facing[i] = pose->facing;
             type[i] = pose->field0008;

@@ -249,7 +249,7 @@ void Scene3::RenderHud()
                     ((secondary[work.player]->sequences[secondary[work.player]->field0008].data[secondary[work.player]->field000a].field00aa & 0x400) == 0)) {
                     if (secondary[work.player]->facing == '\x01') {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (int)secondary[work.player]->field0020 + field045c + work.stroke;
+                            work.destination.left = (int)secondary[work.player]->positionX + field045c + work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->field0028) - (unsigned int)(secondary[work.player]->field0028 < 0.0)) + work.stroke;
                             work.destination.right = (int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + work.destination.left + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100;
                             work.destination.bottom = work.destination.top + 1;
@@ -260,7 +260,7 @@ void Scene3::RenderHud()
                         }
                     } else {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (((int)secondary[work.player]->field0020 + field045c) - ((int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100)) - work.stroke;
+                            work.destination.left = (((int)secondary[work.player]->positionX + field045c) - ((int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100)) - work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->field0028) - (unsigned int)(secondary[work.player]->field0028 < 0.0)) + work.stroke;
                             work.destination.right = (int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + work.destination.left + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100;
                             work.destination.bottom = work.destination.top + 1;
@@ -274,7 +274,7 @@ void Scene3::RenderHud()
                 if ((secondary[work.player]->field0134 != 0.0f) && secondary[work.player]->IsStateGroupA() != 0) {
                     if (secondary[work.player]->facing == '\x01') {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (int)secondary[work.player]->field0020 + field045c + work.stroke;
+                            work.destination.left = (int)secondary[work.player]->positionX + field045c + work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->field0028) - (unsigned int)(secondary[work.player]->field0028 < 0.0)) + work.stroke;
                             work.destination.right = (int)(work.destination.left + secondary[work.player]->field0134 * 100.0f / 360.0f);
                             work.destination.bottom = work.destination.top + 1;
@@ -285,7 +285,7 @@ void Scene3::RenderHud()
                         }
                     } else {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (int)(((int)secondary[work.player]->field0020 + field045c) - secondary[work.player]->field0134 * 100.0f / 360.0f - work.stroke);
+                            work.destination.left = (int)(((int)secondary[work.player]->positionX + field045c) - secondary[work.player]->field0134 * 100.0f / 360.0f - work.stroke);
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->field0028) - (unsigned int)(secondary[work.player]->field0028 < 0.0)) + work.stroke;
                             work.destination.right = (int)(work.destination.left + secondary[work.player]->field0134 * 100.0f / 360.0f);
                             work.destination.bottom = work.destination.top + 1;

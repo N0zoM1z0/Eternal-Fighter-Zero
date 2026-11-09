@@ -37,7 +37,7 @@ void Secondary::Render(int offsetX, int offsetY)
                     source.top = 0;
                     source.right = frame.width;
                     source.bottom = frame.height;
-                    destination.left = int(field0020) + offsetX - frame.u * (facing == 1)
+                    destination.left = int(positionX) + offsetX - frame.u * (facing == 1)
                     - (frame.width - frame.u) * (facing == -1);
                     destination.top = int(field0028) + 210 - (field0028 < 0.0) - frame.v + offsetY;
                     destination.right = frame.width + destination.left;
@@ -57,7 +57,7 @@ void Secondary::Render(int offsetX, int offsetY)
                         source.top = 0;
                         source.right = frame.width;
                         source.bottom = frame.height;
-                        destination.left = int(field0020) + offsetX - frame.u * (facing == 1)
+                        destination.left = int(positionX) + offsetX - frame.u * (facing == 1)
                         - (frame.width - frame.u) * (facing == -1);
                         destination.top = 239 - frame.v;
                         destination.right = frame.width + destination.left;

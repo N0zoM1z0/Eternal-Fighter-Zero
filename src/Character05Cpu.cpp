@@ -42,7 +42,7 @@ void Character05::Slot05()
         return;
     }
     if ((*opponentSlot)->field0008 == 0x60) { return; }
-    distance.forward = ((*opponentSlot)->field0020 - field0020) * facing;
+    distance.forward = ((*opponentSlot)->positionX - positionX) * facing;
     distance.vertical = fabs(field0028 - (*opponentSlot)->field0028);
     if (!( ((field0008 < 0x32) || (0x96 < field0008)) ||
         ((unsigned short)field000c != 0) )) {

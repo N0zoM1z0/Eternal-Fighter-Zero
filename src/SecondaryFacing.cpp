@@ -4,11 +4,11 @@
 int Secondary::FaceOpponent()
 {
     char previous = facing;
-    if (field0020 < (*opponentSlot)->field0020) {
+    if (positionX < (*opponentSlot)->positionX) {
         facing = 1;
         return facing != previous;
     }
-    if (field0020 > (*opponentSlot)->field0020) {
+    if (positionX > (*opponentSlot)->positionX) {
         facing = -1;
         return facing != previous;
     }

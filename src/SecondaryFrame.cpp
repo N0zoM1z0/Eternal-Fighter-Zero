@@ -56,14 +56,14 @@ void Secondary::UpdateMovement()
     if (field014a == 0 && (*opponentSlot)->field014c == 0) {
         if ((CollisionSide() * facing) * (field0030 + field00b0 + (*opponentSlot)->field00b8
         * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) >= 0.0) {
-            field0020 = (field0030 + field00b0 + (*opponentSlot)->field00b8
-            * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) * facing + field0020;
+            positionX = (field0030 + field00b0 + (*opponentSlot)->field00b8
+            * ((*opponentSlot)->field00d0 != 0 && field014c == 0)) * facing + positionX;
         }
-        if (field0020 < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->field0020 <= 20.0)) {
-            field0020 = 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->field0020 <= 20.0);
+        if (positionX < 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0)) {
+            positionX = 20 + ((*opponentSlot)->CollisionSide() == 1 && (*opponentSlot)->positionX <= 20.0);
         } else {
-            if (field0020 > 619 - ((*opponentSlot)->CollisionSide() == -1 && (*opponentSlot)->field0020 >= 619.0)) {
-                field0020 = 619 - ((*opponentSlot)->CollisionSide() == -1 && (*opponentSlot)->field0020 >= 619.0);
+            if (positionX > 619 - ((*opponentSlot)->CollisionSide() == -1 && (*opponentSlot)->positionX >= 619.0)) {
+                positionX = 619 - ((*opponentSlot)->CollisionSide() == -1 && (*opponentSlot)->positionX >= 619.0);
             }
         }
         field0028 = field0028 + field0038;
@@ -149,10 +149,10 @@ void Secondary::UpdateTimers()
 
 char Secondary::CollisionSide()
 {
-    if (field0020 - 20.0 <= ((*opponentSlot)->field0020 <= 20.0)
-    || (*opponentSlot)->field0020 - field0020 > 280.0) return 1;
-    if (field0020 + 20.0 >= 639 - ((*opponentSlot)->field0020 >= 619.0)
-    || field0020 - (*opponentSlot)->field0020 > 280.0) return -1;
+    if (positionX - 20.0 <= ((*opponentSlot)->positionX <= 20.0)
+    || (*opponentSlot)->positionX - positionX > 280.0) return 1;
+    if (positionX + 20.0 >= 639 - ((*opponentSlot)->positionX >= 619.0)
+    || positionX - (*opponentSlot)->positionX > 280.0) return -1;
     return 0;
 }
 
