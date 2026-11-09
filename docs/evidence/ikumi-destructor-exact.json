@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 source and canonical code plus all relocation bindings",
+  "method": "Ikumi natural derived destructor writes original child vtable, restores saved animation banks and performs two separate vector-array delete[] calls; original target explicitly calls the Secondary destructor before compiler-inserted implicit base destructor call, so the original five bound relocations include two distinct 0x40ECB0 calls. Complete 163 bytes strictly exact. No full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 163,
+      "matched_bytes": 163,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 14,
+          "target": 7900532,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character14@@6B@",
+          "evidence": "EFZ.exe @ 0x006A5DCD: original Ikumi child vptr at 0x00788D74 restored by destructor entry",
+          "addend": 0
+        },
+        {
+          "offset": 81,
+          "target": 4227584,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_EPatternSequence@@QAEPAXI@Z",
+          "evidence": "EFZ.exe @ 0x006A5E10: original PatternSequence array vector deleting destructor called with flag 3",
+          "addend": 0
+        },
+        {
+          "offset": 127,
+          "target": 4270192,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_ESecondarySequence@@QAEPAXI@Z",
+          "evidence": "EFZ.exe @ 0x006A5E3E: original SecondarySequence array vector deleting destructor called with flag 3",
+          "addend": 0
+        },
+        {
+          "offset": 147,
+          "target": 4254896,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1Secondary@@QAE@XZ",
+          "evidence": "EFZ.exe @ 0x006A5E52: explicit source-level Secondary base destructor call before compiler-inserted implicit base destruction",
+          "addend": 0
+        },
+        {
+          "offset": 155,
+          "target": 4254896,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1Secondary@@QAE@XZ",
+          "evidence": "EFZ.exe @ 0x006A5E5A: second original Secondary base destructor call, implicit by compiler at end of child destructor",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e81bd8520f3a939d2f75d41af4ce07771a55df7bb406671c072a607f651a302d",
+      "target_extent_sha256": "e81bd8520f3a939d2f75d41af4ce07771a55df7bb406671c072a607f651a302d",
+      "unit": "character-14-destructor",
+      "symbol": "??1Character14@@QAE@XZ",
+      "target_address": "0x006A5DC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "57c7f3ebe46f80f1916a77bef23958c3d851915740f6ebf15efa586e899eb74b",
+      "object_sha256": "4f5c16e8347359259e2aec4557de36535a8c764976efe4e3f6e1606bd9ced381",
+      "source_sha256": "e4b5fa3047846e0ec49c1a19750d76fba9b5512e55ab1d84366c51006a60a753",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "b44a252c92dfd17945e40fab4cb59096f0059e26d650285f02f2f3ed5ce7113c"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "af62c02fd23d61b7df6140c60c6b1c328c1cb833abf2c262ae097e9cf618306e",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cdb8e31316e8d7db805e75e76e09b7dae60bd593c37f0e0fe7f417d938025c71",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

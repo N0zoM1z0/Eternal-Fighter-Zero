@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="176" role="img" aria-label="EFZ reconstruction: 350 exact functions, 1068938 exact bytes; 382 reviewed boundaries out of 950 candidates">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="176" role="img" aria-label="EFZ reconstruction: 351 exact functions, 1069101 exact bytes; 383 reviewed boundaries out of 950 candidates">
   <rect width="560" height="176" rx="8" fill="#1f2335"/>
   <text x="24" y="28" fill="#f4f4f5" font-family="sans-serif" font-size="16" font-weight="600">EFZ reconstruction progress</text>
   <text x="24" y="55" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">Complete exact code</text>
-  <text x="536" y="55" fill="#c7a4ff" text-anchor="end" font-family="monospace" font-size="13">350 functions / 1068938 bytes</text>
+  <text x="536" y="55" fill="#c7a4ff" text-anchor="end" font-family="monospace" font-size="13">351 functions / 1069101 bytes</text>
   <text x="24" y="78" fill="#c8cad2" font-family="sans-serif" font-size="12">Native product and runtime validation remain open</text>
   <text x="24" y="108" fill="#f4f4f5" font-family="sans-serif" font-size="13" font-weight="600">Reviewed complete boundaries</text>
-  <text x="536" y="108" fill="#f4f4f5" text-anchor="end" font-family="monospace" font-size="13">382 / 950 candidates</text>
+  <text x="536" y="108" fill="#f4f4f5" text-anchor="end" font-family="monospace" font-size="13">383 / 950 candidates</text>
   <rect x="24" y="118" width="512" height="12" rx="6" fill="#3b4058"/>
-  <rect x="24" y="118" width="205.88" height="12" rx="0.5" fill="#9b6de3"/>
+  <rect x="24" y="118" width="206.42" height="12" rx="0.5" fill="#9b6de3"/>
   <text x="24" y="154" fill="#c8cad2" font-family="sans-serif" font-size="12">Whole-game authored coverage is not established</text>
 </svg>

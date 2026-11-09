@@ -381,3 +381,4 @@ address,end,size,status,evidence
 0x006A5C50,0x006A5DC0,368,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-initialization-with-bank-reset
 0x006A5E70,0x006A5EAC,60,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-alternate-pattern-resource-loader
 0x006A5EB0,0x006A6265,949,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-alternate-pattern-resource-loader
+0x006A5DC0,0x006A5E63,163,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-natural-destructor

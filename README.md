@@ -70,6 +70,8 @@ NayukiB (472 bytes), Kano (523 bytes), Akiko (511 bytes), Minagi
 also have independently exact natural constructors. Ikumi's separate
 257-byte `SetAlternateMode`, 949-byte second pattern-bank parser and
 60-byte resource wrapper now have independent strict Exact receipts.
+Ikumi's 163-byte derived destructor is also strict Exact, including the
+original double base teardown and two vector-array deletes.
 Other child owners, including Ikumi Slot08 effects, remain open.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386

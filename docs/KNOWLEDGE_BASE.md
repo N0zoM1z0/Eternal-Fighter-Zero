@@ -1998,6 +1998,34 @@ strict Exact. The existing public receipts were refreshed from those
 actual builds rather than assuming earlier evidence still applied.
 Unrelated older proof-freshness debt and full game runtime remain open.
 
+### Ikumi natural derived destructor: original double base teardown (2026-11-09)
+
+`Character14::~Character14` at `0x006A5DC0` is now an independently
+accepted **163/163-byte strict Exact** natural C++ owner in
+`src/Character14Destructor.cpp`. It restores the two saved
+base-owned animation bank pointers, then performs real C++
+`delete[] alternatePatterns` and `delete[] alternateSequences` using
+the correct vector-deleting destructors. It has **5/5 original-bound
+relocations**: Ikumi vtable `0x788D74`, the vector destructors at
+`0x408200` and `0x412870`, and **two distinct calls** to the
+base `Secondary::~Secondary` at `0x40ECB0`. An initial ordinary
+C++ destructor matched only 155 bytes; original disassembly showed
+an explicit base destructor before the compiler-added implicit call.
+Preserving both calls (rather than making an ungrounded assumption
+that the original implementation was more idiomatic) produced exactly
+163 matching code bytes. The original body ends at exclusive
+`0x006A5E63` and 13 `CC` alignment bytes lead to the separately
+Exact resource wrapper at `0x006A5E70`.
+
+The selected proof is `docs/evidence/ikumi-destructor-exact.json`.
+Its class declaration does not change the original child allocation
+size; the actual original call semantics are recorded, including the
+unusual double base teardown. The affected scene creation and loading
+owners, full Makoto Slot06, and nine accepted Ikumi methods were
+selectively recompiled/recompared and remained Exact. This is not
+a general full cold replay, runtime safety validation or whole image
+linkage claim.
+
 ### Ikumi mode-aware InitializeState: complete 368-byte exact owner (2026-11-09)
 
 Ikumi's original vtable slot 12 at `0x788DA4` points to the real

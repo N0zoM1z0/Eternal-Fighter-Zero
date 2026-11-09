@@ -286,6 +286,7 @@ class Character14 : public Secondary {
     unsigned char unknown_3474[4];
 public:
     Character14(Secondary **, Context *, Video *, Input *, Audio *, char);
+    ~Character14();
     void SetAlternateMode(char);
     void LoadAlternatePatterns();
     virtual void ResetPose();

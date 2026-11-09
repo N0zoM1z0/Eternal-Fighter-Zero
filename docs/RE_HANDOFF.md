@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **350 exact functions**, **1,068,938 code bytes**,
-  **7,655 associated table bytes**, 382 reviewed complete boundaries and 377
+  ledgers currently count **351 exact functions**, **1,069,101 code bytes**,
+  **7,655 associated table bytes**, 383 reviewed complete boundaries and 378
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -393,6 +393,23 @@ at the opponent X load immediately before repeated CRT `rand()` calls;
 no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
+
+## Ikumi exact derived destructor with two base cleanup calls
+
+`Character14::~Character14` now has a complete natural source owner
+`src/Character14Destructor.cpp` and selected `character-14-destructor`
+strict Exact for **163/163 code bytes and 5/5 reviewed relocations**.
+The original invokes the base `Secondary` destructor **twice**:
+once explicitly after two vector-array deletes, then again via
+compiler-inserted implicit base teardown. Preserving the original
+behavior is necessary for the byte-level match; do not silently
+replace it with a presumed safer variant. The original function
+ends at `0x006A5E63`, before 13 bytes of `CC` padding.
+Certificate: `docs/evidence/ikumi-destructor-exact.json`.
+Only its actual class-view dependents were checked, and all 12
+previous selected units retained exact code and original-bound
+relocations, including the entire Makoto state boss. No full cold
+replay or linked-product claim.
 
 ## Ikumi large alternate animation parser + resource wrapper accepted Exact
 

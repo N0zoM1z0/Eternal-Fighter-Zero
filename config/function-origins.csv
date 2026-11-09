@@ -438,7 +438,7 @@ address,origin,status,evidence
 0x00694D00,unknown,unreviewed,
 0x006A59C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x006A5C50,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-initialization-with-bank-reset
-0x006A5DC0,unknown,unreviewed,
+0x006A5DC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-natural-destructor
 0x006A5E70,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-alternate-pattern-resource-loader
 0x006A5EB0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-alternate-pattern-resource-loader
 0x006A6270,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides

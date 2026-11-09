@@ -129453,3 +129453,48 @@ type = "REL32"
 symbol = "?LoadResources@Secondary@@UAEXXZ"
 target = 0x00410B70
 evidence = "EFZ.exe 0x006A5E83 Original symbol address independently decoded from original PE call/data operand 0x00410B70; original relocation type REL32 and full operand checked"
+
+[units.character-14-destructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Destructor.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-destructor/Character14Destructor.obj"
+symbol = "??1Character14@@QAE@XZ"
+target_address = 0x006A5DC0
+size = 163
+
+[[units.character-14-destructor.relocations]]
+offset = 14
+type = "DIR32"
+symbol = "??_7Character14@@6B@"
+target = 0x00788D74
+evidence = "EFZ.exe @ 0x006A5DCD: original Ikumi child vptr at 0x00788D74 restored by destructor entry"
+
+[[units.character-14-destructor.relocations]]
+offset = 81
+type = "REL32"
+symbol = "??_EPatternSequence@@QAEPAXI@Z"
+target = 0x00408200
+evidence = "EFZ.exe @ 0x006A5E10: original PatternSequence array vector deleting destructor called with flag 3"
+
+[[units.character-14-destructor.relocations]]
+offset = 127
+type = "REL32"
+symbol = "??_ESecondarySequence@@QAEPAXI@Z"
+target = 0x00412870
+evidence = "EFZ.exe @ 0x006A5E3E: original SecondarySequence array vector deleting destructor called with flag 3"
+
+[[units.character-14-destructor.relocations]]
+offset = 147
+type = "REL32"
+symbol = "??1Secondary@@QAE@XZ"
+target = 0x0040ECB0
+evidence = "EFZ.exe @ 0x006A5E52: explicit source-level Secondary base destructor call before compiler-inserted implicit base destruction"
+
+[[units.character-14-destructor.relocations]]
+offset = 155
+type = "REL32"
+symbol = "??1Secondary@@QAE@XZ"
+target = 0x0040ECB0
+evidence = "EFZ.exe @ 0x006A5E5A: second original Secondary base destructor call, implicit by compiler at end of child destructor"
