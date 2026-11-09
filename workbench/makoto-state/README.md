@@ -109,6 +109,13 @@ work, not the original behavior for valid unimplemented animations.
   0x62. Both transitions invoke ResetPose. The original 511-byte block
   was checked independently for constants, branch destinations and
   field offsets rather than copied from an older unverified draft.
+- Animation IDs 60 and 61 (blocks 0x005EA6A8 and 0x005EA8A7,
+  511 bytes each) preserve the airborne hit reaction from state 59 but
+  strengthen the initial downward-to-upward clamp to -4.0 and -6.0.
+  Target instruction-by-instruction comparison of all 144 instructions
+  per branch shows only the two references to the lower-clamp constant
+  differ from state 59. The meter award, airborne frame transitions,
+  gravity, and 0x61/0x62 landing outcomes are otherwise the same.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -128,7 +135,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 60 and onward directly from reviewed target instructions,
+Extend cases 62 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
