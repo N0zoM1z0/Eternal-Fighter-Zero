@@ -1088,6 +1088,27 @@ work, not the original behavior for valid unimplemented animations.
   original ranges cover 2,121 bytes total; the complete partial C++
   workbench compiled with VC7.1, not a whole-function exact match.
 
+- Animation ID 309 (0x005F662C..0x005F698C, 864 bytes) is a
+  stationary healing super, not an ordinary attack. On first
+  pose/tick it clears dash momentum, arms one hit, requests context
+  sound 37, hitstun=120, deducts 3,000 meter and tints with
+  (0xB0,3). It emits **two separate context effects** at truncated
+  X+5*facing, Y-56: first type 0x46/palette 0x40, then (after
+  incrementing field3138 and setting remainingHitCount=19) type
+  0x47 with the same placement and retained properties. Every tick
+  calls Context::SetSceneTimer(15), zeroes velocities/gravity and
+  both players' outgoingPushbackActive. When field313c==1 and pose
+  is 5 it forces pose 6, sound slot 3 and tick zero, returning early.
+  When field313c==2 and pose is 5 it calls ResetPose, sets state
+  310 and returns. At poses 9–12 it heals 20 HP per tick and caps
+  health at 10,000. After normal frame expiry, pose 3 emits local
+  type 0x1A6 at truncated X+6*facing and Y-80, owner 1/group 0/
+  layer 1/facing byte; pose 6 loops back to 5, and pose 13 loops
+  back two frames while field3138<2 (incrementing that counter).
+  Each frame advance clears attackCollisionResult and ordinary
+  exhaustion returns to state 0/ResetPose. All 864 target bytes,
+  event calls and field updates were checked; VC7.1 compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1113,7 +1134,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 309 and onward directly from reviewed target instructions,
+Extend case 310 and the true default path directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

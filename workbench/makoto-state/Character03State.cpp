@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-308 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-309 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -5019,9 +5019,82 @@ void Character03::Slot06()
         }
         return;
 
+    case 309: // Original block 0x005F662C: stationary healing super
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 37;
+            hitstunFrames = 120;
+            meter = (short)(meter - 3000);
+            SetTint(0xb0, 3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int)positionX + (int)facing * 5);
+            effect.y = (double)((int)positionY - 56);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ++field3138;
+            remainingHitCount = 19;
+            effect.type = 0x47;
+            contextOwner->EmitEffect(&effect);
+        }
+        contextOwner->SetSceneTimer(15);
+        velocityX = 0.0;
+        velocityY = 0.0;
+        gravity = 0.0;
+        (*opponentSlot)->outgoingPushbackActive = 0;
+        outgoingPushbackActive = 0;
+        if (field313c == 1 && field000a == 5) {
+            field000a = 6;
+            pendingCharacterSoundSlot = 3;
+            field000c = 0;
+            return;
+        }
+        if (field313c == 2 && field000a == 5) {
+            ResetPose();
+            field0008 = 310;
+            return;
+        }
+        if (field000a > 8 && field000a < 13) {
+            health += 20;
+        }
+        if (health > 10000) {
+            health = 10000;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 3) {
+                effect.type = 0x1a6;
+                effect.x = (double)((int)positionX + (int)facing * 6);
+                effect.y = (double)((int)positionY - 80);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 6) {
+                field000a = (unsigned short)(field000a - 1);
+            }
+            if (field000a == 13 && field3138 < 2) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 2);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 2 explicit cases. The target's true default path also
+        // the other 1 explicit case. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
