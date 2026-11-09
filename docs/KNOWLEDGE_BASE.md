@@ -1740,6 +1740,34 @@ were strictly compared. New public proofs:
 The unrelated historical stale-header certificates were not
 silently refreshed, and no full cold replay was run.
 
+### NayukiB constructor: complete exact code generation (2026-11-09)
+
+`Character17::Character17` at `0x0073E790` is now a natural C++ source
+owner (`src/Character17Frame.cpp`) matching **472/472 bytes** with
+**4/4 reviewed original relocations** under VC7.1. The four bindings
+are the reviewed Secondary base constructor at `0x40EAE0`, the
+13-slot child vtable at `0x788FB8`, original `nayukiB` NUL literal
+at `0x788FB0`, and CRT `strcpy` at `0x778080`. The 0x3458 view
+contains eight explicit initial state integers and three 64-int
+scratch arrays. The remaining child defaults are five pairs of
+collision coordinates, seven command bytes, and surfaceCount=641.
+The original command byte sequence belongs to **commands[0..6]**;
+initially assigning some of them at [10..13] produced seven literal
+code-byte differences despite the correct overall function length.
+Correcting their offsets produced an exact complete comparison.
+
+Both actual constructor consumers were selectively rebuilt and still
+exact: `scene-create-character` has **3495/3495** bytes with **97**
+relocations and `scene-loading-character` has **2651/2651** with
+**76** relocations, including owned local tables. Compiler-local
+label numbers shifted +9; all 25/26 changed symbols were rebound
+simultaneously at the same relocation positions to the exact original
+jump destinations before complete byte checks. Canonical evidence:
+`docs/evidence/nayukib-constructor-exact.json` and
+`docs/evidence/nayukib-creation-consumers-exact.json`. These focused
+checks neither refresh unrelated stale certificates nor imply full
+linked/runtime equivalence; no full cold replay was run.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

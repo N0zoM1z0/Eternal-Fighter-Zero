@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete natural VC7.1 code generation with strict original code and four reviewed relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 472,
+      "matched_bytes": 472,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x0073E7B4: original six-argument Secondary constructor call to reviewed 0x0040EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7901112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character17@@6B@",
+          "evidence": "EFZ.exe @ 0x0073E7BC: original NayukiB child vptr at 0x00788FB8 with 13 decoded virtual destinations",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7901104,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62229",
+          "evidence": "EFZ.exe @ 0x0073E7C2: exact nayukiB NUL literal verified at 0x00788FB0",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x0073E7D1: original CRT strcpy direct call to 0x00778080, Secondary.resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "119387ecc09440a4b1cea2d9ed986c6b36d8d412f28252e3d9121a5916689f47",
+      "target_extent_sha256": "119387ecc09440a4b1cea2d9ed986c6b36d8d412f28252e3d9121a5916689f47",
+      "unit": "character-17-constructor",
+      "symbol": "??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x0073E790",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "d949a0690e36c67ce6baa1bab99f666254f8fe6574ae95d81a05f56bd18c5261",
+      "source_sha256": "e160c008e4132a5f3ef8c50f6d29a3da839d683936cc64b27cc3362abcd6c276",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "c1bbe5c4baa6edba739a198cb00454461e5a0ceb7b0ed9d50038ee2a53c99d6b"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "01a0a74c4a3c5caf70b68d30ca6e6a481b0a42f24c32e4758b91901cb837b832",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "31d344376306ae2596e69a8ba79d4ce9f9684b47a66e992927c7ac7ad17c4904",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "NayukiB source recovers all eight state integers, original 7 command bytes and three 64-int scratch arrays; 472 bytes compared from canonical EFZ.exe, with 4 original call/vptr/string relocations, no cold replay."
+}

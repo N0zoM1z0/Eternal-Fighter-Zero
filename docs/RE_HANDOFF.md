@@ -30,7 +30,7 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **332 exact functions**, **1,004,250 code bytes**,
+  ledgers currently count **333 exact functions**, **1,004,722 code bytes**,
   **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -188,6 +188,25 @@ renumbering with *simultaneous* substitutions. Certificate:
 Only the three affected units were recompiled and strictly compared.
 Other stale source-dependency certificates remain open; no full cold
 replay, runtime equivalence or whole-image completion is claimed.
+
+## Newly accepted NayukiB constructor and affected callers
+
+`Character17::Character17` at `0x0073E790` is exact for the entire
+**472-byte** function and all **4** relocations. Natural C++:
+`src/Character17Frame.cpp`; selected unit `character-17-constructor`;
+public proof `docs/evidence/nayukib-constructor-exact.json`. The
+original 0x3458 object view now exposes eight state integers and three
+64-element scratch arrays. An actual original-code mismatch in command
+indices was fixed rather than ignored.
+
+The two direct constructor consumers were rebuilt after the header
+change: `scene-create-character` remains **3495/3495 Exact** with
+**97** original-bound relocations; `scene-loading-character` remains
+**2651/2651 Exact** with **76**. All 25/26 changed compiler-local
+jump-table label names shifted by +9 and were rebound to the same
+canonical branch destinations by simultaneous substitution. Proof:
+`docs/evidence/nayukib-creation-consumers-exact.json`. No full cold
+replay occurred; unrelated stale dependency proofs remain open.
 
 ## Other open substantial work
 
