@@ -1,0 +1,1208 @@
+[
+  {
+    "case": 1,
+    "compiled_start": "0x4137f9",
+    "original_start": "0x4137f9",
+    "original_size": 123,
+    "compiled_size": 123,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 2,
+    "compiled_start": "0x413874",
+    "original_start": "0x413874",
+    "original_size": 123,
+    "compiled_size": 123,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 3,
+    "compiled_start": "0x4138ef",
+    "original_start": "0x4138ef",
+    "original_size": 131,
+    "compiled_size": 131,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 4,
+    "compiled_start": "0x413972",
+    "original_start": "0x413972",
+    "original_size": 355,
+    "compiled_size": 355,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 5,
+    "compiled_start": "0x413ad5",
+    "original_start": "0x413ad5",
+    "original_size": 367,
+    "compiled_size": 367,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 6,
+    "compiled_start": "0x413c44",
+    "original_start": "0x413c44",
+    "original_size": 330,
+    "compiled_size": 330,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 7,
+    "compiled_start": "0x413d8e",
+    "original_start": "0x413d8e",
+    "original_size": 141,
+    "compiled_size": 141,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 8,
+    "compiled_start": "0x413e1b",
+    "original_start": "0x413e1b",
+    "original_size": 141,
+    "compiled_size": 141,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 9,
+    "compiled_start": "0x413ea8",
+    "original_start": "0x413ea8",
+    "original_size": 183,
+    "compiled_size": 183,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 13,
+    "compiled_start": "0x413f5f",
+    "original_start": "0x413f5f",
+    "original_size": 165,
+    "compiled_size": 165,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 14,
+    "compiled_start": "0x414004",
+    "original_start": "0x414004",
+    "original_size": 308,
+    "compiled_size": 308,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 15,
+    "compiled_start": "0x414138",
+    "original_start": "0x414138",
+    "original_size": 308,
+    "compiled_size": 308,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 16,
+    "compiled_start": "0x41426c",
+    "original_start": "0x41426c",
+    "original_size": 296,
+    "compiled_size": 296,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 47,
+    "compiled_start": "0x414394",
+    "original_start": "0x414394",
+    "original_size": 304,
+    "compiled_size": 304,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 50,
+    "compiled_start": "0x4144c4",
+    "original_start": "0x4144c4",
+    "original_size": 497,
+    "compiled_size": 497,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 51,
+    "compiled_start": "0x4146b5",
+    "original_start": "0x4146b5",
+    "original_size": 497,
+    "compiled_size": 497,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 52,
+    "compiled_start": "0x4148a6",
+    "original_start": "0x4148a6",
+    "original_size": 497,
+    "compiled_size": 497,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 53,
+    "compiled_start": "0x414a97",
+    "original_start": "0x414a97",
+    "original_size": 497,
+    "compiled_size": 497,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 54,
+    "compiled_start": "0x414c88",
+    "original_start": "0x414c88",
+    "original_size": 497,
+    "compiled_size": 497,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 55,
+    "compiled_start": "0x414e79",
+    "original_start": "0x414e79",
+    "original_size": 487,
+    "compiled_size": 487,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 56,
+    "compiled_start": "0x415060",
+    "original_start": "0x415060",
+    "original_size": 473,
+    "compiled_size": 473,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 57,
+    "compiled_start": "0x415239",
+    "original_start": "0x415239",
+    "original_size": 473,
+    "compiled_size": 473,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 58,
+    "compiled_start": "0x415412",
+    "original_start": "0x415412",
+    "original_size": 473,
+    "compiled_size": 473,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 59,
+    "compiled_start": "0x4155eb",
+    "original_start": "0x4155eb",
+    "original_size": 511,
+    "compiled_size": 511,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 60,
+    "compiled_start": "0x4157ea",
+    "original_start": "0x4157ea",
+    "original_size": 511,
+    "compiled_size": 511,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 61,
+    "compiled_start": "0x4159e9",
+    "original_start": "0x4159e9",
+    "original_size": 511,
+    "compiled_size": 511,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 62,
+    "compiled_start": "0x415be8",
+    "original_start": "0x415be8",
+    "original_size": 439,
+    "compiled_size": 439,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 63,
+    "compiled_start": "0x415d9f",
+    "original_start": "0x415d9f",
+    "original_size": 427,
+    "compiled_size": 427,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 64,
+    "compiled_start": "0x415f4a",
+    "original_start": "0x415f4a",
+    "original_size": 561,
+    "compiled_size": 561,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 65,
+    "compiled_start": "0x41617b",
+    "original_start": "0x41617b",
+    "original_size": 561,
+    "compiled_size": 561,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 66,
+    "compiled_start": "0x4163ac",
+    "original_start": "0x4163ac",
+    "original_size": 489,
+    "compiled_size": 489,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 67,
+    "compiled_start": "0x416595",
+    "original_start": "0x416595",
+    "original_size": 477,
+    "compiled_size": 477,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 68,
+    "compiled_start": "0x416772",
+    "original_start": "0x416772",
+    "original_size": 316,
+    "compiled_size": 316,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 69,
+    "compiled_start": "0x4168ae",
+    "original_start": "0x4168ae",
+    "original_size": 277,
+    "compiled_size": 277,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 70,
+    "compiled_start": "0x4169c3",
+    "original_start": "0x4169c3",
+    "original_size": 480,
+    "compiled_size": 480,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 71,
+    "compiled_start": "0x416ba3",
+    "original_start": "0x416ba3",
+    "original_size": 427,
+    "compiled_size": 427,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 72,
+    "compiled_start": "0x416d4e",
+    "original_start": "0x416d4e",
+    "original_size": 341,
+    "compiled_size": 341,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 73,
+    "compiled_start": "0x416ea3",
+    "original_start": "0x416ea3",
+    "original_size": 341,
+    "compiled_size": 341,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 74,
+    "compiled_start": "0x416ff8",
+    "original_start": "0x416ff8",
+    "original_size": 317,
+    "compiled_size": 317,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 75,
+    "compiled_start": "0x417135",
+    "original_start": "0x417135",
+    "original_size": 509,
+    "compiled_size": 509,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 76,
+    "compiled_start": "0x417332",
+    "original_start": "0x417332",
+    "original_size": 509,
+    "compiled_size": 509,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 77,
+    "compiled_start": "0x41752f",
+    "original_start": "0x41752f",
+    "original_size": 485,
+    "compiled_size": 485,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 81,
+    "compiled_start": "0x417714",
+    "original_start": "0x417714",
+    "original_size": 485,
+    "compiled_size": 485,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 82,
+    "compiled_start": "0x4178f9",
+    "original_start": "0x4178f9",
+    "original_size": 546,
+    "compiled_size": 546,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 83,
+    "compiled_start": "0x417b1b",
+    "original_start": "0x417b1b",
+    "original_size": 581,
+    "compiled_size": 581,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 84,
+    "compiled_start": "0x417d60",
+    "original_start": "0x417d60",
+    "original_size": 581,
+    "compiled_size": 581,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 85,
+    "compiled_start": "0x417fa5",
+    "original_start": "0x417fa5",
+    "original_size": 467,
+    "compiled_size": 467,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 86,
+    "compiled_start": "0x418178",
+    "original_start": "0x418178",
+    "original_size": 482,
+    "compiled_size": 482,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 87,
+    "compiled_start": "0x41835a",
+    "original_start": "0x41835a",
+    "original_size": 179,
+    "compiled_size": 179,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 96,
+    "compiled_start": "0x41840d",
+    "original_start": "0x41840d",
+    "original_size": 149,
+    "compiled_size": 149,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 97,
+    "compiled_start": "0x4184a2",
+    "original_start": "0x4184a2",
+    "original_size": 248,
+    "compiled_size": 248,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 98,
+    "compiled_start": "0x41859a",
+    "original_start": "0x41859a",
+    "original_size": 248,
+    "compiled_size": 248,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 99,
+    "compiled_start": "0x418692",
+    "original_start": "0x418692",
+    "original_size": 186,
+    "compiled_size": 186,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 150,
+    "compiled_start": "0x41874c",
+    "original_start": "0x41874c",
+    "original_size": 428,
+    "compiled_size": 428,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 151,
+    "compiled_start": "0x4188f8",
+    "original_start": "0x4188f8",
+    "original_size": 428,
+    "compiled_size": 428,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 152,
+    "compiled_start": "0x418aa4",
+    "original_start": "0x418aa4",
+    "original_size": 428,
+    "compiled_size": 428,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 153,
+    "compiled_start": "0x418c50",
+    "original_start": "0x418c50",
+    "original_size": 404,
+    "compiled_size": 404,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 154,
+    "compiled_start": "0x418de4",
+    "original_start": "0x418de4",
+    "original_size": 404,
+    "compiled_size": 404,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 155,
+    "compiled_start": "0x418f78",
+    "original_start": "0x418f78",
+    "original_size": 404,
+    "compiled_size": 404,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 156,
+    "compiled_start": "0x41910c",
+    "original_start": "0x41910c",
+    "original_size": 272,
+    "compiled_size": 272,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 157,
+    "compiled_start": "0x41921c",
+    "original_start": "0x41921c",
+    "original_size": 332,
+    "compiled_size": 332,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 158,
+    "compiled_start": "0x419368",
+    "original_start": "0x419368",
+    "original_size": 332,
+    "compiled_size": 332,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 161,
+    "compiled_start": "0x4194b4",
+    "original_start": "0x4194b4",
+    "original_size": 276,
+    "compiled_size": 276,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 162,
+    "compiled_start": "0x4195c8",
+    "original_start": "0x4195c8",
+    "original_size": 491,
+    "compiled_size": 491,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 163,
+    "compiled_start": "0x4197b3",
+    "original_start": "0x4197b3",
+    "original_size": 528,
+    "compiled_size": 528,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 164,
+    "compiled_start": "0x4199c3",
+    "original_start": "0x4199c3",
+    "original_size": 414,
+    "compiled_size": 414,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 165,
+    "compiled_start": "0x419b61",
+    "original_start": "0x419b61",
+    "original_size": 433,
+    "compiled_size": 433,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 166,
+    "compiled_start": "0x419d12",
+    "original_start": "0x419d12",
+    "original_size": 437,
+    "compiled_size": 437,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 167,
+    "compiled_start": "0x419ec7",
+    "original_start": "0x419ec7",
+    "original_size": 488,
+    "compiled_size": 488,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 168,
+    "compiled_start": "0x41a0af",
+    "original_start": "0x41a0af",
+    "original_size": 330,
+    "compiled_size": 330,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 169,
+    "compiled_start": "0x41a1f9",
+    "original_start": "0x41a1f9",
+    "original_size": 330,
+    "compiled_size": 330,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 170,
+    "compiled_start": "0x41a343",
+    "original_start": "0x41a343",
+    "original_size": 457,
+    "compiled_size": 457,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 171,
+    "compiled_start": "0x41a50c",
+    "original_start": "0x41a50c",
+    "original_size": 479,
+    "compiled_size": 479,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 178,
+    "compiled_start": "0x41a6eb",
+    "original_start": "0x41a6eb",
+    "original_size": 300,
+    "compiled_size": 300,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 180,
+    "compiled_start": "0x41a817",
+    "original_start": "0x41a817",
+    "original_size": 370,
+    "compiled_size": 370,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 200,
+    "compiled_start": "0x41a989",
+    "original_start": "0x41a989",
+    "original_size": 467,
+    "compiled_size": 467,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 201,
+    "compiled_start": "0x41ab5c",
+    "original_start": "0x41ab5c",
+    "original_size": 467,
+    "compiled_size": 467,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 202,
+    "compiled_start": "0x41ad2f",
+    "original_start": "0x41ad2f",
+    "original_size": 314,
+    "compiled_size": 314,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 203,
+    "compiled_start": "0x41ae69",
+    "original_start": "0x41ae69",
+    "original_size": 808,
+    "compiled_size": 808,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 204,
+    "compiled_start": "0x41b191",
+    "original_start": "0x41b191",
+    "original_size": 491,
+    "compiled_size": 491,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 205,
+    "compiled_start": "0x41b37c",
+    "original_start": "0x41b37c",
+    "original_size": 491,
+    "compiled_size": 491,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 206,
+    "compiled_start": "0x41b567",
+    "original_start": "0x41b567",
+    "original_size": 338,
+    "compiled_size": 338,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 207,
+    "compiled_start": "0x41b6b9",
+    "original_start": "0x41b6b9",
+    "original_size": 470,
+    "compiled_size": 470,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 208,
+    "compiled_start": "0x41b88f",
+    "original_start": "0x41b88f",
+    "original_size": 536,
+    "compiled_size": 536,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 209,
+    "compiled_start": "0x41baa7",
+    "original_start": "0x41baa7",
+    "original_size": 548,
+    "compiled_size": 548,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 220,
+    "compiled_start": "0x41bccb",
+    "original_start": "0x41bccb",
+    "original_size": 486,
+    "compiled_size": 486,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 221,
+    "compiled_start": "0x41beb1",
+    "original_start": "0x41beb1",
+    "original_size": 413,
+    "compiled_size": 413,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 230,
+    "compiled_start": "0x41c04e",
+    "original_start": "0x41c04e",
+    "original_size": 277,
+    "compiled_size": 277,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 231,
+    "compiled_start": "0x41c163",
+    "original_start": "0x41c163",
+    "original_size": 448,
+    "compiled_size": 448,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 232,
+    "compiled_start": "0x41c323",
+    "original_start": "0x41c323",
+    "original_size": 405,
+    "compiled_size": 405,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 233,
+    "compiled_start": "0x41c4b8",
+    "original_start": "0x41c4b8",
+    "original_size": 277,
+    "compiled_size": 277,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 234,
+    "compiled_start": "0x41c5cd",
+    "original_start": "0x41c5cd",
+    "original_size": 277,
+    "compiled_size": 277,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 235,
+    "compiled_start": "0x41c6e2",
+    "original_start": "0x41c6e2",
+    "original_size": 295,
+    "compiled_size": 295,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 248,
+    "compiled_start": "0x41c809",
+    "original_start": "0x41c809",
+    "original_size": 539,
+    "compiled_size": 539,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 249,
+    "compiled_start": "0x41ca24",
+    "original_start": "0x41ca24",
+    "original_size": 423,
+    "compiled_size": 423,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 250,
+    "compiled_start": "0x41cbcb",
+    "original_start": "0x41cbcb",
+    "original_size": 381,
+    "compiled_size": 381,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 251,
+    "compiled_start": "0x41cd48",
+    "original_start": "0x41cd48",
+    "original_size": 381,
+    "compiled_size": 381,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 252,
+    "compiled_start": "0x41cec5",
+    "original_start": "0x41cec5",
+    "original_size": 909,
+    "compiled_size": 909,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 253,
+    "compiled_start": "0x41d252",
+    "original_start": "0x41d252",
+    "original_size": 397,
+    "compiled_size": 397,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 254,
+    "compiled_start": "0x41d3df",
+    "original_start": "0x41d3df",
+    "original_size": 383,
+    "compiled_size": 383,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 255,
+    "compiled_start": "0x41d55e",
+    "original_start": "0x41d55e",
+    "original_size": 688,
+    "compiled_size": 688,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 256,
+    "compiled_start": "0x41d80e",
+    "original_start": "0x41d80e",
+    "original_size": 630,
+    "compiled_size": 630,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 257,
+    "compiled_start": "0x41da84",
+    "original_start": "0x41da84",
+    "original_size": 630,
+    "compiled_size": 630,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 258,
+    "compiled_start": "0x41dcfa",
+    "original_start": "0x41dcfa",
+    "original_size": 812,
+    "compiled_size": 812,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 259,
+    "compiled_start": "0x41e026",
+    "original_start": "0x41e026",
+    "original_size": 348,
+    "compiled_size": 348,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 260,
+    "compiled_start": "0x41e182",
+    "original_start": "0x41e182",
+    "original_size": 359,
+    "compiled_size": 359,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 261,
+    "compiled_start": "0x41e2e9",
+    "original_start": "0x41e2e9",
+    "original_size": 519,
+    "compiled_size": 519,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 262,
+    "compiled_start": "0x41e4f0",
+    "original_start": "0x41e4f0",
+    "original_size": 429,
+    "compiled_size": 429,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 263,
+    "compiled_start": "0x41e69d",
+    "original_start": "0x41e69d",
+    "original_size": 429,
+    "compiled_size": 429,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 264,
+    "compiled_start": "0x41e84a",
+    "original_start": "0x41e84a",
+    "original_size": 937,
+    "compiled_size": 937,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 265,
+    "compiled_start": "0x41ebf3",
+    "original_start": "0x41ebf3",
+    "original_size": 492,
+    "compiled_size": 492,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 266,
+    "compiled_start": "0x41eddf",
+    "original_start": "0x41eddf",
+    "original_size": 498,
+    "compiled_size": 498,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 267,
+    "compiled_start": "0x41efd1",
+    "original_start": "0x41efd1",
+    "original_size": 498,
+    "compiled_size": 498,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 268,
+    "compiled_start": "0x41f1c3",
+    "original_start": "0x41f1c3",
+    "original_size": 447,
+    "compiled_size": 447,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 269,
+    "compiled_start": "0x41f382",
+    "original_start": "0x41f382",
+    "original_size": 447,
+    "compiled_size": 447,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 270,
+    "compiled_start": "0x41f541",
+    "original_start": "0x41f541",
+    "original_size": 607,
+    "compiled_size": 607,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 300,
+    "compiled_start": "0x41f7a0",
+    "original_start": "0x41f7a0",
+    "original_size": 715,
+    "compiled_size": 715,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 303,
+    "compiled_start": "0x41fa6b",
+    "original_start": "0x41fa6b",
+    "original_size": 611,
+    "compiled_size": 611,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 304,
+    "compiled_start": "0x41fcce",
+    "original_start": "0x41fcce",
+    "original_size": 796,
+    "compiled_size": 796,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 305,
+    "compiled_start": "0x41ffea",
+    "original_start": "0x41ffea",
+    "original_size": 846,
+    "compiled_size": 846,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 306,
+    "compiled_start": "0x420338",
+    "original_start": "0x420338",
+    "original_size": 567,
+    "compiled_size": 567,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 307,
+    "compiled_start": "0x42056f",
+    "original_start": "0x42056f",
+    "original_size": 542,
+    "compiled_size": 543,
+    "delta": 1,
+    "instructions_equal": false
+  },
+  {
+    "case": 308,
+    "compiled_start": "0x42078e",
+    "original_start": "0x42078d",
+    "original_size": 577,
+    "compiled_size": 578,
+    "delta": 1,
+    "instructions_equal": false
+  },
+  {
+    "case": 309,
+    "compiled_start": "0x4209d0",
+    "original_start": "0x4209ce",
+    "original_size": 293,
+    "compiled_size": 293,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 310,
+    "compiled_start": "0x420af5",
+    "original_start": "0x420af3",
+    "original_size": 484,
+    "compiled_size": 484,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 311,
+    "compiled_start": "0x420cd9",
+    "original_start": "0x420cd7",
+    "original_size": 519,
+    "compiled_size": 519,
+    "delta": 0,
+    "instructions_equal": true
+  },
+  {
+    "case": 312,
+    "compiled_start": "0x420ee0",
+    "original_start": "0x420ede",
+    "original_size": 1084,
+    "compiled_size": 1084,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 313,
+    "compiled_start": "0x42131c",
+    "original_start": "0x42131a",
+    "original_size": 1085,
+    "compiled_size": 1085,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 314,
+    "compiled_start": "0x421759",
+    "original_start": "0x421757",
+    "original_size": 1119,
+    "compiled_size": 1119,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 315,
+    "compiled_start": "0x421bb8",
+    "original_start": "0x421bb6",
+    "original_size": 672,
+    "compiled_size": 671,
+    "delta": -1,
+    "instructions_equal": false
+  },
+  {
+    "case": 316,
+    "compiled_start": "0x421e57",
+    "original_start": "0x421e56",
+    "original_size": 672,
+    "compiled_size": 672,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 317,
+    "compiled_start": "0x4220f7",
+    "original_start": "0x4220f6",
+    "original_size": 706,
+    "compiled_size": 706,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 318,
+    "compiled_start": "0x4223b9",
+    "original_start": "0x4223b8",
+    "original_size": 725,
+    "compiled_size": 725,
+    "delta": 0,
+    "instructions_equal": false
+  },
+  {
+    "case": 319,
+    "compiled_start": "0x42268e",
+    "original_start": "0x42268d",
+    "original_size": 894,
+    "compiled_size": 894,
+    "delta": 0,
+    "instructions_equal": true
+  }
+]
