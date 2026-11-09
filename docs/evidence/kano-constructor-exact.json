@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete natural VC7.1 code generation, strict original code and reviewed direct relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 523,
+      "matched_bytes": 523,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x00653A44: reviewed Secondary base constructor call, six arguments to 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7900280,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character20@@6B@",
+          "evidence": "EFZ.exe @ 0x00653A4C: Kano child vptr, 13 reviewed method destinations at 0x788C78",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7900272,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62246",
+          "evidence": "EFZ.exe @ 0x00653A52: exact original kano NUL resource literal at 0x788C70",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x00653A61: original direct CRT strcpy call to 0x778080 and resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a8d28d847fe01092e40ea97979118b34024c4183cc0dc1293418f71f1bd7b2d7",
+      "target_extent_sha256": "a8d28d847fe01092e40ea97979118b34024c4183cc0dc1293418f71f1bd7b2d7",
+      "unit": "character-20-constructor",
+      "symbol": "??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x00653A20",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "dc667c8274fb99b57ec07c8cec56ca8108eba4fb9138b02953ce183f80e265b0",
+      "source_sha256": "4aa6b698c0a1e6329bc675befecaf61a36247a98054d91f117cbdf98b4373845",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "467b55a80515e92bfdb0f24fe1648a02bfca010d5e8728bc82ec4f53a4959276"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "36dbc20a13011b2b0466a212aa64a1ad8dff0ebeb79505e51f0cd6b5d908c876",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "53583e0cda2c4f89624932732eab4e34354697fd937a2dbbffbca8c7f1788e06",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Natural Character20 constructor initializes 15 state integers, original collision coordinates/commands, 3x64 arrays and preserves trailing four unknown bytes; original 523-byte target exact, no cold replay."
+}

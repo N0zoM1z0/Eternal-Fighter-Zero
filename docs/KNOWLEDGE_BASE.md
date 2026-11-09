@@ -1768,6 +1768,31 @@ jump destinations before complete byte checks. Canonical evidence:
 checks neither refresh unrelated stale certificates nor imply full
 linked/runtime equivalence; no full cold replay was run.
 
+### Kano constructor: complete exact code generation (2026-11-09)
+
+`Character20::Character20` at `0x00653A20` now has a reviewed natural
+source implementation `src/Character20Frame.cpp`. The entire original
+**523-byte** function matches the native VC7.1 result byte-for-byte
+with **four** original-bound relocations: Secondary constructor at
+`0x40EAE0`, Kano vtable at `0x788C78`, `kano` NUL literal at
+`0x788C70`, and CRT strcpy at `0x778080`. Its 0x3478-byte class
+view exposes fifteen initially zero state integers, three 64-int
+scratch arrays, exact collision offsets and three command bytes,
+retaining the four uninitialized trailing bytes rather than
+inventing fields. This is a full constructor, not an unverified stub.
+
+The two actual direct callers were rebuilt selectively and remain
+**3495/3495 Exact with 97 relocations** (`scene-create-character`)
+and **2651/2651 Exact with 76 relocations**
+(`scene-loading-character`), including their owned jump tables.
+A changed shared header renumbered 25/26 compiler-local labels by +17.
+Their unchanged original target offsets and exact relocation positions
+were verified before simultaneous symbol mapping, then the complete
+caller bytes were compared independently. Public evidence:
+`docs/evidence/kano-constructor-exact.json` and
+`docs/evidence/kano-creation-consumers-exact.json`. Unrelated
+stale-header certificates and whole-image/runtime checks remain open.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

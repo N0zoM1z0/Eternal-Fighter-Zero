@@ -30,7 +30,7 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **333 exact functions**, **1,004,722 code bytes**,
+  ledgers currently count **334 exact functions**, **1,005,245 code bytes**,
   **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -207,6 +207,26 @@ jump-table label names shifted by +9 and were rebound to the same
 canonical branch destinations by simultaneous substitution. Proof:
 `docs/evidence/nayukib-creation-consumers-exact.json`. No full cold
 replay occurred; unrelated stale dependency proofs remain open.
+
+## Newly accepted Kano constructor and affected callers
+
+`Character20::Character20` at `0x00653A20` is fully Exact for **523
+code bytes** with zero differences and four reviewed relocations.
+Natural source `src/Character20Frame.cpp`, selected unit
+`character-20-constructor`, and public proof
+`docs/evidence/kano-constructor-exact.json`. The 0x3478 character
+view has 15 zeroed child-state integers and three 64-int arrays;
+the final four unknown bytes remain unwritten.
+
+After updating the original-size class view, both actual direct
+construction callers were rebuilt and strictly reverified:
+`scene-create-character` stays **3495/3495** Exact (97 bound
+relocations) and `scene-loading-character` stays **2651/2651** Exact
+(76 bound relocations), including the complete owned jump tables.
+25/26 compiler-local switch labels shifted by +17; each binding was
+reviewed at its unchanged relocation position and original target
+jump destination. Proof `docs/evidence/kano-creation-consumers-exact.json`.
+No full cold replay or whole-linked-product claim follows from this.
 
 ## Other open substantial work
 
