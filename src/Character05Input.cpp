@@ -15,7 +15,7 @@ void Character05::Slot04()
     if (field01a9 == '\0') {
         field01aa = 0;
     }
-    if ((field0262 == 0x34) && (((((field0118 >= 500.0 && (1 < field0168)) && (field0168 != 6)) || (('\0' < (char)field0120 && (1 < field0168)))) && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (sequences[field0008].field0002 <= sequences[167].field0000)))))) {
+    if ((field0262 == 0x34) && (((((field0118 >= 500.0 && (1 < field0168)) && (field0168 != 6)) || (('\0' < (char)field0120 && (1 < field0168)))) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (sequences[field0008].field0002 <= sequences[167].field0000)))))) {
         ResetPose();
         ClearBufferedButtons();
         field0008 = 0xa7;
@@ -25,7 +25,7 @@ void Character05::Slot04()
         return;
     }
     if (field015c < 2) {
-        if ((((field0108 < 0xd05) && (field0262 == 0x62)) && ((field0148 >= 3000 && ((((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)) && (field0168 != 6)))))) && (sequences[field0008].field0002 <= sequences[303].field0000)) {
+        if ((((field0108 < 0xd05) && (field0262 == 0x62)) && ((field0148 >= 3000 && ((((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)) && (field0168 != 6)))))) && (sequences[field0008].field0002 <= sequences[303].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x12f;
@@ -35,103 +35,103 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0x70) && (field0148 >= 3000)) && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[316].field0000)) {
+        if (((((field0262 == 0x70) && (field0148 >= 3000)) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[316].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x13c;
             return;
         }
-        if (((((field0262 == 0x6f) || (field0262 == 0x70)) && (field0148 >= 2000)) && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[315].field0000)))) {
+        if (((((field0262 == 0x6f) || (field0262 == 0x70)) && (field0148 >= 2000)) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[315].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x13b;
             return;
         }
-        if ((((((field0262 == 0x6e) || (field0262 == 0x6f) ) || (field0262 == 0x70)) && ((field0148 >= 1000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && ((positionY == 0.0 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) && (sequences[field0008].field0002 <= sequences[314].field0000)) {
+        if ((((((field0262 == 0x6e) || (field0262 == 0x6f) ) || (field0262 == 0x70)) && ((field0148 >= 1000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((positionY == 0.0 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) && (sequences[field0008].field0002 <= sequences[314].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x13a;
             return;
         }
-        if ((((field0262 == 0x7a) && (field0148 >= 3000)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((positionY == 0.0 && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[310].field0000)))))) {
+        if ((((field0262 == 0x7a) && (field0148 >= 3000)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((positionY == 0.0 && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[310].field0000)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x136;
             return;
         }
-        if ((((field0262 == 0x79) || (field0262 == 0x7a)) && ((field0148 >= 2000 && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[309].field0000)))) {
+        if ((((field0262 == 0x79) || (field0262 == 0x7a)) && ((field0148 >= 2000 && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[309].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x135;
             return;
         }
-        if ((((((field0262 == 0x78) || (field0262 == 0x79) ) || (field0262 == 0x7a)) && ((field0148 >= 1000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[308].field0000)))) {
+        if ((((((field0262 == 0x78) || (field0262 == 0x79) ) || (field0262 == 0x7a)) && ((field0148 >= 1000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[308].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x134;
             return;
         }
-        if (((((field0262 == 0xac) && (field0148 >= 3000)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[321].field0000)))) {
+        if (((((field0262 == 0xac) && (field0148 >= 3000)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[321].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x141;
             return;
         }
-        if ((((field0262 == 0xab) || (field0262 == 0xac)) && ((field0148 >= 2000 && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[319].field0000)))) {
+        if ((((field0262 == 0xab) || (field0262 == 0xac)) && ((field0148 >= 2000 && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))))) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[319].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x13f;
             return;
         }
-        if ((((((field0262 == 0xaa) || (field0262 == 0xab) ) || (field0262 == 0xac)) && (((field0148 >= 1000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[317].field0000)) {
+        if ((((((field0262 == 0xaa) || (field0262 == 0xab) ) || (field0262 == 0xac)) && (((field0148 >= 1000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[317].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x13d;
             return;
         }
-        if ((((field0262 == 0x48) && ((((field0118 >= 500.0 || ('\0' < (char)field0120)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[252].field0000)) {
+        if ((((field0262 == 0x48) && ((((field0118 >= 500.0 || ('\0' < (char)field0120)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[252].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfc;
             return;
         }
-        if ((((field0262 == 0x47) || (field0262 == 0x48)) && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[251].field0000)))) {
+        if ((((field0262 == 0x47) || (field0262 == 0x48)) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[251].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfb;
             return;
         }
-        if (((field0262 == 0x46) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (((positionY == 0.0 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[250].field0000)))) {
+        if (((field0262 == 0x46) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((positionY == 0.0 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[250].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfa;
             return;
         }
-        if ((((field0262 == 0x49) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[283].field0000)))) {
+        if ((((field0262 == 0x49) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[283].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x11b;
             return;
         }
-        if ((((field0262 == 0x16) && ((field0118 >= 500.0 || ('\0' < (char)field0120)))) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((positionY == 0.0 && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[268].field0000)))))) {
+        if ((((field0262 == 0x16) && ((field0118 >= 500.0 || ('\0' < (char)field0120)))) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((positionY == 0.0 && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[268].field0000)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x10c;
             return;
         }
-        if (((((field0262 == 0x15) || (field0262 == 0x16)) && (((sequences[field0008].data[field000a].field00b0 & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[267].field0000)) {
+        if (((((field0262 == 0x15) || (field0262 == 0x16)) && (((sequences[field0008].data[field000a].frameFlags & 8) > 0 && (positionY == 0.0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[267].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x10b;
             return;
         }
-        if ((((field0262 == 0x14) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[266].field0000)))) {
+        if ((((field0262 == 0x14) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionY == 0.0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[266].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x10a;
             return;
         }
-        if ((((field0262 == 0xc) && ((field0118 >= 500.0 || ('\0' < (char)field0120)))) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[261].field0000)))) {
+        if ((((field0262 == 0xc) && ((field0118 >= 500.0 || ('\0' < (char)field0120)))) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[261].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x105;
@@ -140,7 +140,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((((field0262 == 0xb) || (field0262 == 0xc)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[260].field0000)) {
+        if (((((field0262 == 0xb) || (field0262 == 0xc)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) && (sequences[field0008].field0002 <= sequences[260].field0000)) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x104;
@@ -149,7 +149,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((field0262 == 10) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[259].field0000)))) {
+        if (((field0262 == 10) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)) && (sequences[field0008].field0002 <= sequences[259].field0000)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x103;
@@ -158,7 +158,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x21) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (sequences[field0008].field0002 <= sequences[273].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+        if ((((field0262 == 0x21) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (sequences[field0008].field0002 <= sequences[273].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x111;
@@ -167,7 +167,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((field0262 == 0x20) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((sequences[field0008].field0002 <= sequences[274].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
+        if (((field0262 == 0x20) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((sequences[field0008].field0002 <= sequences[274].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x112;
@@ -176,7 +176,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((field0262 == 0x1f) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((sequences[field0008].field0002 <= sequences[289].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
+        if (((field0262 == 0x1f) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((sequences[field0008].field0002 <= sequences[289].field0000 && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x121;
@@ -185,7 +185,7 @@ void Character05::Slot04()
             }
             return;
         }
-        if ((((field0262 == 0x1e) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (sequences[field0008].field0002 <= sequences[272].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+        if ((((field0262 == 0x1e) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (sequences[field0008].field0002 <= sequences[272].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0x110;
@@ -197,7 +197,7 @@ void Character05::Slot04()
     }
     if ((field015c < 1) && ((field0262 == 0 || (field0262 == 1)))) {
         if ((positionY < 0.0) && (field0159 < 1)) {
-            if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0 ) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (positionY < -40.0)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0 ) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (positionY < -40.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa5) {
                     ResetPose();
                 }
@@ -207,7 +207,7 @@ void Character05::Slot04()
                 field01a8 = 0;
                 return;
             }
-            if (((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == 1 - field0262 * 2)))) && (((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))))) {
+            if (((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2)) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == 1 - field0262 * 2)))) && (((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))))) {
                 if (field0008 != 0xa6) {
                     ResetPose();
                 }
@@ -218,7 +218,7 @@ void Character05::Slot04()
                 return;
             }
         }
-        if ((positionY == 0.0) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) {
+        if ((positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) {
             if ((((((*opponentSlot)->positionX - positionX) * (1 - field0262 * 2) < 0.0) || ((0.0 == (*opponentSlot)->positionX - positionX && ((int)(char)facing == ((1 - field0262 * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[163].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 if (field0008 != 0xa3) {
                     ResetPose();
@@ -240,7 +240,7 @@ void Character05::Slot04()
             }
         }
     }
-    if ((((((field015c < 3) && (field0262 == 6)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((positionY < 0.0 && (field015a < 1)))) && (sequences[field0008].field0002 <= sequences[14].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+    if ((((((field015c < 3) && (field0262 == 6)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((positionY < 0.0 && (field015a < 1)))) && (sequences[field0008].field0002 <= sequences[14].field0000)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
         ResetPose();
         ClearBufferedButtons();
         ++field015a;
@@ -264,7 +264,7 @@ void Character05::Slot04()
             return;
         }
         if (positionY < 0.0) {if (sequences[field0008].field0002 <= sequences[207].field0000 &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -272,13 +272,13 @@ void Character05::Slot04()
             }
             return;
         }
-        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && ((sequences[field0008].field0002 <= sequences[204].field0000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
+        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && ((sequences[field0008].field0002 <= sequences[204].field0000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xcc;
             return;
         }
-        if ((((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) && (((sequences[field0008].field0002 <= sequences[200].field0000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))))) {
+        if ((((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) && (((sequences[field0008].field0002 <= sequences[200].field0000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 200;
@@ -296,7 +296,7 @@ void Character05::Slot04()
             return;
         }
         if (positionY < 0.0) {if (sequences[field0008].field0002 <= sequences[208].field0000 &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -304,32 +304,32 @@ void Character05::Slot04()
             }
             return;
         }
-        if ((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && (((((int)(char)inputX == -(int)(char)facing && (sequences[field0008].field0002 <= sequences[211].field0000)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
+        if ((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && (((((int)(char)inputX == -(int)(char)facing && (sequences[field0008].field0002 <= sequences[211].field0000)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xd3;
             return;
         }
-        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && ((sequences[field0008].field0002 <= sequences[205].field0000 && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
+        if (((((inputY == '\x01') || ((field01a8 & 4) != 0)) || ((field01a9 & 4) != 0)) && ((sequences[field0008].field0002 <= sequences[205].field0000 && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xcd;
             return;
         }
         if (((inputY == '\0') || ((field01a8 & 4) == 0)) || ((field01a9 & 4) == 0)) {
-            if (((((char)inputX == (char)facing) && (sequences[field0008].field0002 <= sequences[210].field0000)) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if (((((char)inputX == (char)facing) && (sequences[field0008].field0002 <= sequences[210].field0000)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xd2;
                 return;
             }
-            if (((((sequences[field0008].field0002 <= sequences[201].field0000) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (positionX - (*opponentSlot)->positionX > -70.0)) && (positionX - (*opponentSlot)->positionX < 70.0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
+            if (((((sequences[field0008].field0002 <= sequences[201].field0000) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (positionX - (*opponentSlot)->positionX > -70.0)) && (positionX - (*opponentSlot)->positionX < 70.0)) && ((((field0008 >= 200 && (field0168 >= 2)) && (field0168 != 6)) || (field0008 < 200)))) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xc9;
                 return;
             }
-            if (((sequences[field0008].field0002 <= sequences[202].field0000) && ((sequences[field0008].data[field000a].field00b0 & 8) > 0)) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
+            if (((sequences[field0008].field0002 <= sequences[202].field0000) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) && (((field0008 >= 200 && ((field0168 >= 2 && (field0168 != 6)))) || (field0008 < 200)))) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xca;
@@ -354,7 +354,7 @@ void Character05::Slot04()
                 (*opponentSlot)->positionY < 0.0 &&
                 sequences[field0008].field0002 <= sequences[248].field0000 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 156) &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -362,7 +362,7 @@ void Character05::Slot04()
                 return;
             }
             if (sequences[field0008].field0002 <= sequences[209].field0000 &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -372,7 +372,7 @@ void Character05::Slot04()
         }
         if ((inputY == 1 || (field01a8 & 4) != 0 || (field01a9 & 4) != 0) &&
             sequences[field0008].field0002 <= sequences[206].field0000 &&
-            (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
             ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
             ResetPose();
             ClearBufferedButtons();
@@ -385,7 +385,7 @@ void Character05::Slot04()
                 positionX - (*opponentSlot)->positionX < 30.0 &&
                 sequences[field0008].field0002 <= sequences[220].field0000 &&
                 ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 156) &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
@@ -393,7 +393,7 @@ void Character05::Slot04()
                 return;
             }
             if (sequences[field0008].field0002 <= sequences[203].field0000 &&
-                (sequences[field0008].data[field000a].field00b0 & 8) > 0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && field0168 >= 2 && field0168 != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();

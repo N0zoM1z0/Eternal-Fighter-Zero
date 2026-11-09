@@ -30,11 +30,11 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                         work.defenseBoxes[i] = TransformSnapshotBox(secondPose, &work.secondFrame.boxes0000[i]);
                     }
                     specialBounds = TransformSnapshotBox(secondPose, &work.secondFrame.box0090);
-                    if (firstPose->state == 0 && (work.secondFrame.field00b0 & 0x20) == 0 &&
+                    if (firstPose->state == 0 && (work.secondFrame.frameFlags & 0x20) == 0 &&
                         firstPose->command > 0 &&
-                        !(second->field0130 > 0 && (work.firstFrame.field00aa & 0x40) > 0) &&
+                        !(second->field0130 > 0 && (work.firstFrame.attackFlags & 0x40) > 0) &&
                         second->AirActionReady() == 0 && second->field013c == 0) {
-                        if ((work.firstFrame.field00aa & 0x40) > 0) {
+                        if ((work.firstFrame.attackFlags & 0x40) > 0) {
                             for (i = 0; i < 4; ++i) {
                                 work.overlap[i][0] = 1;
                                 work.found |= BoxesOverlap(&work.attackBoxes[i], &specialBounds);
@@ -63,17 +63,17 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     }
                                 }
                             }
-                            if (((((work.secondFrame.field00b0 & 0x1000) > 0) && ((work.firstFrame.field00aa & 0x100) == 0)) && ((work.firstFrame.field00aa & 1) > 0))) {
+                            if (((((work.secondFrame.frameFlags & 0x1000) > 0) && ((work.firstFrame.attackFlags & 0x100) == 0)) && ((work.firstFrame.attackFlags & 1) > 0))) {
                                 --first->field016c;
                                 first->field0168 = 2;
                                 first->field0168 = 6;
                                 second->field0168 = 6;
-                            } else if (((((work.secondFrame.field00b0 & 0x800) > 0) && ((work.firstFrame.field00aa & 0x100) == 0)) && ((work.firstFrame.field00aa & 2) > 0))) {
+                            } else if (((((work.secondFrame.frameFlags & 0x800) > 0) && ((work.firstFrame.attackFlags & 0x100) == 0)) && ((work.firstFrame.attackFlags & 2) > 0))) {
                                 --first->field016c;
                                 first->field0168 = 2;
                                 first->field0168 = 6;
                                 second->field0168 = 6;
-                            } else if ((((second->field0170 != 0) && (second->field014e >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.field00aa & 0x80) == 0))))) {
+                            } else if ((((second->field0170 != 0) && (second->field014e >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.attackFlags & 0x80) == 0))))) {
                                 first->field0168 = 2;
                                 first->field0148 += work.firstFrame.guardMeterGain;
                                 --first->field016c;
@@ -145,7 +145,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->ClearInputHistory();
                                 second->field014c = 0x3c;
                                 first->field0170 = 1;
-                            } else if ((((work.secondFrame.field00b0 & 0x200) > 0) && (((work.secondFrame.field00aa & 1) > 0) && ((work.firstFrame.field00aa & 1) > 0)))) {
+                            } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 1) > 0) && ((work.firstFrame.attackFlags & 1) > 0)))) {
                                 --first->field016c;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -168,7 +168,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0134 > 360.0f) {
                                     second->field0134 = 360.0f;
                                 }
-                            } else if ((((work.secondFrame.field00b0 & 0x200) > 0) && (((work.secondFrame.field00aa & 2) > 0) && ((work.firstFrame.field00aa & 2) > 0)))) {
+                            } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 2) > 0) && ((work.firstFrame.attackFlags & 2) > 0)))) {
                                 --first->field016c;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -191,7 +191,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0134 > 360.0f) {
                                     second->field0134 = 360.0f;
                                 }
-                            } else if ((((work.secondFrame.field00b0 & 0x200) > 0) && ((((work.secondFrame.field00aa & 4) > 0) && ((work.firstFrame.field00aa & 4) > 0)) && (second->positionY < 0.0)))) {
+                            } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && ((((work.secondFrame.attackFlags & 4) > 0) && ((work.firstFrame.attackFlags & 4) > 0)) && (second->positionY < 0.0)))) {
                                 --first->field016c;
                                 effect.owner = 0;
                                 effect.x = (double)((intersection.right + intersection.left) / 2);
@@ -223,9 +223,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.layer = 1;
                                 effect.payload = 0;
                                 second->field0008 =
-                                ((work.firstFrame.field00aa & 0x10) / 16) + 0x96 +
-                                ((work.firstFrame.field00aa & 0x20) / 32) * 2 + (((second->inputY == '\x01') ||
-                                    (((work.firstFrame.field00aa & work.secondFrame.field00b0 & 5) == 0 && (second->cpuControlled != 0)))) ? 1 : 0) * 3;
+                                ((work.firstFrame.attackFlags & 0x10) / 16) + 0x96 +
+                                ((work.firstFrame.attackFlags & 0x20) / 32) * 2 + (((second->inputY == '\x01') ||
+                                    (((work.firstFrame.attackFlags & work.secondFrame.frameFlags & 5) == 0 && (second->cpuControlled != 0)))) ? 1 : 0) * 3;
                                 if (second->positionY < 0.0) {
                                     second->field0008 = 0x9c;
                                 }
@@ -255,20 +255,20 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 effect.palette = 3;
                                 contextOwner->EmitEffect(&effect);
                             } else {
-                                if (((work.secondFrame.field00b0 & 4) == 0 && second->field0138 == 0) ||
-                                    (((work.secondFrame.field00b0 & 4) > 0 || second->field0138 > 0) && (work.firstFrame.field00aa & 0x100) > 0) ||
-                                    (work.firstFrame.field00aa & 0x40) > 0) {
+                                if (((work.secondFrame.frameFlags & 4) == 0 && second->field0138 == 0) ||
+                                    (((work.secondFrame.frameFlags & 4) > 0 || second->field0138 > 0) && (work.firstFrame.attackFlags & 0x100) > 0) ||
+                                    (work.firstFrame.attackFlags & 0x40) > 0) {
                                     if (second->positionY >= 0.0) {
                                         if (work.firstFrame.groundHitState > 0) {
                                             second->field0008 = work.firstFrame.groundHitState;
-                                        } else if ((work.secondFrame.field00b0 & 3) == 3) {
+                                        } else if ((work.secondFrame.frameFlags & 3) == 3) {
                                             second->field0008 = 59;
-                                        } else if ((work.secondFrame.field00b0 & 1) != 0) {
-                                            second->field0008 = ((work.firstFrame.field00aa & 8) > 0) * 3 + 50
-                                            + ((work.firstFrame.field00aa & 0x10) > 0) + ((work.firstFrame.field00aa & 0x20) > 0) * 2;
-                                        } else if ((work.secondFrame.field00b0 & 2) != 0) {
-                                            second->field0008 = ((work.firstFrame.field00aa & 0x10) > 0) + 56
-                                            + ((work.firstFrame.field00aa & 0x20) > 0) * 2;
+                                        } else if ((work.secondFrame.frameFlags & 1) != 0) {
+                                            second->field0008 = ((work.firstFrame.attackFlags & 8) > 0) * 3 + 50
+                                            + ((work.firstFrame.attackFlags & 0x10) > 0) + ((work.firstFrame.attackFlags & 0x20) > 0) * 2;
+                                        } else if ((work.secondFrame.frameFlags & 2) != 0) {
+                                            second->field0008 = ((work.firstFrame.attackFlags & 0x10) > 0) + 56
+                                            + ((work.firstFrame.attackFlags & 0x20) > 0) * 2;
                                         }
                                     } else {
                                         if (work.firstFrame.airHitState > 0) second->field0008 = work.firstFrame.airHitState;
@@ -282,7 +282,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                     second->SetCharacterTint(0xdf,3);
                                     first->field0168 = 7;
                                 }
-                                if ((work.secondFrame.field00b0 & 0x10) > 0) {
+                                if ((work.secondFrame.frameFlags & 0x10) > 0) {
                                     first->field0174 = 0;
                                     if (first->field0178 > 10000.0) {
                                         first->field0178 =
@@ -297,11 +297,11 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (first->field0174 == 0) {
                                     second->field010c = second->field0108;
                                 }
-                                first->field0144 = (((work.firstFrame.field00aa & 0x2000) > 0) && ((work.secondFrame.field00b0 & 0x2000) > 0)) ? 1 : 0;
+                                first->field0144 = (((work.firstFrame.attackFlags & 0x2000) > 0) && ((work.secondFrame.frameFlags & 0x2000) > 0)) ? 1 : 0;
                                 second->field0108 -= (int)(work.firstFrame.damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                                 second->field0124 = (short)(work.firstFrame.airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
-                                second->field0128 = (unsigned int)((work.firstFrame.field00aa & 0x400) > 0);
-                                second->field012c = (unsigned int)((work.firstFrame.field00aa & 0x800) > 0);
+                                second->field0128 = (unsigned int)((work.firstFrame.attackFlags & 0x400) > 0);
+                                second->field012c = (unsigned int)((work.firstFrame.attackFlags & 0x800) > 0);
                                 second->field0158 = 0;
                                 second->field0159 = 0;
                                 second->field015a = 0;

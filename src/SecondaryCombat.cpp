@@ -5,9 +5,9 @@
 int Secondary::CanGuard(const SecondaryFrame *attack, const SecondaryFrame *defense)
 {
     if (field013a > 0) return 0;
-    if ((attack->field00aa & 0x80) > 0) return 0;
-    if ((defense->field00b0 & 0x10) == 0) return 0;
-    if ((attack->field00aa & 4) == 0 && positionY < 0.0 && field014e < 30) return 0;
+    if ((attack->attackFlags & 0x80) > 0) return 0;
+    if ((defense->frameFlags & 0x10) == 0) return 0;
+    if ((attack->attackFlags & 4) == 0 && positionY < 0.0 && field014e < 30) return 0;
     if (GuardInput(attack) == 0) return 0;
     return 1;
 }
@@ -19,16 +19,16 @@ int Secondary::GuardInput(const SecondaryFrame *attack)
             if (contextOwner->counter1348 == 0) return 0;
         } else {
             if (float(std::rand()) > field00a8 * 10000.0f) return 0;
-            if ((attack->field00aa & 1) == 0) inputY = 1;
-            else if ((attack->field00aa & 2) == 0) inputY = 0;
+            if ((attack->attackFlags & 1) == 0) inputY = 1;
+            else if ((attack->attackFlags & 2) == 0) inputY = 0;
         }
-        if (((attack->field00aa & 2) == 0 && inputY == 1 && positionY == 0.0)
-        || ((attack->field00aa & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
+        if (((attack->attackFlags & 2) == 0 && inputY == 1 && positionY == 0.0)
+        || ((attack->attackFlags & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
     } else {
         if (inputX != 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
         && (IsStateGroupA() == 0 || inputX == 0)) return 0;
-        if (((attack->field00aa & 2) == 0 && inputY == 1 && positionY == 0.0)
-        || ((attack->field00aa & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
+        if (((attack->attackFlags & 2) == 0 && inputY == 1 && positionY == 0.0)
+        || ((attack->attackFlags & 1) == 0 && inputY != 1 && positionY == 0.0)) return 0;
     }
     return 1;
 }

@@ -246,7 +246,7 @@ void Scene3::RenderHud()
                     (secondary[work.player]->positionY < 0.0)) &&
                     ((secondary[work.player]->field0008 >= 50 &&
                     (secondary[work.player]->field0008 < 0x96)))) &&
-                    ((secondary[work.player]->sequences[secondary[work.player]->field0008].data[secondary[work.player]->field000a].field00aa & 0x400) == 0)) {
+                    ((secondary[work.player]->sequences[secondary[work.player]->field0008].data[secondary[work.player]->field000a].attackFlags & 0x400) == 0)) {
                     if (secondary[work.player]->facing == '\x01') {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
                             work.destination.left = (int)secondary[work.player]->positionX + field045c + work.stroke;

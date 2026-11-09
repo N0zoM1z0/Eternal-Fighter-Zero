@@ -146,9 +146,9 @@ void Secondary::LoadPatterns()
                                         frame->u = reader.ReadInt();
                                         frame->v = reader.ReadInt();
                                         extra->damage = reader.ReadInt();
-                                        extra->field00aa = reader.ReadInt();
+                                        extra->attackFlags = reader.ReadInt();
                                         extra->airHitState = reader.ReadInt();
-                                        extra->field00b0 = reader.ReadInt();
+                                        extra->frameFlags = reader.ReadInt();
                                         extra->airActionLockFrames = reader.ReadInt();
                                         extra->guardDamage = reader.ReadInt();
                                         extra->hitMeterGain = reader.ReadInt();
