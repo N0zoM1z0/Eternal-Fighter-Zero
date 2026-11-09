@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-249 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3553,9 +3553,75 @@ void Character03::Slot06()
         }
         return;
 
+    case 249: // Original block 0x005F223A: airborne throw and landing impact
+        hitInvulnerabilityFrames = 30;
+        (*opponentSlot)->hitInvulnerabilityFrames = 30;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = -2.5;
+            velocityY = -4.5;
+            gravity = 0.045;
+        }
+        velocityY += gravity;
+        if (field000a < 8) {
+            velocityX += 0.035;
+            if (velocityX >= 0.0) {
+                velocityX = 0.0;
+            }
+            (*opponentSlot)->positionY = positionY;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
+            if (positionY + velocityY >= 0.0) {
+                positionY = 0.0;
+                (*opponentSlot)->positionY = 0.0;
+                (*opponentSlot)->positionX = positionX;
+                field000c = 0;
+                field000a = 8;
+                effect.type = 0;
+                effect.palette = 2;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 2;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                (*opponentSlot)->ResetPose();
+                (*opponentSlot)->field0008 = 98;
+                return;
+            }
+        }
+        if (field000a == 8 && field000c == 0) {
+            hitstopFrames = 60;
+            (*opponentSlot)->hitstopFrames = 60;
+            ApplyDamage(1100, 500.0);
+        }
+        if (field000a == 9 && field000c == 0) {
+            velocityY = -1.5;
+            velocityX = -1.3;
+            gravity = 0.035;
+        }
+        if (field000a > 9 && positionY + velocityY >= 0.0) {
+            ResetPose();
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 13;
+            return;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 3) {
+                (*opponentSlot)->field0008 = 121;
+            }
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 25 explicit cases. The target's true default path also
+        // the other 24 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

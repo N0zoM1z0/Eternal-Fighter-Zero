@@ -799,6 +799,26 @@ work, not the original behavior for valid unimplemented animations.
   1 directly, with no ResetPose call. The original 426-byte block
   was checked against EFZ.exe; the C++ draft compiled under VC7.1.
 
+- Animation ID 249 (0x005F223A..0x005F2562, 808 bytes) is the
+  continuing aerial throw after state 248. It sets both characters'
+  hitInvulnerabilityFrames to 30 and clears dash momentum on every
+  tick; first pose/tick speed is (-2.5,-4.5) with gravity 0.045.
+  Gravity integrates each tick. While pose<8, horizontal speed rises
+  by 0.035 and clamps at zero, while the opponent follows self Y
+  and self X+19*facing. Projected ground contact in this phase
+  moves both characters to Y=0 and the same X, forces pose 8/tick 0,
+  emits **context** effect 0 with palette 2/group 2/layer 1 at
+  truncated position, then calls opponent ResetPose and switches
+  opponent to state 98. Pose 8/tick zero gives both characters
+  60 hitstop frames and calls ApplyDamage(1100,500.0). Pose 9/tick
+  zero sets velocity (-1.3,-1.5) and gravity 0.035. Ground contact
+  after pose 9 calls self ResetPose, then ResetFrame, grounds Y and
+  enters landing state 13. On each frame advance it clears the hit
+  result; pose 3 selects opponent state 121 and final poses loop by
+  subtracting two. These original commands and all 808 instruction
+  bytes were checked against EFZ.exe, including x87 constants;
+  the partial VC7.1 owner compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -824,7 +844,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 249 and onward directly from reviewed target instructions,
+Extend case 250 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
