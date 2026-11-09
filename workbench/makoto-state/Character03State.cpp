@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-62 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47 and 50-63 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -785,6 +785,45 @@ void Character03::Slot06()
             meter = (short)(meter + 30);
             velocityX = knockbackVelocityX;
             velocityY = velocityY * 0.75 + knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 63: // Original block 0x005EAC5D: direct-velocity aerial hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
             gravity = 0.032;
         }
         if (velocityY <= 0.0) {

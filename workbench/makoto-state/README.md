@@ -124,6 +124,14 @@ work, not the original behavior for valid unimplemented animations.
   rule are independently present in the original 0x005EAAA6..0x005EAC5D
   instructions. Unlike cases 59-61, no -2/-4/-6 or -0.5 clamp is executed.
 
+- Animation ID 63 (block 0x005EAC5D, 427 bytes) differs from case 62
+  only in its initial vertical-speed assignment: on pose 0/tick 0 it takes
+  knockbackVelocityY directly, without combining it with the previous speed.
+  It still grants 30 meter, copies knockbackVelocityX, uses gravity=0.032,
+  and preserves the same sign-based poses, two-frame loop and 0x61/0x62
+  landing choice. The removed x87 multiply/add accounts for the target
+  block being 12 bytes shorter than animation 62.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -143,7 +151,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 63 and onward directly from reviewed target instructions,
+Extend cases 64 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
