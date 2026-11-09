@@ -378,6 +378,25 @@ work, not the original behavior for valid unimplemented animations.
   FaceOpponent calls and all 2,496 instruction bytes were checked
   against the current EFZ.exe. The partial draft compiles with VC7.1.
 
+- Animation ID 156 (0x005EDFBF..0x005EE0CF, 272 bytes) starts
+  with velocityY=-2.6, meter+15, gravity=0.06, then enforces
+  velocityX=-1.2 and adds gravity every tick. On pose exhaustion it
+  enters state 9 and resets; on grounded contact it requests sound 9,
+  faces the opponent and enters animation 13 instead.
+
+- Animation IDs 157 and 158 (0x005EE0CF..0x005EE223 and
+  0x005EE223..0x005EE377, 340 bytes each) implement a mirrored
+  air-effect launch. They set velocityX to +1.0/-1.0, gravity=0.045
+  and clear dash momentum each tick. On their first pose/tick they set
+  vertical speed -2.3 and emit context effect 8 with group 2/layer 0
+  at truncated character position; otherwise they add gravity. When
+  the pose expires, **both subtract two from the advanced pose** rather
+  than returning to state 9. This differs from the accepted Character07
+  implementation and was verified against Makoto's own instructions.
+  Landing uses the same sound-9, FaceOpponent, animation-13 transition.
+  All three original 952-byte blocks and constants were checked against
+  EFZ.exe and the partial source compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the

@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99 and 150-155 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99 and 150-158 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2007,9 +2007,99 @@ void Character03::Slot06()
         }
         return;
 
+    case 156: // Original block 0x005EDFBF: forward airborne knockback
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.6;
+            meter = (short)(meter + 15);
+            gravity = 0.06;
+        }
+        velocityX = -1.2;
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 157: // Original block 0x005EE0CF: aerial effect with two-frame loop
+        velocityX = 1.0;
+        gravity = 0.045;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        } else {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 158: // Original block 0x005EE223: opposite-direction aerial effect
+        velocityX = -1.0;
+        gravity = 0.045;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        } else {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 65 explicit cases. The target's true default path also
+        // the other 62 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
