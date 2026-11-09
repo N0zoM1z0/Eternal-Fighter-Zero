@@ -757,6 +757,20 @@ work, not the original behavior for valid unimplemented animations.
   double constants were checked directly in EFZ.exe; the complete
   partial dispatcher compiled under VC7.1.
 
+- Animation IDs 233 and 234 (0x005F1C6F..0x005F1DB5 and
+  0x005F1DB5..0x005F1EFB, 326 bytes each) are independently
+  dispatched crouch-terminal trail strikes. The first arm clears
+  dash momentum *before* StartTrail(3), while the second starts the
+  trail first. Both preserve the 0.03 positive-horizontal-speed
+  friction and clamp negative speed to zero, and only the initial
+  pose/tick zeroes velocityY. State 233 grants 5 meter, sound 21 and
+  one hit on pose 1/tick zero; state 234 grants 10 meter, sound 20 and
+  one hit on pose 2/tick zero. Every expired frame clears
+  attackCollisionResult; both finish in **state 3**, followed by
+  ResetPose without FaceOpponent. They must not be grouped with
+  states 230/231, which finish in state 0. All 652 original bytes
+  were compared against EFZ.exe, and the partial VC7.1 owner builds.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -782,7 +796,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 233 and onward directly from reviewed target instructions,
+Extend case 235 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
