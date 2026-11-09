@@ -155,6 +155,13 @@ work, not the original behavior for valid unimplemented animations.
   comparison shows case 66 omits the 19 clamp instructions (72 bytes)
   from the 561-byte case 64; gravity, pose cycle and landing branches remain.
 
+- Animation ID 67 (block 0x005EB453, 477 bytes) is the direct-vertical
+  counterpart of case 66. The initial speed is taken directly from
+  knockbackVelocityY instead of old velocityY * 0.75 + knockbackVelocityY.
+  The target removes the three x87 instructions for that blending
+  operation (12 bytes). The collision-side escape to state 70, meter award,
+  gravity, two-pose loop and knockdown landing behavior are preserved.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -174,7 +181,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 67 and onward directly from reviewed target instructions,
+Extend cases 68 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
