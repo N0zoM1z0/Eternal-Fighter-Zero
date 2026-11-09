@@ -1244,6 +1244,31 @@ All six changed arms were compiled under VC7.1 and each relevant
 This does not imply whole-owner COFF Exact: its frame-stack locals
 and relocated target constants remain separate acceptance tasks.
 
+## Rechecked throw and aerial landing code generation
+
+The full native partial owner was rebuilt after correcting four explicit
+arms against the target **instruction sequence**, not just behavior notes:
+
+- State **249** stores the 30-frame timer at `field013e` (offset
+  `+0x13E`) for both characters, **not** `hitInvulnerabilityFrames`
+  (offset `+0x13C`). Its horizontal clamp and all three ground tests
+  require the original strict-positive x87 predicates; the falling
+  contact expression also has the original `velocityY + positionY`
+  load/add order.
+- States **256, 257 and 258** test `field000a < 8` before
+  `field000a > 1` (and 258 tests `<19` before `>12` in the second
+  airborne phase). Their projected landing tests use
+  `velocityY + positionY > 0.0`. The earlier `>=` changed exact-zero
+  behavior, while the prior reversed comparisons generated different
+  VC7.1 conditional branches.
+
+All **226/226, 146/146, 146/146 and 260/260 instructions** in these
+four original case blocks now match the compiled partial source's
+instruction sequences after normalizing relocation operands and stack
+home numbers. This check does **not** claim a full function byte match:
+frame layout, relocations, and cross-case codegen still require a
+complete target-bound comparison.
+
 ## Next implementation work
 
 The 2026-11-09 handoff storage cleanup archived 61 historical candidate

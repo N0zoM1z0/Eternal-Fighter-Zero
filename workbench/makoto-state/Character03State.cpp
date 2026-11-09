@@ -3595,8 +3595,8 @@ void Character03::Slot06()
         return;
 
     case 249: // Original block 0x005F223A: airborne throw and landing impact
-        hitInvulnerabilityFrames = 30;
-        (*opponentSlot)->hitInvulnerabilityFrames = 30;
+        field013e = 30;
+        (*opponentSlot)->field013e = 30;
         dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             velocityX = -2.5;
@@ -3606,12 +3606,12 @@ void Character03::Slot06()
         velocityY += gravity;
         if (field000a < 8) {
             velocityX += 0.035;
-            if (velocityX >= 0.0) {
+            if (velocityX > 0.0) {
                 velocityX = 0.0;
             }
             (*opponentSlot)->positionY = positionY;
             (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
-            if (positionY + velocityY >= 0.0) {
+            if (velocityY + positionY > 0.0) {
                 positionY = 0.0;
                 (*opponentSlot)->positionY = 0.0;
                 (*opponentSlot)->positionX = positionX;
@@ -3639,7 +3639,7 @@ void Character03::Slot06()
             velocityX = -1.3;
             gravity = 0.035;
         }
-        if (field000a > 9 && positionY + velocityY >= 0.0) {
+        if (field000a > 9 && positionY + velocityY > 0.0) {
             ResetPose();
             ResetFrame();
             positionY = 0.0;
@@ -3887,8 +3887,8 @@ void Character03::Slot06()
                 velocityX = 0.0;
             }
         }
-        if (field000a > 1 && field000a < 8 &&
-            positionY + velocityY >= 0.0) {
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
             field000a = 8;
             field000c = 0;
             positionY = 0.0;
@@ -3938,8 +3938,8 @@ void Character03::Slot06()
                 velocityX = 0.0;
             }
         }
-        if (field000a > 1 && field000a < 8 &&
-            positionY + velocityY >= 0.0) {
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
             field000a = 8;
             field000c = 0;
             positionY = 0.0;
@@ -4001,16 +4001,16 @@ void Character03::Slot06()
                 velocityX = 0.0;
             }
         }
-        if (field000a > 1 && field000a < 8 &&
-            positionY + velocityY >= 0.0) {
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
             field000a = 8;
             field000c = 0;
             positionY = 0.0;
             ResetFrame();
             return;
         }
-        if (field000a > 12 && field000a < 19 &&
-            positionY + velocityY >= 0.0) {
+        if (field000a < 19 && field000a > 12 &&
+            velocityY + positionY > 0.0) {
             field000a = 19;
             field000c = 0;
             positionY = 0.0;
