@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-234 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3480,9 +3480,48 @@ void Character03::Slot06()
         }
         return;
 
+    case 235: // Original block 0x005F1EFB: crouching four-cycle strike
+        dashMomentumFlag = 0;
+        StartTrail(3);
+        if (field000a == 0 && field000c == 0) {
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 1;
+        }
+        if (velocityX > 0.0) {
+            velocityX -= 0.01;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 6 && field3138 < 4) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+                if (field3138 > 2) {
+                    remainingHitCount = 0;
+                }
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 27 explicit cases. The target's true default path also
+        // the other 26 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

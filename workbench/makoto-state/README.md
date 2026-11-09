@@ -771,6 +771,20 @@ work, not the original behavior for valid unimplemented animations.
   states 230/231, which finish in state 0. All 652 original bytes
   were compared against EFZ.exe, and the partial VC7.1 owner builds.
 
+- Animation ID 235 (0x005F1EFB..0x005F2090, 405 bytes) is a
+  crouching four-cycle strike. It clears dash momentum and starts
+  trail 3 on every tick. On first pose/tick it clears
+  horizontalDeceleration and sets remainingHitCount=1; positive
+  horizontal velocity loses exactly **0.01**, unlike case 206's
+  multi-phase 0.03/0.02 deceleration. Pose 2/tick zero awards 25
+  meter and sound 20. Upon frame expiration, an advanced pose 1
+  clears attackCollisionResult; an advanced pose 6 with field3138<4
+  rewinds three poses and increments that counter. Once the counter
+  exceeds two, it also clears remainingHitCount. Exhaustion selects
+  state 3, FaceOpponent then ResetPose. Its independent 405-byte
+  original block and 0.01 x87 constant were checked against EFZ.exe;
+  the VC7.1 partial owner compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -796,7 +810,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 235 and onward directly from reviewed target instructions,
+Extend case 248 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
