@@ -318,6 +318,14 @@ fresh replay of unrelated certificates or whole-game runtime proof.
   63,133-byte output is **not Exact**; differences concentrate in
   cases 303–309 and 312–318. Independently verified original boundary
   evidence lives in `docs/evidence/shiori-state-boundary-review.json`.
+  A new tracked diagnostic `workbench/shiori-state/audit_case_codegen.py`
+  and `case-codegen-audit.json` pinpoint the three original register-width
+  drifts: 307 (`sub eax,0x7D0` target vs `edx`), 308 (`eax,0xBB8`
+  vs `edx`), 315 (`edx,0x3E8` vs `eax`), with deltas +1/+1/-1.
+  Normalized opcode sequences for states 300–319 are 20/20, **not**
+  strict byte Exact. About three dozen natural source-form trials did
+  not fix the register choices; investigate original register lifetime
+  rather than removing/adding unrelated instructions.
   Do not overwrite accepted `src/` headers with the old views;
   preserved private experiments remain in `.analysis/probes/shiori-state/`.
 - **Scene2::PrepareBattle** at `0x0076CA50`: now a **reviewed

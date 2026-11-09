@@ -1,0 +1,228 @@
+{
+  "status": "diagnostic-only-not-an-exact-match",
+  "target_address": "0x4136d0",
+  "target_extent_size": 63132,
+  "target_extent_sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded",
+  "compiled_extent_size": 63133,
+  "compiler_object_sha256": "a91bc7a5220aa7927ed908de28e1a82e35aedf4050eb695bd047de76659ec69d",
+  "source_sha256": "071a82bebd2efb15fb7fb97acc463e435998d2f56e710aa6976cd53ff290bb4d",
+  "compiled_relocations": 1374,
+  "target_code_size": 62273,
+  "compiled_code_size": 62274,
+  "selector_byte_equal": true,
+  "case_range": [
+    300,
+    319
+  ],
+  "cases_with_identical_normalized_opcode_sequence": 20,
+  "cases": [
+    {
+      "animation_id": 300,
+      "target_size": 715,
+      "compiled_size": 715,
+      "target_instruction_count": 190,
+      "compiled_instruction_count": 190,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 301,
+      "target_size": 123,
+      "compiled_size": 123,
+      "target_instruction_count": 33,
+      "compiled_instruction_count": 33,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 302,
+      "target_size": 123,
+      "compiled_size": 123,
+      "target_instruction_count": 33,
+      "compiled_instruction_count": 33,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 303,
+      "target_size": 611,
+      "compiled_size": 611,
+      "target_instruction_count": 160,
+      "compiled_instruction_count": 160,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 304,
+      "target_size": 796,
+      "compiled_size": 796,
+      "target_instruction_count": 203,
+      "compiled_instruction_count": 203,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 305,
+      "target_size": 846,
+      "compiled_size": 846,
+      "target_instruction_count": 217,
+      "compiled_instruction_count": 217,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 306,
+      "target_size": 567,
+      "compiled_size": 567,
+      "target_instruction_count": 149,
+      "compiled_instruction_count": 149,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 307,
+      "target_size": 542,
+      "compiled_size": 543,
+      "target_instruction_count": 144,
+      "compiled_instruction_count": 144,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": [
+        {
+          "index": 24,
+          "target_va": "0x4205cc",
+          "target_bytes": 5,
+          "compiled_bytes": 6,
+          "target_insn": "sub    eax,0x7d0",
+          "compiled_insn": "sub    edx,0x7d0"
+        }
+      ]
+    },
+    {
+      "animation_id": 308,
+      "target_size": 577,
+      "compiled_size": 578,
+      "target_instruction_count": 154,
+      "compiled_instruction_count": 154,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": [
+        {
+          "index": 24,
+          "target_va": "0x4207ea",
+          "target_bytes": 5,
+          "compiled_bytes": 6,
+          "target_insn": "sub    eax,0xbb8",
+          "compiled_insn": "sub    edx,0xbb8"
+        }
+      ]
+    },
+    {
+      "animation_id": 309,
+      "target_size": 293,
+      "compiled_size": 293,
+      "target_instruction_count": 80,
+      "compiled_instruction_count": 80,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 310,
+      "target_size": 484,
+      "compiled_size": 484,
+      "target_instruction_count": 126,
+      "compiled_instruction_count": 126,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 311,
+      "target_size": 519,
+      "compiled_size": 519,
+      "target_instruction_count": 136,
+      "compiled_instruction_count": 136,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 312,
+      "target_size": 1084,
+      "compiled_size": 1084,
+      "target_instruction_count": 292,
+      "compiled_instruction_count": 292,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 313,
+      "target_size": 1085,
+      "compiled_size": 1085,
+      "target_instruction_count": 292,
+      "compiled_instruction_count": 292,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 314,
+      "target_size": 1119,
+      "compiled_size": 1119,
+      "target_instruction_count": 302,
+      "compiled_instruction_count": 302,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 315,
+      "target_size": 672,
+      "compiled_size": 671,
+      "target_instruction_count": 175,
+      "compiled_instruction_count": 175,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": [
+        {
+          "index": 14,
+          "target_va": "0x421bf5",
+          "target_bytes": 6,
+          "compiled_bytes": 5,
+          "target_insn": "sub    edx,0x3e8",
+          "compiled_insn": "sub    eax,0x3e8"
+        }
+      ]
+    },
+    {
+      "animation_id": 316,
+      "target_size": 672,
+      "compiled_size": 672,
+      "target_instruction_count": 175,
+      "compiled_instruction_count": 175,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 317,
+      "target_size": 706,
+      "compiled_size": 706,
+      "target_instruction_count": 185,
+      "compiled_instruction_count": 185,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 318,
+      "target_size": 725,
+      "compiled_size": 725,
+      "target_instruction_count": 194,
+      "compiled_instruction_count": 194,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    },
+    {
+      "animation_id": 319,
+      "target_size": 900,
+      "compiled_size": 900,
+      "target_instruction_count": 252,
+      "compiled_instruction_count": 252,
+      "normalized_opcode_sequence_equal": true,
+      "instruction_width_differences": []
+    }
+  ],
+  "qualification": "Normalization erases GPR choices, branch destinations and stack homes. It never proves byte-exact codegen or binding of relocations."
+}

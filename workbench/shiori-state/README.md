@@ -57,6 +57,42 @@ See the frozen `case-sizes-baseline.json` for all 134 per-case extents.
 Specific size deltas are +1 in 307 and 308, -1 in 315, explaining the
 net +1 result but **not** explaining all byte mismatches.
 
+## Pinned per-case opcode and instruction-width audit (2026-11-09)
+
+`audit_case_codegen.py` is a focused, rerunnable investigation utility
+that checks the canonical PE target and builds **only this Shiori
+workbench TU**. It independently validates the 135-entry original
+address table and compares per-case disassembly for states 300–319.
+Run:
+
+```bash
+scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild
+```
+
+The retained `case-codegen-audit.json` records a **63,133-byte**
+compiled contribution versus the **63,132-byte** target and all
+**1,374 current COFF relocations**. After intentionally normalizing
+GPR names, stack homes, and numeric branch/call operands, all
+**20/20 late-state opcode sequences** are identical. This is not
+a strict byte/relocation comparison! The exact original-code width
+mismatches have now been isolated:
+
+| Animation | Canonical VA | Original x86 | Compiled x86 | Block size delta |
+| --- | --- | --- | --- | ---: |
+| 307 | `0x004205CC` | 5-byte `sub eax,0x7D0` | 6-byte `sub edx,0x7D0` | +1 |
+| 308 | `0x004207EA` | 5-byte `sub eax,0xBB8` | 6-byte `sub edx,0xBB8` | +1 |
+| 315 | `0x00421BF5` | 6-byte `sub edx,0x3E8` | 5-byte `sub eax,0x3E8` | -1 |
+
+The net +1 byte is therefore a **register-allocation/coding-width**
+problem rather than a missing explicit state. Replacing the meter
+subtraction with eight alternate natural C++ arithmetic forms in
+state 307, plus eleven alternate first-tick guards and fifteen
+variations of the *preceding* state 306, was tested under VC7.1.
+None restored the target EAX register. Some variants changed the
+whole-owner size by altering other instructions, which is not valid
+Exact progress. Preserve the unmodified best candidate and focus
+on original source-level register lifetime instead of byte padding.
+
 ## New independently tested case-303 variants
 
 A targeted VC7.1 experiment used the complete candidate source and only
