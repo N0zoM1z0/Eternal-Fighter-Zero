@@ -219,6 +219,12 @@ work, not the original behavior for valid unimplemented animations.
   registers differ, but the operations and constants agree. Keep
   separate switch cases to retain the distinct original dispatch.
 
+- Animation ID 74 (block 0x005EBEB6, 317 bytes) shares the original
+  case 72/73 grounded recoil and stage-edge pushback calculation but
+  always exits to crouch animation 3 and ResetPose when the final
+  frame elapses. The original 0x005EBFDB..0x005EBFEE branch has no inputY
+  test and no state-7 assignment, unlike cases 72/73.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -238,7 +244,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 74 and onward directly from reviewed target instructions,
+Extend cases 75 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
