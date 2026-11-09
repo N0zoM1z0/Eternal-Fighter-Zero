@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "authority": "strict original-bound complete VC7.1 native C++ constructor including both vector allocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 647,
+      "matched_bytes": 647,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A59E4: six-argument Secondary constructor at reviewed 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7900532,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character14@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x006A59EC: original Ikumi child vptr at 0x788D74",
+          "addend": 0
+        },
+        {
+          "offset": 56,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A59F7: CRT operator-new allocation for 505 PatternSequence entries plus length header",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 4227856,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0PatternSequence@@QAE@XZ",
+          "evidence": "resources/EFZ.exe @ 0x006A5A11: PatternSequence element constructor pointer originally 0x408310",
+          "addend": 0
+        },
+        {
+          "offset": 101,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A5A24: native vector constructor iterator (505 elements, 8 bytes)",
+          "addend": 0
+        },
+        {
+          "offset": 141,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A5A4C: second CRT operator-new for 505 SecondarySequence entries",
+          "addend": 0
+        },
+        {
+          "offset": 167,
+          "target": 4270112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??0SecondarySequence@@QAE@XZ",
+          "evidence": "resources/EFZ.exe @ 0x006A5A66: original SecondarySequence element constructor pointer",
+          "addend": 0
+        },
+        {
+          "offset": 186,
+          "target": 4227968,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??_H@YGXPAXIHP6EPAX0@Z@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A5A79: second vector constructor iterator, 505 elements at size 8",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 6993568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetAlternateMode@Character14@@QAEXD@Z",
+          "evidence": "resources/EFZ.exe @ 0x006A5AA1: original Ikumi thiscall mode-switch function at reviewed 0x6AB6A0, argument zero",
+          "addend": 0
+        },
+        {
+          "offset": 241,
+          "target": 7900504,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62317",
+          "evidence": "resources/EFZ.exe @ 0x006A5AB0: exact original ikumi NUL resource literal",
+          "addend": 0
+        },
+        {
+          "offset": 255,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x006A5ABE: original direct CRT strcpy into resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c5f8769695c885f893c344498893b91c18ac4f5701c1b76c52c39559fa5eb836",
+      "target_extent_sha256": "c5f8769695c885f893c344498893b91c18ac4f5701c1b76c52c39559fa5eb836",
+      "unit": "character-14-constructor",
+      "symbol": "??0Character14@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x006A59C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b3ce66695f66d5394af74a7efa516ba78796234a6f9ce5da038ac2160f084034",
+      "object_sha256": "e858c9a8e540aca3e408392e8f924b25ca2175d20ddbd8a9feb8508533c5de21",
+      "source_sha256": "41689f45dc96be0ea5cfb1935a4f5e303af9a355b14ba98e56bb0e691a973d13",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "934000bb370fc3c96932e2e8a2e537552a0bfb129838467efdaa0797ae71f58d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c9be3f75e9cd660ea8b4ceb1d5858bd2e46d2036f8665302c63ade017cd6a601",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "cc9fa3fb8d0edb28485214d677f7a80117f4d68eafd8d5900dafdb0a17a0a25d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Complete 647-byte Ikumi source owns two new[505] PatternSequence and SecondarySequence allocations with real vector-constructor relocations plus original SetAlternateMode thiscall; all 11 relocation destinations checked directly against EFZ.exe, no machine-code padding."
+}

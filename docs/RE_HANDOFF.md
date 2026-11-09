@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **339 exact functions**, **1,065,578 code bytes**,
+  ledgers currently count **340 exact functions**, **1,066,225 code bytes**,
   **7,655 associated table bytes**, 373 reviewed complete boundaries and 368
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -307,6 +307,26 @@ were rebound to the same original destinations with a +9 label shift
 and independently compared in
 `docs/evidence/sayuri-creation-consumers-exact.json`. This is not a
 fresh replay of unrelated certificates or whole-game runtime proof.
+
+## New Ikumi vector-array constructor is fully Exact
+
+`Character14::Character14` at `0x006A59C0` is newly **647/647 exact**
+with **11** reviewed relocations, including two real C++ `new[505]`
+vector constructions and the original mode-switch call
+`SetAlternateMode(0)` at `0x006AB6A0`. Natural source:
+`src/Character14Frame.cpp`; selected unit `character-14-constructor`;
+proof `docs/evidence/ikumi-constructor-exact.json`. The original 0x3478
+class view includes two new pattern/sequence arrays, two saved pointers
+and the separate +0x3460 byte. The called mode-switch function remains
+a separate owner requiring strict reconstruction.
+
+Three real callers/header dependents were selectively rebuilt:
+`scene-create-character` is still 3495/3495 exact (97 relocs),
+`scene-loading-character` 2651/2651 exact (76 relocs), and Makoto
+Slot06 59292/59292 exact (1386 relocs). Their 25/26/127 internal label
+references shifted +20 but retained all original canonical target
+values and relocation fields; full selected evidence is in
+`docs/evidence/ikumi-creation-consumers-exact.json`. No cold replay.
 
 ## Other open substantial work
 

@@ -267,9 +267,19 @@ public:
     virtual void InitializeState();
 };
 class Character14 : public Secondary {
-    unsigned char unknown_body[0x3478 - sizeof(Secondary)];
+    int field3138, field313c, field3140, field3144, field3148;
+    int field314c, field3150, field3154, field3158, field315c;
+    int field3160[64], field3260[64], field3360[64];
+    unsigned char alternateMode;
+    unsigned char unknown_3461[3];
+    PatternSequence *alternatePatterns;
+    SecondarySequence *alternateSequences;
+    PatternSequence *savedPatterns;
+    SecondarySequence *savedSequences;
+    unsigned char unknown_3474[4];
 public:
     Character14(Secondary **, Context *, Video *, Input *, Audio *, char);
+    void SetAlternateMode(char);
     virtual void ResetPose();
     virtual void Slot01();
     virtual void Slot02();

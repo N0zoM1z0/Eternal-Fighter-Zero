@@ -64,8 +64,9 @@ background owners. Seven characters have exact constructors and substantial
 child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
 Kaori (383 bytes), MizukaB (396 bytes), Kanna (403 bytes),
 NayukiB (472 bytes), Kano (523 bytes), Akiko (511 bytes), Minagi
-(469 bytes), EX Nanase (452 bytes) and Sayuri (419 bytes) also have
-independently exact natural constructors; their other child owners remain open.
+(469 bytes), EX Nanase (452 bytes), Sayuri (419 bytes) and Ikumi
+(647 bytes, including two 505-element vector allocations) also have
+independently exact natural constructors; other child owners remain open.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386
 relocations strictly bound. Shiori's 63,132-byte Slot06 is now

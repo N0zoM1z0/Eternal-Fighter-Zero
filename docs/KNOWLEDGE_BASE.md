@@ -1901,6 +1901,34 @@ jump destinations. The complete reports are
 Makoto report was also refreshed from a new selected build. Other
 legacy source-dependency freshness and runtime linkage remain open.
 
+### Ikumi constructor: exact native vector-array initialization (2026-11-09)
+
+`Character14::Character14` at `0x006A59C0` now has a **647/647-byte
+Exact** natural C++ source owner `src/Character14Frame.cpp` and selected
+`character-14-constructor` unit with all **11** original-bound
+relocations. Unlike simple constructors, the native code allocates
+**505 PatternSequence objects and 505 SecondarySequence objects** with
+real C++ `new[]` vector-constructor headers and calls the member
+`SetAlternateMode(0)` at the independently reviewed `0x006AB6A0`.
+It then sets byte +0x3460 to zero, assigns original Ikumi resource
+literal/collision/command defaults, and zeroes three 64-element arrays.
+The child object remains the observed **0x3478 bytes** with separate
+alternate and saved pattern/sequence pointer fields; unused bytes
+remain explicitly unknown. Operator-new, vector iterator, child mode,
+CRT and vptr operands all have independently verified original targets.
+
+Three genuine dependents of `CharacterViews.h` were rebuilt:
+`scene-create-character` **3495/3495 bytes with 97 relocations**,
+`scene-loading-character` **2651/2651 with 76**, and complete Makoto
+Slot06 **59292/59292 with 1,386**. Their compiler-local label symbols
+shifted by +20 for 25/26/127 references, rebound at unchanged original
+relocation positions and destinations before full byte comparison.
+Certificates: `docs/evidence/ikumi-constructor-exact.json` and
+`docs/evidence/ikumi-creation-consumers-exact.json`; the Makoto proof
+was refreshed from this selected build. The called `SetAlternateMode`
+function is a *separate owner* and must receive its own reconstruction
+and strict comparison rather than inheriting Exact status.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's
