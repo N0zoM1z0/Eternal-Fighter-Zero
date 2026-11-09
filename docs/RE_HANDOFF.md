@@ -31,7 +31,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
   ledgers currently count **343 exact functions**, **1,067,344 code bytes**,
-  **7,655 associated table bytes**, 374 reviewed complete boundaries and 369
+  **7,655 associated table bytes**, 375 reviewed complete boundaries and 370
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -378,6 +378,21 @@ All 25/26/127 compiler-local references shifted +11 with unchanged
 original relocation positions/targets. Proof:
 `docs/evidence/nayuki-creation-consumers-exact.json`. No full cold
 replay or whole-product runtime claim.
+
+## Newly staged Ikumi Slot08 effect-state owner (not Exact)
+
+Original `Character14::Slot08` at `0x006AB060` is now a **reviewed
+1,592-byte complete function boundary and authored origin**, independently
+identified at original vtable slot 8 (`0x00788D94`). New natural C++
+workbench `workbench/ikumi-effects/Character14Effects.cpp` implements
+EX-mode, 17 tint milestones, saved-bank rollback and five separate
+local-effect action groups; the original countdown comparison was
+corrected to `field3150 <= 0`. It **compiles**, but its 1,537-byte
+output with 33 relocations is not Exact. Remaining FP codegen starts
+at the opponent X load immediately before repeated CRT `rand()` calls;
+no byte padding or guessed relocations were accepted. Original target
+proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
+reproduction instructions: `workbench/ikumi-effects/README.md`.
 
 ## Other open substantial work
 

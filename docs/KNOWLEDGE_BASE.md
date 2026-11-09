@@ -1929,6 +1929,31 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
+## Ikumi Slot08 effects owner: reviewed 1,592-byte partial reconstruction
+
+`Character14::Slot08` (not `Slot07`) is confirmed by the original
+Character14 vtable pointer at `0x00788D94`: the native destination
+`0x006AB060` owns precisely **1,592 code bytes**, ending at exclusive
+`0x006AB698` with 8 following `CC` alignment bytes before the now
+Exact mode-switch helper at `0x006AB6A0`. Its complete original
+SHA-256 is `b1f3a40ab03af31d6a15b5f882f1efea4ccb1f3962fb490348aa9ad5002f7e29`.
+The function boundary and authored origin are now reviewed and
+retained in `docs/evidence/ikumi-slot08-boundary-review.json`.
+
+A new natural C++ effect-state implementation lives in the isolated
+`workbench/ikumi-effects/` using current accepted type views. It
+reconstructs the EX-mode transition, 17 explicit timed tint events,
+186-step cycling, mode reset via `SetAlternateMode(0)`, and five
+independent local-effect action groups. The first C++/original x87
+comparison exposed a genuine `field3150 <= 0` countdown condition,
+corrected from `< 1`. This is **only a partial source recovery**:
+VC7.1 currently produces **1,537 bytes and 33 relocations** versus
+the original 1,592-byte body. Five original effect-spawn blocks load
+opponent X on x87 before CRT `rand()`, absent from the current draft;
+blindly adding a float sum can make lengths coincide while leaving
+incorrect FP instructions. The full body has not yet achieved strict
+Exact and must not be included in the matches ledger.
+
 ### Ikumi alternate mode switch: 257-byte strict Exact (2026-11-09)
 
 `Character14::SetAlternateMode(char)` at `0x006AB6A0` is now a natural

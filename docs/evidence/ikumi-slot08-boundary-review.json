@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-authored-slot08-function-boundary-only-not-exact-codegen",
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "function": "Character14::Slot08",
+  "vtable_address": "0x00788D74",
+  "vtable_slot_index": 8,
+  "vtable_slot_pointer_address": "0x00788D94",
+  "vtable_slot_value": "0x006AB060",
+  "original_function": {
+    "start": "0x006AB060",
+    "end_exclusive": "0x006AB698",
+    "size": 1592,
+    "sha256": "b1f3a40ab03af31d6a15b5f882f1efea4ccb1f3962fb490348aa9ad5002f7e29"
+  },
+  "following_alignment": {
+    "start": "0x006AB698",
+    "bytes": "cccccccccccccccc",
+    "next_function": "0x006AB6A0"
+  },
+  "method": "Verified original Character14 vtable slot 8, canonical 1592-byte prologue/body/RET and 8-byte INT3 padding before the separately Exact SetAlternateMode at 0x6AB6A0. The independent natural C++ workbench currently compiles 1537 bytes and is not an Exact match."
+}
