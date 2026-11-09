@@ -567,6 +567,19 @@ bytes. Both remain larger than the 799-byte target and strict comparison
 rejects the complete extents. These are semantic C++ candidates, not exact
 owners; the target's body-local ESI/EDI saves and AH/AL loops remain unrecovered.
 
+The 897-byte target at `0x40A0B0` is boundary-reviewed as
+`Video::DrawBlendedSurface`. Its `ret 0x30` is at `0x40A42E`, ending at
+`0x40A431`; the next method begins at `0x40A440` after 15 INT3 bytes. The
+natural C++ owner is in `src/VideoCharacterDraw.cpp` under unit
+`video-draw-blended-surface`. It reproduces the low-signed-byte mode check
+(only 0/1 accepted), selects the adjacent `meanBlend`/`sumBlend` 64 KiB table,
+indexes it with source pixel in the high byte and destination pixel in the low
+byte, and preserves the key/flip, clipping, Lock and Unlock paths. The pinned
+VC7.1 `/Od` object is 1,362 bytes versus the 897-byte target, with no
+relocations; strict comparison rejects the complete extents. All three pixel
+kernels now have independent reviewed boundaries, focused units and natural
+C++ semantic owners, but none has exactness credit.
+
 A focused tracking audit also exposed a pre-existing certificate problem.
 `17edf49` changed `SecondaryPose::field000c` in `src/Engine.h` from `short`
 to `unsigned short` after the prior exact certificates were generated. The
