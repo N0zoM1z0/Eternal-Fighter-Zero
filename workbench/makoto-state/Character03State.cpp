@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-68 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47 and 50-69 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1043,7 +1043,7 @@ void Character03::Slot06()
 
     case 68: // Original block 0x005EB630: collision-cancelled airborne recovery
         if (field0120 != 0) {
-            field0118 -= 0.3;
+            field0118 -= 1.5;
         }
         meter = (short)(meter + 3);
         velocityX = knockbackVelocityX;
@@ -1054,6 +1054,33 @@ void Character03::Slot06()
             ResetPose();
             return;
         }
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 69: // Original block 0x005EB76C: airborne recovery without wall cancel
+        if (field0120 != 0) {
+            field0118 -= 1.5;
+        }
+        meter = (short)(meter + 3);
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
+        ++field000c;
         if (field000c >= frameDuration) {
             field000c = 0;
             ++field000a;
