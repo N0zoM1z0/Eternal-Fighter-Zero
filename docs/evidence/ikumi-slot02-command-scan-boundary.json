@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-function-boundary-and-first-of-fifteen-scans-not-whole-function-exact",
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "function_name": "Character14::Slot02",
+  "vtable_slot_index": 2,
+  "vtable_slot_pointer_address": "0x00788D7C",
+  "vtable_slot_destination": "0x006AB7E0",
+  "full_owner": {
+    "start": "0x006AB7E0",
+    "end_exclusive": "0x006ACC01",
+    "size": 5153,
+    "sha256": "752ea6e701bca768800303e3a6a370d0d0ce8f17d238378528e2e8f678e1466c"
+  },
+  "first_scan": {
+    "start": "0x006AB7E0",
+    "end_exclusive": "0x006AB9D3",
+    "size": 499,
+    "original_instructions": 153,
+    "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
+  },
+  "following_padding_bytes": 15,
+  "qualification": "The first 153 compiled instructions match the target only after normalizing numeric jump targets, because the remaining 14 scans are not yet included. The current partial object is 503 bytes and not a selected full-owner Exact unit."
+}

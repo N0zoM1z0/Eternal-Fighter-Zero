@@ -31,7 +31,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
   ledgers currently count **351 exact functions**, **1,069,101 code bytes**,
-  **7,655 associated table bytes**, 383 reviewed complete boundaries and 378
+  **7,655 associated table bytes**, 384 reviewed complete boundaries and 379
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -393,6 +393,22 @@ at the opponent X load immediately before repeated CRT `rand()` calls;
 no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
+
+## Ikumi Slot02 command boss: first original scan source recovered
+
+The source `workbench/ikumi-commands/Character14Commands.cpp` now
+reconstructs Ikumi Slot02's first **499-byte / 153-instruction**
+priority scan. Its focused `check_first_scan.py` test passes all
+153 opcode/operand comparisons after normalizing only future jump
+addresses. Crucially the original direction term is
+`2 + (facing == -1 ? 0 : -1)`, not the reverse condition suggested
+by one decompiler rendering. The original **5,153-byte complete
+boundary** `[0x006AB7E0,0x006ACC01)` and authored vtable slot 2
+are independently reviewed, with target proof
+`docs/evidence/ikumi-slot02-command-scan-boundary.json`.
+The **remaining 14 command scans still require source**; do not
+claim whole-owner Exact. Continue first with scan 2 beginning
+at `0x006AB9D3` and preserve the original priority ordering.
 
 ## Ikumi exact derived destructor with two base cleanup calls
 

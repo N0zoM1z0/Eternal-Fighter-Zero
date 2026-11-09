@@ -1929,6 +1929,31 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
+## Ikumi Slot02 input command scanner: exact first-scan opcode sequence
+
+The original Ikumi vtable slot 2 at `0x00788D7C` points to
+`Character14::Slot02` at `0x006AB7E0`, a **5,153-byte** command
+recognizer ending just before `0x006ACC01` (15 following `CC`
+alignment bytes). The full unpadded owner and authored origin have
+been newly reviewed against canonical EFZ.exe and recorded in
+`docs/evidence/ikumi-slot02-command-scan-boundary.json`.
+
+The first of the original 15 priority-ordered history scans has now
+been reconstructed as **normal C++**, in the separate unaccepted
+`workbench/ikumi-commands/` source. It scans 70–179 ticks of the
+180-frame circular history, advances through nine directional stages,
+and recognizes command 0x5E. The complete original first scan
+`0x006AB7E0..0x006AB9D3` has **499 bytes / 153 instructions**; its
+compilation matches **153/153 disassembled opcodes and operands**, with
+*only the absolute jump destinations* normalized because the other
+14 scans are still absent. The source path contains a focused,
+reproducible VC7.1 verification script. The correct original facing
+term is `2 + (facing == -1 ? 0 : -1)` (and the corresponding term
+starting from 6); an earlier algebraic reading of Ghidra's decompile
+had reversed the direction. The new form matches both behavior and
+codegen. **The complete 5,153-byte owner is not Exact** and has not
+been integrated into production `src/` or the matches ledger.
+
 ## Ikumi Slot08 effects owner: reviewed 1,592-byte partial reconstruction
 
 `Character14::Slot08` (not `Slot07`) is confirmed by the original

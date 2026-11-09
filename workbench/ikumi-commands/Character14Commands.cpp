@@ -1,0 +1,53 @@
+// Ikumi command recognition: independently recovered highest-priority input scan.
+// This is a workbench PARTIAL implementation of the original 5,153-byte Slot02,
+// not accepted as a strict Exact whole function or production source.
+#include "../../src/CharacterViews.h"
+
+void Character14::Slot02()
+{
+    int i;
+    unsigned char buttons, stage;
+    recognizedCommand = 99;
+
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x46;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0x40) != 0) && (stage == 9)) {
+            recognizedCommand = 0x5e;
+            return;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == 8)) {
+            if ((buttons & 0x40) != 0) {
+                recognizedCommand = 0x5e;
+                return;
+            }
+            stage = 9;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == 7)) {
+            stage = 8;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 6)) {
+            stage = 7;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == 5)) {
+            stage = 6;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == 4)) {
+            stage = 5;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Further 14 original ordered scans remain to be recovered.
+}
