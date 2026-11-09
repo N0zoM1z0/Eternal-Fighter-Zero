@@ -14,7 +14,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
     work.defense = &pose->frame;
     if (work.slot->field0080 == 0 && (work.defense->frameFlags & 0x20) == 0 &&
         work.slot->field0084 > 0 &&
-        !(second->field0130 > 0 && (work.attack->attackFlags & 0x40) > 0) &&
+        !(second->throwInvulnerabilityFrames > 0 && (work.attack->attackFlags & 0x40) > 0) &&
         second->AirActionReady() == 0 && second->hitInvulnerabilityFrames == 0) {
         struct CollisionBoxes {
             int overlap[4][5];

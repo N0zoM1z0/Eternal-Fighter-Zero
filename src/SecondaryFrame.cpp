@@ -92,9 +92,9 @@ void Secondary::UpdateTimers()
             else airActionGauge -= 0.075f;
             if (airActionGauge < 0.0f) airActionGauge = 0.0f;
         }
-        if (field0130 > 0) --field0130;
-        else field0130 = 0;
-        if ((sequences[field0008].data[field000a].frameFlags & 0x40) > 0) field0130 = 27;
+        if (throwInvulnerabilityFrames > 0) --throwInvulnerabilityFrames;
+        else throwInvulnerabilityFrames = 0;
+        if ((sequences[field0008].data[field000a].frameFlags & 0x40) > 0) throwInvulnerabilityFrames = 27;
         if (field0138 > 0) --field0138;
         else field0138 = 0;
         if (field013a > 0) --field013a;

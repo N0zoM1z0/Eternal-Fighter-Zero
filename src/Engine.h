@@ -245,7 +245,7 @@ public:
     short airActionLockFrames;
     unsigned char unknown_0126[2];
     int airActionDisabled, knockdownOnLanding;
-    char field0130;
+    char throwInvulnerabilityFrames;
     unsigned char unknown_0131[3];
     float airActionGauge;
     short field0138;

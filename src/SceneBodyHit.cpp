@@ -32,7 +32,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                     specialBounds = TransformSnapshotBox(secondPose, &work.secondFrame.bodyBox);
                     if (firstPose->state == 0 && (work.secondFrame.frameFlags & 0x20) == 0 &&
                         firstPose->command > 0 &&
-                        !(second->field0130 > 0 && (work.firstFrame.attackFlags & 0x40) > 0) &&
+                        !(second->throwInvulnerabilityFrames > 0 && (work.firstFrame.attackFlags & 0x40) > 0) &&
                         second->AirActionReady() == 0 && second->hitInvulnerabilityFrames == 0) {
                         if ((work.firstFrame.attackFlags & 0x40) > 0) {
                             for (i = 0; i < 4; ++i) {

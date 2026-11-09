@@ -27,7 +27,7 @@ void Character05::Slot05()
         guardInputFrames = 0x3c;
     }
     if ((double)(unsigned short)RandomRange(0, 2000) <
-        ((double)(field0130 > 0) * 4.0 + 1.0) * 8.0 * field00a8 *
+        ((double)(throwInvulnerabilityFrames > 0) * 4.0 + 1.0) * 8.0 * field00a8 *
         ((field0008 > 149 && field0008 < 157 ? 1 : 0) * 2 + 1)) {
         guardInputFrames = 0x3c;
     }
