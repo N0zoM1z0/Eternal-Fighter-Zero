@@ -930,6 +930,21 @@ work, not the original behavior for valid unimplemented animations.
   984-byte target instructions, x87 constants, three global-effect
   calls and three ResetFrame sites were reviewed; VC7.1 compiles.
 
+- Animation IDs 259 and 260 (0x005F36BF..0x005F386E and
+  0x005F386E..0x005F3A20, 431/434 bytes) each emit **two separate
+  local effects** on pose 4/tick zero, after a first-tick
+  dash-momentum clear and ResetFrame. State 259 uses type 0x19A and
+  second type 0x192, at truncated X+36*facing and Y-78; both retain
+  the character's facing. State 260 uses first type 0x19B and second
+  type 0x192 at truncated X-36*facing and Y-78, with the second
+  effect's facing byte **negated**. Both use owner 1, group 2/layer
+  1, then clear pendingCharacterSoundSlot and set field3148=1.
+  There is no context effect and no context sound. Each advanced
+  pose clears attackCollisionResult and both return to idle through
+  FaceOpponent and ResetPose. The 865 bytes of independent original
+  instruction blocks were checked against EFZ.exe, and VC7.1 builds
+  the draft.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -955,7 +970,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 259 and onward directly from reviewed target instructions,
+Extend case 261 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
