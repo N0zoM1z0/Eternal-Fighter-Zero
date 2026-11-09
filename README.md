@@ -70,8 +70,10 @@ other child owners remain open.
 500 switch-address bytes and 310 selector bytes, with all 1,386
 relocations strictly bound. Shiori's 63,132-byte Slot06 is now
 structurally reviewed, with a complete **non-Exact** natural-C++
-candidate tracked in `workbench/shiori-state/`. Video and other
-scene/character work remain open. See the live ledgers for individual acceptance.
+candidate tracked in `workbench/shiori-state/`. The substantial
+`Scene2::PrepareBattle` owner also has a tracked unaccepted C++ draft
+at `workbench/prepare-battle/` and a reviewed 4,029-byte original
+boundary. Video and other scene/character work remain open. See the live ledgers for individual acceptance.
 
 Reader/audio integration is complete. The
 [workbench](workbench/reader-audio/README.md) preserves historical drafts and

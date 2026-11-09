@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-authored-function-boundary-and-two-switch-address-tables-not-exact-codegen",
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "name": "Scene2::PrepareBattle",
+  "address": "0x0076CA50",
+  "caller": {
+    "instruction_address": "0x0076C8FD",
+    "instruction_bytes": "e84e010000",
+    "direct_call_destination": "0x0076CA50",
+    "source_owner": "Scene2::Step"
+  },
+  "code": {
+    "start": "0x0076CA50",
+    "end_exclusive": "0x0076D985",
+    "size": 3893,
+    "sha256": "9ebb4d27987012d6574b515579b519c12bc6b1171e9858882766ded11a923d40"
+  },
+  "address_table_primary": {
+    "start": "0x0076D985",
+    "end_exclusive": "0x0076D9E9",
+    "size": 100,
+    "entries": 25,
+    "distinct_entries": 25,
+    "sha256": "19fbe4b56bfaf11155bc750b00cfe3eae7e146ef5ffbaa42db4371a29c1b03b6"
+  },
+  "address_table_backgrounds": {
+    "start": "0x0076D9E9",
+    "end_exclusive": "0x0076D9FD",
+    "size": 20,
+    "entries": 5,
+    "distinct_entries": 5,
+    "sha256": "d0d6ae6dc2e2be4a30505db142b06897b8701cf7eab23264b79b83400bdc3e00"
+  },
+  "selector_backgrounds": {
+    "start": "0x0076D9FD",
+    "end_exclusive": "0x0076DA0D",
+    "size": 16,
+    "values": [
+      0,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      1,
+      4,
+      2,
+      4,
+      4,
+      4,
+      3
+    ],
+    "default_index": 4,
+    "default_count": 12,
+    "sha256": "596f793734846ed0b32fdbc309566856ca53ba18480ae183efa57e31ca17e7d6"
+  },
+  "full_owned_extent": {
+    "start": "0x0076CA50",
+    "end_exclusive": "0x0076DA0D",
+    "size": 4029,
+    "sha256": "1b529588799198f4fd6d913e877c029fe53e129cccb391a928cea0a1dae03d99"
+  },
+  "next_function": {
+    "alignment": "cccccc",
+    "prologue_at_0x0076DA10": "558bec"
+  },
+  "method": "Canonical EFZ.exe PE byte checks: real direct call from Scene2::Step, original prologue and RET, 30 valid in-range branch destinations in two separately owned tables, complete 16-byte selector and next function alignment. Not a compiled source match: private candidate emits 4031 bytes."
+}

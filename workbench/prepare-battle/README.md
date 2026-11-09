@@ -70,3 +70,12 @@ new-background allocation through the later virtual-load call; strictly
 bind all relocations and verify both address tables and selector before
 accepting. Also reconcile the provisional view with the current accepted
 header graph **by targeted consumers**, never by overwriting `src/`.
+
+## Reviewed authored boundary is separately registered
+
+The direct original `Scene2::Step` call at `0x0076C8FD` and every byte
+of the 4,029-byte function/tables were independently checked. The
+reviewed boundary and authored origin now have formal registry entries
+and a reproducible target-only certificate at
+`docs/evidence/prepare-battle-boundary-review.json`. That progress
+**does not** imply codegen Exact for this 4,031-byte draft.

@@ -280,8 +280,14 @@ claim is implied. Other historical proof freshness remains open.
   evidence lives in `docs/evidence/shiori-state-boundary-review.json`.
   Do not overwrite accepted `src/` headers with the old views;
   preserved private experiments remain in `.analysis/probes/shiori-state/`.
-- **Scene2::PrepareBattle** at `0x0076CA50`: 3,893 code bytes plus 136
-  selector/address bytes; read `.analysis/probes/scene-loading/README.md`.
+- **Scene2::PrepareBattle** at `0x0076CA50`: now a **reviewed
+  authored 4,029-byte owner** (3,893 code plus 100/20 address-table
+  bytes and 16 selector bytes). The complete unaccepted C++ draft,
+  isolated headers and focused VC7.1 diagnostics are tracked in
+  `workbench/prepare-battle/`. Current compiled contribution is 4,031
+  bytes and 115 relocation sites, not Exact. Original direct Step
+  caller and complete byte/table proof:
+  `docs/evidence/prepare-battle-boundary-review.json`.
 - **Video pixel kernels** in `src/VideoCharacterDraw.cpp`:
   `DrawSurface` (799 bytes), `DrawBlendedSurface` (897),
   `DrawCharacterTint` (865), `DrawShadowSurface` (806),

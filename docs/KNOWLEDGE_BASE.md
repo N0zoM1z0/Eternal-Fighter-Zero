@@ -6116,6 +6116,41 @@ header replay,and all parked Shiori/PrepareBattle work remain live. Original
 target/toolchain/Wine/Ghidra state is preserved. Storage accounting and exact
 restore commands are in `docs/RE_ARTIFACTS.md`; native logs remain available.
 
+## Scene2 PrepareBattle owner boundary
+
+`Scene2::PrepareBattle` is a substantial, authored member function at
+`0x0076CA50`. The accepted `Scene2::Step` directly calls this exact
+address from instruction `0x0076C8FD` (`E8 4E 01 00 00`), proving
+its real receiver/call-site relationship rather than relying on a
+provisional decompiler signature. Independently rechecked canonical
+EFZ.exe bytes establish the following **4,029-byte** full contribution:
+
+- x86 code `[0x0076CA50,0x0076D985)`, **3,893 bytes**, original
+  `55 8B EC` prologue and shared `RET` at `0x0076D984`;
+- first address table `[0x0076D985,0x0076D9E9)`, **100 bytes** with
+  25 distinct in-code branch destinations;
+- background address table `[0x0076D9E9,0x0076D9FD)`, **20 bytes**
+  with five more distinct in-code destinations;
+- selector `[0x0076D9FD,0x0076DA0D)`, **16 bytes**, choosing
+  index 4 (default) 12 times and indices 0–3 once each.
+
+The full target SHA-256 is
+`1b529588799198f4fd6d913e877c029fe53e129cccb391a928cea0a1dae03d99`,
+followed by three `CC` alignment bytes and the next function's
+prologue at `0x0076DA10`. The proof
+`docs/evidence/prepare-battle-boundary-review.json` grounds every
+boundary/table/caller claim. Origin and complete boundary are now
+reviewed in the ledgers, **not the codegen or Exact source status**.
+
+The complete natural C++ candidate, provisional local headers,
+reproducible VC7.1 build and six tested background-construction
+variants are tracked in `workbench/prepare-battle/`. Its selected
+`/Od /G6 /MT /Gy /GS /W3` compile still has **4,031 bytes with
+115 relocations**, versus the 4,029 original owned bytes; original
+register choices at `0x0076D743` and an extra two-byte receiver move
+remain. No target bytes have been masked, and no full cold replay
+was performed. Do not copy private header views into accepted `src/`.
+
 ## Shiori state owner boundary and selector review
 
 Target `0x004136D0` is an authored, non-thunk `Character08::Slot06`
