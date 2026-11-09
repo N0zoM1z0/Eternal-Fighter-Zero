@@ -514,7 +514,9 @@ work, not the original behavior for valid unimplemented animations.
 - Animation ID 178 (0x005EF5E8..0x005EF70A, 290 bytes) slows
   velocityX by 0.03 every tick, retains the source's otherwise
   redundant self-assignment, and clamps negative horizontal speed
-  to zero while clearing dash momentum. Down+jump from a nonzero pose
+  to zero. **No write to dashMomentumFlag** occurs in Makoto's target
+  block (unlike Character07): a copied momentum clear was removed
+  after independently inspecting every instruction. Down+jump from a nonzero pose
   chooses states 4/5/6 by inputX and facing, clears the attack collision
   result and resets pose. Ordinary sequence exhaustion chooses
   **state 7**, not state 0 as in the comparable Character07 branch.
@@ -530,6 +532,23 @@ work, not the original behavior for valid unimplemented animations.
   **before** selecting animation 0. The original 660-byte span and
   all four x87 constants were checked against EFZ.exe; the draft
   compiles with VC7.1.
+
+- Animation IDs 200 and 201 (0x005EF87C..0x005EFA4F and
+  0x005EFA4F..0x005EFC22, 467 bytes each) preserve momentum-based
+  attacks with independent switch targets. When dashMomentumFlag is
+  zero they clear both velocities. Positive velocity with flag 1
+  applies a **0.03** horizontal loss each tick; other conditions
+  zero velocityX and clear the flag. Both permit a jump cancel after
+  pose zero if inputY=-1, field015c<3 and attackCollisionResult>=2,
+  choosing states 4/5/6 by facing/inputX and resetting the collision
+  result. State 200 rewards 5 meter, sound 21 and one remaining hit at
+  **pose 2/tick zero**; state 201 instead awards 15 meter, sound 20
+  and one hit at **pose 1/tick zero**. On duration expiration both
+  clear attackCollisionResult only while the advanced pose is below
+  **2**, and return to idle through FaceOpponent/ResetPose at sequence
+  exhaustion. These pose gates and the 0.03 constant differ from the
+  analogous Character07 cases. All 934 target instruction bytes were
+  verified against EFZ.exe and the isolated draft was rebuilt.
 
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
@@ -556,7 +575,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 161 and onward directly from reviewed target instructions,
+Extend case 202 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

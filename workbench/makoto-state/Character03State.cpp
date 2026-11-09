@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178 and 180 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-201 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2514,7 +2514,6 @@ void Character03::Slot06()
         velocityX = velocityX;
         if (velocityX < 0.0) {
             velocityX = 0.0;
-            dashMomentumFlag = 0;
         }
         if (inputY == -1 && field000a > 0) {
             field0008 = 4;
@@ -2575,9 +2574,97 @@ void Character03::Slot06()
         }
         return;
 
+    case 200: // Original block 0x005EF87C: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 201: // Original block 0x005EFA4F: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 15);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 49 explicit cases. The target's true default path also
+        // the other 47 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
