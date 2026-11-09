@@ -416,6 +416,29 @@ work, not the original behavior for valid unimplemented animations.
   The raw 767-byte target range was checked against the canonical
   executable and the draft was rebuilt under VC7.1.
 
+- Animation ID 163 (0x005EE676..0x005EE867, 497 bytes) is Makoto's
+  cancellable dash, **not** the generic Character07 dash. Its first
+  tick starts trail 3. Down+jump after pose zero selects states 4/5/6
+  by facing and inputX, clears attackCollisionResult, and resets pose.
+  Otherwise its first tick clears vertical speed/gravity, every tick
+  enforces velocityX=2.2 and dashMomentumFlag=1, then advances
+  field3138 and field313c. Frame exhaustion rolls back **six** poses;
+  it does not return to idle. A late state-178 transition requires
+  either same-facing input with field313c>=80 or opposite-facing input
+  with field3138>=60, with pose below 4. The current target contains
+  no call to ResetFrame or first-tick context sound in this branch.
+
+- Animation ID 164 (0x005EE867..0x005EE9B2, 331 bytes) starts trail 3
+  on every tick and clears dashMomentumFlag. The first tick zeroes
+  velocities; pose 1/tick zero sets velocityX=-2.2. It then applies
+  +0.02 horizontal deceleration and clamps positive speed to zero.
+  When the advanced pose equals 4 with field3138<2, it subtracts
+  two poses and increments field3138. At sequence exhaustion, it
+  calls FaceOpponent, enters idle state 0, ResetPose, then ResetFrame
+  in that order. This is distinct from Character07's -3.1/+0.04
+  and threshold-driven early exit. Both original blocks (828 bytes)
+  were checked byte-for-byte in EFZ.exe; the partial owner builds.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the

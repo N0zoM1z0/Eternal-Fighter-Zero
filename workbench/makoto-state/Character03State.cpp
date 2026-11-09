@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-162 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-164 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2165,9 +2165,83 @@ void Character03::Slot06()
         }
         return;
 
+    case 163: // Original block 0x005EE676: cancellable forward dash
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(3);
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        velocityX = 2.2;
+        dashMomentumFlag = 1;
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 6);
+                return;
+            }
+        }
+        if (inputX == facing && field313c >= 80 && field000a < 4) {
+            field0008 = 178;
+            ResetPose();
+        }
+        if (inputX != facing && field3138 >= 60 && field000a < 4) {
+            field0008 = 178;
+            ResetPose();
+        }
+        return;
+
+    case 164: // Original block 0x005EE867: decelerating ground dash
+        StartTrail(3);
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            velocityX = -2.2;
+        }
+        velocityX += 0.02;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && field3138 < 2) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field3138;
+            }
+            if (field000a >= animationFrameCount) {
+                FaceOpponent();
+                field0008 = 0;
+                ResetPose();
+                ResetFrame();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 60 explicit cases. The target's true default path also
+        // the other 58 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }
