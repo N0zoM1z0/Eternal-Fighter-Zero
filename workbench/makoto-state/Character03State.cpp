@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-164 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-166 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2239,9 +2239,99 @@ void Character03::Slot06()
         }
         return;
 
+    case 165: // Original block 0x005EE9B2: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = 1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = -0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.5) {
+            velocityX = 0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (inputX == facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if (inputX != facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
+    case 166: // Original block 0x005EEBB9: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = -1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = 0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX > -0.5) {
+            velocityX = -0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if ((int)inputX == -(int)facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if ((int)inputX != -(int)facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 58 explicit cases. The target's true default path also
+        // the other 56 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

@@ -439,6 +439,26 @@ work, not the original behavior for valid unimplemented animations.
   and threshold-driven early exit. Both original blocks (828 bytes)
   were checked byte-for-byte in EFZ.exe; the partial owner builds.
 
+- Animation IDs 165 and 166 (0x005EE9B2..0x005EEDC4, 519 and
+  523 bytes respectively) are sustained air-momentum variants with
+  separate dispatches and opposite horizontal motion. Only at the
+  initial pose/tick with field3138==0 do they start trail 3 and sound
+  17, set velocityX to +1.9/-1.9, velocityY=+1.3, horizontal
+  deceleration=-0.015/+0.015 and gravity=-0.038. Each tick adds
+  gravity/deceleration, clamps horizontal speed to >=0.5/<=-0.5,
+  and clamps vertical speed to >=-1.5. Both increment field3138/313c,
+  advance the unsigned pose and loop its final two frames.
+  Same-direction input after 120 ticks (field313c) or other input after
+  48 ticks (field3138) transitions to state 9, ResetPose and gravity
+  0.03. FaceOpponent may negate the **current** velocityX, not a
+  newly assigned constant. State 166 compares inputX to -facing,
+  while 165 compares to facing. These are two independent checks in
+  each case and must not be combined into else-if. The original
+  1,042-byte target range and every named x87 constant were verified
+  against EFZ.exe; the partial draft builds with VC7.1. The related
+  Character07 cases have different initial velocities and thus cannot
+  be copied as equivalent source.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
