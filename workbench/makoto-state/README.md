@@ -833,6 +833,24 @@ work, not the original behavior for valid unimplemented animations.
   ResetPose. All 654 original bytes were verified against EFZ.exe,
   and the partial VC7.1 owner builds.
 
+- Animation ID 252 (0x005F27F0..0x005F2A5D, 621 bytes) is a
+  two-phase special finisher. On initial pose/tick it clears dash
+  momentum, calls ResetFrame, adds 45 meter, then subtracts **500**
+  from field0118 when field0120 is zero (250 otherwise); this
+  conditional is the opposite of a tempting resource-enabled-only
+  assumption. It emits **global** effect type 33, palette 11,
+  group 2/layer 1 at truncated X and truncated Y-50. While pose==3
+  (without a tick-zero guard) it emits **local** type 0x195 with
+  owner=1, group 0/layer 1 and facing, located at truncated
+  X+23*facing and Y-76, then requests context sound 21 and character
+  sound 5. Independently, an ordinary frame *advance into pose 3*
+  emits that local effect again and requests sound 21, but does not
+  request character sound 5. Each expiration sets
+  attackCollisionResult=3; full exhaustion enters idle and ResetPose.
+  These two distinct local-effect sites and the single global-effect
+  call are all present in the original 621-byte block. The complete
+  branch was reviewed against EFZ.exe and compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -858,7 +876,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 252 and onward directly from reviewed target instructions,
+Extend case 253 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
