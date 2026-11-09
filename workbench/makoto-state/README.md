@@ -98,6 +98,17 @@ work, not the original behavior for valid unimplemented animations.
   20/30 resource deductions. Like state 56, they always end in crouching
   state 3 without reading inputY. Original branch bytes independently
   confirm the per-strength immediates and state-3 termination.
+- Animation ID 59 (block 0x005EA4A9, 511 bytes) is a distinct airborne
+  hit reaction: it deducts 0.8 from field0118 when enabled and grants 30
+  meter on the initial tick. Initial horizontal speed comes from
+  knockbackVelocityX. Initial vertical speed is the previous speed scaled
+  by 0.75 plus knockbackVelocityY, clamped to [-2.0, -0.5], then gravity
+  is set to 0.032. On each tick, the rising/falling signs select pose 1
+  or pose 2, with a two-pose loop at animation exhaustion. Landing after
+  pose 1 selects animation 0x61 when knockdownOnLanding is set, else
+  0x62. Both transitions invoke ResetPose. The original 511-byte block
+  was checked independently for constants, branch destinations and
+  field offsets rather than copied from an older unverified draft.
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -117,7 +128,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 59 and onward directly from reviewed target instructions,
+Extend cases 60 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
