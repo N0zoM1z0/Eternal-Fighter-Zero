@@ -7,11 +7,11 @@ void Character23::Slot05()
     // Both distances are used throughout the original decision owner.
     struct { double forward, vertical; } distance;
     field0262 = 99;
-    if (0 < field01a0) {
-        --field01a0;
+    if (0 < cpuMoveRightFrames) {
+        --cpuMoveRightFrames;
     }
-    if (0 < field01a4) {
-        --field01a4;
+    if (0 < cpuMoveLeftFrames) {
+        --cpuMoveLeftFrames;
     }
     inputX = 0;
     inputY = 0;
@@ -1139,41 +1139,41 @@ void Character23::Slot05()
                 return;
             }
         }
-        if (field01a0 > 0) {
-            if ((CollisionSide() != '\0') && (0xf < field01a0)) {
-                field01a0 = 0xf;
+        if (cpuMoveRightFrames > 0) {
+            if ((CollisionSide() != '\0') && (0xf < cpuMoveRightFrames)) {
+                cpuMoveRightFrames = 0xf;
             }
             inputX = 1;
             return;
         }
-        if (field01a4 > 0) {
-            if ((CollisionSide() != '\0') && (0xf < field01a4)) {
-                field01a4 = 0xf;
+        if (cpuMoveLeftFrames > 0) {
+            if ((CollisionSide() != '\0') && (0xf < cpuMoveLeftFrames)) {
+                cpuMoveLeftFrames = 0xf;
             }
             inputX = -1;
             return;
         }
         if (((unsigned short)RandomRange(0, 100) < 0x32) && (distance.forward < 120.0)) {
             if (facing == '\x01') {
-                field01a4 = (unsigned short)RandomRange(0, 200) + 0x3c;
+                cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
             }
             else {
-                field01a0 = (unsigned short)RandomRange(0, 200) + 0x3c;
+                cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
             }
         }
         if ((unsigned short)RandomRange(0, 100) < 0x32) {
             if (facing == '\x01') {
-                field01a0 = (unsigned short)RandomRange(0, 200) + 0x3c;
+                cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
             }
             else {
-                field01a4 = (unsigned short)RandomRange(0, 200) + 0x3c;
+                cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
             }
         }
         else if (facing == -1) {
-            field01a0 = (unsigned short)RandomRange(0, 200) + 0x3c;
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
         }
         else {
-            field01a4 = (unsigned short)RandomRange(0, 200) + 0x3c;
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 0x3c;
         }
     }
     return;

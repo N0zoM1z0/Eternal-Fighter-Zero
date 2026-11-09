@@ -281,7 +281,8 @@ public:
     char inputX, inputY, buttonPulse[4];
     unsigned char unknown_018e[2];
     int buttonHeld[4];
-    int field01a0, field01a4;
+    // AI-held absolute horizontal direction, decremented every CPU frame.
+    int cpuMoveRightFrames, cpuMoveLeftFrames;
     unsigned char field01a8;
     unsigned char field01a9;
     unsigned char field01aa;
