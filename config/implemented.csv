@@ -354,3 +354,4 @@ address,name,source,symbol,status,evidence
 0x004ADD90,Character06::Character06,src/Character06Frame.cpp,??0Character06@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/nagamori-constructor-exact.json
 0x004AE130,Character06::ResetPose,src/Character06Core.cpp,?ResetPose@Character06@@UAEXXZ,complete,docs/evidence/nagamori-core-overrides-exact.json
 0x004AE170,Character06::RemoveLocalEffect,src/Character06Core.cpp,?RemoveLocalEffect@Character06@@UAEXF@Z,complete,docs/evidence/nagamori-core-overrides-exact.json
+0x004ADFA0,Character06::InitializeState,src/Character06Initialize.cpp,?InitializeState@Character06@@UAEXXZ,complete,docs/evidence/nagamori-initialize-state-exact.json

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "complete original-bound selected VC7.1 code generation, zero masks",
+  "method": "Original Nagamori vtable slot12 points to a complete 387-byte InitializeState owner at 0x4ADFA0. Natural C++ restores exactly twelve initialized child integers in the original nonmonotonic order, five collision coordinate pairs, one 64-byte flag array and three 64-element integer scratch arrays, then calls Secondary::InitializeState at 0x40EDF0. Full original bytes, one relocation and exclusion of 13 INT3 alignment bytes verified; no cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 387,
+      "matched_bytes": 387,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 379,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe canonical original direct call at 0x004AE11A, to Secondary::InitializeState 0x0040EDF0 after 64 byte flags and three 64-int bank resets",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a9f3efb2510d050d925cd8afd999c85d11734742dfb1458ded7340e58c1d6525",
+      "target_extent_sha256": "a9f3efb2510d050d925cd8afd999c85d11734742dfb1458ded7340e58c1d6525",
+      "unit": "character-06-initialize-state",
+      "symbol": "?InitializeState@Character06@@UAEXXZ",
+      "target_address": "0x004ADFA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "de28f97585489ec5cd8efbc1d602be8ebdb1dedee54f05b42d437be66f96d5f8",
+      "object_sha256": "41cea95de6535ecd4a083b79a4e453b0a25740d19da7bdfb16d132124cc7ccf2",
+      "source_sha256": "cd1200810b74d44205dd12857915da45412a2f069dc320563cc8493c235ac91c",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "5b5e6944fc4a2da03e0aaba092c1bf22ff7fd09eabc26dd14a629cdb01c63fc4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0d5ac0a080925f489b4e803aa372e39074f7cef53c88fc03158f5133c3525c73",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

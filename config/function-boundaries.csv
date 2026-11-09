@@ -385,3 +385,4 @@ address,end,size,status,evidence
 0x006AB7E0,0x006ACC01,5153,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-slot02-input-command-scanner
 0x004AE130,0x004AE16A,58,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-reset-and-effect-cleanup-overrides
 0x004AE170,0x004AE1CF,95,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-reset-and-effect-cleanup-overrides
+0x004ADFA0,0x004AE123,387,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-exact-initialize-state

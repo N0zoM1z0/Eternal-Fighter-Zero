@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **355 exact functions**, **1,074,924 code bytes**,
-  **7,655 associated table bytes**, 386 reviewed complete boundaries and 381
+  ledgers currently count **356 exact functions**, **1,075,311 code bytes**,
+  **7,655 associated table bytes**, 387 reviewed complete boundaries and 382
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,19 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori complete initialization Exact
+
+`Character06::InitializeState`, virtual slot 12 at `0x004ADFA0`,
+now emits the complete original **387/387-byte Exact** body with one
+original base initialization call. Natural C++:
+`src/Character06Initialize.cpp`, selected unit
+`character-06-initialize-state`; canonical proof:
+`docs/evidence/nagamori-initialize-state-exact.json`. The source
+resets twelve state integers (leaving +0x3154 untouched), five
+collision pairs and four 64-element scratch/flag banks. Original
+`[0x004ADFA0,0x004AE123)` boundary and 13 `CC` alignment bytes
+reviewed; no broad cold replay.
 
 ## Nagamori first two virtual overrides Strict Exact
 

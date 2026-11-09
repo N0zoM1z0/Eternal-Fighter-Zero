@@ -129580,3 +129580,20 @@ type = "REL32"
 symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
 target = 0x00412E60
 evidence = "EFZ.exe original base effect removal call at 0x004AE1C4 after clearing byte flags and three per-slot int arrays, signed-short index"
+
+[units.character-06-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Initialize.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-initialize-state/Character06Initialize.obj"
+symbol = "?InitializeState@Character06@@UAEXXZ"
+target_address = 0x004ADFA0
+size = 387
+
+[[units.character-06-initialize-state.relocations]]
+offset = 379
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "EFZ.exe canonical original direct call at 0x004AE11A, to Secondary::InitializeState 0x0040EDF0 after 64 byte flags and three 64-int bank resets"

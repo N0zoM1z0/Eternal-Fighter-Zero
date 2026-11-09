@@ -2189,6 +2189,21 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori InitializeState: complete 387-byte owner (2026-11-09)
+
+`Character06::InitializeState` at `0x004ADFA0` is now a complete
+natural C++ source function in `src/Character06Initialize.cpp`, with
+**387/387 bytes, zero differences and one original-bound relocation**
+under VC7.1. Original Nagamori vtable slot 12 at `0x78842C` confirms
+its identity. It resets twelve additional state integers (preserving
+the non-monotonic original assignment order), five collision pairs,
+64 one-byte flags and three 64-int scratch banks before the reviewed
+base `Secondary::InitializeState` call at `0x40EDF0`. It deliberately
+does not initialize the separate +0x3154 field, which the original
+reset doesn't touch. The original function ends at `0x004AE123`;
+13 following `CC` alignment bytes are excluded. Strict selected
+proof: `docs/evidence/nagamori-initialize-state-exact.json`.
+
 ### Nagamori reset and effect cleanup overrides: two exact methods (2026-11-09)
 
 Original Nagamori vtable `0x7883FC` slot 0 resolves to
