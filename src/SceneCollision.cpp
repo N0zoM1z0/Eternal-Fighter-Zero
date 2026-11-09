@@ -153,12 +153,12 @@ int Scene3::TestBodyInteraction(Secondary *first, Secondary *second,
             pass.firstFrame = firstPose->frame;
             pass.secondFrame = secondPose->frame;
             for (i = 0; i < 4; ++i) {
-                pass.attackBoxes[i] = TransformSnapshotBox(firstPose, &pass.firstFrame.boxes0050[i]);
+                pass.attackBoxes[i] = TransformSnapshotBox(firstPose, &pass.firstFrame.attackBoxes[i]);
             }
             for (i = 0; i < 5; ++i) {
-                pass.defenseBoxes[i] = TransformSnapshotBox(secondPose, &pass.secondFrame.boxes0000[i]);
+                pass.defenseBoxes[i] = TransformSnapshotBox(secondPose, &pass.secondFrame.hurtBoxes[i]);
             }
-            specialBounds = TransformSnapshotBox(secondPose, &pass.secondFrame.box0090);
+            specialBounds = TransformSnapshotBox(secondPose, &pass.secondFrame.bodyBox);
             if (first->field0168 == 0 && (pass.secondFrame.frameFlags & 0x20) == 0 &&
                 first->field016c > 0 &&
                 !(second->field0130 > 0 && (pass.firstFrame.attackFlags & 0x40) > 0) &&

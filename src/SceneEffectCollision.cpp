@@ -29,12 +29,12 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                     found = 0;
                     for (work.i = 0; work.i < 4; ++work.i) {
                         // The full effect slot shares the reviewed prefix read by this helper.
-                        boxes.attackBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.slot), &work.attack->boxes0050[work.i]);
+                        boxes.attackBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.slot), &work.attack->attackBoxes[work.i]);
                     }
                     for (work.i = 0; work.i < 5; ++work.i) {
-                        boxes.defenseBoxes[work.i] = TransformSnapshotBox(pose, &work.defense->boxes0000[work.i]);
+                        boxes.defenseBoxes[work.i] = TransformSnapshotBox(pose, &work.defense->hurtBoxes[work.i]);
                     }
-                    specialBounds = TransformSnapshotBox(pose, &work.defense->box0090);
+                    specialBounds = TransformSnapshotBox(pose, &work.defense->bodyBox);
                     if ((work.attack->attackFlags & 0x40) > 0) {
                         for (work.i = 0; work.i < 4; ++work.i) {
                             boxes.overlap[work.i][0] = 1;
@@ -373,8 +373,8 @@ void Scene3::ResolveEffectClash(Secondary *first, Secondary *second, int firstIn
         work.firstSlot->field0084 > 0 && work.secondSlot->field0084 > 0 &&
         first->sequences[work.firstSlot->type].field0000 > 0 &&
         second->sequences[work.secondSlot->type].field0000 > 0) {
-        work.firstBounds = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.firstSlot), &work.attack->box0090);
-        work.secondBounds = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.secondSlot), &work.defense->box0090);
+        work.firstBounds = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.firstSlot), &work.attack->bodyBox);
+        work.secondBounds = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.secondSlot), &work.defense->bodyBox);
         if (BoxesOverlap(&work.firstBounds, &work.secondBounds) != 0) {
             if (second->sequences[work.secondSlot->type].field0000 == first->sequences[work.firstSlot->type].field0000) {
                 work.firstSlot->field0080 = 4;
@@ -415,10 +415,10 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                 SurfaceRect intersection;
                 found = 0;
                 for (work.i = 0; work.i < 4; ++work.i) {
-                    boxes.attackBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.firstSlot), &work.attack->boxes0050[work.i]);
+                    boxes.attackBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.firstSlot), &work.attack->attackBoxes[work.i]);
                 }
                 for (work.i = 0; work.i < 5; ++work.i) {
-                    boxes.defenseBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.secondSlot), &work.defense->boxes0000[work.i]);
+                    boxes.defenseBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.secondSlot), &work.defense->hurtBoxes[work.i]);
                 }
                 for (work.i = 0; work.i < 4; ++work.i) {
                     for (work.j = 0; work.j < 5; ++work.j) {
@@ -548,10 +548,10 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                 boxes.defense = second->sequences[work.slot->type].data[work.slot->frame];
                 found = 0;
                 for (work.i = 0; work.i < 4; ++work.i) {
-                    boxes.attackBoxes[work.i] = TransformSnapshotBox(firstPose, &work.attack->boxes0050[work.i]);
+                    boxes.attackBoxes[work.i] = TransformSnapshotBox(firstPose, &work.attack->attackBoxes[work.i]);
                 }
                 for (work.i = 0; work.i < 5; ++work.i) {
-                    boxes.defenseBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.slot), &boxes.defense.boxes0000[work.i]);
+                    boxes.defenseBoxes[work.i] = TransformPoseBox(reinterpret_cast<const SecondaryPose *>(work.slot), &boxes.defense.hurtBoxes[work.i]);
                 }
                 for (work.i = 0; work.i < 4; ++work.i) {
                     for (work.j = 0; work.j < 5; ++work.j) {
