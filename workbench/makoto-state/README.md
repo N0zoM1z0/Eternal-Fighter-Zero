@@ -19,6 +19,11 @@ work, not the original behavior for valid unimplemented animations.
 - Animation ID 2: clear dashMomentumFlag, set velocity (-0.7, 0.0).
 - Animation ID 3: set velocity (0.0, 0.0), clear dashMomentumFlag,
   and invoke FaceOpponent.
+- Animation ID 6 (block 0x005E8B61): backward counterpart of state 5,
+  using gravity=0.042, vertical speed=-2.9, and horizontal speed=-0.7 at
+  pose 3/tick 0. It has no 1.1 dash-speed override or momentum-flag reset
+  in this entry block. Its final two pose frames loop and landing uses the
+  same sound-9 / animation-13 transition.
 - Animation ID 5 (block 0x005E89F4): repeat the first-tick face/zero
   behavior, then on pose 3's first tick set gravity=0.042, vertical speed=-2.9,
   horizontal speed=0.7, with dashMomentumFlag==1 upgrading horizontal speed
@@ -53,7 +58,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 6 and onward directly from reviewed target instructions,
+Extend cases 7 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
