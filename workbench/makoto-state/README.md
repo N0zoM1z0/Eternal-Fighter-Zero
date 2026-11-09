@@ -1166,6 +1166,25 @@ work, not the original behavior for valid unimplemented animations.
   a semantic and code-layout correction; the overall 59,292-byte
   function still requires complete exact binary verification.
 
+- Refining the remaining code-layout differences found more natural
+  source corrections. State 178's original target contains **two
+  separate unconditional exit jumps**: one immediately after its
+  successful last-frame ResetPose, and one for the ordinary path.
+  An explicit `return` after that ResetPose restores the missing
+  5-byte jump with no synthetic padding. State 307 lacked the
+  target's `hitInvulnerabilityFrames=3` before the pose-5 launch;
+  the omitted store was restored. States 306–308 used an integer
+  cast/subtraction to rewind pose 6, where the original emits a
+  16-bit `mov ax; sub ax,1`; natural `--field000a` matches those
+  16-bit instructions. After rebuilding, the generated lengths of
+  **123/124 explicit branches** match their individual canonical
+  spans. Only case 70 is six bytes longer: its x87 conversion
+  scratch lives at EBP-0x84 instead of the original EBP-0x80,
+  because the current compiler allocates a stack frame of 0x37C
+  rather than the target's 0x378. The whole owner is now 59,298
+  bytes versus 59,292; emitted selector still matches 310/310.
+  These are not byte-for-byte matches and no Exact credit is claimed.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the

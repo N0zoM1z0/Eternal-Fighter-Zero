@@ -2574,6 +2574,7 @@ void Character03::Slot06()
             if (field000a >= animationFrameCount) {
                 field0008 = 7;
                 ResetPose();
+                return;
             }
         }
         return;
@@ -4874,7 +4875,7 @@ void Character03::Slot06()
                 pendingCharacterSoundSlot = 4;
             }
             if (field000a == 6) {
-                field000a = (unsigned short)(field000a - 1);
+                --field000a;
             }
             attackCollisionResult = 0;
             if (field000a >= animationFrameCount) {
@@ -4946,6 +4947,7 @@ void Character03::Slot06()
                 ++field313c;
             }
             if (field000a == 5) {
+                hitInvulnerabilityFrames = 3;
                 velocityX = 2.3;
                 velocityY = -0.65;
                 positionX += (double)((int)facing * 30);
@@ -4959,7 +4961,7 @@ void Character03::Slot06()
                 contextOwner->EmitEffect(&effect);
             }
             if (field000a == 6) {
-                field000a = (unsigned short)(field000a - 1);
+                --field000a;
             }
             attackCollisionResult = 0;
             if (field000a >= animationFrameCount) {
@@ -5050,7 +5052,7 @@ void Character03::Slot06()
                 pendingCharacterSoundSlot = 4;
             }
             if (field000a == 6) {
-                field000a = (unsigned short)(field000a - 1);
+                --field000a;
             }
             attackCollisionResult = 0;
             if (field000a >= animationFrameCount) {
