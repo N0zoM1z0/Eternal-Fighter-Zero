@@ -84,7 +84,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (2 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -115,7 +115,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (2 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -146,7 +146,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (2 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -193,7 +193,7 @@ void Character23::Slot06()
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
             ResetFrame();
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             field0008 = 0xd;
             ResetPose();
         }
@@ -234,7 +234,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (3 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -259,7 +259,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (3 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -284,7 +284,7 @@ void Character23::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (3 < field000a)) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -300,7 +300,7 @@ void Character23::Slot06()
             (field000a < 2)) {
             field000c = 0;
             field000a = 2;
-            field02c9 = 7;
+            pendingContextSoundSlot = 7;
             positionY = 0.0;
             velocityY = 0.0;
             gravity = 0.0;
@@ -1141,7 +1141,7 @@ void Character23::Slot06()
             velocityX = 0.5;
             velocityY = -2.5;
             gravity = 0.025;
-            field02c9 = 0x1f;
+            pendingContextSoundSlot = 0x1f;
             effect.type = 0;
             effect.x = (double)(int(positionX));
             effect.y = (double)(int(positionY));
@@ -1451,7 +1451,7 @@ void Character23::Slot06()
         }
         if (((field000a == 0) && ((unsigned short)field000c == 0)) &&
             (field3138 == 0)) {
-            field02c9 = 0x1e;
+            pendingContextSoundSlot = 0x1e;
             velocityY = -0.45;
             velocityX = -0.1;
             ++field3138;
@@ -1509,7 +1509,7 @@ void Character23::Slot06()
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
-            field02c9 = 0x21;
+            pendingContextSoundSlot = 0x21;
             velocityY = -1.5;
             velocityX = -0.8;
             meter = meter + 0x1e;
@@ -1561,7 +1561,7 @@ void Character23::Slot06()
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
-            field02c9 = 0x21;
+            pendingContextSoundSlot = 0x21;
             velocityY = -1.5;
             velocityX = -0.8;
             meter = meter + 0x1e;
@@ -1613,7 +1613,7 @@ void Character23::Slot06()
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
             }
-            field02c9 = 0x21;
+            pendingContextSoundSlot = 0x21;
             velocityX = knockbackVelocityX;
             velocityY = knockbackVelocityY;
             meter = meter + 0x1e;
@@ -1657,7 +1657,7 @@ void Character23::Slot06()
                 if (field0120 != '\0') {
                     field0118 = field0118 - 30.0;
                 }
-                field02c9 = 0x21;
+                pendingContextSoundSlot = 0x21;
                 velocityX = knockbackVelocityX;
                 velocityY = knockbackVelocityY;
                 meter = meter + 0x1e;
@@ -1733,7 +1733,7 @@ void Character23::Slot06()
             effect.group = 2;
             effect.layer = 0;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 7;
+            pendingContextSoundSlot = 7;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -1756,7 +1756,7 @@ void Character23::Slot06()
             effect.group = 2;
             effect.layer = 0;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 7;
+            pendingContextSoundSlot = 7;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2049,7 +2049,7 @@ void Character23::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -2081,7 +2081,7 @@ void Character23::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -2113,7 +2113,7 @@ void Character23::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
             FaceOpponent();
             field0008 = 0xd;
             ResetPose();
@@ -2129,7 +2129,7 @@ void Character23::Slot06()
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
             field016c = 1;
-            field02c9 = 0x3e;
+            pendingContextSoundSlot = 0x3e;
             ++field3138;
         }
         ++field000c;
@@ -2161,7 +2161,7 @@ void Character23::Slot06()
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
             field016c = 1;
-            field02c9 = 0x3e;
+            pendingContextSoundSlot = 0x3e;
             meter = meter + -1000;
             ++field3138;
         }
@@ -2206,7 +2206,7 @@ void Character23::Slot06()
             velocityX = 1.8;
             velocityY = -1.2;
             gravity = 0.01;
-            field02c9 = 0x11;
+            pendingContextSoundSlot = 0x11;
         }
         velocityY = velocityY + gravity;
         ++field000c;
@@ -2244,7 +2244,7 @@ void Character23::Slot06()
             velocityX = -1.8;
             velocityY = -1.3;
             gravity = 0.01;
-            field02c9 = 0x11;
+            pendingContextSoundSlot = 0x11;
             effect.type = 0x1f;
             effect.x = (double)(int(positionX));
             effect.y = (double)(int(positionY));
@@ -2280,7 +2280,7 @@ void Character23::Slot06()
             (field3140 == 0)) {
             velocityX = 1.8;
             velocityY = -0.3;
-            field02c9 = 0x11;
+            pendingContextSoundSlot = 0x11;
             ++field3140;
         }
         velocityY = velocityY + 0.01;
@@ -2318,7 +2318,7 @@ void Character23::Slot06()
             (field3140 == 0)) {
             velocityX = -1.8;
             velocityY = -0.3;
-            field02c9 = 0x11;
+            pendingContextSoundSlot = 0x11;
             ++field3140;
         }
         velocityY = velocityY + 0.01;
@@ -2364,7 +2364,7 @@ void Character23::Slot06()
             SetTint(0xb0,3);
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
-            field02c9 = 0x12;
+            pendingContextSoundSlot = 0x12;
             effect.type = 1;
             effect.x = (double)(int(positionX));
             effect.y = (double)(int(positionY));
@@ -2502,7 +2502,7 @@ void Character23::Slot06()
             SetTint(0xb0,3);
         }
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
-            field02c9 = 0x12;
+            pendingContextSoundSlot = 0x12;
             effect.type = 1;
             effect.x = (double)(int(positionX));
             effect.y = (double)(int(positionY));
@@ -2540,7 +2540,7 @@ void Character23::Slot06()
             positionY = 0.0;
             field000c = 0;
             field000a = 5;
-            field02c9 = 9;
+            pendingContextSoundSlot = 9;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -2578,7 +2578,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
-            field02c9 = 0x15;
+            pendingContextSoundSlot = 0x15;
             field016c = 1;
         }
         ++field000c;
@@ -2618,7 +2618,7 @@ void Character23::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if ((1 < field000a) &&
@@ -2660,7 +2660,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         ++field000c;
@@ -2684,7 +2684,7 @@ void Character23::Slot06()
         }
         if ((field000a == 4) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         ++field000c;
@@ -2719,7 +2719,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
-            field02c9 = 0x15;
+            pendingContextSoundSlot = 0x15;
             field016c = 1;
         }
         ++field000c;
@@ -2757,7 +2757,7 @@ void Character23::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         ++field000c;
@@ -2782,7 +2782,7 @@ void Character23::Slot06()
         velocityY = 0.0;
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x19;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         ++field000c;
@@ -2794,7 +2794,7 @@ void Character23::Slot06()
                 effect.x = (double)((int(positionX)) + facing * 0x25);
                 effect.y = (double)((int(positionY)) + -2);
                 effect.group = 2;
-                field02c8 = 3;
+                pendingCharacterSoundSlot = 3;
                 effect.layer = 1;
                 contextOwner->EmitEffect(&effect);
             }
@@ -2830,7 +2830,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
-            field02c9 = 0x15;
+            pendingContextSoundSlot = 0x15;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -2871,7 +2871,7 @@ void Character23::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xd;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -2912,7 +2912,7 @@ void Character23::Slot06()
         }
         if ((field000a == 3) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -2950,7 +2950,7 @@ void Character23::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if ((field000a == 5) && ((unsigned short)field000c == 0)) {
@@ -2989,7 +2989,7 @@ void Character23::Slot06()
         }
         if ((field000a == 8) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x23;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if (positionY < 0.0) {
@@ -3024,7 +3024,7 @@ void Character23::Slot06()
         velocityY = velocityY + gravity;
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x1e;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
             velocityX = velocityX / 2.0;
             gravity = 0.07;
@@ -3047,7 +3047,7 @@ void Character23::Slot06()
             effect.layer = 0;
             effect.palette = 7;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 7;
+            pendingContextSoundSlot = 7;
             field0008 = 0xd6;
             ResetPose();
             break;
@@ -3219,7 +3219,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 5;
-            field02c9 = 0x15;
+            pendingContextSoundSlot = 0x15;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -3247,7 +3247,7 @@ void Character23::Slot06()
         }
         if ((field000a == 2) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
-            field02c9 = 0x15;
+            pendingContextSoundSlot = 0x15;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -3275,7 +3275,7 @@ void Character23::Slot06()
         }
         if ((field000a == 1) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
-            field02c9 = 0x14;
+            pendingContextSoundSlot = 0x14;
             field016c = 1;
         }
         if (positionY + velocityY >= 0.0) {
@@ -3402,7 +3402,7 @@ void Character23::Slot06()
             effect.flag0018 = (unsigned char)facing;
             effect.owner = 1;
             effect.layer = 1;
-            field02c8 = 1;
+            pendingCharacterSoundSlot = 1;
             EmitLocalEffect(&effect);
         }
         ++field000c;
@@ -3427,7 +3427,7 @@ void Character23::Slot06()
             effect.owner = 1;
             effect.flag0018 = (unsigned char)facing;
             effect.layer = 1;
-            field02c8 = 1;
+            pendingCharacterSoundSlot = 1;
             EmitLocalEffect(&effect);
         }
         ++field000c;
@@ -3470,7 +3470,7 @@ void Character23::Slot06()
             effect.flag0018 = (unsigned char)facing;
             effect.owner = 1;
             effect.layer = 1;
-            field02c8 = 1;
+            pendingCharacterSoundSlot = 1;
             EmitLocalEffect(&effect);
         }
         ++field000c;
@@ -3685,7 +3685,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 10) {
-                field02c8 = 9;
+                pendingCharacterSoundSlot = 9;
             }
             if (field000a == 0x11) {
                 field000a = field000a + -2;
@@ -3730,7 +3730,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 10) {
-                field02c8 = 9;
+                pendingCharacterSoundSlot = 9;
             }
             if (field000a == 0x11) {
                 field000a = field000a + -2;
@@ -3792,7 +3792,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 10) {
-                field02c8 = 10;
+                pendingCharacterSoundSlot = 10;
             }
             if (field000a == 0x11) {
                 field000a = field000a + -2;
@@ -3831,7 +3831,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
-                field02c8 = 9;
+                pendingCharacterSoundSlot = 9;
             }
             if (field000a == 9) {
                 field000a = field000a + -2;
@@ -3870,7 +3870,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
-                field02c8 = 9;
+                pendingCharacterSoundSlot = 9;
             }
             if (field000a == 9) {
                 field000a = field000a + -2;
@@ -3926,7 +3926,7 @@ void Character23::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a == 2) {
-                field02c8 = 10;
+                pendingCharacterSoundSlot = 10;
             }
             if (field000a == 9) {
                 field000a = field000a + -2;
@@ -3950,7 +3950,7 @@ void Character23::Slot06()
             effect.layer = 1;
             effect.group = 2;
             EmitLocalEffect(&effect);
-            field02c8 = 6;
+            pendingCharacterSoundSlot = 6;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -3975,7 +3975,7 @@ void Character23::Slot06()
             effect.layer = 1;
             effect.group = 2;
             EmitLocalEffect(&effect);
-            field02c8 = 6;
+            pendingCharacterSoundSlot = 6;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -4013,7 +4013,7 @@ void Character23::Slot06()
             effect.layer = 1;
             effect.group = 2;
             EmitLocalEffect(&effect);
-            field02c8 = 6;
+            pendingCharacterSoundSlot = 6;
         }
         ++field000c;
         if ((unsigned short)field000c >= frameDuration) {
@@ -4047,7 +4047,7 @@ void Character23::Slot06()
             field000a = 8;
             field0168 = 0;
             hitstunFrames = 0x9f;
-            field02c9 = 3;
+            pendingContextSoundSlot = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
             effect.y = (double)((int(positionY)) + -0x28);
@@ -4106,7 +4106,7 @@ void Character23::Slot06()
             field000a = 8;
             field0168 = 0;
             hitstunFrames = 0x9f;
-            field02c9 = 3;
+            pendingContextSoundSlot = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
             effect.y = (double)((int(positionY)) + -0x28);
@@ -4160,14 +4160,14 @@ void Character23::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 0x25;
+            pendingContextSoundSlot = 0x25;
         }
         if ((field0168 == 6) && (field000a == 7)) {
             ResetPose();
             field000a = 8;
             field0168 = 0;
             hitstunFrames = 0x9f;
-            field02c9 = 3;
+            pendingContextSoundSlot = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
             effect.y = (double)((int(positionY)) + -0x28);
@@ -4289,7 +4289,7 @@ void Character23::Slot06()
             field000a = 8;
             field0168 = 0;
             hitstunFrames = 0x9f;
-            field02c9 = 3;
+            pendingContextSoundSlot = 3;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 10);
             effect.y = (double)((int(positionY)) + -0x28);
@@ -4433,7 +4433,7 @@ void Character23::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 0x25;
+            pendingContextSoundSlot = 0x25;
             effect.type = 0x1b8;
             effect.x = (double)((int(positionX)) - facing * 0x32);
             effect.y = (double)((int(positionY)) + 200);
@@ -4556,7 +4556,7 @@ void Character23::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 0x25;
+            pendingContextSoundSlot = 0x25;
         }
         if (((field000a == 9) && ((unsigned short)field000c == 0)) &&
             (field3464 = field3464 + 3, 3 < field3464)) {
@@ -4695,7 +4695,7 @@ void Character23::Slot06()
             effect.owner = 1;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            field02c9 = 0x25;
+            pendingContextSoundSlot = 0x25;
             effect.type = 0x47;
             contextOwner->EmitEffect(&effect);
         }
@@ -4794,7 +4794,7 @@ void Character23::Slot06()
                 effect.group = 2;
                 effect.layer = 0;
                 contextOwner->EmitEffect(&effect);
-                field02c9 = 7;
+                pendingContextSoundSlot = 7;
                 contextOwner->FadeMusic(0,1000);
             }
             if (field000a >= frameCount) {

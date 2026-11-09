@@ -85,7 +85,7 @@ void Character03::Slot07()
                     ((*opponentSlot)->field0008 < 50 || (*opponentSlot)->field0008 > 150)) ||
                     (field0008 > 249 && field0008 < 253))) {
                     effects[i].group = 2;
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                     effects[i].field0084 = 1;
                     effects[i].frame = 6;
                     effects[i].tick = 0;
@@ -123,7 +123,7 @@ void Character03::Slot07()
                     }
                     if (effects[i].frame == 6) {
                         effects[i].group = 2;
-                        field02c8 = 0;
+                        pendingCharacterSoundSlot = 0;
                         effects[i].field0084 = 1;
                         effects[i].vx = 0.0;
                     }
@@ -168,7 +168,7 @@ void Character03::Slot07()
                     (field0008 > 249 && field0008 < 253))) {
                     effects[i].group = 2;
                     effects[i].group = 2;
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                     effects[i].field0084 = 1;
                     effects[i].frame = 6;
                     effects[i].tick = 0;
@@ -206,7 +206,7 @@ void Character03::Slot07()
                     }
                     if (effects[i].frame == 6) {
                         effects[i].group = 2;
-                        field02c8 = 0;
+                        pendingCharacterSoundSlot = 0;
                         effects[i].field0084 = 1;
                         effects[i].vx = 0.0;
                     }
@@ -251,7 +251,7 @@ void Character03::Slot07()
                     (field0008 > 249 && field0008 < 253))) {
                     effects[i].group = 2;
                     effects[i].group = 2;
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                     effects[i].field0084 = 1;
                     effects[i].frame = 6;
                     effects[i].tick = 0;
@@ -289,7 +289,7 @@ void Character03::Slot07()
                     }
                     if (effects[i].frame == 6) {
                         effects[i].group = 2;
-                        field02c8 = 0;
+                        pendingCharacterSoundSlot = 0;
                         effects[i].field0084 = 1;
                         effects[i].vx = 0.0;
                     }
@@ -546,7 +546,7 @@ void Character03::Slot07()
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
                             }
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             break;
                         }
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
@@ -557,7 +557,7 @@ void Character03::Slot07()
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
                             }
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             break;
                         }
                     }
@@ -568,7 +568,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -579,7 +579,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -595,7 +595,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -605,7 +605,7 @@ void Character03::Slot07()
                         if (effects[i].x < (double)contextOwner->cameraBounds.left) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -620,7 +620,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -630,7 +630,7 @@ void Character03::Slot07()
                         if (effects[i].x < (double)contextOwner->cameraBounds.left) {
                             effects[i].frame -= 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -648,7 +648,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -659,7 +659,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -674,7 +674,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -685,7 +685,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -701,7 +701,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -711,7 +711,7 @@ void Character03::Slot07()
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -726,7 +726,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -736,7 +736,7 @@ void Character03::Slot07()
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
                             effects[i].frame -= 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -782,7 +782,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -793,7 +793,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -808,7 +808,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -819,7 +819,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -835,7 +835,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -845,7 +845,7 @@ void Character03::Slot07()
                         if (effects[i].x < (double)contextOwner->cameraBounds.left) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -860,7 +860,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -870,7 +870,7 @@ void Character03::Slot07()
                         if (effects[i].x < (double)contextOwner->cameraBounds.left) {
                             effects[i].frame -= 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -888,7 +888,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -899,7 +899,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -914,7 +914,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -925,7 +925,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -941,7 +941,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -951,7 +951,7 @@ void Character03::Slot07()
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -966,7 +966,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -976,7 +976,7 @@ void Character03::Slot07()
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
                             effects[i].frame -= 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (3 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -1017,7 +1017,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1029,7 +1029,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1045,7 +1045,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1057,7 +1057,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1074,7 +1074,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1086,7 +1086,7 @@ void Character03::Slot07()
                             effects[i].frame -= 2;
                             ++field314c[i];
                             effects[i].field0084 = 1;
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -1101,7 +1101,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1113,7 +1113,7 @@ void Character03::Slot07()
                             effects[i].frame -= 6;
                             ++field314c[i];
                             effects[i].field0084 = 1;
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -1131,7 +1131,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1143,7 +1143,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 6;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1159,7 +1159,7 @@ void Character03::Slot07()
                         if (effects[i].y > (double)contextOwner->cameraBounds.bottom) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1171,7 +1171,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1188,7 +1188,7 @@ void Character03::Slot07()
                             effects[i].frame =
                             effects[i].frame + 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1199,7 +1199,7 @@ void Character03::Slot07()
                         if (effects[i].x > (double)contextOwner->cameraBounds.right) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1215,7 +1215,7 @@ void Character03::Slot07()
                         if (effects[i].y < (double)contextOwner->cameraBounds.top) {
                             effects[i].frame -= 2;
                             ++field314c[i];
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             effects[i].field0084 = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
@@ -1227,7 +1227,7 @@ void Character03::Slot07()
                             effects[i].frame -= 6;
                             ++field314c[i];
                             effects[i].field0084 = 1;
-                            field02c8 = 1;
+                            pendingCharacterSoundSlot = 1;
                             if (7 < field314c[i]) {
                                 RemoveLocalEffect((short)i);
                                 field3148 = 0;
@@ -1453,7 +1453,7 @@ void Character03::Slot07()
                     effects[i].vx = -1.0 - (double)((unsigned short)RandomRange(0, 0x14)) * 0.01;
                 }
                 if (effects[i].y + effects[i].vy > 0.0) {
-                    field02c8 = 2;
+                    pendingCharacterSoundSlot = 2;
                     effects[i].y = 0.0;
                     effects[i].vy =
                     -effects[i].vy * 0.5;
@@ -1668,7 +1668,7 @@ void Character03::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c9 = 0x22;
+                    pendingContextSoundSlot = 0x22;
                     RemoveLocalEffect((short)i);
                     field3144 = 0;
                     break;

@@ -288,8 +288,8 @@ public:
     short field0260;
     short field0262;
     unsigned short soundSlots[50];
-    char field02c8;
-    char field02c9;
+    char pendingCharacterSoundSlot;
+    char pendingContextSoundSlot;
     short effectWrite;
     short effectRead;
     unsigned char unknown_02ce[0x2];

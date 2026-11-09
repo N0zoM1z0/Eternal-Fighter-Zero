@@ -58,7 +58,7 @@ void Character08::Slot07()
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
                     effects[i].frame = 1;
-                    field02c9 = 4;
+                    pendingContextSoundSlot = 4;
                     effects[i].tick = 0;
                 }
                 ++effects[i].tick;
@@ -88,7 +88,7 @@ void Character08::Slot07()
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
                     effects[i].frame = 1;
-                    field02c9 = 4;
+                    pendingContextSoundSlot = 4;
                     effects[i].tick = 0;
                 }
                 ++effects[i].tick;
@@ -119,7 +119,7 @@ void Character08::Slot07()
                     effects[i].vy = 0.0;
                     effects[i].group = 2;
                     effects[i].field0084 = 1;
-                    field02c8 = 5;
+                    pendingCharacterSoundSlot = 5;
                     field3148 = 0;
                     break;
                 }
@@ -518,7 +518,7 @@ void Character08::Slot07()
                         effects[i].frame = 1;
                         SetVerticalShake(3,0);
                         effects[i].tick = 0;
-                        field02c9 = 0x22;
+                        pendingContextSoundSlot = 0x22;
                         effects[i].vy = 0.0;
                     }
                 }
@@ -563,7 +563,7 @@ void Character08::Slot07()
                 }
                 if ((effects[i].frame == 0xe) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 7;
+                    pendingCharacterSoundSlot = 7;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -582,7 +582,7 @@ void Character08::Slot07()
                 }
                 if ((effects[i].frame == 0xe) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 7;
+                    pendingCharacterSoundSlot = 7;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -601,7 +601,7 @@ void Character08::Slot07()
                 }
                 if ((effects[i].frame == 0xe) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 7;
+                    pendingCharacterSoundSlot = 7;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -914,7 +914,7 @@ void Character08::Slot07()
                         effects[i].field0084 = 1;
                         effects[i].vx = 4.0;
                         effects[i].vy = 0.0;
-                        field02c9 = 0x14;
+                        pendingContextSoundSlot = 0x14;
                         return;
                     }
                     if ((effects[i].frame == 7) &&
@@ -1022,7 +1022,7 @@ void Character08::Slot07()
                         effect.layer = true;
                         effect.flag0018 = (unsigned char)facing;
                         EmitLocalEffect(&effect);
-                        field02c8 = 5;
+                        pendingCharacterSoundSlot = 5;
                     }
                     if (effects[i].frame == 6) {
                         effects[i].group = 1;
@@ -1611,7 +1611,7 @@ void Character08::Slot07()
                         effect.layer = true;
                         effect.flag0018 = (unsigned char)effects[i].flag0048;
                         EmitLocalEffect(&effect);
-                        field02c8 = 5;
+                        pendingCharacterSoundSlot = 5;
                     }
                     if (effects[i].frame == 6) {
                         effects[i].group = 1;
@@ -1814,7 +1814,7 @@ void Character08::Slot07()
                     effect.layer = true;
                     effect.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&effect);
-                    field02c9 = 0x22;
+                    pendingContextSoundSlot = 0x22;
                     RemoveLocalEffect((short)i);
                     field3144 = 0;
                     break;

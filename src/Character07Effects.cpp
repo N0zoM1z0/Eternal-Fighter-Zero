@@ -252,7 +252,7 @@ void Character07::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c8 = 1;
+                    pendingCharacterSoundSlot = 1;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -316,7 +316,7 @@ void Character07::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c8 = 1;
+                    pendingCharacterSoundSlot = 1;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -380,7 +380,7 @@ void Character07::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c8 = 1;
+                    pendingCharacterSoundSlot = 1;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -418,7 +418,7 @@ void Character07::Slot07()
             case 0x1a1:
                 if ((effects[i].frame == 0) &&
                     (effects[i].tick == 0)) {
-                    field02c9 = 0x12;
+                    pendingContextSoundSlot = 0x12;
                     effects[i].vx = 1.0;
                     spawn.type = 0x198;
                     spawn.x = (double)(int(effects[i].x));
@@ -705,7 +705,7 @@ void Character07::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c9 = 0x22;
+                    pendingContextSoundSlot = 0x22;
                     RemoveLocalEffect((short)i);
                     field3144 = 0;
                     break;

@@ -140,7 +140,7 @@ void Character23::Slot07()
                         ((*opponentSlot)->positionY < 0.0)))))) &&
                         ((*opponentSlot)->field0008 != 0x60)) {
                         effects[i].frame = 2;
-                        field02c8 = 2;
+                        pendingCharacterSoundSlot = 2;
                         effects[i].tick = 0;
                     }
                     if ((((field0008 == 0xfa) || (field0008 == 0xfc)) &&
@@ -190,7 +190,7 @@ void Character23::Slot07()
                         ((*opponentSlot)->field0008 != 0x60)) {
                         effects[i].frame = 2;
                         effects[i].tick = 0;
-                        field02c8 = 2;
+                        pendingCharacterSoundSlot = 2;
                     }
                     if ((((field0008 == 0xfb) || (field0008 == 0xfc)) &&
                         (field000a <= 1)) ||
@@ -238,7 +238,7 @@ void Character23::Slot07()
                         ((*opponentSlot)->field0008 != 0x60)) {
                         effects[i].frame = 2;
                         effects[i].tick = 0;
-                        field02c8 = 2;
+                        pendingCharacterSoundSlot = 2;
                     }
                     if ((((field0008 == 0xfc) && (field000a <= 1)) ||
                         (effects[i].field0080 == 4)) || (effects[i].field0080 == 5)) {
@@ -299,7 +299,7 @@ void Character23::Slot07()
                 }
                 if ((effects[i].frame == 4) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -353,7 +353,7 @@ void Character23::Slot07()
                 }
                 if ((effects[i].frame == 4) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -399,7 +399,7 @@ void Character23::Slot07()
                 }
                 if ((effects[i].frame == 4) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 0;
+                    pendingCharacterSoundSlot = 0;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
@@ -425,7 +425,7 @@ void Character23::Slot07()
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
                     effects[i].field0084 = 1;
-                    field02c8 = 4;
+                    pendingCharacterSoundSlot = 4;
                 }
                 if (effects[i].frame < 4) {
                     effects[i].vy =
@@ -433,7 +433,7 @@ void Character23::Slot07()
                 }
                 if ((effects[i].frame == 4) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 5;
+                    pendingCharacterSoundSlot = 5;
                     effects[i].vy = 0.0;
                     effects[i].vx = 4.0;
                 }
@@ -464,7 +464,7 @@ void Character23::Slot07()
                     (effects[i].tick == 0)) {
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
-                    field02c8 = 4;
+                    pendingCharacterSoundSlot = 4;
                     effects[i].field0084 = 1;
                 }
                 if (effects[i].frame < 4) {
@@ -475,7 +475,7 @@ void Character23::Slot07()
                     (effects[i].tick == 0)) {
                     effects[i].vy = 0.0;
                     effects[i].vx = 4.0;
-                    field02c8 = 5;
+                    pendingCharacterSoundSlot = 5;
                 }
                 if (4 < effects[i].frame) {
                     effects[i].vx =
@@ -505,7 +505,7 @@ void Character23::Slot07()
                     effects[i].vx = 0.0;
                     effects[i].vy = 0.0;
                     effects[i].field0084 = 5;
-                    field02c8 = 4;
+                    pendingCharacterSoundSlot = 4;
                 }
                 if (effects[i].frame < 4) {
                     effects[i].vy =
@@ -526,7 +526,7 @@ void Character23::Slot07()
                     if (effects[i].frame == 4) {
                         effects[i].vy = 1.0;
                         effects[i].vx = 3.4;
-                        field02c8 = 5;
+                        pendingCharacterSoundSlot = 5;
                         spawn.type = 0x19c;
                         spawn.x = (double)(int(effects[i].x));
                         spawn.y = (double)(int(effects[i].y));
@@ -582,7 +582,7 @@ void Character23::Slot07()
                         spawn.flag0018 = (unsigned char)facing;
                         spawn.group = 2;
                         spawn.layer = 1;
-                        field02c8 = 7;
+                        pendingCharacterSoundSlot = 7;
                         EmitLocalEffect(&spawn);
                     }
                     if (effects[i].frame >= frameCount) {
@@ -706,7 +706,7 @@ void Character23::Slot07()
                         spawn.group = 2;
                         spawn.layer = 1;
                         EmitLocalEffect(&spawn);
-                        field02c8 = 7;
+                        pendingCharacterSoundSlot = 7;
                     }
                     if (effects[i].frame >= frameCount) {
                         effects[i].frame -= 2;
@@ -831,7 +831,7 @@ void Character23::Slot07()
                         spawn.group = 2;
                         spawn.layer = 1;
                         EmitLocalEffect(&spawn);
-                        field02c8 = 8;
+                        pendingCharacterSoundSlot = 8;
                     }
                     if (effects[i].frame >= frameCount) {
                         effects[i].frame -= 2;
@@ -1269,7 +1269,7 @@ void Character23::Slot07()
                     spawn.x = (effects[i].x - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     spawn.y = (effects[i].y - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     EmitLocalEffect(&spawn);
-                    field02c8 = 0xb;
+                    pendingCharacterSoundSlot = 0xb;
                     RemoveLocalEffect((short)i);
                     break;
                 }
@@ -1315,7 +1315,7 @@ void Character23::Slot07()
                     spawn.x = (effects[i].x - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     spawn.y = (effects[i].y - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     EmitLocalEffect(&spawn);
-                    field02c8 = 0xb;
+                    pendingCharacterSoundSlot = 0xb;
                     RemoveLocalEffect((short)i);
                     break;
                 }
@@ -1361,7 +1361,7 @@ void Character23::Slot07()
                     spawn.x = (effects[i].x - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     spawn.y = (effects[i].y - 10.0) + (double)(unsigned short)RandomRange(0, 0x14);
                     EmitLocalEffect(&spawn);
-                    field02c8 = 0xb;
+                    pendingCharacterSoundSlot = 0xb;
                     RemoveLocalEffect((short)i);
                     break;
                 }
@@ -1964,7 +1964,7 @@ void Character23::Slot07()
                     spawn.x = (double)(int(effects[i].x));
                     spawn.y = (double)(int(effects[i].y));
                     spawn.group = 2;
-                    field02c9 = 2;
+                    pendingContextSoundSlot = 2;
                     spawn.layer = 1;
                     contextOwner->EmitEffect(&spawn);
                 }
@@ -2059,7 +2059,7 @@ void Character23::Slot07()
                         if (((effects[i].frame == 1) &&
                             ((*opponentSlot)->field0108 <= 5000)) &&
                             (field00ac + 1 == (int)(char)contextOwner->selection134e)) {
-                            field02c8 = 0xd;
+                            pendingCharacterSoundSlot = 0xd;
                         }
                         if (effects[i].frame == 0x11) {
                             if (((*opponentSlot)->field0108 <= 0) &&
@@ -2100,7 +2100,7 @@ void Character23::Slot07()
                 effects[i].y = positionY - 42.0;
                 if ((effects[i].frame == 1) &&
                     (effects[i].tick == 0)) {
-                    field02c8 = 0xc;
+                    pendingCharacterSoundSlot = 0xc;
                     spawn.type = 0x1c4;
                     spawn.x = (double)(facing * 9) + positionX;
                     spawn.y = positionY - 53.0;
@@ -2643,7 +2643,7 @@ void Character23::Slot07()
                     spawn.layer = 1;
                     spawn.flag0018 = (unsigned char)facing;
                     EmitLocalEffect(&spawn);
-                    field02c9 = 0x22;
+                    pendingContextSoundSlot = 0x22;
                     RemoveLocalEffect((short)i);
                     field3144 = 0;
                     break;

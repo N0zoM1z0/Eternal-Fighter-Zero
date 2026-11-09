@@ -107,18 +107,18 @@ void Scene3::PlayCharacterSounds()
 {
     if (flag002d == 2) {
         for (int i = 0; i < 2; ++i) {
-            secondary[i]->field02c9 = -1;
-            secondary[i]->field02c8 = -1;
+            secondary[i]->pendingContextSoundSlot = -1;
+            secondary[i]->pendingCharacterSoundSlot = -1;
         }
     } else {
         for (int i = 0; i < 2; ++i) {
-            if (secondary[i]->field02c9 >= 0 && secondary[i]->field02c9 < 65) {
-                audioOwner->StartSound(contextOwner->soundSlots[secondary[i]->field02c9], 0);
-                secondary[i]->field02c9 = -1;
+            if (secondary[i]->pendingContextSoundSlot >= 0 && secondary[i]->pendingContextSoundSlot < 65) {
+                audioOwner->StartSound(contextOwner->soundSlots[secondary[i]->pendingContextSoundSlot], 0);
+                secondary[i]->pendingContextSoundSlot = -1;
             }
-            if (secondary[i]->field02c8 >= 0 && secondary[i]->field02c8 < 50) {
-                audioOwner->StartSound(secondary[i]->soundSlots[secondary[i]->field02c8], 0);
-                secondary[i]->field02c8 = -1;
+            if (secondary[i]->pendingCharacterSoundSlot >= 0 && secondary[i]->pendingCharacterSoundSlot < 50) {
+                audioOwner->StartSound(secondary[i]->soundSlots[secondary[i]->pendingCharacterSoundSlot], 0);
+                secondary[i]->pendingCharacterSoundSlot = -1;
             }
         }
     }

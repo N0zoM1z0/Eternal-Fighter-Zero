@@ -59,8 +59,8 @@ void Secondary::InitializeState()
     field0262 = 99;
     field0260 = 0;
     for (i = 0; i < 180; ++i) history[i] = 0;
-    field02c8 = -1;
-    field02c9 = -1;
+    pendingCharacterSoundSlot = -1;
+    pendingContextSoundSlot = -1;
     effectWrite = 0;
     effectRead = 0;
     ClearLocalEffects();
