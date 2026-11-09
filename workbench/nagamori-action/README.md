@@ -10,7 +10,7 @@ The full target SHA-256 and the reviewed first-action prefix are in
 ## Implemented source
 
 `Character06Input.cpp` is natural C++, deliberately isolated from
-accepted production `src/`. Its first **twenty-seven priority-ordered action
+accepted production `src/`. Its first **twenty-eight priority-ordered action
 guards** recover the original buffering rules, command checks,
 current animation/frame cancel flags, meter thresholds, attack-state
 restrictions, action group semantics, and result animations.
@@ -23,13 +23,13 @@ conditional airborne follow-on actions after 0x34/0x70/0x6F/0x6E.
 These tests were derived from canonical EFZ.exe instruction order;
 related-character code served only as an initial source-shape reference.
 
-A focused VC7.1 compile of these first actions emits **6,931 bytes**
+A focused VC7.1 compile of these first actions emits **7,268 bytes**
 including a temporary standalone epilogue; the exact canonical
-first-twenty-seven-action prefix is **6,929 bytes / 1,708 instructions** ending
+first-twenty-eight-action prefix is **7,266 bytes / 1,791 instructions** ending
 just before the original `jmp` to the final shared epilogue at
-`0x004AFDF1`. A reproducible check compares 1,707 original
+`0x004AFF42`. A reproducible check compares 1,790 original
 instructions/operands (everything through the last action state
-assignment) and finds **1,707/1,707 matching normalized instruction forms**
+assignment) and finds **1,790/1,790 matching normalized instruction forms**
 with the single incomplete stack-frame prologue instruction excluded. Only numeric branch/call
 targets and original x87 constant destination addresses are normalized.
 The original large function allocates a 20-byte frame with additional
@@ -44,13 +44,13 @@ scripts/repo-python workbench/nagamori-action/check_prefix.py
 ```
 
 The checker compiles this one TU using the repository's pinned VC7.1,
-attests the original 6,929-byte prefix and asserts 918/918
+attests the original 7,266-byte prefix and asserts 918/918
 opcodes/operands after the documented **one frame instruction** is
 excluded. It does not assert whole-function 12,277-byte Exact, and
 no source/match ledger acceptance or broad cold replay is implied.
 
-Next: implement the next action group at `0x004AFDF6`
-(`field015c < 3`, first command 0x06), then continue the original guard order
+Next: implement the next air-direction action group at `0x004AFF47`
+(`field015c < 1`, commands 0 and 1), then continue the original guard order
 until the common epilogue at `0x004B12D1`. Keep explicit numeric
 sequence-array index and action-ID original checks; avoid templating
 away source-level order because VC7.1 codegen depends on it.
@@ -94,3 +94,11 @@ Four more original branches distinguish 0x0C permission plus
 (result 0x10B with alternate 0x116, ceiling 267). These grounded
 branches use the original **zero-Y** equality, unlike the earlier
 negative-Y airborne tiers.
+
+The first `field015c < 3` branch (command 0x06) is now source-level:
+it requires an original negative-Y air action, the current frame
+cancel flag, and `airActionCount < 1`. It increments the byte counter
+at +0x15A and selects action 0x0E, 0x0F or 0x10 depending on the
+signed direction byte at original object offset +0x188 versus facing.
+A local offset read is used rather than changing accepted base class
+layout; all corresponding x86 instructions and registers match.

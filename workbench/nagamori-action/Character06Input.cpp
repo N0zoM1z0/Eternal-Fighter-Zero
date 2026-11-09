@@ -347,5 +347,25 @@ void Character06::Slot04()
             return;
         }
     }
+    if (field015c < 3) {
+        if (recognizedCommand == 0x06 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 && airActionCount < 1 &&
+            sequences[field0008].field0002 <= sequences[14].field0000 &&
+            (((field0008 >= 200 && attackCollisionResult >= 2 &&
+               attackCollisionResult != 6)) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            ++airActionCount;
+            field0008 = 0x0e;
+            if (reinterpret_cast<const signed char *>(this)[0x188] == facing) {
+                field0008 = 0x0f;
+            }
+            if (reinterpret_cast<const signed char *>(this)[0x188] == -facing) {
+                field0008 = 0x10;
+            }
+            return;
+        }
+    }
     // Other priority-ordered actions and the final original default remain open.
 }
