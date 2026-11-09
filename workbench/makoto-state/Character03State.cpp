@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 and 220 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -3218,9 +3218,49 @@ void Character03::Slot06()
         }
         return;
 
+    case 220: // Original block 0x005F1440: opponent grab and impact effect
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        if (field000a == 1 && field000c == 0 &&
+            (*opponentSlot)->positionY == 0.0) {
+            remainingHitCount = 1;
+        } else {
+            remainingHitCount = 0;
+        }
+        if (field000a == 1 && attackCollisionResult == 3) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            outgoingPushbackVelocityX = 0.0;
+            ResetPose();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            field0008 = 221;
+            (*opponentSlot)->field0008 = 107;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 25);
+            effect.y = (double)((int)positionY - 51);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            // Original proceeds to the frame counter even after a grab.
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 34 explicit cases. The target's true default path also
+        // the other 33 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

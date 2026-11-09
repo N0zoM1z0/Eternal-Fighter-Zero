@@ -694,6 +694,22 @@ work, not the original behavior for valid unimplemented animations.
   original blocks cover 928 bytes, checked along with every x87
   constant and effect call directly in EFZ.exe; the C++ draft builds.
 
+- Animation ID 220 (0x005F1440..0x005F160E, 462 bytes) is Makoto's
+  opponent grab entry. Every tick it zeroes X/Y velocity and dash
+  momentum. Pose 1/tick zero gives one hit only if the opponent Y is
+  exactly zero; otherwise the remaining hit count is cleared. A
+  pose-1 attackCollisionResult==3 grab clears horizontal pushback,
+  calls self ResetPose, then opponent ResetPose and ResetFrame, enters
+  own state 221, and sets the opponent state to **107**. It emits
+  **context** effect 0 at truncated X+25*facing and truncated Y-51,
+  group 2/layer 1. The target does *not* set the opponent's
+  airActionDisabled flag here (unlike the Character07 reference),
+  and it still executes the normal frame counter after the grab.
+  Each elapsed frame clears attackCollisionResult; exhaustion enters
+  idle state 0 through FaceOpponent/ResetPose, without an inputY
+  crouch branch. Original call order, 462 bytes and target constants
+  were rechecked in EFZ.exe; the C++ draft builds with VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -719,7 +735,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 220 and onward directly from reviewed target instructions,
+Extend case 221 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
