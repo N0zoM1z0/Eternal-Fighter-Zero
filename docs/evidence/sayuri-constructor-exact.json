@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 code generation and original-bound four relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 419,
+      "matched_bytes": 419,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x00446404: original direct six-argument Secondary constructor call, canonical address 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7897400,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character09@@6B@",
+          "evidence": "EFZ.exe @ 0x0044640C: Sayuri child 13-method vtable pointer at 0x788138, original virtual destinations decoded",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7897392,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62289",
+          "evidence": "EFZ.exe @ 0x00446412: canonical sayuri NUL resource literal at 0x788130",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x00446421: original CRT strcpy call at 0x778080, writing Secondary.resourceName at +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bbeefc0abdad4ef7832a1b14b4ab3f7774e8d83aecec14706055b7b6b38f2481",
+      "target_extent_sha256": "bbeefc0abdad4ef7832a1b14b4ab3f7774e8d83aecec14706055b7b6b38f2481",
+      "unit": "character-09-constructor",
+      "symbol": "??0Character09@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x004463E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "b3ce66695f66d5394af74a7efa516ba78796234a6f9ce5da038ac2160f084034",
+      "object_sha256": "71ef3d32801c9555232b8b5b1b8f780cd5790e7ca38048cfe335bb428f5d5958",
+      "source_sha256": "1dd9c135cb8259a198ff87a775808b97b2d1acb342cd1191c1f3ddd4b6983e57",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "8f97edeaece7e237dc3be12ee756334666aa6a8f9243ccf0c55553a53362e907"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "aa24fec0bc29c55ed6f1f583e25de80c74599120a63f5401907fb53130800937",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a8aafef67bf510eab83bd7f98d9e388904fa6cb5f060d8d7a5cc39c215fbb656",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Natural C++ Sayuri constructor at 0x004463E0: source matches full 419 bytes, 4 direct operand destinations. Original field3150=999 and sparse command slots independently checked. No cold replay."
+}

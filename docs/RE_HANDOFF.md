@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **338 exact functions**, **1,065,159 code bytes**,
+  ledgers currently count **339 exact functions**, **1,065,578 code bytes**,
   **7,655 associated table bytes**, 373 reviewed complete boundaries and 368
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -286,6 +286,27 @@ original jump target and relocation offsets; the simultaneous mapping
 and full byte proofs are in
 `docs/evidence/exnanase-creation-consumers-exact.json` and the fresh
 Makoto receipt. No unrelated replay or linked-product/runtime claim.
+
+## New Sayuri constructor and direct dependents accepted Exact
+
+`Character09::Character09` at `0x004463E0` is newly strict
+**419/419-byte Exact** with four independently reviewed original
+relocation destinations. Natural source `src/Character09Frame.cpp`,
+selected unit `character-09-constructor`, public proof
+`docs/evidence/sayuri-constructor-exact.json`. The 0x3458 class view
+retains seven initial state fields, three 64-int scratch arrays and
+unknown trailing bytes; field3150 is 999, not zero, and the command
+indices are sparse.
+
+After updating the shared class view, the three actual dependent Exact
+functions were selectively rebuilt: `scene-create-character` remains
+**3495/3495** (97 relocations), `scene-loading-character` **2651/2651**
+(76), and **Makoto Slot06 remains 59292/59292** (1,386), tables
+included. All changed compiler-local references (25/26/127 symbols)
+were rebound to the same original destinations with a +9 label shift
+and independently compared in
+`docs/evidence/sayuri-creation-consumers-exact.json`. This is not a
+fresh replay of unrelated certificates or whole-game runtime proof.
 
 ## Other open substantial work
 

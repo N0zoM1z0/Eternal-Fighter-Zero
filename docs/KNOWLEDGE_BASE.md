@@ -1875,6 +1875,32 @@ whole-owner certificate was separately refreshed. These targeted
 checks do not certify unrelated historical header dependencies,
 whole-game linkage or native runtime equivalence.
 
+### Sayuri constructor: independent complete exact source (2026-11-09)
+
+`Character09::Character09` at `0x004463E0` now has a full natural C++
+implementation in `src/Character09Frame.cpp` matching **419/419**
+original code bytes with four original-bound relocations under the
+selected VC7.1 static /Od profile. The reviewed targets are the
+Secondary constructor `0x40EAE0`, 13-slot Sayuri child vtable
+`0x788138`, original `sayuri` literal `0x788130` and CRT strcpy
+`0x778080`. The original-size 0x3458 view has seven explicit child
+state integers, three arrays of 64 integers and four unwritten
+trailing bytes. It initializes `field3150=999` after the surrounding
+zeroed fields, five collision pairs, and sparse command indices
+`[0],[1],[10]` rather than fabricating uniform command defaults.
+
+After the same-size class-view change, three real dependent owners
+were rebuilt and strictly compared: Scene creation **3495/3495
+bytes with 97 relocations**, loading creation **2651/2651 with 76**,
+and the full Makoto Slot06 boss **59292/59292 with 1,386**.
+Compiler-local labels shifted +9 in 25/26/127 references, mapped
+simultaneously at unchanged relocation positions and actual original
+jump destinations. The complete reports are
+`docs/evidence/sayuri-constructor-exact.json` and
+`docs/evidence/sayuri-creation-consumers-exact.json`; the accepted
+Makoto report was also refreshed from a new selected build. Other
+legacy source-dependency freshness and runtime linkage remain open.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's
