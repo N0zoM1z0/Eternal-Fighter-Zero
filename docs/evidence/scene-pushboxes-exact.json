@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "authority": "complete native function codegen with all reviewed original relocation bindings",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 2727,
+      "matched_bytes": 2727,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 44,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766B7A: fld QWORD PTR ds:0x7872f8; relocation at function+0x2C",
+          "addend": 0
+        },
+        {
+          "offset": 62,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766B8C: fld QWORD PTR ds:0x7872f8; relocation at function+0x3E",
+          "addend": 0
+        },
+        {
+          "offset": 164,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "resources/EFZ.exe @ 0x00766BF3: call 0x767600; relocation at function+0xA4",
+          "addend": 0
+        },
+        {
+          "offset": 283,
+          "target": 7763456,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?TransformPoseBox@Scene3@@QAE?AUSurfaceRect@@PBVSecondaryPose@@PBU2@@Z",
+          "evidence": "resources/EFZ.exe @ 0x00766C6A: call 0x767600; relocation at function+0x11B",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 7764272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?BoxesOverlap@Scene3@@QAEHPBUSurfaceRect@@0@Z",
+          "evidence": "resources/EFZ.exe @ 0x00766C91: call 0x767930; relocation at function+0x142",
+          "addend": 0
+        },
+        {
+          "offset": 376,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionLeftBoundary@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766CC6: fcomp QWORD PTR ds:0x787370; relocation at function+0x178",
+          "addend": 0
+        },
+        {
+          "offset": 414,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766CEC: fdiv QWORD PTR ds:0x787328; relocation at function+0x19E",
+          "addend": 0
+        },
+        {
+          "offset": 441,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionLeftBoundary@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766D07: fcomp QWORD PTR ds:0x787370; relocation at function+0x1B9",
+          "addend": 0
+        },
+        {
+          "offset": 479,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766D2D: fdiv QWORD PTR ds:0x787328; relocation at function+0x1DF",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "resources/EFZ.exe @ 0x00766D45: call 0x40ff70; relocation at function+0x1F6",
+          "addend": 0
+        },
+        {
+          "offset": 539,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766D69: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x21B",
+          "addend": 0
+        },
+        {
+          "offset": 617,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766DB7: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x269",
+          "addend": 0
+        },
+        {
+          "offset": 779,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766E59: fdiv QWORD PTR ds:0x787328; relocation at function+0x30B",
+          "addend": 0
+        },
+        {
+          "offset": 874,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "resources/EFZ.exe @ 0x00766EB9: call 0x40ff70; relocation at function+0x36A",
+          "addend": 0
+        },
+        {
+          "offset": 917,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766EE3: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x395",
+          "addend": 0
+        },
+        {
+          "offset": 1016,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766F46: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x3F8",
+          "addend": 0
+        },
+        {
+          "offset": 1178,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00766FE8: fdiv QWORD PTR ds:0x787328; relocation at function+0x49A",
+          "addend": 0
+        },
+        {
+          "offset": 1293,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076705B: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x50D",
+          "addend": 0
+        },
+        {
+          "offset": 1335,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767085: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x537",
+          "addend": 0
+        },
+        {
+          "offset": 1404,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x007670CA: fdiv QWORD PTR ds:0x787328; relocation at function+0x57C",
+          "addend": 0
+        },
+        {
+          "offset": 1545,
+          "target": 7902696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionRightBoundary@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767157: fcomp QWORD PTR ds:0x7895e8; relocation at function+0x609",
+          "addend": 0
+        },
+        {
+          "offset": 1589,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767183: fdiv QWORD PTR ds:0x787328; relocation at function+0x635",
+          "addend": 0
+        },
+        {
+          "offset": 1616,
+          "target": 7902696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionRightBoundary@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076719E: fcomp QWORD PTR ds:0x7895e8; relocation at function+0x650",
+          "addend": 0
+        },
+        {
+          "offset": 1660,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x007671CA: fdiv QWORD PTR ds:0x787328; relocation at function+0x67C",
+          "addend": 0
+        },
+        {
+          "offset": 1683,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "resources/EFZ.exe @ 0x007671E2: call 0x40ff70; relocation at function+0x693",
+          "addend": 0
+        },
+        {
+          "offset": 1726,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076720C: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x6BE",
+          "addend": 0
+        },
+        {
+          "offset": 1825,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076726F: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x721",
+          "addend": 0
+        },
+        {
+          "offset": 1987,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767311: fdiv QWORD PTR ds:0x787328; relocation at function+0x7C3",
+          "addend": 0
+        },
+        {
+          "offset": 2082,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "resources/EFZ.exe @ 0x00767371: call 0x40ff70; relocation at function+0x822",
+          "addend": 0
+        },
+        {
+          "offset": 2125,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076739B: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x84D",
+          "addend": 0
+        },
+        {
+          "offset": 2224,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x007673FE: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x8B0",
+          "addend": 0
+        },
+        {
+          "offset": 2386,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x007674A0: fdiv QWORD PTR ds:0x787328; relocation at function+0x952",
+          "addend": 0
+        },
+        {
+          "offset": 2501,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767513: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x9C5",
+          "addend": 0
+        },
+        {
+          "offset": 2543,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionZero@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x0076753D: fcomp QWORD PTR ds:0x7872f8; relocation at function+0x9EF",
+          "addend": 0
+        },
+        {
+          "offset": 2612,
+          "target": 7893800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "?collisionTwo@@3NA",
+          "evidence": "resources/EFZ.exe @ 0x00767582: fdiv QWORD PTR ds:0x787328; relocation at function+0xA34",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "bedc6c58e153bd8e8a26811dd2c856705414c4771409f2c83ab7ee91784a43d4",
+      "target_extent_sha256": "bedc6c58e153bd8e8a26811dd2c856705414c4771409f2c83ab7ee91784a43d4",
+      "unit": "scene-battle-resolve-pushboxes",
+      "symbol": "?ResolvePushboxes@Scene3@@QAEXXZ",
+      "target_address": "0x00766B50",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "04b516fb6038da8553e0b03ce28286856029a7dcc4ecd216cd6b738e284a721c",
+      "source_sha256": "b7ef8fd5f9f86e2034fc95804587b138842a31074afa10ab163a11c50151952d",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/SceneBattle.h": "115c379b79e672af145f9f97e1deb8d299ae3e92f643e8e34361891fd00f4f5c",
+        "src/SceneBattleGlobals.h": "4b606b0042b81666e308c78472f0ae733317b47a112b112a8de8bb9bc3e1f524"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6ee353b1a4352c05a8afed6b4cf97ef7933fb1224da4153c626ec3dff4e0dfc7",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8d14d2f9f04eef6dd1fbfcac400ca530794805bcff71ffa327e8ba4042cde72c",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Fresh isolated VC7.1 /Od /G6 /MT /Gy /W3 build of src/SceneBattlePushboxes.cpp; strict comparison of the complete 0x00766B50..0x007675F7 code extent and all 35 DIR32/REL32 bindings against the canonical EFZ.exe. One selected unit only. Ghidra caller 0x00763C20 and scene-local callees 0x00767600, 0x00767930; no whole-image or runtime claim."
+}

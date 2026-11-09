@@ -71,10 +71,11 @@ an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
 The current substantial owner is Makoto/Character03 Slot06 in
-`workbench/makoto-state/`, partially reconstructed through selected states
-including 85 but not complete or Exact. The formerly open
-`Scene3::ResolvePushboxes` has passed a complete **local** 2,727-byte,
-35-relocation comparison; origin review and ledger acceptance remain separate.
+`workbench/makoto-state/`, partially reconstructed across 62 selected states
+through 158 but not complete or Exact. `Scene3::ResolvePushboxes` has a fresh
+complete **local** 2,727-byte, 35-relocation exact comparison, independently
+reviewed authored origin and a public exact-ledger entry. Whole-image/runtime
+closure and freshness of unrelated older certificates remain open.
 The [current handoff](docs/RE_HANDOFF.md) gives the receiving agent its
 starting points and the next focused actions.
 

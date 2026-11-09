@@ -1,9 +1,9 @@
 # EFZ reconstruction handoff — 2026-11-09
 
 Start with [AGENTS.md](../AGENTS.md), then the specific source and evidence
-linked below. This handoff reviews source commit `3e98ada`, not the older
-2026-11-08 source checkpoint. Recheck `git status` and recent commits when
-resuming; handoff edits naturally advance HEAD.
+linked below. The live workbench now covers selected Makoto states through
+158 and the pushbox resolver has a fresh exact-ledger certificate. Recheck
+`git status` and the newest commits when resuming.
 
 ## Working agreement
 
@@ -22,16 +22,16 @@ resuming; handoff edits naturally advance HEAD.
 
 ## Current source and proof status
 
-- Repository: `N0zoM1z0/Eternal-Fighter-Zero`. At the 2026-11-09 audit,
-  `main` was clean, synchronized with `origin/main` at `3e98ada`.
+- Repository: `N0zoM1z0/Eternal-Fighter-Zero`. This session added local
+  `gpt-web:` checkpoints on `main` without pushing; the remote is behind.
 - Canonical private target: `resources/EFZ.exe`, 3,743,744 bytes; SHA-256
   `3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
   `verify-target.py` passed again on 2026-11-09.
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **328 exact functions**, **1,000,341 code bytes**,
-  **6,845 associated table bytes**, 371 reviewed complete boundaries and 365
+  ledgers currently count **329 exact functions**, **1,003,068 code bytes**,
+  **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -48,15 +48,17 @@ resuming; handoff edits naturally advance HEAD.
 The active substantial work is the **partial, isolated** draft
 [`workbench/makoto-state/Character03State.cpp`](../workbench/makoto-state/Character03State.cpp).
 Its [case-by-case README](../workbench/makoto-state/README.md) is the current
-detailed record. The latest source commit `3e98ada` reconstructs **state 85**
-following independent work on 81–84 and earlier branches.
+detailed record. Commits `13e9199`, `6871f0b`, `0e58464`, and `6325ad5`
+reconstruct states 86–87, 96–99, 150–155 and 156–158 after the earlier
+state-85 work. All were checked against original instructions and compiled
+as one isolated partial C++ owner.
 
 - Target function `0x005E85F0`: **58,482 bytes of code** plus 500-byte jump
   table and 310-byte selector table (**59,292 owned bytes**).
-- The workbench contains **selected states through 85**, *not all states
-  0–85*. Its default branch is an unfinished marker, not real behavior; this
-  file is not integrated into `src/` or ledgered exact.
-- **Next task: implement case 86 onward**, one branch at a time from target
+- The workbench implements **62 of 124 explicit dispatch IDs**, spread
+  across selected states through 158. Its default branch is an unfinished
+  marker, not real behavior; this file is not integrated into `src/` or ledgered exact.
+- **Next task: implement case 161 onward**, one branch at a time from target
   instructions. Preserve unsigned pose/frame arithmetic, x87 operations,
   distinct switch dispatches, sound/effect calls, and table ownership. Do not
   blindly copy equivalent-looking cases from another character.
@@ -74,7 +76,7 @@ following independent work on 81–84 and earlier branches.
   810 associated table bytes match. Makoto CPU Slot05 and effects Slot07 are
   separate, previously ledgered exact owners.
 
-## Corrected pushbox status: local full-codegen exact
+## Pushbox status: complete local codegen exact and ledgered
 
 `Scene3::ResolvePushboxes` at `0x00766B50` is **not** a still-failing
 12-byte relocation candidate. Commit `cabe2d9` repaired the natural source
@@ -93,11 +95,14 @@ must remain in their `CollisionSide()` branches but outside the nested
 velocity tests. Old notes claiming relocation 617→629 or an unmatched 2,727
 bytes are **superseded historical probes**, not the current defect.
 
-**Do not conflate local exactness with ledger acceptance.** The origin of
-`0x00766B50` remains `unknown/unreviewed` in
-`config/function-origins.csv` and there is no row for it in
-`config/matches.csv`. Review source/origin classification and downstream
-acceptance prerequisites separately; do not manually add one to 328.
+The origin of `0x00766B50` was reviewed as **authored** from its scene
+simulation caller `0x00763C20` and collision-specific callees at
+`0x0040FF70`, `0x00767600`, and `0x00767930`. It now has a source row, an
+exact-ledger row, and the fresh standalone certificate
+[`scene-pushboxes-exact.json`](evidence/scene-pushboxes-exact.json).
+The public ledger count therefore increases to 329. This is local complete
+codegen evidence, not a Factory-accepted replay or a whole-game result;
+old unrelated certificate dependencies still need selective refresh.
 
 Focused reproduction (no full cohort):
 

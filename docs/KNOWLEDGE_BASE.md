@@ -2932,6 +2932,16 @@ at identical offsets with matching owners. This is **local complete-function
 code-generation evidence**, not a Factory-accepted canonical replay receipt
 or proof of whole-image/runtime completion.
 
+**Reviewed 2026-11-09 ledger increment:** A fresh selected exact report is
+now saved in `docs/evidence/scene-pushboxes-exact.json` and the function is
+recorded in `config/implemented.csv` and `config/matches.csv`. Target-bound
+Ghidra showed its caller at `0x00763C20` (the scene's per-frame simulation)
+and its three game-specific callees at `0x0040FF70` (`CollisionSide`),
+`0x00767600` (`TransformPoseBox`) and `0x00767930` (`BoxesOverlap`). The
+independently reviewed origin row now classifies it as authored. This adds
+one complete **2,727-byte** code function to the public ledgers; previously
+stale certificates for unrelated sources remain an independent issue.
+
 **Actual source-level breakthrough:** Four boundary checks originally
 looked like unused named `int` locals, but declaring such locals before the
 rest of the expression spills changes MSVC 7.1's stack allocation.

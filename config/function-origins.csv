@@ -583,7 +583,7 @@ address,origin,status,evidence
 0x00766070,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-scene-construction-camera-and-events
 0x007661A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-number-shadows-and-keyboard-replay-control
 0x00766480,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
-0x00766B50,unknown,unreviewed,
+0x00766B50,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767600,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x007677A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
 0x00767930,authored,reviewed,docs/KNOWLEDGE_BASE.md#battle-collision-dispatch-and-world-boxes
