@@ -2970,6 +2970,27 @@ sequences line up. The targeted boss replay still rejects the relocation
 inventory: candidate relocation 629 remains target 617, so this is a semantic
 correction and a partial codegen improvement, not a completed function.
 
+A fresh source-path rebuild on 2026-11-09 rechecked this conclusion against the
+actual target instructions. In the right-separation fallback, target `0x767513`
+compares `facing1 * secondVelocity` with zero, then `test ah,0x41; jp 0x7675f3`
+exits on greater/unordered; the next comparison at `0x76753d` exits with
+`test ah,0x1; jne 0x7675f3` when `facing0 * firstVelocity` is negative. Thus the
+fallthrough is exactly `facing1 * secondVelocity <= 0` AND
+`facing0 * firstVelocity >= 0`. A probe that reversed these signs to follow a
+literal reading of the decompiler lost four more matching bytes (1652 to 1648)
+and was reverted. Keep the current source predicate; the x87 status-word
+sequence is the authority for this condition.
+
+The saved exact report `.analysis/exact/scene-battle-resolve-pushboxes.json` is
+stale: it describes source `9c1232e2...`, object `35deac04...`, and 1460/2727
+matching bytes. A focused rebuild of current source `53af872a...` produces
+object `e41cbfd9...`; a diagnostic comparison with relocation symbols rebound
+by name gives 1652/2727, but strict comparison still rejects the relocation
+inventory. In particular, target relocation function+0x269 (617) is still at
+candidate function+0x275 (629). Do not use the old 1460-byte receipt as the
+current baseline, and do not claim acceptance from the diagnostic rebound
+score.
+
 ### Complete dispatch and body-contact test
 
 DispatchCollisions first tests both character directions with TestBodyInteraction
