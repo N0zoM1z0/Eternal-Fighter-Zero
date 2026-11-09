@@ -83,17 +83,17 @@ class PatternSequence;
 struct SecondaryEffectSpawn;
 struct SecondaryFrame {
     SurfaceRect boxes0000[5], boxes0050[4], box0090;
-    short field00a0;
+    short damage;
     unsigned char unknown_00a2[2];
     float field00a4;
-    short field00a8;
+    short guardDamage;
     unsigned short field00aa;
     short field00ac, field00ae;
     unsigned short field00b0;
-    short field00b2, field00b4, field00b6;
+    short field00b2, hitMeterGain, guardMeterGain;
     float outgoingPushbackVelocityX, outgoingPushbackVelocityY;
     char field00c0, field00c1;
-    short field00c2, field00c4;
+    short attackerHitstopFrames, defenderHitstopFrames;
     unsigned char unknown_00c6[2];
 };
 class SecondarySequence {

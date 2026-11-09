@@ -84,7 +84,7 @@ void Secondary::AwardComboScore(const SecondaryFrame *attack)
     if (field0174 > field30d4) field30d4 = field0174;
     if (field0100 > field30d8) field30d8 = field0100;
     ++field30d0;
-    AddScore((attack->field00a0 / 100) * field30d0 * field30d4 * field0174);
+    AddScore((attack->damage / 100) * field30d0 * field30d4 * field0174);
 }
 
 void Secondary::AddScore(unsigned int amount)

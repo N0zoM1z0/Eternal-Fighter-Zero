@@ -72,7 +72,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->field0168 = 6;
                         } else if (((second->field0170 != 0) && (((second->field014e >= 0x1e) && (second->field013a == 0)) && (second->GuardInput(work.attack) != 0))) && ((work.attack->field00aa & 0x80) == 0)) {
                             work.slot->field0080 = 2;
-                            first->field0148 += work.attack->field00b6;
+                            first->field0148 += work.attack->guardMeterGain;
                             --work.slot->field0084;
                             second->outgoingPushbackActive = 1;
                             effect.owner = 0;
@@ -99,7 +99,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->field0170 = 1;
                         } else if (((second->field014e >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(work.attack, work.defense) != 0)) {
                             work.slot->field0080 = 2;
-                            first->field0148 += work.attack->field00b6;
+                            first->field0148 += work.attack->guardMeterGain;
                             --work.slot->field0084;
                             second->outgoingPushbackActive = 1;
                             effect.owner = 0;
@@ -121,7 +121,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->field0170 = 1;
                         } else if (((second->CanGuard(work.attack, work.defense) != 0) && (second->field014e >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9)))) {
                             work.slot->field0080 = 2;
-                            first->field0148 += work.attack->field00b6;
+                            first->field0148 += work.attack->guardMeterGain;
                             --work.slot->field0084;
                             second->outgoingPushbackActive = 1;
                             effect.owner = 0;
@@ -154,14 +154,14 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
                             first->field0168 = 2;
-                            first->field014a = work.attack->field00c2;
-                            second->field014a = work.attack->field00c4;
-                            second->field0108 = second->field0108 - (int)work.attack->field00a8;
+                            first->field014a = work.attack->attackerHitstopFrames;
+                            second->field014a = work.attack->defenderHitstopFrames;
+                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
                             second->field0134 =
-                            (float)((int)work.attack->field00a0 / 0x1e) + (float)second->field0134;
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
                             if (second->field0134 > 360.0f) {
                                 second->field0134 = 360.0f;
                             }
@@ -178,14 +178,14 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
                             first->field0168 = 2;
-                            first->field014a = work.attack->field00c2;
-                            second->field014a = work.attack->field00c4;
-                            second->field0108 = second->field0108 - (int)work.attack->field00a8;
+                            first->field014a = work.attack->attackerHitstopFrames;
+                            second->field014a = work.attack->defenderHitstopFrames;
+                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
                             second->field0134 =
-                            (float)((int)work.attack->field00a0 / 0x1e) + (float)second->field0134;
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
                             if (second->field0134 > 360.0f) {
                                 second->field0134 = 360.0f;
                             }
@@ -202,14 +202,14 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.palette = 3;
                             contextOwner->EmitEffect(&effect);
                             first->field0168 = 2;
-                            first->field014a = work.attack->field00c2;
-                            second->field014a = work.attack->field00c4;
-                            second->field0108 = second->field0108 - (int)work.attack->field00a8;
+                            first->field014a = work.attack->attackerHitstopFrames;
+                            second->field014a = work.attack->defenderHitstopFrames;
+                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
                             second->field0134 =
-                            (float)((int)work.attack->field00a0 / 0x1e) + (float)second->field0134;
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
                             if (second->field0134 > 360.0f) {
                                 second->field0134 = 360.0f;
                             }
@@ -226,9 +226,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             second->ResetPose();
                             second->facing = -work.slot->flag0048;
                             work.slot->field0080 = 2;
-                            work.slot->field0086 = work.attack->field00c2;
-                            second->field014a = work.attack->field00c4;
-                            first->field0148 += work.attack->field00b6;
+                            work.slot->field0086 = work.attack->attackerHitstopFrames;
+                            second->field014a = work.attack->defenderHitstopFrames;
+                            first->field0148 += work.attack->guardMeterGain;
                             --work.slot->field0084;
                             second->outgoingPushbackActive = 0;
                             effect.owner = 0;
@@ -238,21 +238,21 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             effect.group = 2;
                             effect.layer = 1;
                             effect.payload = 0;
-                            second->field0108 = second->field0108 - (int)work.attack->field00a8;
+                            second->field0108 = second->field0108 - (int)work.attack->guardDamage;
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
                             if (first->field0134 > 0.0f) {
                                 first->field0134 =
                                 first->field0134 -
-                                (float)((int)work.attack->field00a0 / 0x1e);
+                                (float)((int)work.attack->damage / 0x1e);
                                 if (first->field0134 < 0.0f) {
                                     second->field0134 = (float)second->field0134 - first->field0134;
                                     first->field0134 = 0;
                                 }
                             } else {
                                 second->field0134 =
-                                (float)((int)work.attack->field00a0 / 0x1e) + (float)second->field0134;
+                                (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
                                 if (second->field0134 > 360.0f) {
                                     second->field0134 = 360.0f;
                                 }
@@ -308,7 +308,7 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (first->field0174 == 0) {
                                 second->field010c = second->field0108;
                             }
-                            second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                            second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                             second->field0124 = (short)(work.attack->field00b2 * (first->field0178 / 10000.0)
                                 * ((((work.attack->field00aa & 0x2000) > 0 && (work.defense->field00b0 & 0x2000) > 0) ? 1 : 0) + 1));
                             second->field0128 = (unsigned int)((work.attack->field00aa & 0x400) > 0);
@@ -329,9 +329,9 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             first->field00f4 = first->field0174;
                             first->field0104 = 0xb4;
                             first->field0100 = second->field010c - second->field0108;
-                            first->field0148 += work.attack->field00b4;
-                            work.slot->field0086 = work.attack->field00c2;
-                            second->field014a = work.attack->field00c4;
+                            first->field0148 += work.attack->hitMeterGain;
+                            work.slot->field0086 = work.attack->attackerHitstopFrames;
+                            second->field014a = work.attack->defenderHitstopFrames;
                             --work.slot->field0084;
                             effect.owner = 0;
                             effect.type = (short)work.attack->field00c0;
@@ -483,7 +483,7 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
-                        second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                        second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->field00b2 * (first->field0178 / 10000.0 * 0.8));
                         second->field0128 = (work.attack->field00aa & 0x400) > 0;
                         second->field012c = (work.attack->field00aa & 0x800) > 0;
@@ -497,9 +497,9 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         first->field00f4 = first->field0174;
                         first->field0104 = 180;
                         first->field0100 = second->field010c - second->field0108;
-                        first->field0148 += work.attack->field00b4;
-                        first->field014a = work.attack->field00c2;
-                        second->field014a = work.attack->field00c4;
+                        first->field0148 += work.attack->hitMeterGain;
+                        first->field014a = work.attack->attackerHitstopFrames;
+                        second->field014a = work.attack->defenderHitstopFrames;
                         if (second->field0108 <= 0 && second->field0140 == 0) {
                             second->field0008 = work.attack->field00ac;
                             second->ResetPose();
@@ -616,7 +616,7 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
                         if (first->field0174 == 0) second->field010c = second->field0108;
-                        second->field0108 -= (int)(work.attack->field00a0 * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
+                        second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
                         second->field0124 = (short)(work.attack->field00b2 * (first->field0178 / 10000.0 * 0.8));
                         second->field0128 = (work.attack->field00aa & 0x400) > 0;
                         second->field012c = (work.attack->field00aa & 0x800) > 0;
@@ -630,9 +630,9 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         first->field00f4 = first->field0174;
                         first->field0104 = 180;
                         first->field0100 = second->field010c - second->field0108;
-                        first->field0148 += work.attack->field00b4;
-                        first->field014a = work.attack->field00c2;
-                        second->field014a = work.attack->field00c4;
+                        first->field0148 += work.attack->hitMeterGain;
+                        first->field014a = work.attack->attackerHitstopFrames;
+                        second->field014a = work.attack->defenderHitstopFrames;
                         if (second->field0108 <= 0 && second->field0140 == 0) {
                             second->field0008 = work.attack->field00ac;
                             second->ResetPose();
