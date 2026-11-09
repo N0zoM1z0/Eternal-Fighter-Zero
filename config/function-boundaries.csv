@@ -374,3 +374,5 @@ address,end,size,status,evidence
 0x0076CA50,0x0076DA0D,4029,reviewed,docs/KNOWLEDGE_BASE.md#scene2-preparebattle-owner-boundary
 0x006AB6A0,0x006AB7A1,257,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-alternate-mode-exact
 0x006AB060,0x006AB698,1592,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-slot08-effects-owner
+0x006A6270,0x006A62B7,71,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides
+0x006A62C0,0x006A6310,80,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides

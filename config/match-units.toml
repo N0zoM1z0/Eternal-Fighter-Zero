@@ -129054,3 +129054,37 @@ type = "REL32"
 symbol = "_strcpy"
 target = 0x00778080
 evidence = "EFZ.exe @ 0x004610D1: original direct CRT strcpy at 0x778080, Secondary.resourceName +0x94"
+
+[units.character-14-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Core.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-reset-pose/Character14Core.obj"
+symbol = "?ResetPose@Character14@@UAEXXZ"
+target_address = 0x006A6270
+size = 71
+
+[[units.character-14-reset-pose.relocations]]
+offset = 63
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "EFZ.exe direct call at 0x006A62AE, to original base Secondary::ResetPose at 0x0040F110 after four child-state clears"
+
+[units.character-14-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Core.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-remove-local-effect/Character14Core.obj"
+symbol = "?RemoveLocalEffect@Character14@@UAEXF@Z"
+target_address = 0x006A62C0
+size = 80
+
+[[units.character-14-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "EFZ.exe direct base RemoveLocalEffect call at 0x006A6305 after three array-slot clears, reviewed original 0x00412E60"

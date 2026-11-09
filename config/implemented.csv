@@ -342,3 +342,5 @@ address,name,source,symbol,status,evidence
 0x006AB6A0,Character14::SetAlternateMode,src/Character14Mode.cpp,?SetAlternateMode@Character14@@QAEXD@Z,complete,docs/evidence/ikumi-alternate-mode-exact.json
 0x00588310,Character11::Character11,src/Character11Frame.cpp,??0Character11@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/mio-constructor-exact.json
 0x00461090,Character10::Character10,src/Character10Frame.cpp,??0Character10@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/nayuki-constructor-exact.json
+0x006A6270,Character14::ResetPose,src/Character14Core.cpp,?ResetPose@Character14@@UAEXXZ,complete,docs/evidence/ikumi-core-overrides-exact.json
+0x006A62C0,Character14::RemoveLocalEffect,src/Character14Core.cpp,?RemoveLocalEffect@Character14@@UAEXF@Z,complete,docs/evidence/ikumi-core-overrides-exact.json

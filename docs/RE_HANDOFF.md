@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **343 exact functions**, **1,067,344 code bytes**,
-  **7,655 associated table bytes**, 375 reviewed complete boundaries and 370
+  ledgers currently count **345 exact functions**, **1,067,495 code bytes**,
+  **7,655 associated table bytes**, 377 reviewed complete boundaries and 372
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -393,6 +393,18 @@ at the opponent X load immediately before repeated CRT `rand()` calls;
 no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
+
+## Ikumi first two virtual overrides accepted Exact
+
+`Character14::ResetPose` (`0x006A6270`) and
+`Character14::RemoveLocalEffect` (`0x006A62C0`) now have natural C++
+`src/Character14Core.cpp` and independent strict **71/71** and
+**80/80** function matches (one reviewed relocation each), both
+located directly in the canonical Ikumi vtable. The latter clears
+three different 64-entry child arrays at the signed-short index
+**before** calling base removal. Source evidence is
+`docs/evidence/ikumi-core-overrides-exact.json`. This does not make
+Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
 
 ## Other open substantial work
 

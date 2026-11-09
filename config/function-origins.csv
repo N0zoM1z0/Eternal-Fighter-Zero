@@ -441,8 +441,8 @@ address,origin,status,evidence
 0x006A5DC0,unknown,unreviewed,
 0x006A5E70,unknown,unreviewed,
 0x006A5EB0,unknown,unreviewed,
-0x006A6270,unknown,unreviewed,
-0x006A62C0,unknown,unreviewed,
+0x006A6270,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides
+0x006A62C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#ikumi-exact-reset-and-effect-pool-overrides
 0x006A6310,unknown,unreviewed,
 0x006A6330,unknown,unreviewed,
 0x006A93F0,unknown,unreviewed,

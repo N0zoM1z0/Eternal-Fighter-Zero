@@ -1954,6 +1954,25 @@ blindly adding a float sum can make lengths coincide while leaving
 incorrect FP instructions. The full body has not yet achieved strict
 Exact and must not be included in the matches ledger.
 
+### Ikumi pose reset and effect-slot removal: two exact overrides (2026-11-09)
+
+The original Ikumi child vtable at `0x788D74` confirms its
+`Character14::ResetPose` entry at `0x6A6270` (slot 0) and
+`Character14::RemoveLocalEffect` entry at `0x6A62C0` (slot 10).
+Both now have normal C++ in `src/Character14Core.cpp`, with selected
+**71/71** and **80/80** exact code bytes, respectively. Every byte
+and one original-bound base-call relocation per function matched under
+VC7.1. ResetPose clears only the four original child integers
+`field3138`, `field313c`, `field3140`, `field3154` and then calls
+`Secondary::ResetPose` at `0x40F110`. RemoveLocalEffect clears the
+same signed-short index in three distinct 64-int child arrays before
+calling `Secondary::RemoveLocalEffect` at `0x412E60`. It does not
+replace the base pool-removal method. Their 9-byte/zero-byte alignment
+padding is excluded from the reviewed original function extents.
+Receipt: `docs/evidence/ikumi-core-overrides-exact.json`. These are
+new independently accepted methods; the larger Ikumi `Slot08` effect
+owner remains unaccepted in its separate workbench.
+
 ### Ikumi alternate mode switch: 257-byte strict Exact (2026-11-09)
 
 `Character14::SetAlternateMode(char)` at `0x006AB6A0` is now a natural
