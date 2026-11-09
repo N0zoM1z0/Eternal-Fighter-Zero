@@ -710,6 +710,23 @@ work, not the original behavior for valid unimplemented animations.
   crouch branch. Original call order, 462 bytes and target constants
   were rechecked in EFZ.exe; the C++ draft builds with VC7.1.
 
+- Animation ID 221 (0x005F160E..0x005F182F, 545 bytes) is Makoto's
+  grab follow-through, which is not the Character07 damage-script
+  owner. On pose 1/tick zero it invokes opponent ResetPose, opponent
+  ResetFrame, then changes the opponent state to **50**. Past pose 2
+  it integrates gravity and removes 0.045 horizontal speed, clamping
+  negative velocityX to zero. Ground contact during poses 3..8
+  forces pose 9, tick zero, Y zero, and calls self ResetFrame without
+  resetting the animation ID. On each expired frame it advances pose
+  and clears attackCollisionResult. The advance to pose 2 sets
+  velocity (1.5,-1.6), gravity 0.05 and emits a **global** effect 31
+  with truncated X, Y=0, group/layer zero and facing=(facing!=1).
+  The advance to pose 4 grants 30 meter, one remaining hit and sound
+  21. Normal exhaustion enters idle state 0 with ResetPose only;
+  there is no FaceOpponent call. The independent 545-byte target
+  block, all four doubles and effect field stores were rechecked
+  against EFZ.exe, and the partial owner compiled under VC7.1.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -735,7 +752,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 221 and onward directly from reviewed target instructions,
+Extend case 230 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
