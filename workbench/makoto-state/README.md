@@ -863,6 +863,21 @@ work, not the original behavior for valid unimplemented animations.
   original bytes and effect-structure writes were checked directly
   against EFZ.exe and the partial VC7.1 owner compiles.
 
+- Animation ID 255 (0x005F2CE5..0x005F2EC9, 484 bytes) combines
+  the resource-consuming startup of state 252 with the pose-4 local
+  effect family. On initial pose/tick it clears dash momentum,
+  ResetFrame, awards 45 meter, subtracts field0118 by **500 when
+  field0120==0** (250 otherwise) and emits global type 33 with
+  palette 11, group 2/layer 1, at truncated X and Y-50. After an
+  elapsed frame it sets attackCollisionResult=3; upon advancing to
+  pose 4 it emits local type 0x198 at truncated X+17*facing and
+  Y-26, owner 1/group 0/layer 1, facing and field0028=1, then
+  requests context sound 21. Unlike state 252 there is no repeated
+  pose-3 local effect or character-sound write. Exhaustion chooses
+  state 0 and ResetPose. All 484 original instruction bytes and
+  the two distinct effect destinations were reviewed against the
+  canonical executable; the partial VC7.1 build succeeded.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -888,7 +903,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 255 and onward directly from reviewed target instructions,
+Extend case 256 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
