@@ -5,8 +5,8 @@ void Secondary::ResetFrame()
 {
     velocityX = 0.0;
     velocityY = 0.0;
-    field0040 = 0.0;
-    field0048 = 0.0;
+    horizontalDeceleration = 0.0;
+    gravity = 0.0;
     field00b8 = 0.0;
 }
 

@@ -1289,7 +1289,7 @@ void Character08::Slot07()
                         }
                     }
                     if (effects[i].frame == 7) {
-                        (*opponentSlot)->field0048 = 0.035;
+                        (*opponentSlot)->gravity = 0.035;
                         (*opponentSlot)->velocityY = -10.5;
                         (*opponentSlot)->velocityX = 0.5;
                     }

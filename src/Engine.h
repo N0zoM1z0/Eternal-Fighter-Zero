@@ -182,7 +182,7 @@ public:
     unsigned char unknown_001b[5];
     double positionX;
     double positionY;
-    double velocityX, velocityY, field0040, field0048;
+    double velocityX, velocityY, horizontalDeceleration, gravity;
     char facing;
     unsigned char unknown_0051[0x7];
     char field0058;
