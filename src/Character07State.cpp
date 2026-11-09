@@ -347,7 +347,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -388,7 +388,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -429,7 +429,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -470,7 +470,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -511,7 +511,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -552,7 +552,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -593,7 +593,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -631,7 +631,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -669,7 +669,7 @@ void Character07::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -2386,8 +2386,8 @@ void Character07::Slot06()
             velocityX = 0.0;
             velocityY = 0.0;
             if (field0120 == '\x01') {
-                field0178 =
-                field0118 * 5.0 + field0178;
+                comboDamageScale =
+                field0118 * 5.0 + comboDamageScale;
             }
             field0118 = 0.0;
             hitstunFrames = 0x5a;
@@ -2526,8 +2526,8 @@ void Character07::Slot06()
             velocityX = 0.0;
             velocityY = 0.0;
             if (field0120 == '\x01') {
-                field0178 =
-                field0118 * 5.0 + field0178;
+                comboDamageScale =
+                field0118 * 5.0 + comboDamageScale;
             }
             field0118 = 0.0;
             hitstunFrames = 0x5a;
@@ -3632,8 +3632,8 @@ void Character07::Slot06()
                 (*opponentSlot)->knockbackVelocityY = -1.0;
                 (*opponentSlot)->gravity = 0.035;
                 ApplyDamage(0x514,500.0);
-                --field0174;
-                --field00f4;
+                --comboHitCount;
+                --comboDisplayHitCount;
                 (*opponentSlot)->field0128 = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =
@@ -4128,8 +4128,8 @@ void Character07::Slot06()
                 (*opponentSlot)->knockbackVelocityY = -0.3;
                 (*opponentSlot)->gravity = 0.035;
                 ApplyDamage(0x352,890.0);
-                --field0174;
-                --field00f4;
+                --comboHitCount;
+                --comboDisplayHitCount;
                 (*opponentSlot)->field0128 = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =
@@ -4359,11 +4359,11 @@ void Character07::Slot06()
                 (*opponentSlot)->field0008 = 0x3c;
                 (*opponentSlot)->knockbackVelocityX = 0.8;
                 (*opponentSlot)->knockbackVelocityY =
-                (-5.0 * field0178) / 10000.0;
+                (-5.0 * comboDamageScale) / 10000.0;
                 (*opponentSlot)->gravity = 0.035;
                 ApplyDamage(0x28a,890.0);
-                --field0174;
-                --field00f4;
+                --comboHitCount;
+                --comboDisplayHitCount;
                 (*opponentSlot)->field0128 = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =

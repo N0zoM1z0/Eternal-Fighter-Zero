@@ -365,7 +365,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -407,7 +407,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -449,7 +449,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -491,7 +491,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -533,7 +533,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -575,7 +575,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -617,7 +617,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 10;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.1;
             if (field0120 != '\0') {
                 field0118 = field0118 - 10.0;
@@ -656,7 +656,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0xf;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.5;
             if (field0120 != '\0') {
                 field0118 = field0118 - 20.0;
@@ -695,7 +695,7 @@ void Character24::Slot06()
         if ((field000a == 0) && ((unsigned short)field000c == 0)) {
             meter = meter + 0x14;
             velocityX =
-            (2.0 - (*opponentSlot)->field0178 / 10000.0) *
+            (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) *
             -1.8;
             if (field0120 != '\0') {
                 field0118 = field0118 - 30.0;
@@ -2374,8 +2374,8 @@ void Character24::Slot06()
             velocityX = 0.0;
             velocityY = 0.0;
             if (field0120 == '\x01') {
-                field0178 =
-                5.0 * field0118 + field0178;
+                comboDamageScale =
+                5.0 * field0118 + comboDamageScale;
             }
             field0118 = 0.0;
             hitstunFrames = 0x5a;
@@ -2522,8 +2522,8 @@ void Character24::Slot06()
             velocityX = 0.0;
             velocityY = 0.0;
             if (field0120 == '\x01') {
-                field0178 =
-                5.0 * field0118 + field0178;
+                comboDamageScale =
+                5.0 * field0118 + comboDamageScale;
             }
             field0118 = 0.0;
             hitstunFrames = 0x5a;

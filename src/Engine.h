@@ -229,11 +229,11 @@ public:
     short field00dc;
     unsigned char field00de;
     unsigned char unknown_00df[0x15];
-    short field00f4;
+    short comboDisplayHitCount;
     unsigned char unknown_00f6[0x2];
-    double field00f8;
-    unsigned int field0100;
-    short field0104;
+    double comboDamageScaleDisplay;
+    unsigned int comboDamage;
+    short comboDisplayTimer;
     unsigned char unknown_0106[0x2];
     int field0108;
     int field010c;
@@ -272,9 +272,9 @@ public:
     short remainingHitCount;
     unsigned char unknown_016e[2];
     int attackWasGuarded;
-    short field0174;
+    short comboHitCount;
     unsigned char unknown_0176[0x2];
-    double field0178;
+    double comboDamageScale;
     double field0180;
     char inputX, inputY, buttonPulse[4];
     unsigned char unknown_018e[2];

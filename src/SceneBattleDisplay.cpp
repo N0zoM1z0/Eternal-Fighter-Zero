@@ -17,7 +17,7 @@ void Scene3::RenderHealthBars()
         secondary[0]->field0110 = secondary[0]->field0110 + 200;
         if (secondary[0]->field0110 > secondary[0]->field0108) secondary[0]->field0110 = secondary[0]->field0108;
     }
-    if (secondary[1]->field0174 == 0) {
+    if (secondary[1]->comboHitCount == 0) {
         secondary[0]->field010c -= (secondary[0]->field010c > secondary[0]->field0108) * 100;
         if (secondary[0]->field010c < secondary[0]->field0108) secondary[0]->field010c = secondary[0]->field0108;
     }
@@ -29,7 +29,7 @@ void Scene3::RenderHealthBars()
         secondary[1]->field0110 = secondary[1]->field0110 + 200;
         if (secondary[1]->field0110 > secondary[1]->field0108) secondary[1]->field0110 = secondary[1]->field0108;
     }
-    if (secondary[0]->field0174 == 0) {
+    if (secondary[0]->comboHitCount == 0) {
         secondary[1]->field010c -= (secondary[1]->field010c > secondary[1]->field0108) * 100;
         if (secondary[1]->field010c < secondary[1]->field0108) secondary[1]->field010c = secondary[1]->field0108;
     }
@@ -309,37 +309,37 @@ void Scene3::RenderCombo(Secondary *character)
         int count;
         SurfaceRect destination;
     } work;
-    work.count = character->field00f4;
+    work.count = character->comboDisplayHitCount;
     if (work.count > 99) work.count = 99;
     if (character->player > 0) {
         work.source = MakeSurfaceRect(0, 172, 61, 38);
         work.destination = MakeSurfaceRect(258, 63, 61, 38);
-        if (character->field0104 <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
+        if (character->comboDisplayTimer <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
         else videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         // Preserve the two original digit-count branches, including identical calls.
-        if (work.count > 9) DrawNumber(286, 59, work.count, 1, 0, character->field0104 <= 6);
-        else DrawNumber(286, 59, work.count, 1, 0, character->field0104 <= 6);
-        DrawNumber(285, 82, character->field0100, 2, 0, character->field0104 <= 6);
-        DrawNumber(275, 92, (int)character->field00f8, 2, 0, character->field0104 <= 6);
-        DrawNumber(285, 92, (int)(character->field00f8 * 10.0) % 10, 2, 0, character->field0104 <= 6);
+        if (work.count > 9) DrawNumber(286, 59, work.count, 1, 0, character->comboDisplayTimer <= 6);
+        else DrawNumber(286, 59, work.count, 1, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(285, 82, character->comboDamage, 2, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(275, 92, (int)character->comboDamageScaleDisplay, 2, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(285, 92, (int)(character->comboDamageScaleDisplay * 10.0) % 10, 2, 0, character->comboDisplayTimer <= 6);
         work.source = MakeSurfaceRect(70, 225, 3, 9);
         work.destination = MakeSurfaceRect(275, 92, 3, 9);
-        if (character->field0104 <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
+        if (character->comboDisplayTimer <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
         else videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
     } else {
         work.source = MakeSurfaceRect(0, 172, 61, 38);
         work.destination = MakeSurfaceRect(6, 63, 61, 38);
-        if (character->field0104 <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
+        if (character->comboDisplayTimer <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
         else videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         // Preserve the two original digit-count branches, including identical calls.
-        if (work.count > 9) DrawNumber(34, 59, work.count, 1, 0, character->field0104 <= 6);
-        else DrawNumber(34, 59, work.count, 1, 0, character->field0104 <= 6);
-        DrawNumber(33, 82, character->field0100, 2, 0, character->field0104 <= 6);
-        DrawNumber(23, 92, (int)character->field00f8, 2, 0, character->field0104 <= 6);
-        DrawNumber(33, 92, (int)(character->field00f8 * 10.0) % 10, 2, 0, character->field0104 <= 6);
+        if (work.count > 9) DrawNumber(34, 59, work.count, 1, 0, character->comboDisplayTimer <= 6);
+        else DrawNumber(34, 59, work.count, 1, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(33, 82, character->comboDamage, 2, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(23, 92, (int)character->comboDamageScaleDisplay, 2, 0, character->comboDisplayTimer <= 6);
+        DrawNumber(33, 92, (int)(character->comboDamageScaleDisplay * 10.0) % 10, 2, 0, character->comboDisplayTimer <= 6);
         work.source = MakeSurfaceRect(70, 225, 3, 9);
         work.destination = MakeSurfaceRect(23, 92, 3, 9);
-        if (character->field0104 <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
+        if (character->comboDisplayTimer <= 6) videoOwner->DrawBlendedSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0, 0);
         else videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
     }
 }

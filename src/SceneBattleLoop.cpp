@@ -249,8 +249,8 @@ void Scene3::Slot0()
         secondary[1]->Slot01();
     }
     RenderHud();
-    if (secondary[0]->field00f4 > 1 && secondary[0]->field0104 > 0) RenderCombo(secondary[0]);
-    if (secondary[1]->field00f4 > 1 && secondary[1]->field0104 > 0) RenderCombo(secondary[1]);
+    if (secondary[0]->comboDisplayHitCount > 1 && secondary[0]->comboDisplayTimer > 0) RenderCombo(secondary[0]);
+    if (secondary[1]->comboDisplayHitCount > 1 && secondary[1]->comboDisplayTimer > 0) RenderCombo(secondary[1]);
     if (field058c != 0) {
         if (field0590 % 2 == 0) videoOwner->SaveScreenshot(field0590 / 2, contextOwner->characterPalette);
         ++field0590;

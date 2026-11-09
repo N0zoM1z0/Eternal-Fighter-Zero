@@ -289,46 +289,46 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 second->ResetPose();
                                 second->facing = -work.slot->flag0048;
                             } else {
-                                first->field0174 = 0;
+                                first->comboHitCount = 0;
                                 second->SetCharacterTint(0xe9,3);
                                 work.slot->field0080 = 7;
                             }
                             if ((work.defense->frameFlags & 0x10) > 0) {
-                                first->field0174 = 0;
-                                if (first->field0178 > 10000.0) {
-                                    first->field0178 =
-                                    first->field0178 - 20.0;
+                                first->comboHitCount = 0;
+                                if (first->comboDamageScale > 10000.0) {
+                                    first->comboDamageScale =
+                                    first->comboDamageScale - 20.0;
                                 } else {
-                                    first->field0178 = 10000.0;
+                                    first->comboDamageScale = 10000.0;
                                 }
                             }
                             second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                             second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                             second->outgoingPushbackActive = 0;
-                            if (first->field0174 == 0) {
+                            if (first->comboHitCount == 0) {
                                 second->field010c = second->field0108;
                             }
                             second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                            second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0)
+                            second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0)
                                 * ((((work.attack->attackFlags & 0x2000) > 0 && (work.defense->frameFlags & 0x2000) > 0) ? 1 : 0) + 1));
                             second->field0128 = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
                             second->field012c = (unsigned int)((work.attack->attackFlags & 0x800) > 0);
                             second->field0158 = 0;
                             second->field0159 = 0;
                             second->field015a = 0;
-                            first->field00f8 = first->field0178 / 100.0;
-                            first->field0178 =
+                            first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
+                            first->comboDamageScale =
                             (double)((work.attack->comboDamageScale / 1000.0f) *
-                                first->field0178);
-                            if (first->field0178 > 10000.0) {
-                                first->field0178 =
+                                first->comboDamageScale);
+                            if (first->comboDamageScale > 10000.0) {
+                                first->comboDamageScale =
                                 (double)((work.attack->comboDamageScale / 1000.0f) *
-                                    first->field0178);
+                                    first->comboDamageScale);
                             }
-                            ++first->field0174;
-                            first->field00f4 = first->field0174;
-                            first->field0104 = 0xb4;
-                            first->field0100 = second->field010c - second->field0108;
+                            ++first->comboHitCount;
+                            first->comboDisplayHitCount = first->comboHitCount;
+                            first->comboDisplayTimer = 0xb4;
+                            first->comboDamage = second->field010c - second->field0108;
                             first->meter += work.attack->hitMeterGain;
                             work.slot->field0086 = work.attack->attackerHitstopFrames;
                             second->hitstopFrames = work.attack->defenderHitstopFrames;
@@ -471,32 +471,32 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                             second->ResetPose();
                             second->FaceOpponent();
                         } else {
-                            first->field0174 = 0;
+                            first->comboHitCount = 0;
                             second->SetCharacterTint(0xdf, 2);
                         }
                         if ((work.defense->frameFlags & 0x10) > 0) {
-                            first->field0174 = 0;
-                            if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
-                            else first->field0178 = 10000.0;
+                            first->comboHitCount = 0;
+                            if (first->comboDamageScale > 10000.0) first->comboDamageScale = first->comboDamageScale - 20.0;
+                            else first->comboDamageScale = 10000.0;
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
-                        if (first->field0174 == 0) second->field010c = second->field0108;
+                        if (first->comboHitCount == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
+                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->field0128 = (work.attack->attackFlags & 0x400) > 0;
                         second->field012c = (work.attack->attackFlags & 0x800) > 0;
                         second->field0158 = 0;
                         second->field0159 = 0;
                         second->field015a = 0;
-                        first->field00f8 = first->field0178 / 100.0;
-                        first->field0178 = (work.attack->comboDamageScale / 1000.0f) * first->field0178;
-                        if (first->field0178 > 10000.0) first->field0178 = (work.attack->comboDamageScale / 1000.0f) * first->field0178;
-                        ++first->field0174;
-                        first->field00f4 = first->field0174;
-                        first->field0104 = 180;
-                        first->field0100 = second->field010c - second->field0108;
+                        first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
+                        first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
+                        if (first->comboDamageScale > 10000.0) first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
+                        ++first->comboHitCount;
+                        first->comboDisplayHitCount = first->comboHitCount;
+                        first->comboDisplayTimer = 180;
+                        first->comboDamage = second->field010c - second->field0108;
                         first->meter += work.attack->hitMeterGain;
                         first->hitstopFrames = work.attack->attackerHitstopFrames;
                         second->hitstopFrames = work.attack->defenderHitstopFrames;
@@ -604,32 +604,32 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                             second->ResetPose();
                             second->FaceOpponent();
                         } else {
-                            first->field0174 = 0;
+                            first->comboHitCount = 0;
                             second->SetCharacterTint(0xdf, 2);
                         }
                         if ((boxes.defense.frameFlags & 0x10) > 0) {
-                            first->field0174 = 0;
-                            if (first->field0178 > 10000.0) first->field0178 = first->field0178 - 20.0;
-                            else first->field0178 = 10000.0;
+                            first->comboHitCount = 0;
+                            if (first->comboDamageScale > 10000.0) first->comboDamageScale = first->comboDamageScale - 20.0;
+                            else first->comboDamageScale = 10000.0;
                         }
                         second->knockbackVelocityX = (double)work.attack->outgoingPushbackVelocityX;
                         second->knockbackVelocityY = (double)work.attack->outgoingPushbackVelocityY;
                         second->outgoingPushbackActive = 1;
-                        if (first->field0174 == 0) second->field010c = second->field0108;
+                        if (first->comboHitCount == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->field0178 / 10000.0 * 0.8));
+                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
                         second->field0128 = (work.attack->attackFlags & 0x400) > 0;
                         second->field012c = (work.attack->attackFlags & 0x800) > 0;
                         second->field0158 = 0;
                         second->field0159 = 0;
                         second->field015a = 0;
-                        first->field00f8 = first->field0178 / 100.0;
-                        first->field0178 = (work.attack->comboDamageScale / 1000.0f) * first->field0178;
-                        if (first->field0178 > 10000.0) first->field0178 = (work.attack->comboDamageScale / 1000.0f) * first->field0178;
-                        ++first->field0174;
-                        first->field00f4 = first->field0174;
-                        first->field0104 = 180;
-                        first->field0100 = second->field010c - second->field0108;
+                        first->comboDamageScaleDisplay = first->comboDamageScale / 100.0;
+                        first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
+                        if (first->comboDamageScale > 10000.0) first->comboDamageScale = (work.attack->comboDamageScale / 1000.0f) * first->comboDamageScale;
+                        ++first->comboHitCount;
+                        first->comboDisplayHitCount = first->comboHitCount;
+                        first->comboDisplayTimer = 180;
+                        first->comboDamage = second->field010c - second->field0108;
                         first->meter += work.attack->hitMeterGain;
                         first->hitstopFrames = work.attack->attackerHitstopFrames;
                         second->hitstopFrames = work.attack->defenderHitstopFrames;

@@ -47,11 +47,11 @@ void Secondary::InitializeState()
     attackCollisionResult = 0;
     hitstopFrames = 0;
     field0134 = 0;
-    field0174 = 0;
-    field00f4 = 0;
-    field0104 = 0;
-    field0178 = 10000.0;
-    field00f8 = 10000.0;
+    comboHitCount = 0;
+    comboDisplayHitCount = 0;
+    comboDisplayTimer = 0;
+    comboDamageScale = 10000.0;
+    comboDamageScaleDisplay = 10000.0;
     attackWasGuarded = 0;
     field0180 = 1.0;
     field01a8 = 0;

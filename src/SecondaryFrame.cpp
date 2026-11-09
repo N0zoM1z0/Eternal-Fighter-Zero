@@ -7,9 +7,9 @@ void Secondary::DispatchState()
         if (field0008 < 50 || field0008 > 150 || field0008 == 96) {
             field0124 = 0;
             field012c = 0;
-            (*opponentSlot)->field0174 = 0;
-            if ((*opponentSlot)->field0178 > 10000.0) (*opponentSlot)->field0178 -= 20.0;
-            else (*opponentSlot)->field0178 = 10000.0;
+            (*opponentSlot)->comboHitCount = 0;
+            if ((*opponentSlot)->comboDamageScale > 10000.0) (*opponentSlot)->comboDamageScale -= 20.0;
+            else (*opponentSlot)->comboDamageScale = 10000.0;
         }
         if (field0008 < 50) {
             Slot03();
@@ -144,7 +144,7 @@ void Secondary::UpdateTimers()
     else if (field0118 > 1000.0) field0118 = 1000.0;
     --field30f0;
     if (field30f0 <= 0) field30f0 = 12600;
-    if (field0104 > 0 && field0174 == 0) --field0104;
+    if (comboDisplayTimer > 0 && comboHitCount == 0) --comboDisplayTimer;
 }
 
 char Secondary::CollisionSide()

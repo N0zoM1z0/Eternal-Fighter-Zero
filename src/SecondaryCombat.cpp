@@ -58,33 +58,33 @@ double Secondary::HealthFactor()
 
 double Secondary::ComboFactor()
 {
-    if (field0178 / 10000.0 > 1.0) return 1.0;
-    return field0178 / 10000.0;
+    if (comboDamageScale / 10000.0 > 1.0) return 1.0;
+    return comboDamageScale / 10000.0;
 }
 
 void Secondary::ApplyDamage(int damage, double scaling)
 {
-    if (field0174 == 0) (*opponentSlot)->field010c = (*opponentSlot)->field0108;
+    if (comboHitCount == 0) (*opponentSlot)->field010c = (*opponentSlot)->field0108;
     (*opponentSlot)->field0108 -= int(damage * DamageFactor() * (*opponentSlot)->HealthFactor() * ComboFactor());
-    field00f8 = field0178 / 100.0;
-    field0178 = (scaling / 1000.0) * field0178;
-    if (field0178 > 10000.0) field0178 = (scaling / 1000.0) * field0178;
-    ++field0174;
-    field00f4 = field0174;
-    field0104 = 180;
-    field0100 = (*opponentSlot)->field010c - (*opponentSlot)->field0108;
-    if (field0174 > field30d4) field30d4 = field0174;
-    if (field0100 > field30d8) field30d8 = field0100;
+    comboDamageScaleDisplay = comboDamageScale / 100.0;
+    comboDamageScale = (scaling / 1000.0) * comboDamageScale;
+    if (comboDamageScale > 10000.0) comboDamageScale = (scaling / 1000.0) * comboDamageScale;
+    ++comboHitCount;
+    comboDisplayHitCount = comboHitCount;
+    comboDisplayTimer = 180;
+    comboDamage = (*opponentSlot)->field010c - (*opponentSlot)->field0108;
+    if (comboHitCount > field30d4) field30d4 = comboHitCount;
+    if (comboDamage > field30d8) field30d8 = comboDamage;
     ++field30d0;
-    AddScore((damage / 100) * field30d0 * field30d4 * field0174);
+    AddScore((damage / 100) * field30d0 * field30d4 * comboHitCount);
 }
 
 void Secondary::AwardComboScore(const SecondaryFrame *attack)
 {
-    if (field0174 > field30d4) field30d4 = field0174;
-    if (field0100 > field30d8) field30d8 = field0100;
+    if (comboHitCount > field30d4) field30d4 = comboHitCount;
+    if (comboDamage > field30d8) field30d8 = comboDamage;
     ++field30d0;
-    AddScore((attack->damage / 100) * field30d0 * field30d4 * field0174);
+    AddScore((attack->damage / 100) * field30d0 * field30d4 * comboHitCount);
 }
 
 void Secondary::AddScore(unsigned int amount)
