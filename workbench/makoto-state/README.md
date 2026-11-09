@@ -210,6 +210,15 @@ work, not the original behavior for valid unimplemented animations.
   both reset pose. These operations were checked against the target
   0x005EBC0C..0x005EBD61 and a separate authored Character23 variant.
 
+- Animation ID 73 (block 0x005EBD61, 341 bytes) is an independently
+  dispatched copy of the grounded recoil state 72. It clears both
+  velocities and dash momentum, evaluates the same edge-pushback
+  expression, advances unsigned pose counters, and selects state 3
+  when inputY==1 or state 7 otherwise at sequence exhaustion. Both
+  original instruction blocks were inspected separately; their
+  registers differ, but the operations and constants agree. Keep
+  separate switch cases to retain the distinct original dispatch.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -229,7 +238,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 73 and onward directly from reviewed target instructions,
+Extend cases 74 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
