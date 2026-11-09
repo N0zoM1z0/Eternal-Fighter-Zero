@@ -851,6 +851,18 @@ work, not the original behavior for valid unimplemented animations.
   call are all present in the original 621-byte block. The complete
   branch was reviewed against EFZ.exe and compiled under VC7.1.
 
+- Animation IDs 253 and 254 (0x005F2A5D..0x005F2BA1 and
+  0x005F2BA1..0x005F2CE5, 324 bytes each) begin by clearing dash
+  momentum, ResetFrame and awarding 45 meter. An expired frame
+  advances the pose and sets attackCollisionResult=3. On the
+  *advance to pose 4*, each emits its own local effect type (0x196
+  for 253, 0x197 for 254) at truncated X+17*facing and Y-26, with
+  owner=1, group=0, layer=1, facing byte and **field0028=1**. It
+  then requests context sound 21 without the character sound 5 of
+  states 250/251. Both finish in idle state 0, ResetPose. All 648
+  original bytes and effect-structure writes were checked directly
+  against EFZ.exe and the partial VC7.1 owner compiles.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -876,7 +888,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 253 and onward directly from reviewed target instructions,
+Extend case 255 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
