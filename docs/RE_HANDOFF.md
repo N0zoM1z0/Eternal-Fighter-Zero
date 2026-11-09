@@ -490,17 +490,17 @@ three different 64-entry child arrays at the signed-short index
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
 
-## Nagamori Slot04 major action function — 2,216-byte source prefix
+## Nagamori Slot04 major action function — 2,974-byte source prefix
 
 Original `Character06::Slot04` is a newly reviewed complete
 **12,277-byte** function at `[0x004AE2E0,0x004B12D5)`, confirmed
 by the vtable pointer `0x0078840C`. `workbench/nagamori-action/`
-contains actual natural C++ for the first eight priority-ordered
-action guards. A focused native test verifies 541 original opcode+
+contains actual natural C++ for the first eleven priority-ordered
+action guards. A focused native test verifies 730 original opcode+
 operand positions aside from one non-final prologue stack-frame
 instruction, normalizing only jump/call targets and original constant
 addresses. The accepted full owner still awaits the other actions;
-**do not mark it Exact**. Next action begins at `0x004AEB8D`.
+**do not mark it Exact**. Next action begins at `0x004AEE83` (original command 0x2A).
 Original complete target SHA and partial-target evidence:
 `docs/evidence/nagamori-slot04-first-actions-boundary.json`.
 No cold replay occurred.
