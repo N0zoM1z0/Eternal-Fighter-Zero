@@ -240,6 +240,15 @@ work, not the original behavior for valid unimplemented animations.
   slots (75 uses EBP-0x94 and 76 EBP-0x98), not arithmetic or branch behavior.
   Their C++ arms are deliberately independent, not one grouped switch label.
 
+- Animation ID 77 (0x005EC3ED..0x005EC5D2, 485 bytes) preserves
+  state 75/76's every-tick 0.6 resource drain, 30-meter/30-resource
+  first-tick exchange, horizontal 2.2 launch and 0.06 deceleration,
+  gravity/vertical reset, and edge pushback. Its distinct animation
+  exhaustion is unconditional: field0008=3 followed by ResetPose, with
+  no inputY test and no state-7 assignment. The target has 128 instructions,
+  six fewer than 75/76; the eliminated instructions match the conditional
+  terminal-state selection. The independent x87 scratch home is EBP-0x9C.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -259,7 +268,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 77 and onward directly from reviewed target instructions,
+Extend case 81 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
