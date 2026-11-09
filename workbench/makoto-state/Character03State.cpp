@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Animations outside cases 1-9 and 13-14 have not yet been reconstructed.
+// game sources. Animations outside cases 1-9 and 13-16 have not yet been reconstructed.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -226,6 +226,56 @@ void Character03::Slot06()
             if (field000a >= animationFrameCount) {
                 field0008 = 9;
                 ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 15: // Original block 0x005E902E: forward aerial launch
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = 0.7;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 16: // Original block 0x005E913B: backward aerial launch
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = -0.7;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
             }
         }
         if (positionY + velocityY >= 0.0 && field000a > 3) {

@@ -23,6 +23,12 @@ work, not the original behavior for valid unimplemented animations.
   both velocity components, clears dashMomentumFlag, faces the opponent,
   then advances the pose. When it finishes, it selects state 0 except when
   inputY (+0x189) is 1, in which case it selects state 3, then ResetPose.
+- Animation IDs 15/16 (blocks 0x005E902E and 0x005E913B):
+  paired forward/backward aerial launches. Set gravity=0.042 every tick;
+  on pose 0/tick 0 set vertical speed=-2.9, clear dashMomentumFlag, and
+  set horizontal speed to +0.7/-0.7 respectively. Their final two
+  pose frames loop in the air. Landing after pose 3 requests sound 9,
+  faces the opponent, and transitions to state 13.
 - Animation ID 14 (block 0x005E8F1F): applies gravity=0.042 every tick.
   On pose 0/tick 0 it initializes vertical speed=-2.9 and horizontal speed=0,
   clearing dashMomentumFlag. Pose exhaustion selects animation 9; landing
@@ -78,7 +84,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 15 and onward directly from reviewed target instructions,
+Extend cases 47 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
