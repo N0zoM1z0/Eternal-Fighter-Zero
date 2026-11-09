@@ -30,7 +30,7 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **335 exact functions**, **1,063,727 code bytes**,
+  ledgers currently count **336 exact functions**, **1,064,238 code bytes**,
   **7,655 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -229,6 +229,23 @@ relocations) and `scene-loading-character` stays **2651/2651** Exact
 reviewed at its unchanged relocation position and original target
 jump destination. Proof `docs/evidence/kano-creation-consumers-exact.json`.
 No full cold replay or whole-linked-product claim follows from this.
+
+## Newly accepted Akiko constructor and actual creation callers
+
+`Character16::Character16` at `0x007219A0` now has a native strict
+**511/511-byte Exact** source function with **4/4** original-bound
+relocations. Selected unit `character-16-constructor`; natural source
+`src/Character16Frame.cpp`; public proof
+`docs/evidence/akiko-constructor-exact.json`. The 0x3468 character
+view contains eleven state integers and three 64-slot arrays,
+original collision and command defaults, and an unwritten four-byte
+tail. Only the two actual direct creation callers were rebuilt:
+`scene-create-character` remains **3495/3495 Exact** with 97
+relocations, `scene-loading-character` **2651/2651 Exact** with 76.
+All 25/26 compiler-local symbol changes (+13) were bound to unchanged
+original jump destinations before complete code/table comparison.
+`docs/evidence/akiko-creation-consumers-exact.json` retains this
+focused proof. No full cold replay or whole-game linkage is claimed.
 
 ## Other open substantial work
 

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 code and original-bound reviewed relocations",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 511,
+      "matched_bytes": 511,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "EFZ.exe @ 0x007219C4: original Secondary six-argument base constructor call 0x40EAE0",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7901016,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character16@@6B@",
+          "evidence": "EFZ.exe @ 0x007219CC: original Akiko 13-slot child vtable at 0x788F58",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7901008,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62259",
+          "evidence": "EFZ.exe @ 0x007219D2: exact original akiko NUL literal at 0x788F50",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "EFZ.exe @ 0x007219E1: reviewed direct CRT strcpy call at 0x778080 and resourceName +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b8ad249caeace170a67bdb0ae675b77fcc62503a3e34ab797d9ee2dd6439a965",
+      "target_extent_sha256": "b8ad249caeace170a67bdb0ae675b77fcc62503a3e34ab797d9ee2dd6439a965",
+      "unit": "character-16-constructor",
+      "symbol": "??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x007219A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "a4914e72aecc994c54a8510b3b5ea999b316dc9722c81c46774699476c05d28f",
+      "source_sha256": "e0780d71f4f56114ae41a23ea1f0808d2d5315601b60a200fdb1a08b3eb07179",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "e35cc607fe96936d3298bec2b8aa692e5303745d6474ae9f3186269fea41411d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "0f699849d48ab128d13ba4feb43ba4dc84ec81e48f06680ec5e2417787075143",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a87a09e11ad0d36cdd0ae202e3492124574d30795595f87abb75f0227fde4d40",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Character16 natural C++ constructor recovers eleven state integers, original seven command bytes, collision defaults, and 3x64 arrays while retaining four unknown trailing bytes. All 511 target bytes and four relocations strictly compared without cold replay."
+}

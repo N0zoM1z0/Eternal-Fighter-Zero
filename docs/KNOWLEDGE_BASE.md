@@ -1793,6 +1793,33 @@ caller bytes were compared independently. Public evidence:
 `docs/evidence/kano-creation-consumers-exact.json`. Unrelated
 stale-header certificates and whole-image/runtime checks remain open.
 
+### Akiko constructor: complete exact native proof (2026-11-09)
+
+`Character16::Character16` at `0x007219A0` now has authored natural
+C++ source in `src/Character16Frame.cpp` and a complete selected
+`character-16-constructor` match under VC7.1. All **511 original
+bytes** and four reviewed relocations are exact: Secondary base
+constructor `0x40EAE0`, Akiko child vtable `0x788F58`, original
+`akiko` string `0x788F50`, and CRT `strcpy` `0x778080`.
+Its 0x3468 view exposes eleven zero-initialized state integers,
+three arrays of 64 slots, five collision pairs, seven explicit
+command bytes and four deliberately unwritten unknown trailing bytes.
+The command byte placements were independently compared against the
+target, not inferred merely from other characters' layouts.
+
+Both direct creation callers were rebuilt selectively: the full
+`scene-create-character` owned contribution remains **3495/3495
+Exact with 97 relocations**, and `scene-loading-character` remains
+**2651/2651 Exact with 76 relocations**. Their 25/26 compiler-local
+label references shift by +13 after this same-size view change;
+they were rebound simultaneously at unchanged original target offsets
+and exact branch destinations before full byte comparison, including
+both owned switch tables. Public proof:
+`docs/evidence/akiko-constructor-exact.json` and
+`docs/evidence/akiko-creation-consumers-exact.json`. This does not
+refresh unrelated historical stale-header certificates or prove
+whole-game runtime equivalence. No full cold replay was performed.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

@@ -11903,7 +11903,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 69
 type = "DIR32"
-symbol = "$L62441"
+symbol = "$L62454"
 target = 0x007593f7
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -12407,168 +12407,168 @@ evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently re
 [[units.scene-create-character.relocations]]
 offset = 3399
 type = "DIR32"
-symbol = "$L62254"
+symbol = "$L62267"
 target = 0x007586f9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3403
 type = "DIR32"
-symbol = "$L62258"
+symbol = "$L62271"
 target = 0x00758769
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3407
 type = "DIR32"
-symbol = "$L62262"
+symbol = "$L62275"
 target = 0x007587d9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3411
 type = "DIR32"
-symbol = "$L62266"
+symbol = "$L62279"
 target = 0x00758849
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3415
 type = "DIR32"
-symbol = "$L62270"
+symbol = "$L62283"
 target = 0x007588b9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3419
 type = "DIR32"
-symbol = "$L62274"
+symbol = "$L62287"
 target = 0x00758929
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3423
 type = "DIR32"
-symbol = "$L62278"
+symbol = "$L62291"
 target = 0x00758999
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3427
 type = "DIR32"
-symbol = "$L62282"
+symbol = "$L62295"
 target = 0x00758a09
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3431
 type = "DIR32"
-symbol = "$L62286"
+symbol = "$L62299"
 target = 0x00758a79
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3435
 type = "DIR32"
-symbol = "$L62290"
+symbol = "$L62303"
 target = 0x00758ae9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3439
 type = "DIR32"
-symbol = "$L62294"
+symbol = "$L62307"
 target = 0x00758b59
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3443
 type = "DIR32"
-symbol = "$L62298"
+symbol = "$L62311"
 target = 0x00758bc9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3447
 type = "DIR32"
-symbol = "$L62302"
+symbol = "$L62315"
 target = 0x00758c39
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3451
 type = "DIR32"
-symbol = "$L62306"
+symbol = "$L62319"
 target = 0x00758ca9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3455
 type = "DIR32"
-symbol = "$L62310"
+symbol = "$L62323"
 target = 0x00758d19
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3459
 type = "DIR32"
-symbol = "$L62314"
+symbol = "$L62327"
 target = 0x00758d89
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3463
 type = "DIR32"
-symbol = "$L62318"
+symbol = "$L62331"
 target = 0x00758df9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3467
 type = "DIR32"
-symbol = "$L62322"
+symbol = "$L62335"
 target = 0x00758e69
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3471
 type = "DIR32"
-symbol = "$L62326"
+symbol = "$L62339"
 target = 0x00758ed9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3475
 type = "DIR32"
-symbol = "$L62330"
+symbol = "$L62343"
 target = 0x00758f49
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3479
 type = "DIR32"
-symbol = "$L62334"
+symbol = "$L62347"
 target = 0x00758fb9
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3483
 type = "DIR32"
-symbol = "$L62338"
+symbol = "$L62351"
 target = 0x00759029
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3487
 type = "DIR32"
-symbol = "$L62342"
+symbol = "$L62355"
 target = 0x007590a2
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
 [[units.scene-create-character.relocations]]
 offset = 3491
 type = "DIR32"
-symbol = "$L62346"
+symbol = "$L62359"
 target = 0x00759118
 evidence = "docs/KNOWLEDGE_BASE.md#character-creation-dispatch; independently reviewed original 24-case table operand and complete branch destinations; explicit original function-relative offset binding"
 
@@ -27215,7 +27215,7 @@ evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; complete o
 [[units.scene-loading-character.relocations]]
 offset = 35
 type = "DIR32"
-symbol = "$L62496"
+symbol = "$L62509"
 target = 0x0076E417
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076DA43; complete 25-entry local table/branch destination and independent compiled offset"
 
@@ -27572,175 +27572,175 @@ evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 00
 [[units.scene-loading-character.relocations]]
 offset = 2551
 type = "DIR32"
-symbol = "$L62295"
+symbol = "$L62308"
 target = 0x0076DA47
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E417; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2555
 type = "DIR32"
-symbol = "$L62299"
+symbol = "$L62312"
 target = 0x0076DAA2
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2559
 type = "DIR32"
-symbol = "$L62303"
+symbol = "$L62316"
 target = 0x0076DAFD
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E41F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2563
 type = "DIR32"
-symbol = "$L62307"
+symbol = "$L62320"
 target = 0x0076DB58
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E423; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2567
 type = "DIR32"
-symbol = "$L62311"
+symbol = "$L62324"
 target = 0x0076DBB3
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E427; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2571
 type = "DIR32"
-symbol = "$L62315"
+symbol = "$L62328"
 target = 0x0076DC0E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2575
 type = "DIR32"
-symbol = "$L62319"
+symbol = "$L62332"
 target = 0x0076DC72
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E42F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2579
 type = "DIR32"
-symbol = "$L62323"
+symbol = "$L62336"
 target = 0x0076DCD6
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E433; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2583
 type = "DIR32"
-symbol = "$L62327"
+symbol = "$L62340"
 target = 0x0076DD3A
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E437; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2587
 type = "DIR32"
-symbol = "$L62331"
+symbol = "$L62344"
 target = 0x0076DD9E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2591
 type = "DIR32"
-symbol = "$L62335"
+symbol = "$L62348"
 target = 0x0076DE02
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E43F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2595
 type = "DIR32"
-symbol = "$L62339"
+symbol = "$L62352"
 target = 0x0076DE66
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E443; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2599
 type = "DIR32"
-symbol = "$L62343"
+symbol = "$L62356"
 target = 0x0076DECA
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E447; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2603
 type = "DIR32"
-symbol = "$L62347"
+symbol = "$L62360"
 target = 0x0076DF2E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2607
 type = "DIR32"
-symbol = "$L62351"
+symbol = "$L62364"
 target = 0x0076DF92
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E44F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2611
 type = "DIR32"
-symbol = "$L62355"
+symbol = "$L62368"
 target = 0x0076DFF6
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E453; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2615
 type = "DIR32"
-symbol = "$L62359"
+symbol = "$L62372"
 target = 0x0076E05A
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E457; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2619
 type = "DIR32"
-symbol = "$L62363"
+symbol = "$L62376"
 target = 0x0076E0BE
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2623
 type = "DIR32"
-symbol = "$L62367"
+symbol = "$L62380"
 target = 0x0076E122
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E45F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2627
 type = "DIR32"
-symbol = "$L62371"
+symbol = "$L62384"
 target = 0x0076E186
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E463; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2631
 type = "DIR32"
-symbol = "$L62375"
+symbol = "$L62388"
 target = 0x0076E1EA
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E467; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2635
 type = "DIR32"
-symbol = "$L62379"
+symbol = "$L62392"
 target = 0x0076E24E
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46B; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2639
 type = "DIR32"
-symbol = "$L62383"
+symbol = "$L62396"
 target = 0x0076E2B2
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E46F; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2643
 type = "DIR32"
-symbol = "$L62387"
+symbol = "$L62400"
 target = 0x0076E316
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E473; complete 25-entry local table/branch destination and independent compiled offset"
 
 [[units.scene-loading-character.relocations]]
 offset = 2647
 type = "DIR32"
-symbol = "$L62391"
+symbol = "$L62404"
 target = 0x0076E377
 evidence = "docs/KNOWLEDGE_BASE.md#loading-scene-and-mizuka-creation; operand 0076E477; complete 25-entry local table/branch destination and independent compiled offset"
 
@@ -128715,3 +128715,41 @@ type = "DIR32"
 symbol = "$L62208"
 target = 0x005E869D
 evidence = "EFZ.exe original table/code operand 0x005F6C52: internal DIR32 branch 0x005E869D matches compiled function-local offset 0xAD"
+
+[units.character-16-constructor]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Frame.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-constructor/Character16Frame.obj"
+symbol = "??0Character16@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target_address = 0x007219A0
+size = 511
+
+[[units.character-16-constructor.relocations]]
+offset = 37
+type = "REL32"
+symbol = "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z"
+target = 0x0040EAE0
+evidence = "EFZ.exe @ 0x007219C4: original Secondary six-argument base constructor call 0x40EAE0"
+
+[[units.character-16-constructor.relocations]]
+offset = 46
+type = "DIR32"
+symbol = "??_7Character16@@6B@"
+target = 0x00788F58
+evidence = "EFZ.exe @ 0x007219CC: original Akiko 13-slot child vtable at 0x788F58"
+
+[[units.character-16-constructor.relocations]]
+offset = 51
+type = "DIR32"
+symbol = "$SG62259"
+target = 0x00788F50
+evidence = "EFZ.exe @ 0x007219D2: exact original akiko NUL literal at 0x788F50"
+
+[[units.character-16-constructor.relocations]]
+offset = 66
+type = "REL32"
+symbol = "_strcpy"
+target = 0x00778080
+evidence = "EFZ.exe @ 0x007219E1: reviewed direct CRT strcpy call at 0x778080 and resourceName +0x94"

@@ -63,8 +63,8 @@ battle simulation/collision/display/keyboard/replay controls and four concrete
 background owners. Seven characters have exact constructors and substantial
 child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
 Kaori (383 bytes), MizukaB (396 bytes), Kanna (403 bytes),
-NayukiB (472 bytes) and Kano (523 bytes) also have independently exact
-natural constructors; their other child owners remain open.
+NayukiB (472 bytes), Kano (523 bytes) and Akiko (511 bytes) also have
+independently exact natural constructors; their other child owners remain open.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386
 relocations strictly bound. Shiori's large Slot06, Video and other
