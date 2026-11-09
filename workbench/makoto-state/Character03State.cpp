@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-74 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-76 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1253,6 +1253,86 @@ void Character03::Slot06()
             ++field000a;
             if (field000a >= animationFrameCount) {
                 field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 75: // Original block 0x005EBFF3: forward grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX <= 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 76: // Original block 0x005EC1F0: independent duplicate of recoil 75
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX <= 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
                 ResetPose();
             }
         }

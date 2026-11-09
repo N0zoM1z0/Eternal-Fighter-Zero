@@ -225,6 +225,21 @@ work, not the original behavior for valid unimplemented animations.
   frame elapses. The original 0x005EBFDB..0x005EBFEE branch has no inputY
   test and no state-7 assignment, unlike cases 72/73.
 
+- Animation IDs 75 and 76 (0x005EBFF3..0x005EC1F0 and
+  0x005EC1F0..0x005EC3ED, 509 bytes each) are separate grounded
+  forward-recoil entries. At every tick, if field0120 is set they deduct 0.6
+  from field0118, then clear dash momentum. Only at pose/tick zero do they
+  award 30 meter, optionally deduct another 30 from field0118, and set
+  velocityX=2.2. Each tick resets positionY, velocityY and gravity to zero,
+  sets horizontalDeceleration=0.06, subtracts it from velocityX and clamps
+  nonpositive speed to zero. At x-20 <= 0 or x+20 >= 639, pushback is
+  (1 - 0.25 * (opponent Y < 0)) * velocityX; elsewhere it is zero.
+  Animation exhaustion selects state 7 or state 3 when inputY==1, then
+  ResetPose. Both target blocks contain 134 instructions. The only
+  normalized instruction differences are independent x87 predicate scratch
+  slots (75 uses EBP-0x94 and 76 EBP-0x98), not arithmetic or branch behavior.
+  Their C++ arms are deliberately independent, not one grouped switch label.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -244,7 +259,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 75 and onward directly from reviewed target instructions,
+Extend case 77 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
