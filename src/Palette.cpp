@@ -111,8 +111,8 @@ void Video::BuildBlendTables(unsigned char *palette)
         {
             unsigned char index0, index1, index2; // Mirror column, paired entry, candidate entry.
             v3 = squaredDifference + 256;
-            v25 = reinterpret_cast<unsigned char *>(this) + 0x305;
-            v21 = reinterpret_cast<unsigned char *>(this) + 0x10305;
+            v25 = reinterpret_cast<unsigned char *>(paletteEntries) + 0x300;
+            v21 = reinterpret_cast<unsigned char *>(meanBlend) + 0xff00;
             v5 = palette - 4;
             v8 = v5;
             v13 = palette - 3;
@@ -158,10 +158,10 @@ void Video::BuildBlendTables(unsigned char *palette)
             // Mirror entries 0..254; the final column retains its previous contents.
             for (index0 = 0; index0 < 255; ++index0) {
                 for (i = 0; i < index0; ++i) {
-                    (reinterpret_cast<unsigned char *>(this) + 0x405 + i * 256)[index0] =
-                    (reinterpret_cast<unsigned char *>(this) + 0x405 + index0 * 256)[i];
-                    (reinterpret_cast<unsigned char *>(this) + 0x10405 + i * 256)[index0] =
-                    (reinterpret_cast<unsigned char *>(this) + 0x10405 + index0 * 256)[i];
+                    (reinterpret_cast<unsigned char *>(meanBlend) + i * 256)[index0] =
+                    (reinterpret_cast<unsigned char *>(meanBlend) + index0 * 256)[i];
+                    (reinterpret_cast<unsigned char *>(sumBlend) + i * 256)[index0] =
+                    (reinterpret_cast<unsigned char *>(sumBlend) + index0 * 256)[i];
                 }
             }
         }
