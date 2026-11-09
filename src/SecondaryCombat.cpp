@@ -7,7 +7,7 @@ int Secondary::CanGuard(const SecondaryFrame *attack, const SecondaryFrame *defe
     if (field013a > 0) return 0;
     if ((attack->attackFlags & 0x80) > 0) return 0;
     if ((defense->frameFlags & 0x10) == 0) return 0;
-    if ((attack->attackFlags & 4) == 0 && positionY < 0.0 && field014e < 30) return 0;
+    if ((attack->attackFlags & 4) == 0 && positionY < 0.0 && guardInputFrames < 30) return 0;
     if (GuardInput(attack) == 0) return 0;
     return 1;
 }

@@ -2443,7 +2443,7 @@ void Character15::Slot06()
             velocityY = 0.0;
             positionY = 0.0;
             gravity = 0.0;
-            field014e = 0;
+            guardInputFrames = 0;
             outgoingPushbackVelocityX = 0.0;
             horizontalDeceleration = 0.0;
             effect.type = 8;
@@ -2473,7 +2473,7 @@ void Character15::Slot06()
             velocityY = 0.0;
             positionY = 0.0;
             gravity = 0.0;
-            field014e = 0;
+            guardInputFrames = 0;
             outgoingPushbackVelocityX = 0.0;
             horizontalDeceleration = 0.0;
             effect.type = 8;
@@ -2505,7 +2505,7 @@ void Character15::Slot06()
             }
             velocityX = 0.0;
             velocityY = 0.0;
-            field014e = 0;
+            guardInputFrames = 0;
             outgoingPushbackVelocityX = 0.0;
             hitstunFrames = 0x3c;
         }

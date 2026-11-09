@@ -19,23 +19,23 @@ void Character15::Slot05()
     buttonPulse[1] = 0;
     buttonPulse[2] = 0;
     buttonPulse[3] = 0;
-    field014e = 0;
+    guardInputFrames = 0;
     if ((float)(unsigned short)RandomRange(0, 1000) <
         25.0f * field00a8 + (positionY < 0.0 ? 1 : 0) * 30 * field00a8 +
         (float)((field3114 == 3 ? 1 : 0) * 400) + (float)((field0008 == 0xaa ? 1 : 0) * 300))
     {
-        field014e = 0x3c;
+        guardInputFrames = 0x3c;
     }
     if ((double)(unsigned short)RandomRange(0, 2000) <
         ((double)(field0130 > 0) * 4.0 + 1.0) * 8.0 * field00a8 *
         ((field0008 > 149 && field0008 < 157 ? 1 : 0) * 2 + 1)) {
-        field014e = 0x3c;
+        guardInputFrames = 0x3c;
     }
     if (((float)(unsigned short)RandomRange(0, 1000) < 40.0f * field00a8) && (199 < field0008)) {
-        field014e = 0x3c;
+        guardInputFrames = 0x3c;
     }
     if ((field0170 == 1) && (field3114 == 2)) {
-        field014e = 0x1e;
+        guardInputFrames = 0x1e;
         if (field0008 < 200) {
             field3114 = 0;
         }

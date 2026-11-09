@@ -258,7 +258,7 @@ public:
     short meter;
     short hitstopFrames;
     short hitstunFrames;
-    short field014e;
+    short guardInputFrames;
     int field0150;
     int field0154;
     char field0158;

@@ -73,7 +73,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 first->field0168 = 2;
                                 first->field0168 = 6;
                                 second->field0168 = 6;
-                            } else if ((((second->field0170 != 0) && (second->field014e >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.attackFlags & 0x80) == 0))))) {
+                            } else if ((((second->field0170 != 0) && (second->guardInputFrames >= 0x1e)) && ((second->field013a == 0) && ((second->GuardInput(&work.firstFrame) != 0) && ((work.firstFrame.attackFlags & 0x80) == 0))))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
@@ -100,7 +100,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->hitstunFrames = 0x3c;
                                 second->field0170 = 0;
                                 first->field0170 = 1;
-                            } else if ((((second->field014e >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
+                            } else if ((((second->guardInputFrames >= 0x1e) && (second->positionY < 0.0)) && (second->CanGuard(&work.firstFrame,&work.secondFrame) != 0))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;
@@ -122,7 +122,7 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 second->ClearInputHistory();
                                 second->hitstunFrames = 0x3c;
                                 first->field0170 = 1;
-                            } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->field014e >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
+                            } else if ((((second->CanGuard(&work.firstFrame,&work.secondFrame) != 0) && (second->guardInputFrames >= 0x1e)) && ((second->positionY == 0.0) && ((second->field0008 != 0xa8) && (second->field0008 != 0xa9))))) {
                                 first->field0168 = 2;
                                 first->meter += work.firstFrame.guardMeterGain;
                                 --first->field016c;

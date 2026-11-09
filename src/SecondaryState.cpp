@@ -34,7 +34,7 @@ void Secondary::InitializeState()
     field0159 = 0;
     field0158 = 0;
     field015a = 0;
-    field014e = 0;
+    guardInputFrames = 0;
     field0150 = 0;
     field00ac = 0;
     field0138 = 0;

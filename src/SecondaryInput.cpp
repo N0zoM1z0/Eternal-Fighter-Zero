@@ -71,8 +71,8 @@ void Secondary::UpdateInput()
         ++field0260;
         if (field0260 >= 180) field0260 = 0;
         if (inputX == 1 - 2 * ((*opponentSlot)->positionX - positionX > 0.0)
-        && field014e == 0 && field0150 == 0) field014e = 60;
-        if ((*opponentSlot)->hitstopFrames == 0 && field014e > 0) --field014e;
+        && guardInputFrames == 0 && field0150 == 0) guardInputFrames = 60;
+        if ((*opponentSlot)->hitstopFrames == 0 && guardInputFrames > 0) --guardInputFrames;
         if (inputX == 0) field0150 = 0;
         else field0150 = 1;
         Slot02();
