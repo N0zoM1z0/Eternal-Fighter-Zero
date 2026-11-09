@@ -1316,6 +1316,21 @@ the source into the production `src/` tree, declare every relocation
 and its independently checked original target, and run the strict
 selected COFF oracle before ledgering the whole function.
 
+## Final acceptance supersedes this historical workbench status
+
+The original `Slot06` owner is now accepted as **strict Exact**, not
+just a staged workbench. The natural implementation was copied to
+`src/Character03State.cpp` without changing its generated operations.
+The selected `character-03-state-slot06` unit and public
+`docs/evidence/makoto-state-slot06-exact.json` certify all 59,292
+original owned bytes and 1,386 reviewed relocation fields with **zero
+differences**. The full contribution includes 58,482 instruction
+bytes, 500 DWORD jump-table bytes and the 310-byte selector table.
+The README's earlier instructions to keep the owner out of the source
+ledger were appropriate before this acceptance and are historical,
+not current. Future major-state work should target Shiori Slot06 or
+other unaccepted owners; no full cold replay was involved.
+
 ## Next implementation work
 
 The 2026-11-09 handoff storage cleanup archived 61 historical candidate

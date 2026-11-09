@@ -64,18 +64,22 @@ background owners. Seven characters have exact constructors and substantial
 child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
 Kaori (383 bytes), MizukaB (396 bytes), Kanna (403 bytes),
 NayukiB (472 bytes) and Kano (523 bytes) also have independently exact
-natural constructors; their other child owners remain open. Shiori's and Makoto's large slot-6 state owners remain open,
-alongside other character, Video and scene work. See the live ledgers for individual acceptance.
+natural constructors; their other child owners remain open.
+**Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
+500 switch-address bytes and 310 selector bytes, with all 1,386
+relocations strictly bound. Shiori's large Slot06, Video and other
+scene/character work remain open. See the live ledgers for individual acceptance.
 
 Reader/audio integration is complete. The
 [workbench](workbench/reader-audio/README.md) preserves historical drafts and
 an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
-The current substantial owner is Makoto/Character03 Slot06 in
-`workbench/makoto-state/`, with all 124 explicit states and the default
-branch reconstructed as a natural C++ draft. Its complete code generation,
-relocations and both local tables are still not accepted Exact. `Scene3::ResolvePushboxes` has a fresh
+The current completed substantial owner is Makoto/Character03 Slot06:
+accepted `src/Character03State.cpp` and full proof
+`docs/evidence/makoto-state-slot06-exact.json`. Its 124 explicit states
+and default compiled to the entire 59,292-byte original contribution;
+new substantial work can now prioritize Shiori Slot06 and other open owners. `Scene3::ResolvePushboxes` has a fresh
 complete **local** 2,727-byte, 35-relocation exact comparison, independently
 reviewed authored origin and a public exact-ledger entry. Whole-image/runtime
 closure and freshness of unrelated older certificates remain open.

@@ -5894,9 +5894,10 @@ overwrite accepted/newer source.
 At this 2026-11-07 checkpoint, ten of thirteen actual Makoto virtual
 destinations had complete exact proofs, including inherited LoadResources.
 Slot05 CPU, Slot06 state and Slot07 effects were then identified as the next
-owners. Slot05 CPU and Slot07 effects have since been accepted strict exact in
-the source sections below; Slot06 is the only remaining open Makoto virtual
-owner. All thirteen fresh read-only annotations are retained and the Ghidra job
+owners. Slot05 CPU and Slot07 effects were later accepted strict exact;
+Slot06 was also fully accepted on 2026-11-09 as detailed in the later
+state-dispatch exactness section. The "only remaining open" status
+applies to the historical pre-Slot06 checkpoint only. All thirteen fresh read-only annotations are retained and the Ghidra job
 is terminal. Its state decompiler warning about 03020100 is provisional
 analysis, not evidence of an accepted data dependency.
 At that checkpoint authored totals were 325 functions, 948,980 instruction
@@ -5963,8 +5964,8 @@ remain one-time records and must not overwrite accepted/newer source.
 At this post-CPU checkpoint, eleven of thirteen actual Makoto virtual
 destinations had complete exact proofs. Slot07 local effects has since also
 been accepted strict exact; Slot06 at 0x5E85F0 /58,482 code bytes plus 810 bytes
-of reviewed tables (59,292 total) is the sole remaining open Makoto virtual
-owner. Its fresh read-only annotations are retained in .analysis/probes/makoto/;
+of reviewed tables (59,292 total) was then the sole open Makoto virtual
+owner and has since been accepted Exact. Its fresh read-only annotations are retained in .analysis/probes/makoto/;
 all Ghidra jobs are terminal. At this checkpoint authored totals were 326
 functions, 966,511 instruction bytes and 6,621 associated table bytes; 361
 reviewed boundaries/origins and 344 proof recipes. Current repository totals are
@@ -5982,8 +5983,9 @@ Seven excluded CC bytes precede next prologue607930. Vtable788AC8 slot07 operand
 788AE4 contains5FF4C0. Public proof:`docs/evidence/makoto-effects-exact.json`;
 recipe:character-03-update-local-effects, pinned vc71-od-static.
 
-With Slot07 accepted, 12 of 13 actual Makoto virtual destinations now have
-complete strict-exact proofs. Slot06 is the only remaining open virtual owner.
+At the earlier Slot07 checkpoint, 12 of 13 Makoto virtual destinations
+had complete strict-exact proofs; Slot06 was then open and has since been
+accepted Exact with the full 59,292-byte owner on 2026-11-09.
 
 Independent review covers7,687 contiguous instructions,544 direct branches,
 the indirect dispatch, full RET/data boundary and every canonical destination.
@@ -6084,11 +6086,44 @@ retained in `.analysis/probes/makoto/state-case-map.csv` and the full review in
 The selector map ends at `0x5F6D8C`. Four `CC` bytes follow, and the next
 Character03 constructor begins at `0x5F6D90`. The complete owned code-plus-table
 extent is therefore `[0x5E85F0, 0x5F6D8C)`, 59,292 bytes. The function boundary
-and authored origin are now reviewed in the ledgers. The source reconstruction,
-external/local relocation ownership, strict code-generation match, and runtime
-validation remain open; this boundary review is not an exactness claim. The
-Ghidra switch-normalization warning remains provisional and is not treated as a
-source-level case map.
+and authored origin are reviewed in the ledgers. The complete natural
+source and strict code-generation match have now been independently accepted
+(see immediately below); only linked-product/runtime closure remains open.
+The Ghidra switch-normalization warning remains provisional and was never
+used as an authoritative animation-ID mapping.
+
+### Exact acceptance of Makoto's full 59,292-byte state owner (2026-11-09)
+
+Natural C++ accepted source: `src/Character03State.cpp` implementing
+`Character03::Slot06`; selected VC7.1 unit `character-03-state-slot06`;
+public strict proof `docs/evidence/makoto-state-slot06-exact.json`.
+Unlike the earlier workbench-only checkpoint, this is a complete
+**59,292/59,292 byte** source reconstruction: **58,482 code bytes**,
+**500 switch-address bytes** and **310 selector bytes**. The full native
+COFF has **1,386 explicitly declared relocation entries**, comprising
+**369 REL32 external** operands, **890 DIR32 external** operands and
+**127 DIR32 internal branch/table** operands. Original target bytes
+and compiler addends give **220 distinct symbol target addresses**;
+all multiple uses agree, and all 127 internal destinations match exact
+compiled function-local offsets. Every original x87 double constant
+was checked against its encoded IEEE-754 bytes in EFZ.exe. The complete
+strict native oracle reports `result=exact`, zero different bytes and
+relocated/target SHA-256
+`430e18ae01c539e7b2b93228261cba667760633e16e0a10769910ece8aea3d2d`.
+No relocation sites or selector bytes were masked, skipped or substituted.
+
+The important natural-codegen change is a small `FrameTiming` struct
+whose two 16-bit members are individually 4-byte-aligned. It puts the
+source timing cache at original stack addresses `[ebp-0x8]` and
+`[ebp-0x4]` while retaining the `EffectSpawn` local at `[ebp-0x50]`.
+The prologue, all 125 dispatch addresses, complete code and both tables
+then align exactly; this was verified after copying the source into
+`src/` and using its actual selected unit, not just a workbench trial.
+All 124 explicit state arms and the unmapped-state default are included.
+Earlier attempt notes about an unresolved case-70 six-byte drift,
+missing state branches or uncertain table ownership are superseded.
+This does **not** claim complete game linkage, runtime equivalence or
+freshness of unrelated historic receipts. Only targeted builds were run.
 
 ## VC7.1 x87 floating-to-integer helper
 
@@ -6104,4 +6139,5 @@ Do not reconstruct this as a game-authored C++ leaf or call it explicitly from
 source. Write the original floating-point expression and its natural integer
 conversion; VC7.1 should emit the helper as a compiler-support dependency. Its
 boundary and compiler-generated origin are now reviewed, but this does not
-close the Makoto state function's code-generation or relocation proof.
+substitute for checking the accepted Makoto state function's own
+strict code-generation and relocation proof.

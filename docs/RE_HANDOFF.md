@@ -1,8 +1,8 @@
 # EFZ reconstruction handoff — 2026-11-09
 
 Start with [AGENTS.md](../AGENTS.md), then the specific source and evidence
-linked below. The live workbench now covers selected Makoto states through
-210 and the pushbox resolver has a fresh exact-ledger certificate. Recheck
+linked below. The full Makoto state boss is now accepted as exact source,
+and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 `git status` and the newest commits when resuming.
 
 ## Working agreement
@@ -30,8 +30,8 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **334 exact functions**, **1,005,245 code bytes**,
-  **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
+  ledgers currently count **335 exact functions**, **1,063,727 code bytes**,
+  **7,655 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -43,46 +43,48 @@ linked below. The live workbench now covers selected Makoto states through
 - Whole Windows product/link/data/resource closure, independent native runtime
   comparison and portability are not complete.
 
-## Immediate boss: Makoto / Character03::Slot06
+## Accepted major boss: Makoto / Character03::Slot06
 
-The active substantial work is the **partial, isolated** draft
-[`workbench/makoto-state/Character03State.cpp`](../workbench/makoto-state/Character03State.cpp).
-Its [case-by-case README](../workbench/makoto-state/README.md) is the current
-detailed record. Commits `13e9199`, `6871f0b`, `0e58464`, and `6325ad5`
-reconstruct states 86–87, 96–99, 150–155 and 156–158 after the earlier
-state-85 work. Later `gpt-web:` commits reconstruct 161–171, 178, 180 and 200–210;
-the independent recheck removed a stray dash-momentum clear from state 178.
-All remain in an isolated partial C++ owner, not in the exact ledger.
+The formerly open 59,292-byte Makoto state dispatcher is now an
+**accepted strict-Exact source owner**, in
+[`src/Character03State.cpp`](../src/Character03State.cpp). Its target
+function at `0x005E85F0` owns **58,482 code bytes**, followed by a
+**500-byte (125-entry) jump table** and a **310-byte selector table**.
+The selected VC7.1 `character-03-state-slot06` unit matches the **entire
+59,292/59,292 bytes**, with **zero differences** and **1,386/1,386
+relocations** explicitly bound to reviewed original targets.
+All 127 source-local branch/table relocations match their compiled
+offsets, all 220 distinct symbol target values are consistent across
+references and the full relocated SHA-256 equals the original:
+`430e18ae01c539e7b2b93228261cba667760633e16e0a10769910ece8aea3d2d`.
 
-- Target function `0x005E85F0`: **58,482 bytes of code** plus 500-byte jump
-  table and 310-byte selector table (**59,292 owned bytes**).
-- The workbench now implements **124/124 explicit dispatch IDs** and
-  the original true default behavior. It is not integrated into `src/`
-  or accepted as an Exact whole owner.
-- **Next task: close native code generation and relocation differences.**
-  Its current selected VC7.1 build is about 59.28 KB, very close to the
-  target's 59,292 owned bytes, and the first 35 case-table targets match
-  target-relative offsets. The first divergence is case 70's two
-  6-byte instructions addressing `[ebp-0x84]` instead of the target's
-  3-byte `[ebp-0x80]` forms: a four-byte extra local-stack home shifts
-  subsequent case addresses by +6. Simple local declaration order,
-  `volatile` and alignment probes did **not** fix this. Do not pad
-  machine code or claim Exact on a near-size match. Review the actual
-  locals/temporary-lifetime cause and other late-state offsets before
-  adding the selected match unit and strict comparator.
-- Starting evidence: the workbench README, ignored
-  `.analysis/probes/makoto/state-case-map.csv` and
-  `.analysis/probes/makoto/state-code-005e85f0.txt`, tracked
-  `docs/evidence/makoto-state-case-map.csv` and the Makoto state section of
-  [KNOWLEDGE_BASE.md](KNOWLEDGE_BASE.md).
-- Preserve current `build/makoto-state/Character03State.obj` and
-  `Character03State.HEAD-verify.obj`. Earlier named trial objects and
-  disassemblies were archived losslessly under
-  `.analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-objects.tar.gz`;
-  [RE_ARTIFACTS.md](RE_ARTIFACTS.md) gives the manifest and restore command.
-- Do **not** ledger this state owner until its full function, relocations and
-  810 associated table bytes match. Makoto CPU Slot05 and effects Slot07 are
-  separate, previously ledgered exact owners.
+Original source reconstruction is natural C++, including all **124
+explicit animation IDs and the true default**. The final stack-layout
+breakthrough groups two four-byte-aligned `unsigned short` frame cache
+members inside a local `FrameTiming` structure, recovering original
+`[ebp-0x8]` and `[ebp-0x4]` values, the EffectSpawn home at
+`[ebp-0x50]`, `this` at `[ebp-0x54]` and the `0x378`-byte stack frame.
+No disassembly bytes were inserted or masked. Earlier workbench probes
+and their case-by-case explanations remain in
+[`workbench/makoto-state/`](../workbench/makoto-state/); older notes
+claiming the case-70 6-byte mismatch are superseded by the accepted
+proof [`makoto-state-slot06-exact.json`](evidence/makoto-state-slot06-exact.json).
+
+Focused reproduction, with no global cold replay:
+
+```bash
+scripts/repo-python scripts/verify-target.py
+scripts/repo-python scripts/build-match-unit.py --unit character-03-state-slot06
+scripts/repo-python scripts/compare-coff-function.py --unit character-03-state-slot06
+scripts/repo-python scripts/progress.py --check
+```
+
+Next substantial owner: **Shiori Slot06** (`0x004136D0`, 63,132
+owned bytes including tables), plus other listed open work below.
+Acceptance of this individual Makoto source is **not** equivalent to
+a fully linked Windows product, runtime equivalence or an overall
+clean historical certificate graph. The old broad proof-freshness
+debt remains separately open.
 
 ## Pushbox status: complete local codegen exact and ledgered
 

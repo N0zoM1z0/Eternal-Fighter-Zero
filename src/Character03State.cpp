@@ -1,0 +1,5166 @@
+// Original-complete, strict-exact Makoto state dispatcher (124 states + default).
+//
+// The selected native VC7.1 unit owns 58,482 code bytes and contiguous
+// 500-byte switch-address/310-byte selector tables at 0x005E85F0.
+// See docs/evidence/makoto-state-slot06-exact.json for 1,386 bound relocations.
+// Whole Windows product/runtime equivalence is not implied by source acceptance.
+#include "CharacterViews.h"
+
+void Character03::Slot06()
+{
+    // Target entry 0x005E85F0: stop this tick if either fighter freezes it.
+    if (hitstopFrames > 0 || (*opponentSlot)->hitstunFrames > 0) return;
+
+    // 0x005E8623: construct the effect spawn, snapshot this frame's duration
+    // and the animation's frame count, then initialize the spawn's defaults.
+    EffectSpawn effect;
+    // Original VC7.1 frame cache uses two separate, four-byte-aligned
+    // 16-bit stack homes at [ebp-0x8] and [ebp-0x4]. Keeping these
+    // together restores EffectSpawn's [ebp-0x50] home and the frame size.
+    struct FrameTiming {
+        __declspec(align(4)) unsigned short animationFrameCount;
+        __declspec(align(4)) unsigned short frameDuration;
+    } timing;
+    timing.frameDuration = patterns[field0008].frames[field000a].duration;
+    timing.animationFrameCount = patterns[field0008].count;
+    ResetLocalEffectSpawn(&effect);
+
+    // The original selector at 0x005F6C56 is an animation-ID-to-case map.
+    // Do not use Ghidra's normalized 0..124 case numbers as animation IDs.
+    switch (field0008) {
+    default: // Original block 0x005E869D: unmapped animation IDs
+        // The selector table sends 186 IDs here; it is not a no-op.
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
+
+    case 1: // Original block 0x005E8718
+        dashMomentumFlag = 0;
+        velocityX = 0.7;
+        velocityY = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
+
+    case 2: // Original block 0x005E8793
+        dashMomentumFlag = 0;
+        velocityX = -0.7;
+        velocityY = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
+
+    case 3: // Original block 0x005E880E
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
+
+    case 4: // Original block 0x005E8891: jump with optional dash follow-through
+        if (field000a == 0 && field000c == 0) {
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
+            velocityX = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            gravity = 0.042;
+            velocityY = -2.9;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 0.4;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (field000a > 2) velocityY += gravity;
+
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+
+        // Landing is checked after the animation counters advance.
+        // On the original path the sound request precedes FaceOpponent.
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 5: // Original block 0x005E89F4: forward jump with a two-frame loop
+        if (field000a == 0 && field000c == 0) {
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
+            velocityX = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            gravity = 0.042;
+            velocityY = -2.9;
+            velocityX = 0.7;
+            if ((unsigned char)dashMomentumFlag == 1) {
+                velocityX = 1.1;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (field000a > 2) velocityY += gravity;
+
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike case 4, do not change animation or ResetPose here.
+                // The last two pose frames repeat while airborne.
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 6: // Original block 0x005E8B61: backward jump with a two-frame loop
+        if (field000a == 0 && field000c == 0) {
+            if ((unsigned char)dashMomentumFlag == 0) FaceOpponent();
+            velocityX = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            gravity = 0.042;
+            velocityY = -2.9;
+            velocityX = -0.7;
+            // Unlike case 5, this direction has no dashMomentumFlag override.
+        }
+        if (field000a > 2) velocityY += gravity;
+
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 7: // Original block 0x005E8CA9: neutral recovery to animation 0
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 8: // Original block 0x005E8D36: neutral recovery to animation 3
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 9: // Original block 0x005E8DC3: airborne fall and landing reset
+        velocityY += gravity;
+        dashMomentumFlag = 0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0; // Repeat this animation while in the air.
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 13: // Original block 0x005E8E7A: grounded landing recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // The original tests inputY (+0x189) after selecting state 0.
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 14: // Original block 0x005E8F1F: upward launch and landing recovery
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 15: // Original block 0x005E902E: forward aerial launch
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = 0.7;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 16: // Original block 0x005E913B: backward aerial launch
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = -0.7;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 47: // Original block 0x005E9248: low aerial strike / ground contact
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.6;
+            gravity = 0.035;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0 && field000a < 2) {
+            field000c = 0;
+            field000a = 2;
+            pendingContextSoundSlot = 7;
+            positionY = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                --field000a;
+            }
+        }
+        return;
+
+    case 50: // Original block 0x005E9378: grounded recoil level 1
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 51: // Original block 0x005E9569: grounded recoil level 2
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 52: // Original block 0x005E975A: grounded recoil level 3
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            // Preserve the original signed ground-height test even though
+            // positionY has just been set to zero in this branch.
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 53: // Original block 0x005e994b: grounded recoil continuation 1
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 54: // Original block 0x005e9b3c: grounded recoil continuation 2
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 55: // Original block 0x005e9d2d: grounded recoil continuation 3
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 56: // Original block 0x005E9F1E: recoil returning directly to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 10);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
+            if (field0120 != 0) {
+                field0118 -= 10.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 57: // Original block 0x5ea0f7: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 15);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
+            if (field0120 != 0) {
+                field0118 -= 20.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 58: // Original block 0x5ea2d0: stronger recoil returning to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 20);
+            velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)(positionY < 0.0) * 0.2) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                // Unlike cases 50-55, this recovery always chooses crouch.
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 59: // Original block 0x005EA4A9: airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -2.0) {
+                velocityY = -2.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 60: // Original block 0x5ea6a8: stronger airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -4.0) {
+                velocityY = -4.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 61: // Original block 0x5ea8a7: stronger airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -6.0) {
+                velocityY = -6.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 62: // Original block 0x005EAAA6: unclamped airborne hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 63: // Original block 0x005EAC5D: direct-velocity aerial hit reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 64: // Original block 0x005EAE08: wall-aware airborne reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -2.0) {
+                velocityY = -2.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 65: // Original block 0x005EB039: stronger wall-aware airborne reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            if (velocityY < -4.0) {
+                velocityY = -4.0;
+            } else if (velocityY > -0.5) {
+                velocityY = -0.5;
+            }
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 66: // Original block 0x005EB26A: unclamped wall-aware airborne reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = velocityY * 0.75 + knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 67: // Original block 0x005EB453: direct-speed wall-contact reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a > 0 && CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 68: // Original block 0x005EB630: collision-cancelled airborne recovery
+        if (field0120 != 0) {
+            field0118 -= 1.5;
+        }
+        meter = (short)(meter + 3);
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
+        ++field000c;
+        if (CollisionSide() != 0) {
+            field0008 = 70;
+            ResetPose();
+            return;
+        }
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 69: // Original block 0x005EB76C: airborne recovery without wall cancel
+        if (field0120 != 0) {
+            field0118 -= 1.5;
+        }
+        meter = (short)(meter + 3);
+        velocityX = knockbackVelocityX;
+        velocityY = knockbackVelocityY;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 70: // Original block 0x005EB881: wall recovery with global effect
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            meter = (short)(meter + 30);
+            ++field3138;
+            airActionLockFrames = (short)(airActionLockFrames + 120);
+            velocityX = 0.5;
+            velocityY = -2.5;
+            gravity = 0.025;
+            pendingContextSoundSlot = 31;
+
+            effect.type = 0;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 71: // Original block 0x005EBA61: high-gravity direct-speed air reaction
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.072;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 72: // Original block 0x005EBC0C: grounded recoil with stage pushback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 73: // Original block 0x005EBD61: separate grounded recoil continuation
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 74: // Original block 0x005EBEB6: grounded recoil to crouch
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 75: // Original block 0x005EBFF3: forward grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 76: // Original block 0x005EC1F0: independent duplicate of recoil 75
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 77: // Original block 0x005EC3ED: recoil ends in crouch
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 81: // Original block 0x005EC5D2: airborne recoil and local hit effect
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 499;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        velocityX += 0.02;
+        velocityY += gravity;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                --field000a;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a == 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 82: // Original block 0x005EC7B7: repeated airborne lift and knockback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            pendingContextSoundSlot = 30;
+            velocityY = -0.45;
+            velocityX = -0.1;
+            ++field3138;
+            meter = (short)(meter + 30);
+        }
+        if (field000a == 4 && field000c == 0) {
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY > 0.0 && field000a == 4) {
+            field000a = 5;
+            field000c = 0;
+        }
+        if (field000a > 3) {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && field3138 < 8) {
+                field000a = 0;
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 4) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 83: // Original block 0x005EC9D9: airborne ground-impact recovery
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 84: // Original block 0x005ECC1E: independent ground-impact recovery
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 85: // Original block 0x005ECE63: direct airborne knockback and landing
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 86: // Original block 0x005ED036: one-shot lift and landing recoil
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            // Unlike state 85, this launch is suppressed after its first use.
+            if (field3138 == 0) {
+                if (field0120 != 0) {
+                    field0118 -= 30.0;
+                }
+                pendingContextSoundSlot = 33;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
+                meter = (short)(meter + 30);
+                ++field3138;
+            }
+        }
+        // 0x00787DA8 holds 0.06, not the 0.04 used by state 85.
+        velocityY += 0.06;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 87: // Original block 0x005ED218: fixed-position effect and idle return
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 0x1ef;
+            effect.x = 60.0;
+            effect.y = 40.0;
+            effect.payload = 1;
+            effect.flag0018 = 1;
+            effect.group = 0;
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 96: // Original block 0x005ED2CB: stand/crouch wakeup timing
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            // Face one frame before the animation ends, not at the end.
+            if (field000a == timing.animationFrameCount - 1) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 97: // Original block 0x005ED360: first impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 98: // Original block 0x005ED458: separately dispatched impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 99: // Original block 0x005ED550: end of knockout recovery
+        dashMomentumFlag = 0;
+        // The target deliberately checks the tick count without a pose gate.
+        if (health > 0 && field000c > 99) {
+            field0008 = 96;
+            ResetPose();
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 96;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 150: // Original block 0x005ED5FF: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 153;
+        }
+        if (inputY != 1) {
+            field0008 = 150;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 10);
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 151: // Original block 0x005ED7AB: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 154;
+        }
+        if (inputY != 1) {
+            field0008 = 151;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 15);
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 152: // Original block 0x005ED957: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 155;
+        }
+        if (inputY != 1) {
+            field0008 = 152;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 20);
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 153: // Original block 0x005EDB03: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 153;
+        }
+        if (inputY != 1) {
+            field0008 = 150;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 10);
+            velocityX = -1.5;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 154: // Original block 0x005EDC97: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 154;
+        }
+        if (inputY != 1) {
+            field0008 = 151;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 15);
+            velocityX = -1.8;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 155: // Original block 0x005EDE2B: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
+        if (inputY == 1) {
+            field0008 = 155;
+        }
+        if (inputY != 1) {
+            field0008 = 152;
+        }
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            meter = (short)(meter + 20);
+            velocityX = -2.3;
+            velocityY = 0.0;
+            positionY = 0.0;
+        }
+        velocityY = 0.0;
+        velocityX += 0.06;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX = velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 156: // Original block 0x005EDFBF: forward airborne knockback
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.6;
+            meter = (short)(meter + 15);
+            gravity = 0.06;
+        }
+        velocityX = -1.2;
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 157: // Original block 0x005EE0CF: aerial effect with two-frame loop
+        velocityX = 1.0;
+        gravity = 0.045;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        } else {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 158: // Original block 0x005EE223: opposite-direction aerial effect
+        velocityX = -1.0;
+        gravity = 0.045;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.3;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+        } else {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 161: // Original block 0x005EE377: aerial impact and trail reset
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 60);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            ++field3138;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+                gravity = 0.035;
+            }
+        }
+        return;
+
+    case 162: // Original block 0x005EE48B: staged aerial launch and impact
+        if (field000a == 0 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -1.5;
+            gravity = 0.025;
+            remainingHitCount = 1;
+        }
+        if (field000a == 7 && field000c == 0) {
+            ResetFrame();
+            effect.type = 9;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 60);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 62;
+            meter = (short)(meter - 1000);
+            ++field3138;
+        }
+        velocityY += gravity;
+        if (positionY + velocityY > 0.0) {
+            field0008 = 13;
+            ResetPose();
+            ResetPose();
+            positionY = 0.0;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 18) {
+                gravity = 0.035;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 163: // Original block 0x005EE676: cancellable forward dash
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(3);
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        velocityX = 2.2;
+        dashMomentumFlag = 1;
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 6);
+                return;
+            }
+        }
+        if (inputX == facing && field313c >= 80 && field000a < 4) {
+            field0008 = 178;
+            ResetPose();
+        }
+        if (inputX != facing && field3138 >= 60 && field000a < 4) {
+            field0008 = 178;
+            ResetPose();
+        }
+        return;
+
+    case 164: // Original block 0x005EE867: decelerating ground dash
+        StartTrail(3);
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            velocityX = -2.2;
+        }
+        velocityX += 0.02;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && field3138 < 2) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                FaceOpponent();
+                field0008 = 0;
+                ResetPose();
+                ResetFrame();
+            }
+        }
+        return;
+
+    case 165: // Original block 0x005EE9B2: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = 1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = -0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX < 0.5) {
+            velocityX = 0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (inputX == facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if (inputX != facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
+    case 166: // Original block 0x005EEBB9: sustained airborne momentum
+        if (field000a == 0 && field000c == 0 && field3138 == 0) {
+            velocityX = -1.9;
+            velocityY = 1.3;
+            StartTrail(3);
+            horizontalDeceleration = 0.015;
+            gravity = -0.038;
+            pendingContextSoundSlot = 17;
+        }
+        velocityY += gravity;
+        velocityX += horizontalDeceleration;
+        if (velocityX > -0.5) {
+            velocityX = -0.5;
+        }
+        if (velocityY < -1.5) {
+            velocityY = -1.5;
+        }
+        ++field000c;
+        ++field3138;
+        ++field313c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if ((int)inputX == -(int)facing && field313c >= 120) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        if ((int)inputX != -(int)facing && field3138 >= 48) {
+            field0008 = 9;
+            ResetPose();
+            gravity = 0.03;
+            if (FaceOpponent() != 0) {
+                velocityX = -velocityX;
+            }
+        }
+        return;
+
+    case 167: // Original block 0x005EEDC4: stunned recovery with two effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        if (field000a == 1 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 2 && field000c == 0) {
+            effect.type = 4;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 168: // Original block 0x005EEFAC: grounded impact to state 0
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 169: // Original block 0x005EF0F6: grounded impact to state 3
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == timing.animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 170: // Original block 0x005EF240: delayed stored-velocity release
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (gravity == 0.0) {
+                gravity = 0.035;
+            }
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            hitstunFrames = 60;
+        }
+        if (hitstunFrames == 0 && field3140 == 0) {
+            ++field3140;
+            velocityX = (double)field3138 * 0.01;
+            velocityY = (double)field313c * 0.01;
+        }
+        if (hitstunFrames == 0) {
+            velocityY += gravity;
+        }
+        if (velocityY + positionY > 0.0) {
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 169;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 171: // Original block 0x005EF409: frozen hit, one immediate effect
+        if (field000a == 0 && field000c == 0) {
+            field3138 = (int)(velocityX * 100.0);
+            field313c = (int)(velocityY * 100.0);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            if (field0120 == 1) {
+                comboDamageScale += field0118 * 5.0;
+            }
+            field0118 = 0.0;
+            hitstunFrames = 90;
+            SetTint(0xb0, 3);
+        }
+        // This effect is also on pose zero, unlike reference characters.
+        if (field000a == 0 && field000c == 0) {
+            pendingContextSoundSlot = 18;
+            effect.type = 1;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                velocityX = (double)field3138 * 0.01;
+                velocityY = (double)field313c * 0.01;
+                gravity = 0.035;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 178: // Original block 0x005EF5E8: dash slide and jump cancel
+        velocityX -= 0.03;
+        velocityX = velocityX;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (inputY == -1 && field000a > 0) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+                return;
+            }
+        }
+        return;
+
+    case 180: // Original block 0x005EF70A: trailing aerial landing
+        if (field000a == 0 && field000c == 0) {
+            StartTrail(2);
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (positionY < 0.0) {
+            velocityY += gravity;
+        }
+        if (positionY + velocityY > 0.0 && field000a < 10) {
+            ResetFrame();
+            positionY = 0.0;
+            field000c = 0;
+            field000a = 10;
+            pendingContextSoundSlot = 9;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                velocityX = -0.5;
+                velocityY = -1.0;
+                gravity = 0.028;
+            }
+            if (field000a == 10) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 0;
+            }
+        }
+        return;
+
+    case 200: // Original block 0x005EF87C: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 201: // Original block 0x005EFA4F: dash-momentum attack
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 15);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 202: // Original block 0x005EFC22: local hit effect on advanced pose
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 15);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 4) {
+                pendingCharacterSoundSlot = 0;
+                effect.type = 0x19d;
+                effect.x = (double)((int)positionX + (int)facing * 34);
+                effect.y = (double)((int)positionY - 31);
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 203: // Original block 0x005EFDDF: repeatable charged hit
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.06;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 0 && field000c == 0) {
+            remainingHitCount = 1;
+        }
+        if (field000a == 10 && buttonPulse[2] == 1 && field3138 < 2) {
+            pendingCharacterSoundSlot = 0;
+            field000c = 0;
+            field000a = 6;
+            pendingCharacterSoundSlot = 0;
+            attackCollisionResult = 0;
+            remainingHitCount = 1;
+            meter = (short)(meter + 15);
+            ++field3138;
+            effect.type = 400;
+            effect.x = (double)((int)positionX + (int)facing * 90);
+            effect.y = (double)((int)positionY - 50);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 7) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 6) {
+                remainingHitCount = 1;
+                pendingCharacterSoundSlot = 0;
+                effect.type = 400;
+                effect.x = (double)((int)positionX + (int)facing * 90);
+                effect.y = (double)((int)positionY - 50);
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 204: // Original block 0x005F008D: grounded dash cancel and recovery
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 205: // Original block 0x005F0278: grounded dash cancel and recovery
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing) {
+                field0008 = 5;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 6;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 13);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 206: // Original block 0x005F0463: accelerating repeatable dash strike
+        if (field000a < 2) {
+            if ((unsigned char)dashMomentumFlag == 0) {
+                velocityX = 0.0;
+                velocityY = 0.0;
+            }
+            if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+                velocityX -= 0.03;
+            } else {
+                velocityX = 0.0;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (velocityX > 0.0) {
+            dashMomentumFlag = 0;
+            velocityX -= 0.02;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 2) {
+                velocityX = 1.9;
+            }
+            if (field000a == 6 && field3138 < 4) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+                if (field3138 > 2) {
+                    remainingHitCount = 0;
+                }
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 207: // Original block 0x005F0669: aerial attack with jump cancel
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 208: // Original block 0x005F0840: aerial attack with jump cancel
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 13);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 209: // Original block 0x005F0A17: repeated aerial local attack
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a > 4 && buttonPulse[2] == 1 && field3138 < 2) {
+            field000c = 0;
+            field000a = 3;
+            ++field3138;
+            attackCollisionResult = 0;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4) {
+                meter = (short)(meter + 15);
+                pendingContextSoundSlot = 20;
+                remainingHitCount = 1;
+                pendingCharacterSoundSlot = 0;
+                effect.type = 0x191;
+                effect.x = (double)((int)positionX + (int)facing * 27);
+                effect.y = (double)((int)positionY - 28);
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 210: // Original block 0x005F0CB7: impact-driven crouch recovery
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityX = 0.6;
+            velocityY = -1.4;
+            gravity = 0.036;
+        }
+        if (field000a == 6 && field000c == 0) {
+            meter = (short)(meter + 20);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (field000a > 2) {
+            velocityY += gravity;
+        }
+        if (positionY + velocityY > 0.0 && field000a < 9 && field000a > 3) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 9;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 211: // Original block 0x005F0E5C: airborne pose-5 local hit effect
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 5) {
+                meter = (short)(meter + 15);
+                pendingContextSoundSlot = 20;
+                remainingHitCount = 1;
+                pendingCharacterSoundSlot = 0;
+                effect.type = 400;
+                effect.x = (double)((int)positionX + (int)facing * 45);
+                effect.y = (double)((int)positionY - 62);
+                effect.flag0018 = (unsigned char)facing;
+                effect.layer = 1;
+                effect.group = 2;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 212: // Original block 0x005F10A0: aerial bounce and landing flash
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+            velocityX /= 2.0;
+            gravity = 0.07;
+        }
+        if (attackCollisionResult > 1) {
+            field0008 = 213;
+            ResetPose();
+            ResetFrame();
+            return;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+            field0008 = 214;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 213: // Original block 0x005F1265: upward hit recoil
+        gravity = 0.042;
+        velocityY += gravity;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = -1.0;
+            velocityY = -2.4;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 214: // Original block 0x005F1321: grounded hit flash and recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.palette = 7;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 220: // Original block 0x005F1440: opponent grab and impact effect
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        if (field000a == 1 && field000c == 0 &&
+            (*opponentSlot)->positionY == 0.0) {
+            remainingHitCount = 1;
+        } else {
+            remainingHitCount = 0;
+        }
+        if (field000a == 1 && attackCollisionResult == 3) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+            outgoingPushbackVelocityX = 0.0;
+            ResetPose();
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            field0008 = 221;
+            (*opponentSlot)->field0008 = 107;
+            effect.type = 0;
+            effect.x = (double)((int)positionX + (int)facing * 25);
+            effect.y = (double)((int)positionY - 51);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            // Original proceeds to the frame counter even after a grab.
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 221: // Original block 0x005F160E: follow-through after opponent grab
+        if (field000a == 1 && field000c == 0) {
+            (*opponentSlot)->ResetPose();
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->field0008 = 50;
+        }
+        if (field000a > 2) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a < 9 && field000a > 2 &&
+            velocityY + positionY > 0.0) {
+            field000a = 9;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 2) {
+                velocityX = 1.5;
+                velocityY = -1.6;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 4) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 230: // Original block 0x005F182F: grounded trail strike
+        StartTrail(3);
+        dashMomentumFlag = 0;
+        if (velocityX > 0.0) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 231: // Original block 0x005F1975: grounded trail strike
+        StartTrail(3);
+        dashMomentumFlag = 0;
+        if (velocityX > 0.0) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 10);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 232: // Original block 0x005F1ABB: launched strike with landing shortcut
+        dashMomentumFlag = 0;
+        StartTrail(3);
+        if (field000a == 0 && field000c == 0) {
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 1;
+        }
+        if (field000a < 3) {
+            velocityX -= 0.035;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+        }
+        if (field000a == 3) {
+            velocityY += gravity;
+            if (positionY + velocityY > 0.0) {
+                positionY = 0.0;
+                ResetFrame();
+                field000c = 0;
+                field000a = 4;
+                return;
+            }
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 3) {
+                velocityX = 1.8;
+                velocityY = -1.5;
+                gravity = 0.045;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 233: // Original block 0x005F1C6F: crouching trail strike
+        dashMomentumFlag = 0;
+        StartTrail(3);
+        if (velocityX > 0.0) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 5);
+            pendingContextSoundSlot = 21;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 234: // Original block 0x005F1DB5: crouching trail strike
+        StartTrail(3);
+        dashMomentumFlag = 0;
+        if (velocityX > 0.0) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (field000a == 0 && field000c == 0) {
+            velocityY = 0.0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 10);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 235: // Original block 0x005F1EFB: crouching four-cycle strike
+        dashMomentumFlag = 0;
+        StartTrail(3);
+        if (field000a == 0 && field000c == 0) {
+            horizontalDeceleration = 0.0;
+            remainingHitCount = 1;
+        }
+        if (velocityX > 0.0) {
+            velocityX -= 0.01;
+        } else {
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 25);
+            pendingContextSoundSlot = 20;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 6 && field3138 < 4) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+                if (field3138 > 2) {
+                    remainingHitCount = 0;
+                }
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 248: // Original block 0x005F2090: airborne grab and opponent capture
+        velocityY += gravity;
+        if (field000a == 1 && attackCollisionResult == 3) {
+            (*opponentSlot)->ResetFrame();
+            (*opponentSlot)->ResetPose();
+            ResetFrame();
+            (*opponentSlot)->airActionDisabled = 1;
+            field000a = 0;
+            field000c = 0;
+            field0008 = 249;
+            (*opponentSlot)->field0008 = 110;
+            (*opponentSlot)->positionY = positionY;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1 && (*opponentSlot)->positionY < 0.0 &&
+                ((*opponentSlot)->field0008 < 50 ||
+                 (*opponentSlot)->field0008 > 149)) {
+                remainingHitCount = 1;
+            } else {
+                remainingHitCount = 0;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 211;
+                field000a = 1;
+            }
+        }
+        return;
+
+    case 249: // Original block 0x005F223A: airborne throw and landing impact
+        field013e = 30;
+        (*opponentSlot)->field013e = 30;
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            velocityX = -2.5;
+            velocityY = -4.5;
+            gravity = 0.045;
+        }
+        velocityY += gravity;
+        if (field000a < 8) {
+            velocityX += 0.035;
+            if (velocityX > 0.0) {
+                velocityX = 0.0;
+            }
+            (*opponentSlot)->positionY = positionY;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 19);
+            if (velocityY + positionY > 0.0) {
+                positionY = 0.0;
+                (*opponentSlot)->positionY = 0.0;
+                (*opponentSlot)->positionX = positionX;
+                field000c = 0;
+                field000a = 8;
+                effect.type = 0;
+                effect.palette = 2;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 2;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                (*opponentSlot)->ResetPose();
+                (*opponentSlot)->field0008 = 98;
+                return;
+            }
+        }
+        if (field000a == 8 && field000c == 0) {
+            hitstopFrames = 60;
+            (*opponentSlot)->hitstopFrames = 60;
+            ApplyDamage(1100, 500.0);
+        }
+        if (field000a == 9 && field000c == 0) {
+            velocityY = -1.5;
+            velocityX = -1.3;
+            gravity = 0.035;
+        }
+        if (field000a > 9 && positionY + velocityY > 0.0) {
+            ResetPose();
+            ResetFrame();
+            positionY = 0.0;
+            field0008 = 13;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 3) {
+                (*opponentSlot)->field0008 = 121;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        return;
+
+    case 250: // Original block 0x005F2562: local special-effect finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 3) {
+                effect.type = 403;
+                effect.x = (double)((int)positionX + (int)facing * 23);
+                effect.y = (double)((int)positionY - 76);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+                pendingCharacterSoundSlot = 5;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 251: // Original block 0x005F26A9: local special-effect finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 3) {
+                effect.type = 404;
+                effect.x = (double)((int)positionX + (int)facing * 23);
+                effect.y = (double)((int)positionY - 76);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+                pendingCharacterSoundSlot = 5;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 252: // Original block 0x005F27F0: two-phase special effect finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+            if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+            effect.type = 33;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 3) {
+            effect.type = 0x195;
+            effect.x = (double)((int)positionX + (int)facing * 23);
+            effect.y = (double)((int)positionY - 76);
+            effect.group = 0;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            pendingContextSoundSlot = 21;
+            pendingCharacterSoundSlot = 5;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 3) {
+                effect.type = 0x195;
+                effect.x = (double)((int)positionX + (int)facing * 23);
+                effect.y = (double)((int)positionY - 76);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 253: // Original block 0x005F2A5D: pose-4 local impact finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 4) {
+                effect.type = 406;
+                effect.x = (double)((int)positionX + (int)facing * 17);
+                effect.y = (double)((int)positionY - 26);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                effect.field0028 = 1;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 254: // Original block 0x005F2BA1: pose-4 local impact finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 4) {
+                effect.type = 407;
+                effect.x = (double)((int)positionX + (int)facing * 17);
+                effect.y = (double)((int)positionY - 26);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                effect.field0028 = 1;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 255: // Original block 0x005F2CE5: resource-draining impact finisher
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            meter = (short)(meter + 45);
+            if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+            effect.type = 33;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 4) {
+                effect.type = 0x198;
+                effect.x = (double)((int)positionX + (int)facing * 17);
+                effect.y = (double)((int)positionY - 26);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                effect.field0028 = 1;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 256: // Original block 0x005F2EC9: aerial launcher and hit flash
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 1) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
+            field000a = 8;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                velocityX = 1.5;
+                velocityY = -1.5;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 257: // Original block 0x005F30D8: aerial launcher and hit flash
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 1) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
+            field000a = 8;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                velocityX = 1.5;
+                velocityY = -1.8;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 258: // Original block 0x005F32E7: two-wave aerial impact sequence
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+            effect.type = 33;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a > 1) {
+            velocityY += gravity;
+            velocityX -= 0.045;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a < 8 && field000a > 1 &&
+            velocityY + positionY > 0.0) {
+            field000a = 8;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        if (field000a < 19 && field000a > 12 &&
+            velocityY + positionY > 0.0) {
+            field000a = 19;
+            field000c = 0;
+            positionY = 0.0;
+            ResetFrame();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
+            if (field000a == 1) {
+                velocityX = 0.9;
+                velocityY = -1.0;
+                gravity = 0.05;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 3) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a == 12) {
+                velocityX = 1.4;
+                velocityY = -2.9;
+                gravity = 0.05;
+                attackCollisionResult = 0;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 13) {
+                pendingContextSoundSlot = 21;
+                remainingHitCount = 1;
+                meter = (short)(meter + 30);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 259: // Original block 0x005F36BF: paired local impact effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 410;
+            effect.x = (double)((int)positionX + (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.owner = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.type = 0x192;
+            effect.x = (double)((int)positionX + (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+            field3148 = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 260: // Original block 0x005F386E: paired local impact effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 411;
+            effect.x = (double)((int)positionX - (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.owner = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.type = 0x192;
+            effect.x = (double)((int)positionX - (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)(-facing);
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+            field3148 = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 261: // Original block 0x005F3A20: resource-backed paired effects
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            if (field0120 == 0) {
+                field0118 -= 500.0;
+            } else {
+                field0118 -= 250.0;
+            }
+            effect.type = 33;
+            effect.palette = 11;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 0x19c;
+            effect.x = (double)((int)positionX + (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.owner = 1;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            effect.type = 0x192;
+            effect.x = (double)((int)positionX + (int)facing * 36);
+            effect.y = (double)((int)positionY - 78);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+            field3148 = 1;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
+    case 262: // Original block 0x005F3C6F: slowed aerial local finisher
+        if (field000a == 0 && field000c == 0) {
+            velocityX *= 0.25;
+            velocityY *= 0.25;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 4) {
+                meter = (short)(meter + 45);
+                effect.type = 0x196;
+                effect.x = (double)((int)positionX + (int)facing * 14);
+                effect.y = (double)((int)positionY - 35);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                effect.field0028 = 1;
+                EmitLocalEffect(&effect);
+                pendingContextSoundSlot = 21;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 300: // Original block 0x005F3DC5: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 418;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 301: // Original block 0x005F405D: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 419;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 302: // Original block 0x005F42F5: super sequence with frozen impact
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a >= 1) {
+            // This two-byte member is not yet named in the shared view.
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        if (field000a == 5 && field000c == 0 && field3138 == 0) {
+            effect.type = 420;
+            effect.x = (double)((int)positionX + (int)facing * 77);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 47);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 5 && hitstunFrames > 0) {
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 8 && field3138 < 3) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 303: // Original block 0x005F458D: extended super and repeated hit bursts
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            remainingHitCount = 99;
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -2.4;
+            velocityX = -0.4;
+            gravity = 0.029;
+            remainingHitCount = 99;
+        }
+        if (field000a == 3) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a > 11) {
+            (*opponentSlot)->SetHorizontalShake(50, 3);
+        }
+        if (field000a == 3 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 1000);
+            SetTint(0xb0, 3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 11 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 12 && field000c == 0) {
+            velocityX = -0.2;
+            velocityY = -0.8;
+            gravity = 0.015;
+        }
+        if (field000a == 14 && field000c == 0) {
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 180)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.owner = 1;
+            effect.type = 0x19f;
+            effect.x = (double)(int)positionX;
+            effect.y = 0.0;
+            effect.flag0018 = (unsigned char)facing;
+            effect.group = 2;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 18 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 180)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        velocityY += gravity;
+        if (field000a < 20 && velocityY > 0.15) {
+            velocityY = 0.15;
+        }
+        if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            field000a = 22;
+            field000c = 0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 20 && field3138 < 8) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 22) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 304: // Original block 0x005F4C63: extended super and repeated hit bursts
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            remainingHitCount = 99;
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -2.4;
+            velocityX = -0.4;
+            gravity = 0.029;
+            remainingHitCount = 99;
+        }
+        if (field000a == 3) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a > 11) {
+            (*opponentSlot)->SetHorizontalShake(50, 3);
+        }
+        if (field000a == 3 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 2000);
+            SetTint(0xb0, 3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a == 11 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a == 12 && field000c == 0) {
+            velocityX = -0.2;
+            velocityY = -0.8;
+            gravity = 0.015;
+        }
+        if (field000a == 14 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 240)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.owner = 1;
+            effect.type = 0x1a0;
+            effect.x = (double)(int)positionX;
+            effect.y = 0.0;
+            effect.flag0018 = (unsigned char)facing;
+            effect.group = 2;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 18 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 240)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        velocityY += gravity;
+        if (field000a < 20 && velocityY > 0.15) {
+            velocityY = 0.15;
+        }
+        if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            field000a = 22;
+            field000c = 0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 20 && field3138 < 15) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 22) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 305: // Original block 0x005F5341: extended super and repeated hit bursts
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            remainingHitCount = 99;
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityY = -2.4;
+            velocityX = -0.4;
+            gravity = 0.029;
+            remainingHitCount = 99;
+        }
+        if (field000a == 3) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a > 11) {
+            (*opponentSlot)->SetHorizontalShake(50, 3);
+        }
+        if (field000a == 3 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 3000);
+            SetTint(0xb0, 3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 37;
+        }
+        if (field000a == 11 && field000c == 0) {
+            ResetFrame();
+        }
+        if (field000a > 10) {
+            contextOwner->SetSceneTimer(15);
+        }
+        if (field000a == 12 && field000c == 0) {
+            velocityX = -0.2;
+            velocityY = -0.8;
+            gravity = 0.015;
+        }
+        if (field000a == 14 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 320)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.owner = 1;
+            effect.type = 0x1a1;
+            effect.x = (double)(int)positionX;
+            effect.y = 0.0;
+            effect.flag0018 = (unsigned char)facing;
+            effect.group = 2;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 18 && field000c == 0) {
+            effect.owner = 0;
+            effect.type = 3;
+            effect.x = (double)(int)(positionX + (double)((int)facing *
+                       (unsigned short)RandomRange(0, 320)));
+            effect.y = 0.0;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+
+            effect.type = 0x191;
+            effect.x = (double)((int)positionX + (int)facing * 27);
+            effect.y = (double)((int)positionY - 28);
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            effect.group = 2;
+            EmitLocalEffect(&effect);
+
+            effect.type = 0x1a5;
+            effect.x = (double)((int)positionX + (int)facing * 16);
+            effect.y = (double)((int)positionY - 43);
+            effect.layer = 1;
+            effect.group = 0;
+            EmitLocalEffect(&effect);
+
+            effect.x = (double)((int)positionX + (int)facing * 21);
+            effect.y = (double)((int)positionY - 51);
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
+        }
+        velocityY += gravity;
+        if (field000a < 20 && velocityY > 0.15) {
+            velocityY = 0.15;
+        }
+        if (field000a > 14 && field000a < 22 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            ResetFrame();
+            field000a = 22;
+            field000c = 0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 20 && field3138 < 25) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 3);
+            }
+            if (field000a == 22) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 306: // Original block 0x005F5A42: sustained super impact and rise
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            if (field3138 == 0) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 1000);
+                SetTint(0xb0, 3);
+                effect.type = 0x44;
+                effect.palette = 0x13;
+                effect.x = (double)((int)positionX + (int)facing * 5);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                ++field3138;
+                remainingHitCount = 5;
+            }
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 0x1a7;
+            effect.x = (double)((int)positionX + (int)facing * 45);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)(-facing);
+            EmitLocalEffect(&effect);
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a == 5) {
+            velocityY += 0.01;
+        }
+        if (field000a == 5 && positionY + velocityY > 0.0) {
+            field000a = 6;
+            field000c = 0;
+            positionY = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a > 5) {
+            velocityX -= 0.025;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a >= 1) {
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field313c < 9) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field313c;
+            }
+            if (field000a == 5) {
+                velocityX = 1.9;
+                velocityY = -0.4;
+                positionX += (double)((int)facing * 30);
+                pendingCharacterSoundSlot = 4;
+            }
+            if (field000a == 6) {
+                --field000a;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 307: // Original block 0x005F5DE3: sustained super impact and rise
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            if (field3138 == 0) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 2000);
+                SetTint(0xb0, 3);
+                effect.type = 0x45;
+                effect.palette = 5;
+                effect.x = (double)((int)positionX + (int)facing * 5);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                ++field3138;
+                remainingHitCount = 12;
+            }
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 0x1a7;
+            effect.x = (double)((int)positionX + (int)facing * 45);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)(-facing);
+            EmitLocalEffect(&effect);
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a == 5) {
+            velocityY += 0.01;
+        }
+        if (field000a == 5 && positionY + velocityY > 0.0) {
+            field000a = 6;
+            field000c = 0;
+            positionY = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a > 5) {
+            velocityX -= 0.025;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a >= 1) {
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field313c < 9) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field313c;
+            }
+            if (field000a == 5) {
+                hitInvulnerabilityFrames = 3;
+                velocityX = 2.3;
+                velocityY = -0.65;
+                positionX += (double)((int)facing * 30);
+                pendingCharacterSoundSlot = 4;
+                effect.type = 31;
+                effect.x = (double)(int)positionX;
+                effect.y = 0.0;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.facing = facing != 1;
+                contextOwner->EmitEffect(&effect);
+            }
+            if (field000a == 6) {
+                --field000a;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 308: // Original block 0x005F61E7: sustained super impact and rise
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            if (field3138 == 0) {
+                hitstunFrames = 120;
+                meter = (short)(meter - 3000);
+                SetTint(0xb0, 3);
+                effect.type = 0x46;
+                effect.palette = 0x40;
+                effect.x = (double)((int)positionX + (int)facing * 5);
+                effect.y = (double)((int)positionY - 43);
+                effect.group = 2;
+                effect.owner = 1;
+                effect.layer = 1;
+                contextOwner->EmitEffect(&effect);
+                ++field3138;
+                remainingHitCount = 19;
+                pendingContextSoundSlot = 37;
+            }
+            velocityX = 0.0;
+            velocityY = 0.0;
+            gravity = 0.0;
+        }
+        contextOwner->SetSceneTimer(15);
+        if (field000a == 5 && field3140 < 0) {
+            effect.type = 31;
+            effect.x = (double)(int)positionX;
+            effect.y = 0.0;
+            effect.group = 0;
+            effect.layer = 0;
+            effect.facing = facing != 1;
+            contextOwner->EmitEffect(&effect);
+            field3140 = 12;
+        }
+        --field3140;
+        if (field000a == 4 && field000c == 0) {
+            effect.type = 0x1a7;
+            effect.x = (double)((int)positionX + (int)facing * 45);
+            effect.y = (double)((int)positionY - 43);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)(-facing);
+            EmitLocalEffect(&effect);
+        }
+        if (field000a < 5) {
+            SetHorizontalShake(50, 3);
+        }
+        if (field000a == 5) {
+            velocityY += 0.01;
+        }
+        if (field000a == 5 && positionY + velocityY > 0.0) {
+            field000a = 6;
+            field000c = 0;
+            positionY = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a > 5) {
+            velocityX -= 0.025;
+            if (velocityX < 0.0) {
+                velocityX = 0.0;
+            }
+        }
+        if (field000a >= 1) {
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field313c < 9) {
+                field000a = (unsigned short)(field000a - 2);
+                ++field313c;
+            }
+            if (field000a == 5) {
+                velocityX = 2.5;
+                velocityY = -0.8;
+                positionX += (double)((int)facing * 30);
+                pendingCharacterSoundSlot = 4;
+            }
+            if (field000a == 6) {
+                --field000a;
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 309: // Original block 0x005F662C: stationary healing super
+        dashMomentumFlag = 0;
+        if (field000a == 0 && field000c == 0) {
+            remainingHitCount = 1;
+            pendingContextSoundSlot = 37;
+            hitstunFrames = 120;
+            meter = (short)(meter - 3000);
+            SetTint(0xb0, 3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)((int)positionX + (int)facing * 5);
+            effect.y = (double)((int)positionY - 56);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            ++field3138;
+            remainingHitCount = 19;
+            effect.type = 0x47;
+            contextOwner->EmitEffect(&effect);
+        }
+        contextOwner->SetSceneTimer(15);
+        velocityX = 0.0;
+        velocityY = 0.0;
+        gravity = 0.0;
+        (*opponentSlot)->outgoingPushbackActive = 0;
+        outgoingPushbackActive = 0;
+        if (field313c == 1 && field000a == 5) {
+            field000a = 6;
+            pendingCharacterSoundSlot = 3;
+            field000c = 0;
+            return;
+        }
+        if (field313c == 2 && field000a == 5) {
+            ResetPose();
+            field0008 = 310;
+            return;
+        }
+        if (field000a > 8 && field000a < 13) {
+            health += 20;
+        }
+        if (health > 10000) {
+            health = 10000;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 3) {
+                effect.type = 0x1a6;
+                effect.x = (double)((int)positionX + (int)facing * 6);
+                effect.y = (double)((int)positionY - 80);
+                effect.group = 0;
+                effect.owner = 1;
+                effect.layer = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+            }
+            if (field000a == 6) {
+                field000a = (unsigned short)(field000a - 1);
+            }
+            if (field000a == 13 && field3138 < 2) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 2);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 310: // Original block 0x005F698C: final stationary super recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        gravity = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 2 && field3138 < 8) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 2);
+            }
+            attackCollisionResult = 0;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    }
+}

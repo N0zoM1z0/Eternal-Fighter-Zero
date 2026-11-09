@@ -333,3 +333,4 @@ address,name,source,symbol,status,evidence
 0x00675C80,Character19::Character19,src/Character19Frame.cpp,??0Character19@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/kanna-constructor-exact.json
 0x0073E790,Character17::Character17,src/Character17Frame.cpp,??0Character17@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/nayukib-constructor-exact.json
 0x00653A20,Character20::Character20,src/Character20Frame.cpp,??0Character20@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z,complete,docs/evidence/kano-constructor-exact.json
+0x005E85F0,Character03::Slot06,src/Character03State.cpp,?Slot06@Character03@@UAEXXZ,complete,docs/evidence/makoto-state-slot06-exact.json
