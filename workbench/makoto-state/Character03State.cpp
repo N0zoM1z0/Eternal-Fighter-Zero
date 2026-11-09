@@ -4923,7 +4923,7 @@ void Character03::Slot06()
         if (field000a == 5) {
             velocityY += 0.01;
         }
-        if (field000a == 5 && positionY + velocityY >= 0.0) {
+        if (field000a == 5 && positionY + velocityY > 0.0) {
             field000a = 6;
             field000c = 0;
             positionY = 0.0;
@@ -5022,7 +5022,7 @@ void Character03::Slot06()
         if (field000a == 5) {
             velocityY += 0.01;
         }
-        if (field000a == 5 && positionY + velocityY >= 0.0) {
+        if (field000a == 5 && positionY + velocityY > 0.0) {
             field000a = 6;
             field000c = 0;
             positionY = 0.0;

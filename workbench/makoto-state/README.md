@@ -1090,6 +1090,15 @@ work, not the original behavior for valid unimplemented animations.
   original ranges cover 2,121 bytes total; the complete partial C++
   workbench compiled with VC7.1, not a whole-function exact match.
 
+- A fresh comparison of the recovered 307/308 x87 landing tests
+  corrected an earlier semantic error. The target uses
+  `test ah,0x41` after `fcomp 0.0` (positive-only result); natural
+  C++ therefore requires `positionY + velocityY > 0.0`, **not**
+  `>= 0.0`. Both states were recompiled independently and the
+  matching `test ah,0x41` instruction checked against addresses
+  0x005F5FE0 and 0x005F6488. This is a behavior correction at
+  exact zero contact, not a mere formatting change.
+
 - Animation ID 309 (0x005F662C..0x005F698C, 864 bytes) is a
   stationary healing super, not an ordinary attack. On first
   pose/tick it clears dash momentum, arms one hit, requests context
