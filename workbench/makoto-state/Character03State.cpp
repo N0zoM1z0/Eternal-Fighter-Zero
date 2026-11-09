@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Animations outside cases 1-9 have not yet been reconstructed.
+// game sources. Animations outside cases 1-9 and 13-14 have not yet been reconstructed.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -188,6 +188,50 @@ void Character03::Slot06()
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
             pendingContextSoundSlot = 9;
+            field0008 = 13;
+            ResetPose();
+        }
+        return;
+
+    case 13: // Original block 0x005E8E7A: grounded landing recovery
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                // The original tests inputY (+0x189) after selecting state 0.
+                field0008 = 0;
+                if (inputY == 1) field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 14: // Original block 0x005E8F1F: upward launch and landing recovery
+        gravity = 0.042;
+        if (field000a == 0 && field000c == 0) {
+            velocityY = -2.9;
+            velocityX = 0.0;
+            dashMomentumFlag = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 3) {
+            positionY = 0.0;
+            pendingContextSoundSlot = 9;
+            FaceOpponent();
             field0008 = 13;
             ResetPose();
         }
