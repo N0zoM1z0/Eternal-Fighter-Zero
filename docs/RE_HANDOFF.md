@@ -397,18 +397,19 @@ reproduction instructions: `workbench/ikumi-effects/README.md`.
 ## Ikumi Slot02 command boss: first original scan source recovered
 
 The source `workbench/ikumi-commands/Character14Commands.cpp` now
-reconstructs Ikumi Slot02's first **499-byte / 153-instruction**
-priority scan. Its focused `check_first_scan.py` test passes all
-153 opcode/operand comparisons after normalizing only future jump
-addresses. Crucially the original direction term is
+reconstructs Ikumi Slot02's first **two** ordered priority scans:
+**1,122 original bytes / 346 instructions**. The focused
+`check_first_scan.py` recompile test passes all 346 opcode and
+operand comparisons after normalizing only future jump addresses;
+the separate scans are 499/153 and 623/193 bytes/instructions. Crucially the original direction term is
 `2 + (facing == -1 ? 0 : -1)`, not the reverse condition suggested
 by one decompiler rendering. The original **5,153-byte complete
 boundary** `[0x006AB7E0,0x006ACC01)` and authored vtable slot 2
 are independently reviewed, with target proof
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-The **remaining 14 command scans still require source**; do not
-claim whole-owner Exact. Continue first with scan 2 beginning
-at `0x006AB9D3` and preserve the original priority ordering.
+The **remaining 13 command scans still require source**; do not
+claim whole-owner Exact. Continue first with scan 3 beginning
+at `0x006ABC42` and preserve the original priority ordering.
 
 ## Ikumi exact derived destructor with two base cleanup calls
 

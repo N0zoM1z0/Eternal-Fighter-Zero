@@ -20,5 +20,20 @@
     "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
   },
   "following_padding_bytes": 15,
-  "qualification": "The first 153 compiled instructions match the target only after normalizing numeric jump targets, because the remaining 14 scans are not yet included. The current partial object is 503 bytes and not a selected full-owner Exact unit."
+  "qualification": "The first two natural C++ scans reproduce 346/346 original instructions after normalizing only branch destinations; thirteen remaining scans and original far jump targets are still missing, so the 1,126-byte workbench TU is NOT a full 5,153-byte Exact match.",
+  "second_scan": {
+    "start": "0x006AB9D3",
+    "end_exclusive": "0x006ABC42",
+    "size": 623,
+    "original_instructions": 193,
+    "sha256": "f4eeecf8e53d97e964c42481798a090a8ef6f1168e55468c195abee8a92abc80"
+  },
+  "natural_cpp_recovered_prefix": {
+    "start": "0x006AB7E0",
+    "end_exclusive": "0x006ABC42",
+    "size": 1122,
+    "instructions": 346,
+    "compiled_partial_size": 1126,
+    "qualification": "All 346 original x86 mnemonics, operands, registers and stack homes match compiled natural C++ after normalizing only branch destination numbers. The missing 13 later scans make the full TU non-Exact."
+  }
 }

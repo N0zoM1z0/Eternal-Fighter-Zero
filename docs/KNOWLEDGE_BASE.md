@@ -1929,7 +1929,7 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
-## Ikumi Slot02 input command scanner: exact first-scan opcode sequence
+## Ikumi Slot02 input command scanner: two complete opcode-level scans
 
 The original Ikumi vtable slot 2 at `0x00788D7C` points to
 `Character14::Slot02` at `0x006AB7E0`, a **5,153-byte** command
@@ -1938,15 +1938,19 @@ alignment bytes). The full unpadded owner and authored origin have
 been newly reviewed against canonical EFZ.exe and recorded in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
 
-The first of the original 15 priority-ordered history scans has now
-been reconstructed as **normal C++**, in the separate unaccepted
-`workbench/ikumi-commands/` source. It scans 70–179 ticks of the
-180-frame circular history, advances through nine directional stages,
-and recognizes command 0x5E. The complete original first scan
-`0x006AB7E0..0x006AB9D3` has **499 bytes / 153 instructions**; its
-compilation matches **153/153 disassembled opcodes and operands**, with
-*only the absolute jump destinations* normalized because the other
-14 scans are still absent. The source path contains a focused,
+The first **two** of the original 15 priority-ordered history scans
+have been reconstructed as **normal C++** in the separate unaccepted
+`workbench/ikumi-commands/` source. Scan 1 reads 70–179 ticks of the
+180-frame circular history, advances nine directional stages and
+recognizes command 0x5E; it covers **499 bytes / 153 instructions**.
+Scan 2 reads 45–179 ticks and recognizes a special command with base
+0x96 plus the input-button flags, retaining an early-finish branch and
+an original stage-5→8 transition; it covers **623 bytes / 193
+instructions**. The complete first-two-scan extent
+`0x006AB7E0..0x006ABC42` totals **1,122 bytes / 346 instructions**.
+The natural VC7.1 compilation matches **346/346 original mnemonics,
+registers, immediate values, and stack operands**, normalizing *only
+absolute branch destinations* because the last 13 scans are missing. The source path contains a focused,
 reproducible VC7.1 verification script. The correct original facing
 term is `2 + (facing == -1 ? 0 : -1)` (and the corresponding term
 starting from 6); an earlier algebraic reading of Ghidra's decompile

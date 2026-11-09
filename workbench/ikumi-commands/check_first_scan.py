@@ -1,4 +1,4 @@
-"""Focused VC7.1 check of Ikumi's first command-history scanner (NOT whole Exact)."""
+"""Focused VC7.1 check of Ikumi command scans 1 and 2 (NOT whole Exact)."""
 import hashlib
 import re
 import subprocess
@@ -13,6 +13,7 @@ from native_build import compile_source
 
 ORIGIN = 0x006AB7E0
 FIRST_SCAN_END = 0x006AB9D3
+SECOND_SCAN_END = 0x006ABC42
 SOURCE = ROOT / 'workbench/ikumi-commands/Character14Commands.cpp'
 OBJECT = ROOT / 'build/ikumi-commands/Character14Commands.partial.obj'
 
@@ -34,20 +35,24 @@ def disasm(code, file):
 
 
 def main():
-    original = target_bytes(verify_target(), ORIGIN, FIRST_SCAN_END - ORIGIN)
+    original = target_bytes(verify_target(), ORIGIN, SECOND_SCAN_END - ORIGIN)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/ikumi-commands-workbench.log')
     built, relocs = object_function(OBJECT, '?Slot02@Character14@@UAEXXZ')
     target_ins = disasm(original, ROOT / 'build/ikumi-commands/first-scan.original.bin')
     built_ins = disasm(built, ROOT / 'build/ikumi-commands/first-scan.compiled.bin')
-    assert len(original) == 499 and len(target_ins) == 153
-    assert len(built) == 503 and len(built_ins) == 156 and not relocs
-    assert target_ins == built_ins[:153]
+    assert len(original) == 1122 and len(target_ins) == 346
+    assert len(built) == 1126 and len(built_ins) == 349 and not relocs
+    assert target_ins == built_ins[:346]
     assert built_ins[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Ikumi first command scan: 153/153 x86 instructions match after'
-          ' normalizing only branch destinations; 499 original bytes')
-    print('Full owner is 5,153 bytes; this 503-byte partial TU is NOT Exact.')
-    print('First-scan target SHA256:', hashlib.sha256(original).hexdigest())
+    first = target_bytes(verify_target(), ORIGIN, FIRST_SCAN_END - ORIGIN)
+    second = target_bytes(verify_target(), FIRST_SCAN_END, SECOND_SCAN_END - FIRST_SCAN_END)
+    assert len(first) == 499 and len(second) == 623
+    print('Ikumi command scans 1 and 2: 346/346 original x86 instructions'
+          ' match after normalizing only branch destinations; 1,122 target bytes')
+    print('Full owner is 5,153 bytes; this 1,126-byte partial TU is NOT Exact.')
+    print('Scan 1 SHA256:', hashlib.sha256(first).hexdigest())
+    print('Scan 2 SHA256:', hashlib.sha256(second).hexdigest())
 
 
 if __name__ == '__main__':
