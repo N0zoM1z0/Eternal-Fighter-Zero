@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-87 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87 and 96-99 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1682,9 +1682,97 @@ void Character03::Slot06()
         }
         return;
 
+    case 96: // Original block 0x005ED2CB: stand/crouch wakeup timing
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            // Face one frame before the animation ends, not at the end.
+            if (field000a == animationFrameCount - 1) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 97: // Original block 0x005ED360: first impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 98: // Original block 0x005ED458: separately dispatched impact flash
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (field000a == 0 && field000c == 0) {
+            SetVerticalShake(3, 0);
+            effect.type = 3;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 7;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 99: // Original block 0x005ED550: end of knockout recovery
+        dashMomentumFlag = 0;
+        // The target deliberately checks the tick count without a pose gate.
+        if (health > 0 && field000c > 99) {
+            field0008 = 96;
+            ResetPose();
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 96;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 75 explicit cases. The target's true default path also
+        // the other 71 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

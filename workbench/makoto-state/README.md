@@ -339,6 +339,29 @@ work, not the original behavior for valid unimplemented animations.
   to animation 0 and calls ResetPose on exhaustion. The effect event is
   only on pose/tick zero; neither velocity nor gravity is written.
 
+- Animation ID 96 (0x005ED2CB..0x005ED360, 149 bytes) only
+  advances pose timers. At exactly animationFrameCount-1 it calls
+  FaceOpponent, then on exhaustion requests state 7 or state 3 when
+  inputY==1 and resets the pose. It does not reset gravity or velocity.
+
+- Animation IDs 97 and 98 (0x005ED360..0x005ED458 and
+  0x005ED458..0x005ED550, 248 bytes each) are separate impact-flash
+  arms. Both clear velocityX/Y each tick; on pose/tick zero they call
+  SetVerticalShake(3,0), emit **global/context effect** type 3 at
+  truncated character coordinates with group 2 and layer 0, and request
+  sound 7. Both advance to animation 99 after frame exhaustion. The
+  target's direct call at 0x00407100 is Context::EmitEffect, not the
+  virtual per-character local-effect call. These instructions were
+  reviewed independently, including distinct target stack scratch slots.
+
+- Animation ID 99 (0x005ED550..0x005ED5FF, 175 bytes) clears dash
+  momentum every tick. If health>0 and its unsigned frame tick is
+  greater than 99, it switches to animation 96 and calls ResetPose,
+  **without** requiring pose 0 (unlike superficially similar characters).
+  After normal frame advancement it calls FaceOpponent exactly when the
+  advanced pose equals animationFrameCount and then returns to state 96
+  on exhaustion. Target instructions were checked independently.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
