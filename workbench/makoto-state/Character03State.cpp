@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47 and 50-71 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47 and 50-72 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1175,6 +1175,33 @@ void Character03::Slot06()
                 ResetPose();
             } else {
                 field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 72: // Original block 0x005EBC0C: grounded recoil with stage pushback
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        dashMomentumFlag = 0;
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
                 ResetPose();
             }
         }

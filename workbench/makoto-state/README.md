@@ -198,6 +198,18 @@ work, not the original behavior for valid unimplemented animations.
   The two-pose rising/falling cycle, unsigned frame progression, and
   knockdown-dependent landing outcomes match the original 71 block.
 
+- Animation ID 72 (block 0x005EBC0C, 341 bytes) is a grounded
+  recoil state. It deducts 0.8 from field0118 when enabled, clears the
+  dash-momentum flag and sets both velocities to zero. The stage-edge
+  condition is (positionX - 20 <= 0) OR (positionX + 20 >= 639).
+  Inside the edge branch it still evaluates the opponent's airborne
+  status and assigns (1 - 0.25 * airborne) * velocityX to outgoingPushbackVelocityX;
+  otherwise the correction is zero. The x87 expression is preserved even
+  though velocityX was just zeroed, because the original executes it.
+  On frame exhaustion, inputY==1 selects crouch state 3, else state 7;
+  both reset pose. These operations were checked against the target
+  0x005EBC0C..0x005EBD61 and a separate authored Character23 variant.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -217,7 +229,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend cases 72 and onward directly from reviewed target instructions,
+Extend cases 73 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
