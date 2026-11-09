@@ -762,7 +762,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -808,7 +808,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -854,7 +854,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -895,7 +895,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -935,7 +935,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -986,7 +986,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1037,7 +1037,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1083,7 +1083,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1128,7 +1128,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1168,7 +1168,7 @@ void Character24::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1203,7 +1203,7 @@ void Character24::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1221,7 +1221,7 @@ void Character24::Slot06()
             (field3138 == 0)) {
             meter = meter + 0x1e;
             ++field3138;
-            field0124 = field0124 + 0x78;
+            airActionLockFrames = airActionLockFrames + 0x78;
             velocityX = 0.5;
             velocityY = -2.5;
             gravity = 0.025;
@@ -1245,7 +1245,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1285,7 +1285,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1534,7 +1534,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (field000a == 1)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1583,7 +1583,7 @@ void Character24::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (4 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1733,7 +1733,7 @@ void Character24::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1778,7 +1778,7 @@ void Character24::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -5117,7 +5117,7 @@ void Character24::Slot06()
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x61;
-                (*opponentSlot)->field012c = 1;
+                (*opponentSlot)->knockdownOnLanding = 1;
                 ApplyDamage(300,980.0);
                 if ((*opponentSlot)->field0108 <= 0) {
                     (*opponentSlot)->field0108 = 1;
@@ -5232,7 +5232,7 @@ void Character24::Slot06()
                 (*opponentSlot)->knockbackVelocityY = -5.0;
                 (*opponentSlot)->gravity = 0.035;
                 ApplyDamage(0xdac,700.0);
-                (*opponentSlot)->field0124 = 0xb4;
+                (*opponentSlot)->airActionLockFrames = 0xb4;
             }
             if ((field000a == 7) && (field3138 < 0xb)) {
                 ++field3138;

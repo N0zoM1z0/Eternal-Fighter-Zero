@@ -5,8 +5,8 @@ void Secondary::DispatchState()
 {
     if (hitstopFrames == 0 && (*opponentSlot)->hitstunFrames == 0) {
         if (field0008 < 50 || field0008 > 150 || field0008 == 96) {
-            field0124 = 0;
-            field012c = 0;
+            airActionLockFrames = 0;
+            knockdownOnLanding = 0;
             (*opponentSlot)->comboHitCount = 0;
             if ((*opponentSlot)->comboDamageScale > 10000.0) (*opponentSlot)->comboDamageScale -= 20.0;
             else (*opponentSlot)->comboDamageScale = 10000.0;
@@ -29,7 +29,7 @@ void Secondary::DispatchState()
                 }
             }
         }
-        if (field0008 >= 50 && field0008 < 150 && field0134 <= 0.0f
+        if (field0008 >= 50 && field0008 < 150 && airActionGauge <= 0.0f
         && (sequences[field0008].data[field000a].attackFlags & 0x400) == 0) CheckAirAction();
         Slot04();
     }
@@ -37,8 +37,8 @@ void Secondary::DispatchState()
 
 void Secondary::CheckAirAction()
 {
-    if (field0124 > 0) --field0124;
-    else if (positionY < 0.0 && field0128 == 0
+    if (airActionLockFrames > 0) --airActionLockFrames;
+    else if (positionY < 0.0 && airActionDisabled == 0
     && (buttonPulse[0] != 0 || buttonPulse[1] != 0 || buttonPulse[2] != 0 || buttonPulse[3] != 0)) {
         if (inputX == facing) {
             if (field0008 != 157) ResetPose();
@@ -88,9 +88,9 @@ void Secondary::UpdateTimers()
         if (hitstopFrames > 0) --hitstopFrames;
         else hitstopFrames = 0;
         if (IsStateGroupA() == 0) {
-            if (IsStateGroupB() != 0) field0134 -= float(1.0 / ((positionY == 0.0) * 4 + 1));
-            else field0134 -= 0.075f;
-            if (field0134 < 0.0f) field0134 = 0.0f;
+            if (IsStateGroupB() != 0) airActionGauge -= float(1.0 / ((positionY == 0.0) * 4 + 1));
+            else airActionGauge -= 0.075f;
+            if (airActionGauge < 0.0f) airActionGauge = 0.0f;
         }
         if (field0130 > 0) --field0130;
         else field0130 = 0;

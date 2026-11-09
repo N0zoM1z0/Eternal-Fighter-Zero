@@ -241,8 +241,8 @@ void Scene3::RenderHud()
         videoOwner->DrawSurface(work.destination, contextOwner->extraC, work.source, contextOwner->colorKey, 0);
         if (contextOwner->counter1354 == 0) {
             for (work.player = 0; work.player < 2; work.player = work.player + 1) {
-                if (((((0 < secondary[work.player]->field0124) &&
-                    (secondary[work.player]->field0128 == 0)) &&
+                if (((((0 < secondary[work.player]->airActionLockFrames) &&
+                    (secondary[work.player]->airActionDisabled == 0)) &&
                     (secondary[work.player]->positionY < 0.0)) &&
                     ((secondary[work.player]->field0008 >= 50 &&
                     (secondary[work.player]->field0008 < 0x96)))) &&
@@ -251,32 +251,32 @@ void Scene3::RenderHud()
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
                             work.destination.left = (int)secondary[work.player]->positionX + field045c + work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->positionY) - (unsigned int)(secondary[work.player]->positionY < 0.0)) + work.stroke;
-                            work.destination.right = (int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + work.destination.left + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100;
+                            work.destination.right = (int)secondary[work.player]->airActionLockFrames * (unsigned int)(secondary[work.player]->airActionLockFrames < 100) + work.destination.left + (unsigned int)(secondary[work.player]->airActionLockFrames >= 100) * 100;
                             work.destination.bottom = work.destination.top + 1;
-                            videoOwner->FillRectangle(work.destination, 211 - (secondary[work.player]->field0124 > 30) * 3 - (secondary[work.player]->field0124 > 60) * 7);
+                            videoOwner->FillRectangle(work.destination, 211 - (secondary[work.player]->airActionLockFrames > 30) * 3 - (secondary[work.player]->airActionLockFrames > 60) * 7);
                             work.destination.top = work.destination.top + 2;
                             work.destination.bottom = work.destination.top + 1;
                             videoOwner->FillRectangle(work.destination,0xc2);
                         }
                     } else {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (((int)secondary[work.player]->positionX + field045c) - ((int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100)) - work.stroke;
+                            work.destination.left = (((int)secondary[work.player]->positionX + field045c) - ((int)secondary[work.player]->airActionLockFrames * (unsigned int)(secondary[work.player]->airActionLockFrames < 100) + (unsigned int)(secondary[work.player]->airActionLockFrames >= 100) * 100)) - work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->positionY) - (unsigned int)(secondary[work.player]->positionY < 0.0)) + work.stroke;
-                            work.destination.right = (int)secondary[work.player]->field0124 * (unsigned int)(secondary[work.player]->field0124 < 100) + work.destination.left + (unsigned int)(secondary[work.player]->field0124 >= 100) * 100;
+                            work.destination.right = (int)secondary[work.player]->airActionLockFrames * (unsigned int)(secondary[work.player]->airActionLockFrames < 100) + work.destination.left + (unsigned int)(secondary[work.player]->airActionLockFrames >= 100) * 100;
                             work.destination.bottom = work.destination.top + 1;
-                            videoOwner->FillRectangle(work.destination, 211 - (secondary[work.player]->field0124 > 30) * 3 - (secondary[work.player]->field0124 > 60) * 7);
+                            videoOwner->FillRectangle(work.destination, 211 - (secondary[work.player]->airActionLockFrames > 30) * 3 - (secondary[work.player]->airActionLockFrames > 60) * 7);
                             work.destination.top = work.destination.top + 2;
                             work.destination.bottom = work.destination.top + 1;
                             videoOwner->FillRectangle(work.destination,0xc2);
                         }
                     }
                 }
-                if ((secondary[work.player]->field0134 != 0.0f) && secondary[work.player]->IsStateGroupA() != 0) {
+                if ((secondary[work.player]->airActionGauge != 0.0f) && secondary[work.player]->IsStateGroupA() != 0) {
                     if (secondary[work.player]->facing == '\x01') {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
                             work.destination.left = (int)secondary[work.player]->positionX + field045c + work.stroke;
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->positionY) - (unsigned int)(secondary[work.player]->positionY < 0.0)) + work.stroke;
-                            work.destination.right = (int)(work.destination.left + secondary[work.player]->field0134 * 100.0f / 360.0f);
+                            work.destination.right = (int)(work.destination.left + secondary[work.player]->airActionGauge * 100.0f / 360.0f);
                             work.destination.bottom = work.destination.top + 1;
                             videoOwner->FillRectangle(work.destination, 0xdc);
                             work.destination.top = work.destination.top + 2;
@@ -285,9 +285,9 @@ void Scene3::RenderHud()
                         }
                     } else {
                         for (work.stroke = 0; work.stroke < 3; work.stroke = work.stroke + 1) {
-                            work.destination.left = (int)(((int)secondary[work.player]->positionX + field045c) - secondary[work.player]->field0134 * 100.0f / 360.0f - work.stroke);
+                            work.destination.left = (int)(((int)secondary[work.player]->positionX + field045c) - secondary[work.player]->airActionGauge * 100.0f / 360.0f - work.stroke);
                             work.destination.top = ((field0460 + 0xd2 + (int)secondary[work.player]->positionY) - (unsigned int)(secondary[work.player]->positionY < 0.0)) + work.stroke;
-                            work.destination.right = (int)(work.destination.left + secondary[work.player]->field0134 * 100.0f / 360.0f);
+                            work.destination.right = (int)(work.destination.left + secondary[work.player]->airActionGauge * 100.0f / 360.0f);
                             work.destination.bottom = work.destination.top + 1;
                             videoOwner->FillRectangle(work.destination, 0xdc);
                             work.destination.top = work.destination.top + 2;

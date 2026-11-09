@@ -1383,7 +1383,7 @@ void Character08::Slot07()
                     (*opponentSlot)->field000c = 0;
                     (*opponentSlot)->knockbackVelocityX = -0.2;
                     (*opponentSlot)->knockbackVelocityY = -1.0;
-                    (*opponentSlot)->field0128 = 1;
+                    (*opponentSlot)->airActionDisabled = 1;
                     effect.type = 0x34;
                     effect.x = (double)(int(effects[i].x));
                     effect.y = (double)((int(effects[i].y)) + -0x28);

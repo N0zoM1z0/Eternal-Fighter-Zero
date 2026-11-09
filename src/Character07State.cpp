@@ -735,7 +735,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -780,7 +780,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -825,7 +825,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -865,7 +865,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -904,7 +904,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -954,7 +954,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1004,7 +1004,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1049,7 +1049,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1093,7 +1093,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1124,7 +1124,7 @@ void Character07::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1150,7 +1150,7 @@ void Character07::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1167,7 +1167,7 @@ void Character07::Slot06()
             (field3138 == 0)) {
             meter = meter + 0x1e;
             ++field3138;
-            field0124 = field0124 + 0x78;
+            airActionLockFrames = airActionLockFrames + 0x78;
             velocityX = 0.5;
             velocityY = -2.5;
             gravity = 0.025;
@@ -1191,7 +1191,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1230,7 +1230,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1472,7 +1472,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (field000a == 1)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1520,7 +1520,7 @@ void Character07::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (4 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1667,7 +1667,7 @@ void Character07::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1711,7 +1711,7 @@ void Character07::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -3242,7 +3242,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             field0008 = 0xdd;
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x25);
             effect.y = (double)((int(positionY)) + -0x2a);
@@ -3560,7 +3560,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x36);
             effect.y = (double)((int(positionY)) + -0x54);
@@ -3634,7 +3634,7 @@ void Character07::Slot06()
                 ApplyDamage(0x514,500.0);
                 --comboHitCount;
                 --comboDisplayHitCount;
-                (*opponentSlot)->field0128 = 1;
+                (*opponentSlot)->airActionDisabled = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =
                 positionX - (double)(facing * 0x27);
@@ -4046,7 +4046,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x36);
             effect.y = (double)((int(positionY)) + -0x54);
@@ -4130,7 +4130,7 @@ void Character07::Slot06()
                 ApplyDamage(0x352,890.0);
                 --comboHitCount;
                 --comboDisplayHitCount;
-                (*opponentSlot)->field0128 = 1;
+                (*opponentSlot)->airActionDisabled = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =
                 positionX - (double)(facing * 0x27);
@@ -4170,7 +4170,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             (*opponentSlot)->positionY = -85.0;
             (*opponentSlot)->positionX =
             (double)(facing * 0x27) + positionX;
@@ -4230,7 +4230,7 @@ void Character07::Slot06()
                     (*opponentSlot)->facing = -facing;
                     (*opponentSlot)->ResetPose();
                     (*opponentSlot)->field0008 = 0x61;
-                    (*opponentSlot)->field012c = 1;
+                    (*opponentSlot)->knockdownOnLanding = 1;
                     ApplyDamage(0x15e,960.0);
                 }
                 else {
@@ -4279,7 +4279,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetFrame();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x36);
             effect.y = (double)((int(positionY)) + -0x54);
@@ -4364,7 +4364,7 @@ void Character07::Slot06()
                 ApplyDamage(0x28a,890.0);
                 --comboHitCount;
                 --comboDisplayHitCount;
-                (*opponentSlot)->field0128 = 1;
+                (*opponentSlot)->airActionDisabled = 1;
                 (*opponentSlot)->positionY = positionY - 69.0;
                 (*opponentSlot)->positionX =
                 positionX - (double)(facing * 0x27);
@@ -5031,7 +5031,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x1d);
             effect.y = (double)((int(positionY)) + -0x53);
@@ -5122,7 +5122,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x1d);
             effect.y = (double)((int(positionY)) + -0x53);
@@ -5213,7 +5213,7 @@ void Character07::Slot06()
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
             ResetPose();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             effect.type = 0;
             effect.x = (double)((int(positionX)) + facing * 0x1d);
             effect.y = (double)((int(positionY)) + -0x53);
@@ -5309,7 +5309,7 @@ void Character07::Slot06()
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x61;
-                (*opponentSlot)->field012c = 1;
+                (*opponentSlot)->knockdownOnLanding = 1;
                 ApplyDamage(300,980.0);
             }
             if ((field000a == 6) && (field3138 < 3)) {
@@ -5363,7 +5363,7 @@ void Character07::Slot06()
                 (*opponentSlot)->facing = -facing;
                 (*opponentSlot)->ResetPose();
                 (*opponentSlot)->field0008 = 0x61;
-                (*opponentSlot)->field012c = 1;
+                (*opponentSlot)->knockdownOnLanding = 1;
                 ApplyDamage(300,920.0);
             }
             if ((field000a == 6) && (field3138 < 6)) {
@@ -5373,7 +5373,7 @@ void Character07::Slot06()
             if (field000a == 10) {
                 (*opponentSlot)->ResetFrame();
                 (*opponentSlot)->ResetPose();
-                (*opponentSlot)->field0128 = 1;
+                (*opponentSlot)->airActionDisabled = 1;
                 effect.type = 0;
                 effect.x = (double)((int(positionX)) + facing * 0xf);
                 effect.y = (double)((int(positionY)) + -5);

@@ -160,10 +160,10 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
-                            second->field0134 =
-                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
-                            if (second->field0134 > 360.0f) {
-                                second->field0134 = 360.0f;
+                            second->airActionGauge =
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
+                            if (second->airActionGauge > 360.0f) {
+                                second->airActionGauge = 360.0f;
                             }
                         } else if (((work.defense->frameFlags & 0x200) > 0) && (((work.defense->attackFlags & 2) > 0) && ((work.attack->attackFlags & 2) > 0))) {
                             --work.slot->field0084;
@@ -184,10 +184,10 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
-                            second->field0134 =
-                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
-                            if (second->field0134 > 360.0f) {
-                                second->field0134 = 360.0f;
+                            second->airActionGauge =
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
+                            if (second->airActionGauge > 360.0f) {
+                                second->airActionGauge = 360.0f;
                             }
                         } else if (((work.defense->frameFlags & 0x200) > 0) && ((((work.defense->attackFlags & 4) > 0) && ((work.attack->attackFlags & 4) > 0)) && (second->positionY < 0.0))) {
                             --work.slot->field0084;
@@ -208,10 +208,10 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
-                            second->field0134 =
-                            (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
-                            if (second->field0134 > 360.0f) {
-                                second->field0134 = 360.0f;
+                            second->airActionGauge =
+                            (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
+                            if (second->airActionGauge > 360.0f) {
+                                second->airActionGauge = 360.0f;
                             }
                         } else if (second->CanGuard(work.attack, work.defense) != 0) {
                             second->field0008 =
@@ -242,19 +242,19 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                             if (second->field0108 <= 0) {
                                 second->field0108 = 1;
                             }
-                            if (first->field0134 > 0.0f) {
-                                first->field0134 =
-                                first->field0134 -
+                            if (first->airActionGauge > 0.0f) {
+                                first->airActionGauge =
+                                first->airActionGauge -
                                 (float)((int)work.attack->damage / 0x1e);
-                                if (first->field0134 < 0.0f) {
-                                    second->field0134 = (float)second->field0134 - first->field0134;
-                                    first->field0134 = 0;
+                                if (first->airActionGauge < 0.0f) {
+                                    second->airActionGauge = (float)second->airActionGauge - first->airActionGauge;
+                                    first->airActionGauge = 0;
                                 }
                             } else {
-                                second->field0134 =
-                                (float)((int)work.attack->damage / 0x1e) + (float)second->field0134;
-                                if (second->field0134 > 360.0f) {
-                                    second->field0134 = 360.0f;
+                                second->airActionGauge =
+                                (float)((int)work.attack->damage / 0x1e) + (float)second->airActionGauge;
+                                if (second->airActionGauge > 360.0f) {
+                                    second->airActionGauge = 360.0f;
                                 }
                             }
                             second->field0154 = 1;
@@ -309,10 +309,10 @@ void Scene3::ResolveEffectHit(Secondary *first, Secondary *second, int index, Ba
                                 second->field010c = second->field0108;
                             }
                             second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                            second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0)
+                            second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0)
                                 * ((((work.attack->attackFlags & 0x2000) > 0 && (work.defense->frameFlags & 0x2000) > 0) ? 1 : 0) + 1));
-                            second->field0128 = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
-                            second->field012c = (unsigned int)((work.attack->attackFlags & 0x800) > 0);
+                            second->airActionDisabled = (unsigned int)((work.attack->attackFlags & 0x400) > 0);
+                            second->knockdownOnLanding = (unsigned int)((work.attack->attackFlags & 0x800) > 0);
                             second->dashMomentumFlag = 0;
                             second->airDashCount = 0;
                             second->airActionCount = 0;
@@ -484,9 +484,9 @@ void Scene3::ResolveEffectPair(Secondary *first, Secondary *second, int firstInd
                         second->outgoingPushbackActive = 1;
                         if (first->comboHitCount == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
-                        second->field0128 = (work.attack->attackFlags & 0x400) > 0;
-                        second->field012c = (work.attack->attackFlags & 0x800) > 0;
+                        second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
+                        second->airActionDisabled = (work.attack->attackFlags & 0x400) > 0;
+                        second->knockdownOnLanding = (work.attack->attackFlags & 0x800) > 0;
                         second->dashMomentumFlag = 0;
                         second->airDashCount = 0;
                         second->airActionCount = 0;
@@ -617,9 +617,9 @@ void Scene3::ResolveBodyEffect(Secondary *first, Secondary *second, BattleCollis
                         second->outgoingPushbackActive = 1;
                         if (first->comboHitCount == 0) second->field010c = second->field0108;
                         second->field0108 -= (int)(work.attack->damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                        second->field0124 = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
-                        second->field0128 = (work.attack->attackFlags & 0x400) > 0;
-                        second->field012c = (work.attack->attackFlags & 0x800) > 0;
+                        second->airActionLockFrames = (short)(work.attack->airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
+                        second->airActionDisabled = (work.attack->attackFlags & 0x400) > 0;
+                        second->knockdownOnLanding = (work.attack->attackFlags & 0x800) > 0;
                         second->dashMomentumFlag = 0;
                         second->airDashCount = 0;
                         second->airActionCount = 0;

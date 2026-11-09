@@ -748,7 +748,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -793,7 +793,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -838,7 +838,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -878,7 +878,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -917,7 +917,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -967,7 +967,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1017,7 +1017,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1062,7 +1062,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1106,7 +1106,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1137,7 +1137,7 @@ void Character15::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1163,7 +1163,7 @@ void Character15::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1180,7 +1180,7 @@ void Character15::Slot06()
             (field3138 == 0)) {
             meter = meter + 0x1e;
             ++field3138;
-            field0124 = field0124 + 0x78;
+            airActionLockFrames = airActionLockFrames + 0x78;
             velocityX = 0.5;
             velocityY = -2.5;
             gravity = 0.025;
@@ -1204,7 +1204,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1243,7 +1243,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (1 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1485,7 +1485,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (field000a == 1)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1533,7 +1533,7 @@ void Character15::Slot06()
         if ((0.0 <= positionY + velocityY) &&
             (4 < field000a)) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1680,7 +1680,7 @@ void Character15::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -1724,7 +1724,7 @@ void Character15::Slot06()
         }
         if (0.0 <= positionY + velocityY) {
             positionY = 0.0;
-            if (field012c != 0) {
+            if (knockdownOnLanding != 0) {
                 field0008 = 0x61;
                 ResetPose();
             } else {
@@ -3529,7 +3529,7 @@ void Character15::Slot06()
         if ((field000a == 1) && (attackCollisionResult == 3)) {
             (*opponentSlot)->ResetFrame();
             (*opponentSlot)->ResetPose();
-            (*opponentSlot)->field0128 = 1;
+            (*opponentSlot)->airActionDisabled = 1;
             ResetFrame();
             ResetPose();
             effect.type = 0;

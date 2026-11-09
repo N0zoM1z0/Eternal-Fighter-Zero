@@ -46,7 +46,7 @@ void Secondary::InitializeState()
     field0160 = 0;
     attackCollisionResult = 0;
     hitstopFrames = 0;
-    field0134 = 0;
+    airActionGauge = 0;
     comboHitCount = 0;
     comboDisplayHitCount = 0;
     comboDisplayTimer = 0;

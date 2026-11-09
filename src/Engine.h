@@ -242,12 +242,12 @@ public:
     double field0118;
     char field0120;
     unsigned char unknown_0121[3];
-    short field0124;
+    short airActionLockFrames;
     unsigned char unknown_0126[2];
-    int field0128, field012c;
+    int airActionDisabled, knockdownOnLanding;
     char field0130;
     unsigned char unknown_0131[3];
-    float field0134;
+    float airActionGauge;
     short field0138;
     short field013a;
     short field013c;

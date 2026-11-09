@@ -164,9 +164,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
                                 }
-                                second->field0134 = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->field0134;
-                                if (second->field0134 > 360.0f) {
-                                    second->field0134 = 360.0f;
+                                second->airActionGauge = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->airActionGauge;
+                                if (second->airActionGauge > 360.0f) {
+                                    second->airActionGauge = 360.0f;
                                 }
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && (((work.secondFrame.attackFlags & 2) > 0) && ((work.firstFrame.attackFlags & 2) > 0)))) {
                                 --first->remainingHitCount;
@@ -187,9 +187,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
                                 }
-                                second->field0134 = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->field0134;
-                                if (second->field0134 > 360.0f) {
-                                    second->field0134 = 360.0f;
+                                second->airActionGauge = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->airActionGauge;
+                                if (second->airActionGauge > 360.0f) {
+                                    second->airActionGauge = 360.0f;
                                 }
                             } else if ((((work.secondFrame.frameFlags & 0x200) > 0) && ((((work.secondFrame.attackFlags & 4) > 0) && ((work.firstFrame.attackFlags & 4) > 0)) && (second->positionY < 0.0)))) {
                                 --first->remainingHitCount;
@@ -237,17 +237,17 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 if (second->field0108 <= 0) {
                                     second->field0108 = 1;
                                 }
-                                if (first->field0134 > 0.0f) {
-                                    first->field0134 =
-                                    first->field0134 - (float)((int)work.firstFrame.damage / 0x1e);
-                                    if (first->field0134 < 0.0f) {
-                                        second->field0134 = (float)second->field0134 - first->field0134;
-                                        first->field0134 = 0;
+                                if (first->airActionGauge > 0.0f) {
+                                    first->airActionGauge =
+                                    first->airActionGauge - (float)((int)work.firstFrame.damage / 0x1e);
+                                    if (first->airActionGauge < 0.0f) {
+                                        second->airActionGauge = (float)second->airActionGauge - first->airActionGauge;
+                                        first->airActionGauge = 0;
                                     }
                                 } else {
-                                    second->field0134 = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->field0134;
-                                    if (second->field0134 > 360.0f) {
-                                        second->field0134 = 360.0f;
+                                    second->airActionGauge = (float)((int)work.firstFrame.damage / 0x1e) + (float)second->airActionGauge;
+                                    if (second->airActionGauge > 360.0f) {
+                                        second->airActionGauge = 360.0f;
                                     }
                                 }
                                 second->field0154 = 0;
@@ -299,9 +299,9 @@ void Scene3::ResolveBodyHit(Secondary *first, Secondary *second,
                                 }
                                 first->field0144 = (((work.firstFrame.attackFlags & 0x2000) > 0) && ((work.secondFrame.frameFlags & 0x2000) > 0)) ? 1 : 0;
                                 second->field0108 -= (int)(work.firstFrame.damage * first->DamageFactor() * second->HealthFactor() * first->ComboFactor());
-                                second->field0124 = (short)(work.firstFrame.airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
-                                second->field0128 = (unsigned int)((work.firstFrame.attackFlags & 0x400) > 0);
-                                second->field012c = (unsigned int)((work.firstFrame.attackFlags & 0x800) > 0);
+                                second->airActionLockFrames = (short)(work.firstFrame.airActionLockFrames * (first->comboDamageScale / 10000.0 * 0.8));
+                                second->airActionDisabled = (unsigned int)((work.firstFrame.attackFlags & 0x400) > 0);
+                                second->knockdownOnLanding = (unsigned int)((work.firstFrame.attackFlags & 0x800) > 0);
                                 second->dashMomentumFlag = 0;
                                 second->airDashCount = 0;
                                 second->airActionCount = 0;

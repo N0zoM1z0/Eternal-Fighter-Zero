@@ -35,7 +35,7 @@ int Secondary::GuardInput(const SecondaryFrame *attack)
 
 int Secondary::AirActionReady()
 {
-    return (field0124 <= 0 && positionY < 0.0 && field0128 == 0 && IsStateGroupB() != 0) ? 1 : 0;
+    return (airActionLockFrames <= 0 && positionY < 0.0 && airActionDisabled == 0 && IsStateGroupB() != 0) ? 1 : 0;
 }
 
 int Secondary::IsStateGroupC()
