@@ -2,7 +2,7 @@
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
 // game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-310 are implemented so far.
-// The canonical owner's full code and local tables remain open.
+// The canonical owner's full codegen, jump/selector tables and strict comparison remain open.
 #include "../../src/CharacterViews.h"
 
 void Character03::Slot06()
@@ -5112,10 +5112,19 @@ void Character03::Slot06()
         }
         return;
 
-    default:
-        // This draft deliberately does not provide a fake implementation for
-        // no other explicit cases. The target's true default path also
-        // clears motion, but that path must not replace any mapped case.
+    default: // Original block 0x005E869D: unmapped animation IDs
+        // The selector table sends 186 IDs here; it is not a no-op.
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
         return;
     }
 

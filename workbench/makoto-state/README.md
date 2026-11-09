@@ -1127,6 +1127,17 @@ work, not the original behavior for valid unimplemented animations.
   310-byte selector table must still be recovered/strictly matched
   before a source or Exact ledger entry is permitted.
 
+- The *true default dispatch* at 0x005E869D..0x005E8718
+  (123 original bytes, including its jump to the shared exit)
+  was recovered too. The selector maps 186 IDs to this block:
+  it zeroes both velocities, clears dashMomentumFlag, advances the
+  unsigned tick and wraps the pose to zero on sequence exhaustion.
+  The earlier default no-op was a deliberate incomplete workbench
+  sentinel and has now been replaced by actual target behavior.
+  All 124 explicit cases and this default now compile together.
+  Code-generation equality and both source-owned tables are still
+  **open**; do not accept the whole owner as Exact yet.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1152,7 +1163,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Review the true default path, the complete switch code generation and both associated tables directly from reviewed target instructions,
+Compare complete native switch code generation and both associated tables directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
