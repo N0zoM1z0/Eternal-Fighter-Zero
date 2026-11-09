@@ -30,7 +30,7 @@ linked below. The live workbench now covers selected Makoto states through
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **330 exact functions**, **1,003,451 code bytes**,
+  ledgers currently count **331 exact functions**, **1,003,847 code bytes**,
   **6,845 associated table bytes**, 371 reviewed complete boundaries and 366
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
@@ -138,6 +138,30 @@ jump destinations and complete bytes. Reproduce only these three units
 with `build-match-unit.py --unit ...` then `compare-coff-function.py`.
 The remaining historical `CharacterViews.h` certificate staleness is
 not cleared; do not relabel proofs or invoke a full cold replay.
+
+## Newly accepted MizukaB constructor and direct creation callers
+
+`Character18::Character18` at `0x004D2850` is now a complete
+**396/396 exact** source function in `src/Character18Frame.cpp`.
+The selected unit is `character-18-constructor`, with four independently
+reviewed relocation destinations; public certificate:
+`docs/evidence/mizukab-constructor-exact.json`. Its `CharacterViews.h`
+child view preserves the original 0x3460 size with four state integers,
+three 64-int scratch arrays, and six trailing state fields.
+
+This type-view update changes *compiler-local* symbols in the two actual
+construction callers. Rebuilt `scene-create-character` remains
+**3,495/3,495 exact** with 97 relocations; `scene-loading-character`
+remains **2,651/2,651 exact** with 76 relocations, including their
+96/100-byte internal jump tables. All 25/26 shifted local-label
+operands were matched by original relocation offsets and target
+jump destinations and strict code bytes, not by invented masks.
+Certificate: `docs/evidence/mizukab-creation-consumers-exact.json`.
+Targeted reproduction: `scripts/repo-python scripts/build-match-unit.py
+--unit <name>` followed by `scripts/repo-python
+scripts/compare-coff-function.py --unit <name>` for only these three
+names. Do not claim this refreshes other stale `CharacterViews.h`
+certificates or the unbuilt Windows product.
 
 ## Other open substantial work
 

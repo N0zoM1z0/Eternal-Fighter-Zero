@@ -1685,6 +1685,33 @@ complete target bytes. The new public receipts are
 certificates were left unchanged; unrelated `CharacterViews.h` users still
 have earlier stale dependency metadata and were not cold-replayed.
 
+### MizukaB constructor: complete exact native code generation (2026-11-09)
+
+The reviewed selection-ID 18 constructor `Character18::Character18` at
+`0x004D2850` now has authored natural source in `src/Character18Frame.cpp`.
+The selected `character-18-constructor` unit rebuilt under VC7.1
+`/Od /G6 /MT /Gy /W3` and matched **396/396 original bytes** with zero
+code differences and all **four** checked relocations: Secondary base
+constructor `0x40EAE0`, child vtable `0x7884F0`, `mizukaB` resource
+literal `0x7884E8`, and CRT `strcpy` `0x778080`. Source initializes
+surfaceCount=851, four child state integers, two collision coordinate
+pairs, six trailing state integers, four command IDs, and three sets
+of 64 scratch slots. The class remains exactly the observed 0x3460
+allocation size, without speculative writes to unknown fields.
+
+Both original direct construction consumers were selectively rebuilt:
+`Scene1::LoadCharacter` at `0x007586B0` still matches its complete
+3,495-byte function plus switch table with **97/97** bound relocations,
+and `Scene2::LoadCharacter` at `0x0076DA20` still matches its 2,651
+bytes with **76/76** relocations. The modified class view shifts
+compiler-local switch labels by +11; the 25 and 26 changed labels
+were mapped by unchanged relocation offsets and original target
+jump destinations before independently comparing *all* caller bytes.
+Proof: `docs/evidence/mizukab-constructor-exact.json` and
+`docs/evidence/mizukab-creation-consumers-exact.json`.
+Unrelated `CharacterViews.h` dependents still have historical proof
+freshness issues, not re-certified by this targeted check.
+
 All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's

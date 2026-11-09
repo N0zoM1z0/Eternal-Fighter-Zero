@@ -62,8 +62,9 @@ Context, title/selection/loading scenes, substantial shared character code,
 battle simulation/collision/display/keyboard/replay controls and four concrete
 background owners. Seven characters have exact constructors and substantial
 child bodies: Shiori, Mizuka, Misuzu, Mishio, Misaki, Mayu and Makoto.
-Kaori's constructor is also newly exact (383 bytes), while its other child
-owners are still open. Shiori's and
+Kaori's constructor (383 bytes) and MizukaB's constructor (396 bytes)
+are also independently exact; their other child owners remain open.
+Shiori's and
 Makoto's large slot-6 state owners remain open, alongside other character,
 Video and scene work. See the live ledgers for individual acceptance.
 

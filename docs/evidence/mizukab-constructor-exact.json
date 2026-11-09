@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "authority": "complete VC7.1 code generation, complete target bytes and explicit relocation bindings",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 396,
+      "matched_bytes": 396,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4254432,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0Secondary@@QAE@PAPAV0@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+          "evidence": "resources/EFZ.exe @ 0x004D2874: direct call to reviewed Secondary base constructor, six source arguments match",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7898352,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "??_7Character18@@6B@",
+          "evidence": "resources/EFZ.exe @ 0x004D287C: original MizukaB vtable pointer; 13 virtual destinations independently verified at 0x7884F0",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7898344,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62212",
+          "evidence": "resources/EFZ.exe @ 0x004D2882: exact mizukaB NUL resource literal at 0x7884E8",
+          "addend": 0
+        },
+        {
+          "offset": 66,
+          "target": 7831680,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcpy",
+          "evidence": "resources/EFZ.exe @ 0x004D2891: original direct CRT strcpy call, target 0x778080 and destination +0x94",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c8c92f9983a03ab9a17d1f6b1a0caeb161e5f0972113fa2cdbe8c1d26a307e9c",
+      "target_extent_sha256": "c8c92f9983a03ab9a17d1f6b1a0caeb161e5f0972113fa2cdbe8c1d26a307e9c",
+      "unit": "character-18-constructor",
+      "symbol": "??0Character18@@QAE@PAPAVSecondary@@PAVContext@@PAVVideo@@PAVInput@@PAVAudio@@D@Z",
+      "target_address": "0x004D2850",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2dbf480dc9dcced28f8bd63241c1142cad82dbd0d27ba77de5a5643e5194f06b",
+      "object_sha256": "1206eb42aff6083663b84e9946ac32731aa02fa59ab3bcd391b254c79d490930",
+      "source_sha256": "014627519c230d7ff063c2aacf628d3edc4dcfd514f6a63806b0b6b74ad3b2a4",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "682ef695bf70e64623c7d0b46ff84dd2fc3132456384a1c48e0385be1f794d52"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "606c0e55d4dab44dd5885b714fea7dbe10e70c73190a56ff1e5dd21bec2e85ab",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "39cdaa122f266b234e78cd68d04b90950f0c71b08f8e32c8d302357fb7bc5da0",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ],
+  "method": "Selected original-boundary COFF compile; 396-byte full strict comparison including 4 original vptr/string/direct-call relocations. No full cold replay."
+}
