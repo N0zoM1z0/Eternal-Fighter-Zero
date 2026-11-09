@@ -358,14 +358,61 @@ void Character06::Slot04()
             ClearBufferedButtons();
             ++airActionCount;
             field0008 = 0x0e;
-            if (reinterpret_cast<const signed char *>(this)[0x188] == facing) {
+            if (inputX == facing) {
                 field0008 = 0x0f;
             }
-            if (reinterpret_cast<const signed char *>(this)[0x188] == -facing) {
+            if ((int)inputX == -(int)facing) {
                 field0008 = 0x10;
             }
             return;
         }
     }
-    // Other priority-ordered actions and the final original default remain open.
+    if ((field015c < 1) && ((recognizedCommand == 0 || (recognizedCommand == 1)))) {
+        if ((positionY < 0.0) && (airDashCount < 1)) {
+            if (((((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == ((1 - recognizedCommand * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[165].field0000)) && (((field0008 != 0xaa && (positionY < -40.0)) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))) && ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) || (field0008 < 200)))) {
+                if (field0008 != 0xa5) {
+                    ResetPose();
+                }
+                field0008 = 0xa5;
+                FaceOpponent();
+                ++airDashCount;
+                ++airActionCount;
+                actionBufferedInput = 0;
+                return;
+            }
+            if ((((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2)) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == 1 - recognizedCommand * 2)))) && ((sequences[field0008].field0002 <= sequences[166].field0000 && ((field0008 != 0xaa && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)))))) && (((field0008 >= 200 && ((attackCollisionResult >= 2 && (attackCollisionResult != 6)))) || (field0008 < 200)))) {
+                if (field0008 != 0xa6) {
+                    ResetPose();
+                }
+                field0008 = 0xa6;
+                FaceOpponent();
+                ++airDashCount;
+                ++airActionCount;
+                actionBufferedInput = 0;
+                return;
+            }
+        }
+        if ((positionY == 0.0) && ((sequences[field0008].data[field000a].frameFlags & 8) > 0)) {
+            if ((((((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2) < 0.0) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == ((1 - recognizedCommand * 2) * -1))))) && (sequences[field0008].field0002 <= sequences[163].field0000)) && ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) || (field0008 < 200)))) {
+                if (field0008 != 0xa3) {
+                    ResetPose();
+                }
+                field0008 = 0xa3;
+                FaceOpponent();
+                ++dashMomentumFlag;
+                actionBufferedInput = 0;
+                return;
+            }
+            if (((0.0 < ((*opponentSlot)->positionX - positionX) * (1 - recognizedCommand * 2)) || (((*opponentSlot)->positionX - positionX == 0.0 && ((int)(char)facing == 1 - recognizedCommand * 2)))) && ((sequences[field0008].field0002 <= sequences[164].field0000 && ((((field0008 >= 200 && (attackCollisionResult >= 2)) && (attackCollisionResult != 6)) || (field0008 < 200)))))) {
+                if (field0008 != 0xa4) {
+                    ResetPose();
+                }
+                field0008 = 0xa4;
+                FaceOpponent();
+                actionBufferedInput = 0;
+                return;
+            }
+        }
+    }
+    // Subsequent original command/cancel modes remain open.
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-owner-and-first-twenty-eight-actions-not-full-Exact",
+  "status": "reviewed-original-owner-and-first-thirty-two-actions-not-full-Exact",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function": "Character06::Slot04",
   "original_vtable_pointer": "0x0078840C",
@@ -44,14 +44,18 @@
     "0x0C alternate field3148",
     "0x0B or 0x0C selector",
     "0x0A selector",
-    "0x06 air-action direction 0x0E/0x0F/0x10"
+    "0x06 air-action direction 0x0E/0x0F/0x10",
+    "air dash 0xA5",
+    "air dash 0xA6",
+    "ground dash 0xA3",
+    "ground dash 0xA4"
   ],
-  "first_twenty_eight_actions": {
+  "first_thirty_two_actions": {
     "start": "0x004AE2E0",
-    "end_exclusive": "0x004AFF42",
-    "size": 7266,
-    "original_instructions": 1791,
-    "sha256": "b16081a7624094e333416f36b77404341a3a980ed8c08a4fcaa4f62dfeea913d",
-    "qualification": "1790 of 1791 original x86 instruction positions match pinned native C++ under branch/direct-call/x87 PE constant target normalization; only incomplete prologue stack frame differs. Subsequent position-and-air-movement states remain absent."
+    "end_exclusive": "0x004B0558",
+    "size": 8824,
+    "original_instructions": 2201,
+    "sha256": "4714c5e0f69c1224ae9e676bd763871975b128f24ebc6c67ee6f2e6b87e8462a",
+    "qualification": "All 2201 original native instruction forms and operands match the compiled natural C++ after normalizing numeric branch/direct-call targets and original PE constants. Natural local FP arithmetic restores original 20-byte stack frame. The incomplete source still has a temporary local epilogue, not full original owner Exact."
   }
 }

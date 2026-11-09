@@ -1,8 +1,9 @@
-"""Target-bound diagnostic for first twenty-eight Nagamori Slot04 priority actions.
+"""Target-bound diagnostic for first thirty-two Nagamori Slot04 priority actions.
 
 This is not a whole-function Exact match. Normalize only original local
 branch destinations, direct call addresses, x87 external constant operands,
-and one compiler stack-frame width affected by the missing later actions.
+with no stack-frame exception: natural air/ground dash variables
+restore the original 20-byte frame.
 """
 import hashlib
 import re
@@ -17,7 +18,7 @@ from coff import object_function
 from native_build import compile_source
 
 START = 0x004AE2E0
-PREFIX_END = 0x004AFF42
+PREFIX_END = 0x004B0558
 SOURCE = ROOT / "workbench/nagamori-action/Character06Input.cpp"
 OBJECT = ROOT / "build/nagamori-action/Character06Input.partial.obj"
 
@@ -51,20 +52,19 @@ def main():
     compiled, relocations = object_function(OBJECT, "?Slot04@Character06@@UAEXXZ")
     expected = disassemble(original, ROOT / "build/nagamori-action/verified-prefix.target.bin")
     actual = disassemble(compiled, ROOT / "build/nagamori-action/verified-prefix.compiled.bin")
-    assert len(original) == 7266 and len(expected) == 1791
-    assert len(actual) == 1794 and len(compiled) == 7268 and len(relocations) == 58
-    assert expected[2][1] == "sub    esp,0x14" and actual[2][1] == "push   ecx"
+    assert len(original) == 8824 and len(expected) == 2201
+    assert len(actual) == 2204 and len(compiled) == 8828 and len(relocations) == 73
+    assert expected[2][1] == "sub    esp,0x14" and actual[2][1] == "sub    esp,0x14"
     assert actual[-3:] == [(START+len(compiled)-4,"mov    esp,ebp"),
                            (START+len(compiled)-2,"pop    ebp"),
                            (START+len(compiled)-1,"ret")]
     mismatch = []
     for i,(a,b) in enumerate(zip(expected,actual)):
-        if i == 2:continue  # later cases restore the 20-byte frame; not present yet
         if normalize_instruction(a[1]) != normalize_instruction(b[1]):
             mismatch.append((i,a,b))
     assert not mismatch, mismatch[:5]
-    print("Nagamori Slot04 first 28 actions: 1790/1790 checked native"
-          " instructions and operands match, aside from 1 incomplete frame size")
+    print("Nagamori Slot04 first 32 actions: 2201/2201 checked native"
+          " instructions and operands match, including the original 20-byte stack frame")
     print("Canonical original prefix:", len(original), "bytes,", len(expected), "instructions")
     print("Current partial function:", len(compiled), "bytes,", len(relocations), "COFF relocations; NOT full Exact")
     print("Canonical prefix SHA-256:", hashlib.sha256(original).hexdigest())

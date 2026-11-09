@@ -490,20 +490,21 @@ three different 64-entry child arrays at the signed-short index
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
 
-## Nagamori Slot04 major action function — 7,266-byte source prefix
+## Nagamori Slot04 major boss: 8,824-byte natural C++ prefix
 
-Original `Character06::Slot04` is a newly reviewed complete
-**12,277-byte** function at `[0x004AE2E0,0x004B12D5)`, confirmed
-by the vtable pointer `0x0078840C`. `workbench/nagamori-action/`
-contains actual natural C++ for the first twenty-eight priority-ordered
-action guards. A focused native test verifies 1,790 original opcode+
-operand positions aside from one non-final prologue stack-frame
-instruction, normalizing only jump/call targets and original constant
-addresses. The accepted full owner still awaits the other actions;
-**do not mark it Exact**. Next action begins at `0x004AFF47` (next air-position group).
-Original complete target SHA and partial-target evidence:
-`docs/evidence/nagamori-slot04-first-actions-boundary.json`.
-No cold replay occurred.
+The canonical original `Character06::Slot04` target at `0x004AE2E0`
+(vtable slot 4, `0x0078840C`) is a reviewed **12,277-byte** owner.
+Its isolated `workbench/nagamori-action/` C++ now reconstructs the
+first **32 priority guards** and the actual **8,824-byte / 2,201
+instruction** original prefix. The focused test matches every native
+instruction form after normalizing only future branch/call targets
+and original constant addresses, including the now-correct natural
+20-byte stack frame. Air/ground dash actions and input-X facing
+transitions are implemented; the next original branch starts at
+`0x004B055D`. **3,453 bytes remain, whole Slot04 NOT Exact**.
+Evidence and executable focused test:
+`docs/evidence/nagamori-slot04-first-actions-boundary.json` and
+`workbench/nagamori-action/check_prefix.py`. No broad cold replay.
 
 ## Nagamori meter renderer, 1,080-byte full source Exact
 

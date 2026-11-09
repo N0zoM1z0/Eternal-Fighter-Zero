@@ -1,104 +1,64 @@
-# Nagamori `Character06::Slot04` — 12,277-byte action-priority boss
+# Nagamori `Character06::Slot04` — 12,277-byte original action boss
 
-**Work in progress, NOT full-function Exact.** The reviewed original
-Nagamori vtable slot 4 at `0x0078840C` points to `0x004AE2E0`.
-The code body owns `[0x004AE2E0,0x004B12D5)`, **12,277 bytes**;
-11 `CC` padding bytes align the next Slot01 at `0x004B12E0`.
-The full target SHA-256 and the reviewed first-action prefix are in
+**Actual partial C++ source, not yet whole-function Exact.** Original
+Nagamori vtable slot 4 at `0x0078840C` points to `0x004AE2E0`. Its
+complete unpadded owner spans `[0x004AE2E0,0x004B12D5)` (12,277 code
+bytes), followed by 11 `CC` alignment bytes. The exact original SHA
+and the currently matched prefix are in
 `docs/evidence/nagamori-slot04-first-actions-boundary.json`.
 
-## Implemented source
+## Reconstructed source
 
-`Character06Input.cpp` is natural C++, deliberately isolated from
-accepted production `src/`. Its first **twenty-eight priority-ordered action
-guards** recover the original buffering rules, command checks,
-current animation/frame cancel flags, meter thresholds, attack-state
-restrictions, action group semantics, and result animations.
-Specifically it reconstructs the commands 0x34, 0x5B, 0x7A,
-0x79/0x7A, 0x78/0x79/0x7A, 0x70, 0x6F, 0x6E, 0x66,
-0x65/0x66, 0x64/0x65/0x66, 0x2A, 0x29/0x2A and 0x28, including original
-per-action level caps at `sequences[167]` and `sequences[312..315]`
-plus separate 306/307/308 caps. It also preserves the unusual
-conditional airborne follow-on actions after 0x34/0x70/0x6F/0x6E.
-These tests were derived from canonical EFZ.exe instruction order;
-related-character code served only as an initial source-shape reference.
+`Character06Input.cpp` is isolated natural C++, not accepted in `src/`.
+The first **32 priority-ordered action guards** now match the original
+**8,824-byte / 2,201-instruction prefix**, ending before the far jump
+at `0x004B0558`. This includes buffer/timer updates, special-meter
+tiers, grounded and airborne action variants, direction and collision
+windows, and four air/ground dash transitions.
 
-A focused VC7.1 compile of these first actions emits **7,268 bytes**
-including a temporary standalone epilogue; the exact canonical
-first-twenty-eight-action prefix is **7,266 bytes / 1,791 instructions** ending
-just before the original `jmp` to the final shared epilogue at
-`0x004AFF42`. A reproducible check compares 1,790 original
-instructions/operands (everything through the last action state
-assignment) and finds **1,790/1,790 matching normalized instruction forms**
-with the single incomplete stack-frame prologue instruction excluded. Only numeric branch/call
-targets and original x87 constant destination addresses are normalized.
-The original large function allocates a 20-byte frame with additional
-locals used in the yet-unimplemented action branches; the partial
-source currently allocates 4 bytes. That discrepancy is intentional,
-**not** a license to add inert locals or pad machine-code bytes.
+The original action gates include command tiers `0x34`, `0x5B`,
+`0x7A`, `0x79`, `0x78`, `0x70`, `0x6F`, `0x6E`, `0x66`, `0x65`,
+`0x64`, `0x2A`, `0x29`, `0x28`, `0x16`, `0x15`, `0x14`, `0x20`,
+`0x1F`, `0x1E`, `0x0C`, `0x0B`, `0x0A`, `0x06` and commands 0/1.
+Duplicate command IDs at different priorities select distinct action
+animations and conditions; they must not be collapsed.
 
-## Run the focused native source check
+Original action x87 guards were checked instruction by instruction.
+The airborne 0x0C/0x0B/0x0A group requires `positionY < 0.0`, not
+zero or positive Y. The later 0x0C variants require zero Y, with
+`field3148` selecting between results; their sequence caps must
+remain in original order. The first `0x06` air action increments the
+`airActionCount` byte and chooses 0x0E/0x0F/0x10 from `inputX`
+(original object offset +0x188) compared to `facing`.
+
+The four later direction actions compare the opponent's X coordinate
+with this character's X and a signed input-derived multiplier. The
+two airborne branches choose 0xA5 or 0xA6 and increment dash/action
+counts. Two ground branches choose 0xA3 or 0xA4. These expressions
+were initially adapted from another *already exact* character source,
+but **Nagamori's own canonical x86** independently confirms every
+one of the **2,201 instruction forms**, with only numeric local jumps,
+original external call targets, and x87 PE constant addresses
+normalized. All register choices, stack operands and frame size now
+match. Two genuine local FP temporaries naturally caused VC7.1 to
+emit the original **`sub esp,0x14`** prologue; no inert stack padding
+or inserted machine bytes were used.
+
+## Focused replay (only this translation unit)
 
 ```bash
 scripts/repo-python workbench/nagamori-action/check_prefix.py
 ```
 
-The checker compiles this one TU using the repository's pinned VC7.1,
-attests the original 7,266-byte prefix and asserts 918/918
-opcodes/operands after the documented **one frame instruction** is
-excluded. It does not assert whole-function 12,277-byte Exact, and
-no source/match ledger acceptance or broad cold replay is implied.
+The source presently compiles to **8,828 bytes** with 73 COFF
+relocations, including a *temporary four-byte local epilogue*. The
+target prefix is 8,824 bytes and must eventually jump to the original
+shared exit at `0x004B12D1`. The **remaining 3,453 code bytes** and
+later actions are still missing. Complete 12,277-byte bytes/relocations
+have **not** been selected/accepted Exact, and the code has deliberately
+not been integrated into production `src/`.
 
-Next: implement the next air-direction action group at `0x004AFF47`
-(`field015c < 1`, commands 0 and 1), then continue the original guard order
-until the common epilogue at `0x004B12D1`. Keep explicit numeric
-sequence-array index and action-ID original checks; avoid templating
-away source-level order because VC7.1 codegen depends on it.
-
-The last three implemented guards were intentionally reordered to check
-`sequences[..].field0002` against original per-level 302/301/300 caps
-**before** the final hit-state guard. The first natural C++ draft
-reversed this order, causing three groups of ten displaced x86
-instructions despite equivalent Boolean outcomes. The revised source
-now matches the original instruction sequence.
-
-The next three source guards now capture 0x2A, 0x29/0x2A, and 0x28
-with original per-action sequence ceilings 272, 271 and 270. The
-0x2A branch has the distinct `field0118 >= 500 || field0120 > 0`
-permission gate. All three compile to their original x86 instruction
-forms under the existing one-frame-byte / relocation-target qualification.
-
-The three newly restored non-meter action tiers recognize commands
-`0x16`, `0x15/0x16` and `0x14` with distinct original animation
-ceilings `sequences[252]`, `[251]`, `[250]`, respectively. The first
-requires an additional `field0118 >= 500 || field0120 > 0` permission
-gate, and all preserve original cancel-flag and state-priority order.
-
-The next recovered three action tiers handle `0x20`, `0x1F`,
-`0x1E`. The native original checks `meter > 50`, not `meter >= 50`,
-and uses per-animation ceilings 257/256/255. Each action has the
-original airborne follow-on (0x115/0x114/0x113) after base action
-0x101/0x100/0xFF; their guard order matches original VC7.1 x86.
-
-The next 0x0C/0x0B/0x0A tiers use original animation ceilings
-262/261/260 and original **negative-Y** airborne eligibility. Their
-x87 source must be `positionY < 0.0`: an early guessed `== 0.0`
-produced `fucompp`/`test ah,0x44` and a guessed `>= 0.0` produced
-`test ah,0x1`; neither equals the target `fcomp`/`test ah,0x5`
-sequence. The corrected normal C++ generates the exact comparison.
-
-Four more original branches distinguish 0x0C permission plus
-`field3148 == 0` (result 0x10D, ceiling 269), 0x0C with
-`field3148 != 0` (result 0x118, ceiling 280), 0x0B/0x0C
-(result 0x10C with alternate 0x117, ceiling 268), and 0x0A
-(result 0x10B with alternate 0x116, ceiling 267). These grounded
-branches use the original **zero-Y** equality, unlike the earlier
-negative-Y airborne tiers.
-
-The first `field015c < 3` branch (command 0x06) is now source-level:
-it requires an original negative-Y air action, the current frame
-cancel flag, and `airActionCount < 1`. It increments the byte counter
-at +0x15A and selects action 0x0E, 0x0F or 0x10 depending on the
-signed direction byte at original object offset +0x188 versus facing.
-A local offset read is used rather than changing accepted base class
-layout; all corresponding x86 instructions and registers match.
+Next original action group begins at `0x004B055D`. Continue the
+original branch priority and preserve source-level expression order
+because it determines VC7.1 register allocation and x87 codegen.
+No broad cold replay is needed for these focused experiments.

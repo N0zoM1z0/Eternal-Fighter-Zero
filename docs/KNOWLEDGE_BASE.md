@@ -2189,49 +2189,39 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
-## Nagamori Slot04 action boss: reviewed boundary and actual partial source
+## Nagamori Slot04 action boss: 8,824-byte verified natural-source prefix
 
-Nagamori's vtable slot 4 at `0x0078840C` points to the real
-`Character06::Slot04` at `0x004AE2E0`. Independent canonical PE-byte
-checks confirm the complete **12,277-byte** function owner
-`[0x004AE2E0,0x004B12D5)` and eleven `CC` padding bytes before the
-separately Exact `Slot01`. Original complete-owner SHA-256 is
+Nagamori vtable slot 4 at `0x0078840C` confirms the original
+`Character06::Slot04` target `0x004AE2E0` and full **12,277-byte**
+owner `[0x004AE2E0,0x004B12D5)`, then 11 `CC` alignment bytes.
+Complete original SHA-256:
 `bd59aef64acf8b517eb8075e1a43d4250ef28b95973f47e0132289979f0fe26f`.
-This is now a formally **reviewed authored boundary**, but not Exact.
+A reviewed authored boundary is recorded, but **no whole-owner Exact**.
 
-A new, real natural C++ candidate in `workbench/nagamori-action/`
-has recovered the **first twenty-eight priority-ordered action conditions**
-with the original state clears, command IDs, animation flags, frame
-cancel windows, meter thresholds, grouped attack state guards and
-resulting action IDs. A target-bound focused VC7.1 check verifies the
-original first **7,266 bytes / 1,791 instructions** through three
-additional `0x66/0x65/0x64` meter-tier action guards plus three
-`0x2A`/`0x29`/`0x28` priority branches (different animation ceilings
-272, 271, 270), followed by the `0x16`/`0x15`/`0x14`
-attack-priority guards and their distinct 252/251/250 animation ceilings,
-then `0x20`/`0x1F`/`0x1E` (the `meter > 50` tiers,
-257/256/255 animation ceilings and airborne follow-on actions),
-then the `0x0C`/`0x0B`/`0x0A` airborne-only tiers, with a crucial
-original negative-Y x87 check (`positionY < 0.0`) and
-262/261/260 separate animation caps, followed by four
-independent 0x0C/0x0B/0x0A ground actions with switchable
-`field3148` results and 269/280/268/267 animation ceilings, then the first
-`field015c < 3` air action (`0x06`, results 0x0E/0x0F/0x10 and
-one-shot air-action counter). The compiled
-source now includes the original 3000/2000/1000 tier thresholds and
-the distinct sequence-index caps 302, 301 and 300. These frame caps
-must be checked before the final hit-state guard; an earlier source
-trial reversed that order and displaced three complete instruction
-blocks despite similar Boolean behavior.
-Apart from the one prologue frame-size instruction (the incomplete
-function has fewer stack locals), the first **1,790 matched instruction
-positions** have identical register choices and operands after
-normalizing only numeric calls/branches and x87 constant addresses.
-The temporary source emits 7,268 bytes with a temporary local return,
-not the original shared long epilogue jump. The full 12,277-byte owner
-remains open; no selected Exact unit or code-byte masking was used.
-Evidence `docs/evidence/nagamori-slot04-first-actions-boundary.json`,
-reproducer `workbench/nagamori-action/check_prefix.py`.
+The separate natural C++ `workbench/nagamori-action/Character06Input.cpp`
+now implements the first **32** ordered action and input guards.
+Canonical first **8,824 bytes / 2,201 x86 instructions** through
+`0x004B0558` match the selected VC7.1 source's complete instruction
+forms, including registers and the **original 20-byte stack frame**.
+Only future numeric branch/direct-call targets and x87 PE constant
+address operands are normalized for this *diagnostic prefix* check;
+the temporary source retains its own four-byte local epilogue.
+
+This includes three meter-priority tiers with strict target evaluation
+order; distinct airborne-versus-grounded x87 sign tests; 0x0C/0x0B/0x0A
+variant branches; a byte counter and `inputX` direction selecting
+0x0E/0x0F/0x10; and four opponent-X relative air/ground dash actions
+(0xA5/0xA6/0xA3/0xA4). Reusing another character's C++ was only an
+experimental hypothesis, not evidence: independently disassembling
+Nagamori's target confirmed all 2,201 instruction forms. The real
+floating-point temporaries restored the target `sub esp,0x14`
+prologue, eliminating an earlier width mismatch naturally.
+
+Unimplemented continuation begins at original `0x004B055D`;
+**3,453 original code bytes remain**. Strict original whole-function
+codegen/relocation acceptance has not occurred. Focused evidence:
+`docs/evidence/nagamori-slot04-first-actions-boundary.json`;
+reproducer: `workbench/nagamori-action/check_prefix.py`.
 
 ### Nagamori 1,080-byte meter overlay renderer: complete Exact (2026-11-09)
 
