@@ -1929,7 +1929,7 @@ was refreshed from this selected build. The called `SetAlternateMode` is a **sep
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
 
-## Ikumi Slot02 input command scanner: four verified original scans
+## Ikumi Slot02 input command scanner: six verified original scans
 
 Original `Character14::Slot02` is confirmed by vtable slot 2 at
 `0x00788D7C`; the full **5,153-byte** function owns
@@ -1938,10 +1938,10 @@ The complete boundary and authored origin have been reviewed in
 `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
 
 Natural C++ at `workbench/ikumi-commands/Character14Commands.cpp`
-now implements **the first four of fifteen priority-ordered command
-scans**, exactly **2,150 original bytes / 651 instructions** from
-`0x006AB7E0` through `0x006AC046`. The separate scanners are
-499/153, 623/193, 506/148 and 522/157 bytes/instructions. The first scan
+now implements **the first six of fifteen priority-ordered command
+scans**, exactly **2,928 original bytes / 879 instructions** from
+`0x006AB7E0` through `0x006AC350`. The separate scanners are
+499/153, 623/193, 506/148, 522/157, 402/119 and 376/109 bytes/instructions. The first scan
 recognizes 0x5E, the second recognizes base 0x96 plus button flags,
 and the third uses base 0xAA or 0xA0 with the original early-finish
 branch. Ikumi's third scan starts when either meter is at least 1000
@@ -1949,9 +1949,9 @@ branch. Ikumi's third scan starts when either meter is at least 1000
 order of directional conditions and signed-facing terms were verified
 against original x86, not assumed from related characters.
 
-A focused VC7.1 build and `check_first_scan.py` compare all **651/651
+A focused VC7.1 build and `check_first_scan.py` compare all **879/879
 opcodes and operands**, normalizing only jump destinations because the
-last **11 scans have not yet been authored**. The current 1,632-byte
+last **9 scans have not yet been authored**. The current 1,632-byte
 partial function is NOT the full 5,153-byte function and is **not
 Exact**; no match-unit or source ledger acceptance has been claimed.
 

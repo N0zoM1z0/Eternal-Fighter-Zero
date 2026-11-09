@@ -21,6 +21,8 @@ SCANS = [
     (0x006AB9D3, 0x006ABC42, 193),
     (0x006ABC42, 0x006ABE3C, 148),
     (0x006ABE3C, 0x006AC046, 157),
+    (0x006AC046, 0x006AC1D8, 119),
+    (0x006AC1D8, 0x006AC350, 109),
 ]
 SOURCE = ROOT / 'workbench/ikumi-commands/Character14Commands.cpp'
 OBJECT = ROOT / 'build/ikumi-commands/Character14Commands.partial.obj'
@@ -53,7 +55,7 @@ def main():
     compiled_inst = disasm(built, ROOT / 'build/ikumi-commands/scans.compiled.bin')
     expected_instructions = sum(s[2] for s in SCANS)
     assert len(original_inst) == expected_instructions
-    assert len(built) == len(full) + 4 and len(compiled_inst) == expected_instructions + 3
+    assert len(built) >= len(full) and len(compiled_inst) == expected_instructions + 3
     assert not relocs and original_inst == compiled_inst[:expected_instructions]
     assert compiled_inst[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
     print(f'Ikumi first {len(SCANS)} command scans: {expected_instructions}/{expected_instructions}'

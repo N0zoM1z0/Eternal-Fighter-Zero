@@ -170,5 +170,57 @@ void Character14::Slot02()
             stage = 1;
         }
     }
-    // Further 11 original ordered scans remain to be recovered.
+    // Fifth priority scan: quick horizontal/diagonal motion with button
+    // finish, using only the last 60 frames of input history.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x78;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf0) != 0) && (stage == 3)) {
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x46 +
+                                ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            return;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) &&
+            (stage == 2)) {
+            if ((buttons & 0xf0) != 0) {
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x46 +
+                                    ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                return;
+            }
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 6 - (facing == -1)) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 2 - (facing == -1)) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Sixth priority scan: 125–179-frame diagonal-neutral-finish motion.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x7d;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf0) != 0) && (stage == 3)) {
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 +
+                                ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            return;
+        }
+        if (((buttons & 0xf) == 6 + (facing == -1 ? 0 : -1)) && (stage == 2)) {
+            if ((buttons & 0xf0) != 0) {
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x14 +
+                                    ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                return;
+            }
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == 0)) {
+            stage = 1;
+        }
+    }
+    // Further 9 original priority-ordered scans remain to be recovered.
 }
