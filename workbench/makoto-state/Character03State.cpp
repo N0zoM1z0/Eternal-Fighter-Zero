@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-167 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158 and 161-169 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -2371,9 +2371,71 @@ void Character03::Slot06()
         }
         return;
 
+    case 168: // Original block 0x005EEFAC: grounded impact to state 0
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 169: // Original block 0x005EF0F6: grounded impact to state 3
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            velocityX = 0.0;
+            velocityY = 0.0;
+            positionY = 0.0;
+            gravity = 0.0;
+            guardInputFrames = 0;
+            outgoingPushbackVelocityX = 0.0;
+            horizontalDeceleration = 0.0;
+            effect.type = 8;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == animationFrameCount) {
+                FaceOpponent();
+            }
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 55 explicit cases. The target's true default path also
+        // the other 53 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

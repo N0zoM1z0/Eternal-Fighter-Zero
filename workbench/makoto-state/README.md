@@ -473,6 +473,19 @@ work, not the original behavior for valid unimplemented animations.
   original range was checked in canonical EFZ.exe; VC7.1 builds the
   added natural C++ branch.
 
+- Animation IDs 168 and 169 (0x005EEFAC..0x005EF0F6 and
+  0x005EF0F6..0x005EF240; 330 bytes each) are independently dispatched
+  grounded impacts with the same first-tick cleanup: clear dash
+  momentum, horizontal/vertical speed, vertical position, gravity,
+  guardInputFrames, outgoingPushbackVelocityX and
+  horizontalDeceleration. The first tick also emits context effect 8
+  with truncated character coordinates, group 2 and layer 1. Frame
+  exhaustion calls FaceOpponent on the **exact** final pose, then
+  enters idle state 0 for 168 or crouch state 3 for 169 and calls
+  ResetPose. Both ranges (660 bytes total) were rechecked against
+  EFZ.exe; the draft compiles with VC7.1. The shared source body
+  does not imply a shared jump destination or identical terminal ID.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
