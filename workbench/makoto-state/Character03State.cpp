@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Animations outside cases 1-6 have not yet been reconstructed.
+// game sources. Animations outside cases 1-8 have not yet been reconstructed.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -139,6 +139,38 @@ void Character03::Slot06()
             FaceOpponent();
             field0008 = 13;
             ResetPose();
+        }
+        return;
+
+    case 7: // Original block 0x005E8CA9: neutral recovery to animation 0
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 8: // Original block 0x005E8D36: neutral recovery to animation 3
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        FaceOpponent();
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
         }
         return;
 
