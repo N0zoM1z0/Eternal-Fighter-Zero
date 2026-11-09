@@ -1,4 +1,4 @@
-"""Target-bound diagnostic for first eleven Nagamori Slot04 priority actions.
+"""Target-bound diagnostic for first fourteen Nagamori Slot04 priority actions.
 
 This is not a whole-function Exact match. Normalize only original local
 branch destinations, direct call addresses, x87 external constant operands,
@@ -17,7 +17,7 @@ from coff import object_function
 from native_build import compile_source
 
 START = 0x004AE2E0
-PREFIX_END = 0x004AEE7E
+PREFIX_END = 0x004AF16E
 SOURCE = ROOT / "workbench/nagamori-action/Character06Input.cpp"
 OBJECT = ROOT / "build/nagamori-action/Character06Input.partial.obj"
 
@@ -51,8 +51,8 @@ def main():
     compiled, relocations = object_function(OBJECT, "?Slot04@Character06@@UAEXXZ")
     expected = disassemble(original, ROOT / "build/nagamori-action/verified-prefix.target.bin")
     actual = disassemble(compiled, ROOT / "build/nagamori-action/verified-prefix.compiled.bin")
-    assert len(original) == 2974 and len(expected) == 731
-    assert len(actual) == 734 and len(compiled) == 2976 and len(relocations) == 24
+    assert len(original) == 3726 and len(expected) == 919
+    assert len(actual) == 922 and len(compiled) == 3728 and len(relocations) == 31
     assert expected[2][1] == "sub    esp,0x14" and actual[2][1] == "push   ecx"
     assert actual[-3:] == [(START+len(compiled)-4,"mov    esp,ebp"),
                            (START+len(compiled)-2,"pop    ebp"),
@@ -63,7 +63,7 @@ def main():
         if normalize_instruction(a[1]) != normalize_instruction(b[1]):
             mismatch.append((i,a,b))
     assert not mismatch, mismatch[:5]
-    print("Nagamori Slot04 first 11 actions: 730/730 checked native"
+    print("Nagamori Slot04 first 14 actions: 918/918 checked native"
           " instructions and operands match, aside from 1 incomplete frame size")
     print("Canonical original prefix:", len(original), "bytes,", len(expected), "instructions")
     print("Current partial function:", len(compiled), "bytes,", len(relocations), "COFF relocations; NOT full Exact")

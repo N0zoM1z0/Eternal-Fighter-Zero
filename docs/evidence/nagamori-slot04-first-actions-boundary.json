@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-owner-and-first-eleven-actions-not-full-Exact",
+  "status": "reviewed-original-owner-and-first-fourteen-actions-not-full-Exact",
   "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "function": "Character06::Slot04",
   "original_vtable_pointer": "0x0078840C",
@@ -16,14 +16,6 @@
   "reproducer": "workbench/nagamori-action/check_prefix.py",
   "alignment_after_owner": "11 bytes CC before Slot01 at 0x004B12E0",
   "whole_owner_exact": false,
-  "first_eleven_actions": {
-    "start": "0x004AE2E0",
-    "end_exclusive": "0x004AEE7E",
-    "size": 2974,
-    "original_instructions": 731,
-    "sha256": "ce88f62ef265d359b2f9273595a28169683917e12358d1c7a1b1c19bbdd7eea9",
-    "qualification": "First 730/731 original instructions match compiled C++ at all registers/operands after normalizing numeric branch/direct-call addresses and two x87 PE constants. The one different prologue frame-size instruction reflects absent subsequent actions and stack locals. Original common-epilogue long jump at next VA is still absent."
-  },
   "recovered_actions": [
     "0x34",
     "0x5B",
@@ -35,6 +27,17 @@
     "0x6E",
     "0x66",
     "0x65/0x66",
-    "0x64/0x65/0x66"
-  ]
+    "0x64/0x65/0x66",
+    "0x2A",
+    "0x29/0x2A",
+    "0x28"
+  ],
+  "first_fourteen_actions": {
+    "start": "0x004AE2E0",
+    "end_exclusive": "0x004AF16E",
+    "size": 3726,
+    "original_instructions": 919,
+    "sha256": "cd5655f5c38c03d3126425474e6d057c9937bba34fe77445227e1f0614823e63",
+    "qualification": "First 918/919 instruction positions match native C++ after normalizing local branch targets, direct calls and PE x87 constant addresses; one prologue allocation width differs because later branches remain absent. Final shared epilogue not yet present."
+  }
 }
