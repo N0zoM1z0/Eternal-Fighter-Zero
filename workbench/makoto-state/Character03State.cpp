@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-85 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-87 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1613,9 +1613,78 @@ void Character03::Slot06()
         }
         return;
 
+    case 86: // Original block 0x005ED036: one-shot lift and landing recoil
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            // Unlike state 85, this launch is suppressed after its first use.
+            if (field3138 == 0) {
+                if (field0120 != 0) {
+                    field0118 -= 30.0;
+                }
+                pendingContextSoundSlot = 33;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
+                meter = (short)(meter + 30);
+                ++field3138;
+            }
+        }
+        // 0x00787DA8 holds 0.06, not the 0.04 used by state 85.
+        velocityY += 0.06;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 87: // Original block 0x005ED218: fixed-position effect and idle return
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 0x1ef;
+            effect.x = 60.0;
+            effect.y = 40.0;
+            effect.palette = 1;
+            effect.flag0018 = 1;
+            effect.group = 0;
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     default:
         // This draft deliberately does not provide a fake implementation for
-        // the other 98 explicit cases. The target's true default path also
+        // the other 75 explicit cases. The target's true default path also
         // clears motion, but that path must not replace any mapped case.
         return;
     }

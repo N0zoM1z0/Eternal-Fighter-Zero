@@ -320,6 +320,25 @@ work, not the original behavior for valid unimplemented animations.
   matching the observed original order instead of merging the
   cases by their common effect prefix.
 
+- Animation ID 86 (0x005ED036..0x005ED218, 482 bytes) has a
+  guarded first-tick effect identical to the local 0x1F0 producer in 85,
+  but its movement setup is additionally conditional on field3138==0.
+  Only then does it subtract 30 resource when enabled, request sound 33,
+  take knockbackVelocityX/Y, award 30 meter and increment field3138.
+  Subsequent ticks add **0.06** to velocityY (0x00787DA8, checked in
+  EFZ.exe; not the 0.04 in state 85). Expired frames wrap the pose to
+  zero without resetting the animation. Landing at any pose selects
+  0x61/0x62 from knockdownOnLanding. The original branch was checked at
+  0x005ED036..0x005ED213; the isolated draft builds with VC7.1.
+
+- Animation ID 87 (0x005ED218..0x005ED2CB, 179 bytes) is a short,
+  independent first-tick effect owner. It emits local type 0x1EF at fixed
+  coordinates (60.0, 40.0), with palette=1, flag0018=1, group=0 and
+  layer=0. These are actual target data constants and field stores,
+  not character-position calculations. Its unsigned pose counter returns
+  to animation 0 and calls ResetPose on exhaustion. The effect event is
+  only on pose/tick zero; neither velocity nor gravity is written.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
