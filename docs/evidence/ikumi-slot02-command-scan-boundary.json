@@ -20,7 +20,7 @@
     "sha256": "c4439f2c7c3b408f3c1e4b7153a10520160af13979f7fdecfce429cf746c3c39"
   },
   "following_padding_bytes": 15,
-  "qualification": "First six natural C++ scans recover 2928 target bytes / 879 original x86 instructions, with only numeric branch destinations normalized. Nine scans are still missing; compiled temporary function is not full 5153-byte Exact.",
+  "qualification": "Eight complete input scans produce 3694 target bytes/1101 original x86 instructions with only branch destinations normalized. Seven scans are absent, so this is not a 5153-byte full-owner Exact match.",
   "second_scan": {
     "start": "0x006AB9D3",
     "end_exclusive": "0x006ABC42",
@@ -30,11 +30,11 @@
   },
   "natural_cpp_recovered_prefix": {
     "start": "0x006AB7E0",
-    "end_exclusive": "0x006AC350",
-    "size": 2928,
-    "instructions": 879,
-    "compiled_partial_size": 2929,
-    "qualification": "All 879 native instructions and operands match original first six scans; only numeric future jump destinations are normalized. The other 9 scans are missing."
+    "end_exclusive": "0x006AC64E",
+    "size": 3694,
+    "instructions": 1101,
+    "compiled_partial_size": 3695,
+    "qualification": "All 1101 native instructions and operands match the first eight original scans, normalizing only branch destinations; remaining seven scans not yet authored."
   },
   "third_scan": {
     "start": "0x006ABC42",
@@ -63,5 +63,19 @@
     "size": 376,
     "original_instructions": 109,
     "sha256": "65282ea444b393b5cb327b605cf8bba1910525f93de543a39c6d6df70420440c"
+  },
+  "seventh_scan": {
+    "start": "0x006AC350",
+    "end_exclusive": "0x006AC4CB",
+    "size": 379,
+    "original_instructions": 109,
+    "sha256": "893b85ce11f0368d68b6c9fc550dec1d55eb30eda18307a5e52b92f2e9a38ac5"
+  },
+  "eighth_scan": {
+    "start": "0x006AC4CB",
+    "end_exclusive": "0x006AC64E",
+    "size": 387,
+    "original_instructions": 113,
+    "sha256": "332f9d0414ba3ee21566f55a9851150b0f007689e0220789dddf458387e9682a"
   }
 }

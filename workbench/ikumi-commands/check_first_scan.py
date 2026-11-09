@@ -23,6 +23,8 @@ SCANS = [
     (0x006ABE3C, 0x006AC046, 157),
     (0x006AC046, 0x006AC1D8, 119),
     (0x006AC1D8, 0x006AC350, 109),
+    (0x006AC350, 0x006AC4CB, 109),
+    (0x006AC4CB, 0x006AC64E, 113),
 ]
 SOURCE = ROOT / 'workbench/ikumi-commands/Character14Commands.cpp'
 OBJECT = ROOT / 'build/ikumi-commands/Character14Commands.partial.obj'
