@@ -191,7 +191,7 @@ address,origin,status,evidence
 0x00413040,authored,reviewed,docs/KNOWLEDGE_BASE.md#shared-character-base
 0x00413090,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
 0x00413100,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
-0x004136D0,unknown,unreviewed,
+0x004136D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-state-owner-boundary-and-selector-review
 0x00422D70,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-local-effects-and-shiori-construction
 0x00422F40,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion
 0x00423090,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-command-state-and-shared-locomotion

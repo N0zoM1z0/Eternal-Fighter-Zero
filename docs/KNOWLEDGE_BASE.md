@@ -6116,6 +6116,37 @@ header replay,and all parked Shiori/PrepareBattle work remain live. Original
 target/toolchain/Wine/Ghidra state is preserved. Storage accounting and exact
 restore commands are in `docs/RE_ARTIFACTS.md`; native logs remain available.
 
+## Shiori state owner boundary and selector review
+
+Target `0x004136D0` is an authored, non-thunk `Character08::Slot06`
+state dispatcher. The original Character08 virtual table at
+`0x00787DF8`, slot-6 pointer at `0x00787E10`, contains this exact
+entry, and the original body contains 134 explicit animation
+branches plus a true default path. An independent read of canonical
+EFZ.exe bytes confirms the complete owned extent:
+
+- **62,273 instruction bytes**, `[0x004136D0,0x00422A11)`, ending with
+  the original `pop edi; pop esi; mov esp,ebp; pop ebp; ret` epilogue;
+- **540 address-table bytes**, `[0x00422A11,0x00422C2D)`, with 135
+  distinct DWORD branch destinations, *all* inside that code extent;
+- **319 selector bytes**, `[0x00422C2D,0x00422D6C)`, mapping
+  animation IDs 1–319 to those 135 entries; index 134 (default)
+  occurs **185** times and each explicit index occurs once.
+
+The complete 63,132-byte owner has SHA-256
+`b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded`.
+Four `CC` bytes align to the next constructor's `55 8B EC` prologue
+at `0x00422D70`. Function origin and complete boundary are now
+formally reviewed with the independently checked byte report
+`docs/evidence/shiori-state-boundary-review.json`. This is a
+**boundary/origin review, not a claim of source or codegen Exact**.
+The full, still-unaccepted natural C++ candidate and its isolated
+provisional views are tracked in `workbench/shiori-state/`. A fresh
+single-unit VC7.1 build emits 63,133 bytes, not the target 63,132,
+and register/branch-byte mismatches remain in the late states.
+The candidate must not be accepted until the full code, both tables
+and every relocation strictly compare. No cold replay was run.
+
 ## Makoto state dispatch boundary and selector mapping
 
 `Character03::Slot06` begins at `0x5E85F0`. The Character03 vtable at

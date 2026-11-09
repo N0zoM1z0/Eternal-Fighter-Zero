@@ -270,10 +270,16 @@ claim is implied. Other historical proof freshness remains open.
 
 ## Other open substantial work
 
-- **Shiori Slot06**, target `0x004136D0`: 63,132 owned bytes including tables;
-  unfinished natural-C++ candidate. Start at
-  `.analysis/probes/shiori-state/README.md` and its parked-best evidence.
-  Do not overwrite newer shared headers from a parked snapshot.
+- **Shiori Slot06**, target `0x004136D0`: newly **reviewed authored
+  63,132-byte owner** with 62,273 code, 540 address-table and 319
+  selector bytes. The complete unaccepted natural candidate is tracked
+  at `workbench/shiori-state/ShioriState.cpp`, with private provisional
+  header views and a reproducible focused VC7.1 build. Its current
+  63,133-byte output is **not Exact**; differences concentrate in
+  cases 303–309 and 312–318. Independently verified original boundary
+  evidence lives in `docs/evidence/shiori-state-boundary-review.json`.
+  Do not overwrite accepted `src/` headers with the old views;
+  preserved private experiments remain in `.analysis/probes/shiori-state/`.
 - **Scene2::PrepareBattle** at `0x0076CA50`: 3,893 code bytes plus 136
   selector/address bytes; read `.analysis/probes/scene-loading/README.md`.
 - **Video pixel kernels** in `src/VideoCharacterDraw.cpp`:

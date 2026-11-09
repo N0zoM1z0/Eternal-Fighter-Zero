@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "reviewed-function-boundary-and-authored-origin-only-not-an-exact-codegen-certificate",
+  "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+  "function_name": "Character08::Slot06",
+  "target_address": "0x004136D0",
+  "vtable_slot_pointer_address": "0x00787E10",
+  "vtable_slot_pointer_value": "0x004136D0",
+  "code": {
+    "start": "0x004136D0",
+    "end_exclusive": "0x00422A11",
+    "size": 62273,
+    "sha256": "171ca454788f418dd4749ff861074f0295a50b3393d28777dffd37987df47421"
+  },
+  "jump_table": {
+    "start": "0x00422A11",
+    "end_exclusive": "0x00422C2D",
+    "size": 540,
+    "entries": 135,
+    "distinct_instruction_destinations": 135,
+    "min_destination": "0x41377e",
+    "max_destination": "0x42268d",
+    "sha256": "de8bc4ecf33101fc27e4639cc2a2bd14791908811cbaed868ed57dd1f8051ceb"
+  },
+  "selector_table": {
+    "start": "0x00422C2D",
+    "end_exclusive": "0x00422D6C",
+    "size": 319,
+    "animation_id_range": "1..319",
+    "distinct_selector_values": 135,
+    "default_case_index": 134,
+    "default_case_count": 185,
+    "sha256": "794cab354f7cdf2c08997da7c260ff1fa242f93ed760540cef962f948c89d4eb"
+  },
+  "complete_owner": {
+    "start": "0x004136D0",
+    "end_exclusive": "0x00422D6C",
+    "size": 63132,
+    "sha256": "b677461e2b0e0104de11fc3ed40c47545c86ea0f02c4d6dc68437e0ea475aded"
+  },
+  "next_object": {
+    "alignment_bytes": "cccccccc",
+    "start": "0x00422D70",
+    "original_constructor_prologue": "558bec"
+  },
+  "evidence_method": "Fresh canonical executable PE bytes: vtable Slot06 lookup, bounded code disassembly endpoint, 135 validated in-range function-local address table destinations, full 319-byte selector and next constructor alignment. This is not a full COFF match; Shiori private draft is 63133 bytes."
+}

@@ -68,7 +68,9 @@ NayukiB (472 bytes), Kano (523 bytes), Akiko (511 bytes) and Minagi
 other child owners remain open.
 **Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
 500 switch-address bytes and 310 selector bytes, with all 1,386
-relocations strictly bound. Shiori's large Slot06, Video and other
+relocations strictly bound. Shiori's 63,132-byte Slot06 is now
+structurally reviewed, with a complete **non-Exact** natural-C++
+candidate tracked in `workbench/shiori-state/`. Video and other
 scene/character work remain open. See the live ledgers for individual acceptance.
 
 Reader/audio integration is complete. The
