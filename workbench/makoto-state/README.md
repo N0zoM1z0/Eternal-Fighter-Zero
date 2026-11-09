@@ -1066,6 +1066,28 @@ work, not the original behavior for valid unimplemented animations.
   All 929 original instruction bytes and four x87 constants were
   verified against EFZ.exe, and the partial owner builds under VC7.1.
 
+- Animation IDs 307 and 308 (0x005F5DE3..0x005F61E7, 1,028 bytes;
+  0x005F61E7..0x005F662C, 1,093 bytes) are stronger forms of the
+  multi-cycle rising super 306. They preserve pose-2 loops, pose-4
+  local type 0x1A7, horizontal shake, gravity/friction and the pose-6
+  rollback, but their initial single-use super activation spends
+  2,000/3,000 meter, emits global type 0x45/palette 5 or 0x46/palette
+  0x40, and sets remainingHitCount=12/19 rather than five. State 308
+  additionally requests context sound 37 and calls
+  Context::SetSceneTimer(15) **every tick**. At pose 5, a negative
+  field3140 on state 308 emits context type 31 at truncated X/Y=0,
+  facing=(facing!=1), group/layer 0, then reloads field3140=12;
+  the counter decrements each tick. This is *not* a normal pose-5
+  tick-zero effect. On the frame-advance into pose 5, state 307
+  assigns hitInvulnerabilityFrames=3, horizontal/vertical launch
+  (2.3,-0.65), adds 30*facing to positionX and sound 4, then emits
+  context type 31. State 308 instead launches with (2.5,-0.8),
+  same +30*facing shift and sound 4, but no additional event at that
+  frame-advance site. Both launch gravities and all other independent
+  state events were checked against target instructions. Their
+  original ranges cover 2,121 bytes total; the complete partial C++
+  workbench compiled with VC7.1, not a whole-function exact match.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -1091,7 +1113,7 @@ disassemblies and 67 named trial objects without deleting the current
 workbench source, target case map or latest objects. See
 `docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
 
-Extend case 307 and onward directly from reviewed target instructions,
+Extend case 309 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the
