@@ -296,6 +296,18 @@ work, not the original behavior for valid unimplemented animations.
   FaceOpponent call. These controls were independently reviewed at
   the original address; no whole-owner Exact assertion is made.
 
+- Animation ID 84 (0x005ECC1E..0x005ECE63, another 581-byte
+  157-instruction body) is not an alias of 83: it has its own original
+  switch destination and independent statements. Both blocks contain
+  the same calls, constants, field accesses and branch decisions, with
+  different register allocation near the facing byte move; their
+  register-and-EBP-normalized instruction similarity is 155/157
+  (98.7%). The independent C++ case preserves the local-effect
+  guard, 30-meter startup, ground impact, -2.0 horizontal transition,
+  ResetPose/FaceOpponent termination and original virtual call.
+  Retaining both arms is necessary until the whole dispatch and
+  selector table have been reconstructed.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
@@ -315,7 +327,7 @@ docs/KNOWLEDGE_BASE.md#makoto-state-dispatch-boundary-and-selector-mapping.
 
 ## Next implementation work
 
-Extend case 84 and onward directly from reviewed target instructions,
+Extend case 85 and onward directly from reviewed target instructions,
 retaining each case's distinct frame behavior. Once a complete owner exists,
 add its selected match unit with correct internal jump/selector table
 ownership and run the strict VC7.1 COFF comparison. Do not add it to the

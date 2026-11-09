@@ -1,7 +1,7 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-83 are implemented so far.
+// game sources. Cases 1-9, 13-16, 47, 50-77 and 81-84 are implemented so far.
 // The canonical owner's full code and local tables remain open.
 #include "../../src/CharacterViews.h"
 
@@ -1464,6 +1464,59 @@ void Character03::Slot06()
         return;
 
     case 83: // Original block 0x005EC9D9: airborne ground-impact recovery
+        if (field000a == 0 && field000c == 0) {
+            if (field3144 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                field3144 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && positionY + velocityY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 84: // Original block 0x005ECC1E: independent ground-impact recovery
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
