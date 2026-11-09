@@ -119031,14 +119031,14 @@ evidence = "EFZ.exe relocation field at 0x005E866C: reviewed original REL32 oper
 [[units.character-03-state-slot06.relocations]]
 offset = 162
 type = "DIR32"
-symbol = "$L64008"
+symbol = "$L64021"
 target = 0x005F6C56
 evidence = "EFZ.exe original table/code operand 0x005E8692: internal DIR32 branch 0x005F6C56 matches compiled function-local offset 0xE666"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 169
 type = "DIR32"
-symbol = "$L64168"
+symbol = "$L64181"
 target = 0x005F6A62
 evidence = "EFZ.exe original table/code operand 0x005E8699: internal DIR32 branch 0x005F6A62 matches compiled function-local offset 0xE472"
 
@@ -127844,875 +127844,875 @@ evidence = "EFZ.exe relocation field at 0x005F69A9: reviewed original DIR32 oper
 [[units.character-03-state-slot06.relocations]]
 offset = 58482
 type = "DIR32"
-symbol = "$L62211"
+symbol = "$L62224"
 target = 0x005E8718
 evidence = "EFZ.exe original table/code operand 0x005F6A62: internal DIR32 branch 0x005E8718 matches compiled function-local offset 0x128"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58486
 type = "DIR32"
-symbol = "$L62214"
+symbol = "$L62227"
 target = 0x005E8793
 evidence = "EFZ.exe original table/code operand 0x005F6A66: internal DIR32 branch 0x005E8793 matches compiled function-local offset 0x1A3"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58490
 type = "DIR32"
-symbol = "$L62217"
+symbol = "$L62230"
 target = 0x005E880E
 evidence = "EFZ.exe original table/code operand 0x005F6A6A: internal DIR32 branch 0x005E880E matches compiled function-local offset 0x21E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58494
 type = "DIR32"
-symbol = "$L62220"
+symbol = "$L62233"
 target = 0x005E8891
 evidence = "EFZ.exe original table/code operand 0x005F6A6E: internal DIR32 branch 0x005E8891 matches compiled function-local offset 0x2A1"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58498
 type = "DIR32"
-symbol = "$L62231"
+symbol = "$L62244"
 target = 0x005E89F4
 evidence = "EFZ.exe original table/code operand 0x005F6A72: internal DIR32 branch 0x005E89F4 matches compiled function-local offset 0x404"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58502
 type = "DIR32"
-symbol = "$L62243"
+symbol = "$L62256"
 target = 0x005E8B61
 evidence = "EFZ.exe original table/code operand 0x005F6A76: internal DIR32 branch 0x005E8B61 matches compiled function-local offset 0x571"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58506
 type = "DIR32"
-symbol = "$L62253"
+symbol = "$L62266"
 target = 0x005E8CA9
 evidence = "EFZ.exe original table/code operand 0x005F6A7A: internal DIR32 branch 0x005E8CA9 matches compiled function-local offset 0x6B9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58510
 type = "DIR32"
-symbol = "$L62256"
+symbol = "$L62269"
 target = 0x005E8D36
 evidence = "EFZ.exe original table/code operand 0x005F6A7E: internal DIR32 branch 0x005E8D36 matches compiled function-local offset 0x746"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58514
 type = "DIR32"
-symbol = "$L62259"
+symbol = "$L62272"
 target = 0x005E8DC3
 evidence = "EFZ.exe original table/code operand 0x005F6A82: internal DIR32 branch 0x005E8DC3 matches compiled function-local offset 0x7D3"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58518
 type = "DIR32"
-symbol = "$L62263"
+symbol = "$L62276"
 target = 0x005E8E7A
 evidence = "EFZ.exe original table/code operand 0x005F6A86: internal DIR32 branch 0x005E8E7A matches compiled function-local offset 0x88A"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58522
 type = "DIR32"
-symbol = "$L62267"
+symbol = "$L62280"
 target = 0x005E8F1F
 evidence = "EFZ.exe original table/code operand 0x005F6A8A: internal DIR32 branch 0x005E8F1F matches compiled function-local offset 0x92F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58526
 type = "DIR32"
-symbol = "$L62272"
+symbol = "$L62285"
 target = 0x005E902E
 evidence = "EFZ.exe original table/code operand 0x005F6A8E: internal DIR32 branch 0x005E902E matches compiled function-local offset 0xA3E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58530
 type = "DIR32"
-symbol = "$L62278"
+symbol = "$L62291"
 target = 0x005E913B
 evidence = "EFZ.exe original table/code operand 0x005F6A92: internal DIR32 branch 0x005E913B matches compiled function-local offset 0xB4B"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58534
 type = "DIR32"
-symbol = "$L62284"
+symbol = "$L62297"
 target = 0x005E9248
 evidence = "EFZ.exe original table/code operand 0x005F6A96: internal DIR32 branch 0x005E9248 matches compiled function-local offset 0xC58"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58538
 type = "DIR32"
-symbol = "$L62291"
+symbol = "$L62304"
 target = 0x005E9378
 evidence = "EFZ.exe original table/code operand 0x005F6A9A: internal DIR32 branch 0x005E9378 matches compiled function-local offset 0xD88"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58542
 type = "DIR32"
-symbol = "$L62304"
+symbol = "$L62317"
 target = 0x005E9569
 evidence = "EFZ.exe original table/code operand 0x005F6A9E: internal DIR32 branch 0x005E9569 matches compiled function-local offset 0xF79"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58546
 type = "DIR32"
-symbol = "$L62317"
+symbol = "$L62330"
 target = 0x005E975A
 evidence = "EFZ.exe original table/code operand 0x005F6AA2: internal DIR32 branch 0x005E975A matches compiled function-local offset 0x116A"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58550
 type = "DIR32"
-symbol = "$L62330"
+symbol = "$L62343"
 target = 0x005E994B
 evidence = "EFZ.exe original table/code operand 0x005F6AA6: internal DIR32 branch 0x005E994B matches compiled function-local offset 0x135B"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58554
 type = "DIR32"
-symbol = "$L62343"
+symbol = "$L62356"
 target = 0x005E9B3C
 evidence = "EFZ.exe original table/code operand 0x005F6AAA: internal DIR32 branch 0x005E9B3C matches compiled function-local offset 0x154C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58558
 type = "DIR32"
-symbol = "$L62356"
+symbol = "$L62369"
 target = 0x005E9D2D
 evidence = "EFZ.exe original table/code operand 0x005F6AAE: internal DIR32 branch 0x005E9D2D matches compiled function-local offset 0x173D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58562
 type = "DIR32"
-symbol = "$L62369"
+symbol = "$L62382"
 target = 0x005E9F1E
 evidence = "EFZ.exe original table/code operand 0x005F6AB2: internal DIR32 branch 0x005E9F1E matches compiled function-local offset 0x192E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58566
 type = "DIR32"
-symbol = "$L62381"
+symbol = "$L62394"
 target = 0x005EA0F7
 evidence = "EFZ.exe original table/code operand 0x005F6AB6: internal DIR32 branch 0x005EA0F7 matches compiled function-local offset 0x1B07"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58570
 type = "DIR32"
-symbol = "$L62393"
+symbol = "$L62406"
 target = 0x005EA2D0
 evidence = "EFZ.exe original table/code operand 0x005F6ABA: internal DIR32 branch 0x005EA2D0 matches compiled function-local offset 0x1CE0"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58574
 type = "DIR32"
-symbol = "$L62405"
+symbol = "$L62418"
 target = 0x005EA4A9
 evidence = "EFZ.exe original table/code operand 0x005F6ABE: internal DIR32 branch 0x005EA4A9 matches compiled function-local offset 0x1EB9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58578
 type = "DIR32"
-symbol = "$L62420"
+symbol = "$L62433"
 target = 0x005EA6A8
 evidence = "EFZ.exe original table/code operand 0x005F6AC2: internal DIR32 branch 0x005EA6A8 matches compiled function-local offset 0x20B8"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58582
 type = "DIR32"
-symbol = "$L62435"
+symbol = "$L62448"
 target = 0x005EA8A7
 evidence = "EFZ.exe original table/code operand 0x005F6AC6: internal DIR32 branch 0x005EA8A7 matches compiled function-local offset 0x22B7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58586
 type = "DIR32"
-symbol = "$L62450"
+symbol = "$L62463"
 target = 0x005EAAA6
 evidence = "EFZ.exe original table/code operand 0x005F6ACA: internal DIR32 branch 0x005EAAA6 matches compiled function-local offset 0x24B6"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58590
 type = "DIR32"
-symbol = "$L62462"
+symbol = "$L62475"
 target = 0x005EAC5D
 evidence = "EFZ.exe original table/code operand 0x005F6ACE: internal DIR32 branch 0x005EAC5D matches compiled function-local offset 0x266D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58594
 type = "DIR32"
-symbol = "$L62474"
+symbol = "$L62487"
 target = 0x005EAE08
 evidence = "EFZ.exe original table/code operand 0x005F6AD2: internal DIR32 branch 0x005EAE08 matches compiled function-local offset 0x2818"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58598
 type = "DIR32"
-symbol = "$L62490"
+symbol = "$L62503"
 target = 0x005EB039
 evidence = "EFZ.exe original table/code operand 0x005F6AD6: internal DIR32 branch 0x005EB039 matches compiled function-local offset 0x2A49"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58602
 type = "DIR32"
-symbol = "$L62506"
+symbol = "$L62519"
 target = 0x005EB26A
 evidence = "EFZ.exe original table/code operand 0x005F6ADA: internal DIR32 branch 0x005EB26A matches compiled function-local offset 0x2C7A"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58606
 type = "DIR32"
-symbol = "$L62519"
+symbol = "$L62532"
 target = 0x005EB453
 evidence = "EFZ.exe original table/code operand 0x005F6ADE: internal DIR32 branch 0x005EB453 matches compiled function-local offset 0x2E63"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58610
 type = "DIR32"
-symbol = "$L62532"
+symbol = "$L62545"
 target = 0x005EB630
 evidence = "EFZ.exe original table/code operand 0x005F6AE2: internal DIR32 branch 0x005EB630 matches compiled function-local offset 0x3040"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58614
 type = "DIR32"
-symbol = "$L62542"
+symbol = "$L62555"
 target = 0x005EB76C
 evidence = "EFZ.exe original table/code operand 0x005F6AE6: internal DIR32 branch 0x005EB76C matches compiled function-local offset 0x317C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58618
 type = "DIR32"
-symbol = "$L62551"
+symbol = "$L62564"
 target = 0x005EB881
 evidence = "EFZ.exe original table/code operand 0x005F6AEA: internal DIR32 branch 0x005EB881 matches compiled function-local offset 0x3291"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58622
 type = "DIR32"
-symbol = "$L62565"
+symbol = "$L62578"
 target = 0x005EBA61
 evidence = "EFZ.exe original table/code operand 0x005F6AEE: internal DIR32 branch 0x005EBA61 matches compiled function-local offset 0x3471"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58626
 type = "DIR32"
-symbol = "$L62577"
+symbol = "$L62590"
 target = 0x005EBC0C
 evidence = "EFZ.exe original table/code operand 0x005F6AF2: internal DIR32 branch 0x005EBC0C matches compiled function-local offset 0x361C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58630
 type = "DIR32"
-symbol = "$L62586"
+symbol = "$L62599"
 target = 0x005EBD61
 evidence = "EFZ.exe original table/code operand 0x005F6AF6: internal DIR32 branch 0x005EBD61 matches compiled function-local offset 0x3771"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58634
 type = "DIR32"
-symbol = "$L62595"
+symbol = "$L62608"
 target = 0x005EBEB6
 evidence = "EFZ.exe original table/code operand 0x005F6AFA: internal DIR32 branch 0x005EBEB6 matches compiled function-local offset 0x38C6"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58638
 type = "DIR32"
-symbol = "$L62603"
+symbol = "$L62616"
 target = 0x005EBFF3
 evidence = "EFZ.exe original table/code operand 0x005F6AFE: internal DIR32 branch 0x005EBFF3 matches compiled function-local offset 0x3A03"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58642
 type = "DIR32"
-symbol = "$L62616"
+symbol = "$L62629"
 target = 0x005EC1F0
 evidence = "EFZ.exe original table/code operand 0x005F6B02: internal DIR32 branch 0x005EC1F0 matches compiled function-local offset 0x3C00"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58646
 type = "DIR32"
-symbol = "$L62629"
+symbol = "$L62642"
 target = 0x005EC3ED
 evidence = "EFZ.exe original table/code operand 0x005F6B06: internal DIR32 branch 0x005EC3ED matches compiled function-local offset 0x3DFD"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58650
 type = "DIR32"
-symbol = "$L62641"
+symbol = "$L62654"
 target = 0x005EC5D2
 evidence = "EFZ.exe original table/code operand 0x005F6B0A: internal DIR32 branch 0x005EC5D2 matches compiled function-local offset 0x3FE2"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58654
 type = "DIR32"
-symbol = "$L62656"
+symbol = "$L62669"
 target = 0x005EC7B7
 evidence = "EFZ.exe original table/code operand 0x005F6B0E: internal DIR32 branch 0x005EC7B7 matches compiled function-local offset 0x41C7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58658
 type = "DIR32"
-symbol = "$L62670"
+symbol = "$L62683"
 target = 0x005EC9D9
 evidence = "EFZ.exe original table/code operand 0x005F6B12: internal DIR32 branch 0x005EC9D9 matches compiled function-local offset 0x43E9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58662
 type = "DIR32"
-symbol = "$L62687"
+symbol = "$L62700"
 target = 0x005ECC1E
 evidence = "EFZ.exe original table/code operand 0x005F6B16: internal DIR32 branch 0x005ECC1E matches compiled function-local offset 0x462E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58666
 type = "DIR32"
-symbol = "$L62704"
+symbol = "$L62717"
 target = 0x005ECE63
 evidence = "EFZ.exe original table/code operand 0x005F6B1A: internal DIR32 branch 0x005ECE63 matches compiled function-local offset 0x4873"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58670
 type = "DIR32"
-symbol = "$L62719"
+symbol = "$L62732"
 target = 0x005ED036
 evidence = "EFZ.exe original table/code operand 0x005F6B1E: internal DIR32 branch 0x005ED036 matches compiled function-local offset 0x4A46"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58674
 type = "DIR32"
-symbol = "$L62735"
+symbol = "$L62748"
 target = 0x005ED218
 evidence = "EFZ.exe original table/code operand 0x005F6B22: internal DIR32 branch 0x005ED218 matches compiled function-local offset 0x4C28"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58678
 type = "DIR32"
-symbol = "$L62739"
+symbol = "$L62752"
 target = 0x005ED2CB
 evidence = "EFZ.exe original table/code operand 0x005F6B26: internal DIR32 branch 0x005ED2CB matches compiled function-local offset 0x4CDB"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58682
 type = "DIR32"
-symbol = "$L62744"
+symbol = "$L62757"
 target = 0x005ED360
 evidence = "EFZ.exe original table/code operand 0x005F6B2A: internal DIR32 branch 0x005ED360 matches compiled function-local offset 0x4D70"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58686
 type = "DIR32"
-symbol = "$L62752"
+symbol = "$L62765"
 target = 0x005ED458
 evidence = "EFZ.exe original table/code operand 0x005F6B2E: internal DIR32 branch 0x005ED458 matches compiled function-local offset 0x4E68"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58690
 type = "DIR32"
-symbol = "$L62760"
+symbol = "$L62773"
 target = 0x005ED550
 evidence = "EFZ.exe original table/code operand 0x005F6B32: internal DIR32 branch 0x005ED550 matches compiled function-local offset 0x4F60"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58694
 type = "DIR32"
-symbol = "$L62765"
+symbol = "$L62778"
 target = 0x005ED5FF
 evidence = "EFZ.exe original table/code operand 0x005F6B36: internal DIR32 branch 0x005ED5FF matches compiled function-local offset 0x500F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58698
 type = "DIR32"
-symbol = "$L62778"
+symbol = "$L62791"
 target = 0x005ED7AB
 evidence = "EFZ.exe original table/code operand 0x005F6B3A: internal DIR32 branch 0x005ED7AB matches compiled function-local offset 0x51BB"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58702
 type = "DIR32"
-symbol = "$L62791"
+symbol = "$L62804"
 target = 0x005ED957
 evidence = "EFZ.exe original table/code operand 0x005F6B3E: internal DIR32 branch 0x005ED957 matches compiled function-local offset 0x5367"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58706
 type = "DIR32"
-symbol = "$L62804"
+symbol = "$L62817"
 target = 0x005EDB03
 evidence = "EFZ.exe original table/code operand 0x005F6B42: internal DIR32 branch 0x005EDB03 matches compiled function-local offset 0x5513"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58710
 type = "DIR32"
-symbol = "$L62816"
+symbol = "$L62829"
 target = 0x005EDC97
 evidence = "EFZ.exe original table/code operand 0x005F6B46: internal DIR32 branch 0x005EDC97 matches compiled function-local offset 0x56A7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58714
 type = "DIR32"
-symbol = "$L62828"
+symbol = "$L62841"
 target = 0x005EDE2B
 evidence = "EFZ.exe original table/code operand 0x005F6B4A: internal DIR32 branch 0x005EDE2B matches compiled function-local offset 0x583B"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58718
 type = "DIR32"
-symbol = "$L62840"
+symbol = "$L62853"
 target = 0x005EDFBF
 evidence = "EFZ.exe original table/code operand 0x005F6B4E: internal DIR32 branch 0x005EDFBF matches compiled function-local offset 0x59CF"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58722
 type = "DIR32"
-symbol = "$L62846"
+symbol = "$L62859"
 target = 0x005EE0CF
 evidence = "EFZ.exe original table/code operand 0x005F6B52: internal DIR32 branch 0x005EE0CF matches compiled function-local offset 0x5ADF"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58726
 type = "DIR32"
-symbol = "$L62857"
+symbol = "$L62870"
 target = 0x005EE223
 evidence = "EFZ.exe original table/code operand 0x005F6B56: internal DIR32 branch 0x005EE223 matches compiled function-local offset 0x5C33"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58730
 type = "DIR32"
-symbol = "$L62868"
+symbol = "$L62881"
 target = 0x005EE377
 evidence = "EFZ.exe original table/code operand 0x005F6B5A: internal DIR32 branch 0x005EE377 matches compiled function-local offset 0x5D87"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58734
 type = "DIR32"
-symbol = "$L62876"
+symbol = "$L62889"
 target = 0x005EE48B
 evidence = "EFZ.exe original table/code operand 0x005F6B5E: internal DIR32 branch 0x005EE48B matches compiled function-local offset 0x5E9B"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58738
 type = "DIR32"
-symbol = "$L62890"
+symbol = "$L62903"
 target = 0x005EE676
 evidence = "EFZ.exe original table/code operand 0x005F6B62: internal DIR32 branch 0x005EE676 matches compiled function-local offset 0x6086"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58742
 type = "DIR32"
-symbol = "$L62903"
+symbol = "$L62916"
 target = 0x005EE867
 evidence = "EFZ.exe original table/code operand 0x005F6B66: internal DIR32 branch 0x005EE867 matches compiled function-local offset 0x6277"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58746
 type = "DIR32"
-symbol = "$L62911"
+symbol = "$L62924"
 target = 0x005EE9B2
 evidence = "EFZ.exe original table/code operand 0x005F6B6A: internal DIR32 branch 0x005EE9B2 matches compiled function-local offset 0x63C2"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58750
 type = "DIR32"
-symbol = "$L62922"
+symbol = "$L62935"
 target = 0x005EEBB9
 evidence = "EFZ.exe original table/code operand 0x005F6B6E: internal DIR32 branch 0x005EEBB9 matches compiled function-local offset 0x65C9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58754
 type = "DIR32"
-symbol = "$L62937"
+symbol = "$L62950"
 target = 0x005EEDC4
 evidence = "EFZ.exe original table/code operand 0x005F6B72: internal DIR32 branch 0x005EEDC4 matches compiled function-local offset 0x67D4"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58758
 type = "DIR32"
-symbol = "$L62952"
+symbol = "$L62965"
 target = 0x005EEFAC
 evidence = "EFZ.exe original table/code operand 0x005F6B76: internal DIR32 branch 0x005EEFAC matches compiled function-local offset 0x69BC"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58762
 type = "DIR32"
-symbol = "$L62961"
+symbol = "$L62974"
 target = 0x005EF0F6
 evidence = "EFZ.exe original table/code operand 0x005F6B7A: internal DIR32 branch 0x005EF0F6 matches compiled function-local offset 0x6B06"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58766
 type = "DIR32"
-symbol = "$L62970"
+symbol = "$L62983"
 target = 0x005EF240
 evidence = "EFZ.exe original table/code operand 0x005F6B7E: internal DIR32 branch 0x005EF240 matches compiled function-local offset 0x6C50"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58770
 type = "DIR32"
-symbol = "$L62982"
+symbol = "$L62995"
 target = 0x005EF409
 evidence = "EFZ.exe original table/code operand 0x005F6B82: internal DIR32 branch 0x005EF409 matches compiled function-local offset 0x6E19"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58774
 type = "DIR32"
-symbol = "$L62996"
+symbol = "$L63009"
 target = 0x005EF5E8
 evidence = "EFZ.exe original table/code operand 0x005F6B86: internal DIR32 branch 0x005EF5E8 matches compiled function-local offset 0x6FF8"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58778
 type = "DIR32"
-symbol = "$L63005"
+symbol = "$L63018"
 target = 0x005EF70A
 evidence = "EFZ.exe original table/code operand 0x005F6B8A: internal DIR32 branch 0x005EF70A matches compiled function-local offset 0x711A"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58782
 type = "DIR32"
-symbol = "$L63014"
+symbol = "$L63027"
 target = 0x005EF87C
 evidence = "EFZ.exe original table/code operand 0x005F6B8E: internal DIR32 branch 0x005EF87C matches compiled function-local offset 0x728C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58786
 type = "DIR32"
-symbol = "$L63030"
+symbol = "$L63043"
 target = 0x005EFA4F
 evidence = "EFZ.exe original table/code operand 0x005F6B92: internal DIR32 branch 0x005EFA4F matches compiled function-local offset 0x745F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58790
 type = "DIR32"
-symbol = "$L63046"
+symbol = "$L63059"
 target = 0x005EFC22
 evidence = "EFZ.exe original table/code operand 0x005F6B96: internal DIR32 branch 0x005EFC22 matches compiled function-local offset 0x7632"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58794
 type = "DIR32"
-symbol = "$L63064"
+symbol = "$L63077"
 target = 0x005EFDDF
 evidence = "EFZ.exe original table/code operand 0x005F6B9A: internal DIR32 branch 0x005EFDDF matches compiled function-local offset 0x77EF"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58798
 type = "DIR32"
-symbol = "$L63089"
+symbol = "$L63102"
 target = 0x005F008D
 evidence = "EFZ.exe original table/code operand 0x005F6B9E: internal DIR32 branch 0x005F008D matches compiled function-local offset 0x7A9D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58802
 type = "DIR32"
-symbol = "$L63106"
+symbol = "$L63119"
 target = 0x005F0278
 evidence = "EFZ.exe original table/code operand 0x005F6BA2: internal DIR32 branch 0x005F0278 matches compiled function-local offset 0x7C88"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58806
 type = "DIR32"
-symbol = "$L63123"
+symbol = "$L63136"
 target = 0x005F0463
 evidence = "EFZ.exe original table/code operand 0x005F6BA6: internal DIR32 branch 0x005F0463 matches compiled function-local offset 0x7E73"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58810
 type = "DIR32"
-symbol = "$L63141"
+symbol = "$L63154"
 target = 0x005F0669
 evidence = "EFZ.exe original table/code operand 0x005F6BAA: internal DIR32 branch 0x005F0669 matches compiled function-local offset 0x8079"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58814
 type = "DIR32"
-symbol = "$L63153"
+symbol = "$L63166"
 target = 0x005F0840
 evidence = "EFZ.exe original table/code operand 0x005F6BAE: internal DIR32 branch 0x005F0840 matches compiled function-local offset 0x8250"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58818
 type = "DIR32"
-symbol = "$L63165"
+symbol = "$L63178"
 target = 0x005F0A17
 evidence = "EFZ.exe original table/code operand 0x005F6BB2: internal DIR32 branch 0x005F0A17 matches compiled function-local offset 0x8427"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58822
 type = "DIR32"
-symbol = "$L63185"
+symbol = "$L63198"
 target = 0x005F0CB7
 evidence = "EFZ.exe original table/code operand 0x005F6BB6: internal DIR32 branch 0x005F0CB7 matches compiled function-local offset 0x86C7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58826
 type = "DIR32"
-symbol = "$L63195"
+symbol = "$L63208"
 target = 0x005F0E5C
 evidence = "EFZ.exe original table/code operand 0x005F6BBA: internal DIR32 branch 0x005F0E5C matches compiled function-local offset 0x886C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58830
 type = "DIR32"
-symbol = "$L63214"
+symbol = "$L63227"
 target = 0x005F10A0
 evidence = "EFZ.exe original table/code operand 0x005F6BBE: internal DIR32 branch 0x005F10A0 matches compiled function-local offset 0x8AB0"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58834
 type = "DIR32"
-symbol = "$L63226"
+symbol = "$L63239"
 target = 0x005F1265
 evidence = "EFZ.exe original table/code operand 0x005F6BC2: internal DIR32 branch 0x005F1265 matches compiled function-local offset 0x8C75"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58838
 type = "DIR32"
-symbol = "$L63230"
+symbol = "$L63243"
 target = 0x005F1321
 evidence = "EFZ.exe original table/code operand 0x005F6BC6: internal DIR32 branch 0x005F1321 matches compiled function-local offset 0x8D31"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58842
 type = "DIR32"
-symbol = "$L63239"
+symbol = "$L63252"
 target = 0x005F1440
 evidence = "EFZ.exe original table/code operand 0x005F6BCA: internal DIR32 branch 0x005F1440 matches compiled function-local offset 0x8E50"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58846
 type = "DIR32"
-symbol = "$L63250"
+symbol = "$L63263"
 target = 0x005F160E
 evidence = "EFZ.exe original table/code operand 0x005F6BCE: internal DIR32 branch 0x005F160E matches compiled function-local offset 0x901E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58850
 type = "DIR32"
-symbol = "$L63262"
+symbol = "$L63275"
 target = 0x005F182F
 evidence = "EFZ.exe original table/code operand 0x005F6BD2: internal DIR32 branch 0x005F182F matches compiled function-local offset 0x923F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58854
 type = "DIR32"
-symbol = "$L63271"
+symbol = "$L63284"
 target = 0x005F1975
 evidence = "EFZ.exe original table/code operand 0x005F6BD6: internal DIR32 branch 0x005F1975 matches compiled function-local offset 0x9385"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58858
 type = "DIR32"
-symbol = "$L63280"
+symbol = "$L63293"
 target = 0x005F1ABB
 evidence = "EFZ.exe original table/code operand 0x005F6BDA: internal DIR32 branch 0x005F1ABB matches compiled function-local offset 0x94CB"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58862
 type = "DIR32"
-symbol = "$L63291"
+symbol = "$L63304"
 target = 0x005F1C6F
 evidence = "EFZ.exe original table/code operand 0x005F6BDE: internal DIR32 branch 0x005F1C6F matches compiled function-local offset 0x967F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58866
 type = "DIR32"
-symbol = "$L63300"
+symbol = "$L63313"
 target = 0x005F1DB5
 evidence = "EFZ.exe original table/code operand 0x005F6BE2: internal DIR32 branch 0x005F1DB5 matches compiled function-local offset 0x97C5"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58870
 type = "DIR32"
-symbol = "$L63309"
+symbol = "$L63322"
 target = 0x005F1EFB
 evidence = "EFZ.exe original table/code operand 0x005F6BE6: internal DIR32 branch 0x005F1EFB matches compiled function-local offset 0x990B"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58874
 type = "DIR32"
-symbol = "$L63321"
+symbol = "$L63334"
 target = 0x005F2090
 evidence = "EFZ.exe original table/code operand 0x005F6BEA: internal DIR32 branch 0x005F2090 matches compiled function-local offset 0x9AA0"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58878
 type = "DIR32"
-symbol = "$L63330"
+symbol = "$L63343"
 target = 0x005F223A
 evidence = "EFZ.exe original table/code operand 0x005F6BEE: internal DIR32 branch 0x005F223A matches compiled function-local offset 0x9C4A"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58882
 type = "DIR32"
-symbol = "$L63348"
+symbol = "$L63361"
 target = 0x005F2562
 evidence = "EFZ.exe original table/code operand 0x005F6BF2: internal DIR32 branch 0x005F2562 matches compiled function-local offset 0x9F72"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58886
 type = "DIR32"
-symbol = "$L63360"
+symbol = "$L63373"
 target = 0x005F26A9
 evidence = "EFZ.exe original table/code operand 0x005F6BF6: internal DIR32 branch 0x005F26A9 matches compiled function-local offset 0xA0B9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58890
 type = "DIR32"
-symbol = "$L63372"
+symbol = "$L63385"
 target = 0x005F27F0
 evidence = "EFZ.exe original table/code operand 0x005F6BFA: internal DIR32 branch 0x005F27F0 matches compiled function-local offset 0xA200"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58894
 type = "DIR32"
-symbol = "$L63397"
+symbol = "$L63410"
 target = 0x005F2A5D
 evidence = "EFZ.exe original table/code operand 0x005F6BFE: internal DIR32 branch 0x005F2A5D matches compiled function-local offset 0xA46D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58898
 type = "DIR32"
-symbol = "$L63409"
+symbol = "$L63422"
 target = 0x005F2BA1
 evidence = "EFZ.exe original table/code operand 0x005F6C02: internal DIR32 branch 0x005F2BA1 matches compiled function-local offset 0xA5B1"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58902
 type = "DIR32"
-symbol = "$L63421"
+symbol = "$L63434"
 target = 0x005F2CE5
 evidence = "EFZ.exe original table/code operand 0x005F6C06: internal DIR32 branch 0x005F2CE5 matches compiled function-local offset 0xA6F5"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58906
 type = "DIR32"
-symbol = "$L63439"
+symbol = "$L63452"
 target = 0x005F2EC9
 evidence = "EFZ.exe original table/code operand 0x005F6C0A: internal DIR32 branch 0x005F2EC9 matches compiled function-local offset 0xA8D9"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58910
 type = "DIR32"
-symbol = "$L63452"
+symbol = "$L63465"
 target = 0x005F30D8
 evidence = "EFZ.exe original table/code operand 0x005F6C0E: internal DIR32 branch 0x005F30D8 matches compiled function-local offset 0xAAE8"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58914
 type = "DIR32"
-symbol = "$L63465"
+symbol = "$L63478"
 target = 0x005F32E7
 evidence = "EFZ.exe original table/code operand 0x005F6C12: internal DIR32 branch 0x005F32E7 matches compiled function-local offset 0xACF7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58918
 type = "DIR32"
-symbol = "$L63490"
+symbol = "$L63503"
 target = 0x005F36BF
 evidence = "EFZ.exe original table/code operand 0x005F6C16: internal DIR32 branch 0x005F36BF matches compiled function-local offset 0xB0CF"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58922
 type = "DIR32"
-symbol = "$L63507"
+symbol = "$L63520"
 target = 0x005F386E
 evidence = "EFZ.exe original table/code operand 0x005F6C1A: internal DIR32 branch 0x005F386E matches compiled function-local offset 0xB27E"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58926
 type = "DIR32"
-symbol = "$L63524"
+symbol = "$L63537"
 target = 0x005F3A20
 evidence = "EFZ.exe original table/code operand 0x005F6C1E: internal DIR32 branch 0x005F3A20 matches compiled function-local offset 0xB430"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58930
 type = "DIR32"
-symbol = "$L63547"
+symbol = "$L63560"
 target = 0x005F3C6F
 evidence = "EFZ.exe original table/code operand 0x005F6C22: internal DIR32 branch 0x005F3C6F matches compiled function-local offset 0xB67F"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58934
 type = "DIR32"
-symbol = "$L63559"
+symbol = "$L63572"
 target = 0x005F3DC5
 evidence = "EFZ.exe original table/code operand 0x005F6C26: internal DIR32 branch 0x005F3DC5 matches compiled function-local offset 0xB7D5"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58938
 type = "DIR32"
-symbol = "$L63584"
+symbol = "$L63597"
 target = 0x005F405D
 evidence = "EFZ.exe original table/code operand 0x005F6C2A: internal DIR32 branch 0x005F405D matches compiled function-local offset 0xBA6D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58942
 type = "DIR32"
-symbol = "$L63609"
+symbol = "$L63622"
 target = 0x005F42F5
 evidence = "EFZ.exe original table/code operand 0x005F6C2E: internal DIR32 branch 0x005F42F5 matches compiled function-local offset 0xBD05"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58946
 type = "DIR32"
-symbol = "$L63634"
+symbol = "$L63647"
 target = 0x005F458D
 evidence = "EFZ.exe original table/code operand 0x005F6C32: internal DIR32 branch 0x005F458D matches compiled function-local offset 0xBF9D"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58950
 type = "DIR32"
-symbol = "$L63702"
+symbol = "$L63715"
 target = 0x005F4C63
 evidence = "EFZ.exe original table/code operand 0x005F6C36: internal DIR32 branch 0x005F4C63 matches compiled function-local offset 0xC673"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58954
 type = "DIR32"
-symbol = "$L63770"
+symbol = "$L63783"
 target = 0x005F5341
 evidence = "EFZ.exe original table/code operand 0x005F6C3A: internal DIR32 branch 0x005F5341 matches compiled function-local offset 0xCD51"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58958
 type = "DIR32"
-symbol = "$L63839"
+symbol = "$L63852"
 target = 0x005F5A42
 evidence = "EFZ.exe original table/code operand 0x005F6C3E: internal DIR32 branch 0x005F5A42 matches compiled function-local offset 0xD452"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58962
 type = "DIR32"
-symbol = "$L63870"
+symbol = "$L63883"
 target = 0x005F5DE3
 evidence = "EFZ.exe original table/code operand 0x005F6C42: internal DIR32 branch 0x005F5DE3 matches compiled function-local offset 0xD7F3"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58966
 type = "DIR32"
-symbol = "$L63903"
+symbol = "$L63916"
 target = 0x005F61E7
 evidence = "EFZ.exe original table/code operand 0x005F6C46: internal DIR32 branch 0x005F61E7 matches compiled function-local offset 0xDBF7"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58970
 type = "DIR32"
-symbol = "$L63937"
+symbol = "$L63950"
 target = 0x005F662C
 evidence = "EFZ.exe original table/code operand 0x005F6C4A: internal DIR32 branch 0x005F662C matches compiled function-local offset 0xE03C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58974
 type = "DIR32"
-symbol = "$L63962"
+symbol = "$L63975"
 target = 0x005F698C
 evidence = "EFZ.exe original table/code operand 0x005F6C4E: internal DIR32 branch 0x005F698C matches compiled function-local offset 0xE39C"
 
 [[units.character-03-state-slot06.relocations]]
 offset = 58978
 type = "DIR32"
-symbol = "$L62208"
+symbol = "$L62221"
 target = 0x005E869D
 evidence = "EFZ.exe original table/code operand 0x005F6C52: internal DIR32 branch 0x005E869D matches compiled function-local offset 0xAD"
 
