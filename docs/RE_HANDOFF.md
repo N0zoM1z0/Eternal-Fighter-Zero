@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **348 exact functions**, **1,067,929 code bytes**,
-  **7,655 associated table bytes**, 380 reviewed complete boundaries and 375
+  ledgers currently count **350 exact functions**, **1,068,938 code bytes**,
+  **7,655 associated table bytes**, 382 reviewed complete boundaries and 377
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -393,6 +393,30 @@ at the opponent X load immediately before repeated CRT `rand()` calls;
 no byte padding or guessed relocations were accepted. Original target
 proof: `docs/evidence/ikumi-slot08-boundary-review.json`; focused
 reproduction instructions: `workbench/ikumi-effects/README.md`.
+
+## Ikumi large alternate animation parser + resource wrapper accepted Exact
+
+`Character14::LoadAlternatePatterns` at `0x006A5EB0` is now
+**949/949-byte strict Exact with all 39 reviewed relocations**,
+natural C++ source `src/Character14Loader.cpp`, selected unit
+`character-14-extra-patterns`. It reads `ikumi\ikumi2.pat`, decodes
+frame attack data plus rectangular hitboxes and preserves both x87
+100/-100 float scale constants. Its original unpadded boundary ends
+at `0x006A6265`, after which eleven alignment bytes precede reset.
+Public proof: `docs/evidence/ikumi-extra-patterns-exact.json`.
+
+The caller `Character14::LoadResources` at `0x006A5E70` is separately
+**60/60-byte Exact with 2/2 original calls**, `character-14-load-resources`
+in the same C++ source. It invokes the new parser, base loading and
+saves both current animation-bank pointers. Public proof:
+`docs/evidence/ikumi-load-resources-exact.json`. All ten directly
+affected selected consumers of the changed `CharacterViews.h` were
+recompiled: scene creation, scene loading, full Makoto Slot06 and
+seven previously accepted Ikumi owners all returned complete Exact.
+Compiler-local labels in the three large functions shifted +1
+with unchanged canonical relocation positions/targets. Those receipts
+were refreshed and no whole cold replay was run. The independent
+1,592-byte Ikumi Slot08 effects boss remains open.
 
 ## Ikumi mode-aware state initializer now fully Exact
 

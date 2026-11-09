@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "authority": "complete selected native VC7.1 COFF with canonical original target and all original-bound relocations",
+  "method": "Complete original 60-byte resource-loading wrapper: call the independently Exact 949-byte LoadAlternatePatterns at 0x6A5EB0, call the reviewed base Secondary::LoadResources at 0x410B70, then save original current pattern and sequence bank pointers. Exactly two target-bound direct call relocations, no masks or cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 60,
+      "matched_bytes": 60,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 6971056,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadAlternatePatterns@Character14@@QAEXXZ",
+          "evidence": "EFZ.exe 0x006A5E7B Original symbol address independently decoded from original PE call/data operand 0x006A5EB0; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 19,
+          "target": 4262768,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?LoadResources@Secondary@@UAEXXZ",
+          "evidence": "EFZ.exe 0x006A5E83 Original symbol address independently decoded from original PE call/data operand 0x00410B70; original relocation type REL32 and full operand checked",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "16bd45acf1e4cc1c6d4b1e46c87f973925024d0c4077bfdb7e95764a6849aadd",
+      "target_extent_sha256": "16bd45acf1e4cc1c6d4b1e46c87f973925024d0c4077bfdb7e95764a6849aadd",
+      "unit": "character-14-load-resources",
+      "symbol": "?LoadResources@Character14@@UAEXXZ",
+      "target_address": "0x006A5E70",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a6c6028478a150e48222949c16eab8cea4d5c8db1f851340fd98aa3c3eaf71ad",
+      "object_sha256": "7833aa5039d0070ff37989d2d452dd0ced6a9230e06a86ae6bf20a07469aa79d",
+      "source_sha256": "97b3c06deecdde358f24c28f466784a34b415fcf51b2d8f1266b6fc085ddcfad",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "68524761fcc639894553c006afc681e3ecceeaf7675e6a08ed37528c9ef57b16",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b631f964ee1dc5361192a096eb001d33733ce196e25c21db0431fce61d738473",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "38898bce0cdd1b4178f2be47b7ebd4b82479aab785fa04149c889e632a285862",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

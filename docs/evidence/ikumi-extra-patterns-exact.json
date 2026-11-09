@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "authority": "complete selected native VC7.1 COFF with canonical original target and all original-bound relocations",
+  "method": "Complete original 949-byte Ikumi alternate pattern reader, canonical path ikumi\\ikumi2.pat, 505-element sequence/pattern banks, 23 ReadInt and 4 ReadShort/5 binary rectangle reads and both IEEE-754 100/-100 float operands. All 39 original relocation offsets, symbols and concrete destinations verified; no masks or cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 949,
+      "matched_bytes": 949,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 12,
+          "target": 7900512,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG62324",
+          "evidence": "EFZ.exe 0x006A5EBC Original Ikumi alternate-pattern filename NUL literal 0x00788D60; original relocation type DIR32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 20,
+          "target": 4227888,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0PatternReader@@QAE@PBDH@Z",
+          "evidence": "EFZ.exe 0x006A5EC4 Original symbol address independently decoded from original PE call/data operand 0x00408330; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 28,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5ECC Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 69,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5EF5 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 80,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5F00 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5F18 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 129,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5F31 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 187,
+          "target": 4270800,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@SecondarySequence@@QAEXH@Z",
+          "evidence": "EFZ.exe 0x006A5F6B Original symbol address independently decoded from original PE call/data operand 0x00412AD0; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 211,
+          "target": 4227792,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Allocate@PatternSequence@@QAEXH@Z",
+          "evidence": "EFZ.exe 0x006A5F83 Original symbol address independently decoded from original PE call/data operand 0x004082D0; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 302,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5FDE Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 322,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A5FF2 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 337,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6001 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 352,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6010 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 367,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A601F Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 382,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A602E Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 397,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A603D Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 415,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A604F Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 433,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6061 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 451,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6073 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 469,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6085 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 487,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6097 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 505,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A60A9 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 523,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A60BB Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 541,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "EFZ.exe 0x006A60CD Original symbol address independently decoded from original PE call/data operand 0x00405720; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 574,
+          "target": 7896156,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42c80000",
+          "evidence": "EFZ.exe 0x006A60EE Original symbol address independently decoded from original PE call/data operand 0x00787C5C; original relocation type DIR32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 591,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "EFZ.exe 0x006A60FF Original symbol address independently decoded from original PE call/data operand 0x00405720; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 624,
+          "target": 7896152,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c2c80000",
+          "evidence": "EFZ.exe 0x006A6120 Original symbol address independently decoded from original PE call/data operand 0x00787C58; original relocation type DIR32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 641,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "EFZ.exe 0x006A6131 Original symbol address independently decoded from original PE call/data operand 0x00405720; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 658,
+          "target": 4216608,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadShort@PatternReader@@QAEFXZ",
+          "evidence": "EFZ.exe 0x006A6142 Original symbol address independently decoded from original PE call/data operand 0x00405720; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 675,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6153 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 693,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6165 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 711,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A6177 Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 734,
+          "target": 4216576,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ReadInt@PatternReader@@QAEHXZ",
+          "evidence": "EFZ.exe 0x006A618E Original symbol address independently decoded from original PE call/data operand 0x00405700; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 764,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "EFZ.exe 0x006A61AC Original symbol address independently decoded from original PE call/data operand 0x00405600; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 808,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "EFZ.exe 0x006A61D8 Original symbol address independently decoded from original PE call/data operand 0x00405600; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 827,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "EFZ.exe 0x006A61EB Original symbol address independently decoded from original PE call/data operand 0x00405600; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 871,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "EFZ.exe 0x006A6217 Original symbol address independently decoded from original PE call/data operand 0x00405600; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 921,
+          "target": 4216320,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?Read@PatternReader@@QAEHPAXH@Z",
+          "evidence": "EFZ.exe 0x006A6249 Original symbol address independently decoded from original PE call/data operand 0x00405600; original relocation type REL32 and full operand checked",
+          "addend": 0
+        },
+        {
+          "offset": 941,
+          "target": 4227936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??1PatternReader@@QAE@XZ",
+          "evidence": "EFZ.exe 0x006A625D Original symbol address independently decoded from original PE call/data operand 0x00408360; original relocation type REL32 and full operand checked",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "71a7bbfd6e5f5b04b5eea54ec3a1cce6d3c134d1d33178b41200fe60619399ed",
+      "target_extent_sha256": "71a7bbfd6e5f5b04b5eea54ec3a1cce6d3c134d1d33178b41200fe60619399ed",
+      "unit": "character-14-extra-patterns",
+      "symbol": "?LoadAlternatePatterns@Character14@@QAEXXZ",
+      "target_address": "0x006A5EB0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "a6c6028478a150e48222949c16eab8cea4d5c8db1f851340fd98aa3c3eaf71ad",
+      "object_sha256": "994d12390a046695cc1d3edf4f860dc5bdf575561de19409720e3fa9a7e065eb",
+      "source_sha256": "97b3c06deecdde358f24c28f466784a34b415fcf51b2d8f1266b6fc085ddcfad",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "68524761fcc639894553c006afc681e3ecceeaf7675e6a08ed37528c9ef57b16",
+        "src/PatternReader.h": "51675fe8ccee73017802ecccb44e84cb355228a3e713eb1d691320fe567fd342"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b631f964ee1dc5361192a096eb001d33733ce196e25c21db0431fce61d738473",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "bc43621073f5256f4a57465b83480290c93438936fb4bff7922e6c4a4c624f5f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

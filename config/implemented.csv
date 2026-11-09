@@ -347,3 +347,5 @@ address,name,source,symbol,status,evidence
 0x006A6310,Character14::Slot03,src/Character14Delegates.cpp,?Slot03@Character14@@UAEXXZ,complete,docs/evidence/ikumi-delegates-exact.json
 0x006AB7B0,Character14::EmitLocalEffect,src/Character14Delegates.cpp,?EmitLocalEffect@Character14@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/ikumi-delegates-exact.json
 0x006A5C50,Character14::InitializeState,src/Character14Initialize.cpp,?InitializeState@Character14@@UAEXXZ,complete,docs/evidence/ikumi-initialize-state-exact.json
+0x006A5EB0,Character14::LoadAlternatePatterns,src/Character14Loader.cpp,?LoadAlternatePatterns@Character14@@QAEXXZ,complete,docs/evidence/ikumi-extra-patterns-exact.json
+0x006A5E70,Character14::LoadResources,src/Character14Loader.cpp,?LoadResources@Character14@@UAEXXZ,complete,docs/evidence/ikumi-load-resources-exact.json

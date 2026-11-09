@@ -1954,6 +1954,50 @@ blindly adding a float sum can make lengths coincide while leaving
 incorrect FP instructions. The full body has not yet achieved strict
 Exact and must not be included in the matches ledger.
 
+### Ikumi exact alternate pattern resource loader (2026-11-09)
+
+Ikumi's extra animation-bank file reader is a substantial independent
+**949/949-byte strict Exact** function,
+`Character14::LoadAlternatePatterns` at `0x006A5EB0`, reconstructed
+entirely in natural C++ in `src/Character14Loader.cpp`. The original
+entry is reached by Ikumi's vtable slot-11 `LoadResources` override;
+it reads the original NUL-terminated resource path
+`ikumi\ikumi2.pat` into the two existing 505-element pattern and
+secondary-sequence banks. It decodes each frame's timing and texture
+fields, attack/stun/guard parameters, two x87 float scaling values,
+all body/hurt/attack rectangles and their original loop order, using
+`PatternReader`. All **39 original relocation sites** were explicitly
+bound and compared without masks, across ten distinct symbols:
+`PatternReader` construction/destruction, ReadInt/ReadShort/Read,
+two Allocate helpers, the canonical path, and IEEE-754 `100.0f`
+/ `-100.0f` at `0x787C5C` / `0x787C58`. The compiled full function
+matches every original byte through its unpadded RET at `0x006A6265`;
+the following eleven `CC` bytes belong to alignment before reset.
+Receipt: `docs/evidence/ikumi-extra-patterns-exact.json`.
+
+The actual vtable slot-11 `Character14::LoadResources` at
+`0x006A5E70` is another independently **60/60-byte Exact** natural
+method in the same source file. It calls the 949-byte parser, the
+already Exact base `Secondary::LoadResources` at `0x410B70`, then
+saves the current pattern and sequence bank pointers at +0x346C/
++0x3470, in original order. Both original direct-call relocations
+are bound: `docs/evidence/ikumi-load-resources-exact.json`.
+The 60-byte function ends before four `CC` padding bytes that precede
+the 949-byte helper. These are two **separate** original owners,
+not one merged 1,009-byte function.
+
+Adding only the nonvirtual `LoadAlternatePatterns` declaration to the
+original-size Character14 view did not change object layout, but it
+did renumber compiler-local labels. Ten actual affected accepted
+units were selectively rebuilt and re-checked: the two creation
+functions (3495/97, 2651/76), full Makoto Slot06 (59292/1386), and
+seven previously accepted Ikumi source owners. The creation/Makoto
+function-local symbols shifted +1 in 25/26/127 occurrences; all
+original target destinations and all function/table bytes remained
+strict Exact. The existing public receipts were refreshed from those
+actual builds rather than assuming earlier evidence still applied.
+Unrelated older proof-freshness debt and full game runtime remain open.
+
 ### Ikumi mode-aware InitializeState: complete 368-byte exact owner (2026-11-09)
 
 Ikumi's original vtable slot 12 at `0x788DA4` points to the real

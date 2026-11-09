@@ -287,6 +287,7 @@ class Character14 : public Secondary {
 public:
     Character14(Secondary **, Context *, Video *, Input *, Audio *, char);
     void SetAlternateMode(char);
+    void LoadAlternatePatterns();
     virtual void ResetPose();
     virtual void Slot01();
     virtual void Slot02();

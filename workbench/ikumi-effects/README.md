@@ -5,6 +5,9 @@ The correct owner is `Character14::Slot08`, not `Slot07`: the canonical
 Character14 vtable begins at `0x00788D74`, and its **slot 8 pointer** at
 `0x00788D94` points to original function `0x006AB060`. This slot was
 independently verified rather than inherited from a previous guess.
+The alternate pattern-bank file reader and resource wrapper are now
+independently strict Exact in `src/Character14Loader.cpp`; those
+acceptances do not cover this still-open effect-state boss.
 The target body owns **1,592 bytes** (`[0x006AB060,0x006AB698)`),
 ending in `RET` immediately before eight `CC` bytes and the separately
 Exact `Character14::SetAlternateMode` at `0x006AB6A0`.
