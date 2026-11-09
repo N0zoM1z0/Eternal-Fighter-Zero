@@ -1,7 +1,8 @@
 // First natural-C++ cases of the still-open Makoto state dispatcher.
 //
 // This is a compileable reconstruction WORKBENCH, not linked into the accepted
-// game sources. Cases 1-9, 13-16, 47, 50-77, 81-87, 96-99, 150-158, 161-171, 178, 180 and 200-214 220-221 and 230-235 and 248-262 and 300-310 are implemented so far.
+// game sources. All 124 explicit animation-ID arms and the true default
+// are implemented, but code generation and jump table targets are not Exact.
 // The canonical owner's full codegen, jump/selector tables and strict comparison remain open.
 #include "../../src/CharacterViews.h"
 
@@ -20,24 +21,63 @@ void Character03::Slot06()
     // The original selector at 0x005F6C56 is an animation-ID-to-case map.
     // Do not use Ghidra's normalized 0..124 case numbers as animation IDs.
     switch (field0008) {
+    default: // Original block 0x005E869D: unmapped animation IDs
+        // The selector table sends 186 IDs here; it is not a no-op.
+        velocityX = 0.0;
+        velocityY = 0.0;
+        dashMomentumFlag = 0;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
+
     case 1: // Original block 0x005E8718
         dashMomentumFlag = 0;
         velocityX = 0.7;
         velocityY = 0.0;
-        break;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
 
     case 2: // Original block 0x005E8793
         dashMomentumFlag = 0;
         velocityX = -0.7;
         velocityY = 0.0;
-        break;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
 
     case 3: // Original block 0x005E880E
         velocityX = 0.0;
         velocityY = 0.0;
         dashMomentumFlag = 0;
         FaceOpponent();
-        break;
+        ++field000c;
+        if (field000c >= frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        return;
 
     case 4: // Original block 0x005E8891: jump with optional dash follow-through
         if (field000a == 0 && field000c == 0) {
@@ -5112,28 +5152,5 @@ void Character03::Slot06()
         }
         return;
 
-    default: // Original block 0x005E869D: unmapped animation IDs
-        // The selector table sends 186 IDs here; it is not a no-op.
-        velocityX = 0.0;
-        velocityY = 0.0;
-        dashMomentumFlag = 0;
-        ++field000c;
-        if (field000c >= frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a >= animationFrameCount) {
-                field000a = 0;
-            }
-        }
-        return;
-    }
-
-    // The first three reviewed cases share the same frame-advance tail:
-    // target 0x005E873A..0x005E878E (and equivalent case 2/3 tails).
-    ++field000c;
-    if (field000c >= frameDuration) {
-        field000c = 0;
-        ++field000a;
-        if (field000a >= animationFrameCount) field000a = 0;
     }
 }

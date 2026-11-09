@@ -1138,6 +1138,22 @@ work, not the original behavior for valid unimplemented animations.
   Code-generation equality and both source-owned tables are still
   **open**; do not accept the whole owner as Exact yet.
 
+- Natural C++ switch layout was improved after complete case recovery.
+  The original selector's default target is at 0x005E869D, *before*
+  case 1; the earlier draft had default last and cases 1–3 emitted
+  a single shared `break`/timer tail. Moving default to the first
+  source label and giving 1/2/3 their independent explicit unsigned
+  timer advancement and `return` (as the original blocks actually
+  do) made VC7.1 emit the **first 15 jump-table destinations at the
+  exact target-relative addresses**, including the true default.
+  The complete generated 310-byte selector table is now **310/310
+  identical** to original EFZ.exe, with 125 source-local jump-table
+  relocations. Full emitted owner size improved from 59,104 to
+  **59,266 bytes**, just 26 short of the canonical 59,292 owned
+  bytes. These are meaningful structural advances, *not* a strict
+  complete COFF match: function stack frame/relocations and other
+  code still differ, so no Exact credit is taken.
+
 - For these cases, increment field000c, wrapping to zero and advancing
   field000a once the frame's duration is reached, then wrap the frame index
   at the animation's frame count. These are unsigned 16-bit members in the
