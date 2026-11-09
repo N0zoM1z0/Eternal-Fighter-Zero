@@ -151,26 +151,40 @@ int Video::DrawSurface(SurfaceRect destination, IUnknown *surface,
     int width = destination.right - destination.left;
     int height = destination.bottom - destination.top;
 
+    // Advance the locked pixel pointers one pitch per scanline, as in the
+    // original's backwards-indexed pixel loops.
     if (colorKey == 0) {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                destinationPixels[y * destinationPitch + x] = sourcePixels[y * sourcePitch + x];
-            }
-        }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                destinationPixels[x] = sourcePixels[x];
+            } while (--x >= 0);
+            sourcePixels += sourcePitch;
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     } else if (flip == 0) {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                unsigned char pixel = sourcePixels[y * sourcePitch + x];
-                if (pixel != colorKey) destinationPixels[y * destinationPitch + x] = pixel;
-            }
-        }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                unsigned char pixel = sourcePixels[x];
+                if (pixel != colorKey) destinationPixels[x] = pixel;
+            } while (--x >= 0);
+            sourcePixels += sourcePitch;
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     } else {
-        for (int y = 0; y < height; ++y) {
-            for (int x = width - 1; x >= 0; --x) {
-                unsigned char pixel = sourcePixels[y * sourcePitch + (width - 1 - x)];
-                if (pixel != colorKey) destinationPixels[y * destinationPitch + x] = pixel;
-            }
-        }
+        int rows = height - 1;
+        do {
+            int x = width - 1;
+            do {
+                unsigned char pixel = sourcePixels[width - 1 - x];
+                if (pixel != colorKey) destinationPixels[x] = pixel;
+            } while (--x >= 0);
+            sourcePixels += sourcePitch;
+            destinationPixels += destinationPitch;
+        } while (--rows >= 0);
     }
 
     backSurface->Unlock(destinationDescription.lpSurface);
