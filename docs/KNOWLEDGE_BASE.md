@@ -2980,56 +2980,48 @@ runtime behavior remain open.
 
 <a id="sayuri-slot05-cpu-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot05: reviewed 7,851-byte CPU boss prefix
+## Sayuri Character09 Slot05: reviewed 8,534-byte CPU boss prefix
 
-The original Character09 virtual Slot05 is grounded
-by vtable entry 0x0078814C -> 0x0044AB30. The
-full canonical code extent [0x0044AB30,0x0044DB5A)
-has 12,330 bytes, followed by six CC alignment
-bytes, SHA-256:
+Original Character09 vtable entry 0x0078814C points to
+0x0044AB30; the complete range [0x0044AB30,0x0044DB5A)
+is 12,330 code bytes followed by six CC alignment bytes.
+Full original SHA-256:
 359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
-This is boundary and ownership evidence,
-not full-owner Exact codegen.
+Ownership/boundary is reviewed; the whole owner is not Exact yet.
 
-The natural C++ workbench
-workbench/sayuri-cpu/Character09Cpu.cpp
-currently covers [0x0044AB30,0x0044C9DB),
-**7,851 original bytes / 1,997 instructions**,
-prefix SHA-256:
-62d89b2cff402fe1d36b0b4497883d5a611bee887871e39b370c824826e206b0.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates
-7,844 bytes / 1,999 instructions including a
-temporary epilogue. Of 1,996 comparable
-original body instructions, **1,995 match**
-after normalizing calls, jump targets and
-original literal addresses. Incomplete stack
-0xC4 versus target 0xD8 is the remaining
-form difference. Two original near JMPs shrink
-because the distant shared exit is missing.
+The natural C++ source workbench/sayuri-cpu/Character09Cpu.cpp
+reconstructs [0x0044AB30,0x0044CC86), **8,534
+original bytes / 2,157 instructions**, prefix SHA-256
+51d0973f6f6c87a843d5f7fa4ae686c377b2a7c69f6b576124f03e580fa90847.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 8,527
+bytes / 2,159 instructions with a temporary epilogue,
+146 COFF relocations. **2,155/2,156 comparable
+original body instruction forms/operands agree**,
+after normalizing direct jumps/calls and literal
+addresses; only the incomplete stack frame (0xC4
+versus original 0xD8) differs. Two near JMPs shorten
+because the original shared return is absent.
 
-The bounded workbench/sayuri-cpu/check_prefix.py
-verifies **251 internal branch destinations**,
-**82 original valid outbound destinations** and
-**all 138 original-bound COFF relocation sites**,
-including all IEEE-754 literal payload bytes and
-canonical RandomRange/CRT fabs calls. All 29
-unique symbols have one original target binding.
+The focused workbench/sayuri-cpu/check_prefix.py
+verifies **276 in-prefix original jump destinations**,
+**91 outbound original targets** and all **146
+target-bound relocation operands**, across 29
+unique symbol destinations. Complete original IEEE-754
+payloads and RandomRange/fabs callee targets match.
 
-Recovered behavior covers first defensive chance
-and movement gates, Sayuri-specific 140-distance
-0x14 trigger, A8/A9 graded meter commands,
-AA-state airborne decisions, states 0..7, and
-ordered C8, C9, CA, CB, CC and CD collision
-reaction trees. CD's opponent hit-confirm
-branches, state 7 fallback and randomized
-attack choices preserve original C++ compiler
-code order, including unusual late timer tests.
+Behavior covers early defensive rolls, unique
+Sayuri 140-unit special, graded A8/A9 meter moves,
+AA aerial reactions, CPU states 0..7 and original
+C8/C9/CA/CB/CC/CD/CE collision-followup priority.
+CE includes the 750..800 meter command and
+a collision-dependent upper timer limit.
+The duplicate CD block discovered in dirty work
+was reconciled before validation.
 
-Continue at 0x0044C9DB (action CE).
-**Not whole Exact**: 4,479 target bytes,
-full native stack, shared exit and remaining
-relocation bindings remain open. No full replay
-was run.
+Continue at 0x0044CC86, CF/D0.
+**Partial, not full Exact**: 3,796 original bytes,
+complete frame, return and remaining relocations
+are open. No all-unit cold replay was performed.
 
 ## Sayuri Character09 Slot04: complete 11,119-byte strict Exact
 
