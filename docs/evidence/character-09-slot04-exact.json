@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "authority": "Complete authored Character09 Slot04 natural source under pinned native VC7.1, entire 11119-code-byte range and all 95 original-bound COFF relocations; whole-product integration/runtime not claimed",
+  "method": "Original Character09 vtable at 0x00788138 slot4 0x00788148 selects 0x00446780, exact code [0x00446780,0x004492EF). 2815 contiguous x86 instructions and 460 original direct branch destinations land on valid original instruction boundaries; shared return at 0x004492EB and CC alignment at 0x004492EF. Natural C++ reconstructed the full priority of 0x34, 0x62, meter tiers, ground/air special commands, directional A3/A4/A5/A6 dashes, air action count, buffered attack buttons 0/1/2, action families C8-CF, D0-D1, F8, and final C9/DC/CB. Corrected source control scope field015c<2 and inputX versus attack-button byte during reconstruction. VC7.1 /Od /G6 /MT /Gy /W3 produces exactly 11119 original bytes and 2815 original instructions including 0x14 stack frame, with 95 reviewed relocation fields over 12 distinct original symbol targets. All original IEEE-754 payloads and three authored callees independently bound to canonical EFZ.exe operands. Entire relocated output matches 11119/11119 bytes with zero differences; no hand-written machine code, padding, masks or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 11119,
+      "matched_bytes": 11119,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 216,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "EFZ.exe original operand at 0x00446858, reviewed direct authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z bound to 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 265,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x00446889, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 427,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x0044692B, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 448,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446940, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 554,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004469AA, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 729,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446A59, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 796,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446A9C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 970,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446B4A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1054,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446B9E, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1228,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446C4C, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1329,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446CB1, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1503,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446D5F, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1570,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446DA2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1744,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446E50, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1828,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446EA4, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2002,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00446F52, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2103,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00446FB7, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2277,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447065, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2341,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004470A5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2515,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447153, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2594,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004471A2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2768,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447250, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2861,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004472AD, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3035,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x0044735B, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3083,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x0044738B, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3170,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004473E2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3290,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x0044745A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3400,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004474C8, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3537,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447551, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3632,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004475B0, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3752,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447628, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3800,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x00447658, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3884,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004476AC, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4009,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447729, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4116,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447794, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4240,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447810, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4332,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x0044786C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4456,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004478E8, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4578,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447962, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4702,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004479DE, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4750,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x00447A0E, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 4834,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447A62, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4959,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447ADF, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5066,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447B4A, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5190,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447BC6, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5282,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447C22, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5406,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447C9E, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5454,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x00447CCE, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 5487,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447CEF, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5676,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447DAC, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5697,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447DC1, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5930,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447EAA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 5951,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447EBF, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6169,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00447F99, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 6190,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00447FAE, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6272,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448000, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6352,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448050, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6382,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x0044806E, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6507,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004480EB, exact canonical IEEE-754 double literal __real@c044000000000000 bound to 0x00787E48",
+          "addend": 0
+        },
+        {
+          "offset": 6663,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe original operand at 0x00448187, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 6770,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004481F2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6800,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448210, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7055,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe original operand at 0x0044830F, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 7121,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448351, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7237,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004483C5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7267,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004483E3, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7457,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe original operand at 0x004484A1, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 7543,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004484F7, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7573,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448515, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7756,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "EFZ.exe original operand at 0x004485CC, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 7868,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x0044863C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8011,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004486CB, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8169,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448769, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8338,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448812, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8563,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004488F3, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8788,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004489D4, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8863,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448A1F, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9032,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448AC8, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9258,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448BAA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9438,
+          "target": 7896640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c051800000000000",
+          "evidence": "EFZ.exe original operand at 0x00448C5E, exact canonical IEEE-754 double literal __real@c051800000000000 bound to 0x00787E40",
+          "addend": 0
+        },
+        {
+          "offset": 9468,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x00448C7C, exact canonical IEEE-754 double literal __real@4051800000000000 bound to 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 9546,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448CCA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9722,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448D7A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9797,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448DC5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9874,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448E12, exact canonical IEEE-754 double literal __real@c059000000000000 bound to 0x007875C8",
+          "addend": 0
+        },
+        {
+          "offset": 9908,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448E34, exact canonical IEEE-754 double literal __real@4059000000000000 bound to 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 9936,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00448E50, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10150,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448F26, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10322,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00448FD2, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10548,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004490B4, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10642,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x00449112, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10681,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "EFZ.exe original operand at 0x00449139, exact canonical IEEE-754 double literal __real@c03e000000000000 bound to 0x00787E30",
+          "addend": 0
+        },
+        {
+          "offset": 10715,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "EFZ.exe original operand at 0x0044915B, exact canonical IEEE-754 double literal __real@403e000000000000 bound to 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 10929,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x00449231, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 11102,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "EFZ.exe original operand at 0x004492DE, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286",
+      "target_extent_sha256": "fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286",
+      "unit": "character-09-slot04",
+      "symbol": "?Slot04@Character09@@UAEXXZ",
+      "target_address": "0x00446780",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "da2bd90d15bb9c5d419c30ac58f9fed0cc7fae3d4fa4e095e224eceb0eb9a8d7",
+      "object_sha256": "6876e99da1dd7ff2da06e9fcbba10cc1662100fdc7f9c94b609c24fa37646581",
+      "source_sha256": "97c45bd38b677a30a615adc0abd7c7d89797acdd592176bcda245576b30df31d",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "073307de6394041232ab51925f661319f4d2abddad301494565ddf327e1c8c9f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "a950559bb2feef1c91c68db0899ed8e014d121e226497d0a32bb3a4bdbef82a1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

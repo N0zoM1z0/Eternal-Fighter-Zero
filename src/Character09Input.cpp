@@ -1,7 +1,6 @@
-// Natural C++ reconstruction of the Sayuri action/command boss.
-// Canonical 11,119-byte owner: Character09::Slot04 at 0x00446780.
-// Only the reviewed opening is implemented in this workbench so far.
-#include "../../src/CharacterViews.h"
+// Full natural C++ reconstruction of Sayuri Character09::Slot04.
+ // Original 11,119-byte action/command decision owner at 0x00446780.
+#include "CharacterViews.h"
 
 void Character09::Slot04()
 {
@@ -404,5 +403,179 @@ void Character09::Slot04()
             field0008 = 0x10;
         return;
     }
-    // Remaining original action guards and command dispatch are open.
+    // Attack button 0 also recognizes the two independent held-input masks.
+    // Air and ground attacks choose distinct original action/state owners.
+    if (buttonPulse[0] == 1 ||
+        (actionBufferedInput & 0x10) != 0 ||
+        (stateGroupCBufferedInput & 0x10) != 0) {
+        if (positionY < 0.0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[207].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xcf;
+            }
+            // Air attack has priority: a failed eligibility check still
+            // leaves this state handler, without trying the ground attacks.
+            return;
+        }
+        if (inputY == 1 || (actionBufferedInput & 4) != 0 ||
+            (stateGroupCBufferedInput & 4) != 0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[204].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xcc;
+                return;
+            }
+        }
+        if (inputY == 0 || (actionBufferedInput & 4) == 0 ||
+            (stateGroupCBufferedInput & 4) == 0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[200].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xc8;
+                return;
+            }
+        }
+    }
+    // Attack button 1 or the independent 0x20 held-input bits. Airborne
+    // attempts exit this priority group even when its action is disallowed.
+    if (buttonPulse[1] == 1 ||
+        (actionBufferedInput & 0x20) != 0 ||
+        (stateGroupCBufferedInput & 0x20) != 0) {
+        if (positionY < 0.0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[208].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xd0;
+            }
+            return;
+        }
+        if (inputY == 1 || (actionBufferedInput & 4) != 0 ||
+            (stateGroupCBufferedInput & 4) != 0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[205].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xcd;
+                return;
+            }
+        }
+        if (inputY == 0 || (actionBufferedInput & 4) == 0 ||
+            (stateGroupCBufferedInput & 4) == 0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[201].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                positionX - (*opponentSlot)->positionX > -70.0 &&
+                positionX - (*opponentSlot)->positionX < 70.0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xc9;
+                return;
+            }
+            if (sequences[field0008].field0002 <=
+                    sequences[202].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xca;
+                return;
+            }
+        }
+    }
+    // Third attack button: aerial priority and grounded follow-up actions.
+    if (buttonPulse[2] == 1 ||
+        (actionBufferedInput & 0x40) != 0 ||
+        (stateGroupCBufferedInput & 0x40) != 0) {
+        if (positionY < 0.0) {
+            if (inputX == facing && inputY == 0 &&
+                positionX - (*opponentSlot)->positionX > -100.0 &&
+                positionX - (*opponentSlot)->positionX < 100.0 &&
+                (*opponentSlot)->positionY < 0.0 &&
+                sequences[field0008].field0002 <=
+                    sequences[248].field0000 &&
+                ((*opponentSlot)->field0008 < 50 ||
+                 (*opponentSlot)->field0008 > 156) &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xf8;
+                return;
+            }
+            if (sequences[field0008].field0002 <=
+                    sequences[209].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xd1;
+            }
+            return;
+        }
+        if (inputY == 1 || (actionBufferedInput & 4) != 0 ||
+            (stateGroupCBufferedInput & 4) != 0) {
+            if (sequences[field0008].field0002 <=
+                    sequences[206].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xce;
+                return;
+            }
+        }
+        if (inputY == 0 || (actionBufferedInput & 4) == 0 ||
+            (stateGroupCBufferedInput & 4) == 0) {
+            if (inputX != 0 && (*opponentSlot)->positionY == 0.0 &&
+                positionX - (*opponentSlot)->positionX > -30.0 &&
+                positionX - (*opponentSlot)->positionX < 30.0 &&
+                sequences[field0008].field0002 <=
+                    sequences[220].field0000 &&
+                ((*opponentSlot)->field0008 < 50 ||
+                 (*opponentSlot)->field0008 > 156) &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xdc;
+                return;
+            }
+            if (sequences[field0008].field0002 <=
+                    sequences[203].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xcb;
+            }
+        }
+    }
 }

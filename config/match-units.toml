@@ -133128,3 +133128,678 @@ type = "REL32"
 symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
 target = 0x00412E60
 evidence = "Original EFZ.exe CALL displacement at 0x00446756 directs to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60"
+
+[units.character-09-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Input.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot04/Character09Input.obj"
+symbol = "?Slot04@Character09@@UAEXXZ"
+target_address = 0x00446780
+size = 11119
+
+[[units.character-09-slot04.relocations]]
+offset = 216
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "EFZ.exe original operand at 0x00446858, reviewed direct authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z bound to 0x00410AC0"
+
+[[units.character-09-slot04.relocations]]
+offset = 265
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x00446889, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30"
+
+[[units.character-09-slot04.relocations]]
+offset = 427
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x0044692B, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 448
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446940, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 554
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004469AA, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 729
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446A59, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 796
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446A9C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 970
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446B4A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 1054
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446B9E, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 1228
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446C4C, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 1329
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446CB1, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 1503
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446D5F, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 1570
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446DA2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 1744
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446E50, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 1828
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446EA4, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 2002
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00446F52, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 2103
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00446FB7, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 2277
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447065, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 2341
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004470A5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 2515
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447153, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 2594
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004471A2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 2768
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447250, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 2861
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004472AD, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 3035
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x0044735B, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 3083
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x0044738B, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30"
+
+[[units.character-09-slot04.relocations]]
+offset = 3170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004473E2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 3290
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x0044745A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 3400
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004474C8, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 3537
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447551, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 3632
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004475B0, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 3752
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447628, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 3800
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x00447658, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30"
+
+[[units.character-09-slot04.relocations]]
+offset = 3884
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004476AC, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 4009
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447729, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 4116
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447794, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 4240
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447810, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 4332
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x0044786C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 4456
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004478E8, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 4578
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447962, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 4702
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004479DE, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 4750
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x00447A0E, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30"
+
+[[units.character-09-slot04.relocations]]
+offset = 4834
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447A62, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 4959
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447ADF, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 5066
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447B4A, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 5190
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447BC6, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 5282
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447C22, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 5406
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447C9E, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 5454
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x00447CCE, exact canonical IEEE-754 double literal __real@407f400000000000 bound to 0x00787C30"
+
+[[units.character-09-slot04.relocations]]
+offset = 5487
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447CEF, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 5676
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447DAC, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 5697
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447DC1, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 5930
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447EAA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 5951
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447EBF, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6169
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00447F99, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 6190
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00447FAE, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6272
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448000, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6352
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448050, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6382
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x0044806E, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6507
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "EFZ.exe original operand at 0x004480EB, exact canonical IEEE-754 double literal __real@c044000000000000 bound to 0x00787E48"
+
+[[units.character-09-slot04.relocations]]
+offset = 6663
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe original operand at 0x00448187, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630"
+
+[[units.character-09-slot04.relocations]]
+offset = 6770
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004481F2, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 6800
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448210, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7055
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe original operand at 0x0044830F, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630"
+
+[[units.character-09-slot04.relocations]]
+offset = 7121
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448351, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7237
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004483C5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7267
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004483E3, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7457
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe original operand at 0x004484A1, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630"
+
+[[units.character-09-slot04.relocations]]
+offset = 7543
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004484F7, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7573
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448515, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 7756
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "EFZ.exe original operand at 0x004485CC, reviewed direct authored callee ?FaceOpponent@Secondary@@QAEHXZ bound to 0x0040E630"
+
+[[units.character-09-slot04.relocations]]
+offset = 7868
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x0044863C, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 8011
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004486CB, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 8169
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448769, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 8338
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448812, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 8563
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004488F3, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 8788
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004489D4, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 8863
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448A1F, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 9032
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448AC8, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 9258
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448BAA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 9438
+type = "DIR32"
+symbol = "__real@c051800000000000"
+target = 0x00787E40
+evidence = "EFZ.exe original operand at 0x00448C5E, exact canonical IEEE-754 double literal __real@c051800000000000 bound to 0x00787E40"
+
+[[units.character-09-slot04.relocations]]
+offset = 9468
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x00448C7C, exact canonical IEEE-754 double literal __real@4051800000000000 bound to 0x00787E38"
+
+[[units.character-09-slot04.relocations]]
+offset = 9546
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448CCA, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 9722
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448D7A, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 9797
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448DC5, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 9874
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "EFZ.exe original operand at 0x00448E12, exact canonical IEEE-754 double literal __real@c059000000000000 bound to 0x007875C8"
+
+[[units.character-09-slot04.relocations]]
+offset = 9908
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x00448E34, exact canonical IEEE-754 double literal __real@4059000000000000 bound to 0x007875D0"
+
+[[units.character-09-slot04.relocations]]
+offset = 9936
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00448E50, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 10150
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448F26, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 10322
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00448FD2, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 10548
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004490B4, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 10642
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x00449112, exact canonical IEEE-754 double literal __real@0000000000000000 bound to 0x007872F8"
+
+[[units.character-09-slot04.relocations]]
+offset = 10681
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "EFZ.exe original operand at 0x00449139, exact canonical IEEE-754 double literal __real@c03e000000000000 bound to 0x00787E30"
+
+[[units.character-09-slot04.relocations]]
+offset = 10715
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "EFZ.exe original operand at 0x0044915B, exact canonical IEEE-754 double literal __real@403e000000000000 bound to 0x00787D88"
+
+[[units.character-09-slot04.relocations]]
+offset = 10929
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x00449231, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[[units.character-09-slot04.relocations]]
+offset = 11102
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "EFZ.exe original operand at 0x004492DE, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"

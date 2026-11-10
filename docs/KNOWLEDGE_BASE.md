@@ -2978,56 +2978,51 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot04: reviewed 8,112-byte action-boss prefix
+## Sayuri Character09 Slot04: complete 11,119-byte strict Exact
 
-The original Character09 vtable entry at 0x00788148 resolves
-to the 11,119-byte authored owner [0x00446780,0x004492EF),
-which contains 2,815 contiguous x86 instructions and 460
-direct jumps to valid instruction boundaries. The original
-RET at 0x004492EE is followed by one alignment CC byte.
-Whole-owner SHA-256:
+The original Character09/Sayuri vtable slot04 at 0x00788148
+points to 0x00446780; the full canonical owner is
+[0x00446780,0x004492EF), exactly **11,119 code bytes and
+2,815 x86 instructions**, with 460 original direct jump
+targets inside the function. The shared epilogue RET at
+0x004492EE is followed by one CC alignment byte.
+Whole-original target SHA-256:
 fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286.
 
-The natural partial C++ source
-workbench/sayuri-action/Character09Input.cpp now covers
-[0x00446780,0x00448730): **8,112 original bytes /
-2,044 instructions**. Prefix SHA-256:
-9823904b804842e36c2fb6d86b4b376d613a4b13a9252ce034fae2ba5a2dac30.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits
-8,111 bytes / 2,046 instructions including its
-temporary return and 72 COFF relocations. All 2,043/2,043 comparable original body instructions
-agree in form and operands after normalizing direct
-branches/calls and fixed IEEE-754 constant addresses.
-The original sub esp,0x14 frame now matches after
-restoring the natural ground and air action branches;
-the last original prefix JMP still targets the
-unreconstructed full-function shared exit.
+Complete natural C++ source is now **src/Character09Input.cpp**.
+The pinned VC7.1 /Od /G6 /MT /Gy /W3 compiled source
+matches **11,119/11,119 original bytes, 2,815 original
+instructions, the original 0x14 stack frame and 95/95
+canonical COFF relocation fields with zero differences**.
+All 12 unique symbol destinations are verified against original
+PE operands, including original 500.0, 0.0, -40.0, +/-70.0,
++/-100.0 and +/-30.0 IEEE-754 literals and original calls
+to SetCharacterTint, ClearBufferedButtons and FaceOpponent.
+Proof: docs/evidence/character-09-slot04-exact.json.
+Accepted selected unit: character-09-slot04 in
+config/match-units.toml. No full-game cold replay or runtime
+equivalence claim is involved.
 
-Selected audit workbench/sayuri-action/check_prefix.py
-checks **295 internal branches** by instruction
-ordinal and **all 72 original-bound relocation operands**,
-including original 0.0, -40.0 and 500.0 double
-constants and accepted original callee addresses.
+The recovered source covers buffered-input expiration,
+character command/animation gating, meter-based special
+priority, aerial and grounded state transitions, mirrored
+A3/A4 ground and A5/A6 air dashes, one-use command-6 air
+action, and three independently buffered attack buttons
+leading to 0xC8–0xD1, 0xF8 and 0xDC families.
 
-Restored behavior includes buffered-input expiration,
-meter/sequence-triggered special states, grounded and
-aerial attack groups through 0x0A–0x0C, command 0/1
-mirrored A5/A6 air-dash reactions, and mirrored A3/A4
-grounded steering. The latest source also reconstructs
-command 6's one-use air action, incrementing the
-original airActionCount and selecting action
-0x0E/0x0F/0x10 from horizontal input versus facing.
-The original field015c guard spans the complete
-special-command tree; this semantic scope was
-independently repaired after the first in-prefix
-branch-target comparison exposed a premature exit.
-
-Continue at 0x00448730 (defensive held-input
-priorities and generic action selection).
-**Partial diagnostic only, not complete Exact**:
-3,007 original bytes and the complete stack,
-shared exit and relocation closure remain open.
-No full cold replay was run.
+Two critical original control-flow details were corrected
+through prefix validation: the field015c < 2 early gate
+skips the full high-priority command chain, not only the
+first few commands; and airborne button attacks exit the
+priority handler even when their eligibility test fails.
+A final original operand review found inputX at +0x188
+in the grounded third-button/0xDC decision, not
+buttonPulse[0] at +0x18A. Source expresses the original
+direction multiplications (including * -1 rather than
+negation) to preserve VC7.1 register and x87 operations.
+The earlier partial workbench is retired after verifying
+that its effective changes are preserved in accepted source.
+Whole-product linkage and runtime equivalence remain open.
 
 ## Shiori command state and shared locomotion
 
