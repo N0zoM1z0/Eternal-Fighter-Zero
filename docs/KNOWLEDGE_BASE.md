@@ -2096,49 +2096,50 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 5,366-byte native-source prefix
+## Nagamori Slot05 CPU boss: 6,650-byte native-source prefix
 
-Original Nagamori CPU Slot05 is the 15,292-byte natural owner
-[0x004B2AC0,0x004B667C), bound to the original slot-5 vtable entry at
-0x00788410. The partial natural C++ workbench now covers the original
-[0x004B2AC0,0x004B3FB6): **5,366 bytes / 1,441 instructions**.
-Canonical prefix SHA-256:
-6079a74ebf39350db98311a79d3ae2fa4b2c358226856d95e94ce56256cd4d1c.
+Nagamori's canonical virtual Slot05 at 0x004B2AC0 owns the
+15,292-byte range [0x004B2AC0,0x004B667C). The partial natural
+C++ source in workbench/nagamori-cpu/ now covers the original prefix
+[0x004B2AC0,0x004B44BA), **6,650 original bytes / 1,745
+instructions**. Reviewed prefix SHA-256:
+36ac9b4431122a619058eb5acc943b1c6cb492e80a28bbd50efbbda9138abc40.
 
-Selected pinned VC7.1 builds the partial source into 5,362 bytes,
-including a temporary three-instruction epilogue, with 104 COFF
-relocations. The first **1,439 of 1,440 comparable instruction forms
-and operands** agree after normalizing branch/call destinations and FP
-constant addresses. Only the incomplete local stack frame differs:
-0xB4 versus original 0xE8. The original 1,441st instruction jumps
-to the not-yet-reconstructed common exit; the partial source returns
-instead. The independent prefix audit also verifies **176 validated internal
-jump destinations by instruction ordinal** and the original six-byte
-0x004B3172 guarded branch. Branch lengths into the missing portion,
-complete stack lifetime and external relocation closure are open.
+The pinned VC7.1 /Od /G6 /MT /Gy /W3 build emits a
+**6,646-byte partial candidate** (1,747 instructions including
+the temporary return, 124 COFF relocations). The first **1,743 of
+1,744 comparable instruction forms and operands** match after
+normalizing direct branch/call destinations and original FP
+constant addresses. The incomplete stack frame is 0xB8 versus
+target 0xE8. The original prefix's final jump targets the complete
+function's shared exit rather than the partial candidate's return.
+The focused audit separately verifies **215 original internal
+branch destinations by instruction ordinal** (zero mismatches).
+Jump widths into the missing function, full stack lifetime and
+external relocation bindings are not yet accepted.
 
-The reconstructed decisions cover defensive random checks, grounded
-movement/attack choices and distance-tier commands. The 0xAA
-aerial-start tree (0x004B35F2) includes five original height/distance
-chance checks; the final float factor must be expressed as
-field00a8 * 2.0f for the x87 fadd st(0),st(0) instruction.
-The 0x004B3891 response to opponent action IDs 0xA8/0xA9/0xAA
-selects 0x48, 0x0C, 0x14, 0x16 or meter-based commands; the
-0x004B3A75 airborne tree sets state/command, and the 0x004B3B84
-condition emits special command 0x34.
+Previously reconstructed decisions cover grounded commands,
+defensive probabilities, 0xAA aerial-start responses, opponent
+0xA8/0xA9/0xAA reaction choices and CPU states 4..11. Target
+0x004B3172 has a common opponent guard around *two* attack
+choices; this correct C++ scope is checked as a six-byte near JNZ.
+From 0x004B3FB6 the source now also recovers the collision-based
+random follow-up tree: it checks attackCollisionResult, hitstop,
+CPU state and a 25.0f chance, then samples a 0..1000 decision
+and selects behavior for actions 0xC8 and 0xC9. The branches
+include distance/height thresholds, commands, attack-button
+pulses, jumps and directional state changes. The multiplication
+order field00a8 * 25.0f is necessary for the observed original
+x87 load/multiply order. The 0xC9 tree's final RandomRange(0,1)
+branch only returns when the result is zero; otherwise the
+original falls through toward later actions, preserved in C++.
 
-Newly recovered 0x004B3C74..0x004B3FB6 implements state clear/guard
-behavior and state-4 through state-11 steering, direction commands
-and button pulses. It preserves seemingly contradictory frame/animation
-guards because the original compiler emitted them. The VC7.1 source
-uses ordinary conditions, with no ASM, injected bytes or padding.
-
-The next substantial target branch begins at 0x004B3FB6 (combat
-follow-up decision). Reproduce only through
-workbench/nagamori-cpu/check_prefix.py. This is **not complete Exact**:
-9,926 original bytes remain outside the audited prefix, and the
-normalization does not establish full-function codegen, relocations
-or runtime equivalence.
+Continue at original 0x004B44BA, the following 0xCA action branch.
+Only the focused workbench checker is relevant now:
+workbench/nagamori-cpu/check_prefix.py. **This is not Exact**:
+8,642 original bytes and the whole-function codegen/relocation
+closure remain open. Do not run a full cold replay for the
+partial boss.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

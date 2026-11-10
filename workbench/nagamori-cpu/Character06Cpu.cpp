@@ -309,5 +309,105 @@ void Character06::Slot05()
         if (field0008 == 0xe8) field3114 = 0;
         return;
     }
+    // Attack-collision follow-up: the original skips this entire randomized
+    // decision group when permission, hitstop, or CPU-state gates fail.
+    if (attackCollisionResult > 1 && hitstopFrames == 0 &&
+        (float)(unsigned short)RandomRange(0, 100) < field00a8 * 25.0f &&
+        field3114 != 1 && field3114 != 2) {
+        field3110 = (unsigned short)RandomRange(0, 1000);
+        if (field0008 == 0xc8) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (distance.forward < 40.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 50.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 0;
+                if (attackCollisionResult == 2 &&
+                    (unsigned short)RandomRange(0, 100) < 30) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                }
+                return;
+            }
+            if (distance.forward < 125.0 && field3110 > 399 && field3110 < 700) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 440 && attackCollisionResult == 2) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                inputX = facing;
+                return;
+            }
+            if (field3110 > 950) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 1) == 0) field3114 = 6;
+                return;
+            }
+        }
+        // Next action branch, 0xC9: preserve the original ordered
+        // thresholds, one nested random button, and distinct exit sites.
+        if (field0008 == 0xc9) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300 &&
+                attackCollisionResult == 3) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x14;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 299 && field3110 < 320) {
+                recognizedCommand = 0x1f;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 320 && field3110 < 600 &&
+                distance.forward < 100.0) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 < 200) {
+                buttonPulse[2] = 1;
+                inputY = 1;
+                return;
+            }
+            if (field3110 > 200 && field3110 < 450 && distance.forward < 90.0) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 450 && field3110 < 700) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 > 920) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 700) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 1) == 0) {
+                    field3114 = 6;
+                    if (distance.forward > 110.0) field3114 = 8;
+                    return;
+                }
+            }
+        }
+    }
     // Remaining priority AI decisions are not reconstructed yet.
 }
