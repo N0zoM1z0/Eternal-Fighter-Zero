@@ -3022,50 +3022,56 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot07-effects-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot07: reviewed 14,094-byte effects boss opening
+## Nayuki Character10 Slot07: reviewed 15,548-byte effects-boss opening
 
-Nayuki vtable Slot07 at 0x0078828C selects original
-[0x00468870,0x0046D895), a 20,517-byte native
-owner, SHA-256
+Canonical Nayuki vtable Slot07 at 0x0078828C
+selects [0x00468870,0x0046D895), 20,517 original
+instruction bytes, full SHA-256
 cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9.
-The subsequent 28-entry dispatch target array at
-0x0046D895 and 100-byte compressed case index at
-0x0046D905 remain adjacent data, not code.
+Immediately after the owner are separate switch
+data arrays: 28 four-byte destination targets
+at 0x0046D895 and a 100-byte compact case-ID
+table at 0x0046D905.
 
-Naturally authored C++ at
-workbench/nayuki-effects/Character10Effects.cpp
-now reconstructs contiguous [0x00468870,0x0046BF7E):
-**14,094 original instruction bytes / 3,170
-original instructions**, original prefix SHA-256
-79b89b0d6463f8bf02314a914b46b220bad96bd3d0d2f98f00a29ee71d09ba25.
-Selected pinned VC7.1 native check_prefix.py verifies
-**3,169 identical normalized forms/operands plus an
-incomplete stack frame**, same original instruction
-offsets and widths, **178 internal branch targets**,
-**25 canonical outbound jump destinations**, and
-**150 canonical non-switch COFF relocations** with
-29 independently bound original symbols. Both
-compiler-local jump-table references are separately
-verified; 18 original case destinations are grounded.
+Natural workbench/nayuki-effects/Character10Effects.cpp
+covers the continuous [0x00468870,0x0046C52C),
+**15,548 original code bytes / 3,484 instructions**,
+SHA-256
+944efee87482a799b0b28a0b47956c144f506f91e4ee8500733e4e050e54f5e3.
+Selected VC7.1 /Od /G6 /MT /Gy /W3
+check_prefix.py validates **3,483/3,484 matching
+original instruction forms and operands** at
+the same original offsets and widths; the
+candidate partial stack allocation is 0x1E0
+versus original complete frame 0x1D4.
+It checks **192 in-prefix original branches**,
+**27 canonical outbound destinations**,
+and **166 target-bound non-switch COFF
+relocations** over 30 unique source symbols.
+Both local switch-table fields are separately
+verified, with 20 canonical case dispatch
+targets checked against the original data.
 
-Native effects 0x190–0x1A1 now cover impact and
-bounce, gravity, strict x87 thresholds, camera
-clipping, frame-cadenced child effect emission,
-randomized 0x19C particle emission, and the
-0x19F/0x1A0 position-lock render handlers.
-The last two use Character10-specific integer
-coordinates field314C/3154 and field3150/3158
-for actions 0x12F–0x131; 0x1A1 restores
-the exact -1.9/-2.5/0.035 velocity and gravity
-literals and frame-7 group transition.
+The original Nayuki dispatch has only 27 valid
+case labels. The copied sibling skeleton had
+59 labels; 32 unsupported labels were removed
+from the experimental source (the earlier clone
+is recoverable from Git), restoring the compiler's
+canonical emitted code ordering. The native
+effects restored now cover 0x190–0x1A1 plus
+0x1AB and 0x1AC. The latter two have different
+frame0 velocities (0.3 vs 0.8), shared -3.5
+vertical speed, 0.045 gravity, strict collision
+field0058 reset, field0080 bounce and canonical
+clip/retirement behavior. All reviewed constants
+and original branch targets agree without
+machine-byte injection.
 
-Continue at original 0x0046BF7E, case 0x1AB.
-**Not whole-function Exact:** 6,423 original
-code bytes, full original 0x1D4 stack frame,
-final shared return and remaining jump-table
-cases/relocations still require reconstruction.
-Unreviewed sibling skeleton remains only a trial.
-No full cold replay.
+Continue at 0x0046C52C, case 0x1AD.
+**Not full Exact:** 4,969 original bytes and
+complete 0x1D4 frame/return plus later original
+jump-table cases and relocations remain open.
+No all-unit cold replay was performed.
 
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 
