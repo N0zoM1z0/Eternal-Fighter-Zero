@@ -133847,3 +133847,37 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "EFZ.exe vtable 0x0078815C selects 0x00449390; original direct CALL operand at 0x004493B5 targets reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"
+
+[units.character-09-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-reset-pose/Character09Lifecycle.obj"
+symbol = "?ResetPose@Character09@@UAEXXZ"
+target_address = 0x004466D0
+size = 58
+
+[[units.character-09-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Original Character09 vtable entry 0x00788138 points to 0x004466D0; direct EFZ.exe CALL at 0x00446702 resolves to reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110"
+
+[units.character-09-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-initialize-state/Character09Lifecycle.obj"
+symbol = "?InitializeState@Character09@@UAEXXZ"
+target_address = 0x00446590
+size = 309
+
+[[units.character-09-initialize-state.relocations]]
+offset = 301
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Original Character09 vtable entry 0x00788168 points to 0x00446590; direct EFZ.exe CALL at 0x004466BD resolves to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"

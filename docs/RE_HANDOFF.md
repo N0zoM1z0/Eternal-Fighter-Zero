@@ -34,6 +34,16 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Sayuri Character09 now also has complete strict Exact
+ResetPose (58 bytes at 0x004466D0) and InitializeState
+(309 bytes at 0x00446590). Both source owners are in
+src/Character09Lifecycle.cpp, with one original-bound
+base-method relocation each. Selected replay units:
+character-09-reset-pose and character-09-initialize-state.
+The initializer includes all original signed short offsets
+and the 64-entry effect-bank reset; no full cold replay was run.
+
+
 Three more Sayuri Character09 virtual owners are complete native
 strict Exact: Slot01 at 0x004492F0 (11 bytes, no relocations),
 Slot03 at 0x00446760 (19 bytes, one original UpdateLocomotionState

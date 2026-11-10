@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Complete pinned native VC7.1 natural C++ source under original vtable and exact instruction/relocation boundaries",
+  "method": "Canonical Sayuri Character09 vtable [0x00788138,...] selects the Character09::InitializeState owner 0x00446590. Complete original 309-byte function with one original-bound REL32 direct base-method call. Natural C++ recreates state and character-specific initialization, without padding, manual machine code, or byte masks. Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces every byte after applying the original target-bound relocation. No full-game replay or runtime integration is implied.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 309,
+      "matched_bytes": 309,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 301,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Original Character09 vtable entry 0x00788168 points to 0x00446590; direct EFZ.exe CALL at 0x004466BD resolves to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "4f2732954c2ed4440bcfc4949785fb27c16b97d821455c40b04ad3a19d455de2",
+      "target_extent_sha256": "4f2732954c2ed4440bcfc4949785fb27c16b97d821455c40b04ad3a19d455de2",
+      "unit": "character-09-initialize-state",
+      "symbol": "?InitializeState@Character09@@UAEXXZ",
+      "target_address": "0x00446590",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0ca814f427a543f90451a1fd3a94b63f04f368bedf72ebf80b06037acea3d007",
+      "object_sha256": "74a211b87f934e2759aed085c8b9f749df2dfe837b3cf44b0ee064cc302eb571",
+      "source_sha256": "7b16711834a27ec2a75969d81dbe7f2daad0051dc037e9b5fc969ab7c23f6f7d",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c848e606ebb3bb4535f1a786edb2ff8d576e8afa35f1a1de169e3d26cdb854b5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "06e2061176fa6161ae07b2470d0809e43b338023cfe92f14faea9ec33ea9b599",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

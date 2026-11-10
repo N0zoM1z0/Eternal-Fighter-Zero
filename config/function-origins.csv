@@ -207,8 +207,8 @@ address,origin,status,evidence
 0x00434010,authored,reviewed,docs/KNOWLEDGE_BASE.md#shiori-local-effect-dispatch-and-controls
 0x00434060,unknown,unreviewed,
 0x004463E0,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
-0x00446590,unknown,unreviewed,
-0x004466D0,unknown,unreviewed,
+0x00446590,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
+0x004466D0,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
 0x00446710,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
 0x00446760,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x00446780,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot04-action-boss-reviewed-prefix

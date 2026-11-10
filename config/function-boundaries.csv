@@ -402,3 +402,5 @@ address,end,size,status,evidence
 0x004492F0,0x004492FB,11,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x00446760,0x00446773,19,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x00449390,0x004493BF,47,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
+0x00446590,0x004466C5,309,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
+0x004466D0,0x0044670A,58,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact

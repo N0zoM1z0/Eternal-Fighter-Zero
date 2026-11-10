@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Complete pinned native VC7.1 natural C++ source under original vtable and exact instruction/relocation boundaries",
+  "method": "Canonical Sayuri Character09 vtable [0x00788138,...] selects the Character09::ResetPose owner 0x004466D0. Complete original 58-byte function with one original-bound REL32 direct base-method call. Natural C++ recreates state and character-specific initialization, without padding, manual machine code, or byte masks. Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces every byte after applying the original target-bound relocation. No full-game replay or runtime integration is implied.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Original Character09 vtable entry 0x00788138 points to 0x004466D0; direct EFZ.exe CALL at 0x00446702 resolves to reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "2c3baf1f6e4d88d436b3ab0c87733dfb4a62b9248a49f17d11bc7e78572b0845",
+      "target_extent_sha256": "2c3baf1f6e4d88d436b3ab0c87733dfb4a62b9248a49f17d11bc7e78572b0845",
+      "unit": "character-09-reset-pose",
+      "symbol": "?ResetPose@Character09@@UAEXXZ",
+      "target_address": "0x004466D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0ca814f427a543f90451a1fd3a94b63f04f368bedf72ebf80b06037acea3d007",
+      "object_sha256": "928bb44f87fd3688270177891ba0d42dca803b82066bd143aade0f4ebb13f356",
+      "source_sha256": "7b16711834a27ec2a75969d81dbe7f2daad0051dc037e9b5fc969ab7c23f6f7d",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c848e606ebb3bb4535f1a786edb2ff8d576e8afa35f1a1de169e3d26cdb854b5",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "622e488be0cec36b953eb082f30ac9885d0d07700c7728e1fbf2ab7a37a018b1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

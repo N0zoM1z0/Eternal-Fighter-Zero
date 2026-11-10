@@ -3026,6 +3026,40 @@ Whole-product linkage and runtime equivalence remain open.
 
 <a id="sayuri-remaining-leaf-delegates-exact"></a>
 
+<a id="sayuri-lifecycle-and-delegates-exact"></a>
+
+## Sayuri Character09 native lifecycle: ResetPose and InitializeState exact
+
+Two newly authored lifecycle functions are recovered from the
+original Character09/Sayuri vtable. Slot 0 at
+0x00788138 points to Character09::ResetPose at 0x004466D0
+[0x004466D0,0x0044670A), **58 bytes**, with six following
+CC alignment bytes. Slot 12 at 0x00788168 points to
+Character09::InitializeState at 0x00446590
+[0x00446590,0x004466C5), **309 bytes**, with eleven CC bytes
+before the ResetPose function. Both target extents and
+ownership were independently reviewed.
+
+The natural source src/Character09Lifecycle.cpp compiles under
+pinned VC7.1 /Od /G6 /MT /Gy /W3 to **58/58 and 309/309
+strict Exact** with one original-bound REL32 relocation
+per owner and zero differing bytes. ResetPose clears the three
+Sayuri animation state dwords then delegates to the original
+Secondary::ResetPose at 0x0040F110. InitializeState resets
+the Sayuri-specific counters, sets field3150 to 999, reproduces
+all ten signed short movement/offset constants in the original
+field2ad0/field2af8 layout, clears the three 64-entry effect
+owner banks, then calls Secondary::InitializeState at
+0x0040EDF0. The loop's original unoptimized integer code and
+stack homes agree without padding or handwritten instructions.
+
+Only the two selected units character-09-reset-pose and
+character-09-initialize-state were cold-replayed independently.
+The receipts docs/evidence/character-09-reset-pose-exact.json
+and docs/evidence/character-09-initialize-state-exact.json
+are full-authority **per-function native codegen** acceptance,
+not a claim of complete-game linkage or runtime equivalence.
+
 ## Sayuri remaining virtual leaf/delegate owners: three strict Exact matches
 
 Three additional Sayuri/Character09 virtual functions have been restored
