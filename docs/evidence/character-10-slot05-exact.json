@@ -1,0 +1,2124 @@
+{
+  "schema_version": 1,
+  "authority": "Full natural VC7.1 codegen of original Nayuki Character10::Slot05 vtable owner, all 13259 x86 bytes and 232 original-bound COFF relocation sites; not whole-game runtime/linkage.",
+  "method": "Original Character10 vtable slot05 at 0x00788284 directly selects 0x004654A0. Canonical complete code owner [0x004654A0,0x0046886B) contains 13259 original code bytes / 3391 i386 instructions and is followed by five CC alignment bytes. Full natural C++ at src/Character10Cpu.cpp reconstructs Nayuki-specific A8/A9 graded commands, AA air combos, CPU states 4..10, FA/FC timed reaction, 0x10C four-button chain, C8/C9/CA/CB/CC/CD/CE/CF/D0/D1 randomized collision-response trees, and generic CPU ground/air and movement policy with original shared return. Differences from Sayuri were reviewed against original x87 opcodes, original branch destinations, 39 unique symbol bindings and full IEEE-754 constants; examples include 35/50 near-range windows, 530-priority action timer with 150/300/20 weighted offsets and constant-first expression to recover original LEA register ordering, grounded rather than aerial final proximity permission, 3.0f/4.0f exact float literals, and 90-frame final movement timer with 40% random branch. Pinned native VC7.1 /Od /G6 /MT /Gy /W3 produces original full 0xC0 frame, 13259/13259 original bytes and exactly 232/232 original-bound COFF relocations across 39 symbols (RandomRange, CRT fabs, CollisionSide, float references). Complete strict compare and selected unit cold replay return Exact, zero differences, SHA-256 equal. No inline assembler, machine byte masks, hand-shaped padding or all-unit cold replay; whole-game runtime/linkage remains a separate task.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 13259,
+      "matched_bytes": 13259,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 170,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046554A: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 208,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465570: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465582: independently original-byte-verified IEEE-754 constant __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 392,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465628: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 430,
+          "target": 7896840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4010000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046564E: independently original-byte-verified IEEE-754 constant __real@4010000000000000 at 0x00787F08",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465654: independently original-byte-verified IEEE-754 constant __real@3ff0000000000000 at 0x007875C0",
+          "addend": 0
+        },
+        {
+          "offset": 442,
+          "target": 7896832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4020000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046565A: independently original-byte-verified IEEE-754 constant __real@4020000000000000 at 0x00787F00",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465696: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 520,
+          "target": 7896828,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42200000",
+          "evidence": "Canonical EFZ.exe operand at 0x004656A8: independently original-byte-verified IEEE-754 constant __real@42200000 at 0x00787EFC",
+          "addend": 0
+        },
+        {
+          "offset": 716,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "Canonical EFZ.exe operand at 0x0046576C: independently original-operand-verified direct callee _fabs at 0x0077842D",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004657AF: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 801,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004657C1: independently original-byte-verified IEEE-754 constant __real@41000000 at 0x00787EF8",
+          "addend": 0
+        },
+        {
+          "offset": 856,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004657F8: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 900,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465824: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 956,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046585C: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1062,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004658C6: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 1078,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004658D6: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 1157,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465925: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1365,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004659F5: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1405,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465A1D: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 1424,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465A30: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1448,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465A48: independently original-byte-verified IEEE-754 constant __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1582,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465ACE: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1622,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465AF6: independently original-byte-verified IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1638,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465B06: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 1657,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465B19: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1753,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465B79: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 1776,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465B90: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1800,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465BA8: independently original-byte-verified IEEE-754 constant __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1824,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465BC0: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 1860,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465BE4: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1884,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465BFC: independently original-byte-verified IEEE-754 constant __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1908,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465C14: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 1944,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465C38: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1988,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465C64: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2024,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465C88: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2048,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465CA0: independently original-byte-verified IEEE-754 constant __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 2101,
+          "target": 7896784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465CD5: independently original-byte-verified IEEE-754 constant __real@406b800000000000 at 0x00787ED0",
+          "addend": 0
+        },
+        {
+          "offset": 2124,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465CEC: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2168,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465D18: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2204,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465D3C: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2248,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465D68: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2333,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465DBD: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2357,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465DD5: independently original-byte-verified IEEE-754 constant __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 2407,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E07: independently original-byte-verified IEEE-754 constant __real@c044000000000000 at 0x00787E48",
+          "addend": 0
+        },
+        {
+          "offset": 2437,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E25: independently original-byte-verified IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 2453,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E35: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 2472,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E48: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2496,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E60: independently original-byte-verified IEEE-754 constant __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 2529,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E81: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 2545,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465E91: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 2564,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465EA4: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2588,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465EBC: independently original-byte-verified IEEE-754 constant __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 2621,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465EDD: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 2637,
+          "target": 7896704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465EED: independently original-byte-verified IEEE-754 constant __real@4060400000000000 at 0x00787E80",
+          "addend": 0
+        },
+        {
+          "offset": 2656,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465F00: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2686,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465F1E: independently original-byte-verified IEEE-754 constant __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 2792,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465F88: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2820,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00465FA4: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2844,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "Canonical EFZ.exe operand at 0x00465FBC: independently original-byte-verified IEEE-754 constant __real@41700000 at 0x00787EB0",
+          "addend": 0
+        },
+        {
+          "offset": 2914,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466002: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2953,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466029: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3004,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046605C: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3055,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046608F: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3132,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004660DC: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3286,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466176: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3309,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046618D: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3333,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "Canonical EFZ.exe operand at 0x004661A5: independently original-byte-verified IEEE-754 constant __real@41700000 at 0x00787EB0",
+          "addend": 0
+        },
+        {
+          "offset": 3391,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004661DF: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3448,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466218: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3485,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046623D: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3509,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466255: independently original-byte-verified IEEE-754 constant __real@41000000 at 0x00787EF8",
+          "addend": 0
+        },
+        {
+          "offset": 3885,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004663CD: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3948,
+          "target": 7897784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c04e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046640C: independently original-byte-verified IEEE-754 constant __real@c04e000000000000 at 0x007882B8",
+          "addend": 0
+        },
+        {
+          "offset": 4523,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046664B: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4597,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466695: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4674,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004666E2: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4690,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004666F2: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 4762,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046673A: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4778,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046674A: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 4846,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046678E: independently original-byte-verified IEEE-754 constant __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 4890,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004667BA: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4956,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004667FC: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4977,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466811: independently original-byte-verified IEEE-754 constant __real@4064000000000000 at 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 5043,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466853: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5064,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466868: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 5130,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004668AA: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5215,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004668FF: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5245,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046691D: independently original-byte-verified IEEE-754 constant __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 5305,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466959: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5353,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466989: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5409,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004669C1: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 5465,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004669F9: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 5521,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466A31: independently original-byte-verified IEEE-754 constant __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 5633,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466AA1: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5693,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466ADD: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5754,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466B1A: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5822,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466B5E: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5891,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466BA3: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6261,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466D15: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6321,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466D51: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6382,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466D8E: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6448,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466DD0: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6515,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00466E13: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6560,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466E40: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 6619,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466E7B: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6852,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00466F64: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7077,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467045: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 7172,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004670A4: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7252,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004670F4: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7323,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046713B: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7378,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467172: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7434,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004671AA: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 7490,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004671E2: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 7546,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046721A: independently original-byte-verified IEEE-754 constant __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 7605,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467255: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7677,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046729D: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7737,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004672D9: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8084,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467434: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8144,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467470: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8381,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046755D: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8496,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004675D0: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8570,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046761A: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 8653,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046766D: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8702,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046769E: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 8718,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004676AE: independently original-byte-verified IEEE-754 constant __real@403e000000000000 at 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 8772,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004676E4: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8818,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467712: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 8864,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467740: independently original-byte-verified IEEE-754 constant __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 8966,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004677A6: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9075,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467813: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9169,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467871: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9234,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004678B2: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9258,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x004678CA: independently original-byte-verified IEEE-754 constant __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 9292,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004678EC: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9313,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467901: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9343,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046791F: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9389,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046794D: independently original-byte-verified IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 9410,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467962: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9486,
+          "target": 7897776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4041800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004679AE: independently original-byte-verified IEEE-754 constant __real@4041800000000000 at 0x007882B0",
+          "addend": 0
+        },
+        {
+          "offset": 9539,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004679E3: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 9592,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467A18: independently original-byte-verified IEEE-754 constant __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 9608,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467A28: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 9673,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467A69: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 9788,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467ADC: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 9918,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467B5E: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 9934,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467B6E: independently original-byte-verified IEEE-754 constant __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 10005,
+          "target": 7897768,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4070400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467BB5: independently original-byte-verified IEEE-754 constant __real@4070400000000000 at 0x007882A8",
+          "addend": 0
+        },
+        {
+          "offset": 10021,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467BC5: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 10070,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467BF6: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10100,
+          "target": 7896688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4069000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467C14: independently original-byte-verified IEEE-754 constant __real@4069000000000000 at 0x00787E70",
+          "addend": 0
+        },
+        {
+          "offset": 10116,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467C24: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 10179,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00467C63: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10209,
+          "target": 7896688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4069000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467C81: independently original-byte-verified IEEE-754 constant __real@4069000000000000 at 0x00787E70",
+          "addend": 0
+        },
+        {
+          "offset": 10225,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467C91: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 10303,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467CDF: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 10336,
+          "target": 7896688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4069000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467D00: independently original-byte-verified IEEE-754 constant __real@4069000000000000 at 0x00787E70",
+          "addend": 0
+        },
+        {
+          "offset": 10352,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467D10: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 10416,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467D50: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 10469,
+          "target": 7896688,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4069000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467D85: independently original-byte-verified IEEE-754 constant __real@4069000000000000 at 0x00787E70",
+          "addend": 0
+        },
+        {
+          "offset": 10485,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467D95: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 10549,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467DD5: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 10766,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467EAE: independently original-byte-verified IEEE-754 constant __real@4066800000000000 at 0x00787340",
+          "addend": 0
+        },
+        {
+          "offset": 10952,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467F68: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10980,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467F84: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11000,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467F98: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11016,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467FA8: independently original-byte-verified IEEE-754 constant __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 11077,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467FE5: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11093,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00467FF5: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 11154,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468032: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11174,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468046: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 11190,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468056: independently original-byte-verified IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 11206,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468066: independently original-byte-verified IEEE-754 constant __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 11240,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468088: independently original-byte-verified IEEE-754 constant __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 11287,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004680B7: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11303,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004680C7: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 11319,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004680D7: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11372,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046810C: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 11388,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046811C: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11404,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046812C: independently original-byte-verified IEEE-754 constant __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 11420,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046813C: independently original-byte-verified IEEE-754 constant __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 11488,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468180: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11529,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004681A9: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11554,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004681C2: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 11570,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004681D2: independently original-byte-verified IEEE-754 constant __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 11616,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468200: independently original-byte-verified IEEE-754 constant __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 11632,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468210: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11653,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468225: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11737,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468279: independently original-byte-verified IEEE-754 constant __real@405b800000000000 at 0x00787E98",
+          "addend": 0
+        },
+        {
+          "offset": 11753,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468289: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 11769,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468299: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11788,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004682AC: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11881,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468309: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11901,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046831D: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 11917,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046832D: independently original-byte-verified IEEE-754 constant __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 11960,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468358: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 11976,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468368: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11992,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468378: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 12167,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468427: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 12191,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046843F: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12215,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468457: independently original-byte-verified IEEE-754 constant __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 12239,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046846F: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 12301,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004684AD: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 12329,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004684C9: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12353,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x004684E1: independently original-byte-verified IEEE-754 constant __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 12377,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004684F9: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 12393,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468509: independently original-byte-verified IEEE-754 constant __real@4064000000000000 at 0x00787370",
+          "addend": 0
+        },
+        {
+          "offset": 12409,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468519: independently original-byte-verified IEEE-754 constant __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 12461,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046854D: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12499,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468573: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12523,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046858B: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12547,
+          "target": 7893728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40800000",
+          "evidence": "Canonical EFZ.exe operand at 0x004685A3: independently original-byte-verified IEEE-754 constant __real@40800000 at 0x007872E0",
+          "addend": 0
+        },
+        {
+          "offset": 12599,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004685D7: independently original-byte-verified IEEE-754 constant __real@406e000000000000 at 0x00787E68",
+          "addend": 0
+        },
+        {
+          "offset": 12615,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x004685E7: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 12639,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004685FF: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12681,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468629: independently original-byte-verified IEEE-754 constant __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 12697,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468639: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 12721,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468651: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12763,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046867B: independently original-byte-verified IEEE-754 constant __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 12779,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046868B: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 12795,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0046869B: independently original-byte-verified IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 12857,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "Canonical EFZ.exe operand at 0x004686D9: independently original-operand-verified direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 12924,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "Canonical EFZ.exe operand at 0x0046871C: independently original-operand-verified direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 12983,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468757: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13000,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x00468768: independently original-byte-verified IEEE-754 constant __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 13034,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0046878A: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13066,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004687AA: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13093,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004687C5: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13128,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x004687E8: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13160,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468808: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13204,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468834: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13236,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x00468854: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce",
+      "target_extent_sha256": "fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce",
+      "unit": "character-10-slot05",
+      "symbol": "?Slot05@Character10@@UAEXXZ",
+      "target_address": "0x004654A0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6f417b29925101ee7f9b83796ba46910df90b717e67d177674dcb6ebcc2d3cb2",
+      "object_sha256": "fc345993823333ab8807c24ec6069472d7095b562166ca409e5b336fd2617623",
+      "source_sha256": "0baea26dd39b40c39841b60bc9ed5ff75d180aa3f250dd118e4bea40991a4de2",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "826350ce4b926f5c5ddb1490d80244c4c8fd0a440b322b9613bd867eab794244",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "1eda4b3a4db736262192c02c9047b058a82b11c4ce5ffe05640080e5825048c7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

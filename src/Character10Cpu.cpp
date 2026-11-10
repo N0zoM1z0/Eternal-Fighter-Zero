@@ -1,6 +1,6 @@
-// Nayuki Character10::Slot05 natural CPU reconstruction — PARTIAL.
-// Original complete owner [0x004654A0, 0x0046886B), 13,259 bytes.
-#include "../../src/CharacterViews.h"
+// Nayuki Character10::Slot05 complete naturally reconstructed CPU AI owner.
+// Original [0x004654A0,0x0046886B): 13,259 bytes, original shared return.
+#include "CharacterViews.h"
 #include <math.h>
 
 void Character10::Slot05()
@@ -649,5 +649,262 @@ void Character10::Slot05()
             }
         }
     }
-    // Further Nayuki-specific CPU decisions remain open.
+    // General-purpose randomized CPU logic after the action-specific trees.
+    if ((float)(unsigned short)RandomRange(0, 100) < 25.0f * field00a8) {
+        field3110 = (unsigned short)RandomRange(0, 1000);
+        if (positionY == 0.0) {
+            if ((*opponentSlot)->positionY == 0.0 &&
+                (*opponentSlot)->field0008 != 99) {
+                if (distance.forward < 40.0 &&
+                    (*opponentSlot)->positionY == 0.0 &&
+                    field3110 < 5) {
+                    buttonPulse[2] = 1;
+                    inputX = -facing;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 35.0 && field3110 < 15) {
+                    buttonPulse[0] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 50.0 && field3110 < 30) {
+                    buttonPulse[0] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 90.0 && distance.forward > 60.0 &&
+                    field3110 < 75 && field3110 < 30) {
+                    buttonPulse[1] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 150.0 &&
+                    distance.forward > 70 - (field3148 > 6) * 20 &&
+                    field3110 < 135 && field3110 < 75) {
+                    buttonPulse[1] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 150.0 &&
+                    distance.forward > 70 - (field3148 > 6) * 20 &&
+                    field3110 < 135 && field3110 < 160 && field3148 > 2) {
+                    buttonPulse[1] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 150.0 && distance.forward > 90.0 &&
+                    field3110 < 240 && field3110 > 160) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 260.0 && distance.forward > 100.0 &&
+                    field3110 < 340 && field3110 > 300) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x0a;
+                    return;
+                }
+                if (distance.forward < 200.0 && distance.forward > 70.0 &&
+                    field3110 < field3148 * 5 + 360 && field3110 > 350) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x46;
+                    return;
+                }
+                if (distance.forward < 200.0 && distance.forward > 70.0 &&
+                    field3110 < field3148 * 5 + 420 && field3110 > 410 &&
+                    field3148 > 3 && field0118 > 500.0) {
+                    recognizedCommand = 0x15;
+                    return;
+                }
+                if (distance.forward < 200.0 && distance.forward < 100.0 &&
+                    field3110 < field3148 * 2 + 480 && field3110 > 470 &&
+                    field0118 > 500.0 && (*opponentSlot)->field0008 > 199) {
+                    recognizedCommand = 0x48;
+                    return;
+                }
+                if (distance.forward < 200.0 && distance.forward < 70.0 &&
+                    field3110 < field3148 * 2 + 510 && field3110 > 500 &&
+                    field0118 > 500.0 && (*opponentSlot)->field0008 > 199) {
+                    recognizedCommand = 0x16;
+                    return;
+                }
+                // Delay-dependent D-button follow-up, opponent action windows.
+                if (field3110 > 530 &&
+                    field3110 < (
+                        530 +
+                        ((*opponentSlot)->field0008 > 58 &&
+                          (*opponentSlot)->field0008 < 100 &&
+                          (*opponentSlot)->field0008 != 96) * 150 +
+                        ((*opponentSlot)->field0008 > 95 &&
+                          (*opponentSlot)->field0008 < 100 &&
+                          (*opponentSlot)->field0008 != 96) * 300 +
+                        (distance.forward > 180.0) * 20) &&
+                    field3148 < 9) {
+                    buttonPulse[3] = 1;
+                    return;
+                }
+                // Canonical contradictory timer test is intentionally retained.
+                if (field3110 < 42 && field3110 > 47) {
+                    recognizedCommand = (short)facing;
+                    field3114 = 5;
+                    return;
+                }
+            }
+            // Opponent-airborne priorities: rising and falling Nayuki responses.
+            if ((*opponentSlot)->positionY < 0.0) {
+                if ((*opponentSlot)->velocityY < 0.0) {
+                    if (distance.forward < 80.0 && distance.vertical < 120.0 &&
+                        field3110 < 10) {
+                        inputY = -1;
+                        inputX = -facing;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && distance.vertical < 70.0 &&
+                        field3110 < 20) {
+                        buttonPulse[2] = 1;
+                        inputY = 1;
+                        return;
+                    }
+                }
+                if ((*opponentSlot)->velocityY > 0.0) {
+                    if (distance.forward < 70.0 && distance.vertical > 40.0 &&
+                        distance.vertical < 90.0 && field3110 < 50 &&
+                        (field0118 > 500.0 || field0120 > 0)) {
+                        recognizedCommand = 0x14;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && distance.vertical < 150.0 &&
+                        distance.vertical > 80.0 && field3110 < 90) {
+                        buttonPulse[2] = 1;
+                        inputY = 1;
+                        return;
+                    }
+                    if (distance.forward < 150.0 && distance.forward > 100.0 &&
+                        distance.vertical < 120.0 && distance.vertical > 90.0 &&
+                        field3110 < 110 && field3110 > 90) {
+                        buttonPulse[1] = 1;
+                        inputY = 0;
+                        return;
+                    }
+                }
+            }
+        }
+        // Nayuki self-airborne follow-up: grounded and airborne opponents.
+        if (positionY < 0.0 && field3114 != 3) {
+            if ((*opponentSlot)->positionY == 0.0) {
+                if (distance.forward < 70.0 && distance.vertical < 50.0 &&
+                    field3110 < 200) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 70.0 && distance.vertical < 100.0 &&
+                    field3110 < ((*opponentSlot)->positionY == 0.0) * 100 + 250) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 110.0 &&
+                    distance.vertical > 60.0 && distance.vertical < 80.0 &&
+                    velocityY > 0.0 && (*opponentSlot)->positionY > positionY &&
+                    field3110 > 500 && field3110 < 620) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+            }
+            if ((*opponentSlot)->positionY < 0.0) {
+                if (distance.forward < 60.0 && distance.vertical > 60.0 &&
+                    field3110 < 110) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 150.0 && distance.forward > 100.0 &&
+                    distance.vertical < 80.0 &&
+                    (*opponentSlot)->positionY < positionY &&
+                    field3110 < 250 && field3110 > 110) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+            }
+        }
+    }
+    // This common continuation is reached both when the 25x generic AI
+    // probability fails and after all its candidate decisions fall through.
+    if (field0008 < 50 &&
+        (((*opponentSlot)->field0008 > 149 &&
+          (*opponentSlot)->field0008 < 156) ||
+         ((*opponentSlot)->field0008 > 49 &&
+          (*opponentSlot)->field0008 < 59)) &&
+        positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8) {
+        if (distance.forward < 150.0)
+            recognizedCommand = facing == 1;
+        return;
+    }
+
+    // Nayuki second low-probability grounded spacing response.
+    if (field0008 < 50 && positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 1.0f * field00a8 &&
+        distance.forward > 80.0 && distance.forward < 160.0) {
+        if (distance.forward < 150.0)
+            recognizedCommand = facing == 1;
+        return;
+    }
+
+    if ((unsigned short)RandomRange(0, 1000) < 2) {
+        field3114 = 4;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 2) {
+        if ((float)(unsigned short)RandomRange(0, 100) < 4.0f * field00a8)
+            field3114 = 3;
+        else
+            field3114 = 0;
+        if (distance.forward > 240.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 80.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 140.0 && distance.forward > 100.0 &&
+            positionY == 0.0) {
+            inputX = facing;
+            inputY = -1;
+            return;
+        }
+    }
+    if (cpuMoveRightFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveRightFrames > 15)
+            cpuMoveRightFrames = 15;
+        inputX = 1;
+        return;
+    }
+    if (cpuMoveLeftFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveLeftFrames > 15)
+            cpuMoveLeftFrames = 15;
+        inputX = -1;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 40 &&
+        distance.forward < 100.0) {
+        if (facing == 1)
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 90;
+        else
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 90;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 80) {
+        if (facing == 1)
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 90;
+        else
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 90;
+    }
+    else if (facing == -1) {
+        cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 90;
+    }
+    else {
+        cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 90;
+    }
 }

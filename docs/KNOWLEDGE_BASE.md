@@ -2986,50 +2986,49 @@ runtime behavior remain open.
 
 <a id="nayuki-slot05-cpu-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot05: 9,226-byte reviewed CPU boss prefix
+## Nayuki Character10 Slot05: complete 13,259-byte strict Exact CPU boss
 
-The original Nayuki vtable slot05 at 0x00788284
-selects the 13,259-byte code owner
-[0x004654A0,0x0046886B), with five trailing
-CC alignment bytes, original SHA-256
+Original Nayuki Character10 vtable slot05 at 0x00788284
+selects 0x004654A0, canonical complete owner
+[0x004654A0,0x0046886B): **13,259 original x86
+code bytes / 3,391 instructions**, followed by five CC
+alignment bytes. Original full-owner SHA-256:
 fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
-This original-boundary evidence does not prove
-whole-function Exact codegen.
 
-Natural source workbench/nayuki-cpu/Character10Cpu.cpp
-covers [0x004654A0,0x004678AA), **9,226
-original bytes / 2,308 instructions**, prefix SHA-256
-2a2f2b43bcd16144c2b0e974e500568118337fa710cd417cb0326f97d4177cf1.
-Pinned VC7.1 emits 9,216 bytes / 2,310 instructions
-including a temporary return, 132 relocations.
-**2,306/2,307 comparable original instruction forms
-and operands agree** after branch/call/literal
-normalization; the incomplete frame (candidate
-0x98 versus original 0xC0) differs, and three
-near jumps shorten because the true shared
-return is not yet reconstructed.
+The full natural C++ source is now **src/Character10Cpu.cpp**.
+Pinned native VC7.1 /Od /G6 /MT /Gy /W3 reproduces
+**13,259/13,259 original code bytes**, the complete
+0xC0 stack frame and original shared return, and
+**232/232 independently canonical-bound COFF relocations**
+spanning **39 unique original symbol references**. Exact
+IEEE-754 float literal payloads and RandomRange, CRT
+fabs and CollisionSide callees were checked against
+the original executable, with zero bytes differing.
+The strict compare and **selected one-unit cold replay**
+both return **Exact**. Evidence:
+docs/evidence/character-10-slot05-exact.json;
+reproducible recipe character-10-slot05 in
+config/match-units.toml. No full-game cold replay or
+runtime/linkage equivalence claim.
 
-The focused check_prefix.py validates **333 original
-internal jump targets**, **104 canonical original
-outbound destinations**, and **all 132 original-bound
-COFF relocations**, with 28 uniquely bound symbols
-and exact original IEEE-754 payloads and callee targets.
-
-The recovered natural CPU code includes A8/A9/AA
-special priorities, CPU states 4–10, FA/FC and
-0x10C timed attacks and complete C8/C9/CA/CB/
-CC/CD/CE/CF/D0/D1 randomized collision response
-families. Original button pulse selection, altitude,
-horizontal distance, meter, direction and random
-function order are all preserved. Non-obvious
-C8–CE branches were verified individually rather
-than copied blindly from a sibling character.
-
-Continue at original 0x004678AA, the generic CPU
-ground/air selection. **Not full Exact**: 4,033
-remaining code bytes, full stack lifetime,
-return and relocation closure remain open.
-No all-unit cold replay.
+Restored natural behavior covers Nayuki-specific
+A8/A9/AA special priorities, CPU state 4–10 recovery,
+FA/FC timed counters, 0x10C four-button chain,
+all C8/C9/CA/CB/CC/CD/CE/CF/D0/D1 collision
+follow-up trees, and complete generic grounded/airborne
+CPU policy and randomized movement cooldowns. Important
+original distinctions were independently recovered:
+35/50 near-range windows, meter/field3148-conditioned
+action timing, dynamic opponent-state timers with
+150/300/20 weighted offsets and **constant-first
+addition needed for canonical register LEA ordering**,
+grounded second proximity permission, original
+3.0f/4.0f probabilities and 90-frame movement
+generation with 40% branch threshold. The original
+conditional priorities and even contradictory checks
+remain in natural source. No byte patching or injected
+assembler was used. The old dirty workbench C++ was
+reconciled into the full accepted source before retirement.
 
 ## Nayuki Character10 Slot02: full 4,827-byte strict Exact command boss
 

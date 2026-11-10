@@ -34,6 +34,22 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Nayuki Character10::Slot05 CPU boss is now **complete
+native strict Exact**: 13,259/13,259 original code
+bytes, 3,391 original x86 instructions, full 0xC0
+stack frame/shared return, **232/232 original-bound
+COFF relocations**, zero differences. Accepted natural
+source src/Character10Cpu.cpp with proof
+docs/evidence/character-10-slot05-exact.json.
+Reproduce with the selected-only unit:
+scripts/repo-python scripts/replay-exact-units.py --unit character-10-slot05.
+The formerly dirty workbench and unfinished generic
+experiment were fully reconciled into the accepted
+source before retiring them. Whole-game linkage/runtime
+and the separate Nayuki Slot04 experiment are not
+included in this acceptance.
+
+
 Nayuki Character10::Slot02 is now full native strict
 Exact: 4,827/4,827 code bytes, all 1,395 original
 instructions, zero relocations/differences.
@@ -164,7 +180,6 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot05 CPU | 0x004654A0, 13,259 original bytes | workbench/nayuki-cpu/ covers 9,226 original bytes / 2,308 instructions; 2,306/2,307 comparable forms (incomplete frame), 333 internal jumps, 104 canonical outbound targets and 132 COFF relocations agree. Continue 0x004678AA; 4,033 bytes remain, partial only. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 
