@@ -34,6 +34,17 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Nayuki Character10 now has six newly accepted native strict Exact
+virtual/lifecycle functions from the original 0x00788270 vtable:
+InitializeState (335 bytes), ResetPose (58), RemoveLocalEffect (80),
+Slot03 (19), Slot08 (11) and EmitLocalEffect (47).
+They are full natural C++ in src/Character10Lifecycle.cpp
+and reproduce **550 original bytes, five canonical call relocations,
+zero byte differences**. Each character-10-* unit was replayed
+separately and has proof under docs/evidence/. Their addition
+does not change class layout or imply whole-product linkage.
+
+
 Sayuri Character09::Slot05 CPU is **complete native strict Exact**:
 12,330 original bytes / 3,172 i386 instructions,
 original 0xD8 frame and shared return, 237/237

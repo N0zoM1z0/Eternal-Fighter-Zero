@@ -135616,3 +135616,98 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108A0
 evidence = "Canonical EFZ.exe operand at 0x0044DB43: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[units.character-10-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-reset-pose/Character10Lifecycle.obj"
+symbol = "?ResetPose@Character10@@UAEXXZ"
+target_address = 0x004613B0
+size = 58
+
+[[units.character-10-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Original EFZ.exe virtual slot 0x00788270 bound to 0x004613B0; canonical call displacement 0x004613E2 points to reviewed ?ResetPose@Secondary@@UAEXXZ at 0x0040F110"
+
+[units.character-10-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot03/Character10Lifecycle.obj"
+symbol = "?Slot03@Character10@@UAEXXZ"
+target_address = 0x00461440
+size = 19
+
+[[units.character-10-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Original EFZ.exe virtual slot 0x0078827C bound to 0x00461440; canonical call displacement 0x0046144B points to reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740"
+
+[units.character-10-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot08/Character10Lifecycle.obj"
+symbol = "?Slot08@Character10@@UAEXXZ"
+target_address = 0x00464180
+size = 11
+
+[units.character-10-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-emit-local-effect/Character10Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character10@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00464190
+size = 47
+
+[[units.character-10-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Original EFZ.exe virtual slot 0x00788294 bound to 0x00464190; canonical call displacement 0x004641B5 points to reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"
+
+[units.character-10-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-remove-local-effect/Character10Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character10@@UAEXF@Z"
+target_address = 0x004613F0
+size = 80
+
+[[units.character-10-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Original EFZ.exe virtual slot 0x00788298 bound to 0x004613F0; canonical call displacement 0x00461436 points to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60"
+
+[units.character-10-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-initialize-state/Character10Lifecycle.obj"
+symbol = "?InitializeState@Character10@@UAEXXZ"
+target_address = 0x00461260
+size = 335
+
+[[units.character-10-initialize-state.relocations]]
+offset = 327
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Original EFZ.exe virtual slot 0x007882A0 bound to 0x00461260; canonical call displacement 0x004613A7 points to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"

@@ -2980,6 +2980,54 @@ runtime behavior remain open.
 
 <a id="sayuri-slot05-cpu-reviewed-prefix"></a>
 
+<a id="nayuki-lifecycle-and-virtual-leaves-exact"></a>
+
+## Nayuki Character10 lifecycle and virtual delegates: six strict Exact owners
+
+Character10/Nayuki original vtable 0x00788270 confirms six
+complete functions, reconstructed as natural C++ in
+**src/Character10Lifecycle.cpp**. Complete original
+code extents and selected original method identities:
+
+- InitializeState, vtable slot 12: [0x00461260,0x004613AF),
+  **335 bytes**, one original-bound Secondary::InitializeState call.
+- ResetPose, slot 0: [0x004613B0,0x004613EA),
+  **58 bytes**, one original-bound Secondary::ResetPose call.
+- RemoveLocalEffect, slot 10: [0x004613F0,0x00461440),
+  **80 bytes**, one original-bound Secondary::RemoveLocalEffect call.
+- Slot03, slot 3: [0x00461440,0x00461453),
+  **19 bytes**, one original UpdateLocomotionState call.
+- Slot08, slot 8: [0x00464180,0x0046418B),
+  **11 bytes**, no relocations, natural empty virtual.
+- EmitLocalEffect, slot 9: [0x00464190,0x004641BF),
+  **47 bytes**, virtual RemoveLocalEffect(effectWrite) followed
+  by one original-bound direct Secondary::EmitLocalEffect call.
+
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces every
+canonical native code byte: **550/550 strict Exact bytes
+across six independent selected COFF units, five original
+direct call relocations, zero differences**. Each selected
+recipe (character-10-reset-pose, character-10-slot03,
+character-10-slot08, character-10-emit-local-effect,
+character-10-remove-local-effect, character-10-initialize-state)
+was replayed independently with native strict Exact
+acceptance. Complete provenance is in the corresponding
+docs/evidence/character-10-*-exact.json receipts; there was
+no full cold replay.
+
+The 335-byte initializer resets nine Nayuki-specific
+state integers (including original field3148 = 3),
+sets all ten original signed-short movement/offset
+constants from -58 to +36 as appropriate, and clears
+all three 64-entry local effect tracking arrays before
+calling Secondary::InitializeState. The effect-removal
+function clears the matching indexed entries prior to
+calling the original base method. These owners add no
+fields or virtual declarations and leave existing
+class layout untouched. Whole-product linkage and
+runtime equivalence are not implied by native codegen
+Exact acceptance.
+
 ## Sayuri Character09 Slot05: complete 12,330-byte strict Exact CPU boss
 
 Original Character09/Sayuri vtable slot5 at 0x0078814C

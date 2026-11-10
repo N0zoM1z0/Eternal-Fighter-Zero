@@ -376,3 +376,9 @@ address,name,source,symbol,status,evidence
 0x00446590,Character09::InitializeState,src/Character09Lifecycle.cpp,?InitializeState@Character09@@UAEXXZ,complete,docs/evidence/character-09-initialize-state-exact.json
 0x004493C0,Character09::Slot02,src/Character09Commands.cpp,?Slot02@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot02-exact.json
 0x0044AB30,Character09::Slot05,src/Character09Cpu.cpp,?Slot05@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot05-exact.json
+0x004613B0,Character10::ResetPose,src/Character10Lifecycle.cpp,?ResetPose@Character10@@UAEXXZ,complete,docs/evidence/character-10-reset-pose-exact.json
+0x00461440,Character10::Slot03,src/Character10Lifecycle.cpp,?Slot03@Character10@@UAEXXZ,complete,docs/evidence/character-10-slot03-exact.json
+0x00464180,Character10::Slot08,src/Character10Lifecycle.cpp,?Slot08@Character10@@UAEXXZ,complete,docs/evidence/character-10-slot08-exact.json
+0x00464190,Character10::EmitLocalEffect,src/Character10Lifecycle.cpp,?EmitLocalEffect@Character10@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-10-emit-local-effect-exact.json
+0x004613F0,Character10::RemoveLocalEffect,src/Character10Lifecycle.cpp,?RemoveLocalEffect@Character10@@UAEXF@Z,complete,docs/evidence/character-10-remove-local-effect-exact.json
+0x00461260,Character10::InitializeState,src/Character10Lifecycle.cpp,?InitializeState@Character10@@UAEXXZ,complete,docs/evidence/character-10-initialize-state-exact.json

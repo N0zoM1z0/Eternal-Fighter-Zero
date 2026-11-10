@@ -406,3 +406,9 @@ address,end,size,status,evidence
 0x004466D0,0x0044670A,58,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
 0x004493C0,0x0044AB2B,5995,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot02-command-prefix
 0x0044AB30,0x0044DB5A,12330,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot05-cpu-reviewed-prefix
+0x00461260,0x004613AF,335,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x004613B0,0x004613EA,58,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x004613F0,0x00461440,80,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x00461440,0x00461453,19,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x00464180,0x0046418B,11,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x00464190,0x004641BF,47,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
