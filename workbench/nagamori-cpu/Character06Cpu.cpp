@@ -408,6 +408,54 @@ void Character06::Slot05()
                 }
             }
         }
+        // Action 0xCA: additional input and command priorities.
+        if (field0008 == 0xca) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300 &&
+                attackCollisionResult == 3) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x14;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 299 && field3110 < 320) {
+                recognizedCommand = 0x1f;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 320 && field3110 < 600 &&
+                distance.forward < 100.0) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 < 500 && attackCollisionResult == 3 &&
+                distance.forward < 80.0) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 499 && field3110 < 550) {
+                recognizedCommand = ((unsigned short)RandomRange(0, 2) == 0) *
+                    2 * (field0118 > 500.0) + 0x0a;
+                return;
+            }
+            if (field3110 > 549 && field3110 < 680) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                return;
+            }
+            if (field3110 > 950) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 700) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 1) == 0) {
+                    field3114 = 6;
+                    if (distance.forward > 110.0) field3114 = 8;
+                    return;
+                }
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }
