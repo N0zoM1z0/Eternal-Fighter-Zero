@@ -488,6 +488,115 @@ void Character10::Slot05()
                 return;
             }
         }
+        if (field0008 == 0xcc) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (distance.forward < 80.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 50.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 0;
+                return;
+            }
+            if (distance.forward < 125.0 &&
+                field3110 > 399 && field3110 < 700) {
+                buttonPulse[1] = 1;
+                inputY = (unsigned short)RandomRange(0, 2) ? 0 : 1;
+                return;
+            }
+            if (field3110 > 900) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 3) == 0)
+                    field3114 = 7;
+                return;
+            }
+        }
+        if (field0008 == 0xcd) {
+            if (field3110 < 350 && attackCollisionResult == 3) {
+                buttonPulse[2] = 1;
+                inputY = 1;
+                return;
+            }
+            if (field3110 > 350 && field3110 < 500 &&
+                attackCollisionResult == 3) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 500 && field3110 < 550 && field3148 > 2) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                inputX = facing;
+                return;
+            }
+            if (field3110 > 0 && field3110 < 500) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 900) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 599) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 2) == 0)
+                    field3114 = 7;
+                return;
+            }
+        }
+        if (field0008 == 0xce) {
+            if (field3110 > 0 && field3110 < 400 &&
+                attackCollisionResult == 3) {
+                inputX = facing;
+                inputY = -1;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 800 &&
+                attackCollisionResult == 3 && field3148 < 9) {
+                buttonPulse[3] = 1;
+                return;
+            }
+            if (field3110 > 0 && field3110 < 150) {
+                recognizedCommand = 0x0a;
+                if ((*opponentSlot)->positionY < 0.0)
+                    recognizedCommand = 0x0b;
+                return;
+            }
+            if (field3110 > 150 && field3110 < 300) {
+                recognizedCommand = 0x1e;
+                return;
+            }
+            if (field3110 > 300 && field3110 < 450 &&
+                (*opponentSlot)->positionY == 0.0) {
+                recognizedCommand = 0x46;
+                return;
+            }
+            if (field3110 > 450 && field3110 < 600 &&
+                field0118 > 500.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+            if (field3110 > 600 && field3110 < 1610 &&
+                meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x64;
+                return;
+            }
+        }
     }
     // Further Nayuki-specific CPU decisions remain open.
 }
