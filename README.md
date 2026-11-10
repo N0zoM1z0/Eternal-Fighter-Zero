@@ -14,8 +14,8 @@ Agent workflow: follow the highest-priority requirements in [AGENTS.md](AGENTS.m
 </p>
 
 Source reconstruction of the executable supplied in the Memorial archive.
-The repository follows the organization and complete-function exact workflow
-of the local TH10 reconstruction. [TH105](https://github.com/N0zoM1z0/th105)
+Exactness is established by reproducible complete-function comparisons.
+[TH105](https://github.com/N0zoM1z0/th105)
 is an engine-family research reference; its VC8 compiler and recovered layouts
 are not EFZ evidence.
 
@@ -83,10 +83,7 @@ probes are not the current source of truth. Shiori's 63,132-byte
 unfinished owners. See [handoff](docs/RE_HANDOFF.md) for exact
 candidate paths, measurements and targeted next steps.
 
-Reader/audio integration is complete. The
-[workbench](workbench/reader-audio/README.md) preserves historical drafts and
-an already-integrated patch; it is not an active integration queue. Accepted
-code lives in `src/`.
+Reader/audio integration is complete; accepted code lives in `src/`.
 
 Recent completed **large** owners include Makoto `Slot06`
 (59,292 bytes including tables), Nagamori `Slot04` (12,277 bytes) and
@@ -164,13 +161,13 @@ are open. [Oracle contract](docs/ORACLES.md), [workflow](docs/RE_WORKFLOW.md).
 | --- | --- |
 | `config/` | target/tool locks, build recipes and independent progress ledgers |
 | `src/` | handwritten natural C/C++ reconstruction |
-| `workbench/` | explicitly unaccepted drafts and integration notes |
+| `workbench/` | active unfinished candidates and one required isolated header |
 | `probes/` | compiler/linker/resource smoke inputs |
 | `scripts/` | verification, Ghidra, build, exact comparison and reporting |
 | `docs/` | handoff, durable findings, workflow and comparison evidence |
 | `resources/` | ignored read-only original executable |
 | `.tools/` | ignored tool links and isolated Wine state |
-| `.analysis/` | ignored logs, analysis exports and comparison reports |
+| `.analysis/` | disposable logs, analysis exports and comparison reports |
 | `_reference/` | ignored extraction of the supplied archive |
 | `build/`, `ghidra-project/` | ignored products and local database |
 

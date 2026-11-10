@@ -1,178 +1,116 @@
 # EFZ reconstruction rules
 
-## Highest priority: lightweight exact reconstruction and useful knowledge
-
-These are the user's current workflow requirements. They override older
-instructions that mandate broad CI, repeated preflights, document/source-pin
-refreshes, per-checkpoint audits or extra workflow machinery. Preserve the
-actual exactness, target identity, natural-source and state-isolation rules.
-
-- Prioritize exact reconstruction of both substantial/boss functions and
-  small/leaf functions; do not optimize for leaf count. Actively explore natural
-  C/C++ implementations and test falsifiable hypotheses against the original.
-  Recheck earlier documents and assumptions against target bytes rather than
-  inheriting them as facts.
-- Use the shortest useful loop: inspect relevant state, analyze/edit, compile
-  and compare the affected scope, retain useful learning, and create a coherent
-  checkpoint.
-- The operator confirms there is no concurrent session or other agent editing
-  this worktree. Treat existing dirty/untracked changes as in-scope work: inspect
-  and reconcile them, do not avoid them, reset them, or discard them blindly.
-- After each substantive verified increment, create a checkpoint commit with
-  prefix `gpt-web: `. Make several meaningful commits during a working session
-  when progress warrants them; do not stop after a single commit. Never push
-  without an explicit instruction.
-- Use existing repository scripts and composable Bash. Add only the smallest
-  change needed for an observed problem. Do not introduce a framework, schema,
-  registry, state machine, generalized validator, test family or reporting
-  process merely to make a local reconstruction task look more engineered.
-- Documentation, knowledge and handoff edits require no compiler, analyzer,
-  full CI, cold replay or receipt refresh. Inspect the diff. Check syntax only
-  for machine-readable inputs actually changed.
-- Source changes need the complete affected exact comparison, including its
-  owned extents and relocations. Recheck known consumers of changed shared
-  inputs. Tool changes need relevant positive/negative cases and a bounded
-  real smoke. Run a broad suite only for an explicit request or a demonstrated
-  impact that cannot be narrowed; state that reason first.
-- Do not add tests or live freshness gates for prose hashes, prompt wording,
-  progress totals, handoff source-SHA tables or ordinary source spelling.
-  Bind exact evidence to executable inputs and relevant verification settings.
-  Keep Git metadata as provenance. A document genuinely consumed by a build
-  remains a build input. Never edit historical receipts to manufacture a pass.
-- Plain Markdown is sufficient for knowledge: record the finding, applicable
-  target/compiler/scope, evidence links, useful failed attempts and open
-  questions. No mandatory JSON conversion, promotion workflow or test per note.
-  Search relevant sections; do not read an entire large knowledge journal.
-- Write documentation and knowledge in natural, fluent English. Lead with the
-  concrete finding and connect the evidence and next action clearly. Remove
-  filler, circular restatements, repeated conclusions and unnecessary jargon.
-  Do not add defensive-claim boilerplate. State a real uncertainty or scope
-  limit once when it changes a decision; do not repeat disclaimers about what
-  a note does not prove, certify or authorize. Prefer a small useful note over
-  an exhaustive report that is difficult to read.
-- Keep handoff focused on current work, evidence references, blockers and the
-  next useful action. Generate progress from canonical ledgers; avoid manual
-  duplicate counts, recurring full reports and unrelated documentation chores.
-- Preserve targets, useful evidence, game-specific Wine prefixes and analyzer
-  projects. Do not avoid dirty/untracked work: inspect and resolve it as part of
-  the current workstream. Exactness still requires a complete strict comparison;
-  knowledge and successful commands alone confer no exact credit.
-
-
-## Factory access
-
-When working through the shared Reconstruction Factory, select repository
-`efz` and analysis provider `efz-ghidra`. The live Bash tool exposes this
-worktree, its ignored `resources/EFZ.exe`, repository Python, VC7.1 tools and
-EFZ-only Wine prefix. Use the existing repository build and oracle scripts for
-explicit selected-unit verification; Factory receipts are not prerequisites.
-Other registered source trees are read-only at `/references/<repository_id>`.
-Cross-game code is hypothesis material, not EFZ evidence. Native analysis
-previews are bounded; recover complete output from the returned artifact path
-through live Bash. The local `scripts/ghidra.py` workflow remains available.
-
-## Session recovery
+## Working loop
 
 Work in this repository. Inspect `git status --short --branch` and the diff,
-then read `docs/RE_HANDOFF.md` and the relevant source/ledger rows. Preserve
-unrelated work. Never push without an explicit user instruction. The operator
-authorized creating and publishing the initial public
-`N0zoM1z0/Eternal-Fighter-Zero` repository on 2026-11-01. Keep code, comments,
-documentation and repository metadata in English; conversation may be Chinese.
+then read `docs/RE_HANDOFF.md` and the relevant source/ledger rows. The operator
+confirms no concurrent writer: inspect and reconcile dirty/untracked work.
+Do not discard it blindly. Do not spawn agents unless separately requested.
+Keep code, comments, docs and commit messages in English; chat may be Chinese.
 
-Use `scripts/repo-python` for Python. Run `scripts/verify-target.py` before
-target-dependent work. Use Bash and local `scripts/ghidra.py` directly; the
-operator explicitly requested no REA. Do not introduce Factory provider
-protocols or receipts as prerequisites.
+Prioritize exact reconstruction of substantial owners and useful small functions;
+do not optimize for leaf count. Check old assumptions against target bytes.
+Use the shortest useful loop: inspect, analyze/edit, compile and compare the
+involved scope, record useful findings, commit a coherent checkpoint with
+`gpt-web: `. Make several commits when progress warrants them. Never push
+without an explicit instruction.
+
+Use existing scripts and composable Bash. Add only what an observed problem
+needs. Avoid new frameworks, registries, reporting processes and routine audits.
+Use `scripts/repo-python` for Python and local `scripts/ghidra.py` for analysis.
+The operator explicitly requested no REA.
+
+## Inputs and isolation
 
 The only canonical target is ignored, read-only `resources/EFZ.exe`, SHA-256
 `3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481`.
-Do not substitute `EFZ.OLD`, netplay binaries or another release. New targets
-require an explicit scope change, a separate identity and separate evidence.
+Run `scripts/verify-target.py` before target-dependent work. Do not substitute
+`EFZ.OLD`, a netplay binary or another release. New targets need an explicit
+scope change and separate identity/evidence.
 
-## Reconstruction policy
+Use pinned VC7.1 RTM 13.10.3077 and explicit per-unit profiles. Run
+`scripts/verify-toolchain.py --check` for native work; `--execute` is for setup,
+toolchain changes or compiler/Wine failures. Native builds are serial, one CPU,
+nice 10, bounded, with exit logs. Never borrow another game's Wine prefix.
 
-Recover both substantial owners and useful small functions; do not optimize
-for leaf count. Recheck prior documentation/hypotheses against target evidence.
-Preserve unfinished work and inspect its handoff before integrating it. Commit
-substantive verified progress using the English prefix `gpt-web: `; make multiple
-coherent commits in a productive session. Replay only changed/involved units and
-actual affected consumers, never an unrequested full cold cohort. A successful
-unit does not complete the game reconstruction. The 2026-11-07 statement that
-no task was active is historical and is superseded by the user's 2026-11-08
-request to prepare a receiving-agent handoff and continue reconstruction. This
-handoff is intended for that receiving agent; do not spawn additional agents
-unless separately requested.
+Follow [docs/SHARED_TOOLS.md](docs/SHARED_TOOLS.md). Ghidra/JDK and Wine come
+from the shared runtime; use `scripts/shared_runtime.py` and the existing
+frontends. Keep EFZ's prefix, analyzer project, Java state, target and compiler
+profile isolated. Do not install duplicate tools or inherit ambient WINEPREFIX.
 
-## Exact work
+Through Reconstruction Factory, select repository `efz` and provider
+`efz-ghidra`. Live Bash exposes this worktree, Python, VC7.1 and the EFZ prefix.
+Factory protocols/receipts are not prerequisites for local scripts. Other
+registered trees at `/references/<repository_id>` are read-only. TH10 is an
+infrastructure reference; TH105 similarity supplies hypotheses, not EFZ proof.
+Recover bounded analysis output from its artifact path when needed.
 
-Use the pinned VC7.1 RTM 13.10.3077 toolchain and explicit per-unit profiles.
-Run `scripts/verify-toolchain.py --check` for tool identity; `--execute` is
-needed for setup, toolchain changes or compiler/Wine failures, not every unit.
-Native builds are serial, one CPU, nice 10, bounded, and retain exit logs.
-Never reuse another game's Wine prefix for EFZ builds.
+## Exact acceptance
 
-Review complete target boundaries before acceptance. Ghidra candidates, names,
-types, calling conventions and inferred origins are provisional. Keep candidate
-inventory, boundary review, origin, source mapping and exact codegen separate.
-Inventory export is private and cannot overwrite reviewed ledgers.
+Review complete target boundaries before acceptance. Ghidra names, types,
+calling conventions, inferred origins and candidate extents are provisional.
+Keep inventory, boundary review, origin, source mapping and exact codegen
+separate. Inventory export is private and cannot overwrite reviewed ledgers.
 
-Write natural C/C++. Provisional offset/numeric names are acceptable. Do not
-copy original bytes into source, patch target code, use naked/assembly byte
-wrappers, add inert padding, fake ABI declarations, or conceal incorrect
-relocation fields. Normal source scope and local names can affect VC7.1 /Od
-stack allocation; retain a complete cold comparison of each affected function
-and its actual consumers after such changes, not a full unrelated cohort.
+Write natural C/C++. Provisional numeric/offset names are acceptable. Do not
+copy target bytes into source, patch target code, use assembly/naked byte
+wrappers, add inert padding, fake ABI declarations or conceal wrong relocations.
+Unsupported LTCG, EH and linked-data cases remain open.
 
+Build a complete source early. Test falsifiable source/codegen hypotheses;
+park byte-neutral controls until new evidence predicts a different result.
 Only complete, target-bound, zero-difference strict comparisons may enter
-`config/matches.csv`. Every relocation must have an explicit reviewed symbol,
-destination and evidence. No masked address acceptance, size-only matches or
-prefix comparisons. `compare_size` overrides are forbidden. Unsupported LTCG,
-EH and linked-data cases remain open rather than receiving approximate credit.
+`config/matches.csv`. Include all owned tables and relocations, each with an
+explicit reviewed symbol, destination and evidence. No masking, prefix/size-only
+acceptance or `compare_size` overrides.
 
-Build and compare the first complete source early. Prefer coherent owners over
-large speculative flag/name sweeps. Park byte-neutral controls unless new
-evidence gives a falsifiable prediction. Replay only new and affected exact
-units with explicit `--unit` selectors.
+Source edits require a complete native comparison of the affected functions
+and actual consumers, including shared-header and local-scope/name changes
+that can affect VC7.1 /Od stack allocation. Select explicit `--unit` values.
+Do not run an unrequested full cold cohort. `src/` is the current baseline;
+`workbench/` contains active unfinished candidates and the isolated Nagamori
+helper header required by one accepted unit. Do not copy provisional workbench
+headers over accepted shared headers.
 
-## Evidence and checkpoints
+## Checks and knowledge
 
-Record durable target facts in `docs/KNOWLEDGE_BASE.md` and current next steps
-in `docs/RE_HANDOFF.md`. TH10 is an infrastructure reference; TH105 engine
-similarity suggests hypotheses but proves no EFZ bytes, flags, layout or ABI.
+`scripts/ci.py` runs fast target-free basic checks: syntax, tool declarations,
+ledger structure, generated progress and whitespace. Use `--only NAME` when
+appropriate. Oracle tests are opt-in for oracle changes. Historical certificate
+freshness is a separate optional audit:
+`validate-tracking.py --check-proofs --unit NAME`. Daily CI passing is not a
+new exact comparison. Never edit old hashes to manufacture a pass.
 
-Keep original executables/data, downloaded toolchains, databases, generated
-decompiler text and credentials out of Git. Scratch belongs in `.analysis/`,
-builds in `build/`, tool links/Wine state in `.tools/`, private Ghidra state in
-`ghidra-project/`.
+Tool changes need relevant positive/negative cases and a bounded real smoke.
+Source changes finish with affected native exact comparisons. Broaden checks
+only for an explicit request or an observed impact that cannot be narrowed;
+state that reason first. Do not add routine runtime/failure-injection/sanitizer
+matrices. Whole-product closure, runtime comparison and portability are later
+phases. A successful unit does not complete the game.
 
-Source changes finish with the affected native exact comparison. Infrastructure
-changes need the relevant focused oracle checks. Run the applicable
-`scripts/ci.py --only ...` checks and `git diff --check` before a checkpoint;
-regenerate progress after ledger changes. The operator requested no routine
-full CI or full cold cohort; select only new and affected native units.
-Do not require broad runtime/failure-injection/sanitizer matrices for ordinary
-exact units. Product closure, original/reconstructed runtime comparison and
-portability are later, independently tracked phases.
+Documentation-only changes need diff review and `git diff --check`, without
+compiler/analyzer replay, proof refresh or full CI. Check syntax for changed
+machine inputs. Regenerate progress after ledger changes; do not duplicate
+counts manually. Plain Markdown is sufficient: keep verified findings, current
+blockers, useful failed approaches and the next action concise in
+`docs/KNOWLEDGE_BASE.md` and `docs/RE_HANDOFF.md`. No prose-hash gates, source-pin
+tables, promotion process or test per note.
 
-`src/` is the accepted baseline. Reader/audio integration is complete;
-`workbench/reader-audio/` preserves historical drafts and the already-integrated
-patch. Those scratch comparisons confer no independent progress credit. Read
-its README before consulting the archive; do not reapply it over `src/`.
-Do not delete retained analysis evidence or toolchain/Wine/Ghidra state as
-routine cache cleanup. When the user explicitly requests storage cleanup, archive
-superseded generated artifacts losslessly, verify every member by size and
-SHA-256 before deletion, and document exact restore paths. Preserve canonical
-inputs, accepted evidence and the latest useful probes.
-The verified lossless cleanup archives and restore instructions are recorded in
-`docs/RE_ARTIFACTS.md`; restore an archived historical artifact before using it.
+## Retention and cleanup
 
-## Shared Factory runtime
+Keep necessary inputs (original program, toolchain, Ghidra project and isolated
+runtime state), current source/ledgers/build-and-compare scripts, and useful
+knowledge. Keep an unfinished candidate's unusual compilation context only
+when it is needed to reproduce the problem.
 
-Follow [the shared tools instructions](docs/SHARED_TOOLS.md). Ghidra/JDK and
-Wine executables are shared through Factory; repository scripts also work
-without MCP. Use `scripts/shared_runtime.py` and the existing compiler/analysis
-frontends. Keep this game's prefix, analyzer project, Java home/cache, target
-and compiler profile isolated. Do not install duplicate tools or inherit
-another game's `WINEPREFIX`. This shared-runtime procedure supersedes older
-per-repository installation instructions; pinned versions/hashes still apply.
+Delete obsolete archives, duplicate evidence, completed drafts, old experiment
+outputs and cleanup reports when they no longer help reconstruction. Remove
+their references too. A document mentioning a file is not a retention reason.
+No lossless re-archive, per-file deletion manifest or new cleanup audit is
+required. Exactness comes from reproducible complete comparisons.
+
+Keep original executables/data, tools, databases, generated decompiler text and
+credentials out of Git. Use `.analysis/` for disposable analysis output,
+`build/` for regenerable products, `.tools/` for tool links/Wine state and
+`ghidra-project/` for the private analyzer project. Never delete shared tool
+installations or necessary inputs as cache cleanup.

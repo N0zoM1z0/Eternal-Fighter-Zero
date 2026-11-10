@@ -53,8 +53,8 @@ only after the corresponding completion marker. Truncation is explicit.
 Full memory-byte attestation does not validate inferred function boundaries.
 
 The initial default analysis logs include warnings about reads at `0x03020100`
-while decompiling some large functions. The import completed; those warnings
-are retained and automatic results remain provisional. Do not treat the
+while decompiling some large functions. The import completed; automatic results
+remain provisional. Do not treat the
 candidate inventory as an exhaustive reviewed function census.
 
 ## Python and public CI

@@ -11,15 +11,9 @@ The public proof is `docs/evidence/nagamori-effect-proximity-exact.json`.
 
 `CharacterViews.h` in this directory is a *unit-isolated, same-object-size*
 Nagamori class declaration, including this nonvirtual helper. It is
-used only for compiling the original single source owner. Keeping this
-private avoids changing the widely shared `src/CharacterViews.h` and
-making 123 unrelated selected-unit source-dependency certificates
-stale for a method whose object layout and vtable are unchanged.
-Both source and class declaration are retained for audit; the original
-partial `Character06Helper.cpp` is a historical equivalent TU.
-This chosen isolation proves individual original machine-code and
-relocation equivalence, **not** whole-program C++ ODR/linkage or game
-runtime equivalence.
+required by this accepted recipe and included directly by its source. Keep it
+until the helper is integrated with the shared class declaration. Individual
+codegen exactness does not establish whole-program ODR/linkage correctness.
 
 Focused check without a full cold replay:
 

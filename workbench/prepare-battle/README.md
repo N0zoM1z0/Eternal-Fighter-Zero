@@ -2,10 +2,9 @@
 
 This directory is a **tracked, isolated natural C++ workbench** for the
 complete resource/background/replay preparation owner `Scene2::PrepareBattle`.
-It deliberately retains the earlier provisional `SceneLoading.cpp`,
-`Engine.h`, `Input.h`, and `Backgrounds.h` views from the archived
-`.analysis/probes/scene-loading/parked-best/` without overwriting the
-currently accepted `src/` headers or the already-Exact loading functions.
+Its local `SceneLoading.cpp`, `Engine.h`, `Input.h` and `Backgrounds.h`
+preserve the candidate's provisional compilation context. Keep these views
+separate from accepted `src/` headers and loading functions.
 The accepted `src/SceneLoading.cpp` is a *different production owner*.
 This draft is **not linked and not Exact**.
 
@@ -46,8 +45,7 @@ PY2
 ```
 
 The draft reproducibly emits **4,031 bytes and 115 relocations** under
-VC7.1; the target is 4,029 bytes. `parked-best/prepare-instruction.diff`
-retained privately has the first compiler register divergence at
+VC7.1; the target is 4,029 bytes. The first compiler register divergence is at
 `0x0076D743` while constructing the first background object. At a later
 resource-load virtual call, the candidate adds a two-byte `mov ecx,edx`.
 These are differences in the **complete owner**, not an acceptable

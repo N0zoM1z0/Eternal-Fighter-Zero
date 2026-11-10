@@ -2,13 +2,10 @@
 
 This **tracked, independent workbench** preserves the complete original-branch
 natural C++ draft for Shiori's 134-case animation dispatcher and true default.
-It is **not** a production source or an accepted match unit. The four local
-files `ShioriState.cpp`, `CharacterViews.h`, `Engine.h` and `Input.h` come from
-`.analysis/probes/shiori-state/` at the same SHA-256 and reproduce the earlier
-parked best draft. In particular the local headers are *provisional views*,
-not substitutes for the newer, accepted `src/` headers. Do not overwrite the
-accepted headers with these older private copies. The code does not create
-any new compiled production symbol until properly integrated.
+It is **not** a production source or an accepted match unit. The local
+`ShioriState.cpp`, `CharacterViews.h`, `Engine.h` and `Input.h`
+preserve the candidate's compilation context. Its headers are provisional;
+keep them separate from the accepted `src/` headers.
 
 ## Original independently checked ownership
 
@@ -53,7 +50,6 @@ individual cases have strong instruction-level matches, but **do not**
 normalize/register-relabel the entire function and mark Exact: the original
 byte mismatches beginning at `0x0041FC1E` in case 303 remain, along with
 additional register and stack-temp differences in 303–309 and 312–318.
-See the frozen `case-sizes-baseline.json` for all 134 per-case extents.
 Specific size deltas are +1 in 307 and 308, -1 in 315, explaining the
 net +1 result but **not** explaining all byte mismatches.
 
@@ -69,7 +65,8 @@ Run:
 scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild
 ```
 
-The retained `case-codegen-audit.json` records a **63,133-byte**
+The diagnostic writes `.analysis/probes/shiori-state/case-codegen-audit.json`
+and reports a **63,133-byte**
 compiled contribution versus the **63,132-byte** target and all
 **1,374 current COFF relocations**. After intentionally normalizing
 GPR names, stack homes, and numeric branch/call operands, all
@@ -111,13 +108,9 @@ machine-code patching:
 | `tick = (unsigned short)(tick + 1)` | 63,132 | **Not accepted:** worsens the local opcode match dramatically |
 
 At the first mismatch `0x0041FC1E`, the canonical source executes
-`mov eax,[ebp-0x54]` and increments tick via `cx`; the archived VC7.1
+`mov eax,[ebp-0x54]` and increments tick via `cx`; the current VC7.1
 draft loads `ecx` and increments via `dx`, with subsequent register-choice
 differences. Matching *only* the 63,132-byte extent therefore does not
 prove equivalent code. Real next tasks: reconstruct the register-life
 source form for case 303 and independently review late cases 307, 308 and
 315 before attempting complete relocation-bound Exact. Never mask bytes.
-
-See `.analysis/probes/shiori-state/` for the original disassembly,
-full normalized diffs, source attempts and unaccepted objects. They remain
-preserved and were not overwritten during this work.

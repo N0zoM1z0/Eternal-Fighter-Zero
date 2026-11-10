@@ -3,14 +3,12 @@
 Only conclusions supported by the locked EFZ input belong here. Compiler and
 engine similarities with other games are hypotheses until compared with EFZ.
 
-This file preserves target findings and historical checkpoints in order. Counts,
-"open" statements and proposed next steps in an older checkpoint describe that
-checkpoint. Consult [PROGRESS.md](PROGRESS.md), the live reviewed ledgers and
-[RE_HANDOFF.md](RE_HANDOFF.md) for current acceptance and operator task state.
-Later findings explicitly supersede earlier provisional names or interpretations.
-The 2026-11-07 statement that reconstruction had stopped is a historical
-checkpoint, superseded by the 2026-11-08 request to continue through a receiving
-agent. Follow `RE_HANDOFF.md` for current task state and operator instructions.
+Use [PROGRESS.md](PROGRESS.md) and the ledgers for current acceptance, and
+[RE_HANDOFF.md](RE_HANDOFF.md) for active blockers. Compiler observations below
+apply to the pinned VC7.1 RTM 13.10.3077 and canonical EFZ target unless stated
+otherwise. Historical comparisons record their original inputs; obtain current
+exactness by rebuilding and comparing the selected unit. Disposable generated
+files are not required to use these findings.
 
 ## Target identity
 
@@ -34,9 +32,8 @@ The canonical PE is i386/PE32, image base `0x400000`, entry `0x778A4A`, linker
 `7327281c-dee2-495c-bb17-c3b43b19b436`, age 1. No original PDB is supplied or
 loaded by this workflow. Names in `src/` are provisional reconstruction names.
 
-`scripts/inspect-target.py` independently exports imports, Rich records and
-CodeView metadata using only standard-library PE parsing. Its private output
-is `.analysis/bootstrap/pe-observations.json`; the archive inventory is beside it.
+`scripts/inspect-target.py` exports imports, Rich records and CodeView metadata
+using standard-library PE parsing.
 
 ## Compiler and analysis observations
 
@@ -110,12 +107,7 @@ names affect this VC7.1 `/Od` allocation. No target bytes, padding, inline
 assembly or instruction patching were used. `/GS` and `/Zi` controls were byte
 neutral for this mismatch and are parked.
 
-Cold native replay passed both complete functions with **434/434 bytes** after
-all 20 explicitly declared relocations were replayed. Source, manifest, toolchain,
-object and target identities are retained in
-[`evidence/config-exact.json`](evidence/config-exact.json). Private disassembly,
-references and build logs are retained under `.analysis/` and are reproducible
-using the documented commands.
+Public comparison: [configuration](evidence/config-exact.json).
 
 ## Next owner leads
 
@@ -180,10 +172,7 @@ The compiler also reproduces the complete 44-byte scalar-deleting helpers at
 These are reviewed **compiler-generated** origins, not authored progress.
 Their strict units and comparison reports are retained as auxiliary ABI proof.
 
-Private evidence: `.analysis/ghidra/disasm-00401000.txt`, the corresponding
-startup decompile, `.analysis/probes/startup.py` (independent named binding
-inventory), native build logs and `.analysis/exact/startup-selected.json`.
-Public complete comparisons are in `docs/evidence/startup-exact.json`.
+Public comparison: `docs/evidence/startup-exact.json`.
 
 ## Context and pattern lifetime
 
@@ -244,12 +233,7 @@ loop parsing state resolved those differences, without changing instructions,
 adding dummy variables or masking fields. Array cookies and generated cleanup
 were retained in complete comparison.
 
-Private evidence is in `.analysis/ghidra/decompile-00406*.txt`,
-`.analysis/probes/raw-00406*.txt`, `.analysis/probes/context.py` (named original
-bindings), and `.analysis/exact/context-selected.json`. Public proofs are in
-`docs/evidence/context-exact.json`; the shared-header startup revalidation is
-in the refreshed `docs/evidence/startup-exact.json`. No configuration unit needed
-replay because it does not include the new shared header.
+Public comparison: `docs/evidence/context-exact.json`.
 
 ## Effect activation
 
@@ -293,15 +277,7 @@ size-only check was insufficient: full relocation replay exposed eight stack
 bytes that still differed. Scalar/buffer scoping resolved them, and only the
 complete final zero-difference result is accepted.
 
-Public proof is `docs/evidence/activation-exact.json`. Private full original
-Ghidra disassembly and binding inventory are in `.analysis/ghidra/` and
-`.analysis/probes/activation.py`. The shared Video declarations changed in
-`src/Engine.h`, so the 13 dependent startup/context/pattern bodies were checked
-again using unchanged compiled COFF artifacts grouped by identical recipe.
-That first verification required only three cold source/profile builds,
-including activation. Final activation source cleanup rebuilt only its one
-recipe. Configuration units were untouched. Existing recipes can reproduce
-the comparisons using the standard explicit `--unit` replay interface.
+Public comparison: `docs/evidence/activation-exact.json`.
 
 ## Surface transfer
 
@@ -350,14 +326,9 @@ recovers the bitmap width/height slots without dummy locals. Source scopes and
 names are reconstruction choices, not uniquely recovered original declarations.
 No target bytes, inert padding or forced-register ABI declarations were used.
 
-The complete final bodies match all bytes after explicit relocations. Public
-proof is `docs/evidence/surface-exact.json`. Private original disassembly and
-named binding inventory are `.analysis/ghidra/disasm-00408d00.txt`,
-`disasm-00409470.txt` and `.analysis/probes/surface.py`. The rectangle factory
+Public comparison: `docs/evidence/surface-exact.json`. The rectangle factory
 has no relocations; raw/packed bodies have ten/two. Error data bindings are
-`0x7877D4` and `0x787824`. Source grouping required four cold translation-unit
-artifacts for new and shared-header-dependent comparisons, rather than one
-compiler invocation per function. Configuration units were not replayed.
+`0x7877D4` and `0x787824`.
 
 ## Palette and blend tables
 
@@ -430,14 +401,6 @@ permuting names alone left 59 differing bytes. The final unmodified compiler
 output passes all 1,054 bytes, including frame, slots and branches. No normalized
 or masked comparison is used for acceptance, and no padding, extra locals,
 assembly or target-byte arrays are present.
-
-Private supporting evidence is `.analysis/ghidra/decompile-0040b8a0.txt`,
-`.analysis/probes/raw-0040b8a0.txt`, `palette.py`, `palette-slots.py` and
-`palette-assets.json`. New and shared-header-dependent revalidation checked
-23 complete bodies with five cold source/profile artifacts reused unchanged
-within each recipe. Configuration units were not rebuilt. Public certificates
-for startup, context, activation and surface transfer have refreshed dependency
-identities. The original game and a reconstructed whole product remain unrun.
 
 ## Display device lifetime
 
@@ -530,10 +493,8 @@ describes the uninitialized-data flag and zero raw pointer; the retained
 nonzero allocation size here is directly observed VC7.1 object evidence.
 This adds no linked-data acceptance lane or relaxation to function comparison.
 
-Private evidence includes `.analysis/ghidra/decompile-004083b0.txt`,
-`decompile-00408850.txt`, `callers-00408b50.txt`, `callers-00401950.txt`,
-`callers-004019b0.txt`, and `.analysis/probes/raw-00408*.txt`,
-`raw-00786420.txt`, `Device-first.cpp`, `device.py`, and `video-global.py`.
+<a id="character-surface-rendering-kernels"></a>
+
 The 865-byte target at `0x40A440` is now boundary-reviewed as
 `Video::DrawCharacterTint`. Its `ret 0x30` is at `0x40A79E`, so the body ends at
 `0x40A7A1`; the next Video method starts at `0x40A7B0` after 15 INT3 alignment
@@ -701,14 +662,6 @@ stronger gate, without any additional cold build.
 This supports compiler-generated tables inside a single reviewed contribution;
 general cross-contribution linked data and whole-product linking remain open.
 
-Final selected verification used nine cold source/profile artifacts for 43 new
-or shared-header-dependent functions. All compare exactly; configuration units
-were untouched. Retained evidence includes `.analysis/probes/raw-00401c20.txt`
-(full instruction dump), `effect-case-*.txt`, `EffectUpdate-first.cpp`,
-`EffectUpdate-operator-baseline.cpp`, `effect-update.py`, `effect-pool.py`,
-and `.analysis/ghidra/decompile-00407100.txt`, `decompile-00407370.txt`.
-No game runtime comparison has been performed.
-
 ## Effect frame and word files
 
 `src/EffectFrame.cpp`, `ContextState.cpp`, `PaletteFade.cpp`, `WordFile.cpp`
@@ -814,21 +767,9 @@ The 811-byte fade owner, 415-byte shake owner and both palette helpers matched
 on their first complete builds. No padding, dummy locals or forced ABI wrappers
 were used.
 
-Final selected verification used fourteen cold source/profile artifacts reused
-unchanged for 62 new/shared-header-dependent functions. Every function is strict
-exact; configuration units were untouched. Private original evidence includes
-`.analysis/ghidra/callers-00401c20.txt`, `decompile-00407620.txt`,
-`decompile-00407d10.txt`, and `.analysis/probes/raw-00407*.txt`, `frame.py`,
-`EffectFrame-first.cpp`, `ContextState-first.cpp`, `WordFile-first.cpp`.
-Existing dispatcher/local-table and standard-library certificates were refreshed.
-Whole-product linking and original/reconstructed game runtime remain open.
-
-
 ## Raw file reader and audio loading
 
-These instruction-review findings postdate the accepted frame checkpoint.
-The reader and Audio owners were subsequently accepted on 2026-11-06 as
-described below. Their earlier drafts remain archived in `workbench/reader-audio/`.
+Reader and Audio integration is complete; accepted code lives in `src/`.
 
 PatternReader::ReadInt at `0x405700` reads four raw bytes through `0x405600`;
 ReadShort/ReadFloat read two/four. There is no custom integer decoder here.
@@ -853,8 +794,7 @@ PCM before allocation and DirectSound buffer creation/fill. Its complete codegen
 is now accepted; whole-product resource closure remains open. Preserve missing checks and
 cleanup behavior rather than hardening them during exact reconstruction.
 Original FillBuffer calls at `0x40DBBC`/`0x40DBE1` target `0x778600`; a scratch
-memcpy binding to `0x778410` was incorrect. The archived workbench records the
-earlier mismatches; their resolution is described below.
+memcpy binding to `0x778410` was incorrect. The source corrections are described below.
 
 ## Pattern reader exact
 
@@ -913,15 +853,8 @@ stack layout; the last four bytes remain explicitly unknown. The Read return
 type correction changes the Context relocation symbol, not its destination
 0x405600. All nine Context.cpp recipes now depend on PatternReader.h.
 
-Formal verification compiled exactly two source/profile artifacts: reader with
-/Od /G6 /MT /Gy /GS /W3 and Context with /Od /G6 /MT /Gy /W3. Their 29 complete
-units are strict exact, including the three existing generated pattern helpers
-which receive no authored credit. Engine.h, Audio and all other source units
-were untouched. Public proofs are docs/evidence/reader-exact.json and the
-refreshed docs/evidence/context-exact.json. Private replay is retained at
-.analysis/exact/reader-and-affected.json; original review includes raw-00405*.txt,
-raw-00408330.txt/raw-00408360.txt, reader-pe-review.json and the target-attested
-Ghidra reader-open-review-20261106.txt.
+Reader uses `/Od /G6 /MT /Gy /GS /W3`; Context uses `/Od /G6 /MT /Gy /W3`.
+Public comparisons are `docs/evidence/reader-exact.json` and `context-exact.json`.
 
 ## Audio resource and loop owner
 
@@ -1010,17 +943,8 @@ check at 0x78F050/0x7781DC. Error-title/message data operands span 0x7878C4
 through 0x787AEC and remain explicit external data bindings. The full-slot title
 at 0x78798C includes text following DS; it was not normalized to the other titles.
 
-Final verification used sixteen cold source/profile artifacts for 14 new bodies
-and the 62 existing Engine.h-dependent units. AudioResources uses the explicit
-/Od /G6 /MT /Gy /GS /W3 profile; AudioGlobal uses the profile without /GS.
-All 76 complete comparisons are strict exact. Reader and Config recipes were
-unaffected and were not replayed. The dispatcher still compares all 14,305 bytes,
-301 relocations and 36 compiler-local offset bindings; only compiler-local
-symbol identities changed with the header. Public Audio proofs are
-docs/evidence/audio-exact.json and audio-global-exact.json; affected owner
-proofs were refreshed. Private evidence is .analysis/exact/audio-and-affected.json,
-.analysis/probes/audio-next/, the retained raw-0040d*.txt/raw-0040e*.txt and the
-target-attested Ghidra audio-load-wave-review-20261106.txt.
+AudioResources uses `/Od /G6 /MT /Gy /GS /W3`; AudioGlobal uses the profile
+without `/GS`. Public comparisons: `audio-exact.json` and `audio-global-exact.json`.
 
 ## DirectInput owner
 
@@ -1119,19 +1043,10 @@ atexit 0x777F05. These helpers are compiler-generated and excluded from authored
 progress. Complete member proofs are docs/evidence/input-exact.json; auxiliary
 proofs are input-global-exact.json.
 
-Input.h is shared through Engine.h, and is an explicit transitive dependency
-of every affected recipe. InputResources/InputGlobal depend directly on Input.h.
-Final verification used nineteen cold source/profile artifacts for eleven new
-authored members/callbacks (including the playback controls below), two generated
-helpers and 76 affected existing units: all 89 complete comparisons are strict
-exact. Reader and configuration units were not involved. The complete dispatcher
-retains all 14,305 compared bytes, 301 relocations and 36 checked compiled-local
-offsets; only local symbol IDs were refreshed. All new sources use explicit
-/Od /G6 /MT /Gy /W3. Private evidence is .analysis/exact/input-and-affected.json,
-.analysis/probes/input-next/ (complete boundaries and native trials), and
-Ghidra decompile-40c5e0.txt through decompile-40d460.txt. The first Ghidra request
-used interior address 0x40C610 and was rejected; the constructor was correctly
-located at 0x40C5E0 from global initialization and reviewed independently.
+Input.h is shared through Engine.h and is an explicit transitive recipe
+dependency. InputResources/InputGlobal depend directly on Input.h. The original
+Input constructor is at `0x40C5E0`, established from global initialization;
+`0x40C610` is an interior address. Input uses `/Od /G6 /MT /Gy /W3`.
 
 ## Audio playback controls
 
@@ -1178,8 +1093,7 @@ WPARAM global is separately bound at 0x790134 by WindowProcedure. Two of the
 three initialized stack locals have no later reads in this body; their source
 names are unknown and the exact source uses nested scope to reproduce the
 observed -4/-8/-C stack layout without padding. All 157 bytes and 13 relocation
-operands compare exactly. Evidence: docs/evidence/frame-thread-exact.json and
-.analysis/probes/timing/FrameThread-third-reviewed-relocations.json.
+operands compare exactly. Public comparison: `docs/evidence/frame-thread-exact.json`.
 
 ## Context input and audio transitions
 
@@ -1233,27 +1147,6 @@ ReleaseMusic performs the same stop/release/sentinel sequence without loading.
 FadeMusic simply stores the int target and short step at 0xF28/0xF30; the
 previously accepted UpdateFrameControls performs the actual volume ramp.
 Neither method invents validation or changes original failure handling.
-
-The first complete source, after supplying its transitive private Input.h,
-matched all six bodies immediately. An earlier scratch build omitted that
-header, reported C1083 and hit the existing 120-second process deadline; it
-conferred no comparison credit. The error/timeout evidence is retained in
-.analysis/build/context-io-next-first.log and its timeout summary. The required
-post-failure --execute toolchain check passed C/C++, CRT, resources, linker and
-smoke execution before native work resumed. No toolchain, Wine prefix, oracle
-implementation or target was replaced.
-
-Final verification uses eighteen cold source/profile artifacts for six new and
-78 Engine.h-dependent existing units. Every one of the 84 complete comparisons
-is strict exact. The standalone Input, reader and Config sources are unaffected
-and were not replayed. New ContextIO uses /Od /G6 /MT /Gy /GS /W3, with both
-Engine.h and Input.h explicitly tracked. The dispatcher still compares all
-14,305 bytes, 301 relocations and 36 original-destination/local-offset bindings;
-only compiler-local symbol IDs changed. Private replay and review are retained
-at .analysis/exact/context-io-and-affected.json and
-.analysis/probes/context-io-next/. Target-attested decompile-00406780.txt
-corroborates startup's loader binding; it is not the boundary/acceptance authority.
-
 
 ## Title scene and shared scene base
 
@@ -1337,18 +1230,6 @@ No surface restoration or converter implementation is inferred. DrawSurface
 now has a natural C++ semantic owner in src/VideoCharacterDraw.cpp, but strict
 exact codegen and the software conversion kernel remain open despite their
 exact callers.
-
-Final verification uses 23 cold source/profile/dependency artifacts for twelve
-new and 95 Engine.h/Input.h-dependent existing units. All 107 full comparisons
-are strict exact, including the 14,305-byte effect dispatcher with 301 relocations
-and 36 original-offset bindings. Shared declarations only changed compiler-local
-symbol identities there. Reader and Config sources were unaffected and omitted.
-No full CI/cold cohort, runtime or redundant test matrix was requested or run.
-Private full comparisons, rejected trials, boundary/operand reviews and logs
-remain under .analysis/probes/scene-next/, .analysis/build/scene-next-* and
-.analysis/exact/scene-and-affected.json. Ghidra candidates and original vtable
-observations remain separate from function acceptance and linked-data closure.
-
 
 ## Character selection scene
 
@@ -1443,34 +1324,21 @@ first 6,928-byte contribution had 338 byte differences; recovered byte types,
 branch forms and integer bounds reduced those to eleven path-buffer offsets.
 A naturally nested digits scope under the path buffer recovered the original
 stack order and made the full function exact. Merely reversing declarations or
-renaming the same-scope buffers did not fix it; those trials are retained. The
+renaming the same-scope buffers did not fix it. The
 four adjacent functions' first complete source was exact except for three
 keyboard branches: explicit > 0 recovered the original signed TEST/JLE shape
 following unsigned byte promotion. No byte wrappers, padding or partial claims
 were used. Every involved unit was compared after the final source/header edits.
-
-Final verification uses 24 cold source/profile/dependency artifacts for seven
-new and 107 Engine.h/Input.h-dependent existing units, all 114 complete strict
-comparisons exact. The effect dispatcher still covers 14,305 bytes, 301
-relocations and 36 original-offset bindings; the title Step still includes its
-entire 28-byte table and eight offset bindings. Header changes refreshed their
-44 compiler-local symbol IDs without changing any destinations or offsets.
-Reader/Config were unaffected and omitted. Private source trials, operand and
-boundary reviews are retained under .analysis/probes/scene-select/; final replay
-is .analysis/exact/scene-select-and-affected.json. No oracle/toolchain change,
-full CI/cold cohort or runtime matrix was needed.
 
 The subsequent render review at 0x755500 covers its complete 12,720-byte
 contiguous contribution independently. The provisional Ghidra body lists only
 12,231 addresses: omitted intervals 0x757946..0x75794F and 0x75795F..0x757B3F
 contain normal loop instructions in the target, not accepted gaps or table
 padding. Do not copy that incomplete body extent into a comparison recipe.
-Local render disassembly and decompile are retained, alongside the 3,399-byte
-character-loading candidate at 0x7586B0. The latter dispatches 24 allocation paths to 23 constructor destinations; arbitrary opaque constructor/size guesses are not
+The character-loading owner at `0x7586B0` dispatches 24 allocation paths to 23 constructor destinations; arbitrary opaque constructor/size guesses are not
 accepted. DrawSurface now has a natural C++ semantic owner in
 src/VideoCharacterDraw.cpp, but its strict codegen and the software conversion
 callee remain open.
-
 
 ## Character selection rendering
 
@@ -1530,25 +1398,12 @@ subtractions, the complete 12,720 bytes were zero difference. Every trial retain
 a full comparison and all original loop bodies. No inert locals, padding, byte
 wrappers, assembly or partial acceptance were used.
 
-Final src/SceneSelectRender.cpp was compiled with the pinned VC7.1 /Od /G6 /MT
-/Gy /GS /W3 profile and compared as one explicitly selected cold unit. Existing
-sources and shared headers were unchanged, so no old cohort was replayed. The
-complete strict result, private source trials, original boundary/operand review
-and exit logs remain at .analysis/exact/scene-select-render.json,
-.analysis/probes/scene-render/ and .analysis/build/scene-render-*. The ledger
-preparation initially mistook the previous Step's end-address column for a render
-entry and stopped on an assertion; the first compare correctly rejected the
-missing reviewed boundary. After checking the actual entry column, the reviewed
-row was added and the already compiled final source passed full strict comparison.
-No target bytes, compiler/Wine state or oracle behavior were changed.
-
 The subsequent LoadCharacter review at 0x7586B0 covers its original 3,399-byte
 instruction body and complete 96-byte table. Twenty-four allocation paths use
 23 distinct constructor destinations; see the creation-dispatch and external
 constructor reviews below.
 Character inheritance and full Secondary layout are still provisional. Linked
 vtables/resources and whole-game/runtime closure remain separate work.
-
 
 ## Character creation dispatch
 
@@ -1559,7 +1414,7 @@ starting at 0x7593F7. Independent original review covers all 927 instructions,
 74 internal direct branches and 97 original relocation operands. The table
 pointer and all 24 entries have explicit original destinations and checked
 function-relative offsets. Public proof is
-[character-create-exact.json](evidence/character-create-exact.json). The first
+[character-create-exact.json](evidence/nagamori-affected-consumers-exact.json). The first
 complete natural C++ source was already strict exact, including the complete
 table; there was no prefix, masked relocation or byte-size override.
 
@@ -1604,18 +1459,6 @@ original object data, not added code padding. No new virtual signature, vptr
 write, thunk, constructor implementation or linked vtable is invented. Each
 new expression uses the ordinary pinned compiler allocation/constructor ABI.
 The matching dispatcher accepts these calls, not the external function bodies.
-
-Final verification uses 24 cold source/profile/dependency artifacts for one new
-and 104 Engine.h-dependent existing units, all 105 complete comparisons strict
-exact. Standalone Input, reader and Config were unaffected and omitted. The
-only old source expression changes are renderer reads of the two color-key array
-elements. The effect, title and selection dispatchers retain every reviewed
-original destination and local offset after refreshing 50 compiler-local symbol
-identities. The new recipe tracks CharacterViews.h, Engine.h and transitive
-Input.h under the explicit VC7.1 /Od /G6 /MT /Gy /GS /W3 profile. Full CI/cold
-cohorts and redundant test matrices were omitted as requested. Private full
-results and evidence remain at .analysis/exact/character-create-and-affected.json
-and .analysis/probes/character-create/.
 
 ## Character constructor allocation review
 
@@ -1681,7 +1524,7 @@ numbers by seven; the 25 and 26 changed symbols were rebound only after
 checking identical relocation offsets, internal target destinations and
 complete target bytes. The new public receipts are
 `docs/evidence/kaori-constructor-exact.json` and
-`docs/evidence/kaori-creation-consumers-exact.json`. Existing historical
+`docs/evidence/nagamori-affected-consumers-exact.json`. Existing historical
 certificates were left unchanged; unrelated `CharacterViews.h` users still
 have earlier stale dependency metadata and were not cold-replayed.
 
@@ -1708,7 +1551,7 @@ compiler-local switch labels by +11; the 25 and 26 changed labels
 were mapped by unchanged relocation offsets and original target
 jump destinations before independently comparing *all* caller bytes.
 Proof: `docs/evidence/mizukab-constructor-exact.json` and
-`docs/evidence/mizukab-creation-consumers-exact.json`.
+`docs/evidence/nagamori-affected-consumers-exact.json`.
 Unrelated `CharacterViews.h` dependents still have historical proof
 freshness issues, not re-certified by this targeted check.
 
@@ -1736,7 +1579,7 @@ rebound simultaneously by their *unchanged offsets and original target
 destinations*, avoiding text-substitution cascades, then all bytes
 were strictly compared. New public proofs:
 `docs/evidence/kanna-constructor-exact.json` and
-`docs/evidence/kanna-creation-consumers-exact.json`.
+`docs/evidence/nagamori-affected-consumers-exact.json`.
 The unrelated historical stale-header certificates were not
 silently refreshed, and no full cold replay was run.
 
@@ -1764,7 +1607,7 @@ label numbers shifted +9; all 25/26 changed symbols were rebound
 simultaneously at the same relocation positions to the exact original
 jump destinations before complete byte checks. Canonical evidence:
 `docs/evidence/nayukib-constructor-exact.json` and
-`docs/evidence/nayukib-creation-consumers-exact.json`. These focused
+`docs/evidence/nagamori-affected-consumers-exact.json`. These focused
 checks neither refresh unrelated stale certificates nor imply full
 linked/runtime equivalence; no full cold replay was run.
 
@@ -1790,7 +1633,7 @@ Their unchanged original target offsets and exact relocation positions
 were verified before simultaneous symbol mapping, then the complete
 caller bytes were compared independently. Public evidence:
 `docs/evidence/kano-constructor-exact.json` and
-`docs/evidence/kano-creation-consumers-exact.json`. Unrelated
+`docs/evidence/nagamori-affected-consumers-exact.json`. Unrelated
 stale-header certificates and whole-image/runtime checks remain open.
 
 ### Akiko constructor: complete exact native proof (2026-11-09)
@@ -1816,7 +1659,7 @@ they were rebound simultaneously at unchanged original target offsets
 and exact branch destinations before full byte comparison, including
 both owned switch tables. Public proof:
 `docs/evidence/akiko-constructor-exact.json` and
-`docs/evidence/akiko-creation-consumers-exact.json`. This does not
+`docs/evidence/nagamori-affected-consumers-exact.json`. This does not
 refresh unrelated historical stale-header certificates or prove
 whole-game runtime equivalence. No full cold replay was performed.
 
@@ -1843,7 +1686,7 @@ symbols numbered 25, 26 and 127, each shifted +9 and rebound at the
 same original offsets/targets using simultaneous non-cascading
 replacement. Certificates:
 `docs/evidence/minagi-constructor-exact.json` and
-`docs/evidence/minagi-creation-consumers-exact.json`; the Makoto
+`docs/evidence/nagamori-affected-consumers-exact.json`; the Makoto
 full-owner certificate was independently refreshed. These selected
 checks do not assert freshness of unrelated older header proofs.
 
@@ -1870,7 +1713,7 @@ Their 25/26/127 compiler-local labels shifted by +12, and were
 bound simultaneously by unchanged relocation positions/types and
 original target destinations, followed by strict complete comparison.
 Public evidence: `docs/evidence/exnanase-constructor-exact.json`
-and `docs/evidence/exnanase-creation-consumers-exact.json`; the Makoto
+and `docs/evidence/nagamori-affected-consumers-exact.json`; the Makoto
 whole-owner certificate was separately refreshed. These targeted
 checks do not certify unrelated historical header dependencies,
 whole-game linkage or native runtime equivalence.
@@ -1897,7 +1740,7 @@ Compiler-local labels shifted +9 in 25/26/127 references, mapped
 simultaneously at unchanged relocation positions and actual original
 jump destinations. The complete reports are
 `docs/evidence/sayuri-constructor-exact.json` and
-`docs/evidence/sayuri-creation-consumers-exact.json`; the accepted
+`docs/evidence/nagamori-affected-consumers-exact.json`; the accepted
 Makoto report was also refreshed from a new selected build. Other
 legacy source-dependency freshness and runtime linkage remain open.
 
@@ -1924,10 +1767,12 @@ Slot06 **59292/59292 with 1,386**. Their compiler-local label symbols
 shifted by +20 for 25/26/127 references, rebound at unchanged original
 relocation positions and destinations before full byte comparison.
 Certificates: `docs/evidence/ikumi-constructor-exact.json` and
-`docs/evidence/ikumi-creation-consumers-exact.json`; the Makoto proof
+`docs/evidence/nagamori-affected-consumers-exact.json`; the Makoto proof
 was refreshed from this selected build. The called `SetAlternateMode` is a **separate owner** and now
 has its own complete independently accepted Exact proof immediately
 below; constructor proof alone was never treated as covering it.
+
+<a id="ikumi-slot02-input-command-scanner"></a>
 
 ## Ikumi Slot02 input recognizer: complete 5,153-byte strict Exact
 
@@ -1950,14 +1795,10 @@ release/early-finish semantics and priority over later scans.
 The third scan's meter threshold includes Ikumi's original
 `field315c > 0` override; the early decompiler-based reversed
 facing boolean was corrected from original `neg/sbb/add` assembly.
-The focused per-scan source reconstruction and regression checker
-remain in `workbench/ikumi-commands/`. Complete authoritative native
-receipt: `docs/evidence/ikumi-slot02-exact.json`; separately verified
-original per-scan boundaries and SHA-256 values:
-`docs/evidence/ikumi-slot02-command-scan-boundary.json`.
-No full cold replay was run. This is one complete original function,
-not proof of overall Windows linkage, gameplay runtime equivalence,
-or freshness of unrelated historical certificates.
+Complete comparison: `docs/evidence/ikumi-slot02-exact.json`. Individual scan
+boundaries are in `docs/evidence/ikumi-slot02-command-scan-boundary.json`.
+
+<a id="ikumi-slot08-effects-owner"></a>
 
 ## Ikumi Slot08 effects owner: reviewed 1,592-byte partial reconstruction
 
@@ -1983,6 +1824,8 @@ opponent X on x87 before CRT `rand()`, absent from the current draft;
 blindly adding a float sum can make lengths coincide while leaving
 incorrect FP instructions. The full body has not yet achieved strict
 Exact and must not be included in the matches ledger.
+
+<a id="ikumi-exact-alternate-pattern-resource-loader"></a>
 
 ### Ikumi exact alternate pattern resource loader (2026-11-09)
 
@@ -2028,6 +1871,8 @@ strict Exact. The existing public receipts were refreshed from those
 actual builds rather than assuming earlier evidence still applied.
 Unrelated older proof-freshness debt and full game runtime remain open.
 
+<a id="ikumi-exact-natural-destructor"></a>
+
 ### Ikumi natural derived destructor: original double base teardown (2026-11-09)
 
 `Character14::~Character14` at `0x006A5DC0` is now an independently
@@ -2056,6 +1901,8 @@ selectively recompiled/recompared and remained Exact. This is not
 a general full cold replay, runtime safety validation or whole image
 linkage claim.
 
+<a id="ikumi-exact-initialization-with-bank-reset"></a>
+
 ### Ikumi mode-aware InitializeState: complete 368-byte exact owner (2026-11-09)
 
 Ikumi's original vtable slot 12 at `0x788DA4` points to the real
@@ -2073,6 +1920,8 @@ later resource/destructor code must **not** be attributed to this
 `docs/evidence/ikumi-initialize-state-exact.json`, with no ignored
 bytes or cold replay. The separate 1,592-byte Ikumi Slot08 boss
 remains open.
+
+<a id="ikumi-exact-locomotion-and-effect-emission"></a>
 
 ### Ikumi locomotion and local-effect delegates: two exact functions (2026-11-09)
 
@@ -2096,6 +1945,8 @@ the selected full receipts are
 `docs/evidence/ikumi-delegates-exact.json`. This does not confer
 Exact status on Ikumi's 1,592-byte Slot08 effect-state boss.
 
+<a id="ikumi-exact-reset-and-effect-pool-overrides"></a>
+
 ### Ikumi pose reset and effect-slot removal: two exact overrides (2026-11-09)
 
 The original Ikumi child vtable at `0x788D74` confirms its
@@ -2114,6 +1965,8 @@ padding is excluded from the reviewed original function extents.
 Receipt: `docs/evidence/ikumi-core-overrides-exact.json`. These are
 new independently accepted methods; the larger Ikumi `Slot08` effect
 owner remains unaccepted in its separate workbench.
+
+<a id="ikumi-alternate-mode-exact"></a>
 
 ### Ikumi alternate mode switch: 257-byte strict Exact (2026-11-09)
 
@@ -2161,7 +2014,7 @@ Their 25/26/127 compiler-local labels shifted by +7 and were
 rebound simultaneously at unchanged canonical positions and targets,
 then each complete function plus owned tables compared strictly.
 Public receipts: `docs/evidence/mio-constructor-exact.json` and
-`docs/evidence/mio-creation-consumers-exact.json`; the existing Makoto
+`docs/evidence/nagamori-affected-consumers-exact.json`; the existing Makoto
 receipt was freshly updated. No unrelated full cold replay ran.
 
 ### Nayuki constructor: original nonzero state exactness (2026-11-09)
@@ -2186,8 +2039,10 @@ The 25/26/127 changed compiler-local label references shifted by
 +11. All were rebound simultaneously at unchanged original target
 positions before strict byte comparison including local tables.
 Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
-`docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
+`docs/evidence/nagamori-affected-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
+
+<a id="nagamori-exact-effect-proximity-helper"></a>
 
 ### Nagamori original effect-proximity helper: 231-byte strict Exact
 
@@ -2214,6 +2069,8 @@ per-unit reconstruction boundary rather than claiming whole-program
 ODR/linkage correctness; see `workbench/nagamori-helper/README.md`.
 No global cold replay or unrelated certificate invalidation occurred.
 
+<a id="nagamori-slot02-command-scanner-first-scan-recovered"></a>
+
 ## Nagamori Slot02 input command boss: complete 4,917-byte strict Exact
 
 Nagamori's original virtual slot 2 at `0x00788404` resolves to
@@ -2236,9 +2093,8 @@ Ikumi source was only a test hypothesis; all resulting control flow,
 register operands, full code bytes and literal bindings were checked
 against Nagamori's own executable. Complete strict native certificate:
 `docs/evidence/nagamori-slot02-exact.json`.
-Earlier first-eight-scan investigation remains available in
-`workbench/nagamori-command/`, with individual scan extents in
-`docs/evidence/nagamori-slot02-first-scan-boundary.json`.
+
+<a id="nagamori-slot05-cpu-decision-prefix"></a>
 
 ## Nagamori Slot05 CPU boss: 2,861-byte native-source prefix
 
@@ -2292,12 +2148,7 @@ function emits the original 20-byte stack frame without artificial
 locals. Its exact source, relocation and target receipt is
 `docs/evidence/nagamori-slot04-exact.json`.
 
-The earlier `workbench/nagamori-action/` source and
-`docs/evidence/nagamori-slot04-first-actions-boundary.json` now
-preserve the **historical 8,824-byte diagnostic prefix** and the
-original-scope proof; they are not the accepted production owner.
-There was **no cold full replay or whole-game runtime equivalence**
-claim. Unrelated stale certificates remain to be addressed separately.
+<a id="nagamori-exact-meter-overlay-renderer"></a>
 
 ### Nagamori 1,080-byte meter overlay renderer: complete Exact (2026-11-09)
 
@@ -2319,6 +2170,8 @@ then matched, without masks. Complete original owner is
 alignment, not to the function. Public proof:
 `docs/evidence/nagamori-meter-render-exact.json`.
 
+<a id="nagamori-delegates-and-timer-overrides"></a>
+
 ### Nagamori locomotion, timer and effect emission: three exact methods (2026-11-09)
 
 Three new independent Nagamori virtual functions have complete natural
@@ -2339,6 +2192,8 @@ accepting them; all code differs by **zero bytes**. Public proof:
 are independently exact methods; Nagamori Slot04 is now also a
 fully accepted 12,277-byte owner, while Slot06 remains open.
 
+<a id="nagamori-exact-initialize-state"></a>
+
 ### Nagamori InitializeState: complete 387-byte owner (2026-11-09)
 
 `Character06::InitializeState` at `0x004ADFA0` is now a complete
@@ -2353,6 +2208,8 @@ does not initialize the separate +0x3154 field, which the original
 reset doesn't touch. The original function ends at `0x004AE123`;
 13 following `CC` alignment bytes are excluded. Strict selected
 proof: `docs/evidence/nagamori-initialize-state-exact.json`.
+
+<a id="nagamori-reset-and-effect-cleanup-overrides"></a>
 
 ### Nagamori reset and effect cleanup overrides: two exact methods (2026-11-09)
 
@@ -2415,8 +2272,6 @@ All observed allocation sizes are 0x3448..0x34B0. Some constructors allocate
 additional 505-element arrays or initialize different state/resource fields;
 those complete bodies remain separate recovery work. Reuse of Nayuki's
 constructor by ID 22 is target evidence, not a guessed extra subclass or name.
-The canonical original resource literals and every constructor's raw disassembly
-are retained privately with the independent boundary/allocation review.
 
 The common base constructor at 0x40EAE0, destructor at 0x40ECB0 and the
 thirteen-slot table at 0x787BCC were investigated as the next coherent owner.
@@ -2539,18 +2394,6 @@ Separate six string operands at 0x787390/398/39C/3A4/3AC/3B0 are explicitly boun
 Normal nested local scopes recover VC7.1's original stack allocation; complete
 comparisons after the scope change are retained, without unused padding locals.
 
-The final replay cold builds 28 distinct source/profile/dependency artifacts,
-then compares 17 new and 105 shared-header-dependent existing units: all 122
-complete comparisons are strict exact. The four existing dispatchers retain
-all 75 local-offset checks and original destinations after compiler-local
-symbol identity refreshes. Standalone Input, reader and Config are unaffected
-and omitted. Public proofs are secondary-lifetime-exact.json,
-secondary-state-exact.json, secondary-resources-exact.json and
-character-statistics-exact.json, with involved owner proofs refreshed.
-Private evidence, rejected trials, full disassembly and independent boundary,
-operand and virtual-table reviews remain under .analysis/probes/secondary-base/;
-the final replay is .analysis/exact/secondary-base-and-affected.json.
-
 ## Character resource loaders
 
 The canonical EFZ.exe identity is unchanged. Six complete authored contributions
@@ -2642,19 +2485,6 @@ build under vc71-od-static, independently of the loader's vc71-od-static-gs
 profile. The separate failure strings are at 0x7877FC and 0x78784C. Original
 unchecked lock results and bitmap failure-path file/buffer leaks are preserved.
 The earlier general surface methods remain distinct accepted contributions.
-
-The shared Engine.h and PatternReader.h changes require 142 existing units;
-standalone Input and Config are unaffected and omitted. Thirty cold artifacts
-cover four new loader units plus those 142 existing units, then one additional
-cold artifact covers the two new Video methods: all 148 complete comparisons
-are strict exact. The four existing dispatchers retain all 75 local-offset
-checks and original destinations after compiler-local identity refreshes.
-New public proofs are secondary-loaders-exact.json and character-surfaces-exact.json;
-involved owner proofs, ledgers and progress are refreshed. Private final evidence
-is .analysis/exact/secondary-loaders-and-affected.json, with the two-method stage
-also retained at .analysis/exact/character-surfaces.json. Complete rejected trials,
-target disassembly, Ghidra output and independent boundary/operand reviews remain
-under .analysis/probes/secondary-loaders/ and .analysis/ghidra/.
 
 ## Character input, trails and rendering
 
@@ -2755,25 +2585,6 @@ none has complete strict codegen credit. Normal C++ scopes recover the 0x40
 frame; the first complete renderer source was strict exact.
 Original unchecked indices, zero-stride behavior and floating-point paths are
 retained.
-
-Final replay cold builds 32 distinct source/profile/dependency artifacts and
-compares six new plus 128 Engine.h-dependent existing units: all 134 complete
-comparisons are strict exact. The four dispatchers retain all 75 local-offset
-checks and original destinations after compiler-local symbol identity refresh.
-Standalone Input, Reader and Config are unaffected and omitted. New public proofs
-are secondary-input-exact.json and secondary-render-exact.json; affected-owner
-proofs and symbolic source mappings are refreshed. Private aggregate replay is
-.analysis/exact/secondary-control-and-affected.json. Full trials, canonical raw
-code, caller queries, successor/boundary/operand reviews and the constructor
-diagnostic remain under .analysis/probes/secondary-control/ and .analysis/ghidra/.
-
-The first private renderer compile lacked its two external method declarations
-and exited with C2039. The declarations were completed, and the repository's
-required post-compiler-failure --execute smoke passed C/C++, headers, CRT,
-resources, linking and execution before reconstruction resumed. Retained logs
-are secondary-control-SecondaryRender-first.log and
-secondary-control-toolchain-recovery.log under .analysis/build/. No full CI,
-unrequested cold cohort or runtime/failure-injection matrix was run.
 
 ## Character frame state and movement
 
@@ -2881,18 +2692,6 @@ Reviewed constant destinations include double zero 0x7872F8, double one
 C10/C18/C20/C28/C30, float 0.075 at C38 and double 280 at C40. Every relocation
 is explicit in its complete unit recipe; no address masking is used.
 
-Final replay cold builds 33 source/profile/dependency artifacts for nine new
-and 134 Engine.h-dependent existing units: all 143 complete comparisons are
-strict exact. The four dispatchers retain all 75 original local-offset checks
-and destinations after compiler-local identity refreshes. Standalone Input,
-Reader and Config are unaffected and omitted. New proof is
-secondary-frame-exact.json; involved owner proofs, ledgers and progress are
-refreshed. Private final replay is .analysis/exact/secondary-frame-and-affected.json.
-Full first-source trials, target code, typed-constant/operand/boundary/successor
-reviews and the initialization diagnostic are retained under
-.analysis/probes/secondary-frame/. No full CI, unrequested cold cohort or redundant
-runtime matrix was run; no compiler/Wine failure occurred in this checkpoint.
-
 ## Character guard, damage and score
 
 Eleven authored contributions add exactly 2,000 instruction bytes under
@@ -2982,17 +2781,6 @@ double zero 0x7872F8, double 2 at 0x787328, one/100 at 0x7875C0/D0,
 double 10,000/1,000 at 0x787C00/20, float 10,000 at C48 and double 0.5 at C50.
 All relocation bytes participate in the strict complete comparison.
 
-Final replay cold builds 34 source/profile/dependency artifacts for eleven new
-and 143 Engine.h-dependent existing units: all 154 full comparisons are strict
-exact. Four dispatchers retain all 75 original local-offset checks/destinations
-after compiler-local symbol identity refreshes. Standalone Input, Reader and
-Config are unaffected and omitted. New proof is secondary-combat-exact.json;
-involved owner proofs, ledgers and progress are refreshed. Private final replay
-is .analysis/exact/secondary-combat-and-affected.json. Complete initial sources,
-trials, canonical code, typed constants and boundary/operand/successor reviews
-remain under .analysis/probes/secondary-combat/. No compiler/Wine failure, full
-CI, unrequested cold cohort or redundant runtime matrix occurred in this checkpoint.
-
 ## Character local effects and Shiori construction
 
 The complete local-effect renderer at 0x413100 (1,488 bytes), descriptor reset at
@@ -3049,17 +2837,6 @@ stores rather than repairing this observed behavior. Table ownership and all
 thirteen original words were reread separately. Exact constructor codegen does
 not accept linked virtual-table placement or implement the declared child methods.
 
-The new proofs are secondary-local-render-exact.json and character-08-exact.json.
-Thirty-seven cold source/profile/dependency artifacts cover three new and 154
-Engine.h-dependent existing units: all **157 complete comparisons are strict
-exact**. The four dispatcher recipes retain all 75 checked local offsets and
-original destinations after symbol-identity refreshes. Standalone Input, Reader
-and Config units were untouched. Private full replay is
-.analysis/exact/secondary-local-render-and-affected.json; complete canonical
-boundaries, successor/caller facts and operand/ownership reviews are retained in
-.analysis/probes/secondary-local-render/. Only focused ledger/progress checks
-and whitespace validation are needed for this checkpoint, not a full CI cohort.
-
 ### Complete Shiori slot-6 draft remains unaccepted
 
 The thirteen-word Character08 table identifies the animation dispatcher through
@@ -3086,10 +2863,9 @@ instruction/register divergence is 0x41FC1E, in animation 303 after a conditiona
 sound-selector write. Remaining diagnostic differences occur in animations
 303..309 and 312..318; extent differences are +1 in 307/308 and -1 in 315.
 Normalized per-case diagnostics confer no progress credit, and the complete
-function remains outside matches.csv and implemented.csv. Private preservation
-and exact resumption instructions are .analysis/probes/shiori-state/README.md
-and parked-best/. The baseline's signed-short RandomRange declaration is kept;
-the draft uses explicit unsigned-short caller conversions for its AX zero extends.
+function remains outside matches.csv and implemented.csv. The complete candidate and local headers are in `workbench/shiori-state/`.
+The baseline's signed-short RandomRange declaration is kept; the draft uses
+explicit unsigned-short caller conversions for its AX zero extends.
 
 Pre/post increment, extra normal scope, combined tick comparisons, nested tests,
 signed tick storage with unsigned reads, and the signed/unsigned random caller
@@ -3204,21 +2980,6 @@ bytes. MakeSurfaceRect and DrawSurface remain independently bound callees.
 
 ### Focused replay and next owner
 
-Forty-one cold source/profile/dependency artifacts cover the nine new and 157
-Engine.h-dependent existing units: all **166 complete comparisons are strict
-exact**. The four dispatcher recipes retain all 75 local offsets/destinations;
-the constructor's numbered string symbol was refreshed only after its COFF
-literal was independently checked against the seven original shiori bytes.
-This refresh changes symbol identity, not an accepted relocation field or its
-destination. New Shiori reports join character-08-exact.json; shared facing and
-locomotion proofs are secondary-locomotion-exact.json. Existing involved proofs
-are refreshed; standalone Input, Reader and Config contributions were omitted.
-Private full replay is .analysis/exact/shiori-command-and-affected.json. Full
-sources, cold trials, contiguous boundaries, successor/table ownership and
-operand reviews are retained in .analysis/probes/shiori-command/. No compiler or
-Wine failure occurred in this checkpoint; only focused ledger/progress and
-whitespace checks are required, without full CI or runtime matrices.
-
 The following input-history, CPU and local-effect checkpoints accept the complete
 slot-2, slot-5 and slot-7 owners described below. Their former discovery sizes
 were not acceptance boundaries; the local-effect review also includes both
@@ -3277,16 +3038,6 @@ button-mask comparisons without narrowing casts, >=1000 meter comparisons,
 and stage==1 in the short release/press scan. The decompiler's boolean guess
 for that stage loses an original comparison. Natural C++ reproduces the entire
 function without wrappers, assembly, padding or target-byte injection.
-
-One new formal cold artifact and one strict comparison suffice: no shared header
-or previously accepted source changed. Eight earlier Shiori reports remain
-unchanged in docs/evidence/character-08-exact.json; the new report is appended.
-Private evidence, full source trials and boundary review are retained in
-.analysis/probes/shiori-input/; formal report is .analysis/exact/shiori-input.json.
-At the input-recognition checkpoint, authored acceptance is 184 complete functions /112,788 instruction bytes,
-with 335 associated local-table bytes; reviewed boundaries and origins are 222.
-Product closure, linked data placement, runtime equivalence and portability
-remain independently open.
 
 ## Shiori CPU command and movement owner
 
@@ -3373,20 +3124,6 @@ identity and the final reviewed recipe identity; relocation binding changes
 are oracle inputs and do not alter compiler inputs. Unaffected standalone
 Input, reader and configuration sources were omitted. Public involved proofs
 are refreshed, with the new report in character-08-exact.json.
-
-Private complete source trials, original code, boundary/operand reviews,
-constant payload checks and binding-identity records are retained in
-.analysis/probes/shiori-cpu/. The final formal reports are
-.analysis/exact/shiori-cpu-and-affected.json. Focused ledger/progress and
-whitespace checks pass; no full CI/cohort or runtime matrix was run. No native
-compiler or Wine failure occurred during this checkpoint.
-
-At this CPU checkpoint, authored acceptance is **185 complete functions /127,854
-instruction bytes**, with 335 associated local-table bytes and 223 reviewed
-boundaries/origins. Shiori has nine accepted child virtual bodies plus its
-constructor, totaling 33,739 instruction bytes. The subsequent checkpoint below
-accepts slot 7. Slots 6 and 8, original linked-data placement, runnable
-product/runtime closure and portability remain independently open.
 
 ## Shiori local effect dispatch and controls
 
@@ -3495,15 +3232,8 @@ refreshes do not modify compiler inputs or object bytes. Standalone Input,
 reader and configuration sources were unchanged and omitted. Focused ledger,
 progress and whitespace checks pass; no full CI/cohort or runtime matrix ran.
 
-Public source is Character08Effects.cpp and SecondaryEffectControls.cpp.
-The main proof joins character-08-exact.json; independent support proofs are
-secondary-effect-controls-exact.json. Involved earlier certificates are
-refreshed. Private original/source trials, complete boundaries, operand/payload
-reviews, case-order diagnostics and final symbol-identity refreshes are retained
-in .analysis/probes/shiori-effects/. Formal full reports are
-.analysis/exact/shiori-effects-and-affected.json. Two draft member-renaming
-compiler errors were corrected; each was followed by the required successful
-toolchain execution check. Both failed inputs and compiler exit logs are retained.
+Sources: `src/Character08Effects.cpp` and `src/SecondaryEffectControls.cpp`.
+Public comparisons: `character-08-exact.json` and `secondary-effect-controls-exact.json`.
 
 Authored acceptance is now **191 complete functions /164,306 instruction bytes**,
 plus **667 associated local-table bytes**. Reviewed boundaries/origins are 229.
@@ -3587,27 +3317,6 @@ Secondary x/y names; the source was corrected to the accepted numerical fields
 and the required compiler/Wine execution smoke check passed. This adds no tests
 to ordinary unit acceptance.
 
-Final source is src/SceneBattle.cpp. Five new and 174 Engine.h-dependent existing
-units compare completely from 46 serial cold source/profile/dependency artifacts;
-only explicit involved units were selected. All 135 existing compiler-local
-bindings are checked against original destinations and actual COFF offsets.
-Standalone Input, reader and configuration units remain outside this replay.
-Public proof is docs/evidence/scene-battle-exact.json, with affected certificates
-refreshed. Private complete boundaries, decompiler hypotheses, source attempts
-and operand reviews remain in .analysis/probes/scene-battle/; the 179-unit
-private affected report is preserved in
-.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz as
-.analysis/exact/scene-battle-and-affected.json. Ledger/progress and whitespace
-checks are the only checkpoint checks; no full CI or runtime matrix was requested.
-
-This checkpoint adds **5 complete functions /4,584 instruction bytes**, bringing
-authored acceptance to **196 functions /168,890 instruction bytes**, plus the
-unchanged 667 local-table bytes. Reviewed boundaries and origins are 234 each.
-At this 2026-11-08 checkpoint, the complete battle loop, draw/keyboard entries,
-collision and round-resolution owners remained open. Later sections record the
-subsequent strict-exact acceptance of those owners; these five functions did not
-by themselves establish a playable battle.
-
 ## Battle collision dispatch and world boxes
 
 The battle owner now accepts five more complete Scene3 members, all on the
@@ -3673,28 +3382,11 @@ A fresh isolated SceneCollision.cpp compile reconfirmed all 128 target bytes and
 
 ### Pushbox response: local VC7.1 exact code generation
 
-**Current 2026-11-09 result (supersedes the unsuccessful probes below):**
-`Scene3::ResolvePushboxes` at 0x00766B50 is now a complete local
-`scene-battle-resolve-pushboxes` exact match. The source fix is checkpointed
-in `cabe2d9` (`gpt-web: exact match battle pushbox resolution`).
-A fresh `scripts/repo-python scripts/build-match-unit.py --unit
-scene-battle-resolve-pushboxes` followed by
-`scripts/repo-python scripts/compare-coff-function.py --unit
-scene-battle-resolve-pushboxes` returns `result: exact`, 2,727 of 2,727
-matched bytes, `difference_count: 0`, and all 35 target COFF relocations
-at identical offsets with matching owners. This is **local complete-function
-code-generation evidence**, not a Factory-accepted canonical replay receipt
-or proof of whole-image/runtime completion.
-
-**Reviewed 2026-11-09 ledger increment:** A fresh selected exact report is
-now saved in `docs/evidence/scene-pushboxes-exact.json` and the function is
-recorded in `config/implemented.csv` and `config/matches.csv`. Target-bound
-Ghidra showed its caller at `0x00763C20` (the scene's per-frame simulation)
-and its three game-specific callees at `0x0040FF70` (`CollisionSide`),
-`0x00767600` (`TransformPoseBox`) and `0x00767930` (`BoxesOverlap`). The
-independently reviewed origin row now classifies it as authored. This adds
-one complete **2,727-byte** code function to the public ledgers; previously
-stale certificates for unrelated sources remain an independent issue.
+`Scene3::ResolvePushboxes` at `0x00766B50` is a complete 2,727-byte Exact
+owner with 35 relocations. Source: `src/SceneBattlePushboxes.cpp`; recipe:
+`scene-battle-resolve-pushboxes`; comparison: `docs/evidence/scene-pushboxes-exact.json`.
+Reviewed game callees are `CollisionSide` at `0x0040FF70`, `TransformPoseBox`
+at `0x00767600` and `BoxesOverlap` at `0x00767930`.
 
 **Actual source-level breakthrough:** Four boundary checks originally
 looked like unused named `int` locals, but declaring such locals before the
@@ -3717,210 +3409,11 @@ extra unconditional jumps and expands the function to 2,737 bytes.
 The completed source retains the asymmetric sign/clamping rules and
 single shared-velocity average exactly as observed in x87 instructions.
 
-The following paragraphs preserve the **historical pre-exact diagnosis**,
-including rejected hypotheses, old source SHA-256s and earlier partial
-replay scores. Their statements that the owner is "still open", that
-the best source remains non-exact, or that relocation 617 still drifts to
-629 are now superseded by the focused exact comparison above.
-
-#### Pre-exact investigations (historical, superseded)
-
-
-A fresh canonical-target review establishes the complete extent of the large
-pushbox resolver at 0x766B50: 2,727 bytes, 708 instructions, ending with the
-sole RET at 0x7675F6. All 48 direct branch instructions target addresses inside
-that extent. Its seven direct calls are two TransformPoseBox calls, one
-BoxesOverlap call and four CollisionSide calls. Its sole direct caller is
-Scene3::Step at callsite 0x764136 (return address 0x76413B). Nine 0xCC
-alignment bytes follow the RET; the next function
-starts at 0x767600. The reviewed boundary is therefore [0x766B50, 0x7675F7),
-not an assumed range inferred only from a candidate object.
-
-The original operands were also checked against the canonical PE data bytes:
-zero at 0x7872F8 is 0.0, the divisor at 0x787328 is 2.0, the left-side limit at
-0x787370 is 160.0, and the right-side limit at 0x7895E8 is 479.0. These are
-separate from CollisionSide's 20.0 / 619.0 / 280.0 constants. Do not substitute
-those character-edge thresholds for the pushbox stage limits.
-
-The resolver first transforms both current-pose boxes and tests their overlap.
-On overlap it selects the separation direction from the box-center ordering,
-computes an integer edge displacement, and splits that displacement between
-the two world X positions. Its subsequent velocity response is asymmetric:
-CollisionSide results select different sign-clamping and shared-velocity paths
-for the two directions. Four before/after boundary comparisons are explicitly
-materialized in separate stack slots. Preserve their order while reconstructing
-the natural C++ scopes; their apparent lack of high-level consumers is not a
-reason to delete them prematurely.
-
-A full natural C++ candidate now lives in `src/SceneBattlePushboxes.cpp`, with
-the four verified stage constants declared in `SceneBattleGlobals.h` and defined
-in `SceneBattleGlobals.cpp`. The first probe had a reversed comparison in the
-right-separation / secondary-1 `CollisionSide() == -1` path. Reading the actual
-x87 FCOMPP operand load order and the following condition-code test shows that
-the post-mask comparison is `facing1 * secondVelocity > facing0 * firstVelocity`;
-the source candidate now reflects that raw-instruction result rather than the
-old reversed expression.
-
-The current candidate materializes the four before/after stage-boundary stores
-in their respective separation branches as ordinary `int` locals. A focused
-VC7.1 build confirmed that removing `volatile` leaves all 2,727 function bytes
-and all 35 relocation records identical to the earlier volatile probe. Thus the
-target proves four ordered 32-bit stores, not a source-level `volatile`
-qualifier; `/Od` retains these unused locals. The shared four-`bool` approximation
-is rejected because it changed store widths and/or stack ownership.
-
-The focused `scene-battle-resolve-pushboxes` match unit is present in
-`config/match-units.toml` and binds all 35 external relocations: the four
-pushbox globals, two `TransformPoseBox` calls, `BoxesOverlap`, and four
-`CollisionSide` calls. The VC7.1 unit build succeeds and records a
-source/toolchain/dependency receipt. The current candidate now has the exact
-2,727-byte target extent. This is only an extent match: the canonical focused
-replay still rejects byte-for-byte comparison, so the function receives no
-exactness credit yet.
-
-The 28-byte excess in the previous 2,750-byte candidate was traced to an
-incorrect extra facing-times-average assignment in the left-separation /
-second-side-negative response. Removing it restored the target extent. A
-separate explicit exit in the right-separation fallback reproduces the target's
-second five-byte jump to the shared epilogue. These are semantic/control-flow
-corrections, not padding.
-
-The remaining mismatch is concentrated in local stack allocation and some
-x87 temporary lifetimes. The target saves `this` at EBP-0x60, its two
-conditional pose pointers at EBP-0x64/-0x68, and its hidden return buffers at
-EBP-0x4c/-0x5c. Its left-branch boundary stores use EBP-0x6c/-0x70 and its
-right-branch boundary stores use EBP-0xdc/-0xe0. The current candidate instead
-saves `this` at EBP-0x70, places the pose pointers at EBP-0x74/-0x78, the return
-buffers at EBP-0x5c/-0x6c, and the left/right boundary pairs at EBP-0x44/-0x40
-and EBP-0x4c/-0x48 respectively. Keep using the focused
-`scene-battle-resolve-pushboxes` unit; do not run a full cold replay for these
-local experiments.
-
-A fresh focused pass on 2026-11-08 independently reconfirmed the two most
-important leaves: `TransformPoseBox` is exact at 405/405 bytes (its accepted
-relocations include the x87 `__ftol2` conversions and original 0.5 operands),
-and `BoxesOverlap` is exact at 128/128 bytes with no relocations. These results
-do not confer exactness on the caller.
-
-The first 11 relocation offsets in the current 2,727-byte resolver candidate
-match the target. The next target relocation is at function+0x269 (offset 617),
-while the candidate places it at 629. Instruction inspection traced this 12-byte
-drift to two integer-to-x87 temporary slots: target uses disp8 accesses at
-`[ebp-0x7c]` and `[ebp-0x80]`, while the candidate spills them at
-`[ebp-0x84]` and `[ebp-0x88]`, forcing longer `mov` and `fild` encodings. A probe
-that removes the aggregate's `average` field and inlines the average expression
-moves the relocation back to 617, but duplicates the x87 average computation
-and expands the function to 2,805 bytes; it is a rejected diagnostic, not a
-candidate implementation. Retain the shared average computation and recover its
-natural local lifetime/placement instead.
-
-Changing the compiler's `/G5`, `/G7`, `/GB`, `/Gd`, `/Gz` or `/Gr` mode did not
-change the current object's 2,727-byte layout or relocation offsets. Simple
-reordering of the existing aggregate's declarations, moving its `average` to
-another outer-scope declaration, and splitting `displacement` into direction
-branches also failed to improve the match. These negative controls narrow the
-search; they do not establish that the current local aggregate is the original
-source declaration.
-
-A further focused pass on 2026-11-08 tested natural alternatives rather than
-assuming the aggregate was correct: independent `SurfaceRect`/velocity locals,
-16-byte frame records containing the boundary flags and pose pointers, explicit
-pose-pointer locals, function-scope versus branch-scope flags, and removal of
-the outer/transform braces. Independent locals move `this` farther down to
-EBP-0x74 and the hidden returns to EBP-0x60/-0x70; the frame-record variants
-move `this` to EBP-0x78. None preserves the target's return-copy instructions
-and stack ownership. A free `__fastcall ResolvePushboxes(Scene3 *)` control
-produces the same prologue as the member function, so the current mismatch is
-not explained by member-versus-free-function calling convention. Register and
-ordinary `char`/ `signed char` facing locals, aggregate padding, and simple
-scope-brace removal are also rejected controls.
-
-The scan of 643 locally built objects containing this function found no
-candidate with the target's combined prologue, pose-pointer, and hidden-return
-buffer offsets. Three direct-initialization probes place the first return
-buffer at the target EBP-0x4c, but they change the post-call copy sequence and
-grow the function to 2,729 bytes; they are diagnostics, not source candidates.
-The target's 12-byte drift at relocation 617 remains independently explained:
-two integer-to-x87 spill slots are EBP-0x7c/-0x80 in the target but EBP-0x84/
--0x88 in the candidate, forcing longer `mov` and `fild` encodings. Keep the
-average computed once and continue searching for the natural lifetime/layout
-that moves those spills without changing the two aggregate-return call sites.
-
-A canonical focused exact-unit replay on 2026-11-08 independently accepted
-`scene-battle-transform-pose-box` (405/405 bytes, 11 reviewed relocations,
-including eight `__ftol2` calls and three 0.5 operands) and
-`scene-battle-boxes-overlap` (128/128 bytes, no relocations). Their receipts are
-`.analysis/exact/scene-battle-transform-pose-box.json` and
-`.analysis/exact/scene-battle-boxes-overlap.json`; both carry
-`acceptance_authority: complete-function-codegen`. This is leaf-only evidence
-and does not confer exactness on `ResolvePushboxes`.
-
-One additional natural-layout control put `displacement` first in the local
-record. It reproduced the target's displacement/rectangle/double stack slots
-(EBP-0x40, -0x3c..-0x20, -0x1c/-0x14, -0x08), but expanded the frame to 0x14c
-and moved `this` to EBP-0x74 and the hidden returns to -0x60/-0x70. It is a
-useful layout clue, not a viable candidate; keep the accepted source untouched
-until the entire call/return layout improves together.
-
-The side-response fallthrough predicates were re-derived from the target's
-x87 status-word branches, not from the old source comments. On the left-separation
-path, the fallback is `facing1 * secondVelocity >= 0` and
-`facing0 * firstVelocity <= 0`; on the right-separation path it is
-`facing1 * secondVelocity <= 0` and `facing0 * firstVelocity >= 0`. The source
-had strict `< 0` on the two inclusive sides. Changing only those two operators
-to `<=` makes the corresponding target `test ah,0x41` / `test ah,0x1` branch
-sequences line up. The targeted boss replay still rejects the relocation
-inventory: candidate relocation 629 remains target 617, so this is a semantic
-correction and a partial codegen improvement, not a completed function.
-
-A fresh source-path rebuild on 2026-11-09 rechecked this conclusion against the
-actual target instructions. In the right-separation fallback, target `0x767513`
-compares `facing1 * secondVelocity` with zero, then `test ah,0x41; jp 0x7675f3`
-exits on greater/unordered; the next comparison at `0x76753d` exits with
-`test ah,0x1; jne 0x7675f3` when `facing0 * firstVelocity` is negative. Thus the
-fallthrough is exactly `facing1 * secondVelocity <= 0` AND
-`facing0 * firstVelocity >= 0`. A probe that reversed these signs to follow a
-literal reading of the decompiler lost four more matching bytes (1652 to 1648)
-and was reverted. Keep the current source predicate; the x87 status-word
-sequence is the authority for this condition.
-
-The saved exact report .analysis/exact/scene-battle-resolve-pushboxes.json is
-stale: it describes source 9c1232e2..., object 35deac04..., and 1460/2727
-matching bytes. After the 2026-11-09 whitespace-only source cleanup, the current
-source SHA-256 is 86987a06a3c9d57bc892d126cb9fc10e377073196849868a0f834a6d4dc9566b.
-The current focused build receipt is
-.analysis/build/scene-battle-resolve-pushboxes.build.json. A relocation-normalized
-diagnostic comparison gives 1652/2727, but the strict
-comparator rejects the relocation inventory before full code comparison.
-In particular, target relocation function+0x269 (617) is still at candidate
-function+0x275 (629). The final strict failure is recorded in
-.analysis/build/scene-battle-resolve-pushboxes.strict-final.log. Do not use the
-old 1460-byte report as the current baseline, and do not claim acceptance from
-the diagnostic rebound score.
-
-A second stack-layout pass on 2026-11-09 inspected 911 built COFF objects that
-contain `ResolvePushboxes`; 304 had the exact 2,727-byte extent. No same-size
-object in that corpus has the target's combined `this` home and both hidden
-return-buffer addresses. The target's first `TransformPoseBox` call uses the
-EBP-0x4c hidden buffer and the second uses EBP-0x5c; the current candidate uses
-EBP-0x5c and EBP-0x6c. The target saves `this` at EBP-0x60 and its conditional
-pose pointers at EBP-0x64/-0x68, whereas the candidate saves `this` at
-EBP-0x70 and the pointers at EBP-0x74/-0x78. The target's left boundary result
-stores are at EBP-0x6c/-0x70 (right results at EBP-0xdc/-0xe0); the current
-branch locals are at EBP-0x44/-0x40 and EBP-0x4c/-0x48. The common displacement
-(-0x3c), rectangle locals (-0x38..-0x1c), and three double locals
-(-0x18/-0x10/-0x08) already agree. This makes local lifetime/slot ownership,
-not aggregate size, the remaining prologue and spill-layout problem.
-
-The target's first facing-to-x87 integer spill is EBP-0x74, followed by the
-EBP-0x7c/-0x80 pair that explains the target relocation at function+0x269
-(offset 617). The candidate's corresponding first spill starts at EBP-0x7c and
-its later pair is EBP-0x84/-0x88, producing the 12-byte relocation drift to
-offset 629. Reversing the rectangle members while remapping logical player
-references scored only 1615/2727; grouping boundary flags into a local struct
-left the 1652/2727 score unchanged, while explicit pointer/flag scratch records
-expanded the function to 2754 bytes. Four function-scope flag locals scored
-1586/2727. These are retained negative controls, not accepted source changes.
+Earlier Pushboxes experiments tried declaration order, aggregate locals,
+explicit pointer lifetimes, comparison rewrites and `/O1`/`/O2`. None solved
+the original stack layout. The useful correction was to retain the standalone
+conditional expressions and put both returns at the original branch scope,
+as described above. Accepted source: `src/SceneBattlePushboxes.cpp`.
 
 ### Complete dispatch and body-contact test
 
@@ -3965,31 +3458,6 @@ the new header precisely. Future changes confined to this battle declaration can
 therefore select its actual consumer units rather than all Engine.h consumers.
 This one-time shared-header change still receives complete affected comparison.
 
-Five new and 179 Engine.h-dependent existing units compare strict exact from
-47 serial cold source/profile/dependency artifacts. All 135 existing compiler-local
-destination/offset bindings are checked before receipt finalization. Uninvolved
-standalone Input, reader and configuration units remain outside this replay.
-Focused ledger/progress and whitespace checks pass; no full CI, runtime matrix or
-unrequested full cohort ran. New source is src/SceneCollision.cpp and public proof
-is docs/evidence/scene-collision-exact.json, with affected certificates refreshed.
-Private evidence and native attempts are retained in .analysis/probes/scene-collision/;
-the 184-unit full formal report is preserved inside
-.analysis/cleanup/2026-11-07/retired-trials-and-reports.tar.gz as
-.analysis/exact/scene-collision-and-affected.json. This is a historical
-acceptance snapshot, not a current dependency-freshness claim:
-a later src/Engine.h change left 296 exact-unit certificates with stale
-dependency hashes. Current tracking validation fails until affected units are
-selectively replayed; see docs/RE_HANDOFF.md. Do not treat the old replay counts
-as current fresh proof.
-
-The old note below this point claiming that `ResolvePushboxes` had no source
-owner or match-unit recipe is stale and superseded by the current state above:
-`src/SceneBattlePushboxes.cpp` defines the member and
-`config/match-units.toml` contains `scene-battle-resolve-pushboxes`. The source
-builds to the correct 2,727-byte extent, but strict byte comparison still fails;
-there is deliberately no exact-match receipt or exactness credit for the boss
-function yet.
-
 The target's `TransformPoseBox` call at `0x767600` uses ECX=`this`, stack `+8`
 for the output `SurfaceRect *`, `+0xC` for the `SecondaryPose *`, and `+0x10`
 for the source box pointer; it returns the output pointer in EAX and uses `RET
@@ -4016,67 +3484,13 @@ these control-flow facts:
   The x87 status tests are respectively `test ah,0x41; jp`,
   `test ah,0x41; jne`, `test ah,0x1; jne`, and `test ah,0x5; jp`.
 
-Natural C++ probes have progressed beyond the old 150/174 inventory. The
-important current controls are:
+An earlier union experiment overwrote a still-live horizontal displacement
+with a boundary Boolean before both position updates consumed it. Keep these
+live values separate; instruction-count similarity did not expose that error.
 
-| Probe | `.text` | Frame | Instructions | Result |
-| --- | ---: | ---: | ---: | --- |
-| 150 | 2,725 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack ownership differs |
-| 174 | 2,729 | `0x148` | 708 | Full target mnemonic histogram; 35 relocations; stack ownership differs |
-| 259 | 2,535 | `0x140` | 708 | 276 `mov`, 16 `jmp`, 8 `jp`; velocity and rectangle result slots align better, but four boundary comparisons are absent |
-| 276 | 2,711 | `0x148` | 708 | Full target mnemonic histogram; one reused volatile Boolean creates byte stores at the wrong slots |
-| 277 | 2,726 | `0x150` | 708 | Full target mnemonic histogram; 35 relocations; four distinct volatile Booleans, but byte-store widths/stack slots and frame differ |
-
-Probe 277 is a historical instruction-inventory control, not the current best
-implementation. It is one byte shorter than the target and matches the complete
-708-instruction mnemonic histogram, but it is not byte-exact: its frame is eight
-bytes larger (0x150 vs 0x148), this is at [ebp-0x78] rather than [ebp-0x60],
-and its four volatile bool stores are bytes at [ebp-0x79], [ebp-0x7a],
-[ebp-0xe5] and [ebp-0xe6], unlike the target's four 32-bit stores. The
-pose-pointer and output-temporary slots also differ. Probe 276 has the target
-frame size but reuses one volatile Boolean and is 16 bytes short. Probe 259 is a
-useful local-lifetime control: its initial velocity stores and rectangle-result
-slots match the target more closely, but its frame/this/pose slots differ and
-it omits the four boundary comparisons. The current source owner in
-src/SceneBattlePushboxes.cpp is 2,727 bytes and has the best current diagnostic
-result (1652/2727), but it remains non-exact.
-
-The `WorkScratch` union in probes 276/277 aliases only the horizontal
-`displacement` and the later `facing` byte; their live ranges do not overlap.
-This is distinct from the withdrawn 2,898-byte `PushboxScratch::work` attempt,
-which overwrote a still-live displacement with a boundary Boolean before both
-position updates consumed it. That earlier attempt is semantically wrong and
-must not be revived.
-
-The next useful experiment is to recover the target's different lifetimes for
-the left/right boundary results, pose pointers, and the two hidden SurfaceRect
-return buffers. Simple declaration-order permutations and aggregate-versus-
-independent locals are now negative controls. Focus on the target EBP-0x7c/
--0x80 x87 spill slots that explain relocation 617 while keeping the average
-computed once and preserving both return-copy sequences. A further 2026-11-09
-pass tested frame records, explicit pose-pointer lifetimes, local aggregate
-order, function/branch scopes, flag declaration order and /O1-/O2 profiles;
-none improved the current 1652/2727 diagnostic result. Compare the complete
-function and every relocation after each focused build. Do not infer exactness
-from size or histogram. The retired source variants and logs are in the
-2026-11-09 archives documented in RE_ARTIFACTS.md; the 13 selected controls
-listed above remain live.
-
-The large battle-collision owners `ResolveBodyHit` (0x767F60),
-`ResolveEffectHit` (0x7697D0), `ResolveEffectPair` (0x76B090),
-`ResolveEffectClash` (0x76BAB0), and `ResolveBodyEffect` (0x76BD40) have since
-been independently rebuilt and matched against their canonical target bytes
-with reviewed relocation fields. `Scene3::Step`, round update/exit, replay reset,
-intro update and battle input/control owners have also been accepted. Check the
-current ledgers and `RE_HANDOFF.md` rather than treating this older open-work list
-as current. The five Video pixel owners at 0x409A90, 0x40A0B0, 0x40A440,
-0x40A7B0 and 0x40AAE0 now have natural C++ semantic owners in
-src/VideoCharacterDraw.cpp; all five remain open for strict exact codegen.
-
-This checkpoint adds **5 complete functions /4,113 instruction bytes**, for
-**201 authored functions /173,003 instruction bytes**, plus unchanged 667 local-table
-bytes. Reviewed boundaries/origins are 239 each. Complete game, linked resources,
-original/reconstructed runtime and portability remain independently open phases.
+The five Video pixel owners at `0x409A90`, `0x40A0B0`, `0x40A440`, `0x40A7B0`
+and `0x40AAE0` have natural C++ candidates in `src/VideoCharacterDraw.cpp` and
+remain open for strict exact codegen.
 
 ## Battle body-hit resolution
 
@@ -4180,25 +3594,6 @@ the actual 3B4-byte body frame and genuine descriptor/frame ownership without
 padding members, assembly or fabricated call ABI objects. One draft source-parser
 edit misread a C++ member arrow as a relational operator; it was corrected and
 the required pinned compiler/Wine --execute check passed before further comparison.
-
-Final source is src/SceneBodyHit.cpp. The two new and 184 Engine.h-dependent
-existing units compare strict exact from **48 serial cold source/profile/dependency
-artifacts**, with all 135 existing compiler-local destination/offset bindings
-checked before final receipts. Uninvolved standalone Input, reader and Config
-units are omitted. Public proof is docs/evidence/body-hit-exact.json and affected
-certificates are refreshed. Private complete bodies, typed-source derivation,
-constant/operand reviews and attempts are retained in .analysis/probes/body-hit/;
-full final reports are .analysis/exact/body-hit-and-affected.json. Only focused
-ledger/progress and whitespace checks ran; no full CI or runtime matrix ran.
-
-The checkpoint adds **2 complete authored functions /6,320 instruction bytes**,
-bringing acceptance to **203 functions /179,323 instruction bytes**, plus unchanged
-667 local-table bytes. Reviewed boundaries/origins are 241 each. At this body-hit
-checkpoint, ResolveEffectHit 0x7697D0 /6334 and the remaining effect/body collision
-owners were still open (subsequently recovered below), as were
-the battle update/draw/keyboard entries and independently tracked product/runtime/
-portability phases. The accepted body-hit owner does not complete battle or game
-reconstruction.
 
 ## Battle effect collision resolution
 
@@ -4312,24 +3707,6 @@ Clash and BodyEffect were complete exact on their first source builds. All work
 records contain used pointers, indices, matrices, rectangles or real frame values;
 there are no byte wrappers, assembly, padding fields or fake ABI declarations.
 Readable else-if cleanup also received complete native comparisons.
-
-The final public source, including its last formatting edits and actual filename,
-received **one serial cold source/profile/dependency artifact** and four complete
-manifest-bound comparisons, each with zero differences. Shared headers and all
-previous source files are unchanged, so no unrelated unit replay was needed.
-Proof is docs/evidence/effect-collision-exact.json; original full instructions,
-decompiles, all source/object attempts, complete comparisons, independent constant/
-call/branch/boundary reviews and final reports remain in
-.analysis/probes/effect-hit/, .analysis/probes/scene-collision/ and
-.analysis/exact/effect-collision.json. Only focused ledger/progress and whitespace
-checks accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
-
-This checkpoint adds **4 authored complete exact functions /12,028 instruction
-bytes**, bringing authored acceptance to **207 functions /191,351 instruction
-bytes**, plus unchanged 667 local-table bytes. Reviewed boundaries and origins
-are 245 each. At the effect-collision checkpoint, battle Step/render/keyboard and the parked
-pushbox owner were still open; Step/render and further control are recovered
-below. Product/runtime/portability closure and the whole game remain open.
 
 ## Battle main loop, rendering and round control
 
@@ -4487,25 +3864,6 @@ inputs/logs are retained; pinned toolchain --execute smoke checks passed before
 subsequent final comparisons. All native builds are bounded, serial, CPU1/nice10
 and use EFZ's own Wine state. Work records contain only used real values.
 
-The final six new and 190 actual Engine.h-dependent existing units compare strict
-exact from **50 serial cold source/profile/dependency artifacts**, retaining every
-original compiler-local destination/offset binding. The standalone Input, reader
-and configuration cohorts are uninvolved. Final public proof is
-docs/evidence/battle-loop-exact.json; private full reports are
-.analysis/exact/battle-loop-and-affected.json. Full canonical instructions,
-decompiles, source/object attempts and independent branch/call/constant/boundary
-reviews remain in .analysis/probes/battle-loop/. Only selected new/affected native
-units and focused ledger/progress/whitespace checks run, without full CI,
-a full cold cohort or redundant runtime matrices.
-
-This checkpoint adds **6 authored complete exact functions /6,385 instruction
-bytes**, bringing acceptance to **213 functions /197,736 instruction bytes**
-plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 251 each.
-At this loop checkpoint, battle keyboard and health/HUD/shadow/combo/number
-drawing were open; those are accepted in the following sections. Screenshot/fill,
-concrete background implementations and parked pushbox remain open, as do the
-whole game and independent product/runtime/portability phases.
-
 ## Battle health, HUD and combo display
 
 Canonical target: resources/EFZ.exe, SHA-256
@@ -4623,32 +3981,10 @@ is accepted separately in the later number/shadows/keyboard section.
 Complete health, HUD and combo sources were built early, at 7700,9028 and2205
 bytes respectively. Genuine work records hold only used rectangles, widths,
 player/stroke indices or counts. The health derivation initially had private
-parser errors involving a frame width name and a spaced dereference; inputs/logs
-are retained, and the pinned --execute smoke check passed before subsequent
-comparisons. Original branch/literal order and ordinary subtraction resolved
+parser errors involving a frame width name and a spaced dereference; the errors were corrected before subsequent comparisons. Original branch/literal order and ordinary subtraction resolved
 the complete differences. Final formatting/comment cleanup also received full
 native comparisons. There are no assembly, copied bytes, padding fields,
 masked fields or shortened-prefix comparisons.
-
-The final public source received **one serial cold source/profile/dependency
-artifact** and three complete manifest-bound strict comparisons, all zero
-at full extent. Existing source files and shared headers are unchanged, so
-no previous-unit replay was involved. Public proof is
-docs/evidence/battle-display-exact.json. Private complete target instructions,
-source/object attempts, independent call/constant/branch/boundary reviews and
-final reports remain in .analysis/probes/battle-display/ and
-.analysis/exact/battle-display.json. The original decompiles remain in
-.analysis/probes/battle-loop/. Only focused ledger/progress/whitespace checks
-accompany the checkpoint; no full CI, full cold cohort or runtime matrix.
-
-The checkpoint adds **3 authored complete exact functions /18,944 instruction
-bytes**, bringing acceptance to **216 functions /216,680 instruction bytes**,
-plus unchanged 667 local-table bytes. Reviewed boundaries and origins are 254 each.
-DrawNumber, the shadow prepass and battle keyboard/replay reset were open at
-this display checkpoint and are accepted below. Parked pushbox, concrete
-background implementations and whole-game/product/runtime/portability closure
-remain open. Complete display functions do not establish a runnable
-replacement or whole-game completion.
 
 ## Battle number, shadows and keyboard replay control
 
@@ -4664,8 +4000,6 @@ bytes and no local tables:
 | PollKeyboard | 0x765660 | 2,358 | 0x765F96 | 456 | 65 | 8 | 2 | 19 |
 | ResetReplay | 0x7661A0 | 734 | 0x76647E | 201 | 2 | 20 | 3 | 24 |
 
-Complete contiguous instruction, branch, receiver, return and following alignment
-review is retained in .analysis/probes/battle-controls/boundary-review.json.
 The respective following CC lengths are 14,0,10,2, outside credited extents.
 DrawNumber ends in RET18; the other three have no stack arguments. All 54
 relocations are explicit: 38 direct REL32 calls and 16 DIR32 operands comprising
@@ -4714,8 +4048,7 @@ are 618 and 590 bytes respectively, versus the 806-byte target. Strict
 comparison rejects all complete extents. The original body uses ESI/EDI/EBX,
 body-local ESI/EDI saves, AH/AL comparisons and three repeated source-pitch
 subtractions per row; those compiler-visible details remain unrecovered. No
-exactness credit is assigned. Full original instructions and provisional
-decompile are retained beside the caller reviews.
+exactness credit is assigned. Use target disassembly to review these instructions.
 
 ### Keyboard and replay behavior
 
@@ -4761,20 +4094,6 @@ existing compiler-local destination/offset bindings were retained; the changed
 Shiori constructor literal ID was independently checked against `shiori` at
 787DF0 before receipts were finalized. No toolchain/Wine failure occurred.
 
-Public proof: docs/evidence/battle-controls-exact.json, plus refreshed involved
-older certificates. Final reports: .analysis/exact/battle-controls-and-affected.json.
-All target dumps, attempts, independent operand/call/constant/boundary reviews
-and native logs remain private. Derivation/publish scripts are one-time history;
-do not rerun them on an evolving baseline.
-
-Authored acceptance at this historical checkpoint totals 220 functions /
-221,678 code bytes, with 667 local-table bytes and 258 reviewed boundaries and
-origins. These figures describe that checkpoint, not the current generated
-progress report. On 2026-11-09 the operator requested a receiving-agent handoff
-and continuation of reconstruction. The earlier statement that no task remained
-is superseded. Pushbox, Shiori slot6, other characters, pixel-kernel exactness
-and product/runtime/portability closure remain open. Follow RE_HANDOFF.md.
-
 ## Video screenshot writer
 
 `Video::SaveScreenshot` at 0x40C1C0 is a complete authored 962-byte member,
@@ -4805,13 +4124,10 @@ Ordinary nested local scopes and a work record containing only live capture
 values retain the original /GS frame and local storage; no inert padding is
 present. Reformatting or changing these locals requires a new full comparison.
 
-One final selected cold artifact proves the final public source. No accepted
-header/source consumer changed and no full CI/cohort ran. Private complete
-attempts, disassembly, operand audit and formal log are retained under
-`.analysis/probes/video-output/`. FillRectangle at 0x40B300 remains open:
-complete review found a second body-local EDI save/restore around a register
-pixel loop, consistent with handwritten assembly. Its decompile alone is not
-evidence for a permitted natural C++ exact implementation.
+FillRectangle at `0x40B300` remains open: complete review found a second
+body-local EDI save/restore around a register pixel loop, consistent with
+handwritten assembly. Its decompile alone is not evidence for a permitted
+natural C++ exact implementation.
 
 ## Loading scene and Mizuka creation
 
@@ -4879,11 +4195,11 @@ The first instruction operand difference beyond shifted local-table references
 is at 0x76D743, the first background-constructor argument evaluation; later GPR
 rotation adds a two-byte receiver move before the first LoadResources call.
 Pointer casts/views, destructor declarations and case scopes were byte-neutral;
-do not repeat them without new evidence. Its full random/replay/CPU/stage
-preparation behavior and disabled BMP branch are retained privately. The
+do not repeat them without new evidence. The complete draft in `workbench/prepare-battle/` includes random/replay/CPU/stage
+preparation and the disabled BMP branch. The
 confirmed background scale for stage 16 is 0.125, otherwise 1.0; CPU division is
 by 1.5f. These correct the decompiler's lost constant types and initial guesses.
-Read `.analysis/probes/scene-loading/README.md` and parked-best before resuming.
+Use the workbench README for its selected build command.
 
 ## Animated background owners
 
@@ -4956,13 +4272,6 @@ on that pointer. The scalar-deleting helper at751A10 calls the original
 PatternSequence destructor and optional operator delete; it is not a vector
 -deleting helper. No runtime repair is part of this exact reconstruction.
 
-Final public sources and their six affected battle consumers passed all26
-complete strict comparisons from only three serial cold artifacts. All five
-local address/table bindings were independently checked before symbol-name
-refresh. Public certificates and per-unit dependencies were refreshed only for
-this selection. No full CI/cohort or runtime matrix ran. Private decompiles,
-full disassembly, attempts and reviews live in `.analysis/probes/backgrounds/`.
-
 ## Mizuka action selection and lifetime
 
 Eight additional Character24/Mizuka virtual bodies are complete exact in
@@ -5028,20 +4337,10 @@ store uses an ordinary conditional assignment followed by the common return.
 The entire 10,464-byte result, not a normalized instruction diagnostic, is the
 acceptance authority.
 
-Final formatted public sources passed all ten selected complete strict native
-comparisons from three serial static /Od artifacts: eight new functions plus
-the existing Scene2 creation dispatcher and Mizuka constructor that consume the
-new header. All26 existing compiler-local table/destination offsets were audited
-before symbol-only refresh; the original25-entry dispatcher table remains fully
-compared. Tracking and ledger/progress CI are focused checks; no full cohort,
-full CI or runtime matrix was requested or run. Private decompiles, complete
-attempts, disassembly, derivation and reviews live in `.analysis/probes/mizuka/`.
-
-The earlier PrepareBattle4031/4029 extent issue was tested once using the newly
-accepted real background layout, base inheritance and declarations. Its complete
-native result and first GPR divergence at76D743 were unchanged. The control is
-now parked in `.analysis/probes/loading-owner/README.md`; do not repeat that
-layout/type hypothesis without new evidence. It earns no implementation credit.
+PrepareBattle was tested with the accepted real background layout, base
+inheritance and declarations. Its 4,031/4,029 extent and first GPR divergence
+at `0x76D743` were unchanged. Do not repeat this type/layout hypothesis
+without new evidence.
 
 ## Mizuka circular command recognition
 
@@ -5086,14 +4385,6 @@ E0/C0/80 masks without intermediate narrowing casts. Source scopes, scan
 ordering and actual state transitions are preserved; there is no artificial
 padding, byte wrapper or fake ABI.
 
-A final cold artifact for the formatted public source passed strict complete
-comparison. No existing source or header changed, so no old native units needed
-replay. Focused tracking, ledger/progress CI and whitespace checks passed; no
-full CI/cohort or runtime matrix ran. Private complete source/object attempts,
-full target disassembly, derivation and independent review are retained in
-`.analysis/probes/mizuka-command/`. Its generator is derivation evidence rather
-than an idempotent tool for recreating refined accepted source.
-
 ## Mizuka CPU command and movement owner
 
 Character24::Slot05 at0x4FDC10 is complete exact:16,912 instruction bytes,
@@ -5137,15 +4428,6 @@ or reversing floating operands changes behavior for exceptional values as well
 as emitted x87 instructions. Do not normalize these tests from decompiler output.
 Existing Shiori CPU source supplied field/ABI hypotheses; all Mizuka acceptance
 comes from this canonical target's complete comparison and operand review.
-
-The formatted public source passed one selected cold native artifact with all
-16,912 bytes equal and zero differences after the341 reviewed relocations.
-Public headers and existing sources are unchanged, so no old unit required
-replay. Focused tracking, ledger/progress CI and whitespace checks passed; no
-full CI/cohort or runtime matrix ran. Private decompile, complete source/header/
-object attempts, retained compiler exits, full disassembly and independent
-reviews are in `.analysis/probes/mizuka-cpu/`. Its one-time derivation scripts
-must not be rerun over accepted or newer sources.
 
 ## Mizuka local effect dispatch and controls
 
@@ -5213,20 +4495,6 @@ atan2. This identifies an external CRT dependency, not an authored reconstructio
 of the math runtime. StartFade writes fadeDirection=1, fadeAttack=arg1,
 fadeHold=arg2 and fadeRelease=arg3 in that order, then RET0C. Layouts and original
 class/type names remain reconstruction views, not claims about recovered names.
-
-Only two nonvirtual method declarations change public Engine.h; data layout and
-existing method bodies are unchanged. To keep dependency-bound exact evidence
-current, formal replay selected three new units and241 actual Engine.h consumers,
-compiled once per65 source/profile/dependency groups. Every complete comparison
-passed strict zero-difference acceptance, including the main's full tables.
-Generated local-symbol names were reviewed against unchanged original destinations,
-local offsets and string payloads before refreshing receipts. Thirty-three
-unaffected existing units (31 authored and two auxiliary) retained their earlier
-evidence. This was an explicit affected
-selection; no unrequested full cold cohort, full CI or runtime matrix ran.
-Tracking, ledger/progress CI and whitespace checks passed. Private full attempts,
-compiler exits, decompiles and independent reviews remain in
-`.analysis/probes/mizuka-effects/`.
 
 ## Mizuka animation and state owner
 
@@ -5297,16 +4565,6 @@ StartReverseFade writes direction-1 then attack/hold/release and returns RET0C.
 SetSceneTimer stores Context14278, halves it with signed division only when
 setting136C==0 and returns RET04. These methods retain existing provisional view
 names rather than asserting recovered original source names.
-
-Formal validation selected four new units and244 actual Engine.h consumers,
-including existing auxiliaries, from67 serial cold source/profile/dependency
-artifacts. All248 complete comparisons passed strict zero differences; both
-main tables were compared in full. Compiler-local identities were refreshed
-only after unchanged offsets, canonical destinations and literal bytes were
-verified. Thirty-three unrelated prior units retained their evidence. Tracking,
-ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
-matrix ran. Private evidence, complete attempts and compiler exits remain in
-`.analysis/probes/mizuka-state/`.
 
 With this accepted owner, every one of the13 original Mizuka vtable destinations
 has a complete exact source-bound proof, including the inherited shared resource
@@ -5405,17 +4663,6 @@ branches. The first complete source already had size5242 but seven differing
 bytes; three gate jumps and two meter-threshold pairs required correction.
 Size agreement alone never conferred acceptance.
 
-Final formatted sources passed 37 complete strict comparisons from 17 serial
-cold source/profile/dependency artifacts: ten new units and 27 actual consumers
-of CharacterViews.h. All 308 refreshed generated-symbol identities across six
-old units retain reviewed offsets, destinations or literal payloads. The other
-254 existing units retain earlier evidence. Engine.h and Input.h are unchanged.
-Focused tracking, ledger/progress CI and whitespace checks passed; no full
-CI/cohort or runtime matrix ran. Full target dumps, read-only annotated
-decompiles, source/object attempts, compiler exit logs and independent reviews
-remain in `.analysis/probes/misuzu/`. Its one-time derivation/publication scripts
-must not be rerun over accepted or newer sources.
-
 ## Misuzu CPU command and movement owner
 
 Character23::Slot05 at 0x51F3E0 now has complete strict exact source in
@@ -5468,15 +4715,6 @@ reduced it to 17,127. The final four differing bytes identified incorrect source
 literals, corrected to the original 4.0f and 800.0 before acceptance. Final
 formatted source retained the full zero-difference result. Diagnostic branch
 normalization and size agreement supplied no acceptance credit.
-
-One selected final cold artifact passed all 17,127 bytes with zero differences
-after the 318 reviewed bindings. Public headers and existing source bodies are
-unchanged, so no old native unit needed replay. Focused tracking, ledger/progress
-CI and whitespace checks passed; no full CI/cohort or runtime matrix ran. One
-initial generated-source syntax failure was fixed, and the required pinned
-toolchain --execute C/C++/Windows/CRT/resource/link/execution smoke passed before
-further native builds. All attempts and compiler exits remain retained under
-`.analysis/probes/misuzu-cpu/` and `.analysis/build/`.
 
 Eleven of the thirteen original Misuzu vtable destinations now have exact
 source-bound proofs, including the inherited resource loader. State50C4B0/54769
@@ -5549,22 +4787,6 @@ entire unmodified contribution passed strict zero differences. Final source
 formatting retained that result. Case-local or branch-normalized diagnostics
 confer no acceptance credit by themselves.
 
-One final selected cold artifact passed all 55,622 bytes, including both complete
-tables and all 1,300 reviewed bindings. Public headers and all prior source and
-unit recipes are unchanged, so no old native unit needed replay. Focused tracking,
-ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
-matrix ran. All native builds succeeded under pinned VC7.1 RTM, EFZ-only Wine,
-serial one-CPU nice10 bounded commands with retained exit logs. Complete target
-dumps, read-only decompile, source/object attempts and reviews remain in
-`.analysis/probes/misuzu-state/`. One-time derivation/publication scripts must
-not be rerun over accepted or newer source.
-
-Twelve of thirteen original Misuzu vtable destinations now have complete exact
-source-bound proofs, including inherited LoadResources. Local effects5236D0/54139
-remains open, as do linked data/assets, original translation-unit partitioning,
-complete runtime behavior and whole-game reconstruction. This checkpoint gives
-no credit to the parked Shiori state dispatcher.
-
 ## Misuzu local effect dispatch and controls
 
 Character23::Slot07 at 0x5236D0 has complete strict exact source in
@@ -5636,18 +4858,6 @@ fields and three threshold comparisons. Restoring original direct exits and
 threshold expressions yielded complete strict zero differences, retained after
 source formatting. Case extents, register-normalized shapes and branch-normalized
 diagnostics never conferred acceptance credit.
-
-One final selected cold artifact passed all54,511 bytes, both complete tables
-and all662 reviewed bindings. Public Engine.h, CharacterViews.h and Input.h,
-all275 earlier authored matches and293 earlier unit recipes remain unchanged;
-no old native unit required replay. Focused tracking, ledger/progress CI and
-whitespace checks passed; no full CI/cohort or runtime matrix ran. An initial
-provisional Context cast syntax failure was corrected, and required toolchain
---execute C/C++/Windows/CRT/resource/link/execution smoke passed before further
-native compilation. Full attempts, compiler exits, target dumps, read-only
-decompile and independent reviews remain in `.analysis/probes/misuzu-effects/`.
-One-time derivation/refinement/publication scripts must not be rerun over
-accepted or newer sources.
 
 Every one of the13 original Misuzu vtable destinations now has complete exact
 source-bound evidence, including inherited LoadResources. This is a virtual-entry
@@ -5756,10 +4966,6 @@ old units retain reviewed destinations, local offsets or literal payloads
 Engine.h and Input.h remain unchanged. Focused tracking, ledger/progress CI and
 whitespace checks passed; no full CI/cohort or runtime matrix ran.
 
-Full attempts, read-only annotated decompiles, boundary/operand review and native
-exit logs are retained in `.analysis/probes/mishio/`. Its one-time generation
-scripts are derivation history and must not overwrite accepted/newer sources.
-
 ## Mishio CPU command and movement owner
 
 Character15::Slot05 at 0x54C250 is complete strict exact in
@@ -5811,15 +5017,6 @@ vertical-40. Preserve subtraction from vertical before comparing forward;
 algebraic reassociation changes the x87 operations. Positive movement timers
 precede the final random movement owner. The original close/far facing-command
 guards, thresholds and immediately returning branches are retained.
-
-Final formatted public source passed one selected complete cold native replay
-with all297 reviewed bindings and zero differing bytes. Public headers and all
-304 existing recipes/source owners are unchanged, so no old unit required
-replay. Focused tracking, ledger/progress CI and whitespace checks passed;
-no full CI/cohort or runtime matrix ran. No native compiler/Wine failure occurred.
-All decompile input, target review, source/object attempts and native exits are
-retained in `.analysis/probes/mishio-cpu/`. One-time derivation scripts are
-historical and must not overwrite accepted/newer sources.
 
 Eleven of thirteen original Mishio virtual destinations now have exact proofs.
 State530BC0 and effects54FD30 remain open, including unreviewed associated tables.
@@ -5898,21 +5095,6 @@ zero-difference comparison. Diagnostic case normalization alone has no acceptanc
 authority. Final formatting also received complete comparison and renewed operand
 review before one selected final cold native replay.
 
-Public headers and all305 previous recipes/source owners remain unchanged, so
-no old native unit needed replay. Focused tracking, ledger/progress CI and
-whitespace checks passed; no full CI/cohort or runtime matrix ran. The initial
-provisional comma-assignment syntax failure was corrected, and required
-verify-toolchain --execute smoke passed before subsequent native attempts.
-All inputs, objects, compiler exits and independent reviews remain retained in
-`.analysis/probes/mishio-state/`; its one-time derivation scripts must not overwrite
-accepted/newer sources.
-
-Twelve of thirteen original Mishio virtual destinations now have exact proofs.
-Local effects54FD30/29568 instruction bytes remains open with associated tables
-unreviewed. Its fresh annotated decompile is retained privately; it confers no
-acceptance. Linked resources/data, original TU partitioning, runtime and game
-reconstruction remain independently open.
-
 ## Mishio local effect dispatch and controls
 
 Character15::Slot07 at 0x54FD30 is complete strict exact in
@@ -5979,15 +5161,6 @@ the raw mismatch to32 bytes. Unmodified complete comparison caught the remaining
 direct-exit destinations and type443 immediate, which branch-normalized diagnostic
 cases could conceal. Final source and both complete tables have zero differences;
 formatting received another complete comparison and independent operand review.
-
-One final selected cold native replay passed all29,876 bytes and279 reviewed
-bindings. Public headers and all306 prior recipes/source owners remain unchanged,
-so no old unit required replay. Focused tracking, ledger/progress CI and whitespace
-checks passed; no full CI/cohort or runtime matrix ran. No native compiler/Wine
-failure occurred in this effect checkpoint. All target evidence, source/object
-attempts, compiler exits and independent reviews remain in
-`.analysis/probes/mishio-effects/`; its one-time derivation scripts must not
-be rerun over accepted/newer source.
 
 All13 original Mishio vtable788768 destinations now have complete exact recipes,
 including inherited LoadResources410B70. The constructor is additional to this
@@ -6068,11 +5241,6 @@ threshold is >=1000. The first complete4073-byte source already had the full
 size but four differing bytes: two gate jumps and one threshold pair required
 original-instruction corrections. Equal size alone never conferred acceptance.
 
-Full read-only annotations for all13 new bodies, target dumps, source/object
-attempts, native exits and complete boundary/operand reviews are retained in
-`.analysis/probes/misaki/`. One-time derivation scripts must not overwrite
-accepted/newer source. Public Engine.h and Input.h remain unchanged.
-
 Final formatted sources passed63 complete strict comparisons from29 serial cold
 source/profile/dependency artifacts: ten new units and53 actual CharacterViews.h
 consumers. All726 refreshed generated symbol identities across12 units retain
@@ -6124,15 +5292,6 @@ and x87 return. Retained external callee bytes are ABI evidence only, without
 new authored reconstruction credit. Existing real shared declarations remain
 unchanged; no fake ABI or inert locals were introduced.
 
-One final selected cold native replay passed all17,127 bytes and318 reviewed
-bindings with zero differences. Public headers and all317 existing recipes /
-source owners remain unchanged, so no old native unit needed replay. Focused
-tracking, ledger/progress CI and whitespace checks passed; no full CI/cohort or
-runtime matrix ran. No compiler/Wine failure occurred. Full annotations, target
-review, source/object attempt and native exits remain retained in
-`.analysis/probes/misaki-cpu/`; unused inherited derivation scripts are historical
-templates and must not overwrite accepted/newer source.
-
 Eleven of thirteen original Misaki virtual destinations now have complete exact
 proofs, including inherited LoadResources. State5571F0 and effects56F920 remain
 open with associated tables unreviewed. Resource/data/runtime/TU and game phases
@@ -6170,18 +5329,6 @@ them. Preserve original particle arithmetic, random sample order and throwing
 state transitions rather than simplifying equivalent expressions. Original
 class/translation-unit provenance remains open.
 
-The first complete native source was built early. Target-backed control and
-expression refinements then yielded the full exact artifact; diagnostic case
-normalization conferred no credit. After source formatting, the entire function
-was rebuilt and compared again. One final selected cold native replay passed
-all67,342 bytes and1,519 reviewed bindings with zero differences. Public headers,
-all318 prior recipes and existing source owners are unchanged. Focused tracking,
-ledger/progress CI and whitespace checks passed; no full CI/cohort or runtime
-matrix ran. No compiler/Wine failure occurred. Retain all target evidence,
-complete source/header/object attempts and bounded native exit logs in
-`.analysis/probes/misaki-state/` and `.analysis/build/`. Inherited unused derivation
-scripts are historical templates, not idempotent maintenance commands.
-
 Twelve of thirteen Misaki virtual destinations now have complete exact proofs.
 Effects56F920/15,562 instruction bytes remains open, with associated tables still
 unreviewed. Resource/data/runtime/TU and game phases remain independently open.
@@ -6217,22 +5364,6 @@ float operand order remain explicit. CRT random multipliers must retain their
 actual evaluation order; mathematical commutativity does not establish exact
 codegen or random-draw correspondence. Existing field3148/3248 arrays and shared
 effect-slot views suffice without public-header changes.
-
-A complete source was compiled early, refined against original instructions,
-then fully rebuilt and compared after formatting. One final selected cold replay
-passed all15,786 bytes and193 reviewed bindings with zero differences. All319
-prior recipes/source owners and public headers were audited unchanged. Focused
-tracking, ledgers/progress CI and whitespace checks passed; no old replay, full
-CI/cohort or runtime matrix ran. No compiler/Wine failure occurred. Full private
-target/operand review, complete source/header/object attempts and native exits
-remain in `.analysis/probes/misaki-effects/` and `.analysis/build/`. Unused inherited
-derivation scripts are historical templates and must not overwrite accepted source.
-
-All thirteen actual destinations of Misaki vtable788808 now map to complete exact
-recipes, including inherited LoadResources. This closes the observed virtual-body
-set, without claiming resource/linked-data, original TU, runtime or game closure.
-Current authored totals:302 functions,801,974 instruction bytes and5,499 associated
-table bytes;339 reviewed boundaries/origins and320 proof recipes.
 
 ## Mayu construction input and indicator owners
 
@@ -6276,16 +5407,6 @@ diagonal selection. Its first5,009-byte source yielded all5,004 exact bytes afte
 those operand/control corrections. Formatting changes received complete native
 comparisons; no inert locals, fake ABI or original-byte wrappers were introduced.
 
-The final selected cold comparison covers76 complete units from35 serial native
-source/profile/dependency artifacts:ten new owners and66 actual CharacterViews.h
-consumers. The other254 existing units retain earlier artifacts. Compiler-local
-symbol identity changes are reviewed against identical canonical destinations,
-actual local offsets and complete string payloads before strict comparison.
-All selected units pass zero differences. Focused tracking, ledgers/progress CI
-and whitespace checks pass; no full CI/cohort or runtime matrix ran. Preserve
-private target/operand review, source/header/object attempts, Ghidra logs and
-bounded native exits in `.analysis/probes/mayu/` and `.analysis/build/`.
-
 Ten of thirteen Mayu virtual destinations now have complete exact proofs,
 including inherited LoadResources. CPU5E2440/14310, state5C8580/87209 instruction
 bytes and effects5E5C30/10512 instruction bytes remain open; their associated
@@ -6320,14 +5441,6 @@ near-facing owner performs its random guard before checking forward distance
 remaining branch-destination byte exposed this distinction after all instruction
 forms and extents matched. Keep that outer return explicit. No far-facing guard
 from another character is inferred. Original class/TU provenance stays open.
-
-Formatting received a complete native rebuild and strict comparison. One final
-selected cold replay passes all14,310 bytes and275 reviewed bindings with zero
-differences. Public headers and all330 prior recipes/source owners are unchanged;
-no old replay is needed. Focused tracking, ledgers/progress CI and whitespace
-checks pass; no full CI/cohort or runtime matrix ran. No compiler/Wine failure
-occurred. Preserve all target/operand/ABI evidence and complete source/header /
-object attempts with bounded native exits in `.analysis/probes/mayu-cpu/`.
 
 Eleven of thirteen actual Mayu virtual destinations now have exact proofs.
 State5C8580/87209 and effects5E5C30/10512 instruction bytes remain open, with
@@ -6366,26 +5479,6 @@ association remain explicit. Types408/409 really return from the complete update
 after converting the slot, rather than continue the ring. CRT particle random
 multiplier order follows target instructions. Existing child fields/shared views
 suffice without public-header changes; original class/TU provenance stays open.
-
-The first complete10,647-byte native source was built early. Target-backed word
-updates, positive lifecycle exits, original threshold operands and arithmetic
-order recover the full artifact. Formatting received a complete native rebuild /
-strict comparison. One final selected cold replay passes all10,680 bytes and144
-reviewed bindings with zero differences. Public headers and all331 prior recipes /
-source owners remain unchanged; no old unit needs replay. Focused tracking,
-ledgers/progress CI and whitespace checks pass; no full CI/cohort or runtime
-matrix ran. No compiler/Wine failure occurred. Preserve all private evidence,
-complete source/header/object attempts and bounded native exits in
-`.analysis/probes/mayu-effects/` and `.analysis/build/`; unused inherited derivation
-scripts must not overwrite accepted/newer source.
-
-Twelve of thirteen actual Mayu virtual destinations now have exact proofs.
-The substantial state owner5C8580/87,209 instruction bytes remains open, with
-associated tables unreviewed; its complete fresh read-only annotation is retained.
-Current authored totals:314 functions,844,753 instruction bytes and5,667 associated
-table bytes;350 reviewed boundaries/origins and332 proof recipes. Resource/data /
-runtime/TU and game phases remain independently open.
-
 
 ## Mayu animation and state owner
 
@@ -6435,23 +5528,6 @@ is outstanding. The read-only typed state decompile completed successfully but
 still split double literals into DWORD stores; those hypotheses were checked
 against fresh target operands rather than trusted as source declarations.
 
-After final formatting, another complete native strict comparison passes.
-One final selected cold replay passes all88,163 bytes and2,059 explicit reviewed
-bindings with zero differences. Public headers and all332 prior recipes/source
-owners remain unchanged; no old unit needs replay. Focused tracking,
-ledgers/progress CI and whitespace checks pass. No full CI/cohort, runtime
-matrix, REA or subagents ran. Preserve complete private evidence, source/header /
-object attempts and native logs in `.analysis/probes/mayu-state/` and
-`.analysis/build/`; derivation scripts are one-time records and must not overwrite
-accepted/newer source.
-
-All thirteen actual Mayu virtual destinations now have complete exact proofs,
-including inherited LoadResources. This closes these code bodies only. Current
-authored totals:315 functions,931,962 instruction bytes and6,621 associated table
-bytes;351 reviewed boundaries/origins and333 proof recipes. Resource/data,
-runtime, original TU partitioning, portability and game phases remain open.
-
-
 ## Makoto construction input and indicator owners
 
 Ten complete Character03 owners add17,018 strict exact instruction bytes without
@@ -6495,36 +5571,6 @@ guards compare>=1000 directly; original 0x80 branch tests remain !=0 while the
 command ID sum retains positive-mask boolean arithmetic. Similarities with other
 characters supplied hypotheses only; complete original bytes are the authority.
 
-The final selected comparison covers89 units from41 serial cold native artifacts:
-ten new bodies and79 actual CharacterViews.h consumers. The other254 units retain
-their earlier proofs. Every compiler-generated local/string symbol rename is
-checked against unchanged canonical destinations/local offsets and native string
-bytes before accepting new receipts. Report:
-`.analysis/exact/makoto-and-affected.json`; log:
-`.analysis/build/makoto-formal-replay.log`. Focused target-required tracking,
-ledgers/progress CI and whitespace checks pass; no full CI/cohort or runtime
-matrix is needed. No native compiler/Wine failure, REA or subagents occurred.
-Preserve all private source/header/object attempts, original disassembly,
-read-only Ghidra annotations, complete boundary/operand reviews and logs in
-`.analysis/probes/makoto/`. Derivation scripts are one-time records and must not
-overwrite accepted/newer source.
-
-At this 2026-11-07 checkpoint, ten of thirteen actual Makoto virtual
-destinations had complete exact proofs, including inherited LoadResources.
-Slot05 CPU, Slot06 state and Slot07 effects were then identified as the next
-owners. Slot05 CPU and Slot07 effects were later accepted strict exact;
-Slot06 was also fully accepted on 2026-11-09 as detailed in the later
-state-dispatch exactness section. The "only remaining open" status
-applies to the historical pre-Slot06 checkpoint only. All thirteen fresh read-only annotations are retained and the Ghidra job
-is terminal. Its state decompiler warning about 03020100 is provisional
-analysis, not evidence of an accepted data dependency.
-At that checkpoint authored totals were 325 functions, 948,980 instruction
-bytes and 6,621 associated table bytes; 360 reviewed boundaries/origins and 343
-proof recipes. Current repository totals are generated in docs/PROGRESS.md.
-Resource/data, runtime, TU, portability and game phases remain independently
-open.
-
-
 ## Makoto CPU command and movement owner
 
 Character03::Slot05 at0x5FB040 is complete strict exact in
@@ -6565,32 +5611,6 @@ The two final timer random draws retain their separate conditions and original
 nested facing/return joins. All of these are target facts rather than inferred
 intent or another character's algorithm.
 
-The first complete17,712-byte native draft was built early. Actual control flow,
-scalar/constant order and integer subtraction recover the complete owner. One
-private text rewrite initially matched the suffix of25.0f and caused a syntax
-error; it was corrected and the required full verify-toolchain --execute smoke
-passed. No compiler/Wine issue remains. After final formatting, another complete
-native strict comparison passes. One final selected cold replay passes all17,531
-bytes and329 reviewed bindings with zero differences. Public headers and all343
-previous recipes/source owners remain unchanged; no old unit needs replay.
-Focused target-required tracking,ledgers/progress CI and whitespace checks pass;
-no full CI/cohort,runtime matrix,REA or subagents ran. Preserve all private
-attempts,boundary/operand/random-return reviews,full fabs ABI and bounded build
-logs in `.analysis/probes/makoto-cpu/` and `.analysis/build/`. Derivation scripts
-remain one-time records and must not overwrite accepted/newer source.
-
-At this post-CPU checkpoint, eleven of thirteen actual Makoto virtual
-destinations had complete exact proofs. Slot07 local effects has since also
-been accepted strict exact; Slot06 at 0x5E85F0 /58,482 code bytes plus 810 bytes
-of reviewed tables (59,292 total) was then the sole open Makoto virtual
-owner and has since been accepted Exact. Its fresh read-only annotations are retained in .analysis/probes/makoto/;
-all Ghidra jobs are terminal. At this checkpoint authored totals were 326
-functions, 966,511 instruction bytes and 6,621 associated table bytes; 361
-reviewed boundaries/origins and 344 proof recipes. Current repository totals are
-generated in docs/PROGRESS.md. Resource/data, runtime, TU, portability and game
-phases remain independently open.
-
-
 ## Makoto local effect dispatch and controls
 
 Character03::Slot07 at0x5FF4C0 is complete strict exact in
@@ -6600,10 +5620,6 @@ address table occupies607849..6078C4 and100 selector bytes occupy6078C5..607928.
 Seven excluded CC bytes precede next prologue607930. Vtable788AC8 slot07 operand
 788AE4 contains5FF4C0. Public proof:`docs/evidence/makoto-effects-exact.json`;
 recipe:character-03-update-local-effects, pinned vc71-od-static.
-
-At the earlier Slot07 checkpoint, 12 of 13 Makoto virtual destinations
-had complete strict-exact proofs; Slot06 was then open and has since been
-accepted Exact with the full 59,292-byte owner on 2026-11-09.
 
 Independent review covers7,687 contiguous instructions,544 direct branches,
 the indirect dispatch, full RET/data boundary and every canonical destination.
@@ -6635,50 +5651,6 @@ Effect496 retains integer coordinate subtraction. Effects497/498 preserve each
 CRT sample's original multiplier/order,the actual counter<10 group transition
 and removal exits. Do not exchange independent random samples or rewrite these
 expressions solely by mathematical equivalence.
-
-The first complete33,862-byte native source was built early. A provisional
-register rewrite initially produced an invalid assignment; the source and real
-camera-bound fields were corrected and the required verify-toolchain --execute
-smoke passed. A broad draft threshold replacement also altered <10; original
-instruction review restored the exact predicate before acceptance. No compiler /
-Wine issue remains. After final formatting, another complete strict comparison
-passes. One final selected cold replay passes all33,897 bytes and308 reviewed
-bindings with zero differences. Public headers and all344 previous recipes/source
-owners remain unchanged; no old unit needs replay. Focused tracking,ledgers /
-progress CI and whitespace checks pass. No full CI/cohort,runtime matrix,REA or
-subagents ran. Complete private evidence and latest source/header/object snapshots
-remain under `.analysis/probes/makoto-effects/`; historical trials are preserved
-in the verified cleanup archive described in RE_ARTIFACTS.md. One-time derivation
-scripts must not overwrite accepted/newer source.
-
-Twelve of thirteen actual Makoto virtual destinations now have exact proofs.
-State5E85F0/58,482 instruction bytes remains open,with associated tables still
-unreviewed. Its fresh read-only annotation is retained. Current authored totals:
-327 functions,1,000,184 instruction bytes and6,845 associated table bytes;
-362 reviewed boundaries/origins and345 proof recipes. This codegen milestone
-does not close resource/data,runtime,TU,portability or game phases.
-
-## Cleanup and handoff on 2026-11-07 (historical checkpoint)
-
-At that checkpoint the operator requested cleanup and stated that no further
-owner should be started. This task-state statement is historical and was
-superseded on 2026-11-08 by the request to prepare a handoff to another agent and
-continue reconstruction. The final in-flight Makoto local-effect comparison
-was completed and recorded at that earlier checkpoint.
-README and AGENTS now reflect the current character coverage and task state.
-Reader/audio integration was already accepted on2026-11-06; its workbench is an
-archive,not an unfinished integration queue. Earlier contrary wording is
-superseded by this clarification and the workbench's completed-integration notes.
-
-The current handoff is condensed around live acceptance,tool state,parked work
-and evidence paths. Historical checkpoint narratives remain here. Selected old
-trial snapshots,retired diagnostic build directories and superseded aggregate
-reports were preserved losslessly in a size/SHA-256-verified private archive
-before redundant live copies were removed. Latest successful source/object
-snapshots,current accepted objects/receipts,per-unit reports,the latest affected
-header replay,and all parked Shiori/PrepareBattle work remain live. Original
-target/toolchain/Wine/Ghidra state is preserved. Storage accounting and exact
-restore commands are in `docs/RE_ARTIFACTS.md`; native logs remain available.
 
 ## Scene2 PrepareBattle owner boundary
 
@@ -6764,8 +5736,7 @@ unique instruction starts inside the code extent. The selector map begins at
 the default path at `0x5E869D`. Thus there are 124 explicit animation cases and
 186 defaulted IDs. Ghidra's normalized `case 0..124` values are dispatch-table
 indices, not the original animation IDs; the exact animation-to-case mapping is
-retained in `.analysis/probes/makoto/state-case-map.csv` and the full review in
-`.analysis/probes/makoto/state-boundary-review.json`.
+recorded in `docs/evidence/makoto-state-case-map.csv`.
 
 The selector map ends at `0x5F6D8C`. Four `CC` bytes follow, and the next
 Character03 constructor begins at `0x5F6D90`. The complete owned code-plus-table
@@ -6780,7 +5751,7 @@ used as an authoritative animation-ID mapping.
 
 Natural C++ accepted source: `src/Character03State.cpp` implementing
 `Character03::Slot06`; selected VC7.1 unit `character-03-state-slot06`;
-public strict proof `docs/evidence/makoto-state-slot06-exact.json`.
+public strict proof `docs/evidence/nagamori-affected-consumers-exact.json`.
 Unlike the earlier workbench-only checkpoint, this is a complete
 **59,292/59,292 byte** source reconstruction: **58,482 code bytes**,
 **500 switch-address bytes** and **310 selector bytes**. The full native

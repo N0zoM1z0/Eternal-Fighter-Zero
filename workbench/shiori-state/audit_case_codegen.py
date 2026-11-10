@@ -63,7 +63,7 @@ def main() -> None:
     parser.add_argument("--rebuild", action="store_true", help="compile only this TU under pinned VC7.1")
     parser.add_argument("--start", type=int, default=300)
     parser.add_argument("--end", type=int, default=319)
-    parser.add_argument("--output", default="workbench/shiori-state/case-codegen-audit.json")
+    parser.add_argument("--output", default=".analysis/probes/shiori-state/case-codegen-audit.json")
     args = parser.parse_args()
     if args.rebuild:
         compile_source(SOURCE, OBJECT, ["/Od", "/G6", "/MT", "/Gy", "/W3"],
@@ -130,6 +130,7 @@ def main() -> None:
         "qualification": "Normalization erases GPR choices, branch destinations and stack homes. It never proves byte-exact codegen or binding of relocations.",
     }
     out = ROOT / args.output
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(evidence, indent=2) + "\n")
     print("Shiori complete owner compiled:", len(compiled), "target:", CODE_SIZE + TABLE_SIZE + SELECTOR_SIZE)
     print("Target-relative address table/selector and local widths audited for cases", args.start, "through", args.end)

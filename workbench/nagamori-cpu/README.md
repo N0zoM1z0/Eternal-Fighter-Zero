@@ -38,8 +38,5 @@ Reproduce by compiling only this workbench TU:
 scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 ```
 
-The next original branch begins at `0x004B35F2`. The rest of the CPU
-behavior is not implemented. An unaccepted full sibling-derived
-source hypothesis remains privately in
-`.analysis/probes/nagamori-slot05-sibling-candidate.cpp` for study.
-No full cold replay is needed.
+The next original branch begins at `0x004B35F2`. Continue from Nagamori's
+original instructions; the rest of the CPU behavior is not implemented.
