@@ -15,51 +15,46 @@ from this large source. Never call the full owner Exact yet.
 
 ## Original-bound reviewed opening
 
-[0x00451850,0x004557A1): **16,209 original code bytes /
-4,470 original x86 instructions**, original SHA-256
-97a16c405e5fb6f0b0bc7ca52cec0d3cad72a868b979562b75c9e93c64766db9.
+[0x00451850, 0x0045649A): **19,530 original code bytes /
+5,377 original x86 instructions**, original SHA-256
+6f9523c035e1ba22be13357225561c2cfc80e173b698cddc90787ff3086bc3f7.
 
-Nayuki-specific natural C++ has now been recovered for the
-default state and **42 state IDs**: 1–9, 13–16, 47 and
-50–77. This is real state-machine work, not just leaf functions:
-field3148-dependent ground speed, original jumping and
-directional dash bonuses, wall/airborne collision reactions,
-ground hitstun, the distinct 50–58 recoil tiers, landing
-priority and 0x61/0x62 knockdown selection. Source was
-adjusted using original i386 instruction forms, original
-branch targets and exact IEEE-754 literal bits; inherited
-sibling-only dash reset instructions were removed where
-Nayuki does not execute them.
+Nayuki-specific C++ has now been reviewed for the original default
+branch and **49 live state cases**: 1–9, 13–16, 47, 50–77 and 81–87.
+Reconstructed behavior includes field3148-dependent movement, jumps,
+grounded recoil, wall and airborne collisions, late knockdown,
+state 81–86 impact/launch/ground-contact reactions, and original
+state 87's effect 0x1EF on render layer 1. The earlier Makoto
+structural experiment did not have the correct layer or dash
+flag behavior. IEEE-754 literals, local effect spawn order and
+the original branch targets are verified from the canonical binary.
 
-Run ONLY the selected native prefix audit:
+Selected native audit only:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-The check dynamically builds those authentic opening cases
-and explicitly *unaccepted* marker branches for other
-live IDs, retaining the original 137-case/169-default
-selector structure without compiling the entire 154 KB
-workbench on every edit. Complex late states 300–306 are
-retained in this trial only to preserve VC7.1 ESI prologue
-behavior. The placeholder branches are not reconstructed.
-The generated source is cleaned up after testing.
+The checker recompiles a **focused selected function**: the 49
+authentic reviewed early cases, deliberately unaccepted neutral
+markers for the other selector IDs, and authentic late state
+300–306 structural branches to preserve the original VC7.1
+ESI prologue. All marker bodies remain unreviewed and are
+excluded from the matched prefix. The temporary source is
+always cleaned up.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits the same
-original offsets, instruction forms and widths for all
-4,470 opening instructions except the incomplete partial
-stack allocation, currently 0x1C4 rather than
-original 0x2B4. It verifies **422 internal original branch
-destinations, 49 valid original outbound jump targets,
-429 target-bound non-local COFF relocation fields**
-(including exact original floats and six named callee
-symbols), and two separately verified original local
-switch references. All 42 reviewed state entry addresses
-are independently crosschecked against the original
-138-address table and 306-byte index map.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces **5,377
+same-offset/same-width original instruction forms** except
+its deliberately incomplete stack allocation (the original
+full frame is 0x2B4). The selected checker confirms **498
+original internal jump destinations**, **58 canonical
+outbound targets**, **490 original-bound external
+call/IEEE-754 relocation fields**, **two** independently
+verified local switch-table references, and the first
+**49 canonical case entries** from the original selector
+and jump destination tables.
 
-Continue at **0x004557A1**, native state 81.
-**46,484 original code bytes, 21 absent live states,
-original 0x2B4 stack, complete jump table/data,
-final return and remaining relocations are OPEN**.
-This is not full Exact or runtime equivalence.
-No all-unit cold replay was performed.
+Next original code address **0x0045649A**, live state 96.
+**43,163 original code bytes**, full 0x2B4 stack lifetime,
+21 absent live case labels, remaining codegen, original
+switch tables and relocation closure are OPEN. Do not
+claim whole-function Exact, runtime equivalence or
+all-unit cold replay.

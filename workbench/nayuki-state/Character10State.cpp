@@ -1411,7 +1411,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 81: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne recoil and local hit effect
+    case 81: // Reviewed original Nayuki state at 0x004557A1
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1452,7 +1452,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 82: // Unreviewed inherited sibling logic, Makoto address 0x005: repeated airborne lift and knockback
+    case 82: // Reviewed original Nayuki state at 0x00455986
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1499,7 +1499,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 83: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne ground-impact recovery
+    case 83: // Reviewed original Nayuki state at 0x00455BA8
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1552,7 +1552,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 84: // Unreviewed inherited sibling logic, Makoto address 0x005: independent ground-impact recovery
+    case 84: // Reviewed original Nayuki state at 0x00455DED
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1605,7 +1605,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 85: // Unreviewed inherited sibling logic, Makoto address 0x005: direct airborne knockback and landing
+    case 85: // Reviewed original Nayuki state at 0x00456032
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1649,7 +1649,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 86: // Unreviewed inherited sibling logic, Makoto address 0x005: one-shot lift and landing recoil
+    case 86: // Reviewed original Nayuki state at 0x00456205
         if (field000a == 0 && field000c == 0) {
             if (field3144 == 0) {
                 effect.type = 0x1f0;
@@ -1696,7 +1696,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 87: // Unreviewed inherited sibling logic, Makoto address 0x005: fixed-position effect and idle return
+    case 87: // Reviewed original Nayuki state at 0x004563E7
         if (field000a == 0 && field000c == 0) {
             effect.type = 0x1ef;
             effect.x = 60.0;
@@ -1704,7 +1704,7 @@ void Character10::Slot06()
             effect.payload = 1;
             effect.flag0018 = 1;
             effect.group = 0;
-            effect.layer = 0;
+            effect.layer = 1;
             EmitLocalEffect(&effect);
         }
         ++field000c;
@@ -1718,7 +1718,9 @@ void Character10::Slot06()
         }
         return;
 
-    case 96: // Unreviewed inherited sibling logic, Makoto address 0x005: stand/crouch wakeup timing
+    case 96: // Nayuki original block at 0x0045649A: wakeup timer/state recovery
+        if (field000a == 1 && field000c == 0 && field3148 > 0)
+            --field3148;
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
@@ -1786,7 +1788,6 @@ void Character10::Slot06()
         return;
 
     case 99: // Unreviewed inherited sibling logic, Makoto address 0x005: end of knockout recovery
-        dashMomentumFlag = 0;
         // The target deliberately checks the tick count without a pose gate.
         if (health > 0 && field000c > 99) {
             field0008 = 96;
