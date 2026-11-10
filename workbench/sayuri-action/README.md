@@ -10,47 +10,41 @@ direct jumps stay on original instruction starts inside the function.
 The shared return is at 0x004492EB. One CC byte separates the function
 from the next prologue at 0x004492F0.
 
-Natural C++ candidate Character09Input.cpp covers
-[0x00446780,0x0044834C): **7,116 original bytes /
-1,783 instructions**, SHA-256
-b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643.
+Natural C++ candidate Character09Input.cpp now covers
+[0x00446780,0x00448730), **8,112 original bytes /
+2,044 instructions** (prefix SHA-256
+9823904b804842e36c2fb6d86b4b376d613a4b13a9252ce034fae2ba5a2dac30).
 
-It covers input-buffer decay, the Sayuri 150–155 opponent-state
-gate, complete early special-command priorities through 0x0A–0x0C,
-and both mirrored air-dash reactions for commands 0 and 1.
-These reactions check the opponent/own X difference, command
-direction and equal-position facing, meter/action permissions,
-and initiate action 0xA5 or 0xA6. The original negative
-direction test requires multiplication by -1 (which VC7.1
-emits as IMUL), not unary negation (NEG).
+The source restores input buffer aging; the 150–155
+opponent-state tint rule; high-priority command/meter
+tiers; grounded and aerial commands; command-dependent
+A5/A6 air dashes and mirrored A3/A4 ground movement.
+It now includes the original command-6 air action
+permission guard, action counter increment and
+choice of 0x0E, 0x0F or 0x10 based on horizontal
+input relative to facing. The original field015c < 2
+guard covers the full special-command chain, not only
+the first four states; the checker explicitly tests
+this previously missed control-flow edge.
 
-One significant semantic correction was made when the prefix
-passed 0x00447FC7. The original field015c >= 2 near JNL
-at 0x00446963 skips the entire command priority chain.
-Earlier partial C++ mistakenly closed the field015c < 2
-guard immediately after action 0x12C, incorrectly permitting
-later commands. That target was outside the old reviewed
-prefix; the expanded checker now verifies it as an internal
-edge and rejects the wrong scope.
-
-Rebuild/review only this owner:
+Reproduce the selected pinned VC7.1 native build with:
 
     scripts/repo-python workbench/sayuri-action/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
-**7,115-byte draft / 1,785 instructions** including
-the three-instruction temporary return, with 63 relocations.
-Of 1,782 aligned, comparable original body instructions,
-1,781 agree after normalizing direct call/jump and original
-FP addresses; the remaining source-frame allocation
-(sub esp,0xC vs original 0x14) is incomplete.
-The original prefix ends with an unresolved jump to the
-complete owner's shared exit. **261 internal branch targets
-and all 63 original-bound relocations agree**, including
-original double bit patterns. This is **not Exact**.
+The partial compiler emits 8,111 bytes / 2,046
+instructions including the temporary epilogue,
+with **72 COFF relocations**. All 2,043 aligned original
+body instructions match after normalizing
+direct branch/call and literal addresses; the **original
+sub esp,0x14 stack frame is now restored** naturally.
+The final original JMP targets the complete shared
+exit, so it is absent from the partial C++.
+**295 original in-prefix branch targets and all 72
+target-bound relocation operands** agree, including
+the IEEE-754 constant payloads.
 
-Continue at 0x0044834C (remaining grounded/movement and
-defensive action selection). The remaining **4,003 bytes**,
-final stack lifetime and whole-owner relocation closure
-must be reconstructed before strict acceptance. No all-unit
-cold replay was run.
+Continue at 0x00448730: defensive input masks, attack
+eligibility and generic movement/attack decisions.
+**This is not full-function Exact**: 3,007 target
+bytes and the final stack/exit/relocation closure
+remain. Do not run the full cold replay.

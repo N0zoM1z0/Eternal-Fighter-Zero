@@ -2978,61 +2978,56 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot04: 7,116-byte verified action-boss prefix
+## Sayuri Character09 Slot04: reviewed 8,112-byte action-boss prefix
 
-Original Character09 vtable slot04 at 0x00788148 points to
-the 11,119-byte owner [0x00446780,0x004492EF),
-with 2,815 original x86 instructions and 460 direct
-jumps entirely within canonical instruction boundaries.
-The shared RET at 0x004492EE is followed by one CC
-alignment byte. Full owner SHA-256:
+The original Character09 vtable entry at 0x00788148 resolves
+to the 11,119-byte authored owner [0x00446780,0x004492EF),
+which contains 2,815 contiguous x86 instructions and 460
+direct jumps to valid instruction boundaries. The original
+RET at 0x004492EE is followed by one alignment CC byte.
+Whole-owner SHA-256:
 fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286.
 
-The natural partial C++ candidate
-workbench/sayuri-action/Character09Input.cpp covers
-[0x00446780,0x0044834C), **7,116 original bytes /
-1,783 instructions**; prefix SHA-256
-b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles to
-7,115 bytes / 1,785 instructions including the
-temporary return, with 63 COFF relocations. Of the
-1,782 comparable original body instructions, 1,781
-agree in form/operands after normalizing direct
-jump/call and FP literal addresses; the incomplete
-stack frame (original sub esp,0x14, draft sub esp,0xC)
-is the remaining form difference. The original last
-prefix instruction jumps to the complete owner's
-shared exit and is absent from the draft.
+The natural partial C++ source
+workbench/sayuri-action/Character09Input.cpp now covers
+[0x00446780,0x00448730): **8,112 original bytes /
+2,044 instructions**. Prefix SHA-256:
+9823904b804842e36c2fb6d86b4b376d613a4b13a9252ce034fae2ba5a2dac30.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits
+8,111 bytes / 2,046 instructions including its
+temporary return and 72 COFF relocations. All 2,043/2,043 comparable original body instructions
+agree in form and operands after normalizing direct
+branches/calls and fixed IEEE-754 constant addresses.
+The original sub esp,0x14 frame now matches after
+restoring the natural ground and air action branches;
+the last original prefix JMP still targets the
+unreconstructed full-function shared exit.
 
-The focused script workbench/sayuri-action/check_prefix.py
-validates **261 in-prefix branch destinations** by
-instruction ordinal and **all 63 original-bound
-relocation operands**, including original 0.0,
--40.0 and 500.0 IEEE-754 constants and accepted
-SetCharacterTint, ClearBufferedButtons and FaceOpponent
-call destinations. The expanded check exposed a
-real bug: target 0x00446963 JNL skips all advanced
-command groups until 0x00447FC7, whereas the old
-C++ guard had ended prematurely after the 0x12C
-tier. Moving the source block scope restores the
-canonical target branch destination.
+Selected audit workbench/sayuri-action/check_prefix.py
+checks **295 internal branches** by instruction
+ordinal and **all 72 original-bound relocation operands**,
+including original 0.0, -40.0 and 500.0 double
+constants and accepted original callee addresses.
 
-The recovered behavior now covers buffered commands,
-meter/sequence conditions, aerial and grounded
-0x28–0x2A/0x14–0x16/0x1E–0x20/0x46–0x48/0x0A–0x0C,
-and both A5/A6 air-dash directions from command 0/1.
-The air-dash tests preserve both signed X displacement
-and equal-position facing, action 0xAA exclusion,
-optional 40-unit height limit for A5 and original
-dash/action counters. A deliberate multiplication
-by -1 in the opposite-facing test emits the original
-IMUL instead of a shorter NEG.
+Restored behavior includes buffered-input expiration,
+meter/sequence-triggered special states, grounded and
+aerial attack groups through 0x0A–0x0C, command 0/1
+mirrored A5/A6 air-dash reactions, and mirrored A3/A4
+grounded steering. The latest source also reconstructs
+command 6's one-use air action, incrementing the
+original airActionCount and selecting action
+0x0E/0x0F/0x10 from horizontal input versus facing.
+The original field015c guard spans the complete
+special-command tree; this semantic scope was
+independently repaired after the first in-prefix
+branch-target comparison exposed a premature exit.
 
-**Not whole-function Exact**: the remaining 4,003
-target bytes and the complete stack/exit/relocation
-closure remain unfinished. Continue at original
-0x0044834C. Only the selected workbench is built;
-no full cold replay was used.
+Continue at 0x00448730 (defensive held-input
+priorities and generic action selection).
+**Partial diagnostic only, not complete Exact**:
+3,007 original bytes and the complete stack,
+shared exit and relocation closure remain open.
+No full cold replay was run.
 
 ## Shiori command state and shared locomotion
 

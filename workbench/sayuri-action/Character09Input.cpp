@@ -351,6 +351,58 @@ void Character09::Slot04()
                 return;
             }
         }
+        // Grounded direction changes use the same command orientation but
+        // distinct ground action priorities and air-dash flags.
+        if (positionY == 0.0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0) {
+            if ((((*opponentSlot)->positionX - positionX) *
+                     (double)(1 - recognizedCommand * 2) < 0.0 ||
+                 (((*opponentSlot)->positionX - positionX == 0.0) &&
+                  facing == (1 - recognizedCommand * 2) * -1)) &&
+                sequences[field0008].field0002 <= sequences[163].field0000 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                if (field0008 != 0xa3)
+                    ResetPose();
+                field0008 = 0xa3;
+                FaceOpponent();
+                ++dashMomentumFlag;
+                actionBufferedInput = 0;
+                return;
+            }
+            if ((((*opponentSlot)->positionX - positionX) *
+                     (double)(1 - recognizedCommand * 2) > 0.0 ||
+                 (((*opponentSlot)->positionX - positionX == 0.0) &&
+                  facing == (1 - recognizedCommand * 2))) &&
+                sequences[field0008].field0002 <= sequences[164].field0000 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                if (field0008 != 0xa4)
+                    ResetPose();
+                field0008 = 0xa4;
+                FaceOpponent();
+                actionBufferedInput = 0;
+                return;
+            }
+        }
+    }
+    // Aerial command 6: one action-count slot selects neutral/forward/back
+    // from the buffered horizontal input, after the original frame guard.
+    if (field015c < 3 && recognizedCommand == 6 &&
+        (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+        positionY < 0.0 && airActionCount < 1 &&
+        sequences[field0008].field0002 <= sequences[14].field0000 &&
+        ((field0008 >= 200 && attackCollisionResult >= 2 &&
+          attackCollisionResult != 6) || field0008 < 200)) {
+        ResetPose();
+        ClearBufferedButtons();
+        ++airActionCount;
+        field0008 = 0x0e;
+        if (inputX == facing)
+            field0008 = 0x0f;
+        if (inputX == -facing)
+            field0008 = 0x10;
+        return;
     }
     // Remaining original action guards and command dispatch are open.
 }

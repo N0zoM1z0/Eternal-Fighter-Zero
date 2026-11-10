@@ -16,9 +16,9 @@ from coff import object_function
 
 START = 0x00446780
 FULL_SIZE = 11119
-END = 0x0044834C
+END = 0x00448730
 ORIGINAL_SHA = "fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286"
-PREFIX_SHA = "b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643"
+PREFIX_SHA = "9823904b804842e36c2fb6d86b4b376d613a4b13a9252ce034fae2ba5a2dac30"
 SOURCE = ROOT / "workbench/sayuri-action/Character09Input.cpp"
 OBJECT = ROOT / "build/sayuri-action/Character09Input.partial.obj"
 
@@ -54,15 +54,14 @@ def main():
     target_instr = instructions(original)
     draft_instr = instructions(candidate)
     assert (len(original), len(target_instr), len(candidate),
-            len(draft_instr), len(relocations)) == (7116, 1783, 7115, 1785, 63)
+            len(draft_instr), len(relocations)) == (8112, 2044, 8111, 2046, 72)
     assert target_instr[2][2] == "sub esp,byte +0x14"
-    assert draft_instr[2][2] == "sub esp,byte +0xc"
+    assert draft_instr[2][2] == "sub esp,byte +0x14"
     assert target_instr[-1][2] == "jmp 0x2b6b"
     assert [x[2] for x in draft_instr[-3:]] == ["mov esp,ebp", "pop ebp", "ret"]
     for i, (target, draft) in enumerate(zip(target_instr[:-1], draft_instr[:-3])):
-        if i != 2:
-            assert compare_text(target[2]) == compare_text(draft[2]), (
-                i, hex(target[0]), target[2], draft[2])
+        assert compare_text(target[2]) == compare_text(draft[2]), (
+            i, hex(target[0]), target[2], draft[2])
     by_target = {v[0]: i for i, v in enumerate(target_instr)}
     by_draft = {v[0]: i for i, v in enumerate(draft_instr)}
     inside = outside = 0
@@ -79,7 +78,7 @@ def main():
                 i, target[2], draft[2], by_target[ta], by_draft.get(ca))
         else:
             outside += 1
-    assert (inside, outside) == (261, 35)
+    assert (inside, outside) == (295, 36)
     # The 0x00446963 high-priority meter gate must skip ALL command
     # families through 0x00447FC7, not stop after the first four.
     assert target_instr[123][2] == "jnl near 0x1847"
@@ -110,8 +109,8 @@ def main():
             }
         observed[(row["symbol"], row["type"])].add(address)
     assert len(observed) == 6 and all(len(v) == 1 for v in observed.values())
-    print("Sayuri Slot04: reviewed 7116 / 11119 original code bytes,")
-    print("1781/1782 comparable forms, one incomplete frame and shared-exit jump;")
+    print("Sayuri Slot04: reviewed 8112 / 11119 original code bytes,")
+    print("2043/2043 comparable forms, original frame restored, shared-exit jump open;")
     print(inside, "in-prefix branches and", len(relocations),
           "independently verified original-bound relocation fields.")
     print("This diagnostic is partial and NEVER a complete Exact certificate.")
