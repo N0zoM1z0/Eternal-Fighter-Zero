@@ -16,9 +16,9 @@ from coff import object_function
 
 START = 0x00446780
 FULL_SIZE = 11119
-END = 0x004478FA
+END = 0x00447CB0
 ORIGINAL_SHA = "fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286"
-PREFIX_SHA = "b48cc6010e85cf04393a3e2ec0ad9af7b7bebe20d3713d976cc77a4da450c028"
+PREFIX_SHA = "5ba50c91574ca5fbc4642c0a5c508201209c4ed6effb95bc793df4df4d8d952d"
 SOURCE = ROOT / "workbench/sayuri-action/Character09Input.cpp"
 OBJECT = ROOT / "build/sayuri-action/Character09Input.partial.obj"
 
@@ -54,7 +54,7 @@ def main():
     target_instr = instructions(original)
     draft_instr = instructions(candidate)
     assert (len(original), len(target_instr), len(candidate),
-            len(draft_instr), len(relocations)) == (4474, 1112, 4471, 1114, 38)
+            len(draft_instr), len(relocations)) == (5424, 1354, 5421, 1356, 47)
     assert target_instr[2][2] == "sub esp,byte +0x14"
     assert draft_instr[2][2] == "push ecx"
     assert target_instr[-1][2] == "jmp 0x2b6b"
@@ -79,7 +79,7 @@ def main():
                 i, target[2], draft[2], by_target[ta], by_draft.get(ca))
         else:
             outside += 1
-    assert (inside, outside) == (169, 22)
+    assert (inside, outside) == (206, 26)
 
     starts = [v[0] for v in draft_instr]
     observed = defaultdict(set)
@@ -105,8 +105,8 @@ def main():
             }
         observed[(row["symbol"], row["type"])].add(address)
     assert len(observed) == 4 and all(len(v) == 1 for v in observed.values())
-    print("Sayuri Slot04: reviewed 4474 / 11119 original code bytes,")
-    print("1111/1112 comparable forms, one incomplete frame and shared-exit jump;")
+    print("Sayuri Slot04: reviewed 5424 / 11119 original code bytes,")
+    print("1352/1353 comparable forms, one incomplete frame and shared-exit jump;")
     print(inside, "in-prefix branches and", len(relocations),
           "independently verified original-bound relocation fields.")
     print("This diagnostic is partial and NEVER a complete Exact certificate.")

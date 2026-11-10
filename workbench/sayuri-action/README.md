@@ -10,30 +10,38 @@ direct jumps stay on original instruction starts inside the function.
 The shared return is at 0x004492EB. One CC byte separates the function
 from the next prologue at 0x004492F0.
 
-The current source Character09Input.cpp reconstructs the first **4,474
-original bytes / 1,112 instructions**, through the beginning of the next
-command guard at 0x004478FA (prefix SHA-256
-b48cc6010e85cf04393a3e2ec0ad9af7b7bebe20d3713d976cc77a4da450c028).
-It covers buffered action-input expiration; the special 150–155
-animation + opponent-ID check; and the ordered 0x34, 0x62, 0xAC,
-0xAB/AC, 0xAA/AB/AC, 0xA2, 0xA1/A2, 0xA0/A1/A2, 0x6E/0x6F/0x70 and aerial 0x2A/0x29/0x28 and grounded 0x16/0x15/0x14 command upgrades, with exact
-meter thresholds, sequence flags, frame guards and vtable calls.
+The current natural C++ source Character09Input.cpp reconstructs
+the first **5,424 original bytes / 1,354 instructions** through
+the beginning of the next action guard at 0x00447CB0.
+Reviewed prefix SHA-256:
+5ba50c91574ca5fbc4642c0a5c508201209c4ed6effb95bc793df4df4d8d952d.
 
-Run only:
+This source covers input-buffer expiration, the animation 150–155
+and opponent-action gate, and the strict original priority
+of 0x34, 0x62, 0xAC, 0xA0–0xA2, 0x6E–0x70, aerial
+0x28–0x2A, grounded 0x14–0x16, 0x1E–0x20, and 0x46–0x48
+command families. Grounded/airborne, meter, attackCollisionResult,
+sequence flags and frame-start gates remain in their original order.
+
+Run the bounded VC7.1 comparison:
 
     scripts/repo-python workbench/sayuri-action/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 4,471 bytes, 1,114
-instructions including the temporary three-instruction return and
-38 COFF relocations. The first 1,111 target instruction forms/operands
-agree except the incomplete stack allocation (target sub esp,0x14,
-candidate push ecx). The final target-prefix JMP goes to the original
-full-function shared return and is not present in the partial source.
-The focused checker additionally verifies **169 internal branch targets
-and all 38 original-bound relocation fields** by corresponding
-instruction ordinal, including four unique real symbol destinations.
-These tests do **not** establish whole-function Exact status.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **5,421 bytes**,
+1,356 instructions including the three-instruction temporary
+epilogue and 47 COFF relocations. Of the 1,353 aligned,
+comparable original body instructions, 1,352 agree after
+normalizing original direct-call/jump destinations and fixed
+FP constant addresses. The only differing instruction is the
+incomplete stack frame (original sub esp,0x14; candidate push ecx).
+The target's last instruction in the prefix jumps to the
+complete function's distant shared exit, absent from this draft.
+**206 in-prefix branch targets and all 47 original-bound
+relocation sites** agree with the candidate, including the
+original literal IEEE-754 payloads.
 
-Continue from original 0x004478FA (next 0x1E/0x1F/0x20 command group), then reconstruct the remaining action dispatch and
-shared exit. Do not add this partial workbench to config/matches.csv.
-Do not run all-unit cold replay.
+Next target block begins at 0x00447CB0 (command 0x0C),
+followed by remaining action dispatch. **Do not claim Exact**:
+5,695 original bytes, complete stack lifetime, return and
+whole-owner relocation closure are still unfinished. Never
+run an all-unit cold replay for this draft.
