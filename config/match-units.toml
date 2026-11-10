@@ -130733,3 +130733,2113 @@ type = "REL32"
 symbol = "@__security_check_cookie@4"
 target = 0x007781dc
 evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401C0E, original complete instruction and verified destination"
+
+[units.character-06-slot05]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Cpu.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot05/Character06Cpu.obj"
+symbol = "?Slot05@Character06@@UAEXXZ"
+target_address = 0x004B2AC0
+size = 15292
+
+[[units.character-06-slot05.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B2B6A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 208
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2B90: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "EFZ.exe original operand at 0x004B2BA2: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000"
+
+[[units.character-06-slot05.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2C48: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787F08
+evidence = "EFZ.exe original operand at 0x004B2C6E: EFZ.exe original literal at 0x00787F08; exact IEEE-754 bit pattern __real@4010000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "EFZ.exe original operand at 0x004B2C74: EFZ.exe original literal at 0x007875C0; exact IEEE-754 bit pattern __real@3ff0000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 442
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787F00
+evidence = "EFZ.exe original operand at 0x004B2C7A: EFZ.exe original literal at 0x00787F00; exact IEEE-754 bit pattern __real@4020000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2CB6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 520
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787EFC
+evidence = "EFZ.exe original operand at 0x004B2CC8: EFZ.exe original literal at 0x00787EFC; exact IEEE-754 bit pattern __real@42200000"
+
+[[units.character-06-slot05.relocations]]
+offset = 716
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842D
+evidence = "EFZ.exe original operand at 0x004B2D8C: EFZ.exe direct call to original CRT fabs at 0x0077842D"
+
+[[units.character-06-slot05.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2DCF: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 801
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787EF8
+evidence = "EFZ.exe original operand at 0x004B2DE1: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 856
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2E18: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2E44: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B2E7C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B2EE6: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1078
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787EF0
+evidence = "EFZ.exe original operand at 0x004B2EF6: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B2F45: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B3015: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1413
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B3045: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3058: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 1456
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B3070: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1499
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B309B: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1518
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B30AE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 1542
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B30C6: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1677
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B314D: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1725
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B317D: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1741
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B318D: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1760
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B31A0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 1784
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B31B8: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1837
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B31ED: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1853
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B31FD: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1872
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3210: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 1896
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B3228: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1972
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B3274: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 1995
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B328B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2019
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B32A3: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2043
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B32BB: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2082
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B32E2: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2117
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3305: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2141
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B331D: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2193
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B3351: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2228
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3374: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2252
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B338C: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2284
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B33AC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2326
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B33D6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2356
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B33F4: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2374
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B3406: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2428
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B343C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2458
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B345A: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2476
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787EF0
+evidence = "EFZ.exe original operand at 0x004B346C: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2527
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "EFZ.exe original operand at 0x004B349F: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2546
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B34B2: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2576
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B34D0: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2600
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B34E8: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2633
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ED0
+evidence = "EFZ.exe original operand at 0x004B3509: EFZ.exe original literal at 0x00787ED0; exact IEEE-754 bit pattern __real@406b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2649
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "EFZ.exe original operand at 0x004B3519: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2668
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B352C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2698
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "EFZ.exe original operand at 0x004B354A: EFZ.exe original literal at 0x00787ED8; exact IEEE-754 bit pattern __real@3f800000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2719
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B355F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2749
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ED0
+evidence = "EFZ.exe original operand at 0x004B357D: EFZ.exe original literal at 0x00787ED0; exact IEEE-754 bit pattern __real@406b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2768
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3590: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2798
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "EFZ.exe original operand at 0x004B35AE: EFZ.exe original literal at 0x00787ED8; exact IEEE-754 bit pattern __real@3f800000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2822
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B35C6: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 2841
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B35D9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2924
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B362C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 2954
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "EFZ.exe original operand at 0x004B364A: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3004
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B367C: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3034
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "EFZ.exe original operand at 0x004B369A: EFZ.exe original literal at 0x00787E48; exact IEEE-754 bit pattern __real@c044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3050
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B36AA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3069
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B36BD: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3099
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "EFZ.exe original operand at 0x004B36DB: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3146
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "EFZ.exe original operand at 0x004B370A: EFZ.exe original literal at 0x00787E30; exact IEEE-754 bit pattern __real@c03e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3176
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B3728: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3192
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B3738: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3211
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B374B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3241
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "EFZ.exe original operand at 0x004B3769: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3288
+type = "DIR32"
+symbol = "__real@c049000000000000"
+target = 0x00787EC0
+evidence = "EFZ.exe original operand at 0x004B3798: EFZ.exe original literal at 0x00787EC0; exact IEEE-754 bit pattern __real@c049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3322
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "EFZ.exe original operand at 0x004B37BA: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3338
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B37CA: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3354
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B37DA: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3373
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B37ED: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3403
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "EFZ.exe original operand at 0x004B380B: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3446
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "EFZ.exe original operand at 0x004B3836: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3462
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B3846: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3481
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3859: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3605
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B38D5: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3633
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B38F1: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3657
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787EB0
+evidence = "EFZ.exe original operand at 0x004B3909: EFZ.exe original literal at 0x00787EB0; exact IEEE-754 bit pattern __real@41700000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3727
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B394F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 3766
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B3976: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3817
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B39A9: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3868
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B39DC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3919
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B3A0F: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 3996
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3A5C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 4092
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B3ABC: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 4115
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3AD3: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 4139
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787EB0
+evidence = "EFZ.exe original operand at 0x004B3AEB: EFZ.exe original literal at 0x00787EB0; exact IEEE-754 bit pattern __real@41700000"
+
+[[units.character-06-slot05.relocations]]
+offset = 4201
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3B29: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 4252
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B3B5C: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 4303
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B3B8F: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 4340
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3BB4: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 4364
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787EF8
+evidence = "EFZ.exe original operand at 0x004B3BCC: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 4699
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3D1B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 5408
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B3FE0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 5438
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "EFZ.exe original operand at 0x004B3FFE: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000"
+
+[[units.character-06-slot05.relocations]]
+offset = 5498
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B403A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 5545
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4069: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 5601
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B40A1: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 5657
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "EFZ.exe original operand at 0x004B40D9: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 5723
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B411B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 5765
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787EA8
+evidence = "EFZ.exe original operand at 0x004B4145: EFZ.exe original literal at 0x00787EA8; exact IEEE-754 bit pattern __real@405f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 5959
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4207: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6019
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4243: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6079
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B427F: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6125
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B42AD: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6163
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B42D3: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6234
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B431A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6280
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B4348: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6381
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B43AD: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6430
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B43DE: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6532
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4444: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6592
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4480: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6621
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "EFZ.exe original operand at 0x004B449D: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B44DA: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6728
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4508: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 6766
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B452E: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6837
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4575: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6883
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B45A3: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 6941
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B45DD: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7018
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B462A: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7059
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4653: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7136
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B46A0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7207
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B46E7: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7267
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4723: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7296
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "EFZ.exe original operand at 0x004B4740: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7357
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B477D: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7403
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B47AB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7441
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B47D1: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7537
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B4831: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7578
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B485A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7652
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B48A4: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7727
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B48EF: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7749
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B4905: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7818
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B494A: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7910
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B49A6: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 7929
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B49B9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 7992
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B49F8: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8073
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4A49: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8156
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4A9C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8245
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4AF5: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8301
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B4B2D: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8357
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "EFZ.exe original operand at 0x004B4B65: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8423
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4BA7: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8465
+type = "DIR32"
+symbol = "__real@4060e00000000000"
+target = 0x00787E90
+evidence = "EFZ.exe original operand at 0x004B4BD1: EFZ.exe original literal at 0x00787E90; exact IEEE-754 bit pattern __real@4060e00000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8562
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4C32: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8622
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4C6E: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8683
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4CAB: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8729
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4CD9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 8767
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4CFF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8838
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4D46: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8884
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B4D74: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 8979
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B4DD3: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9028
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B4E04: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9130
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4E6A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9190
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4EA6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9219
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "EFZ.exe original operand at 0x004B4EC3: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9304
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B4F18: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9345
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4F41: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9419
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B4F8B: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9450
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B4FAA: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9516
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B4FEC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9609
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B5049: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9628
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B505C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9691
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B509B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9772
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B50EC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9833
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5129: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 9862
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "EFZ.exe original operand at 0x004B5146: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9923
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5183: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 9969
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B51B1: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10015
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787EA8
+evidence = "EFZ.exe original operand at 0x004B51DF: EFZ.exe original literal at 0x00787EA8; exact IEEE-754 bit pattern __real@405f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10117
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5245: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 10202
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B529A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10279
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B52E7: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10361
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5339: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10380
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B534C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 10470
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B53A6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 10582
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5416: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10659
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5463: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10710
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5496: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 10799
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B54EF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10845
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B551D: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 10883
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5543: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 10979
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B55A3: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11020
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B55CC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11094
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B5616: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11169
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5661: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11191
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B5677: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11260
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B56BC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11326
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B56FE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11407
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B574F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11455
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B577F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11484
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "EFZ.exe original operand at 0x004B579C: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11516
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B57BC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11540
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "EFZ.exe original operand at 0x004B57D4: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11574
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B57F6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 11595
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B580B: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11625
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5829: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11671
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B5857: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11692
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B586C: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11768
+type = "DIR32"
+symbol = "__real@404b800000000000"
+target = 0x00788430
+evidence = "EFZ.exe original operand at 0x004B58B8: EFZ.exe original literal at 0x00788430; exact IEEE-754 bit pattern __real@404b800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11821
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B58ED: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11874
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B5922: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11890
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B5932: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11943
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5967: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 11996
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B599C: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12042
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B59CA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12144
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B5A30: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12160
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B5A40: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12213
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B5A75: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12229
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B5A85: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12282
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5ABA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12405
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5B35: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 12429
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B5B4D: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12450
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5B62: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12523
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5BAB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 12553
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "EFZ.exe original operand at 0x004B5BC9: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12620
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5C0C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 12658
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5C32: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12686
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5C4E: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12706
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5C62: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12722
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5C72: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12783
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5CAF: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12836
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5CE4: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12852
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5CF4: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12905
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5D29: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12925
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5D3D: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12941
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5D4D: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 12963
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B5D63: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13055
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B5DBF: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13071
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5DCF: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13087
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B5DDF: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13140
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5E14: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13156
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B5E24: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13205
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5E55: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 13238
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5E76: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13279
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5E9F: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13304
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B5EB8: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13320
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B5EC8: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13341
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B5EDD: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13422
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B5F2E: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13438
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "EFZ.exe original operand at 0x004B5F3E: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13454
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "EFZ.exe original operand at 0x004B5F4E: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13515
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787E80
+evidence = "EFZ.exe original operand at 0x004B5F8B: EFZ.exe original literal at 0x00787E80; exact IEEE-754 bit pattern __real@4060400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13531
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "EFZ.exe original operand at 0x004B5F9B: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13547
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B5FAB: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13614
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B5FEE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 13638
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "EFZ.exe original operand at 0x004B6006: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13689
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6039: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 13719
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "EFZ.exe original operand at 0x004B6057: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13785
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6099: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 13823
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B60BF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13843
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B60D3: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13863
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "EFZ.exe original operand at 0x004B60E7: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 13909
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "EFZ.exe original operand at 0x004B6115: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14001
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "EFZ.exe original operand at 0x004B6171: EFZ.exe original literal at 0x00787E78; exact IEEE-754 bit pattern __real@4061800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14017
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B6181: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14060
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787EF0
+evidence = "EFZ.exe original operand at 0x004B61AC: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14076
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "EFZ.exe original operand at 0x004B61BC: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14122
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "EFZ.exe original operand at 0x004B61EA: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14171
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B621B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14201
+type = "DIR32"
+symbol = "__real@4066800000000000"
+target = 0x00787340
+evidence = "EFZ.exe original operand at 0x004B6239: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14267
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B627B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14386
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B62F2: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14410
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B630A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14434
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "EFZ.exe original operand at 0x004B6322: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14494
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B635E: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14532
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6384: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14556
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B639C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14580
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787EF8
+evidence = "EFZ.exe original operand at 0x004B63B4: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14632
+type = "DIR32"
+symbol = "__real@4064000000000000"
+target = 0x00787370
+evidence = "EFZ.exe original operand at 0x004B63E8: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14648
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B63F8: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14672
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6410: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14714
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B643A: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14730
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B644A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14754
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6462: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 14796
+type = "DIR32"
+symbol = "__real@4065400000000000"
+target = 0x00787E50
+evidence = "EFZ.exe original operand at 0x004B648C: EFZ.exe original literal at 0x00787E50; exact IEEE-754 bit pattern __real@4065400000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14812
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "EFZ.exe original operand at 0x004B649C: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14828
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original operand at 0x004B64AC: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 14890
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "EFZ.exe original operand at 0x004B64EA: EFZ.exe direct call to reviewed Secondary::CollisionSide at 0x0040FF70"
+
+[[units.character-06-slot05.relocations]]
+offset = 14957
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "EFZ.exe original operand at 0x004B652D: EFZ.exe direct call to reviewed Secondary::CollisionSide at 0x0040FF70"
+
+[[units.character-06-slot05.relocations]]
+offset = 15016
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6568: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15033
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "EFZ.exe original operand at 0x004B6579: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000"
+
+[[units.character-06-slot05.relocations]]
+offset = 15067
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B659B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15099
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B65BB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15126
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B65D6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15161
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B65F9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15193
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6619: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15237
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6645: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[[units.character-06-slot05.relocations]]
+offset = 15269
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "EFZ.exe original operand at 0x004B6665: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"

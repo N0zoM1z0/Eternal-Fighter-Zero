@@ -2096,44 +2096,52 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 14,292-byte reviewed prefix
+## Nagamori Slot05 CPU boss: complete 15,292-byte strict Exact
 
-Original Character06 Slot05 owns [0x004B2AC0,0x004B667C):
-15,292 bytes, followed by four alignment bytes.
-The natural-source workbench now covers the opening
-[0x004B2AC0,0x004B6294), **14,292 original bytes /
-3,640 instructions**. Prefix SHA-256:
-47897f4117416f2806f0bc2bd0ed47f77e116f2001940140141be758a3c6aaea.
+The original virtual Slot05 on Nagamori Character06
+(vtable pointer 0x00788410) occupies the complete
+[0x004B2AC0,0x004B667C) range, **15,292 code bytes /
+3,924 x86 instructions**, followed by four CC alignment bytes
+excluded from this owner. Original complete-function SHA-256:
+14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 14,288
-bytes and 3,642 instructions including the temporary
-return, with 273 COFF relocations. Of the 3,639
-comparable instruction forms, **3,638 match** with
-direct branch/call/FP addresses normalized. The
-remaining form difference is the incomplete stack frame,
-0xE0 versus target 0xE8; the original last prefix
-instruction jumps to the unreconstructed shared exit.
-The focused audit verifies **516 internal jump targets**
-and **187 IEEE-754 literal binding payloads** against
-the original.
+The complete natural C++ source is now
+src/Character06Cpu.cpp. Pinned VC7.1 /Od /G6 /MT /Gy /W3
+emits exactly **15,292/15,292 code bytes**, the original
+**0xE8 stack frame** and all **3,924 original instructions**.
+After binding every original relocation, a full strict normal-COFF
+comparison reports **zero differing bytes**, including all
+**300 / 300 original-bound relocations** (198 original
+floating-point literal references, 99 Secondary::RandomRange
+calls, two Secondary::CollisionSide calls and one CRT fabs).
+The 37 unique COFF symbols each bind to a single original
+address. Every real constant's exact 4/8-byte IEEE-754
+payload was independently checked at its corresponding
+original executable address; call targets were verified from
+original direct call operands, not guessed from sibling sources.
 
-The source covers defense/movement, state 4..11 input,
-action-specific collision follow-ups 0xC8..0xE7,
-generic ground-vs-ground and ground-vs-airborne
-opponent decisions, and now self-airborne reactions
-[0x004B5E6E,0x004B6294). The new branch has separate
-grounded-opponent and airborne-opponent logic, random
-forward-distance checks, meter commands 0x1E/0x6E
-and jump/attack buttons. Inline Boolean expressions
-restore deep temporary stack slots EBP-0xD8 and
-EBP-0xE0 without shifting the original EBP-0x14
-this-pointer home.
+The source reconstructs the defensive random checks, CPU
+movement and grounded/airborne decisions, states 4..11,
+collision follow-ups for actions 0xC8..0xD1 and 0xE7,
+then all generic decision trees and the final walking timer
+continuation. The original 0x004B3172 near-JNZ shares a guard
+over two attacks, and floating evaluation order matters
+in several tests (notably 0x004B5B75). An inline Boolean
+expression in the opponent-airborne branch restores the
+original EBP-0xD4 scratch register and avoids shifting the
+this-pointer home; the final fallback naturally restores
+the complete 0xE8 stack and shared exit. No padding,
+handwritten machine code or fixed-register ABI was used.
 
-Continue with the final 1,000-byte fallback at
-0x004B6294 and the shared return at 0x004B6678.
-Run only workbench/nagamori-cpu/check_prefix.py.
-**Not full-function Exact** until the final stack
-frame, all bytes and original relocations match.
+The strict acceptance evidence is
+docs/evidence/nagamori-slot05-exact.json, selected native
+replay unit character-06-slot05 in config/match-units.toml.
+Earlier normalized prefix checks are superseded: unlike
+those partial diagnostics this certificate covers the entire
+natural compiler function and every original relocation.
+This establishes codegen Exact for one substantial authored
+owner, not whole-product linkage, runtime equivalence or
+the entire game's reconstruction.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

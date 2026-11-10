@@ -29,10 +29,19 @@ run a full cold cohort to tidy documentation.
 
 ## Accepted owners to leave accepted
 
-Makoto Slot06, Nagamori Slot04/Slot02, Ikumi Slot02 and Scene3 pushboxes are
+Makoto Slot06, Nagamori Slot05/Slot04/Slot02, Ikumi Slot02 and Scene3 pushboxes are
 complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
+
+Nagamori Character06::Slot05 CPU is now **complete native strict Exact**,
+15,292 original bytes / 3,924 instructions, 300/300 original-bound
+relocations and zero differences. The source is
+`src/Character06Cpu.cpp` and the certificate
+`docs/evidence/nagamori-slot05-exact.json`.
+Rebuild only with
+`scripts/repo-python scripts/replay-exact-units.py --unit character-06-slot05`.
+The old partial workbench and prefix test are retired.
 
 Legacy bitmap-to-object conversion at original `0x004019B0` is now
 complete strict Exact (614 bytes, all 37 relocations); source is
@@ -51,7 +60,6 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nagamori `Character06::Slot05` CPU | `[0x004B2AC0,0x004B667C)`, 15,292 bytes | `workbench/nagamori-cpu/`: 14,292-byte prefix / 3,640 instructions; 3,638/3,639 forms, 516 internal jumps and 187 float literals agree. Frame 0xE0 vs original 0xE8. Finish final 1,000-byte fallback at `0x004B6294` and shared return; no full-owner Exact yet. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 | Ikumi `Character14::Slot08` | `0x006AB060`, 1,592 bytes; verified vtable slot 8 | `workbench/ikumi-effects/`: partial output is 1,537 bytes / 33 relocations. Five spawn branches need the original opponent-X x87 load before `rand()`. Volatile/comma/multiplication variants did not reproduce it. |
@@ -59,7 +67,6 @@ with the common class declaration remains a separate task.
 Focused diagnostic commands:
 
 ```bash
-scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 scripts/repo-python workbench/shiori-state/audit_case_codegen.py --rebuild
 ```
 

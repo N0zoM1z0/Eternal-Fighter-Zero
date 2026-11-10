@@ -1,6 +1,6 @@
-// Nagamori Slot05: verified opening CPU-decision sequence, partial original C++.
-// Target 0x004B2AC0; remaining original AI branches are still open.
-#include "../../src/CharacterViews.h"
+// Nagamori's complete CPU decision owner at original 0x004B2AC0.
+// All action-specific and generic branches are reconstructed in natural C++.
+#include "CharacterViews.h"
 #include <math.h>
 
 void Character06::Slot05()
@@ -950,5 +950,76 @@ void Character06::Slot05()
             }
         }
     }
-    // Remaining priority AI decisions are not reconstructed yet.
+    // This common continuation is reached both when the 25x generic AI
+    // probability fails and after all its candidate decisions fall through.
+    if (field0008 < 50 &&
+        (((*opponentSlot)->field0008 > 149 &&
+          (*opponentSlot)->field0008 < 156) ||
+         ((*opponentSlot)->field0008 > 49 &&
+          (*opponentSlot)->field0008 < 59)) &&
+        positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 3.0f * field00a8) {
+        recognizedCommand = facing == 1;
+        return;
+    }
+
+    if ((unsigned short)RandomRange(0, 1000) < 2) {
+        field3114 = 4;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 2) {
+        if ((float)(unsigned short)RandomRange(0, 100) < 8.0f * field00a8)
+            field3114 = 3;
+        else
+            field3114 = 0;
+        if (distance.forward > 160.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 100.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 170.0 && distance.forward > 120.0 &&
+            positionY == 0.0) {
+            inputX = facing;
+            inputY = -1;
+            return;
+        }
+    }
+    if (cpuMoveRightFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveRightFrames > 15)
+            cpuMoveRightFrames = 15;
+        inputX = 1;
+        return;
+    }
+    if (cpuMoveLeftFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveLeftFrames > 15)
+            cpuMoveLeftFrames = 15;
+        inputX = -1;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 50 &&
+        distance.forward < 100.0) {
+        if (facing == 1)
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 30;
+        else
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 30;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 60) {
+        if (facing == 1)
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 30;
+        else
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 30;
+    }
+    else if (facing == -1) {
+        cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 30;
+    }
+    else {
+        cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 30;
+    }
 }

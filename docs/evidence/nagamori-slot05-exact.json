@@ -1,0 +1,2736 @@
+{
+  "schema_version": 1,
+  "authority": "Complete native VC7.1 original-bound codegen; 15292 code bytes and all 300 normal-COFF relocations; whole product/runtime still open",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiled the complete natural Character06::Slot05 source, including 3924 x86 instructions and 0xE8 frame. Entire original function [0x004B2AC0,0x004B667C) is compared without padding, masks or byte injection. Original PE call operands bind 99 RandomRange calls to 0x004108A0, two CollisionSide calls to 0x0040FF70, one CRT fabs call to 0x0077842D; 198 floating constants have their original 4/8-byte IEEE-754 values independently verified at each original address. The 300 binding fields are replayed, then all 15292 bytes are compared with zero differences. Four following CC alignment bytes excluded; no full-game runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 15292,
+      "matched_bytes": 15292,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 170,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2B6A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 208,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2B90: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "EFZ.exe original operand at 0x004B2BA2: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000",
+          "addend": 0
+        },
+        {
+          "offset": 392,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2C48: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 430,
+          "target": 7896840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4010000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2C6E: EFZ.exe original literal at 0x00787F08; exact IEEE-754 bit pattern __real@4010000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2C74: EFZ.exe original literal at 0x007875C0; exact IEEE-754 bit pattern __real@3ff0000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 442,
+          "target": 7896832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4020000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2C7A: EFZ.exe original literal at 0x00787F00; exact IEEE-754 bit pattern __real@4020000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2CB6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 520,
+          "target": 7896828,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42200000",
+          "evidence": "EFZ.exe original operand at 0x004B2CC8: EFZ.exe original literal at 0x00787EFC; exact IEEE-754 bit pattern __real@42200000",
+          "addend": 0
+        },
+        {
+          "offset": 716,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "EFZ.exe original operand at 0x004B2D8C: EFZ.exe direct call to original CRT fabs at 0x0077842D",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2DCF: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 801,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "EFZ.exe original operand at 0x004B2DE1: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000",
+          "addend": 0
+        },
+        {
+          "offset": 856,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2E18: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 900,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2E44: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 956,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B2E7C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1062,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2EE6: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1078,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2EF6: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1157,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B2F45: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1365,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3015: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1413,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3045: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1432,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3058: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1456,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B3070: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 1499,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B309B: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1518,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B30AE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1542,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B30C6: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 1677,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B314D: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1725,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B317D: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1741,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B318D: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1760,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B31A0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1784,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B31B8: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 1837,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B31ED: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1853,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B31FD: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1872,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3210: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1896,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B3228: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 1972,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3274: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 1995,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B328B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2019,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B32A3: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2043,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B32BB: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2082,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B32E2: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2117,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3305: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2141,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B331D: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2193,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3351: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2228,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3374: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2252,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B338C: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2284,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B33AC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2326,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B33D6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2356,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B33F4: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2374,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3406: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2428,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B343C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2458,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B345A: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2476,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "EFZ.exe original operand at 0x004B346C: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2527,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B349F: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2546,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B34B2: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2576,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B34D0: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 2600,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B34E8: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2633,
+          "target": 7896784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3509: EFZ.exe original literal at 0x00787ED0; exact IEEE-754 bit pattern __real@406b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2649,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3519: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2668,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B352C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2698,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "EFZ.exe original operand at 0x004B354A: EFZ.exe original literal at 0x00787ED8; exact IEEE-754 bit pattern __real@3f800000",
+          "addend": 0
+        },
+        {
+          "offset": 2719,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B355F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2749,
+          "target": 7896784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B357D: EFZ.exe original literal at 0x00787ED0; exact IEEE-754 bit pattern __real@406b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2768,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3590: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2798,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "EFZ.exe original operand at 0x004B35AE: EFZ.exe original literal at 0x00787ED8; exact IEEE-754 bit pattern __real@3f800000",
+          "addend": 0
+        },
+        {
+          "offset": 2822,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B35C6: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 2841,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B35D9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2924,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B362C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2954,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "EFZ.exe original operand at 0x004B364A: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000",
+          "addend": 0
+        },
+        {
+          "offset": 3004,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B367C: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3034,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B369A: EFZ.exe original literal at 0x00787E48; exact IEEE-754 bit pattern __real@c044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3050,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B36AA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3069,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B36BD: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3099,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "EFZ.exe original operand at 0x004B36DB: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000",
+          "addend": 0
+        },
+        {
+          "offset": 3146,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B370A: EFZ.exe original literal at 0x00787E30; exact IEEE-754 bit pattern __real@c03e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3176,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3728: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3192,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3738: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3211,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B374B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3241,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "EFZ.exe original operand at 0x004B3769: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000",
+          "addend": 0
+        },
+        {
+          "offset": 3288,
+          "target": 7896768,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3798: EFZ.exe original literal at 0x00787EC0; exact IEEE-754 bit pattern __real@c049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3322,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B37BA: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3338,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B37CA: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3354,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B37DA: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3373,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B37ED: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3403,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "EFZ.exe original operand at 0x004B380B: EFZ.exe original literal at 0x00787EC8; exact IEEE-754 bit pattern __real@40a00000",
+          "addend": 0
+        },
+        {
+          "offset": 3446,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3836: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3462,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3846: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3481,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3859: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3605,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B38D5: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3633,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B38F1: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3657,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "EFZ.exe original operand at 0x004B3909: EFZ.exe original literal at 0x00787EB0; exact IEEE-754 bit pattern __real@41700000",
+          "addend": 0
+        },
+        {
+          "offset": 3727,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B394F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3766,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3976: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3817,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B39A9: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3868,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B39DC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3919,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3A0F: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 3996,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3A5C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4092,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3ABC: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4115,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3AD3: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4139,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "EFZ.exe original operand at 0x004B3AEB: EFZ.exe original literal at 0x00787EB0; exact IEEE-754 bit pattern __real@41700000",
+          "addend": 0
+        },
+        {
+          "offset": 4201,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3B29: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4252,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3B5C: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4303,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B3B8F: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 4340,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3BB4: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4364,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "EFZ.exe original operand at 0x004B3BCC: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000",
+          "addend": 0
+        },
+        {
+          "offset": 4699,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3D1B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5408,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B3FE0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5438,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "EFZ.exe original operand at 0x004B3FFE: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000",
+          "addend": 0
+        },
+        {
+          "offset": 5498,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B403A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5545,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4069: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5601,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B40A1: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5657,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B40D9: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5723,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B411B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5765,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4145: EFZ.exe original literal at 0x00787EA8; exact IEEE-754 bit pattern __real@405f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 5959,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4207: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6019,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4243: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6079,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B427F: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6125,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B42AD: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6163,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B42D3: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6234,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B431A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6280,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4348: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6381,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B43AD: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6430,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B43DE: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6532,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4444: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6592,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4480: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6621,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B449D: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6682,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B44DA: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6728,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4508: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6766,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B452E: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6837,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4575: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6883,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B45A3: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 6941,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B45DD: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7018,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B462A: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7059,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4653: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7136,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B46A0: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7207,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B46E7: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7267,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4723: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7296,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4740: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7357,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B477D: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7403,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B47AB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7441,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B47D1: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7537,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4831: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7578,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B485A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7652,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B48A4: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7727,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B48EF: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7749,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4905: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7818,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B494A: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7910,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B49A6: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 7929,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B49B9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7992,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B49F8: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8073,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4A49: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8156,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4A9C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8245,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4AF5: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8301,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4B2D: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8357,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4B65: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8423,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4BA7: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8465,
+          "target": 7896720,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060e00000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4BD1: EFZ.exe original literal at 0x00787E90; exact IEEE-754 bit pattern __real@4060e00000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8562,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4C32: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8622,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4C6E: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8683,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4CAB: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8729,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4CD9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8767,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4CFF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8838,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4D46: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8884,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4D74: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 8979,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4DD3: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9028,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4E04: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9130,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4E6A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9190,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4EA6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9219,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4EC3: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9304,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4F18: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9345,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4F41: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9419,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4F8B: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9450,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B4FAA: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9516,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B4FEC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9609,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5049: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9628,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B505C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9691,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B509B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9772,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B50EC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9833,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5129: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9862,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5146: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9923,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5183: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 9969,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B51B1: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10015,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B51DF: EFZ.exe original literal at 0x00787EA8; exact IEEE-754 bit pattern __real@405f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10117,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5245: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10202,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B529A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10279,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B52E7: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10361,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5339: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10380,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B534C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10470,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B53A6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10582,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5416: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10659,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5463: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10710,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5496: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10799,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B54EF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10845,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B551D: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10883,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5543: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 10979,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B55A3: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11020,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B55CC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11094,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5616: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11169,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5661: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11191,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5677: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11260,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B56BC: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11326,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B56FE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11407,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B574F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11455,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B577F: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11484,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B579C: EFZ.exe original literal at 0x00787E98; exact IEEE-754 bit pattern __real@405b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11516,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B57BC: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11540,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "EFZ.exe original operand at 0x004B57D4: EFZ.exe original literal at 0x00787F10; exact IEEE-754 bit pattern __real@41c80000",
+          "addend": 0
+        },
+        {
+          "offset": 11574,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B57F6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11595,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B580B: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11625,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5829: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11671,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5857: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11692,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B586C: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11768,
+          "target": 7898160,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404b800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B58B8: EFZ.exe original literal at 0x00788430; exact IEEE-754 bit pattern __real@404b800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11821,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B58ED: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11874,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5922: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11890,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5932: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11943,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5967: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 11996,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B599C: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12042,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B59CA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12144,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5A30: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12160,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5A40: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12213,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5A75: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12229,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5A85: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12282,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5ABA: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12405,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5B35: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12429,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5B4D: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12450,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5B62: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12523,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5BAB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12553,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5BC9: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12620,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5C0C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12658,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5C32: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12686,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5C4E: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12706,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5C62: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12722,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5C72: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12783,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5CAF: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12836,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5CE4: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12852,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5CF4: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12905,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5D29: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12925,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5D3D: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12941,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5D4D: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 12963,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5D63: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13055,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5DBF: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13071,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5DCF: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13087,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5DDF: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13140,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5E14: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13156,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5E24: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13205,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5E55: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13238,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5E76: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13279,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5E9F: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13304,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5EB8: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13320,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5EC8: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13341,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5EDD: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13422,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5F2E: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13438,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5F3E: EFZ.exe original literal at 0x00787EB8; exact IEEE-754 bit pattern __real@4049000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13454,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5F4E: EFZ.exe original literal at 0x00787CE8; exact IEEE-754 bit pattern __real@404e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13515,
+          "target": 7896704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5F8B: EFZ.exe original literal at 0x00787E80; exact IEEE-754 bit pattern __real@4060400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13531,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5F9B: EFZ.exe original literal at 0x00787CE0; exact IEEE-754 bit pattern __real@4044000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13547,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B5FAB: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13614,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B5FEE: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13638,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6006: EFZ.exe original literal at 0x00787E38; exact IEEE-754 bit pattern __real@4051800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13689,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6039: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13719,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6057: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13785,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6099: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 13823,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B60BF: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13843,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B60D3: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13863,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B60E7: EFZ.exe original literal at 0x00787EE0; exact IEEE-754 bit pattern __real@4054000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 13909,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6115: EFZ.exe original literal at 0x00787C30; exact IEEE-754 bit pattern __real@407f400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14001,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6171: EFZ.exe original literal at 0x00787E78; exact IEEE-754 bit pattern __real@4061800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14017,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6181: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14060,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "EFZ.exe original operand at 0x004B61AC: EFZ.exe original literal at 0x00787EF0; exact IEEE-754 bit pattern __real@4062c00000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14076,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B61BC: EFZ.exe original literal at 0x00787EA0; exact IEEE-754 bit pattern __real@4056800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14122,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B61EA: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14171,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B621B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14201,
+          "target": 7893824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4066800000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6239: EFZ.exe original literal at 0x00787340; exact IEEE-754 bit pattern __real@4066800000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14267,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B627B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14386,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B62F2: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14410,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B630A: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14434,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "EFZ.exe original operand at 0x004B6322: EFZ.exe original literal at 0x00787EE8; exact IEEE-754 bit pattern __real@40400000",
+          "addend": 0
+        },
+        {
+          "offset": 14494,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B635E: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14532,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6384: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14556,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B639C: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14580,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "EFZ.exe original operand at 0x004B63B4: EFZ.exe original literal at 0x00787EF8; exact IEEE-754 bit pattern __real@41000000",
+          "addend": 0
+        },
+        {
+          "offset": 14632,
+          "target": 7893872,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4064000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B63E8: EFZ.exe original literal at 0x00787370; exact IEEE-754 bit pattern __real@4064000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14648,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B63F8: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14672,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6410: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14714,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B643A: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14730,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B644A: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14754,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6462: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 14796,
+          "target": 7896656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4065400000000000",
+          "evidence": "EFZ.exe original operand at 0x004B648C: EFZ.exe original literal at 0x00787E50; exact IEEE-754 bit pattern __real@4065400000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14812,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B649C: EFZ.exe original literal at 0x00787368; exact IEEE-754 bit pattern __real@405e000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14828,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B64AC: EFZ.exe original literal at 0x007872F8; exact IEEE-754 bit pattern __real@0000000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 14890,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "EFZ.exe original operand at 0x004B64EA: EFZ.exe direct call to reviewed Secondary::CollisionSide at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 14957,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "EFZ.exe original operand at 0x004B652D: EFZ.exe direct call to reviewed Secondary::CollisionSide at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 15016,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6568: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15033,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "EFZ.exe original operand at 0x004B6579: EFZ.exe original literal at 0x007875D0; exact IEEE-754 bit pattern __real@4059000000000000",
+          "addend": 0
+        },
+        {
+          "offset": 15067,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B659B: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15099,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B65BB: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15126,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B65D6: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15161,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B65F9: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15193,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6619: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15237,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6645: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 15269,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "EFZ.exe original operand at 0x004B6665: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9",
+      "target_extent_sha256": "14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9",
+      "unit": "character-06-slot05",
+      "symbol": "?Slot05@Character06@@UAEXXZ",
+      "target_address": "0x004B2AC0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "9e264b6f430a99cdac5fafc13446da11eeafab7ee3340af679a3c9ebb0e27fc9",
+      "object_sha256": "9f2728290cb477beec025c539d6bd45a40aa98ecebfa34ed0afed59dbd5fa271",
+      "source_sha256": "d703e04f0a808686adcaaeb6d70b35e83c8560014a89db0dc9b94bf55d64181e",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3f330115b2a02d2274c9219ae6080c8480d39b029d6f359e9338fa0cddfd40c2",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "defda1045af041f258ca66b052d921576cf792d6c53998f38cc0119709edff7d",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
