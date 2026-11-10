@@ -59,7 +59,28 @@ candidate inventory as an exhaustive reviewed function census.
 
 ## Python and public CI
 
-`scripts/repo-python` enforces CPython 3.13.5. The initial workflow uses no pip
-dependencies. `scripts/ci.py` checks syntax, declarations, ledger consistency,
-generated progress, focused oracle tests and whitespace without private tools
-or game assets. Diagnostic experiments must not silently become dependencies.
+`scripts/repo-python` enforces CPython 3.13.5. CI uses only the standard
+library and needs no game assets, compiler or analyzer:
+
+```bash
+scripts/repo-python scripts/ci.py
+# Optional, when changing the exact oracle:
+scripts/repo-python scripts/ci.py --only oracle
+```
+
+The default checks script/config syntax, tool declarations, ledger structure,
+generated progress and whitespace. It reads the checkout's scripts rather than
+only the last commit, so earlier changes in a pull request are checked too.
+Use repeated `--only NAME` options to select checks for a narrow change.
+Markdown-only edits need diff review and `git diff --check`.
+
+Ledger structure checks do not audit historical certificate freshness. Audit
+one accepted unit explicitly when useful:
+
+```bash
+scripts/repo-python scripts/validate-tracking.py --check-proofs --unit config-read-byte
+```
+
+Some historical certificates have stale source or header hashes. Keep that
+history as recorded; establish current exactness with a selected native rebuild
+and complete comparison. No historical freshness audit runs in daily CI.

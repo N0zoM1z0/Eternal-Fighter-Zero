@@ -49,13 +49,11 @@ Compiler-generated helpers and standard-library wrappers are recorded separately
 and excluded from authored progress. Automatic Ghidra candidates are not an
 authored-code denominator.
 
-Proof freshness remains incomplete: `validate-tracking.py --require-target`
-currently reports stale source dependencies in public exact certificates,
-including previous changes to `src/Engine.h`. The old stale-certificate count
-and header hashes are no longer a current audit. Ledger totals remain useful
-inventory, not a substitute for refreshing affected proofs. See the
-[handoff](docs/RE_HANDOFF.md); do not run a full cold replay or hand-edit proof
-records merely to update this note.
+Historical exact certificates can have stale source or header hashes. Daily CI
+checks ledger structure; current exactness comes from rebuilding and comparing
+the affected units. Optional certificate audits use
+`validate-tracking.py --check-proofs --unit NAME`. See the
+[workflow](docs/RE_WORKFLOW.md).
 
 Accepted sources cover configuration, file reading, DirectInput, Audio,
 Context, title/selection/loading scenes, substantial shared character code,
@@ -119,8 +117,7 @@ scripts/bootstrap-tools.sh \
   --jdk /path/to/jdk-21.0.12.1+1
 scripts/repo-python scripts/verify-target.py
 scripts/repo-python scripts/verify-toolchain.py --execute
-scripts/repo-python scripts/ci.py --only ledgers
-scripts/repo-python scripts/ci.py --only progress
+scripts/repo-python scripts/ci.py
 ```
 
 The selected VC7.1 RTM compiler is **13.10.3077**, linker **7.10.3077**. This

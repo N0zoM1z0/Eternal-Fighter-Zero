@@ -23,8 +23,14 @@ def summary() -> dict:
                 whole_product="open", runtime_validation="open", portability="not started")
 
 
-def validate() -> None:
+def validate(*, check_proofs: bool = False, proof_units: set[str] | None = None) -> None:
     units = load_units()
+    profiles = load_toml(ROOT / "config/build.toml")["profiles"]
+    toolchain_hash = sha256(ROOT / "config/tools.lock.toml")
+    source_hashes = {}
+    certificates = {}
+    if proof_units is not None and (unknown := proof_units - units.keys()):
+        raise ValueError(f"unknown proof units: {sorted(unknown)}")
     canonical = load_toml(ROOT / "config/target.toml")["target"]["sha256"]
     boundaries = {number(r["address"]): r for r in rows("function-boundaries.csv")}
     origins = {number(r["address"]): r for r in rows("function-origins.csv")}
@@ -38,10 +44,11 @@ def validate() -> None:
     for name, unit in units.items():
         if unit["artifact_kind"] != "coff" or "compare_size" in unit or unit["size"] <= 0:
             raise ValueError(f"unsupported/partial match unit {name}")
-        if not (ROOT / unit["source"]).is_file():
-            raise ValueError(f"missing source for {name}")
+        for source in [unit["source"], *unit.get("dependencies", [])]:
+            if not (ROOT / source).is_file():
+                raise ValueError(f"missing source/dependency for {name}: {source}")
         (ROOT / unit["object"]).resolve().relative_to((ROOT / "build").resolve())
-        profile = load_toml(ROOT / "config/build.toml")["profiles"][unit["profile"]]
+        profile = profiles[unit["profile"]]
         if profile["artifact_kind"] != "coff":
             raise ValueError("unsupported build profile")
         for binding in unit.get("relocations", []):
@@ -68,17 +75,34 @@ def validate() -> None:
             raise ValueError("exact authored claim lacks reviewed origin")
         if implemented[address]["source"] != unit["source"] or implemented[address]["symbol"] != unit["symbol"]:
             raise ValueError("source ledger differs from exact unit")
-        for key, expected in [("target_sha256", canonical), ("source_sha256", sha256(ROOT / unit["source"])),
-                              ("unit_sha256", record_digest(unit)),
-                              ("profile_sha256", record_digest(load_toml(ROOT / "config/build.toml")["profiles"][unit["profile"]])),
-                              ("toolchain_lock_sha256", sha256(ROOT / "config/tools.lock.toml"))]:
-            if match[key] != expected:
-                raise ValueError(f"stale exact ledger {name}: {key}")
+        if match["target_sha256"] != canonical:
+            raise ValueError("exact claim is bound to another target")
+        for key in ("source_sha256", "unit_sha256", "profile_sha256",
+                    "toolchain_lock_sha256", "target_extent_sha256"):
+            digest = match[key]
+            if len(digest) != 64 or any(c not in "0123456789abcdef" for c in digest):
+                raise ValueError(f"invalid exact ledger digest: {name}: {key}")
         if not match["evidence"] or len(match["target_extent_sha256"]) != 64:
             raise ValueError("exact claim lacks comparison evidence")
         proof_path = (ROOT / match["evidence"]).resolve()
         proof_path.relative_to((ROOT / "docs/evidence").resolve())
-        reports = [r for r in json.loads(proof_path.read_text())["reports"] if r["unit"] == name]
+        if not proof_path.is_file():
+            raise ValueError(f"missing comparison certificate: {proof_path}")
+        claimed.append((address, address + unit["size"]))
+        if not check_proofs or (proof_units is not None and name not in proof_units):
+            continue
+        source = unit["source"]
+        if source not in source_hashes:
+            source_hashes[source] = sha256(ROOT / source)
+        for key, expected in [("target_sha256", canonical), ("source_sha256", source_hashes[source]),
+                              ("unit_sha256", record_digest(unit)),
+                              ("profile_sha256", record_digest(profiles[unit["profile"]])),
+                              ("toolchain_lock_sha256", toolchain_hash)]:
+            if match[key] != expected:
+                raise ValueError(f"stale exact ledger {name}: {key}")
+        if proof_path not in certificates:
+            certificates[proof_path] = json.loads(proof_path.read_text())["reports"]
+        reports = [r for r in certificates[proof_path] if r["unit"] == name]
         if len(reports) != 1:
             raise ValueError("exact ledger lacks one public comparison certificate")
         proof = reports[0]
@@ -96,7 +120,8 @@ def validate() -> None:
                 raise ValueError(f"public comparison certificate differs: {key}")
         if proof["dependencies"] != {p: sha256(ROOT / p) for p in unit.get("dependencies", [])}:
             raise ValueError("public comparison certificate has stale source dependencies")
-        claimed.append((address, address + unit["size"]))
+    if proof_units is not None and (unclaimed := proof_units - seen_units):
+        raise ValueError(f"units have no exact ledger claim: {sorted(unclaimed)}")
     claimed.sort()
     if any(a[1] > b[0] for a, b in zip(claimed, claimed[1:])):
         raise ValueError("exact claims overlap")

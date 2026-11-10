@@ -3,7 +3,6 @@
 > Current workflow: follow the **Highest priority** section in `AGENTS.md`.
 > Prefer affected exact comparisons and useful Markdown knowledge. Ordinary
 > notes do not require full CI, native replay or document-hash/pin refreshes.
-> Older broad validation instructions apply only when their impact is relevant.
 
 
 ## Recover and select
@@ -45,9 +44,9 @@ scripts/repo-python scripts/replay-exact-units.py --unit config-read-byte
 
 Classify a mismatch by complete extent, code, local branch, ABI or bound address.
 Change one supported hypothesis at a time. Keep useful logs under `.analysis/`.
-Preserve retained source/object attempts, target reviews and unfinished drafts;
-historical derivation scripts may overwrite the accepted baseline and must not
-be rerun blindly.
+Retain the current unfinished candidate and any unusual build context needed
+to reproduce it. Record useful failed approaches briefly; delete obsolete
+attempts and generated output when they no longer help.
 
 ## Record a checkpoint
 
@@ -58,13 +57,14 @@ source and manifest identities in the ledger and durable compact evidence.
 ```bash
 scripts/repo-python scripts/validate-tracking.py --require-target
 scripts/repo-python scripts/progress.py
-scripts/repo-python scripts/ci.py --only ledgers
-scripts/repo-python scripts/ci.py --only progress
+scripts/repo-python scripts/ci.py --only ledgers --only progress
 git diff --check
 ```
 
-Default CI is target-free. Its metadata checks do not run the original game,
-Ghidra or proprietary compiler. Native comparison is a distinct selected action.
+Default CI is a fast, target-free basic check. Ledger validation checks structure
+and recorded target identity; it does not audit historical source/header hashes.
+Use `validate-tracking.py --check-proofs --unit NAME` for that optional audit.
+Current exactness requires the selected native comparison above.
 Use only the relevant CI selectors for ordinary checkpoints. Add syntax or
 focused oracle checks when the corresponding infrastructure changes; do not
 run a full CI/cold cohort as a routine function-acceptance prerequisite.

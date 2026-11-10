@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Check changed machine inputs; exact comparisons are selected by affected scope."""
-from pathlib import Path
+"""Fast, target-free checks. Native exact replay is a separate selected action."""
+import argparse
 import ast
 import json
 import os
+from pathlib import Path
 import subprocess
 import sys
 import tomllib
@@ -11,27 +12,15 @@ import tomllib
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def main():
-    if sys.argv[1:] in (["--help"], ["-h"]):
-        print("usage: ci.py [--full | existing explicit check options]\nDefault: changed machine-input syntax and diff checks. Run affected exact/tool commands for the task.")
-        return 0
-    if len(sys.argv) > 1:
-        arguments = sys.argv[1:]
-        if not any(flag in arguments for flag in ('--full', '--only')):
-            print("Unknown CI option; use no arguments for scoped checks or --full for the broad suite.", file=sys.stderr)
-            return 2
-        arguments = [arg for arg in arguments if arg != "--full"]
-        return subprocess.call([sys.executable, str(ROOT / "scripts/ci-full.py"), *arguments], cwd=ROOT)
-    names = set()
-    for command in (["git", "diff", "HEAD", "--name-only", "-z"],
-                    ["git", "ls-files", "--others", "--exclude-standard", "-z"]):
-        names.update(n for n in subprocess.check_output(command, cwd=ROOT).decode().split("\0") if n)
-    if os.environ.get("CI"):
-        # Clean CI checkouts have no worktree diff. Inspect the commit being checked.
-        names.update(n for n in subprocess.check_output(
-            ["git", "show", "--format=", "--first-parent", "--name-only", "-z", "HEAD"],
-            cwd=ROOT).decode().split("\0") if n)
-    for name in sorted(names):
+def command(*args):
+    subprocess.run(args, cwd=ROOT, check=True)
+
+
+def syntax():
+    names = subprocess.check_output(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z",
+         "--", "scripts", "workbench", "config"], cwd=ROOT).decode().split("\0")
+    for name in sorted(set(names) - {""}):
         path = ROOT / name
         if not path.is_file() or path.is_symlink():
             continue
@@ -41,10 +30,52 @@ def main():
             json.loads(path.read_text())
         elif path.suffix == ".toml":
             tomllib.loads(path.read_text())
-        elif path.suffix == ".sh":
-            subprocess.run(["bash", "-n", str(path)], check=True)
-    subprocess.run(["git", "diff", "--check"], cwd=ROOT, check=True)
-    print("Changed machine inputs checked. Use affected exact/tool checks; --full explicitly selects the broad suite.")
+        elif path.suffix == ".sh" or name == "scripts/repo-python":
+            command("bash", "-n", str(path))
+
+
+def declarations():
+    from common import load_toml
+    lock = json.loads((ROOT / "config/analysis-tools.lock.json").read_text())
+    if lock["schema_version"] != 1:
+        raise ValueError("unknown analysis lock schema")
+    toolchain = load_toml(ROOT / "config/tools.lock.toml")
+    if toolchain["msvc71"]["compiler_version"] != "13.10.3077":
+        raise ValueError("unexpected compiler declaration")
+    for expected in [*toolchain["files"].values(), *toolchain["trees"].values()]:
+        if len(expected) != 64 or any(c not in "0123456789abcdef" for c in expected):
+            raise ValueError("invalid tool digest")
+
+
+def ledgers():
+    from tracking import validate
+    validate()
+
+
+def whitespace():
+    command("git", "diff", "--check")
+    command("git", "diff", "--cached", "--check")
+    if os.environ.get("CI"):
+        command("git", "show", "--format=", "--check", "HEAD")
+
+
+def main():
+    checks = dict(
+        syntax=syntax, declarations=declarations, ledgers=ledgers,
+        progress=lambda: command(sys.executable, "scripts/progress.py", "--check"),
+        whitespace=whitespace,
+        oracle=lambda: command(sys.executable, "-m", "unittest", "discover", "-s", "scripts/tests"),
+    )
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--only", action="append", choices=checks,
+                        help="run a named check; repeat to select several (oracle is opt-in)")
+    args = parser.parse_args()
+    try:
+        for name in args.only or [n for n in checks if n != "oracle"]:
+            checks[name]()
+            print(f"PASS {name}", flush=True)
+    except (OSError, ValueError, KeyError, SyntaxError, subprocess.SubprocessError) as error:
+        parser.exit(1, f"CI failed: {error}\n")
     return 0
 
 
