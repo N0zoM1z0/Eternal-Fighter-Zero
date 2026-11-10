@@ -180,6 +180,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
+| Nayuki Character10::Slot04 action boss | 0x00461460, 10,605 original bytes | workbench/nayuki-action/ covers 3,839 bytes / 962 instructions; 962/962 forms, 147 internal jumps, 16 valid outbound targets and 33 original-bound relocations agree. Next 0x0046235F (0x0D); 6,766 bytes remain, not full Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

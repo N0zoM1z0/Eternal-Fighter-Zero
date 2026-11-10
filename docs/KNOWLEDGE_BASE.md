@@ -2986,6 +2986,40 @@ runtime behavior remain open.
 
 <a id="nayuki-slot05-cpu-reviewed-prefix"></a>
 
+<a id="nayuki-slot04-action-reviewed-prefix"></a>
+
+## Nayuki Character10 Slot04: reviewed 3,839-byte action boss opening
+
+Original Nayuki Character10 vtable Slot04 at 0x00788280 selects
+[0x00461460,0x00463DCD), **10,605 x86 bytes**, followed by
+three CC alignment bytes. Complete original SHA-256:
+9b36e02745b63428693a1fd39258d2fbbbccfdc120f2d16d915073fedde5806d.
+Only original boundary and partial native codegen are reviewed;
+this owner is **NOT full Exact**.
+
+The natural C++ in workbench/nayuki-action/Character10Action.cpp
+reconstructs [0x00461460,0x0046235F), **3,839 original
+bytes / 962 instructions**, prefix SHA-256
+ddfa95a85b9fa949c7aba50bf072feedd0f86a2129c9b276aa2295dd505fc821.
+The selected check_prefix.py compiles the one native function
+under pinned VC7.1 /Od /G6 /MT /Gy /W3 and checks **962/962
+instruction forms/operands**, **147 internal branch targets**,
+**16 canonical outbound destinations** and **33 original-bound
+COFF relocations**. Remaining source has not been accepted.
+
+Reconstruction corrected the Sayuri-clone priority: Nayuki
+uses critical command 0x61, 0x66/65/64 and 0x70/6F/6E
+meter tiers, 0x48/47/46, 0x1E/1F/20 and 0x16/15/14.
+The 0x1E family dynamically extends sequence 268's frame
+limit by (field3148 > 6) * 10 with 0x108/0x109 action
+exceptions. Natural code forces original VC7.1 EBX use
+and the full push ebx prologue absent from the sibling clone.
+The 0x48 and 0x16 gates each cover a three-command group.
+
+Continue at 0x0046235F with Nayuki 0x0D command;
+**6,766 original code bytes remain unaccepted**.
+No full-game cold replay was run.
+
 ## Nayuki Character10 Slot05: complete 13,259-byte strict Exact CPU boss
 
 Original Nayuki Character10 vtable slot05 at 0x00788284
