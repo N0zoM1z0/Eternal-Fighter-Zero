@@ -259,3 +259,60 @@ tar -xzf .analysis/cleanup/2026-11-09/retired-makoto-trial-disassemblies-and-obj
 Check the recorded per-file digest after restoration. Do not overwrite a newer
 live artifact with an old trial. The archive and manifest remain private,
 ignored, and must **not** be committed.
+
+## 2026-11-10 receiving-agent cleanup: completed-state history and old logs
+
+The operator requested another storage cleanup before handing EFZ to the next
+agent. Superseded **generated** artifacts from five already-Exact character
+state owners (Mayu, Misaki, Mishio, Misuzu and Mizuka), earlier Makoto
+source/disassembly variants, two old prior-unit inventories, a superseded
+Shiori first-build dump, and generated `.analysis/build/*.log`/`*.json`
+files older than **2026-11-07 UTC** were archived **losslessly**.
+
+| Verified item | Amount |
+| --- | ---: |
+| Files archived, checked and retired | **3,009** |
+| Logical bytes before compression | **74,400,754** |
+| Allocated bytes of former loose files | **85,049,344** |
+| Compressed archive bytes | **5,134,497** |
+| Net reclaimed allocated bytes, including new archive/manifest/plan/script overhead | **78,946,304 (about 75.3 MiB)** |
+
+Private, ignored files (relative to repository root):
+
+- Archive: `.analysis/cleanup/2026-11-10/completed-state-trials-and-old-build-logs.tar.gz`
+- Member-level original relative paths, exact sizes, mtime and SHA-256:
+  `.analysis/cleanup/2026-11-10/completed-state-trials-and-old-build-logs.manifest.json`
+- Selection and preserved-control paths:
+  `.analysis/cleanup/2026-11-10/completed-state-trials-and-old-build-logs.plan.json`
+- Reproducible selection/archival procedure:
+  `.analysis/cleanup/2026-11-10/archive_completed_trials.py`
+
+Archive SHA-256:
+`8b564d2a5eadb9aa7954966f6e252881daba2917ae178135ac2bed638a20a65c`.
+**Every one of the 3,009 members was read back from the completed compressed
+archive and independently verified against its original size and SHA-256
+before deleting the loose copy.** Originals were rehashed immediately before
+removal. The archive remains private and must not be committed or pushed.
+
+Inspect without restoring all historical data:
+
+```bash
+tar -tzf .analysis/cleanup/2026-11-10/completed-state-trials-and-old-build-logs.tar.gz | head
+
+# Restore ONLY a needed historical experiment, preserving its former path:
+tar -xzf .analysis/cleanup/2026-11-10/completed-state-trials-and-old-build-logs.tar.gz \
+  .analysis/probes/mayu-state/original-code.txt
+
+# For other members, use the exact relative paths in the manifest or tar list;
+# compare SHA-256 with the manifest after extracting.
+```
+
+What stays live: accepted `src/` C++, `config/` ledgers, `docs/evidence/`,
+current `build/match-units/`, original EFZ.exe, each completed state's
+`target-code.txt`/`target-code.bin` reference, all current Shiori source
+and parked-best comparisons, Makoto's original state disassembly and
+current control disassemblies, the active Nagamori/Ikumi workbenches,
+`.tools/` (including the EFZ Wine prefix) and `ghidra-project/`.
+One-time historical scripts may refer to archived private paths: restore
+those exact members before rerunning them. Do not try to recreate their
+old reports by changing an Exact certificate or the canonical target.
