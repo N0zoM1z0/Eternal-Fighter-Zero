@@ -11,37 +11,39 @@ The shared return is at 0x004492EB. One CC byte separates the function
 from the next prologue at 0x004492F0.
 
 The current natural C++ source Character09Input.cpp reconstructs
-the first **5,424 original bytes / 1,354 instructions** through
-the beginning of the next action guard at 0x00447CB0.
-Reviewed prefix SHA-256:
-5ba50c91574ca5fbc4642c0a5c508201209c4ed6effb95bc793df4df4d8d952d.
+**6,215 original bytes / 1,551 instructions** of the full owner,
+through the next guard at 0x00447FC7, prefix SHA-256
+7a79a6757eff05a9a25fc96f4ff488e0cb601053116e09a9d0da188e930d289b.
 
-This source covers input-buffer expiration, the animation 150–155
-and opponent-action gate, and the strict original priority
-of 0x34, 0x62, 0xAC, 0xA0–0xA2, 0x6E–0x70, aerial
-0x28–0x2A, grounded 0x14–0x16, 0x1E–0x20, and 0x46–0x48
-command families. Grounded/airborne, meter, attackCollisionResult,
-sequence flags and frame-start gates remain in their original order.
+Source covers the original high-priority command state transitions,
+the 150–155 opponent action gate, meter-tier upgrades, aerial
+0x28–0x2A, grounded 0x14–0x16 and 0x1E–0x20, and 0x46–0x48
+command groups. Newly restored 0x0C/0x0B/0x0A branches
+preserve EX-state suppression and air/ground action selection;
+0x0C additionally permits already-airborne operation in the
+absence of primary/secondary meter permission. The exact
+original order of action buffering, meter checks, sequence
+frame flags and attackCollisionResult conditions is retained.
 
-Run the bounded VC7.1 comparison:
+Reproduce only this selected owner:
 
     scripts/repo-python workbench/sayuri-action/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **5,421 bytes**,
-1,356 instructions including the three-instruction temporary
-epilogue and 47 COFF relocations. Of the 1,353 aligned,
-comparable original body instructions, 1,352 agree after
-normalizing original direct-call/jump destinations and fixed
-FP constant addresses. The only differing instruction is the
-incomplete stack frame (original sub esp,0x14; candidate push ecx).
-The target's last instruction in the prefix jumps to the
-complete function's distant shared exit, absent from this draft.
-**206 in-prefix branch targets and all 47 original-bound
-relocation sites** agree with the candidate, including the
-original literal IEEE-754 payloads.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **6,212 bytes /
+1,553 instructions** including a temporary epilogue, with
+**55 COFF relocations**. The first 1,549 of 1,550
+comparable original body instructions match in form and
+operands after normalizing direct branch/call destinations
+and floating-point literal addresses; the only differing
+form is the incomplete stack frame (sub esp,0x14 original,
+push ecx partial source). The original final prefix JMP
+targets the full shared return, absent from partial C++.
+**236 in-prefix branch targets and all 55 original-bound
+relocation operands** agree; original double bit patterns
+are checked at their executable locations.
 
-Next target block begins at 0x00447CB0 (command 0x0C),
-followed by remaining action dispatch. **Do not claim Exact**:
-5,695 original bytes, complete stack lifetime, return and
-whole-owner relocation closure are still unfinished. Never
-run an all-unit cold replay for this draft.
+Next original block begins at 0x00447FC7 (low-priority
+special/grounded movement decisions). **Not Exact**:
+4,904 original bytes, full stack/return and complete
+original relocation bindings remain to reconstruct.
+No full-game cold replay is relevant to this draft.

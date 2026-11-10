@@ -267,5 +267,47 @@ void Character09::Slot04()
             field0008 = 0xfd;
             return;
         }
+        // Action 0x0C permits meter, alternate meter, or already-airborne
+        // execution; the lower tiers have independent EX-mode suppression.
+        if (recognizedCommand == 0x0c &&
+            (field0118 >= 500.0 || field0120 > 0 || positionY < 0.0) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field314c == 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[252].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0xfc;
+            if (positionY < 0.0)
+                field0008 = 0x10b;
+            return;
+        }
+        if ((recognizedCommand == 0x0b || recognizedCommand == 0x0c) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field314c == 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[251].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0xfb;
+            if (positionY < 0.0)
+                field0008 = 0x10a;
+            return;
+        }
+        if (recognizedCommand == 0x0a &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field314c == 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[250].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0xfa;
+            if (positionY < 0.0)
+                field0008 = 0x109;
+            return;
+        }
     // Remaining original action guards and command dispatch are open.
 }
