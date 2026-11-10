@@ -11,37 +11,35 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed opening [0x004B2AC0,0x004B3C74) covers
-**4,532 original bytes / 1,230 instructions**, target prefix SHA-256
-394daf5e635d55eae9333e6c6e9d3d80ce52b563aca9ffe7f288232dbb035617.
-Under pinned VC7.1, the partial source emits **4,531 bytes / 1,232
-instructions (including the three-instruction temporary epilogue)** and
-103 COFF relocations. The first **1,228 of 1,229 comparable instruction
-forms** match after normalizing original direct branch/call destinations
-and FP constant addresses; the incomplete stack allocation is 0xB4
-versus the original 0xE8. The original final jump to the shared exit
-is not present until the full owner is restored.
+The reviewed prefix [0x004B2AC0,0x004B3FB6) covers
+**5,366 original bytes / 1,441 instructions**. Canonical SHA-256:
+6079a74ebf39350db98311a79d3ae2fa4b2c358226856d95e94ce56256cd4d1c.
 
-The focused audit additionally checks **141 internal branch targets**
-against their corresponding instruction ordinals, not just mnemonics.
-It rejects the old incorrect implementation that allowed the second
-60-120 forward-range attack outside its shared opponent guard: original
-0x004B3172 must jump over both choices on failure.
+Pinned VC7.1 emits a **5,362-byte partial COFF function**, 1,443
+instructions including the temporary epilogue, and 104 relocations.
+Of the 1,440 comparable original instruction forms/operands,
+**1,439 match** with branch/call destinations and FP literal addresses
+normalized. The still-incomplete stack frame is 0xB4 rather than
+the original 0xE8. The final original prefix instruction jumps to
+the full shared exit rather than the draft's temporary return.
 
-The recovered decision trees include original defensive choices,
-0xAA aerial-opening five-chance responses from 0x004B35F2,
-grounded opponent-action randomized command selection from 0x004B3891,
-an airborne response tree from 0x004B3A75, and the 0x34 meter/air-combo
-special from 0x004B3B84. The original last aerial 2x chance generates
-x87 fadd st(0),st(0) from field00a8 * 2.0f, not
-field00a8 + field00a8.
+Crucially, the diagnostic also verifies **176 validated internal branch
+destinations by instruction ordinal**. This detected a formerly
+incorrect opponent-state guard: the near conditional jump at original
+0x004B3172 must bypass both attack branches, not one. A
+matching opcode sequence alone did not establish correct flow.
 
-Run the single-owner native check:
+The candidate reconstructs defensive choices, close/midrange attacks,
+the 0xAA aerial decision sequence, opponent A8/A9/AA responses,
+special command 0x34, and newly recovered AI states 4..11 with
+direction steering and independent button pulses. Repeated action
+checks that seem redundant are preserved from the target. Float
+expressions match the original x87 operand ordering.
+
+Run the targeted check only:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-The next original block starts at 0x004B3C74. This is a partial
-natural C++ draft, **not complete Exact**. Exit branches, the original
-full stack frame, remaining 10,760 owner bytes and external
-relocation bindings are still open. A matching normalized prefix
-must not be promoted to the exact ledger.
+The next original block begins at 0x004B3FB6. This is an unfinished
+native-source boss; **do not register Exact** without completing and
+strictly comparing the full 15,292 bytes and all relocations.

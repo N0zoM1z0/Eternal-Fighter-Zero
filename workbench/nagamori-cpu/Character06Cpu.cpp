@@ -252,5 +252,62 @@ void Character06::Slot05()
         recognizedCommand = 0x34;
         return;
     }
+    // CPU state recovery and state-4 steering (0x004B3C74 onward).
+    if (field3114 > 0 && field0008 > 49 && field0008 < 158)
+        field3114 = 0;
+    if (field3114 == 1 && field0008 < 200)
+        field3114 = 0;
+    if (field3114 == 2 && attackWasGuarded != 1) {
+        field3114 = 0;
+        return;
+    }
+    if (field3114 == 4) {
+        inputY = -1;
+        inputX = (unsigned short)RandomRange(0, 2) - 1;
+        if (field0008 == 4 || field0008 == 5 || field0008 == 6) {
+            recognizedCommand = facing == 1;
+            if (field0008 == 0xa5) field3114 = 0;
+            inputY = 0;
+            inputX = 0;
+            return;
+        }
+    }
+    // State 5..11 direction commands and attack pulses.  These state
+    // tests are intentionally kept separate, matching the original priority.
+    if (field3114 == 5 && field0008 < 50) {
+        recognizedCommand = facing == 1;
+        if (field0008 == 0xa3) field3114 = 0;
+        return;
+    }
+    if (field3114 == 6 && field0008 < 50) {
+        recognizedCommand = facing == 1;
+        if (field0008 == 0xa3) field3114 = 7;
+        return;
+    }
+    if (field3114 == 7 && field0008 == 0xa3) {
+        buttonPulse[0] = 1;
+        if (field0008 == 0xe6) field3114 = 0;
+        return;
+    }
+    if (field3114 == 8 && field0008 < 50) {
+        recognizedCommand = facing == 1;
+        if (field0008 == 0xa3) field3114 = 9;
+        return;
+    }
+    if (field3114 == 9 && field0008 == 0xa3) {
+        buttonPulse[1] = 1;
+        if (field0008 == 0xe7) field3114 = 0;
+        return;
+    }
+    if (field3114 == 10 && field0008 < 50) {
+        recognizedCommand = facing == 1;
+        if (field0008 == 0xa3) field3114 = 11;
+        return;
+    }
+    if (field3114 == 11 && field0008 == 0xa3) {
+        buttonPulse[2] = 1;
+        if (field0008 == 0xe8) field3114 = 0;
+        return;
+    }
     // Remaining priority AI decisions are not reconstructed yet.
 }
