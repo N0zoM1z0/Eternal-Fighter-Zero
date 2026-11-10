@@ -230,7 +230,7 @@ address,origin,status,evidence
 0x00464190,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x004641C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot02-command-reviewed-prefix
 0x004654A0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot05-cpu-reviewed-prefix
-0x00468870,unknown,unreviewed,
+0x00468870,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot07-effects-reviewed-prefix
 0x0046D970,unknown,unreviewed,
 0x0047C130,unknown,unreviewed,
 0x0048A720,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
