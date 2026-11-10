@@ -1,6 +1,6 @@
-// Nayuki Character10::Slot07: canonical 27-case effects switch, partial native codegen.
- // Unreviewed later case bodies remain workbench experiments, never full Exact.
-#include "../../src/CharacterViews.h"
+// Exact natural C++ Nayuki Character10::Slot07 with 27-case switch tables.
+// Original 20,517 code bytes + 112-byte destinations + 100-byte case IDs.
+#include "CharacterViews.h"
 #include <cstdlib>
 #include <cmath>
 
@@ -708,49 +708,48 @@ void Character10::Slot07()
                 }
                 break;
             case 0x1ad:
-                if (((effects[i].frame == 0x1c) &&
-                    (effects[i].tick == 0)) &&
-                    (field000a < 0x10 && (200 < field0008))) {
-                    effect.owner = 1;
-                    effect.type = 0x1ad;
-                    effect.x = (double)((int(positionX)) - facing * 0xf);
-                    effect.y = effects[i].y;
-                    effect.flag0018 = (unsigned char)facing;
-                    effect.group = 2;
-                    effect.layer = true;
-                    EmitLocalEffect(&effect);
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].field0084 = 1;
+                    effects[i].vx = 1.3;
+                    effects[i].vy = -3.5;
+                    effects[i].ay = 0.045;
                 }
+                effects[i].vy += effects[i].ay;
+                if (effects[i].vy + effects[i].y > 0.0)
+                    effects[i].field0058 = 0;
+                if (effects[i].field0080 > 1) {
+                    effects[i].tick = 0;
+                    effects[i].field0080 = 0;
+                    effects[i].frame = 1;
+                    effects[i].vy = -1.5;
+                    effects[i].vx = -effects[i].vx * 0.5;
+                    effects[i].ay = 0.035;
+                }
+                if (effects[i].y > 60.0)
+                    RemoveLocalEffect((short)i);
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
                 }
                 break;
             case 0x1ae:
-                if (((effects[i].frame == 8) &&
-                    (effects[i].tick == 0)) &&
-                    (field000a < 0x10 && (200 < field0008))) {
-                    effect.owner = 1;
-                    effect.type = 0x1ae;
-                    effect.x = (double)((int(positionX)) - facing * 0xf);
-                    effect.y = (double)(int(effects[i].y));
-                    effect.flag0018 = (unsigned char)facing;
-                    effect.group = 2;
-                    effect.layer = true;
-                    EmitLocalEffect(&effect);
-                }
+                if (effects[i].frame == 0 && effects[i].tick == 0)
+                    effects[i].vx = 1.5;
+                if (field0008 != 0x7b ||
+                    (field0008 == 0x7b && field000a > 2))
+                    RemoveLocalEffect((short)i);
+                effects[i].vy += 0.02;
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
-                        RemoveLocalEffect((short)i);
-                    }
+                    if (effects[i].frame >= frameCount)
+                        --effects[i].frame;
                 }
                 break;
             case 0x1ef:

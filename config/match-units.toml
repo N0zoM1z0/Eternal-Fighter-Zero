@@ -138033,3 +138033,1874 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Canonical EFZ.exe original direct REL32 call at 0x00464173 to reviewed ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x00409A90"
+
+[units.character-10-slot07]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot07/Character10Effects.obj"
+symbol = "?Slot07@Character10@@UAEXXZ"
+target_address = 0x00468870
+size = 20729
+code_size = 20517
+
+[[units.character-10-slot07.local_data]]
+offset = 20517
+size = 112
+kind = "switch-address-table"
+evidence = "docs/KNOWLEDGE_BASE.md#nayuki-slot07-effects-exact; original 28-entry destination table at 0x0046D895"
+
+[[units.character-10-slot07.local_data]]
+offset = 20629
+size = 100
+kind = "switch-index-table"
+evidence = "docs/KNOWLEDGE_BASE.md#nayuki-slot07-effects-exact; original 100-byte compact index table at 0x0046D905"
+
+[[units.character-10-slot07.relocations]]
+offset = 55
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical EFZ.exe address 0x004688A7: original independently reviewed function call; COFF REL32 ??0EffectSpawn@@QAE@XZ -> 0x00405490, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 288
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical EFZ.exe address 0x00468990: original independently reviewed function call; COFF REL32 ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z -> 0x00413090, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 343
+type = "DIR32"
+symbol = "$L63410"
+target = 0x0046D905
+evidence = "Canonical EFZ.exe address 0x004689C7: original local compiler switch-table or owned code label; COFF DIR32 $L63410 -> 0x0046D905, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 350
+type = "DIR32"
+symbol = "$L63484"
+target = 0x0046D895
+evidence = "Canonical EFZ.exe address 0x004689CE: original local compiler switch-table or owned code label; COFF DIR32 $L63484 -> 0x0046D895, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 438
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00468A26: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 496
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00468A60: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 535
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical EFZ.exe address 0x00468A87: original independently reviewed function call; COFF REL32 ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z -> 0x00407100, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 553
+type = "DIR32"
+symbol = "__real@bfeccccccccccccd"
+target = 0x00787C90
+evidence = "Canonical EFZ.exe address 0x00468A99: original IEEE-754 bit pattern; COFF DIR32 __real@bfeccccccccccccd -> 0x00787C90, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 578
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787CB8
+evidence = "Canonical EFZ.exe address 0x00468AB2: original IEEE-754 bit pattern; COFF DIR32 __real@bff0000000000000 -> 0x00787CB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 603
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x00468ACB: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1014
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x00468C66: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1039
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x00468C7F: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1109
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x00468CC5: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1172
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468D04: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1197
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468D1D: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1222
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468D36: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1247
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468D4F: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468DC5: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1518
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x00468E5E: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1556
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468E84: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1606
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe address 0x00468EB6: original IEEE-754 bit pattern; COFF DIR32 __real@c04e000000000000 -> 0x007882B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1648
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00468EE0: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1736
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00468F38: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1768
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00468F58: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1807
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical EFZ.exe address 0x00468F7F: original independently reviewed function call; COFF REL32 ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z -> 0x00407100, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1825
+type = "DIR32"
+symbol = "__real@3ffccccccccccccd"
+target = 0x007880A8
+evidence = "Canonical EFZ.exe address 0x00468F91: original IEEE-754 bit pattern; COFF DIR32 __real@3ffccccccccccccd -> 0x007880A8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1850
+type = "DIR32"
+symbol = "__real@bfeccccccccccccd"
+target = 0x00787C90
+evidence = "Canonical EFZ.exe address 0x00468FAA: original IEEE-754 bit pattern; COFF DIR32 __real@bfeccccccccccccd -> 0x00787C90, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 1875
+type = "DIR32"
+symbol = "__real@3f9999999999999a"
+target = 0x00787D38
+evidence = "Canonical EFZ.exe address 0x00468FC3: original IEEE-754 bit pattern; COFF DIR32 __real@3f9999999999999a -> 0x00787D38, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2075
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x0046908B: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2109
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x004690AD: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2146
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x004690D2: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2223
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x0046911F: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2634
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x004692BA: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2659
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x004692D3: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2729
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x00469319: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2792
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469358: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2817
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469371: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2842
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046938A: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 2867
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x004693A3: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3011
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x00469433: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3049
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469459: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3099
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe address 0x0046948B: original IEEE-754 bit pattern; COFF DIR32 __real@c04e000000000000 -> 0x007882B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3141
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x004694B5: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3229
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046950D: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3261
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046952D: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3300
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical EFZ.exe address 0x00469554: original independently reviewed function call; COFF REL32 ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z -> 0x00407100, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3318
+type = "DIR32"
+symbol = "__real@4000000000000000"
+target = 0x00787328
+evidence = "Canonical EFZ.exe address 0x00469566: original IEEE-754 bit pattern; COFF DIR32 __real@4000000000000000 -> 0x00787328, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3343
+type = "DIR32"
+symbol = "__real@c00c000000000000"
+target = 0x00787C60
+evidence = "Canonical EFZ.exe address 0x0046957F: original IEEE-754 bit pattern; COFF DIR32 __real@c00c000000000000 -> 0x00787C60, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3368
+type = "DIR32"
+symbol = "__real@3f9999999999999a"
+target = 0x00787D38
+evidence = "Canonical EFZ.exe address 0x00469598: original IEEE-754 bit pattern; COFF DIR32 __real@3f9999999999999a -> 0x00787D38, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3568
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x00469660: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3602
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x00469682: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3639
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x004696A7: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 3716
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x004696F4: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4127
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x0046988F: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4152
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x004698A8: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4222
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x004698EE: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4285
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046992D: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4310
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469946: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4335
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046995F: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4360
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469978: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4478
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x004699EE: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4602
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x00469A6A: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4640
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469A90: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4690
+type = "DIR32"
+symbol = "__real@c04e000000000000"
+target = 0x007882B8
+evidence = "Canonical EFZ.exe address 0x00469AC2: original IEEE-754 bit pattern; COFF DIR32 __real@c04e000000000000 -> 0x007882B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4732
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x00469AEC: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4820
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00469B44: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4852
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x00469B64: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4891
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical EFZ.exe address 0x00469B8B: original independently reviewed function call; COFF REL32 ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z -> 0x00407100, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4909
+type = "DIR32"
+symbol = "__real@400199999999999a"
+target = 0x00787D20
+evidence = "Canonical EFZ.exe address 0x00469B9D: original IEEE-754 bit pattern; COFF DIR32 __real@400199999999999a -> 0x00787D20, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4934
+type = "DIR32"
+symbol = "__real@bff999999999999a"
+target = 0x00787CB0
+evidence = "Canonical EFZ.exe address 0x00469BB6: original IEEE-754 bit pattern; COFF DIR32 __real@bff999999999999a -> 0x00787CB0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 4959
+type = "DIR32"
+symbol = "__real@3f9999999999999a"
+target = 0x00787D38
+evidence = "Canonical EFZ.exe address 0x00469BCF: original IEEE-754 bit pattern; COFF DIR32 __real@3f9999999999999a -> 0x00787D38, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5187
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x00469CB3: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5221
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x00469CD5: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5258
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x00469CFA: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5335
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x00469D47: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5812
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787FC8
+evidence = "Canonical EFZ.exe address 0x00469F24: original IEEE-754 bit pattern; COFF DIR32 __real@3ffb333333333333 -> 0x00787FC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 5837
+type = "DIR32"
+symbol = "__real@bffb333333333333"
+target = 0x00788230
+evidence = "Canonical EFZ.exe address 0x00469F3D: original IEEE-754 bit pattern; COFF DIR32 __real@bffb333333333333 -> 0x00788230, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6435
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x0046A193: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6460
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x0046A1AC: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6530
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046A1F2: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6593
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A231: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6618
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A24A: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6643
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A263: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6668
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A27C: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6787
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410A10
+evidence = "Canonical EFZ.exe address 0x0046A2F3: original independently reviewed function call; COFF REL32 ?SetVerticalShake@Secondary@@QAEXHH@Z -> 0x00410A10, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6817
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A311: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 6856
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A338: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7193
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x0046A489: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7218
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x0046A4A2: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7288
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046A4E8: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7351
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A527: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7376
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A540: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7401
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A559: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7426
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A572: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7545
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410A10
+evidence = "Canonical EFZ.exe address 0x0046A5E9: original independently reviewed function call; COFF REL32 ?SetVerticalShake@Secondary@@QAEXHH@Z -> 0x00410A10, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7575
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A607: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7617
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A631: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7775
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A6CF: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 7817
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A6F9: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8127
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x0046A82F: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8152
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x0046A848: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8222
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046A88E: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8285
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A8CD: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8310
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A8E6: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8335
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A8FF: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8360
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046A918: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8479
+type = "REL32"
+symbol = "?SetVerticalShake@Secondary@@QAEXHH@Z"
+target = 0x00410A10
+evidence = "Canonical EFZ.exe address 0x0046A98F: original independently reviewed function call; COFF REL32 ?SetVerticalShake@Secondary@@QAEXHH@Z -> 0x00410A10, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8509
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A9AD: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8548
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046A9D4: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8709
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AA75: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8751
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AA9F: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8885
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AB25: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 8927
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AB4F: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9295
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046ACBF: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9338
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "Canonical EFZ.exe address 0x0046ACEA: original IEEE-754 bit pattern; COFF DIR32 __real@4049000000000000 -> 0x00787EB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9356
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046ACFC: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9382
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AD16: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9418
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046AD3A: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9448
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AD58: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9830
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046AED6: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9873
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "Canonical EFZ.exe address 0x0046AF01: original IEEE-754 bit pattern; COFF DIR32 __real@4049000000000000 -> 0x00787EB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9891
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046AF13: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9917
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AF2D: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9953
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046AF51: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 9983
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046AF6F: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10365
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046B0ED: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10408
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "Canonical EFZ.exe address 0x0046B118: original IEEE-754 bit pattern; COFF DIR32 __real@4049000000000000 -> 0x00787EB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10426
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046B12A: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10452
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B144: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10488
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046B168: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10518
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B186: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10829
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B2BD: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10843
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046B2CB: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10904
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B308: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10921
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe address 0x0046B319: original independently reviewed function call; COFF REL32 ?RandomRange@Secondary@@QAEFFF@Z -> 0x004108A0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 10964
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical EFZ.exe address 0x0046B344: original independently reviewed function call; COFF REL32 ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z -> 0x00407100, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11317
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe address 0x0046B4A5: original IEEE-754 bit pattern; COFF DIR32 __real@4054000000000000 -> 0x00787EE0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11400
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046B4F8: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11425
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046B511: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11478
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B546: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11511
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B567: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11626
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B5DA: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 11665
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B601: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12212
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046B824: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12237
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046B83D: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12290
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B872: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12323
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B893: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12438
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B906: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 12477
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046B92D: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 13717
+type = "DIR32"
+symbol = "__real@bffe666666666666"
+target = 0x00788240
+evidence = "Canonical EFZ.exe address 0x0046BE05: original IEEE-754 bit pattern; COFF DIR32 __real@bffe666666666666 -> 0x00788240, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 13742
+type = "DIR32"
+symbol = "__real@c004000000000000"
+target = 0x00787D40
+evidence = "Canonical EFZ.exe address 0x0046BE1E: original IEEE-754 bit pattern; COFF DIR32 __real@c004000000000000 -> 0x00787D40, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 13767
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x0046BE37: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14178
+type = "DIR32"
+symbol = "__real@3fd3333333333333"
+target = 0x007872F0
+evidence = "Canonical EFZ.exe address 0x0046BFD2: original IEEE-754 bit pattern; COFF DIR32 __real@3fd3333333333333 -> 0x007872F0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14203
+type = "DIR32"
+symbol = "__real@c00c000000000000"
+target = 0x00787C60
+evidence = "Canonical EFZ.exe address 0x0046BFEB: original IEEE-754 bit pattern; COFF DIR32 __real@c00c000000000000 -> 0x00787C60, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14228
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046C004: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14336
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046C070: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14477
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x0046C0FD: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14511
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x0046C11F: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14548
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x0046C144: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14580
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x0046C164: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14905
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787D80
+evidence = "Canonical EFZ.exe address 0x0046C2A9: original IEEE-754 bit pattern; COFF DIR32 __real@3fe999999999999a -> 0x00787D80, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14930
+type = "DIR32"
+symbol = "__real@c00c000000000000"
+target = 0x00787C60
+evidence = "Canonical EFZ.exe address 0x0046C2C2: original IEEE-754 bit pattern; COFF DIR32 __real@c00c000000000000 -> 0x00787C60, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 14955
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046C2DB: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15063
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046C347: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15204
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x0046C3D4: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15238
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x0046C3F6: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15275
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x0046C41B: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15307
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x0046C43B: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15632
+type = "DIR32"
+symbol = "__real@3ff4cccccccccccd"
+target = 0x00787CA8
+evidence = "Canonical EFZ.exe address 0x0046C580: original IEEE-754 bit pattern; COFF DIR32 __real@3ff4cccccccccccd -> 0x00787CA8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15657
+type = "DIR32"
+symbol = "__real@c00c000000000000"
+target = 0x00787C60
+evidence = "Canonical EFZ.exe address 0x0046C599: original IEEE-754 bit pattern; COFF DIR32 __real@c00c000000000000 -> 0x00787C60, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15682
+type = "DIR32"
+symbol = "__real@3fa70a3d70a3d70a"
+target = 0x00787CC0
+evidence = "Canonical EFZ.exe address 0x0046C5B2: original IEEE-754 bit pattern; COFF DIR32 __real@3fa70a3d70a3d70a -> 0x00787CC0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15790
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046C61E: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15931
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x0046C6AB: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 15965
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x0046C6CD: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 16002
+type = "DIR32"
+symbol = "__real@3fa1eb851eb851ec"
+target = 0x00787DD8
+evidence = "Canonical EFZ.exe address 0x0046C6F2: original IEEE-754 bit pattern; COFF DIR32 __real@3fa1eb851eb851ec -> 0x00787DD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 16034
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe address 0x0046C712: original IEEE-754 bit pattern; COFF DIR32 __real@404e000000000000 -> 0x00787CE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 16337
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787D48
+evidence = "Canonical EFZ.exe address 0x0046C841: original IEEE-754 bit pattern; COFF DIR32 __real@3ff8000000000000 -> 0x00787D48, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 16421
+type = "DIR32"
+symbol = "__real@3f947ae147ae147b"
+target = 0x00787D18
+evidence = "Canonical EFZ.exe address 0x0046C895: original IEEE-754 bit pattern; COFF DIR32 __real@3f947ae147ae147b -> 0x00787D18, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 16700
+type = "DIR32"
+symbol = "__real@bf947ae147ae147b"
+target = 0x00787F20
+evidence = "Canonical EFZ.exe address 0x0046C9AC: original IEEE-754 bit pattern; COFF DIR32 __real@bf947ae147ae147b -> 0x00787F20, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17099
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CB3B: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17137
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CB61: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17204
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CBA4: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17242
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CBCA: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17309
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CC0D: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17347
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CC33: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17414
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CC76: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17440
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CC90: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17504
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CCD0: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17542
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CCF6: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17609
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CD39: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17647
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CD5F: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17714
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CDA2: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17752
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CDC8: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17819
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CE0B: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17857
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CE31: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17924
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CE74: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 17960
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CE98: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18027
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CEDB: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18065
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe address 0x0046CF01: original independently reviewed function call; COFF REL32 __ftol2 -> 0x007783B8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18460
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D08C: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18478
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D09E: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18542
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D0DE: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18570
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe address 0x0046D0FA: original IEEE-754 bit pattern; COFF DIR32 __real@3ff3333333333333 -> 0x00787FD0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18581
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D105: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18609
+type = "DIR32"
+symbol = "__real@3fe6666666666666"
+target = 0x00787DE8
+evidence = "Canonical EFZ.exe address 0x0046D121: original IEEE-754 bit pattern; COFF DIR32 __real@3fe6666666666666 -> 0x00787DE8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18626
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D132: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18654
+type = "DIR32"
+symbol = "__real@3ffb333333333333"
+target = 0x00787FC8
+evidence = "Canonical EFZ.exe address 0x0046D14E: original IEEE-754 bit pattern; COFF DIR32 __real@3ffb333333333333 -> 0x00787FC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18666
+type = "DIR32"
+symbol = "__real@bffccccccccccccd"
+target = 0x00787D90
+evidence = "Canonical EFZ.exe address 0x0046D15A: original IEEE-754 bit pattern; COFF DIR32 __real@bffccccccccccccd -> 0x00787D90, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18690
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D172: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18718
+type = "DIR32"
+symbol = "__real@3fe3333333333333"
+target = 0x00787DB8
+evidence = "Canonical EFZ.exe address 0x0046D18E: original IEEE-754 bit pattern; COFF DIR32 __real@3fe3333333333333 -> 0x00787DB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18729
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D199: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18757
+type = "DIR32"
+symbol = "__real@3feccccccccccccd"
+target = 0x007872E8
+evidence = "Canonical EFZ.exe address 0x0046D1B5: original IEEE-754 bit pattern; COFF DIR32 __real@3feccccccccccccd -> 0x007872E8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18774
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D1C6: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18802
+type = "DIR32"
+symbol = "__real@3ff6666666666666"
+target = 0x00787F18
+evidence = "Canonical EFZ.exe address 0x0046D1E2: original IEEE-754 bit pattern; COFF DIR32 __real@3ff6666666666666 -> 0x00787F18, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18814
+type = "DIR32"
+symbol = "__real@bff3333333333333"
+target = 0x00787CC8
+evidence = "Canonical EFZ.exe address 0x0046D1EE: original IEEE-754 bit pattern; COFF DIR32 __real@bff3333333333333 -> 0x00787CC8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18858
+type = "DIR32"
+symbol = "__real@3fa999999999999a"
+target = 0x00787FD8
+evidence = "Canonical EFZ.exe address 0x0046D21A: original IEEE-754 bit pattern; COFF DIR32 __real@3fa999999999999a -> 0x00787FD8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18902
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046D246: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 18934
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046D266: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19384
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D428: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19402
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D43A: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19466
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D47A: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19499
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D49B: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19527
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x0046D4B7: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19544
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D4C8: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19572
+type = "DIR32"
+symbol = "__real@3ff8000000000000"
+target = 0x00787D48
+evidence = "Canonical EFZ.exe address 0x0046D4E4: original IEEE-754 bit pattern; COFF DIR32 __real@3ff8000000000000 -> 0x00787D48, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19584
+type = "DIR32"
+symbol = "__real@bff8000000000000"
+target = 0x00787D98
+evidence = "Canonical EFZ.exe address 0x0046D4F0: original IEEE-754 bit pattern; COFF DIR32 __real@bff8000000000000 -> 0x00787D98, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19608
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D508: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19636
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical EFZ.exe address 0x0046D524: original IEEE-754 bit pattern; COFF DIR32 __real@3fe0000000000000 -> 0x00787C50, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19647
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D52F: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19675
+type = "DIR32"
+symbol = "__real@3fe999999999999a"
+target = 0x00787D80
+evidence = "Canonical EFZ.exe address 0x0046D54B: original IEEE-754 bit pattern; COFF DIR32 __real@3fe999999999999a -> 0x00787D80, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19692
+type = "REL32"
+symbol = "_rand"
+target = 0x00777D61
+evidence = "Canonical EFZ.exe address 0x0046D55C: original independently reviewed function call; COFF REL32 _rand -> 0x00777D61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19720
+type = "DIR32"
+symbol = "__real@3ff3333333333333"
+target = 0x00787FD0
+evidence = "Canonical EFZ.exe address 0x0046D578: original IEEE-754 bit pattern; COFF DIR32 __real@3ff3333333333333 -> 0x00787FD0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19732
+type = "DIR32"
+symbol = "__real@bff0000000000000"
+target = 0x00787CB8
+evidence = "Canonical EFZ.exe address 0x0046D584: original IEEE-754 bit pattern; COFF DIR32 __real@bff0000000000000 -> 0x00787CB8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19776
+type = "DIR32"
+symbol = "__real@3f9eb851eb851eb8"
+target = 0x00787CA0
+evidence = "Canonical EFZ.exe address 0x0046D5B0: original IEEE-754 bit pattern; COFF DIR32 __real@3f9eb851eb851eb8 -> 0x00787CA0, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19820
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046D5DC: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 19852
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe address 0x0046D5FC: original IEEE-754 bit pattern; COFF DIR32 __real@0000000000000000 -> 0x007872F8, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20517
+type = "DIR32"
+symbol = "$L62949"
+target = 0x004689D2
+evidence = "Canonical EFZ.exe address 0x0046D895: original local compiler switch-table or owned code label; COFF DIR32 $L62949 -> 0x004689D2, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20521
+type = "DIR32"
+symbol = "$L62959"
+target = 0x00468C12
+evidence = "Canonical EFZ.exe address 0x0046D899: original local compiler switch-table or owned code label; COFF DIR32 $L62959 -> 0x00468C12, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20525
+type = "DIR32"
+symbol = "$L62982"
+target = 0x00469266
+evidence = "Canonical EFZ.exe address 0x0046D89D: original local compiler switch-table or owned code label; COFF DIR32 $L62982 -> 0x00469266, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20529
+type = "DIR32"
+symbol = "$L63004"
+target = 0x0046983B
+evidence = "Canonical EFZ.exe address 0x0046D8A1: original local compiler switch-table or owned code label; COFF DIR32 $L63004 -> 0x0046983B, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20533
+type = "DIR32"
+symbol = "$L63028"
+target = 0x00469ED3
+evidence = "Canonical EFZ.exe address 0x0046D8A5: original local compiler switch-table or owned code label; COFF DIR32 $L63028 -> 0x00469ED3, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20537
+type = "DIR32"
+symbol = "$L63036"
+target = 0x0046A07F
+evidence = "Canonical EFZ.exe address 0x0046D8A9: original local compiler switch-table or owned code label; COFF DIR32 $L63036 -> 0x0046A07F, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20541
+type = "DIR32"
+symbol = "$L63040"
+target = 0x0046A155
+evidence = "Canonical EFZ.exe address 0x0046D8AD: original local compiler switch-table or owned code label; COFF DIR32 $L63040 -> 0x0046A155, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20545
+type = "DIR32"
+symbol = "$L63052"
+target = 0x0046A44B
+evidence = "Canonical EFZ.exe address 0x0046D8B1: original local compiler switch-table or owned code label; COFF DIR32 $L63052 -> 0x0046A44B, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20549
+type = "DIR32"
+symbol = "$L63069"
+target = 0x0046A7F1
+evidence = "Canonical EFZ.exe address 0x0046D8B5: original local compiler switch-table or owned code label; COFF DIR32 $L63069 -> 0x0046A7F1, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20553
+type = "DIR32"
+symbol = "$L63091"
+target = 0x0046AC4A
+evidence = "Canonical EFZ.exe address 0x0046D8B9: original local compiler switch-table or owned code label; COFF DIR32 $L63091 -> 0x0046AC4A, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20557
+type = "DIR32"
+symbol = "$L63104"
+target = 0x0046AE61
+evidence = "Canonical EFZ.exe address 0x0046D8BD: original local compiler switch-table or owned code label; COFF DIR32 $L63104 -> 0x0046AE61, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20561
+type = "DIR32"
+symbol = "$L63117"
+target = 0x0046B078
+evidence = "Canonical EFZ.exe address 0x0046D8C1: original local compiler switch-table or owned code label; COFF DIR32 $L63117 -> 0x0046B078, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20565
+type = "DIR32"
+symbol = "$L63130"
+target = 0x0046B28F
+evidence = "Canonical EFZ.exe address 0x0046D8C5: original local compiler switch-table or owned code label; COFF DIR32 $L63130 -> 0x0046B28F, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20569
+type = "DIR32"
+symbol = "$L63141"
+target = 0x0046B44C
+evidence = "Canonical EFZ.exe address 0x0046D8C9: original local compiler switch-table or owned code label; COFF DIR32 $L63141 -> 0x0046B44C, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20573
+type = "DIR32"
+symbol = "$L63156"
+target = 0x0046B77E
+evidence = "Canonical EFZ.exe address 0x0046D8CD: original local compiler switch-table or owned code label; COFF DIR32 $L63156 -> 0x0046B77E, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20577
+type = "DIR32"
+symbol = "$L63171"
+target = 0x0046BAAA
+evidence = "Canonical EFZ.exe address 0x0046D8D1: original local compiler switch-table or owned code label; COFF DIR32 $L63171 -> 0x0046BAAA, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20581
+type = "DIR32"
+symbol = "$L63180"
+target = 0x0046BC34
+evidence = "Canonical EFZ.exe address 0x0046D8D5: original local compiler switch-table or owned code label; COFF DIR32 $L63180 -> 0x0046BC34, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20585
+type = "DIR32"
+symbol = "$L63189"
+target = 0x0046BDBE
+evidence = "Canonical EFZ.exe address 0x0046D8D9: original local compiler switch-table or owned code label; COFF DIR32 $L63189 -> 0x0046BDBE, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20589
+type = "DIR32"
+symbol = "$L63195"
+target = 0x0046BF7E
+evidence = "Canonical EFZ.exe address 0x0046D8DD: original local compiler switch-table or owned code label; COFF DIR32 $L63195 -> 0x0046BF7E, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20593
+type = "DIR32"
+symbol = "$L63204"
+target = 0x0046C255
+evidence = "Canonical EFZ.exe address 0x0046D8E1: original local compiler switch-table or owned code label; COFF DIR32 $L63204 -> 0x0046C255, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20597
+type = "DIR32"
+symbol = "$L63213"
+target = 0x0046C52C
+evidence = "Canonical EFZ.exe address 0x0046D8E5: original local compiler switch-table or owned code label; COFF DIR32 $L63213 -> 0x0046C52C, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20601
+type = "DIR32"
+symbol = "$L63222"
+target = 0x0046C803
+evidence = "Canonical EFZ.exe address 0x0046D8E9: original local compiler switch-table or owned code label; COFF DIR32 $L63222 -> 0x0046C803, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20605
+type = "DIR32"
+symbol = "$L63229"
+target = 0x0046C99E
+evidence = "Canonical EFZ.exe address 0x0046D8ED: original local compiler switch-table or owned code label; COFF DIR32 $L63229 -> 0x0046C99E, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20609
+type = "DIR32"
+symbol = "$L63234"
+target = 0x0046CAC6
+evidence = "Canonical EFZ.exe address 0x0046D8F1: original local compiler switch-table or owned code label; COFF DIR32 $L63234 -> 0x0046CAC6, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20613
+type = "DIR32"
+symbol = "$L63272"
+target = 0x0046D03F
+evidence = "Canonical EFZ.exe address 0x0046D8F5: original local compiler switch-table or owned code label; COFF DIR32 $L63272 -> 0x0046D03F, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20617
+type = "DIR32"
+symbol = "$L63289"
+target = 0x0046D3DB
+evidence = "Canonical EFZ.exe address 0x0046D8F9: original local compiler switch-table or owned code label; COFF DIR32 $L63289 -> 0x0046D3DB, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20621
+type = "DIR32"
+symbol = "$L63306"
+target = 0x0046D771
+evidence = "Canonical EFZ.exe address 0x0046D8FD: original local compiler switch-table or owned code label; COFF DIR32 $L63306 -> 0x0046D771, in full 20,517-byte code + 112-byte targets + 100-byte indices"
+
+[[units.character-10-slot07.relocations]]
+offset = 20625
+type = "DIR32"
+symbol = "$L62941"
+target = 0x0046D874
+evidence = "Canonical EFZ.exe address 0x0046D901: original local compiler switch-table or owned code label; COFF DIR32 $L62941 -> 0x0046D874, in full 20,517-byte code + 112-byte targets + 100-byte indices"

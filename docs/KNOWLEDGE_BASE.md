@@ -3020,58 +3020,62 @@ palette arguments follow the exact original order.
 No machine byte patches, hand-authored assembly,
 full cold replay or whole-game runtime claim.
 
-<a id="nayuki-slot07-effects-reviewed-prefix"></a>
+<a id="nayuki-slot07-effects-exact"></a>
 
-## Nayuki Character10 Slot07: reviewed 15,548-byte effects-boss opening
+## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
-Canonical Nayuki vtable Slot07 at 0x0078828C
-selects [0x00468870,0x0046D895), 20,517 original
-instruction bytes, full SHA-256
+Original Nayuki Character10 virtual slot07 at vtable
+0x0078828C selects [0x00468870,0x0046D895),
+**20,517 exact original code bytes / 4,644 x86
+instructions**, SHA-256
 cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9.
-Immediately after the owner are separate switch
-data arrays: 28 four-byte destination targets
-at 0x0046D895 and a 100-byte compact case-ID
-table at 0x0046D905.
-
-Natural workbench/nayuki-effects/Character10Effects.cpp
-covers the continuous [0x00468870,0x0046C52C),
-**15,548 original code bytes / 3,484 instructions**,
+The owner also contains exactly **212 adjacent
+local table bytes**, comprising the original 28-entry
+**112-byte switch-address table** [0x0046D895,0x0046D905)
+and the **100-byte compact case-index table**
+[0x0046D905,0x0046D969). Full native contribution
+[0x00468870,0x0046D969): **20,729 bytes**,
 SHA-256
-944efee87482a799b0b28a0b47956c144f506f91e4ee8500733e4e050e54f5e3.
-Selected VC7.1 /Od /G6 /MT /Gy /W3
-check_prefix.py validates **3,483/3,484 matching
-original instruction forms and operands** at
-the same original offsets and widths; the
-candidate partial stack allocation is 0x1E0
-versus original complete frame 0x1D4.
-It checks **192 in-prefix original branches**,
-**27 canonical outbound destinations**,
-and **166 target-bound non-switch COFF
-relocations** over 30 unique source symbols.
-Both local switch-table fields are separately
-verified, with 20 canonical case dispatch
-targets checked against the original data.
+4ec9ad4dc0449c55bcf3e36388c4a20c61274d359b2cf2686a201d6efc42e41c.
+The tables are independently accounted for as
+owned *data*, not code instructions.
 
-The original Nayuki dispatch has only 27 valid
-case labels. The copied sibling skeleton had
-59 labels; 32 unsupported labels were removed
-from the experimental source (the earlier clone
-is recoverable from Git), restoring the compiler's
-canonical emitted code ordering. The native
-effects restored now cover 0x190–0x1A1 plus
-0x1AB and 0x1AC. The latter two have different
-frame0 velocities (0.3 vs 0.8), shared -3.5
-vertical speed, 0.045 gravity, strict collision
-field0058 reset, field0080 bounce and canonical
-clip/retirement behavior. All reviewed constants
-and original branch targets agree without
-machine-byte injection.
+Complete naturally authored C++ is
+**src/Character10Effects.cpp**. It implements the
+canonical **27 live switch cases** 0x190–0x1A1,
+0x1AB–0x1AE and 0x1EF–0x1F3, including Nayuki
+particle lifetimes, grounded and airborne bounce,
+direction checks, camera bounds, child effects,
+sound/shake output and the final owner return.
+Original source reconstruction uncovered **32
+unrelated sibling-only case labels** in the early
+compilable experiment; removal recovered the
+original 27-case dispatch ordering and the exact
+canonical source-code layout. These old experimental
+cases remain recoverable in Git history.
 
-Continue at 0x0046C52C, case 0x1AD.
-**Not full Exact:** 4,969 original bytes and
-complete 0x1D4 frame/return plus later original
-jump-table cases and relocations remain open.
-No all-unit cold replay was performed.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 now emits
+**20,729/20,729 Exact original code+local-data bytes**,
+the original complete 0x1D4 stack frame and all
+original control flow, with **264/264 original-bound
+COFF relocations** across 73 uniquely bound symbols.
+Of those 264 relocations, 30 refer to internal
+switch labels/owned code and 234 to original
+external calls or data references, all proven.
+Both original 112/100-byte tables are exact.
+No differing instruction, byte, float literal,
+original call target or relocatable table entry
+remains. Selected one-unit cold replay returns
+**Exact** with zero differences.
+
+Full proof: docs/evidence/character-10-slot07-exact.json.
+Native recipe: character-10-slot07 in
+config/match-units.toml; compare only this unit
+with scripts/repo-python scripts/replay-exact-units.py
+--unit character-10-slot07. No inline assembly,
+manual padding or byte masks, and no full-game
+cold replay was used. Whole-game linkage and
+runtime-equivalence remain separate acceptance tasks.
 
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 
