@@ -19,9 +19,9 @@ from coff import object_function
 
 START = 0x004654A0
 FULL_SIZE = 13259
-END = 0x00467686
+END = 0x004678AA
 FULL_SHA = "fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce"
-PREFIX_SHA = "bf76edc73efa3598127e2c87066c97cc067fc24fc110721c4d370a2ea54c739b"
+PREFIX_SHA = "2a2f2b43bcd16144c2b0e974e500568118337fa710cd417cb0326f97d4177cf1"
 SOURCE = ROOT / "workbench/nayuki-cpu/Character10Cpu.cpp"
 OBJECT = ROOT / "build/nayuki-cpu/Character10.partial.obj"
 
@@ -60,14 +60,14 @@ def main():
     target = instructions(partial)
     candidate = instructions(code)
     assert (len(partial), len(target), len(code), len(candidate), len(rels)) == (
-        8678, 2179, 8674, 2181, 124)
+        9226, 2308, 9216, 2310, 132)
     assert target[2][2] == "sub esp,0xc0"
     assert candidate[2][2] == "sub esp,0x98"
     assert target[-1][2] == "jmp 0x33c7"
     assert [x[2] for x in candidate[-3:]] == ["mov esp,ebp", "pop ebp", "ret"]
     widths = [(i, t[2], c[2]) for i, (t, c) in enumerate(
         zip(target[:-1], candidate[:-3])) if len(t[1]) != len(c[1])]
-    assert widths == [(2159, "jmp 0x33c7", "jmp short 0x21de")]
+    assert widths == [(2279, "jmp 0x33c7", "jmp short 0x23fc"), (2285, "jmp 0x33c7", "jmp short 0x23fc"), (2301, "jmp 0x33c7", "jmp short 0x23fc")]
     for i, (t, c) in enumerate(zip(target[:-1], candidate[:-3])):
         if i == 2:
             continue
@@ -91,7 +91,7 @@ def main():
                 t, c, target_positions[ta], candidate_positions.get(ca))
         else:
             outside += 1
-    assert (inside, outside) == (310, 96)
+    assert (inside, outside) == (333, 104)
 
     symbols = defaultdict(set)
     original_calls = {
@@ -116,13 +116,13 @@ def main():
             assert rel["type"] == "REL32"
             assert original_calls[rel["symbol"]] == dest, (rel, dest)
         symbols[(rel["symbol"], rel["type"])].add(dest)
-    assert len(symbols) == 27
+    assert len(symbols) == 28
     assert all(len(v) == 1 for v in symbols.values())
 
-    print("Nayuki Slot05: 8678/13259 reviewed original bytes,")
-    print("2177/2178 aligned forms, one incomplete original 0xC0 frame,")
-    print("310 original internal edges and 96 valid outbound edges,")
-    print("all 124 original-bound relocations with 27 distinct symbols.")
+    print("Nayuki Slot05: 9226/13259 reviewed original bytes,")
+    print("2306/2307 aligned forms, one incomplete original 0xC0 frame,")
+    print("333 original internal edges and 104 valid outbound edges,")
+    print("all 132 original-bound relocations with 28 distinct symbols.")
     print("Last original JMP and complete shared return remain open: NOT Exact.")
 
 

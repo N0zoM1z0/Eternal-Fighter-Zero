@@ -597,6 +597,57 @@ void Character10::Slot05()
                 return;
             }
         }
+        if (field0008 == 0xcf) {
+            if (distance.forward < 60.0 && distance.vertical < 30.0 &&
+                field3110 < 400) {
+                buttonPulse[0] = 1;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                return;
+            }
+            if (distance.forward < 60.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                return;
+            }
+            if (distance.forward < 125.0 &&
+                field3110 > 399 && field3110 < 700) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 800) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 4) == 0)
+                    field3114 = 3;
+                return;
+            }
+        }
+        if (field0008 == 0xd0) {
+            if (field3110 > 0 && field3110 < 400) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 > 950) {
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 3;
+                return;
+            }
+        }
+        if (field0008 == 0xd1) {
+            if (field3110 > 950) {
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 600) {
+                field3114 = 3;
+                return;
+            }
+        }
     }
     // Further Nayuki-specific CPU decisions remain open.
 }
