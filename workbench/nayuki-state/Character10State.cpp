@@ -366,11 +366,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 50: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil level 1
+    case 50: // Original Nayuki recoil at 0x004525DD
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 10);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
@@ -404,11 +403,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 51: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil level 2
+    case 51: // Original Nayuki recoil at 0x004527C4
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 15);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
@@ -442,11 +440,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 52: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil level 3
+    case 52: // Original Nayuki recoil at 0x004529AB
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 20);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
@@ -480,11 +477,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 53: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil continuation 1
+    case 53: // Original Nayuki recoil at 0x00452B92
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 10);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
@@ -516,11 +512,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 54: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil continuation 2
+    case 54: // Original Nayuki recoil at 0x00452D79
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 15);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
@@ -552,11 +547,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 55: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil continuation 3
+    case 55: // Original Nayuki recoil at 0x00452F60
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 20);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;

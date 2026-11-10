@@ -3024,53 +3024,62 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: reviewed 3,469-byte state boss prefix
+## Nayuki Character10 Slot06: reviewed 6,391-byte state boss opening
 
-Original vtable Slot06 at 0x00788288 selects the
-62,693-byte code owner [0x00451850,0x00460D35),
-full SHA-256
-4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-The adjacent original 138-entry (552-byte)
-switch destination table begins at 0x00460D35;
-the 306-byte selector at 0x00460F5D contains
-137 live animation IDs and 169 default mappings.
+Original Nayuki vtable Slot06 at 0x00788288 selects
+[0x00451850,0x00460D35), the 62,693-byte original
+x86 state owner (SHA-256
+4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9).
+The adjacent 138-entry 552-byte jump destination
+table at 0x00460D35 and 306-byte selector map at
+0x00460F5D are separate owned data, not x86 code.
+Their 306 state IDs include 137 live cases and
+169 default mappings.
 
-The large natural C++ workbench in
-workbench/nayuki-state/Character10State.cpp
-recovers [0x00451850,0x004525DD), **3,469 original
-bytes / 991 original x86 instructions**, SHA-256
-da8cab5b1faa8040f8faf416775a9905bcca7ec499a65c3d12e6ef7899f83eef.
-Nayuki-specific initial movement state code covers
-the default plus states 1–9, 13–16 and 47. Original
-field3148-dependent speed, 0.024 gravity, -2.0
-jump impulse, dash bonuses, landing, timing and
-FaceOpponent priorities were reconstructed
-from the original code, not simply copied.
+Natural workbench/nayuki-state/Character10State.cpp
+now reconstructs [0x00451850,0x00453147),
+**6,391 original code bytes / 1,765 original
+instructions**, prefix SHA-256
+d392f15f0e2611a4adffa4424266d4d2b62c8da99d51bea691840c03a47d848f.
+The default branch and states 1–9, 13–16, 47,
+and 50–55 have been repaired independently from
+Nayuki's original x87 and control flow, including
+field3148-dependent movement, 0.024 gravity,
+-2.0 jump impulse, exact dash bonuses, landing
+and target-native grounded damage recoil.
+The 50–55 recoil tiers preserve original meter
+awards, opponent combo damage scaling, 0.6/10/20/30
+damage penalties, ground bounds, pushback and
+recovery-frame priority. Inherited sibling-only
+dash flag writes were removed.
 
-To avoid recompiling the enormous inherited
-Makoto skeleton on every edit, the selected
-check_prefix.py builds those verified early
-states plus temporary explicitly UNACCEPTED
-marker cases for later original IDs. The
-markers are not counted as recovered behavior.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 matches all
-991 original instruction offsets/widths/forms
-except the incomplete 0x180 candidate stack
-versus full canonical 0x2B4. The focused audit
-checks **78 in-prefix original branches**, **16
-valid outbound targets**, **76 original-bound
-external/IEEE-754 COFF relocations**, two
-original local switch references, and 14
-original case targets.
+The selected check_prefix.py uses a fast VC7.1
+/Od /G6 /MT /Gy /W3 partial compiler with
+**temporary unaccepted marker cases** to preserve
+the canonical switch selector shape without
+rebuilding 154 KB after each edit. These markers
+do not count as reconstructed code. It validates
+**1,765 original instruction offsets and widths**,
+with all corresponding normalized instruction
+forms matching except the still incomplete
+0x180-0x198 candidate frame versus original
+0x2B4 frame. **156 in-prefix original branch
+targets**, **22 canonical outbound targets**,
+**184 exact target-bound non-switch COFF
+call/IEEE-754 relocations** and **two original
+local switch-address fields** all agree.
+The first 20 original case destinations are
+independently verified against original tables.
 
-The workbench has 116 of 137 live case labels;
-21 unique Nayuki states are missing and 8
-unsupported Makoto labels were removed.
-Continue at 0x004525DD with state 50.
-**Not whole-function Exact:** 59,224 code bytes,
-full original frame, selector tables, remaining
-relocations, all missing states and shared
-return are open. No all-unit cold replay.
+The workbench currently has 116 original live
+labels among the 137 cases; **21 Nayuki-specific
+states remain missing** and the remaining inherited
+sibling bodies are unreviewed. Continue from
+0x00453147 (state 56): **56,302 original x86
+bytes**, original full 0x2B4 frame, complete
+tables/return and other relocations still OPEN.
+This is not full Exact, nor game runtime closure.
+No all-unit cold replay was performed.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

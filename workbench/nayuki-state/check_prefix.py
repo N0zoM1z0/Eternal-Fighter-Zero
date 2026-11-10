@@ -20,17 +20,17 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,make_source,disasm,normalized
 
-END=BASE+0xD8D
-PREFIX_SHA="da8cab5b1faa8040f8faf416775a9905bcca7ec499a65c3d12e6ef7899f83eef"
+END=BASE+0x18F7
+PREFIX_SHA="d392f15f0e2611a4adffa4424266d4d2b62c8da99d51bea691840c03a47d848f"
 FULL_SHA="4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9"
 KNOWN_CALLS={
     "??0EffectSpawn@@QAE@XZ":0x00405490,
     "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z":0x00413090,
     "?FaceOpponent@Secondary@@QAEHXZ":0x0040E630,
 }
-REVIEWED_IDS=[1,2,3,4,5,6,7,8,9,13,14,15,16,47]
+REVIEWED_IDS=[1,2,3,4,5,6,7,8,9,13,14,15,16,47,50,51,52,53,54,55]
 REVIEWED_OFFSETS=[0x11e,0x1a8,0x232,0x2ab,0x400,0x561,
-                  0x69d,0x720,0x7a3,0x850,0x8eb,0xa15,0xb3f,0xc5d]
+                  0x69d,0x720,0x7a3,0x850,0x8eb,0xa15,0xb3f,0xc5d,0xd8d,0xf74,0x115b,0x1342,0x1529,0x1710]
 
 def main():
     image=verify_target()
@@ -38,7 +38,7 @@ def main():
     original=target_bytes(image,BASE,CODE_SIZE)
     assert hashlib.sha256(original).hexdigest()==FULL_SHA
     prefix=original[:END-BASE]
-    assert len(prefix)==3469 and hashlib.sha256(prefix).hexdigest()==PREFIX_SHA
+    assert len(prefix)==6391 and hashlib.sha256(prefix).hexdigest()==PREFIX_SHA
     # Data owner beyond the 62,693 code bytes: 138 addresses, 306 selectors.
     labels=target_bytes(image,0x00460D35,138*4)
     indices=target_bytes(image,0x00460F5D,306)
@@ -51,7 +51,7 @@ def main():
     assert sum(n!=137 for n in indices)==137
     # The original source has only 116 of the 137 active cases implemented
     # in this workbench; the experimental placeholder cases are NOT accepted.
-    used=make_source(47)
+    used=make_source(55)
     assert set(REVIEWED_IDS).issubset(used)
     try:
         compile_source(PROBE,OBJECT,["/Od","/G6","/MT","/Gy","/W3"],
@@ -60,7 +60,7 @@ def main():
     finally:
         PROBE.unlink(missing_ok=True)
     target,compiled=disasm(prefix),disasm(code)
-    assert len(target)==991 and len(compiled)>len(target)
+    assert len(target)==1765 and len(compiled)>len(target)
     assert target[2][2]=="sub esp,0x2b4"
     assert compiled[2][2].startswith("sub esp,") and compiled[2][2]!="sub esp,0x2b4"
     assert compiled[len(target)][0]==len(prefix)
@@ -86,7 +86,7 @@ def main():
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:
             outbound+=1
-    assert (internal,outbound)==(78,16),(internal,outbound)
+    assert (internal,outbound)==(156,22),(internal,outbound)
 
     refs=defaultdict(set)
     locals={}
@@ -113,14 +113,14 @@ def main():
             assert KNOWN_CALLS[name]==dst,(row,hex(dst))
         refs[(name,row["type"])].add(dst)
     assert locals=={0xA2:0x00460F5D,0xA9:0x00460D35},locals
-    assert n==78
-    assert len(refs)==16 and all(len(v)==1 for v in refs.values()),len(refs)
-    print("Nayuki Slot06: selected 3,469 / 62,693 original code bytes;")
-    print("991 original same-width/offset x86 instructions (only incomplete frame differs).")
-    print("78 verified in-prefix original branches, 16 valid original outbound targets;")
-    print("76 exact original-bound external/float relocations, 2 local switch references.")
-    print("Original dispatch: 137 live + 169 default IDs; 14 original case targets reviewed.")
-    print("NOT full Exact: 59,224 code bytes, real 0x2B4 frame, 21 missing states,")
+    assert n==186
+    assert len(refs)==28 and all(len(v)==1 for v in refs.values()),len(refs)
+    print("Nayuki Slot06: selected 6,391 / 62,693 original code bytes;")
+    print("1,765 original same-width/offset x86 instructions (only incomplete frame differs).")
+    print("156 verified in-prefix original branches, 22 valid original outbound targets;")
+    print("184 exact original-bound external/float relocations, 2 local switch references.")
+    print("Original dispatch: 137 live + 169 default IDs; 20 original case targets reviewed.")
+    print("NOT full Exact: 56,302 code bytes, real 0x2B4 frame, 21 missing states,")
     print("full switch layout, shared return and remaining relocation closure OPEN.")
 
 if __name__=="__main__":

@@ -15,15 +15,15 @@ from this large source. Never call the full owner Exact yet.
 
 ## Original-bound reviewed opening
 
-[0x00451850, 0x004525DD): **3,469 original bytes, 991 original
+[0x00451850, 0x00453147): **6,391 original bytes, 1,765 original
 instructions**, SHA-256
-da8cab5b1faa8040f8faf416775a9905bcca7ec499a65c3d12e6ef7899f83eef.
+d392f15f0e2611a4adffa4424266d4d2b62c8da99d51bea691840c03a47d848f.
 
 Original natural behavior has been recovered for the default branch,
-animation IDs **1–9, 13–16, and 47**: Nayuki field3148-dependent
+animation IDs **1–9, 13–16, 47, and 50–55**: Nayuki field3148-dependent
 ground speed, 0.024 jump gravity, original -2.0 rising velocity,
 direction/dash bonuses, FaceOpponent order, and landing state
-transitions. The Makoto-only dash reset and incorrect jump timing
+transitions. The 50–55 grounded recoil tiers now preserve native meter awards, impact-scaling damage, pushback velocity and original recovery timing. The Makoto-only dash reset and incorrect jump timing
 were corrected without machine-byte edits.
 
 Selected native audit ONLY:
@@ -38,16 +38,16 @@ ESI-prologue behavior without repeatedly compiling 154 KB of
 experimental source. Marker bodies do not count as reconstructed
 behavior. The generated probe source is removed after execution.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces 991 original
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces 1,765 original
 same-offset/same-width x86 instruction forms, except the
 incomplete candidate stack allocation (0x180 vs original 0x2B4).
-All **78 original internal branch targets, 16 valid canonical
-outbound destinations, 76 original-bound external and IEEE-754
+All **156 original internal branch targets, 22 valid canonical
+outbound destinations, 184 original-bound external and IEEE-754
 literal relocations, and 2 separately verified switch-table
-fields** pass. The first 14 original state destinations are
+fields** pass. The first 20 original state destinations are
 independently checked against original selector/target bytes.
 
-Continue at 0x004525DD (state 50). **59,224 original code
+Continue at 0x00453147 (state 56). **56,302 original code
 bytes, 21 missing live cases, the complete original stack, all
 remaining branches/relocations, owned tables and final return**
 remain open. No full cold replay or runtime-equivalence claim.
