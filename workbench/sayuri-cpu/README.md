@@ -6,43 +6,42 @@ is **12,330 original instruction bytes**, followed by six CC
 padding bytes. Full-target SHA-256:
 359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
 
-The natural-C++ workbench Character09Cpu.cpp now covers
-[0x0044AB30,0x0044C2C6), **6,038 original bytes /
-1,571 instructions**, prefix SHA-256
-6d4c13f9b7139ef0e66278f50d55cb7dca841ec96f2608d9645ac8d8a50a1e1b.
+The natural C++ source Character09Cpu.cpp now covers
+[0x0044AB30,0x0044C625), **6,901 original
+bytes / 1,774 instructions**, SHA-256
+7f0791a91b316db677720f52f252478bb4f38b383f952e45e6b4ff0346d9def8.
 
-The code reconstructs the original CPU defense entry,
-Sayuri-specific 140-distance 0x14 trigger, graded 0xA8/0xA9
-reactions, AA-state aerial follow-ups, opponent action
-reactions and CPU state 0..7 steering. The main randomized
-attack collision tree now covers complete 0xC8/0xC9
-decisions, with their precise timer and distance windows,
-opponent airborne conditions, meter gates and state changes.
-The original C8 button-write path at distance <80 and
-roll <400 falls through to subsequent checks, rather
-than returning. Every RandomRange call is retained,
-including the late timer tests that may be unreachable
-after earlier decisions.
+Recovered logic comprises CPU defensive initialization,
+the Sayuri-specific early 0x14 command, graded 0xA8/A9
+attack priorities, AA-state aerial follow-ups, CPU
+states 0..7, and main 0xC8/0xC9/0xCA/0xCB collision-
+confirm trees. The new CA and CB trees preserve original
+ground/air eligibility, exact timer intervals, meter
+checks, RandomRange calls and attack pulse/input commands.
+CB's 700+ timer window depends on the original
+attackCollisionResult==3 multiplier, so it must not be
+replaced with a constant threshold.
 
-Run only the native selected check:
+Use only:
 
     scripts/repo-python workbench/sayuri-cpu/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
-**6,031-byte / 1,573-instruction partial candidate**
-including a temporary epilogue, with **113 COFF
-relocations**. Of 1,570 comparable original body
-instructions, **1,569 agree** after normalizing direct
-call/jump destinations and floating literal addresses.
-The incomplete stack frame is 0xC4 rather than
-original 0xD8. Two original near jumps to the distant
-shared exit shorten to short jumps in the partial
-candidate. All **185 internal branch destinations, 57
-valid outbound original destinations, and 113 target-
-bound relocations** agree, including original literal
-payloads and 29 unique symbol bindings.
+VC7.1 /Od /G6 /MT /Gy /W3 emits **6,894 bytes /
+1,776 instructions**, including the temporary
+three-instruction return and **124 relocations**.
+Of 1,773 comparable original instruction forms,
+1,772 match after call/jump/float-address
+normalization; the one remaining form difference
+is the incomplete stack frame, original 0xD8
+versus draft 0xC4. Two original near JMPs to the
+unrecovered shared return compile as short JMPs.
+**219 internal branch destinations**, **68 valid
+original outbound jumps** and **all 124 original-
+bound COFF relocations**, including 29 unique
+symbols and original IEEE-754 payloads, agree.
 
-Next original address is 0x0044C2C6 (0xCA collision
-follow-up). **Not complete Exact**: 6,292 remaining
-target bytes, full stack/return and relocation closure
-are open. No all-unit cold replay was performed.
+Next original block is 0x0044C625, the CC action
+reaction group. **Not complete Exact**:
+5,429 target bytes, complete stack/return and
+full relocation closure are still pending. No
+all-unit cold replay is performed for this draft.

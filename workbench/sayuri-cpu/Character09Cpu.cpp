@@ -378,6 +378,66 @@ void Character09::Slot05()
                 return;
             }
         }
+        if (field0008 == 0xca) {
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 < 200 && attackCollisionResult == 3) {
+                recognizedCommand = 0x1e;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 199 && field3110 < 400) {
+                recognizedCommand = 0x0b;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 399 && field3110 < 500 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0xaa;
+                return;
+            }
+            if (field3110 < 400 && distance.forward < 100.0) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 700) {
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x0a;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 1;
+                return;
+            }
+        }
+        if (field0008 == 0xcb) {
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 < 250 && attackCollisionResult == 3) {
+                recognizedCommand = 0x0a;
+                return;
+            }
+            if (field3110 > 250 && field3110 < 350 &&
+                meter >= 1000 && attackCollisionResult == 3) {
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 0xaa;
+                return;
+            }
+            if (field3110 > 0 && field3110 < 650) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x0a;
+                return;
+            }
+            if (field3110 > 650 && field3110 < 700 && field0118 > 500.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+            if (field3110 > 700 &&
+                field3110 < (attackCollisionResult == 3) * 0x14 + 0x2da &&
+                meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x6e;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 1;
+                return;
+            }
+        }
     }
     // Later action-specific CPU decisions are still open.
 }
