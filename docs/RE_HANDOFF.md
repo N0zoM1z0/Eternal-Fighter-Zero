@@ -42,6 +42,15 @@ declaration in Engine.h does not change object layout; selected
 neighbor owners FaceOpponent and UpdateLocomotionState remain exact.
 
 
+Ikumi Character14::Slot08 effects is now **complete native strict Exact**,
+1,592 bytes / 434 instructions and 33/33 original-bound relocations.
+Its old five rand() calls were replaced with the real x87
+opponent-X to integer conversions before storing effect.x.
+Accepted source is src/Character14Effects.cpp, proof is
+docs/evidence/ikumi-slot08-exact.json; rebuild only
+scripts/repo-python scripts/replay-exact-units.py --unit character-14-slot08.
+The old partial workbench is retired.
+
 Nagamori Character06::Slot05 CPU is now **complete native strict Exact**,
 15,292 original bytes / 3,924 instructions, 300/300 original-bound
 relocations and zero differences. The source is
@@ -70,7 +79,6 @@ with the common class declaration remains a separate task.
 | --- | --- | --- |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
-| Ikumi `Character14::Slot08` | `0x006AB060`, 1,592 bytes; verified vtable slot 8 | `workbench/ikumi-effects/`: partial output is 1,537 bytes / 33 relocations. Five spawn branches need the original opponent-X x87 load before `rand()`. Volatile/comma/multiplication variants did not reproduce it. |
 
 Focused diagnostic commands:
 

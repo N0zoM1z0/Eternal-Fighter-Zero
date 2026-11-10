@@ -1,6 +1,6 @@
 // Ikumi's independent animation-300 and EX-mode effect owner.
-// Reconstructed from original state/effect control flow; NOT yet Exact.
-#include "../../src/CharacterViews.h"
+// Complete natural C++ owner, restored from all original state/effect branches.
+#include "CharacterViews.h"
 #include <cstdlib>
 
 void Character14::Slot08()
@@ -49,7 +49,7 @@ void Character14::Slot08()
         if (field0008 == 201 || field0008 == 202 ||
             field0008 == 205 || field0008 == 208) {
             effect.type = 0x1d6;
-            effect.x = (double)std::rand();
+            effect.x = (double)(int)(*opponentSlot)->positionX;
             effect.y = (*opponentSlot)->positionY - 40.0;
             effect.group = 0;
             effect.layer = 1;
@@ -59,7 +59,7 @@ void Character14::Slot08()
         }
         if (field0008 == 231 || field0008 == 234) {
             effect.type = 0x1de;
-            effect.x = (double)std::rand();
+            effect.x = (double)(int)(*opponentSlot)->positionX;
             effect.y = (*opponentSlot)->positionY - 40.0;
             effect.group = 0;
             effect.layer = 1;
@@ -70,7 +70,7 @@ void Character14::Slot08()
         if (field0008 == 253 || field0008 == 254 ||
             field0008 == 256 || field0008 == 257) {
             effect.type = 0x1d7;
-            effect.x = (double)std::rand();
+            effect.x = (double)(int)(*opponentSlot)->positionX;
             effect.y = (*opponentSlot)->positionY - 40.0;
             effect.group = 0;
             effect.layer = 1;
@@ -81,7 +81,7 @@ void Character14::Slot08()
         if (field0008 == 266 || field0008 == 255 || field0008 == 267 ||
             field0008 == 258 || field0008 == 272 || field0008 == 273) {
             effect.type = 0x1df;
-            effect.x = (double)std::rand();
+            effect.x = (double)(int)(*opponentSlot)->positionX;
             effect.y = (*opponentSlot)->positionY - 40.0;
             effect.group = 0;
             effect.layer = 1;
@@ -92,7 +92,7 @@ void Character14::Slot08()
         if (field0008 == 269 || field0008 == 270 ||
             field0008 == 276 || field0008 == 277) {
             effect.type = 0x1e0;
-            effect.x = (double)std::rand();
+            effect.x = (double)(int)(*opponentSlot)->positionX;
             effect.y = (*opponentSlot)->positionY - 40.0;
             effect.group = 0;
             effect.layer = 1;

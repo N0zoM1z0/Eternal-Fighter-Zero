@@ -132853,3 +132853,244 @@ object = "build/match-units/secondary-face-position/SecondaryFacePosition.obj"
 symbol = "?FacePosition@Secondary@@QAEHN@Z"
 target_address = 0x0040E6C0
 size = 116
+
+[units.character-14-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character14Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-14-slot08/Character14Effects.obj"
+symbol = "?Slot08@Character14@@UAEXXZ"
+target_address = 0x006AB060
+size = 1592
+
+[[units.character-14-slot08.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical EFZ.exe operand 0x006AB06D; Original reviewed authored callee ??0EffectSpawn@@QAE@XZ at 0x00405490"
+
+[[units.character-14-slot08.relocations]]
+offset = 25
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical EFZ.exe operand 0x006AB079; Original reviewed authored callee ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x00413090"
+
+[[units.character-14-slot08.relocations]]
+offset = 46
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand 0x006AB08E; Exact original IEEE-754 constant __real@0000000000000000 at 0x007872F8"
+
+[[units.character-14-slot08.relocations]]
+offset = 102
+type = "REL32"
+symbol = "?ResetFrame@Secondary@@QAEXXZ"
+target = 0x0040F1E0
+evidence = "Canonical EFZ.exe operand 0x006AB0C6; Original reviewed authored callee ?ResetFrame@Secondary@@QAEXXZ at 0x0040F1E0"
+
+[[units.character-14-slot08.relocations]]
+offset = 231
+type = "REL32"
+symbol = "?StartTrail@Secondary@@QAEXE@Z"
+target = 0x004109D0
+evidence = "Canonical EFZ.exe operand 0x006AB147; Original reviewed authored callee ?StartTrail@Secondary@@QAEXE@Z at 0x004109D0"
+
+[[units.character-14-slot08.relocations]]
+offset = 258
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB162; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 285
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB17D; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 312
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB198; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 339
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB1B3; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 366
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB1CE; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 393
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB1E9; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 420
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB204; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 447
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB21F; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 474
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB23A; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 501
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB255; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 528
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB270; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 555
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB28B; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 582
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB2A6; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 609
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB2C1; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 636
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB2DC; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 663
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB2F7; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 690
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical EFZ.exe operand 0x006AB312; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[[units.character-14-slot08.relocations]]
+offset = 738
+type = "REL32"
+symbol = "?SetAlternateMode@Character14@@QAEXD@Z"
+target = 0x006AB6A0
+evidence = "Canonical EFZ.exe operand 0x006AB342; Original reviewed authored callee ?SetAlternateMode@Character14@@QAEXD@Z at 0x006AB6A0"
+
+[[units.character-14-slot08.relocations]]
+offset = 851
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe operand 0x006AB3B3; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8"
+
+[[units.character-14-slot08.relocations]]
+offset = 877
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand 0x006AB3CD; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-14-slot08.relocations]]
+offset = 984
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe operand 0x006AB438; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8"
+
+[[units.character-14-slot08.relocations]]
+offset = 1010
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand 0x006AB452; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-14-slot08.relocations]]
+offset = 1147
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe operand 0x006AB4DB; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8"
+
+[[units.character-14-slot08.relocations]]
+offset = 1173
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand 0x006AB4F5; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-14-slot08.relocations]]
+offset = 1339
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe operand 0x006AB59B; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8"
+
+[[units.character-14-slot08.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand 0x006AB5B5; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-14-slot08.relocations]]
+offset = 1502
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical EFZ.exe operand 0x006AB63E; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8"
+
+[[units.character-14-slot08.relocations]]
+offset = 1528
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand 0x006AB658; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"

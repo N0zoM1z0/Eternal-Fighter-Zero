@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "authority": "Complete native VC7.1 source owner, 1592-byte full original boundary and all 33 canonical PE operands target-bound; no full-game linkage claim",
+  "method": "Original Ikumi Character14::Slot08 vtable 8 code at [0x006AB060,0x006AB698) has exactly 434 i386 instructions and 8 following CC alignment bytes. Original collision effect groups use opponent X converted to int by the original x87 __ftol2 helper at 0x007783B8, then re-converted into double; the earlier rand hypothesis was false. Five natural C++ corrections restore these conversion instructions, while preserving independent effect groups, tint cycle, mode switch and counter gates. All 33 COFF relocations and complete 1592 code bytes have zero differences under pinned VC7.1 /Od /G6 /MT /Gy /W3. The source is src/Character14Effects.cpp; no padding, masks, inline machine code or full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1592,
+      "matched_bytes": 1592,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "Canonical EFZ.exe operand 0x006AB06D; Original reviewed authored callee ??0EffectSpawn@@QAE@XZ at 0x00405490",
+          "addend": 0
+        },
+        {
+          "offset": 25,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB079; Original reviewed authored callee ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x00413090",
+          "addend": 0
+        },
+        {
+          "offset": 46,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB08E; Exact original IEEE-754 constant __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 102,
+          "target": 4256224,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetFrame@Secondary@@QAEXXZ",
+          "evidence": "Canonical EFZ.exe operand 0x006AB0C6; Original reviewed authored callee ?ResetFrame@Secondary@@QAEXXZ at 0x0040F1E0",
+          "addend": 0
+        },
+        {
+          "offset": 231,
+          "target": 4262352,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?StartTrail@Secondary@@QAEXE@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB147; Original reviewed authored callee ?StartTrail@Secondary@@QAEXE@Z at 0x004109D0",
+          "addend": 0
+        },
+        {
+          "offset": 258,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB162; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 285,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB17D; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 312,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB198; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 339,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB1B3; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 366,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB1CE; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 393,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB1E9; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 420,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB204; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 447,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB21F; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 474,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB23A; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 501,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB255; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 528,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB270; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 555,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB28B; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 582,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB2A6; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 609,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB2C1; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 636,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB2DC; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 663,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB2F7; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 690,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB312; Original reviewed authored callee ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        },
+        {
+          "offset": 738,
+          "target": 6993568,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetAlternateMode@Character14@@QAEXD@Z",
+          "evidence": "Canonical EFZ.exe operand 0x006AB342; Original reviewed authored callee ?SetAlternateMode@Character14@@QAEXD@Z at 0x006AB6A0",
+          "addend": 0
+        },
+        {
+          "offset": 851,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical EFZ.exe operand 0x006AB3B3; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 877,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB3CD; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 984,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical EFZ.exe operand 0x006AB438; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 1010,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB452; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1147,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical EFZ.exe operand 0x006AB4DB; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 1173,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB4F5; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1339,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical EFZ.exe operand 0x006AB59B; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 1365,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB5B5; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1502,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical EFZ.exe operand 0x006AB63E; Original VC7.1 x87 float-to-long helper __ftol2 at 0x007783B8",
+          "addend": 0
+        },
+        {
+          "offset": 1528,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand 0x006AB658; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "b1f3a40ab03af31d6a15b5f882f1efea4ccb1f3962fb490348aa9ad5002f7e29",
+      "target_extent_sha256": "b1f3a40ab03af31d6a15b5f882f1efea4ccb1f3962fb490348aa9ad5002f7e29",
+      "unit": "character-14-slot08",
+      "symbol": "?Slot08@Character14@@UAEXXZ",
+      "target_address": "0x006AB060",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4bd1c1e2e04aab7086b4894b7aba5e4f429c65d39d04c58cb26f76260477d061",
+      "object_sha256": "a3f793a498834b2cabdfe99cad6dffc543450dd8f5374de1059f660afc2fb886",
+      "source_sha256": "d9c8ec416bceaed39c17382f8cf4f4c775f7cca2bd6a08c97793752b1b56aadf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "785834b7e0b1319ae59d5f75cd835bb5e751a144bf42b4261524301557ccb6c2",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7964d5827dc549bac5a1962b70cc6db2df4c1b06cbcb75cff1f8c8f60dae37df",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
