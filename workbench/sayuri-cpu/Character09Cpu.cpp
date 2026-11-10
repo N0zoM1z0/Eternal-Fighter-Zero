@@ -1,6 +1,6 @@
 // Sayuri Character09::Slot05 partial native CPU workbench.
 // This opening is reviewed against original Sayuri x86.
- // Unreviewed sibling-character logic is deliberately excluded.
+// Unreviewed sibling-character logic is deliberately excluded.
 #include "../../src/CharacterViews.h"
 #include <math.h>
 
@@ -164,6 +164,128 @@ void Character09::Slot05()
                 return;
             }
         }
+    }
+    // Sayuri's AA-state aerial hit confirms have five ordered outcomes.
+    if (field0008 == 0xaa && (unsigned short)field000a == 1 &&
+        (unsigned short)field000c == 0) {
+        if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            field3114 = 3;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY > 0.0 &&
+            positionY - (*opponentSlot)->positionY < 40.0 &&
+            distance.forward < 80.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[0] = 1;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY > -30.0 &&
+            positionY - (*opponentSlot)->positionY < 0.0 &&
+            distance.forward < 100.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[1] = 1;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY > -80.0 &&
+            positionY - (*opponentSlot)->positionY < 30.0 &&
+            distance.vertical > 30.0 && distance.forward < 100.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[2] = 1;
+            inputY = 0;
+            return;
+        }
+        if (distance.vertical < 50.0 && distance.forward < 100.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 2.0f &&
+            field0118 > 500.0) {
+            recognizedCommand = 0x2a;
+            return;
+        }
+    }
+    // Grounded reaction to an opponent entering a long attack action.
+    if (((*opponentSlot)->field0008 == 0xa8 ||
+         (*opponentSlot)->field0008 == 0xa9 ||
+         (*opponentSlot)->field0008 == 0xaa) &&
+        positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8 &&
+        field3114 != 2 && (*opponentSlot)->hitstunFrames == 0) {
+        field3110 = (unsigned short)RandomRange(0, 100);
+        if (field3110 < 4 && field0118 > 500.0) {
+            recognizedCommand = 0x20;
+            return;
+        }
+        if (field3110 < 10 && field0118 > 500.0) {
+            recognizedCommand = 0x14;
+            return;
+        }
+        if (field3110 < 13 && field0118 > 500.0) {
+            recognizedCommand = 0x0c;
+            return;
+        }
+        if (field3110 < 17 && field3110 > 12 && meter >= 1000) {
+            recognizedCommand = (unsigned short)RandomRange(0, 2) * 0xaa;
+            return;
+        }
+        // This contradictory window is present in the original native tree.
+        if (field3110 < 16 && field3110 > 18 && meter == 3000) {
+            recognizedCommand = 0x5d;
+            return;
+        }
+    }
+    // Airborne reaction to the same opponent attack states.
+    if (((*opponentSlot)->field0008 == 0xa8 ||
+         (*opponentSlot)->field0008 == 0xa9 ||
+         (*opponentSlot)->field0008 == 0xaa) &&
+        positionY < 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8 &&
+        field3114 != 2 && (*opponentSlot)->hitstunFrames == 0) {
+        field3110 = (unsigned short)RandomRange(0, 100);
+        if (field3110 < 20) {
+            field3114 = 2;
+            return;
+        }
+        if (distance.forward < 100.0 && field3110 < 22) {
+            recognizedCommand = 0x16;
+            return;
+        }
+    }
+    // CPU state recovery, state 4 steering and state 5/6/7 transitions.
+    if (field3114 > 0 && field0008 > 49 && field0008 < 158)
+        field3114 = 0;
+    if (field3114 == 1 && field0008 < 200)
+        field3114 = 0;
+    if (field3114 == 2 && attackWasGuarded != 1) {
+        field3114 = 0;
+        return;
+    }
+    if (field3114 == 4) {
+        inputY = -1;
+        inputX = (unsigned short)RandomRange(0, 2) - 1;
+        if (field0008 == 4 || field0008 == 5 || field0008 == 6) {
+            recognizedCommand = facing == 1;
+            if (field0008 == 0xa5)
+                field3114 = 0;
+            inputY = 0;
+            inputX = 0;
+            return;
+        }
+    }
+    if (field3114 == 5 && field0008 < 50) {
+        field3114 = 6;
+        return;
+    }
+    if (field3114 == 6 && field0008 == 9) {
+        field3114 = 0;
+        buttonPulse[1] = 1;
+        return;
+    }
+    if (field3114 == 7) {
+        inputY = -1;
+        inputX = facing;
+        if (positionY < -30.0) {
+            recognizedCommand = 0x28;
+            field3114 = 0;
+        }
+        return;
     }
     // Later action-specific CPU decisions are still open.
 }

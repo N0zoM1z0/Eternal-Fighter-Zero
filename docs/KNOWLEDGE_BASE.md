@@ -2980,50 +2980,59 @@ runtime behavior remain open.
 
 <a id="sayuri-slot05-cpu-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot05: 2,921-byte reviewed CPU Boss prefix
+## Sayuri Character09 Slot05: 4,859-byte reviewed CPU Boss prefix
 
-Character09 virtual Slot05 at vtable entry 0x0078814C points
-to 0x0044AB30. The complete original code range is
-[0x0044AB30,0x0044DB5A): **12,330 original instruction
-bytes**, followed by six CC alignment bytes. Original
-whole-owner SHA-256:
+Original Character09 vtable slot05 at 0x0078814C points to
+0x0044AB30. The complete canonical function
+[0x0044AB30,0x0044DB5A) has **12,330 instruction
+bytes** and six following CC alignment bytes.
+Original full-owner SHA-256:
 359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
-This is independently confirmed ownership/boundary, not Exact.
+This is ownership/boundary review, not Exact codegen.
 
-The natural partial candidate
+The natural source in
 workbench/sayuri-cpu/Character09Cpu.cpp covers
-[0x0044AB30,0x0044B699), **2,921 original bytes /
-791 instructions**; prefix SHA-256
-14bf1272ffd01a60679fb196b82ea2edbb314e7ae6e1cfdb57c7c14a3dfdb4af.
+[0x0044AB30,0x0044BE2B), **4,859 original bytes /
+1,297 instructions**; prefix SHA-256
+46b3ef24f1cfb2419c126a2c3abd72fc30ae4562a0e682cbca08093cb946d06b.
 Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates
-2,917 bytes / 793 instructions including a
-temporary epilogue. **789/790 comparable original
-body instruction forms agree** after normalizing
-direct calls/branches and float literal addresses.
-The one original frame-size difference is 0xA4 versus
-original 0xD8; a five-byte near JMP becomes short
-because the full shared exit is not reconstructed.
+4,855 code bytes / 1,299 instructions including
+its temporary epilogue. The first **1,295 / 1,296
+comparable original instruction forms/operands**
+agree after call/branch/literal normalization; the
+only incomplete form is the stack allocation
+(0xC0 versus canonical 0xD8). A near JMP to the
+unreconstructed shared return currently emits a
+short JMP in the partial owner.
 
-The focused script workbench/sayuri-cpu/check_prefix.py
-independently validates **81 in-prefix branch destinations**,
-**22 valid outbound original targets** and all **59 original
-COFF relocation sites**, including complete IEEE-754 literal
-payloads and the canonical RandomRange / CRT fabs calls.
-Twenty-three different symbols resolve to their original
-target addresses.
+Selected workbench/sayuri-cpu/check_prefix.py
+verifies **151 in-prefix branch targets**, **37
+valid original outbound branch destinations** and
+**all 96 original-bound COFF relocations**, including
+complete original IEEE-754 bit patterns and the
+RandomRange / CRT fabs call targets. All 28 distinct
+symbol bindings are unambiguous. This represents
+focused partial codegen evidence, not full Exact.
 
-Source restores shared first CPU defensive checks and
-Sayuri-specific attack follow-ups: an extra 140-distance
-0x14 choice, the 40..90 hit-confirm response, and the
-0xA8/0xA9 graded decision tree covering 80/135/220
-distance bands and meter-gated 0xAB/0x6E commands.
-An initial guessed 2.0f multiplier compiled to FADD;
-reading the original constant showed 1.0f and restored
-the exact x87 FMUL.
+The reconstructed CPU priority tree covers early
+defense random chances, the 140-distance Sayuri
+0x14 choice, 40..90 collision response, graded
+0xA8/0xA9 commands, five ordered AA-state airborne
+reactions, opponent A8/AA ground/air response,
+CPU states 0..7 and directional inputs. Target
+literal 0x787ED8 is 1.0f and must remain a
+natural FMUL rather than the incorrect FADD from
+2.0f; the opponent reaction rate is 15.0f from
+original constant 0x787EB0. Correct opponent
+state permission checks hitstunFrames at +0x14C,
+not guardInputFrames at +0x14E. These differences
+were found by comparing original relocation
+payloads as well as instruction forms.
 
-Continue at original 0x0044B699. **Not full-function
-Exact**: 9,409 original bytes, complete frame/return
-and remaining relocation closure are open.
+Next original block 0x0044BE2B begins the
+randomized collision follow-up. **Not complete
+Exact**: 7,471 original bytes, full native frame,
+shared return and remaining relocations are open.
 No full cold replay was run.
 
 ## Sayuri Character09 Slot04: complete 11,119-byte strict Exact

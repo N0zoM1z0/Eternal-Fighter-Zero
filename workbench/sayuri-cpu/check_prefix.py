@@ -15,9 +15,9 @@ from native_build import compile_source
 from coff import object_function
 
 START, FULL_SIZE = 0x0044AB30, 12330
-END = 0x0044B699
+END = 0x0044BE2B
 FULL_SHA = "359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5"
-PREFIX_SHA = "14bf1272ffd01a60679fb196b82ea2edbb314e7ae6e1cfdb57c7c14a3dfdb4af"
+PREFIX_SHA = "46b3ef24f1cfb2419c126a2c3abd72fc30ae4562a0e682cbca08093cb946d06b"
 SOURCE = ROOT / "workbench/sayuri-cpu/Character09Cpu.cpp"
 OBJECT = ROOT / "build/sayuri-cpu/Character09Cpu.partial.obj"
 
@@ -55,9 +55,9 @@ def main():
     code, rels = object_function(OBJECT, "?Slot05@Character09@@UAEXXZ")
     target, compiled = disasm(prefix), disasm(code)
     assert (len(prefix), len(target), len(code), len(compiled), len(rels)) == (
-        2921, 791, 2917, 793, 59)
+        4859, 1297, 4855, 1299, 96)
     assert target[2][2] == "sub esp,0xd8"
-    assert compiled[2][2] == "sub esp,0xa4"
+    assert compiled[2][2] == "sub esp,0xc0"
     assert [x[2] for x in compiled[-3:]] == ["mov esp,ebp", "pop ebp", "ret"]
     assert target[-1][2] == "jmp 0x3026"
     for i, (a, b) in enumerate(zip(target[:-1], compiled[:-3])):
@@ -65,7 +65,7 @@ def main():
             assert form(a[2]) == form(b[2]), (i, a, b)
     widths = [(i, a[2], b[2]) for i, (a, b) in enumerate(
         zip(target[:-1], compiled[:-3])) if len(a[1]) != len(b[1])]
-    assert widths == [(763, "jmp 0x3026", "jmp short 0xb61")]
+    assert widths == [(1276, "jmp 0x3026", "jmp short 0x12f3")]
 
     originals = {row[0]: i for i, row in enumerate(target)}
     drafts = {row[0]: i for i, row in enumerate(compiled)}
@@ -84,7 +84,7 @@ def main():
             assert originals[orig_dest] == drafts.get(draft_dest), (a, b)
         else:
             outside += 1
-    assert (inside, outside) == (81, 22)
+    assert (inside, outside) == (151, 37)
 
     starts = [insn[0] for insn in compiled]
     bindings = defaultdict(set)
@@ -108,11 +108,11 @@ def main():
                 ("_fabs", 0x0077842D),
             }
         bindings[(r["symbol"], r["type"])].add(addr)
-    assert len(bindings) == 23 and all(len(x) == 1 for x in bindings.values())
-    print("Sayuri Slot05 CPU: 2921 / 12330 original code bytes,")
-    print("789/790 comparable instruction forms, one incomplete stack frame,")
-    print("81 original in-prefix jump targets, 22 reviewed outbound jumps,")
-    print("59 independently original-bound COFF relocations (23 symbols).")
+    assert len(bindings) == 28 and all(len(x) == 1 for x in bindings.values())
+    print("Sayuri Slot05 CPU: 4859 / 12330 original code bytes,")
+    print("1295/1296 comparable instruction forms, one incomplete stack frame,")
+    print("151 original in-prefix jump targets, 37 reviewed outbound jumps,")
+    print("96 independently original-bound COFF relocations (28 symbols).")
     print("This is a PARTIAL diagnostic, NEVER a complete Exact receipt.")
 
 
