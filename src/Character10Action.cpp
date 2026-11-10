@@ -1,6 +1,6 @@
-// Nayuki Character10::Slot04 action/command interpreter workbench.
-// Canonical original 0x00461460, 10,605 bytes; this workbench is NOT Exact.
-#include "../../src/CharacterViews.h"
+// Complete natural C++ reconstruction of Nayuki Character10::Slot04.
+// Original code [0x00461460,0x00463DCD): 10,605 x86 instruction bytes.
+#include "CharacterViews.h"
 
 void Character10::Slot04()
 {
@@ -191,52 +191,57 @@ void Character10::Slot04()
             return;
         }
         }
-        // Action 0x0C permits meter, alternate meter, or already-airborne
-        // execution; the lower tiers have independent EX-mode suppression.
-        if (recognizedCommand == 0x0c &&
-            (field0118 >= 500.0 || field0120 > 0 || positionY < 0.0) &&
+        // Nayuki unique 0x0D move and grounded 0x0C/0x0B/0x0A tiers.
+        if (recognizedCommand == 0x0d &&
             (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
-            field314c == 0 &&
+            positionY == 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[279].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x117;
+            return;
+        }
+        if (recognizedCommand == 0x0c &&
+            (field0118 >= 500.0 || field0120 > 0) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
             ((field0008 >= 200 && attackCollisionResult >= 2 &&
               attackCollisionResult != 6) || field0008 < 200) &&
             sequences[field0008].field0002 <= sequences[252].field0000) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfc;
-            if (positionY < 0.0)
-                field0008 = 0x10b;
             return;
         }
         if ((recognizedCommand == 0x0b || recognizedCommand == 0x0c) &&
             (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
-            field314c == 0 &&
+            positionY == 0.0 &&
             ((field0008 >= 200 && attackCollisionResult >= 2 &&
               attackCollisionResult != 6) || field0008 < 200) &&
             sequences[field0008].field0002 <= sequences[251].field0000) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfb;
-            if (positionY < 0.0)
-                field0008 = 0x10a;
             return;
         }
         if (recognizedCommand == 0x0a &&
             (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
-            field314c == 0 &&
+            positionY == 0.0 &&
             ((field0008 >= 200 && attackCollisionResult >= 2 &&
               attackCollisionResult != 6) || field0008 < 200) &&
             sequences[field0008].field0002 <= sequences[250].field0000) {
             ResetPose();
             ClearBufferedButtons();
             field0008 = 0xfa;
-            if (positionY < 0.0)
-                field0008 = 0x109;
             return;
         }
     }
     // Air dash when the opponent lies on the command's chosen side.
     if (field015c < 1 && (recognizedCommand == 0 || recognizedCommand == 1)) {
-        if (positionY < 0.0 && airDashCount < 1) {
+        if (positionY < 0.0 &&
+            airDashCount < 1 + (field3148 > 2) + (field3148 > 7)) {
             if ((((*opponentSlot)->positionX - positionX) *
                      (double)(1 - recognizedCommand * 2) < 0.0 ||
                  (((*opponentSlot)->positionX - positionX == 0.0) &&
@@ -246,8 +251,7 @@ void Character10::Slot04()
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
                   attackCollisionResult != 6) || field0008 < 200)) {
-                if (field0008 != 0xa5)
-                    ResetPose();
+                ResetPose();
                 field0008 = 0xa5;
                 FaceOpponent();
                 ++airDashCount;
@@ -266,8 +270,7 @@ void Character10::Slot04()
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
                   attackCollisionResult != 6) || field0008 < 200)) {
-                if (field0008 != 0xa6)
-                    ResetPose();
+                ResetPose();
                 field0008 = 0xa6;
                 FaceOpponent();
                 ++airDashCount;
@@ -291,7 +294,6 @@ void Character10::Slot04()
                     ResetPose();
                 field0008 = 0xa3;
                 FaceOpponent();
-                ++dashMomentumFlag;
                 actionBufferedInput = 0;
                 return;
             }
@@ -342,10 +344,13 @@ void Character10::Slot04()
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
-                field0008 = 0xcf;
+                if (field0008 == 0xa3) {
+                    field0008 = 0xe6;
+                    return;
+                } else {
+                    field0008 = 0xcf;
+                }
             }
-            // Air attack has priority: a failed eligibility check still
-            // leaves this state handler, without trying the ground attacks.
             return;
         }
         if (inputY == 1 || (actionBufferedInput & 4) != 0 ||
@@ -388,15 +393,23 @@ void Character10::Slot04()
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
-                field0008 = 0xd0;
+                if (field0008 == 0xa3) {
+                    field0008 = 0xe7;
+                    return;
+                } else {
+                    field0008 = 0xd0;
+                }
             }
             return;
         }
         if (inputY == 1 || (actionBufferedInput & 4) != 0 ||
             (stateGroupCBufferedInput & 4) != 0) {
-            if (sequences[field0008].field0002 <=
-                    sequences[205].field0000 &&
-                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            if (((sequences[field0008].field0002 <= sequences[205].field0000 &&
+                  (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                  field0008 != 0xc9) ||
+                 (sequences[field0008].field0002 <= sequences[205].field0000 &&
+                  (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                  field3148 > 0)) &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
@@ -408,10 +421,21 @@ void Character10::Slot04()
         if (inputY == 0 || (actionBufferedInput & 4) == 0 ||
             (stateGroupCBufferedInput & 4) == 0) {
             if (sequences[field0008].field0002 <=
+                    sequences[210].field0000 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                inputX == facing && field3148 > 1 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                ResetPose();
+                ClearBufferedButtons();
+                field0008 = 0xd2;
+                return;
+            }
+            if (sequences[field0008].field0002 <=
                     sequences[201].field0000 &&
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
-                positionX - (*opponentSlot)->positionX > -70.0 &&
-                positionX - (*opponentSlot)->positionX < 70.0 &&
+                positionX - (*opponentSlot)->positionX > -80.0 &&
+                positionX - (*opponentSlot)->positionX < 80.0 &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
@@ -419,11 +443,12 @@ void Character10::Slot04()
                 field0008 = 0xc9;
                 return;
             }
-            if (sequences[field0008].field0002 <=
+            if ((field0008 == 0xcd && field3148 > 1) ||
+                (sequences[field0008].field0002 <=
                     sequences[202].field0000 &&
-                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
-                ((field0008 >= 200 && attackCollisionResult >= 2 &&
-                  attackCollisionResult != 6) || field0008 < 200)) {
+                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                   attackCollisionResult != 6) || field0008 < 200))) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xca;
@@ -449,17 +474,33 @@ void Character10::Slot04()
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
-                field0008 = 0xf8;
-                return;
+                if (field0008 == 0xa3) {
+                    field0008 = 0xe8;
+                    return;
+                } else {
+                    field0008 = 0xf8;
+                    return;
+                }
             }
-            if (sequences[field0008].field0002 <=
-                    sequences[209].field0000 &&
-                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            if (((sequences[field0008].field0002 <= sequences[209].field0000 &&
+                  (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                  field0008 != 0xca) ||
+                 (sequences[field0008].field0002 <= sequences[209].field0000 &&
+                  (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                  field3148 > 4)) &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
                   attackCollisionResult != 6) || field0008 < 200)) {
                 ResetPose();
                 ClearBufferedButtons();
-                field0008 = 0xd1;
+                if (field0008 == 0xa3) {
+                    field0008 = 0xe8;
+                    return;
+                } else if (field0008 == 0xca) {
+                    field0008 = 0xd6;
+                    return;
+                } else {
+                    field0008 = 0xd1;
+                }
             }
             return;
         }
@@ -487,7 +528,8 @@ void Character10::Slot04()
                  (*opponentSlot)->field0008 > 156) &&
                 (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
                 ((field0008 >= 200 && attackCollisionResult >= 2 &&
-                  attackCollisionResult != 6) || field0008 < 200)) {
+                  attackCollisionResult != 6) || field0008 < 200) &&
+                (*opponentSlot)->positionY == 0.0) {
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xdc;
@@ -501,7 +543,24 @@ void Character10::Slot04()
                 ResetPose();
                 ClearBufferedButtons();
                 field0008 = 0xcb;
+                return;
             }
+        }
+    }
+    // Nayuki's independent fourth button and 0x80 held input family.
+    if (field015c < 2 &&
+        (buttonPulse[3] == 1 || (actionBufferedInput & 0x80) != 0 ||
+         (stateGroupCBufferedInput & 0x80) != 0)) {
+        if (sequences[field0008].field0002 <= sequences[259].field0000 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            field3148 < 9 && positionY == 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200)) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x103;
+            if (inputY == 1)
+                field0008 = 0x118;
         }
     }
 }

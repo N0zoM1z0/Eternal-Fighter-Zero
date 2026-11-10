@@ -1,0 +1,810 @@
+{
+  "schema_version": 1,
+  "authority": "Complete Nayuki Character10 Slot04 original vtable-anchored 10605-byte native code owner, all 86 original COFF relocations and exact byte acceptance under pinned VC7.1; not whole-game runtime/linkage",
+  "method": "Nayuki Character10 vtable slot04 at 0x00788280 selects original function at 0x00461460, complete [0x00461460,0x00463DCD) 10605 x86 instruction bytes / 2690 original x86 instructions, followed by 3 CC alignment bytes. Natural C++ source src/Character10Action.cpp reconstructs the full original prioritized action/command handler: 0x34 cancellation; meter commands 0x61, 0x66/65/64 and 0x70/6F/6E; 0x48/47/46, 0x1E/1F/20, 0x16/15/14, unique 0x0D, 0x0C/0B/0A; Nayuki-specific air dash count limit using field3148 and all four primary button groups. The 0x1E sequence 268 frame limit depends on (field3148>6)*10, with native EBX register allocation and original push/pop; 0x108 and 0x109 exceptions and whole-family state gating are preserved. The A3\u2192E6/E7/E8 attacks and CA\u2192D6 response match canonical exits, with naturally formed 5-byte near JMPs, and the 0xC9 permission and D2 special attack retain original order. Final 4th button produces 0x103 and inputY==1 override 0x118. Original double literals use +-80.0 spacing rather than sibling +-70.0. The original full 0x14 frame and shared return are naturally compiled under VC7.1 /Od /G6 /MT /Gy /W3, producing 10605/10605 strict exact bytes with all 86 COFF relocations to original float payloads or reviewed Secondary::ClearBufferedButtons and FaceOpponent callees, across 11 distinct symbols. Single-owner native strict compare and selected cold replay return Exact, zero differences, SHA equal; no inline asm, byte masks, injected padding, full-game replay or runtime equivalence claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 10605,
+      "matched_bytes": 10605,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 136,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original EFZ.exe at 0x004614E8: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 298,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046158A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 319,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x0046159F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 425,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461609: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 558,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046168E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 622,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004616CE: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 796,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046177C: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 875,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004617CB: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1049,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461879: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1142,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004618D6: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1316,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461984: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1380,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004619C4: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1554,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461A72: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1633,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461AC1: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1807,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461B6F: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 1900,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461BCC: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2074,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461C7A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2138,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original EFZ.exe at 0x00461CBA: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2222,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461D0E: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2346,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461D8A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2453,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461DF5: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2577,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461E71: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2669,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461ECD: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 2793,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00461F49: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 2915,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00461FC3: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3092,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462074: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3156,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original EFZ.exe at 0x004620B4: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3240,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462108: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3364,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462184: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3471,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004621EF: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3595,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046226B: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3687,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004622C7: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3811,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462343: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 3903,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x0046239F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4028,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046241C: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4076,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Original EFZ.exe at 0x0046244C: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 4160,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004624A0: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4285,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046251D: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4392,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462588: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4516,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462604: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4608,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462660: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4732,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x004626DC: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 4807,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462727: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4920,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462798: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4950,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x004627B6: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5076,
+          "target": 7896648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c044000000000000",
+          "evidence": "Original EFZ.exe at 0x00462834: original IEEE-754 literal bytes verified; __real@c044000000000000 binds 0x00787E48",
+          "addend": 0
+        },
+        {
+          "offset": 5218,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original EFZ.exe at 0x004628C2: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 5325,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x0046292D: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5355,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x0046294B: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5596,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original EFZ.exe at 0x00462A3C: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 5660,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462A7C: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5776,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462AF0: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5806,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462B0E: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5991,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original EFZ.exe at 0x00462BC7: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 6056,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462C08: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6086,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462C26: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6269,
+          "target": 4253232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FaceOpponent@Secondary@@QAEHXZ",
+          "evidence": "Original EFZ.exe at 0x00462CDD: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630",
+          "addend": 0
+        },
+        {
+          "offset": 6381,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462D4D: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6524,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462DDC: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 6682,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00462E7A: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6855,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00462F27: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7109,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463025: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7334,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463106: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7409,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463151: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7582,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x004631FE: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 7950,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046336E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8208,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463470: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8340,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "Original EFZ.exe at 0x004634F4: original IEEE-754 literal bytes verified; __real@c054000000000000 binds 0x007880D8",
+          "addend": 0
+        },
+        {
+          "offset": 8370,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Original EFZ.exe at 0x00463512: original IEEE-754 literal bytes verified; __real@4054000000000000 binds 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 8448,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463560: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8654,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x0046362E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 8729,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463679: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8806,
+          "target": 7894472,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c059000000000000",
+          "evidence": "Original EFZ.exe at 0x004636C6: original IEEE-754 literal bytes verified; __real@c059000000000000 binds 0x007875C8",
+          "addend": 0
+        },
+        {
+          "offset": 8840,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Original EFZ.exe at 0x004636E8: original IEEE-754 literal bytes verified; __real@4059000000000000 binds 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 8868,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463704: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9082,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x004637DA: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9410,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463922: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9694,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463A3E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 9788,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463A9C: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9827,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Original EFZ.exe at 0x00463AC3: original IEEE-754 literal bytes verified; __real@c03e000000000000 binds 0x00787E30",
+          "addend": 0
+        },
+        {
+          "offset": 9861,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Original EFZ.exe at 0x00463AE5: original IEEE-754 literal bytes verified; __real@403e000000000000 binds 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 10071,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463BB7: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10101,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463BD5: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10278,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463C86: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        },
+        {
+          "offset": 10479,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe at 0x00463D4F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10563,
+          "target": 4256112,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ClearBufferedButtons@Secondary@@QAEXXZ",
+          "evidence": "Original EFZ.exe at 0x00463DA3: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "9b36e02745b63428693a1fd39258d2fbbbccfdc120f2d16d915073fedde5806d",
+      "target_extent_sha256": "9b36e02745b63428693a1fd39258d2fbbbccfdc120f2d16d915073fedde5806d",
+      "unit": "character-10-slot04",
+      "symbol": "?Slot04@Character10@@UAEXXZ",
+      "target_address": "0x00461460",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4d71078164fa37dbe561ec1322bf05640cae166d62177e9389978af24bbabd38",
+      "object_sha256": "fac04be91e80dca3b7f9ffb8fd76a4635ebed5198983db72bc28a202860e8bb5",
+      "source_sha256": "9caea829b1552eb256d7fe24372129bcb8e88103a0fa5f691f62e52ebed32e12",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "6cd77dcfd176465468b9d6aadc9f493d0b19811d3dd4f5d69e1348922ab4b228",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "6db94acf55f651cc9a6a564bc755d6df40c456cf9b12b7a06f4a3e45bc6608ff",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

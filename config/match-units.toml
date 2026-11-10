@@ -137355,3 +137355,615 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108A0
 evidence = "Canonical EFZ.exe operand at 0x00468854: independently original-operand-verified direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[units.character-10-slot04]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Action.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot04/Character10Action.obj"
+symbol = "?Slot04@Character10@@UAEXXZ"
+target_address = 0x00461460
+size = 10605
+
+[[units.character-10-slot04.relocations]]
+offset = 136
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original EFZ.exe at 0x004614E8: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30"
+
+[[units.character-10-slot04.relocations]]
+offset = 298
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046158A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 319
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x0046159F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 425
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461609: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 558
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046168E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 622
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004616CE: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 796
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046177C: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 875
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004617CB: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 1049
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461879: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 1142
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004618D6: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 1316
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461984: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 1380
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004619C4: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 1554
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461A72: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 1633
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461AC1: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 1807
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461B6F: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 1900
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461BCC: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 2074
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461C7A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 2138
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original EFZ.exe at 0x00461CBA: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30"
+
+[[units.character-10-slot04.relocations]]
+offset = 2222
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461D0E: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 2346
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461D8A: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 2453
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461DF5: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 2577
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461E71: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 2669
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461ECD: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 2793
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00461F49: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 2915
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00461FC3: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 3092
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462074: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 3156
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original EFZ.exe at 0x004620B4: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30"
+
+[[units.character-10-slot04.relocations]]
+offset = 3240
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462108: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 3364
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462184: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 3471
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004621EF: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 3595
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046226B: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 3687
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004622C7: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 3811
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462343: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 3903
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x0046239F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4028
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046241C: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 4076
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Original EFZ.exe at 0x0046244C: original IEEE-754 literal bytes verified; __real@407f400000000000 binds 0x00787C30"
+
+[[units.character-10-slot04.relocations]]
+offset = 4160
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004624A0: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4285
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046251D: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 4392
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462588: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4516
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462604: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 4608
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462660: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4732
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x004626DC: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 4807
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462727: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4920
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462798: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 4950
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x004627B6: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5076
+type = "DIR32"
+symbol = "__real@c044000000000000"
+target = 0x00787E48
+evidence = "Original EFZ.exe at 0x00462834: original IEEE-754 literal bytes verified; __real@c044000000000000 binds 0x00787E48"
+
+[[units.character-10-slot04.relocations]]
+offset = 5218
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe at 0x004628C2: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630"
+
+[[units.character-10-slot04.relocations]]
+offset = 5325
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x0046292D: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5355
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x0046294B: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5596
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe at 0x00462A3C: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630"
+
+[[units.character-10-slot04.relocations]]
+offset = 5660
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462A7C: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5776
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462AF0: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5806
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462B0E: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 5991
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe at 0x00462BC7: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630"
+
+[[units.character-10-slot04.relocations]]
+offset = 6056
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462C08: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 6086
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462C26: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 6269
+type = "REL32"
+symbol = "?FaceOpponent@Secondary@@QAEHXZ"
+target = 0x0040E630
+evidence = "Original EFZ.exe at 0x00462CDD: original direct call destination verified; ?FaceOpponent@Secondary@@QAEHXZ binds 0x0040E630"
+
+[[units.character-10-slot04.relocations]]
+offset = 6381
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462D4D: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 6524
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462DDC: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 6682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00462E7A: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 6855
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00462F27: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 7109
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463025: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 7334
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463106: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 7409
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463151: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 7582
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x004631FE: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 7950
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046336E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 8208
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463470: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 8340
+type = "DIR32"
+symbol = "__real@c054000000000000"
+target = 0x007880D8
+evidence = "Original EFZ.exe at 0x004634F4: original IEEE-754 literal bytes verified; __real@c054000000000000 binds 0x007880D8"
+
+[[units.character-10-slot04.relocations]]
+offset = 8370
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Original EFZ.exe at 0x00463512: original IEEE-754 literal bytes verified; __real@4054000000000000 binds 0x00787EE0"
+
+[[units.character-10-slot04.relocations]]
+offset = 8448
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463560: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 8654
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x0046362E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 8729
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463679: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 8806
+type = "DIR32"
+symbol = "__real@c059000000000000"
+target = 0x007875C8
+evidence = "Original EFZ.exe at 0x004636C6: original IEEE-754 literal bytes verified; __real@c059000000000000 binds 0x007875C8"
+
+[[units.character-10-slot04.relocations]]
+offset = 8840
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Original EFZ.exe at 0x004636E8: original IEEE-754 literal bytes verified; __real@4059000000000000 binds 0x007875D0"
+
+[[units.character-10-slot04.relocations]]
+offset = 8868
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463704: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 9082
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x004637DA: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 9410
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463922: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 9694
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463A3E: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 9788
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463A9C: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 9827
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Original EFZ.exe at 0x00463AC3: original IEEE-754 literal bytes verified; __real@c03e000000000000 binds 0x00787E30"
+
+[[units.character-10-slot04.relocations]]
+offset = 9861
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Original EFZ.exe at 0x00463AE5: original IEEE-754 literal bytes verified; __real@403e000000000000 binds 0x00787D88"
+
+[[units.character-10-slot04.relocations]]
+offset = 10071
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463BB7: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 10101
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463BD5: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 10278
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463C86: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[[units.character-10-slot04.relocations]]
+offset = 10479
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe at 0x00463D4F: original IEEE-754 literal bytes verified; __real@0000000000000000 binds 0x007872F8"
+
+[[units.character-10-slot04.relocations]]
+offset = 10563
+type = "REL32"
+symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
+target = 0x0040F170
+evidence = "Original EFZ.exe at 0x00463DA3: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"

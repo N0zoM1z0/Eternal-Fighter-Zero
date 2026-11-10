@@ -2988,37 +2988,50 @@ runtime behavior remain open.
 
 <a id="nayuki-slot04-action-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot04: reviewed 3,839-byte action boss opening
+## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 
-Original Nayuki Character10 vtable Slot04 at 0x00788280 selects
-[0x00461460,0x00463DCD), **10,605 x86 bytes**, followed by
-three CC alignment bytes. Complete original SHA-256:
-9b36e02745b63428693a1fd39258d2fbbbccfdc120f2d16d915073fedde5806d.
-Only original boundary and partial native codegen are reviewed;
-this owner is **NOT full Exact**.
+Original Nayuki vtable slot04 at 0x00788280 selects
+[0x00461460,0x00463DCD), exactly **10,605 x86 code
+bytes / 2,690 original x86 instructions**, with three
+CC alignment bytes afterward. Original whole-function
+SHA-256: 9b36e02745b63428693a1fd39258d2fbbbccfdc120f2d16d915073fedde5806d.
 
-The natural C++ in workbench/nayuki-action/Character10Action.cpp
-reconstructs [0x00461460,0x0046235F), **3,839 original
-bytes / 962 instructions**, prefix SHA-256
-ddfa95a85b9fa949c7aba50bf072feedd0f86a2129c9b276aa2295dd505fc821.
-The selected check_prefix.py compiles the one native function
-under pinned VC7.1 /Od /G6 /MT /Gy /W3 and checks **962/962
-instruction forms/operands**, **147 internal branch targets**,
-**16 canonical outbound destinations** and **33 original-bound
-COFF relocations**. Remaining source has not been accepted.
+Full natural C++ is now **src/Character10Action.cpp**.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces the
+original 0x14 stack frame, preserved EBX, original
+shared exit, and **10,605/10,605 strict Exact code
+bytes** with **86/86 verified original-bound COFF
+relocations**. All eleven referenced symbols uniquely
+bind their reviewed original targets, including IEEE-754
+literals and Secondary::ClearBufferedButtons and
+FaceOpponent direct calls. The full strict byte compare
+and selected-only cold replay both yield **Exact,
+zero byte differences** with matching SHA-256.
+Full evidence: docs/evidence/character-10-slot04-exact.json;
+rebuild recipe: character-10-slot04 in config/match-units.toml.
 
-Reconstruction corrected the Sayuri-clone priority: Nayuki
-uses critical command 0x61, 0x66/65/64 and 0x70/6F/6E
-meter tiers, 0x48/47/46, 0x1E/1F/20 and 0x16/15/14.
-The 0x1E family dynamically extends sequence 268's frame
-limit by (field3148 > 6) * 10 with 0x108/0x109 action
-exceptions. Natural code forces original VC7.1 EBX use
-and the full push ebx prologue absent from the sibling clone.
-The 0x48 and 0x16 gates each cover a three-command group.
+Original Nayuki-specific command priorities are restored:
+0x34 cancel, meter moves 0x61 / 0x66/65/64 / 0x70/6F/6E,
+0x48/47/46, 0x1E/1F/20, 0x16/15/14, unique 0x0D,
+0x0C/0B/0A, air dash and ground dash, and the four
+attack-button priorities. The 0x1E-family permitted
+frame interval includes the original dynamic sequence
+268 + (field3148>6)*10 and exceptions 0x108/0x109:
+the natural expression made VC7.1 allocate EBX and
+restore the original push/pop instructions. Nayuki's
+variable air-dash count limit, A3→E6/E7/E8 and
+CA→D6 action variants, C9 and CD permission
+overrides, D2 special attack, final 0x103/0x118
+fourth-button selector and ±80.0 attack spacing
+are recovered with the correct original near JMP
+return placement and original field inputY at 0x189.
 
-Continue at 0x0046235F with Nayuki 0x0D command;
-**6,766 original code bytes remain unaccepted**.
-No full-game cold replay was run.
+No manual machine-code patches, inline asm or
+artificial padding were used. The complete dirty
+workbench C++ was reconciled into the accepted
+source before retirement. This is exact native
+codegen for one owner, not whole-game linkage
+or runtime equivalence. No full all-unit replay.
 
 ## Nayuki Character10 Slot05: complete 13,259-byte strict Exact CPU boss
 
