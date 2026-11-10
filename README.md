@@ -74,42 +74,31 @@ also have independently exact natural constructors. Ikumi's separate
 Ikumi's 163-byte derived destructor is also strict Exact, including the
 original double base teardown and two vector-array deletes.
 Other child owners, including Ikumi Slot08 effects, remain open.
-Ikumi's separate **5,153-byte Slot02 command-recognition boss is now
-strict Exact**, all **1,508 original instructions and 15 ordered input
-scans** reconstructed in `src/Character14Commands.cpp` with zero
-code-byte differences and no relocations. The original per-scan
-research remains in `workbench/ikumi-commands/`.
-**Makoto's large Slot06 is now accepted Exact**: 58,482 source-code bytes,
-500 switch-address bytes and 310 selector bytes, with all 1,386
-relocations strictly bound. Shiori's 63,132-byte Slot06 is now
-structurally reviewed, with a complete **non-Exact** natural-C++
-candidate tracked in `workbench/shiori-state/`. The substantial
-`Scene2::PrepareBattle` owner also has a tracked unaccepted C++ draft
-at `workbench/prepare-battle/` and a reviewed 4,029-byte original
-boundary. Ikumi's independent Slot08 effects owner now has a 1,592-byte
-reviewed boundary and a separate still-unaccepted C++ draft in
-`workbench/ikumi-effects/`. Nagamori's entire **12,277-byte Slot04 action boss** is now accepted
-**Strict Exact** in `src/Character06Input.cpp`, all 3,092 x86
-instructions and 100 original-bound relocations matching the canonical
-target. Historical partial-source probes remain in
-`workbench/nagamori-action/`. Video and other scene/character work
-remain open. See the live ledgers for individual acceptance.
+Ikumi's independent 5,153-byte `Slot02` command recognizer is strict
+Exact in `src/Character14Commands.cpp`; Nagamori's 12,277-byte
+`Slot04` action selection and 4,917-byte `Slot02` input recognizer
+are also fully Exact in `src/Character06Input.cpp` and
+`src/Character06Commands.cpp`. Their historical partial workbench
+probes are not the current source of truth. Shiori's 63,132-byte
+`Slot06`, Nagamori's 15,292-byte CPU `Slot05`,
+`Scene2::PrepareBattle` and Ikumi `Slot08` remain substantive
+unfinished owners. See [handoff](docs/RE_HANDOFF.md) for exact
+candidate paths, measurements and targeted next steps.
 
 Reader/audio integration is complete. The
 [workbench](workbench/reader-audio/README.md) preserves historical drafts and
 an already-integrated patch; it is not an active integration queue. Accepted
 code lives in `src/`.
 
-The current completed substantial owner is Makoto/Character03 Slot06:
-accepted `src/Character03State.cpp` and full proof
-`docs/evidence/makoto-state-slot06-exact.json`. Its 124 explicit states
-and default compiled to the entire 59,292-byte original contribution;
-new substantial work can now prioritize Shiori Slot06 and other open owners. `Scene3::ResolvePushboxes` has a fresh
-complete **local** 2,727-byte, 35-relocation exact comparison, independently
-reviewed authored origin and a public exact-ledger entry. Whole-image/runtime
-closure and freshness of unrelated older certificates remain open.
-The [current handoff](docs/RE_HANDOFF.md) gives the receiving agent its
-starting points and the next focused actions.
+Recent completed **large** owners include Makoto `Slot06`
+(59,292 bytes including tables), Nagamori `Slot04` (12,277 bytes) and
+`Slot02` (4,917 bytes), and Ikumi `Slot02` (5,153 bytes); each has a
+complete target-bound exact receipt in `docs/evidence/`. The
+`Scene3::ResolvePushboxes` local owner is also ledgered Exact for
+2,727 bytes. More functions, linked data and runtime semantics are
+still open. For current next actions and blockers, use the concise
+[receiving-agent handoff](docs/RE_HANDOFF.md), not historical session
+summaries.
 
 The last recorded compiler, linker, resource and native execution smoke checks
 passed. The original
