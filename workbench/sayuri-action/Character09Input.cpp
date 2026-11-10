@@ -104,5 +104,51 @@ void Character09::Slot04()
             field0008 = 0x137;
             return;
         }
+        if ((recognizedCommand == 0xa0 || recognizedCommand == 0xa1 ||
+             recognizedCommand == 0xa2) &&
+            meter >= 1000 && positionY == 0.0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[309].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x135;
+            return;
+        }
+        if (recognizedCommand == 0x70 &&
+            meter >= 3000 && positionY == 0.0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[308].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x134;
+            return;
+        }
+        if ((recognizedCommand == 0x6f || recognizedCommand == 0x70) &&
+            meter >= 2000 && positionY == 0.0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[307].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x133;
+            return;
+        }
+        if ((recognizedCommand == 0x6e || recognizedCommand == 0x6f ||
+             recognizedCommand == 0x70) &&
+            meter >= 1000 && positionY == 0.0 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[306].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x132;
+            return;
+        }
     // Remaining original action guards and command dispatch are open.
 }

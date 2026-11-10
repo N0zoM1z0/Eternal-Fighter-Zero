@@ -2978,7 +2978,7 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot04: reviewed 2,020-byte action-boss prefix
+## Sayuri Character09 Slot04: reviewed 3,053-byte action-boss prefix
 
 The original 11,119-byte Character09 virtual Slot04 at 0x00446780
 is directly anchored by vtable 0x00788138 slot4 at 0x00788148.
@@ -2991,26 +2991,26 @@ fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286.
 This review establishes ownership/boundary, **not Exact codegen**.
 
 The natural C++ workbench at workbench/sayuri-action/Character09Input.cpp
-now covers [0x00446780,0x00446F64), 2,020 original bytes and 497
+now covers [0x00446780,0x0044736D), 3,053 original bytes and 753
 instructions; the prefix SHA-256 is
-bf29da93b45be658e8e136520ca2aa87b3a605df4e069cb000ee1740256c981a.
-Pinned VC7.1 compiles its incomplete body into 2,017 bytes with 499
-instructions including a temporary epilogue. The first 496 comparable
+cf9f5bb284717cc722008659c49b5a7b02693f7b75a68df44fe56996573d7592.
+Pinned VC7.1 compiles its incomplete body into 3,050 bytes with 755
+instructions including a temporary epilogue. The first 752 comparable
 original instruction forms/operands all agree except for the
 incomplete frame (sub esp,0x14 original, push ecx candidate).
 The target's final prefix instruction is a jump to the
 full owner's shared exit, not a local return. The checker at
-workbench/sayuri-action/check_prefix.py confirms **72 in-prefix
-branch destinations** and all **16 independently target-bound
+workbench/sayuri-action/check_prefix.py confirms **113 in-prefix
+branch destinations** and all **24 independently target-bound
 relocation operands**, including original 500.0 and 0.0 double
 values and calls to SetCharacterTint/ClearBufferedButtons.
 
 The recovered branches implement input-buffer expiration, the
-Sayuri 150–155 animation/opponent-state priority, and seven
+Sayuri 150–155 animation/opponent-state priority, and eleven
 meter-gated command upgrade groups from 0x34 through
-0xA1/0xA2, preserving original sequence/frame guards and
+0x6E/0x6F/0x70, preserving original sequence/frame guards and
 virtual reset/clear operations. The next original guard is
-0x00446F64. The remaining 9,099 bytes, complete stack lifetime,
+0x0044736D. The remaining 8,066 bytes, complete stack lifetime,
 shared exit and all other relocations remain open.
 **No Exact credit or whole cold replay was claimed.**
 
