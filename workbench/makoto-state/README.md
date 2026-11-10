@@ -1,16 +1,24 @@
-# Makoto Slot06 — natural C++ reconstruction in progress
+# Makoto Slot06 — historical reconstruction notes (already Strict Exact)
 
-The original Character03::Slot06 is an authored 58,482-byte function at
-0x005E85F0, followed by a 500-byte 125-entry jump table and 310-byte
-animation selector table. The full owned extent is
-[0x005E85F0, 0x005F6D8C), 59,292 bytes. It is still open.
+**Current authoritative status:** `Character03::Slot06` is **fully
+accepted Strict Exact** in `src/Character03State.cpp`. The selected
+`character-03-state-slot06` unit and
+`docs/evidence/makoto-state-slot06-exact.json` prove the entire
+**59,292/59,292-byte** original owner (58,482 code + 500-byte
+125-entry jump table + 310-byte selector), with **1,386 original-bound
+relocations and zero differences**. Its original VA range is
+`[0x005E85F0,0x005F6D8C)`.
 
-Character03State.cpp is a **partial, isolated source draft**. It is **not**
-linked into src/, does not implement all mapped states, and is not an exact
-candidate. In particular, its default return is only a marker for unfinished
-work, not the original behavior for valid unimplemented animations.
+This README and `workbench/makoto-state/Character03State.cpp` preserve
+**historical partial/incremental source research** and per-animation
+observations. The notes below were recorded *before* full acceptance;
+phrases such as “still open”, “not Exact”, or “missing” describe the
+checkpoint at which they were written, **not the present repository
+status**. Do not integrate or replay this partial draft over the
+accepted production C++ or start solving Makoto Slot06 again. For
+current unfinished substantial owners see `docs/RE_HANDOFF.md`.
 
-## Recovered natural C++ paths
+## Historical per-animation source findings
 
 - Entry: return on nonzero self hitstop or opponent hitstun.
 - Initialize EffectSpawn, read PatternFrame::duration and
@@ -1331,15 +1339,16 @@ ledger were appropriate before this acceptance and are historical,
 not current. Future major-state work should target Shiori Slot06 or
 other unaccepted owners; no full cold replay was involved.
 
-## Next implementation work
+## Historical experiment recovery and future work
 
-The 2026-11-09 handoff storage cleanup archived 61 historical candidate
-disassemblies and 67 named trial objects without deleting the current
-workbench source, target case map or latest objects. See
-`docs/RE_ARTIFACTS.md` for the exact archive and restore paths.
+The 2026-11-09 and 2026-11-10 storage cleanups archived superseded
+Makoto trial objects, source variants and generated disassemblies
+**losslessly**. Restore individual original paths from the private
+tar archives listed in `docs/RE_ARTIFACTS.md` if a historical
+experiment must be reproduced. Current canonical target disassembly,
+accepted source, exact receipts and selected reference probes remain
+available.
 
-Compare complete native switch code generation and both associated tables directly from reviewed target instructions,
-retaining each case's distinct frame behavior. Once a complete owner exists,
-add its selected match unit with correct internal jump/selector table
-ownership and run the strict VC7.1 COFF comparison. Do not add it to the
-exact-function ledger until the entire 59,292-byte owned extent matches.
+For **new** large-state work, prioritize the unresolved Shiori Slot06,
+Nagamori Slot05, or another open owner listed in the current handoff.
+Do not add a second Exact ledger claim for historical Makoto drafts.

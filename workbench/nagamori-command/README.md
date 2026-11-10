@@ -1,4 +1,4 @@
-# Nagamori `Character06::Slot02` — tracked input command source
+# Nagamori `Character06::Slot02` — historical eight-scan draft
 
 **Historical partial natural C++ investigation.** The complete
 production owner `src/Character06Commands.cpp` is now **4,917/4,917
@@ -10,7 +10,7 @@ Original Nagamori vtable slot 2 at `0x00788404` points to
 alignment `CC` bytes. Verified complete target SHA and per-scan hashes:
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
 
-The current `Character06Command.cpp` reconstructs the first **eight**
+This historical `Character06Command.cpp` reconstructs the first **eight**
 ordered scans, original **3,437 bytes / 1,010 instructions**:
 
 | Scan | Original range | Bytes | Instructions | Result |
