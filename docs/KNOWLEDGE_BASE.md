@@ -2978,6 +2978,54 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
+<a id="sayuri-slot05-cpu-reviewed-prefix"></a>
+
+## Sayuri Character09 Slot05: 2,921-byte reviewed CPU Boss prefix
+
+Character09 virtual Slot05 at vtable entry 0x0078814C points
+to 0x0044AB30. The complete original code range is
+[0x0044AB30,0x0044DB5A): **12,330 original instruction
+bytes**, followed by six CC alignment bytes. Original
+whole-owner SHA-256:
+359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
+This is independently confirmed ownership/boundary, not Exact.
+
+The natural partial candidate
+workbench/sayuri-cpu/Character09Cpu.cpp covers
+[0x0044AB30,0x0044B699), **2,921 original bytes /
+791 instructions**; prefix SHA-256
+14bf1272ffd01a60679fb196b82ea2edbb314e7ae6e1cfdb57c7c14a3dfdb4af.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates
+2,917 bytes / 793 instructions including a
+temporary epilogue. **789/790 comparable original
+body instruction forms agree** after normalizing
+direct calls/branches and float literal addresses.
+The one original frame-size difference is 0xA4 versus
+original 0xD8; a five-byte near JMP becomes short
+because the full shared exit is not reconstructed.
+
+The focused script workbench/sayuri-cpu/check_prefix.py
+independently validates **81 in-prefix branch destinations**,
+**22 valid outbound original targets** and all **59 original
+COFF relocation sites**, including complete IEEE-754 literal
+payloads and the canonical RandomRange / CRT fabs calls.
+Twenty-three different symbols resolve to their original
+target addresses.
+
+Source restores shared first CPU defensive checks and
+Sayuri-specific attack follow-ups: an extra 140-distance
+0x14 choice, the 40..90 hit-confirm response, and the
+0xA8/0xA9 graded decision tree covering 80/135/220
+distance bands and meter-gated 0xAB/0x6E commands.
+An initial guessed 2.0f multiplier compiled to FADD;
+reading the original constant showed 1.0f and restored
+the exact x87 FMUL.
+
+Continue at original 0x0044B699. **Not full-function
+Exact**: 9,409 original bytes, complete frame/return
+and remaining relocation closure are open.
+No full cold replay was run.
+
 ## Sayuri Character09 Slot04: complete 11,119-byte strict Exact
 
 The original Character09/Sayuri vtable slot04 at 0x00788148

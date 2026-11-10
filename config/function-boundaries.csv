@@ -405,3 +405,4 @@ address,end,size,status,evidence
 0x00446590,0x004466C5,309,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
 0x004466D0,0x0044670A,58,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-lifecycle-and-delegates-exact
 0x004493C0,0x0044AB2B,5995,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot02-command-prefix
+0x0044AB30,0x0044DB5A,12330,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot05-cpu-reviewed-prefix
