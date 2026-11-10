@@ -18,15 +18,16 @@ from common import verify_target, target_bytes
 from native_build import compile_source
 from coff import object_function
 
-BASE, FULL_SIZE, END = 0x00468870, 20517, 0x00469ED3
+BASE, FULL_SIZE, END = 0x00468870, 20517, 0x0046A44B
 FULL_SHA = "cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9"
-PREFIX_SHA = "0699fb618eea6325b68ee8e58a6e35dffed7632b616f3dad80bcb988ce613d9d"
+PREFIX_SHA = "b3c00d2a268e23974a725bd297f8cc906bd7530ee54a213feb9c4b519d7358d7"
 SOURCE = ROOT / "workbench/nayuki-effects/Character10Effects.cpp"
 OBJECT = ROOT / "build/nayuki-effects/Character10Effects.partial.obj"
 CALLEES = {
     "??0EffectSpawn@@QAE@XZ": 0x00405490,
     "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z": 0x00413090,
     "__ftol2": 0x007783B8,
+    "?SetVerticalShake@Secondary@@QAEXHH@Z": 0x00410A10,
     "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z": 0x00407100,
 }
 
@@ -63,14 +64,14 @@ def main():
     assert full[-5:]==bytes.fromhex("5e 5b 8b e5 5d c3")[-5:]
     assert target_bytes(im,BASE+FULL_SIZE,4)==bytes.fromhex("d2 89 46 00")
     original=full[:END-BASE]
-    assert len(original)==5731
+    assert len(original)==7131
     assert hashlib.sha256(original).hexdigest()==PREFIX_SHA
 
     # The original jump table is adjacent to (not part of) the full function:
     # 100 compact case IDs, a 28-entry destination table, 27 active types.
     index=target_bytes(im,0x0046D905,100)
     destinations=target_bytes(im,0x0046D895,28*4)
-    for j,relative in enumerate([0x162,0x3A2,0x9F6,0xFCB]):
+    for j,relative in enumerate([0x162,0x3A2,0x9F6,0xFCB,0x1663,0x180F,0x18E5]):
         assert index[j]==j
         assert struct.unpack_from("<I",destinations,4*j)[0]==BASE+relative
 
@@ -79,9 +80,9 @@ def main():
         ROOT/".analysis/build/nayuki-effects-selected-prefix.log")
     code,relocs=object_function(OBJECT,"?Slot07@Character10@@UAEXXZ")
     ref,got=decode(original),decode(code)
-    assert len(ref)==1293 and len(got)>=len(ref)
+    assert len(ref)==1603 and len(got)>=len(ref)
     assert ref[2][2]=="sub esp,0x1d4"
-    assert got[2][2]=="sub esp,0x348"
+    assert got[2][2]=="sub esp,0x34c"
     assert got[len(ref)][0]==len(original)
     for i,(a,b) in enumerate(zip(ref,got)):
         assert a[0]==b[0],(i,a,b)
@@ -106,7 +107,7 @@ def main():
             assert ref_pos[target]==got_pos.get(compiled),(a,b)
         else:
             outside+=1
-    assert (inside,outside)==(77,11),(inside,outside)
+    assert (inside,outside)==(92,14),(inside,outside)
 
     # Two DIR32 relocations encode the compiler-generated jump dispatch
     # tables. They are NOT accepted as exact; original mappings are reviewed
@@ -141,14 +142,14 @@ def main():
         reviewed_relocations+=1
         distinct[(name,typ)].add(addr)
     assert local=={0x157:0x0046D905,0x15E:0x0046D895},local
-    assert reviewed_relocations==73
-    assert len(distinct)==21
-    print("Nayuki Slot07: 5,731 / 20,517 original bytes, 1,293 instructions.")
-    print("1,292 matching instruction forms plus incomplete stack allocation;")
-    print("77 original internal branches, 11 valid original outbound targets;")
-    print("73 original-bound literal/call relocations; two local switch-table")
+    assert reviewed_relocations==85
+    assert len(distinct)==24
+    print("Nayuki Slot07: 7,131 / 20,517 original bytes, 1,603 instructions.")
+    print("1,602 matching instruction forms plus incomplete stack allocation;")
+    print("92 original internal branches, 14 valid original outbound targets;")
+    print("85 original-bound literal/call relocations; two local switch-table")
     print("relocations independently identified, not claimed Exact.")
-    print("Remaining effects and 0x348 vs 0x1D4 frame NOT Exact.")
+    print("Remaining effects and 0x34C vs 0x1D4 frame NOT Exact.")
 
 
 if __name__=="__main__":

@@ -7,40 +7,45 @@ The complete code extent is directly followed by a 28-entry destination
 table at 0x0046D895, then a 100-entry compact ID table at 0x0046D905;
 do not classify these tables as instruction bytes or CC padding.
 
-The natural C++ candidate Character10Effects.cpp began from the accepted
-Character08 structural skeleton; all cases after 0x193 are still
-experimental sibling scaffolding and are NOT accepted as Nayuki behavior.
-The opening and four Nayuki-specific effect states 0x190–0x193 were
-rewritten and reviewed against the original executable:
+The naturally authored workbench Character10Effects.cpp now has
+Nayuki-specific effect cases 0x190–0x196 reviewed against the
+canonical executable. Its contiguous reviewed opening is
+[0x00468870, 0x0046A44B), **7,131 original bytes / 1,603
+original instructions**, SHA-256
+b3c00d2a268e23974a725bd297f8cc906bd7530ee54a213feb9c4b519d7358d7.
 
-  [0x00468870, 0x00469ED3): 5,731 bytes / 1,293 original instructions
-  SHA-256: 0699fb618eea6325b68ee8e58a6e35dffed7632b616f3dad80bcb988ce613d9d
-
-Reproduce ONLY the selected native prefix audit:
+Reproduce ONLY the selected native prefix:
 
     scripts/repo-python workbench/nayuki-effects/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all 1,293 original
-instruction forms except the as-yet-incomplete stack allocation
-(0x348 candidate versus original 0x1D4). Every instruction has the
-same original offset and byte width over the compared range. The
-checker verifies 77 internal original branch targets, 11 valid original
-outbound targets, and 73 original-bound non-switch COFF relocation fields,
-including full IEEE-754 literal payloads and four reviewed call targets.
-The two switch-table relocations are separately identified, and the
-first four canonical switch targets are verified from original table
-bytes. The candidate switch table for unreviewed later cases and its
-entire remaining owner are NOT accepted as exact.
+Pinned native VC7.1 /Od /G6 /MT /Gy /W3 produces 1,603
+same-offset, same-width original instruction forms;
+1,602 instruction forms and operands agree, with
+only the incomplete full-function stack frame
+0x34C candidate versus original 0x1D4. The checker
+verifies **92 original internal branch targets**,
+**14 canonical outbound branches** and **85 verified
+original-bound non-switch COFF relocations** over
+24 distinct original reference symbols. Two
+compiler-local switch-table relocations are independently
+identified (not accepted byte-exact), and the first
+seven original switch targets are checked against the
+canonical target's adjacent case tables.
 
-Reviewed source restores original 0x190 frame-5 particle generation,
-0x191 and 0x192 grounded bounce and ±60 position windows,
-0x193 field0084 collision permission and frame-6 backward transition,
-the original state-dependent particle velocity double constants,
-effect layer changes, frame clock, object retirement and group updates.
-The original x87 compare flags distinguish >0 from >=0 in the landing
-branches; no byte injection or inline assembler was used.
+Reviewed effects include original 0x190 frame5
+particle emission, 0x191/0x192 contact bounce and
+opposite-facing +/-60 impact windows, 0x193
+field0084 conditional bounce and frame6 rollback,
+0x194 cameraBounds.top - 40 clipping with x87
+operand order matching, 0x195 simple lifetime,
+and 0x196 tick30/frame5 vertical shake, subeffect
+0x199 and pending sound. Their original float
+constants and call destinations are verified.
 
-Continue at original 0x00469ED3, 0x194 effect handler. More than 14 KB,
-the true final 0x1D4 frame lifetime, complete switch table and all later
-relocations remain OPEN. This is a partial checkpoint, NOT whole-function
-Exact, game linkage or runtime acceptance. No all-unit cold replay.
+The entire source body AFTER case 0x196 is
+UNREVIEWED sibling-derived structural scaffolding.
+Continue at original 0x0046A44B, effect case 0x197.
+**13,386 original code bytes** plus full original
+stack lifetime, later jump-table layout and many
+relocations remain open. Not whole-function Exact,
+not a runtime/linkage claim. No full cold replay.

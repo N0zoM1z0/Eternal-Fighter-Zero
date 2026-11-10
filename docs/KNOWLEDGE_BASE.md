@@ -3022,51 +3022,51 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot07-effects-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot07: first 5,731 effect-boss bytes reviewed
+## Nayuki Character10 Slot07: reviewed 7,131-byte effects-boss prefix
 
-Nayuki original vtable Slot07 at 0x0078828C anchors
-[0x00468870,0x0046D895), **20,517 original code bytes**
-(whole original SHA-256:
-cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9).
-The original code is immediately followed by a 28-entry
-switch destination table at 0x0046D895 and a 100-byte
-compact switch index table at 0x0046D905. The table
-dispatches 27 active effect IDs between 0x190 and 0x1F3.
-These adjacent data tables are not part of the 20,517 code bytes.
+The original Nayuki vtable Slot07 at 0x0078828C
+anchors [0x00468870,0x0046D895), **20,517 original
+instruction bytes**, full SHA-256
+cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9.
+Its original 28-entry destination table at 0x0046D895
+and 100-byte compact switch index table at 0x0046D905
+are separate adjacent data, not code. There are
+27 active effect cases in the 0x190–0x1F3 range.
 
-The natural C++ in workbench/nayuki-effects/Character10Effects.cpp
-has its initial common effect-selection skeleton and native
-0x190/0x191/0x192/0x193 handlers reviewed:
-[0x00468870,0x00469ED3), **5,731 original
-bytes / 1,293 instructions**, prefix SHA-256
-0699fb618eea6325b68ee8e58a6e35dffed7632b616f3dad80bcb988ce613d9d.
-Nayuki-specific logic has been reconstructed for the
-0x190 frame-5 emission, 0x191/0x192 bounce events,
-direction-dependent ±60 collision windows, 0x193
-field0084 extra gate and frame-6 rollback, effect
-velocities, grouping, frame clocks and retirement.
-Original IEEE-754 doubles and strict x87 compare
-semantics were audited against the original executable.
+The natural C++ workbench/nayuki-effects/Character10Effects.cpp
+now reconstructs [0x00468870,0x0046A44B), **7,131
+original code bytes / 1,603 instructions**,
+canonical prefix SHA-256
+b3c00d2a268e23974a725bd297f8cc906bd7530ee54a213feb9c4b519d7358d7.
+Its selected native VC7.1 /Od /G6 /MT /Gy /W3
+audit verifies **1,602 matching original instruction
+forms plus the incomplete frame**, all original
+instruction byte widths and offsets, **92 internal
+jumps**, **14 canonical outbound branches**, and
+**85 original-bound non-switch COFF relocations**
+over 24 verified reference symbols. Both compiler-local
+switch-table relocation fields are separately recognized;
+seven original case destinations are verified from the
+canonical jump table.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates
-**1,292/1,293 identical normalized instruction forms**,
-the only differing form being the incomplete
-0x348 stack allocation versus the full original 0x1D4.
-All 1,293 instructions occupy their original offsets
-and retain their original widths. The focused
-workbench/nayuki-effects/check_prefix.py audits
-**77 in-prefix jumps**, **11 original outbound jumps**,
-**73 canonical non-switch COFF relocations** with exact
-call/float targets, and independently checks the two
-original local switch-table addresses and first four
-dispatch cases.
+The reconstructed Nayuki-specific effects 0x190–0x196
+include frame5 particle emission, 0x191/0x192 bounce,
+facing-dependent +/-60 proximity and gravity checks,
+0x193 field0084 collision permission and frame6
+rollback, 0x194 camera top clipping and action 0xFE
+position lock, 0x195 simple animation lifetime,
+and 0x196 frame5/tick30 Shake(5,0), child effect
+0x199 and sound initiation. Original literal bits,
+x87 compare semantics, effect layers and calls
+were audited independently.
 
-The remaining structural C++ was initially copied
-from another character solely as a compilable experiment
-and is explicitly unreviewed. **Not whole-function Exact:**
-14,786 more code bytes, complete original stack lifetime,
-switch table and later relocations remain open. No
-all-unit cold replay or runtime-equivalence claim.
+The candidate's stack allocation is currently
+0x34C, but original is 0x1D4. Source after 0x196
+remains deliberately unreviewed sibling scaffolding.
+Continue at **0x0046A44B** with case 0x197.
+**Not whole-function Exact:** 13,386 original
+code bytes, final stack, return, switch table and
+remaining relocations remain open. No full cold replay.
 
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 

@@ -1,4 +1,4 @@
-// Nayuki Character10::Slot07 native effect owner — structural trial, NOT reviewed.
+// Nayuki Character10::Slot07: reviewed partial native opening, later effects remain unreviewed sibling scaffolding.
 #include "../../src/CharacterViews.h"
 #include <cstdlib>
 #include <cmath>
@@ -244,102 +244,70 @@ void Character10::Slot07()
                 }
                 break;
             case 0x194:
-                if ((effects[i].frame == 0) &&
-                    (field315c[i] == 0)) {
-                    effects[i].vx = 2.0;
-                    effects[i].vy = 2.0;
-                    effects[i].field0084 = 4;
-                    ++field315c[i];
+                if (field0008 == 0xfe) {
+                    effects[i].x = positionX;
+                    effects[i].y = positionY;
+                } else {
+                    effects[i].vx = 1.7;
+                    effects[i].vy = -1.7;
                 }
-                if ((effects[i].frame == 1) &&
-                    (effects[i].tick == 0x5f)) {
-                    effects[i].group = 1;
-                }
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].frame == 0)) {
-                    effects[i].vx = 0.0;
-                    effects[i].vy = 0.0;
-                    effects[i].frame = 1;
-                    pendingContextSoundSlot = 4;
-                    effects[i].tick = 0;
+                if (effects[i].y <
+                    (double)(contextOwner->cameraBounds.top - 40)) {
+                    RemoveLocalEffect((short)i);
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame == 1) {
-                        effects[i].frame = 0;
-                    }
-                    if (effects[i].frame >= frameCount) {
-                        RemoveLocalEffect((short)i);
-                    }
+                    if (effects[i].frame >= frameCount)
+                        --effects[i].frame;
                 }
                 break;
             case 0x195:
-                field3148 = 1;
-                if (field0008 > 49 && field0008 < 150) {
-                    RemoveLocalEffect((short)i);
-                    field3148 = 0;
-                    break;
-                }
-                if (field315c[i] >= 520) {
-                    effects[i].type = 0x199;
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
-                    effects[i].frame = 0;
-                    effects[i].vx = 0.0;
-                    effects[i].vy = 0.0;
-                    effects[i].group = 2;
-                    effects[i].field0084 = 1;
-                    pendingCharacterSoundSlot = 5;
-                    field3148 = 0;
-                    break;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
                 }
-                effects[i].vx =
-                effects[i].vx +
-                effects[i].ax;
-                effects[i].vy =
-                effects[i].vy +
-                effects[i].ay;
-                if (effects[i].vx < -0.7) {
-                    effects[i].vx = -0.7;
-                } else if (effects[i].vx > 0.7) {
-                    effects[i].vx = 0.7;
+                break;
+            case 0x196:
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].vx = 0.3;
+                    effects[i].vy = -1.2;
+                    pendingCharacterSoundSlot = 0;
                 }
-                if (effects[i].vy < -0.4) {
-                    effects[i].vy = -0.4;
-                } else if (effects[i].vy > 0.4) {
-                    effects[i].vy = 0.4;
+                if (effects[i].frame == 0) {
+                    effects[i].vy += 0.045;
+                    if (effects[i].vy + effects[i].y > 0.0) {
+                        effects[i].y = 0.0;
+                        effects[i].vy = 0.0;
+                        effects[i].vx = 0.0;
+                        effects[i].frame = 1;
+                        effects[i].layer = 1;
+                    }
                 }
-                ++field315c[i];
-                if (effects[i].flag0048 != facing) {
-                    effects[i].vx =
-                    -effects[i].vx;
-                    effects[i].flag0048 = facing;
-                }
-                if (effects[i].x <= positionX) {
-                    effects[i].ax =
-                    (double)(int)facing * 0.01;
-                }
-                if (effects[i].x > positionX) {
-                    effects[i].ax =
-                    (double)(int)facing * -0.01;
-                }
-                if (effects[i].y <=
-                    positionY - 40.0) {
-                    effects[i].ay = 0.01;
-                }
-                if (effects[i].y > positionY - 40.0) {
-                    effects[i].ay = -0.01;
+                if (effects[i].frame == 5 && effects[i].tick == 30) {
+                    SetVerticalShake(5, 0);
+                    effect.type = 0x199;
+                    effect.x = (double)(int)effects[i].x;
+                    effect.y = (double)(int)effects[i].y;
+                    effect.flag0018 = facing;
+                    effect.group = 2;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
+                    pendingCharacterSoundSlot = 1;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
-                        effects[i].frame = 0;
-                    }
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
                 }
                 break;
             case 0x197:
