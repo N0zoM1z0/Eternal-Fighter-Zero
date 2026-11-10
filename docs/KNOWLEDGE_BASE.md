@@ -3028,6 +3028,49 @@ Whole-product linkage and runtime equivalence remain open.
 
 <a id="sayuri-lifecycle-and-delegates-exact"></a>
 
+<a id="sayuri-slot02-command-prefix"></a>
+
+## Sayuri Character09 Slot02: 2,019-byte reviewed command-boss opening
+
+Original Sayuri Character09 vtable slot02 at 0x00788140
+points directly to 0x004493C0. The complete natural-owner
+boundary [0x004493C0,0x0044AB2B) is 5,995 instruction
+bytes; the function ends with an original shared epilogue
+RET followed by five CC padding bytes. Whole-function
+original SHA-256:
+e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436.
+Boundary/origin review is independent from any codegen
+Exact acceptance.
+
+The natural C++ workbench
+workbench/sayuri-commands/Character09Commands.cpp
+now reconstructs the original contiguous
+[0x004493C0,0x00449BA3), **2,019 original bytes /
+607 x86 instructions**, with canonical prefix SHA-256
+5c06b95f6afa3c924b9255dc94cd3be8709e3845e373f429c9591b073e4aa742.
+It implements four separate priority-ordered circular
+input-history scans (command 0x62, 0xAA, 0xA0 and
+0x64 families), preserving all original 180-frame
+wrapping, state phases, meter and facing conditions.
+
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 2,023
+bytes, 610 instructions including its temporary
+return. **607/607 original prefix instruction forms
+and operands match**; the 80 in-prefix branches
+agree by destination instruction ordinal, while
+seven outbound branch targets are valid original
+boundaries beyond the reviewed segment. All four
+COFF relocations match original IEEE-754 zero-double
+bits at 0x007872F8. The focused checker is
+workbench/sayuri-commands/check_prefix.py.
+
+Next source owner block is original 0x00449BA3,
+the 0x6E six-stage meter command scan.
+**Not complete Exact**: 3,976 code bytes,
+the rest of the command dispatcher, original
+shared exit and complete relocation closure
+remain open. No full cold replay was run.
+
 ## Sayuri Character09 native lifecycle: ResetPose and InitializeState exact
 
 Two newly authored lifecycle functions are recovered from the
