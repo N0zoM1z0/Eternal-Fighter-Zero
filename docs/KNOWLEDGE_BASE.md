@@ -2096,23 +2096,23 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 7,325-byte native-source prefix
+## Nagamori Slot05 CPU boss: 8,213-byte native-source prefix
 
 The original 15,292-byte Nagamori virtual Slot05 owner is
 [0x004B2AC0,0x004B667C). Its natural C++ workbench now covers
-[0x004B2AC0,0x004B475D): **7,325 original instruction bytes /
-1,909 instructions**, SHA-256
-3da33c37a348518b0680252be3ca43a36cba72881fb11490952f96e90635f85a.
+[0x004B2AC0,0x004B4AD5): **8,213 original instruction bytes /
+2,120 instructions**, SHA-256
+1ca08326f2aa05578177d2edb456da8bdcbf7369a9691bc025753152c5413509.
 
 The selected pinned VC7.1 /Od /G6 /MT /Gy /W3 profile
-compiles the partial source to 7,321 bytes / 1,911 instructions
-including a temporary shared-exit substitute, with 136 COFF
-relocations. The first **1,907 of 1,908 comparable original
+compiles the partial source to 8,206 bytes / 2,122 instructions
+including a temporary shared-exit substitute, with 150 COFF
+relocations. The first **2,118 of 2,119 comparable original
 instruction forms/operands** agree with direct branch/call
 destinations and FP constant addresses normalized. Its incomplete
-stack frame is 0xBC rather than the original 0xE8. The final
+stack frame is 0xC0 rather than the original 0xE8. The final
 original prefix instruction is a jump to the full shared exit.
-The focused checker independently verifies **239 intra-prefix
+The focused checker independently verifies **276 intra-prefix
 branch targets by original and compiled instruction ordinal**.
 The original 0x004B3172 near-branch correctly skips both attack
 choices; this semantic detail was previously lost in a form-only
@@ -2123,20 +2123,20 @@ aerial startup/reaction logic, AI state 4..11 steering and special
 command 0x34. The 0x004B3FB6 collision-follow-up group checks
 attackCollisionResult, hitstopFrames, state exclusions and a
 float 25.0f chance; it samples a 0..1000 decision and then selects
-separate response trees for actions 0xC8, 0xC9 and now 0xCA. The
+separate response trees for actions 0xC8, 0xC9, 0xCA and now 0xCB. The
 0xCA tree chooses attack buttons, short/medium distance commands,
 state 4 movement and state 1/6/8 transitions from bounded random
 rolls. The state-0xCA command generator multiplies a Boolean
 float-meter permission by a Boolean RandomRange result and
 produces the original x87 and integer instruction sequence.
-Preserve the nonzero final random branch's fall-through into
+The newly recovered 0xCB branch additionally gates command 0x14,\n0x1F, 0x34, 0x48, the random 0x0A/0x0C and 0x64/0x66,\n0x6E/0x70 families by the exact roll intervals, opponent\nheight, meter and distance checks. Its Boolean meter permission\nmultiplies a random-zero test; VC7.1 reproduces the original\nstack word and integer operations naturally.\nPreserve the nonzero final random branch's fall-through into
 later action checks: an unconditional return would change control
 flow. The 25.0f chance uses field00a8 * 25.0f (not the
 reversed multiplicands) to reproduce the original load ordering.
 
-Continue at 0x004B475D (action 0xCB). Run only
+Continue at 0x004B4AD5 (action 0xCC). Run only
 workbench/nagamori-cpu/check_prefix.py for partial diagnostic
-comparison. **Not full-function Exact**: the remaining 7,967 bytes,
+comparison. **Not full-function Exact**: the remaining 7,079 bytes,
 shared exit, full stack lifetime, original relocations and native
 product closure remain open. No full cold replay is appropriate yet.
 
