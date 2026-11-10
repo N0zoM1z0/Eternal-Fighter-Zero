@@ -412,3 +412,4 @@ address,end,size,status,evidence
 0x00461440,0x00461453,19,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00464180,0x0046418B,11,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00464190,0x004641BF,47,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
+0x004641C0,0x0046549B,4827,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot02-command-reviewed-prefix

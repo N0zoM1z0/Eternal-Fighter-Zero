@@ -228,7 +228,7 @@ address,origin,status,evidence
 0x00463DD0,unknown,unreviewed,
 0x00464180,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00464190,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
-0x004641C0,unknown,unreviewed,
+0x004641C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot02-command-reviewed-prefix
 0x004654A0,unknown,unreviewed,
 0x00468870,unknown,unreviewed,
 0x0046D970,unknown,unreviewed,

@@ -2982,6 +2982,48 @@ runtime behavior remain open.
 
 <a id="nayuki-lifecycle-and-virtual-leaves-exact"></a>
 
+<a id="nayuki-slot02-command-reviewed-prefix"></a>
+
+## Nayuki Character10 Slot02: 3,347-byte reviewed command-boss opening
+
+Original Nayuki vtable slot02 at 0x00788278 anchors the
+4,827-byte code owner [0x004641C0,0x0046549B),
+with five CC alignment bytes. Canonical owner SHA-256:
+0fed5a3c7f5af912bee361dd49a78286b10d147ef9ec10589627b5785213d6c6.
+Reviewed ownership/boundary does not imply full Exact.
+
+The natural C++ candidate in
+workbench/nayuki-commands/Character10Commands.cpp
+reconstructs [0x004641C0,0x00464ED3),
+**3,347 original bytes / 984 x86 instructions**,
+prefix SHA-256
+a16fce268f4681f9e6e96b650ab8d212ee5fdef05c5aa3e5b2f13bdfc0df0ecf.
+Eight original priority scans are recovered: 0x6E,
+0x64, 0x61, 0x46, 0x14, 0x0A, 0x28, 0x1E.
+They preserve the original circular 180-frame
+history, staged facing tests and meter conditions.
+Nayuki 0x61 requires a dedicated 0x40 button
+and exactly 3000 meter. The first two scans
+reverse their direction formulas, and Nayuki's
+0x28 stage does not require Sayuri's airborne check.
+
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates
+3,352 bytes / 988 instructions including a
+temporary stage reset and return. All **984/984
+comparable original instruction forms and operands**
+agree; **115 in-prefix branch destinations** and
+**16 canonical outbound jump targets** are verified
+by the focused check_prefix.py. There are zero
+COFF relocations in this reviewed opening.
+One near jump shortens due to the still-absent
+original complete shared return.
+
+Continue at original 0x00464ED3 (short button
+and final direction inputs). **Not full Exact**:
+1,480 original instruction bytes remain, with
+the full shared return still to reconstruct.
+No all-unit cold replay was run.
+
 ## Nayuki Character10 lifecycle and virtual delegates: six strict Exact owners
 
 Character10/Nayuki original vtable 0x00788270 confirms six
