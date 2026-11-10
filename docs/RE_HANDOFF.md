@@ -520,17 +520,18 @@ relocations at `0x007872F8` and no byte differences. Selected
 `workbench/nagamori-command/` and per-scan bounds remain historical
 and are superseded by the whole-owner result. No full cold replay.
 
-## Nagamori Slot05 CPU boss: new source-based opening prefix
+## Nagamori Slot05 CPU boss: 2,517-byte natural-source prefix
 
-Original `Character06::Slot05` is now reviewed at
-`[0x004B2AC0,0x004B667C)` (**15,292 bytes**). The newly written
-`workbench/nagamori-cpu/Character06Cpu.cpp` reconstructs the first
-**1,827 original bytes / 502 x86 positions**, matching 501 forms under
-focused VC7.1 comparison. Only the incomplete prologue stack size
-differs; Nagamori's original first random attack threshold is 3.0f,
-not Misaki's 2.0f. Continue from the next original branch at
-`0x004B31E8`; the remaining large CPU decision tree is open.
-Run `scripts/repo-python workbench/nagamori-cpu/check_prefix.py`.
+Original `Character06::Slot05` at `0x004B2AC0` is an open
+**15,292-byte** CPU boss. Its isolated source
+`workbench/nagamori-cpu/Character06Cpu.cpp` now covers the first
+**2,517 original bytes / 689 instruction positions**; 688 forms
+match focused VC7.1, with only the incomplete stack-frame instruction
+different. It recovers original 3x close-range aggression,
+0x0C/0x48/random 0x14-or-0x16 choices and distinct 0x65/0x66 meter
+tiers. Continue at original `0x004B349A` and check only the named TU
+with `scripts/repo-python workbench/nagamori-cpu/check_prefix.py`.
+No full-owner Exact credit or cold replay.
 
 ## Newly accepted major boss: Nagamori full Slot04 action selector
 

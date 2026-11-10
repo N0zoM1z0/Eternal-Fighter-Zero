@@ -100,6 +100,41 @@ void Character06::Slot05()
             inputX = 0;
             return;
         }
+        if (distance.forward > 60.0 && distance.forward < 120.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
+            buttonPulse[0] = 3;
+            inputY = 1;
+            return;
+        }
+    }
+    if (field0008 == 0xa8 || field0008 == 0xa9) {
+        if (distance.forward < 100.0) {
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
+                field0118 > 500.0) {
+                recognizedCommand = 0x0c;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) <
+                field00a8 * 3.0f + (float)((field0118 > 500.0 ? 1 : 0) << 1)) {
+                recognizedCommand = 0x48;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) <
+                field00a8 * 3.0f + (float)((field0118 > 500.0 ? 1 : 0) << 1)) {
+                recognizedCommand = ((unsigned short)RandomRange(0, 1) == 1) * 2 + 0x14;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
+                distance.forward < 60.0 && meter >= 2000) {
+                recognizedCommand = 0x65;
+                return;
+            }
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
+                distance.forward < 150.0 && meter == 3000) {
+                recognizedCommand = 0x66;
+                return;
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }

@@ -14,7 +14,7 @@ from common import verify_target, target_bytes
 from coff import object_function
 from native_build import compile_source
 
-START, END = 0x004B2AC0, 0x004B31E3
+START, END = 0x004B2AC0, 0x004B3495
 SOURCE = ROOT / 'workbench/nagamori-cpu/Character06Cpu.cpp'
 OBJECT = ROOT / 'build/nagamori-cpu/Character06Cpu.partial.obj'
 
@@ -45,14 +45,14 @@ def main():
     code, relocs = object_function(OBJECT, '?Slot05@Character06@@UAEXXZ')
     target = instructions(original, ROOT / 'build/nagamori-cpu/target-prefix.bin')
     built = instructions(code, ROOT / 'build/nagamori-cpu/draft-prefix.bin')
-    assert len(original) == 1827 and len(target) == 502
-    assert len(code) == 1820 and len(built) == 505 and len(relocs) == 30
-    assert target[2] == 'sub    esp,0xe8' and built[2] == 'sub    esp,0x60'
+    assert len(original) == 2517 and len(target) == 689
+    assert len(code) == 2514 and len(built) == 692 and len(relocs) == 51
+    assert target[2] == 'sub    esp,0xe8' and built[2] == 'sub    esp,0x88'
     assert all(t == b for i, (t, b) in enumerate(zip(target, built)) if i != 2)
     assert built[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori Slot05 original opening: 501/502 instruction forms match')
-    print('Original 1827-byte prefix; 15292-byte whole owner remains incomplete')
-    print('Stack: target sub esp,0xE8; partial sub esp,0x60 (remaining original locals absent)')
+    print('Nagamori Slot05 original opening: 688/689 instruction forms match')
+    print('Original 2517-byte prefix; 15292-byte whole owner remains incomplete')
+    print('Stack: target sub esp,0xE8; partial sub esp,0x88 (remaining original locals absent)')
     print('Prefix SHA256:', hashlib.sha256(original).hexdigest())
 
 

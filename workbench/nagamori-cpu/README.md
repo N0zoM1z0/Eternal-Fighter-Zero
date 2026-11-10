@@ -1,40 +1,39 @@
-# Nagamori CPU decision boss — original Slot05 (partial)
+# Nagamori Slot05 CPU boss — partial natural C++
 
-Nagamori's original virtual slot 5 at `0x00788410` points to
-`Character06::Slot05` at `0x004B2AC0`. The complete original
-function occupies `[0x004B2AC0,0x004B667C)`, **15,292 bytes**,
-followed by four `CC` alignment bytes. Its full original SHA-256 is
-`14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
+The original virtual slot 5 at `0x00788410` points to
+`Character06::Slot05` at `[0x004B2AC0,0x004B667C)`, **15,292 bytes**.
+Four `CC` bytes follow the original return. The complete original
+SHA-256 is `14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
 
-`Character06Cpu.cpp` is a **natural C++ source draft**, not a selected
-whole-function Exact. It implements the verified opening command reset,
-CPU directional countdowns, button clearing, random guard choices,
-opponent distance calculations, first attack-selection guards, and the
-first close-range follow-ups. Its source form originated as a comparison
-hypothesis using Misaki's already accepted CPU source, but was checked
-against **Nagamori's own executable** and corrected: the first
-close-range random threshold uses `field00a8 * 3.0f` (original x87
-`fmul dword ptr [0x787ee8]`), not Misaki's multiplier 2.
+`Character06Cpu.cpp` reconstructs the original opening AI decisions,
+including CPU movement counters, input clearing, random guard choices,
+opponent-distance calculation, short-range reactions and meter attacks.
+It was initially shaped using another exact character's CPU source,
+but Nagamori's own target disassembly forced the corrections below.
 
-The canonical original opening `[0x004B2AC0,0x004B31E3)` spans
-**1,827 bytes and 502 x86 instructions**. Its first 501 instruction
-forms and operands match the pinned VC7.1 draft with only numeric
-branch/call destinations and external constant operands normalized.
-The remaining position is the prologue frame allocation:
-`sub esp,0xE8` in the full original versus `sub esp,0x60` in this
-truncated translation unit, whose subsequent AI locals are absent.
-The compiled partial body has 1,820 bytes and a temporary return;
-this is **not byte-level/full-function Exact**.
+The canonical original prefix `[0x004B2AC0,0x004B3495)` is
+**2,517 bytes / 689 instructions**. A focused pinned VC7.1 build
+reproduces **688 of 689 original instruction forms and operands**
+after normalizing numeric jump/call targets and external constants.
+Only the prologue allocation differs (`sub esp,0xE8` original versus
+`sub esp,0x88` partial), because later local variables are missing.
+The partial object is **2,514 bytes** and ends in a temporary return.
+It is NOT a full-function Exact owner.
 
-Focused check (compiles only this TU):
+Target-derived differences include a 3.0f rather than 2.0f CPU
+aggression multiplier, the original `buttonPulse[0] = 3` for forward
+range 60–120, an `0x0C` branch, an `0x48` branch with a two-point
+bonus when `field0118 > 500.0`, a randomized `0x14/0x16` action, and
+`0x65`/`0x66` commands gated by 2000/3000 meter and distance ceilings
+60/150. The 150.0 double is verified at original `0x00787EF0`.
+
+Run only this affected translation unit:
 
 ```bash
 scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 ```
 
-The next original instruction at `0x004B31E3` branches to the shared
-function exit. The next unimplemented path starts at `0x004B31E8`.
-Continue by independently deriving Nagamori's conditions rather than
-assuming the sibling's remaining 15KB behavior is correct. A rejected
-complete sibling-source hypothesis is retained privately in
-`.analysis/probes/nagamori-slot05-sibling-candidate.cpp` for comparison.
+The next original decision begins at `0x004B349A`. The separately
+rejected sibling-derived full-function hypothesis remains in private
+`.analysis/probes/nagamori-slot05-sibling-candidate.cpp`. Continue
+checking Nagamori against its own disassembly; no full cold replay.

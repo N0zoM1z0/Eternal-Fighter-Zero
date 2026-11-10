@@ -2240,24 +2240,25 @@ Earlier first-eight-scan investigation remains available in
 `workbench/nagamori-command/`, with individual scan extents in
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
 
-## Nagamori Slot05 CPU decision prefix: 1,827 original bytes verified
+## Nagamori Slot05 CPU decision prefix: 2,517 original bytes verified
 
-Original Nagamori vtable slot 5 (`0x00788410`) points to the
-**15,292-byte** CPU input function `[0x004B2AC0,0x004B667C)`, followed
-by four `CC` bytes. Its original SHA-256 is
-`14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
-An isolated normal C++ workbench source at
-`workbench/nagamori-cpu/Character06Cpu.cpp` reconstructs the opening
-CPU guards and close-range reactions. Its first **1,827 original
-bytes / 502 instruction positions** have been compared to pinned
-VC7.1: 501 opcode/operand forms match, after normalizing numeric
-branch/call destinations and external FP constants. The lone prologue
-frame allocation differs (`0xE8` target vs `0x60` partial) because
-subsequent local variables have not been implemented. One original
-Nagamori-specific multiplier is **3.0f**, verified at
-`0x004B306E`, rather than the sibling's factor 2. This boss is
-**not whole-function Exact**. The focused check and investigative
-notes are under `workbench/nagamori-cpu/`.
+Nagamori vtable slot 5 (`0x00788410`) points to the original
+**15,292-byte** `Character06::Slot05` owner
+`[0x004B2AC0,0x004B667C)`. Its first **2,517 bytes / 689 instruction
+positions** now have natural C++ in `workbench/nagamori-cpu/`.
+Under focused VC7.1, 688 original opcode/operand forms match after
+normalizing numeric branch/direct-call addresses and original FP
+constant addresses. Only the incomplete prologue stack allocation
+differs (`0xE8` original versus `0x88` partial).
+
+The source corrects a sibling-derived 2x CPU aggression multiplier to
+Nagamori's original 3x, restores the 60–120-range button-0 action,
+and reconstructs 0x0C/0x48/random 0x14-or-0x16 plus 0x65/0x66
+meter-gated decisions. The 0x66 command requires meter 3000 and
+forward range below **150.0** (literal at `0x00787EF0`). This CPU
+boss is not whole-function Exact. The next original block starts at
+`0x004B349A`; focused reproducer is
+`workbench/nagamori-cpu/check_prefix.py`.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
