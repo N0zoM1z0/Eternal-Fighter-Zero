@@ -86,25 +86,27 @@ void Character06::Slot05()
                 return;
             }
         }
-        if ((((((*opponentSlot)->field0008 == 0xc9) ||
-            ((*opponentSlot)->field0008 == 0xca)) ||
-            ((*opponentSlot)->field0008 == 0xcd)) &&
-            ((((*opponentSlot)->field0008 < 0xfa &&
-            ((*opponentSlot)->positionY == 0.0)) &&
-            (((*opponentSlot)->remainingHitCount == 0 &&
-            ((distance.forward > 60.0 && (distance.forward < 80.0)))))))) &&
-            (
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f)) {
-            buttonPulse[1] = 1;
-            inputY = 1;
-            inputX = 0;
-            return;
-        }
-        if (distance.forward > 60.0 && distance.forward < 120.0 &&
-            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
-            buttonPulse[0] = 3;
-            inputY = 1;
-            return;
+        // Both choices share the opponent-state/grounded/no-hit guard.
+        // The original 0x004B3172 branch skips *both* attempts on failure.
+        if (((*opponentSlot)->field0008 == 0xc9 ||
+              (*opponentSlot)->field0008 == 0xca ||
+              (*opponentSlot)->field0008 == 0xcd) &&
+            (*opponentSlot)->field0008 < 0xfa &&
+            (*opponentSlot)->positionY == 0.0 &&
+            (*opponentSlot)->remainingHitCount == 0) {
+            if (distance.forward > 60.0 && distance.forward < 80.0 &&
+                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) {
+                buttonPulse[1] = 1;
+                inputY = 1;
+                inputX = 0;
+                return;
+            }
+            if (distance.forward > 60.0 && distance.forward < 120.0 &&
+                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
+                buttonPulse[0] = 3;
+                inputY = 1;
+                return;
+            }
         }
     }
     if (field0008 == 0xa8 || field0008 == 0xa9) {
@@ -192,6 +194,63 @@ void Character06::Slot05()
             recognizedCommand = 0x16;
             return;
         }
+    }
+    // Opponent aerial-state command selection, original 0x004B3891 onward.
+    if (((*opponentSlot)->field0008 == 0xa8 ||
+         (*opponentSlot)->field0008 == 0xa9 ||
+         (*opponentSlot)->field0008 == 0xaa) &&
+        positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8 &&
+        field3114 != 2 && (*opponentSlot)->hitstunFrames == 0) {
+        field3110 = (unsigned short)RandomRange(0, 100);
+        if (field3110 < 3 && field0118 > 500.0) {
+            recognizedCommand = 0x48;
+            return;
+        }
+        if (field3110 < 7 && field0118 > 500.0) {
+            recognizedCommand = 0x0c;
+            return;
+        }
+        if (field3110 < 10 && field0118 > 500.0) {
+            recognizedCommand = 0x14;
+            return;
+        }
+        if (field3110 < 13 && field0118 > 500.0) {
+            recognizedCommand = 0x16;
+            return;
+        }
+        if (field3110 < 17 && field3110 > 12 && meter >= 2000) {
+            recognizedCommand = (unsigned short)RandomRange(0, 1) + 0x65;
+            return;
+        }
+    }
+    // While airborne, the same opponent action states can prompt a change
+    // of CPU state or a close-range 0x16 command (0x004B3A75 onward).
+    if (((*opponentSlot)->field0008 == 0xa8 ||
+         (*opponentSlot)->field0008 == 0xa9 ||
+         (*opponentSlot)->field0008 == 0xaa) &&
+        positionY < 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 15.0f * field00a8 &&
+        field3114 != 2 && (*opponentSlot)->hitstunFrames == 0) {
+        field3110 = (unsigned short)RandomRange(0, 100);
+        if (field3110 < 20) {
+            field3114 = 2;
+            return;
+        }
+        if (distance.forward < 100.0 && field3110 < 22) {
+            recognizedCommand = 0x16;
+            return;
+        }
+    }
+    // Meter/air-combo special command when the opponent is in 150..156.
+    if ((field0118 > 500.0 || field0120 > 0) &&
+        (float)(unsigned short)RandomRange(0, 100) < 8.0f * field00a8 &&
+        (*opponentSlot)->field0008 > 0x95 &&
+        (*opponentSlot)->field0008 < 0x9d &&
+        (field0008 == 0xfa || field0008 == 0xfb || field0008 == 0xfc ||
+         field0008 == 0x10e || field0008 == 0x10f || field0008 == 0x110)) {
+        recognizedCommand = 0x34;
+        return;
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }

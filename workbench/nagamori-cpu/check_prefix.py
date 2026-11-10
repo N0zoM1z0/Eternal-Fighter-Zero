@@ -14,28 +14,62 @@ from common import verify_target, target_bytes
 from coff import object_function
 from native_build import compile_source
 
-START, END = 0x004B2AC0, 0x004B3891
+START, END = 0x004B2AC0, 0x004B3A75
 SOURCE = ROOT / 'workbench/nagamori-cpu/Character06Cpu.cpp'
 OBJECT = ROOT / 'build/nagamori-cpu/Character06Cpu.partial.obj'
 
 
 def instructions(data, path):
+    """Original/candidate disassembly retaining branch edges as well as forms."""
     path.write_bytes(data)
     result = subprocess.run([
         'objdump', '-D', '-b', 'binary', '-m', 'i386', '-Mintel',
         '--adjust-vma=' + hex(START), str(path)],
         capture_output=True, check=True, text=True).stdout
     parsed = []
+    edges = {}
     for line in result.splitlines():
         match = re.match(r'^\s*([0-9a-f]+):\s+(?:[0-9a-f]{2}\s+)+\s*\t(.+)', line)
-        if match:
-            op = match[2]
-            op = re.sub(r'\b(j\w+)\s+(?:0x)?[0-9a-f]+', r'\1 DEST', op)
-            op = re.sub(r'\bcall\s+(?:0x)?[0-9a-f]+', 'call TARGET', op)
-            op = re.sub(r'(QWORD|DWORD) PTR ds:0x[0-9a-f]+',
-                        r'\1 PTR ds:CONST', op)
-            parsed.append(op)
-    return parsed
+        if not match:
+            continue
+        addr = int(match[1], 16)
+        op = match[2]
+        branch = re.match(r'^(j\w+)\s+(?:0x)?([0-9a-f]+)\b', op)
+        if branch:
+            edges[addr] = int(branch[2], 16)
+        op = re.sub(r'\b(j\w+)\s+(?:0x)?[0-9a-f]+', r'\1 DEST', op)
+        op = re.sub(r'\bcall\s+(?:0x)?[0-9a-f]+', 'call TARGET', op)
+        op = re.sub(r'(QWORD|DWORD) PTR ds:0x[0-9a-f]+',
+                    r'\1 PTR ds:CONST', op)
+        parsed.append((addr, op))
+    return parsed, edges
+
+
+def verify_internal_branches(target, candidate, original_edges, built_edges):
+    """Check destinations by instruction ordinal, allowing size shifts.
+
+    Target branches beyond the recovered prefix intentionally have no verified
+    candidate destination: they can point to the unreconstructed shared exit.
+    """
+    target_index = {address: i for i, (address, _) in enumerate(target)}
+    candidate_index = {address: i for i, (address, _) in enumerate(candidate)}
+    checked = 0
+    for i, (address, _) in enumerate(target[:-1]):
+        destination = original_edges.get(address)
+        target_ordinal = target_index.get(destination)
+        if target_ordinal is None or target_ordinal >= len(target) - 1:
+            continue
+        draft_addr = candidate[i][0]
+        draft_target = built_edges.get(draft_addr)
+        draft_ordinal = candidate_index.get(draft_target)
+        if draft_ordinal != target_ordinal:
+            raise AssertionError(
+                f'branch at source instruction {i}, original {address:#x} '
+                f'jumped to instruction {target_ordinal}, but draft '
+                f'{draft_addr:#x} jumped to {draft_ordinal}')
+        checked += 1
+    assert checked >= 100, checked
+    return checked
 
 
 def main():
@@ -43,25 +77,34 @@ def main():
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/nagamori-cpu-workbench.log')
     code, relocs = object_function(OBJECT, '?Slot05@Character06@@UAEXXZ')
-    target = instructions(original, ROOT / 'build/nagamori-cpu/target-prefix.bin')
-    built = instructions(code, ROOT / 'build/nagamori-cpu/draft-prefix.bin')
-    # The complete target owner ends at 0x4B667C. This is a deliberately
-    # partial native source; only the audited opening range can match.
-    assert len(original) == 3537 and len(target) == 974
-    assert len(code) == 3529 and len(built) == 976 and len(relocs) == 86
-    assert target[2] == 'sub    esp,0xe8' and built[2] == 'sub    esp,0xa8'
+    target_records, original_edges = instructions(original, ROOT / 'build/nagamori-cpu/target-prefix.bin')
+    built_records, built_edges = instructions(code, ROOT / 'build/nagamori-cpu/draft-prefix.bin')
+    target = [op for _, op in target_records]
+    built = [op for _, op in built_records]
+    # The target prefix is stable even when additional, still-incomplete
+    # source branches are appended. Only its aligned original instructions
+    # and in-prefix control-flow edges are audited.
+    assert len(original) == 4021 and len(target) == 1096
+    assert len(code) > 4021 and len(built) > len(target) and len(relocs) >= 86
+    assert target[2] == 'sub    esp,0xe8'
+    assert built[2].startswith('sub    esp,0x')
     assert all(t == b for i, (t, b) in
-               enumerate(zip(target[:-1], built[:-3])) if i != 2)
+               enumerate(zip(target, built)) if i != 2)
+    edges = verify_internal_branches(target_records, built_records, original_edges, built_edges)
+    # Catch the previous bug: both attack choices must be covered by this
+    # six-byte near JNZ, not a short jump into the second choice.
+    assert original[0x6b2:0x6b4] == code[0x6b2:0x6b4] == bytes.fromhex('0f 85')
     assert target[-1] == 'jmp DEST'
     assert built[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori Slot05 original opening: 972/973 aligned instruction')
-    print('forms and operands match (normalizing branch/call destinations')
-    print('and original FP constant addresses); final target JMP absent')
-    print('because the candidate is a partial owner.')
-    print('Original reviewed 3537-byte prefix / 974 instructions;')
-    print('compiled candidate 3529 bytes / 976 incl. temporary epilogue;')
-    print('15,292-byte whole owner remains incomplete.')
-    print('Stack: target sub esp,0xE8; partial sub esp,0xA8.')
+    print('Nagamori Slot05 original opening: 1095/1096 aligned instruction')
+    print('forms and operands match, normalizing direct call/branch targets')
+    print('and original FP constant addresses. Only the unfinished stack')
+    print('allocation differs. This is NOT complete-function Exact.')
+    print('Internal branch destinations verified:', edges)
+    print('Original prefix: 4021 bytes / 1096 instructions.')
+    print('Partial compiled owner:',len(code),'bytes /',len(built),'instructions,',
+          len(relocs),'COFF relocations; target whole owner is 15292 bytes.')
+    print('Stack: original 0xE8, candidate',built[2])
     print('Original prefix SHA256:', hashlib.sha256(original).hexdigest())
 
 
