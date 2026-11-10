@@ -640,6 +640,83 @@ void Character06::Slot05()
                 return;
             }
         }
+        // Action 0xCF: close-range follow-ups without changing vertical
+        // input on the first two choices.
+        if (field0008 == 0xcf) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                return;
+            }
+            if (distance.forward < 60.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                return;
+            }
+            if (distance.forward < 125.0 &&
+                field3110 > 399 && field3110 < 700) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 4) == 0) field3114 = 3;
+                return;
+            }
+        }
+        // Action 0xD0: short hit-confirm windows, an optional meter special,
+        // and later movement/CPU-state fallbacks.
+        if (field0008 == 0xd0) {
+            if (field3110 < 20 && attackCollisionResult == 3 &&
+                (*opponentSlot)->positionY < 0.0) {
+                recognizedCommand = 0x14;
+                return;
+            }
+            if (field3110 > 20 && field3110 < 60 &&
+                attackCollisionResult == 3 &&
+                (*opponentSlot)->positionY < 0.0) {
+                recognizedCommand = 0x1f;
+                return;
+            }
+            if (field3110 > 60 && field3110 < 80 && meter >= 1000 &&
+                (*opponentSlot)->positionY < 0.0) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                return;
+            }
+            if (field3110 > 80 && field3110 < 300) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 > 950) {
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 3;
+                return;
+            }
+        }
+        // Action 0xD1: related short windows, but no meter branch.
+        if (field0008 == 0xd1) {
+            if (field3110 < 20 && attackCollisionResult == 3 &&
+                (*opponentSlot)->positionY < 0.0) {
+                recognizedCommand = 0x14;
+                return;
+            }
+            if (field3110 > 20 && field3110 < 90 &&
+                attackCollisionResult == 3 &&
+                (*opponentSlot)->positionY < 0.0) {
+                recognizedCommand = 0x1f;
+                return;
+            }
+            if (field3110 > 950) {
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 3;
+                return;
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }

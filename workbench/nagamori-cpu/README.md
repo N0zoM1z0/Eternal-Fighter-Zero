@@ -11,30 +11,30 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed original prefix [0x004B2AC0,0x004B5163) spans
-**9,891 bytes / 2,523 instructions**, canonical SHA-256
-84b29c132a73c4f8a2ef6e24b8c6ad6aebad1edc8ee677cda0e82f338899e65f.
+The reviewed original contiguous prefix
+[0x004B2AC0,0x004B54CF) contains **10,767 bytes and
+2,737 instructions**, SHA-256
+077793f37f1408d598ced341ccd23fba753fabb486116aa75840d8029c786303.
 
-Selected pinned VC7.1 emits a **9,887-byte partial candidate**
-(2,525 instructions including temporary return, 178 relocations).
-**2,521 / 2,522** comparable forms agree after normalizing
-branch/call destinations and floating-point literal addresses;
-the incomplete stack frame is 0xC4 versus original 0xE8.
-All **335 internal jump destinations** and **112 IEEE-754 literal
-payloads** match their original instruction/relocation counterparts.
+Selected pinned VC7.1 emits a **10,760-byte partial COFF
+function** (2,739 instructions including temporary epilogue,
+190 relocations). **2,735 / 2,736 comparable forms** agree,
+with incomplete stack frame 0xC4 instead of original 0xE8.
+The final original instruction jumps to the shared exit.
+The diagnostic checks **373 internal branch destinations**
+and **120 IEEE-754 literal payloads** against the original.
 
-The source now covers the ordered collision-reaction decision
-trees for actions 0xC8 through 0xCE, along with the earlier
-defense, movement and CPU state 4..11 logic. The 0xCE branch
-adds distinct meter, distance and random intervals and the
-state 1/6/8 transition. The original near branch at
-0x004B3172 correctly skips both guarded attacks. Normalized
-instruction agreement does not establish complete byte-exactness.
+This source now implements the recovered defensive, movement,
+CPU state 4..11 and collision-follow-up action 0xC8..0xD1
+decisions. New 0xCF / 0xD0 / 0xD1 groups cover conditional
+command selection, meter gates, jump/button responses and
+horizontal steering, preserving priority and return placement.
 
-Only build/audit this active workbench TU:
+Compile/test only this TU:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-Continue at 0x004B5163 (action 0xCF). **Do not register Exact**:
-5,401 target bytes, the full stack frame/shared exit and complete
-target-bound relocation comparison are still open.
+Continue at original 0x004B54CF (action 0xE7). This is
+**not strict Exact**; the remaining 4,525 target bytes,
+shared exit, full frame and target-bound relocations are
+still unfinished.
