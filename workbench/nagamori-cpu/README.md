@@ -11,35 +11,37 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed opening prefix [0x004B2AC0,0x004B4AD5)
-contains **8,213 original bytes / 2,120 instructions**. Original
-SHA-256 is
-1ca08326f2aa05578177d2edb456da8bdcbf7369a9691bc025753152c5413509.
+The reviewed original prefix [0x004B2AC0,0x004B4C8B) is
+**8,651 bytes / 2,224 instructions**, with SHA-256
+f64663ffc6f842806f5e6d9053f4ba4400c0a38ae4fadd6f69dd8dbb2a2e6475.
 
-Pinned VC7.1 builds a **8,206-byte partial COFF function** with
-2,122 instructions (including its temporary epilogue) and 150
-relocations. Of the first 2,119 comparable target instruction
-forms/operands, **2,118 match** with branch/call destinations and
-floating constants normalized; the incomplete stack frame is 0xBC
-rather than target 0xE8. The final target instruction jumps into
-the not-yet-reconstructed shared exit. **276 internal branch
-targets** agree by destination instruction ordinal, including the
-original shared guard at 0x004B3172. These are diagnostic results,
-not strict byte-exact acceptance.
+Selected VC7.1 emits an **8,644-byte partial COFF function**,
+2,226 instructions including the temporary return, and 157
+relocations. **2,222 of the first 2,223 comparable original
+instruction forms** agree after branch/call/FP-address normalization.
+The incomplete stack allocation is 0xC0 rather than target 0xE8;
+the final original prefix jump reaches the unimplemented shared exit.
+The diagnostic also verifies **289 internal branch destinations**
+by instruction ordinal and all **100 original float/double
+literal payloads** at corresponding source relocation sites.
 
-The partial source contains defensive, distance, aerial action
-and CPU state 4..11 decision paths, plus the collision-based
-random follow-up choices for action IDs 0xC8, 0xC9, 0xCA and 0xCB.
-The 0xCB branch adds the meter-gated random 0x0A/0x0C\ncommands and 0x14/0x1F/0x34/0x48/0x64/0x6E tiers.\nThe 0xCA branch includes the original mixed floating-point
-permission and integer random-command expression. Keep natural
-float-multiplication operand order and preserve fall-through
-when the final random choice is nonzero.
+This audit caught five previously hidden source-value errors even
+though their machine instruction forms had matched: original
+distance 40.0 rather than 45.0 or 60.0, two original 3x
+probabilities rather than 1x, and the 0xCC distance limit
+135.0 rather than 70.0. A deliberately wrong 70.0 compile
+was rejected; restoring 135.0 passed the focused native check.
 
-Run only:
+The source has complete natural-code forms for the recovered
+defensive, grounded, aerial-start, CPU state 4..11 and
+collision-follow-up action 0xC8/0xC9/0xCA/0xCB/0xCC branches.
+The original 0x004B3172 guarded jump spans both nearby attacks.
+Keep the original random and x87 expression evaluation order.
+
+Reproduce just the partial owner with:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-The next branch is original 0x004B4AD5 (action 0xCC).
-The remaining 7,079 original bytes and their relocations,
-shared return, and full owner comparison are still open.
-Do not register this partial candidate as Exact.
+The next original block is 0x004B4C8B (action 0xCD).
+This remains unfinished; **do not claim Exact** until all
+15,292 bytes, complete relocations, and the shared return match.

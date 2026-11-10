@@ -71,7 +71,7 @@ void Character06::Slot05()
             ((*opponentSlot)->field0008 < 0xfa)) &&
             ((*opponentSlot)->positionY == 0.0)) &&
             ((*opponentSlot)->remainingHitCount == 0)))) {
-            if ((distance.forward < 45.0) &&
+            if ((distance.forward < 40.0) &&
                 (
                 (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f)) {
                 buttonPulse[0] = 1;
@@ -80,7 +80,7 @@ void Character06::Slot05()
             }
             if ((distance.forward < 60.0) &&
                 (
-                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f)) {
+                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f)) {
                 buttonPulse[0] = 1;
                 inputY = 0;
                 return;
@@ -94,8 +94,8 @@ void Character06::Slot05()
             (*opponentSlot)->field0008 < 0xfa &&
             (*opponentSlot)->positionY == 0.0 &&
             (*opponentSlot)->remainingHitCount == 0) {
-            if (distance.forward > 60.0 && distance.forward < 80.0 &&
-                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) {
+            if (distance.forward > 40.0 && distance.forward < 80.0 &&
+                (float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f) {
                 buttonPulse[1] = 1;
                 inputY = 1;
                 inputX = 0;
@@ -509,6 +509,45 @@ void Character06::Slot05()
             }
             if (field3110 > 649) {
                 field3114 = 1;
+                return;
+            }
+        }
+        // Action 0xCC: prioritize air response before distance-tier attacks.
+        if (field0008 == 0xcc) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 40.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 50.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 0;
+                if (attackCollisionResult == 2 &&
+                    (unsigned short)RandomRange(0, 100) < 20) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                }
+                return;
+            }
+            if (distance.forward < 135.0 && field3110 < 600) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 950) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 1) == 0) field3114 = 5;
                 return;
             }
         }

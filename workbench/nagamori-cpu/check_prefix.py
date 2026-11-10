@@ -3,6 +3,7 @@
 This is a target instruction comparison, not full-function Exact.
 """
 from pathlib import Path
+from bisect import bisect_right
 import hashlib
 import re
 import subprocess
@@ -14,7 +15,7 @@ from common import verify_target, target_bytes
 from coff import object_function
 from native_build import compile_source
 
-START, END = 0x004B2AC0, 0x004B4AD5
+START, END = 0x004B2AC0, 0x004B4C8B
 SOURCE = ROOT / 'workbench/nagamori-cpu/Character06Cpu.cpp'
 OBJECT = ROOT / 'build/nagamori-cpu/Character06Cpu.partial.obj'
 
@@ -68,12 +69,53 @@ def verify_internal_branches(target, candidate, original_edges, built_edges):
                 f'jumped to instruction {target_ordinal}, but draft '
                 f'{draft_addr:#x} jumped to {draft_ordinal}')
         checked += 1
-    assert checked >= 275, checked
+    assert checked == 289, checked
     return checked
 
 
+def verify_float_literals(image, original, target_records, built_records, relocations):
+    """Check original IEEE-754 bytes for every source COFF float relocation.
+
+    A normalized instruction can hide a wrong constant (for example, 70.0
+    vs the target's 135.0). Map relocation fields by instruction ordinal so
+    branch-width changes in the partial source do not shift the lookup.
+    This is still only a prefix diagnostic, not full relocation closure.
+    """
+    built_addresses = [address for address, _ in built_records]
+    verified = 0
+    for relocation in relocations:
+        symbol = relocation["symbol"]
+        if not symbol.startswith("__real@"):
+            continue
+        assert relocation["type"] == "DIR32", relocation
+        bits = symbol.removeprefix("__real@")
+        assert len(bits) in (8, 16), symbol
+        expected = bytes.fromhex(bits)[::-1]
+        field_address = START + relocation["offset"]
+        index = bisect_right(built_addresses, field_address) - 1
+        assert 0 <= index < len(target_records) - 1, relocation
+        compiled_start = built_addresses[index]
+        original_start = target_records[index][0]
+        original_next = target_records[index + 1][0]
+        compiled_next = built_addresses[index + 1]
+        displacement = field_address - compiled_start
+        assert (0 <= displacement and
+                displacement + 4 <= compiled_next - compiled_start and
+                displacement + 4 <= original_next - original_start), relocation
+        target_offset = original_start - START + displacement
+        address = int.from_bytes(original[target_offset:target_offset + 4], "little")
+        actual = target_bytes(image, address, len(expected))
+        assert actual == expected, (
+            f"float literal mismatch @ {original_start + displacement:#x}: "
+            f"{symbol} != target {address:#x} "
+            f"({actual[::-1].hex()})")
+        verified += 1
+    return verified
+
+
 def main():
-    original = target_bytes(verify_target(), START, END-START)
+    image = verify_target()
+    original = target_bytes(image, START, END-START)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/nagamori-cpu-workbench.log')
     code, relocs = object_function(OBJECT, '?Slot05@Character06@@UAEXXZ')
@@ -84,26 +126,29 @@ def main():
     # The target prefix is stable even when additional, still-incomplete
     # source branches are appended. Only its aligned original instructions
     # and in-prefix control-flow edges are audited.
-    assert len(original) == 8213 and len(target) == 2120
-    assert hashlib.sha256(original).hexdigest() == '1ca08326f2aa05578177d2edb456da8bdcbf7369a9691bc025753152c5413509'
-    assert len(code) == 8206 and len(built) == 2122 and len(relocs) == 150
+    assert len(original) == 8651 and len(target) == 2224
+    assert hashlib.sha256(original).hexdigest() == 'f64663ffc6f842806f5e6d9053f4ba4400c0a38ae4fadd6f69dd8dbb2a2e6475'
+    assert len(code) == 8644 and len(built) == 2226 and len(relocs) == 157
     assert target[2] == 'sub    esp,0xe8'
     assert built[2] == 'sub    esp,0xc0'
     assert all(t == b for i, (t, b) in
                enumerate(zip(target[:-1], built[:-3])) if i != 2)
     edges = verify_internal_branches(target_records, built_records, original_edges, built_edges)
-    assert edges >= 275, edges
+    assert edges == 289, edges
+    literal_count = verify_float_literals(image, original, target_records, built_records, relocs)
+    assert literal_count == 100, literal_count
     # Catch the previous bug: both attack choices must be covered by this
     # six-byte near JNZ, not a short jump into the second choice.
     assert original[0x6b2:0x6b8] == code[0x6b2:0x6b8]
     assert target[-1] == 'jmp DEST'
     assert built[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori Slot05 original opening: 2118/2119 aligned instruction')
+    print('Nagamori Slot05 original opening: 2222/2223 aligned instruction')
     print('forms and operands match, normalizing direct call/branch targets')
     print('and original FP constant addresses. Only the unfinished stack')
     print('allocation differs. This is NOT complete-function Exact.')
     print('Internal branch destinations verified:', edges)
-    print('Original prefix: 8213 bytes / 2120 instructions.')
+    print('Original IEEE-754 float literal bindings verified:', literal_count)
+    print('Original prefix: 8651 bytes / 2224 instructions.')
     print('Partial compiled owner:',len(code),'bytes /',len(built),'instructions,',
           len(relocs),'COFF relocations; target whole owner is 15292 bytes.')
     print('Stack: original 0xE8, candidate',built[2])
