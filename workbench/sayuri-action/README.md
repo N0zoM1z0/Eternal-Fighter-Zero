@@ -10,31 +10,30 @@ direct jumps stay on original instruction starts inside the function.
 The shared return is at 0x004492EB. One CC byte separates the function
 from the next prologue at 0x004492F0.
 
-The current source Character09Input.cpp reconstructs the first **3,053
-original bytes / 753 instructions**, through the beginning of the next
-command guard at 0x0044736D (prefix SHA-256
-cf9f5bb284717cc722008659c49b5a7b02693f7b75a68df44fe56996573d7592).
+The current source Character09Input.cpp reconstructs the first **3,770
+original bytes / 933 instructions**, through the beginning of the next
+command guard at 0x0044763A (prefix SHA-256
+1b401b206f86f776949192c39125c138c4a71f27e6a0d0231b1f7c14fba93a15).
 It covers buffered action-input expiration; the special 150–155
 animation + opponent-ID check; and the ordered 0x34, 0x62, 0xAC,
-0xAB/AC, 0xAA/AB/AC, 0xA2, 0xA1/A2, 0xA0/A1/A2 and 0x6E/0x6F/0x70 command upgrades, with exact
+0xAB/AC, 0xAA/AB/AC, 0xA2, 0xA1/A2, 0xA0/A1/A2, 0x6E/0x6F/0x70 and aerial 0x2A/0x29/0x28 command upgrades, with exact
 meter thresholds, sequence flags, frame guards and vtable calls.
 
 Run only:
 
     scripts/repo-python workbench/sayuri-action/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 3,050 bytes, 755
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 3,767 bytes, 935
 instructions including the temporary three-instruction return and
-24 COFF relocations. The first 752 target instruction forms/operands
+31 COFF relocations. The first 932 target instruction forms/operands
 agree except the incomplete stack allocation (target sub esp,0x14,
 candidate push ecx). The final target-prefix JMP goes to the original
 full-function shared return and is not present in the partial source.
-The focused checker additionally verifies **113 internal branch targets
-and all 24 original-bound relocation fields** by corresponding
+The focused checker additionally verifies **142 internal branch targets
+and all 31 original-bound relocation fields** by corresponding
 instruction ordinal, including four unique real symbol destinations.
 These tests do **not** establish whole-function Exact status.
 
-Continue from original 0x0044736D (next command 0x2A meter-sensitive
-guard), then reconstruct the remaining action dispatch and
+Continue from original 0x0044763A (next 0x16 command meter/air-action gate), then reconstruct the remaining action dispatch and
 shared exit. Do not add this partial workbench to config/matches.csv.
 Do not run all-unit cold replay.

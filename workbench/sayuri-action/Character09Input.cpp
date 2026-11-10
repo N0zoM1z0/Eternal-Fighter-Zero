@@ -150,5 +150,40 @@ void Character09::Slot04()
             field0008 = 0x132;
             return;
         }
+        if (recognizedCommand == 0x2a &&
+            (field0118 >= 500.0 || field0120 > 0) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[261].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x105;
+            return;
+        }
+        if ((recognizedCommand == 0x29 || recognizedCommand == 0x2a) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            field0008 != 0x10c &&
+            sequences[field0008].field0002 <= sequences[260].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x104;
+            return;
+        }
+        if (recognizedCommand == 0x28 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY < 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[259].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x103;
+            return;
+        }
     // Remaining original action guards and command dispatch are open.
 }
