@@ -2096,40 +2096,47 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 4,021-byte native-source prefix
+## Nagamori Slot05 CPU boss: 4,532-byte native-source prefix
 
-The canonical original Nagamori Slot05 at 0x004B2AC0
-(vtable pointer 0x00788410) owns **15,292 bytes** through 0x004B667C.
-The natural C++ draft in workbench/nagamori-cpu/ now covers the
-original [0x004B2AC0,0x004B3A75) opening **4,021 bytes / 1,096
-instructions**, extending the formerly audited 3,537-byte boundary.
-Original prefix SHA-256:
-21c9a1823c8a544065573a3a112a4393d0e485f0d897d8301ffcdc21023465df.
+The canonical original Nagamori Slot05 at 0x004B2AC0 (original vtable
+pointer 0x00788410) owns **15,292 instruction bytes** through 0x004B667C.
+The natural C++ candidate in workbench/nagamori-cpu/ now covers the
+original [0x004B2AC0,0x004B3C74) prefix: **4,532 bytes / 1,230 x86
+instructions**. Prefix SHA-256:
+394daf5e635d55eae9333e6c6e9d3d80ce52b563aca9ffe7f288232dbb035617.
 
-Under pinned VC7.1, **1,095 of these 1,096 instruction forms and
-operands agree** after normalizing original branch/call destinations
-and FP literal addresses. The remaining discrepancy is a stack-frame
-allocation still smaller than original 0xE8. Importantly, the
-enhanced targeted audit checks **117 intra-prefix branch destinations
-by instruction ordinal**, independently of instruction byte sizes.
-The original 0x004B3172 JNZ must skip both attacks under the
-opponent airborne/grounded/no-hit gate. Correcting that C++ guard
-restored the original near-branch layout and eliminated a real
-control-flow semantic error missed by the earlier operand-only check.
+The pinned VC7.1 build produces a 4,531-byte partial function,
+including the temporary return, and 103 COFF relocations. Of the first
+1,229 original instruction forms, **1,228 agree** with normalized
+branch/call destinations and floating constant addresses. The
+remaining difference is the incomplete 0xB4 stack frame versus
+original 0xE8; the 1,230th target instruction is a jump into the
+not-yet-reconstructed common exit, absent from the partial source.
+The targeted checker separately validates **141 internal control-flow
+edges by destination instruction ordinal**, catching semantic control
+flow mistakes that a mnemonic-only comparison misses. Original
+0x004B3172 JNZ must skip both adjacent attacks if the shared
+opponent-state/grounded/no-hit condition fails; its corrected C++
+guard restores the original near-branch opcode and destination.
 
-The reviewed portion includes defensive random checks, Nagamori
-grounded input choices, distance-tier CPU commands and the
-0xAA aerial-opening chain starting 0x004B35F2, including its
-five height/distance random choices. Its last 2x chance must be
-expressed as field00a8 * 2.0f to yield original x87 fadd st(0),st(0).
-The 0x004B3891 opponent aerial-state response tree adds randomized
-0x48, 0x0C, 0x14, 0x16 and meter-gated special commands.
-The workbench also contains further provisional decisions beyond
-the current reviewed prefix. Run only
-workbench/nagamori-cpu/check_prefix.py for this focused native
-audit. This is **not** byte-exact codegen or full-owner acceptance;
-branch sizes, shared exit, full stack lifetime and all relocations
-remain open until complete 15,292-byte reconstruction.
+The recovered scope covers defensive randomized checks, grounded
+input choices, distance-tier offensive commands and the 0xAA
+aerial-opening decision sequence starting at 0x004B35F2.
+The final 2x chance needs field00a8 * 2.0f to generate the
+original x87 fadd st(0),st(0), rather than two field loads.
+The 0x004B3891 grounded response to opponent actions 0xA8/0xA9/0xAA
+implements randomized 0x48, 0x0C, 0x14, 0x16 and meter-gated
+commands. The 0x004B3A75 airborne response changes CPU decision
+state or emits 0x16 after the original chance checks; the
+0x004B3B84 section emits command 0x34 for the six reviewed current
+animation IDs under original opponent-action and meter conditions.
+
+This remains **partial**, not full-function Exact: unimplemented
+remaining decisions, source stack lifetime, external jump/call
+destinations and all relocations still require complete acceptance.
+Reproduce with the single-owner
+workbench/nagamori-cpu/check_prefix.py; the next original branch
+begins at 0x004B3C74. Do not replay the whole product for this draft.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
