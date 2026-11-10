@@ -2096,27 +2096,38 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 2,861-byte native-source prefix
+## Nagamori Slot05 CPU boss: 3,537-byte native-source prefix
 
-The canonical original Nagamori virtual Slot05 at `0x004B2AC0`
-(vtable pointer `0x00788410`) owns **15,292 code bytes** through
-`0x004B667C`, then four `CC` alignment bytes. An independent
-natural C++ draft in `workbench/nagamori-cpu/` now implements its
-first **2,861 bytes / 784 x86 instructions**. The named VC7.1
-reproducer matches **783 instruction forms and operands**, with
-numeric branch/call/constant addresses normalized; the sole differing
-prologue width is `0xE8` original versus `0x94` partial. No full
-function Exact acceptance is claimed.
+The canonical original Nagamori virtual Slot05 at 0x004B2AC0
+(vtable pointer 0x00788410) owns **15,292 code bytes** through
+0x004B667C, then four CC alignment bytes. The natural C++ draft
+in workbench/nagamori-cpu/ now covers its first **3,537 original
+bytes / 974 x86 instructions** through 0x004B3891, 676 more
+original bytes than the previous review.
+
+Selected VC7.1 compilation makes a 3,529-byte partial body, with
+86 COFF relocations and a temporary epilogue. Of the first 973 original
+instruction forms and operands, **972 match** with direct branch/call
+destinations and FP constants normalized. The sole operand difference
+is the incomplete stack frame (sub esp,0xE8 target versus 0xA8
+partial). The 974th original instruction is a jump to the full
+function's shared exit; the partial source cannot emit it yet. This
+normalized comparison is **not Exact**: the candidate uses some
+shorter branch forms and no complete-function relocation closure.
 
 Target-derived CPU behavior includes 3x random close-range aggression,
 forward-distance 60–120 button selection, commands 0x0C/0x48,
-random 0x14/0x16 and meter-gated 0x65/0x66. The latest natural source
-also restores priority decisions at forward ranges under 160,
-160–220 and above 220, using original 3x/1x probabilities,
-`field0118 > 500.0` permissions, and random base-0x46/base-0x0A
-commands. Original 160.0 and 220.0 literals were independently
-checked. Continue at `0x004B35F2`, using
-`workbench/nagamori-cpu/check_prefix.py` for focused native checks.
+random 0x14/0x16 and meter-gated 0x65/0x66. The source also restores
+forward range under 160, 160–220 and above 220 decision tiers with original
+3x/1x chances and meter permissions. Newly reconstructed 0xAA
+opening-aerial decisions at 0x004B35F2 handle pose 1/tick 0,
+relative opponent heights (-50/-40/-30/0/50), forward/vertical
+distance thresholds and five independent 5x/2x probability events.
+The final float factor is written as field00a8 * 2.0f to reproduce
+the original x87 fadd st(0),st(0), not an extra field load.
+The focused native check is workbench/nagamori-cpu/check_prefix.py;
+the next unimplemented original branch begins at 0x004B3891. No whole
+owner Exact acceptance is claimed.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

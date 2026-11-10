@@ -156,5 +156,42 @@ void Character06::Slot05()
             }
         }
     }
+    // Opening aerial-state priority logic (original 0x004B35F2 onward).
+    // Preserve repeated signed height differences, float multiplications and
+    // individual random checks rather than precomputing a shared comparison.
+    if (field0008 == 0xaa && (unsigned short)field000a == 1 &&
+        (unsigned short)field000c == 0) {
+        if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            field3114 = 3;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY < 0.0 &&
+            positionY - (*opponentSlot)->positionY > -40.0 &&
+            distance.forward < 80.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[0] = 1;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY > -30.0 &&
+            positionY - (*opponentSlot)->positionY < 0.0 &&
+            distance.forward < 100.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[1] = 1;
+            return;
+        }
+        if (positionY - (*opponentSlot)->positionY > -50.0 &&
+            positionY - (*opponentSlot)->positionY < 50.0 &&
+            distance.vertical < 60.0 && distance.forward < 120.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 5.0f) {
+            buttonPulse[2] = 1;
+            inputY = 0;
+            return;
+        }
+        if (distance.vertical < 50.0 && distance.forward < 100.0 &&
+            (float)(unsigned short)RandomRange(0, 100) < field00a8 * 2.0f) {
+            recognizedCommand = 0x16;
+            return;
+        }
+    }
     // Remaining priority AI decisions are not reconstructed yet.
 }
