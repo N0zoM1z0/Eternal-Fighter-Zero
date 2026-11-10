@@ -6,51 +6,39 @@ is **13,259 original x86 bytes**, with five trailing CC padding
 bytes and whole-owner SHA-256
 fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
 
-The natural-source workbench Character10Cpu.cpp recovers
-[0x004654A0,0x004668D5), **5,173 original code
-bytes / 1,379 original x86 instructions**, prefix SHA-256
-84f93312ce88b7dec59b456344cebcbd3e858ea7de184adbf46a02bcb739955b.
+Natural-source workbench Character10Cpu.cpp now covers
+[0x004654A0,0x00466D6E), **6,350 original bytes /
+1,650 instructions**, prefix SHA-256
+c277b4472010e301dcc8f6a5909c399d27d2a98a65d3aa2c6240131090c42e73.
 
-The shared early CPU policy was adjusted for Nayuki's unique
-A8/A9 graded 0x48/0x16/0x0C/0x61 commands,
-AA aerial attacks, opponent reactions, A5/A6 dash pulse,
-and CPU state 4–10 recovery. New original FA/FC
-counterattacks preserve the timed windows 0–300, 300–450,
-450–550 and 550–650, first checking the opponent is
-grounded (positionY == 0.0), then airborne (positionY < 0).
-A separate original 0x10C owner uses 120/160/100
-horizontal distance limits and up to four distinct
-button-pulse outcomes. The grounded/airborne split
-was proven from x87 FUCOMPP flags; using a seemingly
-reasonable '< 0.0' guess for all four branches generates
-different native code. The horizontal/vertical distance
-distinction was likewise reviewed against original
-stack references.
+The CPU policy reconstructs Nayuki A8/A9 graded specials,
+AA aerial attacks, CPU state 4–10 recovery, FA/FC
+ground/air counterattacks, the 0x10C timed four-button
+sequence, and complete 0xC8/0xC9 randomized collision
+follow-up trees. All original opponent-altitude tests,
+forward-distance windows, roll thresholds, input pulses,
+state 1/4/7 outcomes, and RandomRange argument/order
+remain in their original priority. Overlapping and
+apparently unreachable timer windows were retained.
 
-Reproduce ONLY this selected workbench:
+Reproduce only this selected partial native audit:
 
     scripts/repo-python workbench/nayuki-cpu/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
-**5,169-byte / 1,381-instruction partial body**
-including the temporary three-instruction return,
-with **87 COFF relocations**. Of 1,378 original
-body instructions compared, **1,377 forms and
-operands agree** after branch/call/float-reference
-normalization; only the incomplete 0x90 frame
-differs from original 0xC0. One original near
-JMP currently shrinks to a JMP short because
-the complete shared return is not available;
-the last original prefix instruction itself
-jumps to that distant return. **185 original
-internal branch targets, 44 valid original
-outbound targets, and all 87 target-bound COFF
-relocations agree**, with 26 uniquely bound
-symbols and full IEEE-754 bit comparisons.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **6,343
+bytes / 1,652 instructions** with a temporary return.
+Of 1,649 original comparable body instructions,
+**1,648 agree** after branch/call/float normalization.
+The incomplete stack frame is 0x94 instead of original
+0xC0; two original near jumps currently shorten
+because the true shared exit has not been reconstructed.
+**223 internal branch targets, 62 valid original
+outbound destinations, and all 101 original-bound
+COFF relocations agree**, with 27 unique symbol
+bindings and exact original IEEE-754 literal payloads.
 
-Continue at original 0x004668D5 (remaining Nayuki
-action-collision and generic CPU AI selection).
-**Not Exact:** 8,086 original bytes, full frame,
-return and later relocations remain open. The
-unverified action-Slot04 experiment remains in
-workbench/nayuki-action, untouched. No full replay.
+Continue original 0x00466D6E (CA collision follow-up).
+**Not whole-function Exact:** 6,909 original code bytes,
+full frame/return and remaining original relocations
+are still open. Experimental Nayuki action Slot04 remains
+untouched in workbench/nayuki-action. No all-unit cold replay.
