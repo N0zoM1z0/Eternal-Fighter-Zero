@@ -2984,6 +2984,57 @@ runtime behavior remain open.
 
 <a id="nayuki-slot02-command-reviewed-prefix"></a>
 
+<a id="nayuki-slot05-cpu-reviewed-prefix"></a>
+
+## Nayuki Character10 Slot05: 4,420-byte reviewed CPU boss opening
+
+The original Character10/Nayuki vtable slot05 at 0x00788284
+points to 0x004654A0. The full original authored owner
+[0x004654A0,0x0046886B) contains **13,259 x86
+instruction bytes** followed by five CC alignment bytes.
+Full original SHA-256:
+fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
+The original owner boundary is reviewed but native
+whole-function Exact has not yet been established.
+
+Natural source workbench/nayuki-cpu/Character10Cpu.cpp
+reconstructs [0x004654A0,0x004665E4), **4,420
+original code bytes / 1,186 original instructions**,
+prefix SHA-256
+240202b17a0bdb78ecee357744a568d7b081c79ba92fc5c44df569a72b73929e.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
+4,416-byte / 1,188-instruction partial candidate,
+including its temporary return. Of the 1,185
+comparable original body instructions **1,184 match**
+after normalizing direct call/jump and float references.
+The only nonmatching form is the incomplete native
+stack frame (0x90 instead of original 0xC0);
+the original last prefix JMP targets the complete
+owner's unreconstructed distant shared exit.
+
+The focused script
+workbench/nayuki-cpu/check_prefix.py checks
+**153 in-prefix original branch destinations**
+by instruction ordinal, **34 valid original outbound
+jump targets**, and **all 74 original-bound COFF
+relocations over 24 uniquely bound symbols**.
+Full original IEEE-754 constant payloads and original
+RandomRange/fabs callees are independently verified.
+
+The source restores Nayuki's character-specific
+A8/A9 meter/command choices (0x48, 0x16, 0x0C and
+0x61), AA airborne hit response, opponent attack
+reaction, dash A5/A6 pulses, and CPU state 4–10
+transitions. Original constants -40.0 and 60.0
+were recovered from canonical relocation sites,
+not inherited from Sayuri's source.
+
+Continue at original 0x004665E4. **Partial, not Exact**:
+8,839 original bytes and the complete CPU collision
+selection, frame, return and relocation closure remain
+open. Only the selected native workbench was compiled;
+no all-unit cold replay was performed.
+
 ## Nayuki Character10 Slot02: full 4,827-byte strict Exact command boss
 
 Character10 vtable slot02 at 0x00788278 points to 0x004641C0.
