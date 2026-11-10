@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Full pinned VC7.1 natural C++ codegen, one canonical original REL32 binding, all code bytes zero-difference",
+  "method": "Original Sayuri Character09 vtable starting 0x00788138 points to 0x00446710 for Character09::RemoveLocalEffect. Pinned VC7.1 /Od /G6 /MT /Gy /W3 rebuilds natural C++ source src/Character09Effects.cpp with all 80 instruction bytes exactly equal after binding the single original REL32 direct call target. Original member, thiscall and caller object offset derive from the target vtable and instructions. The boundary excludes adjacent alignment/next function; no whole-game linkage or runtime acceptance is implied.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Original EFZ.exe CALL displacement at 0x00446756 directs to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "07d83336cda7583980afc57439fc72a494864e7ddcb26b9ee5dd4a1d62a4163c",
+      "target_extent_sha256": "07d83336cda7583980afc57439fc72a494864e7ddcb26b9ee5dd4a1d62a4163c",
+      "unit": "character-09-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character09@@UAEXF@Z",
+      "target_address": "0x00446710",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99d511604a92df1f81dddc595b35bd5ee0107e7000ead7dce18abd71a752cbc1",
+      "object_sha256": "b4495ca78579249341b06ccbcce1c6350ea23f777d887893893c18dfa6c37183",
+      "source_sha256": "593d22aac20ddde2b5253e9bb9edededc03682ad80dd1feef386c915c76efb6e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b718745b2f079e9b306404e025a9fe3bb34d418208ccd7454b52358fdbd0075d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9842243bda0934a3042e0a9be8ec744d0a31fe14311c8918a64fe6eb8326aa14",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

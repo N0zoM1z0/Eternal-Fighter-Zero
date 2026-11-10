@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "authority": "Full pinned VC7.1 natural C++ codegen, one canonical original REL32 binding, all code bytes zero-difference",
+  "method": "Original Sayuri Character09 vtable starting 0x00788138 points to 0x00449300 for Character09::Slot08. Pinned VC7.1 /Od /G6 /MT /Gy /W3 rebuilds natural C++ source src/Character09Effects.cpp with all 131 instruction bytes exactly equal after binding the single original REL32 direct call target. Original member, thiscall and caller object offset derive from the target vtable and instructions. The boundary excludes adjacent alignment/next function; no whole-game linkage or runtime acceptance is implied.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 131,
+      "matched_bytes": 131,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 123,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Original EFZ.exe CALL displacement at 0x0044937B directs to reviewed ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "8ad7d6982400c3549337d5d6f3e2a40880cde08cc76f3ffdf7fd3da38f686766",
+      "target_extent_sha256": "8ad7d6982400c3549337d5d6f3e2a40880cde08cc76f3ffdf7fd3da38f686766",
+      "unit": "character-09-slot08",
+      "symbol": "?Slot08@Character09@@UAEXXZ",
+      "target_address": "0x00449300",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "99d511604a92df1f81dddc595b35bd5ee0107e7000ead7dce18abd71a752cbc1",
+      "object_sha256": "b999ab1ab365d40da558a351a86ed43d78ff74a1b3db0ce85932c0b806f736d5",
+      "source_sha256": "593d22aac20ddde2b5253e9bb9edededc03682ad80dd1feef386c915c76efb6e",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b718745b2f079e9b306404e025a9fe3bb34d418208ccd7454b52358fdbd0075d",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "92550d9ca3c94397544112557359f04b6c56df0dc561e14529d25163f7b4da7a",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

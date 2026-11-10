@@ -2941,6 +2941,41 @@ into this standalone source, restoring the previously accepted
 SecondaryFacing.cpp owner before replay. This exactness
 does not imply complete product linkage or runtime equivalence.
 
+<a id="sayuri-slot08-and-local-effect-removal"></a>
+
+## Sayuri slot-8 tint trigger and local-effect removal: two strict Exact owners
+
+Original Character09/Sayuri vtable 0x00788138 proves the slot-8
+entry at 0x00788158 points to 0x00449300 and the slot-10
+RemoveLocalEffect entry at 0x00788160 points to 0x00446710.
+The respective complete code extents are
+[0x00449300,0x00449383) (**131 bytes**) and
+[0x00446710,0x00446760) (**80 bytes**). The former is followed
+by thirteen CC alignment bytes; the latter is adjacent to a
+different function's 55 8B EC prologue at 0x00446760.
+
+Natural src/Character09Effects.cpp rebuilds both under pinned VC7.1
+/Od /G6 /MT /Gy /W3 to **131/131 and 80/80 strict Exact**,
+each with one verified original REL32 binding and **zero
+differences**. The 131-byte Slot08 checks first pose/tick zero,
+action 150–155, opponent collision state 2, and opponent action
+equal to Character09 field3150; it sets field3138=1 and invokes
+SetCharacterTint(0xB1,10). That original direct call resolves to
+0x00410AC0. The 80-byte RemoveLocalEffect(short) clears the
+indexed entries in all three field3154/field3254/field3354
+effect-array banks, then calls the original Secondary base
+RemoveLocalEffect at 0x00412E60. The class layout already
+had those same fields; no provisional header edits are needed.
+
+Reproducible selected match units character-09-slot08 and
+character-09-remove-local-effect are in config/match-units.toml;
+their full receipts are in
+docs/evidence/character-09-slot08-exact.json and
+docs/evidence/character-09-remove-local-effect-exact.json.
+Each function was compiled and compared separately, not as
+part of a whole-game cold replay. Whole-game linkage and
+runtime behavior remain open.
+
 ## Shiori command state and shared locomotion
 
 Nine complete authored contributions add **13,965 instruction bytes**, including

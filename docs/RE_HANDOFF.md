@@ -34,6 +34,14 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Sayuri Character09 now has two newly accepted native Exact owners:
+Slot08 at 0x00449300 (131 bytes) and RemoveLocalEffect at 0x00446710
+(80 bytes). Natural source is src/Character09Effects.cpp; each has
+one original-bound REL32 and zero byte differences. Rebuild only
+character-09-slot08 or character-09-remove-local-effect. No shared
+class-layout changes were needed.
+
+
 The explicit-X facing member Secondary::FacePosition(double) at
 0x0040E6C0 is complete native Exact (116 bytes / zero relocations),
 with source src/SecondaryFacePosition.cpp and proof

@@ -366,3 +366,5 @@ address,name,source,symbol,status,evidence
 0x004B2AC0,Character06::Slot05,src/Character06Cpu.cpp,?Slot05@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot05-exact.json
 0x0040E6C0,Secondary::FacePosition,src/SecondaryFacePosition.cpp,?FacePosition@Secondary@@QAEHN@Z,complete,docs/evidence/secondary-face-position-exact.json
 0x006AB060,Character14::Slot08,src/Character14Effects.cpp,?Slot08@Character14@@UAEXXZ,complete,docs/evidence/ikumi-slot08-exact.json
+0x00449300,Character09::Slot08,src/Character09Effects.cpp,?Slot08@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot08-exact.json
+0x00446710,Character09::RemoveLocalEffect,src/Character09Effects.cpp,?RemoveLocalEffect@Character09@@UAEXF@Z,complete,docs/evidence/character-09-remove-local-effect-exact.json

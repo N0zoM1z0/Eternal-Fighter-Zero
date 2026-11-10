@@ -133094,3 +133094,37 @@ type = "DIR32"
 symbol = "__real@4044000000000000"
 target = 0x00787CE0
 evidence = "Canonical EFZ.exe operand 0x006AB658; Exact original IEEE-754 constant __real@4044000000000000 at 0x00787CE0"
+
+[units.character-09-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot08/Character09Effects.obj"
+symbol = "?Slot08@Character09@@UAEXXZ"
+target_address = 0x00449300
+size = 131
+
+[[units.character-09-slot08.relocations]]
+offset = 123
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Original EFZ.exe CALL displacement at 0x0044937B directs to reviewed ?SetCharacterTint@Secondary@@QAEXEH@Z at 0x00410AC0"
+
+[units.character-09-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Effects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-remove-local-effect/Character09Effects.obj"
+symbol = "?RemoveLocalEffect@Character09@@UAEXF@Z"
+target_address = 0x00446710
+size = 80
+
+[[units.character-09-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Original EFZ.exe CALL displacement at 0x00446756 directs to reviewed ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60"
