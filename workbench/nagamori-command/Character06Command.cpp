@@ -71,5 +71,39 @@ void Character06::Slot02()
             stage = 1;
         }
     }
-    // Remaining original priority scans still to be reconstructed.
+    // Nagamori third priority scan: 90-frame motion, meter >= 1000 required.
+    stage = 0;
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf0) != 0) && (stage == 6)) {
+            recognizedCommand = ((buttons & 0xe0) > 0) + 0x6e +
+                                ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            return;
+        }
+        if (((buttons & 0xf) == 2 - (facing == -1)) && (stage == 5)) {
+            if ((buttons & 0xf0) != 0) {
+                recognizedCommand = ((buttons & 0xe0) > 0) + 0x6e +
+                                    ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                return;
+            }
+            stage = 6;
+        }
+        if (((buttons & 0xf) == 6 - (facing == -1)) && (stage == 4)) {
+            stage = 5;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 3)) {
+            stage = 4;
+        }
+        if (((buttons & 0xf) == 2 - (facing == -1)) && (stage == 2)) {
+            stage = 3;
+        }
+        if (((buttons & 0xf) == 6 - (facing == -1)) && (stage == 1)) {
+            stage = 2;
+        }
+        if (((buttons & 0xf) == 4) && (stage == 0) && (meter >= 1000)) {
+            stage = 1;
+        }
+    }
+    // Lower-priority Nagamori scans remain unimplemented.
 }

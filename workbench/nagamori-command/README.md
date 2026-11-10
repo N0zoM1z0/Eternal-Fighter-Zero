@@ -1,36 +1,37 @@
-# Nagamori `Character06::Slot02` — command-history recognizer
+# Nagamori `Character06::Slot02` — tracked input command source
 
-**Partial natural C++ workbench only; NOT an accepted full-function Exact source.**
+**Only a partial natural C++ implementation; not full-function Exact.**
 Original Nagamori vtable slot 2 at `0x00788404` points to
-`[0x004B1780,0x004B2AB5)` (**4,917 bytes**), followed by 11 `CC`
-alignment bytes. Original target SHA and reviewed boundaries are in
+`[0x004B1780,0x004B2AB5)` (**4,917 bytes**) followed by 11
+alignment `CC` bytes. Verified complete target SHA and per-scan hashes:
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
 
-The first **two priority-ordered scans** have now been reconstructed
-in `Character06Command.cpp`. The original first scan owns
-`[0x004B1780,0x004B191C)` (**412 bytes / 120 instructions**) and
-requires both **3000 meter and exact ground contact** before a five-
-stage motion can issue command `0x5B`. Certain buttons abort the scan
-without a result, passing control to lower-priority scans.
+The current `Character06Command.cpp` reconstructs the first **three**
+ordered scans, original **1,377 bytes / 410 instructions**:
 
-The original second scan owns `[0x004B191C,0x004B1AD7)` (**443
-bytes / 133 instructions**), scans input-history ticks 100–179 and
-recognizes command base `0x78` with input button flags. It preserves
-both the high-priority completed-motion finish and the same-frame
-stage-three finish; its facing arithmetic was reconstructed from
-original `neg/sbb/add` and `sub` instructions, not copied blindly.
+| Scan | Original range | Bytes | Instructions | Result |
+| --- | --- | ---: | ---: | --- |
+| 1 | `0x004B1780..0x004B191C` | 412 | 120 | Original meter==3000 and ground gate, command 0x5B |
+| 2 | `0x004B191C..0x004B1AD7` | 443 | 133 | 100–179 history ticks, two early 0x78-series finish paths |
+| 3 | `0x004B1AD7..0x004B1CE1` | 522 | 157 | 90–179 history ticks, meter>=1000, two 0x6E-series finishes |
 
-Together **855 original bytes / 253 instructions** match natural VC7.1
-C++ after normalizing only numeric branch destinations and the 0.0
-constant's original PE location. The local TU emits **859 bytes**
-including a temporary three-instruction return. The remaining
-priority scans are open and this is **not a complete Exact owner**.
+Each sequence preserves the original signed-facing computation,
+input-history wrap and priority. The third scan was verified against
+the *Nagamori original*, even though its natural C++ form resembles
+Ikumi's independently exact scanner. One accidentally duplicated
+third scan was removed after native comparison showed an extra
+522-byte block; the correct source matches exactly one original scan.
 
-Reproduce with *only* the named C++ source and canonical executable:
+Focused verification compiles only this source under pinned VC7.1:
 
 ```bash
 scripts/repo-python workbench/nagamori-command/check_first_scan.py
 ```
 
-Next original scan begins at `0x004B1AD7`. The rest of the function
-remains in workbench until complete strict whole-owner matching.
+The original first **410/410 instruction forms and operands** match
+after normalizing only numeric forward-jump destinations and the
+canonical x87 0.0 double address. The compiler emits **1,381 bytes**:
+1,377 original-prefix bytes plus an artificial local 3-instruction
+return. No whole-owner match/relocation acceptance exists yet.
+The **next scan begins at `0x004B1CE1`**; 12 lower-priority scans
+remain, and this partial source must stay outside production `src/`.

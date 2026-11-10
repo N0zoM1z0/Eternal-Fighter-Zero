@@ -508,18 +508,19 @@ invalidation of 123 selected units. As for all single-unit Exact
 owners, this does **not** establish whole-game C++ linkage or runtime.
 No full cold replay.
 
-## Nagamori Slot02 boss: two original input scans reconstructed
+## Nagamori Slot02 command boss: first three scans restored
 
-`Character06::Slot02` is a reviewed **4,917-byte** owner at
-`[0x004B1780,0x004B2AB5)` (original vtable slot 2). In
-`workbench/nagamori-command/Character06Command.cpp` the first
-**855 target bytes / 253 x86 instructions** now have normal C++:
-a 3000-meter, grounded command 0x5B priority scan followed by a
-100–179 tick base-0x78 command scan with two original early finishes.
-Both match the original instruction forms, with only future jump
-and original x87 zero literal addresses normalized. Focused test:
-`workbench/nagamori-command/check_first_scan.py`.
-The next scan begins at `0x004B1AD7`; complete Slot02 is NOT Exact.
+The original Nagamori `Character06::Slot02` at `0x004B1780`
+(vtable slot 2, `0x00788404`) has a reviewed **4,917-byte** boundary.
+Partial natural C++ in `workbench/nagamori-command/` now reproduces
+**1,377/4,917 original prefix bytes** across the first **3 scans,
+410/410 instruction forms**, normalizing numeric unimplemented branch
+addresses and one PE x87 constant location. First scan requires
+meter==3000/ground and recognizes 0x5B; second recognizes 0x78 series;
+third recognizes meter>=1000 0x6E series. Distinct original scan
+bounds and hashes are saved in
+`docs/evidence/nagamori-slot02-first-scan-boundary.json`.
+**NOT whole Exact**. Next scan starts at `0x004B1CE1`; no cold replay.
 
 ## Newly accepted major boss: Nagamori full Slot04 action selector
 

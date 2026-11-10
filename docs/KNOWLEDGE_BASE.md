@@ -2214,22 +2214,31 @@ per-unit reconstruction boundary rather than claiming whole-program
 ODR/linkage correctness; see `workbench/nagamori-helper/README.md`.
 No global cold replay or unrelated certificate invalidation occurred.
 
-## Nagamori Slot02 command recognizer: first two scans recovered
+## Nagamori Slot02 command scanner: three natural-source scans recovered
 
-Original Nagamori vtable slot 2 at `0x00788404` points to
-`Character06::Slot02` at `0x004B1780`, a **4,917-byte** function
-ending at `0x004B2AB5`. The first two ordered scans are now normal
-C++ at `workbench/nagamori-command/Character06Command.cpp`, covering
-**855 original bytes / 253 x86 instructions**: scan 1 (412/120)
-requires 3000 meter and ground position before issuing command 0x5B;
-scan 2 (443/133) checks input ticks 100–179, issuing base 0x78 plus
-button flags after the original directional pattern. A focused native
-rebuild reproduces all 253 instruction forms/operands after normalizing
-numeric future jumps and the original x87 zero-constant address.
-The compiled partial TU is 859 bytes because later scans are missing.
-Original per-scan hashes and the reviewed complete boundary are in
-`docs/evidence/nagamori-slot02-first-scan-boundary.json`.
-**The entire Slot02 is still open**, not Exact.
+Original Nagamori vtable slot 2 at `0x00788404` selects
+`Character06::Slot02` at `0x004B1780`, complete original function
+`[0x004B1780,0x004B2AB5)`, **4,917 bytes**, followed by 11 `CC`
+alignment bytes. The isolated source `workbench/nagamori-command/`
+now implements the first **three** priority-ordered input-history
+scans: 412/120, 443/133 and 522/157 original bytes/instructions,
+through `0x004B1CE1` for **1,377 bytes and 410 instructions**.
+
+Scan 1 recognizes command 0x5B only after the meter==3000, grounded
+start; scan 2 recognizes button-flagged 0x78-series specials; scan 3
+recognizes 0x6E-series specials after a distinct meter>=1000 motion.
+The exact original signed-facing arithmetic, early completion paths
+and 180-tick history ring were confirmed by canonical x86 rather than
+relying on superficially similar characters. A duplicate third scan
+in a draft was discovered and corrected with native compiler output.
+
+Focused VC7.1 recompilation confirms all **410 original instruction
+forms and operands**, normalizing only unimplemented numeric jump
+targets and a single original x87 constant address. The 1,381-byte
+partial function has a temporary local epilogue and lacks the final
+12 scans; **not a strict 4,917-byte whole-owner Exact claim**.
+Evidence `docs/evidence/nagamori-slot02-first-scan-boundary.json`,
+reproducer `workbench/nagamori-command/check_first_scan.py`.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
