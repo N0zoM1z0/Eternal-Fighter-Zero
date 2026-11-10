@@ -272,6 +272,58 @@ void Character10::Slot05()
             field3114 = 0;
         return;
     }
-    // Remaining Nayuki-specific action collision and general CPU decisions
-    // are pending; this draft is a partial native-source checkpoint.
+    // Nayuki FA/FC counterattack: grounded opponent first, aerial opponent later.
+    if (field0008 == 0xfa || field0008 == 0xfc) {
+        if ((*opponentSlot)->field0008 > 49 &&
+            (*opponentSlot)->field0008 < 157) {
+            if (field3110 < 300 && (*opponentSlot)->positionY == 0.0) {
+                field3114 = 7;
+                return;
+            }
+            if (field3110 > 300 && field3110 < 450 &&
+                (*opponentSlot)->positionY == 0.0) {
+                field3114 = 4;
+                return;
+            }
+            if (field3110 > 450 && field3110 < 550 &&
+                (*opponentSlot)->positionY < 0.0 &&
+                distance.forward < 60.0) {
+                field3114 = 9;
+                return;
+            }
+            if (field3110 > 550 && field3110 < 650 &&
+                (*opponentSlot)->positionY < 0.0 &&
+                distance.forward < 100.0) {
+                field3114 = 10;
+                return;
+            }
+        }
+    }
+    // Action 0x10C has four distinct timed button follow-ups.
+    if (field0008 == 0x10c) {
+        if (field3110 < 300 && distance.forward < 120.0 &&
+            ((*opponentSlot)->field0008 > 199 ||
+             (*opponentSlot)->positionY < 0.0)) {
+            buttonPulse[0] = 1;
+            return;
+        }
+        if (field3110 < 450 && field3110 > 300 &&
+            (*opponentSlot)->positionY == 0.0 &&
+            distance.forward < 160.0) {
+            buttonPulse[1] = 1;
+            return;
+        }
+        if (field3110 < 600 && field3110 > 450 &&
+            (*opponentSlot)->positionY == 0.0 &&
+            distance.forward < 100.0) {
+            buttonPulse[2] = 1;
+            return;
+        }
+        if (field3110 < 650 && field3110 > 600 &&
+            (*opponentSlot)->positionY == 0.0 && field3148 < 9) {
+            buttonPulse[3] = 1;
+            return;
+        }
+    }
+    // Further Nayuki-specific CPU decisions remain open.
 }

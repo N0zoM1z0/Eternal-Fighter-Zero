@@ -2986,54 +2986,54 @@ runtime behavior remain open.
 
 <a id="nayuki-slot05-cpu-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot05: 4,420-byte reviewed CPU boss opening
+## Nayuki Character10 Slot05: 5,173-byte reviewed CPU boss prefix
 
-The original Character10/Nayuki vtable slot05 at 0x00788284
-points to 0x004654A0. The full original authored owner
-[0x004654A0,0x0046886B) contains **13,259 x86
-instruction bytes** followed by five CC alignment bytes.
+Original Character10/Nayuki virtual slot05 at vtable
+0x00788284 selects 0x004654A0, complete authored
+code extent [0x004654A0,0x0046886B) with **13,259
+code bytes** and five following CC alignment bytes.
 Full original SHA-256:
 fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
-The original owner boundary is reviewed but native
-whole-function Exact has not yet been established.
+The original boundary is independently reviewed;
+whole-owner Exact codegen has not yet been reached.
 
-Natural source workbench/nayuki-cpu/Character10Cpu.cpp
-reconstructs [0x004654A0,0x004665E4), **4,420
-original code bytes / 1,186 original instructions**,
-prefix SHA-256
-240202b17a0bdb78ecee357744a568d7b081c79ba92fc5c44df569a72b73929e.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
-4,416-byte / 1,188-instruction partial candidate,
-including its temporary return. Of the 1,185
-comparable original body instructions **1,184 match**
-after normalizing direct call/jump and float references.
-The only nonmatching form is the incomplete native
-stack frame (0x90 instead of original 0xC0);
-the original last prefix JMP targets the complete
-owner's unreconstructed distant shared exit.
+The naturally authored C++
+workbench/nayuki-cpu/Character10Cpu.cpp now covers
+[0x004654A0,0x004668D5), **5,173 original bytes /
+1,379 instructions**, original prefix SHA-256
+84f93312ce88b7dec59b456344cebcbd3e858ea7de184adbf46a02bcb739955b.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 5,169
+bytes / 1,381 instructions including a temporary
+return. Of 1,378 comparable original instructions
+**1,377 match in form and operands** after normalizing
+direct branch/call and literal addresses; the
+incomplete stack frame (0x90 versus original 0xC0)
+differs, with one original near jump shortened
+because the shared return is still unreconstructed.
 
-The focused script
-workbench/nayuki-cpu/check_prefix.py checks
-**153 in-prefix original branch destinations**
-by instruction ordinal, **34 valid original outbound
-jump targets**, and **all 74 original-bound COFF
-relocations over 24 uniquely bound symbols**.
-Full original IEEE-754 constant payloads and original
-RandomRange/fabs callees are independently verified.
+Selected audit workbench/nayuki-cpu/check_prefix.py
+verifies **185 in-prefix jump destinations** by
+instruction ordinal, **44 valid original outbound
+destinations**, and all **87 canonical COFF relocation
+fields** over 26 independently bound symbols,
+including exact original IEEE-754 bit patterns.
 
-The source restores Nayuki's character-specific
-A8/A9 meter/command choices (0x48, 0x16, 0x0C and
-0x61), AA airborne hit response, opponent attack
-reaction, dash A5/A6 pulses, and CPU state 4–10
-transitions. Original constants -40.0 and 60.0
-were recovered from canonical relocation sites,
-not inherited from Sayuri's source.
+The recovered action logic includes unique Nayuki
+A8/A9 special-meter choices, AA-state airborne
+attacks, 150–156 opponent defense, A5/A6 pulse
+logic, CPU state 4–10 recovery, FA/FC timed counter
+state changes and the 0x10C four-button priority.
+Original FA/FC first requires grounded opponent
+(positionY == 0.0), then airborne opponent
+(positionY < 0.0), as shown by FUCOMPP condition
+flags. The four 0x10C branches use 120/160/100
+horizontal distance gates; misusing vertical
+distance was detected by original stack offsets.
 
-Continue at original 0x004665E4. **Partial, not Exact**:
-8,839 original bytes and the complete CPU collision
-selection, frame, return and relocation closure remain
-open. Only the selected native workbench was compiled;
-no all-unit cold replay was performed.
+Next original block 0x004668D5. **Not full Exact:**
+8,086 remaining code bytes, full original frame,
+shared return and relocation closure are still open.
+No complete-game cold replay.
 
 ## Nayuki Character10 Slot02: full 4,827-byte strict Exact command boss
 
