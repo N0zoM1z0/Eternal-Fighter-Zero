@@ -130,7 +130,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Sayuri Character09::Slot05 CPU | 0x0044AB30, 12,330 original bytes | workbench/sayuri-cpu/ covers 6,901 original bytes / 1,774 instructions; 1,772/1,773 forms (incomplete native frame), 219 internal jumps, 68 canonical outbound destinations and 124 COFF relocations agree. Continue at 0x0044C625 (CC); 5,429 target bytes remain, partial only. |
+| Sayuri Character09::Slot05 CPU | 0x0044AB30, 12,330 original bytes | workbench/sayuri-cpu/ covers 7,851 original bytes / 1,997 instructions; 1,995/1,996 forms (incomplete native frame), 251 internal jumps, 82 valid canonical outbound destinations and 138 COFF relocations agree. Continue at 0x0044C9DB (CE); 4,479 target bytes remain, partial only. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

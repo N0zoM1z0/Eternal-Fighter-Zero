@@ -438,6 +438,83 @@ void Character09::Slot05()
                 return;
             }
         }
+        if (field0008 == 0xcc) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 60.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 1;
+                return;
+            }
+            if (distance.forward < 80.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                inputY = 0;
+                return;
+            }
+            if (distance.forward < 125.0 &&
+                field3110 > 399 && field3110 < 700) {
+                buttonPulse[1] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 950) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 4) == 0)
+                    field3114 = 5;
+                return;
+            }
+        }
+        if (field0008 == 0xcd) {
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 < 200 && attackCollisionResult == 3) {
+                recognizedCommand = 0x1e;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 199 && field3110 < 400) {
+                recognizedCommand = 0x0b;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 399 && field3110 < 500 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0xaa;
+                return;
+            }
+            if (field3110 < 400 && distance.forward < 100.0) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 700) {
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x0a;
+                return;
+            }
+            if (field3110 > 850) {
+                if ((unsigned short)RandomRange(0, 2) == 0)
+                    field3114 = 7;
+                inputY = -1;
+                return;
+            }
+            if (field3110 > 920) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 1;
+                return;
+            }
+        }
     }
     // Later action-specific CPU decisions are still open.
 }
