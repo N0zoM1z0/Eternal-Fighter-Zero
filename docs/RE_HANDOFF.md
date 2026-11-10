@@ -85,6 +85,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
+| Sayuri `Character09::Slot04` | 0x00446780, 11,119 original bytes | workbench/sayuri-action/ has 2,020 original bytes / 497 instructions; 496/497 comparable forms (incomplete frame only), 72 internal branch destinations and 16 relocations match. Continue from 0x00446F64; partial diagnostic only, not Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

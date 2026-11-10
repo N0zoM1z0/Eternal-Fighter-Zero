@@ -398,3 +398,4 @@ address,end,size,status,evidence
 0x0040E6C0,0x0040E734,116,reviewed,docs/KNOWLEDGE_BASE.md#secondary-facing-explicit-x-coordinate
 0x00449300,0x00449383,131,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
 0x00446710,0x00446760,80,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
+0x00446780,0x004492EF,11119,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot04-action-boss-reviewed-prefix
