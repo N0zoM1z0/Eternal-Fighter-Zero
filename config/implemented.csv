@@ -361,3 +361,4 @@ address,name,source,symbol,status,evidence
 0x004B12E0,Character06::Slot01,src/Character06Render.cpp,?Slot01@Character06@@UAEXXZ,complete,docs/evidence/nagamori-meter-render-exact.json
 0x004AE2E0,Character06::Slot04,src/Character06Input.cpp,?Slot04@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot04-exact.json
 0x004AE1D0,Character06::MarkEffectCollision,src/Character06Collision.cpp,?MarkEffectCollision@Character06@@QAEXFFFF@Z,complete,docs/evidence/nagamori-effect-proximity-exact.json
+0x004B1780,Character06::Slot02,src/Character06Commands.cpp,?Slot02@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot02-exact.json

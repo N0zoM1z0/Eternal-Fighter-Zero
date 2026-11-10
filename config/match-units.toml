@@ -130440,3 +130440,27 @@ type = "REL32"
 symbol = "_fabs"
 target = 0x0077842D
 evidence = "EFZ.exe at 0x004AE26F original CRT fabs relative-call destination 0x0077842D for vertical range"
+
+[units.character-06-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-06-slot02/Character06Commands.obj"
+symbol = "?Slot02@Character06@@UAEXXZ"
+target_address = 0x004B1780
+size = 4917
+
+[[units.character-06-slot02.relocations]]
+offset = 387
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe @ 0x004B1903: exact IEEE-754 positive-zero double constant at 0x007872F8 for meter-gated grounded combo"
+
+[[units.character-06-slot02.relocations]]
+offset = 1874
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Original EFZ.exe @ 0x004B1ED2: second exact positive-zero double literal for 1000-meter grounded base-0x64 motion"

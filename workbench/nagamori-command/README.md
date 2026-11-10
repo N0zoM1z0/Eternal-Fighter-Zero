@@ -1,6 +1,10 @@
 # Nagamori `Character06::Slot02` — tracked input command source
 
-**Only a partial natural C++ implementation; not full-function Exact.**
+**Historical partial natural C++ investigation.** The complete
+production owner `src/Character06Commands.cpp` is now **4,917/4,917
+strict Exact** with all 15 original input scans and 2/2 original
+literal relocations. See `docs/evidence/nagamori-slot02-exact.json`.
+The workbench source below remains an eight-scan historical draft.
 Original Nagamori vtable slot 2 at `0x00788404` points to
 `[0x004B1780,0x004B2AB5)` (**4,917 bytes**) followed by 11
 alignment `CC` bytes. Verified complete target SHA and per-scan hashes:

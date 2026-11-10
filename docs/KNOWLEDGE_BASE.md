@@ -2214,29 +2214,31 @@ per-unit reconstruction boundary rather than claiming whole-program
 ODR/linkage correctness; see `workbench/nagamori-helper/README.md`.
 No global cold replay or unrelated certificate invalidation occurred.
 
-## Nagamori Slot02 command recognizer: eight original input scans recovered
+## Nagamori Slot02 input command boss: complete 4,917-byte strict Exact
 
-Original Nagamori vtable slot 2 (`0x00788404`) selects a complete
-**4,917-byte** function at `[0x004B1780,0x004B2AB5)`.
-The isolated natural C++ in `workbench/nagamori-command/` now
-reconstructs **eight ordered scans**, covering **3,437 original
-bytes / 1,010 x86 instructions**. Their exact bounds, lengths,
-priorities and original SHA-256 values are in
+Nagamori's original virtual slot 2 at `0x00788404` resolves to
+`Character06::Slot02` at `0x004B1780`. The complete **4,917-byte**
+owner `[0x004B1780,0x004B2AB5)` is now reconstructed in natural
+C++ at `src/Character06Commands.cpp` and accepted as selected
+`character-06-slot02` Strict Exact: **4,917/4,917 original code bytes,
+all 1,421 instructions, zero differences, and both original DIR32
+relocations**. They resolve to the original IEEE-754 positive-zero
+double at `0x007872F8`. Eleven following `CC` alignment bytes are
+excluded. The original function SHA-256 is
+`a3f3e30b48a3763a54ee34d5a3d35ea5f0f83e321e65f804ceaf5c33a815bb00`.
+
+All fifteen original priority-ordered circular input-history scans
+are implemented, including Nagamori's 3000-meter grounded 0x5B
+command, 1000-meter grounded 0x64 branch, base 0x78/0x6E specials,
+original signed facing and input-window conditions, and the 0x35
+pattern gated by state `field0008 == 0x60`. Superficially similar
+Ikumi source was only a test hypothesis; all resulting control flow,
+register operands, full code bytes and literal bindings were checked
+against Nagamori's own executable. Complete strict native certificate:
+`docs/evidence/nagamori-slot02-exact.json`.
+Earlier first-eight-scan investigation remains available in
+`workbench/nagamori-command/`, with individual scan extents in
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
-
-The highest-priority 0x5B command requires exact ground position and
-3,000 meter. Subsequent 0x78, 0x6E and 0x64 specials preserve original
-1000-meter and ground-entry restrictions, then four lower-priority
-0x28, 0x14, 0x0A, 0x1E scans recognize distinct directional patterns.
-The Nagamori-specific 45/60-frame scan windows and signed-facing
-expressions were checked against canonical disassembly; an earlier
-duplicate scan draft was rejected after independent VC7.1 comparison.
-
-Focused `check_first_scan.py` recompiles only this translation unit
-and verifies **1,010/1,010 original instruction forms**, normalizing
-numeric future branch destinations and two original constant operand
-addresses. The 3,438-byte temporary object still has its own return;
-seven original scans remain open. **Not whole-function Exact.**
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

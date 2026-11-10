@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authority": "complete native pinned VC7.1 C++ original function with all 2 canonical DIR32 relocations and 0 differences",
+  "method": "Nagamori Character06::Slot02 original virtual slot2 (0x00788404) owns [0x004B1780,0x004B2AB5), 4917 bytes. Complete natural C++ implements 15 priority-ordered input-history scans and their real common return. All 1421 x86 instructions, 4917 code bytes and both 0x7872F8 IEEE-754 0.0 literal relocations match original. Distinct Nagamori guards include 0x5B with 3000 meter/ground, 0x64 with 1000 meter/ground, 0x35 with initial animation 0x60, and 45-tick later input windows. Compared entire owner strictly without byte masks, code patches or full cold replay. Original 11 INT3 alignment bytes excluded; unrelated executable/game runtime closure remains open.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4917,
+      "matched_bytes": 4917,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 387,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe @ 0x004B1903: exact IEEE-754 positive-zero double constant at 0x007872F8 for meter-gated grounded combo",
+          "addend": 0
+        },
+        {
+          "offset": 1874,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Original EFZ.exe @ 0x004B1ED2: second exact positive-zero double literal for 1000-meter grounded base-0x64 motion",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "a3f3e30b48a3763a54ee34d5a3d35ea5f0f83e321e65f804ceaf5c33a815bb00",
+      "target_extent_sha256": "a3f3e30b48a3763a54ee34d5a3d35ea5f0f83e321e65f804ceaf5c33a815bb00",
+      "unit": "character-06-slot02",
+      "symbol": "?Slot02@Character06@@UAEXXZ",
+      "target_address": "0x004B1780",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e0f63fc7ccf3e74fecdbea490f524f5bac5e79a0c153a7a68d7adc34d97eab50",
+      "object_sha256": "fa050432e7864dd6040f22e77a5d47ab75e00f40da5280d0c63176f3122672f5",
+      "source_sha256": "0de744635662674a50ecc9c496b08919a34bbd69e3cc703cef4e883a874fa676",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "7117f991aaad2878d44f8dc3921a06ce1857026e5191fd787f709ecac4fbda33",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "9abb2223d7cd05f47c5ff7fd0bdb68cb66e4bdded0107bd5cd7b3e4fd7ef72de",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
