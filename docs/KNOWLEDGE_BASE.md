@@ -2240,6 +2240,25 @@ Earlier first-eight-scan investigation remains available in
 `workbench/nagamori-command/`, with individual scan extents in
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
 
+## Nagamori Slot05 CPU decision prefix: 1,827 original bytes verified
+
+Original Nagamori vtable slot 5 (`0x00788410`) points to the
+**15,292-byte** CPU input function `[0x004B2AC0,0x004B667C)`, followed
+by four `CC` bytes. Its original SHA-256 is
+`14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
+An isolated normal C++ workbench source at
+`workbench/nagamori-cpu/Character06Cpu.cpp` reconstructs the opening
+CPU guards and close-range reactions. Its first **1,827 original
+bytes / 502 instruction positions** have been compared to pinned
+VC7.1: 501 opcode/operand forms match, after normalizing numeric
+branch/call destinations and external FP constants. The lone prologue
+frame allocation differs (`0xE8` target vs `0x60` partial) because
+subsequent local variables have not been implemented. One original
+Nagamori-specific multiplier is **3.0f**, verified at
+`0x004B306E`, rather than the sibling's factor 2. This boss is
+**not whole-function Exact**. The focused check and investigative
+notes are under `workbench/nagamori-cpu/`.
+
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
 The original Nagamori vtable slot 4 at `0x0078840C` points to

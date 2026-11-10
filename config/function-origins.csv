@@ -262,7 +262,7 @@ address,origin,status,evidence
 0x004B1720,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B1750,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-delegates-and-timer-overrides
 0x004B1780,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot02-command-scanner-first-scan-recovered
-0x004B2AC0,unknown,unreviewed,
+0x004B2AC0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot05-cpu-decision-prefix
 0x004B6680,unknown,unreviewed,
 0x004C0480,authored,reviewed,docs/KNOWLEDGE_BASE.md#mizuka-local-effect-dispatch-and-controls
 0x004C04B0,unknown,unreviewed,

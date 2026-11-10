@@ -393,3 +393,4 @@ address,end,size,status,evidence
 0x004AE2E0,0x004B12D5,12277,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot04-action-boss-complete-12277-byte-strict-exact
 0x004B1780,0x004B2AB5,4917,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot02-command-scanner-first-scan-recovered
 0x004AE1D0,0x004AE2B7,231,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-exact-effect-proximity-helper
+0x004B2AC0,0x004B667C,15292,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot05-cpu-decision-prefix
