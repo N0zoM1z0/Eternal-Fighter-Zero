@@ -11,30 +11,33 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed original prefix [0x004B2AC0,0x004B57B4)
-contains **11,508 bytes / 2,915 instructions**, target SHA-256
-1846fda259370ce1a13b5e0da195d6247bad897a81f41b42d6224e4d26516977.
+The reviewed original prefix [0x004B2AC0,0x004B5C25)
+covers **12,645 original bytes / 3,211 instructions**,
+SHA-256 baff0e79b3f6aeee3840f1c8b0091439056cff4a65795cdce0be1c20d5fba08b.
 
-The pinned VC7.1 build emits **11,509 bytes / 2,918 instructions**
-including the three-instruction temporary return, with 203
-COFF relocations. **2,914 / 2,915 target instruction forms**
-agree after normalization; only the unfinished stack frame
-differs (0xC8 versus target 0xE8). The focused test also
-compares **401 intra-prefix branch destinations** and
-**128 literal IEEE-754 payload bindings** against the original.
+Selected pinned VC7.1 yields a **12,641-byte partial
+COFF candidate** (3,213 instructions including temporary
+epilogue, 228 relocations). **3,209 / 3,210 comparable
+forms** agree; only the unfinished stack frame 0xD0
+versus original 0xE8 differs. The target prefix ends in
+a shared-exit jump absent from the incomplete source.
+All **445 internal branch destinations** and **148 original
+float/double literal payloads** match this selected source.
 
-The reconstructed conditional decisions cover state 4..11,
-defense/movement and collision reaction actions 0xC8..0xD1
-plus 0xE7. The 0xE7 branch leaves the function *without* a
-return on its final failed/random-miss path, falling into
-the later generic decision logic at 0x004B57B4. The test
-now compares every original prefix instruction including
-its last natural fall-through rather than assuming an exit jump.
+The source includes action-specific defensive/movement
+decisions and 0xC8..0xE7 collision reactions. It now
+also restores the 25x-probability generic ground-vs-ground
+decisions through 0x004B5C25: distance windows,
+attack inputs, meter commands, rare CPU states and one
+original unreachable roll window. The original x87 compare
+at 0x004B5B75 requires opponentY > positionY to obtain
+the correct instruction order/branch polarity.
 
-Only this source owner is rebuilt:
+Run only:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-Continue at 0x004B57B4. This is **not Exact**: 3,784
-target bytes plus the complete original frame and
-relocation closure still remain.
+Continue at 0x004B5C25 (airborne-opponent branch), then
+0x004B5E6E (self-airborne), 0x004B6294 (chance fallback).
+**Not Exact** until remaining 2,647 bytes, complete
+stack and all original relocation bindings are closed.

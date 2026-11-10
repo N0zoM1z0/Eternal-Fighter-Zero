@@ -763,5 +763,90 @@ void Character06::Slot05()
             }
         }
     }
+    // General-purpose randomized CPU logic after the action-specific trees.
+    if ((float)(unsigned short)RandomRange(0, 100) < 25.0f * field00a8) {
+        field3110 = (unsigned short)RandomRange(0, 1000);
+        if (positionY == 0.0) {
+            if ((*opponentSlot)->positionY == 0.0 &&
+                (*opponentSlot)->field0008 != 99) {
+                if (distance.forward < 40.0 &&
+                    (*opponentSlot)->positionY == 0.0 &&
+                    field3110 < 5) {
+                    buttonPulse[2] = 1;
+                    inputX = -facing;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 55.0 && field3110 < 20) {
+                    buttonPulse[0] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 70.0 && field3110 < 30) {
+                    buttonPulse[0] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 100.0 && distance.forward > 70.0 &&
+                    field3110 < 15) {
+                    buttonPulse[1] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 120.0 && field3110 < 20) {
+                    buttonPulse[1] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward > 120.0 && field3110 < 30) {
+                    field3114 = 8;
+                    return;
+                }
+                if (distance.forward < 80.0 && field3110 < 80 &&
+                    field3110 > 37 &&
+                    (*opponentSlot)->field0008 > 49 &&
+                    (*opponentSlot)->field0008 < 157) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 90.0 && distance.forward > 60.0 &&
+                    field3110 < 37) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 100.0 && distance.forward > 70.0 &&
+                    field3110 < 40) {
+                    buttonPulse[2] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 80.0 && field3110 < 42 &&
+                    field3110 > 40) {
+                    recognizedCommand = 0x14;
+                    return;
+                }
+                // Preserve the original, apparently unreachable roll window.
+                if (field3110 < 42 && field3110 > 50) {
+                    recognizedCommand = (short)facing;
+                    field3114 = 5;
+                    return;
+                }
+                if ((double)(unsigned short)RandomRange(0, 0x140) <
+                        distance.forward - 70.0 &&
+                    velocityY > 0.0 && (*opponentSlot)->positionY > positionY &&
+                    field3110 > 235 && field3110 < 250) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                    return;
+                }
+                if (distance.forward > 180.0 &&
+                    field3110 > 250 && field3110 < 252 && meter >= 1000) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                    return;
+                }
+            }
+        }
+    }
     // Remaining priority AI decisions are not reconstructed yet.
 }

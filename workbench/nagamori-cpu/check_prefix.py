@@ -15,7 +15,7 @@ from common import verify_target, target_bytes
 from coff import object_function
 from native_build import compile_source
 
-START, END = 0x004B2AC0, 0x004B57B4
+START, END = 0x004B2AC0, 0x004B5C25
 SOURCE = ROOT / 'workbench/nagamori-cpu/Character06Cpu.cpp'
 OBJECT = ROOT / 'build/nagamori-cpu/Character06Cpu.partial.obj'
 
@@ -69,7 +69,7 @@ def verify_internal_branches(target, candidate, original_edges, built_edges):
                 f'jumped to instruction {target_ordinal}, but draft '
                 f'{draft_addr:#x} jumped to {draft_ordinal}')
         checked += 1
-    assert checked == 401, checked
+    assert checked == 445, checked
     return checked
 
 
@@ -123,32 +123,32 @@ def main():
     built_records, built_edges = instructions(code, ROOT / 'build/nagamori-cpu/draft-prefix.bin')
     target = [op for _, op in target_records]
     built = [op for _, op in built_records]
-    # The target prefix ends at the first unrecovered instruction; unlike
-    # earlier milestones, the 0xE7 branch falls through rather than ending
-    # with a jump to the shared return. Compare all currently recovered
-    # instruction forms and their internal control-flow destinations.
-    assert len(original) == 11508 and len(target) == 2915
-    assert hashlib.sha256(original).hexdigest() == '1846fda259370ce1a13b5e0da195d6247bad897a81f41b42d6224e4d26516977'
-    assert len(code) == 11509 and len(built) == 2918 and len(relocs) == 203
+    # The current original prefix ends in a shared-exit jump that the partial
+    # C++ source cannot emit until the whole owner is reconstructed. Compare
+    # the recoverable prefix and its internal control-flow destinations.
+    assert len(original) == 12645 and len(target) == 3211
+    assert hashlib.sha256(original).hexdigest() == 'baff0e79b3f6aeee3840f1c8b0091439056cff4a65795cdce0be1c20d5fba08b'
+    assert len(code) == 12641 and len(built) == 3213 and len(relocs) == 228
     assert target[2] == 'sub    esp,0xe8'
-    assert built[2] == 'sub    esp,0xc8'
+    assert built[2] == 'sub    esp,0xd0'
     assert all(t == b for i, (t, b) in
-               enumerate(zip(target, built[:-3])) if i != 2)
+               enumerate(zip(target[:-1], built[:-3])) if i != 2)
     edges = verify_internal_branches(target_records, built_records, original_edges, built_edges)
-    assert edges == 401, edges
+    assert edges == 445, edges
     literal_count = verify_float_literals(image, original, target_records, built_records, relocs)
-    assert literal_count == 128, literal_count
+    assert literal_count == 148, literal_count
     # Catch the previous bug: both attack choices must be covered by this
     # six-byte near JNZ, not a short jump into the second choice.
     assert original[0x6b2:0x6b8] == code[0x6b2:0x6b8]
+    assert target[-1] == 'jmp DEST'
     assert built[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori Slot05 original opening: 2914/2915 aligned instruction')
+    print('Nagamori Slot05 original opening: 3209/3210 aligned instruction')
     print('forms and operands match, normalizing direct call/branch targets')
     print('and original FP constant addresses. Only the unfinished stack')
     print('allocation differs. This is NOT complete-function Exact.')
     print('Internal branch destinations verified:', edges)
     print('Original IEEE-754 float literal bindings verified:', literal_count)
-    print('Original prefix: 11508 bytes / 2915 instructions.')
+    print('Original prefix: 12645 bytes / 3211 instructions.')
     print('Partial compiled owner:',len(code),'bytes /',len(built),'instructions,',
           len(relocs),'COFF relocations; target whole owner is 15292 bytes.')
     print('Stack: original 0xE8, candidate',built[2])

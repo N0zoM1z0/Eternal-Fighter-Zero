@@ -2096,44 +2096,46 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 11,508-byte reviewed prefix
+## Nagamori Slot05 CPU boss: 12,645-byte reviewed prefix
 
-Original Nagamori Character06 Slot05 owns 15,292 code bytes at
-[0x004B2AC0,0x004B667C), with the following 4 bytes of alignment
-excluded. The natural-source candidate in workbench/nagamori-cpu/
-now covers [0x004B2AC0,0x004B57B4):
-**11,508 original bytes / 2,915 instructions**. Target prefix
-SHA-256: 1846fda259370ce1a13b5e0da195d6247bad897a81f41b42d6224e4d26516977.
+Original Character06 Slot05 owns 15,292 instruction bytes at
+[0x004B2AC0,0x004B667C). The natural-source candidate in
+workbench/nagamori-cpu/ now covers [0x004B2AC0,0x004B5C25):
+**12,645 original bytes / 3,211 instructions**. Reviewed prefix
+SHA-256: baff0e79b3f6aeee3840f1c8b0091439056cff4a65795cdce0be1c20d5fba08b.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 11,509 bytes
-and 2,918 instructions including the temporary three-instruction
-return, with 203 relocations. **2,914 / 2,915 original instruction
-forms** agree after normalizing branch/call targets and FP
-constant addresses; only the incomplete stack frame (0xC8
-versus original 0xE8) differs. The diagnostic verifies **401
-original internal branch edges** by destination instruction
-ordinal and **128 IEEE-754 constant bindings**, each against
-the target's literal payload. These are prefix diagnostics,
-not complete-function Exact.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 12,641 bytes
+(3,213 instructions including the temporary epilogue,
+228 COFF relocations). **3,209 / 3,210 comparable original
+instruction forms** agree, normalizing direct call/branch and
+floating-constant addresses. Only the incomplete stack frame
+(0xD0 versus original 0xE8) differs. The target's final
+prefix instruction is a jump into the incomplete shared
+return. The targeted audit additionally verifies **445
+internal branches** by instruction ordinal and **148 full
+IEEE-754 literal bindings**. No full-owner Exact claim is made.
 
-Recovered branches include defense input, grounded/airborne
-selection, CPU states 4..11 and attackCollisionResult follow-up
-for actions 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE,
-0xCF, 0xD0, 0xD1 and 0xE7. The E7 branch at 0x004B54CF
-uses separate opponent-height and meter-gated commands
-0x14/0x1F/0x0A/0x0C/0x48/0x34/0x1E/0x6E and state 6/8.
-Critically, its final random-state check can fall through
-into the *shared generic AI* at 0x004B57B4. That final
-instruction is compared against the original, rather than
-pretending the prefix ends with a jump.
+Recovered decisions include defense, grounded movement,
+CPU states 4..11, action-specific collision reactions
+0xC8..0xD1 and 0xE7. The following general AI opens at
+0x004B57B4 with a 25x CPU probability, sampling a fresh
+0..1000 decision and branching by character/opponent
+airborne status. The newly restored ground-vs-ground owner
+(through 0x004B5C25) includes ordered forward-distance
+thresholds, hit buttons, horizontal/vertical inputs,
+meter-gated commands 0x1E/0x6E and rare state transitions.
+Source preserves an apparently impossible original roll
+window; it is not optimized away in the VC7.1 output.
+For the original 0x004B5B75 x87 compare, the natural C++
+form opponentY > positionY is required to recover the
+original floating register load/condition direction.
 
-Next target block at 0x004B57B4 starts a broad
-25.0f-probability generic decision tree, branching into
-0x004B5C25, 0x004B5E6E and 0x004B6294. Continue with
-workbench/nagamori-cpu/check_prefix.py; never run full
-cold replay for this workbench. **Not Exact**:
-3,784 target bytes, remaining stack lifetime, complete
-shared exit and original relocations remain open.
+Next target branch at 0x004B5C25 handles an airborne opponent,
+followed by self-airborne choices at 0x004B5E6E and the random
+gate fallback at 0x004B6294. Run only the targeted
+workbench/nagamori-cpu/check_prefix.py for partial codegen
+checks. **Not Exact**: 2,647 target bytes remain and the
+full stack/return/relocation closure is still open.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
