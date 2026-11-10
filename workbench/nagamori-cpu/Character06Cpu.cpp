@@ -717,6 +717,51 @@ void Character06::Slot05()
                 return;
             }
         }
+        // Action 0xE7 remains in the collision-confirm priority tree.
+        // The last failed/random-miss path falls through into the generic AI.
+        if (field0008 == 0xe7) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300 &&
+                attackCollisionResult == 3) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x14;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 299 && field3110 < 320) {
+                recognizedCommand = 0x1f;
+                return;
+            }
+            if (field3110 > 0 && field3110 < 200) {
+                recognizedCommand = ((unsigned short)RandomRange(0, 3) == 0) *
+                    2 * (field0118 > 500.0) + 0x0a;
+                return;
+            }
+            if (field3110 > 200 && field3110 < 250 &&
+                distance.forward < 90.0 && attackCollisionResult == 3) {
+                recognizedCommand = 0x14;
+                return;
+            }
+            if (field3110 > 250 && field3110 < 350 &&
+                distance.forward < 120.0 && field0118 > 500.0) {
+                recognizedCommand = 0x48;
+                return;
+            }
+            if (field3110 > 350 && field3110 < 400 && field0118 > 500.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 700) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                return;
+            }
+            if (field3110 > 700 && field3110 < 730 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                return;
+            }
+            if (field3110 > 649 && (unsigned short)RandomRange(0, 3) == 0) {
+                field3114 = 6;
+                if (distance.forward > 110.0) field3114 = 8;
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }
