@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "authority": "complete native VC7.1 COFF matched against canonical original function with both original CRT fabs relocations",
+  "method": "Nagamori nonvirtual Character06::MarkEffectCollision(short x,short y,short width,short height) at 0x004AE1D0 scans signed-short effectRead..effectWrite ring modulo 64. It sets the per-slot +0x316C byte only when effectActive[i] and fabs of the coordinate differences are below the supplied rectangle half-widths. Both original calls resolve to CRT fabs 0x0077842D; all 231 code bytes and 2 relocations strictly match original. The compiling translation unit uses a standalone same-size Nagamori C++ class declaration in workbench/nagamori-helper/CharacterViews.h; shared src/CharacterViews.h remains unmodified, so no 123-unit dependency-wide replay. This is a strictly exact individual function, not a linked-program/ODR/runtime claim. Nine external CC alignment bytes excluded; no full cold replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 231,
+      "matched_bytes": 231,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 97,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "EFZ.exe at 0x004AE231 original CRT fabs relative-call destination 0x0077842D for horizontal range",
+          "addend": 0
+        },
+        {
+          "offset": 159,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "EFZ.exe at 0x004AE26F original CRT fabs relative-call destination 0x0077842D for vertical range",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "09bc3275b3fccd4ed406b259da7abde052b58d64a80aa1d2077cd28a8b9cf403",
+      "target_extent_sha256": "09bc3275b3fccd4ed406b259da7abde052b58d64a80aa1d2077cd28a8b9cf403",
+      "unit": "character-06-effect-proximity",
+      "symbol": "?MarkEffectCollision@Character06@@QAEXFFFF@Z",
+      "target_address": "0x004AE1D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "e0f63fc7ccf3e74fecdbea490f524f5bac5e79a0c153a7a68d7adc34d97eab50",
+      "object_sha256": "bdab171ed55404262c44ff3af065fdc0fc9c58a8e582ef20c3a31b281e4384cc",
+      "source_sha256": "5bc7e3287291ef3f898f9692751ce481ddc86b72a80a270cc52de928f047bf7e",
+      "dependencies": {
+        "src/Engine.h": "bb3b070658a2465fe59b7fbd8b5af5b58fc8072ba87f34bcd719b545ad598f4d",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "workbench/nagamori-helper/CharacterViews.h": "d1dfe0ec38ee7e4a92a7e71b08b467348341fbc95b92aec1e5262acb8b799bac"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "bfe223e1dc1ef5ce2fc3c50187f2ddfa25cdc66d9c44982aca0d0af7f231f5d2",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "2df4fed400ce7c9f369c02e91c76c714d9254ec9aae2ac4f0efaf392c1a64f9e",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

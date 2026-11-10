@@ -30,8 +30,8 @@ and the pushbox resolver also has a fresh strict-ledger certificate. Recheck
 - Selected compiler/profile: VC7.1 RTM 13.10.3077, `vc71-od-static`,
   EFZ-specific Wine environment.
 - `scripts/repo-python scripts/progress.py --check` passes. The reviewed
-  ledgers currently count **361 exact functions**, **1,088,778 code bytes**,
-  **7,655 associated table bytes**, 393 reviewed complete boundaries and 388
+  ledgers currently count **362 exact functions**, **1,089,009 code bytes**,
+  **7,655 associated table bytes**, 394 reviewed complete boundaries and 389
   reviewed origins out of 950 automatic Ghidra candidates. These are **ledger
   counts**, not a fresh replay of every certificate or a whole-game percentage.
 - `scripts/repo-python scripts/validate-tracking.py --require-target` still
@@ -489,6 +489,24 @@ three different 64-entry child arrays at the signed-short index
 **before** calling base removal. Source evidence is
 `docs/evidence/ikumi-core-overrides-exact.json`. This does not make
 Ikumi's 1,592-byte Slot08 function Exact; retain the open workbench.
+
+## Nagamori effect-proximity helper: 231-byte strict Exact
+
+`Character06::MarkEffectCollision(short,short,short,short)` at
+`0x004AE1D0` now has natural C++
+`src/Character06Collision.cpp`, complete **231/231-byte strict Exact**
+with **2/2 canonical `_fabs` call relocations** and zero differences.
+Selected unit `character-06-effect-proximity`; public proof
+`docs/evidence/nagamori-effect-proximity-exact.json`.
+It checks the active circular effect pool and sets the local flag when
+both axis distances are inside the supplied box limits.
+
+The function is compiled against a **private original-size Nagamori
+class view** in `workbench/nagamori-helper/`, leaving shared
+`src/CharacterViews.h` untouched and avoiding unnecessary dependency
+invalidation of 123 selected units. As for all single-unit Exact
+owners, this does **not** establish whole-game C++ linkage or runtime.
+No full cold replay.
 
 ## Nagamori Slot02 boss: two original input scans reconstructed
 

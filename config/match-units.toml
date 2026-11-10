@@ -130417,3 +130417,26 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "EFZ.exe exact original REL32 relocation operand 0x004B12C4: Canonical original direct thiscall ?ClearBufferedButtons@Secondary@@QAEXXZ to 0x0040F170"
+[units.character-06-effect-proximity]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character06Collision.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "workbench/nagamori-helper/CharacterViews.h"]
+object = "build/match-units/character-06-effect-proximity/Character06Collision.obj"
+symbol = "?MarkEffectCollision@Character06@@QAEXFFFF@Z"
+target_address = 0x004AE1D0
+size = 231
+
+[[units.character-06-effect-proximity.relocations]]
+offset = 97
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842D
+evidence = "EFZ.exe at 0x004AE231 original CRT fabs relative-call destination 0x0077842D for horizontal range"
+
+[[units.character-06-effect-proximity.relocations]]
+offset = 159
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842D
+evidence = "EFZ.exe at 0x004AE26F original CRT fabs relative-call destination 0x0077842D for vertical range"

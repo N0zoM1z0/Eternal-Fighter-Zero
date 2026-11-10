@@ -2189,6 +2189,31 @@ Public receipts: `docs/evidence/nayuki-constructor-exact.json` and
 `docs/evidence/nayuki-creation-consumers-exact.json`; the Makoto
 receipt was refreshed. No full cold replay or game runtime claim.
 
+### Nagamori original effect-proximity helper: 231-byte strict Exact
+
+The nonvirtual `Character06::MarkEffectCollision` at `0x004AE1D0`
+is now fully reconstructed in normal C++ at
+`src/Character06Collision.cpp` and accepted as an isolated source
+function, unit `character-06-effect-proximity`.
+It scans the effect pool from `effectRead` to `effectWrite` through
+64 circular slots; if a slot is active and both `fabs` coordinate
+differences fall inside the supplied half-width and half-height,
+it sets Nagamori's matching +0x316C byte flag. The complete original
+`[0x004AE1D0,0x004AE2B7)` extent is **231/231 strict Exact** under
+pinned VC7.1, with both original `REL32` calls bound to CRT `fabs`
+(`0x0077842D`), zero byte differences and nine external alignment
+`CC` bytes excluded. Strict proof:
+`docs/evidence/nagamori-effect-proximity-exact.json`.
+
+Because adding a nonvirtual member declaration to shared
+`src/CharacterViews.h` would change source hashes for **123 already
+selected units**, the exact member is compiled using a dedicated
+same-layout class view `workbench/nagamori-helper/CharacterViews.h`
+while the shared header stays unchanged. This is an explicit
+per-unit reconstruction boundary rather than claiming whole-program
+ODR/linkage correctness; see `workbench/nagamori-helper/README.md`.
+No global cold replay or unrelated certificate invalidation occurred.
+
 ## Nagamori Slot02 command recognizer: first two scans recovered
 
 Original Nagamori vtable slot 2 at `0x00788404` points to
