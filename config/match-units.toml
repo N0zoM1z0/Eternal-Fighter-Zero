@@ -133881,3 +133881,69 @@ type = "REL32"
 symbol = "?InitializeState@Secondary@@UAEXXZ"
 target = 0x0040EDF0
 evidence = "Original Character09 vtable entry 0x00788168 points to 0x00446590; direct EFZ.exe CALL at 0x004466BD resolves to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"
+
+[units.character-09-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot02/Character09Commands.obj"
+symbol = "?Slot02@Character09@@UAEXXZ"
+target_address = 0x004493C0
+size = 5995
+
+[[units.character-09-slot02.relocations]]
+offset = 306
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x004494F2: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 821
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x004496F5: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 1466
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x0044997A: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 1990
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x00449B86: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 2494
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x00449D7E: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 2917
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x00449F25: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 3314
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x0044A0B2: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[[units.character-09-slot02.relocations]]
+offset = 4106
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "EFZ.exe original IEEE-754 double reference at 0x0044A3CA: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"

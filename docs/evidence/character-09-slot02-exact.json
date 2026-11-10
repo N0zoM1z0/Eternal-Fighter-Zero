@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "Complete natural VC7.1 compiled Character09 Slot02, original 5995-byte authored boundary, original target-bound COFF relocations and exact byte comparison; not whole-game linkage/runtime",
+  "method": "Original Sayuri Character09 vtable at 0x00788138 slot02 at 0x00788140 selects 0x004493C0, code [0x004493C0,0x0044AB2B) with five following CC alignment bytes. Reconstructed all 1752 x86 instructions in natural C++ loops over circular 180-frame input history, 15 command priority scans and complete shared epilogue. Key command gates include stage transitions for 0x62, 0xAA, 0xA0, 0x64, 0x6E, 0x46, 0x14, 0x0A, 0x28, 0x1E, 0x06, 0x35, 0x34, 0x33, 0x32, and alternated 0x01 and 0x00. The explicit original 0x28 scan requires airborne positionY < 0 while the 0x14 scan requires grounded positionY == 0. Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces the full original 0xC stack frame, 5995/5995 code bytes and all 8 COFF relocations to the target-verified IEEE-754 zero constant at 0x007872F8 with zero differences, no padding/asm/masks or full all-unit replay.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 5995,
+      "matched_bytes": 5995,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 306,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x004494F2: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 821,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x004496F5: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 1466,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x0044997A: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 1990,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x00449B86: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 2494,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x00449D7E: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 2917,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x00449F25: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 3314,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x0044A0B2: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        },
+        {
+          "offset": 4106,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "EFZ.exe original IEEE-754 double reference at 0x0044A3CA: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436",
+      "target_extent_sha256": "e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436",
+      "unit": "character-09-slot02",
+      "symbol": "?Slot02@Character09@@UAEXXZ",
+      "target_address": "0x004493C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "2fadfff78409ad1fa4ebcfb6731e1a3bc65ae1d12949dbbfaef5c70c5ee2646a",
+      "object_sha256": "57ace6214256bca57349e71c3dfebd6bca5ff2c8a7c79132678abcb8af3f502e",
+      "source_sha256": "518981ee65bf063b69d63fd4316de03307785c073f3b338ac3067c0684db2dfa",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "db979640b846aea0b6a2668407f6f2c913a2d1377c3061f2eac4ec3c18214305",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "db112334921f0a780fd5b12edad019048892f1e5a85eadb52266888d2c9b92b6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
