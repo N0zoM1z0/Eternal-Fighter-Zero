@@ -1,4 +1,4 @@
-# Nayuki Character10::Slot07 — first 10,248 original code bytes reviewed
+# Nayuki Character10::Slot07 — first 12,858 original code bytes reviewed
 
 Original Nayuki vtable Slot07 at 0x0078828C selects the full native
 [0x00468870, 0x0046D895) owner: 20,517 original x86 bytes,
@@ -8,52 +8,45 @@ table at 0x0046D895, then a 100-entry compact ID table at 0x0046D905;
 do not classify these tables as instruction bytes or CC padding.
 
 Natural C++ workbench Character10Effects.cpp now reconstructs
-Nayuki-specific effect types 0x190–0x19A against the
-canonical executable's native control flow:
-[0x00468870,0x0046B078), **10,248 original x86
-bytes / 2,310 original instructions**, prefix SHA-256
-8500e5e430d4da4ebaff77e1719ebace6bbcf3315b8e9df6d6b3a4523d817b3b.
+[0x00468870,0x0046BAAA), **12,858 original code bytes /
+2,895 x86 instructions**, original prefix SHA-256
+ae6f216e043d32cec93d9c21d9ab0feece5b3f27e510f45a4377c477be8e5038.
+The complete owner still spans 20,517 bytes; not whole Exact.
 
-Selected reproducible native audit:
+Selected native workbench audit only (no full replay):
 
     scripts/repo-python workbench/nayuki-effects/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits the
-**2,309 comparable matching original instruction forms**
-with original offsets and original byte widths.
-Only the unfinished full-owner stack allocation differs
-(incomplete candidate vs original 0x1D4).
-**126 original internal branches**, **18 valid
-original outbound branches** and **123 original-bound
-non-switch COFF literal/call relocations** across
-26 distinct symbols are checked by original bytes.
-The two compiler-local switch table relocations
-are independently reviewed; eleven original dispatch
-targets are checked against the original jump table.
-Later unreviewed switch cases are NOT exact.
+VC7.1 /Od /G6 /MT /Gy /W3 emits **2,894 matching
+original instruction forms and operands** in
+their original same-width locations, except the
+incomplete frame allocation (the original frame
+is 0x1D4; candidate frame changes as later effects
+are recovered). **159 original in-prefix branch
+destinations, 22 original outbound targets and
+147 non-switch original-bound COFF relocations**
+over 27 uniquely bound symbol targets agree.
+Both compiler-local switch-table relocations
+are treated separately, and the first 15
+original case destinations are verified against
+canonical switch table bytes. None of this
+claims an Exact whole owner or complete jump table.
 
-Reconstructed 0x190–0x196 includes frame5 particle,
-0x191/0x192 bounce, 0x193 frame6 rollback, 0x194
-camera top clamp, 0x195 simple clock, and 0x196
-tick30 shake plus child effect. Newly authored
-0x197 has twin 0x19A subeffects at ticks 24 and 30
-with +/-40 x offsets; 0x198 emits three 0x19B
-subeffects at ticks 19/24/30 with 0/+50/-50 x
-offsets and SetVerticalShake(15,0); 0x199 emits
-randomized child 0x19C from canonical x-50.0
-margin with three RandomRange(0,100) calls.
-All original floating literals and direct calls
-in the reviewed range are original-bound.
+The now-reviewed natural C++ includes Nayuki effect
+handlers 0x190–0x19E: hit/ground bounces, opponent
+facing and distance tests, camera-bound clipping,
+multi-frame 0x19A/0x19B particle bursts, and
+randomized 0x19C projectile emissions. The
+0x19B, 0x19C, 0x19D and 0x19E bodies extend the
+prior 0x19A random-particle family with their
+original state permissions, timing and source
+call order. Floating-point literal bit patterns,
+RandomRange and local emission callees have been
+checked against the target, not copied unchecked.
 
-Continue at original **0x0046B078**, effect 0x19B.
-**10,269 more original instruction bytes**, full
-frame/return and remaining local jump table and
-relocations are open. The structural C++ after
-0x199 is UNREVIEWED sibling scaffolding; do not
-credit it as native exactness. No all-unit cold replay.
-
-The newly reviewed 0x19A emitter has a 12% random
-chance and the same canonical -50.0 position offset
-with a separate frame-zero state flag. More recent
-0x19B scaffold changes do not enlarge the accepted
-prefix until the selected audit passes.
+Continue at original 0x0046BAAA, case 0x19F.
+**7,659 original code bytes remain open**,
+plus original final 0x1D4 stack lifetime, the
+remaining switch targets, return and relocations.
+Later sibling-derived source remains experimental
+until audited. No full-game cold replay.

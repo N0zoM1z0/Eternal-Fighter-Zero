@@ -202,7 +202,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot07 effects boss | 0x00468870, 20,517 original bytes | workbench/nayuki-effects/ covers reviewed 10,248-byte / 2,310-instruction prefix through case 0x19A; 2,309 normalized instruction forms agree (incomplete stack vs original 0x1D4), 126 internal jumps, 18 canonical outbound targets, 123 original non-switch COFF relocations; two local switch references reviewed separately. Continue 0x0046B078 (0x19B); 10,269 bytes still open, NOT Exact. |
+| Nayuki Character10::Slot07 effects boss | 0x00468870, 20,517 original bytes | workbench/nayuki-effects/ covers 12,858 bytes / 2,895 instructions through 0x19E; 2,894 original forms match (incomplete 0x1D4 frame), 159 internal branches, 22 outbound canonical targets, 147 original non-switch COFF relocations; two local switch fields reviewed separately. Continue 0x0046BAAA (0x19F); 7,659 original bytes still open, NOT Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

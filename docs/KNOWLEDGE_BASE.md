@@ -3022,60 +3022,49 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot07-effects-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot07: reviewed 10,248-byte effects-boss opening
+## Nayuki Character10 Slot07: reviewed 12,858-byte effects-boss opening
 
-Original Nayuki vtable Slot07 at 0x0078828C selects
-[0x00468870,0x0046D895), 20,517 original x86 code
-bytes, whole SHA-256
+The original Nayuki vtable Slot07 at 0x0078828C selects
+[0x00468870,0x0046D895), **20,517 original code bytes**,
+full SHA-256
 cbb77f4167efda7923dad4f9dc596fccba3a501d04451336368193ba1a1896f9.
-Immediately following code are the original 28-entry
-switch destination array at 0x0046D895 and
-100-byte case index table at 0x0046D905.
-These are separate DATA, not instruction bytes.
+The original adjacent 28-entry jump-target array
+at 0x0046D895 and compact 100-byte case-ID table
+at 0x0046D905 are not instruction bytes.
 
-Natural source at workbench/nayuki-effects/Character10Effects.cpp
-now reconstructs [0x00468870,0x0046B078),
-**10,248 original bytes / 2,310 instructions**,
-canonical prefix SHA-256
-8500e5e430d4da4ebaff77e1719ebace6bbcf3315b8e9df6d6b3a4523d817b3b.
-Selected pinned VC7.1 comparison checks **2,309
-matching original forms plus incomplete stack allocation**,
-all original instruction offsets and byte widths,
-**126 canonical internal jumps**, **18 valid
-outbound branches** and **123 original-bound
-non-switch COFF relocations** across 26 unique
-symbols. Original local switch table relocation
-fields are separately reviewed, with ten case
-destinations verified from original table bytes.
+The naturally authored C++ workbench
+workbench/nayuki-effects/Character10Effects.cpp
+reconstructs [0x00468870,0x0046BAAA):
+**12,858 original bytes / 2,895 instructions**,
+prefix SHA-256
+ae6f216e043d32cec93d9c21d9ab0feece5b3f27e510f45a4377c477be8e5038.
+Pinned native VC7.1 /Od /G6 /MT /Gy /W3
+with the selected check_prefix.py verifies
+**2,894/2,895 comparable forms/operands**,
+with the only nonmatching form being the
+incomplete stack frame versus original 0x1D4.
+It also verifies all same-width instruction offsets,
+**159 original internal branches**, **22 valid
+outbound targets** and **147 canonical non-switch
+COFF relocation fields** over 27 independently
+bound original symbols. The two compiler-local
+switch-table references remain separately checked;
+15 original case dispatch targets are grounded.
 
-The reviewed source covers real Nayuki effect
-cases 0x190–0x19A: early particle emission,
-bounce and grounded collision, camera clipping,
-frame lifecycle, 0x196 local effect 0x199 at
-tick30, 0x197 pair of 0x19A at ticks 24/30
-with +/-40 x positions, 0x198 triple 0x19B
-at ticks 19/24/30 with +50/-50 adjustments,
-and 0x199 randomized 0x19C with exact -50.0
-float origin and source-ordered RandomRange calls.
-Original x87 literals, virtual effects, sound
-and frame duration semantics are checked.
+Natural reconstruction now covers 0x190–0x19E,
+including bounce/impact effect states,
+camera-top truncation, frame5 timed emission,
+dual and triple 0x19A/0x19B particle bursts,
+randomized 0x19C children and distinct
+0x19B/0x19C/0x19D/0x19E effect clocks.
+Original IEEE-754 constants, RandomRange
+calls and emission priority are audited.
 
-The candidate has unfinished a non-final size stack frame
-instead of original 0x1D4. The structural source
-after 0x199 is unreviewed sibling scaffolding.
-Continue at **0x0046B078 (case 0x19A)**.
-**Not whole-function Exact**: 10,269 original
-code bytes, stack, return, later switch table,
-and remaining relocations still need work.
-No all-unit cold replay was run.
-
-
-The 0x19A frame-zero init and 12% random 0x19C
-particle emission have been reconstructed using
-the canonical -50.0 x margin and original random
-call sequence. The incomplete stack allocation
-is expected to change as unreviewed later cases
-are replaced, so it is not accepted as Exact.
+Continue at original 0x0046BAAA (case 0x19F).
+**Not whole-function Exact:** 7,659 original
+bytes, full 0x1D4 stack lifetime/return and
+the remaining jump cases/relocations are
+still unreviewed. No full cold replay.
 
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 
