@@ -7,46 +7,42 @@ padding bytes. Full-target SHA-256:
 359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
 
 The natural-C++ workbench Character09Cpu.cpp now covers
-[0x0044AB30,0x0044BE2B), **4,859 original bytes /
-1,297 instructions**, prefix SHA-256
-46b3ef24f1cfb2419c126a2c3abd72fc30ae4562a0e682cbca08093cb946d06b.
+[0x0044AB30,0x0044C2C6), **6,038 original bytes /
+1,571 instructions**, prefix SHA-256
+6d4c13f9b7139ef0e66278f50d55cb7dca841ec96f2608d9645ac8d8a50a1e1b.
 
-The source restores the common defensive CPU opening and
-Sayuri-specific 140-distance 0x14 trigger, 40..90 collision
-reaction, 0xA8/0xA9 graded command selection and the
-five-priority AA-state aerial attack decisions (including
-upward/downward relative Y, ±30/40/80 thresholds and
-the meter-gated command 0x2A). It now also reconstructs
-the grounded and airborne opponent 0xA8/0xA9/0xAA
-reactions, and CPU state 0–7 recovery: dash-direction
-inputs, state reset, one-shot button pulses and the
-airborne 0x28 state. The opponent attack check is
-hitstunFrames at +0x14C, NOT guardInputFrames at +0x14E.
-The attacker reaction probability uses the canonical
-15.0f literal at 0x787EB0, not an inferred 10.0f.
+The code reconstructs the original CPU defense entry,
+Sayuri-specific 140-distance 0x14 trigger, graded 0xA8/0xA9
+reactions, AA-state aerial follow-ups, opponent action
+reactions and CPU state 0..7 steering. The main randomized
+attack collision tree now covers complete 0xC8/0xC9
+decisions, with their precise timer and distance windows,
+opponent airborne conditions, meter gates and state changes.
+The original C8 button-write path at distance <80 and
+roll <400 falls through to subsequent checks, rather
+than returning. Every RandomRange call is retained,
+including the late timer tests that may be unreachable
+after earlier decisions.
 
-Reproduce the native focused comparison only:
+Run only the native selected check:
 
     scripts/repo-python workbench/sayuri-cpu/check_prefix.py
 
 Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
-4,855-byte partial candidate / 1,299 instructions,
-including a three-instruction temporary epilogue,
-with **96 COFF relocations**. Of 1,296 original
-comparable body instructions, **1,295 match** after
-call/jump/float-reference normalization; the only
-differing instruction form is the incomplete stack
-frame (0xC0 versus original 0xD8). One original
-five-byte near JMP shrinks to a short JMP before
-the temporary epilogue; the original last prefix
-instruction also targets the future shared return.
-**151 in-prefix branch destinations, 37 valid outbound
-original branches and all 96 original-bound
-relocations** agree, including all literal byte
-payloads and 28 uniquely bound symbols.
+**6,031-byte / 1,573-instruction partial candidate**
+including a temporary epilogue, with **113 COFF
+relocations**. Of 1,570 comparable original body
+instructions, **1,569 agree** after normalizing direct
+call/jump destinations and floating literal addresses.
+The incomplete stack frame is 0xC4 rather than
+original 0xD8. Two original near jumps to the distant
+shared exit shorten to short jumps in the partial
+candidate. All **185 internal branch destinations, 57
+valid outbound original destinations, and 113 target-
+bound relocations** agree, including original literal
+payloads and 29 unique symbol bindings.
 
-Continue from original 0x0044BE2B (randomized
-collision reaction/attack continuation). **Not full
-Exact**: 7,471 target bytes, complete stack lifetime,
-return and relocation closure remain unfinished.
-No full all-unit cold replay was performed.
+Next original address is 0x0044C2C6 (0xCA collision
+follow-up). **Not complete Exact**: 6,292 remaining
+target bytes, full stack/return and relocation closure
+are open. No all-unit cold replay was performed.
