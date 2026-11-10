@@ -3022,6 +3022,56 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot07-effects-exact"></a>
 
+<a id="nayuki-slot06-state-prefix"></a>
+
+## Nayuki Character10 Slot06: reviewed 3,469-byte state boss prefix
+
+Original vtable Slot06 at 0x00788288 selects the
+62,693-byte code owner [0x00451850,0x00460D35),
+full SHA-256
+4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
+The adjacent original 138-entry (552-byte)
+switch destination table begins at 0x00460D35;
+the 306-byte selector at 0x00460F5D contains
+137 live animation IDs and 169 default mappings.
+
+The large natural C++ workbench in
+workbench/nayuki-state/Character10State.cpp
+recovers [0x00451850,0x004525DD), **3,469 original
+bytes / 991 original x86 instructions**, SHA-256
+da8cab5b1faa8040f8faf416775a9905bcca7ec499a65c3d12e6ef7899f83eef.
+Nayuki-specific initial movement state code covers
+the default plus states 1–9, 13–16 and 47. Original
+field3148-dependent speed, 0.024 gravity, -2.0
+jump impulse, dash bonuses, landing, timing and
+FaceOpponent priorities were reconstructed
+from the original code, not simply copied.
+
+To avoid recompiling the enormous inherited
+Makoto skeleton on every edit, the selected
+check_prefix.py builds those verified early
+states plus temporary explicitly UNACCEPTED
+marker cases for later original IDs. The
+markers are not counted as recovered behavior.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 matches all
+991 original instruction offsets/widths/forms
+except the incomplete 0x180 candidate stack
+versus full canonical 0x2B4. The focused audit
+checks **78 in-prefix original branches**, **16
+valid outbound targets**, **76 original-bound
+external/IEEE-754 COFF relocations**, two
+original local switch references, and 14
+original case targets.
+
+The workbench has 116 of 137 live case labels;
+21 unique Nayuki states are missing and 8
+unsupported Makoto labels were removed.
+Continue at 0x004525DD with state 50.
+**Not whole-function Exact:** 59,224 code bytes,
+full original frame, selector tables, remaining
+relocations, all missing states and shared
+return are open. No all-unit cold replay.
+
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 
 Original Nayuki Character10 virtual slot07 at vtable

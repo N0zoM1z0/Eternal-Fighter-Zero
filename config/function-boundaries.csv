@@ -417,3 +417,4 @@ address,end,size,status,evidence
 0x00461460,0x00463DCD,10605,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot04-action-reviewed-prefix
 0x00463DD0,0x0046417B,939,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot01-render-exact
 0x00468870,0x0046D969,20729,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot07-effects-exact
+0x00451850,0x00460D35,62693,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot06-state-prefix

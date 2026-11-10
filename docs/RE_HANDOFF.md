@@ -219,6 +219,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
+| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 original code bytes plus 552/306-byte local switch tables | workbench/nayuki-state/ covers 3,469 original bytes / 991 instructions (default, 1–9, 13–16, 47); 78 original internal jumps, 16 original outbound targets, 76 original-bound call/float COFF relocations plus 2 local switch fields; local compiler uses unaccepted late state markers for fast selected testing. 21 live states missing; continue 0x004525DD (state 50), 59,224 bytes OPEN; NOT Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

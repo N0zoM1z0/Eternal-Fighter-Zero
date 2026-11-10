@@ -218,7 +218,7 @@ address,origin,status,evidence
 0x004493C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot02-command-prefix
 0x0044AB30,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot05-cpu-reviewed-prefix
 0x0044DB60,unknown,unreviewed,
-0x00451850,unknown,unreviewed,
+0x00451850,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot06-state-prefix
 0x00461090,authored,reviewed,docs/KNOWLEDGE_BASE.md#character-constructor-allocation-review
 0x00461260,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x004613B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
