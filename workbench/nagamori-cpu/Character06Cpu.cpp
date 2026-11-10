@@ -888,6 +888,67 @@ void Character06::Slot05()
                 }
             }
         }
+        // Self-airborne follow-up: separate opponent ground/air branches.
+        if (positionY < 0.0 && field3114 != 3) {
+            if ((*opponentSlot)->positionY == 0.0) {
+                if (distance.forward < 70.0 && distance.vertical < 100.0 &&
+                    field3110 < ((*opponentSlot)->positionY == 0.0) * 100 + 100) {
+                    buttonPulse[0] = 1;
+                    return;
+                }
+                if (distance.forward < 120.0 &&
+                    distance.vertical > 50.0 && distance.vertical < 60.0 &&
+                    field3110 > 200 && field3110 < 260) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 130.0 &&
+                    distance.vertical > 40.0 && distance.vertical < 80.0 &&
+                    field3110 > 260 && field3110 < 265) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+                if ((double)(unsigned short)RandomRange(0, 0x140) <
+                        distance.forward - 70.0 &&
+                    field3110 > 270 && field3110 < 350) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                    return;
+                }
+                if (distance.forward > 180.0 &&
+                    field3110 > 350 && field3110 < 352 && meter >= 1000) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                    return;
+                }
+            }
+            if ((*opponentSlot)->positionY < 0.0) {
+                if (distance.forward < 80.0 && distance.vertical < 80.0 &&
+                    (*opponentSlot)->positionY < positionY &&
+                    field3110 < (field0118 > 500.0 || field0120 > 0) * 20 + 6) {
+                    recognizedCommand = 0x14;
+                    return;
+                }
+                if (distance.forward < 140.0 && distance.vertical > 90.0 &&
+                    field3110 < 110) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 150.0 && distance.vertical < 90.0 &&
+                    field3110 < 200) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+                if (distance.forward > 180.0 &&
+                    field3110 > 235 && field3110 < 250) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                    return;
+                }
+                if (distance.forward > 180.0 &&
+                    field3110 > 250 && field3110 < 252 && meter >= 1000) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                    return;
+                }
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }

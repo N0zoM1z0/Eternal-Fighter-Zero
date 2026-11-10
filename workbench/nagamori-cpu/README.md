@@ -11,31 +11,27 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-Current original prefix [0x004B2AC0,0x004B5E6E):
-**13,230 bytes / 3,366 instructions**, SHA-256
-a214eec93cdb6105bde7f9e5c0a4532e00309f43a00c277d0ec2c55c6ec6ce3c.
+Current original prefix [0x004B2AC0,0x004B6294):
+**14,292 bytes / 3,640 instructions**, SHA-256
+47897f4117416f2806f0bc2bd0ed47f77e116f2001940140141be758a3c6aaea.
 
-Pinned VC7.1 generates a **13,226-byte partial candidate**
-with 3,368 instructions including temporary return, 245
-relocations. **3,364/3,365 comparable forms**, **470
-internal branch targets**, and **164 IEEE-754 literal
-payloads** match the original with normalized call/
-branch/constant references. The remaining frame-size
-difference is 0xD4 vs target 0xE8.
+Pinned VC7.1 emits a **14,288-byte candidate**
+(3,642 instructions including temporary return,
+273 relocations). **3,638/3,639 comparable forms**,
+**516 internal branches** and **187 IEEE-754
+literal bindings** match the target. Incomplete
+stack frame: 0xE0 versus original 0xE8.
 
-The generic AI now has both ground-vs-ground and
-ground-vs-airborne decision trees. The latter distinguishes
-opponent rising/falling velocities, forward/vertical distance
-windows and jump/meter commands. Writing the permission
-factor inline rather than as a named int recovers the original
-EBP-0x14 this pointer and EBP-0xD4 scratch word;
-several other natural formulations failed.
+Generic AI now covers both opponent-airborne and
+self-airborne reactions as well as the earlier
+grounded decisions. Inline permission expressions
+preserve target EBP-0x14 this-pointer home and deep
+EBP-0xD8/-0xE0 local scratch slots.
 
-Rebuild and audit only this owner:
+Only this TU is rebuilt for workbench validation:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-Continue at 0x004B5E6E (self airborne), then
-0x004B6294 (probability fallback). **Not complete Exact**
-until 2,062 remaining bytes, full stack lifetime,
-the shared exit and all original relocation bindings match.
+Next original block: 0x004B6294, final 1,000
+bytes and the complete shared exit. **Not Exact**
+until all code and original relocations match.

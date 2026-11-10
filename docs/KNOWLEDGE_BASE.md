@@ -2096,45 +2096,44 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 13,230-byte reviewed prefix
+## Nagamori Slot05 CPU boss: 14,292-byte reviewed prefix
 
-Original Character06 Slot05 owns 15,292 bytes at
-[0x004B2AC0,0x004B667C). The natural C++ candidate covers
-[0x004B2AC0,0x004B5E6E), **13,230 original bytes /
-3,366 instructions**; prefix SHA-256
-a214eec93cdb6105bde7f9e5c0a4532e00309f43a00c277d0ec2c55c6ec6ce3c.
+Original Character06 Slot05 owns [0x004B2AC0,0x004B667C):
+15,292 bytes, followed by four alignment bytes.
+The natural-source workbench now covers the opening
+[0x004B2AC0,0x004B6294), **14,292 original bytes /
+3,640 instructions**. Prefix SHA-256:
+47897f4117416f2806f0bc2bd0ed47f77e116f2001940140141be758a3c6aaea.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 generates 13,226
-bytes and 3,368 instructions, including the temporary
-epilogue, with 245 COFF relocations. The first **3,364 /
-3,365 comparable instruction forms** agree after
-normalizing call/branch and floating literal references.
-Only the incomplete stack frame (0xD4 vs original 0xE8)
-differs. The original prefix exits through the still-open
-full-function shared return. The focused checker verifies
-**470 internal branch destinations** and the exact
-IEEE-754 payloads for **164 floating literal bindings**.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 14,288
+bytes and 3,642 instructions including the temporary
+return, with 273 COFF relocations. Of the 3,639
+comparable instruction forms, **3,638 match** with
+direct branch/call/FP addresses normalized. The
+remaining form difference is the incomplete stack frame,
+0xE0 versus target 0xE8; the original last prefix
+instruction jumps to the unreconstructed shared exit.
+The focused audit verifies **516 internal jump targets**
+and **187 IEEE-754 literal binding payloads** against
+the original.
 
-The source has the reconstructed defense/movement logic,
-CPU states 4..11, collision follow-up 0xC8..0xE7 and
-generic decisions for ground-vs-ground and ground-vs-
-airborne opponents. The new 0x004B5C25 branch covers the
-rising/falling opponent and separate forward/vertical
-distance windows, meter-gated 0x65-series commands and
-jump/button inputs. A natural inline Boolean expression
-(field0118 > 500.0 || field0120 > 0) * 5 + 6 was necessary
-to reproduce the original deep temporary slot EBP-0xD4
-and preserve the this-pointer home EBP-0x14. Six VC7.1
-formulations were compared; the named local shifted
-the this pointer and inverted a conditional jump.
-No stack padding, assembly or byte injection was used.
+The source covers defense/movement, state 4..11 input,
+action-specific collision follow-ups 0xC8..0xE7,
+generic ground-vs-ground and ground-vs-airborne
+opponent decisions, and now self-airborne reactions
+[0x004B5E6E,0x004B6294). The new branch has separate
+grounded-opponent and airborne-opponent logic, random
+forward-distance checks, meter commands 0x1E/0x6E
+and jump/attack buttons. Inline Boolean expressions
+restore deep temporary stack slots EBP-0xD8 and
+EBP-0xE0 without shifting the original EBP-0x14
+this-pointer home.
 
-Next: self-airborne decisions at original 0x004B5E6E
-and the fallback at 0x004B6294. Use only
-workbench/nagamori-cpu/check_prefix.py for partial
-native diagnostics. **Not complete Exact**: 2,062
-original bytes and the full return/relocation closure
-are still open.
+Continue with the final 1,000-byte fallback at
+0x004B6294 and the shared return at 0x004B6678.
+Run only workbench/nagamori-cpu/check_prefix.py.
+**Not full-function Exact** until the final stack
+frame, all bytes and original relocations match.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 
