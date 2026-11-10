@@ -8,31 +8,40 @@ e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436.
 The shared return ends at 0x0044AB2A; five CC padding bytes precede
 the next function at 0x0044AB30.
 
-The natural source Character09Commands.cpp currently reconstructs the
-original contiguous **2,019-byte / 607-instruction** opening
-[0x004493C0,0x00449BA3), SHA-256
-5c06b95f6afa3c924b9255dc94cd3be8709e3845e373f429c9591b073e4aa742.
-It implements four prioritized 180-frame circular history scans:
-the first priority command 0x62 with its empty input/hold state gates;
-the following 0xAA meter command, 0xA0 eight-stage command and
-0x64 six-stage meter command. The input history wraps exactly once
-at 180, and the original meter, direction, landing and staged button
-conditions preserve natural VC7.1 machine instruction order.
+The natural source Character09Commands.cpp currently covers
+[0x004493C0,0x00449F42), **2,946 original bytes /
+885 instructions**, prefix SHA-256
+c2a2fdadfdffce690d302893ec4a44fa8c0d6066692450b01fc5c0644ca33340.
 
-Only compile/review this incomplete owner:
+The six original prioritized circular history scans are reconstructed:
+the initial 0x62 command, the 0xAA and 0xA0 meter
+patterns, the 0x64 and 0x6E six-stage patterns, and the
+0x46 three-stage command sequence. All 180-frame wrap
+arithmetic, meter, facing, button and landing checks
+retain the original priority and original x87 load ordering.
+
+Run only:
 
     scripts/repo-python workbench/sayuri-commands/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 2,023 bytes including
-a three-instruction temporary return; the first 607 original
-instructions match in form and operands. There are four COFF
-floating-point relocations, all verified against the target's
-original 0.0 double constant address 0x007872F8. All 80
-internal branch destinations agree by instruction ordinal,
-and seven outbound jumps target valid original boundaries
-outside the recovered portion.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles the incomplete
+source into **2,947 bytes / 888 instructions** including
+a temporary three-instruction return. All **885/885
+original instruction forms and operands** agree after
+normalizing direct branch destinations and original
+double addresses. **112 original in-prefix branch
+destinations** agree by instruction ordinal. The 11
+outbound jumps still point to valid original owner
+instructions beyond the prefix. One final original
+5-byte near jump shortens to a 2-byte JMP in the
+partial source because the true shared exit is absent;
+no other instruction width differs. All **six COFF
+floating literal relocations** match the original
+IEEE-754 zero constant at 0x007872F8.
 
-**Not complete Exact**: 3,976 original bytes, remaining priority
-history scans, full function shared exit and all original
-relocation closure are still open. Continue at 0x00449BA3
-(the next six-stage 0x6E command scan). Do not run full cold replay.
+Continue at 0x00449F42 (the 0x14 three-stage command
+follow-up), then reconstruct the remaining priority
+scans, full exit and original relocations. The remaining
+**3,049 original bytes are not yet reconstructed**.
+**Do not register this incomplete function as Exact**
+or run a complete-game cold replay.
