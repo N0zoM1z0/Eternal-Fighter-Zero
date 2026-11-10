@@ -133803,3 +133803,47 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "EFZ.exe original operand at 0x004492DE, reviewed direct authored callee ?ClearBufferedButtons@Secondary@@QAEXXZ bound to 0x0040F170"
+
+[units.character-09-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot01/Character09Delegates.obj"
+symbol = "?Slot01@Character09@@UAEXXZ"
+target_address = 0x004492F0
+size = 11
+
+[units.character-09-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Delegates.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot03/Character09Delegates.obj"
+symbol = "?Slot03@Character09@@UAEXXZ"
+target_address = 0x00446760
+size = 19
+
+[[units.character-09-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "EFZ.exe vtable 0x00788144 selects 0x00446760; original direct CALL operand at 0x0044676B targets reviewed ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740"
+
+[units.character-09-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09EmitEffects.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-emit-local-effect/Character09EmitEffects.obj"
+symbol = "?EmitLocalEffect@Character09@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x00449390
+size = 47
+
+[[units.character-09-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "EFZ.exe vtable 0x0078815C selects 0x00449390; original direct CALL operand at 0x004493B5 targets reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10"

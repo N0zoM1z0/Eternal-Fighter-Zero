@@ -34,6 +34,18 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Three more Sayuri Character09 virtual owners are complete native
+strict Exact: Slot01 at 0x004492F0 (11 bytes, no relocations),
+Slot03 at 0x00446760 (19 bytes, one original UpdateLocomotionState
+call), and EmitLocalEffect at 0x00449390 (47 bytes, one original
+direct base emitter call after virtual removal). Accepted sources
+src/Character09Delegates.cpp and src/Character09EmitEffects.cpp;
+selected units character-09-slot01, character-09-slot03,
+character-09-emit-local-effect, with independent proof JSON under
+docs/evidence/. No common headers or existing acceptance owners
+were modified.
+
+
 Sayuri Character09::Slot04 is now **complete native strict Exact**:
 11,119/11,119 code bytes, 2,815 instructions, the full
 0x14 native stack frame and 95/95 original-bound relocations,

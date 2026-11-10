@@ -399,3 +399,6 @@ address,end,size,status,evidence
 0x00449300,0x00449383,131,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
 0x00446710,0x00446760,80,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
 0x00446780,0x004492EF,11119,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot04-action-boss-reviewed-prefix
+0x004492F0,0x004492FB,11,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
+0x00446760,0x00446773,19,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
+0x00449390,0x004493BF,47,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact

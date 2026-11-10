@@ -369,3 +369,6 @@ address,name,source,symbol,status,evidence
 0x00449300,Character09::Slot08,src/Character09Effects.cpp,?Slot08@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot08-exact.json
 0x00446710,Character09::RemoveLocalEffect,src/Character09Effects.cpp,?RemoveLocalEffect@Character09@@UAEXF@Z,complete,docs/evidence/character-09-remove-local-effect-exact.json
 0x00446780,Character09::Slot04,src/Character09Input.cpp,?Slot04@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot04-exact.json
+0x004492F0,Character09::Slot01,src/Character09Delegates.cpp,?Slot01@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot01-exact.json
+0x00446760,Character09::Slot03,src/Character09Delegates.cpp,?Slot03@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot03-exact.json
+0x00449390,Character09::EmitLocalEffect,src/Character09EmitEffects.cpp,?EmitLocalEffect@Character09@@UAEXPAUSecondaryEffectSpawn@@@Z,complete,docs/evidence/character-09-emit-local-effect-exact.json

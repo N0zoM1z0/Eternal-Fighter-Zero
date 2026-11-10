@@ -3024,6 +3024,41 @@ The earlier partial workbench is retired after verifying
 that its effective changes are preserved in accepted source.
 Whole-product linkage and runtime equivalence remain open.
 
+<a id="sayuri-remaining-leaf-delegates-exact"></a>
+
+## Sayuri remaining virtual leaf/delegate owners: three strict Exact matches
+
+Three additional Sayuri/Character09 virtual functions have been restored
+from the canonical vtable at 0x00788138. Slot01 at vtable 0x0078813C
+selects [0x004492F0,0x004492FB), **11 bytes** of empty natural
+C++ code in src/Character09Delegates.cpp; the five following CC
+alignment bytes are excluded. Slot03 at 0x00788144 selects
+[0x00446760,0x00446773), **19 bytes**, delegating to
+Secondary::UpdateLocomotionState at original 0x0040E740.
+The thirteen following CC bytes are excluded.
+EmitLocalEffect at slot09 (vtable 0x0078815C) selects
+[0x00449390,0x004493BF), **47 bytes**, in
+src/Character09EmitEffects.cpp. It first calls Sayuri's
+virtual RemoveLocalEffect(effectWrite) via the original
+slot10 vtable dispatch, then directly calls the accepted
+Secondary::EmitLocalEffect(effect) base implementation at
+0x00412B10. Only the latter is an explicit COFF relocation;
+one CC byte follows this owner.
+
+All three were built and independently strict-compared under
+pinned VC7.1 /Od /G6 /MT /Gy /W3:
+**11/11, 19/19 and 47/47 matching code bytes**;
+0, 1 and 1 original-bound relocations; **zero byte differences**.
+Their selected recipes and evidence are respectively
+character-09-slot01,
+character-09-slot03,
+character-09-emit-local-effect in config/match-units.toml and
+docs/evidence/character-09-slot01-exact.json,
+docs/evidence/character-09-slot03-exact.json,
+docs/evidence/character-09-emit-local-effect-exact.json.
+No other accepted sources or common class-layout declarations
+were edited; runtime/whole-game linkage remains unverified.
+
 ## Shiori command state and shared locomotion
 
 Nine complete authored contributions add **13,965 instruction bytes**, including

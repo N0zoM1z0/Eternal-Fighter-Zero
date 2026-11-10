@@ -210,11 +210,11 @@ address,origin,status,evidence
 0x00446590,unknown,unreviewed,
 0x004466D0,unknown,unreviewed,
 0x00446710,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
-0x00446760,unknown,unreviewed,
+0x00446760,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x00446780,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot04-action-boss-reviewed-prefix
-0x004492F0,unknown,unreviewed,
+0x004492F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x00449300,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-slot08-and-local-effect-removal
-0x00449390,unknown,unreviewed,
+0x00449390,authored,reviewed,docs/KNOWLEDGE_BASE.md#sayuri-remaining-leaf-delegates-exact
 0x004493C0,unknown,unreviewed,
 0x0044AB30,unknown,unreviewed,
 0x0044DB60,unknown,unreviewed,
