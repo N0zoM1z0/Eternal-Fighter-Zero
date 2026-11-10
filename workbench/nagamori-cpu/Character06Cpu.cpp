@@ -846,6 +846,47 @@ void Character06::Slot05()
                     return;
                 }
             }
+            // Airborne opponent: separate rising and falling attack windows.
+            if ((*opponentSlot)->positionY < 0.0) {
+                if ((*opponentSlot)->velocityY < 0.0) {
+                    if (distance.forward < 80.0 && distance.vertical < 120.0 &&
+                        field3110 < 10) {
+                        inputY = -1;
+                        inputX = -facing;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && field3110 < 15) {
+                        buttonPulse[2] = 1;
+                        inputY = 0;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && distance.vertical < 120.0 &&
+                        field3110 < 17) {
+                        recognizedCommand = 0x15;
+                        return;
+                    }
+                }
+                if ((*opponentSlot)->velocityY > 0.0) {
+                    if (distance.forward < 80.0 && distance.vertical < 120.0) {
+                        if (field3110 <
+                            (field0118 > 500.0 || field0120 > 0) * 5 + 6) {
+                            recognizedCommand = 0x15;
+                            return;
+                        }
+                    }
+                    if (distance.forward < 90.0 && distance.vertical < 120.0 &&
+                        distance.vertical > 90.0 && field3110 < 15) {
+                        buttonPulse[2] = 1;
+                        inputY = 0;
+                        return;
+                    }
+                    if (distance.forward < 120.0 && distance.vertical < 100.0 &&
+                        field3110 < 17 && meter >= 2000) {
+                        recognizedCommand = (unsigned short)RandomRange(0, 1) + 0x65;
+                        return;
+                    }
+                }
+            }
         }
     }
     // Remaining priority AI decisions are not reconstructed yet.
