@@ -43,7 +43,9 @@ def make_source(last_real):
     body=SOURCE.read_text()
     matches=list(re.finditer(r"^    case (0x[0-9a-fA-F]+|[0-9]+):",body,re.M))
     stop=body.rfind("\n    }\n}")
-    assert len(matches)==116 and stop>matches[-1].start()
+    # More original Nayuki states are added as their native bodies are recovered.
+    # Do not freeze the old count of 116 copied sibling branches.
+    assert 116<=len(matches)<=137 and stop>matches[-1].start()
     parts={int(m[1],0):body[m.start():matches[i+1].start() if i+1<len(matches) else stop]
            for i,m in enumerate(matches)}
     im=verify_target()

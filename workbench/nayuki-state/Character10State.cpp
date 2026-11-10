@@ -1807,15 +1807,22 @@ void Character10::Slot06()
         }
         return;
 
-    case 150: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 153;
+    case 123: // Nayuki-specific neutral recovery at original 0x004567FC
+        velocityX = 0.0;
+        velocityY = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 99;
+                ResetPose();
+            }
         }
-        if (inputY != 1) {
-            field0008 = 150;
-        }
+        return;
+
+    case 150: // Nayuki original 0x00456877: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 10);
             velocityX = -1.5;
             velocityY = 0.0;
@@ -1848,15 +1855,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 151: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 154;
-        }
-        if (inputY != 1) {
-            field0008 = 151;
-        }
+    case 151: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 15);
             velocityX = -1.8;
             velocityY = 0.0;
@@ -1889,15 +1889,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 152: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 155;
-        }
-        if (inputY != 1) {
-            field0008 = 152;
-        }
+    case 152: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 20);
             velocityX = -2.3;
             velocityY = 0.0;
@@ -1930,15 +1923,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 153: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 153;
-        }
-        if (inputY != 1) {
-            field0008 = 150;
-        }
+    case 153: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 10);
             velocityX = -1.5;
             velocityY = 0.0;
@@ -1968,15 +1954,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 154: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 154;
-        }
-        if (inputY != 1) {
-            field0008 = 151;
-        }
+    case 154: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 15);
             velocityX = -1.8;
             velocityY = 0.0;
@@ -2006,15 +1985,8 @@ void Character10::Slot06()
         }
         return;
 
-    case 155: // Unreviewed inherited sibling logic, Makoto address 0x005: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
-        if (inputY == 1) {
-            field0008 = 155;
-        }
-        if (inputY != 1) {
-            field0008 = 152;
-        }
+    case 155: // Nayuki reviewed original grounded recoil: {'stand/crouch' if terminal == 0 else 'crouching'} recoil
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             meter = (short)(meter + 20);
             velocityX = -2.3;
             velocityY = 0.0;
@@ -2073,7 +2045,6 @@ void Character10::Slot06()
     case 157: // Unreviewed inherited sibling logic, Makoto address 0x005: aerial effect with two-frame loop
         velocityX = 1.0;
         gravity = 0.045;
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.3;
             effect.type = 8;
@@ -2090,7 +2061,8 @@ void Character10::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
+                field0008 = 9;
+                ResetPose();
             }
         }
         if (positionY + velocityY >= 0.0) {
@@ -2105,7 +2077,6 @@ void Character10::Slot06()
     case 158: // Unreviewed inherited sibling logic, Makoto address 0x005: opposite-direction aerial effect
         velocityX = -1.0;
         gravity = 0.045;
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             velocityY = -2.3;
             effect.type = 8;
@@ -2122,7 +2093,8 @@ void Character10::Slot06()
             field000c = 0;
             ++field000a;
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
+                field0008 = 9;
+                ResetPose();
             }
         }
         if (positionY + velocityY >= 0.0) {
