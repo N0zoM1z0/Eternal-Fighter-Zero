@@ -34,6 +34,14 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+The explicit-X facing member Secondary::FacePosition(double) at
+0x0040E6C0 is complete native Exact (116 bytes / zero relocations),
+with source src/SecondaryFacePosition.cpp and proof
+docs/evidence/secondary-face-position-exact.json. Its nonvirtual
+declaration in Engine.h does not change object layout; selected
+neighbor owners FaceOpponent and UpdateLocomotionState remain exact.
+
+
 Nagamori Character06::Slot05 CPU is now **complete native strict Exact**,
 15,292 original bytes / 3,924 instructions, 300/300 original-bound
 relocations and zero differences. The source is

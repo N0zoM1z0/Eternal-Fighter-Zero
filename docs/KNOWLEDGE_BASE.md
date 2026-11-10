@@ -2902,6 +2902,36 @@ and pinned toolchain execution checks passed; all final accepted-unit builds and
 comparisons above succeeded. Original translation-unit context and private draft
 field/helper views remain hypotheses requiring fresh evidence before integration.
 
+<a id="secondary-facing-explicit-x-coordinate"></a>
+
+## Secondary explicit-X facing update: 116-byte strict Exact
+
+The adjacent member at 0x0040E6C0 has original reviewed
+extent [0x0040E6C0,0x0040E734) (116 instruction bytes),
+followed by twelve CC alignment bytes before
+Secondary::UpdateLocomotionState. It is a natural authored
+nonvirtual int Secondary::FacePosition(double) method, accepting
+an explicit world-space X coordinate and returning whether the
+facing direction changed. For X greater than self positionX the
+signed facing byte becomes +1, for smaller X it becomes -1,
+and equal X preserves facing and returns 0.
+
+src/SecondaryFacePosition.cpp compiled under pinned VC7.1
+/Od /G6 /MT /Gy /W3 is **strict Exact**: all
+116/116 original code bytes agree, with **zero relocations
+and zero byte differences**. Evidence:
+docs/evidence/secondary-face-position-exact.json; selected
+single-unit recipe: secondary-face-position. The declaration
+added to src/Engine.h is nonvirtual, without fields or ABI
+layout changes. Its two nearest accepted consumers
+secondary-face-opponent (130 bytes) and
+secondary-update-locomotion-state (923 bytes) were also
+rebuilt and both remain exact. An interim local
+FacingSecondaryView::SetFacingToward draft was reconciled
+into this standalone source, restoring the previously accepted
+SecondaryFacing.cpp owner before replay. This exactness
+does not imply complete product linkage or runtime equivalence.
+
 ## Shiori command state and shared locomotion
 
 Nine complete authored contributions add **13,965 instruction bytes**, including

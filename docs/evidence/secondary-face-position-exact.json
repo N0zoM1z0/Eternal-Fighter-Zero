@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "authority": "Complete authored 116-byte member, zero relocations and byte-for-byte canonical PE equivalence under pinned VC7.1",
+  "method": "FacePosition(double) sets facing to +1 or -1 according to comparison with positionX and returns whether orientation changed. Original [0x0040E6C0,0x0040E734) is all executable code with no tables/relocations; twelve following CC alignment bytes excluded. Natural C++ VC7.1 /Od /G6 /MT /Gy /W3 compiled output compares 116/116 bytes, zero differences. The declaration is a nonvirtual Secondary method, adding no fields or vtable entries. Adjacent accepted Secondary::FaceOpponent and Secondary::UpdateLocomotionState were recompiled independently with zero differences.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 116,
+      "matched_bytes": 116,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "a2bfe905136559a813a187420d40bc7c4f6fca728810fdb3f1bbb24446fd47cf",
+      "target_extent_sha256": "a2bfe905136559a813a187420d40bc7c4f6fca728810fdb3f1bbb24446fd47cf",
+      "unit": "secondary-face-position",
+      "symbol": "?FacePosition@Secondary@@QAEHN@Z",
+      "target_address": "0x0040E6C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "4bd1c1e2e04aab7086b4894b7aba5e4f429c65d39d04c58cb26f76260477d061",
+      "object_sha256": "2000f9fd9ac13e45f76f531f17381de4440a751ba02508ad4b4e49a678bb2af4",
+      "source_sha256": "d9be87c2e4a733a482ffecc9d7ff2303bc632cbc4885b8a061be11f010ba06c6",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "9970d30b7ae272e2ca6ae44067fa2cdc599f37b48716b2f6b25981a91156efc4",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "84377743f8e932298388601ccf9419bb61b1e9e2327ff294026b0da17f9746c1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

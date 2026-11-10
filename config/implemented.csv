@@ -364,3 +364,4 @@ address,name,source,symbol,status,evidence
 0x004B1780,Character06::Slot02,src/Character06Commands.cpp,?Slot02@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot02-exact.json
 0x004019B0,ConvertLegacyObjectData,src/LegacyObjectConverter.cpp,?ConvertLegacyObjectData@@YAXXZ,complete,docs/evidence/legacy-object-converter-exact.json
 0x004B2AC0,Character06::Slot05,src/Character06Cpu.cpp,?Slot05@Character06@@UAEXXZ,complete,docs/evidence/nagamori-slot05-exact.json
+0x0040E6C0,Secondary::FacePosition,src/SecondaryFacePosition.cpp,?FacePosition@Secondary@@QAEHN@Z,complete,docs/evidence/secondary-face-position-exact.json

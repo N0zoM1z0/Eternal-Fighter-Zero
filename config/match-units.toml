@@ -132843,3 +132843,13 @@ type = "REL32"
 symbol = "?RandomRange@Secondary@@QAEFFF@Z"
 target = 0x004108A0
 evidence = "EFZ.exe original operand at 0x004B6665: EFZ.exe direct call to reviewed Secondary::RandomRange at 0x004108A0"
+
+[units.secondary-face-position]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/SecondaryFacePosition.cpp"
+dependencies = ["src/Engine.h", "src/Input.h"]
+object = "build/match-units/secondary-face-position/SecondaryFacePosition.obj"
+symbol = "?FacePosition@Secondary@@QAEHN@Z"
+target_address = 0x0040E6C0
+size = 116

@@ -371,6 +371,7 @@ public:
     void SetHorizontalShake(int, int);
     void SetHorizontalOffset(int, int);
     int FaceOpponent();
+    int FacePosition(double x);
     void UpdateLocomotionState();
 };
 // Word-oriented file state; the remaining Context fields are separate members.
