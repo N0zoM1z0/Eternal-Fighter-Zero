@@ -592,103 +592,60 @@ void Character10::Slot07()
                 }
                 break;
             case 0x19f:
-                if (((effects[i].frame == 0) &&
-                    (effects[i].tick == 0)) && (field315c[i] == 0)) {
-                    field325c[i] =
-                    (unsigned int)(16000 < (std::rand())) * 0x28 + 0x50 + (unsigned int)(16000 < (std::rand())) * 0x14;
-                    ++field315c[i];
-                    effects[i].vx =
-                    -0.5 - ((((double)(16000 < (std::rand())) * 1.2) - ((double)(16000 < (std::rand())) * 0.7)) - (double)(16000 < (std::rand())) * 1.7);
-                    effects[i].vy =
-                    -1.2 - ((((double)(16000 < (std::rand())) * 0.6) - ((double)(16000 < (std::rand())) * 0.5)) - (double)(16000 < (std::rand())) * 0.8);
+                if (field0008 == 0x12f || field0008 == 0x130 ||
+                    field0008 == 0x131) {
+                    effects[i].x = (double)field314c;
+                    effects[i].y = (double)field3154;
                 }
-                effects[i].vy =
-                effects[i].vy + 0.05;
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].vy > 0.0)) {
-                    effects[i].vy =
-                    -effects[i].vy;
-                }
-                if (field325c[i] < 10) {
-                    effects[i].group = 1;
-                }
-                if (field325c[i] < 0) {
-                    RemoveLocalEffect((short)i);
-                    break;
-                }
-                else {
-                    ++effects[i].tick;
-                    --field325c[i];
-                    if (effects[i].tick >= frameDuration) {
-                        effects[i].tick = 0;
-                        ++effects[i].frame;
-                        effects[i].field0080 = 0;
-                        if (effects[i].frame >= frameCount) {
-                            effects[i].frame = 0;
-                        }
-                    }
-                }
-                break;
-            case 0x1a0:
-                if (((effects[i].frame == 0) &&
-                    (effects[i].tick == 0)) && (field315c[i] == 0)) {
-                    field325c[i] =
-                    (unsigned int)(16000 < (std::rand())) * 0x28 + 0x50 + (unsigned int)(16000 < (std::rand())) * 0x14;
-                    ++field315c[i];
-                    effects[i].vx =
-                    -0.5 - ((((double)(16000 < (std::rand())) * 1.2) - ((double)(16000 < (std::rand())) * 0.7)) - (double)(16000 < (std::rand())) * 1.7);
-                    effects[i].vy =
-                    -1.2 - ((((double)(16000 < (std::rand())) * 0.6) - ((double)(16000 < (std::rand())) * 0.5)) - (double)(16000 < (std::rand())) * 0.8);
-                }
-                effects[i].vy =
-                effects[i].vy + 0.05;
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].vy > 0.0)) {
-                    effects[i].vy =
-                    -effects[i].vy;
-                }
-                if (field325c[i] < 10) {
-                    effects[i].group = 1;
-                }
-                if (field325c[i] < 0) {
-                    RemoveLocalEffect((short)i);
-                    break;
-                }
-                else {
-                    ++effects[i].tick;
-                    --field325c[i];
-                    if (effects[i].tick >= frameDuration) {
-                        effects[i].tick = 0;
-                        ++effects[i].frame;
-                        effects[i].field0080 = 0;
-                        if (effects[i].frame >= frameCount) {
-                            effects[i].frame = 0;
-                        }
-                    }
-                }
-                break;
-            case 0x1a1:
-                if (field0008 == 0xff) {
-                    effects[i].x =
-                    (double)(facing * 0x17) + positionX;
-                    effects[i].y =
-                    positionY - 48.0;
-                }
-                if (field0008 != 0xff) {
-                    RemoveLocalEffect((short)i);
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].field0084 = 1;
+                    pendingCharacterSoundSlot = 2;
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
-                    if ((effects[i].frame == 0x18) &&
-                        (field000a < 7)) {
-                        effects[i].frame = 0;
-                    }
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
+                }
+                break;
+            case 0x1a0:
+                if (field0008 == 0x12f || field0008 == 0x130 ||
+                    field0008 == 0x131) {
+                    effects[i].x = (double)field3150;
+                    effects[i].y = (double)field3158;
+                }
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].field0084 = 1;
+                    pendingCharacterSoundSlot = 2;
+                }
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
+                    effects[i].tick = 0;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
+                }
+                break;
+            case 0x1a1:
+                if (effects[i].frame == 0 && field315c[i] == 0) {
+                    field315c[i] = 1;
+                    effects[i].vx = -1.9;
+                    effects[i].vy = -2.5;
+                    effects[i].ay = 0.035;
+                }
+                effects[i].vy += effects[i].ay;
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
+                    effects[i].tick = 0;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame == 7)
+                        effects[i].group = 1;
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
                 }
                 break;
             case 0x1a2:
