@@ -185,5 +185,40 @@ void Character09::Slot04()
             field0008 = 0x103;
             return;
         }
+        // Command-16 meter permission and three grounded follow-up tiers.
+        if (recognizedCommand == 0x16 &&
+            (field0118 >= 500.0 || field0120 > 0) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[264].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x108;
+            return;
+        }
+        if ((recognizedCommand == 0x15 || recognizedCommand == 0x16) &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[263].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x107;
+            return;
+        }
+        if (recognizedCommand == 0x14 &&
+            (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+            positionY == 0.0 &&
+            ((field0008 >= 200 && attackCollisionResult >= 2 &&
+              attackCollisionResult != 6) || field0008 < 200) &&
+            sequences[field0008].field0002 <= sequences[262].field0000) {
+            ResetPose();
+            ClearBufferedButtons();
+            field0008 = 0x106;
+            return;
+        }
     // Remaining original action guards and command dispatch are open.
 }

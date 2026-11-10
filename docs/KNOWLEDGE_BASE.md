@@ -2978,7 +2978,7 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot04: reviewed 3,770-byte action-boss prefix
+## Sayuri Character09 Slot04: reviewed 4,474-byte action-boss prefix
 
 The original 11,119-byte Character09 virtual Slot04 at 0x00446780
 is directly anchored by vtable 0x00788138 slot4 at 0x00788148.
@@ -2991,26 +2991,26 @@ fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286.
 This review establishes ownership/boundary, **not Exact codegen**.
 
 The natural C++ workbench at workbench/sayuri-action/Character09Input.cpp
-now covers [0x00446780,0x0044763A), 3,770 original bytes and 933
+now covers [0x00446780,0x004478FA), 4,474 original bytes and 1,112
 instructions; the prefix SHA-256 is
-1b401b206f86f776949192c39125c138c4a71f27e6a0d0231b1f7c14fba93a15.
-Pinned VC7.1 compiles its incomplete body into 3,767 bytes with 935
-instructions including a temporary epilogue. The first 932 comparable
+b48cc6010e85cf04393a3e2ec0ad9af7b7bebe20d3713d976cc77a4da450c028.
+Pinned VC7.1 compiles its incomplete body into 4,471 bytes with 1,114
+instructions including a temporary epilogue. The first 1,111 comparable
 original instruction forms/operands all agree except for the
 incomplete frame (sub esp,0x14 original, push ecx candidate).
 The target's final prefix instruction is a jump to the
 full owner's shared exit, not a local return. The checker at
-workbench/sayuri-action/check_prefix.py confirms **142 in-prefix
-branch destinations** and all **31 independently target-bound
+workbench/sayuri-action/check_prefix.py confirms **169 in-prefix
+branch destinations** and all **38 independently target-bound
 relocation operands**, including original 500.0 and 0.0 double
 values and calls to SetCharacterTint/ClearBufferedButtons.
 
 The recovered branches implement input-buffer expiration, the
-Sayuri 150–155 animation/opponent-state priority, and fourteen
+Sayuri 150–155 animation/opponent-state priority, and seventeen
 meter-gated and airborne command upgrade groups from 0x34 through
-0x6E/0x6F/0x70 and 0x2A/0x29/0x28, preserving original sequence/frame guards and
+0x6E/0x6F/0x70 and 0x2A/0x29/0x28 and 0x16/0x15/0x14, preserving original sequence/frame guards and
 virtual reset/clear operations. The next original guard is
-0x0044763A. The remaining 7,349 bytes, complete stack lifetime,
+0x004478FA. The remaining 6,645 bytes, complete stack lifetime,
 shared exit and all other relocations remain open.
 **No Exact credit or whole cold replay was claimed.**
 
