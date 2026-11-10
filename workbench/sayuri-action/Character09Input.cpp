@@ -81,7 +81,6 @@ void Character09::Slot04()
             field0008 = 0x12c;
             return;
         }
-    }
         if (recognizedCommand == 0xa2 &&
             meter >= 3000 && positionY == 0.0 &&
             (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
@@ -309,5 +308,49 @@ void Character09::Slot04()
                 field0008 = 0x109;
             return;
         }
+    }
+    // Air dash when the opponent lies on the command's chosen side.
+    if (field015c < 1 && (recognizedCommand == 0 || recognizedCommand == 1)) {
+        if (positionY < 0.0 && airDashCount < 1) {
+            if ((((*opponentSlot)->positionX - positionX) *
+                     (double)(1 - recognizedCommand * 2) < 0.0 ||
+                 (((*opponentSlot)->positionX - positionX == 0.0) &&
+                  facing == (1 - recognizedCommand * 2) * -1)) &&
+                sequences[field0008].field0002 <= sequences[165].field0000 &&
+                field0008 != 0xaa && positionY < -40.0 &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                if (field0008 != 0xa5)
+                    ResetPose();
+                field0008 = 0xa5;
+                FaceOpponent();
+                ++airDashCount;
+                ++airActionCount;
+                actionBufferedInput = 0;
+                return;
+            }
+            // Mirrored air dash: the opposite horizontal side and the
+            // matching facing condition choose the A6 movement state.
+            if ((((*opponentSlot)->positionX - positionX) *
+                     (double)(1 - recognizedCommand * 2) > 0.0 ||
+                 (((*opponentSlot)->positionX - positionX == 0.0) &&
+                  facing == (1 - recognizedCommand * 2))) &&
+                sequences[field0008].field0002 <= sequences[166].field0000 &&
+                field0008 != 0xaa &&
+                (sequences[field0008].data[field000a].frameFlags & 8) > 0 &&
+                ((field0008 >= 200 && attackCollisionResult >= 2 &&
+                  attackCollisionResult != 6) || field0008 < 200)) {
+                if (field0008 != 0xa6)
+                    ResetPose();
+                field0008 = 0xa6;
+                FaceOpponent();
+                ++airDashCount;
+                ++airActionCount;
+                actionBufferedInput = 0;
+                return;
+            }
+        }
+    }
     // Remaining original action guards and command dispatch are open.
 }

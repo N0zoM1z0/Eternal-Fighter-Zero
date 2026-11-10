@@ -2978,54 +2978,61 @@ runtime behavior remain open.
 
 <a id="sayuri-slot04-action-boss-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot04: reviewed 6,215-byte action-boss prefix
+## Sayuri Character09 Slot04: 7,116-byte verified action-boss prefix
 
-Original Character09 vtable slot04 at 0x00788148 is the
-11,119-byte authored function [0x00446780,0x004492EF).
-All 2,815 original instructions decode continuously,
-all 460 direct jumps land on original instruction starts;
-the shared RET is at 0x004492EE, followed by a CC
-alignment byte and the next function's prologue.
-Whole owner SHA-256:
+Original Character09 vtable slot04 at 0x00788148 points to
+the 11,119-byte owner [0x00446780,0x004492EF),
+with 2,815 original x86 instructions and 460 direct
+jumps entirely within canonical instruction boundaries.
+The shared RET at 0x004492EE is followed by one CC
+alignment byte. Full owner SHA-256:
 fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286.
 
-The partial natural C++ candidate in
+The natural partial C++ candidate
 workbench/sayuri-action/Character09Input.cpp covers
-[0x00446780,0x00447FC7), **6,215 original bytes /
-1,551 instructions**. Original prefix SHA-256:
-7a79a6757eff05a9a25fc96f4ff488e0cb601053116e09a9d0da188e930d289b.
-Pinned VC7.1 emits 6,212 bytes / 1,553 instructions
-including a temporary three-instruction epilogue,
-with 55 COFF relocations. Of 1,550 comparable original
-body instructions **1,549 agree** in form/operands after
-normalizing direct call/branch and literal addresses.
-The incomplete stack frame (original sub esp,0x14;
-candidate push ecx) still differs; the original last
-prefix instruction jumps to the distant shared exit,
-which is absent from this partial source.
+[0x00446780,0x0044834C), **7,116 original bytes /
+1,783 instructions**; prefix SHA-256
+b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles to
+7,115 bytes / 1,785 instructions including the
+temporary return, with 63 COFF relocations. Of the
+1,782 comparable original body instructions, 1,781
+agree in form/operands after normalizing direct
+jump/call and FP literal addresses; the incomplete
+stack frame (original sub esp,0x14, draft sub esp,0xC)
+is the remaining form difference. The original last
+prefix instruction jumps to the complete owner's
+shared exit and is absent from the draft.
 
-The independent focused checker now validates **236
-in-prefix branch targets** by destination instruction
-ordinal and **all 55 original-bound relocations**,
-including exact 0.0/500.0 IEEE-754 payloads and
-SetCharacterTint/ClearBufferedButtons call targets.
+The focused script workbench/sayuri-action/check_prefix.py
+validates **261 in-prefix branch destinations** by
+instruction ordinal and **all 63 original-bound
+relocation operands**, including original 0.0,
+-40.0 and 500.0 IEEE-754 constants and accepted
+SetCharacterTint, ClearBufferedButtons and FaceOpponent
+call destinations. The expanded check exposed a
+real bug: target 0x00446963 JNL skips all advanced
+command groups until 0x00447FC7, whereas the old
+C++ guard had ended prematurely after the 0x12C
+tier. Moving the source block scope restores the
+canonical target branch destination.
 
-The source retains input-buffer expiration, the
-Sayuri 150–155 opponent-action gate, meter/animation
-priority, aerial 0x28–0x2A and grounded 0x14–0x16,
-0x1E–0x20, 0x46–0x48 and new 0x0A–0x0C
-families. For 0x0C, the original meter/secondary-meter
-checks short circuit to an already-airborne fallback;
-successful grounded/airborne actions retain distinct
-0xFC/0x10B, 0xFB/0x10A and 0xFA/0x109
-transitions. All are ordinary C++ conditions, not
-byte patches or hand-authored assembly.
+The recovered behavior now covers buffered commands,
+meter/sequence conditions, aerial and grounded
+0x28–0x2A/0x14–0x16/0x1E–0x20/0x46–0x48/0x0A–0x0C,
+and both A5/A6 air-dash directions from command 0/1.
+The air-dash tests preserve both signed X displacement
+and equal-position facing, action 0xAA exclusion,
+optional 40-unit height limit for A5 and original
+dash/action counters. A deliberate multiplication
+by -1 in the opposite-facing test emits the original
+IMUL instead of a shorter NEG.
 
-Continue at 0x00447FC7 (low-priority combat/movement
-decisions). **Partial diagnostic, not Exact**:
-4,904 original bytes remain, alongside complete
-frame, shared return and remaining relocation closure.
-No full cold replay was run.
+**Not whole-function Exact**: the remaining 4,003
+target bytes and the complete stack/exit/relocation
+closure remain unfinished. Continue at original
+0x0044834C. Only the selected workbench is built;
+no full cold replay was used.
 
 ## Shiori command state and shared locomotion
 

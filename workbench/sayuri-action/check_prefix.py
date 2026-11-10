@@ -16,9 +16,9 @@ from coff import object_function
 
 START = 0x00446780
 FULL_SIZE = 11119
-END = 0x00447FC7
+END = 0x0044834C
 ORIGINAL_SHA = "fd248e424f2ebcdddb59462a3101f653e9931e4053d53eb2af9a067e2c0bb286"
-PREFIX_SHA = "7a79a6757eff05a9a25fc96f4ff488e0cb601053116e09a9d0da188e930d289b"
+PREFIX_SHA = "b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643"
 SOURCE = ROOT / "workbench/sayuri-action/Character09Input.cpp"
 OBJECT = ROOT / "build/sayuri-action/Character09Input.partial.obj"
 
@@ -54,9 +54,9 @@ def main():
     target_instr = instructions(original)
     draft_instr = instructions(candidate)
     assert (len(original), len(target_instr), len(candidate),
-            len(draft_instr), len(relocations)) == (6215, 1551, 6212, 1553, 55)
+            len(draft_instr), len(relocations)) == (7116, 1783, 7115, 1785, 63)
     assert target_instr[2][2] == "sub esp,byte +0x14"
-    assert draft_instr[2][2] == "push ecx"
+    assert draft_instr[2][2] == "sub esp,byte +0xc"
     assert target_instr[-1][2] == "jmp 0x2b6b"
     assert [x[2] for x in draft_instr[-3:]] == ["mov esp,ebp", "pop ebp", "ret"]
     for i, (target, draft) in enumerate(zip(target_instr[:-1], draft_instr[:-3])):
@@ -79,7 +79,11 @@ def main():
                 i, target[2], draft[2], by_target[ta], by_draft.get(ca))
         else:
             outside += 1
-    assert (inside, outside) == (236, 30)
+    assert (inside, outside) == (261, 35)
+    # The 0x00446963 high-priority meter gate must skip ALL command
+    # families through 0x00447FC7, not stop after the first four.
+    assert target_instr[123][2] == "jnl near 0x1847"
+    assert draft_instr[123][2] == "jnl near 0x1847"
 
     starts = [v[0] for v in draft_instr]
     observed = defaultdict(set)
@@ -102,11 +106,12 @@ def main():
             assert (row["symbol"], address) in {
                 ("?SetCharacterTint@Secondary@@QAEXEH@Z", 0x00410AC0),
                 ("?ClearBufferedButtons@Secondary@@QAEXXZ", 0x0040F170),
+                ("?FaceOpponent@Secondary@@QAEHXZ", 0x0040E630),
             }
         observed[(row["symbol"], row["type"])].add(address)
-    assert len(observed) == 4 and all(len(v) == 1 for v in observed.values())
-    print("Sayuri Slot04: reviewed 6215 / 11119 original code bytes,")
-    print("1549/1550 comparable forms, one incomplete frame and shared-exit jump;")
+    assert len(observed) == 6 and all(len(v) == 1 for v in observed.values())
+    print("Sayuri Slot04: reviewed 7116 / 11119 original code bytes,")
+    print("1781/1782 comparable forms, one incomplete frame and shared-exit jump;")
     print(inside, "in-prefix branches and", len(relocations),
           "independently verified original-bound relocation fields.")
     print("This diagnostic is partial and NEVER a complete Exact certificate.")

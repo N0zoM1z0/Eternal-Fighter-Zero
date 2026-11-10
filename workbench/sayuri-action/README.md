@@ -10,40 +10,47 @@ direct jumps stay on original instruction starts inside the function.
 The shared return is at 0x004492EB. One CC byte separates the function
 from the next prologue at 0x004492F0.
 
-The current natural C++ source Character09Input.cpp reconstructs
-**6,215 original bytes / 1,551 instructions** of the full owner,
-through the next guard at 0x00447FC7, prefix SHA-256
-7a79a6757eff05a9a25fc96f4ff488e0cb601053116e09a9d0da188e930d289b.
+Natural C++ candidate Character09Input.cpp covers
+[0x00446780,0x0044834C): **7,116 original bytes /
+1,783 instructions**, SHA-256
+b801b2fe234dcc8c4e04cb3558ef60898e4e808b01b1ee5d25eb125c1ba7e643.
 
-Source covers the original high-priority command state transitions,
-the 150–155 opponent action gate, meter-tier upgrades, aerial
-0x28–0x2A, grounded 0x14–0x16 and 0x1E–0x20, and 0x46–0x48
-command groups. Newly restored 0x0C/0x0B/0x0A branches
-preserve EX-state suppression and air/ground action selection;
-0x0C additionally permits already-airborne operation in the
-absence of primary/secondary meter permission. The exact
-original order of action buffering, meter checks, sequence
-frame flags and attackCollisionResult conditions is retained.
+It covers input-buffer decay, the Sayuri 150–155 opponent-state
+gate, complete early special-command priorities through 0x0A–0x0C,
+and both mirrored air-dash reactions for commands 0 and 1.
+These reactions check the opponent/own X difference, command
+direction and equal-position facing, meter/action permissions,
+and initiate action 0xA5 or 0xA6. The original negative
+direction test requires multiplication by -1 (which VC7.1
+emits as IMUL), not unary negation (NEG).
 
-Reproduce only this selected owner:
+One significant semantic correction was made when the prefix
+passed 0x00447FC7. The original field015c >= 2 near JNL
+at 0x00446963 skips the entire command priority chain.
+Earlier partial C++ mistakenly closed the field015c < 2
+guard immediately after action 0x12C, incorrectly permitting
+later commands. That target was outside the old reviewed
+prefix; the expanded checker now verifies it as an internal
+edge and rejects the wrong scope.
+
+Rebuild/review only this owner:
 
     scripts/repo-python workbench/sayuri-action/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **6,212 bytes /
-1,553 instructions** including a temporary epilogue, with
-**55 COFF relocations**. The first 1,549 of 1,550
-comparable original body instructions match in form and
-operands after normalizing direct branch/call destinations
-and floating-point literal addresses; the only differing
-form is the incomplete stack frame (sub esp,0x14 original,
-push ecx partial source). The original final prefix JMP
-targets the full shared return, absent from partial C++.
-**236 in-prefix branch targets and all 55 original-bound
-relocation operands** agree; original double bit patterns
-are checked at their executable locations.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a
+**7,115-byte draft / 1,785 instructions** including
+the three-instruction temporary return, with 63 relocations.
+Of 1,782 aligned, comparable original body instructions,
+1,781 agree after normalizing direct call/jump and original
+FP addresses; the remaining source-frame allocation
+(sub esp,0xC vs original 0x14) is incomplete.
+The original prefix ends with an unresolved jump to the
+complete owner's shared exit. **261 internal branch targets
+and all 63 original-bound relocations agree**, including
+original double bit patterns. This is **not Exact**.
 
-Next original block begins at 0x00447FC7 (low-priority
-special/grounded movement decisions). **Not Exact**:
-4,904 original bytes, full stack/return and complete
-original relocation bindings remain to reconstruct.
-No full-game cold replay is relevant to this draft.
+Continue at 0x0044834C (remaining grounded/movement and
+defensive action selection). The remaining **4,003 bytes**,
+final stack lifetime and whole-owner relocation closure
+must be reconstructed before strict acceptance. No all-unit
+cold replay was run.
