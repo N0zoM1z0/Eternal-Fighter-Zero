@@ -1,0 +1,2169 @@
+{
+  "schema_version": 1,
+  "authority": "Complete natural VC7.1-compiled Sayuri Character09::Slot05 owner, 12330 original instruction bytes, all 237 canonical original COFF relocation fields and exact relocated byte comparison; not whole-game linkage/runtime.",
+  "method": "Character09 original vtable slot5 at 0x0078814C points to 0x0044AB30. Full original [0x0044AB30,0x0044DB5A) contains exactly 12330 contiguous i386 code bytes / 3172 instructions, followed by six CC alignment bytes. The complete natural authored C++ source src/Character09Cpu.cpp reconstructs first CPU defensive random guards; Sayuri-specific 0x14 distance and A8/A9 graded commands; AA aerial response; CPU states 0..7; C8-CF and D0/D1 attack-collision followups; and generic grounded/airborne attack, distance and cooldown selection with the full original shared return. The C++ source was corrected from a sibling analogue by original instruction/branch semantics and by independently binding all canonical IEEE-754 literal bytes: notably original 1.0f and 15.0f probabilities, 100-unit conditional command assignment, exact ground/air altitude comparison order, distinct 45/60/90/110/140 distances, and 60-frame movement generation at 80 random threshold. The original collision permission checks opponent hitstunFrames at +0x14C. Pinned native VC7.1 /Od /G6 /MT /Gy /W3 emits 12330 / 12330 exact original bytes with the original 0xD8 stack frame and full shared return; 237/237 original-bound relocations over 36 unique symbols are verified, including RandomRange, CRT fabs, CollisionSide and original literal addresses. Zero byte differences, no inline asm, masks or hand-crafted padding; no all-unit cold replay or whole-game equivalence claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 12330,
+      "matched_bytes": 12330,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 170,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ABDA: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 208,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AC00: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 226,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AC12: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 392,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ACB8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 430,
+          "target": 7896840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4010000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ACDE: reviewed canonical IEEE-754 literal payload __real@4010000000000000 at 0x00787F08",
+          "addend": 0
+        },
+        {
+          "offset": 436,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ACE4: reviewed canonical IEEE-754 literal payload __real@3ff0000000000000 at 0x007875C0",
+          "addend": 0
+        },
+        {
+          "offset": 442,
+          "target": 7896832,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4020000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ACEA: reviewed canonical IEEE-754 literal payload __real@4020000000000000 at 0x00787F00",
+          "addend": 0
+        },
+        {
+          "offset": 502,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AD26: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 520,
+          "target": 7896828,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@42200000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AD38: reviewed canonical IEEE-754 literal payload __real@42200000 at 0x00787EFC",
+          "addend": 0
+        },
+        {
+          "offset": 716,
+          "target": 7832621,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_fabs",
+          "evidence": "Canonical EFZ.exe operand at 0x0044ADFC: reviewed original direct callee _fabs at 0x0077842D",
+          "addend": 0
+        },
+        {
+          "offset": 783,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AE3F: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 801,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AE51: reviewed canonical IEEE-754 literal payload __real@41000000 at 0x00787EF8",
+          "addend": 0
+        },
+        {
+          "offset": 856,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AE88: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 900,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AEB4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 956,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AEEC: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1062,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AF56: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 1078,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AF66: reviewed canonical IEEE-754 literal payload __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 1157,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044AFB5: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1365,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B085: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1413,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B0B5: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1432,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B0C8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1456,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B0E0: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1499,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B10B: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 1518,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B11E: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1542,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B136: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1585,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B161: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 1604,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B174: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1628,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B18C: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 1755,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B20B: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 1795,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B233: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 1811,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B243: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 1830,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B256: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1854,
+          "target": 7896808,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40400000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B26E: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8",
+          "addend": 0
+        },
+        {
+          "offset": 1931,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B2BB: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 1954,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B2D2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 1978,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B2EA: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 2002,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B302: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2041,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B329: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2076,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B34C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2145,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B391: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2169,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B3A9: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 2207,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B3CF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2231,
+          "target": 7893728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B3E7: reviewed canonical IEEE-754 literal payload __real@40800000 at 0x007872E0",
+          "addend": 0
+        },
+        {
+          "offset": 2270,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B40E: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2308,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B434: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2343,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B457: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2421,
+          "target": 7896720,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060e00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B4A5: reviewed canonical IEEE-754 literal payload __real@4060e00000000000 at 0x00787E90",
+          "addend": 0
+        },
+        {
+          "offset": 2447,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B4BF: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 2488,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B4E8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2572,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B53C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2633,
+          "target": 7896784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B579: reviewed canonical IEEE-754 literal payload __real@406b800000000000 at 0x00787ED0",
+          "addend": 0
+        },
+        {
+          "offset": 2656,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B590: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2686,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B5AE: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 2724,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B5D4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2754,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B5F2: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 2792,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B618: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2828,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B63C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2858,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B65A: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 2896,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B680: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 2979,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B6D3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3009,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B6F1: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 3059,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B723: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3089,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B741: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 3105,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B751: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 3124,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B764: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3154,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B782: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 3201,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B7B1: reviewed canonical IEEE-754 literal payload __real@c03e000000000000 at 0x00787E30",
+          "addend": 0
+        },
+        {
+          "offset": 3231,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B7CF: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3247,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B7DF: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 3266,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B7F2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3296,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B810: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 3343,
+          "target": 7897304,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B83F: reviewed canonical IEEE-754 literal payload __real@c054000000000000 at 0x007880D8",
+          "addend": 0
+        },
+        {
+          "offset": 3377,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B861: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 3393,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B871: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 3409,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B881: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 3428,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B894: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3458,
+          "target": 7896776,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@40a00000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B8B2: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8",
+          "addend": 0
+        },
+        {
+          "offset": 3501,
+          "target": 7896760,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4049000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B8DD: reviewed canonical IEEE-754 literal payload __real@4049000000000000 at 0x00787EB8",
+          "addend": 0
+        },
+        {
+          "offset": 3517,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B8ED: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 3536,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B900: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3586,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B932: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3682,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B992: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 3710,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B9AE: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3734,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044B9C6: reviewed canonical IEEE-754 literal payload __real@41700000 at 0x00787EB0",
+          "addend": 0
+        },
+        {
+          "offset": 3804,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BA0C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 3843,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BA33: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3894,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BA66: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 3945,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BA99: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 4022,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BAE6: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4179,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BB83: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 4202,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BB9A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4226,
+          "target": 7896752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41700000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BBB2: reviewed canonical IEEE-754 literal payload __real@41700000 at 0x00787EB0",
+          "addend": 0
+        },
+        {
+          "offset": 4288,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BBF0: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4339,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BC23: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 4546,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BCF2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4818,
+          "target": 7896624,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@c03e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BE02: reviewed canonical IEEE-754 literal payload __real@c03e000000000000 at 0x00787E30",
+          "addend": 0
+        },
+        {
+          "offset": 4901,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BE55: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 4931,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BE73: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 4991,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BEAF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5039,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BEDF: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5095,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BF17: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 5151,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BF4F: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 5202,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BF82: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 5273,
+          "target": 7896720,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060e00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044BFC9: reviewed canonical IEEE-754 literal payload __real@4060e00000000000 at 0x00787E90",
+          "addend": 0
+        },
+        {
+          "offset": 5385,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C039: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5445,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C075: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5505,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C0B1: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5573,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C0F5: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5652,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C144: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 5719,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C187: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5864,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C218: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 5949,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C26D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6009,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C2A9: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6070,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C2E6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6138,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C32A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6209,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C371: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6275,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C3B3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6323,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C3E3: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 6397,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C42D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6487,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C487: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6610,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C502: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6673,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C541: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6739,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C583: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 6843,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C5EB: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 6933,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C645: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 6989,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C67D: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 7045,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C6B5: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 7101,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C6ED: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 7213,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C75D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7273,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C799: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7334,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C7D6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7402,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C81A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7473,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C861: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 7540,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C8A4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7587,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C8D3: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 7661,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C91D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7709,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C94D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7794,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C9A2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 7882,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044C9FA: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8005,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CA75: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8067,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CAB3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8127,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CAEF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8224,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CB50: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8289,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CB91: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 8393,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CBF9: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8474,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CC4A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8566,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CCA6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 8612,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CCD4: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 8658,
+          "target": 7896744,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CD02: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8",
+          "addend": 0
+        },
+        {
+          "offset": 8760,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CD68: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8869,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CDD5: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 8949,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CE25: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9033,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CE79: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9057,
+          "target": 7896848,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41c80000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CE91: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10",
+          "addend": 0
+        },
+        {
+          "offset": 9091,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CEB3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9112,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CEC8: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9142,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CEE6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9188,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CF14: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 9209,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CF29: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9285,
+          "target": 7897456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4046800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CF75: reviewed canonical IEEE-754 literal payload __real@4046800000000000 at 0x00788170",
+          "addend": 0
+        },
+        {
+          "offset": 9338,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CFAA: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 9391,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CFDF: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 9407,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044CFEF: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 9460,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D024: reviewed canonical IEEE-754 literal payload __real@405b800000000000 at 0x00787E98",
+          "addend": 0
+        },
+        {
+          "offset": 9513,
+          "target": 7896816,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4062c00000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D059: reviewed canonical IEEE-754 literal payload __real@4062c00000000000 at 0x00787EF0",
+          "addend": 0
+        },
+        {
+          "offset": 9529,
+          "target": 7896728,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D069: reviewed canonical IEEE-754 literal payload __real@405b800000000000 at 0x00787E98",
+          "addend": 0
+        },
+        {
+          "offset": 9586,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D0A2: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 9663,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D0EF: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 9744,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D140: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 9777,
+          "target": 7896784,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406b800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D161: reviewed canonical IEEE-754 literal payload __real@406b800000000000 at 0x00787ED0",
+          "addend": 0
+        },
+        {
+          "offset": 9939,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D203: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9967,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D21F: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 9987,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D233: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10003,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D243: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 10064,
+          "target": 7896704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D280: reviewed canonical IEEE-754 literal payload __real@4060400000000000 at 0x00787E80",
+          "addend": 0
+        },
+        {
+          "offset": 10080,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D290: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 10096,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D2A0: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0",
+          "addend": 0
+        },
+        {
+          "offset": 10157,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D2DD: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10177,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D2F1: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10193,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D301: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 10265,
+          "target": 7896704,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4060400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D349: reviewed canonical IEEE-754 literal payload __real@4060400000000000 at 0x00787E80",
+          "addend": 0
+        },
+        {
+          "offset": 10281,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D359: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 10297,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D369: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 10350,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D39E: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10366,
+          "target": 7896456,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@403e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D3AE: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88",
+          "addend": 0
+        },
+        {
+          "offset": 10382,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D3BE: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 10398,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D3CE: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10451,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D403: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10467,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D413: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 10528,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D450: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 10564,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D474: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10605,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D49D: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10630,
+          "target": 7896632,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4051800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D4B6: reviewed canonical IEEE-754 literal payload __real@4051800000000000 at 0x00787E38",
+          "addend": 0
+        },
+        {
+          "offset": 10646,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D4C6: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 10667,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D4DB: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10748,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D52C: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10764,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D53C: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 10780,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D54C: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10799,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D55F: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 10884,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D5B4: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 10900,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D5C4: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 10995,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D623: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11015,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D637: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11035,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D64B: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11081,
+          "target": 7896112,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@407f400000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D679: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30",
+          "addend": 0
+        },
+        {
+          "offset": 11173,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D6D5: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 11189,
+          "target": 7896296,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@404e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D6E5: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8",
+          "addend": 0
+        },
+        {
+          "offset": 11232,
+          "target": 7893864,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@405e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D710: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368",
+          "addend": 0
+        },
+        {
+          "offset": 11248,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D720: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 11408,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D7C0: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11432,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D7D8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11456,
+          "target": 7896792,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3f800000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D7F0: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8",
+          "addend": 0
+        },
+        {
+          "offset": 11480,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D808: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11532,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D83C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11570,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D862: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11594,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D87A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11618,
+          "target": 7896824,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@41000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D892: reviewed canonical IEEE-754 literal payload __real@41000000 at 0x00787EF8",
+          "addend": 0
+        },
+        {
+          "offset": 11670,
+          "target": 7896680,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@406e000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D8C6: reviewed canonical IEEE-754 literal payload __real@406e000000000000 at 0x00787E68",
+          "addend": 0
+        },
+        {
+          "offset": 11686,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D8D6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11710,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D8EE: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11752,
+          "target": 7896800,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4054000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D918: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0",
+          "addend": 0
+        },
+        {
+          "offset": 11768,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D928: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11792,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D940: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 11834,
+          "target": 7896696,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4061800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D96A: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78",
+          "addend": 0
+        },
+        {
+          "offset": 11850,
+          "target": 7894480,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4059000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D97A: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0",
+          "addend": 0
+        },
+        {
+          "offset": 11866,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D98A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8",
+          "addend": 0
+        },
+        {
+          "offset": 11928,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "Canonical EFZ.exe operand at 0x0044D9C8: reviewed original direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 11995,
+          "target": 4259696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?CollisionSide@Secondary@@QAEDXZ",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DA0B: reviewed original direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70",
+          "addend": 0
+        },
+        {
+          "offset": 12054,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DA46: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12071,
+          "target": 7896736,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4056800000000000",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DA57: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0",
+          "addend": 0
+        },
+        {
+          "offset": 12105,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DA79: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12137,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DA99: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12164,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DAB4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12199,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DAD7: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12231,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DAF7: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12275,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DB23: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        },
+        {
+          "offset": 12307,
+          "target": 4262048,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RandomRange@Secondary@@QAEFFF@Z",
+          "evidence": "Canonical EFZ.exe operand at 0x0044DB43: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5",
+      "target_extent_sha256": "359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5",
+      "unit": "character-09-slot05",
+      "symbol": "?Slot05@Character09@@UAEXXZ",
+      "target_address": "0x0044AB30",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "6455e98bf37dd680d8f342090eb4c2327a31cdb42382e35213272f08d0f15da2",
+      "object_sha256": "2459e6c261666c06dc1a53f1f5443206247abdd55647156f03a2ee5a4d857e1e",
+      "source_sha256": "e4b5f85e0be6999e5d7496ee9764a4b5cbee65f2fd085a9b1c3b5f349eaf4f91",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "3dbfea7e483c4ae15787194d3658d00c30e67e1a0a31d0d087259afaef579a53",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "60f262f99eb0d1ab0c644e8f9090bc98dfef94f74d94d3f1bd6574ce31909083",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

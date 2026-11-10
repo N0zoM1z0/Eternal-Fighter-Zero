@@ -375,3 +375,4 @@ address,name,source,symbol,status,evidence
 0x004466D0,Character09::ResetPose,src/Character09Lifecycle.cpp,?ResetPose@Character09@@UAEXXZ,complete,docs/evidence/character-09-reset-pose-exact.json
 0x00446590,Character09::InitializeState,src/Character09Lifecycle.cpp,?InitializeState@Character09@@UAEXXZ,complete,docs/evidence/character-09-initialize-state-exact.json
 0x004493C0,Character09::Slot02,src/Character09Commands.cpp,?Slot02@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot02-exact.json
+0x0044AB30,Character09::Slot05,src/Character09Cpu.cpp,?Slot05@Character09@@UAEXXZ,complete,docs/evidence/character-09-slot05-exact.json

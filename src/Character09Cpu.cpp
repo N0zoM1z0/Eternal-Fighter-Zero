@@ -1,7 +1,6 @@
-// Sayuri Character09::Slot05 partial native CPU workbench.
-// This opening is reviewed against original Sayuri x86.
-// Unreviewed sibling-character logic is deliberately excluded.
-#include "../../src/CharacterViews.h"
+// Sayuri Character09::Slot05 complete native CPU decision owner.
+// Original [0x0044AB30,0x0044DB5A): 12,330 instruction bytes.
+#include "CharacterViews.h"
 #include <math.h>
 
 void Character09::Slot05()
@@ -562,6 +561,274 @@ void Character09::Slot05()
             }
         }
 
+        if (field0008 == 0xcf) {
+            if ((*opponentSlot)->positionY < 0.0 && field3110 < 300) {
+                buttonPulse[1] = 1;
+                return;
+            }
+            if (distance.forward < 60.0 && field3110 < 400) {
+                buttonPulse[0] = 1;
+                return;
+            }
+            if (distance.forward < 125.0 &&
+                field3110 > 399 && field3110 < 700) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 699) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 4) == 0)
+                    field3114 = 3;
+                return;
+            }
+        }
+        if (field0008 == 0xd0) {
+            if (field3110 > 60 && field3110 < 300) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if (field3110 > 950) {
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 3;
+                return;
+            }
+        }
+        if (field0008 == 0xd1) {
+            if (velocityY < 0.0 && field3110 < 300) {
+                recognizedCommand = 0x28;
+                return;
+            }
+            if (field3110 > 649) {
+                field3114 = 3;
+                return;
+            }
+        }
     }
-    // Later action-specific CPU decisions are still open.
+    // General-purpose randomized CPU logic after the action-specific trees.
+    if ((float)(unsigned short)RandomRange(0, 100) < 25.0f * field00a8) {
+        field3110 = (unsigned short)RandomRange(0, 1000);
+        if (positionY == 0.0) {
+            if ((*opponentSlot)->positionY == 0.0 &&
+                (*opponentSlot)->field0008 != 99) {
+                if (distance.forward < 40.0 &&
+                    (*opponentSlot)->positionY == 0.0 &&
+                    field3110 < 5) {
+                    buttonPulse[2] = 1;
+                    inputX = -facing;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 45.0 && field3110 < 20) {
+                    buttonPulse[0] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 60.0 && field3110 < 30) {
+                    buttonPulse[0] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 140.0 && distance.forward > 100.0 &&
+                    field3110 < 15) {
+                    buttonPulse[1] = 1;
+                    inputY = 1;
+                    return;
+                }
+                if (distance.forward < 110.0 && field3110 < 20) {
+                    buttonPulse[1] = 1;
+                    inputY = 0;
+                    return;
+                }
+                if (distance.forward < 150.0 && distance.forward > 110.0 &&
+                    field3110 < 42 && field3110 > 40) {
+                    recognizedCommand = 0x1e;
+                    return;
+                }
+                if (distance.forward < 80.0 && field3110 < 48 &&
+                    field3110 > 45 && (*opponentSlot)->field0008 > 199) {
+                    recognizedCommand = 0x14;
+                    return;
+                }
+                if (distance.forward < 80.0 &&
+                    field3110 < 53 && field3110 > 50 &&
+                    (*opponentSlot)->field0008 > 199 && meter >= 2000) {
+                    recognizedCommand = (unsigned short)RandomRange(0, 2) + 0xab;
+                    return;
+                }
+                if (distance.forward > 220.0 &&
+                    field3110 < 55 && field3110 > 53 &&
+                    (*opponentSlot)->field0008 > 199 && meter >= 3000) {
+                    recognizedCommand = 0x62;
+                    return;
+                }
+                // Retain original contradictory timer window.
+                if (field3110 < 42 && field3110 > 47) {
+                    recognizedCommand = (short)facing;
+                    field3114 = 5;
+                    return;
+                }
+            }
+            // Opponent airborne: distinct rising/falling Sayuri priorities.
+            if ((*opponentSlot)->positionY < 0.0) {
+                if ((*opponentSlot)->velocityY < 0.0) {
+                    if (distance.forward < 80.0 && distance.vertical < 120.0 &&
+                        field3110 < 10) {
+                        inputY = -1;
+                        inputX = -facing;
+                        return;
+                    }
+                    if (distance.forward < 130.0 && distance.forward > 90.0 &&
+                        distance.vertical < 40.0 && field3110 < 35) {
+                        buttonPulse[1] = 1;
+                        inputY = 1;
+                        return;
+                    }
+                }
+                if ((*opponentSlot)->velocityY > 0.0) {
+                    if (distance.forward < 80.0 && distance.vertical < 120.0 &&
+                        field3110 < ((*opponentSlot)->field0008 > 199) * 15 + 5) {
+                        recognizedCommand = 0x14;
+                        return;
+                    }
+                    if (distance.forward < 130.0 && distance.forward > 90.0 &&
+                        distance.vertical < 100.0 && field3110 < 35) {
+                        buttonPulse[1] = 1;
+                        inputY = 1;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && distance.forward > 30.0 &&
+                        distance.vertical < 120.0 && distance.forward > 80.0 &&
+                        field3110 < 50) {
+                        buttonPulse[2] = 1;
+                        inputY = 1;
+                        return;
+                    }
+                    if (distance.forward < 80.0 && distance.vertical < 100.0 &&
+                        field3110 > 40 && field3110 < 45 && meter >= 2000) {
+                        recognizedCommand = (unsigned short)RandomRange(0, 2) + 0xab;
+                        return;
+                    }
+                }
+            }
+        }
+        // Sayuri self-airborne follow-up, opponent grounded or airborne.
+        if (positionY < 0.0 && field3114 != 3) {
+            if ((*opponentSlot)->positionY == 0.0) {
+                if (distance.forward < 70.0 && distance.vertical < 100.0 &&
+                    field3110 < ((*opponentSlot)->positionY == 0.0) * 100 + 100) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 80.0 &&
+                    distance.vertical > 60.0 && distance.vertical < 80.0 &&
+                    velocityY > 0.0 && (*opponentSlot)->positionY > positionY &&
+                    field3110 > 200 && field3110 < 220) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+                if (distance.forward < 80.0 && distance.vertical > 140.0 &&
+                    (*opponentSlot)->positionY > positionY && field3110 < 10) {
+                    buttonPulse[2] = 1;
+                    inputY = 1;
+                    inputX = 0;
+                    return;
+                }
+            }
+            if ((*opponentSlot)->positionY < 0.0) {
+                if (distance.forward < 80.0 && distance.vertical < 80.0 &&
+                    (*opponentSlot)->positionY < positionY &&
+                    field3110 < (field0118 > 500.0 || field0120 > 0) * 20 + 6) {
+                    recognizedCommand = 0x14;
+                    return;
+                }
+                if (distance.forward < 140.0 && distance.vertical > 60.0 &&
+                    field3110 < 110) {
+                    buttonPulse[1] = 1;
+                    return;
+                }
+                if (distance.forward < 120.0 && distance.vertical < 90.0 &&
+                    (*opponentSlot)->positionY > positionY && field3110 < 120) {
+                    buttonPulse[2] = 1;
+                    return;
+                }
+            }
+        }
+    }
+    // This common continuation is reached both when the 25x generic AI
+    // probability fails and after all its candidate decisions fall through.
+    if (field0008 < 50 &&
+        (((*opponentSlot)->field0008 > 149 &&
+          (*opponentSlot)->field0008 < 156) ||
+         ((*opponentSlot)->field0008 > 49 &&
+          (*opponentSlot)->field0008 < 59)) &&
+        positionY == 0.0 &&
+        (float)(unsigned short)RandomRange(0, 100) < 1.0f * field00a8) {
+        if (distance.forward < 100.0)
+            recognizedCommand = facing == 1;
+        return;
+    }
+
+    if ((unsigned short)RandomRange(0, 1000) < 2) {
+        field3114 = 4;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 2) {
+        if ((float)(unsigned short)RandomRange(0, 100) < 8.0f * field00a8)
+            field3114 = 3;
+        else
+            field3114 = 0;
+        if (distance.forward > 240.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 80.0 && positionY == 0.0 &&
+            (unsigned short)RandomRange(0, 100) < 2) {
+            inputX = 0;
+            inputY = -1;
+            return;
+        }
+        if (distance.forward < 140.0 && distance.forward > 100.0 &&
+            positionY == 0.0) {
+            inputX = facing;
+            inputY = -1;
+            return;
+        }
+    }
+    if (cpuMoveRightFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveRightFrames > 15)
+            cpuMoveRightFrames = 15;
+        inputX = 1;
+        return;
+    }
+    if (cpuMoveLeftFrames > 0) {
+        if (CollisionSide() != 0 && cpuMoveLeftFrames > 15)
+            cpuMoveLeftFrames = 15;
+        inputX = -1;
+        return;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 50 &&
+        distance.forward < 90.0) {
+        if (facing == 1)
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 60;
+        else
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 60;
+    }
+    if ((unsigned short)RandomRange(0, 100) < 80) {
+        if (facing == 1)
+            cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 60;
+        else
+            cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 60;
+    }
+    else if (facing == -1) {
+        cpuMoveRightFrames = (unsigned short)RandomRange(0, 200) + 60;
+    }
+    else {
+        cpuMoveLeftFrames = (unsigned short)RandomRange(0, 200) + 60;
+    }
 }

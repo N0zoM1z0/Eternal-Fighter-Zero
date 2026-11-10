@@ -2980,48 +2980,57 @@ runtime behavior remain open.
 
 <a id="sayuri-slot05-cpu-reviewed-prefix"></a>
 
-## Sayuri Character09 Slot05: reviewed 8,534-byte CPU boss prefix
+## Sayuri Character09 Slot05: complete 12,330-byte strict Exact CPU boss
 
-Original Character09 vtable entry 0x0078814C points to
-0x0044AB30; the complete range [0x0044AB30,0x0044DB5A)
-is 12,330 code bytes followed by six CC alignment bytes.
-Full original SHA-256:
+Original Character09/Sayuri vtable slot5 at 0x0078814C
+selects 0x0044AB30; the complete code boundary is
+[0x0044AB30,0x0044DB5A), exactly **12,330 original
+instruction bytes / 3,172 i386 instructions**, followed
+by six CC alignment bytes. Whole target SHA-256:
 359e3d5a58dcae61c77acdcfdd0b70bb247f8b497880c8317d75f8ad78c2acc5.
-Ownership/boundary is reviewed; the whole owner is not Exact yet.
 
-The natural C++ source workbench/sayuri-cpu/Character09Cpu.cpp
-reconstructs [0x0044AB30,0x0044CC86), **8,534
-original bytes / 2,157 instructions**, prefix SHA-256
-51d0973f6f6c87a843d5f7fa4ae686c377b2a7c69f6b576124f03e580fa90847.
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 8,527
-bytes / 2,159 instructions with a temporary epilogue,
-146 COFF relocations. **2,155/2,156 comparable
-original body instruction forms/operands agree**,
-after normalizing direct jumps/calls and literal
-addresses; only the incomplete stack frame (0xC4
-versus original 0xD8) differs. Two near JMPs shorten
-because the original shared return is absent.
+The complete naturally authored source is now
+**src/Character09Cpu.cpp**. Pinned native VC7.1
+/Od /G6 /MT /Gy /W3 builds **12,330/12,330 byte
+strict Exact** with the canonical 0xD8 stack frame,
+the original shared return and **237/237 verified
+original-bound COFF relocations**, zero differences.
+All 36 distinct symbol references have a unique
+verified original target: full IEEE-754 32/64-bit
+literal payloads and the original RandomRange, CRT
+fabs and CollisionSide callee addresses. The exact
+certificate is docs/evidence/character-09-slot05-exact.json
+and its one-unit rebuild recipe is
+character-09-slot05 in config/match-units.toml.
+No full-game cold replay or runtime equivalence claim.
 
-The focused workbench/sayuri-cpu/check_prefix.py
-verifies **276 in-prefix original jump destinations**,
-**91 outbound original targets** and all **146
-target-bound relocation operands**, across 29
-unique symbol destinations. Complete original IEEE-754
-payloads and RandomRange/fabs callee targets match.
+The natural C++ restores the entire decision tree:
+defensive random guards, the Sayuri-specific
+140-distance 0x14 special, graded A8/A9 meter
+actions, AA-state airborne reactions, CPU states
+0..7, C8/C9/CA/CB/CC/CD/CE/CF/D0/D1 collision
+priority, generic grounded and airborne responses,
+distance windows, movement cooldown timers and
+shared exit. The entire codegen was recovered
+without machine-byte patches, padding or inline
+assembler.
 
-Behavior covers early defensive rolls, unique
-Sayuri 140-unit special, graded A8/A9 meter moves,
-AA aerial reactions, CPU states 0..7 and original
-C8/C9/CA/CB/CC/CD/CE collision-followup priority.
-CE includes the 750..800 meter command and
-a collision-dependent upper timer limit.
-The duplicate CD block discovered in dirty work
-was reconciled before validation.
-
-Continue at 0x0044CC86, CF/D0.
-**Partial, not full Exact**: 3,796 original bytes,
-complete frame, return and remaining relocations
-are open. No all-unit cold replay was performed.
+Several non-obvious original distinctions were
+resolved by comparing actual source-generated
+x87 instructions, branch destinations and all
+relocation targets rather than accepting merely
+matching function sizes. Examples: 1.0f rather
+than 2.0f for the A8 early command; 15.0f
+rather than 10.0f for opponent attack reaction;
+opponent hitstunFrames +0x14C rather than
+guardInputFrames +0x14E; the 100-unit check before
+assigning the generic command; Sayuri-specific
+45/60/90/110/140 grounded ranges and distinct
+airborne comparison operand order; and the
+movement cooldowns of 60 frames with an
+80-percent branch threshold. The old partially
+validated C++ workbench was reconciled into
+the complete accepted source, then retired.
 
 ## Sayuri Character09 Slot04: complete 11,119-byte strict Exact
 

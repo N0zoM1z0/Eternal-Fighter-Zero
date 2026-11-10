@@ -133947,3 +133947,1672 @@ type = "DIR32"
 symbol = "__real@0000000000000000"
 target = 0x007872F8
 evidence = "EFZ.exe original IEEE-754 double reference at 0x0044A3CA: __real@0000000000000000 binds to 0x007872F8, all eight original payload bytes verified"
+
+[units.character-09-slot05]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character09Cpu.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-09-slot05/Character09Cpu.obj"
+symbol = "?Slot05@Character09@@UAEXXZ"
+target_address = 0x0044AB30
+size = 12330
+
+[[units.character-09-slot05.relocations]]
+offset = 170
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044ABDA: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 208
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AC00: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 226
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "Canonical EFZ.exe operand at 0x0044AC12: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10"
+
+[[units.character-09-slot05.relocations]]
+offset = 392
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044ACB8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 430
+type = "DIR32"
+symbol = "__real@4010000000000000"
+target = 0x00787F08
+evidence = "Canonical EFZ.exe operand at 0x0044ACDE: reviewed canonical IEEE-754 literal payload __real@4010000000000000 at 0x00787F08"
+
+[[units.character-09-slot05.relocations]]
+offset = 436
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "Canonical EFZ.exe operand at 0x0044ACE4: reviewed canonical IEEE-754 literal payload __real@3ff0000000000000 at 0x007875C0"
+
+[[units.character-09-slot05.relocations]]
+offset = 442
+type = "DIR32"
+symbol = "__real@4020000000000000"
+target = 0x00787F00
+evidence = "Canonical EFZ.exe operand at 0x0044ACEA: reviewed canonical IEEE-754 literal payload __real@4020000000000000 at 0x00787F00"
+
+[[units.character-09-slot05.relocations]]
+offset = 502
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AD26: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 520
+type = "DIR32"
+symbol = "__real@42200000"
+target = 0x00787EFC
+evidence = "Canonical EFZ.exe operand at 0x0044AD38: reviewed canonical IEEE-754 literal payload __real@42200000 at 0x00787EFC"
+
+[[units.character-09-slot05.relocations]]
+offset = 716
+type = "REL32"
+symbol = "_fabs"
+target = 0x0077842D
+evidence = "Canonical EFZ.exe operand at 0x0044ADFC: reviewed original direct callee _fabs at 0x0077842D"
+
+[[units.character-09-slot05.relocations]]
+offset = 783
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AE3F: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 801
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787EF8
+evidence = "Canonical EFZ.exe operand at 0x0044AE51: reviewed canonical IEEE-754 literal payload __real@41000000 at 0x00787EF8"
+
+[[units.character-09-slot05.relocations]]
+offset = 856
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AE88: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 900
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AEB4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 956
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044AEEC: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1062
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044AF56: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1078
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787EF0
+evidence = "Canonical EFZ.exe operand at 0x0044AF66: reviewed canonical IEEE-754 literal payload __real@4062c00000000000 at 0x00787EF0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044AFB5: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1365
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044B085: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1413
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand at 0x0044B0B5: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B0C8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1456
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "Canonical EFZ.exe operand at 0x0044B0E0: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1499
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044B10B: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1518
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B11E: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1542
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "Canonical EFZ.exe operand at 0x0044B136: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1585
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe operand at 0x0044B161: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78"
+
+[[units.character-09-slot05.relocations]]
+offset = 1604
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B174: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1628
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044B18C: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1755
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044B20B: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1795
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand at 0x0044B233: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1811
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "Canonical EFZ.exe operand at 0x0044B243: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1830
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B256: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1854
+type = "DIR32"
+symbol = "__real@40400000"
+target = 0x00787EE8
+evidence = "Canonical EFZ.exe operand at 0x0044B26E: reviewed canonical IEEE-754 literal payload __real@40400000 at 0x00787EE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 1931
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044B2BB: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1954
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B2D2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 1978
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044B2EA: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 2002
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044B302: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 2041
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044B329: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 2076
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B34C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2145
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B391: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2169
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044B3A9: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 2207
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B3CF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2231
+type = "DIR32"
+symbol = "__real@40800000"
+target = 0x007872E0
+evidence = "Canonical EFZ.exe operand at 0x0044B3E7: reviewed canonical IEEE-754 literal payload __real@40800000 at 0x007872E0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2270
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B40E: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2308
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044B434: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 2343
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B457: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2421
+type = "DIR32"
+symbol = "__real@4060e00000000000"
+target = 0x00787E90
+evidence = "Canonical EFZ.exe operand at 0x0044B4A5: reviewed canonical IEEE-754 literal payload __real@4060e00000000000 at 0x00787E90"
+
+[[units.character-09-slot05.relocations]]
+offset = 2447
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044B4BF: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 2488
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B4E8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2572
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B53C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2633
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ED0
+evidence = "Canonical EFZ.exe operand at 0x0044B579: reviewed canonical IEEE-754 literal payload __real@406b800000000000 at 0x00787ED0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2656
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B590: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2686
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "Canonical EFZ.exe operand at 0x0044B5AE: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8"
+
+[[units.character-09-slot05.relocations]]
+offset = 2724
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B5D4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2754
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044B5F2: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 2792
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B618: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2828
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B63C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2858
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044B65A: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 2896
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B680: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 2979
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B6D3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3009
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "Canonical EFZ.exe operand at 0x0044B6F1: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3059
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044B723: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3089
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand at 0x0044B741: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3105
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044B751: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3124
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B764: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3154
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "Canonical EFZ.exe operand at 0x0044B782: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3201
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Canonical EFZ.exe operand at 0x0044B7B1: reviewed canonical IEEE-754 literal payload __real@c03e000000000000 at 0x00787E30"
+
+[[units.character-09-slot05.relocations]]
+offset = 3231
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044B7CF: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3247
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044B7DF: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3266
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B7F2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3296
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "Canonical EFZ.exe operand at 0x0044B810: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3343
+type = "DIR32"
+symbol = "__real@c054000000000000"
+target = 0x007880D8
+evidence = "Canonical EFZ.exe operand at 0x0044B83F: reviewed canonical IEEE-754 literal payload __real@c054000000000000 at 0x007880D8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3377
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Canonical EFZ.exe operand at 0x0044B861: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88"
+
+[[units.character-09-slot05.relocations]]
+offset = 3393
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Canonical EFZ.exe operand at 0x0044B871: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88"
+
+[[units.character-09-slot05.relocations]]
+offset = 3409
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044B881: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3428
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B894: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3458
+type = "DIR32"
+symbol = "__real@40a00000"
+target = 0x00787EC8
+evidence = "Canonical EFZ.exe operand at 0x0044B8B2: reviewed canonical IEEE-754 literal payload __real@40a00000 at 0x00787EC8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3501
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "Canonical EFZ.exe operand at 0x0044B8DD: reviewed canonical IEEE-754 literal payload __real@4049000000000000 at 0x00787EB8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3517
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044B8ED: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3536
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B900: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3586
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044B932: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 3682
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044B992: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 3710
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044B9AE: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3734
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787EB0
+evidence = "Canonical EFZ.exe operand at 0x0044B9C6: reviewed canonical IEEE-754 literal payload __real@41700000 at 0x00787EB0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3804
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BA0C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 3843
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044BA33: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 3894
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044BA66: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 3945
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044BA99: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 4022
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BAE6: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4179
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044BB83: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 4202
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BB9A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4226
+type = "DIR32"
+symbol = "__real@41700000"
+target = 0x00787EB0
+evidence = "Canonical EFZ.exe operand at 0x0044BBB2: reviewed canonical IEEE-754 literal payload __real@41700000 at 0x00787EB0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4288
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BBF0: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4339
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044BC23: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4546
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BCF2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4818
+type = "DIR32"
+symbol = "__real@c03e000000000000"
+target = 0x00787E30
+evidence = "Canonical EFZ.exe operand at 0x0044BE02: reviewed canonical IEEE-754 literal payload __real@c03e000000000000 at 0x00787E30"
+
+[[units.character-09-slot05.relocations]]
+offset = 4901
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BE55: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 4931
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "Canonical EFZ.exe operand at 0x0044BE73: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10"
+
+[[units.character-09-slot05.relocations]]
+offset = 4991
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044BEAF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5039
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044BEDF: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5095
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044BF17: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5151
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044BF4F: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5202
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787EA8
+evidence = "Canonical EFZ.exe operand at 0x0044BF82: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5273
+type = "DIR32"
+symbol = "__real@4060e00000000000"
+target = 0x00787E90
+evidence = "Canonical EFZ.exe operand at 0x0044BFC9: reviewed canonical IEEE-754 literal payload __real@4060e00000000000 at 0x00787E90"
+
+[[units.character-09-slot05.relocations]]
+offset = 5385
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C039: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5445
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C075: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5505
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C0B1: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5573
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C0F5: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5652
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C144: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 5719
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C187: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5864
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C218: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 5949
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C26D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6009
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C2A9: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6070
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C2E6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 6138
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C32A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 6209
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C371: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 6275
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C3B3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6323
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044C3E3: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6397
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C42D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6487
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C487: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 6610
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C502: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6673
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C541: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6739
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044C583: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 6843
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C5EB: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 6933
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C645: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 6989
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044C67D: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 7045
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044C6B5: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7101
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787EA8
+evidence = "Canonical EFZ.exe operand at 0x0044C6ED: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8"
+
+[[units.character-09-slot05.relocations]]
+offset = 7213
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C75D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7273
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C799: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7334
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C7D6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 7402
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C81A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 7473
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C861: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 7540
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C8A4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7587
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044C8D3: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7661
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C91D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7709
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C94D: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7794
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044C9A2: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 7882
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044C9FA: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 8005
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CA75: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8067
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CAB3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8127
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CAEF: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8224
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CB50: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8289
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044CB91: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 8393
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CBF9: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8474
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CC4A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8566
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044CCA6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 8612
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044CCD4: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 8658
+type = "DIR32"
+symbol = "__real@405f400000000000"
+target = 0x00787EA8
+evidence = "Canonical EFZ.exe operand at 0x0044CD02: reviewed canonical IEEE-754 literal payload __real@405f400000000000 at 0x00787EA8"
+
+[[units.character-09-slot05.relocations]]
+offset = 8760
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CD68: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8869
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CDD5: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 8949
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044CE25: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9033
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CE79: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9057
+type = "DIR32"
+symbol = "__real@41c80000"
+target = 0x00787F10
+evidence = "Canonical EFZ.exe operand at 0x0044CE91: reviewed canonical IEEE-754 literal payload __real@41c80000 at 0x00787F10"
+
+[[units.character-09-slot05.relocations]]
+offset = 9091
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044CEB3: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9112
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044CEC8: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9142
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044CEE6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9188
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand at 0x0044CF14: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9209
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044CF29: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9285
+type = "DIR32"
+symbol = "__real@4046800000000000"
+target = 0x00788170
+evidence = "Canonical EFZ.exe operand at 0x0044CF75: reviewed canonical IEEE-754 literal payload __real@4046800000000000 at 0x00788170"
+
+[[units.character-09-slot05.relocations]]
+offset = 9338
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044CFAA: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9391
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe operand at 0x0044CFDF: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78"
+
+[[units.character-09-slot05.relocations]]
+offset = 9407
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044CFEF: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9460
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "Canonical EFZ.exe operand at 0x0044D024: reviewed canonical IEEE-754 literal payload __real@405b800000000000 at 0x00787E98"
+
+[[units.character-09-slot05.relocations]]
+offset = 9513
+type = "DIR32"
+symbol = "__real@4062c00000000000"
+target = 0x00787EF0
+evidence = "Canonical EFZ.exe operand at 0x0044D059: reviewed canonical IEEE-754 literal payload __real@4062c00000000000 at 0x00787EF0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9529
+type = "DIR32"
+symbol = "__real@405b800000000000"
+target = 0x00787E98
+evidence = "Canonical EFZ.exe operand at 0x0044D069: reviewed canonical IEEE-754 literal payload __real@405b800000000000 at 0x00787E98"
+
+[[units.character-09-slot05.relocations]]
+offset = 9586
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D0A2: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9663
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D0EF: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9744
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D140: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9777
+type = "DIR32"
+symbol = "__real@406b800000000000"
+target = 0x00787ED0
+evidence = "Canonical EFZ.exe operand at 0x0044D161: reviewed canonical IEEE-754 literal payload __real@406b800000000000 at 0x00787ED0"
+
+[[units.character-09-slot05.relocations]]
+offset = 9939
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D203: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9967
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D21F: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 9987
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D233: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10003
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe operand at 0x0044D243: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368"
+
+[[units.character-09-slot05.relocations]]
+offset = 10064
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787E80
+evidence = "Canonical EFZ.exe operand at 0x0044D280: reviewed canonical IEEE-754 literal payload __real@4060400000000000 at 0x00787E80"
+
+[[units.character-09-slot05.relocations]]
+offset = 10080
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "Canonical EFZ.exe operand at 0x0044D290: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10096
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical EFZ.exe operand at 0x0044D2A0: reviewed canonical IEEE-754 literal payload __real@4044000000000000 at 0x00787CE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10157
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D2DD: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10177
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D2F1: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10193
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe operand at 0x0044D301: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368"
+
+[[units.character-09-slot05.relocations]]
+offset = 10265
+type = "DIR32"
+symbol = "__real@4060400000000000"
+target = 0x00787E80
+evidence = "Canonical EFZ.exe operand at 0x0044D349: reviewed canonical IEEE-754 literal payload __real@4060400000000000 at 0x00787E80"
+
+[[units.character-09-slot05.relocations]]
+offset = 10281
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "Canonical EFZ.exe operand at 0x0044D359: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10297
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044D369: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10350
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D39E: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10366
+type = "DIR32"
+symbol = "__real@403e000000000000"
+target = 0x00787D88
+evidence = "Canonical EFZ.exe operand at 0x0044D3AE: reviewed canonical IEEE-754 literal payload __real@403e000000000000 at 0x00787D88"
+
+[[units.character-09-slot05.relocations]]
+offset = 10382
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe operand at 0x0044D3BE: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368"
+
+[[units.character-09-slot05.relocations]]
+offset = 10398
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D3CE: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10451
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D403: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10467
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044D413: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10528
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D450: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10564
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D474: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10605
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D49D: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10630
+type = "DIR32"
+symbol = "__real@4051800000000000"
+target = 0x00787E38
+evidence = "Canonical EFZ.exe operand at 0x0044D4B6: reviewed canonical IEEE-754 literal payload __real@4051800000000000 at 0x00787E38"
+
+[[units.character-09-slot05.relocations]]
+offset = 10646
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044D4C6: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10667
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D4DB: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10748
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D52C: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10764
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044D53C: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10780
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D54C: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10799
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D55F: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 10884
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D5B4: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 10900
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe operand at 0x0044D5C4: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78"
+
+[[units.character-09-slot05.relocations]]
+offset = 10995
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D623: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11015
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D637: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11035
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D64B: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11081
+type = "DIR32"
+symbol = "__real@407f400000000000"
+target = 0x00787C30
+evidence = "Canonical EFZ.exe operand at 0x0044D679: reviewed canonical IEEE-754 literal payload __real@407f400000000000 at 0x00787C30"
+
+[[units.character-09-slot05.relocations]]
+offset = 11173
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe operand at 0x0044D6D5: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78"
+
+[[units.character-09-slot05.relocations]]
+offset = 11189
+type = "DIR32"
+symbol = "__real@404e000000000000"
+target = 0x00787CE8
+evidence = "Canonical EFZ.exe operand at 0x0044D6E5: reviewed canonical IEEE-754 literal payload __real@404e000000000000 at 0x00787CE8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11232
+type = "DIR32"
+symbol = "__real@405e000000000000"
+target = 0x00787368
+evidence = "Canonical EFZ.exe operand at 0x0044D710: reviewed canonical IEEE-754 literal payload __real@405e000000000000 at 0x00787368"
+
+[[units.character-09-slot05.relocations]]
+offset = 11248
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "Canonical EFZ.exe operand at 0x0044D720: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11408
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D7C0: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11432
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D7D8: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11456
+type = "DIR32"
+symbol = "__real@3f800000"
+target = 0x00787ED8
+evidence = "Canonical EFZ.exe operand at 0x0044D7F0: reviewed canonical IEEE-754 literal payload __real@3f800000 at 0x00787ED8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11480
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044D808: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11532
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D83C: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11570
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D862: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11594
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D87A: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11618
+type = "DIR32"
+symbol = "__real@41000000"
+target = 0x00787EF8
+evidence = "Canonical EFZ.exe operand at 0x0044D892: reviewed canonical IEEE-754 literal payload __real@41000000 at 0x00787EF8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11670
+type = "DIR32"
+symbol = "__real@406e000000000000"
+target = 0x00787E68
+evidence = "Canonical EFZ.exe operand at 0x0044D8C6: reviewed canonical IEEE-754 literal payload __real@406e000000000000 at 0x00787E68"
+
+[[units.character-09-slot05.relocations]]
+offset = 11686
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D8D6: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11710
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D8EE: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11752
+type = "DIR32"
+symbol = "__real@4054000000000000"
+target = 0x00787EE0
+evidence = "Canonical EFZ.exe operand at 0x0044D918: reviewed canonical IEEE-754 literal payload __real@4054000000000000 at 0x00787EE0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11768
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D928: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11792
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044D940: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11834
+type = "DIR32"
+symbol = "__real@4061800000000000"
+target = 0x00787E78
+evidence = "Canonical EFZ.exe operand at 0x0044D96A: reviewed canonical IEEE-754 literal payload __real@4061800000000000 at 0x00787E78"
+
+[[units.character-09-slot05.relocations]]
+offset = 11850
+type = "DIR32"
+symbol = "__real@4059000000000000"
+target = 0x007875D0
+evidence = "Canonical EFZ.exe operand at 0x0044D97A: reviewed canonical IEEE-754 literal payload __real@4059000000000000 at 0x007875D0"
+
+[[units.character-09-slot05.relocations]]
+offset = 11866
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe operand at 0x0044D98A: reviewed canonical IEEE-754 literal payload __real@0000000000000000 at 0x007872F8"
+
+[[units.character-09-slot05.relocations]]
+offset = 11928
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "Canonical EFZ.exe operand at 0x0044D9C8: reviewed original direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70"
+
+[[units.character-09-slot05.relocations]]
+offset = 11995
+type = "REL32"
+symbol = "?CollisionSide@Secondary@@QAEDXZ"
+target = 0x0040FF70
+evidence = "Canonical EFZ.exe operand at 0x0044DA0B: reviewed original direct callee ?CollisionSide@Secondary@@QAEDXZ at 0x0040FF70"
+
+[[units.character-09-slot05.relocations]]
+offset = 12054
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DA46: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12071
+type = "DIR32"
+symbol = "__real@4056800000000000"
+target = 0x00787EA0
+evidence = "Canonical EFZ.exe operand at 0x0044DA57: reviewed canonical IEEE-754 literal payload __real@4056800000000000 at 0x00787EA0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12105
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DA79: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12137
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DA99: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12164
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DAB4: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12199
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DAD7: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12231
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DAF7: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12275
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DB23: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"
+
+[[units.character-09-slot05.relocations]]
+offset = 12307
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical EFZ.exe operand at 0x0044DB43: reviewed original direct callee ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0"

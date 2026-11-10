@@ -34,6 +34,18 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Sayuri Character09::Slot05 CPU is **complete native strict Exact**:
+12,330 original bytes / 3,172 i386 instructions,
+original 0xD8 frame and shared return, 237/237
+original-bound relocations, zero byte differences.
+Full natural C++ source src/Character09Cpu.cpp,
+evidence docs/evidence/character-09-slot05-exact.json.
+Reproduce just the selected unit:
+scripts/repo-python scripts/replay-exact-units.py --unit character-09-slot05.
+The original workbench was reconciled and retired;
+whole-product linkage/runtime remains a separate task.
+
+
 Sayuri Character09::Slot02 input-history command interpreter is now
 complete native strict Exact: 5,995 bytes / 1,752 x86 instructions,
 the original 0xC stack frame, 8/8 original-bound floating relocations,
@@ -130,7 +142,6 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Sayuri Character09::Slot05 CPU | 0x0044AB30, 12,330 original bytes | workbench/sayuri-cpu/ covers 8,534 bytes / 2,157 instructions; 2,155/2,156 comparable forms (incomplete frame), 276 internal jump destinations, 91 canonical outbound targets and 146 original relocations agree. Next 0x0044CC86 (CF/D0); 3,796 bytes remain, partial only. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 
