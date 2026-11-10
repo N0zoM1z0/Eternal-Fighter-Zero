@@ -3022,7 +3022,7 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot07-effects-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot07: reviewed 9,713-byte effects-boss opening
+## Nayuki Character10 Slot07: reviewed 10,248-byte effects-boss opening
 
 Original Nayuki vtable Slot07 at 0x0078828C selects
 [0x00468870,0x0046D895), 20,517 original x86 code
@@ -3034,22 +3034,22 @@ switch destination array at 0x0046D895 and
 These are separate DATA, not instruction bytes.
 
 Natural source at workbench/nayuki-effects/Character10Effects.cpp
-now reconstructs [0x00468870,0x0046AE61),
-**9,713 original bytes / 2,187 instructions**,
+now reconstructs [0x00468870,0x0046B078),
+**10,248 original bytes / 2,310 instructions**,
 canonical prefix SHA-256
-59483bc2b67477d8e72df5bf12919dd29850a02fa7db5791a66caa050b584164.
-Selected pinned VC7.1 comparison checks **2,186
+8500e5e430d4da4ebaff77e1719ebace6bbcf3315b8e9df6d6b3a4523d817b3b.
+Selected pinned VC7.1 comparison checks **2,309
 matching original forms plus incomplete stack allocation**,
 all original instruction offsets and byte widths,
-**120 canonical internal jumps**, **17 valid
-outbound branches** and **117 original-bound
+**126 canonical internal jumps**, **18 valid
+outbound branches** and **123 original-bound
 non-switch COFF relocations** across 26 unique
 symbols. Original local switch table relocation
 fields are separately reviewed, with ten case
 destinations verified from original table bytes.
 
 The reviewed source covers real Nayuki effect
-cases 0x190–0x199: early particle emission,
+cases 0x190–0x19A: early particle emission,
 bounce and grounded collision, camera clipping,
 frame lifecycle, 0x196 local effect 0x199 at
 tick30, 0x197 pair of 0x19A at ticks 24/30
@@ -3060,14 +3060,22 @@ float origin and source-ordered RandomRange calls.
 Original x87 literals, virtual effects, sound
 and frame duration semantics are checked.
 
-The candidate has unfinished 0x380 stack frame
+The candidate has unfinished a non-final size stack frame
 instead of original 0x1D4. The structural source
 after 0x199 is unreviewed sibling scaffolding.
-Continue at **0x0046AE61 (case 0x19A)**.
-**Not whole-function Exact**: 10,804 original
+Continue at **0x0046B078 (case 0x19A)**.
+**Not whole-function Exact**: 10,269 original
 code bytes, stack, return, later switch table,
 and remaining relocations still need work.
 No all-unit cold replay was run.
+
+
+The 0x19A frame-zero init and 12% random 0x19C
+particle emission have been reconstructed using
+the canonical -50.0 x margin and original random
+call sequence. The incomplete stack allocation
+is expected to change as unreviewed later cases
+are replaced, so it is not accepted as Exact.
 
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 

@@ -1,4 +1,4 @@
-# Nayuki Character10::Slot07 — first 9,713 original code bytes reviewed
+# Nayuki Character10::Slot07 — first 10,248 original code bytes reviewed
 
 Original Nayuki vtable Slot07 at 0x0078828C selects the full native
 [0x00468870, 0x0046D895) owner: 20,517 original x86 bytes,
@@ -8,27 +8,27 @@ table at 0x0046D895, then a 100-entry compact ID table at 0x0046D905;
 do not classify these tables as instruction bytes or CC padding.
 
 Natural C++ workbench Character10Effects.cpp now reconstructs
-Nayuki-specific effect types 0x190–0x199 against the
+Nayuki-specific effect types 0x190–0x19A against the
 canonical executable's native control flow:
-[0x00468870,0x0046AE61), **9,713 original x86
-bytes / 2,187 original instructions**, prefix SHA-256
-59483bc2b67477d8e72df5bf12919dd29850a02fa7db5791a66caa050b584164.
+[0x00468870,0x0046B078), **10,248 original x86
+bytes / 2,310 original instructions**, prefix SHA-256
+8500e5e430d4da4ebaff77e1719ebace6bbcf3315b8e9df6d6b3a4523d817b3b.
 
 Selected reproducible native audit:
 
     scripts/repo-python workbench/nayuki-effects/check_prefix.py
 
 Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits the
-**2,186 comparable matching original instruction forms**
+**2,309 comparable matching original instruction forms**
 with original offsets and original byte widths.
 Only the unfinished full-owner stack allocation differs
-(0x380 candidate versus original 0x1D4).
-**120 original internal branches**, **17 valid
-original outbound branches** and **117 original-bound
+(incomplete candidate vs original 0x1D4).
+**126 original internal branches**, **18 valid
+original outbound branches** and **123 original-bound
 non-switch COFF literal/call relocations** across
 26 distinct symbols are checked by original bytes.
 The two compiler-local switch table relocations
-are independently reviewed; ten original dispatch
+are independently reviewed; eleven original dispatch
 targets are checked against the original jump table.
 Later unreviewed switch cases are NOT exact.
 
@@ -45,9 +45,15 @@ margin with three RandomRange(0,100) calls.
 All original floating literals and direct calls
 in the reviewed range are original-bound.
 
-Continue at original **0x0046AE61**, effect 0x19A.
-**10,804 more original instruction bytes**, full
+Continue at original **0x0046B078**, effect 0x19B.
+**10,269 more original instruction bytes**, full
 frame/return and remaining local jump table and
 relocations are open. The structural C++ after
 0x199 is UNREVIEWED sibling scaffolding; do not
 credit it as native exactness. No all-unit cold replay.
+
+The newly reviewed 0x19A emitter has a 12% random
+chance and the same canonical -50.0 position offset
+with a separate frame-zero state flag. More recent
+0x19B scaffold changes do not enlarge the accepted
+prefix until the selected audit passes.

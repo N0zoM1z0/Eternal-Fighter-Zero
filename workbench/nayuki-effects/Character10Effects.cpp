@@ -436,15 +436,20 @@ void Character10::Slot07()
                 }
                 break;
             case 0x19a:
-                if ((effects[i].frame == 2) &&
-                    (effects[i].tick == 0)) {
-                    effect.type = 0x1b2;
-                    effect.x = (double)(int(effects[i].x));
-                    effect.y = (double)(int(effects[i].y));
-                    effect.flag0018 = (unsigned char)effects[i].flag0048;
-                    effect.layer = true;
-                    effect.group = 0;
-                    effect.owner = 1;
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].field0084 = 1;
+                    pendingCharacterSoundSlot = 1;
+                }
+                if (effects[i].frame < 12 &&
+                    (unsigned short)RandomRange(0, 100) < 12) {
+                    effect.type = 0x19c;
+                    effect.x = (double)(int)((effects[i].x - 50.0) +
+                        (unsigned short)RandomRange(0, 100));
+                    effect.y = (double)(int)(effects[i].y -
+                        (unsigned short)RandomRange(0, 100));
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
                     EmitLocalEffect(&effect);
                 }
                 ++effects[i].tick;
@@ -452,125 +457,96 @@ void Character10::Slot07()
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
                 }
                 break;
             case 0x19b:
-                if (((effects[i].frame == 0) &&
-                    (effects[i].tick == 0)) && (field315c[i] == 0)) {
-                    field325c[i] = 0xa0;
-                    ++field315c[i];
-                    effects[i].vx = -0.8;
-                    effects[i].vy = -2.5;
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].field0084 = 1;
+                    pendingCharacterSoundSlot = 1;
                 }
-                effects[i].vy =
-                effects[i].vy + 0.05;
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].vy > 0.0)) {
-                    effects[i].vy =
-                    -effects[i].vy * 0.5;
+                if (effects[i].frame < 12 &&
+                    (unsigned short)RandomRange(0, 100) < 10) {
+                    effect.type = 0x19c;
+                    effect.x = (double)(int)((effects[i].x - 50.0) +
+                        (unsigned short)RandomRange(0, 100));
+                    effect.y = (double)(int)(effects[i].y -
+                        (unsigned short)RandomRange(0, 100));
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
                 }
-                if (field325c[i] < 0x3c) {
-                    contextOwner->RequestTransition('\x02');
-                }
-                if (field325c[i] < 0x37) {
-                    contextOwner->RequestTransition('\x03');
-                }
-                if (field325c[i] < 10) {
-                    effects[i].group = 1;
-                }
-                if (field325c[i] < 0) {
-                    RemoveLocalEffect((short)i);
-                    break;
-                }
-                else {
-                    ++effects[i].tick;
-                    --field325c[i];
-                    if (effects[i].tick >= frameDuration) {
-                        effects[i].tick = 0;
-                        ++effects[i].frame;
-                        effects[i].field0080 = 0;
-                        if (effects[i].frame >= frameCount) {
-                            effects[i].frame = 0;
-                        }
-                    }
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
+                    effects[i].tick = 0;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
                 }
                 break;
             case 0x19c:
-                if (((effects[i].frame == 0) &&
-                    (effects[i].tick == 0)) && (field315c[i] == 0)) {
-                    field325c[i] =
-                    (unsigned int)(16000 < (std::rand())) * 0x28 + 0x50 + (unsigned int)(16000 < (std::rand())) * 0x14;
-                    ++field315c[i];
-                    effects[i].vx =
-                    -0.5 - ((((double)(16000 < (std::rand())) * 1.2) - ((double)(16000 < (std::rand())) * 0.7)) - (double)(16000 < (std::rand())) * 1.7);
-                    effects[i].vy =
-                    -1.2 - ((((double)(16000 < (std::rand())) * 0.6) - ((double)(16000 < (std::rand())) * 0.5)) - (double)(16000 < (std::rand())) * 0.8);
+                if (field315c[i] <= 0) {
+                    effect.type = 0x22;
+                    effect.x = (double)((int)effects[i].x +
+                        (20 - (unsigned short)RandomRange(0, 40)) * facing);
+                    effect.y = (double)((int)effects[i].y + 20 -
+                        (unsigned short)RandomRange(0, 40));
+                    effect.group = 2;
+                    effect.layer = 1;
+                    contextOwner->EmitEffect(&effect);
+                    field315c[i] = 2;
                 }
-                effects[i].vy =
-                effects[i].vy + 0.05;
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].vy > 0.0)) {
-                    effects[i].vy =
-                    -effects[i].vy;
-                }
-                if (field325c[i] < 10) {
-                    effects[i].group = 1;
-                }
-                if (field325c[i] < 0) {
-                    RemoveLocalEffect((short)i);
-                    break;
-                }
-                else {
-                    ++effects[i].tick;
-                    --field325c[i];
-                    if (effects[i].tick >= frameDuration) {
-                        effects[i].tick = 0;
-                        ++effects[i].frame;
-                        effects[i].field0080 = 0;
-                        if (effects[i].frame >= frameCount) {
-                            effects[i].frame = 0;
-                        }
-                    }
+                --field315c[i];
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
+                    effects[i].tick = 0;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame >= frameCount)
+                        RemoveLocalEffect((short)i);
                 }
                 break;
             case 0x19d:
-                if (((effects[i].frame == 0) &&
-                    (effects[i].tick == 0)) && (field315c[i] == 0)) {
-                    field325c[i] =
-                    (unsigned int)(16000 < (std::rand())) * 0x28 + 0x50 + (unsigned int)(16000 < (std::rand())) * 0x14;
-                    ++field315c[i];
-                    effects[i].vx =
-                    -0.5 - ((((double)(16000 < (std::rand())) * 1.2) - ((double)(16000 < (std::rand())) * 0.7)) - (double)(16000 < (std::rand())) * 1.7);
-                    effects[i].vy =
-                    -1.2 - ((((double)(16000 < (std::rand())) * 0.6) - ((double)(16000 < (std::rand())) * 0.5)) - (double)(16000 < (std::rand())) * 0.8);
+                if ((field0008 == 0x12f ||
+                     field0008 == 0x130 ||
+                     field0008 == 0x131) && field000a < 8) {
+                    effects[i].x = positionX;
+                    effects[i].y = positionY - 80.0;
+                } else {
+                    effects[i].frame = 0;
+                    effects[i].tick = 0;
+                    effects[i].vx = 0.0;
+                    effects[i].vy = 0.0;
+                    effects[i].type = 0x195;
                 }
-                effects[i].vy =
-                effects[i].vy + 0.05;
-                if ((effects[i].y > 0.0) &&
-                    (effects[i].vy > 0.0)) {
-                    effects[i].vy =
-                    -effects[i].vy;
+                field314c = (int)effects[i].x;
+                field3154 = (int)effects[i].y;
+                if (effects[i].frame == 0 && effects[i].tick == 0 &&
+                    field315c[i] <= 0) {
+                    effect.type = 0x19f;
+                    effect.x = (double)(int)effects[i].x;
+                    effect.y = (double)(int)effects[i].y;
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
+                    field315c[i] = 3;
+                    if (field0008 == 0x130)
+                        field315c[i] = 2;
+                    if (field0008 == 0x131)
+                        field315c[i] = 1;
                 }
-                if (field325c[i] < 10) {
-                    effects[i].group = 1;
-                }
-                if (field325c[i] < 0) {
-                    RemoveLocalEffect((short)i);
-                    break;
-                }
-                else {
-                    ++effects[i].tick;
-                    --field325c[i];
-                    if (effects[i].tick >= frameDuration) {
-                        effects[i].tick = 0;
-                        ++effects[i].frame;
-                        effects[i].field0080 = 0;
-                        if (effects[i].frame >= frameCount) {
-                            effects[i].frame = 0;
-                        }
+                ++effects[i].tick;
+                if (effects[i].tick >= frameDuration) {
+                    effects[i].tick = 0;
+                    ++effects[i].frame;
+                    effects[i].field0080 = 0;
+                    if (effects[i].frame >= frameCount) {
+                        effects[i].frame = 0;
+                        --field315c[i];
                     }
                 }
                 break;
