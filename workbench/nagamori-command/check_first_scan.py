@@ -15,6 +15,7 @@ START = 0x004B1780
 FIRST_END = 0x004B191C
 SECOND_END = 0x004B1AD7
 THIRD_END = 0x004B1CE1
+FOURTH_END = 0x004B1EEB
 SOURCE = ROOT / 'workbench/nagamori-command/Character06Command.cpp'
 OBJECT = ROOT / 'build/nagamori-command/Character06Command.partial.obj'
 
@@ -38,20 +39,20 @@ def original_instructions(data, path):
 
 
 def main():
-    original = target_bytes(verify_target(), START, THIRD_END - START)
+    original = target_bytes(verify_target(), START, FOURTH_END - START)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/nagamori-command-workbench.log')
     built, relocations = object_function(OBJECT, '?Slot02@Character06@@UAEXXZ')
     original_ins = original_instructions(original, ROOT / 'build/nagamori-command/target.bin')
     compiled_ins = original_instructions(built, ROOT / 'build/nagamori-command/partial.bin')
-    assert len(original) == 1377 and len(original_ins) == 410
-    assert len(built) == 1381 and len(compiled_ins) == 413 and len(relocations) == 1
-    assert compiled_ins[:410] == original_ins
-    assert compiled_ins[410:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori first three priority command scans: 410/410 original x86 instructions match,')
+    assert len(original) == 1899 and len(original_ins) == 566
+    assert len(built) == 1903 and len(compiled_ins) == 569 and len(relocations) == 2
+    assert compiled_ins[:566] == original_ins
+    assert compiled_ins[566:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
+    print('Nagamori first four priority command scans: 566/566 original x86 instructions match,')
     print('normalizing ONLY forward branch targets and PE constant addresses.')
-    print('Original three scans: 1377 bytes; partial source: 1381 with temporary local epilogue.')
-    print('Three-scan prefix SHA256:', hashlib.sha256(original).hexdigest())
+    print('Original four scans: 1899 bytes; partial source: 1903 with temporary local epilogue.')
+    print('Four-scan prefix SHA256:', hashlib.sha256(original).hexdigest())
     print('Entire Nagamori Slot02: 4917 bytes — NOT accepted Exact.')
 
 

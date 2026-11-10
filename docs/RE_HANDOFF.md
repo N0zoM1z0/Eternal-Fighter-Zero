@@ -508,13 +508,13 @@ invalidation of 123 selected units. As for all single-unit Exact
 owners, this does **not** establish whole-game C++ linkage or runtime.
 No full cold replay.
 
-## Nagamori Slot02 command boss: first three scans restored
+## Nagamori Slot02 command boss: first four scans restored
 
 The original Nagamori `Character06::Slot02` at `0x004B1780`
 (vtable slot 2, `0x00788404`) has a reviewed **4,917-byte** boundary.
 Partial natural C++ in `workbench/nagamori-command/` now reproduces
-**1,377/4,917 original prefix bytes** across the first **3 scans,
-410/410 instruction forms**, normalizing numeric unimplemented branch
+**1,899/4,917 original prefix bytes** across the first **4 scans,
+566/566 instruction forms**, normalizing numeric unimplemented branch
 addresses and one PE x87 constant location. First scan requires
 meter==3000/ground and recognizes 0x5B; second recognizes 0x78 series;
 third recognizes meter>=1000 0x6E series. Distinct original scan

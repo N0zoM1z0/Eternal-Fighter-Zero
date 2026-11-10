@@ -105,5 +105,37 @@ void Character06::Slot02()
             stage = 1;
         }
     }
+    // Fourth Nagamori scan: 1000-meter grounded base-100 motion.
+    stage = '\0';
+    i = inputHistoryWriteIndex + 0x5a;
+    for (; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if (((buttons & 0xf0) != 0) && (stage == '\x06')) {
+            recognizedCommand = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+            return;
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x05')) {
+            if ((buttons & 0xf0) != 0) {
+                recognizedCommand = ((buttons & 0xe0) > 0) + 100 + ((buttons & 0xc0) > 0) + ((buttons & 0x80) > 0);
+                return;
+            }
+            stage = '\x06';
+        }
+        if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x04')) {
+            stage = '\x05';
+        }
+        if (((buttons & 0xf) == 4) && (stage == '\x03')) {
+            stage = '\x04';
+        }
+        if (((buttons & 0xf) == 2 + (facing == -1 ? 0 : -1)) && (stage == '\x02')) {
+            stage = '\x03';
+        }
+        if (((buttons & 0xf) == (facing == -1 ? 6 : 5)) && (stage == '\x01')) {
+            stage = '\x02';
+        }
+        if ((((buttons & 0xf) == 4) && (stage == '\0')) && (meter >= 1000) && (positionY == 0.0)) {
+            stage = '\x01';
+        }
+    }
     // Lower-priority Nagamori scans remain unimplemented.
 }

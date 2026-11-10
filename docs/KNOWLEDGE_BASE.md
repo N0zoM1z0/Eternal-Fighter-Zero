@@ -2214,15 +2214,15 @@ per-unit reconstruction boundary rather than claiming whole-program
 ODR/linkage correctness; see `workbench/nagamori-helper/README.md`.
 No global cold replay or unrelated certificate invalidation occurred.
 
-## Nagamori Slot02 command scanner: three natural-source scans recovered
+## Nagamori Slot02 command scanner: four natural-source scans recovered
 
 Original Nagamori vtable slot 2 at `0x00788404` selects
 `Character06::Slot02` at `0x004B1780`, complete original function
 `[0x004B1780,0x004B2AB5)`, **4,917 bytes**, followed by 11 `CC`
 alignment bytes. The isolated source `workbench/nagamori-command/`
-now implements the first **three** priority-ordered input-history
+now implements the first **four** priority-ordered input-history
 scans: 412/120, 443/133 and 522/157 original bytes/instructions,
-through `0x004B1CE1` for **1,377 bytes and 410 instructions**.
+through `0x004B1EEB` for **1,899 bytes and 410 instructions**.
 
 Scan 1 recognizes command 0x5B only after the meter==3000, grounded
 start; scan 2 recognizes button-flagged 0x78-series specials; scan 3
@@ -2232,7 +2232,7 @@ and 180-tick history ring were confirmed by canonical x86 rather than
 relying on superficially similar characters. A duplicate third scan
 in a draft was discovered and corrected with native compiler output.
 
-Focused VC7.1 recompilation confirms all **410 original instruction
+Focused VC7.1 recompilation confirms all **566 original instruction
 forms and operands**, normalizing only unimplemented numeric jump
 targets and a single original x87 constant address. The 1,381-byte
 partial function has a temporary local epilogue and lacks the final

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-complete-boundary-with-three-priority-scans-not-full-Exact",
+  "status": "reviewed-original-complete-boundary-with-four-priority-scans-not-full-Exact",
   "canonical_target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "original_vtable_slot_pointer": "0x00788404",
   "function": "Character06::Slot02",
@@ -20,7 +20,7 @@
   "following_alignment_bytes": 11,
   "partial_source": "workbench/nagamori-command/Character06Command.cpp",
   "reproducer": "workbench/nagamori-command/check_first_scan.py",
-  "limitations": "First 3 of 15 original scans match 410/410 native instruction forms with only numeric branch targets and one canonical x87 0.0 constant address normalized. Temporary three-instruction local epilogue and 12 unimplemented scans make full 4917-byte Exact unproven.",
+  "limitations": "First four priority scans match 566/566 original instructions, normalizing only numeric future branch addresses and two external zero-constant relocation operands; 11 later scans and true shared epilogue are absent, so Slot02 is not whole-owner Exact.",
   "second_scan": {
     "start": "0x004B191C",
     "end_exclusive": "0x004B1AD7",
@@ -37,11 +37,11 @@
   },
   "reconstructed_prefix": {
     "start": "0x004B1780",
-    "end_exclusive": "0x004B1CE1",
-    "size": 1377,
-    "instruction_count": 410,
-    "sha256": "d4e322f8afccf178517a4bd338844d42dba8ce997ec59ad21aa17d1dca7bea37",
-    "native_partial_size": 1381
+    "end_exclusive": "0x004B1EEB",
+    "size": 1899,
+    "instruction_count": 566,
+    "sha256": "4e169f71c6a4209a31b4853e5dac252b370fcf870eba0f61d5c508d92b8e24d3",
+    "native_partial_size": 1903
   },
   "third_scan": {
     "start": "0x004B1AD7",
@@ -49,5 +49,12 @@
     "size": 522,
     "instruction_count": 157,
     "sha256": "5aac20828ee2f22499a1d64607c2437d47802a95066452609b8d310169afdacf"
+  },
+  "fourth_scan": {
+    "start": "0x004B1CE1",
+    "end_exclusive": "0x004B1EEB",
+    "size": 522,
+    "instruction_count": 156,
+    "sha256": "8e07a506d99e5b0544c7a67ed89910c65c4f9e86562f55fc1e02fad49ab28fd9"
   }
 }
