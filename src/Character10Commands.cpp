@@ -1,6 +1,6 @@
-// Nayuki Character10::Slot02 original 4,827-byte input command owner.
-// Current native-source workbench is a reviewed partial only.
-#include "../../src/CharacterViews.h"
+// Complete natural C++ Nayuki Character10::Slot02 command interpreter.
+// Original complete owner [0x004641C0, 0x0046549B): 4,827 bytes.
+#include "CharacterViews.h"
 
 void Character10::Slot02()
 {
@@ -202,5 +202,115 @@ void Character10::Slot02()
             stage = 1;
     }
     stage = 0;
-    // Remaining Nayuki-specific command priorities are open.
+    // Command 6 scans only the last five samples for a released-to-held
+    // transition of the dedicated 0x08 input bit.
+    for (i = inputHistoryWriteIndex + 0xaf; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 8) != 0 && stage == 1) {
+            recognizedCommand = 6;
+            return;
+        }
+        if ((buttons & 8) == 0 && stage == 0)
+            stage = 1;
+    }
+    stage = 0;
+    // The final six priority scans use unmodified input nibbles: a
+    // five-stage 0x35 command, three mirrored four-stage attacks,
+    // then two alternating-direction movement commands.
+    for (i = inputHistoryWriteIndex + 0x5a; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0x80) != 0 && stage == 4) {
+            recognizedCommand = 0x35;
+            return;
+        }
+        if ((buttons & 0xf) == 4 && stage == 3)
+            stage = 4;
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 4 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0 && field0008 == 0x60)
+            stage = 1;
+    }
+    stage = 0;
+
+    for (i = inputHistoryWriteIndex + 0x5a; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0x40) != 0 && stage == 4) {
+            recognizedCommand = 0x34;
+            return;
+        }
+        if ((buttons & 0xf) == 4 && stage == 3)
+            stage = 4;
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 4 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0)
+            stage = 1;
+    }
+    stage = 0;
+
+    for (i = inputHistoryWriteIndex + 0x87; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0x20) != 0 && stage == 4) {
+            recognizedCommand = 0x33;
+            return;
+        }
+        if ((buttons & 0xf) == 4 && stage == 3)
+            stage = 4;
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 4 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0)
+            stage = 1;
+    }
+    stage = 0;
+
+    for (i = inputHistoryWriteIndex + 0x87; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0x10) != 0 && stage == 4) {
+            recognizedCommand = 0x32;
+            return;
+        }
+        if ((buttons & 0xf) == 4 && stage == 3)
+            stage = 4;
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 4 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0)
+            stage = 1;
+    }
+    stage = 0;
+
+    for (i = inputHistoryWriteIndex + 0x87; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0xf) == 1 && stage == 3) {
+            recognizedCommand = 1;
+            return;
+        }
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 1 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0)
+            stage = 1;
+    }
+    stage = 0;
+
+    for (i = inputHistoryWriteIndex + 0x87; i < inputHistoryWriteIndex + 0xb4; ++i) {
+        buttons = history[i - (i >= 180) * 180];
+        if ((buttons & 0xf) == 2 && stage == 3) {
+            recognizedCommand = 0;
+            return;
+        }
+        if ((buttons & 0xf) == 0 && stage == 2)
+            stage = 3;
+        if ((buttons & 0xf) == 2 && stage == 1)
+            stage = 2;
+        if ((buttons & 0xf) == 0 && stage == 0)
+            stage = 1;
+    }
 }

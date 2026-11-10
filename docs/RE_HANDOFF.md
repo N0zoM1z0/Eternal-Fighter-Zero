@@ -34,6 +34,17 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Nayuki Character10::Slot02 is now full native strict
+Exact: 4,827/4,827 code bytes, all 1,395 original
+instructions, zero relocations/differences.
+Full natural source src/Character10Commands.cpp,
+proof docs/evidence/character-10-slot02-exact.json.
+Run only selected replay:
+scripts/repo-python scripts/replay-exact-units.py --unit character-10-slot02.
+The dirty prefix workbench was reconciled into
+accepted source before removal; no full cold replay.
+
+
 Nayuki Character10 now has six newly accepted native strict Exact
 virtual/lifecycle functions from the original 0x00788270 vtable:
 InitializeState (335 bytes), ResetPose (58), RemoveLocalEffect (80),
@@ -153,7 +164,6 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot02 | 0x004641C0, 4,827 original bytes | workbench/nayuki-commands/ covers 3,347 bytes / 984 original instructions; 984/984 forms, 115 internal jumps, 16 canonical outbound targets, no prefix relocations. Continue from 0x00464ED3; 1,480 original bytes open, not Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

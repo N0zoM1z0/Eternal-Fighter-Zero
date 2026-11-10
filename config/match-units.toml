@@ -135711,3 +135711,13 @@ type = "REL32"
 symbol = "?InitializeState@Secondary@@UAEXXZ"
 target = 0x0040EDF0
 evidence = "Original EFZ.exe virtual slot 0x007882A0 bound to 0x00461260; canonical call displacement 0x004613A7 points to reviewed ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0"
+
+[units.character-10-slot02]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Commands.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot02/Character10Commands.obj"
+symbol = "?Slot02@Character10@@UAEXXZ"
+target_address = 0x004641C0
+size = 4827

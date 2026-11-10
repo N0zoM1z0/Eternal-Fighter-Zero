@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "Full original Nayuki Character10::Slot02 complete vtable-anchored 4827-byte code owner reconstructed in natural C++ under pinned VC7.1 and strict original byte acceptance, not whole-game runtime or linkage.",
+  "method": "Original Character10 vtable entry 0x00788278 points to 0x004641C0 and full code extent [0x004641C0,0x0046549B) contains 4827 bytes / 1395 contiguous x86 instructions followed by five CC padding bytes. Natural C++ source src/Character10Commands.cpp reconstructs every one of 15 prioritized circular 180-frame input scans: 0x6E, 0x64, 0x61, 0x46, 0x14, 0x0A, 0x28, 0x1E, one short-window button-6 check, 0x35, 0x34, 0x33, 0x32 and final 1/0 movement. Source preserves per-character differences from Sayuri: reversed direction policy in 0x6E vs 0x64, strict 0x61 meter==3000 and 0x40-button gating, no Sayuri aerial restriction on 0x28. Original return and 0xC frame are recovered without assembly, byte masks or padding. Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits 4827/4827 original code bytes, zero COFF relocations and zero differences. Single-owner cold replay only. Whole-game linkage/runtime validation not claimed.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 4827,
+      "matched_bytes": 4827,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "0fed5a3c7f5af912bee361dd49a78286b10d147ef9ec10589627b5785213d6c6",
+      "target_extent_sha256": "0fed5a3c7f5af912bee361dd49a78286b10d147ef9ec10589627b5785213d6c6",
+      "unit": "character-10-slot02",
+      "symbol": "?Slot02@Character10@@UAEXXZ",
+      "target_address": "0x004641C0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "437569d7252ea43eb49c7aef612c83d0325ad43edec2bf5a28e2b600b7c6bbba",
+      "object_sha256": "d526d06ce4e930cbf610831cda2b838f154f0346c5ae0b4969cb8be2668164d4",
+      "source_sha256": "f8d0248bd6954583ffc0226379f7470f62373e05f36f679db9cd358e29cd5815",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "ae3a5192aa590de1435a2a9c81f397a116257ff1a484fdc9c2c53a1e5cb66efb",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ea9ab8bc7c37b292fbbb6dc8145f02186a3da1f8c5d896ff651bd9ce94fbce7f",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}
