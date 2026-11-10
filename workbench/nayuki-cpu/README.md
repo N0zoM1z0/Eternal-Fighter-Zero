@@ -6,39 +6,47 @@ is **13,259 original x86 bytes**, with five trailing CC padding
 bytes and whole-owner SHA-256
 fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
 
-Natural-source workbench Character10Cpu.cpp now covers
-[0x004654A0,0x00466D6E), **6,350 original bytes /
-1,650 instructions**, prefix SHA-256
-c277b4472010e301dcc8f6a5909c399d27d2a98a65d3aa2c6240131090c42e73.
+Natural C++ workbench Character10Cpu.cpp now covers
+[0x004654A0,0x00467153), **7,347 original bytes /
+1,874 instructions**, prefix SHA-256
+823141cebf49e73c64d42eee79cdb22a0e2d2d6e1daeb2c7cb60353ae4791ff2.
 
-The CPU policy reconstructs Nayuki A8/A9 graded specials,
-AA aerial attacks, CPU state 4–10 recovery, FA/FC
-ground/air counterattacks, the 0x10C timed four-button
-sequence, and complete 0xC8/0xC9 randomized collision
-follow-up trees. All original opponent-altitude tests,
-forward-distance windows, roll thresholds, input pulses,
-state 1/4/7 outcomes, and RandomRange argument/order
-remain in their original priority. Overlapping and
-apparently unreachable timer windows were retained.
+Nayuki's CPU source now restores the original initial
+defensive policy, A8/A9 graded special commands,
+AA airborne reactions, CPU state 4–10 recovery,
+FA/FC grounded vs airborne counterattacks,
+0x10C timed four-button sequence, and complete
+randomized collision response trees for 0xC8,
+0xC9, 0xCA and 0xCB. The 0xCA logic includes a
+150-unit airborne dependent upper timer bound,
+action-field 3148 dependent 10-frame extension
+and 0x6E meter option; 0xCB prioritizes original
+0x0A/0x1E/0x46/0x34/0x6E/0x64 commands, with the
+original roll and meter gates and state-4 fallback.
+Every RandomRange call and apparently redundant
+timer check is retained in original source order.
 
-Reproduce only this selected partial native audit:
+Focused selected native build and audit:
 
     scripts/repo-python workbench/nayuki-cpu/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **6,343
-bytes / 1,652 instructions** with a temporary return.
-Of 1,649 original comparable body instructions,
-**1,648 agree** after branch/call/float normalization.
-The incomplete stack frame is 0x94 instead of original
-0xC0; two original near jumps currently shorten
-because the true shared exit has not been reconstructed.
-**223 internal branch targets, 62 valid original
-outbound destinations, and all 101 original-bound
-COFF relocations agree**, with 27 unique symbol
-bindings and exact original IEEE-754 literal payloads.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits **7,343
+code bytes / 1,876 instructions**, including
+temporary return, with **111 COFF relocations**.
+Of 1,873 comparable original body instructions,
+**1,872 match** after call/jump/float normalization.
+The incomplete stack allocation is 0x98 versus
+original 0xC0; one original near JMP shortens
+because the actual distant return is absent.
+All **263 in-prefix branch targets, 75 valid
+original outbound targets, and 111 original-bound
+relocations** agree, with 27 uniquely bound symbols
+and exact IEEE-754 literal payload comparisons.
 
-Continue original 0x00466D6E (CA collision follow-up).
-**Not whole-function Exact:** 6,909 original code bytes,
-full frame/return and remaining original relocations
-are still open. Experimental Nayuki action Slot04 remains
-untouched in workbench/nayuki-action. No all-unit cold replay.
+Next original block is 0x00467153 (0xCC collision
+response and subsequent actions). **Not full Exact**:
+5,912 original code bytes and the original stack,
+shared return and remaining relocations are still
+open. No all-unit cold replay was performed.
+The unverified action-Slot04 experiment is retained
+in workbench/nayuki-action.

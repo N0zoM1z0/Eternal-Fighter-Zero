@@ -417,6 +417,77 @@ void Character10::Slot05()
                 return;
             }
         }
+        if (field0008 == 0xca) {
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 < 300 && attackCollisionResult == 3) {
+                buttonPulse[2] = 1;
+                return;
+            }
+            if ((*opponentSlot)->positionY < 0.0 &&
+                field3110 > 300 && field3110 < 320 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 3) + 0x6e;
+                return;
+            }
+            if (field3110 < 150 && distance.forward < 80.0) {
+                buttonPulse[2] = 1;
+                inputY = 1;
+                return;
+            }
+            if (field3110 > 150 &&
+                field3110 < (positionY < 0.0) * 150 + 350) {
+                buttonPulse[2] = 1;
+                inputY = 0;
+                return;
+            }
+            if (field3110 > 350 && field3110 < 400) {
+                recognizedCommand = 0x0a;
+                return;
+            }
+            if (field3110 > 400 &&
+                field3110 < field3148 * 10 + 450) {
+                recognizedCommand = 0x1e;
+                return;
+            }
+            if (field3110 > 600 && field3110 < 610 &&
+                positionY < 0.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+        }
+        if (field0008 == 0xcb) {
+            if (field3110 > 0 && field3110 < 150) {
+                recognizedCommand = 0x0a;
+                return;
+            }
+            if (field3110 > 150 && field3110 < 300) {
+                recognizedCommand = 0x1e;
+                return;
+            }
+            if (field3110 > 300 && field3110 < 450) {
+                recognizedCommand = 0x46;
+                return;
+            }
+            if (field3110 > 450 && field3110 < 500 &&
+                field0118 > 500.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+            if (field3110 > 500 && field3110 < 550 &&
+                attackCollisionResult == 3 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                return;
+            }
+            if (field3110 > 550 && field3110 < 560 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x64;
+                return;
+            }
+            if (field3110 > 910) {
+                field3114 = 4;
+                inputY = -1;
+                inputX = (unsigned short)RandomRange(0, 2) - 1;
+                return;
+            }
+        }
     }
     // Further Nayuki-specific CPU decisions remain open.
 }

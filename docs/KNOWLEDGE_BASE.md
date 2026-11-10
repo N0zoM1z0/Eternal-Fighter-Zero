@@ -2986,44 +2986,50 @@ runtime behavior remain open.
 
 <a id="nayuki-slot05-cpu-reviewed-prefix"></a>
 
-## Nayuki Character10 Slot05: reviewed 6,350-byte CPU boss prefix
+## Nayuki Character10 Slot05: reviewed 7,347-byte CPU boss prefix
 
-The original Nayuki vtable slot05 at 0x00788284 points
-to 0x004654A0, the 13,259-byte original code range
-[0x004654A0,0x0046886B) with five CC alignment bytes.
-Whole canonical SHA-256:
+The original Nayuki vtable slot05 at 0x00788284
+anchors [0x004654A0,0x0046886B), the complete
+13,259-byte authored owner, with five CC alignment
+bytes and SHA-256
 fdff7abd73f6c362272c3360eab5da1473255c978572d685d02810e32f1472ce.
-This proves the full original boundary, not codegen Exact.
+Original boundary review is not codegen Exact.
 
-Natural workbench/nayuki-cpu/Character10Cpu.cpp now
-covers [0x004654A0,0x00466D6E), **6,350 original
-code bytes / 1,650 instructions**, prefix SHA-256
-c277b4472010e301dcc8f6a5909c399d27d2a98a65d3aa2c6240131090c42e73.
-Pinned VC7.1 emits 6,343 bytes / 1,652 instructions,
-including a temporary return. **1,648/1,649 original
-comparable forms/operands agree** after call/jump/literal
-normalization; only the incomplete stack frame differs
-(candidate 0x94 versus original 0xC0). Two near jumps
-temporarily shorten due to the unfinished shared return.
+The natural workbench/nayuki-cpu/Character10Cpu.cpp
+covers [0x004654A0,0x00467153),
+**7,347 original code bytes / 1,874 instructions**,
+prefix SHA-256
+823141cebf49e73c64d42eee79cdb22a0e2d2d6e1daeb2c7cb60353ae4791ff2.
+Pinned VC7.1 emits a 7,343-byte /
+1,876-instruction partial body with temporary
+return and 111 relocations. **1,872/1,873
+comparable original instruction forms/operands
+agree** after branch/call and literal normalization.
+Only the incomplete stack frame differs
+(0x98 rather than original 0xC0); a near JMP
+shrinks due to the missing shared return.
 
-The selected check_prefix.py validates **223 internal
-jump destinations**, **62 original outbound jump targets**
-and **all 101 target-bound COFF relocations** across
-27 uniquely bound symbols, including complete original
-IEEE-754 literal bits and RandomRange/fabs callees.
+Focused workbench/nayuki-cpu/check_prefix.py
+validates **263 original in-prefix jump targets**,
+**75 valid outbound original jump targets**,
+and **all 111 target-bound COFF relocations**
+over 27 uniquely bound symbols, including original
+float bit patterns and RandomRange/fabs callees.
 
-Source recovers Nayuki's special move priority, AA
-aerial response, CPU state 4–10, FA/FC grounded/airborne
-reaction, 0x10C four-button timer and full 0xC8/0xC9
-randomized collision follow-ups. The authentic call
-order, overlapping roll windows, opponent altitude
-and 50/80/125 horizontal distance thresholds remain
-in the C++ rather than being simplified away.
+Recovered logic includes A8/A9 meter decisions,
+AA aerial responses, states 4–10, FA/FC
+timed counterattacks, 0x10C four-button chain
+and complete C8/C9/CA/CB randomized collision
+priority. The CA action has a 150-frame
+airborne-dependent bound and field3148-dependent
+threshold; CB uses its specific command priorities,
+meter checks and state-4 fallback. Redundant
+original timer tests remain in the natural C++.
 
-Continue from 0x00466D6E (CA collision response).
-**Partial, not whole-function Exact:** 6,909 bytes,
-complete frame, return and remaining symbol bindings
-are open. No all-unit cold replay.
+Continue at original 0x00467153 (CC branch).
+**Not whole-function Exact:** 5,912 code bytes,
+complete frame, return and remaining relocation
+closure are open. No full cold replay.
 
 ## Nayuki Character10 Slot02: full 4,827-byte strict Exact command boss
 
