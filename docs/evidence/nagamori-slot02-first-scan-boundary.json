@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reviewed-original-complete-boundary-with-four-priority-scans-not-full-Exact",
+  "status": "reviewed-original-complete-boundary-with-eight-priority-scans-not-full-Exact",
   "canonical_target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
   "original_vtable_slot_pointer": "0x00788404",
   "function": "Character06::Slot02",
@@ -20,7 +20,7 @@
   "following_alignment_bytes": 11,
   "partial_source": "workbench/nagamori-command/Character06Command.cpp",
   "reproducer": "workbench/nagamori-command/check_first_scan.py",
-  "limitations": "First four priority scans match 566/566 original instructions, normalizing only numeric future branch addresses and two external zero-constant relocation operands; 11 later scans and true shared epilogue are absent, so Slot02 is not whole-owner Exact.",
+  "limitations": "First 8 original scans produce 3437 target bytes / 1010 matching instruction forms with only numeric branch destinations and two constant operands normalized; 7 later scans and actual common epilogue are absent. This is not full owner Exact.",
   "second_scan": {
     "start": "0x004B191C",
     "end_exclusive": "0x004B1AD7",
@@ -37,11 +37,11 @@
   },
   "reconstructed_prefix": {
     "start": "0x004B1780",
-    "end_exclusive": "0x004B1EEB",
-    "size": 1899,
-    "instruction_count": 566,
-    "sha256": "4e169f71c6a4209a31b4853e5dac252b370fcf870eba0f61d5c508d92b8e24d3",
-    "native_partial_size": 1903
+    "end_exclusive": "0x004B24ED",
+    "size": 3437,
+    "instruction_count": 1010,
+    "sha256": "c8a711638d5fe91757bc8f71131e20e4d47acd3e91da3f9b5f79be4173eebcab",
+    "native_partial_size": 3438
   },
   "third_scan": {
     "start": "0x004B1AD7",
@@ -56,5 +56,33 @@
     "size": 522,
     "instruction_count": 156,
     "sha256": "8e07a506d99e5b0544c7a67ed89910c65c4f9e86562f55fc1e02fad49ab28fd9"
+  },
+  "fifth_scan": {
+    "start": "0x004B1EEB",
+    "end_exclusive": "0x004B2072",
+    "size": 391,
+    "instruction_count": 113,
+    "sha256": "2b1302c70baf2f9cc69251860d09d3a9c14301775197664c1cf5f4e5a4c9acfc"
+  },
+  "sixth_scan": {
+    "start": "0x004B2072",
+    "end_exclusive": "0x004B21EA",
+    "size": 376,
+    "instruction_count": 109,
+    "sha256": "17909accf8388660c68a51871b2e0aba230cf9aa7dc59703ae82e866cd8a3731"
+  },
+  "seventh_scan": {
+    "start": "0x004B21EA",
+    "end_exclusive": "0x004B2368",
+    "size": 382,
+    "instruction_count": 109,
+    "sha256": "7c1186055edb8e327d6d43a19861cde821953025c415c7fb5ef7add45c7a8c11"
+  },
+  "eighth_scan": {
+    "start": "0x004B2368",
+    "end_exclusive": "0x004B24ED",
+    "size": 389,
+    "instruction_count": 113,
+    "sha256": "7d5ff65c792da6c339efa9b24449a8c2adbd4a7f005ab74d2f4589b7abd4d54f"
   }
 }

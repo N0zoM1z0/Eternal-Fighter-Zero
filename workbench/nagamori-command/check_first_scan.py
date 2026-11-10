@@ -16,6 +16,7 @@ FIRST_END = 0x004B191C
 SECOND_END = 0x004B1AD7
 THIRD_END = 0x004B1CE1
 FOURTH_END = 0x004B1EEB
+EIGHTH_END = 0x004B24ED
 SOURCE = ROOT / 'workbench/nagamori-command/Character06Command.cpp'
 OBJECT = ROOT / 'build/nagamori-command/Character06Command.partial.obj'
 
@@ -39,20 +40,20 @@ def original_instructions(data, path):
 
 
 def main():
-    original = target_bytes(verify_target(), START, FOURTH_END - START)
+    original = target_bytes(verify_target(), START, EIGHTH_END - START)
     compile_source(SOURCE, OBJECT, ['/Od', '/G6', '/MT', '/Gy', '/W3'],
                    ROOT / '.analysis/build/nagamori-command-workbench.log')
     built, relocations = object_function(OBJECT, '?Slot02@Character06@@UAEXXZ')
     original_ins = original_instructions(original, ROOT / 'build/nagamori-command/target.bin')
     compiled_ins = original_instructions(built, ROOT / 'build/nagamori-command/partial.bin')
-    assert len(original) == 1899 and len(original_ins) == 566
-    assert len(built) == 1903 and len(compiled_ins) == 569 and len(relocations) == 2
-    assert compiled_ins[:566] == original_ins
-    assert compiled_ins[566:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori first four priority command scans: 566/566 original x86 instructions match,')
+    assert len(original) == 3437 and len(original_ins) == 1010
+    assert len(built) == 3438 and len(compiled_ins) == 1013 and len(relocations) == 2
+    assert compiled_ins[:1010] == original_ins
+    assert compiled_ins[1010:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
+    print('Nagamori first eight priority command scans: 1010/1010 original x86 instructions match,')
     print('normalizing ONLY forward branch targets and PE constant addresses.')
-    print('Original four scans: 1899 bytes; partial source: 1903 with temporary local epilogue.')
-    print('Four-scan prefix SHA256:', hashlib.sha256(original).hexdigest())
+    print('Original eight scans: 3437 bytes; partial source: 3438 with temporary local epilogue.')
+    print('Eight-scan prefix SHA256:', hashlib.sha256(original).hexdigest())
     print('Entire Nagamori Slot02: 4917 bytes — NOT accepted Exact.')
 
 
