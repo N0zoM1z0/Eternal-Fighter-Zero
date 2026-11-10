@@ -11,39 +11,30 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed original prefix [0x004B2AC0,0x004B4EE0) is
-**9,248 bytes / 2,369 instructions**, with SHA-256
-79edb44825253ede8658dc0e1b936a26670f954a3268580c9047f1ce0dca9bc9.
+The reviewed original prefix [0x004B2AC0,0x004B5163) spans
+**9,891 bytes / 2,523 instructions**, canonical SHA-256
+84b29c132a73c4f8a2ef6e24b8c6ad6aebad1edc8ee677cda0e82f338899e65f.
 
-Selected VC7.1 emits an **9,244-byte partial COFF function**,
-2,371 instructions including the temporary return, and 167
-relocations. **2,367 of the first 2,368 comparable original
-instruction forms** agree after branch/call/FP-address normalization.
-The incomplete stack allocation is 0xC0 rather than target 0xE8;
-the final original prefix jump reaches the unimplemented shared exit.
-The diagnostic also verifies **310 internal branch destinations**
-by instruction ordinal and all **107 original float/double
-literal payloads** at corresponding source relocation sites.
+Selected pinned VC7.1 emits a **9,887-byte partial candidate**
+(2,525 instructions including temporary return, 178 relocations).
+**2,521 / 2,522** comparable forms agree after normalizing
+branch/call destinations and floating-point literal addresses;
+the incomplete stack frame is 0xC4 versus original 0xE8.
+All **335 internal jump destinations** and **112 IEEE-754 literal
+payloads** match their original instruction/relocation counterparts.
 
-This audit caught five previously hidden source-value errors even
-though their machine instruction forms had matched: original
-distance 40.0 rather than 45.0 or 60.0, two original 3x
-probabilities rather than 1x, and the 0xCC distance limit
-135.0 rather than 70.0. A deliberately wrong 70.0 compile
-was rejected; restoring 135.0 passed the focused native check.
+The source now covers the ordered collision-reaction decision
+trees for actions 0xC8 through 0xCE, along with the earlier
+defense, movement and CPU state 4..11 logic. The 0xCE branch
+adds distinct meter, distance and random intervals and the
+state 1/6/8 transition. The original near branch at
+0x004B3172 correctly skips both guarded attacks. Normalized
+instruction agreement does not establish complete byte-exactness.
 
-The source has complete natural-code forms for the recovered
-defensive, grounded, aerial-start, CPU state 4..11 and
-collision-follow-up action 0xC8/0xC9/0xCA/0xCB/0xCC/0xCD branches.
-The new 0xCD decision tree retains the original random, grounded,
-distance and meter checks and ends in a guaranteed shared return.
-The original 0x004B3172 guarded jump spans both nearby attacks.
-Keep the original random and x87 expression evaluation order.
-
-Reproduce just the partial owner with:
+Only build/audit this active workbench TU:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-The next original block is 0x004B4EE0 (action 0xCE).
-This remains unfinished; **do not claim Exact** until all
-15,292 bytes, complete relocations, and the shared return match.
+Continue at 0x004B5163 (action 0xCF). **Do not register Exact**:
+5,401 target bytes, the full stack frame/shared exit and complete
+target-bound relocation comparison are still open.

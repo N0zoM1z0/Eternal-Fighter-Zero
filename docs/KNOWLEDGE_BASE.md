@@ -2096,59 +2096,42 @@ against Nagamori's own executable. Complete strict native certificate:
 
 <a id="nagamori-slot05-cpu-decision-prefix"></a>
 
-## Nagamori Slot05 CPU boss: 9,248-byte reviewed prefix
+## Nagamori Slot05 CPU boss: 9,891-byte reviewed prefix
 
-Original Character06 virtual Slot05 owns [0x004B2AC0,0x004B667C):
-15,292 bytes, followed by four alignment bytes. The natural C++
-candidate in workbench/nagamori-cpu/ now covers
-[0x004B2AC0,0x004B4EE0), **9,248 original bytes / 2,369
-instructions** (prefix SHA-256
-79edb44825253ede8658dc0e1b936a26670f954a3268580c9047f1ce0dca9bc9).
+Original Nagamori Character06 Slot05 owns 15,292 code bytes at
+[0x004B2AC0,0x004B667C), with four following alignment bytes.
+The natural C++ workbench now reproduces the opening
+[0x004B2AC0,0x004B5163), **9,891 original bytes / 2,523 instructions**.
+Canonical original prefix SHA-256:
+84b29c132a73c4f8a2ef6e24b8c6ad6aebad1edc8ee677cda0e82f338899e65f.
 
-The pinned VC7.1 /Od /G6 /MT /Gy /W3 build emits
-**9,244 bytes / 2,371 instructions** including a temporary epilogue,
-with 167 COFF relocations. Of the 2,368 comparable original
-instruction forms, **2,367 agree** after normalizing branch/call
-destinations and FP constant addresses. The remaining form is
-the incomplete stack frame, 0xC0 versus the original 0xE8.
-The original last prefix instruction jumps into the complete
-owner's shared exit; this is not present in the partial source.
-The focused audit checks **310 in-prefix conditional/unconditional
-branch destinations by instruction ordinal**, with no divergence.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 emits a 9,887-byte
+partial COFF body (2,525 instructions including a temporary
+epilogue and 178 relocations). Of the 2,522 comparable original
+instruction forms, **2,521 agree** after normalizing direct
+call/branch addresses and FP-address references. The only form
+difference is the incomplete stack allocation, 0xC4 versus the
+original 0xE8. The original last prefix instruction instead jumps
+into the complete owner's shared return. The focused diagnostic
+independently verifies **335 internal branch targets** by instruction
+ordinal and the original IEEE-754 bytes at **112 float/double
+relocation sites**. These checks are not complete-function Exact.
 
-Crucially, that normalized form comparison alone was insufficient:
-it hid five wrong source constants. The workbench now verifies the
-original IEEE-754 bytes for **all 107 float/double COFF relocation
-sites**, matching each compiled literal to its corresponding original
-constant address and full 4/8-byte payload. Four corrected earlier
-values occur at original 0x004B3045 (distance limit 40 rather than 45),
-0x004B30C6 (3x instead of 1x chance), 0x004B317D (40 instead of 60),
-and 0x004B31B8 (3x instead of 1x chance). The newly recovered
-0x004B4BD1 distance test uses 135.0 rather than the initially
-tried 70.0. A negative native test with 70.0 was rejected by the
-literal check, then the source was restored and rechecked.
-The older verified 0x004B3172 near JNZ still correctly skips
-both attack choices under the shared opponent-state guard.
+Earlier target-bound source decisions cover defense, grounded and
+aerial command selection, CPU states 4..11, and collision-follow-up
+reactions to actions 0xC8..0xCD. The previous numeric-literal audit
+uncovered incorrect chance multipliers and distance bounds; those
+are now corrected. The recovered 0xCE branch at 0x004B4EE0 selects
+commands 0x0A/0x0C, 0x14..0x16, 0x34, 0x64..0x66, 0x1E..0x20
+and 0x6E..0x70 from disjoint random ranges, field0118, meter,
+collision state and distance, plus state 1/6/8 transitions. It
+preserves the original Boolean/random arithmetic and return behavior.
 
-The candidate includes defense decisions, grounded movement,
-aerial startup/reaction logic, AI-state 4..11 steering, and
-the collision-follow-up random decision trees for action IDs
-0xC8/0xC9/0xCA/0xCB/0xCC/0xCD. These last branches select directional
-input, button pulses, meter-gated commands and CPU states from
-explicit original random/distance windows; they preserve the
-original x87 evaluation order and conditional fall-through.
-The newly recovered 0xCD branch preserves independent opponent-height,
-random-window and distance checks before choosing command 0x14, 0x1F,
-an attack button, or CPU state 1/4/6/8. Its final state transition
-returns regardless of the second random result; this differs from
-the earlier 0xC9/0xCA fall-through paths.
-
-Next original action branch is 0x004B4EE0 (0xCE).
-Run only workbench/nagamori-cpu/check_prefix.py.
-**This is NOT complete Exact**: 6,044 original bytes, complete
-frame lifetime, the shared exit and all external relocation
-bindings still require a whole-function strict comparison.
-No complete-game cold replay was run.
+Continue from action 0xCF at original 0x004B5163, using only
+workbench/nagamori-cpu/check_prefix.py for targeted native review.
+**Not complete Exact**: 5,401 original bytes remain, as do the
+full stack lifetime, shared exit and complete original relocation
+binding. No whole-game replay was run.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

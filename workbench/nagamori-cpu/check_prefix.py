@@ -15,7 +15,7 @@ from common import verify_target, target_bytes
 from coff import object_function
 from native_build import compile_source
 
-START, END = 0x004B2AC0, 0x004B4EE0
+START, END = 0x004B2AC0, 0x004B5163
 SOURCE = ROOT / 'workbench/nagamori-cpu/Character06Cpu.cpp'
 OBJECT = ROOT / 'build/nagamori-cpu/Character06Cpu.partial.obj'
 
@@ -69,7 +69,7 @@ def verify_internal_branches(target, candidate, original_edges, built_edges):
                 f'jumped to instruction {target_ordinal}, but draft '
                 f'{draft_addr:#x} jumped to {draft_ordinal}')
         checked += 1
-    assert checked == 310, checked
+    assert checked == 335, checked
     return checked
 
 
@@ -126,29 +126,29 @@ def main():
     # The target prefix is stable even when additional, still-incomplete
     # source branches are appended. Only its aligned original instructions
     # and in-prefix control-flow edges are audited.
-    assert len(original) == 9248 and len(target) == 2369
-    assert hashlib.sha256(original).hexdigest() == '79edb44825253ede8658dc0e1b936a26670f954a3268580c9047f1ce0dca9bc9'
-    assert len(code) == 9244 and len(built) == 2371 and len(relocs) == 167
+    assert len(original) == 9891 and len(target) == 2523
+    assert hashlib.sha256(original).hexdigest() == '84b29c132a73c4f8a2ef6e24b8c6ad6aebad1edc8ee677cda0e82f338899e65f'
+    assert len(code) == 9887 and len(built) == 2525 and len(relocs) == 178
     assert target[2] == 'sub    esp,0xe8'
-    assert built[2] == 'sub    esp,0xc0'
+    assert built[2] == 'sub    esp,0xc4'
     assert all(t == b for i, (t, b) in
                enumerate(zip(target[:-1], built[:-3])) if i != 2)
     edges = verify_internal_branches(target_records, built_records, original_edges, built_edges)
-    assert edges == 310, edges
+    assert edges == 335, edges
     literal_count = verify_float_literals(image, original, target_records, built_records, relocs)
-    assert literal_count == 107, literal_count
+    assert literal_count == 112, literal_count
     # Catch the previous bug: both attack choices must be covered by this
     # six-byte near JNZ, not a short jump into the second choice.
     assert original[0x6b2:0x6b8] == code[0x6b2:0x6b8]
     assert target[-1] == 'jmp DEST'
     assert built[-3:] == ['mov    esp,ebp', 'pop    ebp', 'ret']
-    print('Nagamori Slot05 original opening: 2367/2368 aligned instruction')
+    print('Nagamori Slot05 original opening: 2521/2522 aligned instruction')
     print('forms and operands match, normalizing direct call/branch targets')
     print('and original FP constant addresses. Only the unfinished stack')
     print('allocation differs. This is NOT complete-function Exact.')
     print('Internal branch destinations verified:', edges)
     print('Original IEEE-754 float literal bindings verified:', literal_count)
-    print('Original prefix: 9248 bytes / 2369 instructions.')
+    print('Original prefix: 9891 bytes / 2523 instructions.')
     print('Partial compiled owner:',len(code),'bytes /',len(built),'instructions,',
           len(relocs),'COFF relocations; target whole owner is 15292 bytes.')
     print('Stack: original 0xE8, candidate',built[2])

@@ -600,6 +600,46 @@ void Character06::Slot05()
                 return;
             }
         }
+        // Action 0xCE follow-up: the original random windows are deliberately
+        // disjoint; preserve the Boolean meter factor before command selection.
+        if (field0008 == 0xce) {
+            if (field3110 > 0 && field3110 < 150) {
+                recognizedCommand = ((unsigned short)RandomRange(0, 3) == 0) *
+                    2 * (field0118 > 500.0) + 0x0a;
+                return;
+            }
+            if (field3110 > 150 && field3110 < 350 &&
+                distance.forward < 90.0 && attackCollisionResult == 3) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x14;
+                return;
+            }
+            if (field3110 > 350 && field3110 < 400 && field0118 > 500.0) {
+                recognizedCommand = 0x34;
+                return;
+            }
+            if (field3110 > 400 && field3110 < 450 &&
+                attackCollisionResult == 3 && meter >= 1000 &&
+                distance.forward < 90.0) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x64;
+                return;
+            }
+            if (field3110 > 450 && field3110 < 640) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x1e;
+                return;
+            }
+            if (field3110 > 640 && field3110 < 700 && meter >= 1000) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x6e;
+                return;
+            }
+            if (field3110 > 700) {
+                field3114 = 1;
+                if ((unsigned short)RandomRange(0, 1) == 0) {
+                    field3114 = 6;
+                    if (distance.forward > 110.0) field3114 = 8;
+                }
+                return;
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }
