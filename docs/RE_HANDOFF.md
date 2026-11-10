@@ -51,7 +51,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nagamori `Character06::Slot05` CPU | `[0x004B2AC0,0x004B667C)`, 15,292 bytes | `workbench/nagamori-cpu/`: prefix covers 2,861 original bytes / 784 instructions; 783 normalized forms match. Complete target frame is 0xE8 versus partial 0x94. Continue original branch at `0x004B35F2`. |
+| Nagamori `Character06::Slot05` CPU | `[0x004B2AC0,0x004B667C)`, 15,292 bytes | `workbench/nagamori-cpu/`: prefix covers 4,532 original bytes / 1,230 instructions; 1,228 of the first 1,229 comparable forms and 141 internal branch targets agree. Frame is 0xE8 versus partial 0xB4; shared-exit jump and remaining owner remain open. Continue at `0x004B3C74`. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 | Ikumi `Character14::Slot08` | `0x006AB060`, 1,592 bytes; verified vtable slot 8 | `workbench/ikumi-effects/`: partial output is 1,537 bytes / 33 relocations. Five spawn branches need the original opponent-X x87 load before `rand()`. Volatile/comma/multiplication variants did not reproduce it. |
