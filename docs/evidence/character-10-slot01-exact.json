@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "authority": "Complete original Nayuki Character10 Slot01 939-byte vtable-owned native C++ codegen and all 8 original-bound call relocations under pinned VC7.1. Not whole-game runtime.",
+  "method": "Nayuki Character10 vtable slot01 entry 0x00788274 selects 0x00463DD0. Canonical complete code owner [0x00463DD0,0x0046417B) is 939 bytes / 280 x86 instructions, followed by five CC alignment bytes. Natural source src/Character10Render.cpp recreates two ordered pattern/render layers using base pattern44 and pattern (34 + field3148), with original 2\u2212u / 280+u and 2\u2212u / 280\u2212u position expressions, 191\u2212v vertical placement, and the original surface texture/color binding. Pinned VC7.1 /Od /G6 /MT /Gy /W3 produces 939/939 original code bytes, with six exact MakeSurfaceRect direct calls at 0x0040C590 and two exact Video::DrawSurface direct calls at 0x00409A90, all 8 original-bound REL32 relocations; zero differences and same full SHA-256. Selected single-unit replay accepts exact. No ASM, byte patching, artificial padding, all-unit replay or whole-game runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 939,
+      "matched_bytes": 939,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 66,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00463E12 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 176,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00463E80 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 273,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00463EE1 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 425,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00463F79 to reviewed ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x00409A90",
+          "addend": 0
+        },
+        {
+          "offset": 496,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00463FC0 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 633,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00464049 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 755,
+          "target": 4244880,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x004640C3 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590",
+          "addend": 0
+        },
+        {
+          "offset": 931,
+          "target": 4233872,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z",
+          "evidence": "Canonical EFZ.exe original direct REL32 call at 0x00464173 to reviewed ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x00409A90",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5b69c934c7e73d23c52e191823b171281fcd05ded00dc3ef112c9060e751bc35",
+      "target_extent_sha256": "5b69c934c7e73d23c52e191823b171281fcd05ded00dc3ef112c9060e751bc35",
+      "unit": "character-10-slot01",
+      "symbol": "?Slot01@Character10@@UAEXXZ",
+      "target_address": "0x00463DD0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "ad878ef87a130d11c6efc483e8ce490841d5f228ec948c8e1c261bc63400948f",
+      "object_sha256": "2ef43b3069459fb54d71135bd3ca21569da3b450a4667279ec119b1fb5969e3a",
+      "source_sha256": "a305258ef7dc61ef352e878d1b3907cc9b29ac03d871227ab13106b789634dac",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "c5e453e2f7b32c1518446a28f85ef7ea0e6b38cecd39e7ef01cfe4bc68fbc232",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "f0152c104ab79a1ddfd9fbb2a8fc5cf2d03ff2bea829252246b0ad4713fd94be",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

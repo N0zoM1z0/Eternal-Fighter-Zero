@@ -137967,3 +137967,69 @@ type = "REL32"
 symbol = "?ClearBufferedButtons@Secondary@@QAEXXZ"
 target = 0x0040F170
 evidence = "Original EFZ.exe at 0x00463DA3: original direct call destination verified; ?ClearBufferedButtons@Secondary@@QAEXXZ binds 0x0040F170"
+
+[units.character-10-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character10Render.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-10-slot01/Character10Render.obj"
+symbol = "?Slot01@Character10@@UAEXXZ"
+target_address = 0x00463DD0
+size = 939
+
+[[units.character-10-slot01.relocations]]
+offset = 66
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00463E12 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 176
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00463E80 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 273
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00463EE1 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 425
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00463F79 to reviewed ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x00409A90"
+
+[[units.character-10-slot01.relocations]]
+offset = 496
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00463FC0 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 633
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00464049 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 755
+type = "REL32"
+symbol = "?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z"
+target = 0x0040C590
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x004640C3 to reviewed ?MakeSurfaceRect@@YA?AUSurfaceRect@@HHHH@Z at 0x0040C590"
+
+[[units.character-10-slot01.relocations]]
+offset = 931
+type = "REL32"
+symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
+target = 0x00409A90
+evidence = "Canonical EFZ.exe original direct REL32 call at 0x00464173 to reviewed ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z at 0x00409A90"

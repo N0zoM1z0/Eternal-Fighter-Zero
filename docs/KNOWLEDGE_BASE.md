@@ -2988,6 +2988,38 @@ runtime behavior remain open.
 
 <a id="nayuki-slot04-action-reviewed-prefix"></a>
 
+<a id="nayuki-slot01-render-exact"></a>
+
+## Nayuki Character10 Slot01: complete 939-byte strict Exact render owner
+
+Original Character10/Nayuki vtable slot01 at 0x00788274
+points to 0x00463DD0. Complete owner
+[0x00463DD0,0x0046417B) contains **939 original bytes /
+280 original x86 instructions** and five trailing CC
+alignment bytes. Canonical target SHA-256:
+5b69c934c7e73d23c52e191823b171281fcd05ded00dc3ef112c9060e751bc35.
+
+Complete natural C++ source is src/Character10Render.cpp.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles
+**939/939 strict Exact original code bytes** with **8/8
+original-bound REL32 calls**, zero differences, and the
+original 0xF4 stack frame. Six calls are MakeSurfaceRect
+at 0x0040C590 and two Video::DrawSurface at
+0x00409A90. The complete original direct operands,
+replay acceptances and full hash match are recorded at
+docs/evidence/character-10-slot01-exact.json, selected
+recipe character-10-slot01 in config/match-units.toml.
+
+The native source reproduces two sprite layers:
+patterns[44] and patterns[34 + field3148], both
+using first animation frame; original left/right
+coordinate formulas include 2−u, 280+u and 280−u,
+with 191−v vertical coordinate. The original
+source/destination SurfaceRect copies, texture and
+palette arguments follow the exact original order.
+No machine byte patches, hand-authored assembly,
+full cold replay or whole-game runtime claim.
+
 ## Nayuki Character10 Slot04: complete 10,605-byte strict Exact action boss
 
 Original Nayuki vtable slot04 at 0x00788280 selects

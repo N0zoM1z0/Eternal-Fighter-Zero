@@ -34,6 +34,15 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Nayuki Character10::Slot01 render overlay is also strict
+Exact: 939/939 bytes, 280 x86 instructions and 8/8
+original-bound MakeSurfaceRect/Video::DrawSurface calls.
+Accepted natural source src/Character10Render.cpp,
+evidence docs/evidence/character-10-slot01-exact.json,
+selected replay character-10-slot01. This is not
+whole-game runtime/linkage equivalence.
+
+
 Nayuki Character10::Slot04 action boss is now **complete
 strict Exact native codegen**: 10,605 original bytes
 / 2,690 x86 instructions, original 0x14 frame/EBX

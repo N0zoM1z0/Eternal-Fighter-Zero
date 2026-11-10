@@ -225,7 +225,7 @@ address,origin,status,evidence
 0x004613F0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00461440,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00461460,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot04-action-reviewed-prefix
-0x00463DD0,unknown,unreviewed,
+0x00463DD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot01-render-exact
 0x00464180,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x00464190,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-lifecycle-and-virtual-leaves-exact
 0x004641C0,authored,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot02-command-reviewed-prefix

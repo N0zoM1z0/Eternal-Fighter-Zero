@@ -415,3 +415,4 @@ address,end,size,status,evidence
 0x004641C0,0x0046549B,4827,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot02-command-reviewed-prefix
 0x004654A0,0x0046886B,13259,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot05-cpu-reviewed-prefix
 0x00461460,0x00463DCD,10605,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot04-action-reviewed-prefix
+0x00463DD0,0x0046417B,939,reviewed,docs/KNOWLEDGE_BASE.md#nayuki-slot01-render-exact
