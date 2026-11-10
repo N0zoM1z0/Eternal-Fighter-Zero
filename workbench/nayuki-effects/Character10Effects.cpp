@@ -311,15 +311,39 @@ void Character10::Slot07()
                 }
                 break;
             case 0x197:
-                if ((effects[i].frame == 2) &&
-                    (effects[i].tick == 0)) {
-                    effect.type = 0x1b1;
-                    effect.x = (double)(int(effects[i].x));
-                    effect.y = (double)(int(effects[i].y));
-                    effect.flag0018 = (unsigned char)effects[i].flag0048;
-                    effect.layer = true;
-                    effect.group = 0;
-                    effect.owner = 1;
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].vx = 0.3;
+                    effects[i].vy = -1.2;
+                    pendingCharacterSoundSlot = 0;
+                }
+                if (effects[i].frame == 0) {
+                    effects[i].vy += 0.045;
+                    if (effects[i].vy + effects[i].y > 0.0) {
+                        effects[i].y = 0.0;
+                        effects[i].vy = 0.0;
+                        effects[i].vx = 0.0;
+                        effects[i].frame = 1;
+                        effects[i].layer = 1;
+                    }
+                }
+                if (effects[i].frame == 5 && effects[i].tick == 24) {
+                    SetVerticalShake(10, 0);
+                    effect.type = 0x19a;
+                    effect.x = (double)((int)effects[i].x + 40);
+                    effect.y = (double)(int)effects[i].y;
+                    effect.flag0018 = facing;
+                    effect.group = 2;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
+                    pendingCharacterSoundSlot = 1;
+                }
+                if (effects[i].frame == 5 && effects[i].tick == 30) {
+                    effect.type = 0x19a;
+                    effect.flag0018 = facing;
+                    effect.group = 2;
+                    effect.layer = 1;
+                    effect.x = (double)((int)effects[i].x - 40);
+                    effect.y = (double)(int)effects[i].y;
                     EmitLocalEffect(&effect);
                 }
                 ++effects[i].tick;
@@ -327,44 +351,88 @@ void Character10::Slot07()
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
                 }
                 break;
             case 0x198:
-                if (((field0008 == 0x106) || (field0008 == 0x107)) ||
-                    (field0008 == 0x108)) {
-                    effects[i].x =
-                    (double)(facing * 0x24) + positionX;
-                    effects[i].y =
-                    positionY - 48.0;
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
+                    effects[i].vx = 0.3;
+                    effects[i].vy = -1.2;
+                    pendingCharacterSoundSlot = 0;
                 }
                 if (effects[i].frame == 0) {
-                    effects[i].field0084 = 3;
+                    effects[i].vy += 0.045;
+                    if (effects[i].vy + effects[i].y > 0.0) {
+                        effects[i].y = 0.0;
+                        effects[i].vy = 0.0;
+                        effects[i].vx = 0.0;
+                        effects[i].frame = 1;
+                        effects[i].layer = 1;
+                    }
+                }
+                if (effects[i].frame == 5 && effects[i].tick == 19) {
+                    SetVerticalShake(15, 0);
+                    effect.type = 0x19b;
+                    effect.x = (double)(int)effects[i].x;
+                    effect.y = (double)((int)effects[i].y + 15);
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
+                    pendingCharacterSoundSlot = 1;
+                }
+                if (effects[i].frame == 5 && effects[i].tick == 24) {
+                    effect.type = 0x19b;
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    effect.x = (double)((int)effects[i].x + 50);
+                    effect.y = (double)((int)effects[i].y - 10);
+                    EmitLocalEffect(&effect);
+                }
+                if (effects[i].frame == 5 && effects[i].tick == 30) {
+                    effect.type = 0x19b;
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    effect.x = (double)((int)effects[i].x - 50);
+                    effect.y = (double)((int)effects[i].y - 10);
+                    EmitLocalEffect(&effect);
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
                 }
                 break;
             case 0x199:
-                if (effects[i].frame == 0) {
+                if (effects[i].frame == 0 && effects[i].tick == 0) {
                     effects[i].field0084 = 1;
+                    pendingCharacterSoundSlot = 1;
+                }
+                if (effects[i].frame < 12 &&
+                    (unsigned short)RandomRange(0, 100) < 14) {
+                    effect.type = 0x19c;
+                    effect.x = (double)(int)((effects[i].x - 50.0) +
+                        (unsigned short)RandomRange(0, 100));
+                    effect.y = (double)(int)(effects[i].y -
+                        (unsigned short)RandomRange(0, 100));
+                    effect.group = 2;
+                    effect.flag0018 = facing;
+                    effect.layer = 1;
+                    EmitLocalEffect(&effect);
                 }
                 ++effects[i].tick;
                 if (effects[i].tick >= frameDuration) {
                     effects[i].tick = 0;
                     ++effects[i].frame;
                     effects[i].field0080 = 0;
-                    if (effects[i].frame >= frameCount) {
+                    if (effects[i].frame >= frameCount)
                         RemoveLocalEffect((short)i);
-                    }
                 }
                 break;
             case 0x19a:
