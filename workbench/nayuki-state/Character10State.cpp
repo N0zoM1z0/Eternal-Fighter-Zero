@@ -582,11 +582,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 56: // Unreviewed inherited sibling logic, Makoto address 0x005: recoil returning directly to crouch
+    case 56: // Reviewed original Nayuki state at 0x00453147
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 10);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.1;
@@ -618,11 +617,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 57: // Original block 0x5ea0f7: stronger recoil returning to crouch
+    case 57: // Reviewed original Nayuki state at 0x00453316
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 15);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.5;
@@ -654,11 +652,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 58: // Original block 0x5ea2d0: stronger recoil returning to crouch
+    case 58: // Reviewed original Nayuki state at 0x004534E5
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 20);
             velocityX = (2.0 - (*opponentSlot)->comboDamageScale / 10000.0) * -1.8;
@@ -690,7 +687,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 59: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne hit reaction
+    case 59: // Reviewed original Nayuki state at 0x004536B4
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -734,7 +731,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 60: // Original block 0x5ea6a8: stronger airborne hit reaction
+    case 60: // Reviewed original Nayuki state at 0x004538B3
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -778,7 +775,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 61: // Original block 0x5ea8a7: stronger airborne hit reaction
+    case 61: // Reviewed original Nayuki state at 0x00453AB2
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -822,7 +819,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 62: // Unreviewed inherited sibling logic, Makoto address 0x005: unclamped airborne hit reaction
+    case 62: // Reviewed original Nayuki state at 0x00453CB1
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -861,7 +858,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 63: // Unreviewed inherited sibling logic, Makoto address 0x005: direct-velocity aerial hit reaction
+    case 63: // Reviewed original Nayuki state at 0x00453E68
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -900,7 +897,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 64: // Unreviewed inherited sibling logic, Makoto address 0x005: wall-aware airborne reaction
+    case 64: // Reviewed original Nayuki state at 0x00454013
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -949,7 +946,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 65: // Unreviewed inherited sibling logic, Makoto address 0x005: stronger wall-aware airborne reaction
+    case 65: // Reviewed original Nayuki state at 0x00454244
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -998,7 +995,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 66: // Unreviewed inherited sibling logic, Makoto address 0x005: unclamped wall-aware airborne reaction
+    case 66: // Reviewed original Nayuki state at 0x00454475
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1042,7 +1039,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 67: // Unreviewed inherited sibling logic, Makoto address 0x005: direct-speed wall-contact reaction
+    case 67: // Reviewed original Nayuki state at 0x0045465E
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1086,7 +1083,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 68: // Unreviewed inherited sibling logic, Makoto address 0x005: collision-cancelled airborne recovery
+    case 68: // Reviewed original Nayuki state at 0x0045483B
         if (field0120 != 0) {
             field0118 -= 1.5;
         }
@@ -1118,7 +1115,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 69: // Unreviewed inherited sibling logic, Makoto address 0x005: airborne recovery without wall cancel
+    case 69: // Reviewed original Nayuki state at 0x00454977
         if (field0120 != 0) {
             field0118 -= 1.5;
         }
@@ -1145,7 +1142,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 70: // Unreviewed inherited sibling logic, Makoto address 0x005: wall recovery with global effect
+    case 70: // Reviewed original Nayuki state at 0x00454A8C
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1186,7 +1183,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 71: // Unreviewed inherited sibling logic, Makoto address 0x005: high-gravity direct-speed air reaction
+    case 71: // Reviewed original Nayuki state at 0x00454C6C
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
@@ -1225,11 +1222,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 72: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil with stage pushback
+    case 72: // Reviewed original Nayuki state at 0x00454E17
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
-        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
@@ -1252,11 +1248,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 73: // Unreviewed inherited sibling logic, Makoto address 0x005: separate grounded recoil continuation
+    case 73: // Reviewed original Nayuki state at 0x00454F62
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
-        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
@@ -1279,11 +1274,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 74: // Unreviewed inherited sibling logic, Makoto address 0x005: grounded recoil to crouch
+    case 74: // Reviewed original Nayuki state at 0x004550AD
         if (field0120 != 0) {
             field0118 -= 0.8;
         }
-        dashMomentumFlag = 0;
         velocityX = 0.0;
         velocityY = 0.0;
         if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
@@ -1303,11 +1297,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 75: // Unreviewed inherited sibling logic, Makoto address 0x005: forward grounded recoil
+    case 75: // Reviewed original Nayuki state at 0x004551E0
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 30);
             if (field0120 != 0) {
@@ -1343,11 +1336,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 76: // Unreviewed inherited sibling logic, Makoto address 0x005: independent duplicate of recoil 75
+    case 76: // Reviewed original Nayuki state at 0x004553D3
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 30);
             if (field0120 != 0) {
@@ -1383,11 +1375,10 @@ void Character10::Slot06()
         }
         return;
 
-    case 77: // Unreviewed inherited sibling logic, Makoto address 0x005: recoil ends in crouch
+    case 77: // Reviewed original Nayuki state at 0x004555C6
         if (field0120 != 0) {
             field0118 -= 0.6;
         }
-        dashMomentumFlag = 0;
         if (field000a == 0 && field000c == 0) {
             meter = (short)(meter + 30);
             if (field0120 != 0) {
