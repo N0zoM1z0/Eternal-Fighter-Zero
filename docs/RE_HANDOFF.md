@@ -34,6 +34,13 @@ complete Exact owners. The match ledger identifies their current certificates
 and source recipes. Do not reopen them from obsolete partial-draft measurements.
 Reader/audio integration is complete in `src/`.
 
+Legacy bitmap-to-object conversion at original `0x004019B0` is now
+complete strict Exact (614 bytes, all 37 relocations); source is
+`src/LegacyObjectConverter.cpp`, proof
+`docs/evidence/legacy-object-converter-exact.json`. The original fixed
+file paths and file-size-minus-ten behavior have been preserved. This helper
+has no known incoming direct calls; do not infer that it is a runtime path.
+
 Nagamori `MarkEffectCollision` at `0x004AE1D0` is an accepted 231-byte owner.
 Its `character-06-effect-proximity` recipe uses the isolated declaration in
 `workbench/nagamori-helper/CharacterViews.h`, included by

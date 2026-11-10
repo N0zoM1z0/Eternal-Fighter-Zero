@@ -394,3 +394,4 @@ address,end,size,status,evidence
 0x004B1780,0x004B2AB5,4917,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot02-command-scanner-first-scan-recovered
 0x004AE1D0,0x004AE2B7,231,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-exact-effect-proximity-helper
 0x004B2AC0,0x004B667C,15292,reviewed,docs/KNOWLEDGE_BASE.md#nagamori-slot05-cpu-decision-prefix
+0x004019B0,0x00401C16,614,reviewed,docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter

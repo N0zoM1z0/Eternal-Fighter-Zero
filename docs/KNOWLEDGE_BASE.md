@@ -5796,3 +5796,36 @@ conversion; VC7.1 should emit the helper as a compiler-support dependency. Its
 boundary and compiler-generated origin are now reviewed, but this does not
 substitute for checking the accepted Makoto state function's own
 strict code-generation and relocation proof.
+
+## Legacy bitmap-to-object converter
+
+The target contains a complete authored, zero-argument conversion helper at
+0x004019B0 to 0x00401C16 (614 bytes), immediately followed by ten CC
+alignment bytes and the next function at 0x00401C20. The canonical extent
+SHA-256 is ad527aa021a9503f037a53e6ff18f211b04c3610f41de1a20f6d781ff76c0b1f.
+The function has no known incoming direct calls; it may be a retained tool
+routine rather than a production startup path. Origin is classified as authored,
+not a C runtime or compiler-generated helper.
+
+The natural C++ source src/LegacyObjectConverter.cpp reconstructs a one-pass
+loop that builds numbered ayu0\ BMP and ayu\ DAT names but, remarkably,
+actually opens the fixed paths system0\object.bmp for reading and
+system\object.dat for writing with OPEN_ALWAYS. It reads the entire BMP,
+allocates size - 10 output bytes, skips the first ten input bytes, XORs each
+remaining byte with decimal 100, writes the result, closes both handles and
+deallocates both arrays. No sanitization, error recovery or path substitution
+was added: the unusual fixed path and size-underflow behavior are in the
+original instructions. No claim is made that executing this helper is safe for
+arbitrary external files.
+
+VC7.1 /Od /G6 /MT /Gy /GS /W3 generates 202 instructions in exactly
+614 bytes. Natural structures grouping the two filename buffers and the seven
+per-iteration locals recover the original stack slots, including a distinct
+WriteFile size copy. The complete native COFF contains 37 individually
+reviewed relocations (original named CRT calls, Windows PE import-table slots,
+the security cookie/checker and original string literal locations). The
+original encoded operands, literal bytes and unique symbol destinations were
+independently checked against EFZ.exe. A successful strict receipt is kept
+in docs/evidence/legacy-object-converter-exact.json; it covers **all** bytes
+and relocation sites, not merely the disassembled instruction forms. Neither
+whole-product linkage nor runtime equivalence is established by this owner.

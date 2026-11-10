@@ -5,7 +5,7 @@ address,origin,status,evidence
 0x004018F0,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401920,compiler-generated,reviewed,docs/KNOWLEDGE_BASE.md#startup-and-window-ownership
 0x00401950,authored,reviewed,docs/KNOWLEDGE_BASE.md#palette-and-blend-tables
-0x004019B0,unknown,unreviewed,
+0x004019B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter
 0x00401C20,authored,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
 0x00405410,standard-library,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch
 0x00405430,standard-library,reviewed,docs/KNOWLEDGE_BASE.md#effect-state-dispatch

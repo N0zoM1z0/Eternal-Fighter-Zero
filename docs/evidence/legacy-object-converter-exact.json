@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "method": "One target-bound native VC7.1 static/GS translation-unit build; strict complete 614-byte code and all 37 declared relocations",
+  "authority": "complete native codegen under independently reviewed original PE/CRT/literal bindings; whole image/runtime remain open",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 614,
+      "matched_bytes": 614,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 7,
+          "target": 7925840,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "___security_cookie",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019B7, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 51,
+          "target": 7831936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__strnset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019E3, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 59,
+          "target": 7893596,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55284",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019EB, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 68,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019F4, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 82,
+          "target": 7893604,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55286",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A02, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 91,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A0B, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 105,
+          "target": 7893608,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55288",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A19, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 114,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A22, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 132,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A34, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 148,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A44, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 156,
+          "target": 7893612,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55289",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A4C, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 165,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A55, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 191,
+          "target": 7893620,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55290",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A6F, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 197,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A75, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 213,
+          "target": 7831936,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__strnset",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A85, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 221,
+          "target": 7893640,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55291",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A8D, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 230,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A96, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 244,
+          "target": 7893648,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55293",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AA4, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 253,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AAD, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 267,
+          "target": 7893652,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55295",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401ABB, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 276,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AC4, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 294,
+          "target": 7831381,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__itoa",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AD6, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 310,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AE6, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 318,
+          "target": 7893656,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55296",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AEE, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 327,
+          "target": 7831696,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "_strcat",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AF7, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 353,
+          "target": 7893664,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "$SG55297",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B11, original string literal",
+          "addend": 0
+        },
+        {
+          "offset": 359,
+          "target": 7893068,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CreateFileA@28",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B17, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 374,
+          "target": 7893064,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__GetFileSize@8",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B26, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 386,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B32, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 422,
+          "target": 7893060,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__ReadFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B56, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 437,
+          "target": 7830854,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??2@YAPAXI@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B65, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 534,
+          "target": 7893056,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__WriteFile@20",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BC6, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 547,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BD3, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 557,
+          "target": 7893048,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__imp__CloseHandle@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BDD, original PE32 IAT operand",
+          "addend": 0
+        },
+        {
+          "offset": 572,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BEC, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 590,
+          "target": 7831072,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??3@YAXPAX@Z",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BFE, original complete instruction and verified destination",
+          "addend": 0
+        },
+        {
+          "offset": 606,
+          "target": 7832028,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "@__security_check_cookie@4",
+          "evidence": "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401C0E, original complete instruction and verified destination",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "ad527aa021a9503f037a53e6ff18f211b04c3610f41de1a20f6d781ff76c0b1f",
+      "target_extent_sha256": "ad527aa021a9503f037a53e6ff18f211b04c3610f41de1a20f6d781ff76c0b1f",
+      "unit": "legacy-object-converter",
+      "symbol": "?ConvertLegacyObjectData@@YAXXZ",
+      "target_address": "0x004019B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "9e264b6f430a99cdac5fafc13446da11eeafab7ee3340af679a3c9ebb0e27fc9",
+      "object_sha256": "907c8c24b528bd677a9501aa6778f094d1efcb061b21262d3506a8f2e2acf409",
+      "source_sha256": "386872891b805d5361a612d04294b87fff5103fcc631a17f7b6d87810d5639b8",
+      "dependencies": {},
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "f1c740899a94c59531168c0eef1210fd80bc29e0bf9e9642d84258dd783865c1",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "4cb409657d6a1d74d4eefeb500c66743f1c6cc7d497638d47133077128b8eea8",
+      "profile_sha256": "0e59d893ade8099fdcbb466c6648fd9ad9999c388fd3b149a824210340f5b1d5",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

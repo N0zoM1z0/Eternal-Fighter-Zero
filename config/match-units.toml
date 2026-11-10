@@ -130464,3 +130464,272 @@ type = "DIR32"
 symbol = "__real@0000000000000000"
 target = 0x007872F8
 evidence = "Original EFZ.exe @ 0x004B1ED2: second exact positive-zero double literal for 1000-meter grounded base-0x64 motion"
+
+[units.legacy-object-converter]
+artifact_kind = "coff"
+profile = "vc71-od-static-gs"
+source = "src/LegacyObjectConverter.cpp"
+dependencies = []
+object = "build/match-units/legacy-object-converter/LegacyObjectConverter.obj"
+symbol = "?ConvertLegacyObjectData@@YAXXZ"
+target_address = 0x004019b0
+size = 614
+
+[[units.legacy-object-converter.relocations]]
+offset = 7
+type = "DIR32"
+symbol = "___security_cookie"
+target = 0x0078f050
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019B7, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 51
+type = "REL32"
+symbol = "__strnset"
+target = 0x00778180
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019E3, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 59
+type = "DIR32"
+symbol = "$SG55284"
+target = 0x0078725c
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019EB, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 68
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x004019F4, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 82
+type = "DIR32"
+symbol = "$SG55286"
+target = 0x00787264
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A02, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 91
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A0B, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 105
+type = "DIR32"
+symbol = "$SG55288"
+target = 0x00787268
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A19, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 114
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A22, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 132
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A34, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 148
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A44, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 156
+type = "DIR32"
+symbol = "$SG55289"
+target = 0x0078726c
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A4C, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 165
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A55, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 191
+type = "DIR32"
+symbol = "$SG55290"
+target = 0x00787274
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A6F, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 197
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A75, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 213
+type = "REL32"
+symbol = "__strnset"
+target = 0x00778180
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A85, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 221
+type = "DIR32"
+symbol = "$SG55291"
+target = 0x00787288
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A8D, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 230
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401A96, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 244
+type = "DIR32"
+symbol = "$SG55293"
+target = 0x00787290
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AA4, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 253
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AAD, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 267
+type = "DIR32"
+symbol = "$SG55295"
+target = 0x00787294
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401ABB, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 276
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AC4, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 294
+type = "REL32"
+symbol = "__itoa"
+target = 0x00777f55
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AD6, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 310
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AE6, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 318
+type = "DIR32"
+symbol = "$SG55296"
+target = 0x00787298
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AEE, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 327
+type = "REL32"
+symbol = "_strcat"
+target = 0x00778090
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401AF7, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 353
+type = "DIR32"
+symbol = "$SG55297"
+target = 0x007872a0
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B11, original string literal"
+
+[[units.legacy-object-converter.relocations]]
+offset = 359
+type = "DIR32"
+symbol = "__imp__CreateFileA@28"
+target = 0x0078704c
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B17, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 374
+type = "DIR32"
+symbol = "__imp__GetFileSize@8"
+target = 0x00787048
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B26, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 386
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B32, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 422
+type = "DIR32"
+symbol = "__imp__ReadFile@20"
+target = 0x00787044
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B56, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 437
+type = "REL32"
+symbol = "??2@YAPAXI@Z"
+target = 0x00777d46
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401B65, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 534
+type = "DIR32"
+symbol = "__imp__WriteFile@20"
+target = 0x00787040
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BC6, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 547
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BD3, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 557
+type = "DIR32"
+symbol = "__imp__CloseHandle@4"
+target = 0x00787038
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BDD, original PE32 IAT operand"
+
+[[units.legacy-object-converter.relocations]]
+offset = 572
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BEC, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 590
+type = "REL32"
+symbol = "??3@YAXPAX@Z"
+target = 0x00777e20
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401BFE, original complete instruction and verified destination"
+
+[[units.legacy-object-converter.relocations]]
+offset = 606
+type = "REL32"
+symbol = "@__security_check_cookie@4"
+target = 0x007781dc
+evidence = "docs/KNOWLEDGE_BASE.md#legacy-bitmap-to-object-converter; EFZ.exe 0x00401C0E, original complete instruction and verified destination"
