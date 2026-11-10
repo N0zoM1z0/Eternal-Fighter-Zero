@@ -2240,25 +2240,27 @@ Earlier first-eight-scan investigation remains available in
 `workbench/nagamori-command/`, with individual scan extents in
 `docs/evidence/nagamori-slot02-first-scan-boundary.json`.
 
-## Nagamori Slot05 CPU decision prefix: 2,517 original bytes verified
+## Nagamori Slot05 CPU boss: 2,861-byte native-source prefix
 
-Nagamori vtable slot 5 (`0x00788410`) points to the original
-**15,292-byte** `Character06::Slot05` owner
-`[0x004B2AC0,0x004B667C)`. Its first **2,517 bytes / 689 instruction
-positions** now have natural C++ in `workbench/nagamori-cpu/`.
-Under focused VC7.1, 688 original opcode/operand forms match after
-normalizing numeric branch/direct-call addresses and original FP
-constant addresses. Only the incomplete prologue stack allocation
-differs (`0xE8` original versus `0x88` partial).
+The canonical original Nagamori virtual Slot05 at `0x004B2AC0`
+(vtable pointer `0x00788410`) owns **15,292 code bytes** through
+`0x004B667C`, then four `CC` alignment bytes. An independent
+natural C++ draft in `workbench/nagamori-cpu/` now implements its
+first **2,861 bytes / 784 x86 instructions**. The named VC7.1
+reproducer matches **783 instruction forms and operands**, with
+numeric branch/call/constant addresses normalized; the sole differing
+prologue width is `0xE8` original versus `0x94` partial. No full
+function Exact acceptance is claimed.
 
-The source corrects a sibling-derived 2x CPU aggression multiplier to
-Nagamori's original 3x, restores the 60–120-range button-0 action,
-and reconstructs 0x0C/0x48/random 0x14-or-0x16 plus 0x65/0x66
-meter-gated decisions. The 0x66 command requires meter 3000 and
-forward range below **150.0** (literal at `0x00787EF0`). This CPU
-boss is not whole-function Exact. The next original block starts at
-`0x004B349A`; focused reproducer is
-`workbench/nagamori-cpu/check_prefix.py`.
+Target-derived CPU behavior includes 3x random close-range aggression,
+forward-distance 60–120 button selection, commands 0x0C/0x48,
+random 0x14/0x16 and meter-gated 0x65/0x66. The latest natural source
+also restores priority decisions at forward ranges under 160,
+160–220 and above 220, using original 3x/1x probabilities,
+`field0118 > 500.0` permissions, and random base-0x46/base-0x0A
+commands. Original 160.0 and 220.0 literals were independently
+checked. Continue at `0x004B35F2`, using
+`workbench/nagamori-cpu/check_prefix.py` for focused native checks.
 
 ## Nagamori Slot04 action boss: complete 12,277-byte strict Exact
 

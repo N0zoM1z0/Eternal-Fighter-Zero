@@ -135,6 +135,26 @@ void Character06::Slot05()
                 return;
             }
         }
+        if (distance.forward < 160.0) {
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 3.0f &&
+                field0118 > 500.0) {
+                recognizedCommand = 0x0c;
+                return;
+            }
+        }
+        if (distance.forward < 220.0 && distance.forward > 160.0) {
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x46;
+                return;
+            }
+        }
+        if (distance.forward > 220.0) {
+            if ((float)(unsigned short)RandomRange(0, 100) < field00a8 * 1.0f &&
+                field0118 > 500.0) {
+                recognizedCommand = (unsigned short)RandomRange(0, 2) + 0x0a;
+                return;
+            }
+        }
     }
     // Remaining priority AI decisions are not reconstructed yet.
 }

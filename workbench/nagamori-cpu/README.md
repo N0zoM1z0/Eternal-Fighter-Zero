@@ -1,39 +1,45 @@
 # Nagamori Slot05 CPU boss — partial natural C++
 
-The original virtual slot 5 at `0x00788410` points to
-`Character06::Slot05` at `[0x004B2AC0,0x004B667C)`, **15,292 bytes**.
-Four `CC` bytes follow the original return. The complete original
-SHA-256 is `14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
+Original vtable slot 5 at `0x00788410` points to
+`Character06::Slot05` at `[0x004B2AC0,0x004B667C)`, **15,292 code
+bytes**, followed by four `CC` bytes. The complete original SHA-256 is
+`14a83398918558355cd4ae747fa313b60f62771f1758ba870a593d29f596bfb9`.
 
-`Character06Cpu.cpp` reconstructs the original opening AI decisions,
-including CPU movement counters, input clearing, random guard choices,
-opponent-distance calculation, short-range reactions and meter attacks.
-It was initially shaped using another exact character's CPU source,
-but Nagamori's own target disassembly forced the corrections below.
+`Character06Cpu.cpp` reconstructs original CPU input initialization,
+random defensive decisions, opponent distance and the first close-
+and medium-range offensive choices. The shape was tested initially
+using another accepted character's CPU source, but every retained
+instruction is compared against Nagamori's own executable.
 
-The canonical original prefix `[0x004B2AC0,0x004B3495)` is
-**2,517 bytes / 689 instructions**. A focused pinned VC7.1 build
-reproduces **688 of 689 original instruction forms and operands**
-after normalizing numeric jump/call targets and external constants.
-Only the prologue allocation differs (`sub esp,0xE8` original versus
-`sub esp,0x88` partial), because later local variables are missing.
-The partial object is **2,514 bytes** and ends in a temporary return.
-It is NOT a full-function Exact owner.
+The reviewed original prefix `[0x004B2AC0,0x004B35ED)` contains
+**2,861 bytes / 784 x86 instructions**. The focused pinned VC7.1
+compiler reproduces **783 original instruction forms and operands**,
+normalizing only branch/direct-call destinations and original FP
+constant addresses. The one differing instruction is the unfinished
+stack allocation: `sub esp,0xE8` in the complete target versus
+`sub esp,0x94` in the partial source. The partial output is **2,858
+bytes** and finishes with a temporary return; it is NOT full-function
+Exact. Its stack allocation has grown naturally as real decisions
+are restored, without padding.
 
-Target-derived differences include a 3.0f rather than 2.0f CPU
-aggression multiplier, the original `buttonPulse[0] = 3` for forward
-range 60–120, an `0x0C` branch, an `0x48` branch with a two-point
-bonus when `field0118 > 500.0`, a randomized `0x14/0x16` action, and
-`0x65`/`0x66` commands gated by 2000/3000 meter and distance ceilings
-60/150. The 150.0 double is verified at original `0x00787EF0`.
+The current source preserves Nagamori's 3.0f close-range aggression
+factor (rather than a sibling's 2x), original forward range 60–120
+`buttonPulse[0]=3`, conditional commands 0x0C/0x48, a randomized
+0x14-or-0x16 attack, and 0x65/0x66 meter tiers. A further three
+original ranges select different attacks: under 160 uses 3x chance
+and `field0118 > 500.0` for 0x0C; 160–220 uses 1x chance and a
+random 0x46-series command; over 220 uses 1x chance plus the 500
+permission gate for a random 0x0A-series command. The range literals
+160.0/220.0 are verified at original `0x00787370`/`0x00787ED0`.
 
-Run only this affected translation unit:
+Reproduce by compiling only this workbench TU:
 
 ```bash
 scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 ```
 
-The next original decision begins at `0x004B349A`. The separately
-rejected sibling-derived full-function hypothesis remains in private
-`.analysis/probes/nagamori-slot05-sibling-candidate.cpp`. Continue
-checking Nagamori against its own disassembly; no full cold replay.
+The next original branch begins at `0x004B35F2`. The rest of the CPU
+behavior is not implemented. An unaccepted full sibling-derived
+source hypothesis remains privately in
+`.analysis/probes/nagamori-slot05-sibling-candidate.cpp` for study.
+No full cold replay is needed.
