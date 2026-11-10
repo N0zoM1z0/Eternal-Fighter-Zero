@@ -3030,45 +3030,46 @@ Whole-product linkage and runtime equivalence remain open.
 
 <a id="sayuri-slot02-command-prefix"></a>
 
-## Sayuri Character09 Slot02: 2,946-byte reviewed command-boss prefix
+## Sayuri Character09 Slot02: 4,130-byte reviewed command-boss prefix
 
-Original Sayuri Character09 vtable slot02 at 0x00788140
-points to 0x004493C0. The complete function boundary
-[0x004493C0,0x0044AB2B) is 5,995 instruction bytes,
-followed by five CC alignment bytes, with original
-whole-function SHA-256
+Original Character09 vtable slot02 at 0x00788140 selects
+the 5,995-byte owner [0x004493C0,0x0044AB2B),
+with five CC alignment bytes following its shared return.
+Original whole-owner SHA-256:
 e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436.
-This target-only review is not Exact codegen.
 
-The natural C++ candidate
-workbench/sayuri-commands/Character09Commands.cpp
-now covers [0x004493C0,0x00449F42), **2,946
-original instruction bytes / 885 x86 instructions**,
-prefix SHA-256
-c2a2fdadfdffce690d302893ec4a44fa8c0d6066692450b01fc5c0644ca33340.
-It reconstructs six prioritized 180-frame circular
-history scans with the original wrap, facing, input,
-meter and landing gates. The output families include
-0x62, 0xAA, 0xA0, 0x64, 0x6E and 0x46.
+The natural-source candidate
+workbench/sayuri-commands/Character09Commands.cpp covers
+[0x004493C0,0x0044A3E2): **4,130 original bytes /
+1,229 x86 instructions**, prefix SHA-256
+1160ebee6eb1b523fe6778afd6717e5f9fc7bbc485ae4d0f6384b81c5837c8c5.
+Nine command-priority scans reconstruct input-ring
+wrapping, staged direction recognition, meter and
+airborne/grounded checks: 0x62, 0xAA, 0xA0,
+0x64, 0x6E, 0x46, 0x14, 0x0A, and 0x28.
+The 0x14 input scan checks grounded position,
+whereas 0x28 requires positionY < 0.0; the original
+x87 compare flags exposed and corrected this
+semantic difference.
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles a
-2,947-byte / 888-instruction partial body including a
-temporary epilogue. **885/885 original instruction
-forms/operands match** after destination and constant
-address normalization; **112 in-prefix branch targets**
-agree by instruction ordinal and the 11 outbound
-branches land on original owner boundaries. One
-original near JMP becomes a short JMP due to the
-missing complete shared exit, the only width
-difference in this candidate. All **six original-bound
-IEEE-754 double relocations** are byte-verified at
-0x007872F8. The targeted checker is
-workbench/sayuri-commands/check_prefix.py.
+Pinned VC7.1 emits 4,131 bytes and 1,232
+instructions including a temporary return.
+All **1,229/1,229 comparable original instruction
+forms/operands** agree after branch/call and literal
+address normalization. **150 internal jump targets**
+agree by instruction ordinal; 17 outbound jumps
+land on original full-function instruction starts.
+A single near/short width difference arises from the
+still-absent complete shared return. All **eight
+IEEE-754 literal relocations** are byte-matched at
+the original executable double address 0x007872F8.
+Run only workbench/sayuri-commands/check_prefix.py.
 
-Continue at 0x00449F42 (0x14 command scan).
-**Not full-function Exact**: 3,049 bytes,
-remaining command groups and full shared exit remain
-open. No full-game cold replay was performed.
+The next branch begins at original 0x0044A3E2,
+a 0x1E command series. **Partial, not Exact**:
+1,865 original bytes and the shared return/remaining
+relocation closure are still unreconstructed.
+No full cold replay was performed.
 
 ## Sayuri Character09 native lifecycle: ResetPose and InitializeState exact
 

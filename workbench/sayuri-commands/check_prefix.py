@@ -15,9 +15,9 @@ from coff import object_function
 
 START = 0x004493C0
 FULL_SIZE = 5995
-END = 0x00449F42
+END = 0x0044A3E2
 FULL_SHA = "e4aa3f06f35134fcecf1fc29caee30cacfc38fcad71244148689c41e17212436"
-PREFIX_SHA = "c2a2fdadfdffce690d302893ec4a44fa8c0d6066692450b01fc5c0644ca33340"
+PREFIX_SHA = "1160ebee6eb1b523fe6778afd6717e5f9fc7bbc485ae4d0f6384b81c5837c8c5"
 SOURCE = ROOT / "workbench/sayuri-commands/Character09Commands.cpp"
 OBJECT = ROOT / "build/sayuri-commands/Character09Commands.partial.obj"
 
@@ -57,7 +57,7 @@ def main():
     code, rels = object_function(OBJECT, "?Slot02@Character09@@UAEXXZ")
     orig_instr, code_instr = instructions(prefix), instructions(code)
     assert (len(prefix), len(orig_instr), len(code), len(code_instr), len(rels)) == (
-        2946, 885, 2947, 888, 6)
+        4130, 1229, 4131, 1232, 8)
     assert orig_instr[2][2] == code_instr[2][2] == "sub esp,byte +0xc"
     assert [x[2] for x in code_instr[-3:]] == ["mov esp,ebp", "pop ebp", "ret"]
     assert all(normalized(a[2]) == normalized(b[2])
@@ -65,9 +65,9 @@ def main():
     width_changes = [(i, a, b) for i, (a, b) in enumerate(
         zip(orig_instr, code_instr[:-3])) if len(a[1]) != len(b[1])]
     assert len(width_changes) == 1
-    assert width_changes[0][0] == 842
+    assert width_changes[0][0] == 1187
     assert (width_changes[0][1][2], width_changes[0][2][2]) == (
-        "jmp 0x1767", "jmp short 0xb7f")
+        "jmp 0x1767", "jmp short 0x101f")
 
     target_positions = {a[0]: idx for idx, a in enumerate(orig_instr)}
     candidate_positions = {a[0]: idx for idx, a in enumerate(code_instr)}
@@ -86,7 +86,7 @@ def main():
             assert target_positions[td] == candidate_positions.get(cd), (t, c)
         else:
             outside += 1
-    assert (inside, outside) == (112, 11)
+    assert (inside, outside) == (150, 17)
 
     starts = [a[0] for a in code_instr]
     for rel in rels:
@@ -100,9 +100,9 @@ def main():
         address = struct.unpack_from("<I", prefix, off)[0]
         assert address == 0x007872F8
         assert target_bytes(im, address, 8) == b"\0"*8
-    print("Sayuri Slot02: 2946 / 5995 original bytes, 885/885 instruction")
-    print("forms/operands, 112 internal branches, 11 valid outbound destinations")
-    print("and 6 original IEEE-754 double relocations verified. Not Exact.")
+    print("Sayuri Slot02: 4130 / 5995 original bytes, 1229/1229 instruction")
+    print("forms/operands, 150 internal branches, 17 valid outbound destinations")
+    print("and 8 original IEEE-754 double relocations verified. Not Exact.")
 
 
 if __name__ == "__main__":
