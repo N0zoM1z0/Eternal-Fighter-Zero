@@ -11,18 +11,18 @@ and medium-range offensive choices. The shape was tested initially
 using another accepted character's CPU source, but every retained
 instruction is compared against Nagamori's own executable.
 
-The reviewed original prefix [0x004B2AC0,0x004B4C8B) is
-**8,651 bytes / 2,224 instructions**, with SHA-256
-f64663ffc6f842806f5e6d9053f4ba4400c0a38ae4fadd6f69dd8dbb2a2e6475.
+The reviewed original prefix [0x004B2AC0,0x004B4EE0) is
+**9,248 bytes / 2,369 instructions**, with SHA-256
+79edb44825253ede8658dc0e1b936a26670f954a3268580c9047f1ce0dca9bc9.
 
-Selected VC7.1 emits an **8,644-byte partial COFF function**,
-2,226 instructions including the temporary return, and 157
-relocations. **2,222 of the first 2,223 comparable original
+Selected VC7.1 emits an **9,244-byte partial COFF function**,
+2,371 instructions including the temporary return, and 167
+relocations. **2,367 of the first 2,368 comparable original
 instruction forms** agree after branch/call/FP-address normalization.
 The incomplete stack allocation is 0xC0 rather than target 0xE8;
 the final original prefix jump reaches the unimplemented shared exit.
-The diagnostic also verifies **289 internal branch destinations**
-by instruction ordinal and all **100 original float/double
+The diagnostic also verifies **310 internal branch destinations**
+by instruction ordinal and all **107 original float/double
 literal payloads** at corresponding source relocation sites.
 
 This audit caught five previously hidden source-value errors even
@@ -34,7 +34,9 @@ was rejected; restoring 135.0 passed the focused native check.
 
 The source has complete natural-code forms for the recovered
 defensive, grounded, aerial-start, CPU state 4..11 and
-collision-follow-up action 0xC8/0xC9/0xCA/0xCB/0xCC branches.
+collision-follow-up action 0xC8/0xC9/0xCA/0xCB/0xCC/0xCD branches.
+The new 0xCD decision tree retains the original random, grounded,
+distance and meter checks and ends in a guaranteed shared return.
 The original 0x004B3172 guarded jump spans both nearby attacks.
 Keep the original random and x87 expression evaluation order.
 
@@ -42,6 +44,6 @@ Reproduce just the partial owner with:
 
     scripts/repo-python workbench/nagamori-cpu/check_prefix.py
 
-The next original block is 0x004B4C8B (action 0xCD).
+The next original block is 0x004B4EE0 (action 0xCE).
 This remains unfinished; **do not claim Exact** until all
 15,292 bytes, complete relocations, and the shared return match.
