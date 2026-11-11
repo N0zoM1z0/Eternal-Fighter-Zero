@@ -531,25 +531,23 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` has native default
-plus **19 original live cases** (1–9,13–16,47,50–54) of the
-**59,143-byte Character04::Slot06** selected by vtable slot
-`0x00788B94`. It includes original low aerial strike and five
-recoil/wall-pushback tiers, which differ from the related Makoto
-owner by retaining dash momentum. The scoped
-`workbench/character04-state/check_prefix.py` verifies
-**5,755 continuous original code bytes / 1,599 native instructions**,
-**139 native internal and 21 shared-return branches**, **162 exact
-original-bound call/IEEE-754 references** and two original local
-switch address pointers. All remaining reviewed bytes match except
-outbound-return displacement, independently native-bound relocation
-operands, and the provisional three-byte shorter stack allocation.
-The full owner uses original `0x2E8` frame, 139 adjacent DWORD
-switch targets and 325 selector bytes (138 live/187 defaults).
-**Next real case55 begins at `0x00608FAB`**; 119 real native cases
-and full stack/table/return still OPEN. Selected proof ONLY, not
-whole Exact; synthetic marker cases have no credit. No full cold
-all-unit replay or remote push.
+`workbench/character04-state/Character04State.cpp` now reconstructs
+original default plus **26 real native states** (1–9,13–16,47,50–61)
+of the **59,143-byte** original boss at vtable `0x00788B94`.
+The newest authored stages add five grounded recoil/crouch tiers
+and three nontrivial airborne hit reactions (native -2/-4/-6
+velocity caps and 0.032 gravity), not just animation marker bodies.
+Focused `check_prefix.py` proves **9,164 native code bytes / 2,529
+original x86 instruction positions/forms/widths**, **233 internal
+and 28 original shared-return branches**, **267 original-bound
+COFF calls/float operands** and two original native table pointers.
+All other selected bytes match after accounting ONLY for the
+incomplete three-byte stack instruction, shared-return displacement
+and independently native-bound COFF sites. The original full owner
+uses 0x2E8 frame and adjacent 139-pointer/325-selector tables.
+**Next case62 starts at `0x00609CFC`**; the other 112 real native
+cases, complete stack/table and return remain OPEN. NOT full Exact,
+no synthetic marker acceptance, no cold all-unit replay or push.
 
 ## Tools and checks
 

@@ -1,9 +1,9 @@
 # Character04 Slot06 — original-bound 59,143-byte state boss workbench
 
 **Status: PARTIAL, not whole-function Exact.** This workbench contains real
-ordinary C++ for the original default handler and native live states **1–9, 13–16, 47 and 50–54**.
+ordinary C++ for the original default handler and native live states **1–9, 13–16, 47 and 50–61**.
 Only these physically reviewed cases are claimed in the selected prefix;
-synthetic markers temporarily generated for the other 119 live case IDs are
+synthetic markers temporarily generated for the other 112 live case IDs are
 **unaccepted diagnostics, not reconstructed source or acceptable byte padding**.
 
 ## Independently original-bound boundaries and dispatch
@@ -22,7 +22,7 @@ Adjacent, separately identified original switch data:
 
 The already-authored natural C++ is in `Character04State.cpp`. Pinned
 VC7.1 `/Od /G6 /MT /Gy /W3` produces the original source structure
-for default plus IDs 1–9, 13–16, 47 and 50–54: neutral, ±0.5 horizontal movement,
+for default plus IDs 1–9, 13–16, 47 and 50–61: neutral, ±0.5 horizontal movement,
 facing-to-opponent, three real aerial jumps (gravity0.035,
 velocityY−2.7, forward/backward velocityX ±0.6), neutral recovery,
 state8 recovery and falling-to-land motion. Cases13–16 add native
@@ -34,9 +34,12 @@ selects state13 and preserves the original call ordering. Case47
 restores a low airborne strike with landing impact and frame rewind;
 cases50–54 implement five original grounded recoil/pushback tiers,
 meter gains 10/15/20 and distinct -1.1/-1.5/-1.8 velocities,
-resource drain and precise x87 wall-clamp calculations. The
-original Character04 never clears dashMomentumFlag in these
-recoil states, unlike the related Makoto owner.
+resource drain and precise x87 wall-clamp calculations. States56–58 return directly to the crouching state3; states
+59–61 implement three distinct aerial hit reactions with native
+-2.0/-4.0/-6.0 vertical velocity clamps, 0.032 gravity, frame
+loop timing and conditional ground hit transitions to state97/98.
+The original Character04 does not clear dashMomentumFlag in
+the grounded recoil states, unlike the related Makoto owner.
 
 ## Strict selected-prefix check (fast and original-bound)
 
@@ -46,13 +49,13 @@ Run ONLY:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-The canonical continuous opening `[0x00607930,0x00608FAB)` covers
-**5,755 native code bytes / 1,599 x86 instructions**, SHA-256
-`85eb4668366cea69cd6c47b32c22bc2725fe84fa4193e3cafa166345807ad9f5`.
+The canonical continuous opening `[0x00607930,0x00609CFC)` covers
+**9,164 native code bytes / 2,529 x86 instructions**, SHA-256
+`66d1c474b7798910b95479eacaea5599977129a5302dd38db24413ab08209352`.
 The checker compiles only the scope's candidate C++ and checks all
-1,599 native instruction offsets, widths and opcode forms, all
-**139 original in-prefix and 21 original shared-return branches**,
-**162 independently original-bound native direct calls/IEEE-754
+2,529 native instruction offsets, widths and opcode forms, all
+**233 original in-prefix and 28 original shared-return branches**,
+**267 independently original-bound native direct calls/IEEE-754
 operands** and both **original local selector and jump-table pointers**.
 It then compares every nonexceptional original machine-code byte.
 There are **zero additional byte differences** after accounting for
@@ -61,8 +64,8 @@ There are **zero additional byte differences** after accounting for
 the still-outbound shared-return `JMP` displacement, and the
 independently original-bound four-byte COFF relocation operands.
 
-**Next live original case55 begins at `0x00608FAB`.** Remaining
-119 authentic live case bodies, full original frame, all destination
+**Next live original case62 begins at `0x00609CFC`.** Remaining
+112 authentic live case bodies, full original frame, all destination
 table bytes and original shared-return closure are **OPEN**. This is
 strict selected-prefix evidence, **NOT whole-owner Exact**. Never
 mark marker branches or this workbench as accepted production source;
