@@ -114,6 +114,17 @@ register bytes still differ after original case250, so the strict
 selected prefix remains **40,336 bytes**. See Kano README. No cold
 all-unit replay.
 
+Kano charged state258 now also has actual authored natural C++,
+**1,254 native original bytes / 330 original instruction positions**
+with a dedicated `check_case258_shape.py` audit. It independently
+validates **23 native internal branches, 3 shared return paths,
+14 original-bound COFF/IEEE-754 operands**, and all register-abstracted
+instruction forms. Three impact effects have distinct Y offsets,
+resource deduction, sound and facing/owner write order. The
+**state250 register divergence remains open**, so case258 is an
+unaccepted structural island, NOT complete Exact; strict contiguous
+Boss prefix remains 40,336 original bytes. No cold all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

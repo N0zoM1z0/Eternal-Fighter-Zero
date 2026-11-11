@@ -57,6 +57,7 @@ completion. This is not a copy of the 254–256 frame16 effect paths.
 Use only the dedicated original-bound structural audit:
 
     scripts/repo-python workbench/kano-state/check_case257_shape.py
+    scripts/repo-python workbench/kano-state/check_case258_shape.py
 
 The selected VC7.1 candidate matches **all 241 original instruction
 offsets, lengths and register-abstracted instruction forms**, **22
@@ -71,6 +72,39 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental case258 — 1,254 native bytes, distinct triple-impact finisher
+
+Original Kano state258 is the **1,254-byte** native owner subrange
+`[0x0064D8D9,0x0064DDBF)`, containing **330 original x86
+instructions**. Natural C++ in `Character20State.cpp` has been
+substantively reconstructed: charge accumulation+75, frame0/7 resets,
+full charge10000 with residue5000, original command13 resource cancel,
+paired 0x196/0x197 local effects, and three tiered frame17 **0x191**
+impact launches at Y-45, Y-20 and Y-70 (facing-adjusted X+38).
+It retains original per-impact sound, owner/facing-field assignment
+order, `field316c` counters, repeated meter-7 deductions, frame19
+three-pose rewind (up to two cycles), and original state0 return.
+
+The dedicated native-bound checker is:
+
+    scripts/repo-python workbench/kano-state/check_case258_shape.py
+
+It independently checks canonical SHA-256
+`d42c451e8c015bed1140a2636b84c2792b3fec83ea66f5222c8be91e4b6245d8`,
+**all 330 original instruction offsets/widths and register-abstracted
+forms**, **23 exact original internal branches**, **3 original
+shared-return targets**, and **14 original-bound COFF call/IEEE-754
+operands** (three `ResetFrame`, ten `__ftol2`, and double500.0).
+Two native details needed explicit correction: a *single outer*
+frame17 guard around the two field3138 branches, and different
+`effect.owner` / `effect.flag0018` write ordering on the first versus
+later impact effects. Both differences affect compiler layout.
+
+This is a **native-bound structural island only, NOT whole-function
+or concrete-register Exact**. Earlier state250 still prevents strict
+continuous-prefix extension beyond **40,336 bytes**. The selected
+Exact ledger and original native frame/return proof stay unchanged.
 
 ### Experimental case257 — 899 native bytes, original-bound structural island
 

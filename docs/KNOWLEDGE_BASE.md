@@ -1850,6 +1850,19 @@ call/IEEE-754 operands**. The concrete register assignment still
 differs; this is **NOT Exact**, and does not extend the independently
 strict native prefix past 40,336 bytes (state250 remains open).
 
+#### Kano state258 original-bound triple-impact structural island
+
+New native source case258 covers **1,254 original bytes / 330
+instruction locations** of the 68,853-byte Kano boss. The triple
+0x191 impact effects, frame17 tier, 0x196/0x197 paired startup,
+charge/cancel gates and up-to-two frame19 rewinds are implemented in
+real C++. The independent `check_case258_shape.py` audits **23
+internal + 3 shared-return native jumps, 14 native-bound COFF/float
+operands**, the 330 native opcode forms/widths/positions and pinned
+canonical SHA. Concrete VC7.1 register allocation differs after
+state250; thus **NOT Exact** and it does not expand the independently
+accepted 40,336-byte continuous prefix or full Exact ledger.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
