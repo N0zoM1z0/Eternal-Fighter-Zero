@@ -531,23 +531,24 @@ Windows runtime are not thereby accepted. No all-unit cold replay.
 
 ### Active second large boss: Character04::Slot06 selected prefix (NOT Exact)
 
-`workbench/character04-state/Character04State.cpp` now reconstructs
-original default plus **26 real native states** (1–9,13–16,47,50–61)
-of the **59,143-byte** original boss at vtable `0x00788B94`.
-The newest authored stages add five grounded recoil/crouch tiers
-and three nontrivial airborne hit reactions (native -2/-4/-6
-velocity caps and 0.032 gravity), not just animation marker bodies.
-Focused `check_prefix.py` proves **9,164 native code bytes / 2,529
-original x86 instruction positions/forms/widths**, **233 internal
-and 28 original shared-return branches**, **267 original-bound
-COFF calls/float operands** and two original native table pointers.
-All other selected bytes match after accounting ONLY for the
-incomplete three-byte stack instruction, shared-return displacement
-and independently native-bound COFF sites. The original full owner
-uses 0x2E8 frame and adjacent 139-pointer/325-selector tables.
-**Next case62 starts at `0x00609CFC`**; the other 112 real native
-cases, complete stack/table and return remain OPEN. NOT full Exact,
-no synthetic marker acceptance, no cold all-unit replay or push.
+`workbench/character04-state/Character04State.cpp` now contains real
+C++ for the default plus **30 original live cases**
+(1–9,13–16,47,50–65) of the **59,143-byte** original boss at
+vtable `0x00788B94`. Added cases62–65 implement true direct and
+clamped airborne knockback plus native wall collisions to state70,
+including the reviewed `CollisionSide` callee at 0x40FF70.
+Focused `check_prefix.py` confirms **11,152 native code bytes /
+3,096 original instruction positions/forms/widths**, **291 internal
+and 34 shared-return original branches**, **304 independently
+native-bound COFF call/float references** and two original native
+selector/table pointers. Remaining reviewed opcode bytes match
+outside independently native-bound relocation fields, incomplete
+three-byte provisional stack shrink and outbound shared-return
+JMP distance. The complete original owner still uses `0x2E8` frame,
+139 jump pointers and 325 selector bytes. **Next case66
+begins `0x0060A4C0`**; 108 real case bodies, full stack/table
+and return remain OPEN. NOT whole-function Exact. No full cold
+all-unit replay, no marker-body acceptance, no push.
 
 ## Tools and checks
 

@@ -1,9 +1,9 @@
 # Character04 Slot06 — original-bound 59,143-byte state boss workbench
 
 **Status: PARTIAL, not whole-function Exact.** This workbench contains real
-ordinary C++ for the original default handler and native live states **1–9, 13–16, 47 and 50–61**.
+ordinary C++ for the original default handler and native live states **1–9, 13–16, 47 and 50–65**.
 Only these physically reviewed cases are claimed in the selected prefix;
-synthetic markers temporarily generated for the other 112 live case IDs are
+synthetic markers temporarily generated for the other 108 live case IDs are
 **unaccepted diagnostics, not reconstructed source or acceptable byte padding**.
 
 ## Independently original-bound boundaries and dispatch
@@ -22,7 +22,7 @@ Adjacent, separately identified original switch data:
 
 The already-authored natural C++ is in `Character04State.cpp`. Pinned
 VC7.1 `/Od /G6 /MT /Gy /W3` produces the original source structure
-for default plus IDs 1–9, 13–16, 47 and 50–61: neutral, ±0.5 horizontal movement,
+for default plus IDs 1–9, 13–16, 47 and 50–65: neutral, ±0.5 horizontal movement,
 facing-to-opponent, three real aerial jumps (gravity0.035,
 velocityY−2.7, forward/backward velocityX ±0.6), neutral recovery,
 state8 recovery and falling-to-land motion. Cases13–16 add native
@@ -39,7 +39,10 @@ resource drain and precise x87 wall-clamp calculations. States56–58 return dir
 -2.0/-4.0/-6.0 vertical velocity clamps, 0.032 gravity, frame
 loop timing and conditional ground hit transitions to state97/98.
 The original Character04 does not clear dashMomentumFlag in
-the grounded recoil states, unlike the related Makoto owner.
+the grounded recoil states, unlike the related Makoto owner. Cases62–65 add unclamped/direct
+knockback and wall-sensitive airborne collisions, including two
+original `CollisionSide` calls, conditional state70 recovery and
+native vertical clamps −2.0/−4.0.
 
 ## Strict selected-prefix check (fast and original-bound)
 
@@ -49,13 +52,13 @@ Run ONLY:
 scripts/repo-python workbench/character04-state/check_prefix.py
 ```
 
-The canonical continuous opening `[0x00607930,0x00609CFC)` covers
-**9,164 native code bytes / 2,529 x86 instructions**, SHA-256
-`66d1c474b7798910b95479eacaea5599977129a5302dd38db24413ab08209352`.
+The canonical continuous opening `[0x00607930,0x0060A4C0)` covers
+**11,152 native code bytes / 3,096 x86 instructions**, SHA-256
+`013d2d6e861e57ab1dc947ffb169b05c778d776b6b509a8721db2a02958eddc7`.
 The checker compiles only the scope's candidate C++ and checks all
-2,529 native instruction offsets, widths and opcode forms, all
-**233 original in-prefix and 28 original shared-return branches**,
-**267 independently original-bound native direct calls/IEEE-754
+3,096 native instruction offsets, widths and opcode forms, all
+**291 original in-prefix and 34 original shared-return branches**,
+**304 independently original-bound native direct calls/IEEE-754
 operands** and both **original local selector and jump-table pointers**.
 It then compares every nonexceptional original machine-code byte.
 There are **zero additional byte differences** after accounting for
@@ -64,8 +67,8 @@ There are **zero additional byte differences** after accounting for
 the still-outbound shared-return `JMP` displacement, and the
 independently original-bound four-byte COFF relocation operands.
 
-**Next live original case62 begins at `0x00609CFC`.** Remaining
-112 authentic live case bodies, full original frame, all destination
+**Next live original case66 begins at `0x0060A4C0`.** Remaining
+108 authentic live case bodies, full original frame, all destination
 table bytes and original shared-return closure are **OPEN**. This is
 strict selected-prefix evidence, **NOT whole-owner Exact**. Never
 mark marker branches or this workbench as accepted production source;
