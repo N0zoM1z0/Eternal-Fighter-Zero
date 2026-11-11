@@ -52,6 +52,12 @@ six-byte allocation width without offset normalization.
 DATA and shared return are OPEN; NOT whole Exact. Markers unaccepted.
 Only scoped Kano checker, no full all-unit cold replay or push.
 
+The next Kano state250 at `0x0064C750` has authored exploratory
+charge/dual-effect C++ but is **not native-reviewed yet**. The local
+probe first differs in register assignment at `0x0064C955` during
+the animation rewind tail; the original 585-byte case is not accepted.
+See `workbench/kano-state/README.md`; preserve and refine this work.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

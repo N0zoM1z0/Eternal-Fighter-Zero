@@ -3569,5 +3569,53 @@ void Character20::Slot06()
         }
         return;
 
+    case 250: // EXPERIMENTAL Kano 0x0064C750: charged dual-effect special; tail codegen OPEN
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a > 2 && field000a < 7) {
+            field3150 += 75;
+            ++field3138;
+            if (field3150 > 10000)
+                field3150 = 10000;
+        }
+        if ((field000a > 2 && field000a < 7 && buttonPulse[3] == 1) ||
+            (field3150 >= 10000 && field000a < 7)) {
+            field000c = 0;
+            field000a = 7;
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
+            effect.type = 0x196;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            effect.type = 0x197;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.group = 2;
+            effect.layer = 0;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 0;
+            if (field000a == 7)
+                field000a = (unsigned short)(field000a - 4);
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

@@ -41,6 +41,27 @@ then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
 
+### Experimental next state250 — NOT selected-prefix acceptance
+
+Original Kano state250 is `[0x0064C750,0x0064C999)` (**585 code
+bytes**). Actual natural C++ has been authored in
+`Character20State.cpp`, including original charge counter cap10000,
+frame3–6 button release/charge cancel, paired native local effects
+`0x196`/`0x197`, four-frame animation rewind, and frame0 reset.
+It is **experimental, not accepted**: `probe_prefix.py --through 250`
+first diverges at **0x0064C955** (offset `0x9F95` from owner base)
+during the tail animation-frame comparison. Native code begins
+`mov edx,[ebp-0x54]; movzx eax,word [edx+0xa]`, while the current
+VC7.1 candidate rotates scratch registers to EAX/ECX at the same
+instruction boundary. Twelve-plus expression variants were tested,
+including `==7` reversal, cast/assignment forms, frame-count
+comparison order, member qualification and increment forms; none
+closed this difference without disrupting earlier matching bytes.
+The strict selected native checker remains **pinned at case249 end
+0x0064C750** and must NOT be advanced to case250 until full original
+instruction/branch/relocation parity is established. No ledger or
+`src/` accepted function is changed on this hypothesis.
+
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
 not3, gravity `0.025`, vertical launch `-2.2`, optional carry velocity
