@@ -2237,6 +2237,20 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
+### Shiori Character08 Slot08: 11-byte original Exact virtual passive hook
+
+Original Shiori vtable at 0x00787DF8, slot8 at 0x00787E18,
+selects a complete **11-byte** `Character08::Slot08` owner
+`[0x004261B0,0x004261BB)`. Authored natural C++ in
+`src/Character08Slot08.cpp` deliberately implements the actual
+empty hook. The selected original-bound VC7.1 `/Od /G6 /MT /Gy /W3`
+strict replay proves **11/11 identical code bytes, zero relocations
+and zero differences**, with native function boundaries and vtable
+independently confirmed. Evidence:
+`docs/evidence/character-08-slot08-exact.json`. It is a small
+complete Exact leaf, independent of the ongoing much larger
+Character04 and Kano state-Boss reconstruction.
+
 ### Character04 Slot06: original-bound 59,143-byte state boss workbench
 
 Original vtable slot `0x00788B94` selects Character04's

@@ -161742,3 +161742,13 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Canonical original Character04 vtable slot at 0x00788B80 independently selects complete 2248-byte render owner 0x00619D50; original REL32 field at 0x0061A60F resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original source and call operands independently reviewed"
+
+[units.character-08-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character08Slot08.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-08-slot08/Character08Slot08.obj"
+symbol = "?Slot08@Character08@@UAEXXZ"
+target_address = 0x004261B0
+size = 11

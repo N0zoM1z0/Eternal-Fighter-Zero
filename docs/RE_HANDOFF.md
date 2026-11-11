@@ -548,6 +548,14 @@ other selected code byte matches. **Next case96 starts at
 stack and return remain unverified. This is partial original-bound
 source evidence, **NOT whole Exact**. No all-unit cold replay/push.
 
+Shiori `Character08::Slot08` original vtable slot0x787E18 is
+now a complete **11-byte native Exact** virtual passive hook,
+`src/Character08Slot08.cpp`. The native function is truly empty,
+not an unresolved inherited method. Selected strict one-unit replay
+gives **11/11 bytes, zero COFF calls/relocations and zero differences**.
+Proof: `docs/evidence/character-08-slot08-exact.json`.
+No all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256
