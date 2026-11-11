@@ -7,33 +7,34 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` is a still-incomplete **62,693-byte**
-native state boss. Focused workbench instructions:
+Nayuki `Character10::Slot06` remains an incomplete **62,693-byte**
+state boss. Focused handoff:
 [`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
-The selected original-bound prefix has reached **46,762 code bytes /
-12,845 native instructions** and the original default plus **112 live
-cases**; checks verify **1,171 internal branches**, **167 outbound
-destinations**, **1,015 original-bound nonlocal COFF references** and
-2 local switch operands. Partial stack 0x2F8 vs full original 0x2B4.
+Selected original-bound prefix **47,483 bytes / 13,042 instructions**,
+original default and **113 reviewed live states**. Checker verifies
+**1,199 internal branches**, **169 canonical outbound targets**,
+**1,024 nonlocal COFF call/float bindings** and two switch operands.
+Compiler candidate frame 0x2F8 vs real 0x2B4; NOT whole Exact.
 
-Original missing **state263** (629 bytes) is now authored directly
-from native instructions and selected-probe matched to next state264.
-The original 263–281 gap is now reduced to **18 missing 264–281**.
-Seven existing 300–306 bodies are still unverified. No synthetic
-marker can be counted as original code or whole-function Exact.
+Previously missing states263 (629 bytes) and264 (721 bytes) now have
+complete natural C++ state paths, each native-matched. State264
+restores tiered early timer gates, frame7 loops, speed 2.2/3.4 and
+horizontal damping 0.08; original-bound float references checked.
+**Next state265 starts at 0x0045D1CB.** Remaining **17 missing IDs
+265–281** plus seven existing unreviewed 300–306 bodies. Full stack,
+selector DATA and common return remain open. Marker bodies are NOT
+original source.
 
-**Next original state264 at 0x0045CEFA**. Reconstruct from native
-rather than the inherited template, preserve all dirty work.
-Use focused checks and no all-unit cold replay:
+Focused checks, no all-unit cold replay:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 264 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 265 --context 12
     scripts/repo-python scripts/ci.py
 
-Preserve original, pinned VC7.1/Wine, Ghidra and accepted source;
-commit substantive work as `gpt-web: xxx`, no push.
+Keep all dirty edits, canonical target, VC7.1/Wine, Ghidra and accepted
+source. Commit meaningful progress as `gpt-web: xxx`; no push.
 
 ## Additional newly accepted leaf owners
 

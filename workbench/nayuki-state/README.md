@@ -16,51 +16,55 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed original code [0x00451850,0x0045CEFA): **46,762 / 62,693
-code bytes**, **12,845 original x86 instructions**, SHA-256:
-03fc1c25136a56b6f4b9a397891cc29e61bd31f5fd97e8aa7abed3c753c6bc46.
+Reviewed original code [0x00451850,0x0045D1CB): **47,483 / 62,693 code
+bytes**, **13,042 original x86 instructions**, SHA-256:
+47d1a6e4b4ee51636bcdba81eb4976b3f0bd71ae0b41934144aef48a414c9046.
 
-The reviewed default and **112 original live states** are 1–9, 13–16,
+Reviewed original default and **113 live states**: 1–9, 13–16,
 47, 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220–221, 230–232, 248–254 and 256–263.
+200–214, 220–221, 230–232, 248–254, and 256–264.
 
-States261/262 are original-bound 587- and 889-byte multi-hit airborne
-moves (full dynamics, frame transitions, resource expense and tiered
-velocity). Critically, **missing original state263** has now been
-reconstructed as a 629-byte natural C++ implementation rather than
-using the probe's neutral placeholder case: frame0 zeroes velocities
-and deceleration and sets `remainingHitCount = field3148 + 6`;
-gravity applies in air, after frame15 horizontal velocity decelerates
-by 0.028 to zero, and frames6/11 trigger context sound20. A landing
-condition between frames6–15 skips to frame16 and zeros landing
-vertical velocity. Three-tick hit-cycle counter `field313c` resets
-collision result on overflow; frame5 gives meter45 and tiered
-launch: (1.8,-1.7), gravity .035, or (0.6,-3.2), gravity .024 when
-`field3138 == 1`. Frame16 loops back to frame5; completion changes
-to state7 after ResetFrame/ResetPose.
+States261/262 are 587/889-byte native airborne multi-hit chains;
+state263 (629 bytes) is the first formerly missing Nayuki-specific
+natural case, restoring tiered airborne recovery, repeated hit count
+and a frame16->5 loop. State264 (721 bytes), also previously absent,
+now has authentic frame logic: frame0 zeroes motion and sets two hits;
+after frame9 it decelerates horizontal speed by 0.08 until zero;
+frames4/6 trigger context sound21. At frame11 the timer may skip
+forward at tick24 for tiers >3; other early frame gates depend on
+`field3148*3` at frame11 or tier thresholds on frames1 and2.
+Frame4 grants meter45 and horizontal speed 2.2, or 3.4 when
+`field3138==1`. Frame7 loops to frame4 while `field313c<2`, or
+at the higher limit 4 when `field3138==1`; completed animations
+return to state7 after ResetFrame then virtual ResetPose.
 
-Focused native verification:
+The original byte-bound IEEE-754 references were independently checked:
+state264 horizontal damping 0.08 at 0x7881D0, base speed 2.2 at
+0x787D20 and alternate 3.4 at 0x7881C8. Merely matching instruction
+forms without canonical float bindings would not have caught
+incorrect constants, so `check_prefix.py` enforces them too.
+
+Focused selected native check:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` reproduces **12,845 original
-instruction offsets, lengths and normalized opcode forms** except
-the temporary stack frame allocation (0x2F8 candidate vs original
-0x2B4). Original-bound audit validates **1,171 internal jumps**,
-**167 outbound destinations**, **1,015 nonlocal COFF call/float
-references**, two local switch-address operands and **112 case entry
-targets**. This is a selected-prefix check, NOT full-owner Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **13,042 original instruction
+offsets, widths and normalized opcode forms** except the temporary
+stack allocation (partial 0x2F8, original 0x2B4). It independently
+validates **1,199 original internal branches**, **169 outbound targets**,
+**1,024 original-bound nonlocal call/float COFF references**, two local
+switch operands and **113 original selector destinations**. This is a
+selected prefix, NOT full-function Exact.
 
-## Next missing state and remaining work
+## Next missing case and remaining work
 
-Next original state264 starts at **0x0045CEFA**; like 265–281 it
-has no natural C++ case body yet. Use original disassembly to add it,
-then focused `probe_prefix.py --through 264 --context 12`, and
-advance the strict selected checker. Do not bypass missing states.
+Original state265 starts at **0x0045D1CB**; cases265–281 do not yet
+exist as natural C++ and must be reconstructed, not bypassed. Focused
+probe: `probe_prefix.py --through 265 --context 12`.
 
-**15,931 code bytes** remain, along with the full 0x2B4 frame,
-original adjacent 552/306-byte switch DATA, relocations and common
-return. Of 137 live IDs, 119 labels now exist in the workbench:
-112 reviewed, 7 unreviewed 300–306 and **18 absent 264–281**.
-The selective probe's neutral marker cases are UNACCEPTED. No
-all-unit cold replay or whole-game/runtime equivalence claim.
+**15,210 original code bytes**, full original 0x2B4 frame, adjacent
+552/306-byte local switch DATA, remaining relocations and common
+return remain open. Workbench now has 120 of 137 live case labels:
+113 reviewed, 7 inherited/unreviewed 300–306 and **17 absent
+265–281**. Generated marker cases are UNACCEPTED placeholders;
+never treat them as complete source or run all-unit cold replay.
