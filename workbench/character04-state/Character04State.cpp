@@ -2,6 +2,13 @@
 // This is an incomplete workbench. Unreviewed live states are NOT source.
 #include "../../src/CharacterViews.h"
 
+// Source-local offsets only, to keep accepted shared CharacterViews.h stable.
+struct Character04StateFields {
+    unsigned char base[0x3138];
+    int field3138, field313c, field3140, field3144;
+    int field3148, field314c, field3150, field3154;
+};
+
 // The accepted shared Character04 header has provisional child layout.
 // Use this private offset view without changing accepted owner recipes.
 struct Character04StatePrivate {
@@ -1156,6 +1163,544 @@ void Character04::Slot06()
                 ResetPose();
             } else {
                 field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 71: // Native Character04 0x0060ACB7: authentic air or grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.072;
+        }
+        if (velocityY <= 0.0) {
+            field000a = 1;
+            field000c = 0;
+        }
+        if (velocityY >= 0.0 && field000a <= 1) {
+            field000a = 2;
+            field000c = 0;
+        }
+        velocityY += gravity;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 72: // Native Character04 0x0060AE62: authentic air or grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 73: // Native Character04 0x0060AFAD: authentic air or grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 74: // Native Character04 0x0060B0F8: authentic air or grounded recoil
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        velocityX = 0.0;
+        velocityY = 0.0;
+        if (positionX - 20.0 <= 0.0 || 639.0 <= positionX + 20.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 75: // Native Character04 0x0060B22B: grounded pushback tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 76: // Native Character04 0x0060B41E: grounded pushback tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1) {
+                    field0008 = 3;
+                }
+                ResetPose();
+            }
+        }
+        return;
+
+    case 77: // Native Character04 0x0060B611: grounded pushback tier
+        if (field0120 != 0) {
+            field0118 -= 0.6;
+        }
+        if (field000a == 0 && field000c == 0) {
+            meter = (short)(meter + 30);
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            velocityX = 2.2;
+        }
+        velocityY = 0.0;
+        positionY = 0.0;
+        gravity = 0.0;
+        horizontalDeceleration = 0.06;
+        velocityX -= horizontalDeceleration;
+        if (velocityX < 0.0) {
+            velocityX = 0.0;
+        }
+        if (positionX - 20.0 <= 0.0 || positionX + 20.0 >= 639.0) {
+            outgoingPushbackVelocityX =
+                (1.0 - (double)((*opponentSlot)->positionY < 0.0) * 0.25) * velocityX;
+        } else {
+            outgoingPushbackVelocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 3;
+                ResetPose();
+            }
+        }
+        return;
+
+
+    case 81: // Native Character04 0x0060b7ec: aerial and landing transition
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 499;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)(int)positionY;
+            effect.flag0018 = (unsigned char)facing;
+            effect.layer = 1;
+            EmitLocalEffect(&effect);
+            meter = (short)(meter + 30);
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        velocityX += 0.02;
+        velocityY += gravity;
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                --field000a;
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a == 1) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 82: // Native Character04 0x0060b9d1: aerial and landing transition
+        if (field0120 != 0) {
+            field0118 -= 0.8;
+        }
+        if (field000a == 0 && field000c == 0 && reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+            pendingContextSoundSlot = 30;
+            velocityY = -0.45;
+            velocityX = -0.1;
+            ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+            meter = (short)(meter + 30);
+        }
+        if (field000a == 4 && field000c == 0) {
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            gravity = 0.032;
+        }
+        if (velocityY > 0.0 && field000a == 4) {
+            field000a = 5;
+            field000c = 0;
+        }
+        if (field000a > 3) {
+            velocityY += gravity;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 4 && reinterpret_cast<Character04StateFields *>(this)->field3138 < 8) {
+                field000a = 0;
+                ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field000a = (unsigned short)(field000a - 2);
+            }
+        }
+        if (positionY + velocityY >= 0.0 && field000a > 4) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 83: // Native Character04 0x0060bbf3: aerial and landing transition
+        if (field000a == 0 && field000c == 0) {
+            if (reinterpret_cast<Character04StateFields *>(this)->field3154 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                reinterpret_cast<Character04StateFields *>(this)->field3154 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 84: // Native Character04 0x0060be38: aerial and landing transition
+        if (field000a == 0 && field000c == 0) {
+            if (reinterpret_cast<Character04StateFields *>(this)->field3154 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                reinterpret_cast<Character04StateFields *>(this)->field3154 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityY = -1.5;
+            velocityX = -0.8;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        if (field000a == 0 && velocityY + positionY > 0.0) {
+            positionY = 0.0;
+            velocityY = 0.0;
+            field000c = 0;
+            field000a = 1;
+            return;
+        }
+        if (field000a == 1) {
+            velocityX += 0.01;
+        }
+        if (field000a == 2 && field000c == 0) {
+            velocityX = -2.0;
+        }
+        if (field000a > 1) {
+            velocityX += 0.06;
+        }
+        if (velocityX > 0.0) {
+            velocityX = 0.0;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 85: // Native Character04 0x0060c07d: aerial and landing transition
+        if (field000a == 0 && field000c == 0) {
+            if (reinterpret_cast<Character04StateFields *>(this)->field3154 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                reinterpret_cast<Character04StateFields *>(this)->field3154 = 1;
+            }
+            if (field0120 != 0) {
+                field0118 -= 30.0;
+            }
+            pendingContextSoundSlot = 33;
+            velocityX = knockbackVelocityX;
+            velocityY = knockbackVelocityY;
+            meter = (short)(meter + 30);
+        }
+        velocityY += 0.04;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+                FaceOpponent();
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 86: // Native Character04 0x0060c250: aerial and landing transition
+        if (field000a == 0 && field000c == 0) {
+            if (reinterpret_cast<Character04StateFields *>(this)->field3154 == 0) {
+                effect.type = 0x1f0;
+                effect.x = (double)(int)positionX;
+                effect.y = (double)(int)positionY;
+                effect.group = 0;
+                effect.layer = 0;
+                effect.owner = 1;
+                effect.flag0018 = (unsigned char)facing;
+                EmitLocalEffect(&effect);
+                reinterpret_cast<Character04StateFields *>(this)->field3154 = 1;
+            }
+            // Unlike state 85, this launch is suppressed after its first use.
+            if (reinterpret_cast<Character04StateFields *>(this)->field3138 == 0) {
+                if (field0120 != 0) {
+                    field0118 -= 30.0;
+                }
+                pendingContextSoundSlot = 33;
+                velocityX = knockbackVelocityX;
+                velocityY = knockbackVelocityY;
+                meter = (short)(meter + 30);
+                ++reinterpret_cast<Character04StateFields *>(this)->field3138;
+            }
+        }
+        // 0x00787DA8 holds 0.06, not the 0.04 used by state 85.
+        velocityY += 0.06;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field000a = 0;
+            }
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            if (knockdownOnLanding != 0) {
+                field0008 = 0x61;
+                ResetPose();
+            } else {
+                field0008 = 0x62;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 87: // Native Character04 0x0060c432: aerial and landing transition
+        if (field000a == 0 && field000c == 0) {
+            effect.type = 0x1ef;
+            effect.x = 60.0;
+            effect.y = 40.0;
+            effect.payload = 1;
+            effect.flag0018 = 1;
+            effect.group = 0;
+            effect.layer = 0;
+            EmitLocalEffect(&effect);
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
                 ResetPose();
             }
         }
