@@ -16,43 +16,43 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original [0x00451850,0x0045F82F): **57,311 / 62,693 original code
-bytes**, **15,714 native x86 instructions**, SHA-256
-`35d168b00dbd58242387bcbfb4543f93dfd7e627e3aeae7e947768fc6c56e29c`.
-Default and **131 original live states** are now reviewed.
-**All 137 original case labels are present in natural source.**
+Original [0x00451850,0x0045FCE4): **58,516 / 62,693 code bytes**,
+**16,034 x86 instructions**, SHA-256
+`70732f7eb87ab9be57e4de741db4f3167fc800d548ec96898f425e406134311f`.
+Original default plus **133 live state bodies** now have selected
+original-bound checks. All 137 case IDs exist in authored C++.
 
-The last three formerly missing case bodies have been reconstructed:
-state279 (348 bytes) is a tiered local strike using effect0x191,
-frame3 meter+45 and the original frame4 `field3148*3` acceleration.
-State280 (152 bytes) calls ResetFrame each tick, requests character
-sound4 at entry, sets `attackCollisionResult=3` on frame step and
-ends by ResetPose then state0. State281 (338 bytes) is a positive
-dash-momentum decay: when dashMomentumFlag=0 zero both velocities,
-otherwise subtract 0.03 from positive horizontal speed or clear flag;
-frame3 gives meter+25, sound20 and one hit, finishing at state0 or
-state3 according to inputY after FaceOpponent/ResetPose.
+State301 (597 bytes) is a full original two-thousand-meter special:
+it zeros motion and gravity on entry, shakes the screen through
+frame2, spends 2000 meter, sets hitstun120 and tint(0xB0,3), and
+emits global type0x45/palette5 at (int X,int Y-40). It enables the
+10-frame input lock from frame2, and at frame4 emits local type0x197
+at X+facing*14, Y-41, using original owner/group/field write order.
+Its frame5 timer shortens by field3148*6.
 
-Original physical code order after state278 remains:
-**300 (0x45F293) -> 279 (0x45F4E9) -> 280 (0x45F645) ->
-281 (0x45F6DD) -> 301 (0x45F82F)**. The selective probe uses the
-canonical switch table addresses to preserve this order.
+State302 (608 bytes) spends **3000 meter**, uses global type0x46,
+palette0x40 and local type0x198; additionally sets context sound0x25
+and calls accepted `Context::SetSceneTimer(15)` at 0x004080C0 after
+frame2. Unlike 301, 302 has no 0xF2 input-lock assignment.
+Original direct-call targets and the complete code/branch forms
+were independently bound to EFZ.exe. The prior complete function
+proof remains valid.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` verifies **15,714 native
-instruction positions/widths/normalized forms** except partial stack
-allocation (0x330 versus original 0x2B4), **1,476 original internal
-branches**, **226 outbound targets**, **1,177 nonlocal original-bound
-COFF call/float references**, two original switch operands and **131
-original case destinations**. This is NOT whole-function Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` checks **16,034 original native
+instruction offsets, widths and normalized forms** except temporary
+frame allocation (candidate 0x330, native 0x2B4), **1,500 internal
+branches**, **228 outbound targets**, **1,198 nonlocal original-bound
+COFF call/float references**, 2 switch operands and **133 original
+case destinations**. This is selected-prefix evidence, NOT full Exact.
 
-## Remaining owner work
+## Next state and remaining closure
 
-The original **state301 at 0x0045F82F** starts the six unreviewed
-large cases 301–306, with known vtable selector entries already in the
-source. **5,382 original code bytes**, native stack, original
-552/306-byte switch DATA, relocation closure and shared return are
-not verified. Next targeted check is original disassembly and
-`probe_prefix.py --through 301 --context 12`. Do not claim
-whole-function Exact or run full all-unit cold replay.
+**State303 at 0x0045FCE4** begins the four unreviewed original bodies
+303–306. The other 133 state cases are original-bound compared.
+**4,177 original code bytes**, full canonical stack, switch DATA,
+remaining relocation bindings and common return are open.
+Continue with original disassembly and focused
+`probe_prefix.py --through 303 --context 12`; no all-unit cold
+replay and no acceptance of unverified inherited source.

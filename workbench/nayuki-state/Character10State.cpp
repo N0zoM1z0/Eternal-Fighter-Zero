@@ -4964,54 +4964,46 @@ void Character10::Slot06()
         }
         return;
 
-    case 301: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 301: // Reviewed Nayuki 0x0045F82F: two-thousand-meter super with alternate effects
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             gravity = 0.0;
         }
-        if (field000a < 5) {
+        if (field000a < 3)
             SetHorizontalShake(50, 3);
-        }
-        if (field000a >= 1) {
-            // This two-byte member is not yet named in the shared view.
-            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
-        }
-        if (field000a == 5 && field000c == 0 && field3138 == 0) {
-            effect.type = 419;
-            effect.x = (double)((int)positionX + (int)facing * 77);
-            effect.y = (double)((int)positionY - 43);
+        if (field000a == 2 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 2000);
+            SetTint(0xb0, 3);
+            effect.type = 0x45;
+            effect.palette = 0x05;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
             effect.group = 2;
             effect.owner = 1;
             effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+        }
+        if (field000a >= 2)
+            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
+        if (field000a == 4 && field000c == 0) {
+            effect.owner = 1;
+            effect.type = 0x197;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.group = 0;
+            effect.layer = 0;
+            effect.field0028 = 1;
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000a == 5 && field000c == timing.frameDuration - field3148 * 6)) {
             field000c = 0;
             ++field000a;
-            if (field000a == 2) {
-                hitstunFrames = 120;
-                meter = (short)(meter - 1000);
-                SetTint(0xb0, 3);
-                effect.type = 0x44;
-                effect.palette = 0x13;
-                effect.x = (double)((int)positionX + (int)facing * 47);
-                effect.y = (double)((int)positionY - 43);
-                effect.group = 2;
-                effect.owner = 1;
-                effect.layer = 1;
-                contextOwner->EmitEffect(&effect);
-            }
-            if (field000a == 5 && hitstunFrames > 0) {
-                field000a = (unsigned short)(field000a - 3);
-            }
-            if (field000a == 8 && field3138 < 3) {
-                field000a = (unsigned short)(field000a - 3);
-                ++field3138;
-            }
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
@@ -5020,54 +5012,47 @@ void Character10::Slot06()
         }
         return;
 
-    case 302: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 302: // Reviewed Nayuki 0x0045FA84: three-thousand-meter scene-timer super
         if (field000a == 0 && field000c == 0) {
-            dashMomentumFlag = 0;
             velocityX = 0.0;
             velocityY = 0.0;
             gravity = 0.0;
         }
-        if (field000a < 5) {
+        if (field000a < 3)
             SetHorizontalShake(50, 3);
-        }
-        if (field000a >= 1) {
-            // This two-byte member is not yet named in the shared view.
-            reinterpret_cast<short&>(unknown_00df[0x13]) = 10;
-        }
-        if (field000a == 5 && field000c == 0 && field3138 == 0) {
-            effect.type = 420;
-            effect.x = (double)((int)positionX + (int)facing * 77);
-            effect.y = (double)((int)positionY - 43);
+        if (field000a == 2 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 3000);
+            SetTint(0xb0, 3);
+            effect.type = 0x46;
+            effect.palette = 0x40;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 40);
             effect.group = 2;
             effect.owner = 1;
             effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            pendingContextSoundSlot = 0x25;
+        }
+        if (field000a > 2)
+            contextOwner->SetSceneTimer(15);
+        if (field000a == 4 && field000c == 0) {
+            effect.owner = 1;
+            effect.type = 0x198;
+            effect.x = (double)((int)positionX + (int)facing * 14);
+            effect.y = (double)((int)positionY - 41);
+            effect.group = 0;
+            effect.layer = 0;
+            effect.field0028 = 1;
             effect.flag0018 = (unsigned char)facing;
             EmitLocalEffect(&effect);
+            pendingCharacterSoundSlot = 0;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000a == 5 && field000c == timing.frameDuration - field3148 * 6)) {
             field000c = 0;
             ++field000a;
-            if (field000a == 2) {
-                hitstunFrames = 120;
-                meter = (short)(meter - 1000);
-                SetTint(0xb0, 3);
-                effect.type = 0x44;
-                effect.palette = 0x13;
-                effect.x = (double)((int)positionX + (int)facing * 47);
-                effect.y = (double)((int)positionY - 43);
-                effect.group = 2;
-                effect.owner = 1;
-                effect.layer = 1;
-                contextOwner->EmitEffect(&effect);
-            }
-            if (field000a == 5 && hitstunFrames > 0) {
-                field000a = (unsigned short)(field000a - 3);
-            }
-            if (field000a == 8 && field3138 < 3) {
-                field000a = (unsigned short)(field000a - 3);
-                ++field3138;
-            }
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;

@@ -7,30 +7,30 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki `Character10::Slot06` remains unfinished (62,693 original bytes).
-Selected original-bound prefix now **57,311 bytes / 15,714 original
-instructions**, default plus **131 verified states**. Strict check:
-**1,476 internal branches**, **226 outbound**, **1,177 canonical
-external COFF call/float references** and two local switch operands.
-Temporary compiler frame 0x330 vs original 0x2B4: NOT full Exact.
+Nayuki `Character10::Slot06` remains an unfinished 62,693-byte boss;
+see [focused workbench](../workbench/nayuki-state/README.md).
+Selected native-bound prefix is now **58,516 original bytes /
+16,034 x86 instructions**, default plus **133 reviewed states**.
+Checker: **1,500 internal jumps**, **228 outbound**, **1,198 nonlocal
+COFF call/float references** including canonical `Context::SetSceneTimer`
+at 0x4080C0, two local switch operands. Provisional stack 0x330 vs
+original 0x2B4; NOT whole Exact.
 
-States279 (348 bytes), 280 (152 bytes), 281 (338 bytes) have been
-reconstructed and strict native-compared, completing **all 137
-original live case labels** in the natural source. The remaining
-unreviewed code is 301–306 (about 5,382 original bytes), plus full
-stack, original local tables, relocation and shared-return closure.
-Physical order is 278, 300, 279, 280, 281, 301; probe now preserves
-this original address order instead of numeric case order.
+States301/302 (597/608 bytes) are reconstructed: 301 consumes 2000
+meter with tint/effects 0x45/0x197, 302 consumes 3000 meter with
+0x46/0x198 and a scene timer; all bound original calls match.
+**Next original state303 at 0x0045FCE4**. Remaining four inherited
+unverified cases303–306, native stack, local DATA and final return.
 
-**Next state301 at 0x0045F82F.** Only focused tests:
+Selected checks only, no full cold replay:
 
     git status --short --branch
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 301 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 303 --context 12
     scripts/repo-python scripts/ci.py
 
-Never run full all-unit cold replay. Preserve dirty work, original,
-VC7.1/Wine/Ghidra and accepted source. Commit `gpt-web: xxx`; no push.
+Preserve dirty changes, canonical target, VC7.1/Wine/Ghidra and
+accepted source. Commit as `gpt-web: xxx`, no push.
 
 ## Additional newly accepted leaf owners
 
