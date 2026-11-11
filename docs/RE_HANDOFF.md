@@ -278,6 +278,17 @@ operands**, and every native register-abstracted instruction form.
 Structural island only, **NOT concrete-byte or full owner Exact**;
 the strict Boss prefix remains 40,336 bytes until case250 closure.
 
+Kano state305 is now authored as a **1,109-byte / 292-instruction
+native-bound structural island**. It implements original
+3,000-meter super freeze, a 0x1C2 local aura and 600-tick timer,
+Context::SetSceneTimer(15) and separate frame12/17 repeat gates.
+Dedicated `check_case305_shape.py` verifies **23 original internal
+and 2 native shared-return jumps**, **14 independently original-bound
+COFF call/float operands**, all instruction widths/offsets/forms and
+canonical SHA. This is **NOT Exact**: state250's concrete register
+allocation divergence remains and the continuous Boss prefix is
+40,336 bytes. No full cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

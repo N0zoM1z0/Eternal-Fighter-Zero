@@ -68,6 +68,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case301_shape.py
     scripts/repo-python workbench/kano-state/check_case303_shape.py
     scripts/repo-python workbench/kano-state/check_case304_shape.py
+    scripts/repo-python workbench/kano-state/check_case305_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
@@ -114,6 +115,37 @@ SetHorizontalShake, SetTint, ResetFrame, Context::EmitEffect and
 `__ftol2`. It is **native structural evidence only, NOT complete
 Exact**: original case250 register-allocation phase remains open;
 strict contiguous Boss prefix is still **40,336 bytes**.
+
+### Experimental case305 — 1,109-byte timed-aura super with scene control
+
+Native Kano state305 `[0x00651533,0x00651988)` is **1,109 original
+code bytes / 292 x86 instructions**, with real authored natural C++.
+It restores original frame0/7 reset and continuous
+SetHorizontalShake(50,3), frame3 local effects0x196/0x197,
+charge+100 in frames3–6 and the full-charge10000 gate. Frame9
+freezes hitstun120, spends3,000 meter, tints the fighter, emits
+context0x46/palette0x40 at int Y−43 and requests sound37. Frame13
+emits local effect0x1C2 at X+facing×10,Y−55, starts a 600-tick
+local aura (`field315c`, `field3160`, `field3164`), then frame>13
+calls original **Context::SetSceneTimer(15)** at 0x004080C0.
+It preserves the two distinct later rewinds: frame12→10 while
+field3140<8 and frame17→13 while field313c<5.
+
+Run only the original-bound selected diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case305_shape.py
+
+Canonical SHA-256
+`b51e1c620ec17ce7dedc0076e85b25fd9b94d40ab0f3ae12e39b19fa588b65d9`
+is pinned. The checker independently validates **292 original
+instruction addresses/widths/register-abstracted forms**, **23
+internal original branches**, **2 native shared-return paths** and
+**14 canonical COFF call/IEEE-754 bindings** (including
+SetHorizontalShake, SetTint, Context::EmitEffect, `__ftol2` and
+Context::SetSceneTimer). This is **a register-abstracted structural
+island, NOT full owner Exact**. Concrete VC7.1 register parity remains
+blocked at original case250; strict contiguous prefix is still
+40,336 code bytes.
 
 ### Experimental case304 — 1,199-byte four-wave super with vertical shake
 

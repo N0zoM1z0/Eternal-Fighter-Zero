@@ -2134,6 +2134,19 @@ widths/forms**, **18 internal and 2 shared-return branches**,
 It remains an independent structural island, NOT whole-function
 Exact while state250 has unresolved concrete VC7.1 registers.
 
+#### Kano state305: 1,109-byte original-bound timed-aura super island
+
+Authored natural C++ reconstructs Kano state305 native
+`[0x00651533,0x00651988)` with **1,109 bytes / 292 x86 instruction
+positions**. It restores 3,000-meter freeze/tint/context effect,
+frame13 0x1C2 aura launch with 600-tick field3160 timer,
+`Context::SetSceneTimer(15)` and two independent frame12/17 loop
+bounds. Scoped `check_case305_shape.py` original-binds **292 x86
+widths/offsets/register-abstracted forms**, **23 internal + 2
+shared-return branches**, **14 COFF call/float operands** and
+canonical native SHA. This is structural evidence, **NOT complete
+Exact** while case250 concrete registers remain unclosed.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
