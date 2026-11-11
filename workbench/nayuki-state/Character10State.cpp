@@ -3328,109 +3328,125 @@ void Character10::Slot06()
         }
         return;
 
-    case 230: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        StartTrail(3);
-        dashMomentumFlag = 0;
-        if (velocityX > 0.0) {
-            velocityX -= 0.03;
-        } else {
-            velocityX = 0.0;
-            dashMomentumFlag = 0;
+    case 230: // Reviewed Nayuki 0x0045AC54: aerial action cancel, frame2 hit
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
         }
-        if (velocityX < 0.0) {
-            velocityX = 0.0;
-        }
-        if (field000a == 0 && field000c == 0) {
-            velocityY = 0.0;
-        }
-        if (field000a == 1 && field000c == 0) {
+        if (field000a == 2 && field000c == 0) {
             meter = (short)(meter + 5);
             pendingContextSoundSlot = 21;
             remainingHitCount = 1;
         }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            attackCollisionResult = 0;
+            if (field000a < 2) {
+                attackCollisionResult = 0;
+            }
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
+                field0008 = 9;
                 ResetPose();
             }
         }
         return;
 
-    case 231: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        StartTrail(3);
-        dashMomentumFlag = 0;
-        if (velocityX > 0.0) {
-            velocityX -= 0.03;
-        } else {
-            velocityX = 0.0;
-            dashMomentumFlag = 0;
+    case 231: // Reviewed Nayuki 0x0045AE1B: aerial cancel and tier-scaled hit
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
         }
-        if (velocityX < 0.0) {
-            velocityX = 0.0;
+        if (field000a == 1 && field000c == 0) {
+            meter = (short)(meter + 13);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = (short)(field3148 / 2 + 2);
         }
-        if (field000a == 0 && field000c == 0) {
-            velocityY = 0.0;
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 6) {
+                attackCollisionResult = 0;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 9;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 232: // Reviewed Nayuki 0x0045AFF0: airborne chained attack with accelerated frame gate
+        velocityY += gravity;
+        if (inputY == -1 && field000a > 0 &&
+            attackCollisionResult >= 2 && airActionCount == 0) {
+            ++airActionCount;
+            field0008 = 14;
+            if (inputX == facing) {
+                field0008 = 15;
+            }
+            if ((int)inputX == -(int)facing) {
+                field0008 = 16;
+            }
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
         }
         if (field000a == 2 && field000c == 0) {
-            meter = (short)(meter + 10);
+            meter = (short)(meter + 30);
             pendingContextSoundSlot = 20;
-            remainingHitCount = 1;
+            remainingHitCount = 3;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             field000a < field3148 - 3 && field000a < 4)) {
             field000c = 0;
             ++field000a;
-            attackCollisionResult = 0;
+            if (field000a < 2)
+                attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                ResetPose();
-            }
-        }
-        return;
-
-    case 232: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        dashMomentumFlag = 0;
-        StartTrail(3);
-        if (field000a == 0 && field000c == 0) {
-            horizontalDeceleration = 0.0;
-            remainingHitCount = 1;
-        }
-        if (field000a < 3) {
-            velocityX -= 0.035;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
-        }
-        if (field000a == 3 && field000c == 0) {
-            meter = (short)(meter + 25);
-            pendingContextSoundSlot = 20;
-        }
-        if (field000a == 3) {
-            velocityY += gravity;
-            if (positionY + velocityY > 0.0) {
-                positionY = 0.0;
-                ResetFrame();
-                field000c = 0;
-                field000a = 4;
-                return;
-            }
-        }
-        ++field000c;
-        if (field000c >= timing.frameDuration) {
-            field000c = 0;
-            ++field000a;
-            if (field000a == 3) {
-                velocityX = 1.8;
-                velocityY = -1.5;
-                gravity = 0.045;
-            }
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                FaceOpponent();
+                field0008 = 9;
                 ResetPose();
             }
         }

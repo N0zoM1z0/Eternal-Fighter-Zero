@@ -16,44 +16,44 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Reviewed code [0x00451850,0x0045AC54): **37,892 / 62,693 original bytes**,
-**10,405 original x86 instructions**, SHA-256:
-eec18795aa057bd38ccb9fdf18e6ff18ed7f9fe757f47e6bed32fe161913f2fb.
+Reviewed code [0x00451850,0x0045B1EB): **39,323 / 62,693 original
+bytes**, **10,794 original x86 instructions**, SHA-256:
+cea46d99882ded7e580281a97cde1c51e76ffe390829f55dc43d9878b8007cb6.
 
-The reviewed default and **94 live cases** are 1–9, 13–16, 47,
+The reviewed default and **97 live cases** are 1–9, 13–16, 47,
 50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
-200–214, 220 and 221. State213 restores the 0.04-gravity airborne
-recovery, meter award and landing transition to state97; state214
-handles its >0 landing frame10 skip. State220 restores a genuine
-Nayuki throw: ground-only hit activation, 40..600 X clamp, opponent
-state107 and facing-relative opponent placement, impact effect at
-facing*37 and -22. State221 awards ApplyDamage(1000, 750.0), places
-the opponent into state63 with knockback (1.0,-2.5), sets opponent Y
--50, and drags the opponent by facing each of frames 1–3.
+200–214, 220–221 and 230–232. States213–214 restore airborne
+landing and wakeup; state220 repairs Nayuki's grounded throw and
+state221 the 750-damage-scaled follow-through. States230–232 were
+recovered from original aerial action logic rather than inherited
+Makoto StartTrail/dash branches. 230 and 231 react to aerial
+cancellation without a field015c restriction, and 231 sets frame1
+remaining hits to field3148/2+2. State232 triggers 30-meter/3-hit
+activation and tier-dependent three-tick frame advance.
 
-Native selected-prefix verification (NOT full owner Exact):
+Reproduce **focused** native checks only:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all **10,405 original
-instruction offsets, widths and normalized opcode forms** except for
-the provisional frame allocation (0x298 candidate vs 0x2B4 original).
-Original-bound verification includes **963 internal branch targets**,
-**134 outbound targets**, **859 call/IEEE-754 COFF references**,
-2 local switch operands, and **94 original selector destinations**.
-The original `Secondary::ApplyDamage` call at 0x4105A0 has been bound.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces **10,794 native instruction
+offsets, widths and normalized forms**, except the temporary partial
+frame allocation (0x298 vs original 0x2B4). Original-bound checks:
+**1,002 internal branches**, **143 outbound destinations**, **865
+nonlocal COFF call/IEEE-754 references**, two local switch operands
+and **97 original case entry destinations**.
 
-## Next action and remaining scope
+## Next code target and open scope
 
-Original state230 begins at **0x0045AC54**. Examine its current inherited
-body against original bytes; begin with:
+Original state248 starts at **0x0045B1EB** and is still unreviewed.
+The existing copy from a sibling character is NOT verified. Probe:
 
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 230 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 248 --context 12
 
-**24,801 remaining code bytes**, full 0x2B4 stack frame, complete
-local switch tables, remaining relocations and shared return are open.
-Source has 118 of 137 live case labels: **94 reviewed**, 24 existing
-unreviewed and **19 absent IDs 263–281**. `probe_prefix.py` includes
-deliberately UNACCEPTED neutral marker bodies for other states and
-late 300–306 code to preserve ESI/prologue. No all-unit cold replay,
-no whole-game runtime claim and no full Exact acceptance.
+This is a selected *prefix*, **NOT full Exact**. **23,370 original code
+bytes** remain, along with the complete 0x2B4 stack frame, local
+switch tables, relocations and shared return. Of 137 original live
+IDs, source has 118 cases: **97 reviewed**, **21 unreviewed** and
+**19 missing IDs 263–281**. The selective probe includes deliberately
+UNACCEPTED neutral marker branches for unrelated later cases and
+original-like 300–306 bodies to preserve register/prologue shape.
+Never use full cold replay merely for this edited workbench.

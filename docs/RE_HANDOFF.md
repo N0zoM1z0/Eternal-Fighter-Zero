@@ -7,34 +7,34 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 remains the major unfinished 62,693-byte
-state boss, **NOT whole Exact**. See
+Nayuki Character10 Slot06 remains an unfinished **62,693-byte**
+native state boss, not whole-function Exact. Its focused source/handoff:
 [`workbench/nayuki-state/README.md`](../workbench/nayuki-state/README.md).
 
-Selected native original-bound prefix is **37,892 bytes / 10,405
-instructions** through original state221, default plus **94 live cases**.
-The check covers **963 original internal branches**, **134 outbound
-targets**, **859 original-bound nonlocal COFF relocations** and two
-local switch operands. Provisional stack 0x298 vs original 0x2B4.
-States 213–214 restore original aerial landing, while 220–221 restore
-the real throw/position clamp and opponent damage/trajectory.
+Reviewed selected original-bound prefix is **39,323 code bytes /
+10,794 instructions**, default plus **97 live cases**. Its checker
+verifies **1,002 original internal branches**, **143 outbound targets**,
+**865 nonlocal original-bound COFF references** and 2 local switch
+operands. Partial frame 0x298 vs canonical 0x2B4. Newly recovered
+states 213,214,220,221,230,231,232 extend the complete compared prefix.
 
-**Next original state230 at 0x0045AC54.** Existing sibling-derived
-body is unreviewed. Source has 118/137 live cases: 94 reviewed,
-24 unreviewed and 19 entirely missing (263–281). Never count
-synthetic probe marker cases as original code.
+**Next state248 begins 0x0045B1EB.** The workbench has 118 of 137
+original live case labels: 97 reviewed, 21 existing unreviewed,
+19 missing (IDs 263–281). Full function, switch data, final
+relocations and common return remain open. Probe markers do not
+constitute reconstructed source.
 
-Focused commands (do not run all-unit cold replay):
+Only selected checks, **never all-unit cold replay**:
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 230 --context 12
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 248 --context 12
     scripts/repo-python scripts/ci.py
 
-Inspect and reconcile dirty changes; no other writer. Preserve target,
-toolchain, Wine, Ghidra, accepted src and unfinished workbench. Commit
-coherent progress as `gpt-web: xxx`; do not push without permission.
+Reconcile all dirty changes; no other writer. Preserve private
+original, pinned VC7.1/Wine, Ghidra, accepted source and workbench.
+Commit substantial checkpoints as `gpt-web: xxx`, without push.
 
 ## Tools and checks
 
