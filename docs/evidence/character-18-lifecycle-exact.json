@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "authority": "Seven complete native MizukaB Character18 owners at reviewed EFZ.exe vtable 0x007884F0, including complete 179-byte Slot08 and all original-bound COFF relocations",
+  "method": "Selectively compile normal natural C++ from src/Character18Lifecycle.cpp with pinned VC7.1 RTM /Od /G6 /MT /Gy /W3; verify seven complete original vtable target boundaries, five base-method call displacements, Slot08 original floating constants (one at 0x7875C0 and two at 0x7872F8), then replay all eight COFF relocation operands and compare every byte of all seven complete functions. No partial-prefix acceptance, masks, synthetic code, all-unit cold replay or runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 276,
+      "matched_bytes": 276,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 268,
+          "target": 4255216,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?InitializeState@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788520 selects complete 276-byte owner 0x004D29E0; original REL32 field 0x004D2AEC resolves ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "5cb06b06ade2c7ce6507d9d880f2f867e23b91aac68d430c468b2ff4c0243f82",
+      "target_extent_sha256": "5cb06b06ade2c7ce6507d9d880f2f867e23b91aac68d430c468b2ff4c0243f82",
+      "unit": "character-18-initialize-state",
+      "symbol": "?InitializeState@Character18@@UAEXXZ",
+      "target_address": "0x004D29E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "fdaebde5829702c477bc8579bbec80510f98dcb539559d869b51dd8b530c1159",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "47380d28c028e2d941cd56d35da672c594abe26a3fd7c0267c494e72c5395bc7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 58,
+      "matched_bytes": 58,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 50,
+          "target": 4256016,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetPose@Secondary@@UAEXXZ",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x007884F0 selects complete 58-byte owner 0x004D2B00; original REL32 field 0x004D2B32 resolves ?ResetPose@Secondary@@UAEXXZ at 0x0040F110, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "33bc6fda3677aaa2538b4a8a94d3cacb744f250eedc2a1bfaa915328f5e09b75",
+      "target_extent_sha256": "33bc6fda3677aaa2538b4a8a94d3cacb744f250eedc2a1bfaa915328f5e09b75",
+      "unit": "character-18-reset-pose",
+      "symbol": "?ResetPose@Character18@@UAEXXZ",
+      "target_address": "0x004D2B00",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "c0a0a9ceae473c5c541a2e4de3dc1efc771331e54e5fcabb1883d7286e3d193e",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "0348c59f83910ca942e2ab1daeded502f4046cd078394134c05cfedb1c3cc6c7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 80,
+      "matched_bytes": 80,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 70,
+          "target": 4271712,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?RemoveLocalEffect@Secondary@@UAEXF@Z",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788518 selects complete 80-byte owner 0x004D2B40; original REL32 field 0x004D2B86 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e8c8e75d944a6ec0c4c466ac0a6e7fae620b8dd6dd659dee64a0a8832a998db4",
+      "target_extent_sha256": "e8c8e75d944a6ec0c4c466ac0a6e7fae620b8dd6dd659dee64a0a8832a998db4",
+      "unit": "character-18-remove-local-effect",
+      "symbol": "?RemoveLocalEffect@Character18@@UAEXF@Z",
+      "target_address": "0x004D2B40",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "aeb25b3ec6a4a161e15859d6570d25a1d7403df09335dc6f385334d5233483a7",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "131398432d4ff893023a3c34b5dbda2f928fcfa3a558b7cfcb89d1c9f5e1f175",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 19,
+      "matched_bytes": 19,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 11,
+          "target": 4253504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?UpdateLocomotionState@Secondary@@QAEXXZ",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x007884FC selects complete 19-byte owner 0x004D2B90; original REL32 field 0x004D2B9B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "1aaf002de7f268b3aeb9cd1d945deb0c13f7d34ccadfea63d1e832d16c95ff6c",
+      "target_extent_sha256": "1aaf002de7f268b3aeb9cd1d945deb0c13f7d34ccadfea63d1e832d16c95ff6c",
+      "unit": "character-18-slot03",
+      "symbol": "?Slot03@Character18@@UAEXXZ",
+      "target_address": "0x004D2B90",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "bb64323b70fabe85e31dbb252b1ff3bcd72d5e7d662d85566bb4bd9a00367e9c",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "d744d9cfc73d858418e4e982592f9c41b1cbae50d28e07d5d76f85f6c2b3a7c8",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 11,
+      "matched_bytes": 11,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [],
+      "relocated_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "target_extent_sha256": "012a7b6ce927f083ba98a546e3d3f750b2a1d82f350ca27efbd30a9c3c7718a5",
+      "unit": "character-18-slot01",
+      "symbol": "?Slot01@Character18@@UAEXXZ",
+      "target_address": "0x004D59D0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "051c770de0caf69fcd7b90d60c3ffd278a3f817f3eb8d85d2f0e37f94fa2e0b9",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "8206b64f1fbf554a69847bf42b0ba1975b9cd7d5e7c48c04bbd429301f6b65e7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 179,
+      "matched_bytes": 179,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 67,
+          "target": 7894464,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@3ff0000000000000",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A23 resolves __real@3ff0000000000000 at 0x007875C0, including exact float payload if applicable",
+          "addend": 0
+        },
+        {
+          "offset": 104,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A48 resolves __real@0000000000000000 at 0x007872F8, including exact float payload if applicable",
+          "addend": 0
+        },
+        {
+          "offset": 146,
+          "target": 7893752,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@0000000000000000",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A72 resolves __real@0000000000000000 at 0x007872F8, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "c636f6b4ebb79a897e75f58c9841bca117a72154eb2c41a9f15c03beef723b41",
+      "target_extent_sha256": "c636f6b4ebb79a897e75f58c9841bca117a72154eb2c41a9f15c03beef723b41",
+      "unit": "character-18-slot08",
+      "symbol": "?Slot08@Character18@@UAEXXZ",
+      "target_address": "0x004D59E0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "df76be1f5539a8e05bf79ce9d2840d5c471725d9fd5933b14e3bd8fa320a7a04",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "ac2d0a53c502741ee8449ca7b370581da3de1cc53c0dbaafbaa36986b20e3705",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    },
+    {
+      "result": "exact",
+      "size": 47,
+      "matched_bytes": 47,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 37,
+          "target": 4270864,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788514 selects complete 47-byte owner 0x004D5AA0; original REL32 field 0x004D5AC5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10, including exact float payload if applicable",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "99639cd4e08807c2b8e8e3e94666103eb6c0e931c57f63ba42e9cd37d0cef4a9",
+      "target_extent_sha256": "99639cd4e08807c2b8e8e3e94666103eb6c0e931c57f63ba42e9cd37d0cef4a9",
+      "unit": "character-18-emit-local-effect",
+      "symbol": "?EmitLocalEffect@Character18@@UAEXPAUSecondaryEffectSpawn@@@Z",
+      "target_address": "0x004D5AA0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "42c7d51234cb6f014d992e402470990a6fb6dfa39d3bf7119a669d04f369fb3b",
+      "object_sha256": "a9f0a44d846c02734b33ab3ca8e6243df121fadfc01684e6a8175e5d010c6a5a",
+      "source_sha256": "0a2da455fbf1d41c6fec8ddbb1cd8bc5f7375187de989698e587cac3a3b51dcf",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "27074e5277872896278a0d8a8283ef0965e181cedca1e0c4979990cfb05c172f",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "077b438b8c72c590632e429681314274c843ea52785670f59b24db6d569aafa7",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

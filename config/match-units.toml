@@ -140009,3 +140009,129 @@ type = "REL32"
 symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
 target = 0x00412B10
 evidence = "Canonical EFZ.exe: Character13 vtable entry 0x00788C1C selects complete 0x0063B630 owner; original call field at 0x0063B655 resolves reviewed ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z 0x00412B10"
+
+[units.character-18-initialize-state]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-initialize-state/Character18Lifecycle.obj"
+symbol = "?InitializeState@Character18@@UAEXXZ"
+target_address = 0x004D29E0
+size = 276
+
+[[units.character-18-initialize-state.relocations]]
+offset = 268
+type = "REL32"
+symbol = "?InitializeState@Secondary@@UAEXXZ"
+target = 0x0040EDF0
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788520 selects complete 276-byte owner 0x004D29E0; original REL32 field 0x004D2AEC resolves ?InitializeState@Secondary@@UAEXXZ at 0x0040EDF0, including exact float payload if applicable"
+
+[units.character-18-reset-pose]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-reset-pose/Character18Lifecycle.obj"
+symbol = "?ResetPose@Character18@@UAEXXZ"
+target_address = 0x004D2B00
+size = 58
+
+[[units.character-18-reset-pose.relocations]]
+offset = 50
+type = "REL32"
+symbol = "?ResetPose@Secondary@@UAEXXZ"
+target = 0x0040F110
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x007884F0 selects complete 58-byte owner 0x004D2B00; original REL32 field 0x004D2B32 resolves ?ResetPose@Secondary@@UAEXXZ at 0x0040F110, including exact float payload if applicable"
+
+[units.character-18-remove-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-remove-local-effect/Character18Lifecycle.obj"
+symbol = "?RemoveLocalEffect@Character18@@UAEXF@Z"
+target_address = 0x004D2B40
+size = 80
+
+[[units.character-18-remove-local-effect.relocations]]
+offset = 70
+type = "REL32"
+symbol = "?RemoveLocalEffect@Secondary@@UAEXF@Z"
+target = 0x00412E60
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788518 selects complete 80-byte owner 0x004D2B40; original REL32 field 0x004D2B86 resolves ?RemoveLocalEffect@Secondary@@UAEXF@Z at 0x00412E60, including exact float payload if applicable"
+
+[units.character-18-slot03]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-slot03/Character18Lifecycle.obj"
+symbol = "?Slot03@Character18@@UAEXXZ"
+target_address = 0x004D2B90
+size = 19
+
+[[units.character-18-slot03.relocations]]
+offset = 11
+type = "REL32"
+symbol = "?UpdateLocomotionState@Secondary@@QAEXXZ"
+target = 0x0040E740
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x007884FC selects complete 19-byte owner 0x004D2B90; original REL32 field 0x004D2B9B resolves ?UpdateLocomotionState@Secondary@@QAEXXZ at 0x0040E740, including exact float payload if applicable"
+
+[units.character-18-slot01]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-slot01/Character18Lifecycle.obj"
+symbol = "?Slot01@Character18@@UAEXXZ"
+target_address = 0x004D59D0
+size = 11
+
+[units.character-18-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-slot08/Character18Lifecycle.obj"
+symbol = "?Slot08@Character18@@UAEXXZ"
+target_address = 0x004D59E0
+size = 179
+
+[[units.character-18-slot08.relocations]]
+offset = 67
+type = "DIR32"
+symbol = "__real@3ff0000000000000"
+target = 0x007875C0
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A23 resolves __real@3ff0000000000000 at 0x007875C0, including exact float payload if applicable"
+
+[[units.character-18-slot08.relocations]]
+offset = 104
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A48 resolves __real@0000000000000000 at 0x007872F8, including exact float payload if applicable"
+
+[[units.character-18-slot08.relocations]]
+offset = 146
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788510 selects complete 179-byte owner 0x004D59E0; original DIR32 field 0x004D5A72 resolves __real@0000000000000000 at 0x007872F8, including exact float payload if applicable"
+
+[units.character-18-emit-local-effect]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character18Lifecycle.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-18-emit-local-effect/Character18Lifecycle.obj"
+symbol = "?EmitLocalEffect@Character18@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target_address = 0x004D5AA0
+size = 47
+
+[[units.character-18-emit-local-effect.relocations]]
+offset = 37
+type = "REL32"
+symbol = "?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00412B10
+evidence = "Canonical EFZ.exe: MizukaB Character18 vtable 0x00788514 selects complete 47-byte owner 0x004D5AA0; original REL32 field 0x004D5AC5 resolves ?EmitLocalEffect@Secondary@@UAEXPAUSecondaryEffectSpawn@@@Z at 0x00412B10, including exact float payload if applicable"

@@ -48,6 +48,14 @@ are confirmed by selected replay. Evidence:
 or accepted constructor was edited. Targeted unit IDs start with
 `character-13-`; no full cold replay was run.
 
+MizukaB `Character18` now also has **seven complete native Exact
+functions / 670 bytes**, including the nontrivial 179-byte Slot08
+resource timer in `src/Character18Lifecycle.cpp`. Eight original-
+bound COFF calls/float references and seven vtable targets were
+independently checked. Public selected proof:
+`docs/evidence/character-18-lifecycle-exact.json`. The strict replay
+ran only these seven new functions, not a whole repository cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

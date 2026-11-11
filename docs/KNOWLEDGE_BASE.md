@@ -1594,6 +1594,52 @@ Proof: `docs/evidence/mizukab-constructor-exact.json` and
 Unrelated `CharacterViews.h` dependents still have historical proof
 freshness issues, not re-certified by this targeted check.
 
+### MizukaB Character18 lifecycle and Slot08: seven exact native functions
+
+Original `Character18` vtable at `0x007884F0` identifies seven newly
+recovered complete ordinary C++ owners in `src/Character18Lifecycle.cpp`.
+The selected strict original-bound VC7.1 `/Od /G6 /MT /Gy /W3` replay
+reproduces **670/670 canonical code bytes**, **eight independently
+bound COFF relocations**, and **zero differences**, including all
+three IEEE-754 literal operands in the nontrivial Slot08.
+
+| MizukaB owner | Original address | Exact bytes |
+| --- | --- | ---: |
+| InitializeState | `0x004D29E0` | 276 |
+| ResetPose | `0x004D2B00` | 58 |
+| RemoveLocalEffect | `0x004D2B40` | 80 |
+| Slot03 | `0x004D2B90` | 19 |
+| Slot01 | `0x004D59D0` | 11 |
+| Slot08 | `0x004D59E0` | 179 |
+| EmitLocalEffect | `0x004D5AA0` | 47 |
+
+InitializeState writes four character integers, two collision offset
+pairs and six trailing state fields, clears three 64-int arrays, then
+calls `Secondary::InitializeState` at `0x40EDF0`. ResetPose clears
+three child integers before calling base `ResetPose` at `0x40F110`.
+RemoveLocalEffect clears the signed-short index in all three child
+arrays before base `RemoveLocalEffect` at `0x412E60`. Slot03 delegates
+to `Secondary::UpdateLocomotionState` (`0x40E740`), Slot01 is genuinely
+empty, and EmitLocalEffect calls virtual RemoveLocalEffect on
+`effectWrite` before the base emitter at `0x412B10`.
+
+Slot08 is a **real 179-byte state/resource timer**, not an empty leaf.
+When `field3458 > 0`, it increments `field345c`; on a positive count
+it subtracts 1.0 from `field0118` and resets `field345c`.
+It then clears `field3458` when `field0118 <= 0.0`, or a two-test
+state condition `field0008 < 49 && field0008 < 150`, or
+`positionY == 0.0`. Preserving one shared assignment, rather than
+three separate C++ assignments, exactly recovered the original 179
+code bytes and its x87 compare/branch structure. The three original
+literal bindings are `1.0` at `0x7875C0` and `0.0` twice at
+`0x7872F8`. All original owner addresses were independently read
+from vtable entries before Exact registration.
+
+Proof: `docs/evidence/character-18-lifecycle-exact.json`. Selected
+complete-function Exact still does not assert whole-game linkage or
+runtime equivalence; no unrelated sources or shared headers changed.
+
+
 ### Kanna constructor: complete exact native code generation (2026-11-09)
 
 The authored selection-ID 19 constructor `Character19::Character19` at
