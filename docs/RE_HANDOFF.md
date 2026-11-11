@@ -33,23 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano's original 68,853-code-byte state machine is being actively
-reconstructed in `workbench/kano-state/Character20State.cpp`.
-Its selected original-bound opening now matches **33,993 bytes /
-9,312 native x86 instructions**, default plus **86 real reviewed
-cases** through210. Strict checker verifies **870 original internal
-branches**, **113 outbound jumps**, **779 original-bound COFF call/
-IEEE-754 references** and both native switch table operands.
-State209 is a 605-byte five-hit aerial combo with original repeat
-logic; state210 is a 337-byte local-effect attack and meter20 spend.
-**Next original case211 at `0x0064AE89`.**
+The original 68,853-byte Kano state boss is being authored in
+`workbench/kano-state/Character20State.cpp`. Strict continuous
+selected native prefix now covers **34,743 code bytes / 9,524
+original x86 instructions**, default and **88 reviewed live states**.
+Audit: **894 original internal and 116 outbound branch destinations**,
+**795 native-bound nonlocal COFF call/float references**, plus both
+local switch table operands. The new 211/212 cases restore distinct
+grounded/aerial attack recovery, frame4 repeat and frame1 2.6 launch.
+**Next original state213 at `0x0064B177`** includes a call to the
+already accepted `SecondaryEffectSlot::SetVelocityPolar` (original
+call target 0x434010), which is *not* part of state212.
 
-Incomplete candidate stack0x120 versus native0x4A4 has the same
-six-byte instruction width: no position normalization. **50 remaining
-case bodies**, full frame, local switch DATA, remaining relocation
-closure and shared return are open; **NOT whole Exact**. Diagnostic
-marker cases are unaccepted. Only targeted original-bound compilation,
-no full all-unit cold replay, no remote push.
+Incomplete candidate stack0x120 vs canonical0x4A4 has the same six-
+byte allocation instruction form, with no position normalization.
+**48 original live case bodies**, full stack, switch DATA, remaining
+relocs and shared return remain open. This is NOT whole-function Exact
+and generated marker bodies do not count. Only selected Kano checks;
+no all-unit cold replay or remote push.
 
 ## Additional newly accepted leaf owners
 

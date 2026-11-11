@@ -3029,5 +3029,73 @@ void Character20::Slot06()
         }
         return;
 
+    case 211: // Native-reviewed Kano 0x0064AE89: short aerial hit and landing reset
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 3 && field000c == 0) {
+            velocityX = 1.2;
+            velocityY = 1.2;
+        }
+        if (field000a == 1 && field000c == 0)
+            remainingHitCount = 1;
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 13;
+            ResetPose();
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 1);
+        }
+        return;
+
+    case 212: // Native-reviewed Kano 0x0064AFA7: native multi-cycle grounded dash and pose exit
+        if (field000a == 0) {
+            if ((unsigned char)dashMomentumFlag == 0) {
+                velocityX = 0.0;
+                velocityY = 0.0;
+            }
+            if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+                velocityX -= 0.03;
+            } else {
+                velocityX = 0.0;
+                dashMomentumFlag = 0;
+            }
+        }
+        if (field000a == 1 && field000c == 0) {
+            velocityX = 2.6;
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (field000a > 0)
+            velocityX -= 0.03;
+        if (velocityX < 0.0)
+            velocityX = 0.0;
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a < 2)
+                attackCollisionResult = 0;
+            if (field000a == 4 && field3138 < 3) {
+                ++field3138;
+                field000a = (unsigned short)(field000a - 2);
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 7;
+                if (inputY == 1)
+                    field0008 = 3;
+                FaceOpponent();
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

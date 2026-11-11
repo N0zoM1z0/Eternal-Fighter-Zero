@@ -1770,30 +1770,31 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` from vtable `0x00788C90` targets original
-`[0x006429C0,0x006536B5)` (**68,853 code bytes**) with 137 four-byte
-switch destinations and 316 selector bytes (136 live/180 default).
-Partial natural C++ in `workbench/kano-state/Character20State.cpp`
-reproduces `[0x006429C0,0x0064AE89)` = **33,993 native bytes /
-9,312 original x86 instructions**, prefix SHA-256
-`bf13e6307f4f049a8b29077f0f818d6890542ebcf06c94dc115a4aa90d277411`.
-Original default and **86 live cases** reviewed through210.
+Kano `Character20::Slot06` original vtable `0x00788C90` targets
+`[0x006429C0,0x006536B5)` (68,853 original native code bytes),
+with 137 four-byte switch destinations and 316 selector bytes
+(136 live / 180 default). Authored C++ at `workbench/kano-state/`
+now reproduces original `[0x006429C0,0x0064B177)` = **34,743
+code bytes / 9,524 x86 instructions**, selected SHA-256
+`529406942a44a20d95bf7b8f934066887a98ad43098216f625e6bb5da6d72bb0`.
+Default plus **88 reviewed native states** through212.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` strict scoped checker validates
-**9,312 original offsets/widths/opcodes**, **870 internal and 113
-outbound native branch targets**, **779 original-bound external
-COFF calls/IEEE-754 operands**, and both native switch pointers.
-Candidate stack0x120 differs from original0x4A4 but shares six-byte
-allocation instruction form; no offset compensation. This is a
-**selected-prefix proof, NOT whole Exact**.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker validates
+**9,524 original native instruction offsets, widths, forms**, **894
+internal / 116 outbound original branches**, **795 native-bound
+nonlocal COFF call/float references**, plus 2 local switch pointers.
+Incomplete candidate frame0x120 vs native0x4A4 uses same-width six-
+byte allocation, so no position adjustment. This is a selected prefix,
+**NOT whole-function Exact**: 48 original case bodies, full stack,
+adjacent switch DATA and shared return remain OPEN.
 
-State209 is an original 605-byte five-hit aerial attack with frame2
-hitcount5, frame7/10 sound20, frame14 one-time cycle, native landing
-and jump cancel. State210 is a 337-byte attack emitting native
-local effect0x199, meter-20 and frame8 activation, followed by
-state0 recovery. Next original state211 starts `0x0064AE89`;
-50 unverified cases, canonical frame/table/return still open.
-No all-unit cold replay or acceptance of diagnostic markers.
+New state211 (286 bytes) restores frame3 1.2 dual velocity and
+landing recovery; state212 (464 bytes) restores 2.6 horizontal launch,
+sound20, friction0.03, frame4->2 tiered repeats and state7/3 exit.
+**Original polar-velocity call at0x434010 appears in state213, NOT
+state212**; preserving native branch ownership was essential.
+Next state213 starts `0x0064B177`. Do not run all-unit cold replay
+or count neutral probe markers.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
