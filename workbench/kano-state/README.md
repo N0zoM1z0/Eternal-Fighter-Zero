@@ -69,6 +69,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case303_shape.py
     scripts/repo-python workbench/kano-state/check_case304_shape.py
     scripts/repo-python workbench/kano-state/check_case305_shape.py
+    scripts/repo-python workbench/kano-state/check_case305_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
@@ -146,6 +147,33 @@ Context::SetSceneTimer). This is **a register-abstracted structural
 island, NOT full owner Exact**. Concrete VC7.1 register parity remains
 blocked at original case250; strict contiguous prefix is still
 40,336 code bytes.
+
+### Experimental state305 — 1,109-byte timed super with staged aura
+
+Native Kano state305 `[0x00651533,0x00651988)` is **1,109 code bytes /
+292 x86 instructions**. Natural C++ implements native continuous
+`SetHorizontalShake(50,3)`, paired local0x196/0x197 startup, charge
++100 during frames3–6 and native frame7 completion. At frame9 it
+spends 3,000 meter, applies hitstun120, original tint0xB0 and
+stage0x46/palette0x40 impact with context sound37. At frame13 it
+emits local effect0x1C2 with facing X+10/Y−55, increments field315c,
+sets field3160=600 and field3164=facing. During frames14 onward it
+invokes the original `Context::SetSceneTimer(15)` call. Animation
+rewinds frame12->10 while field3140<8 and frame17->13 while
+field313c<5; native completion returns state0.
+
+Focus verification:
+
+    scripts/repo-python workbench/kano-state/check_case305_shape.py
+
+The original SHA-256
+`b51e1c620ec17ce7dedc0076e85b25fd9b94d40ab0f3ae12e39b19fa588b65d9`
+is pinned; the checker compares all **292 native instruction
+addresses, widths and register-abstracted forms**, **23 internal and
+2 canonical shared-return branches**, plus **14 original-bound COFF
+call/float references** (including SetSceneTimer at 0x4080C0).
+This is a structural island, **not native concrete-byte Exact**;
+state250 still blocks the 40,336-byte strict continuous prefix.
 
 ### Experimental case304 — 1,199-byte four-wave super with vertical shake
 

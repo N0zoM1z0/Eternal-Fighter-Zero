@@ -2147,6 +2147,19 @@ shared-return branches**, **14 COFF call/float operands** and
 canonical native SHA. This is structural evidence, **NOT complete
 Exact** while case250 concrete registers remain unclosed.
 
+#### Kano case305: original-bound 1,109-byte timed super
+
+Natural Kano C++ now includes original state305
+`[0x00651533,0x00651988)` (1,109 code bytes / 292 x86
+instructions). It has the original 3,000 meter expenditure,
+frame13 local0x1C2 aura, repeated frame12/17 states and
+`SetSceneTimer(15)` during later frames. Scoped
+`check_case305_shape.py` verifies 292 original register-abstracted
+instruction positions/widths/forms, **23 internal and 2 shared-return
+branches**, **14 independently bound call/float operands**, original
+SHA. As with other case250-gapped states this is structural source
+evidence, **NOT full Exact**; strict prefix remains 40,336 bytes.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

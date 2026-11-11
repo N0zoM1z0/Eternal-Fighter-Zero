@@ -289,6 +289,15 @@ canonical SHA. This is **NOT Exact**: state250's concrete register
 allocation divergence remains and the continuous Boss prefix is
 40,336 bytes. No full cold replay.
 
+Kano state305 original `[0x00651533,0x00651988)` is now
+reconstructed in C++ with **1,109 bytes / 292 native instruction
+positions** checked by `check_case305_shape.py`, including **23
+internal+2 shared-return branches** and **14 independently original-
+bound COFF/float operands** (including SetSceneTimer). Its timed
+charge/0x1C2 aura and animation rewinds are real source, but case250
+still blocks concrete-register Exact; continuous strict prefix stays
+40,336 bytes. No all-unit cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
