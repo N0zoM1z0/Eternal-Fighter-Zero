@@ -16,48 +16,44 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Code [0x00451850,0x0045A62F): **36,319 / 62,693 original bytes**,
-**9,968 original x86 instructions**, SHA-256:
-5fe28ffd5d7739caed581e0b3305934da74398440173511cacfd387b4f3d1247.
+Reviewed code [0x00451850,0x0045AC54): **37,892 / 62,693 original bytes**,
+**10,405 original x86 instructions**, SHA-256:
+eec18795aa057bd38ccb9fdf18e6ff18ed7f9fe757f47e6bed32fe161913f2fb.
 
-The reviewed default and **90 live cases** are 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180 and 200–212.
+The reviewed default and **94 live cases** are 1–9, 13–16, 47,
+50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180,
+200–214, 220 and 221. State213 restores the 0.04-gravity airborne
+recovery, meter award and landing transition to state97; state214
+handles its >0 landing frame10 skip. State220 restores a genuine
+Nayuki throw: ground-only hit activation, 40..600 X clamp, opponent
+state107 and facing-relative opponent placement, impact effect at
+facing*37 and -22. State221 awards ApplyDamage(1000, 750.0), places
+the opponent into state63 with knockback (1.0,-2.5), sets opponent Y
+-50, and drags the opponent by facing each of frames 1–3.
 
-States 204–209 were restored against original frame gates, dash
-physics, multi-hit and rebound behavior. State210's existing four-frame
-launcher now independently matches the native code. State211 was
-reconstructed as a grounded attack-cancel with frame3 meter/hit award
-and no inherited landing code. State212 was rebuilt as the 583-byte
-aerial rebound with state257 collision counter-transition, ground
-impact effect, early frame5 loop, and state7 exit. Unreviewed state213
-begins immediately after this selected prefix.
+Native selected-prefix verification (NOT full owner Exact):
 
-Run **focused** checks from repository root:
-
-    scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 213 --context 12
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all **9,968 original
-offsets and opcode widths**; the 9,967 other normalized instruction
-forms match, apart from the incomplete stack allocation (temporary
-0x280 versus native full 0x2B4). Independently original-bound:
-**936 internal branch destinations**, **127 valid outbound targets**,
-**829 nonlocal call/float COFF relocations**, **2 switch operands**,
-**90 original selector targets**. Branch target/relocation checks do
-not count marker cases as reconstruction.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all **10,405 original
+instruction offsets, widths and normalized opcode forms** except for
+the provisional frame allocation (0x298 candidate vs 0x2B4 original).
+Original-bound verification includes **963 internal branch targets**,
+**134 outbound targets**, **859 call/IEEE-754 COFF references**,
+2 local switch operands, and **94 original selector destinations**.
+The original `Secondary::ApplyDamage` call at 0x4105A0 has been bound.
 
-## Next code target and caveats
+## Next action and remaining scope
 
-Original state213 starts at **0x0045A62F**, and the first mismatch
-is at **0x0045A632** (owner offset 0x8DE2). The provisional candidate
-for state213 is not matched. Use original disassembly to reconstruct
-its physics and transitions; avoid generic sibling templates.
+Original state230 begins at **0x0045AC54**. Examine its current inherited
+body against original bytes; begin with:
 
-**26,374 code bytes**, the full stack, original local switch tables,
-remaining COFF relocations and common return are open.
-Of 137 original live IDs, source has 118 labels: 90 reviewed,
-28 unreviewed and 19 absent (263–281). `probe_prefix.py` inserts
-UNACCEPTED neutral branches for later states and authentic late
-300–306 bodies solely to preserve compiler structure. No all-unit
-cold replay, no whole-image or runtime claim, and no full Exact.
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 230 --context 12
+
+**24,801 remaining code bytes**, full 0x2B4 stack frame, complete
+local switch tables, remaining relocations and shared return are open.
+Source has 118 of 137 live case labels: **94 reviewed**, 24 existing
+unreviewed and **19 absent IDs 263–281**. `probe_prefix.py` includes
+deliberately UNACCEPTED neutral marker bodies for other states and
+late 300–306 code to preserve ESI/prologue. No all-unit cold replay,
+no whole-game runtime claim and no full Exact acceptance.

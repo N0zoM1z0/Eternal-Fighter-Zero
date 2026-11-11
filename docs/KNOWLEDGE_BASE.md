@@ -3026,51 +3026,49 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: reviewed 36,319-byte state boss prefix
+## Nayuki Character10 Slot06: 37,892-byte original-bound state boss prefix
 
-The original Character10 vtable Slot06 at 0x00788288 targets
-[0x00451850,0x00460D35), **62,693 code bytes**, canonical SHA-256
+Character10 vtable Slot06 at 0x00788288 selects original code
+[0x00451850,0x00460D35), **62,693 bytes**, canonical SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-Two adjacent DATA tables (138 four-byte destinations at 0x00460D35;
-306 selector bytes at 0x00460F5D) dispatch 137 live case IDs and
-169 default IDs.
+Adjacent switch DATA is 138 four-byte targets at 0x00460D35 and
+306 selector bytes at 0x00460F5D (137 live / 169 default IDs).
 
-Unfinished natural C++ at `workbench/nayuki-state/Character10State.cpp`
-now has a **36,319-byte / 9,968-instruction reviewed native opening**,
-[0x00451850,0x0045A62F), SHA-256
-5fe28ffd5d7739caed581e0b3305934da74398440173511cacfd387b4f3d1247.
-Reviewed original default and **90 live states**: 1–9, 13–16, 47,
-50–77, 81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–212.
+Current incomplete natural C++ lives at
+`workbench/nayuki-state/Character10State.cpp`, with reviewed original
+[0x00451850,0x0045AC54): **37,892 code bytes / 10,405 original
+x86 instructions**, SHA-256
+eec18795aa057bd38ccb9fdf18e6ff18ed7f9fe757f47e6bed32fe161913f2fb.
+Reviewed default and **94 live cases**: 1–9, 13–16, 47, 50–77,
+81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–214, 220–221.
 
-States 204/205 restore original tiered frame skips and meter/hit rules;
-205 advances X by facing*15 twice. State206 replaces the inherited
-physics and restores the field3148-dependent three-tick frame gate;
-207's existing airborne logic was found native-matching. State208
-sets remainingHitCount to field3148/2+2 at frame1; state209 awards 30
-meter and three hits at frame2 with early frame advancement.
-State210's four-frame launcher compiles to its original 373-byte
-body. State211 replaces unrelated inherited landing/effect code with
-Nayuki's grounded input cancel and frame3 meter/hit activation.
-State212 reconstructs a **583-byte aerial rebound**: frame2 adds 15
-meter, hit1, upward velocity and .035 gravity, collision>1 transitions
-to state257 with inverted velocityX / -2.5 velocityY / .025 gravity,
-landing frames2–4 emit the 3-type impact effect and sound7, and
-frame5 loops back to4 before state7 exit.
+New states 213 and 214 replace inherited scaffolding: state213
+sets 0.04 gravity and zero horizontal velocity, awards 30 meter
+at frame3, landing transitions to state97 and resets the frame;
+state214 awards 30 meter/3 remaining hits at frame2, and
+**strictly positive** landing rewrites the frame to 10.
+State220's 558-byte throw frame bounds positionX to 40..600,
+performs the genuine grounded grab conditional, resets both fighters,
+sets opponent state107 and X = own X + facing*15, and emits
+an impact effect (facing*37, Y-22); unlike Makoto, the grab path
+returns instead of incrementing the regular timer.
+State221's 460-byte follow-through calls the accepted
+`Secondary::ApplyDamage(1000,750.0)` at 0x004105A0 on frame4,
+resets opponent into state63, sets knockback (1,-2.5), sets Y=-50
+and X=own X, then drags the opponent X by facing at frames1–3.
+This case orders ResetPose before FaceOpponent on animation exit.
 
-Selected pinned VC7.1 /Od /G6 /MT /Gy /W3 validation checks **9,968
-same-offset, same-width original instructions**; 9,967 forms plus
-an incomplete stack allocation (0x280 candidate vs original 0x2B4),
-**936 original internal jumps**, **127 valid outbound targets**,
-**829 original-bound nonlocal call/IEEE-754 COFF relocations**,
-two local switch references and 90 original case destinations.
-This is *only* a selected-prefix check; full owner exactness remains open.
-
-Original state213 begins 0x0045A62F, first mismatch 0x0045A632.
-**26,374 code bytes**, original local switch data, complete frame,
-remaining relocations and shared return are still unverified. 19 live
-IDs 263–281 are absent and 28 other present bodies unreviewed.
-Continue with `probe_prefix.py --through 213` and original disassembly,
-not an all-unit cold replay. Synthetic marker cases are UNACCEPTED.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 local checker verifies **10,405
+same-offset/same-width original x86 instructions** and all normalized
+forms except the incomplete frame allocation (0x298 candidate versus
+0x2B4 full original), **963 internal jumps**, **134 valid outbound
+branches**, **859 original-bound nonlocal COFF call/float refs**,
+2 local switch operands and 94 original selector case destinations.
+The full function is *NOT Exact*: **24,801 remaining code bytes**,
+19 missing IDs 263–281, 24 existing unreviewed bodies, full stack,
+tables, relocations and common return are still open. Next state230
+starts 0x0045AC54. Use `probe_prefix.py --through 230`, not an
+all-unit cold replay; neutral marker branches do not count as source.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

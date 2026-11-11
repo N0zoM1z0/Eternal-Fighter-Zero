@@ -3202,37 +3202,45 @@ void Character10::Slot06()
         }
         return;
 
-    case 213: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        gravity = 0.042;
+    case 213: // Reviewed Nayuki original 0x0045A62F: airborne recovery and grounded wakeup
+        gravity = 0.04;
+        velocityX = 0.0;
         velocityY += gravity;
-        if (field000a == 0 && field000c == 0) {
-            velocityX = -1.0;
-            velocityY = -2.4;
+        if (field000a == 3 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 1;
+        }
+        if (positionY + velocityY >= 0.0) {
+            positionY = 0.0;
+            field0008 = 97;
+            ResetFrame();
+            ResetPose();
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a >= timing.animationFrameCount) {
-                field0008 = 9;
-                ResetPose();
-            }
+            if (field000a >= timing.animationFrameCount)
+                field000a = (unsigned short)(field000a - 2);
         }
         return;
 
-    case 214: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        velocityX = 0.0;
-        velocityY = 0.0;
-        if (field000a == 0 && field000c == 0) {
-            SetVerticalShake(3, 0);
-            effect.type = 3;
-            effect.x = (double)(int)positionX;
-            effect.y = (double)(int)positionY;
-            effect.group = 2;
-            effect.layer = 0;
-            effect.palette = 7;
-            contextOwner->EmitEffect(&effect);
+    case 214: // Reviewed Nayuki original 0x0045A750: airborne slam and landing frame skip
+        velocityY += gravity;
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 3;
+        }
+        if (positionY + velocityY > 0.0) {
+            positionY = 0.0;
+            field000c = 0;
+            ResetFrame();
+            field000a = 10;
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
@@ -3241,19 +3249,14 @@ void Character10::Slot06()
             attackCollisionResult = 0;
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 7;
-                if (inputY == 1) {
-                    field0008 = 3;
-                }
-                FaceOpponent();
                 ResetPose();
             }
         }
         return;
 
-    case 220: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 220: // Reviewed Nayuki 0x0045A85A: grounded grab, wall clamp and impact effect
         velocityX = 0.0;
         velocityY = 0.0;
-        dashMomentumFlag = 0;
         if (field000a == 1 && field000c == 0 &&
             (*opponentSlot)->positionY == 0.0) {
             remainingHitCount = 1;
@@ -3261,6 +3264,10 @@ void Character10::Slot06()
             remainingHitCount = 0;
         }
         if (field000a == 1 && attackCollisionResult == 3) {
+            if (positionX > 600.0)
+                positionX = 600.0;
+            if (positionX < 40.0)
+                positionX = 40.0;
             velocityX = 0.0;
             velocityY = 0.0;
             outgoingPushbackVelocityX = 0.0;
@@ -3269,13 +3276,14 @@ void Character10::Slot06()
             (*opponentSlot)->ResetFrame();
             field0008 = 221;
             (*opponentSlot)->field0008 = 107;
+            (*opponentSlot)->positionX = positionX + (double)((int)facing * 15);
             effect.type = 0;
-            effect.x = (double)((int)positionX + (int)facing * 25);
-            effect.y = (double)((int)positionY - 51);
+            effect.x = (double)((int)positionX + (int)facing * 37);
+            effect.y = (double)((int)positionY - 22);
             effect.group = 2;
             effect.layer = 1;
             contextOwner->EmitEffect(&effect);
-            // Original proceeds to the frame counter even after a grab.
+            return;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
@@ -3290,52 +3298,32 @@ void Character10::Slot06()
         }
         return;
 
-    case 221: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a == 1 && field000c == 0) {
+    case 221: // Reviewed Nayuki 0x0045AA88: throw impact, opponent trajectory and drag
+        if (field000a == 4 && field000c == 0) {
+            ApplyDamage(1000, 750.0);
+            (*opponentSlot)->field0008 = 63;
             (*opponentSlot)->ResetPose();
             (*opponentSlot)->ResetFrame();
-            (*opponentSlot)->field0008 = 50;
-        }
-        if (field000a > 2) {
-            velocityY += gravity;
-            velocityX -= 0.045;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
-        }
-        if (field000a < 9 && field000a > 2 &&
-            velocityY + positionY > 0.0) {
-            field000a = 9;
-            field000c = 0;
-            positionY = 0.0;
-            ResetFrame();
-            return;
+            (*opponentSlot)->knockbackVelocityX = 1.0;
+            (*opponentSlot)->knockbackVelocityY = -2.5;
+            (*opponentSlot)->positionY = -50.0;
+            (*opponentSlot)->positionX = positionX;
         }
         ++field000c;
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
             attackCollisionResult = 0;
-            if (field000a == 2) {
-                velocityX = 1.5;
-                velocityY = -1.6;
-                gravity = 0.05;
-                effect.type = 31;
-                effect.x = (double)(int)positionX;
-                effect.y = 0.0;
-                effect.group = 0;
-                effect.layer = 0;
-                effect.facing = facing != 1;
-                contextOwner->EmitEffect(&effect);
-            }
-            if (field000a == 4) {
-                pendingContextSoundSlot = 21;
-                remainingHitCount = 1;
-                meter = (short)(meter + 30);
-            }
+            if (field000a == 1)
+                (*opponentSlot)->positionX -= (double)(int)facing;
+            if (field000a == 2)
+                (*opponentSlot)->positionX -= (double)(int)facing;
+            if (field000a == 3)
+                (*opponentSlot)->positionX -= (double)(int)facing;
             if (field000a >= timing.animationFrameCount) {
                 field0008 = 0;
                 ResetPose();
+                FaceOpponent();
             }
         }
         return;
