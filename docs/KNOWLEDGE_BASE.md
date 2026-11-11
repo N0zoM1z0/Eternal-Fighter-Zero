@@ -1863,6 +1863,19 @@ canonical SHA. Concrete VC7.1 register allocation differs after
 state250; thus **NOT Exact** and it does not expand the independently
 accepted 40,336-byte continuous prefix or full Exact ledger.
 
+#### Kano state259: native five-impact structural island
+
+The natural C++ for state259 covers the full **1,586 original bytes /
+414 x86 instruction positions** of `[0x0064DDBF,0x0064E3F1)`.
+Its real charge10000 and residue2500, three-tier field3138 paths,
+five effect0x191 emissions at distinct Y offsets, meter-10 per hit
+and three-round frame19 rewind were directly reconstructed.
+`check_case259_shape.py` original-binds 414 register-abstracted
+instruction shapes/widths/offsets, **24 internal + 3 shared-return
+branches**, and **18 call/IEEE-754 operands**. These are structural
+island comparisons only, **NOT whole Exact**; the strict original
+Kano prefix remains 40,336 bytes pending case250 closure.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

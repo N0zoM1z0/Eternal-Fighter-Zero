@@ -58,6 +58,7 @@ Use only the dedicated original-bound structural audit:
 
     scripts/repo-python workbench/kano-state/check_case257_shape.py
     scripts/repo-python workbench/kano-state/check_case258_shape.py
+    scripts/repo-python workbench/kano-state/check_case259_shape.py
 
 The selected VC7.1 candidate matches **all 241 original instruction
 offsets, lengths and register-abstracted instruction forms**, **22
@@ -72,6 +73,39 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental case259 — 1,586-byte five-impact charged finisher
+
+Original Kano state259 `[0x0064DDBF,0x0064E3F1)` is **1,586 code
+bytes / 414 x86 instructions**, the largest restored post-state250
+special thus far. The authored natural C++ includes the original
+state0/7 motion reset, 75-per-frame charging, full10000 charge with
+residue2500, command13/resource gate, and two frame3 local effects
+0x196/0x197. At animation frame17 the three distinct tier cases
+(`field3138` == 0/1/2) emit the original **five impact effects**
+(type 0x191) at Y−45, Y−20, Y−70, Y+5 and Y−95. Each uses the
+original facing-X offset38, owner/facing assignment order, character
+sound5 and **10-meter** deductions after each hit; frame19 rewinds
+three frames for up to three rounds, then returns to state0.
+
+Run the focused audit:
+
+    scripts/repo-python workbench/kano-state/check_case259_shape.py
+
+Original-bound SHA-256
+`0cea3ab88f212da9516f5a88a6bfcbb086a08736f7aee22e01ed81f396fdd6c8`
+is frozen, together with **414 exact instruction offsets/widths and
+register-abstracted forms, 24 original internal branches, 3 shared
+return branches and 18 original-bound COFF call/IEEE-754 operands**
+(3 ResetFrame, 14 __ftol2, 1 original 500.0 double literal).
+The native `owner`/facing-write order differs between its original
+effect branches; preserving that order was essential for the 414
+matching instruction positions and widths.
+
+This is an independently verified **structural island, NOT concrete
+register or whole-function Exact**. Original state250's register
+phase still prevents expanding the strict contiguous 40,336-byte
+prefix; formal Exact counters remain unchanged.
 
 ### Experimental case258 — 1,254 native bytes, distinct triple-impact finisher
 

@@ -125,6 +125,17 @@ resource deduction, sound and facing/owner write order. The
 unaccepted structural island, NOT complete Exact; strict contiguous
 Boss prefix remains 40,336 original bytes. No cold all-unit replay.
 
+Kano state259 has now also been authored as a **1,586-byte / 414
+native-instruction** five-impact charged finisher with three
+state-dependent branches. Dedicated `check_case259_shape.py`
+independently validates **24 original internal and 3 shared-return
+jumps**, **18 native COFF/float references**, every original x86
+instruction offset/width and register-abstracted form. C++ preserves
+five original Y-impact offsets, -10 meter per hit, sound and exact
+conditional loop count. **NOT Exact**: the case250 compiler-phase
+register divergence remains; strict Kano prefix still 40,336 bytes.
+No full all-unit cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
