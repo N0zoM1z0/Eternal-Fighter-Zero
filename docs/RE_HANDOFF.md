@@ -7,35 +7,34 @@ and failed hypotheses. Inspect current Git changes before starting.
 
 ## Receiving agent — immediate next task (2026-11-11)
 
-Nayuki Character10 Slot06 is the main unfinished boss,
-NOT full Exact. See the detailed state workbench README.
-The selected proof covers **31,729/62,693 original
-code bytes**, **8,731 original instructions**,
-**81 reviewed states**, **798 internal original
-branches**, **105 original outbound destinations**,
-**781 nonlocal COFF float/call fields** plus two
-local switch operands. The native complete stack is
-0x2B4, partial compiler probe uses 0x270.
+Nayuki Character10 Slot06 remains the major unfinished
+62,693-byte native state boss, not whole Exact.
+See workbench/nayuki-state/README.md for the
+selected compiler and source. The reviewed prefix
+is **32,945 original bytes / 9,056 instructions**
+and **83 live cases**, with **842 original internal
+branches**, **109 canonical outbound targets**,
+**793 exact source-bound nonlocal relocations**,
+and two local switch references. The partial
+probe frame is 0x278 vs full original 0x2B4.
 
-**Next state204 at 0x00459441**; mismatch
-0x00459444 (offset 0x7BF4). The candidate uses
-a placeholder instead of original dash flag
-0x158 byte handling. Original selector has
-137 live IDs, 169 defaults; workbench contains
-118 original case labels, missing 19 IDs 263–281
-and 37 other later cases remain unreviewed.
-
-Focused commands:
+**Next state206 starts 0x00459901**. First
+different opcode **0x00459904** (function offset
+0x80B4): original reads dashMomentumFlag
+at 0x158 while unreviewed selected probe
+has neutral marker code.
 
     git status --short --branch
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/nayuki-state/check_prefix.py
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 204 --context 8
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 206 --context 8
     scripts/repo-python scripts/ci.py
 
-Do not run whole cohort cold replay or treat
-temporary marker branches as true reconstructed code.
-Preserve all dirty modifications.
+Of 137 live case IDs, workbench has 118
+bodies: 83 reviewed, 35 other unreviewed,
+19 absent IDs 263–281. Keep all dirty work;
+do not mistake marker code for acceptance.
+Avoid full all-unit cold replay.
 
 ## Tools and checks
 
@@ -251,7 +250,7 @@ with the common class declaration remains a separate task.
 
 | Owner | Canonical extent | Current candidate / next action |
 | --- | --- | --- |
-| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 code bytes + 552/306-byte local tables | selected workbench: 31,729 bytes / 8,731 instructions and 81 reviewed states; 798 internal jumps, 105 valid outbound targets, 781 canonical nonlocal COFF fields + 2 local refs; incomplete frame 0x270 vs full 0x2B4. Next state204 0x00459441, opcode difference 0x00459444. 19 missing IDs 263–281 and 37 existing later unreviewed; 30,964 code bytes remain OPEN, NOT full Exact. |
+| Nayuki Character10::Slot06 state boss | 0x00451850, 62,693 code bytes + 552/306 local data | selected 32,945 code bytes / 9,056 original instructions, 83 reviewed cases; 842 internal jumps, 109 canonical outbound targets, 793 nonlocal original-bound COFF relocs and 2 local table refs. Incomplete stack 0x278 vs 0x2B4. Next state206 at 0x00459901, mismatch 0x00459904. 35 later existing unreviewed cases plus 19 absent 263–281. 29,748 bytes remain OPEN, NOT full Exact. |
 | Shiori `Character08::Slot06` | `0x004136D0`, 63,132 bytes including both tables | `workbench/shiori-state/`: complete candidate emits 63,133 bytes. First register divergence is case 303 at `0x0041FC1E`; instruction-width deltas are +1 in 307/308 and -1 in 315. Recover original register lifetimes. |
 | `Scene2::PrepareBattle` | `0x0076CA50`, 4,029 bytes including two address tables and selector | `workbench/prepare-battle/`: complete candidate emits 4,031 bytes / 115 relocations. Investigate first-background allocation at `0x0076D743` and later virtual-load receiver move. Casts, named pointer locals and real background layouts did not fix it. |
 

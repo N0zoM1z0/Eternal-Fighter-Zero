@@ -95,7 +95,7 @@ complete target-bound exact receipt in `docs/evidence/`. The
 2,727 bytes. More functions, linked data and runtime semantics are
 still open. For current next actions and blockers, use the concise
 [receiving-agent handoff](docs/RE_HANDOFF.md), not historical session
-summaries. Nayuki Slot06 currently has a selected 31,729-byte native
+summaries. Nayuki Slot06 currently has a selected 32,945-byte native
 prefix, but remains NOT Exact; 19 live case labels 263–281 are missing.
 
 The last recorded compiler, linker, resource and native execution smoke checks

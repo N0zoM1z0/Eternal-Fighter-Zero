@@ -3026,54 +3026,53 @@ full cold replay or whole-game runtime claim.
 
 <a id="nayuki-slot06-state-prefix"></a>
 
-## Nayuki Character10 Slot06: 31,729-byte reviewed state-boss prefix
+## Nayuki Character10 Slot06: 32,945-byte reviewed state boss opening
 
-Original Nayuki Slot06 at vtable 0x00788288 owns
-[0x00451850,0x00460D35): 62,693 original x86 code
-bytes, SHA-256
+Nayuki original vtable Slot06 at 0x00788288 selects
+[0x00451850,0x00460D35), 62,693 original code bytes,
+canonical SHA-256
 4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-The adjacent 552-byte switch destination and
-306-byte selector tables are DATA, not instruction
-bytes. They contain 137 live states, 169 defaults.
+Two adjacent separately owned DATA tables contain
+138 four-byte switch destinations at 0x00460D35
+and 306 selector bytes at 0x00460F5D, dispatching
+137 live case IDs and 169 default IDs.
 
-The natural partial workbench at
-workbench/nayuki-state/Character10State.cpp has
-reconstructed [0x00451850,0x00459441):
-**31,729 bytes / 8,731 original x86 instructions**,
-prefix SHA-256
-e79a6fe2cab2a71967c6ad8eb3d518a1120379c75b91102ea8954e9aba8e3201.
-Reviewed original default plus 81 live cases:
-1–9, 13–16, 47, 50–77, 81–87,
+Partial naturally authored C++ is
+workbench/nayuki-state/Character10State.cpp.
+Original [0x00451850,0x00459901) is reviewed:
+**32,945 bytes / 9,056 original x86 instructions**,
+SHA-256
+ca349ed1b20142e0620a2c6ae706a85f610201b12931c2460a5a2ff03f3c9096.
+The default and 83 original live cases have been
+recovered: 1–9, 13–16, 47, 50–77, 81–87,
 96–99, 123, 150–158, 161–171, 178–180,
-200–203. New real behavior includes grounded
-meter/dash damping (200), advanced state3148
-frame progression (201), timed airborne multi-hit
-with landing shake/particle (202), and frame-14
-launch and zero-height cancel (203). The 203
-FUCOMPP condition is equality positionY == 0.0;
-state202 collision reset is only on frames 4,
-5, 7, 9 and 11.
+200–205. States 204 and 205 restore original
+dash flag damping and grounded attack cancel,
+with 205 implementing state3148-gated 3-tick
+early advancement and two 15-pixel moves.
 
-The selected native check_prefix.py under
-VC7.1 /Od /G6 /MT /Gy /W3 audits
-**8,731 same-offset and same-width instructions**
-with the incomplete partial stack allocation
-(0x270 vs original 0x2B4) as the sole different
-form. Independently reviewed: **798 original
-internal jumps**, **105 valid outbound targets**,
-**781 original-bound nonlocal COFF float/call
-relocations**, 2 local switch references and
-81 canonical case entries. Neutral late-state
-marker code is NOT accepted or counted.
+The selected pinned VC7.1 /Od /G6 /MT /Gy
+/W3 check_prefix.py checks **all 9,056 same-offset
+and same-width original instructions**, with
+9,055 matching normalized forms plus the
+incomplete stack allocation (candidate 0x278
+versus original 0x2B4). Independent
+original-bound checks verify **842 internal
+jumps**, **109 valid outbound targets**,
+**793 COFF nonlocal float/call relocations**,
+two local switch references, and 83 original
+case destinations. Temporary placeholder
+bodies for later cases are explicitly NOT
+accepted source.
 
-Next is original state204 at 0x00459441;
-the next mismatching opcode is at 0x00459444.
-The workbench has 118 original live case labels,
-19 missing IDs 263–281, and 37 later existing
-unreviewed candidate bodies. **Not full Exact:**
-30,964 code bytes, complete frame, switch tables
-and remaining relocations/return are unresolved.
-No full cold replay.
+Next is state206 at 0x00459901; opcode mismatch
+0x00459904. The workbench contains 118/137
+original live case labels; 19 IDs 263–281
+are absent and 35 other later candidates
+are unverified. **Not complete Exact:** 29,748
+original bytes, full stack, original local
+tables and remaining relocations/return
+still need reconstruction. No full cold replay.
 
 ## Nayuki Character10 Slot07: 20,517-byte native Exact effects boss plus owned switch tables
 

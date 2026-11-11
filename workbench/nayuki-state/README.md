@@ -1,60 +1,64 @@
-# Nayuki Character10::Slot06 — focused state-boss reconstruction
+# Nayuki Character10::Slot06 — focused native reconstruction
 
-**PARTIAL, NOT Exact.** Work on workbench/nayuki-state/Character10State.cpp,
-not the accepted src/ tree. The initial Makoto-derived source contains
-UNVERIFIED late case bodies and must not be counted as Nayuki recovery.
+**Status: PARTIAL, NOT complete Exact.** The natural C++ workbench is
+workbench/nayuki-state/Character10State.cpp. The accepted src/ tree is separate.
+Retain and reconcile dirty edits; inherited later Makoto-state hypotheses are
+not original Nayuki evidence.
 
 ## Original owner
 
-- Slot06 vtable 0x00788288 -> 0x00451850.
-- Original code [0x00451850,0x00460D35): 62,693 bytes, SHA-256
-  4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
-- Adjacent local DATA: 138 four-byte destination addresses at 0x00460D35,
-  306 selector bytes at 0x00460F5D; 137 live state IDs and 169 defaults.
-- Workbench has 118/137 labels; missing 19 are IDs 263–281. Another
-  37 later existing case bodies remain unverified.
+Character10 vtable Slot06 at 0x00788288 selects original code
+[0x00451850,0x00460D35): **62,693 bytes**, SHA-256
+4f34b8ffc35b76fec25b63082e0333e1b0ed3c82a76ddf5157df66db3ba949d9.
+Separate immediately adjacent tables: 138 four-byte destinations at
+0x00460D35 and 306 selector bytes at 0x00460F5D.
+Of 306 animation IDs, 137 are live, 169 map to default.
+The workbench has 118 of 137 case labels; 19 absent IDs 263–281.
+Of its present labels, 83 are prefix-reviewed and 35 later remain unverified.
 
-## Reviewed selected checkpoint (2026-11-11)
+## Selected native checkpoint
 
-[0x00451850,0x00459441): **31,729 original code bytes / 8,731
+Original [0x00451850,0x00459901): **32,945 bytes / 9,056 original x86
 instructions**, prefix SHA-256
-e79a6fe2cab2a71967c6ad8eb3d518a1120379c75b91102ea8954e9aba8e3201.
+ca349ed1b20142e0620a2c6ae706a85f610201b12931c2460a5a2ff03f3c9096.
 
-The default plus **81 reviewed live states**: 1–9, 13–16, 47, 50–77,
-81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–203.
-Recently recovered: state200 original damping/ground meter window,
-state201 early state3148 frame advance, state202 airborne multi-hit and
-landing particle/shake, and state203 zero-height cancel/launch. State203
-uses the x87 FUCOMPP equality test (positionY == 0.0); frame gates in
-state202 reset collision only at original frames 4/5/7/9/11.
+Reviewed original default plus 83 live cases: 1–9, 13–16, 47, 50–77,
+81–87, 96–99, 123, 150–158, 161–171, 178–180, 200–205.
+The most recent states 204/205 restore original dash damping, grounded
+input cancel, meter/timer, and Nayuki's special tiered 3-tick frame advance.
+State205 moves the fighter 15 pixels at frames 1 and 2 and recovers to
+state 3. These are native branch and instruction comparisons, not guesses
+borrowed from the sibling character.
 
-Selected test only:
+Run focused validation only:
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces the original offsets and
-widths for all 8,731 instructions; 8,730 normalized instruction forms
-match exactly with the partial frame allocation the sole exception
-(candidate 0x270 vs original complete 0x2B4). Independently tested:
-798 original internal branches; 105 valid original outbound destinations;
-781 original-bound nonlocal COFF call/float relocations plus 2 original
-local jump-table fields; 81 original case-entry targets.
+Pinned VC7.1 /Od /G6 /MT /Gy /W3 reproduces all 9,056 original
+instruction offsets and widths and 9,055 normalized matching forms.
+The only unmatched form is the temporary partial stack allocation
+(candidate 0x278 vs complete original 0x2B4). Checker verifies
+**842 original internal branches**, **109 canonical outbound targets**,
+**793 independently bound original nonlocal COFF call/float references**,
+two separately verified original local switch fields, and the first
+**83 original selector case destinations**.
 
-probe_prefix.py compiles the verified states and deliberately UNACCEPTED
-neutral placeholder cases for other selector IDs, keeping original ESI
-codegen by retaining authentic late states 300–306. These placeholders
-are not reconstruction progress.
+probe_prefix.py creates authentic reviewed early bodies alongside
+deliberately UNACCEPTED neutral marker branches for later live states.
+Original later 300–306 bodies are retained in this test solely to preserve
+VC7.1 ESI/prologue compiler behavior. Test-only markers are never
+accepted reconstruction.
 
-## Next work
+## Next code target
 
-Start **state204** at 0x00459441 (original function offset 0x7BF1).
-First differing opcode at 0x00459444 (offset 0x7BF4), original reads
-the 0x158 dash flag byte, while the current local probe uses a
-state204 placeholder. Focused command:
+Next original state206 starts **0x00459901** (offset 0x80B1).
+First mismatch after the selected prefix is **0x00459904** (0x80B4):
+target reads byte [eax+0x158], while the unreviewed local probe
+uses a marker branch for state206.
 
-    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 204 --context 8
+    scripts/repo-python workbench/nayuki-state/probe_prefix.py --through 206 --context 8
 
-**NOT full-function Exact**: 30,964 original code bytes, 19 missing
-live states, 37 other unreviewed cases, complete stack/frame/return and
-switch tables remain open. Do not run all-unit cold replay, patch machine
-bytes, or overclaim runtime equivalence.
+**Not whole-function Exact:** 29,748 original code bytes, 19 missing live
+case bodies (IDs 263–281), 35 existing unreviewed later cases, full native
+0x2B4 stack, local jump tables, remaining relocations and return are OPEN.
+No all-unit cold replay or whole-game runtime claim.

@@ -2813,7 +2813,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 204: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 204: // Reviewed Nayuki original 0x00459441: recovery and state3148 gate
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2846,6 +2846,10 @@ void Character10::Slot06()
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
+            if (field000a == 3)
+                field000a = 4;
+            if (field000a == 2 && field3148 > 4)
+                field000a = 3;
             if (field000a < 2) {
                 attackCollisionResult = 0;
             }
@@ -2860,7 +2864,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 205: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 205: // Original Nayuki 0x00459666: accelerated frame gates and dash shift
         if ((unsigned char)dashMomentumFlag == 0) {
             velocityX = 0.0;
             velocityY = 0.0;
@@ -2890,67 +2894,66 @@ void Character10::Slot06()
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000c >= 3 &&
+             ((field000a == 1 && field3148 > 0) ||
+              (field000a == 2 && field3148 > 1) ||
+              (field000a == 3 && field3148 > 3) ||
+              (field000a == 4 && field3148 > 5)))) {
             field000c = 0;
             ++field000a;
-            if (field000a < 2) {
-                attackCollisionResult = 0;
-            }
+            attackCollisionResult = 0;
+            if (field000a == 1)
+                positionX += (double)((int)facing * 15);
+            if (field000a == 2)
+                positionX += (double)((int)facing * 15);
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 0;
-                if (inputY == 1) {
-                    field0008 = 3;
-                }
+                field0008 = 3;
                 FaceOpponent();
                 ResetPose();
             }
         }
         return;
 
-    case 206: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
-        if (field000a < 2) {
-            if ((unsigned char)dashMomentumFlag == 0) {
-                velocityX = 0.0;
-                velocityY = 0.0;
-            }
-            if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
-                velocityX -= 0.03;
-            } else {
-                velocityX = 0.0;
-                dashMomentumFlag = 0;
-            }
+    case 206: // Nayuki 0x00459901: dash cancel, meter gain and adaptive frame skip
+        if ((unsigned char)dashMomentumFlag == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
         }
-        if (velocityX > 0.0) {
+        if (velocityX > 0.0 && (unsigned char)dashMomentumFlag == 1) {
+            velocityX -= 0.03;
+        } else {
+            velocityX = 0.0;
             dashMomentumFlag = 0;
-            velocityX -= 0.02;
-            if (velocityX < 0.0) {
-                velocityX = 0.0;
-            }
         }
-        if (field000a == 2 && field000c == 0) {
+        if (inputY == -1 && field000a > 0 && field015c < 3 &&
+            attackCollisionResult >= 2) {
+            field0008 = 4;
+            if (inputX == facing)
+                field0008 = 5;
+            if ((int)inputX == -(int)facing)
+                field0008 = 6;
+            attackCollisionResult = 0;
+            ResetPose();
+            return;
+        }
+        if (field000a == 3 && field000c == 0) {
             meter = (short)(meter + 25);
             pendingContextSoundSlot = 20;
             remainingHitCount = 1;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             field000a < field3148 - 4 && field000a < 4)) {
             field000c = 0;
             ++field000a;
-            if (field000a == 1) {
+            if (field000a < 2)
                 attackCollisionResult = 0;
-            }
-            if (field000a == 2) {
-                velocityX = 1.9;
-            }
-            if (field000a == 6 && field3138 < 4) {
-                field000a = (unsigned short)(field000a - 3);
-                ++field3138;
-                if (field3138 > 2) {
-                    remainingHitCount = 0;
-                }
-            }
             if (field000a >= timing.animationFrameCount) {
-                field0008 = 3;
+                field0008 = 0;
+                if (inputY == 1)
+                    field0008 = 3;
                 FaceOpponent();
                 ResetPose();
             }
@@ -2998,7 +3001,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 208: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 208: // Nayuki 0x00459CFF: scaled multi-hit count for aerial attack
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3014,10 +3017,10 @@ void Character10::Slot06()
             ResetPose();
             return;
         }
-        if (field000a == 3 && field000c == 0) {
+        if (field000a == 1 && field000c == 0) {
             meter = (short)(meter + 13);
             pendingContextSoundSlot = 20;
-            remainingHitCount = 1;
+            remainingHitCount = (short)(field3148 / 2 + 2);
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3029,7 +3032,7 @@ void Character10::Slot06()
         if (field000c >= timing.frameDuration) {
             field000c = 0;
             ++field000a;
-            if (field000a < 2) {
+            if (field000a < 6) {
                 attackCollisionResult = 0;
             }
             if (field000a >= timing.animationFrameCount) {
@@ -3039,7 +3042,7 @@ void Character10::Slot06()
         }
         return;
 
-    case 209: // UNVERIFIED: sibling-derived hypothesis, not a Nayuki match
+    case 209: // Nayuki 0x00459EE4: accelerated aerial timing and landing
         velocityY += gravity;
         if (inputY == -1 && field000a > 0 && field015c < 3 &&
             attackCollisionResult >= 2 && airActionCount == 0) {
@@ -3055,11 +3058,10 @@ void Character10::Slot06()
             ResetPose();
             return;
         }
-        if (field000a > 4 && buttonPulse[2] == 1 && field3138 < 2) {
-            field000c = 0;
-            field000a = 3;
-            ++field3138;
-            attackCollisionResult = 0;
+        if (field000a == 2 && field000c == 0) {
+            meter = (short)(meter + 30);
+            pendingContextSoundSlot = 20;
+            remainingHitCount = 3;
         }
         if (positionY + velocityY >= 0.0) {
             positionY = 0.0;
@@ -3068,27 +3070,16 @@ void Character10::Slot06()
             return;
         }
         ++field000c;
-        if (field000c >= timing.frameDuration) {
+        if (field000c >= timing.frameDuration ||
+            (field000c >= timing.frameDuration - 3 &&
+             field000a < field3148 - 3 && field000a < 4)) {
             field000c = 0;
             ++field000a;
-            if (field000a == 4) {
-                meter = (short)(meter + 15);
-                pendingContextSoundSlot = 20;
-                remainingHitCount = 1;
-                pendingCharacterSoundSlot = 0;
-                effect.type = 0x191;
-                effect.x = (double)((int)positionX + (int)facing * 27);
-                effect.y = (double)((int)positionY - 28);
-                effect.flag0018 = (unsigned char)facing;
-                effect.layer = 1;
-                effect.group = 2;
-                EmitLocalEffect(&effect);
-            }
-            if (field000a < 2) {
+            if (field000a < 2)
                 attackCollisionResult = 0;
-            }
             if (field000a >= timing.animationFrameCount) {
-                field000a = (unsigned short)(field000a - 2);
+                field0008 = 9;
+                ResetPose();
             }
         }
         return;
