@@ -171,6 +171,16 @@ meter cost20 vs50 with distinct write ordering. The two islands are
 **NOT Exact** due original state250's unresolved register phase.
 The strict 40,336-byte Kano prefix is unchanged; no cold replay.
 
+Kano cases263/264 are now also authored and independently checked as
+original-bound structural islands: **809+812=1,621 native code bytes /
+434 x86 instruction positions**, **38 native internal and 4 shared-
+return branches**, **16 original-bound COFF/float references**.
+Original distinct lance offsets X+facing110/160, frame6 charge,
+full-charge reset0 and frame16 repeat are recovered in natural C++.
+Focused `check_case263_264_shape.py` and fast CI pass. These are
+**NOT Exact**, and do not move the strict 40,336-byte Kano prefix.
+No cold all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

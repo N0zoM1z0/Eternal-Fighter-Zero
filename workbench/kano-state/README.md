@@ -60,6 +60,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case258_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
     scripts/repo-python workbench/kano-state/check_case261_262_shape.py
+    scripts/repo-python workbench/kano-state/check_case263_264_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
     scripts/repo-python workbench/kano-state/check_case259_shape.py
 
@@ -76,6 +77,34 @@ native case because state250's compiler phase remains unresolved.
 These island checks do not grow the 40,336-byte strict contiguous
 prefix or register any complete owner. Never count later diagnostic
 neutral marker states as original code.
+
+### Experimental cases263–264 — 1,621-byte native-bound paired lances
+
+The original native Kano cases263 and264 are
+`[0x0064EDBE,0x0064F0E7)` (**809 code bytes**) and
+`[0x0064F0E7,0x0064F413)` (**812 bytes**). They now have separate
+fully authored C++ branches. Their original charge sequence uses
+frame6 instead of 7, adds **300 per frame** during frames3–5,
+resets charge to0 upon reaching10000, and conditionally rewinds
+frame16 twice. At frame12 they launch effect **0x199** with
+positionY fixed at **−40.0**, native X+
+**facing×110** (263) or **facing×160** (264), and play sound2.
+On frame15 each decrements field313c; frame3 emits paired local
+effects0x196/0x197. These are not copies of prior 261/262 tier
+behavior, and the 160-width IMUL adds three native bytes.
+
+Run the original-bound checker:
+
+    scripts/repo-python workbench/kano-state/check_case263_264_shape.py
+
+It fixes both native SHA-256 values and independently checks all
+**434 original instruction offsets/widths/register-abstracted forms**,
+**38 internal and 4 original shared-return branches**, and **16
+original-bound COFF calls/IEEE-754 constants** (ResetFrame,
+`__ftol2`, original −40.0). This is a structural island **NOT
+concrete-byte or whole-function Exact**; native case250's unresolved
+compiler register phase prevents moving the independently strict
+40,336-byte continuous prefix.
 
 ### Experimental cases261–262 — paired charged effect launchers
 

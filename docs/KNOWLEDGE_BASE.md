@@ -1961,6 +1961,18 @@ instruction positions/register-abstracted forms, 40 internal and
 operands**. This is a native structural island, **NOT full Exact**;
 the real stack and original case250 compiler phase remain open.
 
+#### Kano states263/264 native structural islands
+
+Authored C++ now includes the native **809/812-byte cases263/264**
+with distinct frame12 0x199 launcher X offsets ±110/160 (facing),
+Y=−40, charge+300 frames3–5, frame6 reset, and original animation
+rewind. Dedicated `check_case263_264_shape.py` original-binds **434
+original instruction offsets/forms/widths**, **38 internal plus 4
+canonical shared-return branches**, and **16 original COFF call/float
+operands**, using both canonical SHA-256 extents. The register-
+abstracted shape matches, but concrete-register bytes are not Exact;
+the strict prefix still ends before case250 (40,336 bytes).
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
