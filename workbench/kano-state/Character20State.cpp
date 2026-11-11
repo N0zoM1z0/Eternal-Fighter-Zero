@@ -5223,5 +5223,133 @@ void Character20::Slot06()
         }
         return;
 
+    case 306: // EXPERIMENTAL Kano 0x00651988: charged super with timed 0x19E follow-ups
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 1000);
+            SetTint(0xb0,3);
+            effect.type = 0x44;
+            effect.palette = 0x13;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 5;
+            ResetFrame();
+        }
+        if (field000a == 6 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 2 && field000a < 13) {
+            field3150 += 200;
+            if (field3150 > 10000)
+                field3150 = 10000;
+        }
+        if (field000a > 15 && field000a < 19)
+            --field313c;
+        if (field313c <= 0 && field3140 < 3 && field000a > 15) {
+            field3150 = 0;
+            pendingCharacterSoundSlot = 14;
+            effect.type = 0x19e;
+            effect.x = (double)((int)positionX + (int)facing * 30);
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.owner = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            field313c = 30;
+            ++field3140;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 16)
+                hitInvulnerabilityFrames = 15;
+            if (field000a == 19 && field3138 < 6) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
+    case 307: // EXPERIMENTAL Kano 0x00651CC5: charged super with timed 0x19F follow-ups
+        if (field000a == 0 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+            pendingCharacterSoundSlot = 0;
+        }
+        if (field000a == 2 && field000c == 0) {
+            hitstunFrames = 120;
+            meter = (short)(meter - 2000);
+            SetTint(0xb0,3);
+            effect.type = 0x45;
+            effect.palette = 5;
+            effect.x = (double)(int)positionX;
+            effect.y = (double)((int)positionY - 50);
+            effect.group = 2;
+            effect.owner = 1;
+            effect.layer = 1;
+            contextOwner->EmitEffect(&effect);
+            remainingHitCount = 5;
+            ResetFrame();
+        }
+        if (field000a == 6 && field000c == 0) {
+            dashMomentumFlag = 0;
+            ResetFrame();
+        }
+        if (field000a > 2 && field000a < 13) {
+            field3150 += 200;
+            if (field3150 > 10000)
+                field3150 = 10000;
+        }
+        if (field000a > 15 && field000a < 19)
+            --field313c;
+        if (field313c <= 0 && field3140 < 4 && field000a > 15) {
+            field3150 = 0;
+            pendingCharacterSoundSlot = 14;
+            effect.type = 0x19f;
+            effect.x = (double)((int)positionX + (int)facing * 30);
+            effect.y = (double)((int)positionY - 40);
+            effect.group = 2;
+            effect.layer = 1;
+            effect.owner = 1;
+            effect.flag0018 = (unsigned char)facing;
+            EmitLocalEffect(&effect);
+            field313c = 30;
+            ++field3140;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            attackCollisionResult = 3;
+            if (field000a == 16)
+                hitInvulnerabilityFrames = 45;
+            if (field000a == 19 && field3138 < 6) {
+                field000a = (unsigned short)(field000a - 3);
+                ++field3138;
+            }
+            if (field000a >= timing.animationFrameCount) {
+                field0008 = 0;
+                ResetPose();
+            }
+        }
+        return;
+
     }
 }

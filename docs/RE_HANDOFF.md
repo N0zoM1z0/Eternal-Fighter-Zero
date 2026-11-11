@@ -298,6 +298,16 @@ charge/0x1C2 aura and animation rewinds are real source, but case250
 still blocks concrete-register Exact; continuous strict prefix stays
 40,336 bytes. No all-unit cold replay.
 
+Kano states306 and307 have now been reconstructed in natural
+C++ as **1,658 native code bytes / 416 original instructions** with
+tier-dependent meter costs, hitstop, cooldown aura launch and original
+frame16 invulnerability15/45. Dedicated
+`check_case306_307_shape.py` audits 38 internal and 2 original
+shared-return branch targets, 18 native direct-call operands and
+all instruction shapes/offsets. **NOT whole Exact**, as unresolved
+case250 still blocks the 40,336-byte strict continuous Kano prefix.
+No all-unit cold replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++

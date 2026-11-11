@@ -2160,6 +2160,20 @@ branches**, **14 independently bound call/float operands**, original
 SHA. As with other case250-gapped states this is structural source
 evidence, **NOT full Exact**; strict prefix remains 40,336 bytes.
 
+#### Kano cases306/307 timed super follow-up structural islands
+
+Two real C++ cases `[0x00651988,0x00651CC5)` and
+`[0x00651CC5,0x00652002)` restore **1,658 original native bytes /
+416 x86 instructions** with original frame2 120-hitstun impact,
+charge+200 and timed aura loops. State306 uses meter−1000/0x19E,
+3 aura launches and invulnerability15; state307 uses
+meter−2000/0x19F, 4 launches and invulnerability45. Independent
+`check_case306_307_shape.py` freezes native SHA-256 boundaries,
+all 416 register-abstracted instruction forms/widths/offsets,
+38 internal and 2 return branches and 18 original COFF call refs.
+These are structural islands, **NOT accepted full Exact**; the strict
+original-bound Kano prefix remains 40,336 bytes before state250.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

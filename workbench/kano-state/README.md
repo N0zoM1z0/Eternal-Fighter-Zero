@@ -69,6 +69,7 @@ Use only the dedicated original-bound structural audit:
     scripts/repo-python workbench/kano-state/check_case303_shape.py
     scripts/repo-python workbench/kano-state/check_case304_shape.py
     scripts/repo-python workbench/kano-state/check_case305_shape.py
+    scripts/repo-python workbench/kano-state/check_case306_307_shape.py
     scripts/repo-python workbench/kano-state/check_case305_shape.py
     scripts/repo-python workbench/kano-state/check_case302_shape.py
     scripts/repo-python workbench/kano-state/check_case260_shape.py
@@ -147,6 +148,34 @@ Context::SetSceneTimer). This is **a register-abstracted structural
 island, NOT full owner Exact**. Concrete VC7.1 register parity remains
 blocked at original case250; strict contiguous prefix is still
 40,336 code bytes.
+
+### Experimental states306–307 — two 829-byte timed follow-up supers
+
+The original Kano `Slot06` cases306/307 are
+`[0x00651988,0x00651CC5)` and `[0x00651CC5,0x00652002)`, **829
+native bytes and 208 x86 instructions each**. New authored natural
+C++ restores their native frame2 impact/120-frame freeze, frame6
+reset, frame3–12 charge+200 capped at10000, and frame16–18 timed
+field313c cooldown controlling an original local aura launch. Case306
+spends meter1000 with stage effect0x44/palette0x13, uses effect0x19E,
+at most three field3140 launches, and writes invulnerability15 at
+animation frame16. Case307 spends meter2000 with stage0x45/palette5,
+uses effect0x19F, supports four launches and writes invulnerability45.
+Both repeat the later frame19 branch up to six cycles.
+
+Targeted original-bound verification:
+
+    scripts/repo-python workbench/kano-state/check_case306_307_shape.py
+
+The independently pinned native SHA-256s are
+`e4100ae5d25c7d256b0e8524492930afa185cda5f6c0c6b4efba86730ee99ad5`
+and `a32a4a38706f63bc517744d5e06a3ddd77c70a244a956cf27d119b967e729bfe`.
+Checker validates all **416 original instruction offsets/widths and
+register-abstracted forms**, **38 original in-case and 2 native shared
+return branches**, **18 independently bound original COFF REL32 calls**
+(ResetFrame, SetTint, Context::EmitEffect and `__ftol2`). This is
+structural native evidence, **NOT full Exact**; unresolved earlier
+state250 register phase still blocks the strict 40,336-byte prefix.
 
 ### Experimental state305 — 1,109-byte timed super with staged aura
 
