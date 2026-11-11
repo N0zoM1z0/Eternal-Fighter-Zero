@@ -16,40 +16,38 @@ The switch maps 137 live animation IDs and 169 default IDs.
 
 ## Selected original-bound native checkpoint
 
-Original [0x00451850,0x0045E522): **52,434 / 62,693 code bytes**,
-**14,384 native x86 instructions**, SHA-256
-13dafd7fcfc2c3e076888ceca3f3cbe98704626de847d4a575f2d67e508ac110.
-The default and **121 live states** through state272 have been reviewed.
+Reviewed [0x00451850,0x0045E955): **53,509 / 62,693 native code
+bytes**, **14,677 original x86 instructions**, SHA-256
+fb64b228b834142e26b0f0612e24d2a726e5acbeb322181651db495ff3c8c5ac.
+Original default plus **123 live states** through274 are reviewed.
 
-State271 is a fully reconstructed 222-byte charge/tier counter:
-it always calls ResetFrame, emits sound5 and increments `field3148`
-at frame5/tick0, caps field3148 at nine, advances each animation tick
-with attackCollisionResult3 and exits by ResetPose then state7.
-State272 is a 667-byte combo/cancel state: initializes horizontal
-velocity1.4 and zero vertical/deceleration, damps by 0.08 after
-frame3, triggers context sound21 on frames1/3, and accepts original
-button pulses only before frame4. Input chooses 275/269, 274,
-276/281 or 271/280/268 by tier and inputY. Frame4 can rewind to
-frame0 while field313c<3, and animation exit switches to state268,
-then ResetFrame/ResetPose and rewrites frame to8. Original 1.4/0.08
-IEEE-754 references and call order were compared.
-
-Focused selected native verification:
+State273 is a natural 667-byte reverse counterpart of 272: initial
+velocityX **-1.4** rather than +1.4 (IEEE-754 0x788088), while
+retaining 0.08 damping, frame1/3 sound21, button cancellation,
+frame4 rewind, state268 exit and the canonical call order.
+State274 is a separate 408-byte attack: first-tick ResetFrame,
+then a tier-dependent frame9 timing gate. On transition to frame7
+it selects local effect **0x1AC**, 0x1AD for inputX==facing or
+0x1AB for the opposite input; it emits at integer X + facing*30,
+Y-50, field0028=1, group/layer=0, facing flag, then gives 45 meter.
+Completion resets state0 after virtual ResetPose. The original
+`sub/neg/sbb/inc` VC7.1 frame9 indicator and all operands match.
 
     scripts/repo-python workbench/nayuki-state/check_prefix.py
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` matches **14,384 original
-instruction offsets/widths/normalized forms** except partial stack
-allocation (candidate 0x314 vs canonical 0x2B4), **1,349 internal
-branches**, **199 outbound targets**, **1,102 original-bound nonlocal
-COFF call/float references**, 2 local switch operands and **121
-original selector case targets**. This is NOT whole Exact.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected audit checks **14,677
+original instruction offsets/widths/normalized forms** except partial
+stack allocation (0x31C vs original 0x2B4), **1,377 internal jumps**,
+**206 outbound**, **1,116 nonlocal original-bound COFF call/float
+references**, two local switch operands and **123 selector case
+entries**. This is NOT full function Exact.
 
-## Next state and unresolved work
+## Next original case and incomplete full owner
 
-Original state273 begins **0x0045E522**. **9 missing states273–281**
-and seven unreviewed 300–306 remain. Workbench has 128/137 live case
-labels, 121 reviewed. **10,259 unmatched native bytes**, full stack,
-local switch tables, remaining relocations and shared return are open.
-Continue native-driven focused `probe_prefix.py --through 273` only;
-marker bodies are UNACCEPTED and full cold replay is prohibited.
+State275 starts at **0x0045E955**. Seven original live IDs275–281
+remain missing from natural source, alongside seven inherited
+300–306 bodies not yet fully verified. Workbench now has 130/137
+case labels, 123 reviewed. **9,184 native code bytes**, full
+canonical stack, switch DATA, remaining relocations and common return
+are open. Probe only `probe_prefix.py --through 275`, never full
+all-unit cold replay; marker branches are UNACCEPTED.
