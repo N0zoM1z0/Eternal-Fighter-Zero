@@ -33,21 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-Kano original 68,853-byte Slot06 is under **actual authored source
-reconstruction** at `workbench/kano-state/Character20State.cpp`.
-The continuous selected native prefix is now **3,266 original bytes /
-927 instructions**, default plus **13 authentic cases** 1–9,
-13–16. The strict local checker validates **74 original internal
-branches**, **15 outbound destinations**, **67 bound float/call
-relocations** and 2 local switch-address references. Original
-C++-driven Kano jump timing and IEEE-754 speeds differ from sibling.
+Original Kano Slot06 is a **68,853-byte native state boss**, with
+an active authored workbench at `workbench/kano-state/Character20State.cpp`.
+Selected original-bound prefix now reaches **6,055 bytes /
+1,669 x86 instructions**, original default plus **19 fully reviewed
+live cases** (1–9, 13–16, 47, 50–54). Its checker validates **146
+original internal branches**, **21 outbound destinations**, **164
+nonlocal original call/IEEE-754 bindings** and two local table
+addresses. The latest 50–54 are substantive 497-byte original-bound
+recoil/guard states. Real Kano jump/landing logic and tier-dependent
+values differ from the Makoto sibling. **Next state55 at 0x00644167**.
 
-The partial candidate has a 3-byte shorter stack allocation
-(0x58 vs original 0x4A4) because 123 case bodies remain missing.
-This is *not* a full Exact unit or accepted function. **Next native
-case47 begins 0x00643682**. Selected checks and provenance are in
-`workbench/kano-state/README.md`; do not perform whole-repo cold replay
-or count the neutral marker cases as reconstruction.
+Incomplete candidate stack allocation 0x6C is three instruction
+bytes shorter than canonical 0x4A4; this temporary difference is
+explicitly accounted for in the selected checker. Remaining
+117 case bodies, original complete stack, jump tables, relocations
+and common return are OPEN. This is NOT full Exact: unreviewed
+marker cases have no reconstruction or acceptance credit. See
+`workbench/kano-state/README.md`; no all-unit cold replay.
 
 ## Additional newly accepted leaf owners
 

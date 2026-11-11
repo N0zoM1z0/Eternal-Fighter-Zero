@@ -1729,28 +1729,32 @@ linked/runtime equivalence; no full cold replay was run.
 
 ### Kano Slot06 partial original-bound state reconstruction
 
-Kano `Character20::Slot06` vtable slot6 `0x00788C90` selects the
-**68,853-byte** original state machine `[0x006429C0,0x006536B5)`.
-Adjacent table data owns 137 address words (548 bytes) and 316
-selector bytes, mapping **136 live / 180 default** animation IDs.
-The natural partial source in `workbench/kano-state/` reproduces
-**3,266 original native bytes / 927 instructions** from the opening
-through complete cases1–9 and13–16, with next original case47 at
-`0x00643682`. Accounting for the only provisional compiler-frame
-instruction-length difference (candidate short 0x58, canonical long
-0x4A4), the selected native checker verifies **927 original forms and
-positions**, 74 internal and 15 outbound branch targets,
-**67 original-bound nonlocal call/IEEE-754 operands** and both local
-switch table addresses. This is a *partial* proof, NOT whole Exact.
+Kano `Character20::Slot06` vtable slot6 at `0x00788C90` selects
+original `[0x006429C0,0x006536B5)`, **68,853 code bytes**, plus
+137 four-byte switch destinations and 316 selector bytes (136 live
+IDs, 180 default). Active authored source at `workbench/kano-state/`
+now reproduces original `[0x006429C0,0x00644167)` in normalized
+native codegen: **6,055 bytes / 1,669 instructions**. The canonical
+start through cases1–9,13–16,47,50–54 and default are reviewed.
 
-Reviewed Kano-specific behaviors include +0.6/-0.6 base movement;
-frame2 jump timing (not the sibling's frame3); gravity0.025,
-vertical launch-2.2, and optional dash carry 0.3 / 0.4 / 1.1;
-original landing, pose reset and state changes. The remaining
-123 native case bodies, complete 0x4A4 stack, switch DATA, relocs
-and common return are OPEN. The generated neutral marker cases have
-no acceptance credit. Continue original disassembly with selected
-`check_prefix.py` and `probe_prefix.py --through 47` only.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected checker accounts
+explicitly for one incomplete 3-byte shorter compiler stack
+allocation (candidate 0x6C vs native 0x4A4), then confirms **1,669
+instruction offsets/forms/widths**, **146 internal** and **21
+outbound branch targets**, **164 original-bound nonlocal COFF calls/
+IEEE-754 operands** and both local table addresses. This is NOT
+whole-function Exact; the 117 neutral marker bodies generated for
+the selective probe are UNACCEPTED and not original source.
+
+Kano-specific differences include +0.6/-0.6 movement, frame2
+jump timing (instead of sibling frame3), gravity0.025, upward -2.2,
+distinct dash carry and state9/13 landing. Newly reviewed case47
+(304 bytes) implements frame2 impact and gravity0.035; cases50–54
+are each 497-byte tiered recoil/guard reactions with resource cost,
+opponent combo-damage scaling, stage-boundary pushback and pose
+recovery. Next state55 starts `0x00644167`; original full stack,
+remaining 117 cases, native switch tables, relocs and return remain
+open. Continue `probe_prefix.py --through 55`, not a cold replay.
 
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 

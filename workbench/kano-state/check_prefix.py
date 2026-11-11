@@ -14,8 +14,8 @@ from native_build import compile_source
 from coff import object_function
 from probe_prefix import BASE,CODE_SIZE,PROBE,OBJECT,disasm,normalized,make_source
 
-END=0x00643682 # first instruction of native case13, after nine full authored cases
-NATIVE_CODE_SHA='c3ec6e125d3da52249b6111f22c5e719ae86a3d664b5d2d10a38898cd552f1ae'
+END=0x00644167 # first instruction of native case13, after nine full authored cases
+NATIVE_CODE_SHA='96ba1a868dd57db0da3037785566c4df780db3cacab3dd435bd60387224601b5'
 CALLS={
 '??0EffectSpawn@@QAE@XZ':0x00405490,
 '?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z':0x00413090,
@@ -27,10 +27,10 @@ def main():
     assert struct.unpack('<I',target_bytes(image,0x00788C90,4))[0]==BASE
     prefix=target_bytes(image,BASE,END-BASE)
     original=target_bytes(image,BASE,CODE_SIZE)
-    assert len(prefix)==3266 and len(original)==68853
+    assert len(prefix)==6055 and len(original)==68853
     assert hashlib.sha256(prefix).hexdigest()==NATIVE_CODE_SHA
-    used=make_source(16)
-    assert used==set(range(1,10))|{13,14,15,16},used
+    used=make_source(54)
+    assert used==set(range(1,10))|{13,14,15,16,47,50,51,52,53,54},used
     try:
         compile_source(PROBE,OBJECT,['/Od','/G6','/MT','/Gy','/W3'],
                        ROOT/'.analysis/build/kano-state-selected-prefix.log')
@@ -40,7 +40,7 @@ def main():
     target,compiled=disasm(prefix),disasm(code)
     assert len(compiled)>len(target)
     assert target[2][2]=='sub esp,0x4a4'
-    assert compiled[2][2]=='sub esp,byte +0x58'
+    assert compiled[2][2]=='sub esp,byte +0x6c'
     assert target[2][0]==compiled[2][0]==3
     # The 6-byte native frame uses a 32-bit immediate. The unreviewed markers
     # reduce the compiler's provisional frame to a 3-byte 8-bit immediate.
@@ -51,7 +51,7 @@ def main():
         assert len(a[1])==len(b[1]),(i,a,b)
         assert normalized(a[2])==normalized(b[2]),(i,a,b)
     assert compiled[len(target)][0]+3==len(prefix)
-    assert len(target)==927,len(target)
+    assert len(target)==1669,len(target)
 
     original_pos={x[0]:i for i,x in enumerate(target)}
     compiled_pos={x[0]:i for i,x in enumerate(compiled)}
@@ -68,7 +68,7 @@ def main():
             internal+=1
             assert original_pos[dst]==compiled_pos.get(local),(a,b)
         else:outbound+=1
-    assert (internal,outbound)==(74,15),(internal,outbound)
+    assert (internal,outbound)==(146,21),(internal,outbound)
     refs=defaultdict(set);local_refs={};n=0
     for r in rels:
         off=r['offset']
@@ -94,10 +94,10 @@ def main():
             refs[(symbol,r['type'])].add(dest)
     assert local_refs=={0xA1:0x006538D9,0xA8:0x006536B5},local_refs
     assert all(len(values)==1 for values in refs.values()),refs
-    assert n==69 and len(local_refs)==2 and len(refs)==13,(n,len(local_refs),len(refs))
-    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 13 real states + default, NO complete Exact.')
+    assert n==166 and len(refs)==26 and len(local_refs)==2,(n,len(refs),len(local_refs))
+    print(f'Kano Slot06: {len(prefix)} / {CODE_SIZE} native code bytes; 19 real states + default, NO complete Exact.')
     print('native instructions',len(target),'internal branches',internal,'outbound targets',outbound)
     print('original-bound external/float operands',n-len(local_refs),'local switch address operands',len(local_refs),'distinct symbols',len(refs))
-    print('native frame 0x4A4 vs incomplete candidate 0x58; full local data, return and other 123 state bodies OPEN.')
+    print('native frame 0x4A4 vs incomplete candidate 0x6C; full local data, return and other 117 state bodies OPEN.')
 
 if __name__=='__main__':main()

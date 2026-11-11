@@ -8,27 +8,31 @@
 **136 live cases and 180 default IDs**.
 
 The authored natural C++ `Character20State.cpp` currently has
-original common setup, default and **thirteen reviewed live cases**:
-1–9 and 13–16. The native owner starts at `0x006429C0` and the
-next unreviewed case47 starts at `0x00643682`. Case starts:
-default `0x00642A6C`, 1 `0x00642AE7`, 2 `0x00642B62`,
-3 `0x00642BDD`, 4 `0x00642C60`, 5 `0x00642DC3`,
-6 `0x00642F32`, 7 `0x0064307C`, 8 `0x00643109`,
-9 `0x00643196`, 13 `0x0064324D`, 14 `0x006432F2`,
-15 `0x00643426`, 16 `0x0064355A`.
+original common setup, default and **19 reviewed live cases**:
+1–9, 13–16, 47 and 50–54. Next native case55 begins `0x00644167`.
+The selected original prefix `[0x006429C0,0x00644167)` is **6,055
+native code bytes / 1,669 original x86 instructions**, SHA-256
+`96ba1a868dd57db0da3037785566c4df780db3cacab3dd435bd60387224601b5`.
 
-The selected prefix `[0x006429C0,0x00643682)` is **3,266 native
-bytes / 927 instructions**, SHA-256
-`c3ec6e125d3da52249b6111f22c5e719ae86a3d664b5d2d10a38898cd552f1ae`.
-The original six-byte `sub esp,0x4A4` is still compiled with a
-provisional three-byte `sub esp,0x58` because the other 123 real
-source cases are missing. Explicitly restoring ONLY that known
-three-byte position shift, the local verifier checks **927 native
-instruction positions, widths and normalized opcodes**, **74 internal
-branches**, **15 outbound original branch targets**, **67 canonical
-nonlocal float/call relocation operands** and 2 original-local
-switch address operands. There is no fake assembly padding and no
-full-function Exact claim.
+Original `sub esp,0x4A4` has a six-byte instruction; the selected
+candidate currently uses short `sub esp,0x6C`, three bytes shorter,
+because the remaining 117 native cases are not yet authored. The
+focused checker normalizes *only* this provisional three-byte frame
+instruction-size shift. It then strictly verifies all **1,669 native
+instruction positions, widths and forms**, **146 original internal
+branches**, **21 outbound targets**, **164 native-bound nonlocal
+call/IEEE-754 COFF operands** and both switch-table address operands.
+This is NOT whole-function Exact, and marker bodies have no credit.
+
+Case47 (304 bytes) restores the airborne landing/impact transition,
+with gravity0.035 and frame2 loop. States50–54 are Kano's full
+**497-byte-per-state recoil/guard reactions**: each applies resource
+loss if flagged, uses original opponent combo-damage scaling to set
+horizontal pushback, enforces stage-edge constraints, and advances
+animation to neutral/defensive recovery. Original tier-dependent
+meter gain and recoil constants are preserved and verified against
+native IEEE-754 locations. These are actual authored source bodies,
+not mere labels or untouched sibling placeholders.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -45,12 +49,12 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 47 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 55 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case47 `0x00643682`**, then cases50–77
-and the larger late state bodies. The full original 0x4A4 frame,
-123 remaining source cases, local switch DATA, return and complete
-relocation closure are OPEN. The diagnostic probe generates *only* unaccepted
+Next work begins at **Kano case55 `0x00644167`**, followed by
+remaining states56–77 and larger late bodies. The full 0x4A4 stack
+frame, 117 remaining source cases, local switch DATA, return and
+complete relocation closure are OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.
