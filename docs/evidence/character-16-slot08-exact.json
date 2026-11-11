@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "authority": "Complete native Akiko Character16::Slot08 owner at [0x007256B0,0x00725BCE) of 1310 original bytes, independently selected by canonical original vtable slot8 0x00788F78, with five independently original-bound COFF call destinations",
+  "method": "Pinned VC7.1 /Od /G6 /MT /Gy /W3 compiles ordinary authored C++ src/Character16Slot08.cpp with original dual-fighter health gating, opponent tint, multi-counter scene timing, music fade, collision hitstun and full state transition cleanup. Selected-only strict original-bound oracle confirms all 1310 complete native code bytes and the native call operands for three Context::FadeMusic at 0x00406A70, one Secondary::SetCharacterTint at 0x00410AC0 and one Context::SetSceneTimer at 0x004080C0; zero differences. No full cold all-unit replay or whole-game linkage/runtime equivalence claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 1310,
+      "matched_bytes": 1310,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 148,
+          "target": 4221552,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeMusic@Context@@QAEXHF@Z",
+          "evidence": "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725744 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited.",
+          "addend": 0
+        },
+        {
+          "offset": 245,
+          "target": 4262592,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetCharacterTint@Secondary@@QAEXEH@Z",
+          "evidence": "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x007257A5 independently resolves ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; native owner and call/branch structure audited.",
+          "addend": 0
+        },
+        {
+          "offset": 535,
+          "target": 4227264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "evidence": "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x007258C7 independently resolves ?SetSceneTimer@Context@@QAEXH@Z to 0x004080C0; native owner and call/branch structure audited.",
+          "addend": 0
+        },
+        {
+          "offset": 1043,
+          "target": 4221552,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeMusic@Context@@QAEXHF@Z",
+          "evidence": "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725AC3 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited.",
+          "addend": 0
+        },
+        {
+          "offset": 1237,
+          "target": 4221552,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?FadeMusic@Context@@QAEXHF@Z",
+          "evidence": "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725B85 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited.",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "e2013febef4be232fef8181b4aac0f5f8cfafa13bc5cf9b9a447faa581786fea",
+      "target_extent_sha256": "e2013febef4be232fef8181b4aac0f5f8cfafa13bc5cf9b9a447faa581786fea",
+      "unit": "character-16-slot08",
+      "symbol": "?Slot08@Character16@@UAEXXZ",
+      "target_address": "0x007256B0",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "09d41b37d6f6d83c9ecdb9d0079265592a00d8c764a91b5d19b7c3e22a58dda4",
+      "object_sha256": "b32db877dbfe1fd6ec141fc0c5ad2218bad3ecf532cb58c42e965541fd69174c",
+      "source_sha256": "f9f0ae32d6587d61c307adb850fa375cc43c1cf4de241769243a63d448e1ecea",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "b75c670c6c71ebcb777d3bc102d3372745b72cdededd34a614c3819edbc205bd",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7060d8424c7f066380fef06a479a70783a5eb3c1074d27b7025499528e65ade1",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

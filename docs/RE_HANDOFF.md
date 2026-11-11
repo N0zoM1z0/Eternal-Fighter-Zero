@@ -476,6 +476,18 @@ This complete caller's codegen Exact does not establish the Video
 callee's own Exact status or whole-game runtime equivalence.
 Only selected original one-unit replay, never full cold replay.
 
+Akiko `Character16::Slot08` is now a **complete Exact 1,310-byte
+opponent/timer special** authored in `src/Character16Slot08.cpp`.
+Original vtable0x788F78 and all 5 original REL32 targets (3x
+`Context::FadeMusic`, `Secondary::SetCharacterTint`,
+`Context::SetSceneTimer`) are independently verified; strict
+one-unit replay gives **1310/1310** bytes, zero differences. The
+natural source restores the original dual-fighter health gates,
+field0160/field3148 opponent state and layered timer/counter,
+scoreboard/musical fade and exit behavior. Evidence:
+`docs/evidence/character-16-slot08-exact.json`.
+Only the Akiko selected owner was replayed; no all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

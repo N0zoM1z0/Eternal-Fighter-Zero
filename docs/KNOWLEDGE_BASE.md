@@ -2296,6 +2296,35 @@ caller bytes were compared independently. Public evidence:
 `docs/evidence/nagamori-affected-consumers-exact.json`. Unrelated
 stale-header certificates and whole-image/runtime checks remain open.
 
+### Akiko Character16 Slot08: complete 1,310-byte Exact opponent/timer special
+
+Original Akiko vtable `0x00788F78` points to the complete
+`Character16::Slot08` owner `[0x007256B0,0x00725BCE)` of **1,310
+native code bytes**. New authored natural C++ in
+`src/Character16Slot08.cpp` faithfully reconstructs the complex
+stateful function (not a trivial initializer): guards both fighters'
+health, clears opponent field015c and local field3148 when the fight
+ends, manages field0160 activation/expiry and resets four Akiko
+child counters. While an opponent-tint countdown is active it calls
+`Secondary::SetCharacterTint(0xCB,3)` and releases the opponent lock
+at zero. Another timer adds `4-field0160` to field3154, carries
+through field3158/field315c/field3160 in base10, calls
+`Context::SetSceneTimer(3)`, advances the original even-frame
+field314c sequence to36, and manages original opponent hitstun,
+character sounds and multi-phase music fades. Native timer expiry
+at 180 and states50–149 perform original exit/reset logic.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` **strict selected-only
+original-bound replay proves 1,310/1,310 complete code bytes,
+5 original COFF REL32 calls and zero differences**. The native
+vtable target, full owner boundaries, three `Context::FadeMusic`
+call operands (0x00406A70), one `Secondary::SetCharacterTint`
+(0x00410AC0), and one `Context::SetSceneTimer` (0x004080C0)
+were checked independently of the compiler output. Certificate:
+`docs/evidence/character-16-slot08-exact.json`.
+This is complete codegen Exact, not whole-game Windows linkage or
+runtime proof.
+
 ### Akiko Character16 lifecycle and effects: five complete Exact owners
 
 The canonical Akiko Character16 vtable at `0x00788F58` independently

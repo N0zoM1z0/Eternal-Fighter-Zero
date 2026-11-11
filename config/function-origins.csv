@@ -501,7 +501,7 @@ address,origin,status,evidence
 0x00721DA0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
 0x00721DC0,unknown,unreviewed,
 0x00724780,unknown,unreviewed,
-0x007256B0,unknown,unreviewed,
+0x007256B0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-slot08-exact
 0x00725BD0,authored,reviewed,docs/KNOWLEDGE_BASE.md#akiko-character16-lifecycle-exact
 0x00725C00,unknown,unreviewed,
 0x00726F10,unknown,unreviewed,

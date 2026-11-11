@@ -161431,3 +161431,48 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Original EFZ.exe canonical Kano vtable slot 0x00788C7C independently selects the complete 1643-byte owner at 0x00657500; the original REL32 at 0x00657B62 resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90; original code and call ordering independently reviewed"
+
+[units.character-16-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character16Slot08.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-16-slot08/Character16Slot08.obj"
+symbol = "?Slot08@Character16@@UAEXXZ"
+target_address = 0x007256B0
+size = 1310
+
+[[units.character-16-slot08.relocations]]
+offset = 148
+type = "REL32"
+symbol = "?FadeMusic@Context@@QAEXHF@Z"
+target = 0x00406A70
+evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725744 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited."
+
+[[units.character-16-slot08.relocations]]
+offset = 245
+type = "REL32"
+symbol = "?SetCharacterTint@Secondary@@QAEXEH@Z"
+target = 0x00410AC0
+evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x007257A5 independently resolves ?SetCharacterTint@Secondary@@QAEXEH@Z to 0x00410AC0; native owner and call/branch structure audited."
+
+[[units.character-16-slot08.relocations]]
+offset = 535
+type = "REL32"
+symbol = "?SetSceneTimer@Context@@QAEXH@Z"
+target = 0x004080C0
+evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x007258C7 independently resolves ?SetSceneTimer@Context@@QAEXH@Z to 0x004080C0; native owner and call/branch structure audited."
+
+[[units.character-16-slot08.relocations]]
+offset = 1043
+type = "REL32"
+symbol = "?FadeMusic@Context@@QAEXHF@Z"
+target = 0x00406A70
+evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725AC3 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited."
+
+[[units.character-16-slot08.relocations]]
+offset = 1237
+type = "REL32"
+symbol = "?FadeMusic@Context@@QAEXHF@Z"
+target = 0x00406A70
+evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725B85 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited."
