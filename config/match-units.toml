@@ -161476,3 +161476,62 @@ type = "REL32"
 symbol = "?FadeMusic@Context@@QAEXHF@Z"
 target = 0x00406A70
 evidence = "Canonical native Akiko Character16 vtable slot0x00788F78 independently identifies complete 1310-byte Slot08 at 0x007256B0. Original COFF REL32 operand at 0x00725B85 independently resolves ?FadeMusic@Context@@QAEXHF@Z to 0x00406A70; native owner and call/branch structure audited."
+
+[units.character-04-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character04Slot08.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-04-slot08/Character04Slot08.obj"
+symbol = "?Slot08@Character04@@UAEXXZ"
+target_address = 0x0061A620
+size = 528
+
+[[units.character-04-slot08.relocations]]
+offset = 13
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A62D independently resolves ??0EffectSpawn@@QAE@XZ to 0x00405490; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 25
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A639 independently resolves ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z to 0x00413090; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 264
+type = "REL32"
+symbol = "?SetSceneTimer@Context@@QAEXH@Z"
+target = 0x004080C0
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A728 independently resolves ?SetSceneTimer@Context@@QAEXH@Z to 0x004080C0; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 317
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A75D independently resolves __ftol2 to 0x007783B8; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 338
+type = "DIR32"
+symbol = "__real@4044000000000000"
+target = 0x00787CE0
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original DIR32 at 0x0061A772 independently resolves __real@4044000000000000 to 0x00787CE0; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 343
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A777 independently resolves __ftol2 to 0x007783B8; native code and float payload checked"
+
+[[units.character-04-slot08.relocations]]
+offset = 375
+type = "REL32"
+symbol = "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z"
+target = 0x00407100
+evidence = "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A797 independently resolves ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z to 0x00407100; native code and float payload checked"

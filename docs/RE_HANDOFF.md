@@ -488,6 +488,18 @@ scoreboard/musical fade and exit behavior. Evidence:
 `docs/evidence/character-16-slot08-exact.json`.
 Only the Akiko selected owner was replayed; no all-unit cold replay.
 
+Character04 `Slot08` is now a **complete native Exact 528-byte
+passive state controller**, `src/Character04Slot08.cpp`. It uses an
+original-offset provisional typed view only in this source to avoid
+modifying shared class layout dependencies. Original vtable slot
+`0x00788B9C`, 528/528 code bytes and all seven original-bound
+call/float operands pass one-unit strict replay, zero differences.
+A necessary real-world correctness fix was **positionY−40.0**, not
+30.0: the first compiled candidate had matching code forms but the
+wrong float constant, independently rejected by native binding.
+Certificate `docs/evidence/character-04-slot08-exact.json`.
+No all-unit cold replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

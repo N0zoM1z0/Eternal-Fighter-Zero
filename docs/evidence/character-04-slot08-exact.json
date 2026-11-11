@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "authority": "Complete 528-byte Character04::Slot08 native owner [0x0061A620,0x0061A830) from original EFZ.exe virtual dispatch slot 0x00788B9C, with independently verified full code boundary and all seven native call/float destinations",
+  "method": "Original-bound strict selected one-unit audit of authored C++ src/Character04Slot08.cpp using pinned VC7.1 /Od /G6 /MT /Gy /W3. Original offset-accurate provisional child-layout typed view avoids changing shared accepted CharacterViews.h. Seven native relocations bind two true EffectSpawn ctor/reset calls, Context::SetSceneTimer, two __ftol2, original IEEE-754 literal 40.0 at 0x00787CE0 and Context::EmitEffect. Correct literal 40.0 instead of the earlier erroneous 30.0 is required for true exact original binding, not just masked byte similarity. All 528 native bytes match with zero differences. No all-unit cold replay or whole-product linkage/runtime claim.",
+  "reports": [
+    {
+      "result": "exact",
+      "size": 528,
+      "matched_bytes": 528,
+      "difference_count": 0,
+      "first_differences": [],
+      "relocations": [
+        {
+          "offset": 13,
+          "target": 4215952,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "??0EffectSpawn@@QAE@XZ",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A62D independently resolves ??0EffectSpawn@@QAE@XZ to 0x00405490; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 25,
+          "target": 4272272,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A639 independently resolves ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z to 0x00413090; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 264,
+          "target": 4227264,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?SetSceneTimer@Context@@QAEXH@Z",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A728 independently resolves ?SetSceneTimer@Context@@QAEXH@Z to 0x004080C0; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 317,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A75D independently resolves __ftol2 to 0x007783B8; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 338,
+          "target": 7896288,
+          "type": "DIR32",
+          "type_id": 6,
+          "symbol": "__real@4044000000000000",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original DIR32 at 0x0061A772 independently resolves __real@4044000000000000 to 0x00787CE0; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 343,
+          "target": 7832504,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "__ftol2",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A777 independently resolves __ftol2 to 0x007783B8; native code and float payload checked",
+          "addend": 0
+        },
+        {
+          "offset": 375,
+          "target": 4223232,
+          "type": "REL32",
+          "type_id": 20,
+          "symbol": "?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z",
+          "evidence": "Canonical Character04 original vtable slot at 0x00788B9C selects complete 528-byte owner 0x0061A620; original REL32 at 0x0061A797 independently resolves ?EmitEffect@Context@@QAEXPAUEffectSpawn@@@Z to 0x00407100; native code and float payload checked",
+          "addend": 0
+        }
+      ],
+      "relocated_sha256": "d99f43a0ffc657c7a2282644414efbf22b170886b98b0682790572fa56f12d6e",
+      "target_extent_sha256": "d99f43a0ffc657c7a2282644414efbf22b170886b98b0682790572fa56f12d6e",
+      "unit": "character-04-slot08",
+      "symbol": "?Slot08@Character04@@UAEXXZ",
+      "target_address": "0x0061A620",
+      "target_sha256": "3a1616d6c76d2eea08a95bb198d853e96cb6b9b3266e277ca1d167426dd66481",
+      "boundary_ledger_sha256": "0e56634270de0da54f91939649d4324de17c481038e93b8e0c4b22cbe398f0ca",
+      "object_sha256": "d497c5ff145a6bf566d64a8c89d5ba7369ddf78459e5c4fe9a07a4529d475e97",
+      "source_sha256": "aaf27dbdaffdcfb238c572f1e3dcdcbc82e9b4da14d383a5ee00f9174c394524",
+      "dependencies": {
+        "src/Engine.h": "01be0a13d97ed4407b6637ac22dae59dccc7ff5b39e3e9136ee95e4f90fb01aa",
+        "src/Input.h": "731278fa72f9ff4341d47bf39b0fee62ee0e81d1a0efba992c06588bac99167d",
+        "src/CharacterViews.h": "4c21beec7d8b8260b8b643b155783711bab17e28c062f781d01854f0823c10e5"
+      },
+      "toolchain_lock_sha256": "ab22e62f7bbf43240220c0d12d59bab183a26b2ad1634375be0f8d6766681287",
+      "units_manifest_sha256": "43d2c2af941cde18e9a5c978f1ae0d9b9ef36bd46626f4103b458803637e2b0a",
+      "build_manifest_sha256": "2ffe5c7e02599516ec9efc3017c5dd7d8ee3789a2ac001b1639f61f46c284576",
+      "unit_sha256": "7d061616505ad85c19a526cc7b9e92119bc1be683cfe3b1df7905c38228a88e6",
+      "profile_sha256": "61202bf0419eb8b82d13bfef8669f9aada95d990a712e11f3355f20c1d3d163d",
+      "acceptance_authority": "complete-function-codegen"
+    }
+  ]
+}

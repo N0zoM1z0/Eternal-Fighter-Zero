@@ -2237,6 +2237,34 @@ The underlying Video callee is not separately accepted; a complete
 Exact render **caller** does not establish whole Windows runtime
 linkage or actual graphics output parity.
 
+### Character04 Slot08: 528-byte original Exact passive state controller
+
+The original Character04 vtable at `0x00788B7C`, slot8
+`0x00788B9C`, identifies complete native `Character04::Slot08`
+`[0x0061A620,0x0061A830)`, **528 original code bytes**.
+Ordinary authored C++ in `src/Character04Slot08.cpp` uses an
+**offset-accurate, provisional local field view**, not modifications
+to shared CharacterViews.h: `0x3144` selects behavior, `0x3148`
+is countdown, `0x3150` determines alternate countdown rates.
+During active countdown the original state3 subtracts another tick;
+state1 subtracts4, state2 adds1, state3/4 subtract1.
+State4 also clears meter and invokes `Context::SetSceneTimer(3)`.
+When countdown expires, state3 emits effect type1/palette11 with
+integer X and Y from **positionY−40.0**, then resets child counters.
+State4 restarts state3 with counter1200 outside state IDs324/325.
+
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected-only original-bound
+strict replay proves **528/528 complete original code bytes,
+7 independently native-bound COFF call/IEEE-754 operands and zero
+differences**. Native targets are EffectSpawn ctor0x405490,
+`ResetLocalEffectSpawn`0x413090, SetSceneTimer0x4080C0,
+`__ftol2`0x7783B8 (2), 40.0 literal0x787CE0 and
+`Context::EmitEffect`0x407100. The initial 30.0 candidate
+*matched nonrelocated instruction widths* but failed float binding;
+correcting to native **40.0** resolved the full Exact oracle.
+No ASM wrappers, padding or whole runtime claims.
+Certificate: `docs/evidence/character-04-slot08-exact.json`.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five
