@@ -7,34 +7,33 @@
 `[0x006538D9,0x00653A15)` (316 bytes). Original selector holds
 **136 live cases and 180 default IDs**.
 
-Original default and **88 reviewed live states** are authored in
-`Character20State.cpp`, through case212. Strict selected original
-`[0x006429C0,0x0064B177)` covers **34,743 native code bytes /
-9,524 original x86 instructions**, selected SHA-256
-`529406942a44a20d95bf7b8f934066887a98ad43098216f625e6bb5da6d72bb0`.
-Next original case213 begins **`0x0064B177`**.
+Original default plus **90 native-reviewed live states** are now
+authored through state214. The continuous canonical code
+`[0x006429C0,0x0064B461)` is **35,489 native bytes / 9,734
+original x86 instructions**, SHA-256
+`99ceeb0cfe0ccd41d52f1aee9a60c8e6ad4f5f1ab236577254cfe39dbb2b8e9a`.
+Next live original state220 starts at **`0x0064B461`**.
 
-Pinned VC7.1 `/Od /G6 /MT /Gy /W3` scoped checker matches **9,524
-original instruction positions/widths/normalized forms**, **894
-internal and 116 outbound original branch targets**, **795 native-
-bound nonlocal COFF call/IEEE-754 operands** plus two original switch
-pointers. Candidate frame0x120 differs from canonical0x4A4 but is
-same-width six-byte instruction: no position compensation. This is
-**selected-prefix evidence, NOT full Exact**. **48 original live
-case bodies** plus full stack, local switch data, remaining relocation
-closure and common return are still OPEN. Probe marker bodies are
-never accepted as native source.
+Pinned VC7.1 `/Od /G6 /MT /Gy /W3` selected code verifier checks
+**9,734 original instruction positions/widths/normalized forms**,
+**916 original internal and 120 outbound jump targets**, **813
+nonlocal original-bound COFF call/IEEE-754 operands**, plus two
+original local switch address references. The completed exact callee
+`SecondaryEffectSlot::SetVelocityPolar` at **0x00434010** is now
+original-bound in both newly authored native case bodies. The
+incomplete source frame0x120 differs from original0x4A4 but has
+the same six-byte allocation opcode; no position shifts are allowed.
+**46 case bodies**, full native stack, switch DATA and return remain
+OPEN: this is a SELECTED PREFIX, NOT full-function Exact.
 
-Newly recovered state211 (286 bytes) handles native frame0 velocity
-reset, frame3 dual velocity 1.2 and frame1 one-hit count, landing to
-state13, and original casted frame-decrement loop. State212 (464
-bytes) implements a distinct dash continuation: frame0 velocity
-friction0.03 if dashMomentumFlag set, frame1 +2.6 velocityX with
-context sound20/hit1, further 0.03 decay and clamp, frame<2
-collision clear, frame4->2 repetition up to three cycles controlled
-by field3138, and original grounded state7/3 exit with
-FaceOpponent/ResetPose call order. **Polar velocity helper0x434010
-belongs to NEXT case213, not 212**; never conflate native boundaries.
+Newly recovered states213 and214 are separate **373-byte original
+polar-launch sequences**. They start with X/Y motion reset and one
+hit on frame1, detect early ground contact and skip to frame5;
+at frame3 they call the already exact member helper with original
+parameters **(30.0°,2.2)** for state213 and **(45.0°,1.7)** for214.
+On frame5 they loop back two poses, then perform the original
+virtual ResetPose, set state7 and FaceOpponent call ordering. All
+native x87 constants and direct REL32 helper targets are reviewed.
 
 Important Kano-specific differences from the related Makoto dispatcher:
 case1/2 speed `+0.6`/`-0.6`, cases4/5/6 jump start at frame2
@@ -51,11 +50,11 @@ Run ONLY focused checks, not full cold replay:
 
     scripts/repo-python scripts/verify-target.py
     scripts/repo-python workbench/kano-state/check_prefix.py
-    scripts/repo-python workbench/kano-state/probe_prefix.py --through 213 --context 12
+    scripts/repo-python workbench/kano-state/probe_prefix.py --through 220 --context 12
     scripts/repo-python scripts/ci.py
 
-Next work begins at **Kano case213 `0x0064B177`**. Original
-0x4A4 frame, 48 unverified native cases, local switch DATA,
+Next work begins at **Kano case220 `0x0064B461`**. Original
+0x4A4 frame, 46 unverified native cases, local switch DATA,
 shared return and complete relocation closure remain OPEN. The diagnostic probe generates *only* unaccepted
 neutral markers for those later cases; source comments and the
 selected checker must not be construed as whole-function completion.

@@ -33,24 +33,24 @@ Native codegen Exact is *not* a whole-product/runtime completion claim.
 
 ## Active next boss: Kano Character20::Slot06 (partial)
 
-The original 68,853-byte Kano state boss is being authored in
-`workbench/kano-state/Character20State.cpp`. Strict continuous
-selected native prefix now covers **34,743 code bytes / 9,524
-original x86 instructions**, default and **88 reviewed live states**.
-Audit: **894 original internal and 116 outbound branch destinations**,
-**795 native-bound nonlocal COFF call/float references**, plus both
-local switch table operands. The new 211/212 cases restore distinct
-grounded/aerial attack recovery, frame4 repeat and frame1 2.6 launch.
-**Next original state213 at `0x0064B177`** includes a call to the
-already accepted `SecondaryEffectSlot::SetVelocityPolar` (original
-call target 0x434010), which is *not* part of state212.
+The original 68,853-byte Kano state boss is being reconstructed in
+`workbench/kano-state/Character20State.cpp`. Strict original-bound
+selected opening now covers **35,489 native code bytes / 9,734 x86
+instructions**, original default and **90 reviewed live cases**.
+Verification audits **916 original internal and 120 outbound branches**,
+**813 original-bound nonlocal COFF call/IEEE-754 references** and
+both native local switch pointers. Original helper
+`SecondaryEffectSlot::SetVelocityPolar` at **0x00434010**, already
+accepted Exact, is independently bound in the newly restored 213/214
+original polar launchers, parameters (30°,2.2) and (45°,1.7).
+**Next original state220 at `0x0064B461`**.
 
-Incomplete candidate stack0x120 vs canonical0x4A4 has the same six-
-byte allocation instruction form, with no position normalization.
-**48 original live case bodies**, full stack, switch DATA, remaining
-relocs and shared return remain open. This is NOT whole-function Exact
-and generated marker bodies do not count. Only selected Kano checks;
-no all-unit cold replay or remote push.
+The incomplete compiler stack0x120 vs native0x4A4 uses the same
+six-byte prologue instruction, with no offset normalization. **46
+remaining live original cases**, complete native stack, adjacent
+switch tables, remaining relocs and common return are open. This is
+NOT whole-function Exact; generated marker case branches never count.
+Only scoped original verification, no all-unit cold replay or push.
 
 ## Additional newly accepted leaf owners
 

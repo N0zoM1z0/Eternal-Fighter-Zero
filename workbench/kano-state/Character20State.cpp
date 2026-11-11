@@ -3097,5 +3097,69 @@ void Character20::Slot06()
         }
         return;
 
+    case 213: // Native-reviewed Kano 0x0064B177: native aerial bounce and polar-velocity hit
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0)
+            remainingHitCount = 1;
+        if (positionY + velocityY >= 0.0 && field000a < 5) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 5;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1)
+                attackCollisionResult = 0;
+            if (field000a == 3)
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(30.0,2.2);
+            if (field000a == 5)
+                field000a = (unsigned short)(field000a - 2);
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 7;
+                FaceOpponent();
+            }
+        }
+        return;
+
+    case 214: // Native-reviewed Kano 0x0064B2EC: native aerial bounce and polar-velocity hit
+        if (field000a == 0 && field000c == 0) {
+            velocityX = 0.0;
+            velocityY = 0.0;
+        }
+        if (field000a == 1 && field000c == 0)
+            remainingHitCount = 1;
+        if (positionY + velocityY >= 0.0 && field000a < 5) {
+            positionY = 0.0;
+            ResetFrame();
+            field000c = 0;
+            field000a = 5;
+            return;
+        }
+        ++field000c;
+        if (field000c >= timing.frameDuration) {
+            field000c = 0;
+            ++field000a;
+            if (field000a == 1)
+                attackCollisionResult = 0;
+            if (field000a == 3)
+                reinterpret_cast<SecondaryEffectSlot *>(&field0008)->SetVelocityPolar(45.0,1.7);
+            if (field000a == 5)
+                field000a = (unsigned short)(field000a - 2);
+            if (field000a >= timing.animationFrameCount) {
+                ResetPose();
+                field0008 = 7;
+                FaceOpponent();
+            }
+        }
+        return;
+
     }
 }
