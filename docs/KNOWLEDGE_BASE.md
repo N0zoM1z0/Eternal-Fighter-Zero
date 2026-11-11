@@ -1810,6 +1810,20 @@ case250 still blocks the strict continuous prefix. Thus case254 is
 **NOT full or partial Exact acceptance** and changes neither formal
 function ledger nor original-bound continuous prefix of 40,336 bytes.
 
+#### Kano cases255–256: native-bound but unaccepted special tiers
+
+The original states255/256 each span 858 bytes and 228 x86
+instructions. The natural workbench C++ now implements original
+charge10000 thresholds with 5000/2500 residues, native effect types
+0x1BC/0x1BD, exactly paired effects0x196/0x197, and 20/50 meter
+cost. A strict-scope register-abstracted checker
+`workbench/kano-state/check_case255_256_shape.py` independently verifies
+**1,716 original bytes / 456 matching x86 instruction positions,
+40 internal jumps, 6 original return jumps and 20 original-bound
+COFF call/float operands**. These are **independent structural
+islands only**, NOT Exact; the continuous selected strict checkpoint
+remains before original state250 at `0x0064C750` (40,336 bytes).
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

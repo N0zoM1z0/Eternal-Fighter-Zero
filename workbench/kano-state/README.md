@@ -41,6 +41,36 @@ then switching to state13. Animation end repeats the last two frames.
 The full code path, direct call targets and canonical IEEE-754 values
 match in selected VC7.1 native comparison.
 
+### Experimental cases255–256 — two additional 858-byte native islands
+
+Kano state255 original `[0x0064CEA2,0x0064D1FC)` and state256
+`[0x0064D1FC,0x0064D556)` each span **858 native code bytes /
+228 original x86 instructions**. Natural C++ is fully authored in
+`Character20State.cpp` and reproduces their distinct charged special
+attack tiers. Both initialize original effects `0x196` and `0x197`,
+reset and wind up on native frame7, accumulate charge by75, and on
+full10000 charge select a distinct residue **5000 (state255)** or
+**2500 (state256)**. Both preserve native command13 resource-cancel,
+frame16 `owner=1` launch, group2/layer1, original grouped
+X+facing*150+inputX*70 coordinate and animation/return logic.
+The launch effect types are original **0x1BC** and **0x1BD**;
+255 reduces meter by **20**, 256 by **50** at launch.
+
+Run the separately scoped diagnostic:
+
+    scripts/repo-python workbench/kano-state/check_case255_256_shape.py
+
+The checker independently verifies both original SHA-256 extents,
+all **456 instruction offsets/widths/register-abstracted forms**,
+**40 original in-state branches**, **6 canonical shared-return
+branches**, and **20 original native COFF call/double operand
+bindings** (five `__ftol2`, three `ResetFrame`, and 500.0/0.0
+double literals in each case). This is native-bound code evidence,
+NOT whole-function or concrete-register Exact: the original case250
+compiler-phase gap remains. These islands do NOT change accepted
+ledgers, native Exact counts or the contiguous strict Kano
+selected prefix (still 40,336 bytes).
+
 ### Experimental case254 island — 835 native bytes, source authored
 
 Original Kano state254 `[0x0064CB5F,0x0064CEA2)` is **835 machine
@@ -56,6 +86,7 @@ context sound3 and `field3170` increment.
 Run **only the dedicated original-bound diagnostic**:
 
     scripts/repo-python workbench/kano-state/check_case254_shape.py
+    scripts/repo-python workbench/kano-state/check_case255_256_shape.py
 
 This checks the original canonical SHA-256
 `77afeef263e2e92f5601f26e9dd92f44d17ddfc4f14b5f80e143790cc34a64bf`,

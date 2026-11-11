@@ -80,6 +80,18 @@ and state254 are structural islands, not formally accepted owners.
 Real original code correction included grouped facing/input offset
 arithmetic and the `owner` (not `field0028`) effect field.
 
+Kano cases255/256 are now also authored as full separate tiered
+charged attack bodies (858 bytes each). Their dedicated original-bound
+`check_case255_256_shape.py` audit verifies **456 x86 original
+instruction offsets and register-abstracted forms**, **40 native
+internal and 6 canonical shared-return jumps**, **20 independently
+bound original COFF call/float operands**. Correct distinct full-
+charge fallback values 5000/2500, launch types 0x1BC/0x1BD, meter
+spend 20/50, and effect owner/coordinate grouping are coded.
+**NOT Exact**: concrete native registers still differ due unresolved
+state250. The strict Kano selected prefix remains 40,336 bytes.
+See Kano README. No cold all-unit replay.
+
 ## Additional newly accepted leaf owners
 
 Kaori `Character13` now has seven complete strict Exact normal-C++
