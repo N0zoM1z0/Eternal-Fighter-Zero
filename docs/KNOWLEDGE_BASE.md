@@ -1908,6 +1908,46 @@ frame3 paired effects and `effect.owner`/facing mattered. **Not
 native Exact** until state250's concrete-register phase is solved;
 strict contiguous original-bound prefix remains 40,336 bytes.
 
+### Kano Character20 Slot08: 765-byte native Exact meter/effect controller
+
+The canonical Kano `Character20` vtable slot8 at **`0x00788C98`**
+points to the original 765-byte `Character20::Slot08`
+`[0x00657B70,0x00657E6D)`. Natural C++ in `src/Character20Slot08.cpp`
+compiled with pinned VC7.1 `/Od /G6 /MT /Gy /W3` has passed strict
+selected-only native replay: **765/765 code bytes, 16 independently
+original-bound COFF call/IEEE-754 operands, zero differences**.
+
+The function constructs a genuine EffectSpawn and resets its defaults,
+counts time when the opponent is not in hitstun and Kano's state
+is below300, and uses **two separate meter-dependent thresholds**
+computed with original x87 `double(meter)*0.001` and 0.5 factor.
+The second additionally applies when state3 is active. A crucial
+original branch requires **`velocityX == 0.0`** rather than `!=0.0`
+when accumulating the next 630-tick counter; reversing this single
+condition changes the x87 `jpe`/`jpo` parity and was the final byte
+difference in the selected comparison. On expiration it adds 300
+meter and emits effect0x19B at positionY-50 with original owner flags.
+
+A separate periodic effect sequence decrements field3160 and
+conditionally emits native effect0x1C3 using the original
+`RandomRange(0,240)` integer, facing-independent field3164-based
+`*192.0` adjustment, fixed Y=-480 and 180-frame reset. A **single
+combined natural C++ arithmetic expression** must hold the X
+accumulator across the random and float-conversion calls. This
+produces the exact original `push esi` prologue and saves the native
+stack layout; splitting into three statements changes compiler
+allocation even though the arithmetic appears equivalent.
+
+Original native DIR32 literals are individually resolved to
+IEEE-754 values **0.001, 0.5, 0.0, 50.0, 192.0, -480.0**; original
+REL32 helpers include EffectSpawn ctor at0x405490, original
+ResetLocalEffectSpawn at0x413090, `RandomRange` at0x4108A0 and
+`__ftol2` at0x7783B8. Exact native vtable selection, original
+complete owner extent and all 16 relocations were reviewed before
+registration. Proof: `docs/evidence/character-20-slot08-exact.json`.
+This is complete codegen Exact for one owner, not whole-game runtime
+or linkage equivalence.
+
 ### Kano Character20 lifecycle and local effect management: five Exact owners
 
 The canonical `Character20` vtable at `0x00788C78` selects five

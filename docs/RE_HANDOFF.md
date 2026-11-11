@@ -256,6 +256,19 @@ render routine remains separately unaccepted. Proof:
 `docs/evidence/character-11-slot01-exact.json`.
 Selected one-unit replay only; no cold all-unit replay.
 
+Kano `Character20::Slot08` has now been reconstructed as a
+**complete 765-byte original Exact meter/effect controller** in
+`src/Character20Slot08.cpp`. Selected-only strict replay independently
+confirms the real vtable slot0x788C98, all **16 native COFF/float
+relocations**, **765/765 original code bytes** and zero differences.
+A key reconstruction detail is the original `velocityX == 0.0`
+x87 condition; a single combined random-effect X calculation is
+also required to reproduce the native ESI register allocation.
+Certificate `docs/evidence/character-20-slot08-exact.json`.
+This complete leaf Exact is independent from the unfinished 68,853-
+byte Kano Slot06 boss and from its structural island diagnostics.
+Only this unit was replayed; no full cold all-unit replay.
+
 ## Tools and checks
 
 Canonical target: ignored `resources/EFZ.exe`, SHA-256

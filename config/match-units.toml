@@ -161149,3 +161149,125 @@ type = "REL32"
 symbol = "?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z"
 target = 0x00409A90
 evidence = "Canonical EFZ.exe original vtable slot 0x00788880 independently identifies 975-byte original Mio render owner 0x0058D6E0; native REL32 field 0x0058DAA7 independently resolves ?DrawSurface@Video@@QAEHUSurfaceRect@@PAUIUnknown@@0EH@Z to 0x00409A90"
+
+[units.character-20-slot08]
+artifact_kind = "coff"
+profile = "vc71-od-static"
+source = "src/Character20Slot08.cpp"
+dependencies = ["src/Engine.h", "src/Input.h", "src/CharacterViews.h"]
+object = "build/match-units/character-20-slot08/Character20Slot08.obj"
+symbol = "?Slot08@Character20@@UAEXXZ"
+target_address = 0x00657B70
+size = 765
+
+[[units.character-20-slot08.relocations]]
+offset = 14
+type = "REL32"
+symbol = "??0EffectSpawn@@QAE@XZ"
+target = 0x00405490
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657B7E binds ??0EffectSpawn@@QAE@XZ at 0x00405490; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 26
+type = "REL32"
+symbol = "?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z"
+target = 0x00413090
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657B8A binds ?ResetLocalEffectSpawn@Secondary@@QAEXPAUSecondaryEffectSpawn@@@Z at 0x00413090; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 102
+type = "DIR32"
+symbol = "__real@3f50624dd2f1a9fc"
+target = 0x00788620
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657BD6 binds __real@3f50624dd2f1a9fc at 0x00788620; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 107
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657BDB binds __ftol2 at 0x007783B8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 194
+type = "DIR32"
+symbol = "__real@3f50624dd2f1a9fc"
+target = 0x00788620
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657C32 binds __real@3f50624dd2f1a9fc at 0x00788620; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 199
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657C37 binds __ftol2 at 0x007783B8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 242
+type = "DIR32"
+symbol = "__real@3fe0000000000000"
+target = 0x00787C50
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657C62 binds __real@3fe0000000000000 at 0x00787C50; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 248
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657C68 binds __real@0000000000000000 at 0x007872F8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 315
+type = "DIR32"
+symbol = "__real@0000000000000000"
+target = 0x007872F8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657CAB binds __real@0000000000000000 at 0x007872F8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 494
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657D5E binds __ftol2 at 0x007783B8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 515
+type = "DIR32"
+symbol = "__real@4049000000000000"
+target = 0x00787EB8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657D73 binds __real@4049000000000000 at 0x00787EB8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 615
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657DD7 binds __ftol2 at 0x007783B8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 635
+type = "REL32"
+symbol = "?RandomRange@Secondary@@QAEFFF@Z"
+target = 0x004108A0
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657DEB binds ?RandomRange@Secondary@@QAEFFF@Z at 0x004108A0; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 655
+type = "DIR32"
+symbol = "__real@4068000000000000"
+target = 0x00788CB0
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657DFF binds __real@4068000000000000 at 0x00788CB0; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 660
+type = "REL32"
+symbol = "__ftol2"
+target = 0x007783B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original REL32 at 0x00657E04 binds __ftol2 at 0x007783B8; native bytes and floating payload verified"
+
+[[units.character-20-slot08.relocations]]
+offset = 677
+type = "DIR32"
+symbol = "__real@c07e000000000000"
+target = 0x007884B8
+evidence = "Canonical Kano vtable slot 0x00788C98 independently selects complete 765-byte owner 0x00657B70, and the original DIR32 at 0x00657E15 binds __real@c07e000000000000 at 0x007884B8; native bytes and floating payload verified"
